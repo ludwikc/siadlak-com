@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -105,18 +104,38 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/90 dark:bg-deep-space/90 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-lg;
+    @apply bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 shadow-sm;
   }
   
   .btn-primary {
-    @apply bg-ascension-pink hover:bg-luminal-magenta text-white font-medium py-3 px-6 rounded-md transition-all shadow-md hover:shadow-lg active:translate-y-0.5;
+    @apply bg-neural-violet hover:bg-ascension-pink text-white py-3 px-6 rounded-md transition-colors font-medium;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-neural-violet dark:border-silver-mist text-neural-violet dark:text-silver-mist hover:bg-neural-violet hover:text-white dark:hover:bg-silver-mist dark:hover:text-deep-space font-medium py-3 px-6 rounded-md transition-all;
+    @apply bg-white dark:bg-white/10 hover:bg-gray-100 dark:hover:bg-white/20 text-neural-violet dark:text-silver-mist py-3 px-6 rounded-md transition-colors font-medium border border-gray-200 dark:border-white/10;
   }
   
   .section {
     @apply py-16 md:py-24;
   }
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4 text-deep-charcoal dark:text-silver-mist;
+}
+
+.prose h3 {
+  @apply text-xl font-bold mt-6 mb-3 text-deep-charcoal dark:text-silver-mist;
+}
+
+.prose p {
+  @apply mb-4 text-subtle-slate dark:text-silver-mist/80;
+}
+
+.prose ul {
+  @apply mb-4 ml-6 text-subtle-slate dark:text-silver-mist/80;
+}
+
+.prose li {
+  @apply mb-2;
 }
