@@ -1,0 +1,40 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+interface CTASectionProps {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export default function CTASection({ 
+  title, 
+  description, 
+  buttonText, 
+  buttonLink 
+}: CTASectionProps) {
+  return (
+    <section className="py-16 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet/80 dark:to-ascension-pink/80">
+      <div className="container mx-auto px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-white mb-4">{title}</h2>
+          
+          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            {description}
+          </p>
+          
+          <Link 
+            to={buttonLink} 
+            className="bg-white hover:bg-white/90 text-neural-violet font-medium py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-flex items-center"
+          >
+            {buttonText}
+            <ArrowRight size={18} className="ml-2" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
