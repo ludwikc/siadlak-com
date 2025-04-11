@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
@@ -25,6 +25,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* English Routes */}
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -38,9 +39,25 @@ const App = () => (
           <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
           <Route path="/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
           <Route path="/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
-          {/* For Power Test assessment page */}
           <Route path="/assessment" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          {/* Polish Routes */}
+          <Route path="/pl" element={<Index />} />
+          <Route path="/pl/about" element={<About />} />
+          <Route path="/pl/contact" element={<Contact />} />
+          <Route path="/pl/newsletter" element={<Newsletter />} />
+          <Route path="/pl/courses" element={<Courses />} />
+          <Route path="/pl/courses/:courseSlug" element={<CourseDetail />} />
+          <Route path="/pl/resources" element={<Resources />} />
+          <Route path="/pl/resources/:articleSlug" element={<ResourceArticle />} />
+          <Route path="/pl/testimonials" element={<Testimonials />} />
+          <Route path="/pl/thank-you" element={<ThankYou />} />
+          <Route path="/pl/thank-you/contact" element={<ThankYou type="contact" />} />
+          <Route path="/pl/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
+          <Route path="/pl/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
+          <Route path="/pl/assessment" element={<Index />} />
+          
+          {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

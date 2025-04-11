@@ -2,9 +2,58 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { language, getLocalizedPath } = useLanguage();
+  
+  // Footer text based on language
+  const footerText = {
+    en: {
+      tagline: "Guiding professionals at the intersection of technology and human potential.",
+      quickLinks: "Quick Links",
+      programs: "Programs",
+      newsletter: "Newsletter",
+      newsletterDesc: "Subscribe for insights at the intersection of technology and human potential.",
+      emailPlaceholder: "Your email",
+      subscribe: "Subscribe",
+      copyright: `© ${currentYear} Ludwik C. Siadlak. All rights reserved.`,
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      home: "Home",
+      about: "About",
+      courses: "Courses",
+      resources: "Resources",
+      contact: "Contact",
+      testimonials: "Testimonials",
+      mentalElevator: "Mental Elevator",
+      hakowanieProduktywnosci: "Hakowanie Produktywności"
+    },
+    pl: {
+      tagline: "Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.",
+      quickLinks: "Szybkie linki",
+      programs: "Programy",
+      newsletter: "Newsletter",
+      newsletterDesc: "Zapisz się po inspiracje na styku technologii i ludzkiego potencjału.",
+      emailPlaceholder: "Twój email",
+      subscribe: "Zapisz się",
+      copyright: `© ${currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.`,
+      privacy: "Polityka prywatności",
+      terms: "Warunki korzystania",
+      home: "Strona główna",
+      about: "O mnie",
+      courses: "Kursy",
+      resources: "Zasoby",
+      contact: "Kontakt",
+      testimonials: "Referencje",
+      mentalElevator: "Mental Elevator",
+      hakowanieProduktywnosci: "Hakowanie Produktywności"
+    }
+  };
+
+  // Get current language text
+  const txt = language === 'en' ? footerText.en : footerText.pl;
   
   return (
     <footer className="bg-secondary dark:bg-deep-space/80 pt-16 pb-8">
@@ -12,13 +61,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="space-y-4">
-            <Link to="/" className="inline-block">
+            <Link to={getLocalizedPath("/")} className="inline-block">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
                 Ludwik C. Siadlak
               </h3>
             </Link>
             <p className="text-subtle-slate dark:text-silver-mist/70 max-w-xs">
-              Guiding professionals at the intersection of technology and human potential.
+              {txt.tagline}
             </p>
             <div className="flex space-x-4 text-subtle-slate">
               <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
@@ -38,36 +87,36 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">{txt.quickLinks}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  About
+                <Link to={getLocalizedPath("/about")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.about}
                 </Link>
               </li>
               <li>
-                <Link to="/courses" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Courses
+                <Link to={getLocalizedPath("/courses")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.courses}
                 </Link>
               </li>
               <li>
-                <Link to="/resources" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Resources
+                <Link to={getLocalizedPath("/resources")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.resources}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Contact
+                <Link to={getLocalizedPath("/contact")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.contact}
                 </Link>
               </li>
               <li>
-                <Link to="/testimonials" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Testimonials
+                <Link to={getLocalizedPath("/testimonials")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.testimonials}
                 </Link>
               </li>
               <li>
-                <Link to="/newsletter" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Newsletter
+                <Link to={getLocalizedPath("/newsletter")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.newsletter}
                 </Link>
               </li>
             </ul>
@@ -75,16 +124,16 @@ export default function Footer() {
           
           {/* Programs */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Programs</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">{txt.programs}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses/mental-elevator" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Mental Elevator
+                <Link to={getLocalizedPath("/courses/mental-elevator")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.mentalElevator}
                 </Link>
               </li>
               <li>
-                <Link to="/courses/hakowanie-produktywnosci" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Hakowanie Produktywności
+                <Link to={getLocalizedPath("/courses/hakowanie-produktywnosci")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {txt.hakowanieProduktywnosci}
                 </Link>
               </li>
             </ul>
@@ -92,21 +141,21 @@ export default function Footer() {
           
           {/* Newsletter */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Newsletter</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">{txt.newsletter}</h4>
             <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
-              Subscribe for insights at the intersection of technology and human potential.
+              {txt.newsletterDesc}
             </p>
             <form className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder={txt.emailPlaceholder} 
                 className="py-2 px-3 rounded-l-md border-y border-l border-border bg-luminous-white dark:bg-deep-space w-full"
-                aria-label="Email for newsletter"
+                aria-label={txt.emailPlaceholder}
               />
               <button 
                 type="submit"
                 className="bg-ascension-pink hover:bg-luminal-magenta text-white p-2 rounded-r-md transition-colors"
-                aria-label="Subscribe"
+                aria-label={txt.subscribe}
               >
                 <ArrowRight size={20} />
               </button>
@@ -117,15 +166,15 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
           <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
-            &copy; {currentYear} Ludwik C. Siadlak. All rights reserved.
+            {txt.copyright}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-              Terms of Service
-            </Link>
+            <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+              {txt.privacy}
+            </a>
+            <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+              {txt.terms}
+            </a>
           </div>
         </div>
       </div>
