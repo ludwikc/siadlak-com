@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-                Ludwik Siadlak
+                Ludwik C. Siadlak
               </h3>
             </Link>
             <p className="text-subtle-slate dark:text-silver-mist/70 max-w-xs">
@@ -58,6 +58,16 @@ export default function Footer() {
               <li>
                 <Link to="/contact" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/testimonials" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link to="/newsletter" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Newsletter
                 </Link>
               </li>
             </ul>
@@ -107,7 +117,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
           <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
-            &copy; {currentYear} Ludwik Siadlak. All rights reserved.
+            &copy; {currentYear} Ludwik C. Siadlak. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
