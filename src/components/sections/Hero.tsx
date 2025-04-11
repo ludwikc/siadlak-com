@@ -10,6 +10,7 @@ interface HeroProps {
   ctaLink: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
+  imageDescription?: string;
 }
 
 export default function Hero({
@@ -18,7 +19,8 @@ export default function Hero({
   ctaText,
   ctaLink,
   secondaryCtaText,
-  secondaryCtaLink
+  secondaryCtaLink,
+  imageDescription
 }: HeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 pt-24 pb-16 md:pt-32 md:pb-24">

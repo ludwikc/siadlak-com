@@ -3,9 +3,23 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, BookOpen, Code } from 'lucide-react';
+import { ArrowRight, Users, Award, BookOpen, Code, CheckCircle } from 'lucide-react';
 
 const About = () => {
+  const approachPoints = [
+    "Technology should serve you, not the other way around",
+    "Your human capabilities are irreplaceable and must be protected",
+    "The right systems let you command technology while staying human",
+    "Balance is not about using less technology, but about being in control of it"
+  ];
+
+  const credentials = [
+    "15+ years as a Microsoft Certified Trainer",
+    "Trained teams across Fortune 500 companies and military organizations",
+    "Creator of the Hackerzy community with over 1,500 active members",
+    "Developer of the Digital Command Method used by professionals worldwide"
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -16,7 +30,7 @@ const About = () => {
               About Ludwik
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              Mentor, coach, and guide at the intersection of human potential and technological advancement.
+              I help professionals command technology, not serve it
             </p>
           </div>
         </div>
@@ -27,27 +41,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                My Journey
-              </h2>
-              
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p>
-                  With over 15 years of experience spanning technology, psychology, and 
-                  leadership development, I've dedicated my career to understanding the 
-                  complex relationship between human capabilities and technological systems.
+                  For over 15 years, I've stood at the intersection of cutting-edge technology and human performance. With expertise from both worlds, I guide professionals to take back control of their digital lives without sacrificing what makes them uniquely human.
                 </p>
                 
                 <p>
-                  After working with Fortune 500 companies and building several tech startups,
-                  I recognized a growing need: professionals who could thrive in increasingly 
-                  complex and tech-dominated environments without sacrificing their humanity.
-                </p>
-                
-                <p>
-                  Today, my work focuses on helping high-performing individuals and teams 
-                  develop systems that amplify their effectiveness, while ensuring technology 
-                  remains a tool for human flourishing rather than a source of overwhelm.
+                  My journey began as a Microsoft Certified Trainer, where I saw firsthand how technology could either empower or overwhelm. While others focused solely on technical skills, I recognized that the missing piece was teaching people how to maintain their human edge while leveraging digital tools.
                 </p>
               </div>
               
@@ -73,69 +73,51 @@ const About = () => {
         </div>
       </section>
       
-      {/* Expertise Section */}
+      {/* Approach Section */}
       <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-              Areas of Expertise
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+              My approach is simple but powerful
             </h2>
-            <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
-              My work spans multiple disciplines to create a comprehensive approach to personal and professional development.
-            </p>
+            
+            <div className="space-y-6">
+              {approachPoints.map((point, index) => (
+                <div key={index} className="flex glass-card p-5 rounded-xl">
+                  <div className="mr-4">
+                    <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
+                  </div>
+                  <p className="text-deep-charcoal dark:text-silver-mist text-lg">{point}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <p className="text-xl text-deep-charcoal dark:text-silver-mist">
+                What sets my work apart is the focus on keeping you in command. I don't just teach technical skills or mindfulness separately—I show you how to integrate both for true digital mastery.
+              </p>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Expertise Card 1 */}
-            <div className="glass-card p-6 rounded-xl">
-              <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
-                <Code className="text-neural-violet dark:text-luminal-magenta" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                Technology Integration
-              </h3>
-              <p className="text-subtle-slate dark:text-silver-mist/80">
-                Strategies for effectively integrating technology systems into human workflows and decision processes.
-              </p>
-            </div>
+        </div>
+      </section>
+      
+      {/* Credentials Section */}
+      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+              Experience that delivers results
+            </h2>
             
-            {/* Expertise Card 2 */}
-            <div className="glass-card p-6 rounded-xl">
-              <div className="w-12 h-12 bg-ascension-pink/10 dark:bg-ascension-pink/30 rounded-full flex items-center justify-center mb-4">
-                <Users className="text-ascension-pink dark:text-luminal-magenta" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                Leadership Development
-              </h3>
-              <p className="text-subtle-slate dark:text-silver-mist/80">
-                Building resilient, adaptive leadership capabilities for complex environments and challenging times.
-              </p>
-            </div>
-            
-            {/* Expertise Card 3 */}
-            <div className="glass-card p-6 rounded-xl">
-              <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
-                <BookOpen className="text-neural-violet dark:text-luminal-magenta" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                Cognitive Enhancement
-              </h3>
-              <p className="text-subtle-slate dark:text-silver-mist/80">
-                Evidence-based methods for improving decision-making, focus, and mental performance.
-              </p>
-            </div>
-            
-            {/* Expertise Card 4 */}
-            <div className="glass-card p-6 rounded-xl">
-              <div className="w-12 h-12 bg-ascension-pink/10 dark:bg-ascension-pink/30 rounded-full flex items-center justify-center mb-4">
-                <Award className="text-ascension-pink dark:text-luminal-magenta" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                Productivity Systems
-              </h3>
-              <p className="text-subtle-slate dark:text-silver-mist/80">
-                Custom-designed systems that enhance output while protecting autonomy and well-being.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {credentials.map((credential, index) => (
+                <div key={index} className="glass-card p-6 rounded-xl">
+                  <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
+                    <Award className="text-neural-violet dark:text-luminal-magenta" />
+                  </div>
+                  <p className="text-deep-charcoal dark:text-silver-mist">{credential}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -146,24 +128,23 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to Work Together?
+              Ready to take back control of your digital life?
             </h2>
             
             <p className="text-lg mb-8 text-white/90">
-              Whether you're looking to enhance your personal capabilities or transform your organization,
-              I'm here to help you navigate the intersection of technology and human potential.
+              Start with my weekly insights or book a Discovery Call.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/courses">
+              <Link to="/newsletter">
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
-                  Explore Programs
+                  Get Weekly Insights
                 </Button>
               </Link>
               
               <Link to="/contact">
                 <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                  Schedule a Call
+                  Book a Discovery Call
                 </Button>
               </Link>
             </div>

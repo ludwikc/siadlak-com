@@ -1,77 +1,58 @@
 
 import React from 'react';
 import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, BookOpen, FileText, Tag } from 'lucide-react';
-
-// Sample resources data (would typically come from a CMS or API)
-const resourcesData = [
-  {
-    id: 'mental-models-for-tech-leaders',
-    title: 'Mental Models for Technical Leaders',
-    excerpt: 'A framework for making better decisions in complex technical environments.',
-    category: 'Leadership',
-    date: 'April 2, 2025',
-    readTime: '8 min read',
-    image: ''
-  },
-  {
-    id: 'focus-in-distracted-world',
-    title: 'Cultivating Deep Focus in a World of Distractions',
-    excerpt: 'Practical techniques for achieving flow state and maximizing cognitive output.',
-    category: 'Productivity',
-    date: 'March 15, 2025',
-    readTime: '12 min read',
-    image: ''
-  },
-  {
-    id: 'ai-augmented-productivity',
-    title: 'AI-Augmented Productivity Systems',
-    excerpt: 'How to leverage AI tools to enhance rather than replace your cognitive capabilities.',
-    category: 'Technology',
-    date: 'March 1, 2025',
-    readTime: '10 min read',
-    image: ''
-  },
-  {
-    id: 'decision-making-framework',
-    title: 'A Decision-Making Framework for Uncertainty',
-    excerpt: 'A systematic approach to making better decisions when information is incomplete.',
-    category: 'Decision Making',
-    date: 'February 20, 2025',
-    readTime: '15 min read',
-    image: ''
-  },
-  {
-    id: 'energy-management-high-performers',
-    title: 'Energy Management for High Performers',
-    excerpt: 'Why managing energy is more important than managing time for sustained excellence.',
-    category: 'Performance',
-    date: 'February 5, 2025',
-    readTime: '9 min read',
-    image: ''
-  },
-  {
-    id: 'information-overload-strategies',
-    title: 'Strategies for Managing Information Overload',
-    excerpt: 'Practical techniques for filtering, processing, and retaining essential information.',
-    category: 'Productivity',
-    date: 'January 22, 2025',
-    readTime: '11 min read',
-    image: ''
-  }
-];
-
-// Categories for filtering
-const categories = ['All', 'Productivity', 'Leadership', 'Technology', 'Decision Making', 'Performance'];
+import { Button } from '@/components/ui/button';
+import { ArrowRight, FileText, Download, BookOpen, Code } from 'lucide-react';
 
 const Resources = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const resources = [
+    {
+      title: "The Digital Command Checklist",
+      description: "A straightforward assessment to identify where technology is controlling you rather than serving you, with clear action steps for each area.",
+      icon: <FileText className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+      cta: "Download Now",
+      link: "/resources/digital-command-checklist",
+    },
+    {
+      title: "5 Minutes to Focus",
+      description: "A simple system to regain mental clarity when digital overwhelm strikes, usable anytime you feel technology pulling you in too many directions.",
+      icon: <BookOpen className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+      cta: "Get The Guide",
+      link: "/resources/5-minutes-to-focus",
+    },
+    {
+      title: "AI Command Scripts",
+      description: "Ready-to-use templates that help you get exactly what you need from AI tools instead of wasting time with trial and error.",
+      icon: <Code className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+      cta: "Access Scripts",
+      link: "/resources/ai-command-scripts",
+    }
+  ];
 
-  const filteredResources = selectedCategory === 'All'
-    ? resourcesData
-    : resourcesData.filter(resource => resource.category === selectedCategory);
+  const blogPosts = [
+    {
+      title: "How to Make ChatGPT Work For You, Not Against You",
+      excerpt: "Most people use AI tools ineffectively, turning themselves into servants rather than masters. Here's how to flip the script...",
+      image: "",
+      slug: "make-chatgpt-work-for-you",
+      date: "2025-03-15"
+    },
+    {
+      title: "Digital Boundaries That Actually Work",
+      excerpt: "Setting boundaries with technology isn't about using it less—it's about using it on your terms. These three approaches make the difference...",
+      image: "",
+      slug: "digital-boundaries-that-work",
+      date: "2025-02-28"
+    },
+    {
+      title: "The Myth of Multitasking and What Works Instead",
+      excerpt: "Your brain wasn't designed for constant switching. Here's how to structure your digital work for maximum focus and minimum stress...",
+      image: "",
+      slug: "myth-of-multitasking",
+      date: "2025-02-10"
+    }
+  ];
 
   return (
     <Layout>
@@ -80,108 +61,115 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Resources & Insights
+              Free Resources
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              Practical strategies and frameworks for enhancing your capabilities in our complex world.
+              These tools and articles help you start taking control of your digital life right away. Each resource offers practical steps you can implement immediately.
             </p>
           </div>
         </div>
       </section>
       
-      {/* Resources Content */}
+      {/* Resources Grid */}
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            {/* Categories Filter */}
-            <div className="mb-12 overflow-x-auto">
-              <div className="inline-flex space-x-2 pb-2 min-w-max">
-                {categories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-neural-violet dark:bg-luminal-magenta text-white'
-                        : 'bg-secondary/50 dark:bg-quantum-blue/30 text-deep-charcoal dark:text-silver-mist hover:bg-secondary dark:hover:bg-quantum-blue/50'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            {/* Resources Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {filteredResources.map(resource => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {resources.map((resource, index) => (
+              <div 
+                key={index} 
+                className="glass-card p-8 rounded-xl flex flex-col h-full"
+              >
+                <div className="mb-4">
+                  {resource.icon}
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  {resource.title}
+                </h3>
+                
+                <p className="text-subtle-slate dark:text-silver-mist/80 mb-6 flex-grow">
+                  {resource.description}
+                </p>
+                
                 <Link 
-                  key={resource.id} 
-                  to={`/resources/${resource.id}`}
-                  className="glass-card rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  to={resource.link}
+                  className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium hover:underline"
                 >
-                  {/* Resource Image */}
-                  <div className="h-48 bg-gradient-to-br from-neural-violet to-ascension-pink"></div>
+                  {resource.cta}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Blog Section */}
+      <section className="py-16 bg-secondary/30 dark:bg-quantum-blue/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+              Latest Insights
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <div 
+                  key={index} 
+                  className="glass-card rounded-xl overflow-hidden flex flex-col h-full"
+                >
+                  {/* Blog post thumbnail */}
+                  <div className="h-48 bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet/30 dark:to-ascension-pink/30"></div>
                   
-                  {/* Resource Content */}
-                  <div className="p-6">
-                    <div className="flex items-center mb-3">
-                      <Tag className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-sm text-neural-violet dark:text-luminal-magenta font-medium">
-                        {resource.category}
-                      </span>
-                      
-                      <span className="mx-2 text-subtle-slate dark:text-silver-mist/50">•</span>
-                      
-                      <Calendar className="h-4 w-4 mr-2 text-subtle-slate dark:text-silver-mist/70" />
-                      <span className="text-sm text-subtle-slate dark:text-silver-mist/70">
-                        {resource.date}
-                      </span>
-                      
-                      <span className="mx-2 text-subtle-slate dark:text-silver-mist/50">•</span>
-                      
-                      <BookOpen className="h-4 w-4 mr-2 text-subtle-slate dark:text-silver-mist/70" />
-                      <span className="text-sm text-subtle-slate dark:text-silver-mist/70">
-                        {resource.readTime}
-                      </span>
-                    </div>
-                    
-                    <h2 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                      {resource.title}
-                    </h2>
-                    
-                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4">
-                      {resource.excerpt}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <p className="text-sm text-neural-violet dark:text-luminal-magenta mb-2">
+                      {post.date}
                     </p>
                     
-                    <div className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium group">
+                    <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 flex-grow">
+                      {post.excerpt}
+                    </p>
+                    
+                    <Link 
+                      to={`/resources/${post.slug}`}
+                      className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium hover:underline"
+                    >
                       Read More
-                      <ArrowRight size={18} className="ml-2 group-hover:ml-3 transition-all" />
-                    </div>
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </div>
-                </Link>
+                </div>
               ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Button className="bg-neural-violet hover:bg-ascension-pink">
+                View All Resources
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Newsletter CTA */}
-      <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <FileText className="h-12 w-12 mx-auto mb-4 text-neural-violet dark:text-luminal-magenta" />
-            
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              Get Resources Delivered to Your Inbox
+      {/* CTA Section */}
+      <section className="py-12 bg-gradient-to-br from-neural-violet to-ascension-pink">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+              Want Regular Insights Delivered to You?
             </h2>
             
-            <p className="text-subtle-slate dark:text-silver-mist/80 mb-6">
-              Join the newsletter to receive new insights, frameworks, and resources directly to your email.
+            <p className="text-lg mb-8 text-white/90">
+              Join my newsletter for weekly strategies on commanding your digital life.
             </p>
             
             <Link to="/newsletter">
-              <Button className="bg-neural-violet hover:bg-ascension-pink">
+              <Button className="bg-white text-neural-violet hover:bg-white/90">
                 Join the Newsletter
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

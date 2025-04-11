@@ -4,13 +4,14 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Calendar, Mail, Phone, MessageCircle, Linkedin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -35,7 +36,7 @@ const Contact = () => {
               Let's Connect
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              Schedule a discovery call or send a message to explore how we can work together.
+              I value straight talk and respond personally to messages. Whether you have questions about working together or thoughts about taking control of your digital life, I welcome your message.
             </p>
           </div>
         </div>
@@ -57,7 +58,7 @@ const Contact = () => {
               </div>
               
               <p className="text-subtle-slate dark:text-silver-mist/80 mb-6">
-                Schedule a 30-minute consultation to discuss your goals and how we might work together.
+                Schedule a 30-minute consultation to discuss how you can take back control of your digital life.
               </p>
               
               {/* Calendly embed placeholder */}
@@ -94,10 +95,6 @@ const Contact = () => {
                 </h2>
               </div>
               
-              <p className="text-subtle-slate dark:text-silver-mist/80 mb-6">
-                Have a question or inquiry? Fill out the form below and I'll get back to you soon.
-              </p>
-              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
@@ -129,6 +126,19 @@ const Contact = () => {
                 </div>
                 
                 <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                    Subject (optional)
+                  </label>
+                  <Input 
+                    id="subject"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    placeholder="What's this about?"
+                    className="w-full"
+                  />
+                </div>
+                
+                <div>
                   <label htmlFor="message" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
                     Message
                   </label>
@@ -149,82 +159,42 @@ const Contact = () => {
                 >
                   {submitting ? 'Sending...' : 'Send Message'}
                 </Button>
+                
+                <p className="text-center text-sm text-subtle-slate dark:text-silver-mist/70">
+                  I respond within 24-48 hours on business days.
+                </p>
               </form>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Direct Contact Section */}
+      {/* Alternative Contact Section */}
       <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Email */}
-              <div className="flex items-center p-6 glass-card rounded-lg">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mr-4">
-                  <Mail className="text-neural-violet dark:text-luminal-magenta" />
-                </div>
-                <div>
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">Email</p>
-                  <a href="mailto:contact@siadlak.com" className="text-deep-charcoal dark:text-silver-mist font-medium hover:text-neural-violet dark:hover:text-luminal-magenta">
-                    contact@siadlak.com
-                  </a>
-                </div>
-              </div>
-              
-              {/* Phone */}
-              <div className="flex items-center p-6 glass-card rounded-lg">
-                <div className="w-12 h-12 bg-ascension-pink/10 dark:bg-ascension-pink/30 rounded-full flex items-center justify-center mr-4">
-                  <Phone className="text-ascension-pink dark:text-luminal-magenta" />
-                </div>
-                <div>
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">Phone</p>
-                  <a href="tel:+48123456789" className="text-deep-charcoal dark:text-silver-mist font-medium hover:text-neural-violet dark:hover:text-luminal-magenta">
-                    +48 123 456 789
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* FAQ Section */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-              Frequently Asked Questions
-            </h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+              Prefer another way to reach me?
+            </h3>
             
-            <div className="space-y-6">
-              <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                  What happens during a discovery call?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
-                  During our 30-minute call, we'll discuss your goals, challenges, and determine if we're a good fit to work together. There's no obligation, and I'll be happy to recommend other resources if I'm not the right person to help you.
-                </p>
-              </div>
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+              <a 
+                href="mailto:contact@ludwiksiadlak.com" 
+                className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                contact@ludwiksiadlak.com
+              </a>
               
-              <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                  How quickly do you respond to inquiries?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
-                  I typically respond to all messages within 24-48 hours during business days. For urgent matters, please indicate this in your message subject.
-                </p>
-              </div>
-              
-              <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                  Do you offer corporate training?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Yes, I work with organizations of all sizes to develop customized training programs. Please reach out directly to discuss your specific needs and objectives.
-                </p>
-              </div>
+              <a 
+                href="https://linkedin.com/in/ludwiksiadlak" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+              >
+                <Linkedin className="mr-2 h-5 w-5" />
+                Connect on LinkedIn
+              </a>
             </div>
           </div>
         </div>

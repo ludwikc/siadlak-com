@@ -38,6 +38,8 @@ const App = () => (
           <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
           <Route path="/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
           <Route path="/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
+          {/* For Power Test assessment page */}
+          <Route path="/assessment" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
