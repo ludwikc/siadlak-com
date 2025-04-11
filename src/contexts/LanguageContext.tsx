@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'pl';
@@ -20,6 +21,20 @@ export const useLanguage = () => useContext(LanguageContext);
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
   const [languagePrefix, setLanguagePrefix] = useState('');
+
+  // Path translations for resources
+  const resourcePathTranslations = {
+    en: {
+      '/resources/digital-command-checklist': '/resources/digital-command-checklist',
+      '/resources/5-minutes-to-focus': '/resources/5-minutes-to-focus',
+      '/resources/ai-command-scripts': '/resources/ai-command-scripts',
+    },
+    pl: {
+      '/resources/digital-command-checklist': '/resources/lista-kontrolna-cyfrowego-dowodzenia',
+      '/resources/5-minutes-to-focus': '/resources/5-minut-do-koncentracji',
+      '/resources/ai-command-scripts': '/resources/skrypty-dowodzenia-ai',
+    }
+  };
 
   // Set initial language based on URL or browser preference
   useEffect(() => {
@@ -52,6 +67,23 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Get path for current language
   const getLocalizedPath = (path: string): string => {
+    // Special handling for resource paths that have different translations
+    const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path;
+    
+    if (
+      Object.keys(resourcePathTranslations.en).includes(normalizedPath) ||
+      Object.values(resourcePathTranslations.pl).includes(normalizedPath)
+    ) {
+      // Find the equivalent path in the target language
+      const resourceKey = Object.entries(resourcePathTranslations[language === 'en' ? 'pl' : 'en'])
+        .find(([_, val]) => val === normalizedPath)?.[0];
+      
+      if (resourceKey) {
+        const translatedPath = resourcePathTranslations[language][resourceKey];
+        return language === 'pl' ? `/pl${translatedPath}` : translatedPath;
+      }
+    }
+    
     // Remove any existing language prefix
     let cleanPath = path;
     if (cleanPath.startsWith('/pl/')) {

@@ -34,6 +34,9 @@ const App = () => (
           <Route path="/courses/:courseSlug" element={<CourseDetail />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/:articleSlug" element={<ResourceArticle />} />
+          <Route path="/resources/digital-command-checklist" element={<ResourceArticle />} />
+          <Route path="/resources/5-minutes-to-focus" element={<ResourceArticle />} />
+          <Route path="/resources/ai-command-scripts" element={<ResourceArticle />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
@@ -50,6 +53,10 @@ const App = () => (
           <Route path="/pl/courses/:courseSlug" element={<CourseDetail />} />
           <Route path="/pl/resources" element={<Resources />} />
           <Route path="/pl/resources/:articleSlug" element={<ResourceArticle />} />
+          <Route path="/pl/resources/lista-kontrolna-cyfrowego-dowodzenia" element={<ResourceArticle />} />
+          <Route path="/pl/resources/5-minut-do-koncentracji" element={<ResourceArticle />} />
+          <Route path="/pl/resources/skrypty-dowodzenia-ai" element={<ResourceArticle />} />
+          <Route path="/pl/resources/blog/:articleSlug" element={<ResourceArticle />} />
           <Route path="/pl/testimonials" element={<Testimonials />} />
           <Route path="/pl/thank-you" element={<ThankYou />} />
           <Route path="/pl/thank-you/contact" element={<ThankYou type="contact" />} />

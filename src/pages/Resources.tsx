@@ -4,55 +4,129 @@ import Layout from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, FileText, Download, BookOpen, Code } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Resources = () => {
-  const resources = [
-    {
-      title: "The Digital Command Checklist",
-      description: "A straightforward assessment to identify where technology is controlling you rather than serving you, with clear action steps for each area.",
-      icon: <FileText className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
-      cta: "Download Now",
-      link: "/resources/digital-command-checklist",
+  const { language } = useLanguage();
+  
+  // Translation content
+  const content = {
+    en: {
+      title: "Free Resources",
+      intro: "These tools and articles help you start taking control of your digital life right away. Each resource offers practical steps you can implement immediately.",
+      resources: [
+        {
+          title: "The Digital Command Checklist",
+          description: "A straightforward assessment to identify where technology is controlling you rather than serving you, with clear action steps for each area.",
+          icon: <FileText className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Download Now",
+          link: "/resources/digital-command-checklist",
+        },
+        {
+          title: "5 Minutes to Focus",
+          description: "A simple system to regain mental clarity when digital overwhelm strikes, usable anytime you feel technology pulling you in too many directions.",
+          icon: <BookOpen className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Get The Guide",
+          link: "/resources/5-minutes-to-focus",
+        },
+        {
+          title: "AI Command Scripts",
+          description: "Ready-to-use templates that help you get exactly what you need from AI tools instead of wasting time with trial and error.",
+          icon: <Code className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Access Scripts",
+          link: "/resources/ai-command-scripts",
+        }
+      ],
+      blogPosts: [
+        {
+          title: "How to Make ChatGPT Work For You, Not Against You",
+          excerpt: "Most people use AI tools ineffectively, turning themselves into servants rather than masters. Here's how to flip the script...",
+          image: "",
+          slug: "make-chatgpt-work-for-you",
+          date: "2025-03-15"
+        },
+        {
+          title: "Digital Boundaries That Actually Work",
+          excerpt: "Setting boundaries with technology isn't about using it less—it's about using it on your terms. These three approaches make the difference...",
+          image: "",
+          slug: "digital-boundaries-that-work",
+          date: "2025-02-28"
+        },
+        {
+          title: "The Myth of Multitasking and What Works Instead",
+          excerpt: "Your brain wasn't designed for constant switching. Here's how to structure your digital work for maximum focus and minimum stress...",
+          image: "",
+          slug: "myth-of-multitasking",
+          date: "2025-02-10"
+        }
+      ],
+      insights: "Latest Insights",
+      readMore: "Read More",
+      viewAll: "View All Resources",
+      ctaTitle: "Want Regular Insights Delivered to You?",
+      ctaText: "Join my newsletter for weekly strategies on commanding your digital life.",
+      ctaButton: "Join the Newsletter"
     },
-    {
-      title: "5 Minutes to Focus",
-      description: "A simple system to regain mental clarity when digital overwhelm strikes, usable anytime you feel technology pulling you in too many directions.",
-      icon: <BookOpen className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
-      cta: "Get The Guide",
-      link: "/resources/5-minutes-to-focus",
-    },
-    {
-      title: "AI Command Scripts",
-      description: "Ready-to-use templates that help you get exactly what you need from AI tools instead of wasting time with trial and error.",
-      icon: <Code className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
-      cta: "Access Scripts",
-      link: "/resources/ai-command-scripts",
+    pl: {
+      title: "Zasoby",
+      intro: "Te narzędzia i artykuły pomogą Ci natychmiast rozpocząć przejmowanie kontroli nad Twoim cyfrowym życiem. Każdy zasób oferuje praktyczne kroki, które możesz wdrożyć od razu.",
+      resources: [
+        {
+          title: "Lista Kontrolna Cyfrowego Dowodzenia",
+          description: "Prosta ocena pomagająca zidentyfikować, gdzie technologia kontroluje Ciebie zamiast Ci służyć, wraz z konkretnymi krokami dla każdego obszaru.",
+          icon: <FileText className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Pobierz teraz",
+          link: "/pl/resources/lista-kontrolna-cyfrowego-dowodzenia",
+        },
+        {
+          title: "5 Minut do Koncentracji",
+          description: "Prosty system odzyskiwania mentalnej jasności, gdy dopada Cię cyfrowe przytłoczenie. Możesz go użyć zawsze, gdy czujesz, że technologia ciągnie Cię w zbyt wielu kierunkach.",
+          icon: <BookOpen className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Pobierz poradnik",
+          link: "/pl/resources/5-minut-do-koncentracji",
+        },
+        {
+          title: "Skrypty Dowodzenia AI",
+          description: "Gotowe do użycia szablony, które pomogą Ci uzyskać dokładnie to, czego potrzebujesz od narzędzi AI, zamiast tracić czas na metodę prób i błędów.",
+          icon: <Code className="h-12 w-12 text-neural-violet dark:text-luminal-magenta" />,
+          cta: "Pobierz skrypty",
+          link: "/pl/resources/skrypty-dowodzenia-ai",
+        }
+      ],
+      blogPosts: [
+        {
+          title: "Jak sprawić, by ChatGPT pracował dla Ciebie, a nie przeciwko Tobie",
+          excerpt: "Większość osób używa narzędzi AI nieefektywnie, zamieniając się w sługi zamiast panów. Oto jak odwrócić ten scenariusz...",
+          image: "",
+          slug: "jak-sprawic-by-chatgpt-pracowal-dla-ciebie",
+          date: "2025-03-15"
+        },
+        {
+          title: "Cyfrowe granice, które naprawdę działają",
+          excerpt: "Wyznaczanie granic z technologią nie polega na używaniu jej mniej – chodzi o używanie jej na Twoich warunkach. Te trzy podejścia robią różnicę...",
+          image: "",
+          slug: "cyfrowe-granice-ktore-naprawde-dzialaja",
+          date: "2025-02-28"
+        },
+        {
+          title: "Mit wielozadaniowości i co działa zamiast tego",
+          excerpt: "Twój mózg nie został zaprojektowany do ciągłego przełączania się. Oto jak uporządkować cyfrową pracę dla maksymalnej koncentracji i minimalnego stresu...",
+          image: "",
+          slug: "mit-wielozadaniowosci",
+          date: "2025-02-10"
+        }
+      ],
+      insights: "Najnowsze artykuły",
+      readMore: "Czytaj więcej",
+      viewAll: "Zobacz wszystkie zasoby",
+      ctaTitle: "Chcesz otrzymywać regularne inspiracje?",
+      ctaText: "Dołącz do mojego newslettera, aby otrzymywać cotygodniowe strategie dowodzenia swoim cyfrowym życiem.",
+      ctaButton: "Zapisz się do newslettera"
     }
-  ];
-
-  const blogPosts = [
-    {
-      title: "How to Make ChatGPT Work For You, Not Against You",
-      excerpt: "Most people use AI tools ineffectively, turning themselves into servants rather than masters. Here's how to flip the script...",
-      image: "",
-      slug: "make-chatgpt-work-for-you",
-      date: "2025-03-15"
-    },
-    {
-      title: "Digital Boundaries That Actually Work",
-      excerpt: "Setting boundaries with technology isn't about using it less—it's about using it on your terms. These three approaches make the difference...",
-      image: "",
-      slug: "digital-boundaries-that-work",
-      date: "2025-02-28"
-    },
-    {
-      title: "The Myth of Multitasking and What Works Instead",
-      excerpt: "Your brain wasn't designed for constant switching. Here's how to structure your digital work for maximum focus and minimum stress...",
-      image: "",
-      slug: "myth-of-multitasking",
-      date: "2025-02-10"
-    }
-  ];
+  };
+  
+  // Select the appropriate language content
+  const txt = language === 'en' ? content.en : content.pl;
 
   return (
     <Layout>
@@ -61,10 +135,10 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Free Resources
+              {txt.title}
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              These tools and articles help you start taking control of your digital life right away. Each resource offers practical steps you can implement immediately.
+              {txt.intro}
             </p>
           </div>
         </div>
@@ -74,7 +148,7 @@ const Resources = () => {
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {resources.map((resource, index) => (
+            {txt.resources.map((resource, index) => (
               <div 
                 key={index} 
                 className="glass-card p-8 rounded-xl flex flex-col h-full"
@@ -109,11 +183,11 @@ const Resources = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Latest Insights
+              {txt.insights}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
+              {txt.blogPosts.map((post, index) => (
                 <div 
                   key={index} 
                   className="glass-card rounded-xl overflow-hidden flex flex-col h-full"
@@ -135,10 +209,10 @@ const Resources = () => {
                     </p>
                     
                     <Link 
-                      to={`/resources/${post.slug}`}
+                      to={language === 'en' ? `/resources/${post.slug}` : `/pl/resources/blog/${post.slug}`}
                       className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium hover:underline"
                     >
-                      Read More
+                      {txt.readMore}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
@@ -148,7 +222,7 @@ const Resources = () => {
             
             <div className="text-center mt-12">
               <Button className="bg-neural-violet hover:bg-ascension-pink">
-                View All Resources
+                {txt.viewAll}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -161,16 +235,16 @@ const Resources = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
-              Want Regular Insights Delivered to You?
+              {txt.ctaTitle}
             </h2>
             
             <p className="text-lg mb-8 text-white/90">
-              Join my newsletter for weekly strategies on commanding your digital life.
+              {txt.ctaText}
             </p>
             
-            <Link to="/newsletter">
+            <Link to={language === 'en' ? '/newsletter' : '/pl/newsletter'}>
               <Button className="bg-white text-neural-violet hover:bg-white/90">
-                Join the Newsletter
+                {txt.ctaButton}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
