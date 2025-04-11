@@ -1,34 +1,23 @@
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
 const LanguageSwitcher: React.FC = () => {
   const location = useLocation();
-  const { language, setLanguage } = useLanguage();
+  const navigate = useNavigate();
+  const { language, setLanguage, getLocalizedPath } = useLanguage();
   
   const switchLanguage = () => {
     const newLanguage = language === 'en' ? 'pl' : 'en';
     setLanguage(newLanguage);
     
     // Get the corresponding URL for the other language
-    let newPath = location.pathname;
+    const newPath = getLocalizedPath(location.pathname);
     
-    if (newLanguage === 'pl') {
-      // Add /pl prefix if switching to Polish
-      newPath = newPath === '/' ? '/pl' : `/pl${newPath}`;
-    } else {
-      // Remove /pl prefix if switching to English
-      if (newPath.startsWith('/pl/')) {
-        newPath = newPath.substring(3);
-      } else if (newPath === '/pl') {
-        newPath = '/';
-      }
-    }
-    
-    // Update URL without reloading page
-    window.history.pushState(null, '', newPath);
+    // Navigate to the new path
+    navigate(newPath, { replace: true });
   };
   
   return (
