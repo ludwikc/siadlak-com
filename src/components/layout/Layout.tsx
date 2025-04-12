@@ -3,7 +3,6 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { ThemeProvider } from '../../contexts/ThemeContext';
-import { LanguageProvider } from '../../contexts/LanguageContext';
 
 interface LayoutProps {
   children: React.ReactNode;

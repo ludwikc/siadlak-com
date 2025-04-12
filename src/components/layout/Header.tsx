@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Moon, Sun, Menu, X, ChevronDown } from 'lucide-react';
@@ -83,6 +83,19 @@ export default function Header() {
   // Get current language text
   const txt = language === 'en' ? menuItems.en : menuItems.pl;
   
+  const navigate = useNavigate();
+
+  // Direct navigation handlers
+  const handleCoursesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate(getLocalizedPath("/courses"));
+  };
+
+  const handleResourcesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate(getLocalizedPath("/resources"));
+  };
+  
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -111,7 +124,10 @@ export default function Header() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta hover:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger 
+                  className="bg-transparent text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta hover:bg-transparent focus:bg-transparent"
+                  onClick={handleCoursesClick}
+                >
                   {txt.courses}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -150,7 +166,10 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta hover:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger 
+                  className="bg-transparent text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta hover:bg-transparent focus:bg-transparent"
+                  onClick={handleResourcesClick}
+                >
                   {txt.resources}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -248,7 +267,14 @@ export default function Header() {
             
             {/* Mobile Courses Dropdown */}
             <div className="space-y-2">
-              <div className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center">
+              <div 
+                className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(getLocalizedPath("/courses"));
+                  setIsMenuOpen(false);
+                }}
+              >
                 {txt.courses} <ChevronDown size={16} className="ml-1" />
               </div>
               <div className="pl-4 flex flex-col space-y-2">
@@ -278,7 +304,14 @@ export default function Header() {
             
             {/* Mobile Resources Dropdown */}
             <div className="space-y-2">
-              <div className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center">
+              <div 
+                className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(getLocalizedPath("/resources"));
+                  setIsMenuOpen(false);
+                }}
+              >
                 {txt.resources} <ChevronDown size={16} className="ml-1" />
               </div>
               <div className="pl-4 flex flex-col space-y-2">
