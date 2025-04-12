@@ -9,14 +9,16 @@ const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage, getLocalizedPath } = useLanguage();
   
   const switchLanguage = () => {
+    // Get the new language
     const newLanguage = language === 'en' ? 'pl' : 'en';
+    
+    // Update language in context
     setLanguage(newLanguage);
     
     // Get the corresponding path for the new language
     const newPath = getLocalizedPath(location.pathname);
     
-    // Navigate to the new path with full page refresh
-    // This ensures all components re-render with new language
+    // Force full page reload to ensure all components re-render with new language
     window.location.href = newPath;
   };
   

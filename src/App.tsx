@@ -18,6 +18,7 @@ import Resources from "./pages/Resources";
 import ResourceArticle from "./pages/ResourceArticle";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
+import Sitemap from "./pages/Sitemap";
 
 // Polish pages
 import PolishIndex from "./pages/pl/Index";
@@ -28,6 +29,7 @@ import PolishCourses from "./pages/pl/Courses";
 import PolishNewsletter from "./pages/pl/Newsletter";
 import PolishTestimonials from "./pages/pl/Testimonials";
 import PolishThankYou from "./pages/pl/ThankYou";
+import PolishSitemap from "./pages/pl/Sitemap";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +59,7 @@ const App = () => (
             <Route path="/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
             <Route path="/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
             <Route path="/assessment" element={<Index />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             
             {/* Polish Routes */}
             <Route path="/pl" element={<PolishIndex />} />
@@ -77,6 +80,7 @@ const App = () => (
             <Route path="/pl/thank-you/newsletter" element={<PolishThankYou type="newsletter" />} />
             <Route path="/pl/thank-you/discovery-call" element={<PolishThankYou type="discovery-call" />} />
             <Route path="/pl/assessment" element={<PolishIndex />} />
+            <Route path="/pl/sitemap" element={<PolishSitemap />} />
             
             {/* Catch-all route */}
             <Route path="*" element={<NotFound />} />

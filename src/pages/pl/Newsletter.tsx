@@ -22,6 +22,15 @@ const PolishNewsletter = () => {
         </div>
       </section>
       
+      {/* Newsletter Signup Right Below Hero */}
+      <div className="py-12 bg-luminous-white dark:bg-deep-space border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <Newsletter />
+          </div>
+        </div>
+      </div>
+      
       {/* Newsletter Features */}
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
@@ -146,17 +155,6 @@ const PolishNewsletter = () => {
                   Ten newsletter <strong>nie jest</strong> kolejnym przeglądem narzędzi AI ani abstrakcyjnym poradnikiem rozwoju osobistego. To pomost między tymi światami, którego brakuje na rynku.
                 </p>
               </div>
-            </div>
-            
-            {/* Newsletter Signup */}
-            <div className="glass-card p-8 rounded-xl mb-16">
-              <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist text-center">
-                Zapisz się teraz
-              </h3>
-              <Newsletter />
-              <p className="text-center text-sm text-subtle-slate dark:text-silver-mist/70 mt-4">
-                Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia. Z tego newslettera możesz zrezygnować w każdej chwili, jednym kliknięciem. Twoje dane są u mnie bezpieczne.
-              </p>
             </div>
             
             <div className="text-center">

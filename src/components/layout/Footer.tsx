@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Sitemap } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Footer() {
@@ -21,6 +21,7 @@ export default function Footer() {
       copyright: `© ${currentYear} Ludwik C. Siadlak. All rights reserved.`,
       privacy: "Privacy Policy",
       terms: "Terms of Service",
+      sitemap: "Sitemap",
       home: "Home",
       about: "About",
       courses: "Courses",
@@ -41,6 +42,7 @@ export default function Footer() {
       copyright: `© ${currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.`,
       privacy: "Polityka prywatności",
       terms: "Warunki korzystania",
+      sitemap: "Mapa witryny",
       home: "Strona główna",
       about: "O mnie",
       courses: "Kursy",
@@ -168,7 +170,11 @@ export default function Footer() {
           <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
             {txt.copyright}
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap space-x-4 md:space-x-6 mt-4 md:mt-0 justify-center">
+            <Link to={getLocalizedPath("/sitemap")} className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors flex items-center">
+              <Sitemap size={14} className="mr-1" />
+              {txt.sitemap}
+            </Link>
             <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
               {txt.privacy}
             </a>

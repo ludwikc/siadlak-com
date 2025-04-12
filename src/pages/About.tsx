@@ -53,7 +53,7 @@ const About = () => {
               
               <div className="mt-8">
                 <Link to="/contact">
-                  <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist">
+                  <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
                     Schedule a Conversation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
