@@ -28,14 +28,14 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero Section with Profile Image */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/40 to-ascension-pink/40 mix-blend-overlay"></div>
+      {/* Hero Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/40 to-ascension-pink/40 mix-blend-overlay z-0"></div>
+        <div className="absolute inset-0 opacity-30 z-0">
           <img 
-            src="/lovable-uploads/37d71fbd-afdb-490e-8344-e3514f1d3bb2.png" 
+            src="/lovable-uploads/b04d6ee7-6d24-48de-8173-5ea5d03b5fa1.png" 
             alt="Ludwik C. Siadlak" 
-            className="object-cover w-full h-full opacity-30 mix-blend-overlay"
+            className="object-cover w-full h-full"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -71,8 +71,8 @@ const Contact = () => {
               
               <div className="relative rounded-lg overflow-hidden mb-6">
                 <img 
-                  src="/lovable-uploads/64460365-d2d1-44dd-807c-47c341352eb1.png" 
-                  alt="Ludwik C. Siadlak with tablet"
+                  src="/lovable-uploads/5121484c-18e6-4311-a4a6-9813c6dba659.png" 
+                  alt="Ludwik C. Siadlak"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-space/70 to-transparent flex flex-col items-center justify-end p-6">

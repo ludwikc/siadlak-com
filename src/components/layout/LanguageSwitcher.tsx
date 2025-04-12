@@ -1,11 +1,12 @@
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
 const LanguageSwitcher: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { language, setLanguage, getLocalizedPath } = useLanguage();
   
   const switchLanguage = () => {
@@ -15,8 +16,8 @@ const LanguageSwitcher: React.FC = () => {
     // Get the corresponding URL for the other language
     const newPath = getLocalizedPath(location.pathname);
     
-    // Use window.location instead of navigate to force a full page reload
-    window.location.href = newPath;
+    // Navigate to the new path
+    navigate(newPath);
   };
   
   return (

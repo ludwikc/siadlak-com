@@ -11,7 +11,7 @@ export default function AboutSection() {
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
               <img 
-                src="/lovable-uploads/5592c4b4-56a4-49e0-8152-a04120ade57f.png" 
+                src="/lovable-uploads/42fdb972-2ce5-4895-bdc1-66773399f43f.png" 
                 alt="Ludwik C. Siadlak" 
                 className="w-full h-full object-cover"
               />
