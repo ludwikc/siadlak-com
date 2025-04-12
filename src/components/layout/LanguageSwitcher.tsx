@@ -16,8 +16,8 @@ const LanguageSwitcher: React.FC = () => {
     // Get the corresponding URL for the other language
     const newPath = getLocalizedPath(location.pathname);
     
-    // Navigate to the new path
-    navigate(newPath);
+    // Navigate to the new path with a page refresh
+    window.location.href = newPath;
   };
   
   return (

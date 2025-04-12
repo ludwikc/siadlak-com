@@ -85,14 +85,12 @@ export default function Header() {
   
   const navigate = useNavigate();
 
-  // Direct navigation handlers
-  const handleCoursesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  // Direct navigation handlers - fixing the type errors here
+  const handleCoursesClick = () => {
     navigate(getLocalizedPath("/courses"));
   };
 
-  const handleResourcesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const handleResourcesClick = () => {
     navigate(getLocalizedPath("/resources"));
   };
   
@@ -269,8 +267,7 @@ export default function Header() {
             <div className="space-y-2">
               <div 
                 className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate(getLocalizedPath("/courses"));
                   setIsMenuOpen(false);
                 }}
@@ -306,8 +303,7 @@ export default function Header() {
             <div className="space-y-2">
               <div 
                 className="text-deep-charcoal dark:text-silver-mist font-medium flex items-center cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   navigate(getLocalizedPath("/resources"));
                   setIsMenuOpen(false);
                 }}
