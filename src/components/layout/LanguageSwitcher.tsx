@@ -1,22 +1,22 @@
 
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Globe } from 'lucide-react';
 
 const LanguageSwitcher: React.FC = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   const { language, setLanguage, getLocalizedPath } = useLanguage();
   
   const switchLanguage = () => {
     const newLanguage = language === 'en' ? 'pl' : 'en';
     setLanguage(newLanguage);
     
-    // Get the corresponding URL for the other language
+    // Get the corresponding path for the new language
     const newPath = getLocalizedPath(location.pathname);
     
-    // Navigate to the new path with a page refresh
+    // Navigate to the new path with full page refresh
+    // This ensures all components re-render with new language
     window.location.href = newPath;
   };
   
