@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Sitemap } from 'lucide-react';
+import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Map } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function Footer() {
@@ -172,7 +172,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap space-x-4 md:space-x-6 mt-4 md:mt-0 justify-center">
             <Link to={getLocalizedPath("/sitemap")} className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors flex items-center">
-              <Sitemap size={14} className="mr-1" />
+              <Map size={14} className="mr-1" />
               {txt.sitemap}
             </Link>
             <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">

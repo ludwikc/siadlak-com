@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
-import { Sitemap as SitemapIcon } from 'lucide-react';
+import { Map as SitemapIcon } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Sitemap = () => {
