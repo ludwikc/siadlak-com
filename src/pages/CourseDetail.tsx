@@ -3,22 +3,25 @@ import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart, Globe } from 'lucide-react';
-import { bilingualCoursesData } from '@/data/courses'; // Import the data structure we created
+import { bilingualCoursesData } from '../data/courses'; // Import the data structure we created
+import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseDetail = () => {
-  const { courseSlug } = useParams();
-  const [language, setLanguage] = useState('en');
-  const navigate = useNavigate();
-  
-  // Check if current URL includes language indicator
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.includes('/pl/')) {
-      setLanguage('pl');
-    } else {
-      setLanguage('en');
+  let { courseSlug } = useParams();
+  // Normalize courseSlug: trim whitespace, convert to lowercase, and remove any trailing hyphens.
+  if (courseSlug) {
+    // Normalize courseSlug: remove diacritics, trim whitespace, convert to lowercase, and remove any trailing hyphens.
+    courseSlug = courseSlug.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    courseSlug = courseSlug.trim().toLowerCase().replace(/-+$/, "");
+    // Fallback: if exact lookup fails, try finding a key that starts with the normalized slug.
+    if (!bilingualCoursesData[courseSlug]) {
+      const fallbackKey = Object.keys(bilingualCoursesData).find(key => key.startsWith(courseSlug));
+      if (fallbackKey) {
+        courseSlug = fallbackKey;
+      }
     }
-  }, []);
+  }
+  const { language } = useLanguage();
   
   // If course doesn't exist, redirect to courses page
   if (!courseSlug || !bilingualCoursesData[courseSlug]) {
@@ -27,35 +30,9 @@ const CourseDetail = () => {
   
   // Get course data for the current language
   const course = bilingualCoursesData[courseSlug][language];
-  
-  // Function to toggle language
-  const toggleLanguage = () => {
-    const newLanguage = language === 'en' ? 'pl' : 'en';
-    setLanguage(newLanguage);
-    
-    // Update URL to reflect language change while maintaining the course page
-    const currentPath = window.location.pathname;
-    if (newLanguage === 'pl' && !currentPath.includes('/pl/')) {
-      navigate(`/pl/courses/${courseSlug}`);
-    } else if (newLanguage === 'en' && currentPath.includes('/pl/')) {
-      navigate(`/courses/${courseSlug}`);
-    }
-  };
 
   return (
     <Layout>
-      {/* Language Switcher - always visible */}
-      <div className="fixed top-20 right-4 z-50">
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          onClick={toggleLanguage}
-          className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20"
-        >
-          <Globe className="h-4 w-4" />
-          {language === 'en' ? 'Polski' : 'English'}
-        </Button>
-      </div>
     
       {/* Hero Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">

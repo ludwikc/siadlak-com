@@ -1,138 +1,15 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, Calendar, Star, CheckCircle } from 'lucide-react';
+import { bilingualCoursesData } from '../../data/courses';
 
-const coursesData = [
-  {
-    id: 'mental-elevator',
-    title: 'Mental Elevator',
-    subtitle: 'Premium Program Mentoringowy 8-Tygodniowy',
-    description: 'Przejmij pełną kontrolę nad swoją karierą i życiem dzięki intensywnemu programowi transformacyjnemu, stworzonemu specjalnie dla profesjonalistów gotowych wznieść się ponad poziom wykonawczy i osiągnąć prawdziwe przywództwo.',
-    features: [
-      'Cotygodniowe sesje coachingowe 1:1 z bezpośrednim dostępem do Ludwika',
-      'Indywidualny plan wdrożeniowy dostosowany do Twoich konkretnych wyzwań',
-      'Metoda Czarnej Pantery do rozwijania naturalnego autorytetu',
-      'Strategiczne ramy wdrożeniowe dla wszystkich obszarów rozwoju',
-      'Dostęp do ekskluzywnej społeczności wysokowydajnych profesjonalistów',
-      'Dożywotni dostęp do materiałów programu i nagrań'
-    ],
-    duration: '8 tygodni',
-    format: 'Spersonalizowany Mentoring 1:1',
-    level: 'Tylko dla Zdecydowanych Profesjonalistów',
-    startDate: 'Ograniczona Dostępność - Wymagana Aplikacja',
-    price: '12 000 PLN',
-    featured: true,
-    image: ''
-  },
-  {
-    id: 'hakowanie-produktywnosci',
-    title: 'Hakowanie Produktywności',
-    subtitle: 'Kompletny System Produktywności',
-    description: 'Zbuduj spersonalizowany system produktywności, który działa z Twoimi naturalnymi mocnymi stronami, a nie przeciwko nim, pozwalając osiągać więcej przy mniejszym wysiłku i zerowym wypaleniu.',
-    features: [
-      'Kompletny system produktywności dostosowany do Twojego stylu poznawczego',
-      'Architektura zarządzania zadaniami i projektami zoptymalizowana pod Twój przepływ pracy',
-      'Protokoły koncentracji i głębokiej pracy eliminujące rozproszenia',
-      'Framework zarządzania energią zapobiegający wypaleniu',
-      'Plan integracji technologii, który stawia narzędzia na właściwym miejscu',
-      'Systemy wdrożeniowe zapewniające ciągłe stosowanie'
-    ],
-    duration: '6 tygodni',
-    format: 'Kurs Online + Społeczność Wdrożeniowa',
-    level: 'Wszyscy Profesjonaliści',
-    startDate: 'Natychmiastowy Dostęp',
-    price: '1 497 PLN',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'silna-glowa',
-    title: 'Silna Głowa',
-    subtitle: 'Mistrzostwo Odporności Psychicznej',
-    description: 'Zbuduj niezachwianą odporność psychiczną, aby prosperować pod presją, odbijać się po niepowodzeniach i utrzymywać szczytową wydajność niezależnie od zewnętrznych okoliczności.',
-    features: [
-      'Kompletna ocena odporności psychicznej i punkt wyjścia',
-      'Protokół optymalizacji reakcji na stres',
-      'Wdrożenie systemu regeneracji i odnowy',
-      'Framework regulacji emocjonalnej w sytuacjach wysokiego ciśnienia',
-      'Systemy podejmowania decyzji w trudnych okolicznościach',
-      'Zrównoważona integracja praktyk dla ciągłego rozwoju'
-    ],
-    duration: '6 tygodni',
-    format: 'Kurs Online + Protokoły Wdrożeniowe',
-    level: 'Wszyscy Profesjonaliści',
-    startDate: 'Przedsprzedaż Dostępna Teraz',
-    price: '897 PLN (Cena w Przedsprzedaży)',
-    featured: false,
-    image: ''
-  },
-  {
-    id: '7-technik',
-    title: '7 Technik Produktywności',
-    subtitle: 'Szybki Zestaw Wdrożeniowy',
-    description: 'Wdróż 7 potężnych technik produktywności w zaledwie 77 minut, które natychmiast odzyskają kontrolę nad Twoim czasem, koncentracją i energią.',
-    features: [
-      'Kompletny 77-minutowy przewodnik wdrożeniowy',
-      '7 sprawdzonych w praktyce technik produktywności z natychmiastowymi rezultatami',
-      'Gotowe do użycia szablony i arkusze robocze',
-      'Protokoły wdrożeniowe krok po kroku',
-      'Przewodnik rozwiązywania typowych przeszkód',
-      'Framework wyboru technik oparty na Twoich konkretnych potrzebach'
-    ],
-    duration: '77 minut',
-    format: 'Natychmiastowy Dostęp do Kursu Cyfrowego',
-    level: 'Wszyscy Profesjonaliści',
-    startDate: 'Dostępne Natychmiast',
-    price: '77 PLN (Specjalna Oferta - Regularna Cena: 497 PLN)',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'train-the-trainer',
-    title: 'TrainTheTrainer',
-    subtitle: 'Elitarny Program Rozwoju Trenerów',
-    description: 'Przekształć swoją wiedzę ekspercką w światowej klasy umiejętności szkoleniowe poprzez intensywny program mentoringowy zaprojektowany dla aspirujących i doświadczonych trenerów dążących do mistrzostwa.',
-    features: [
-      'Spersonalizowana ocena i rozwój stylu szkoleniowego',
-      'Zaawansowane techniki zaangażowania dla utrzymania uwagi',
-      'Ramy architektury treści dla optymalnego uczenia się',
-      'Doskonalenie mechaniki prowadzenia dla maksymalnego wpływu',
-      'Rozwój modelu biznesowego dla usług szkoleniowych',
-      'Strategia pozycjonowania marki osobistej jako eksperta-trenera'
-    ],
-    duration: '6 tygodni',
-    format: 'Intensywny Mentoring i Sesje Warsztatowe',
-    level: 'Dla Poważnych Profesjonalistów Szkoleniowych',
-    startDate: 'Wkrótce - Dołącz do Listy Oczekujących',
-    price: '8 997 PLN',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'total-immersion',
-    title: 'Doświadczenie Totalnej Immersji',
-    subtitle: 'Ekskluzywny Tydzień Transformacji 1:1',
-    description: 'Osiągnij w jeden tydzień to, co normalnie zajęłoby lata, poprzez całkowitą immersję w systemach transformacyjnych z nieograniczonym dostępem do ekspertyzy, obserwacji i wdrażania.',
-    features: [
-      'Pełny tydzień bezpośredniego dostępu 1:1 w europejskiej lokalizacji',
-      'Kompletna obserwacja systemów produktywności i wydajności',
-      'Wdrażanie ram w czasie rzeczywistym w Twoim konkretnym kontekście',
-      'Bezpośredni transfer metodologii poprzez immersyjne doświadczenie',
-      'Rozwój spersonalizowanego planu transformacji',
-      'Ciągłe wsparcie wdrożeniowe po tygodniu immersji'
-    ],
-    duration: '7 Dni',
-    format: 'Ekskluzywne Doświadczenie Immersji 1:1',
-    level: 'Tylko dla Nadzwyczajnego Zaangażowania',
-    startDate: 'Wymagana Aplikacja - Jeden Uczestnik na Kwartał',
-    price: '50 000 PLN',
-    featured: false,
-    image: ''
-  }
-];
+// Generate the courses array from the bilingual data for Polish version
+const coursesData = Object.keys(bilingualCoursesData).map((key) => ({
+  id: key,
+  ...bilingualCoursesData[key].pl
+}));
 
 const PolishCourses = () => {
   return (
@@ -265,8 +142,7 @@ const PolishCourses = () => {
             </h2>
             
             <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
-              Potrzebujesz czegoś bardziej dopasowanego do swoich specyficznych potrzeb? Oferuję programy zaprojektowane na zamówienie
-              dla osób indywidualnych i organizacji z wyjątkowymi wyzwaniami i celami.
+              Potrzebujesz czegoś bardziej dopasowanego do swoich specyficznych potrzeb? Oferuję programy zaprojektowane na zamówienie dla osób indywidualnych i organizacji z wyjątkowymi wyzwaniami i celami.
             </p>
             
             <Link to="/pl/contact">
@@ -301,7 +177,7 @@ const PolishCourses = () => {
                   Jaka jest polityka zwrotów?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Wszystkie programy objęte są 14-dniową gwarancją satysfakcji. Jeśli nie będziesz zadowolony z programu po pierwszych dwóch sesjach, zapewniam pełny zwrot kosztów.
+                  Wszystkie programy objęte są 14-dniową gwarancją satysfakcji. Jeśli po pierwszych dwóch sesjach nie będziesz zadowolony, otrzymasz pełny zwrot kosztów.
                 </p>
               </div>
               
@@ -319,7 +195,7 @@ const PolishCourses = () => {
                   Ile czasu tygodniowo powinienem przeznaczyć na te programy?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Większość programów wymaga 3-5 godzin tygodniowo, łącznie z sesjami na żywo i pracą własną. Dokładny nakład czasu różni się w zależności od programu i zostanie jasno określony przed zapisaniem się.
+                  Większość programów wymaga 3-5 godzin tygodniowo, łącznie z sesjami na żywo i pracą wdrożeniową. Dokładny nakład czasu zostanie jasno określony przed zapisaniem się.
                 </p>
               </div>
             </div>
@@ -332,7 +208,7 @@ const PolishCourses = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Gotowy podnieść swój potencjał?
+              Gotów podnieść swój potencjał?
             </h2>
             
             <p className="text-lg mb-8 text-white/90">

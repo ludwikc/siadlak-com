@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -78,42 +77,54 @@ export default function DesktopNavigation() {
                       {txt.hakowanieProduktywnosiDesc}
                     </p>
                   </Link>
+                  <Link 
+                    to={getLocalizedPath("/courses/silna-glowa")} 
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
+                  >
+                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.silnaGlowa}</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
+                      Details about Silna Głowa
+                    </p>
+                  </Link>
+                  <Link 
+                    to={getLocalizedPath("/courses/7-technik")} 
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
+                  >
+                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt["7-technik"] || "7 Technik Produktywności"}</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
+                      Details about 7 Technik Produktywności
+                    </p>
+                  </Link>
+                  <Link 
+                    to={getLocalizedPath("/courses/train-the-trainer")} 
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
+                  >
+                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.trainTheTrainer}</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
+                      Details about TrainTheTrainer
+                    </p>
+                  </Link>
+                  <Link 
+                    to={getLocalizedPath("/courses/total-immersion")} 
+                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
+                  >
+                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.totalImmersion}</div>
+                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
+                      Details about Total Immersion Experience
+                    </p>
+                  </Link>
                 </div>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger 
-              className="bg-transparent text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta hover:bg-transparent focus:bg-transparent"
-              onClick={handleResourcesClick}
+            <Link 
+              to={getLocalizedPath("/resources")}
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors px-2 py-2"
             >
               {txt.resources}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="grid gap-3 p-4 w-[400px] md:w-[500px] bg-luminous-white dark:bg-deep-space">
-                <div className="grid grid-cols-1 gap-3">
-                  <Link 
-                    to={getLocalizedPath("/resources")} 
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
-                  >
-                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.allResources}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      {txt.allResourcesDesc}
-                    </p>
-                  </Link>
-                  <Link 
-                    to={getLocalizedPath("/testimonials")} 
-                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
-                  >
-                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.testimonials}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      {txt.testimonialsDesc}
-                    </p>
-                  </Link>
-                </div>
-              </div>
-            </NavigationMenuContent>
+            </Link>
           </NavigationMenuItem>
           
           <NavigationMenuItem>

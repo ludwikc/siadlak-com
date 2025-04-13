@@ -1,4 +1,3 @@
-
 // Shared navigation items with translations
 export const getMenuItems = (language: 'en' | 'pl') => {
   const menuItems = {
@@ -16,9 +15,10 @@ export const getMenuItems = (language: 'en' | 'pl') => {
       mentalElevatorDesc: "Premium 8-week mentoring program to elevate your performance",
       hakowanieProduktywnosci: "Hakowanie Produktywności",
       hakowanieProduktywnosiDesc: "Comprehensive course on mastering productivity systems",
-      allResources: "All Resources",
-      allResourcesDesc: "Access free tools, articles, and guides",
-      testimonialsDesc: "Success stories from program participants",
+      // New keys for courses not previously in the menu
+      silnaGlowa: "Silna Głowa",
+      trainTheTrainer: "TrainTheTrainer",
+      totalImmersion: "Total Immersion Experience"
     },
     pl: {
       home: "Strona główna",
@@ -34,9 +34,10 @@ export const getMenuItems = (language: 'en' | 'pl') => {
       mentalElevatorDesc: "Premium 8-tygodniowy program mentoringowy podnoszący Twoją wydajność",
       hakowanieProduktywnosci: "Hakowanie Produktywności",
       hakowanieProduktywnosiDesc: "Kompleksowy kurs opanowania systemów produktywności",
-      allResources: "Wszystkie zasoby",
-      allResourcesDesc: "Uzyskaj dostęp do darmowych narzędzi, artykułów i poradników",
-      testimonialsDesc: "Historie sukcesu uczestników programu",
+      // New keys for courses not previously in the menu
+      silnaGlowa: "Silna Głowa",
+      trainTheTrainer: "TrainTheTrainer",
+      totalImmersion: "Doświadczenie Totalnej Immersji"
     }
   };
   
