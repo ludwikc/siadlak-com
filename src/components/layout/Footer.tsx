@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Map } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import ConsentButton from '../consent/ConsentButton';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,6 +23,7 @@ export default function Footer() {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
       sitemap: "Sitemap",
+      cookieSettings: "Cookie Settings",
       home: "Home",
       about: "About",
       courses: "Courses",
@@ -43,6 +45,7 @@ export default function Footer() {
       privacy: "Polityka prywatności",
       terms: "Warunki korzystania",
       sitemap: "Mapa witryny",
+      cookieSettings: "Ustawienia plików cookie",
       home: "Strona główna",
       about: "O mnie",
       courses: "Kursy",
@@ -181,6 +184,11 @@ export default function Footer() {
             <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
               {txt.terms}
             </a>
+            <ConsentButton 
+              variant="link" 
+              size="sm" 
+              className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors" 
+            />
           </div>
         </div>
       </div>

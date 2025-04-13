@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import ConsentManager from "./components/consent/ConsentManager";
 
 // English pages
 import Index from "./pages/Index";
@@ -37,9 +38,10 @@ const App = () => (
   <LanguageProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+        <ConsentManager>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
           <Routes>
             {/* English Routes */}
             <Route path="/" element={<Index />} />
@@ -86,6 +88,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        </ConsentManager>
       </TooltipProvider>
     </QueryClientProvider>
   </LanguageProvider>

@@ -39,7 +39,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   // Set initial language based on URL or browser preference
   useEffect(() => {
     // Check if we're on a Polish page
-    const isPolishUrl = window.location.pathname.startsWith('/pl/');
+    const isPolishUrl = window.location.pathname.startsWith('/pl');
     
     // Get browser language preference
     const browserLang = navigator.language.substring(0, 2).toLowerCase();
@@ -59,6 +59,30 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, []);
 
+  // Update language when URL changes
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const isPolishUrl = window.location.pathname.startsWith('/pl');
+      if (isPolishUrl && language !== 'pl') {
+        setLanguage('pl');
+        setLanguagePrefix('/pl');
+      } else if (!isPolishUrl && language !== 'en') {
+        setLanguage('en');
+        setLanguagePrefix('');
+      }
+    };
+
+    // Listen for popstate events (browser back/forward)
+    window.addEventListener('popstate', handleLocationChange);
+    
+    // Initial check
+    handleLocationChange();
+    
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+    };
+  }, [language]);
+
   // Store language preference when changed
   useEffect(() => {
     localStorage.setItem('preferredLanguage', language);
@@ -70,18 +94,35 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     // Special handling for resource paths that have different translations
     const normalizedPath = path.endsWith('/') ? path.slice(0, -1) : path;
     
-    if (
-      Object.keys(resourcePathTranslations.en).includes(normalizedPath) ||
-      Object.values(resourcePathTranslations.pl).includes(normalizedPath)
-    ) {
-      // Find the equivalent path in the target language
-      const resourceKey = Object.entries(resourcePathTranslations[language === 'en' ? 'pl' : 'en'])
-        .find(([_, val]) => val === normalizedPath)?.[0];
-      
-      if (resourceKey) {
-        const translatedPath = resourcePathTranslations[language][resourceKey];
-        return language === 'pl' ? `/pl${translatedPath}` : translatedPath;
+    // First, check if this is a resource path that needs special translation
+    // Check in both language mappings
+    let resourceKey: string | undefined;
+    let sourceLang: Language | undefined;
+    
+    // Check if the path is in English resources
+    for (const [key, value] of Object.entries(resourcePathTranslations.en)) {
+      if (value === normalizedPath) {
+        resourceKey = key;
+        sourceLang = 'en';
+        break;
       }
+    }
+    
+    // If not found in English, check Polish resources
+    if (!resourceKey) {
+      for (const [key, value] of Object.entries(resourcePathTranslations.pl)) {
+        if (value === normalizedPath) {
+          resourceKey = key;
+          sourceLang = 'pl';
+          break;
+        }
+      }
+    }
+    
+    // If we found a resource path and the source language is different from the target language
+    if (resourceKey && sourceLang && sourceLang !== language) {
+      const translatedPath = resourcePathTranslations[language][resourceKey];
+      return language === 'pl' ? `/pl${translatedPath}` : translatedPath;
     }
     
     // Remove any existing language prefix

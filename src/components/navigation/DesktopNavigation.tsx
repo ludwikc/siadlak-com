@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { 
@@ -14,8 +14,9 @@ import {
 import { getMenuItems } from './NavigationItems';
 
 export default function DesktopNavigation() {
-  const { language, getLocalizedPath } = useLanguage();
+  const { language, languagePrefix, getLocalizedPath } = useLanguage();
   const navigate = useNavigate();
+  const location = useLocation();
   const txt = getMenuItems(language);
   
   // Direct navigation handlers
