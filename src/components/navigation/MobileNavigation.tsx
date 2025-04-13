@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { getMenuItems } from './NavigationItems';
@@ -11,9 +11,8 @@ interface MobileNavigationProps {
 }
 
 export default function MobileNavigation({ isMenuOpen, setIsMenuOpen }: MobileNavigationProps) {
-  const { language, languagePrefix, getLocalizedPath } = useLanguage();
+  const { language, getLocalizedPath } = useLanguage();
   const navigate = useNavigate();
-  const location = useLocation();
   const txt = getMenuItems(language);
   
   if (!isMenuOpen) return null;

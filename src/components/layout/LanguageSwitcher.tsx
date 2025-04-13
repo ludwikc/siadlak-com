@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -27,18 +28,24 @@ const LanguageSwitcher: React.FC = () => {
     } else {
       // For other pages, use the getLocalizedPath function
       // First, clean the current path by removing any language prefix
-      let cleanPath = location.pathname;
+      let cleanPath = normalizedPath;
       if (cleanPath.startsWith('/pl/')) {
         cleanPath = cleanPath.substring(3);
       } else if (cleanPath === '/pl') {
         cleanPath = '/';
       }
       
-      // Then determine the new path based on the new language
-      if (newLanguage === 'pl') {
-        newPath = cleanPath === '/' ? '/pl' : `/pl${cleanPath}`;
+      // Special handling for course detail pages
+      if (cleanPath.startsWith('/courses/')) {
+        // No special handling needed - course identifiers are the same across languages
+        newPath = newLanguage === 'pl' ? `/pl${cleanPath}` : cleanPath;
       } else {
-        newPath = cleanPath;
+        // Then determine the new path based on the new language
+        if (newLanguage === 'pl') {
+          newPath = cleanPath === '/' ? '/pl' : `/pl${cleanPath}`;
+        } else {
+          newPath = cleanPath;
+        }
       }
       
       // Special handling for resource paths
@@ -83,12 +90,6 @@ const LanguageSwitcher: React.FC = () => {
         // Use the translated resource path for the new language
         const translatedPath = resourcePathTranslations[newLanguage][resourceKey];
         newPath = newLanguage === 'pl' ? `/pl${translatedPath}` : translatedPath;
-      }
-
-      // Check if this is a course path - we want to keep the same course when switching languages
-      if (cleanPath.startsWith('/courses/')) {
-        // No special handling needed - course identifiers are the same across languages
-        newPath = newLanguage === 'pl' ? `/pl${cleanPath}` : cleanPath;
       }
     }
     
