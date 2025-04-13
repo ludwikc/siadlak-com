@@ -1,35 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart, Globe } from 'lucide-react';
-import { bilingualCoursesData } from '../data/courses'; // Import the data structure we created
+import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart } from 'lucide-react';
+import { bilingualCoursesData } from '../data/courses';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseDetail = () => {
   let { courseSlug } = useParams();
-  // Normalize courseSlug: trim whitespace, convert to lowercase, and remove any trailing hyphens.
-  if (courseSlug) {
-    // Normalize courseSlug: remove diacritics, trim whitespace, convert to lowercase, and remove any trailing hyphens.
-    courseSlug = courseSlug.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-    courseSlug = courseSlug.trim().toLowerCase().replace(/-+$/, "");
-    // Fallback: if exact lookup fails, try finding a key that starts with the normalized slug.
-    if (!bilingualCoursesData[courseSlug]) {
-      const fallbackKey = Object.keys(bilingualCoursesData).find(key => key.startsWith(courseSlug));
-      if (fallbackKey) {
-        courseSlug = fallbackKey;
-      }
-    }
-  }
   const { language } = useLanguage();
   
-  // If course doesn't exist, redirect to courses page
-  if (!courseSlug || !bilingualCoursesData[courseSlug]) {
+  // Handle case when courseSlug is undefined
+  if (!courseSlug) {
     return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
+  }
+  
+  // Normalize courseSlug: remove diacritics, trim whitespace, convert to lowercase
+  courseSlug = courseSlug.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+  courseSlug = courseSlug.trim().toLowerCase();
+  
+  // Remove any trailing hyphens
+  courseSlug = courseSlug.replace(/-+$/, "");
+  
+  // Check if the course exists with the exact slug
+  if (!bilingualCoursesData[courseSlug]) {
+    // Try to find a course with a similar slug
+    const possibleMatch = Object.keys(bilingualCoursesData).find(key => 
+      key.startsWith(courseSlug) || courseSlug.startsWith(key)
+    );
+    
+    if (possibleMatch) {
+      courseSlug = possibleMatch;
+    } else {
+      // If no match is found, redirect to courses page
+      return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
+    }
   }
   
   // Get course data for the current language
   const course = bilingualCoursesData[courseSlug][language];
+  
+  // If course data doesn't exist for the current language, redirect
+  if (!course) {
+    return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
+  }
 
   return (
     <Layout>
@@ -235,7 +249,7 @@ const CourseDetail = () => {
                   {language === 'en' ? 'How is this program delivered?' : 'Jak dostarczany jest ten program?'}
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  {language === 'en' 
+                  {language === 'en'
                     ? 'This program combines live sessions (via Zoom) with self-paced materials and exercises. All materials are accessible through a private online platform, and recordings of live sessions are available if you can\'t attend in real-time.'
                     : 'Ten program łączy sesje na żywo (przez Zoom) z materiałami i ćwiczeniami we własnym tempie. Wszystkie materiały są dostępne przez prywatną platformę online, a nagrania sesji na żywo są dostępne, jeśli nie możesz uczestniczyć w czasie rzeczywistym.'}
                 </p>

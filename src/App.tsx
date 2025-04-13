@@ -63,9 +63,11 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/newsletter" element={<Newsletter />} />
                 <Route path="/courses" element={<Courses />} />
-
-                {/* All English course detail routes */}
+                
+                {/* English course detail routes */}
                 <Route path="/courses/:courseSlug" element={<CourseDetail />} />
+                
+                {/* Explicitly define all English course routes for better matching */}
                 <Route path="/courses/mental-elevator" element={<CourseDetail />} />
                 <Route path="/courses/hakowanie-produktywnosci" element={<CourseDetail />} />
                 <Route path="/courses/silna-glowa" element={<CourseDetail />} />
@@ -100,8 +102,10 @@ const App = () => (
                 <Route path="/pl/newsletter" element={<PolishNewsletter />} />
                 <Route path="/pl/courses" element={<PolishCourses />} />
                 
-                {/* All Polish course detail routes */}
+                {/* Polish course detail routes */}
                 <Route path="/pl/courses/:courseSlug" element={<CourseDetail />} />
+                
+                {/* Explicitly define all Polish course routes for better matching */}
                 <Route path="/pl/courses/mental-elevator" element={<CourseDetail />} />
                 <Route path="/pl/courses/hakowanie-produktywnosci" element={<CourseDetail />} />
                 <Route path="/pl/courses/silna-glowa" element={<CourseDetail />} />

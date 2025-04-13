@@ -37,8 +37,8 @@ const LanguageSwitcher: React.FC = () => {
       
       // Special handling for course detail pages
       if (cleanPath.startsWith('/courses/')) {
-        // No special handling needed - course identifiers are the same across languages
-        newPath = newLanguage === 'pl' ? `/pl${cleanPath}` : cleanPath;
+        const courseSlug = cleanPath.substring('/courses/'.length);
+        newPath = newLanguage === 'pl' ? `/pl/courses/${courseSlug}` : `/courses/${courseSlug}`;
       } else {
         // Then determine the new path based on the new language
         if (newLanguage === 'pl') {
@@ -88,7 +88,7 @@ const LanguageSwitcher: React.FC = () => {
       
       if (isResourcePath && resourceKey) {
         // Use the translated resource path for the new language
-        const translatedPath = resourcePathTranslations[newLanguage][resourceKey];
+        const translatedPath = resourcePathTranslations[language === 'en' ? 'pl' : 'en'][resourceKey];
         newPath = newLanguage === 'pl' ? `/pl${translatedPath}` : translatedPath;
       }
     }
