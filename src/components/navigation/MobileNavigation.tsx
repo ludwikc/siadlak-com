@@ -62,6 +62,34 @@ export default function MobileNavigation({ isMenuOpen, setIsMenuOpen }: MobileNa
             >
               {txt.hakowanieProduktywnosci}
             </Link>
+            <Link 
+              to={getLocalizedPath("/courses/silna-glowa")}
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-1"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {txt.silnaGlowa}
+            </Link>
+            <Link 
+              to={getLocalizedPath("/courses/7-technik")}
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-1"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {txt["7-technik"]}
+            </Link>
+            <Link 
+              to={getLocalizedPath("/courses/train-the-trainer")}
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-1"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {txt.trainTheTrainer}
+            </Link>
+            <Link 
+              to={getLocalizedPath("/courses/total-immersion")}
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-1"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {txt.totalImmersion}
+            </Link>
           </div>
         </div>
         

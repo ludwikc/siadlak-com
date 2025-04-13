@@ -63,7 +63,16 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/newsletter" element={<Newsletter />} />
                 <Route path="/courses" element={<Courses />} />
+
+                {/* All English course detail routes */}
                 <Route path="/courses/:courseSlug" element={<CourseDetail />} />
+                <Route path="/courses/mental-elevator" element={<CourseDetail />} />
+                <Route path="/courses/hakowanie-produktywnosci" element={<CourseDetail />} />
+                <Route path="/courses/silna-glowa" element={<CourseDetail />} />
+                <Route path="/courses/7-technik" element={<CourseDetail />} />
+                <Route path="/courses/train-the-trainer" element={<CourseDetail />} />
+                <Route path="/courses/total-immersion" element={<CourseDetail />} />
+
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/resources/:articleSlug" element={<ResourceArticle />} />
                 <Route path="/resources/digital-command-checklist" element={<ResourceArticle />} />
@@ -90,7 +99,16 @@ const App = () => (
                 <Route path="/pl/contact" element={<PolishContact />} />
                 <Route path="/pl/newsletter" element={<PolishNewsletter />} />
                 <Route path="/pl/courses" element={<PolishCourses />} />
+                
+                {/* All Polish course detail routes */}
                 <Route path="/pl/courses/:courseSlug" element={<CourseDetail />} />
+                <Route path="/pl/courses/mental-elevator" element={<CourseDetail />} />
+                <Route path="/pl/courses/hakowanie-produktywnosci" element={<CourseDetail />} />
+                <Route path="/pl/courses/silna-glowa" element={<CourseDetail />} />
+                <Route path="/pl/courses/7-technik" element={<CourseDetail />} />
+                <Route path="/pl/courses/train-the-trainer" element={<CourseDetail />} />
+                <Route path="/pl/courses/total-immersion" element={<CourseDetail />} />
+                
                 <Route path="/pl/resources" element={<Resources />} />
                 <Route path="/pl/resources/:articleSlug" element={<ResourceArticle />} />
                 <Route path="/pl/resources/lista-kontrolna-cyfrowego-dowodzenia" element={<ResourceArticle />} />

@@ -125,6 +125,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       return language === 'pl' ? `/pl${translatedPath}` : translatedPath;
     }
     
+    // Special handling for course paths
+    if (path.startsWith('/courses/')) {
+      return language === 'pl' ? `/pl${path}` : path;
+    }
+    
     // Remove any existing language prefix
     let cleanPath = path;
     if (cleanPath.startsWith('/pl/')) {

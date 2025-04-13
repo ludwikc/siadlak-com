@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -84,6 +83,12 @@ const LanguageSwitcher: React.FC = () => {
         // Use the translated resource path for the new language
         const translatedPath = resourcePathTranslations[newLanguage][resourceKey];
         newPath = newLanguage === 'pl' ? `/pl${translatedPath}` : translatedPath;
+      }
+
+      // Check if this is a course path - we want to keep the same course when switching languages
+      if (cleanPath.startsWith('/courses/')) {
+        // No special handling needed - course identifiers are the same across languages
+        newPath = newLanguage === 'pl' ? `/pl${cleanPath}` : cleanPath;
       }
     }
     

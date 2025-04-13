@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -83,16 +84,16 @@ export default function DesktopNavigation() {
                   >
                     <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.silnaGlowa}</div>
                     <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      Details about Silna Głowa
+                      {txt.silnaGlowaDesc}
                     </p>
                   </Link>
                   <Link 
                     to={getLocalizedPath("/courses/7-technik")} 
                     className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-secondary/50 dark:hover:bg-quantum-blue/30"
                   >
-                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt["7-technik"] || "7 Technik Produktywności"}</div>
+                    <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt["7-technik"]}</div>
                     <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      Details about 7 Technik Produktywności
+                      {txt["7-technikDesc"]}
                     </p>
                   </Link>
                   <Link 
@@ -101,7 +102,7 @@ export default function DesktopNavigation() {
                   >
                     <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.trainTheTrainer}</div>
                     <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      Details about TrainTheTrainer
+                      {txt.trainTheTrainerDesc}
                     </p>
                   </Link>
                   <Link 
@@ -110,7 +111,7 @@ export default function DesktopNavigation() {
                   >
                     <div className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">{txt.totalImmersion}</div>
                     <p className="line-clamp-2 text-sm leading-snug text-subtle-slate dark:text-silver-mist/80">
-                      Details about Total Immersion Experience
+                      {txt.totalImmersionDesc}
                     </p>
                   </Link>
                 </div>
