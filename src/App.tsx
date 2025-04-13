@@ -22,6 +22,11 @@ import ResourceArticle from "./pages/ResourceArticle";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
 import Sitemap from "./pages/Sitemap";
+import Legal from "./pages/Legal";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsNewsletter from "./pages/legal/TermsNewsletter";
+import TermsSales from "./pages/legal/TermsSales";
+import TermsCommunity from "./pages/legal/TermsCommunity";
 
 // Polish pages
 import PolishIndex from "./pages/pl/Index";
@@ -33,6 +38,11 @@ import PolishNewsletter from "./pages/pl/Newsletter";
 import PolishTestimonials from "./pages/pl/Testimonials";
 import PolishThankYou from "./pages/pl/ThankYou";
 import PolishSitemap from "./pages/pl/Sitemap";
+import PolishLegal from "./pages/pl/Legal";
+import PolishPrivacyPolicy from "./pages/pl/legal/PrivacyPolicy";
+import PolishTermsNewsletter from "./pages/pl/legal/TermsNewsletter";
+import PolishTermsSales from "./pages/pl/legal/TermsSales";
+import PolishTermsCommunity from "./pages/pl/legal/TermsCommunity";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +77,13 @@ const App = () => (
                 <Route path="/assessment" element={<Index />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 
+                {/* Legal Routes */}
+                <Route path="/legal" element={<Legal />} />
+                <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/legal/terms-newsletter" element={<TermsNewsletter />} />
+                <Route path="/legal/terms-sales" element={<TermsSales />} />
+                <Route path="/legal/terms-community" element={<TermsCommunity />} />
+                
                 {/* Polish Routes */}
                 <Route path="/pl" element={<PolishIndex />} />
                 <Route path="/pl/about" element={<PolishAbout />} />
@@ -87,6 +104,13 @@ const App = () => (
                 <Route path="/pl/thank-you/discovery-call" element={<PolishThankYou type="discovery-call" />} />
                 <Route path="/pl/assessment" element={<PolishIndex />} />
                 <Route path="/pl/sitemap" element={<PolishSitemap />} />
+                
+                {/* Polish Legal Routes */}
+                <Route path="/pl/legal" element={<PolishLegal />} />
+                <Route path="/pl/legal/privacy-policy" element={<PolishPrivacyPolicy />} />
+                <Route path="/pl/legal/terms-newsletter" element={<PolishTermsNewsletter />} />
+                <Route path="/pl/legal/terms-sales" element={<PolishTermsSales />} />
+                <Route path="/pl/legal/terms-community" element={<PolishTermsCommunity />} />
                 
                 {/* Catch-all route */}
                 <Route path="*" element={<NotFound />} />

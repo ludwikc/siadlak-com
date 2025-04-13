@@ -75,16 +75,16 @@ export default function Footer() {
               {txt.tagline}
             </p>
             <div className="flex space-x-4 text-subtle-slate">
-              <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="YouTube">
+              <a href="https://youtube.com/ludwikcsiadlak" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="YouTube">
                 <Youtube size={20} />
               </a>
             </div>
@@ -122,6 +122,11 @@ export default function Footer() {
               <li>
                 <Link to={getLocalizedPath("/newsletter")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   {txt.newsletter}
+                </Link>
+              </li>
+              <li>
+                <Link to={getLocalizedPath("/legal")} className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  {language === 'en' ? 'Legal' : 'Informacje Prawne'}
                 </Link>
               </li>
             </ul>
@@ -178,12 +183,12 @@ export default function Footer() {
               <Map size={14} className="mr-1" />
               {txt.sitemap}
             </Link>
-            <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+            <Link to={getLocalizedPath("/legal/privacy-policy")} className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
               {txt.privacy}
-            </a>
-            <a href="https://docs.siadlak.com/legal/regulaminy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+            </Link>
+            <Link to={getLocalizedPath("/legal")} className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
               {txt.terms}
-            </a>
+            </Link>
             <ConsentButton 
               variant="link" 
               size="sm" 

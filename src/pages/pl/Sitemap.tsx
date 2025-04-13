@@ -49,6 +49,15 @@ const PolishSitemap = () => {
     { path: "/thank-you/newsletter", label: "Dziękuję za subskrypcję" },
     { path: "/thank-you/discovery-call", label: "Dziękuję za umówienie rozmowy" },
   ];
+  
+  // Legal pages
+  const legalPages = [
+    { path: "/legal", label: "Informacje Prawne" },
+    { path: "/legal/privacy-policy", label: "Polityka Prywatności" },
+    { path: "/legal/terms-newsletter", label: "Regulamin (Newsletter)" },
+    { path: "/legal/terms-sales", label: "Regulamin (Sprzedaż)" },
+    { path: "/legal/terms-community", label: "Regulamin (Społeczność)" },
+  ];
 
   return (
     <Layout>
@@ -137,6 +146,26 @@ const PolishSitemap = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {thankYouPages.map((page, index) => (
+                  <Link 
+                    key={index} 
+                    to={getLocalizedPath(page.path)} 
+                    className="p-3 hover:bg-secondary/20 rounded-md transition-colors flex items-center text-deep-charcoal dark:text-silver-mist"
+                  >
+                    <span className="mr-2">•</span> {page.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <div className="glass-card p-8 rounded-xl mb-8">
+              <div className="flex items-center mb-6">
+                <SitemapIcon size={24} className="mr-3 text-neural-violet dark:text-luminal-magenta" />
+                <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
+                  Strony Prawne
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {legalPages.map((page, index) => (
                   <Link 
                     key={index} 
                     to={getLocalizedPath(page.path)} 

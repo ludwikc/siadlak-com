@@ -49,6 +49,15 @@ const Sitemap = () => {
     { path: "/thank-you/newsletter", label: language === 'en' ? "Newsletter Thank You" : "Dziękuję za subskrypcję" },
     { path: "/thank-you/discovery-call", label: language === 'en' ? "Discovery Call Thank You" : "Dziękuję za umówienie rozmowy" },
   ];
+  
+  // Legal pages
+  const legalPages = [
+    { path: "/legal", label: language === 'en' ? "Legal Information" : "Informacje Prawne" },
+    { path: "/legal/privacy-policy", label: language === 'en' ? "Privacy Policy" : "Polityka Prywatności" },
+    { path: "/legal/terms-newsletter", label: language === 'en' ? "Terms and Conditions (Newsletter)" : "Regulamin (Newsletter)" },
+    { path: "/legal/terms-sales", label: language === 'en' ? "Terms and Conditions (Sales)" : "Regulamin (Sprzedaż)" },
+    { path: "/legal/terms-community", label: language === 'en' ? "Terms and Conditions (Community)" : "Regulamin (Społeczność)" },
+  ];
 
   return (
     <Layout>
@@ -137,6 +146,26 @@ const Sitemap = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {thankYouPages.map((page, index) => (
+                  <Link 
+                    key={index} 
+                    to={getLocalizedPath(page.path)} 
+                    className="p-3 hover:bg-secondary/20 rounded-md transition-colors flex items-center text-deep-charcoal dark:text-silver-mist"
+                  >
+                    <span className="mr-2">•</span> {page.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <div className="glass-card p-8 rounded-xl mb-8">
+              <div className="flex items-center mb-6">
+                <SitemapIcon size={24} className="mr-3 text-neural-violet dark:text-luminal-magenta" />
+                <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
+                  {language === 'en' ? 'Legal Pages' : 'Strony Prawne'}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {legalPages.map((page, index) => (
                   <Link 
                     key={index} 
                     to={getLocalizedPath(page.path)} 
