@@ -12,92 +12,34 @@ const LanguageSwitcher: React.FC = () => {
     // Get the new language
     const newLanguage = language === 'en' ? 'pl' : 'en';
     
-    // Determine the new path based on the current path and new language
-    let newPath;
+    // Use the context's getLocalizedPath function to determine the new path
+    // This ensures consistent path translation across the application
+    let currentPath = location.pathname;
     
-    // Normalize the current path
-    const normalizedPath = location.pathname.endsWith('/') 
-      ? location.pathname.slice(0, -1) 
-      : location.pathname;
+    // If we're at the root, handle specially
+    if (currentPath === '/' && newLanguage === 'pl') {
+      currentPath = '/pl';
+    } else if (currentPath === '/pl' && newLanguage === 'en') {
+      currentPath = '/';
+    }
     
-    // Special handling for the home page
-    if (normalizedPath === '/' && newLanguage === 'pl') {
-      newPath = '/pl';
-    } else if (normalizedPath === '/pl' && newLanguage === 'en') {
-      newPath = '/';
+    // For course detail pages, ensure we're using the correct path format
+    const courseDetailRegex = /^\/(pl\/)?courses\/([^/]+)\/?$/;
+    const courseMatch = currentPath.match(courseDetailRegex);
+    
+    if (courseMatch) {
+      const courseSlug = courseMatch[2];
+      currentPath = newLanguage === 'pl' ? `/pl/courses/${courseSlug}` : `/courses/${courseSlug}`;
     } else {
-      // For other pages, use the getLocalizedPath function
-      // First, clean the current path by removing any language prefix
-      let cleanPath = normalizedPath;
-      if (cleanPath.startsWith('/pl/')) {
-        cleanPath = cleanPath.substring(3);
-      } else if (cleanPath === '/pl') {
-        cleanPath = '/';
-      }
-      
-      // Special handling for course detail pages
-      if (cleanPath.startsWith('/courses/')) {
-        const courseSlug = cleanPath.substring('/courses/'.length);
-        newPath = newLanguage === 'pl' ? `/pl/courses/${courseSlug}` : `/courses/${courseSlug}`;
-      } else {
-        // Then determine the new path based on the new language
-        if (newLanguage === 'pl') {
-          newPath = cleanPath === '/' ? '/pl' : `/pl${cleanPath}`;
-        } else {
-          newPath = cleanPath;
-        }
-      }
-      
-      // Special handling for resource paths
-      const resourcePathTranslations = {
-        en: {
-          '/resources/digital-command-checklist': '/resources/digital-command-checklist',
-          '/resources/5-minutes-to-focus': '/resources/5-minutes-to-focus',
-          '/resources/ai-command-scripts': '/resources/ai-command-scripts',
-        },
-        pl: {
-          '/resources/digital-command-checklist': '/resources/lista-kontrolna-cyfrowego-dowodzenia',
-          '/resources/5-minutes-to-focus': '/resources/5-minut-do-koncentracji',
-          '/resources/ai-command-scripts': '/resources/skrypty-dowodzenia-ai',
-        }
-      };
-      
-      // Check if this is a resource path that needs special translation
-      let isResourcePath = false;
-      let resourceKey;
-      
-      // Check if the path is in English resources
-      for (const [key, value] of Object.entries(resourcePathTranslations.en)) {
-        if (cleanPath === value) {
-          resourceKey = key;
-          isResourcePath = true;
-          break;
-        }
-      }
-      
-      // If not found in English, check Polish resources
-      if (!isResourcePath) {
-        for (const [key, value] of Object.entries(resourcePathTranslations.pl)) {
-          if (cleanPath === value) {
-            resourceKey = key;
-            isResourcePath = true;
-            break;
-          }
-        }
-      }
-      
-      if (isResourcePath && resourceKey) {
-        // Use the translated resource path for the new language
-        const translatedPath = resourcePathTranslations[language === 'en' ? 'pl' : 'en'][resourceKey];
-        newPath = newLanguage === 'pl' ? `/pl${translatedPath}` : translatedPath;
-      }
+      // For other pages, get the localized path
+      currentPath = getLocalizedPath(currentPath);
     }
     
     // Update language in context
     setLanguage(newLanguage);
     
-    // Force full page reload to ensure all components re-render with new language
-    window.location.href = newPath;
+    // Navigate to the new path
+    window.location.href = currentPath;
   };
   
   return (

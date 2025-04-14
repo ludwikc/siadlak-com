@@ -1,140 +1,20 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, Calendar, Star, CheckCircle } from 'lucide-react';
-
-const coursesData = [
-  {
-    id: 'mental-elevator',
-    title: 'Mental Elevator',
-    subtitle: 'Premium 8-Week Mentoring Program',
-    description: 'Take complete control of your career and life with an immersive transformation program designed specifically for professionals ready to elevate beyond execution into true leadership.',
-    features: [
-      'Weekly 1:1 coaching sessions with direct access to Ludwik',
-      'Custom implementation plan tailored to your specific challenges',
-      'Black Panther Method for developing natural authority',
-      'Strategic implementation frameworks for all areas of development',
-      'Access to exclusive community of high-performers',
-      'Lifetime access to program materials and recordings'
-    ],
-    duration: '8 weeks',
-    format: 'Personalized 1:1 Mentoring',
-    level: 'For Committed Professionals Only',
-    startDate: 'Limited Availability - Application Required',
-    price: '12,000 PLN',
-    featured: true,
-    image: ''
-  },
-  {
-    id: 'hakowanie-produktywnosci',
-    title: 'Hakowanie Produktywności',
-    subtitle: 'Complete Productivity System',
-    description: 'Develop a personalized productivity system that works with your natural strengths rather than against them, allowing you to achieve more with less effort and zero burnout.',
-    features: [
-      'Complete productivity system tailored to your cognitive style',
-      'Task and project management architecture optimized for your workflow',
-      'Focus and deep work protocols that eliminate distractions',
-      'Energy management framework that prevents burnout',
-      'Technology integration blueprint that puts tools in their proper place',
-      'Implementation systems that ensure continued application'
-    ],
-    duration: '6 weeks',
-    format: 'Online Course + Community Implementation',
-    level: 'All Professionals',
-    startDate: 'Instant Access Available',
-    price: '1,497 PLN',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'silna-glowa',
-    title: 'Silna Głowa',
-    subtitle: 'Mental Resilience Mastery',
-    description: 'Build unshakable mental resilience to thrive under pressure, bounce back from setbacks, and maintain peak performance regardless of external circumstances.',
-    features: [
-      'Complete mental resilience assessment and baseline',
-      'Stress response optimization protocol',
-      'Recovery and renewal system implementation',
-      'Emotional regulation framework for high-pressure situations',
-      'Decision-making systems for challenging circumstances',
-      'Sustainable practice integration for ongoing development'
-    ],
-    duration: '6 weeks',
-    format: 'Online Course + Implementation Protocols',
-    level: 'All Professionals',
-    startDate: 'Pre-Sale Available Now',
-    price: '897 PLN (Pre-Sale Price)',
-    featured: false,
-    image: ''
-  },
-  {
-    id: '7-technik',
-    title: '7 Technik Produktywności',
-    subtitle: 'Rapid Implementation Toolkit',
-    description: 'Implement 7 powerful productivity techniques in just 77 minutes that will immediately reclaim control of your time, focus, and energy.',
-    features: [
-      'Complete 77-minute implementation guide',
-      '7 field-tested productivity techniques with immediate results',
-      'Ready-to-use templates and worksheets',
-      'Step-by-step implementation protocols',
-      'Troubleshooting guide for common obstacles',
-      'Technique selection framework based on your specific needs'
-    ],
-    duration: '77 minutes',
-    format: 'Instant Access Digital Course',
-    level: 'All Professionals',
-    startDate: 'Available Immediately',
-    price: '77 PLN (Special Offer - Regular Price: 497 PLN)',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'train-the-trainer',
-    title: 'TrainTheTrainer',
-    subtitle: 'Elite Trainer Development Program',
-    description: 'Transform your expertise into world-class training capabilities through an intensive mentoring program designed for aspiring and established trainers seeking mastery.',
-    features: [
-      'Personalized training style assessment and development',
-      'Advanced engagement techniques for maintaining attention',
-      'Content architecture frameworks for optimal learning',
-      'Delivery mechanics refinement for maximum impact',
-      'Business model development for training services',
-      'Personal brand positioning strategy as an expert trainer'
-    ],
-    duration: '6 weeks',
-    format: 'Intensive Mentoring & Workshop Sessions',
-    level: 'For Serious Training Professionals',
-    startDate: 'Coming Soon - Join Waitlist',
-    price: '8,997 PLN',
-    featured: false,
-    image: ''
-  },
-  {
-    id: 'total-immersion',
-    title: 'Total Immersion Experience',
-    subtitle: 'Exclusive 1:1 Transformation Week',
-    description: 'Achieve in one week what would normally take years through complete immersion in transformative systems with unlimited access to expertise, observation, and implementation.',
-    features: [
-      'Full week of direct 1:1 access in a European location',
-      'Complete observation of productivity and performance systems',
-      'Real-time implementation of frameworks in your specific context',
-      'Direct transfer of methodologies through immersive experience',
-      'Personalized transformation blueprint development',
-      'Ongoing implementation support after the immersion week'
-    ],
-    duration: '7 Days',
-    format: 'Exclusive 1:1 Immersion Experience',
-    level: 'For Extraordinary Commitment Only',
-    startDate: 'Application Required - One Participant Per Quarter',
-    price: '50,000 PLN',
-    featured: false,
-    image: ''
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
+import { bilingualCoursesData } from '../data/courses';
 
 const Courses = () => {
+  const { getLocalizedPath } = useLanguage();
+  
+  // Generate the courses array from the bilingual data for English version
+  const coursesData = Object.keys(bilingualCoursesData).map((key) => ({
+    id: key,
+    ...bilingualCoursesData[key].en
+  }));
+
   return (
     <Layout>
       {/* Hero Section */}

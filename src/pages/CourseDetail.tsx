@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart } from 'lucide-react';
@@ -7,34 +7,19 @@ import { bilingualCoursesData } from '../data/courses';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const CourseDetail = () => {
-  let { courseSlug } = useParams();
-  const { language } = useLanguage();
+  const { courseSlug } = useParams<{ courseSlug: string }>();
+  const { language, languagePrefix } = useLanguage();
+  const location = useLocation();
   
   // Handle case when courseSlug is undefined
   if (!courseSlug) {
     return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
   }
   
-  // Normalize courseSlug: remove diacritics, trim whitespace, convert to lowercase
-  courseSlug = courseSlug.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-  courseSlug = courseSlug.trim().toLowerCase();
-  
-  // Remove any trailing hyphens
-  courseSlug = courseSlug.replace(/-+$/, "");
-  
-  // Check if the course exists with the exact slug
+  // Check if course exists in our data
   if (!bilingualCoursesData[courseSlug]) {
-    // Try to find a course with a similar slug
-    const possibleMatch = Object.keys(bilingualCoursesData).find(key => 
-      key.startsWith(courseSlug) || courseSlug.startsWith(key)
-    );
-    
-    if (possibleMatch) {
-      courseSlug = possibleMatch;
-    } else {
-      // If no match is found, redirect to courses page
-      return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
-    }
+    console.log(`Course not found: ${courseSlug}`);
+    return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
   }
   
   // Get course data for the current language
@@ -42,12 +27,12 @@ const CourseDetail = () => {
   
   // If course data doesn't exist for the current language, redirect
   if (!course) {
+    console.log(`Course data not found for language: ${language}`);
     return <Navigate to={language === 'en' ? "/courses" : "/pl/courses"} />;
   }
 
   return (
     <Layout>
-    
       {/* Hero Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">

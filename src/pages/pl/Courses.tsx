@@ -1,17 +1,21 @@
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, Calendar, Star, CheckCircle } from 'lucide-react';
 import { bilingualCoursesData } from '../../data/courses';
-
-// Generate the courses array from the bilingual data for Polish version
-const coursesData = Object.keys(bilingualCoursesData).map((key) => ({
-  id: key,
-  ...bilingualCoursesData[key].pl
-}));
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const PolishCourses = () => {
+  const { getLocalizedPath } = useLanguage();
+  
+  // Generate the courses array from the bilingual data for Polish version
+  const coursesData = Object.keys(bilingualCoursesData).map((key) => ({
+    id: key,
+    ...bilingualCoursesData[key].pl
+  }));
+
   return (
     <Layout>
       {/* Hero Section */}

@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'pl';
@@ -124,10 +125,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       return language === 'pl' ? `/pl${translatedPath}` : translatedPath;
     }
     
-    // Special handling for course paths
-    if (normalizedPath.startsWith('/courses/')) {
-      // For course detail pages, we keep the same slug and just add/remove the language prefix
-      return language === 'pl' ? `/pl${normalizedPath}` : normalizedPath;
+    // Special handling for course detail pages - preserve the course slug
+    const courseDetailRegex = /^\/(pl\/)?courses\/([^/]+)\/?$/;
+    const courseMatch = normalizedPath.match(courseDetailRegex);
+    
+    if (courseMatch) {
+      const courseSlug = courseMatch[2];
+      return language === 'pl' ? `/pl/courses/${courseSlug}` : `/courses/${courseSlug}`;
     }
     
     // Remove any existing language prefix
