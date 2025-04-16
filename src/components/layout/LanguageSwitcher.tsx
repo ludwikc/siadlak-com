@@ -3,6 +3,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Globe } from 'lucide-react';
+import { Button } from '../ui/button';
 
 const LanguageSwitcher: React.FC = () => {
   const location = useLocation();
@@ -43,16 +44,18 @@ const LanguageSwitcher: React.FC = () => {
   };
   
   return (
-    <button 
+    <Button 
       onClick={switchLanguage}
-      className="flex items-center p-2 rounded-full bg-midnight-black/10 dark:bg-luminous-white/10 hover:bg-midnight-black/20 dark:hover:bg-luminous-white/20 text-deep-charcoal dark:text-silver-detail transition-colors"
+      variant="ghost"
+      size="sm"
+      className="rounded-full flex items-center gap-1"
       aria-label={`Switch to ${language === 'en' ? 'Polish' : 'English'}`}
     >
-      <Globe size={18} className="mr-1" />
-      <span className="text-sm font-medium">
+      <Globe size={18} />
+      <span className="font-medium">
         {language === 'en' ? 'PL' : 'EN'}
       </span>
-    </button>
+    </Button>
   );
 };
 
