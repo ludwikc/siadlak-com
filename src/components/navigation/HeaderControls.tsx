@@ -11,7 +11,7 @@ export default function HeaderControls() {
     <div className="flex items-center space-x-2">
       <button 
         onClick={toggleTheme} 
-        className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+        className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-detail transition-colors"
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       >
         {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}

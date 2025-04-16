@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -6,8 +7,8 @@
 
 @layer base {
   :root {
-    --background: 240 33% 99%;
-    --foreground: 240 10% 4%;
+    --background: 240 33% 99%; /* Luminous White */
+    --foreground: 240 10% 4%; /* Deep Charcoal */
 
     --card: 0 0% 100%;
     --card-foreground: 240 10% 4%;
@@ -15,56 +16,56 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 4%;
 
-    --primary: 271 78% 26%;
+    --primary: 271 100% 50%; /* Primary Purple */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 5% 96%;
+    --secondary: 240 20% 96%; /* Light purple-gray */
     --secondary-foreground: 240 6% 10%;
 
-    --muted: 240 5% 96%;
+    --muted: 240 20% 96%;
     --muted-foreground: 240 4% 46%;
 
-    --accent: 271 78% 26%;
+    --accent: 281 100% 50%; /* Electric Violet */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 271 78% 26%;
+    --border: 240 20% 92%; /* Silver Detail */
+    --input: 240 20% 92%;
+    --ring: 271 100% 50%; /* Primary Purple */
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 240 10% 4%; /* Midnight Black */
+    --foreground: 240 20% 94%; /* Silver Detail */
 
     --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 240 20% 94%;
 
     --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 240 20% 94%;
 
-    --primary: 320 80% 45%;
+    --primary: 282 100% 50%; /* Electric Violet */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 4% 16%;
+    --secondary: 240 9% 12%; /* Slightly lighter black */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4% 16%;
+    --muted: 240 9% 12%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 320 80% 45%;
+    --accent: 292 100% 66%; /* Magenta Glow */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 271 78% 26%;
+    --border: 240 9% 12%;
+    --input: 240 9% 12%;
+    --ring: 282 100% 50%; /* Electric Violet */
   }
 }
 
@@ -82,58 +83,97 @@
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-4xl md:text-5xl lg:text-6xl text-primary-purple dark:text-luminous-white;
   }
   
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl text-primary-purple dark:text-luminous-white;
   }
   
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-2xl md:text-3xl text-electric-violet dark:text-silver-detail;
   }
   
   h4 {
-    @apply text-xl md:text-2xl;
+    @apply text-xl md:text-2xl text-electric-violet dark:text-silver-detail;
   }
   
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-deep-charcoal dark:text-silver-detail;
+  }
+
+  a {
+    @apply text-electric-violet hover:text-magenta-glow dark:text-electric-violet dark:hover:text-magenta-glow transition-colors;
+  }
+
+  a.highlight {
+    @apply hover:dark:text-shadow-text-glow;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 shadow-sm;
+    @apply bg-luminous-white/80 dark:bg-midnight-black/50 backdrop-blur-sm border border-silver-detail dark:border-white/10 shadow-sm;
   }
   
   .btn-primary {
-    @apply bg-neural-violet hover:bg-ascension-pink text-white py-3 px-6 rounded-md transition-colors font-medium;
+    @apply bg-primary-button-gradient text-luminous-white py-3 px-6 rounded-md shadow-button-glow hover:shadow-button-glow-hover transition-all duration-300 font-medium;
   }
   
   .btn-secondary {
-    @apply bg-white dark:bg-white/10 hover:bg-gray-100 dark:hover:bg-white/20 text-neural-violet dark:text-silver-mist py-3 px-6 rounded-md transition-colors font-medium border border-gray-200 dark:border-white/10;
+    @apply bg-transparent border border-primary-purple text-primary-purple dark:text-silver-detail hover:bg-primary-purple/10 dark:hover:bg-primary-purple/20 py-3 px-6 rounded-md transition-colors font-medium;
+  }
+  
+  .featured-element {
+    @apply border border-primary-purple shadow-element-glow;
+  }
+
+  .highlight-text {
+    @apply text-luminous-white dark:text-shadow-text-glow;
   }
   
   .section {
     @apply py-16 md:py-24;
   }
+
+  .logo-gradient-text {
+    @apply bg-logo-glow-gradient bg-clip-text text-transparent;
+  }
+
+  .header-gradient-bg {
+    @apply bg-header-banner-gradient;
+  }
+
+  .accent-gradient-bg {
+    @apply bg-accent-highlight-gradient;
+  }
+
+  .subtle-gradient-bg {
+    @apply bg-subtle-background-gradient;
+  }
+}
+
+/* Add text-shadow utilities */
+@layer utilities {
+  .text-shadow-text-glow {
+    text-shadow: 0 0 10px rgba(124, 0, 255, 0.7);
+  }
 }
 
 .prose h2 {
-  @apply text-2xl font-bold mt-8 mb-4 text-deep-charcoal dark:text-silver-mist;
+  @apply text-2xl font-bold mt-8 mb-4 text-primary-purple dark:text-silver-detail;
 }
 
 .prose h3 {
-  @apply text-xl font-bold mt-6 mb-3 text-deep-charcoal dark:text-silver-mist;
+  @apply text-xl font-bold mt-6 mb-3 text-electric-violet dark:text-silver-detail;
 }
 
 .prose p {
-  @apply mb-4 text-subtle-slate dark:text-silver-mist/80;
+  @apply mb-4 text-deep-charcoal dark:text-silver-detail/80;
 }
 
 .prose ul {
-  @apply mb-4 ml-6 text-subtle-slate dark:text-silver-mist/80;
+  @apply mb-4 ml-6 text-deep-charcoal dark:text-silver-detail/80;
 }
 
 .prose li {

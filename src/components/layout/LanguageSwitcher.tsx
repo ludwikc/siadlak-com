@@ -45,7 +45,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <button 
       onClick={switchLanguage}
-      className="flex items-center p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+      className="flex items-center p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-detail transition-colors"
       aria-label={`Switch to ${language === 'en' ? 'Polish' : 'English'}`}
     >
       <Globe size={18} className="mr-1" />

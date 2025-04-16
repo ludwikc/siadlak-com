@@ -53,17 +53,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom colors for siadlak.com
-				'deep-space': '#0A0A0D',
-				'neural-violet': '#3B0F77',
-				'quantum-blue': '#061A40',
-				'ascension-pink': '#B0128C',
-				'luminal-magenta': '#DA1EAE',
-				'silver-mist': '#E1E1E6',
-				'subtle-slate': '#79788C',
+				// New color palette for siadlak.com
+				'primary-purple': '#7C00FF',
+				'electric-violet': '#B100FF',
+				'magenta-glow': '#D951FF',
+				'quantum-blue': '#4A29D9',
+				'midnight-black': '#0B0B0D',
 				'luminous-white': '#F9F9FB',
+				'silver-detail': '#E9E9F1',
 				'deep-charcoal': '#2B2B33',
-				'gentle-lavender': '#A9A8BD',
+				'light-purple-gray': '#F0F0F5',
+				'slightly-lighter-black': '#1A1A24',
+				'success-green': '#36D399',
+				'error-red': '#F87272',
+				'warning-amber': '#FBBD23',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -91,13 +94,33 @@ export default {
 					'0%': { transform: 'translateX(100%)' },
 					'100%': { transform: 'translateX(0)' },
 				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 15px rgba(177, 0, 255, 0.5)' },
+					'50%': { boxShadow: '0 0 25px rgba(177, 0, 255, 0.7)' }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.4s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
-			}
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'logo-glow-gradient': 'linear-gradient(135deg, #B100FF, #7C00FF, #4A29D9)',
+				'primary-button-gradient': 'linear-gradient(90deg, #B100FF, #7C00FF)',
+				'header-banner-gradient': 'linear-gradient(90deg, #4A29D9, #7C00FF)',
+				'accent-highlight-gradient': 'linear-gradient(90deg, #7C00FF, #D951FF)',
+				'subtle-background-gradient': 'linear-gradient(180deg, #0B0B0D, #1A1A24)',
+			},
+			boxShadow: {
+				'button-glow': '0 0 15px rgba(177, 0, 255, 0.5)',
+				'button-glow-hover': '0 0 25px rgba(177, 0, 255, 0.7)',
+				'element-glow': '0 0 20px rgba(124, 0, 255, 0.4)',
+			},
+			textShadow: {
+				'text-glow': '0 0 10px rgba(124, 0, 255, 0.7)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
