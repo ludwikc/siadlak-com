@@ -11,10 +11,10 @@ export default function HeaderControls() {
     <div className="flex items-center space-x-2">
       <button 
         onClick={toggleTheme} 
-        className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-detail transition-colors"
+        className="p-2 rounded-full bg-midnight-black/10 dark:bg-luminous-white/10 hover:bg-midnight-black/20 dark:hover:bg-luminous-white/20 text-deep-charcoal dark:text-silver-detail transition-colors"
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       >
-        {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+        {theme === 'dark' ? <Sun size={20} className="text-silver-detail" /> : <Moon size={20} className="text-deep-charcoal" />}
       </button>
       
       <LanguageSwitcher />

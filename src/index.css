@@ -151,6 +151,23 @@
   .subtle-gradient-bg {
     @apply bg-subtle-background-gradient;
   }
+  
+  .hero-section {
+    @apply relative py-16 md:py-20 lg:py-24 overflow-hidden;
+    background: linear-gradient(135deg, rgba(74, 41, 217, 0.95), rgba(124, 0, 255, 0.85));
+  }
+  
+  .hero-content {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10;
+  }
+  
+  .persona-card {
+    @apply bg-luminous-white dark:bg-midnight-black/70 rounded-xl p-6 shadow-lg border border-silver-detail/30 dark:border-primary-purple/30 hover:border-primary-purple/60 dark:hover:border-primary-purple/60 transition-all duration-300;
+  }
+  
+  .testimonial-card {
+    @apply bg-luminous-white/90 dark:bg-midnight-black/70 p-6 rounded-xl shadow-lg border border-silver-detail/50 dark:border-primary-purple/20;
+  }
 }
 
 /* Add text-shadow utilities */
