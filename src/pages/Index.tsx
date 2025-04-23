@@ -7,106 +7,108 @@ import PersonaSection from '../components/sections/PersonaSection';
 import TrustElements from '../components/sections/TrustElements';
 import Newsletter from '../components/sections/Newsletter';
 import CTASection from '../components/sections/CTASection';
-import { Brain, Rocket, Cog, CircleCheck, Lightbulb, Users } from 'lucide-react';
+import { Brain, Settings, Briefcase } from 'lucide-react';
 
 const Index = () => {
   // How It Works steps
   const steps = [
     {
-      title: "Take Back Control",
-      description: "First, we identify where technology has become your master. Through proven methods, you'll regain command over your digital environment and stop feeling overwhelmed."
+      title: "Odzyskaj wpływ",
+      description: "Zidentyfikujesz, gdzie technologia przejęła nad Tobą kontrolę. Dzięki sprawdzonym metodom, odzyskasz panowanie nad swoim swoim zmieniającym się środowiskiem pracy i przestaniesz czuć się przytłoczony."
     },
     {
-      title: "Build Systems That Serve You",
-      description: "Next, we create systems that make technology work for you, not against you. These systems respect your natural strengths while amplifying your capabilities."
+      title: "Zbuduj systemy, które Ci służą",
+      description: "Stworzysz systemy, które sprawią, że technologia pracuje na i dla Ciebie, a nie przeciwko Tobie. To meta-system, który respektuje Twoje naturalne mocne strony, jednocześnie wzmacniając Twoje możliwości."
     },
     {
-      title: "Maintain Control Long-Term",
-      description: "Finally, you'll master implementation methods that last, allowing you to stay in command of your technology without sacrificing what makes you human."
+      title: "Utrzymaj kontrolę długoterminowo",
+      description: "Na koniec opanujesz metody wdrażania, które zintegrujesz ze swoim życiem tak, aby zachować kontrolę nad technologią bez poświęcania tego, co czyni Cię człowiekiem."
     }
   ];
   
-  // Personas for "Who It's For" section
+  // Personas
   const personas = [
     {
-      title: "Technical Experts Moving Into Leadership",
-      description: "You've mastered the technical side, but now face the challenge of leading others. You need strategies that honor both your technical mind and your growing leadership role.",
+      title: "Eksperci techniczni wchodzący w role przywódcze",
+      description: "Opanowałeś technikalia, ale teraz stajesz przed wyzwaniem prowadzenia innych. Potrzebujesz strategii, które honorują zarówno Twój techniczny umysł, jak i rosnącą rolę lidera.",
       icon: <Brain size={24} />
     },
     {
-      title: "Professionals Feeling Controlled By Technology",
-      description: "You're skilled in your field but find yourself increasingly ruled by digital tools meant to help you. You're looking for ways to make these tools serve you instead.",
-      icon: <Cog size={24} />
+      title: "Profesjonaliści czujący się kontrolowani przez technologię",
+      description: "Jesteś wykwalifikowany w swojej dziedzinie, ale czujesz się coraz bardziej zdominowany przez cyfrowe narzędzia, które miały Ci pomóc. Szukasz sposobów, by te narzędzia służyły Tobie, a nie odwrotnie.",
+      icon: <Settings size={24} />
     },
     {
-      title: "Entrepreneurs Balancing Growth with Wellbeing",
-      description: "You're building something meaningful but struggle with constant digital demands. You want approaches that support your business without damaging your health and relationships.",
-      icon: <Rocket size={24} />
+      title: "Przedsiębiorcy balansujący między rozwojem a dobrostanem",
+      description: "Budujesz coś wartościowego, ale zmagasz się z ciągłymi cyfrowymi wymaganiami. Potrzebujesz podejścia, które wspiera Twój biznes, nie niszcząc przy tym Twojego zdrowia i relacji.",
+      icon: <Briefcase size={24} />
     }
   ];
   
-  // Trust elements testimonials
+  // Testimonials
   const testimonials = [
     {
-      quote: "Working with Ludwik changed everything about how I use technology. I went from feeling constantly behind to making AI tools work for me. The results have transformed both my work and personal life.",
-      name: "Marketing Director",
-      title: "Technology Sector"
+      quote: "Praca z Ludwikiem zmieniła wszystko w sposobie, w jaki korzystam z technologii. Przeszedłem od ciągłego poczucia bycia w tyle do skutecznego wykorzystywania narzędzi AI. Rezultaty przemieniły zarówno moją pracę, jak i życie osobiste.",
+      name: "Dyrektor marketingu",
+      title: "sektor technologiczny"
     },
     {
-      quote: "What makes this approach different is how it puts humans first while using technology smartly. I've increased my output by 40% while actually spending less time on screens. This isn't about more tech—it's about smarter control.",
-      name: "Senior Project Manager",
-      title: "Finance Industry"
+      quote: "To, co wyróżnia to podejście, to sposób, w jaki stawia człowieka na pierwszym miejscu, przy jednoczesnym inteligentnym wykorzystaniu technologii. Zwiększyłem swoją wydajność o 40%, spędzając przy tym mniej czasu przed ekranami. Nie chodzi o więcej technologii — chodzi o mądrzejszą kontrolę.",
+      name: "Starszy kierownik projektów",
+      title: "branża finansowa"
     }
   ];
 
   return (
     <Layout>
       <Hero 
-        title="Own your power in a digital world"
-        subtitle="Stop being controlled by technology. Start commanding it for your growth."
-        ctaText="Take the Power Test"
+        title="Przejmij kontrolę."
+        subtitle="Przestań być kontrolowanym przez technologię. Zacznij nią świadomie sterować."
+        ctaText="Sprawdź swój poziom kontroli"
         ctaLink="/assessment"
-        secondaryCtaText="Get Weekly Insights"
+        secondaryCtaText="Otrzymuj cotygodniowe inspiracje"
         secondaryCtaLink="/newsletter"
-        imageDescription="Professional looking confident and in control while working with technology, showing mastery not overwhelm"
       />
       
       <div className="py-12 md:py-16 bg-secondary/30 dark:bg-quantum-blue/20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-deep-charcoal dark:text-silver-mist">
-              Technology should work for you, not against you. I help professionals transform from feeling overwhelmed to being in control of both their digital tools and their lives.
+            <h2 className="text-2xl md:text-3xl mb-4 text-deep-charcoal dark:text-silver-mist">
+              Technologia powinna pracować na Ciebie, nie dodawać Ci zadań.
+            </h2>
+            <p className="text-xl text-deep-charcoal/80 dark:text-silver-mist/80">
+              Pomagam profesjonalistom przejść od poczucia przytłoczenia do pełnej kontroli nad narzędziami AI, ale przede wszystkim - własnym życiem.
             </p>
           </div>
         </div>
       </div>
       
       <HowItWorks 
-        title="Three Steps to Digital Mastery"
+        title="Trzy kroki do cyfrowego mistrzostwa"
         steps={steps}
       />
       
       <PersonaSection 
-        title="Is This For You?"
+        title="Czy to dla Ciebie?"
         personas={personas}
-        callout="If you recognize yourself here, you're in the right place. The methods I share are specifically designed for those who refuse to be controlled by the very technology meant to help them succeed."
-        ctaText="Find Your Path"
+        callout="Jeśli odnajdujesz się w tych opisach, jesteś we właściwym miejscu. Metody, którymi się dzielę, są stworzone specjalnie dla tych, którzy odmawiają bycia kontrolowanymi przez technologię, która miała im pomóc odnieść sukces."
+        ctaText="Znajdź swoją ścieżkę"
         ctaLink="/contact"
       />
       
       <TrustElements 
-        title="Why This Approach Works"
-        communityStats="Join over 1,500+ professionals who have taken back control of their digital lives"
+        title="Dlaczego to podejście działa"
+        communityStats="Dołącz do ponad 150 profesjonalistów, którzy odzyskali kontrolę nad swoim cyfrowym życiem"
         testimonials={testimonials}
-        credentialsSummary="Combining 15+ years of Microsoft certification knowledge with deep understanding of human potential to create a uniquely balanced approach"
+        credentialsSummary="Łączę prawie 20-letnie doświadczenie w twardym stacku technologicznym z głębokim zrozumieniem ludzkiego potencjału, tworząc wyjątkowo zbalansowane podejście."
       />
       
       <Newsletter />
       
       <CTASection 
-        title="Ready to Command Your Digital Life?"
-        description="Take the first step toward transforming your relationship with technology."
-        buttonText="Book a Discovery Call"
+        title="Gotów przejąć kontrolę nad swoim cyfrowym życiem?"
+        description="Wykonaj pierwszy krok w kierunku transformacji swojej relacji z technologią."
+        buttonText="Umów się na konsultację"
         buttonLink="/contact"
       />
     </Layout>
