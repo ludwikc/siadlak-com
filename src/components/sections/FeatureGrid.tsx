@@ -32,7 +32,7 @@ export default function FeatureGrid({ title, subtitle, features }: FeatureGridPr
               key={index}
               className="glass-card p-6 rounded-xl hover:transform hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="text-neural-violet dark:text-luminal-magenta mb-4">
+              <div className="text-neural-violet dark:text-luminal-magenta mb-4 flex items-center">
                 {feature.icon}
               </div>
               

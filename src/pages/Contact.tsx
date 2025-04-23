@@ -182,7 +182,7 @@ const Contact = () => {
                 href="mailto:contact@ludwiksiadlak.com" 
                 className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
               >
-                <Mail className="mr-2 h-5 w-5" />
+                <Mail className="mr-2 h-5 w-5 flex-shrink-0" />
                 contact@ludwiksiadlak.com
               </a>
               
@@ -192,7 +192,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
               >
-                <Linkedin className="mr-2 h-5 w-5" />
+                <Linkedin className="mr-2 h-5 w-5 flex-shrink-0" />
                 Connect on LinkedIn
               </a>
             </div>

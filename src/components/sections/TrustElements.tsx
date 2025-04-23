@@ -31,7 +31,7 @@ export default function TrustElements({
         {communityStats && (
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <Users className="text-neural-violet dark:text-luminal-magenta mr-2" size={24} />
+              <Users className="text-neural-violet dark:text-luminal-magenta mr-2 flex-shrink-0" size={24} />
               <p className="text-xl font-medium text-deep-charcoal dark:text-silver-mist">
                 {communityStats}
               </p>
@@ -64,7 +64,7 @@ export default function TrustElements({
         {credentialsSummary && (
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center mb-4">
-              <Award className="text-neural-violet dark:text-luminal-magenta mr-2" size={24} />
+              <Award className="text-neural-violet dark:text-luminal-magenta mr-2 flex-shrink-0" size={24} />
               <p className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">
                 {credentialsSummary}
               </p>

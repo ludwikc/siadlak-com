@@ -77,7 +77,9 @@ const ThankYou = ({ type = 'default' }: ThankYouProps) => {
       <section className="py-20 md:py-32 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            {content.icon}
+            <div className="flex justify-center">
+              {content.icon}
+            </div>
             
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
               {content.title}
