@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, BookOpen, Code, CheckCircle } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const approachPoints = [
@@ -23,7 +23,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-neural-violet to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -37,16 +37,16 @@ const About = () => {
       </section>
       
       {/* Bio Section */}
-      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <p>
+              <div className="prose dark:prose-invert max-w-none">
+                <p className="text-lg">
                   For over 15 years, I've stood at the intersection of cutting-edge technology and human performance. With expertise from both worlds, I guide professionals to take back control of their digital lives without sacrificing what makes them uniquely human.
                 </p>
                 
-                <p>
+                <p className="text-lg">
                   My journey began as a Microsoft Certified Trainer, where I saw firsthand how technology could either empower or overwhelm. While others focused solely on technical skills, I recognized that the missing piece was teaching people how to maintain their human edge while leveraging digital tools.
                 </p>
               </div>
@@ -62,7 +62,7 @@ const About = () => {
             </div>
             
             <div className="order-1 lg:order-2">
-              <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-xl">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                 {/* Placeholder for profile image */}
                 <div className="bg-gradient-to-br from-neural-violet to-ascension-pink h-full w-full flex items-center justify-center">
                   <span className="text-white text-xl font-medium">Ludwik Siadlak</span>
@@ -83,8 +83,8 @@ const About = () => {
             
             <div className="space-y-6">
               {approachPoints.map((point, index) => (
-                <div key={index} className="flex glass-card p-5 rounded-xl">
-                  <div className="mr-4">
+                <div key={index} className="flex glass-card p-5 rounded-xl bg-luminous-white dark:bg-deep-space">
+                  <div className="mr-4 flex-shrink-0">
                     <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                   </div>
                   <p className="text-deep-charcoal dark:text-silver-mist text-lg">{point}</p>
@@ -102,7 +102,7 @@ const About = () => {
       </section>
       
       {/* Credentials Section */}
-      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
@@ -111,7 +111,7 @@ const About = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credentials.map((credential, index) => (
-                <div key={index} className="glass-card p-6 rounded-xl">
+                <div key={index} className="glass-card p-6 rounded-xl bg-luminous-white dark:bg-deep-space">
                   <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                     <Award className="text-neural-violet dark:text-luminal-magenta" />
                   </div>

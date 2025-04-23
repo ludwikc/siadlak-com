@@ -45,7 +45,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 /* DARK MODE OVERRIDES (for .dark-mode on <body>) */
@@ -107,6 +107,15 @@ p {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
+.glass-card {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(8px);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
 /* --- BUTTONS --- */
 .button, .btn-primary {
   display: inline-flex;
@@ -153,6 +162,14 @@ p {
   padding-bottom: var(--section-space);
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* --- BORDERS --- */
 hr {
   border: 0;
@@ -170,6 +187,7 @@ input, textarea, select {
   border: 1px solid var(--border-color);
   padding: 8px 12px;
   transition: border-color 0.3s;
+  width: 100%;
 }
 input:focus, textarea:focus, select:focus {
   outline: none;
@@ -205,11 +223,45 @@ a:hover {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
+/* Main content area for layouts */
+main {
+  padding-top: 60px; /* Account for fixed header */
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+/* Prose styling for content areas */
+.prose {
+  max-width: 65ch;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height);
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  .card { padding: 16px; }
+}
+
 @media (max-width: 640px) {
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
   h3 { font-size: 1.2rem; }
   .card { padding: 16px; }
 }
-
-/* END index.css */
