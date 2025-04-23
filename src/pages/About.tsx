@@ -3,21 +3,21 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Award, BookOpen, Code, CheckCircle } from 'lucide-react';
+import { ArrowRight, Calendar, Mail, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const approachPoints = [
-    "Technology should serve you, not the other way around",
-    "Your human capabilities are irreplaceable and must be protected",
-    "The right systems let you command technology while staying human",
-    "Balance is not about using less technology, but about being in control of it"
+    "Technologia powinna Tobie służyć, nie odwrotnie",
+    "Twoje ludzkie zdolności są niezastąpione i muszą być chronione",
+    "Odpowiednie systemy pozwalają kierować technologią, pozostając człowiekiem",
+    "Równowaga nie polega na używaniu mniejszej ilości technologii, ale na sprawowaniu nad nią kontroli"
   ];
 
   const credentials = [
-    "15+ years as a Microsoft Certified Trainer",
-    "Trained teams across Fortune 500 companies and military organizations",
-    "Creator of the Hackerzy community with over 1,500 active members",
-    "Developer of the Digital Command Method used by professionals worldwide"
+    "Ponad 19 lat jako certyfikowany trener Microsoft",
+    "Szkolenia zespołów w firmach z listy Fortune 500 i organizacjach wojskowych",
+    "Twórca społeczności Hackerzy z ponad 150 aktywnymi członkami",
+    "Twórca Metody Cyfrowego Dowodzenia wykorzystywanej przez profesjonalistów na całym świecie"
   ];
 
   return (
@@ -27,10 +27,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              About Ludwik
+              O mnie
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              I help professionals command technology, not serve it
+              Pomagam profesjonalistom kierować technologią, zamiast jej służyć
             </p>
           </div>
         </div>
@@ -43,19 +43,19 @@ const About = () => {
             <div className="order-2 lg:order-1">
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p>
-                  For over 15 years, I've stood at the intersection of cutting-edge technology and human performance. With expertise from both worlds, I guide professionals to take back control of their digital lives without sacrificing what makes them uniquely human.
+                  Przez ponad 19 lat działam na styku najnowocześniejszej technologii i ludzkiej wydajności. Łącząc ekspertyzę z obu światów, prowadzę profesjonalistów do odzyskania kontroli nad ich cyfrowym życiem bez poświęcania tego, co czyni ich wyjątkowo ludzkimi.
                 </p>
                 
                 <p>
-                  My journey began as a Microsoft Certified Trainer, where I saw firsthand how technology could either empower or overwhelm. While others focused solely on technical skills, I recognized that the missing piece was teaching people how to maintain their human edge while leveraging digital tools.
+                  Moja droga rozpoczęła się jako certyfikowany trener Microsoft, gdzie na własne oczy zobaczyłem, jak technologia może albo wzmacniać, albo przytłaczać. Podczas gdy inni koncentrowali się wyłącznie na umiejętnościach technicznych, ja dostrzegłem, że brakującym elementem jest nauczenie ludzi, jak zachować ludzką przewagę przy jednoczesnym wykorzystaniu cyfrowych narzędzi.
                 </p>
               </div>
               
               <div className="mt-8">
                 <Link to="/contact">
                   <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist">
-                    Schedule a Conversation
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    Umów rozmowę
+                    <Calendar className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -78,7 +78,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-              My approach is simple but powerful
+              Moje podejście jest proste, ale potężne
             </h2>
             
             <div className="space-y-6">
@@ -94,7 +94,7 @@ const About = () => {
             
             <div className="mt-12 text-center">
               <p className="text-xl text-deep-charcoal dark:text-silver-mist">
-                What sets my work apart is the focus on keeping you in command. I don't just teach technical skills or mindfulness separately—I show you how to integrate both for true digital mastery.
+                To, co wyróżnia moją pracę, to skupienie na utrzymaniu Cię w roli dowodzącego. Nie uczę jedynie umiejętności technicznych czy uważności osobno — pokazuję, jak integrować oba aspekty dla prawdziwego cyfrowego mistrzostwa.
               </p>
             </div>
           </div>
@@ -106,14 +106,14 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-              Experience that delivers results
+              Doświadczenie, które przynosi rezultaty
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credentials.map((credential, index) => (
                 <div key={index} className="glass-card p-6 rounded-xl">
                   <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
-                    <Award className="text-neural-violet dark:text-luminal-magenta" />
+                    <CheckCircle className="text-neural-violet dark:text-luminal-magenta" />
                   </div>
                   <p className="text-deep-charcoal dark:text-silver-mist">{credential}</p>
                 </div>
@@ -128,23 +128,25 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to take back control of your digital life?
+              Gotowy odzyskać kontrolę nad swoim cyfrowym życiem?
             </h2>
             
             <p className="text-lg mb-8 text-white/90">
-              Start with my weekly insights or book a Discovery Call.
+              Zacznij od moich cotygodniowych spostrzeżeń lub umów Rozmowę Discovery.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/newsletter">
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
-                  Get Weekly Insights
+                  Otrzymuj cotygodniowe spostrzeżenia
+                  <Mail className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/contact">
                 <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                  Book a Discovery Call
+                  Umów Rozmowę Discovery
+                  <Calendar className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
             </div>
