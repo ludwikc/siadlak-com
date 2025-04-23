@@ -55,7 +55,7 @@ export default function Header() {
             to="/courses"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            Courses
+            Programs
           </Link>
           <Link 
             to="/resources"
