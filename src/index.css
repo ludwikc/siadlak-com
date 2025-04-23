@@ -1,141 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* --- CSS VARIABLE SETUP FOR BAND GUIDELINES --- */
+:root {
+  /* Base color variables - Light Mode Default */
+  --bg-color: #F5F5FA;
+  --text-color: #222226;
+  --card-bg: #FFFFFF;
+  --card-text: #333338;
+  --accent-color: #0072EF;
+  --accent-text: #FFFFFF;
+  --highlight-color: #e74c3c;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-@layer base {
-  :root {
-    --background: 240 33% 99%;
-    --foreground: 240 10% 4%;
+  /* Spacing/Radius */
+  --section-space: 40px;
+  --card-padding: 24px;
+  --button-padding-y: 12px;
+  --button-padding-x: 24px;
+  --content-margin: 16px;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 4%;
+  /* Font & Type */
+  --font-family: ui-sans-serif, sans-serif;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-weight-body: 400;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --line-height: 1.6;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 4%;
-
-    --primary: 271 78% 26%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
-
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
-
-    --accent: 271 78% 26%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 271 78% 26%;
-
-    --radius: 0.75rem;
-  }
-
-  .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 320 80% 45%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
-
-    --accent: 320 80% 45%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 271 78% 26%;
-  }
+  /* Sizes */
+  --border-radius: 8px;
+  --border-radius-button: 4px;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  
-  body {
-    @apply bg-background text-foreground font-sans;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold;
-  }
-  
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-  
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  h4 {
-    @apply text-xl md:text-2xl;
-  }
-  
-  p {
-    @apply leading-relaxed;
-  }
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background:
+    radial-gradient(circle at top left, #7C00FF, transparent 20%) fixed,
+    radial-gradient(circle at bottom right, #4A36C2, transparent 30%) fixed,
+    var(--bg-color) fixed;
+  background-size: 100% 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 
-@layer components {
-  .glass-card {
-    @apply bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 shadow-sm;
-  }
-  
-  .btn-primary {
-    @apply bg-neural-violet hover:bg-ascension-pink text-white py-3 px-6 rounded-md transition-colors font-medium;
-  }
-  
-  .btn-secondary {
-    @apply bg-white dark:bg-white/10 hover:bg-gray-100 dark:hover:bg-white/20 text-neural-violet dark:text-silver-mist py-3 px-6 rounded-md transition-colors font-medium border border-gray-200 dark:border-white/10;
-  }
-  
-  .section {
-    @apply py-16 md:py-24;
-  }
+/* DARK MODE OVERRIDES (for .dark-mode on <body>) */
+body.dark-mode {
+  --bg-color: #0B0B0D;
+  --text-color: #BDBDBD;
+  --card-bg: #1A1A24;
+  --card-text: #E0E0E5;
+  --accent-text: #E0E0E5;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  background:
+    radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%) fixed,
+    radial-gradient(circle at bottom right, rgba(30, 0, 96, 0.3), transparent 35%) fixed,
+    var(--bg-color) fixed;
 }
 
-.prose h2 {
-  @apply text-2xl font-bold mt-8 mb-4 text-deep-charcoal dark:text-silver-mist;
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: var(--content-margin);
+  color: var(--text-color);
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height);
+  margin-bottom: var(--content-margin);
 }
 
-.prose h3 {
-  @apply text-xl font-bold mt-6 mb-3 text-deep-charcoal dark:text-silver-mist;
+/* --- CARDS --- */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow);
+  color: var(--card-text);
+  margin-bottom: var(--section-space);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-.prose p {
-  @apply mb-4 text-subtle-slate dark:text-silver-mist/80;
+/* --- BUTTONS --- */
+.button, .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--border-radius-button);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent-text);
+  background-color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  transition: filter 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.button:hover, .btn-primary:hover {
+  filter: brightness(1.1);
+}
+/* Accent on secondary/outline style (optional) */
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  box-shadow: none;
+}
+.btn-secondary:hover {
+  background: rgba(0,114,239,0.07);
+  color: var(--accent-color);
+  filter: none;
 }
 
-.prose ul {
-  @apply mb-4 ml-6 text-subtle-slate dark:text-silver-mist/80;
+/* Price/highlight (e.g., span) */
+.price,
+.highlight {
+  color: var(--highlight-color);
+  font-weight: 700;
 }
 
-.prose li {
-  @apply mb-2;
+/* --- SPACING & CONTAINERS --- */
+.section {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
+
+/* --- BORDERS --- */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: var(--section-space) 0;
+}
+
+/* --- FORMS --- */
+input, textarea, select {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  color: var(--text-color);
+  background: var(--card-bg);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  transition: border-color 0.3s;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 114, 239, 0.1);
+}
+
+/* --- MISC --- */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #0051a3;
+}
+
+/* Utility: visually hidden for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+
+/* Selection color for accessibility */
+::selection {
+  background: var(--accent-color);
+  color: var(--accent-text);
+}
+
+/* Animation and Mode Transition */
+* {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  .card { padding: 16px; }
+}
+
+/* END index.css */
