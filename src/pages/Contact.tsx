@@ -4,14 +4,13 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Mail, Phone, MessageCircle, Linkedin } from 'lucide-react';
+import { Calendar, Mail, MessageCircle, Linkedin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -33,10 +32,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Let's Connect
+              Kontakt
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              I value straight talk and respond personally to messages. Whether you have questions about working together or thoughts about taking control of your digital life, I welcome your message.
+              Cenię bezpośrednią komunikację i osobiście odpowiadam na wiadomości. Jeśli szukasz transformacji zamiast tylko kolejnego kursu, lub masz pytania o odzyskanie kontroli nad cyfrowym życiem - daj znać.
             </p>
           </div>
         </div>
@@ -53,25 +52,45 @@ const Contact = () => {
                   <Calendar className="text-neural-violet dark:text-luminal-magenta" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  Book a Discovery Call
+                  Umów rozmowę
                 </h2>
               </div>
               
               <p className="text-subtle-slate dark:text-silver-mist/80 mb-6">
-                Schedule a 30-minute consultation to discuss how you can take back control of your digital life.
+                Preferujesz rozmowę? Wybierz termin w moim kalendarzu.
               </p>
+              
+              <div className="space-y-6 mb-6">
+                <div className="p-4 border border-border rounded-lg bg-white/5">
+                  <h3 className="font-semibold mb-2">Sesja Discovery (30 min)</h3>
+                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
+                    To nie jest typowa "rozmowa sprzedażowa" - to obustronny test dopasowania. Sprawdzamy, czy moje podejście pasuje do Twoich wyzwań, a Ty do mojej metodologii pracy.
+                  </p>
+                </div>
+                
+                <div className="p-4 border border-border rounded-lg bg-white/5">
+                  <h3 className="font-semibold mb-2">Sesja strategiczna (45 min)</h3>
+                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
+                    Dla osób szukających konkretnych rozwiązań na styku technologii i rozwoju człowieka. Oczekuję przygotowania - to maksymalizuje wartość naszego czasu.
+                  </p>
+                </div>
+                
+                <div className="p-4 border border-border rounded-lg bg-white/5">
+                  <h3 className="font-semibold mb-2">Konsultacja biznesowa (60 min)</h3>
+                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
+                    Dla liderów i przedsiębiorców gotowych na transformację, nie tylko porady. Rozmawiamy o konkretach, nie ogólnikach.
+                  </p>
+                </div>
+              </div>
               
               {/* Calendly embed placeholder */}
               <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6">
                 <div className="h-full flex flex-col items-center justify-center">
-                  <p className="text-center text-subtle-slate dark:text-silver-mist/80 mb-4">
-                    Calendly embed would appear here
-                  </p>
                   <Button 
                     onClick={() => navigate('/thank-you/discovery-call')}
                     className="bg-neural-violet hover:bg-ascension-pink"
                   >
-                    Schedule a Call
+                    Zarezerwuj termin
                   </Button>
                 </div>
               </div>
@@ -79,7 +98,7 @@ const Contact = () => {
               <div className="flex items-start space-x-3 text-subtle-slate dark:text-silver-mist/80">
                 <MessageCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <p className="text-sm">
-                  All calls are conducted via Zoom. You'll receive connection details after booking.
+                  Po rezerwacji otrzymasz potwierdzenie z instrukcjami. Przygotuj się - to pierwszy test Twojego zaangażowania.
                 </p>
               </div>
             </div>
@@ -91,20 +110,20 @@ const Contact = () => {
                   <Mail className="text-ascension-pink dark:text-luminal-magenta" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  Send a Message
+                  Formularz kontaktowy
                 </h2>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Name
+                    Imię i nazwisko*
                   </label>
                   <Input 
                     id="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name"
+                    placeholder="Twoje imię i nazwisko"
                     required
                     className="w-full"
                   />
@@ -112,41 +131,28 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Email
+                    Email*
                   </label>
                   <Input 
                     id="email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your.email@example.com"
+                    placeholder="twoj.email@przyklad.pl"
                     required
                     className="w-full"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Subject (optional)
-                  </label>
-                  <Input 
-                    id="subject"
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    placeholder="What's this about?"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
                   <label htmlFor="message" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Message
+                    Wiadomość*
                   </label>
                   <Textarea 
                     id="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="How can I help you?"
+                    placeholder="W czym mogę pomóc?"
                     required
                     className="w-full h-32"
                   />
@@ -157,11 +163,11 @@ const Contact = () => {
                   className="w-full bg-ascension-pink hover:bg-luminal-magenta"
                   disabled={submitting}
                 >
-                  {submitting ? 'Sending...' : 'Send Message'}
+                  {submitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
                 </Button>
                 
                 <p className="text-center text-sm text-subtle-slate dark:text-silver-mist/70">
-                  I respond within 24-48 hours on business days.
+                  Odpowiadam w ciągu 1-2 dni na wiadomości, które wymagają odpowiedzi.
                 </p>
               </form>
             </div>
@@ -174,16 +180,16 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              Prefer another way to reach me?
+              Wolisz inny kanał?
             </h3>
             
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
               <a 
-                href="mailto:contact@ludwiksiadlak.com" 
+                href="mailto:connect@siadlak.email" 
                 className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
               >
                 <Mail className="mr-2 h-5 w-5 flex-shrink-0" />
-                contact@ludwiksiadlak.com
+                connect@siadlak.email
               </a>
               
               <a 
@@ -193,7 +199,7 @@ const Contact = () => {
                 className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
               >
                 <Linkedin className="mr-2 h-5 w-5 flex-shrink-0" />
-                Connect on LinkedIn
+                LinkedIn
               </a>
             </div>
           </div>
