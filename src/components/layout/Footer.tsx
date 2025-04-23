@@ -18,7 +18,7 @@ export default function Footer() {
               </h3>
             </Link>
             <p className="text-subtle-slate dark:text-silver-mist/70 max-w-xs">
-              Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.<br> Buduję Społeczności, w których liczy się Człowiek a nie hajs.
+              Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.<br /> Buduję Społeczności, w których liczy się Człowiek a nie hajs.
             </p>
             <div className="flex space-x-4 text-subtle-slate">
               <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
