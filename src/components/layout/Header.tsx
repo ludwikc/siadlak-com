@@ -39,7 +39,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold font-heading bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-            Ludwik Siadlak
+            Ludwik C. Siadlak
           </span>
         </Link>
         
@@ -49,32 +49,32 @@ export default function Header() {
             to="/about"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            About
+            O mnie
           </Link>
           <Link 
             to="/courses"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            Programs
+            Programy
           </Link>
           <Link 
             to="/resources"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            Resources
+            Materiały
           </Link>
           <Link 
             to="/contact"
             className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors"
           >
-            Book a Call
+            Umów rozmowę
           </Link>
           
           {/* Theme Toggle */}
           <button 
             onClick={toggleTheme} 
             className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            aria-label={`Przełącz na tryb ${theme === 'dark' ? 'jasny' : 'ciemny'}`}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
@@ -85,14 +85,14 @@ export default function Header() {
           <button 
             onClick={toggleTheme} 
             className="p-2 mr-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            aria-label={`Przełącz na tryb ${theme === 'dark' ? 'jasny' : 'ciemny'}`}
           >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 text-deep-charcoal dark:text-silver-mist"
-            aria-label="Toggle navigation menu"
+            aria-label="Menu nawigacyjne"
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -109,28 +109,28 @@ export default function Header() {
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              O mnie
             </Link>
             <Link 
               to="/courses"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Courses
+              Programy
             </Link>
             <Link 
               to="/resources"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Resources
+              Materiały
             </Link>
             <Link 
               to="/contact"
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors inline-block"
               onClick={() => setIsMenuOpen(false)}
             >
-              Book a Call
+              Umów rozmowę
             </Link>
           </nav>
         </div>

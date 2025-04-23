@@ -14,11 +14,11 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-                Ludwik Siadlak
+                Ludwik C. Siadlak
               </h3>
             </Link>
             <p className="text-subtle-slate dark:text-silver-mist/70 max-w-xs">
-              Guiding professionals at the intersection of technology and human potential.
+              Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.
             </p>
             <div className="flex space-x-4 text-subtle-slate">
               <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
@@ -38,26 +38,26 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Szybkie linki</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/about" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  About
+                  O mnie
                 </Link>
               </li>
               <li>
                 <Link to="/courses" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Courses
+                  Programy
                 </Link>
               </li>
               <li>
                 <Link to="/resources" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Resources
+                  Materiały
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-                  Contact
+                  Kontakt
                 </Link>
               </li>
             </ul>
@@ -65,7 +65,7 @@ export default function Footer() {
           
           {/* Programs */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Programs</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Programy</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/courses/mental-elevator" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
@@ -84,19 +84,19 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Newsletter</h4>
             <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
-              Subscribe for insights at the intersection of technology and human potential.
+              Zapisz się po cotygodniowe spostrzeżenia na temat cyfrowego przywództwa.
             </p>
             <form className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder="Twój email" 
                 className="py-2 px-3 rounded-l-md border-y border-l border-border bg-luminous-white dark:bg-deep-space w-full"
-                aria-label="Email for newsletter"
+                aria-label="Email do newslettera"
               />
               <button 
                 type="submit"
                 className="bg-ascension-pink hover:bg-luminal-magenta text-white p-2 rounded-r-md transition-colors"
-                aria-label="Subscribe"
+                aria-label="Zapisz się"
               >
                 <ArrowRight size={20} />
               </button>
@@ -107,14 +107,14 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-border pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
           <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
-            &copy; {currentYear} Ludwik Siadlak. All rights reserved.
+            &copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-              Privacy Policy
+              Polityka Prywatności
             </Link>
             <Link to="/terms" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
-              Terms of Service
+              Regulamin
             </Link>
           </div>
         </div>
