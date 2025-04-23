@@ -1,65 +1,63 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Calendar, Mail, FileText } from 'lucide-react';
 
-// Define the different thank you types
 const thankYouContent = {
   default: {
-    title: 'Thank You',
-    message: 'Your submission has been received.',
+    title: 'Dziękuję',
+    message: 'Twoje zgłoszenie zostało przyjęte.',
     icon: <CheckCircle className="w-16 h-16 text-neural-violet dark:text-luminal-magenta mb-6" />,
-    description: 'Thank you for reaching out. We will process your request and get back to you soon.',
+    description: 'Dziękuję za kontakt. Przetworzę Twoje zgłoszenie i wkrótce się do Ciebie odezwę.',
     primaryCta: {
-      text: 'Return to Homepage',
+      text: 'Wróć do strony głównej',
       link: '/'
     },
     secondaryCta: {
-      text: 'Explore Resources',
+      text: 'Zobacz materiały',
       link: '/resources'
     }
   },
   contact: {
-    title: 'Message Received',
-    message: 'Thank you for contacting me.',
+    title: 'Wiadomość otrzymana',
+    message: 'Dziękuję za kontakt.',
     icon: <Mail className="w-16 h-16 text-neural-violet dark:text-luminal-magenta mb-6" />,
-    description: 'I\'ve received your message and will respond to you within 24-48 hours during business days.',
+    description: 'Otrzymałem Twoją wiadomość i odpowiem w ciągu 24-48 godzin w dni robocze.',
     primaryCta: {
-      text: 'Explore Programs',
+      text: 'Zobacz programy',
       link: '/courses'
     },
     secondaryCta: {
-      text: 'Return to Homepage',
+      text: 'Wróć do strony głównej',
       link: '/'
     }
   },
   newsletter: {
-    title: 'Welcome to the Newsletter',
-    message: 'You\'re officially subscribed!',
+    title: 'Witaj w newsletterze',
+    message: 'Jesteś oficjalnie zapisany!',
     icon: <FileText className="w-16 h-16 text-neural-violet dark:text-luminal-magenta mb-6" />,
-    description: 'Thank you for joining my newsletter. Look for an email confirmation in your inbox shortly. You\'ll start receiving insights at the intersection of technology and human potential.',
+    description: 'Dziękuję za dołączenie do mojego newslettera. Sprawdź swoją skrzynkę - znajdziesz tam potwierdzenie. Wkrótce zaczniesz otrzymywać spostrzeżenia na styku technologii i ludzkiego potencjału.',
     primaryCta: {
-      text: 'Explore Resources',
+      text: 'Zobacz materiały',
       link: '/resources'
     },
     secondaryCta: {
-      text: 'Discover Programs',
+      text: 'Odkryj programy',
       link: '/courses'
     }
   },
   'discovery-call': {
-    title: 'Discovery Call Scheduled',
-    message: 'Your session is confirmed!',
+    title: 'Rozmowa umówiona',
+    message: 'Twoja sesja jest potwierdzona!',
     icon: <Calendar className="w-16 h-16 text-neural-violet dark:text-luminal-magenta mb-6" />,
-    description: 'Thank you for scheduling a discovery call. You should receive a calendar invitation with connection details shortly. I look forward to our conversation!',
+    description: 'Dziękuję za umówienie rozmowy discovery. Wkrótce otrzymasz zaproszenie kalendarzowe ze szczegółami połączenia. Czekam na naszą rozmowę!',
     primaryCta: {
-      text: 'Explore Programs',
+      text: 'Zobacz programy',
       link: '/courses'
     },
     secondaryCta: {
-      text: 'Browse Resources',
+      text: 'Przejrzyj materiały',
       link: '/resources'
     }
   }

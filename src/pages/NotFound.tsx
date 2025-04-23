@@ -23,7 +23,7 @@ const NotFound = () => {
           
           <Link 
             to="/" 
-            className="btn-primary inline-flex items-center gap-2"
+            className="inline-flex items-center gap-2 bg-neural-violet hover:bg-ascension-pink text-white px-6 py-3 rounded-md transition-colors"
           >
             <Home size={18} />
             Strona główna
