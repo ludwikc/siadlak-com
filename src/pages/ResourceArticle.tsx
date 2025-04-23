@@ -1,330 +1,328 @@
-
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, BookOpen, Tag, ArrowRight } from 'lucide-react';
 
-// Sample resources data (would typically come from a CMS or API)
 const articlesData = {
   'mental-models-for-tech-leaders': {
-    title: 'Mental Models for Technical Leaders',
-    excerpt: 'A framework for making better decisions in complex technical environments.',
-    category: 'Leadership',
-    date: 'April 2, 2025',
-    readTime: '8 min read',
+    title: 'Modele Mentalne dla Liderów Technicznych',
+    excerpt: 'Framework do podejmowania lepszych decyzji w złożonych środowiskach technicznych.',
+    category: 'Przywództwo',
+    date: '2 kwietnia 2025',
+    readTime: '8 min czytania',
     image: '',
     content: `
-      <h2>Introduction</h2>
-      <p>Leadership in technical domains presents unique challenges. Technical leaders must balance deep domain expertise with broader business understanding, manage teams of specialists, and make decisions in rapidly changing environments.</p>
+      <h2>Wprowadzenie</h2>
+      <p>Przywództwo w domenach technicznych stawia unikalne wyzwania. Liderzy techniczni muszą równoważyć głęboką wiedzę domenową z szerszym zrozumieniem biznesu, zarządzać zespołami specjalistów i podejmować decyzje w szybko zmieniającym się środowisku.</p>
       
-      <p>In this article, I'll share a set of mental models that have proven valuable for technical leaders navigating this complex landscape.</p>
+      <p>W tym artykule podzielę się zestawem modeli mentalnych, które okazały się cenne dla liderów technicznych poruszających się w tym złożonym krajobrazie.</p>
       
-      <h2>The Map is Not the Territory</h2>
-      <p>This mental model reminds us that our understanding of reality (the map) is not reality itself (the territory). Technical leaders often work with abstractions, models, and representations that simplify reality. While these are valuable, remembering their limitations is crucial.</p>
+      <h2>Mapa to nie Terytorium</h2>
+      <p>Ten model mentalny przypomina nam, że nasze zrozumienie rzeczywistości (mapa) to nie sama rzeczywistość (terytorium). Liderzy techniczni często pracują z abstrakcjami, modelami i reprezentacjami, które upraszczają rzeczywistość. Chociaż są one cenne, pamiętanie o ich ograniczeniach jest kluczowe.</p>
       
-      <p>Application: When evaluating system architectures or technical approaches, acknowledge that your models have blind spots. Seek diverse perspectives and real-world testing to identify where your mental map diverges from the territory.</p>
+      <p>Zastosowanie: Oceniając architektury systemów lub podejścia techniczne, przyznaj, że Twoje modele mają punkty ślepe. Szukaj różnorodnych perspektyw i testów w świecie rzeczywistym, aby zidentyfikować, gdzie Twoja mapa mentalna odbiega od terytorium.</p>
       
-      <h2>Second-Order Thinking</h2>
-      <p>First-order thinking considers only the immediate consequences of a decision. Second-order thinking examines the subsequent effects and ripple impacts.</p>
+      <h2>Myślenie Drugiego Rzędu</h2>
+      <p>Myślenie pierwszego rzędu rozważa tylko natychmiastowe konsekwencje decyzji. Myślenie drugiego rzędu bada kolejne efekty i skutki uboczne.</p>
       
-      <p>Application: When making technical decisions, don't stop at "What happens if we implement this feature?" Ask, "What happens after that? How might this decision constrain or enable future choices? What behaviors might this incentivize in our team or users?"</p>
+      <p>Zastosowanie: Podejmując decyzje techniczne, nie zatrzymuj się na pytaniu "Co się stanie, jeśli wdrożymy tę funkcję?". Zapytaj: "Co się stanie potem? Jak ta decyzja może ograniczyć lub umożliwić przyszłe wybory? Jakie zachowania może to zmotywować w naszym zespole lub wśród użytkowników?"</p>
       
-      <h2>Inversion</h2>
-      <p>Instead of asking how to solve a problem, inversion asks how to avoid making it worse.</p>
+      <h2>Inwersja</h2>
+      <p>Zamiast pytać, jak rozwiązać problem, inwersja pyta, jak uniknąć pogorszenia sytuacji.</p>
       
-      <p>Application: Rather than only asking "How do we build a reliable system?", also ask "What would make our system unreliable?" This often reveals overlooked vulnerabilities and design flaws.</p>
+      <p>Zastosowanie: Zamiast tylko pytać "Jak zbudować niezawodny system?", zapytaj również "Co uczyniłoby nasz system niezawodnym?". To często ujawnia pominięte luki i wady projektowe.</p>
       
-      <h2>Conclusion</h2>
-      <p>These mental models provide frameworks for thinking that can enhance decision-making in complex technical environments. By incorporating them into your leadership approach, you can navigate uncertainty with greater clarity and foresight.</p>
+      <h2>Wnioski</h2>
+      <p>Te modele mentalne dostarczają frameworków myślenia, które mogą poprawić podejmowanie decyzji w złożonych środowiskach technicznych. Włączając je do swojego podejścia przywódczego, możesz poruszać się w niepewności z większą jasnością i przewidywalnością.</p>
     `
   },
   'focus-in-distracted-world': {
-    title: 'Cultivating Deep Focus in a World of Distractions',
-    excerpt: 'Practical techniques for achieving flow state and maximizing cognitive output.',
-    category: 'Productivity',
-    date: 'March 15, 2025',
-    readTime: '12 min read',
+    title: 'Kultywowanie Głębokiego Skupienia w Świecie Rozproszenia',
+    excerpt: 'Praktyczne techniki osiągania stanu flow i maksymalizacji potencjału kognitywnego.',
+    category: 'Produktywność',
+    date: '15 marca 2025',
+    readTime: '12 min czytania',
     image: '',
     content: `
-      <h2>The Attention Crisis</h2>
-      <p>In our hyperconnected world, the ability to focus deeply has become increasingly rare and increasingly valuable. The average knowledge worker is interrupted every 3 minutes, and it takes 23 minutes to return to deep focus after each interruption.</p>
+      <h2>Kryzys Uwagi</h2>
+      <p>W naszym hiperpołączonym świecie, zdolność do głębokiego skupienia stała się coraz rzadsza i coraz bardziej wartościowa. Przeciętny pracownik wiedzy jest przerywany co 3 minuty, a powrót do głębokiego skupienia po każdym przerwaniu zajmuje 23 minuty.</p>
       
-      <p>This article presents evidence-based strategies for cultivating the ability to focus deeply in a world designed to distract you.</p>
+      <p>Ten artykuł przedstawia oparte na dowodach strategie kultywowania zdolności do głębokiego skupienia w świecie zaprojektowanym, aby Cię rozpraszać.</p>
       
-      <h2>Understanding the Focus-Distraction Spectrum</h2>
-      <p>Focus isn't binary but exists on a spectrum. At one end is scattered attention, and at the other is flow state—a condition of complete absorption where performance peaks and time seems to disappear.</p>
+      <h2>Zrozumienie Spektrum Skupienia-Rozproszenia</h2>
+      <p>Skupienie nie jest binarne, ale istnieje na spektrum. Na jednym końcu jest rozproszona uwaga, a na drugim stan flow - stan całkowitego pochłonięcia, w którym wydajność osiąga szczyt, a czas wydaje się znikać.</p>
       
-      <p>The key insight is that deep focus is a skill that can be developed through deliberate practice and systems design.</p>
+      <p>Kluczowy wniosek jest taki, że głębokie skupienie to umiejętność, którą można rozwijać poprzez celową praktykę i projektowanie systemów.</p>
       
-      <h2>The Focus Protocol</h2>
-      <h3>1. Environment Design</h3>
-      <p>Create dedicated spaces for deep work by removing potential distractions. This includes:</p>
+      <h2>Protokół Skupienia</h2>
+      <h3>1. Projektowanie Środowiska</h3>
+      <p>Stwórz dedykowane przestrzenie do głębokiej pracy, usuwając potencjalne rozproszenia. To obejmuje:</p>
       <ul>
-        <li>Silencing notifications</li>
-        <li>Using website blockers during focus sessions</li>
-        <li>Creating visual cues that signal "focus mode" to others</li>
+        <li>Wyciszenie powiadomień</li>
+        <li>Używanie blokerów stron internetowych podczas sesji skupienia</li>
+        <li>Tworzenie wizualnych wskazówek, które sygnalizują "tryb skupienia" innym</li>
       </ul>
       
-      <h3>2. Time Blocking</h3>
-      <p>Schedule specific blocks for deep focus work, ideally 90-120 minutes. Protect these blocks as you would any important meeting.</p>
+      <h3>2. Blokowanie Czasu</h3>
+      <p>Zaplanuj konkretne bloki na głęboką pracę, idealnie 90-120 minut. Chroń te bloki tak, jakby to było ważne spotkanie.</p>
       
-      <h3>3. Focus Transitions</h3>
-      <p>Develop rituals that help your mind transition into deep focus:</p>
+      <h3>3. Przejścia Skupienia</h3>
+      <p>Opracuj rytuały, które pomogą Twojemu umysłowi przejść w stan głębokiego skupienia:</p>
       <ul>
-        <li>A specific playlist or sound environment</li>
-        <li>A brief meditation or breathing exercise</li>
-        <li>A physical cue like lighting a candle or putting on specific headphones</li>
+        <li>Specjalna playlista lub środowisko dźwiękowe</li>
+        <li>Krótka medytacja lub ćwiczenie oddechowe</li>
+        <li>Fizyczna wskazówka, jak zapalenie świeczki lub założenie specjalnych słuchawek</li>
       </ul>
       
-      <h2>Conclusion</h2>
-      <p>Deep focus is the superpower of the 21st century. By designing your environment, managing your time, and training your attention, you can cultivate this ability and achieve remarkable cognitive output in a distracted world.</p>
+      <h2>Wnioski</h2>
+      <p>Głębokie skupienie to supermoc XXI wieku. Projektując swoje środowisko, zarządzając czasem i trenując uwagę, możesz kultywować tę zdolność i osiągać niezwykłe wyniki poznawcze w rozproszonym świecie.</p>
     `
   },
   'ai-augmented-productivity': {
-    title: 'AI-Augmented Productivity Systems',
-    excerpt: 'How to leverage AI tools to enhance rather than replace your cognitive capabilities.',
-    category: 'Technology',
-    date: 'March 1, 2025',
-    readTime: '10 min read',
+    title: 'Systemy Produktywności Wspomagane przez AI',
+    excerpt: 'Jak wykorzystać narzędzia AI do wzmacniania, a nie zastępowania Twoich zdolności poznawczych.',
+    category: 'Technologia',
+    date: '1 marca 2025',
+    readTime: '10 min czytania',
     image: '',
     content: `
-      <h2>The AI Augmentation Paradigm</h2>
-      <p>Artificial Intelligence is often framed as either a miraculous solution to all problems or an existential threat. Both perspectives miss the most immediate opportunity: using AI as a cognitive extension that amplifies distinctly human capabilities.</p>
+      <h2>Paradygmat Wzmocnienia AI</h2>
+      <p>Sztuczna Inteligencja jest często przedstawiana jako cudowne rozwiązanie wszystkich problemów lub jako zagrożenie egzystencjalne. Obie perspektywy pomijają najbardziej bezpośrednią możliwość: używanie AI jako rozszerzenia poznawczego, które wzmacnia wyraźnie ludzkie zdolności.</p>
       
-      <p>This article explores how to build AI-augmented productivity systems that enhance your effectiveness without surrendering your agency.</p>
+      <p>Ten artykuł bada, jak budować systemy produktywności wspomagane przez AI, które zwiększają Twoją efektywność bez oddawania Twojej sprawczości.</p>
       
-      <h2>The Complementarity Principle</h2>
-      <p>Effective AI augmentation begins with understanding the complementary strengths of human and artificial intelligence:</p>
+      <h2>Zasada Komplementarności</h2>
+      <p>Skuteczne wzmocnienie AI zaczyna się od zrozumienia komplementarnych mocnych stron inteligencji ludzkiej i sztucznej:</p>
       <ul>
-        <li><strong>AI Strengths:</strong> Pattern recognition in large datasets, rapid information retrieval, tireless execution of defined processes</li>
-        <li><strong>Human Strengths:</strong> Contextual understanding, ethical judgment, creative leaps, interpersonal connection</li>
+        <li><strong>Mocne strony AI:</strong> Rozpoznawanie wzorców w dużych zbiorach danych, szybkie wyszukiwanie informacji, niestrudzone wykonywanie zdefiniowanych procesów</li>
+        <li><strong>Mocne strony Człowieka:</strong> Zrozumienie kontekstowe, osąd etyczny, kreatywne skoki, połączenie interpersonalne</li>
       </ul>
       
-      <p>The goal is to design systems where AI handles what it does best, freeing your human capabilities for what they do best.</p>
+      <p>Celem jest projektowanie systemów, w których AI zajmuje się tym, co robi najlepiej, uwalniając Twoje ludzkie zdolności do tego, co robią najlepiej.</p>
       
-      <h2>Building Your AI-Augmented System</h2>
-      <h3>1. Information Processing</h3>
-      <p>Use AI to summarize, categorize, and extract key insights from information streams, but maintain human oversight of the synthesis and meaning-making.</p>
+      <h2>Budowanie Twojego Systemu Wspomaganego przez AI</h2>
+      <h3>1. Przetwarzanie Informacji</h3>
+      <p>Używaj AI do podsumowywania, kategoryzowania i wyodrębniania kluczowych spostrzeżeń ze strumieni informacji, ale zachowaj ludzki nadzór nad syntezą i tworzeniem znaczeń.</p>
       
-      <h3>2. Idea Development</h3>
-      <p>Leverage AI as a thought partner by using it to:</p>
+      <h3>2. Rozwój Idei</h3>
+      <p>Wykorzystaj AI jako partnera do myślenia, używając go do:</p>
       <ul>
-        <li>Generate alternative perspectives</li>
-        <li>Identify potential blind spots in your thinking</li>
-        <li>Expand initial ideas into fuller concepts</li>
+        <li>Generowania alternatywnych perspektyw</li>
+        <li>Identyfikowania potencjalnych punktów ślepych w Twoim myśleniu</li>
+        <li>Rozszerzania początkowych pomysłów w pełniejsze koncepcje</li>
       </ul>
       
-      <h3>3. Implementation Acceleration</h3>
-      <p>Offload routine aspects of execution to AI while focusing your attention on high-judgment elements:</p>
+      <h3>3. Przyspieszenie Wdrożenia</h3>
+      <p>Odciąż rutynowe aspekty wykonania do AI, koncentrując uwagę na elementach wymagających wysokiego osądu:</p>
       <ul>
-        <li>Use AI for initial drafts, templates, and formatting</li>
-        <li>Apply your human judgment to refine, personalize, and elevate the output</li>
+        <li>Używaj AI do wstępnych szkiców, szablonów i formatowania</li>
+        <li>Zastosuj swój ludzki osąd, aby udoskonalić, spersonalizować i podnieść jakość wyniku</li>
       </ul>
       
-      <h2>The Agency Imperative</h2>
-      <p>The most important principle in AI-augmented productivity is maintaining your agency. This means:</p>
+      <h2>Imperatyw Sprawczości</h2>
+      <p>Najważniejszą zasadą w produktywności wspomaganej przez AI jest utrzymanie Twojej sprawczości. To oznacza:</p>
       <ul>
-        <li>Understanding your tools rather than being mystified by them</li>
-        <li>Developing clear delegation protocols that keep you in the driver's seat</li>
-        <li>Regularly auditing and refining your AI usage to ensure it's serving your goals</li>
+        <li>Rozumienie swoich narzędzi, zamiast być przez nie zdezorientowanym</li>
+        <li>Opracowywanie jasnych protokołów delegacji, które utrzymują Cię na miejscu kierowcy</li>
+        <li>Regularne audytowanie i udoskonalanie Twojego użycia AI, aby upewnić się, że służy Twoim celom</li>
       </ul>
       
-      <h2>Conclusion</h2>
-      <p>AI-augmented productivity represents a significant opportunity for those willing to approach these tools thoughtfully. By creating systems that leverage the complementary strengths of human and artificial intelligence, you can achieve remarkable results while maintaining your uniquely human contribution.</p>
+      <h2>Wnioski</h2>
+      <p>Produktywność wspomagana przez AI stanowi znaczącą szansę dla tych, którzy chcą podejść do tych narzędzi z rozwagą. Tworząc systemy, które wykorzystują komplementarne mocne strony inteligencji ludzkiej i sztucznej, możesz osiągnąć niezwykłe wyniki, zachowując swój unikalny ludzki wkład.</p>
     `
   },
   'decision-making-framework': {
-    title: 'A Decision-Making Framework for Uncertainty',
-    excerpt: 'A systematic approach to making better decisions when information is incomplete.',
-    category: 'Decision Making',
-    date: 'February 20, 2025',
-    readTime: '15 min read',
+    title: 'Framework Podejmowania Decyzji w Warunkach Niepewności',
+    excerpt: 'Systematyczne podejście do podejmowania lepszych decyzji, gdy informacje są niekompletne.',
+    category: 'Podejmowanie Decyzji',
+    date: '20 lutego 2025',
+    readTime: '15 min czytania',
     image: '',
     content: `
-      <h2>The Reality of Uncertainty</h2>
-      <p>We make our most consequential decisions under conditions of uncertainty. Whether in business, career, or personal life, we rarely have complete information yet must still choose a path forward.</p>
+      <h2>Rzeczywistość Niepewności</h2>
+      <p>Podejmujemy nasze najważniejsze decyzje w warunkach niepewności. Czy to w biznesie, karierze, czy życiu osobistym, rzadko mamy pełne informacje, a mimo to musimy wybrać drogę naprzód.</p>
       
-      <p>This article presents a decision-making framework specifically designed for navigating uncertainty with greater confidence and clarity.</p>
+      <p>Ten artykuł przedstawia framework podejmowania decyzji specjalnie zaprojektowany do poruszania się w niepewności z większą pewnością i jasnością.</p>
       
-      <h2>The VISTA Decision Framework</h2>
-      <p>VISTA stands for Values, Information, Scenarios, Tradeoffs, and Adaptation. Each component addresses a critical aspect of decision-making under uncertainty.</p>
+      <h2>Framework Decyzyjny VISTA</h2>
+      <p>VISTA oznacza Wartości, Informacje, Scenariusze, Tradeoffy i Adaptacja. Każdy komponent odnosi się do krytycznego aspektu podejmowania decyzji w warunkach niepewności.</p>
       
-      <h3>V - Values Clarification</h3>
-      <p>Begin by clarifying what matters most in this specific decision context:</p>
+      <h3>W - Ustalenie Wartości</h3>
+      <p>Zacznij od wyjaśnienia, co jest najważniejsze w tym konkretnym kontekście decyzyjnym:</p>
       <ul>
-        <li>What core values should guide this decision?</li>
-        <li>What are your non-negotiables vs. areas of flexibility?</li>
-        <li>What does success look like beyond the immediate outcome?</li>
+        <li>Jakie podstawowe wartości powinny kierować tą decyzją?</li>
+        <li>Jakie są Twoje elementy niepodlegające negocjacjom vs. obszary elastyczności?</li>
+        <li>Jak wygląda sukces poza bezpośrednim wynikiem?</li>
       </ul>
       
-      <h3>I - Information Assessment</h3>
-      <p>Evaluate what you know and don't know:</p>
+      <h3>I - Ocena Informacji</h3>
+      <p>Oceń, co wiesz, a czego nie wiesz:</p>
       <ul>
-        <li>Separate facts from assumptions and clearly label each</li>
-        <li>Identify the most critical knowledge gaps</li>
-        <li>Determine which gaps can be narrowed before deciding and which must be accepted as unknowable</li>
+        <li>Oddziel fakty od założeń i wyraźnie oznacz każdy z nich</li>
+        <li>Zidentyfikuj najbardziej krytyczne luki w wiedzy</li>
+        <li>Określ, które luki można zawęzić przed podjęciem decyzji, a które należy zaakceptować jako niemożliwe do poznania</li>
       </ul>
       
-      <h3>S - Scenario Development</h3>
-      <p>Create multiple plausible futures to explore possibilities:</p>
+      <h3>S - Rozwój Scenariuszy</h3>
+      <p>Stwórz wiele prawdopodobnych przyszłości, aby zbadać możliwości:</p>
       <ul>
-        <li>Develop at least three scenarios (best case, worst case, and unexpected)</li>
-        <li>For each option you're considering, trace its likely outcomes in each scenario</li>
-        <li>Look for options that perform acceptably across all scenarios</li>
+        <li>Opracuj co najmniej trzy scenariusze (najlepszy przypadek, najgorszy przypadek i nieoczekiwany)</li>
+        <li>Dla każdej rozważanej opcji prześledź jej prawdopodobne wyniki w każdym scenariuszu</li>
+        <li>Szukaj opcji, które działają akceptowalnie we wszystkich scenariuszach</li>
       </ul>
       
-      <h3>T - Tradeoff Analysis</h3>
-      <p>Make implicit tradeoffs explicit:</p>
+      <h3>T - Analiza Tradeoffów</h3>
+      <p>Uczyń ukryte tradeoffy jawnymi:</p>
       <ul>
-        <li>Identify the key tradeoffs inherent in each option</li>
-        <li>Consider both short-term vs. long-term and certain vs. potential impacts</li>
-        <li>Assign relative weights based on your values clarification</li>
+        <li>Zidentyfikuj kluczowe tradeoffy nieodłącznie związane z każdą opcją</li>
+        <li>Rozważ zarówno krótko- vs. długoterminowe, jak i pewne vs. potencjalne skutki</li>
+        <li>Przypisz względne wagi na podstawie Twojego ustalenia wartości</li>
       </ul>
       
-      <h3>A - Adaptation Planning</h3>
-      <p>Prepare to adjust as new information emerges:</p>
+      <h3>A - Planowanie Adaptacji</h3>
+      <p>Przygotuj się na dostosowanie w miarę pojawiania się nowych informacji:</p>
       <ul>
-        <li>Define clear triggers that would prompt reconsideration</li>
-        <li>Create contingency plans for the most concerning scenarios</li>
-        <li>Establish a schedule for reviewing the decision and its outcomes</li>
+        <li>Zdefiniuj jasne wyzwalacze, które skłonią do ponownego rozważenia</li>
+        <li>Stwórz plany awaryjne dla najbardziej niepokojących scenariuszy</li>
+        <li>Ustal harmonogram przeglądu decyzji i jej wyników</li>
       </ul>
       
-      <h2>Conclusion</h2>
-      <p>The VISTA framework doesn't eliminate uncertainty, but it provides a structured approach to making decisions despite it. By clarifying values, assessing information, developing scenarios, analyzing tradeoffs, and planning for adaptation, you can navigate uncertain terrain with greater confidence and resilience.</p>
+      <h2>Wnioski</h2>
+      <p>Framework VISTA nie eliminuje niepewności, ale zapewnia ustrukturyzowane podejście do podejmowania decyzji pomimo niej. Wyjaśniając wartości, oceniając informacje, rozwijając scenariusze, analizując tradeoffy i planując adaptację, możesz poruszać się po niepewnym terenie z większą pewnością i odpornością.</p>
     `
   },
   'energy-management-high-performers': {
-    title: 'Energy Management for High Performers',
-    excerpt: 'Why managing energy is more important than managing time for sustained excellence.',
-    category: 'Performance',
-    date: 'February 5, 2025',
-    readTime: '9 min read',
+    title: 'Zarządzanie Energią dla Osób Osiągających Wysokie Wyniki',
+    excerpt: 'Dlaczego zarządzanie energią jest ważniejsze niż zarządzanie czasem dla trwałej doskonałości.',
+    category: 'Wydajność',
+    date: '5 lutego 2025',
+    readTime: '9 min czytania',
     image: '',
     content: `
-      <h2>Beyond Time Management</h2>
-      <p>Traditional productivity advice focuses on managing time. However, high performers understand that time is fixed while energy is variable and renewable. This article explores why energy management is the true key to sustained high performance.</p>
+      <h2>Poza Zarządzaniem Czasem</h2>
+      <p>Tradycyjne porady dotyczące produktywności koncentrują się na zarządzaniu czasem. Jednak osoby osiągające wysokie wyniki rozumieją, że czas jest stały, podczas gdy energia jest zmienna i odnawialna. Ten artykuł bada, dlaczego zarządzanie energią jest prawdziwym kluczem do trwałej wysokiej wydajności.</p>
       
-      <h2>The Four Energy Dimensions</h2>
-      <p>Holistic energy management addresses four interconnected dimensions:</p>
+      <h2>Cztery Wymiary Energii</h2>
+      <p>Holistyczne zarządzanie energią odnosi się do czterech wzajemnie powiązanych wymiarów:</p>
       
-      <h3>1. Physical Energy</h3>
-      <p>The foundation of all other energy types, physical energy depends on:</p>
+      <h3>1. Energia Fizyczna</h3>
+      <p>Podstawa wszystkich innych rodzajów energii, energia fizyczna zależy od:</p>
       <ul>
-        <li>Sleep quality and quantity</li>
-        <li>Nutrition and hydration</li>
-        <li>Movement and recovery</li>
+        <li>Jakości i ilości snu</li>
+        <li>Odżywiania i nawodnienia</li>
+        <li>Ruchu i regeneracji</li>
       </ul>
       
-      <p>High performers design precise protocols for each of these elements, treating them not as lifestyle choices but as performance requirements.</p>
+      <p>Osoby osiągające wysokie wyniki projektują precyzyjne protokoły dla każdego z tych elementów, traktując je nie jako wybory stylu życia, ale jako wymagania dotyczące wydajności.</p>
       
-      <h3>2. Mental Energy</h3>
-      <p>Mental energy governs focus, attention, and cognitive processing power:</p>
+      <h3>2. Energia Mentalna</h3>
+      <p>Energia mentalna rządzi skupieniem, uwagą i mocą przetwarzania poznawczego:</p>
       <ul>
-        <li>Cognitive load management</li>
-        <li>Attention restoration practices</li>
-        <li>Mental state transitions</li>
+        <li>Zarządzanie obciążeniem poznawczym</li>
+        <li>Praktyki przywracania uwagi</li>
+        <li>Przejścia stanu mentalnego</li>
       </ul>
       
-      <h3>3. Emotional Energy</h3>
-      <p>Emotional energy affects resilience and engagement:</p>
+      <h3>3. Energia Emocjonalna</h3>
+      <p>Energia emocjonalna wpływa na odporność i zaangażowanie:</p>
       <ul>
-        <li>Emotional regulation techniques</li>
-        <li>Positive-to-negative interaction ratios</li>
-        <li>Recovery from emotional expenditure</li>
+        <li>Techniki regulacji emocjonalnej</li>
+        <li>Współczynniki interakcji pozytywnych do negatywnych</li>
+        <li>Regeneracja po wydatkowaniu emocjonalnym</li>
       </ul>
       
-      <h3>4. Purpose Energy</h3>
-      <p>Purpose energy connects daily actions to deeper meaning:</p>
+      <h3>4. Energia Celu</h3>
+      <p>Energia celu łączy codzienne działania z głębszym sensem:</p>
       <ul>
-        <li>Alignment between activities and values</li>
-        <li>Meaning-making practices</li>
-        <li>Connection to longer-term impact</li>
+        <li>Zgodność między działaniami a wartościami</li>
+        <li>Praktyki nadawania znaczenia</li>
+        <li>Połączenie z długoterminowym wpływem</li>
       </ul>
       
-      <h2>The Energy Audit and Management System</h2>
-      <p>High performers implement a systematic approach to energy management:</p>
+      <h2>Audyt Energii i System Zarządzania</h2>
+      <p>Osoby osiągające wysokie wyniki wdrażają systematyczne podejście do zarządzania energią:</p>
       
-      <h3>Step 1: Energy Mapping</h3>
-      <p>Track your energy levels across all four dimensions throughout your typical week, noting patterns and influences.</p>
+      <h3>Krok 1: Mapowanie Energii</h3>
+      <p>Śledź swoje poziomy energii we wszystkich czterech wymiarach przez cały typowy tydzień, notując wzorce i wpływy.</p>
       
-      <h3>Step 2: Energy Alignment</h3>
-      <p>Match your most demanding activities with your natural energy peaks, and schedule recovery periods to coincide with energy valleys.</p>
+      <h3>Krok 2: Dopasowanie Energii</h3>
+      <p>Dopasuj swoje najbardziej wymagające działania do swoich naturalnych szczytów energetycznych i zaplanuj okresy regeneracji, aby zbiegały się z dolinami energetycznymi.</p>
       
-      <h3>Step 3: Energy Enhancement</h3>
-      <p>Implement targeted practices to expand your capacity in each energy dimension.</p>
+      <h3>Krok 3: Wzmocnienie Energii</h3>
+      <p>Wdróż ukierunkowane praktyki, aby zwiększyć swoją pojemność w każdym wymiarze energii.</p>
       
-      <h3>Step 4: Energy Recovery</h3>
-      <p>Design deliberate recovery protocols for sustainable performance rather than relying on crisis-driven rest.</p>
+      <h3>Krok 4: Regeneracja Energii</h3>
+      <p>Zaprojektuj celowe protokoły regeneracji dla zrównoważonej wydajności, zamiast polegać na odpoczynku napędzanym kryzysem.</p>
       
-      <h2>Conclusion</h2>
-      <p>The highest performers aren't those who work the most hours but those who bring their fullest energy to their most important work. By shifting focus from time management to energy management, you can achieve more meaningful results while enhancing rather than depleting your well-being.</p>
+      <h2>Wnioski</h2>
+      <p>Najlepsi nie są ci, którzy pracują najwięcej godzin, ale ci, którzy wnoszą swoją pełną energię do swojej najważniejszej pracy. Przenosząc nacisk z zarządzania czasem na zarządzanie energią, możesz osiągnąć bardziej znaczące wyniki, jednocześnie wzmacniając, a nie wyczerpując swoje samopoczucie.</p>
     `
   },
   'information-overload-strategies': {
-    title: 'Strategies for Managing Information Overload',
-    excerpt: 'Practical techniques for filtering, processing, and retaining essential information.',
-    category: 'Productivity',
-    date: 'January 22, 2025',
-    readTime: '11 min read',
+    title: 'Strategie Zarządzania Przeciążeniem Informacyjnym',
+    excerpt: 'Praktyczne techniki filtrowania, przetwarzania i zatrzymywania niezbędnych informacji.',
+    category: 'Produktywność',
+    date: '22 stycznia 2025',
+    readTime: '11 min czytania',
     image: '',
     content: `
-      <h2>The Information Paradox</h2>
-      <p>We live in an age of information abundance but attention scarcity. The average knowledge worker is exposed to more information in a week than someone in the 18th century might encounter in a lifetime. This article presents a comprehensive system for managing information without becoming overwhelmed.</p>
+      <h2>Paradoks Informacji</h2>
+      <p>Żyjemy w erze obfitości informacji, ale niedoboru uwagi. Przeciętny pracownik wiedzy jest narażony na więcej informacji w ciągu tygodnia niż ktoś w XVIII wieku mógłby napotkać w ciągu życia. Ten artykuł przedstawia kompleksowy system zarządzania informacjami bez poczucia przytłoczenia.</p>
       
-      <h2>The Information Processing Framework</h2>
+      <h2>Framework Przetwarzania Informacji</h2>
       
-      <h3>1. Intentional Consumption</h3>
-      <p>Move from passive to active information intake:</p>
+      <h3>1. Świadoma Konsumpcja</h3>
+      <p>Przejdź od pasywnego do aktywnego pobierania informacji:</p>
       <ul>
-        <li>Implement information boundaries (specific times, places, and methods for information intake)</li>
-        <li>Practice "just-in-time" learning rather than "just-in-case" accumulation</li>
-        <li>Develop clear criteria for what deserves your attention</li>
+        <li>Wdróż granice informacyjne (określone czasy, miejsca i metody pobierania informacji)</li>
+        <li>Ćwicz uczenie się "w samą porę" zamiast gromadzenia "na wszelki wypadek"</li>
+        <li>Opracuj jasne kryteria tego, co zasługuje na Twoją uwagę</li>
       </ul>
       
-      <h3>2. Effective Processing</h3>
-      <p>Transform raw information into usable knowledge:</p>
+      <h3>2. Skuteczne Przetwarzanie</h3>
+      <p>Przekształć surowe informacje w użyteczną wiedzę:</p>
       <ul>
-        <li>Implement progressive summarization techniques</li>
-        <li>Practice concept mapping to connect new information to existing knowledge</li>
-        <li>Develop personal metadata systems to enhance retrievability</li>
+        <li>Wdróż techniki progresywnego podsumowywania</li>
+        <li>Ćwicz mapowanie koncepcji, aby połączyć nowe informacje z istniejącą wiedzą</li>
+        <li>Opracuj osobiste systemy metadanych, aby poprawić możliwość wyszukiwania</li>
       </ul>
       
-      <h3>3. Strategic Retention</h3>
-      <p>Move beyond traditional note-taking to knowledge management:</p>
+      <h3>3. Strategiczne Zatrzymywanie</h3>
+      <p>Wyjdź poza tradycyjne robienie notatek do zarządzania wiedzą:</p>
       <ul>
-        <li>Build a personal knowledge management system using tools like Obsidian, Roam, or Notion</li>
-        <li>Implement spaced repetition for information you need to internalize</li>
-        <li>Create retrieval-friendly organization systems</li>
+        <li>Zbuduj osobisty system zarządzania wiedzą za pomocą narzędzi takich jak Obsidian, Roam lub Notion</li>
+        <li>Wdróż powtarzanie w odstępach czasu dla informacji, które musisz zinternalizować</li>
+        <li>Stwórz systemy organizacji przyjazne wyszukiwaniu</li>
       </ul>
       
-      <h2>Information Environments</h2>
-      <p>Your physical and digital environments significantly impact your information processing capabilities:</p>
+      <h2>Środowiska Informacyjne</h2>
+      <p>Twoje środowiska fizyczne i cyfrowe znacząco wpływają na Twoje możliwości przetwarzania informacji:</p>
       
-      <h3>Digital Environment Design</h3>
+      <h3>Projektowanie Środowiska Cyfrowego</h3>
       <ul>
-        <li>Create separate spaces for different information modes (consumption, processing, creation)</li>
-        <li>Implement friction for low-value information sources</li>
-        <li>Design your notification architecture to protect attention</li>
+        <li>Stwórz oddzielne przestrzenie dla różnych trybów informacji (konsumpcja, przetwarzanie, tworzenie)</li>
+        <li>Wdróż tarcie dla źródeł informacji o niskiej wartości</li>
+        <li>Zaprojektuj swoją architekturę powiadomień, aby chronić uwagę</li>
       </ul>
       
-      <h3>Physical Environment Design</h3>
+      <h3>Projektowanie Środowiska Fizycznego</h3>
       <ul>
-        <li>Establish dedicated spaces for deep information processing</li>
-        <li>Use physical cues to trigger different information modes</li>
-        <li>Reduce cognitive load through environmental simplification</li>
+        <li>Ustal dedykowane przestrzenie do głębokiego przetwarzania informacji</li>
+        <li>Używaj fizycznych wskazówek, aby wywoływać różne tryby informacji</li>
+        <li>Zmniejsz obciążenie poznawcze poprzez uproszczenie środowiska</li>
       </ul>
       
-      <h2>From Information to Wisdom</h2>
-      <p>The ultimate goal isn't simply to manage information but to transform it into wisdom:</p>
+      <h2>Od Informacji do Mądrości</h2>
+      <p>Ostatecznym celem nie jest po prostu zarządzanie informacjami, ale przekształcenie ich w mądrość:</p>
       <ul>
-        <li>Schedule regular synthesis sessions to integrate new knowledge</li>
-        <li>Practice applying information in different contexts</li>
-        <li>Develop reflection rituals to extract deeper insights from experiences</li>
+        <li>Zaplanuj regularne sesje syntezy, aby zintegrować nową wiedzę</li>
+        <li>Ćwicz stosowanie informacji w różnych kontekstach</li>
+        <li>Opracuj rytuały refleksji, aby wydobyć głębsze spostrzeżenia z doświadczeń</li>
       </ul>
       
-      <h2>Conclusion</h2>
-      <p>Information overload isn't inevitable. With intentional consumption, effective processing, and strategic retention systems, you can transform the information deluge from a source of stress to a foundation for insight and effectiveness.</p>
+      <h2>Wnioski</h2>
+      <p>Przeciążenie informacyjne nie jest nieuniknione. Dzięki świadomej konsumpcji, skutecznemu przetwarzaniu i strategicznym systemom zatrzymywania, możesz przekształcić potop informacji ze źródła stresu w fundament wglądu i efektywności.</p>
     `
   }
 };
@@ -332,7 +330,6 @@ const articlesData = {
 const ResourceArticle = () => {
   const { articleSlug } = useParams();
   
-  // If article doesn't exist, redirect to resources page
   if (!articleSlug || !articlesData[articleSlug]) {
     return <Navigate to="/resources" />;
   }
@@ -350,7 +347,7 @@ const ResourceArticle = () => {
               className="inline-flex items-center text-silver-mist hover:text-white transition-colors mb-6"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Resources
+              Wróć do Zasobów
             </Link>
             
             <div className="flex items-center mb-4">
@@ -402,13 +399,13 @@ const ResourceArticle = () => {
                   Ludwik Siadlak
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80 mb-2">
-                  Mentor & Coach at the Intersection of Technology and Human Potential
+                  Mentor & Coach na skrzyżowaniu Technologii i Ludzkiego Potencjału
                 </p>
                 <Link 
                   to="/about"
                   className="text-neural-violet dark:text-luminal-magenta hover:underline"
                 >
-                  More about Ludwik
+                  Więcej o Ludwiku
                 </Link>
               </div>
             </div>
@@ -416,24 +413,24 @@ const ResourceArticle = () => {
             {/* Next Steps */}
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                Want to Dive Deeper?
+                Chcesz Zanurzyć Się Głębiej?
               </h3>
               
               <p className="text-subtle-slate dark:text-silver-mist/80 mb-6 max-w-lg mx-auto">
-                Explore how we can work together to enhance your capabilities at the intersection of technology and human potential.
+                Dowiedz się, jak możemy współpracować, aby zwiększyć Twoje możliwości na skrzyżowaniu technologii i ludzkiego potencjału.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
                   <Button className="bg-neural-violet hover:bg-ascension-pink">
-                    Book a Discovery Call
+                    Umów Rozmowę
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 
                 <Link to="/courses">
                   <Button variant="outline">
-                    Explore Programs
+                    Poznaj Programy
                   </Button>
                 </Link>
               </div>

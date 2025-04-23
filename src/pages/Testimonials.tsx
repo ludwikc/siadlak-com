@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
@@ -7,62 +6,62 @@ import { ArrowRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "After 15 years in tech leadership, I was burning out from constant digital demands. Ludwik's approach completely changed how I interact with technology. I now accomplish more meaningful work in less time, and I've regained the mental space for strategic thinking.",
+    quote: "Po 15 latach w zarządzaniu technologią, cyfrowe wymagania zaczęły mnie przytłaczać. Podejście Ludwika całkowicie zmieniło sposób, w jaki współdziałam z technologią. Teraz wykonuję więcej znaczącej pracy w krótszym czasie, odzyskując przestrzeń mentalną na myślenie strategiczne.",
     name: "Marcin K.",
     title: "CTO",
     company: "Financial Technology",
     program: "Mental Elevator",
-    results: "Reduced digital interruptions by 60%, improved team productivity by 35%, and launched two major initiatives that had been stalled for months.",
+    results: "Redukcja cyfrowych zakłóceń o 60%, poprawa produktywności zespołu o 35%, i uruchomienie dwóch głównych inicjatyw, które były zablokowane od miesięcy.",
     featured: true,
     image: ""
   },
   {
-    quote: "I was drowning in AI tools, analytics, and platforms—all supposedly making me more efficient but actually stealing my time and creativity. Working with Ludwik showed me how to make these tools truly serve my vision instead of dictating my day.",
+    quote: "Tonąłem w narzędziach AI, analityce i platformach - wszystko rzekomo miało zwiększać moją efektywność, a w rzeczywistości kradło mój czas i kreatywność. Praca z Ludwikiem pokazała mi, jak sprawić, by te narzędzia faktycznie służyły mojej wizji, zamiast dyktować mój dzień.",
     name: "Anna W.",
-    title: "Marketing Director",
-    company: "Creative Agency",
+    title: "Dyrektor Marketingu",
+    company: "Agencja Kreatywna",
     program: "Mental Elevator",
-    results: "Created a streamlined workflow that cut 12 hours of busywork weekly, doubled creative output, and improved campaign performance by 28%.",
+    results: "Stworzenie usprawnionego workflow, które zaoszczędziło 12 godzin tygodniowo, podwojenie kreatywnego output'u i poprawa wyników kampanii o 28%.",
     featured: true,
     image: ""
   },
   {
-    quote: "As a solo professional, I was trapped in a cycle of constantly checking emails, messages, and updates. Ludwik's systems helped me establish command over my digital environment while actually improving my client responsiveness.",
+    quote: "Jako niezależny specjalista, byłem uwięziony w cyklu ciągłego sprawdzania maili, wiadomości i aktualizacji. Systemy Ludwika pomogły mi przejąć kontrolę nad moim cyfrowym środowiskiem, jednocześnie poprawiając responsywność wobec klientów.",
     name: "Tomasz B.",
-    title: "Independent Consultant",
-    company: "Business Strategy",
+    title: "Niezależny Konsultant",
+    company: "Strategia Biznesowa",
     program: "Hakowanie Produktywności",
-    results: "Reclaimed 2 hours daily, increased client satisfaction scores, and finally completed a long-delayed certification that increased my rates by 40%.",
+    results: "Odzyskanie 2 godzin dziennie, zwiększenie wskaźników satysfakcji klientów i wreszcie ukończenie długo odkładanej certyfikacji, która zwiększyła moje stawki o 40%.",
     featured: true,
     image: ""
   },
   {
-    quote: "The techniques Ludwik teaches aren't just productivity hacks—they're about reclaiming your agency in a world designed to capture your attention. This is about power, focus, and intentionality in digital spaces.",
+    quote: "Techniki, których uczy Ludwik, to nie zwykłe hacki produktywności - to odzyskiwanie sprawczości w świecie zaprojektowanym, by przechwytywać Twoją uwagę. To kwestia siły, skupienia i intencjonalności w przestrzeniach cyfrowych.",
     name: "Kasia L.",
     title: "CTO",
     company: "Tech Startup",
     program: "Tech Leadership Mastery",
-    results: "Transformed team culture around technology use, implemented focused work blocks, and eliminated the 'always on' mentality that was burning everyone out.",
+    results: "Transformacja kultury zespołowej wokół używania technologii, wdrożenie bloków głębokiej pracy i eliminacja mentalności 'zawsze dostępny', która wypalała wszystkich.",
     featured: false,
     image: ""
   },
   {
-    quote: "What sets Ludwik apart is his understanding of both technical systems and human psychology. Most trainers focus on one or the other—he integrates them perfectly.",
+    quote: "To, co wyróżnia Ludwika, to zrozumienie zarówno systemów technicznych, jak i psychologii człowieka. Większość trenerów skupia się na jednym lub drugim - on integruje je perfekcyjnie.",
     name: "Jan B.",
-    title: "Director",
-    company: "Media Company",
+    title: "Dyrektor",
+    company: "Firma Mediowa",
     program: "Hakowanie Produktywności",
-    results: "Established boundaries that seemed impossible before, created systems that support focused creative work, and stopped letting digital tools dictate my priorities.",
+    results: "Ustanowienie granic, które wcześniej wydawały się niemożliwe, stworzenie systemów wspierających skupioną pracę kreatywną i zaprzestanie pozwalania narzędziom cyfrowym na dyktowanie priorytetów.",
     featured: false,
     image: ""
   },
   {
-    quote: "This isn't just about productivity—it's about reclaiming your life from digital colonization. Ludwik's methods helped me establish healthy boundaries without sacrificing professional effectiveness.",
+    quote: "To nie jest tylko kwestia produktywności - to odzyskiwanie życia z cyfrowej kolonizacji. Metody Ludwika pomogły mi ustanowić zdrowe granice bez poświęcania zawodowej skuteczności.",
     name: "Maria J.",
     title: "Engineering Manager",
     company: "Software Development",
     program: "Tech Leadership Mastery",
-    results: "Cut meeting time by 50%, established sustainable communication protocols, and created space for deep work that produced our most innovative features yet.",
+    results: "Redukcja czasu spotkań o 50%, ustanowienie zrównoważonych protokołów komunikacji i stworzenie przestrzeni na głęboką pracę, która zaowocowała naszymi najbardziej innowacyjnymi funkcjami.",
     featured: false,
     image: ""
   }
@@ -76,10 +75,10 @@ const Testimonials = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Success Stories
+              Historie Transformacji
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              These professionals took back control of their digital lives and transformed their relationship with technology. Their stories show what's possible when you stop serving technology and start commanding it.
+              Ci profesjonaliści odzyskali kontrolę nad swoim cyfrowym życiem i przekształcili swoją relację z technologią. Ich historie pokazują, co jest możliwe, gdy przestajesz służyć technologii i zaczynasz nią dowodzić.
             </p>
           </div>
         </div>

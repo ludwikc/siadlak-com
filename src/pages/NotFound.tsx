@@ -14,11 +14,11 @@ const NotFound = () => {
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-            Page Not Found
+            Strona nie istnieje
           </h1>
           
           <p className="text-subtle-slate dark:text-silver-mist/80 mb-8 max-w-lg mx-auto">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            Ta strona została przeniesiona, zmieniono jej nazwę lub jest tymczasowo niedostępna. Zamiast tracić czas, zacznij od nowa.
           </p>
           
           <Link 
@@ -26,7 +26,7 @@ const NotFound = () => {
             className="btn-primary inline-flex items-center gap-2"
           >
             <Home size={18} />
-            Return to Home
+            Wróć na stronę główną
           </Link>
         </div>
       </div>
