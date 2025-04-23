@@ -10,11 +10,11 @@ export default function AboutSection() {
           {/* Image Column */}
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/42fdb972-2ce5-4895-bdc1-66773399f43f.png" 
-                alt="Ludwik C. Siadlak" 
-                className="w-full h-full object-cover"
-              />
+              <div className="w-full h-full bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet dark:to-ascension-pink/50 flex items-center justify-center">
+                <span className="text-neural-violet dark:text-silver-mist text-lg">
+                  Profile Image
+                </span>
+              </div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full blur-2xl opacity-30 dark:opacity-50"></div>
           </div>

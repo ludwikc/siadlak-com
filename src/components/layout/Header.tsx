@@ -1,16 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useLanguage } from '../../contexts/LanguageContext';
-import { Menu, X } from 'lucide-react';
-import DesktopNavigation from '../navigation/DesktopNavigation';
-import MobileNavigation from '../navigation/MobileNavigation';
-import HeaderControls from '../navigation/HeaderControls';
+import { useTheme } from '../../contexts/ThemeContext';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { getLocalizedPath } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   
   // Handle scroll effect
   useEffect(() => {
@@ -40,37 +37,104 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to={getLocalizedPath("/")} className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold font-heading bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-            Ludwik C. Siadlak
+            Ludwik Siadlak
           </span>
         </Link>
         
         {/* Desktop Navigation */}
-        <DesktopNavigation />
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link 
+            to="/about"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            About
+          </Link>
+          <Link 
+            to="/courses"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            Courses
+          </Link>
+          <Link 
+            to="/resources"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            Resources
+          </Link>
+          <Link 
+            to="/contact"
+            className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors"
+          >
+            Book a Call
+          </Link>
+          
+          {/* Theme Toggle */}
+          <button 
+            onClick={toggleTheme} 
+            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+        </nav>
         
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <HeaderControls />
-          
+          <button 
+            onClick={toggleTheme} 
+            className="p-2 mr-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 ml-2 text-deep-charcoal dark:text-silver-mist"
+            className="p-2 text-deep-charcoal dark:text-silver-mist"
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        
-        {/* Desktop Controls - Hidden on Mobile */}
-        <div className="hidden md:block">
-          <HeaderControls />
-        </div>
       </div>
       
       {/* Mobile Menu */}
-      <MobileNavigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-luminous-white dark:bg-deep-space shadow-lg animate-fade-in">
+          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <Link 
+              to="/about"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/courses"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Courses
+            </Link>
+            <Link 
+              to="/resources"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Resources
+            </Link>
+            <Link 
+              to="/contact"
+              className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors inline-block"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Book a Call
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

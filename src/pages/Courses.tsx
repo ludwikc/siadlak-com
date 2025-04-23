@@ -1,20 +1,71 @@
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, Calendar, Star, CheckCircle } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { bilingualCoursesData } from '../data/courses';
+
+const coursesData = [
+  {
+    id: 'mental-elevator',
+    title: 'Mental Elevator',
+    subtitle: 'Premium 8-Week Mentoring Program',
+    description: 'A comprehensive program designed to elevate your mental performance, decision-making capabilities, and leadership presence.',
+    features: [
+      'Weekly 1:1 coaching sessions',
+      'Customized productivity system',
+      'Mental models toolkit',
+      'Lifetime access to program materials',
+      'Private community access'
+    ],
+    duration: '8 weeks',
+    format: 'Hybrid (Online + Live Sessions)',
+    level: 'Intermediate to Advanced',
+    startDate: 'Flexible Start Dates',
+    featured: true,
+    image: ''
+  },
+  {
+    id: 'hakowanie-produktywnosci',
+    title: 'Hakowanie Produktywności',
+    subtitle: 'Productivity Mastery Program',
+    description: 'Master advanced productivity systems that leverage your unique cognitive strengths and create sustainable high performance.',
+    features: [
+      'Personalized productivity assessment',
+      'Custom task management setup',
+      'Focus and deep work protocols',
+      'Energy management framework',
+      'Technology integration blueprint'
+    ],
+    duration: '6 weeks',
+    format: 'Online Self-Paced + Group Calls',
+    level: 'All Levels',
+    startDate: 'Enrollment opens quarterly',
+    featured: false,
+    image: ''
+  },
+  {
+    id: 'tech-leadership',
+    title: 'Tech Leadership Mastery',
+    subtitle: 'For Technical Leaders and Managers',
+    description: 'Develop the unique skill set required to lead technical teams effectively while navigating rapidly changing technology landscapes.',
+    features: [
+      'Technical leadership framework',
+      'Team communication protocols',
+      'Decision-making under uncertainty',
+      'Managing technical debt',
+      'Strategic planning for tech teams'
+    ],
+    duration: '10 weeks',
+    format: 'Online Cohort-Based',
+    level: 'Advanced',
+    startDate: 'Next cohort: September 2025',
+    featured: false,
+    image: ''
+  }
+];
 
 const Courses = () => {
-  const { getLocalizedPath } = useLanguage();
-  
-  // Generate the courses array from the bilingual data for English version
-  const coursesData = Object.keys(bilingualCoursesData).map((key) => ({
-    id: key,
-    ...bilingualCoursesData[key].en
-  }));
-
   return (
     <Layout>
       {/* Hero Section */}

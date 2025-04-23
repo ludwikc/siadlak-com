@@ -22,15 +22,6 @@ const NewsletterPage = () => {
         </div>
       </section>
       
-      {/* Newsletter Signup Right Below Hero */}
-      <div className="py-12 bg-luminous-white dark:bg-deep-space border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <Newsletter />
-          </div>
-        </div>
-      </div>
-      
       {/* Newsletter Features */}
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
@@ -156,6 +147,9 @@ const NewsletterPage = () => {
                 </ul>
               </div>
             </div>
+            
+            {/* Newsletter Signup */}
+            <Newsletter />
             
             <div className="mt-16 text-center">
               <p className="text-subtle-slate dark:text-silver-mist/80 mb-6">

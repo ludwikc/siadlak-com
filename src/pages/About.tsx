@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, Award, BookOpen, Code, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const approachPoints = [
@@ -53,7 +53,7 @@ const About = () => {
               
               <div className="mt-8">
                 <Link to="/contact">
-                  <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
+                  <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist">
                     Schedule a Conversation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -63,11 +63,10 @@ const About = () => {
             
             <div className="order-1 lg:order-2">
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="/lovable-uploads/920ff92a-c475-41f6-805b-4dd977f3b584.png"
-                  alt="Ludwik Siadlak" 
-                  className="h-full w-full object-cover"
-                />
+                {/* Placeholder for profile image */}
+                <div className="bg-gradient-to-br from-neural-violet to-ascension-pink h-full w-full flex items-center justify-center">
+                  <span className="text-white text-xl font-medium">Ludwik Siadlak</span>
+                </div>
               </div>
             </div>
           </div>
@@ -125,16 +124,8 @@ const About = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-neural-violet to-ascension-pink"></div>
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src="/lovable-uploads/5121484c-18e6-4311-a4a6-9813c6dba659.png" 
-            alt="Ludwik Siadlak" 
-            className="w-full h-full object-cover mix-blend-overlay"
-          />
-        </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-neural-violet to-ascension-pink">
+        <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to take back control of your digital life?

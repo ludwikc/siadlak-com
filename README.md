@@ -1,120 +1,73 @@
-# SIADLAK.COM
+# Welcome to your Lovable project
 
-## Overview
-A high-ticket coaching platform showcasing mentorship services, course offerings, and client success stories. This professional website serves as a central hub for potential clients to learn about available coaching services, browse testimonials, explore course catalogs, and establish direct contact with Ludwik C. Siadlak.
+## Project info
 
-This documentation provides a comprehensive overview of the project's technical aspects, setup procedures, and maintenance requirements. It serves as a single source of truth for developers working on the project and can be expanded as the project evolves.
-# Tech Stack
-- **Core Framework**: React 18
-- **Build System**: Vite
-- **Styling**: 
-  - Tailwind CSS for utility-first styling
-  - shadcn/ui for pre-built components
-- **Language**: TypeScript
-- **Static Generation**: Vite static site export
-- **Component Library**: shadcn/ui
-- **Form Handling**: React Hook Form
-- **Routing**: React Router
+**URL**: https://lovable.dev/projects/98155ed7-d1cd-4b39-842d-93eb7410bf1e
 
-## Project Structure
+## How can I edit this code?
+
+There are several ways of editing your application.
+
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/98155ed7-d1cd-4b39-842d-93eb7410bf1e) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
-├── src/
-│   ├── components/
-│   │   ├── common/           # Shared components (buttons, cards, etc.)
-│   │   ├── layout/          # Layout components (header, footer, etc.)
-│   │   └── sections/        # Page-specific sections
-│   ├── pages/
-│   │   ├── Home/
-│   │   ├── About/
-│   │   ├── Contact/
-│   │   └── Testimonials/
-│   ├── lib/                 # Utility functions and helpers
-│   ├── styles/             # Global styles and Tailwind config 
-│   ├── types/              # TypeScript type definitions
-│   ├── config/             # Site configuration
-│   └── main.tsx            # Application entry point
-├── public/                 # Static assets
-└── index.html             # HTML entry point
-```
 
-## Components Overview
+**Edit a file directly in GitHub**
 
-### Layout Components
-- `Header`: Main navigation and branding
-- `Footer`: Site footer with links and contact info
-- `Layout`: Page wrapper with common elements
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-### Common Components
-- `Button`: Customized shadcn/ui button component
-- `Card`: Content container for testimonials/courses
-- `ContactForm`: Form component with validation
-- `TestimonialCard`: Client testimonial display
-- `CourseCard`: Course information display
+**Use GitHub Codespaces**
 
-### Page Components
-- `HomePage`: Landing page with hero section
-- `AboutPage`: Personal information and expertise
-- `ContactPage`: Contact form and information
-- `TestimonialsPage`: Client success stories
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## What technologies are used for this project?
 
-### Configuration Files
-- `vite.config.ts`: Vite build configuration
-- `tailwind.config.js`: Tailwind CSS configuration
-- `tsconfig.json`: TypeScript configuration
+This project is built with:
 
-## Future Roadmap
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-### Planned Features
--   Blog integration
--   Course booking system
--   Newsletter subscription
--   Client dashboard
--   Calendar integration
+## How can I deploy this project?
 
-### Technical Improvements
--   Performance optimization
--   SEO enhancements
--   Analytics integration
--   Automated testing
--   CI/CD pipeline
+Simply open [Lovable](https://lovable.dev/projects/98155ed7-d1cd-4b39-842d-93eb7410bf1e) and click on Share -> Publish.
 
-## Known Issues
+## Can I connect a custom domain to my Lovable project?
 
-### Current Limitations
-- Contact form requires backend implementation
-- Limited mobile menu animations
-- Image optimization needed
-- SEO implementation pending
+Yes it is!
 
-### Browser Compatibility
-- Tested on latest versions of:
-  - Chrome
-  - Firefox
-  - Safari
-  - Edge
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-## Development Guidelines
-
-### Code Style
-- Follow TypeScript best practices
-- Use functional components
-- Implement proper type definitions
-- Maintain component modularity
-
-### Styling Guidelines
-- Use Tailwind utility classes
-- Follow mobile-first approach
-- Maintain consistent spacing
-- Use design system variables
-
-### Performance Considerations
-- Lazy load images
-- Code splitting
-- Bundle size optimization
-- Cache static assets
-
-
-
-Changes made via [Lovable](https://lovable.dev/projects/98155ed7-d1cd-4b39-842d-93eb7410bf1e) will be committed automatically to this repo.
-
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

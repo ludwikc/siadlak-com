@@ -31,45 +31,32 @@ export default function Hero({
       </div>
       
       <div className="container mx-auto px-4 relative">
-        <div className="md:flex items-center">
-          <div className="md:w-3/5 md:pr-8">
-            <h1 className="mb-4 font-bold !leading-tight bg-gradient-to-r from-neural-violet to-ascension-pink dark:from-silver-mist dark:to-luminal-magenta bg-clip-text text-transparent animate-fade-in">
-              {title}
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/80 max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              {subtitle}
-            </p>
-            
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <Link 
-                to={ctaLink} 
-                className="btn-primary flex items-center gap-2"
-              >
-                {ctaText}
-                <ArrowRight size={18} />
-              </Link>
-              
-              {secondaryCtaText && secondaryCtaLink && (
-                <Link 
-                  to={secondaryCtaLink} 
-                  className="btn-secondary"
-                >
-                  {secondaryCtaText}
-                </Link>
-              )}
-            </div>
-          </div>
+        <div className="max-w-4xl">
+          <h1 className="mb-4 font-bold !leading-tight bg-gradient-to-r from-neural-violet to-ascension-pink dark:from-silver-mist dark:to-luminal-magenta bg-clip-text text-transparent animate-fade-in">
+            {title}
+          </h1>
           
-          <div className="md:w-2/5 mt-8 md:mt-0">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/f2e68da4-f580-45e9-992b-18b87edf3b04.png" 
-                alt="Ludwik C. Siadlak" 
-                className="rounded-lg shadow-xl z-10 relative"
-              />
-              <div className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-neural-violet/30 to-ascension-pink/30 rounded-lg blur-md z-0"></div>
-            </div>
+          <p className="text-xl md:text-2xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/80 max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            {subtitle}
+          </p>
+          
+          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Link 
+              to={ctaLink} 
+              className="btn-primary flex items-center gap-2"
+            >
+              {ctaText}
+              <ArrowRight size={18} />
+            </Link>
+            
+            {secondaryCtaText && secondaryCtaLink && (
+              <Link 
+                to={secondaryCtaLink} 
+                className="btn-secondary"
+              >
+                {secondaryCtaText}
+              </Link>
+            )}
           </div>
         </div>
       </div>

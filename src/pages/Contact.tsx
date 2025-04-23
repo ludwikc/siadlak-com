@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Mail, MessageCircle, Linkedin } from 'lucide-react';
+import { Calendar, Mail, Phone, MessageCircle, Linkedin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
@@ -29,16 +29,8 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/40 to-ascension-pink/40 mix-blend-overlay z-0"></div>
-        <div className="absolute inset-0 opacity-30 z-0">
-          <img 
-            src="/lovable-uploads/b04d6ee7-6d24-48de-8173-5ea5d03b5fa1.png" 
-            alt="Ludwik C. Siadlak" 
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Let's Connect
@@ -69,16 +61,15 @@ const Contact = () => {
                 Schedule a 30-minute consultation to discuss how you can take back control of your digital life.
               </p>
               
-              <div className="relative rounded-lg overflow-hidden mb-6">
-                <img 
-                  src="/lovable-uploads/5121484c-18e6-4311-a4a6-9813c6dba659.png" 
-                  alt="Ludwik C. Siadlak"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-space/70 to-transparent flex flex-col items-center justify-end p-6">
+              {/* Calendly embed placeholder */}
+              <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6">
+                <div className="h-full flex flex-col items-center justify-center">
+                  <p className="text-center text-subtle-slate dark:text-silver-mist/80 mb-4">
+                    Calendly embed would appear here
+                  </p>
                   <Button 
                     onClick={() => navigate('/thank-you/discovery-call')}
-                    className="bg-neural-violet hover:bg-ascension-pink mt-4"
+                    className="bg-neural-violet hover:bg-ascension-pink"
                   >
                     Schedule a Call
                   </Button>
