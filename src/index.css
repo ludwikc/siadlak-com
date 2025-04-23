@@ -1,141 +1,151 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 240 33% 99%;
-    --foreground: 240 10% 4%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 4%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 4%;
-
-    --primary: 271 78% 26%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 6% 10%;
-
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
-
-    --accent: 271 78% 26%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 271 78% 26%;
-
-    --radius: 0.75rem;
-  }
-
-  .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
-
-    --card: 240 10% 4%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 320 80% 45%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
-
-    --accent: 320 80% 45%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 271 78% 26%;
-  }
+/* === Brand Color Variables and Gradients === */
+:root {
+  /* Light Mode */
+  --bg-color: #F5F5FA;
+  --text-color: #222226;
+  --card-bg: #FFFFFF;
+  --card-text: #333338;
+  --accent-color: #0072EF;
+  --accent-text: #FFFFFF;
+  --highlight-color: #e74c3c;
+  --border-color: rgba(0,0,0,0.1);
+  --shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Dark mode selector: .dark or .dark-mode for max compatibility */
+.dark,
+.dark-mode {
+  --bg-color: #0B0B0D;
+  --text-color: #BDBDBD;
+  --card-bg: #1A1A24;
+  --card-text: #E0E0E5;
+  --accent-text: #E0E0E5;
+  --border-color: rgba(255,255,255,0.1);
+  --shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* === Gradient Backgrounds === */
+body {
+  font-family: ui-sans-serif, sans-serif;
+  color: var(--text-color);
+  background:
+    radial-gradient(circle at top left, #7C00FF, transparent 20%) fixed,
+    radial-gradient(circle at bottom right, #4A36C2, transparent 30%) fixed,
+    var(--bg-color) fixed;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark,
+body.dark-mode {
+  background:
+    radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%) fixed,
+    radial-gradient(circle at bottom right, rgba(30, 0, 96, 0.3), transparent 35%) fixed,
+    var(--bg-color) fixed;
+  color: var(--text-color);
+}
+
+/* === Base Typography and Spacing === */
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply font-sans antialiased;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold;
+    font-family: ui-sans-serif, sans-serif;
+    font-weight: 700;
+    color: var(--text-color);
   }
-  
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
-  }
-  
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  h4 {
-    @apply text-xl md:text-2xl;
-  }
-  
-  p {
-    @apply leading-relaxed;
-  }
+
+  h1 { font-size: 2.5rem; line-height: 1.2; }
+  h2 { font-size: 1.8rem; line-height: 1.3; }
+  h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
+  p { font-size: 1rem; line-height: 1.6; color: var(--text-color); margin-bottom: 16px; }
+  small, .caption { font-size: 0.875rem; line-height: 1.4; }
 }
+
+/* === Specialty Layout Spacing === */
+.section { padding-top: 40px; padding-bottom: 40px; }
 
 @layer components {
+  /* Card */
+  .card,
   .glass-card {
-    @apply bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 shadow-sm;
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
   }
-  
+
+  /* Button */
+  .button,
   .btn-primary {
-    @apply bg-neural-violet hover:bg-ascension-pink text-white py-3 px-6 rounded-md transition-colors font-medium;
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: none;
   }
-  
+  .button:hover,
+  .btn-primary:hover {
+    filter: brightness(1.1);
+  }
   .btn-secondary {
-    @apply bg-white dark:bg-white/10 hover:bg-gray-100 dark:hover:bg-white/20 text-neural-violet dark:text-silver-mist py-3 px-6 rounded-md transition-colors font-medium border border-gray-200 dark:border-white/10;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
   }
-  
+  .btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--accent-text);
+    filter: brightness(1.1);
+  }
+
+  /* Section Container */
   .section {
-    @apply py-16 md:py-24;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
+/* === Prose Styles for Rich Content === */
 .prose h2 {
-  @apply text-2xl font-bold mt-8 mb-4 text-deep-charcoal dark:text-silver-mist;
+  font-size: 1.8rem; font-weight: bold; margin-top: 32px; margin-bottom: 16px;
+  color: var(--text-color);
 }
-
 .prose h3 {
-  @apply text-xl font-bold mt-6 mb-3 text-deep-charcoal dark:text-silver-mist;
+  font-size: 1.5rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px;
 }
-
-.prose p {
-  @apply mb-4 text-subtle-slate dark:text-silver-mist/80;
-}
-
-.prose ul {
-  @apply mb-4 ml-6 text-subtle-slate dark:text-silver-mist/80;
-}
-
+.prose p,
+.prose ul,
 .prose li {
-  @apply mb-2;
+  color: var(--text-color);
+}
+.prose ul { margin-left: 24px; margin-bottom: 16px; }
+.prose li { margin-bottom: 8px; }
+
+/* === Utility and Shadow/Borders Adjustments === */
+.border {
+  border-color: var(--border-color) !important;
 }
