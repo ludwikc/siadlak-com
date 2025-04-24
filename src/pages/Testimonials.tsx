@@ -85,7 +85,7 @@ const Testimonials = () => {
       </section>
       
       {/* Featured Testimonials */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
             Transformation Stories
@@ -134,7 +134,7 @@ const Testimonials = () => {
       </section>
       
       {/* All Testimonials */}
-      <section className="py-16 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
             More Success Stories

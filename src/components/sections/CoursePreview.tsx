@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -19,7 +18,7 @@ interface CoursePreviewProps {
 
 export default function CoursePreview({ title, subtitle, courses }: CoursePreviewProps) {
   return (
-    <section className="section bg-secondary/50 dark:bg-quantum-blue/10">
+    <section className="section">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-deep-charcoal dark:text-silver-mist mb-4">{title}</h2>

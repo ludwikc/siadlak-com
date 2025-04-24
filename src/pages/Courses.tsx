@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -83,7 +82,7 @@ const Courses = () => {
       </section>
       
       {/* Courses Overview */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {coursesData.map((course) => (
@@ -188,7 +187,7 @@ const Courses = () => {
       </section>
       
       {/* Custom Programs Section */}
-      <section className="py-16 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
@@ -210,7 +209,7 @@ const Courses = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
