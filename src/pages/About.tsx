@@ -26,7 +26,7 @@ const About = () => {
       <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
               O mnie
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
@@ -158,3 +158,4 @@ const About = () => {
 };
 
 export default About;
+

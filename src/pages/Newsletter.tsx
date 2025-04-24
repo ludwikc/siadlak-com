@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { ArrowRight, Mail, BookOpen, Bell, CheckCircle, Ribbon } from 'lucide-react';
@@ -10,7 +11,7 @@ export default function NewsletterPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
               Uwolnij Swój Potencjał z AI: Gdzie Technologia Spotyka Człowieka
             </h1>
             <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
@@ -254,3 +255,4 @@ export default function NewsletterPage() {
     </Layout>
   );
 }
+
