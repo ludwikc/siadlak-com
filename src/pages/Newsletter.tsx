@@ -1,8 +1,6 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
-import Newsletter from '@/components/sections/Newsletter';
-import { ArrowRight, Mail, BookOpen, Bell, CheckCircle } from 'lucide-react';
+import { ArrowRight, Mail, BookOpen, Bell, CheckCircle, Ribbon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const NewsletterPage = () => {
@@ -134,14 +132,14 @@ const NewsletterPage = () => {
             </div>
 
             {/* Pricing Tiers */}
-            <div className="mb-16">
+            <div className="mb-16 relative">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
                 Wybierz swoją ścieżkę:
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Free Tier */}
-                <div className="glass-card p-6 rounded-xl text-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,15,119,0.3)] dark:hover:shadow-[0_0_15px_rgba(218,30,174,0.3)] group">
+                <div className="glass-card p-6 rounded-xl text-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,15,119,0.3)] dark:hover:shadow-[0_0_15px_rgba(218,30,174,0.3)]">
                   <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
                     PODSTAWOWY
                   </h3>
@@ -168,12 +166,19 @@ const NewsletterPage = () => {
                     rel="noopener noreferrer"
                     className="inline-block w-full bg-neural-violet hover:bg-neural-violet/90 text-white py-3 px-6 rounded-lg transition-colors"
                   >
-                    Wybieram PODSTAWOWY
+                    Wybierz PODSTAWOWY
                   </a>
                 </div>
 
                 {/* Premium Tier */}
-                <div className="glass-card p-6 rounded-xl text-center border-2 border-neural-violet dark:border-luminal-magenta transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,15,119,0.4)] dark:hover:shadow-[0_0_20px_rgba(218,30,174,0.4)] animate-pulse group">
+                <div className="glass-card p-6 rounded-xl text-center border-2 border-neural-violet dark:border-luminal-magenta transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,15,119,0.4)] dark:hover:shadow-[0_0_20px_rgba(218,30,174,0.4)] relative">
+                  <div className="absolute -top-1 -right-1 bg-[#FEF7CD] text-neural-violet px-4 py-1 rounded-tr-lg rounded-bl-lg border-t-2 border-r-2 border-neural-violet/20 shadow-md">
+                    <span className="text-sm font-semibold flex items-center gap-1">
+                      <Ribbon className="w-4 h-4" />
+                      tylko teraz
+                    </span>
+                  </div>
+                  
                   <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
                     EDGE
                   </h3>
@@ -214,7 +219,7 @@ const NewsletterPage = () => {
                     rel="noopener noreferrer"
                     className="inline-block w-full bg-ascension-pink hover:bg-luminal-magenta text-white py-3 px-6 rounded-lg transition-colors"
                   >
-                    Wybieram EDGE
+                    Wybierz EDGE
                   </a>
                 </div>
               </div>
@@ -229,24 +234,16 @@ const NewsletterPage = () => {
               </div>
             </div>
             
-            {/* Newsletter Signup */}
-            <Newsletter />
-            
-            <div className="text-center mt-8 space-y-4">
-              <p className="text-subtle-slate dark:text-silver-mist/60 text-sm">
-                PS. Z newslettera możesz zrezygnować w każdej chwili jednym kliknięciem. Twoje dane są u mnie bezpieczne, a Twoja prywatność – szanowana.
-              </p>
-              <p className="text-subtle-slate dark:text-silver-mist/60 text-sm">
-                PPS. Miejsca są ograniczone – chcę budować społeczność osób, które faktycznie wdrażają, a nie tylko czytają.
-              </p>
-            </div>
-
             <div className="mt-16 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
                 Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
               
-              <Button size="lg" className="bg-neural-violet hover:bg-neural-violet/90 text-white">
+              <Button 
+                size="lg" 
+                className="bg-neural-violet hover:bg-neural-violet/90 text-white"
+                onClick={() => window.location.href = 'https://app.easycart.pl/checkout/siadlak/newsletter'}
+              >
                 DOŁĄCZ TERAZ DO SPOŁECZNOŚCI
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
