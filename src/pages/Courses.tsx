@@ -64,17 +64,17 @@ const coursesData = [
   }
 ];
 
-const Courses = () => {
+export default function Courses() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-[#BDBDBD]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD]">
               Transform Your Capabilities
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
+            <p className="text-lg md:text-xl mb-8 text-[#BDBDBD]/90">
               Structured programs designed to enhance your mental performance, productivity, and leadership presence.
             </p>
           </div>
@@ -166,14 +166,14 @@ const Courses = () => {
                     
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Link to={`/courses/${course.id}`}>
-                        <Button className="bg-neural-violet hover:bg-ascension-pink">
+                        <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
                           Learn More
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                       
                       <Link to="/contact">
-                        <Button variant="outline">
+                        <Button variant="outline" className="text-[#BDBDBD] dark:text-white">
                           Request Information
                         </Button>
                       </Link>
@@ -288,6 +288,4 @@ const Courses = () => {
       </section>
     </Layout>
   );
-};
-
-export default Courses;
+}

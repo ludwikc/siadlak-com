@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import { ArrowRight, Mail, BookOpen, Bell, CheckCircle, Ribbon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const NewsletterPage = () => {
+export default function NewsletterPage() {
   return (
     <Layout>
       {/* Hero Section */}
@@ -235,13 +235,13 @@ const NewsletterPage = () => {
             </div>
             
             <div className="mt-16 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#BDBDBD] dark:text-silver-mist">
                 Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
               
               <Button 
                 size="lg" 
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white"
+                className="bg-neural-violet hover:bg-neural-violet/90 text-[#BDBDBD] dark:text-white"
                 onClick={() => window.location.href = 'https://app.easycart.pl/checkout/siadlak/newsletter'}
               >
                 DOŁĄCZ TERAZ DO SPOŁECZNOŚCI
@@ -253,6 +253,4 @@ const NewsletterPage = () => {
       </section>
     </Layout>
   );
-};
-
-export default NewsletterPage;
+}
