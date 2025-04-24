@@ -58,16 +58,16 @@ export default function Header() {
             Programy
           </Link>
           <Link 
-            to="/resources"
+            to="/newsletter"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            Materiały
+            Newsletter
           </Link>
           <Link 
             to="/contact"
             className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors"
           >
-            Umów rozmowę
+            Porozmawiajmy
           </Link>
           
           {/* Theme Toggle */}
@@ -119,18 +119,18 @@ export default function Header() {
               Programy
             </Link>
             <Link 
-              to="/resources"
+              to="/newsletter"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Materiały
+              Newsletter
             </Link>
             <Link 
               to="/contact"
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors inline-block"
               onClick={() => setIsMenuOpen(false)}
             >
-              Umów rozmowę
+              Porozmawiajmy
             </Link>
           </nav>
         </div>

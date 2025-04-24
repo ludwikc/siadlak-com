@@ -106,7 +106,7 @@ const Index = () => {
       <Newsletter />
       
       <CTASection 
-        title="Gotów przejąć kontrolę nad swoim cyfrowym życiem?"
+        title="Gotów przejąć kontrolę nad swoim życiem?"
         description="Wykonaj pierwszy krok w kierunku transformacji swojej relacji z technologią."
         buttonText="Umów się na konsultację"
         buttonLink="/contact"
