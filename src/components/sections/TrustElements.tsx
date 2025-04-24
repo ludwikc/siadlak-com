@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Star, Users, Award } from 'lucide-react';
 
@@ -22,7 +21,7 @@ export default function TrustElements({
   credentialsSummary
 }: TrustElementsProps) {
   return (
-    <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">{title}</h2>

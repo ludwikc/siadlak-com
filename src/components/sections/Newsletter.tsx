@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -21,7 +20,7 @@ export default function Newsletter() {
   };
   
   return (
-    <section className="section bg-luminous-white dark:bg-deep-space">
+    <section className="section">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-8 md:p-12 rounded-2xl relative overflow-hidden">

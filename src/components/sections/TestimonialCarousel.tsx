@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
@@ -31,7 +30,7 @@ export default function TestimonialCarousel({
   const currentTestimonial = testimonials[activeIndex];
   
   return (
-    <section className="section bg-luminous-white dark:bg-deep-space">
+    <section className="section">
       <div className="container mx-auto px-4">
         {title && (
           <h2 className="text-center text-deep-charcoal dark:text-silver-mist mb-16">{title}</h2>

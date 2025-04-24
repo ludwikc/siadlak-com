@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function AboutSection() {
   return (
-    <section className="section bg-luminous-white dark:bg-deep-space">
+    <section className="section">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           {/* Image Column */}
