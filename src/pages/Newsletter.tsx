@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import Newsletter from '@/components/sections/Newsletter';
 import { ArrowRight, Mail, BookOpen, Bell, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const NewsletterPage = () => {
@@ -14,13 +13,16 @@ const NewsletterPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Odblokuj swój pełny potencjał
+              Uwolnij Swój Potencjał z AI: Gdzie Technologia Spotyka Człowieka
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
-              Technologia w służbie Twojego rozwoju, nie zastąpienia.
+            <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
+              "Każda technologia wystarczająco zaawansowana jest nieodróżnialna od magii" – Arthur C. Clarke
             </p>
             <p className="text-base md:text-lg mb-8">
-              Odkryj niewykorzystany potencjał, który w Tobie drzemie.
+              Wyobraź sobie, że budzisz się rano z jasnym planem wykorzystania AI nie tylko do automatyzacji zadań, ale do <strong>faktycznego przełomu w Twoim rozwoju osobistym i zawodowym</strong>.
+            </p>
+            <p className="text-lg">
+              To właśnie oferuję Ci w tym newsletterze.
             </p>
           </div>
         </div>
@@ -29,40 +31,105 @@ const NewsletterPage = () => {
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Main Value Proposition */}
-            <div className="text-center mb-16">
-              <p className="text-lg md:text-xl mb-8 text-deep-charcoal dark:text-silver-mist">
-                Dołącz do newslettera "Tam, gdzie AI spotyka ludzki potencjał" – mojego cotygodniowego przewodnika, który pokazuje jak wykorzystać sztuczną inteligencję nie tylko jako narzędzie, ale jako katalizator Twojej osobistej i zawodowej transformacji.
-              </p>
+            {/* Why Section */}
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                Dlaczego stworzyłem ten newsletter?
+              </h2>
+              
+              <div className="prose dark:prose-invert max-w-none">
+                <p>
+                  Przez 19 lat jako Microsoft Certified Trainer przeprowadziłem setki szkoleń technicznych dla profesjonalistów IT. W tym czasie odkryłem coś fascynującego:
+                </p>
+                <p className="font-bold">
+                  Największa luka na rynku nie istnieje między różnymi technologiami, ale między światem zaawansowanej AI a niewykorzystanym ludzkim potencjałem.
+                </p>
+                <p>
+                  Z jednej strony mamy coraz potężniejsze narzędzia AI, z drugiej – specjalistów, którzy używają ich zaledwie powierzchownie, nie dostrzegając ich transformacyjnego potencjału.
+                </p>
+                <p className="font-bold">
+                  Co się dzieje, gdy świadomie połączysz te dwa światy? To jest właśnie pytanie, na które odpowiadam co tydzień.
+                </p>
+              </div>
             </div>
 
-            {/* Weekly Benefits */}
+            {/* What You Get */}
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-                Każdą środę otrzymasz:
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+                Co dokładnie otrzymasz?
               </h2>
               
               <div className="glass-card p-6 md:p-8 rounded-xl space-y-6">
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                   <p className="text-deep-charcoal dark:text-silver-mist">
-                    Sposoby na odkrywanie umiejętności, o których nie wiedziałeś, że je posiadasz
+                    Praktyczne ramy implementacji – nie tylko "co", ale dokładnie "jak" wykorzystać AI do konkretnych obszarów Twojego rozwoju
                   </p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                   <p className="text-deep-charcoal dark:text-silver-mist">
-                    Praktyczne ramy działania, które dają CI kontrolę nad technologią
+                    Strategiczne ścieżki transformacji – jak przejść od specjalisty technicznego do lidera o szerszym wpływie
                   </p>
                 </div>
                 
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                   <p className="text-deep-charcoal dark:text-silver-mist">
-                    Jedno proste działanie do natychmiastowego zwiększenia Twojego wpływu
+                    Tygodniowe wyzwania wdrożeniowe – małe kroki, które możesz zacząć stosować jeszcze tego samego dnia
                   </p>
                 </div>
+
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
+                  <p className="text-deep-charcoal dark:text-silver-mist">
+                    Analizy przypadków – historie osób, które wykorzystały AI jako katalizator swojego rozwoju, z konkretnymi wnioskami
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-subtle-slate dark:text-silver-mist/80">
+                Ten newsletter <strong>nie jest</strong> kolejnym przeglądem narzędzi AI ani ogólnikowym poradnikiem rozwoju osobistego. To precyzyjny pomost między światami, którego brakuje na rynku.
+              </p>
+            </div>
+
+            {/* For Whom */}
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+                Dla kogo stworzyłem ten newsletter?
+              </h2>
+              
+              <div className="glass-card p-6 md:p-8 rounded-xl">
+                <p className="mb-4 text-deep-charcoal dark:text-silver-mist">
+                  Ten newsletter jest dla Ciebie, jeśli:
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">
+                      Pracujesz w obszarze technologii i czujesz, że Twój potencjał wykracza daleko poza role czysto techniczne
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">
+                      Widzisz w AI zarówno szansę, jak i wyzwanie dla swojej przyszłości zawodowej
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">
+                      Masz dość teoretyzowania i potrzebujesz konkretnych ram implementacji
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">
+                      Dążysz do większego wpływu i głębszego znaczenia w swojej pracy
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -74,7 +141,7 @@ const NewsletterPage = () => {
               
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Free Tier */}
-                <div className="glass-card p-6 rounded-xl text-center">
+                <div className="glass-card p-6 rounded-xl text-center transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,15,119,0.3)] dark:hover:shadow-[0_0_15px_rgba(218,30,174,0.3)] group">
                   <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
                     PODSTAWOWY
                   </h3>
@@ -95,10 +162,18 @@ const NewsletterPage = () => {
                       <span className="text-deep-charcoal dark:text-silver-mist">Podstawowe wyzwania implementacyjne</span>
                     </li>
                   </ul>
+                  <a 
+                    href="https://app.easycart.pl/checkout/siadlak/newsletter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full bg-neural-violet hover:bg-neural-violet/90 text-white py-3 px-6 rounded-lg transition-colors"
+                  >
+                    Wybieram PODSTAWOWY
+                  </a>
                 </div>
 
                 {/* Premium Tier */}
-                <div className="glass-card p-6 rounded-xl text-center border-2 border-neural-violet dark:border-luminal-magenta">
+                <div className="glass-card p-6 rounded-xl text-center border-2 border-neural-violet dark:border-luminal-magenta transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,15,119,0.4)] dark:hover:shadow-[0_0_20px_rgba(218,30,174,0.4)] animate-pulse group">
                   <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
                     EDGE
                   </h3>
@@ -133,64 +208,46 @@ const NewsletterPage = () => {
                       <span className="text-deep-charcoal dark:text-silver-mist">Pytania i odpowiedzi w wersji rozszerzonej</span>
                     </li>
                   </ul>
+                  <a 
+                    href="https://app.easycart.pl/checkout/siadlak/newsletter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block w-full bg-ascension-pink hover:bg-luminal-magenta text-white py-3 px-6 rounded-lg transition-colors"
+                  >
+                    Wybieram EDGE
+                  </a>
                 </div>
               </div>
-            </div>
 
-            {/* Example Topics */}
-            <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-                Dlaczego ten newsletter jest inny
-              </h2>
-              
-              <p className="text-subtle-slate dark:text-silver-mist/80 mb-8">
-                W czasach gdy większość treści o AI skupia się na samej technologii i jej możliwościach, "Tam, gdzie AI spotyka ludzki potencjał" stawia człowieka w centrum. Nie pokazuję jedynie, jak używać AI – pokazuję, jak sprawić, by te narzędzia służyły Tobie, wzmacniając to, co czyni Cię wyjątkowo ludzkim.
-              </p>
-
-              <h3 className="text-xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                Przykładowe tematy:
-              </h3>
-              
-              <div className="space-y-4">
-                <div className="glass-card p-4 rounded-lg">
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    "Zapomniana moc: Trzy zdolności, których AI nigdy nie zastąpi (i jak je wzmocnić)"
-                  </p>
-                </div>
-                <div className="glass-card p-4 rounded-lg">
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    "Poza algorytmem: Odzyskiwanie Twojej kreatywnej sprawczości w świecie AI"
-                  </p>
-                </div>
-                <div className="glass-card p-4 rounded-lg">
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    "Panowie, nie słudzy: Struktura utrzymująca technologię na właściwym miejscu"
-                  </p>
-                </div>
-                <div className="glass-card p-4 rounded-lg">
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    "Matryca od sprawczości do mocy: Transformacja cyfrowego niepokoju w rozwój"
-                  </p>
-                </div>
+              <div className="mt-6 text-center">
+                <p className="text-neural-violet dark:text-luminal-magenta font-bold mb-4">
+                  ⚡ OFERTA LIMITOWANA: Pierwsze 1000 osób otrzymuje dostęp do wersji EDGE za darmo! ⚡
+                </p>
+                <p className="text-subtle-slate dark:text-silver-mist/80">
+                  Zamiast płacić 99 PLN miesięcznie, możesz dołączyć do programu sponsorowanego przez Fundację HACKERZY.PL, która pokrywa koszty dostępu dla pierwszych 1000 osób, które wybiorą wersję EDGE.
+                </p>
               </div>
             </div>
             
             {/* Newsletter Signup */}
             <Newsletter />
             
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 space-y-4">
               <p className="text-subtle-slate dark:text-silver-mist/60 text-sm">
-                Twoje dane są bezpieczne. Możesz zrezygnować w każdej chwili jednym kliknięciem.
+                PS. Z newslettera możesz zrezygnować w każdej chwili jednym kliknięciem. Twoje dane są u mnie bezpieczne, a Twoja prywatność – szanowana.
+              </p>
+              <p className="text-subtle-slate dark:text-silver-mist/60 text-sm">
+                PPS. Miejsca są ograniczone – chcę budować społeczność osób, które faktycznie wdrażają, a nie tylko czytają.
               </p>
             </div>
 
             <div className="mt-16 text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                Dołącz do ruchu odzyskiwania ludzkiej sprawczości w cyfrowym świecie.
+                Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
               
               <Button size="lg" className="bg-neural-violet hover:bg-neural-violet/90 text-white">
-                ROZPOCZNIJ SWOJĄ EWOLUCJĘ
+                DOŁĄCZ TERAZ DO SPOŁECZNOŚCI
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
