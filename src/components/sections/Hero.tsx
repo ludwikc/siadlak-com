@@ -32,7 +32,7 @@ export default function Hero({
       
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl">
-          <h1 className="mb-4 font-bold !leading-tight bg-gradient-to-r from-neural-violet to-ascension-pink dark:from-silver-mist dark:to-luminal-magenta bg-clip-text text-transparent animate-fade-in">
+          <h1 className="mb-4 font-bold !leading-tight bg-gradient-to-r from-neural-violet-light dark:from-neural-violet to-ascension-pink-light dark:to-ascension-pink dark:bg-clip-text dark:text-transparent bg-clip-text text-deep-charcoal dark:text-transparent animate-fade-in">
             {title}
           </h1>
           
@@ -43,7 +43,7 @@ export default function Hero({
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Link 
               to={ctaLink} 
-              className="btn-primary flex items-center gap-2"
+              className="btn-primary flex items-center gap-2 bg-neural-violet-light hover:bg-neural-violet dark:bg-neural-violet hover:dark:bg-neural-violet/80"
             >
               {ctaText}
               <ArrowRight size={18} />

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -55,9 +54,17 @@ export default {
 				},
 				// Custom colors for siadlak.com
 				'deep-space': '#0A0A0D',
-				'neural-violet': '#3B0F77',
+				'neural-violet': {
+					DEFAULT: '#3B0F77',
+					light: '#7C54B3',
+					foreground: '#FFFFFF'
+				},
 				'quantum-blue': '#061A40',
-				'ascension-pink': '#B0128C',
+				'ascension-pink': {
+					DEFAULT: '#B0128C',
+					light: '#D967C4',
+					foreground: '#FFFFFF'
+				},
 				'luminal-magenta': '#DA1EAE',
 				'silver-mist': '#E1E1E6',
 				'subtle-slate': '#79788C',
