@@ -53,7 +53,7 @@ const Contact = () => {
               </p>
               
               <div className="calendly-inline-widget" 
-                data-url="https://calendly.com/ludwikc/quick-call?hide_gdpr_banner=1&primary_color=d400ff" 
+                data-url="https://calendly.com/ludwikc/quick-call?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=d400ff" 
                 style={{ minWidth: '320px', height: '700px' }}
               />
             </div>
