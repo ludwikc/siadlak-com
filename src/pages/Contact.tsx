@@ -44,7 +44,7 @@ const Contact = () => {
               <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6 flex items-center justify-center">
                 <Button 
                   onClick={() => window.location.href = '/thank-you/discovery-call'}
-                  className="bg-neural-violet hover:bg-ascension-pink"
+                  className="bg-neural-violet hover:bg-neural-violet/80 text-white font-medium px-8 py-6 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
                 >
                   Zarezerwuj termin
                 </Button>
@@ -70,17 +70,17 @@ const Contact = () => {
                 <div className="flex flex-col space-y-4">
                   <Button 
                     onClick={() => window.location.href = 'mailto:connect@siadlak.email'}
-                    className="w-full bg-ascension-pink hover:bg-luminal-magenta flex items-center justify-center"
+                    className="w-full h-14 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
                   >
-                    <Mail className="mr-2" />
+                    <Mail className="w-5 h-5" />
                     Wyślij email
                   </Button>
                   
                   <Button 
                     onClick={() => window.location.href = 'https://www.linkedin.com/in/ludwikc'}
-                    className="w-full bg-[#0077B5] hover:bg-[#0369a1] flex items-center justify-center"
+                    className="w-full h-14 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
                   >
-                    <Linkedin className="mr-2" />
+                    <Linkedin className="w-5 h-5" />
                     Połącz się na LinkedIn
                   </Button>
                 </div>
