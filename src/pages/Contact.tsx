@@ -1,10 +1,22 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Calendar, Mail, Linkedin } from 'lucide-react';
 
 const Contact = () => {
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -40,15 +52,10 @@ const Contact = () => {
                 Preferujesz rozmowę? Wybierz termin w moim kalendarzu.
               </p>
               
-              {/* Calendly embed placeholder */}
-              <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6 flex items-center justify-center">
-                <Button 
-                  onClick={() => window.location.href = '/thank-you/discovery-call'}
-                  className="bg-neural-violet hover:bg-neural-violet/80 text-white font-medium px-8 py-6 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
-                >
-                  Zarezerwuj termin
-                </Button>
-              </div>
+              <div className="calendly-inline-widget" 
+                data-url="https://calendly.com/ludwikc/quick-call?hide_gdpr_banner=1&primary_color=d400ff" 
+                style={{ minWidth: '320px', height: '700px' }}
+              />
             </div>
             
             {/* Direct Contact Options */}
