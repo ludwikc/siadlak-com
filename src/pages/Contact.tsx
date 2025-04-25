@@ -1,37 +1,17 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Mail, MessageCircle, Linkedin } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Calendar, Mail, Linkedin } from 'lucide-react';
 
 const Contact = () => {
-  const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitting(false);
-      navigate('/thank-you/contact');
-    }, 1500);
-  };
-
   return (
     <Layout>
       {/* Hero Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
               Kontakt
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
@@ -60,147 +40,51 @@ const Contact = () => {
                 Preferujesz rozmowę? Wybierz termin w moim kalendarzu.
               </p>
               
-              <div className="space-y-6 mb-6">
-                <div className="p-4 border border-border rounded-lg bg-white/5">
-                  <h3 className="font-semibold mb-2">Sesja Discovery (30 min)</h3>
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
-                    To nie jest typowa "rozmowa sprzedażowa" - to obustronny test dopasowania. Sprawdzamy, czy moje podejście pasuje do Twoich wyzwań, a Ty do mojej metodologii pracy.
-                  </p>
-                </div>
-                
-                <div className="p-4 border border-border rounded-lg bg-white/5">
-                  <h3 className="font-semibold mb-2">Sesja strategiczna (45 min)</h3>
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
-                    Dla osób szukających konkretnych rozwiązań na styku technologii i rozwoju człowieka. Oczekuję przygotowania - to maksymalizuje wartość naszego czasu.
-                  </p>
-                </div>
-                
-                <div className="p-4 border border-border rounded-lg bg-white/5">
-                  <h3 className="font-semibold mb-2">Konsultacja biznesowa (60 min)</h3>
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
-                    Dla liderów i przedsiębiorców gotowych na transformację, nie tylko porady. Rozmawiamy o konkretach, nie ogólnikach.
-                  </p>
-                </div>
-              </div>
-              
               {/* Calendly embed placeholder */}
-              <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6">
-                <div className="h-full flex flex-col items-center justify-center">
-                  <Button 
-                    onClick={() => navigate('/thank-you/discovery-call')}
-                    className="bg-neural-violet hover:bg-ascension-pink"
-                  >
-                    Zarezerwuj termin
-                  </Button>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3 text-subtle-slate dark:text-silver-mist/80">
-                <MessageCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <p className="text-sm">
-                  Po rezerwacji otrzymasz potwierdzenie z instrukcjami. Przygotuj się - to pierwszy test Twojego zaangażowania.
-                </p>
+              <div className="bg-white dark:bg-quantum-blue/50 border border-border rounded-lg p-4 h-96 mb-6 flex items-center justify-center">
+                <Button 
+                  onClick={() => window.location.href = '/thank-you/discovery-call'}
+                  className="bg-neural-violet hover:bg-ascension-pink"
+                >
+                  Zarezerwuj termin
+                </Button>
               </div>
             </div>
             
-            {/* Contact Form */}
+            {/* Direct Contact Options */}
             <div className="glass-card p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-ascension-pink/10 dark:bg-ascension-pink/30 rounded-full flex items-center justify-center mr-4">
                   <Mail className="text-ascension-pink dark:text-luminal-magenta" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  Formularz kontaktowy
+                  Kontakt bezpośredni
                 </h2>
               </div>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Imię i nazwisko*
-                  </label>
-                  <Input 
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Twoje imię i nazwisko"
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Email*
-                  </label>
-                  <Input 
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="twoj.email@przyklad.pl"
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                    Wiadomość*
-                  </label>
-                  <Textarea 
-                    id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="W czym mogę pomóc?"
-                    required
-                    className="w-full h-32"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit"
-                  className="w-full bg-ascension-pink hover:bg-luminal-magenta"
-                  disabled={submitting}
-                >
-                  {submitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
-                </Button>
-                
-                <p className="text-center text-sm text-subtle-slate dark:text-silver-mist/70">
-                  Odpowiadam w ciągu 1-2 dni na wiadomości, które wymagają odpowiedzi.
+              <div className="space-y-6">
+                <p className="text-subtle-slate dark:text-silver-mist/80">
+                  Wybierz preferowaną formę kontaktu:
                 </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Alternative Contact Section */}
-      <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              Wolisz inny kanał?
-            </h3>
-            
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
-              <a 
-                href="mailto:connect@siadlak.email" 
-                className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
-              >
-                <Mail className="mr-2 h-5 w-5 flex-shrink-0" />
-                connect@siadlak.email
-              </a>
-              
-              <a 
-                href="https://linkedin.com/in/ludwiksiadlak" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center text-subtle-slate dark:text-silver-mist/80 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
-              >
-                <Linkedin className="mr-2 h-5 w-5 flex-shrink-0" />
-                LinkedIn
-              </a>
+                
+                <div className="flex flex-col space-y-4">
+                  <Button 
+                    onClick={() => window.location.href = 'mailto:connect@siadlak.email'}
+                    className="w-full bg-ascension-pink hover:bg-luminal-magenta flex items-center justify-center"
+                  >
+                    <Mail className="mr-2" />
+                    Wyślij email
+                  </Button>
+                  
+                  <Button 
+                    onClick={() => window.location.href = 'https://www.linkedin.com/in/ludwikc'}
+                    className="w-full bg-[#0077B5] hover:bg-[#0369a1] flex items-center justify-center"
+                  >
+                    <Linkedin className="mr-2" />
+                    Połącz się na LinkedIn
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
