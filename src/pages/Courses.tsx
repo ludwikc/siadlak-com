@@ -8,57 +8,57 @@ const coursesData = [
   {
     id: 'mental-elevator',
     title: 'Mental Elevator',
-    subtitle: 'Premium 8-Week Mentoring Program',
-    description: 'A comprehensive program designed to elevate your mental performance, decision-making capabilities, and leadership presence.',
+    subtitle: 'Program transformacyjny dla świadomych profesjonalistów',
+    description: 'Program dla wybranych profesjonalistów gotowych przejąć kontrolę nad swoją karierą i cyfrowym życiem. Transformacja zaczyna się od decyzji, nie od kolejnego kursu.',
     features: [
-      'Weekly 1:1 coaching sessions',
-      'Customized productivity system',
-      'Mental models toolkit',
-      'Lifetime access to program materials',
-      'Private community access'
+      'Indywidualne sesje mentoringowe (8 tygodni)',
+      'Metodologia Black Panther dla naturalnego autorytetu',
+      'Strategiczne ramy wdrożeniowe dopasowane do Twojego stylu',
+      'Dostęp do ekskluzywnej społeczności praktyków',
+      'Pełna suwerenność zawodowa i osobista'
     ],
-    duration: '8 weeks',
-    format: 'Hybrid (Online + Live Sessions)',
-    level: 'Intermediate to Advanced',
-    startDate: 'Flexible Start Dates',
+    duration: '8 tygodni',
+    format: 'Sesje 1:1 + Wdrożenie',
+    level: 'Dla zdecydowanych na zmianę',
+    startDate: 'Ograniczona dostępność (max 5 miejsc)',
     featured: true,
     image: ''
   },
   {
     id: 'hakowanie-produktywnosci',
     title: 'Hakowanie Produktywności',
-    subtitle: 'Productivity Mastery Program',
-    description: 'Master advanced productivity systems that leverage your unique cognitive strengths and create sustainable high performance.',
+    subtitle: 'System produktywności zgodny z Twoimi wartościami',
+    description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele, zamiast generować kolejne frustracje.',
     features: [
-      'Personalized productivity assessment',
-      'Custom task management setup',
-      'Focus and deep work protocols',
-      'Energy management framework',
-      'Technology integration blueprint'
+      'Kompleksowa diagnoza Twoich blokad produktywności',
+      'Zintegrowany system zarządzania zadaniami i energią',
+      'Protokoły głębokiej pracy dostosowane do Twojego kontekstu',
+      'Praktyczne wdrożenie narzędzi, nie tylko teoria',
+      'Społeczność praktyków do długoterminowego wsparcia'
     ],
-    duration: '6 weeks',
-    format: 'Online Self-Paced + Group Calls',
-    level: 'All Levels',
-    startDate: 'Enrollment opens quarterly',
+    duration: '6 tygodni',
+    format: 'Online + Spotkania grupowe',
+    level: 'Dla świadomych optymalizatorów',
+    startDate: 'Rekrutacja kwartalna',
     featured: false,
     image: ''
   },
   {
-    id: 'tech-leadership',
-    title: 'Tech Leadership Mastery',
-    subtitle: 'For Technical Leaders and Managers',
-    description: 'Develop the unique skill set required to lead technical teams effectively while navigating rapidly changing technology landscapes.',
+    id: 'silna-glowa',
+    title: 'Silna Głowa',
+    subtitle: 'Odporność psychiczna w wymagającym świecie',
+    description: 'Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.',
     features: [
-      'Technical leadership framework',
-      'Team communication protocols',
-      'Decision-making under uncertainty',
-      'Managing technical debt',
-      'Strategic planning for tech teams'
+      'Praktyczne techniki redukcji stresu do natychmiastowego wdrożenia',
+      'Protokoły zarządzania energią mentalną w trudnych sytuacjach',
+      'Strategie podejmowania decyzji pod presją',
+      'Metody budowania długoterminowej odporności psychicznej',
+      'Narzędzia równoważenia intensywnej pracy i regeneracji'
     ],
-    duration: '10 weeks',
-    format: 'Online Cohort-Based',
-    level: 'Advanced',
-    startDate: 'Next cohort: September 2025',
+    duration: '5 tygodni',
+    format: 'Kurs online + praktyki',
+    level: 'Dla poszukujących balansu',
+    startDate: 'Dostęp natychmiastowy',
     featured: false,
     image: ''
   }
@@ -72,10 +72,10 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD]">
-              Transform Your Capabilities
+              Przejmij kontrolę nad swoim potencjałem
             </h1>
             <p className="text-lg md:text-xl mb-8 text-[#BDBDBD]/90">
-              Structured programs designed to enhance your mental performance, productivity, and leadership presence.
+              Sprawdzone programy, które faktycznie transformują, a nie tylko dostarczają kolejnych informacji bez wdrożenia.
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Courses() {
                     {course.featured && (
                       <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                         <Star className="h-6 w-6 text-white inline mr-2" />
-                        <span className="text-white font-medium">Featured Program</span>
+                        <span className="text-white font-medium">Program Flagowy</span>
                       </div>
                     )}
                   </div>
@@ -109,7 +109,7 @@ export default function Courses() {
                   <div className="lg:col-span-2 p-6 md:p-8">
                     {course.featured && (
                       <div className="inline-block bg-ascension-pink/10 dark:bg-ascension-pink/20 text-ascension-pink dark:text-luminal-magenta px-3 py-1 rounded-full text-sm font-medium mb-4">
-                        Featured Program
+                        Program Flagowy
                       </div>
                     )}
                     
@@ -151,7 +151,7 @@ export default function Courses() {
                     {/* Course Features */}
                     <div className="mb-8">
                       <h3 className="text-lg font-medium mb-3 text-deep-charcoal dark:text-silver-mist">
-                        What You'll Get:
+                        Co otrzymasz:
                       </h3>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -165,16 +165,16 @@ export default function Courses() {
                     </div>
                     
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Link to={`/courses/${course.id}`}>
+                      <Link to={`/kursy/${course.id}`}>
                         <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
-                          Learn More
+                          Szczegóły programu
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                       
-                      <Link to="/contact">
+                      <Link to="/kontakt">
                         <Button variant="outline" className="text-[#BDBDBD] dark:text-white">
-                          Request Information
+                          {course.id === 'mental-elevator' ? 'Umów sesję Discovery' : 'Zapytaj o program'}
                         </Button>
                       </Link>
                     </div>
@@ -186,22 +186,23 @@ export default function Courses() {
         </div>
       </section>
       
-      {/* Custom Programs Section */}
+      {/* Personalized Programs Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-              Custom Programs
+              Programy dla zespołów i organizacji
             </h2>
             
             <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
-              Need something more tailored to your specific needs? I offer custom-designed programs
-              for individuals and organizations with unique challenges and goals.
+              Potrzebujesz dedykowanego programu dla swojego zespołu? Tworzę spersonalizowane 
+              rozwiązania dla organizacji, które chcą przejść od produktywności reaktywnej 
+              do strategicznej.
             </p>
             
-            <Link to="/contact">
+            <Link to="/kontakt">
               <Button className="bg-neural-violet hover:bg-ascension-pink">
-                Inquire About Custom Programs
+                Zapytaj o program dla zespołu
               </Button>
             </Link>
           </div>
@@ -213,43 +214,43 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Frequently Asked Questions
+              Najczęściej zadawane pytania
             </h2>
             
             <div className="space-y-8">
               <div className="glass-card p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  How do I know which program is right for me?
+                  Skąd mam wiedzieć, który program jest dla mnie odpowiedni?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Each program is designed for specific needs and goals. I recommend booking a free discovery call where we can discuss your situation and identify the best path forward.
+                  Każdy program jest stworzony z myślą o konkretnych potrzebach. Mental Elevator to program dla liderów gotowych na transformację, Hakowanie Produktywności dla osób szukających spójnego systemu działania, a Silna Głowa dla tych, którzy potrzebują większej odporności psychicznej. Jeśli masz wątpliwości, umów bezpłatną rozmowę Discovery.
                 </p>
               </div>
               
               <div className="glass-card p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  What is your refund policy?
+                  Jaka jest polityka zwrotów?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  All programs come with a 14-day satisfaction guarantee. If you're not satisfied with the program after the first two sessions, I'll provide a full refund.
+                  Wszystkie programy objęte są 14-dniową gwarancją satysfakcji. Jeśli po pierwszych dwóch sesjach nie będziesz usatysfakcjonowany, otrzymasz pełny zwrot środków. W przypadku Mental Elevator, ze względu na intesywność procesu i limitowane miejsca, wymagana jest pełna płatność z góry.
                 </p>
               </div>
               
               <div className="glass-card p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  Do you offer payment plans?
+                  Czy oferujesz plany płatności?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Yes, flexible payment options are available for all programs. Details are provided during the enrollment process or can be discussed during your discovery call.
+                  Tak, elastyczne opcje płatności są dostępne dla programów Hakowanie Produktywności i Silna Głowa. Szczegóły są przedstawiane podczas procesu zapisów lub można je omówić podczas rozmowy Discovery. Mental Elevator wymaga pełnej płatności z góry.
                 </p>
               </div>
               
               <div className="glass-card p-6 rounded-xl">
                 <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  How much time should I allocate weekly for these programs?
+                  Ile czasu tygodniowo powinienem przeznaczyć na te programy?
                 </h3>
                 <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Most programs require 3-5 hours per week, including live sessions and independent work. The exact time commitment varies by program and will be clearly outlined before you enroll.
+                  Większość programów wymaga 3-5 godzin tygodniowo, w tym sesje na żywo i pracę samodzielną. Mental Elevator wymaga większego zaangażowania (6-8 godzin tygodniowo) ze względu na intensywność transformacji. Dokładny zakres czasowy zostanie jasno określony przed zapisaniem się.
                 </p>
               </div>
             </div>
@@ -262,24 +263,24 @@ export default function Courses() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to Elevate Your Potential?
+              Gotowy przejąć kontrolę?
             </h2>
             
             <p className="text-lg mb-8 text-white/90">
-              Take the first step toward transforming your capabilities and reclaiming your agency in our technology-driven world.
+              Nie potrzebujesz kolejnego kursu. Potrzebujesz konkretnej transformacji, która pozwoli Ci wykorzystać technologię, zamiast być przez nią wykorzystywanym.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/kontakt">
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
-                  Book a Discovery Call
+                  Umów rozmowę Discovery
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/newsletter">
                 <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                  Join the Newsletter
+                  Dołącz do newslettera
                 </Button>
               </Link>
             </div>
