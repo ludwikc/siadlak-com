@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -165,12 +166,21 @@ export default function Courses() {
                     </div>
                     
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Link to={`/kursy/${course.id}`}>
-                        <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
-                          Szczegóły programu
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
+                      {course.id === 'mental-elevator' ? (
+                        <Link to="/mental-elevator">
+                          <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
+                            Szczegóły programu
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      ) : (
+                        <Link to={`/kursy/${course.id}`}>
+                          <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
+                            Szczegóły programu
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </Link>
+                      )}
                       
                       <Link to="/kontakt">
                         <Button variant="outline" className="text-[#BDBDBD] dark:text-white">
@@ -271,7 +281,7 @@ export default function Courses() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/kontakt">
+              <Link to="/contact">
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
                   Umów rozmowę Discovery
                   <ArrowRight className="ml-2 h-4 w-4" />

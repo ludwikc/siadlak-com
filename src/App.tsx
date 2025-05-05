@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +13,7 @@ import CourseDetail from "./pages/CourseDetail";
 import Newsletter from "./pages/Newsletter";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
+import MentalElevator from "./pages/MentalElevator";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,7 @@ const App = () => (
           <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
           <Route path="/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
           <Route path="/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
+          <Route path="/mental-elevator" element={<MentalElevator />} />
           {/* For Power Test assessment page */}
           <Route path="/assessment" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
