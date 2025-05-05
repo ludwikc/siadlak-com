@@ -51,6 +51,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/webinar" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Webinar
+                </Link>
+              </li>
+              <li>
                 <Link to="/resources" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Materiały
                 </Link>
@@ -110,6 +115,9 @@ export default function Footer() {
             &copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link to="/legal" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+              Informacje Prawne
+            </Link>
             <Link to="/privacy" className="text-sm text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
               Polityka Prywatności
             </Link>

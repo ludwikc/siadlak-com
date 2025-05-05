@@ -36,8 +36,8 @@ body {
   font-family: ui-sans-serif, sans-serif;
   color: var(--text-color);
   background:
-    radial-gradient(circle at top left, #7C00FF, transparent 20%) fixed,
-    radial-gradient(circle at bottom right, #4A36C2, transparent 30%) fixed,
+    radial-gradient(circle at top left, rgba(124, 0, 255, 0.2), transparent 20%) fixed,
+    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.2), transparent 30%) fixed,
     var(--bg-color) fixed;
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;

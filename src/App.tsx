@@ -15,6 +15,7 @@ import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
 import MentalElevator from "./pages/MentalElevator";
 import Webinar from "./pages/Webinar";
+import Legal from "./pages/Legal";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/thank-you/webinar" element={<ThankYou type="webinar" />} />
           <Route path="/mental-elevator" element={<MentalElevator />} />
           <Route path="/webinar" element={<Webinar />} />
+          <Route path="/legal" element={<Legal />} />
           {/* For Power Test assessment page */}
           <Route path="/assessment" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

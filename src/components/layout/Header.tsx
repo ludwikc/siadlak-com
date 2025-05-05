@@ -64,6 +64,12 @@ export default function Header() {
             Newsletter
           </Link>
           <Link 
+            to="/webinar"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            Webinar
+          </Link>
+          <Link 
             to="/contact"
             className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors"
           >
@@ -124,6 +130,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Newsletter
+            </Link>
+            <Link 
+              to="/webinar"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Webinar
             </Link>
             <Link 
               to="/contact"
