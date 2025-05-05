@@ -1,9 +1,10 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Zap, Calendar, Mail, Clock, ArrowRight, CheckCheck } from 'lucide-react';
+import SpecialOfferCountdown from '@/components/webinar/SpecialOfferCountdown';
 
 type ThankYouProps = {
   type?: 'contact' | 'newsletter' | 'discovery-call' | 'webinar';
@@ -14,10 +15,28 @@ export default function ThankYou({ type = 'newsletter' }: ThankYouProps) {
   const location = useLocation();
   const currentTime = new Date().toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' });
   const currentDate = new Date().toLocaleDateString('pl-PL', { day: '2-digit', month: 'long' });
+  const [isOfferExpired, setIsOfferExpired] = useState(false);
 
   useEffect(() => {
     // Scroll to top on component mount
     window.scrollTo(0, 0);
+
+    // Check if offer is expired
+    const storedEndTime = localStorage.getItem('specialOfferEndTime');
+    if (storedEndTime) {
+      const endTimeMs = parseInt(storedEndTime, 10);
+      const currentTime = new Date().getTime();
+      if (currentTime >= endTimeMs) {
+        setIsOfferExpired(true);
+      } else {
+        // Set a timeout to update the expired state when the timer ends
+        const timeLeft = endTimeMs - currentTime;
+        const timeout = setTimeout(() => {
+          setIsOfferExpired(true);
+        }, timeLeft);
+        return () => clearTimeout(timeout);
+      }
+    }
   }, [location.pathname]);
 
   const renderThankYouContent = () => {
@@ -209,33 +228,50 @@ export default function ThankYou({ type = 'newsletter' }: ThankYouProps) {
               Sprawdź swoją skrzynkę i dodaj wydarzenie do kalendarza, aby nie przegapić webinaru.
             </p>
             
-            <div className="bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 p-4 rounded-lg border border-neural-violet/20">
+            <SpecialOfferCountdown />
+            
+            <div className={`p-4 rounded-lg border ${isOfferExpired 
+              ? 'bg-gray-100 dark:bg-gray-800/60 border-gray-300 dark:border-gray-700' 
+              : 'bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20'}`}>
               <div className="flex justify-between items-center mb-2">
-                <h3 className="font-medium text-neural-violet">⏱️ Czy chcesz przyspieszyć?</h3>
-                <span className="text-xs bg-neural-violet/20 px-2 py-0.5 rounded-full text-neural-violet">Oferta specjalna</span>
+                <h3 className={`font-medium ${isOfferExpired ? 'text-gray-500' : 'text-neural-violet'}`}>
+                  {isOfferExpired ? '⏱️ Było, minęło...' : '⏱️ Czy chcesz przyspieszyć?'}
+                </h3>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${isOfferExpired 
+                  ? 'bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400' 
+                  : 'bg-neural-violet/20 text-neural-violet'}`}>
+                  {isOfferExpired ? 'Oferta wygasła' : 'Oferta specjalna'}
+                </span>
               </div>
-              <p className="text-sm mb-3">
+              <p className={`text-sm mb-3 ${isOfferExpired ? 'text-gray-500' : ''}`}>
                 <span className="font-medium">68% uczestników</span> webinarów nigdy nie wdraża tego, 
                 czego się nauczy. Dlatego stworzyłem ten skrót dla ludzi, którzy działają natychmiast...
               </p>
-              <div className="text-sm">
+              <div className={`text-sm ${isOfferExpired ? 'text-gray-500' : ''}`}>
                 <p className="font-medium">7 technik transformacji programisty w lidera</p>
                 <div className="flex items-center justify-between mt-1">
                   <div className="flex items-center">
                     <span className="line-through text-gray-500 mr-2">499 PLN</span>
-                    <span className="font-bold text-neural-violet">77 PLN</span>
+                    <span className={`font-bold ${isOfferExpired ? 'text-gray-500' : 'text-neural-violet'}`}>77 PLN</span>
                   </div>
-                  <span className="text-xs text-gray-500">Oferta ważna 24h</span>
+                  <span className="text-xs text-gray-500">
+                    {isOfferExpired ? 'Oferta wygasła' : 'Oferta ważna przez ograniczony czas'}
+                  </span>
                 </div>
               </div>
             </div>
             
             <div className="flex flex-col space-y-4 mt-4">
               <Button
-                className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
-                onClick={() => navigate('/checkout/special-offer')}
+                className={`w-full ${isOfferExpired 
+                  ? 'bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed' 
+                  : 'bg-neural-violet hover:bg-neural-violet/90 text-white'}`}
+                onClick={() => !isOfferExpired && navigate('/checkout/special-offer')}
+                disabled={isOfferExpired}
               >
-                Tak, chcę natychmiastowe rezultaty (77 PLN)
+                {isOfferExpired 
+                  ? 'Oferta wygasła - Było, minęło...' 
+                  : 'Tak, chcę natychmiastowe rezultaty (77 PLN)'}
               </Button>
               
               <Button
