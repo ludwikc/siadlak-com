@@ -16,6 +16,12 @@ import ThankYou from "./pages/ThankYou";
 import MentalElevator from "./pages/MentalElevator";
 import Webinar from "./pages/Webinar";
 import Legal from "./pages/Legal";
+import WebinarRegistration from "./pages/WebinarRegistration";
+import WebinarLobby from "./pages/WebinarLobby";
+import WebinarLive from "./pages/WebinarLive";
+import WebinarExpired from "./pages/WebinarExpired";
+import WebinarReplay from "./pages/WebinarReplay";
+import Assessment from "./pages/Assessment";
 
 const queryClient = new QueryClient();
 
@@ -41,8 +47,12 @@ const App = () => (
           <Route path="/mental-elevator" element={<MentalElevator />} />
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/legal" element={<Legal />} />
-          {/* For Power Test assessment page */}
-          <Route path="/assessment" element={<Index />} />
+          <Route path="/webinar-registration" element={<WebinarRegistration />} />
+          <Route path="/webinar-lobby" element={<WebinarLobby />} />
+          <Route path="/webinar-live" element={<WebinarLive />} />
+          <Route path="/webinar-expired" element={<WebinarExpired />} />
+          <Route path="/webinar-replay" element={<WebinarReplay />} />
+          <Route path="/assessment" element={<Assessment />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

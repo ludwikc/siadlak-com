@@ -127,6 +127,15 @@ body.dark-mode {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  
+  /* Transparent section backgrounds for both light and dark mode */
+  .bg-transparent-section {
+    @apply bg-white/20 dark:bg-deep-space/20 backdrop-blur-sm;
+  }
+  
+  .bg-transparent-section-darker {
+    @apply bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm;
+  }
 }
 
 /* === Prose Styles for Rich Content === */
@@ -148,4 +157,25 @@ body.dark-mode {
 /* === Utility and Shadow/Borders Adjustments === */
 .border {
   border-color: var(--border-color) !important;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 0.5s ease-out forwards;
 }
