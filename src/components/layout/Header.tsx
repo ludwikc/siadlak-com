@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -7,7 +6,7 @@ import { Moon, Sun, Menu, X } from 'lucide-react';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, isDevTheme } = useTheme();
   
   // Handle scroll effect
   useEffect(() => {
@@ -77,23 +76,27 @@ export default function Header() {
           </Link>
           
           {/* Theme Toggle */}
-          <button 
-            onClick={toggleTheme} 
-            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-            aria-label={`Przełącz na tryb ${theme === 'dark' ? 'jasny' : 'ciemny'}`}
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+          <div className="flex items-center space-x-2">
+            {/* Light/Dark Theme Toggle */}
+            <button 
+              onClick={toggleTheme} 
+              className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+              aria-label={`Przełącz na tryb ${theme === 'dark' || theme === 'dev' ? 'jasny' : 'ciemny'}`}
+            >
+              {theme === 'dark' || theme === 'dev' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          </div>
         </nav>
         
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center space-x-2">
+          {/* Light/Dark Theme Toggle - Mobile */}
           <button 
             onClick={toggleTheme} 
-            className="p-2 mr-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-            aria-label={`Przełącz na tryb ${theme === 'dark' ? 'jasny' : 'ciemny'}`}
+            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
+            aria-label={`Przełącz na tryb ${theme === 'dark' || theme === 'dev' ? 'jasny' : 'ciemny'}`}
           >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === 'dark' || theme === 'dev' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

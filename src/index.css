@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -31,6 +30,80 @@
   --shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Dev-inspired theme from design system swatches - Dark */
+.dev {
+  /* Background colors */
+  --bg-color: #1E1F22;
+  --card-bg: #2B2D31;
+  --card-text: #B5BAC1;
+  --text-color: #B5BAC1;
+  --accent-color: #7C00FF;
+  --accent-text: #FFFFFF;
+  --highlight-color: #B100FF;
+  --border-color: #3F4147;
+  --shadow: 0 8px 16px rgba(0,0,0,0.3);
+  
+  /* Additional Dev-inspired variables */
+  --background-primary: #1E1F22;
+  --background-secondary: #2B2D31;
+  --background-tertiary: #313338;
+  --text-primary: #B5BAC1;
+  --text-secondary: #A0A5AC;
+  --border-primary: #3F4147;
+  --border-subtle: rgba(255,255,255,0.1);
+  
+  /* Brand Colors */
+  --color-primary: #7C00FF;
+  --color-primary-light: #B100FF;
+  --color-primary-dark: #4A36C2;
+  --color-accent: #C961E3;
+  --color-indigo: #383B6C;
+  --color-premium: #D4AF37;
+  
+  /* UI States */
+  --color-success: #36D399;
+  --color-warning: #FBBD23;
+  --color-error: #F87272;
+  --color-info: #4A36C2;
+}
+
+/* Dev-inspired theme from design system swatches - Light */
+.dev-light {
+  /* Background colors */
+  --bg-color: #F2F3F5;
+  --card-bg: #E3E5E8;
+  --card-text: #2E3338;
+  --text-color: #2E3338;
+  --accent-color: #7C00FF;
+  --accent-text: #FFFFFF;
+  --highlight-color: #B100FF;
+  --border-color: #D4D7DC;
+  --shadow: 0 8px 16px rgba(0,0,0,0.1);
+  
+  /* Additional Dev-inspired variables */
+  --background-primary: #F2F3F5;
+  --background-secondary: #E3E5E8;
+  --background-tertiary: #EBEDEF;
+  --text-primary: #2E3338;
+  --text-secondary: #4F545C;
+  --border-primary: #D4D7DC;
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  
+  /* Brand Colors */
+  --color-primary: #7C00FF;
+  --color-primary-light: #B100FF;
+  --color-primary-dark: #4A36C2;
+  --color-accent: #C961E3;
+  --color-indigo: #383B6C;
+  --color-premium: #D4AF37;
+  
+  /* UI States */
+  --color-success: #36D399;
+  --color-warning: #FBBD23;
+  --color-error: #F87272;
+  --color-info: #4A36C2;
+}
+
 /* === Gradient Backgrounds === */
 body {
   font-family: ui-sans-serif, sans-serif;
@@ -43,13 +116,31 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-body.dark,
-body.dark-mode {
+body.dark:not(.dev),
+body.dark-mode:not(.dev) {
   background:
     radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%) fixed,
     radial-gradient(circle at bottom right, rgba(30, 0, 96, 0.3), transparent 35%) fixed,
     var(--bg-color) fixed;
   color: var(--text-color);
+}
+
+body.dev {
+  background:
+    radial-gradient(circle at top left, rgba(177, 0, 255, 0.15), transparent 20%) fixed,
+    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.15), transparent 30%) fixed,
+    var(--bg-color) fixed;
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+body.dev-light {
+  background:
+    radial-gradient(circle at top left, rgba(177, 0, 255, 0.05), transparent 20%) fixed,
+    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.05), transparent 30%) fixed,
+    var(--bg-color) fixed;
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
 }
 
 /* === Base Typography and Spacing === */
