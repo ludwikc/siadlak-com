@@ -11,13 +11,14 @@ import PersonaSection from '../components/sections/PersonaSection';
 export default function Community() {
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section with Background Image */}
       <Hero
         title="SIADLAXITY: Nasze Cyfrowe Miasto Rozwoju 🌆"
         subtitle="Zobacz, w jakiej dzielnicy naszej społeczności odnajdziesz swoje miejsce"
         ctaText="Dołącz do społeczności"
         ctaLink="#community-districts"
-        imageDescription="Społeczność rozwojowa"
+        backgroundImage="/lovable-uploads/5eb2feb4-928a-4b2b-baea-129edbb57b25.png"
+        imageDescription="Cyfrowe miasto społeczności SIADLAXITY"
       />
       
       {/* Intro Section */}
@@ -34,7 +35,7 @@ export default function Community() {
         </div>
       </section>
       
-      {/* Community Districts Section with card-based styling similar to Programy page */}
+      {/* Community Districts Section */}
       <section id="community-districts" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
