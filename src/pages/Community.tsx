@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
@@ -35,7 +34,7 @@ export default function Community() {
         </div>
       </section>
       
-      {/* Community Districts Section */}
+      {/* Community Districts Section with card-based styling similar to Programy page */}
       <section id="community-districts" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -48,256 +47,245 @@ export default function Community() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* ODKRYWCY Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            {/* Community districts as program-style cards */}
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">🌱 ODKRYWCY</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">🌱 ODKRYWCY</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Dołącz bezpłatnie
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Dla kogo?</strong> Dla wszystkich, którzy rozpoczynają świadomą podróż ku lepszej wersji siebie.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>Co otrzymujesz?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['Dostęp do regularnych **Silent Coworków** - przestrzeni, gdzie wszyscy pracują w skupieniu', 
-                    'Cotygodniowe **sesje medytacyjne na żywo** - buduj praktykę mindfulness w grupie', 
-                    '**Inspirujące cytaty** i fragmenty wartościowych treści',
-                    'Możliwość korzystania z **trackerów nawyków** i postępów',
-                    'Szansę na **podglądanie mistrzów w akcji** - osób, które już przeszły drogę, którą Ty zaczynasz'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Link 
-                    to="#join-community" 
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Dołącz jako Odkrywca
-                  </Link>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Dla kogo?</strong> Dla wszystkich, którzy rozpoczynają świadomą podróż ku lepszej wersji siebie.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>Co otrzymujesz?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['Dostęp do regularnych **Silent Coworków** - przestrzeni, gdzie wszyscy pracują w skupieniu', 
+                      'Cotygodniowe **sesje medytacyjne na żywo** - buduj praktykę mindfulness w grupie', 
+                      '**Inspirujące cytaty** i fragmenty wartościowych treści',
+                      'Możliwość korzystania z **trackerów nawyków** i postępów',
+                      'Szansę na **podglądanie mistrzów w akcji** - osób, które już przeszły drogę, którą Ty zaczynasz'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <Link 
+                  to="#join-community" 
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Dołącz jako Odkrywca
+                </Link>
+              </div>
+            </div>
             
-            {/* EXPLORERS Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">🌍 EXPLORERS</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">🌍 EXPLORERS</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Join for free
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Who is for?</strong> For international growth-seekers and those who prefer English communication.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>What do you get?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['All benefits of the Polish Odkrywcy district', 
-                    'Chance to connect with international productivity enthusiasts', 
-                    'Occasional English-language events and resources'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Link 
-                    to="#join-community" 
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Join as Explorer
-                  </Link>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Who is for?</strong> For international growth-seekers and those who prefer English communication.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>What do you get?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['All benefits of the Polish Odkrywcy district', 
+                      'Chance to connect with international productivity enthusiasts', 
+                      'Occasional English-language events and resources'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <Link 
+                  to="#join-community" 
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Join as Explorer
+                </Link>
+              </div>
+            </div>
             
-            {/* LIFEHACKERZY Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">⚡ LIFEHACKERZY</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">⚡ LIFEHACKERZY</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Dla absolwentów naszych kursów
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Dla kogo?</strong> Dla absolwentów naszych kursów - osób, które zdecydowały się zainwestować w swój rozwój.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>Co otrzymujesz?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['Wszystko z poziomu Odkrywcy PLUS:',
-                    'Dostęp do **codziennych spotkań o 12:34** - rytm, który buduje fundamenty codziennego rozwoju',
-                    'Dedykowane **kanały tematyczne** dla pogłębionej dyskusji',
-                    'Możliwość uczestnictwa w **ekskluzywnych warsztatach** i webinarach',
-                    '**Społeczność ludzi**, którzy są na podobnym etapie transformacji życiowej',
-                    'Regularne **Q&A z Ludwikiem**'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Link 
-                    to="/courses" 
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Sprawdź nasze kursy
-                  </Link>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Dla kogo?</strong> Dla absolwentów naszych kursów - osób, które zdecydowały się zainwestować w swój rozwój.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>Co otrzymujesz?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['Wszystko z poziomu Odkrywcy PLUS:',
+                      'Dostęp do **codziennych spotkań o 12:34** - rytm, który buduje fundamenty codziennego rozwoju',
+                      'Dedykowane **kanały tematyczne** dla pogłębionej dyskusji',
+                      'Możliwość uczestnictwa w **ekskluzywnych warsztatach** i webinarach',
+                      '**Społeczność ludzi**, którzy są na podobnym etapie transformacji życiowej',
+                      'Regularne **Q&A z Ludwikiem**'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <Link 
+                  to="/courses" 
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Sprawdź nasze kursy
+                </Link>
+              </div>
+            </div>
             
-            {/* NFT Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Diamond className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">💎 NFT (Nasze Fenomenalne Towarzystwo)</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">💎 NFT (Nasze Fenomenalne Towarzystwo)</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Dla najbardziej zaangażowanych
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Dla kogo?</strong> Dla najbardziej zaangażowanych członków społeczności, którzy zdecydowali się na dożywotni dostęp do wszystkich moich materiałów.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>Co otrzymujesz?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['Wszystko z poprzednich poziomów PLUS:',
-                    '**Priorytetowy dostęp** do nowych programów i materiałów',
-                    'Możliwość **bezpośredniego wpływu** na kierunek rozwoju społeczności',
-                    'Regularne **sesje mastermind** w małych grupach',
-                    '**Mentoringowe wsparcie** w kluczowych momentach Twojej drogi'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Link 
-                    to="/contact" 
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Zapytaj o NFT
-                  </Link>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Dla kogo?</strong> Dla najbardziej zaangażowanych członków społeczności, którzy zdecydowali się na dożywotni dostęp do wszystkich moich materiałów.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>Co otrzymujesz?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['Wszystko z poprzednich poziomów PLUS:',
+                      '**Priorytetowy dostęp** do nowych programów i materiałów',
+                      'Możliwość **bezpośredniego wpływu** na kierunek rozwoju społeczności',
+                      'Regularne **sesje mastermind** w małych grupach',
+                      '**Mentoringowe wsparcie** w kluczowych momentach Twojej drogi'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <Link 
+                  to="/contact" 
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Zapytaj o NFT
+                </Link>
+              </div>
+            </div>
             
-            {/* PATRONI Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">🙏 PATRONI FUNDACJI HACKERZY.PL</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">🙏 PATRONI FUNDACJI HACKERZY.PL</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Dla wspierających misję
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Dla kogo?</strong> Dla osób, które chcą wspierać misję szerszego udostępniania wartościowej wiedzy.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>Co otrzymujesz?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['Satysfakcję z **wspierania ważnej misji**',
-                    'Specjalne **podziękowania i uznanie** w społeczności',
-                    'Dostęp do **ekskluzywnych treści** dla Patronów',
-                    'Możliwość **współtworzenia inicjatyw** Fundacji'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <a 
-                    href="https://patronite.pl/hackerzy" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Zostań Patronem Fundacji
-                  </a>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Dla kogo?</strong> Dla osób, które chcą wspierać misję szerszego udostępniania wartościowej wiedzy.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>Co otrzymujesz?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['Satysfakcję z **wspierania ważnej misji**',
+                      'Specjalne **podziękowania i uznanie** w społeczności',
+                      'Dostęp do **ekskluzywnych treści** dla Patronów',
+                      'Możliwość **współtworzenia inicjatyw** Fundacji'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <a 
+                  href="https://patronite.pl/hackerzy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Zostań Patronem Fundacji
+                </a>
+              </div>
+            </div>
             
-            {/* MĘSKI KOMPAS Card */}
-            <Card className="glass-card border-none">
-              <CardHeader className="pb-2">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-luminal-magenta/20 rounded-full flex items-center justify-center mb-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full">
+                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Compass className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <CardTitle className="text-xl text-deep-charcoal dark:text-silver-mist">🧭 MĘSKI KOMPAS</CardTitle>
-                <CardDescription className="text-subtle-slate dark:text-silver-mist/70">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">🧭 MĘSKI KOMPAS</h3>
+                <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
                   Dla mężczyzn szukających autentycznej przestrzeni
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                  <strong>Dla kogo?</strong> Dla mężczyzn szukających autentycznej przestrzeni do rozmów o współczesnej męskości.
                 </p>
-                <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
-                  <strong>Co otrzymujesz?</strong>
-                </p>
-                <ul className="space-y-2">
-                  {['Przestrzeń do **głębokich, męskich rozmów**',
-                    'Wsparcie w budowaniu **własnego kodeksu**',
-                    'Możliwość uczestnictwa w **cyklicznych spotkaniach**',
-                    'Społeczność braci, którzy **rozumieją Twoje wyzwania**'].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80" 
-                            dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <Link 
-                    to="/contact" 
-                    className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors"
-                  >
-                    Dowiedz się więcej
-                  </Link>
+                <div className="mb-6 flex-grow">
+                  <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
+                    <strong>Dla kogo?</strong> Dla mężczyzn szukających autentycznej przestrzeni do rozmów o współczesnej męskości.
+                  </p>
+                  <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
+                    <strong>Co otrzymujesz?</strong>
+                  </p>
+                  <ul className="space-y-2">
+                    {['Przestrzeń do **głębokich, męskich rozmów**',
+                      'Wsparcie w budowaniu **własnego kodeksu**',
+                      'Możliwość uczestnictwa w **cyklicznych spotkaniach**',
+                      'Społeczność braci, którzy **rozumieją Twoje wyzwania**'].map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80" 
+                              dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
+                <Link 
+                  to="/contact" 
+                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                >
+                  Dowiedz się więcej
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

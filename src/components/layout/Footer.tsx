@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Users } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -109,27 +108,20 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Newsletter */}
+          {/* Community Column (replacing Newsletter) */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Newsletter</h4>
+            <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Społeczność</h4>
             <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
-              Zapisz się po cotygodniowe spostrzeżenia na temat cyfrowego przywództwa.
+              Dołącz do grupy profesjonalistów dążących do rozwoju na styku technologii i ludzkiego potencjału.
             </p>
-            <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Twój email" 
-                className="py-2 px-3 rounded-l-md border-y border-l border-border bg-luminous-white dark:bg-deep-space w-full"
-                aria-label="Email do newslettera"
-              />
-              <button 
-                type="submit"
-                className="bg-ascension-pink hover:bg-luminal-magenta text-white p-2 rounded-r-md transition-colors"
-                aria-label="Zapisz się"
-              >
-                <ArrowRight size={20} />
-              </button>
-            </form>
+            <Link 
+              to="/community" 
+              className="inline-flex items-center space-x-2 text-neural-violet hover:text-ascension-pink dark:text-luminal-magenta dark:hover:text-luminal-magenta/80 transition-colors"
+            >
+              <Users size={18} />
+              <span>Dołącz do Społeczności Lifehackerów</span>
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
         
