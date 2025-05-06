@@ -25,6 +25,7 @@ import Assessment from "./pages/Assessment";
 import Podcasts from "./pages/Podcasts";
 import LifeHackingPodcast from "./pages/LifeHackingPodcast";
 import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
+import Community from "./pages/Community";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,8 @@ const App = () => (
           <Route path="/podcasts" element={<Podcasts />} />
           <Route path="/podcasts/life-hacking" element={<LifeHackingPodcast />} />
           <Route path="/podcasts/uwazne-zycie" element={<UwazneZyciePodcast />} />
+          {/* Community route */}
+          <Route path="/community" element={<Community />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

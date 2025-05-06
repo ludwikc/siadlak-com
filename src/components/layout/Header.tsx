@@ -64,6 +64,12 @@ export default function Header() {
             Podcasty
           </Link>
           <Link 
+            to="/community"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            Społeczność
+          </Link>
+          <Link 
             to="/newsletter"
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
@@ -140,6 +146,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Podcasty
+            </Link>
+            <Link 
+              to="/community"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Społeczność
             </Link>
             <Link 
               to="/newsletter"
