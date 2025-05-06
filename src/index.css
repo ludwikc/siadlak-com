@@ -167,8 +167,8 @@ body.dev-light {
   small, .caption { font-size: 0.875rem; line-height: 1.4; }
   
   /* Page transitions */
-  .page-transition-container {
-    animation: fadeInZoom 0.3s ease-out forwards;
+  .page-content {
+    animation: fadeInZoom 0.4s ease-out forwards;
   }
   
   /* Smooth scrolling and scroll to top behavior */
@@ -313,4 +313,13 @@ body.dev-light {
 
 .animate-pulse-subtle {
   animation: pulse-subtle 4s infinite ease-in-out;
+}
+
+/* New page transition animation */
+.animate-page-transition {
+  will-change: opacity, transform;
+}
+
+.animate-page-transition .page-content {
+  animation: fadeInZoom 0.4s ease-out forwards;
 }

@@ -68,6 +68,9 @@ const Index = () => {
         ctaLink="/assessment"
         secondaryCtaText="Otrzymuj cotygodniowe inspiracje"
         secondaryCtaLink="/newsletter"
+        backgroundImage="/public/lovable-uploads/75c4c96b-c9d6-4fd5-b7ce-1e9b76b3392e.png"
+        imageDescription="Ludwik Siadlak - Technology Coach"
+        fullHeight={true}
       />
       
       <div className="py-12 md:py-16 bg-secondary/30 dark:bg-quantum-blue/20">

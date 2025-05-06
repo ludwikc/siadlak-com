@@ -23,15 +23,30 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
-        <div className="container mx-auto px-4">
+      <section className="min-h-[90vh] flex items-center justify-center relative text-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/public/lovable-uploads/acfe5513-536a-4e0b-a176-0adb69c86dbf.png"
+            alt="Ludwik Siadlak" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-deep-space/80 via-deep-space/70 to-deep-space/90"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">
               O mnie
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
+            <p className="text-lg md:text-xl mb-8 text-silver-mist/90 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Pomagam profesjonalistom kierować technologią, zamiast jej służyć
             </p>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+              <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                Umów rozmowę
+                <Calendar className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -42,17 +57,17 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="prose prose-lg dark:prose-invert max-w-none">
-                <p>
+                <p className="text-lg">
                   Przez ponad 19 lat działam na styku najnowocześniejszej technologii i ludzkiej wydajności. Łącząc ekspertyzę z obu światów, prowadzę profesjonalistów do odzyskania kontroli nad ich cyfrowym życiem bez poświęcania tego, co czyni ich wyjątkowo ludzkimi.
                 </p>
                 
-                <p>
+                <p className="text-lg">
                   Moja droga rozpoczęła się jako certyfikowany trener Microsoft, gdzie na własne oczy zobaczyłem, jak technologia może albo wzmacniać, albo przytłaczać. Podczas gdy inni koncentrowali się wyłącznie na umiejętnościach technicznych, ja dostrzegłem, że brakującym elementem jest nauczenie ludzi, jak zachować ludzką przewagę przy jednoczesnym wykorzystaniu cyfrowych narzędzi.
                 </p>
               </div>
               
               <div className="mt-8">
-                <Link to="/contact">
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                   <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist">
                     Umów rozmowę
                     <Calendar className="ml-2 h-4 w-4" />
@@ -63,10 +78,7 @@ const About = () => {
             
             <div className="order-1 lg:order-2">
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-xl">
-                {/* Placeholder for profile image */}
-                <div className="bg-gradient-to-br from-neural-violet to-ascension-pink h-full w-full flex items-center justify-center">
-                  <span className="text-white text-xl font-medium">Ludwik Siadlak</span>
-                </div>
+                <img src="/public/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png" alt="Ludwik Siadlak" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -136,14 +148,14 @@ const About = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/newsletter">
+              <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
                   Otrzymuj cotygodniowe spostrzeżenia
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                 <Button variant="outline" className="border-white text-white hover:bg-white/10">
                   Umów Rozmowę Discovery
                   <Calendar className="ml-2 h-4 w-4" />
@@ -158,4 +170,3 @@ const About = () => {
 };
 
 export default About;
-

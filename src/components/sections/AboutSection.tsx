@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -9,11 +10,11 @@ export default function AboutSection() {
           {/* Image Column */}
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet dark:to-ascension-pink/50 flex items-center justify-center">
-                <span className="text-neural-violet dark:text-silver-mist text-lg">
-                  Profile Image
-                </span>
-              </div>
+              <img
+                src="/public/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
+                alt="Ludwik Siadlak"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full blur-2xl opacity-30 dark:opacity-50"></div>
           </div>
@@ -32,7 +33,11 @@ export default function AboutSection() {
               His unique approach combines cutting-edge technical expertise with deep understanding of human psychology and performance optimization, helping clients develop systems that enhance their effectiveness without sacrificing their well-being.
             </p>
             
-            <Link to="/about" className="btn-secondary inline-block">
+            <Link 
+              to="/about" 
+              className="btn-secondary inline-block"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Learn More About Ludwik
             </Link>
           </div>

@@ -36,8 +36,10 @@ function LayoutContent({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-20 page-transition-container">
-        {children}
+      <main className="flex-grow pt-20 animate-page-transition">
+        <div className="page-content">
+          {children}
+        </div>
       </main>
       <Footer />
     </div>
