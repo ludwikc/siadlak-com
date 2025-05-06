@@ -51,6 +51,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/podcasts" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Podcasty
+                </Link>
+              </li>
+              <li>
                 <Link to="/webinar" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Webinar
                 </Link>
@@ -68,7 +73,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Programs */}
+          {/* Programs and Podcasts */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Programy</h4>
             <ul className="space-y-2">
@@ -80,6 +85,20 @@ export default function Footer() {
               <li>
                 <Link to="/courses/hakowanie-produktywnosci" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Hakowanie Produktywności
+                </Link>
+              </li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mb-4 mt-6 text-deep-charcoal dark:text-silver-mist">Podcasty</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/podcasts/life-hacking" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Life Hacking Podcast
+                </Link>
+              </li>
+              <li>
+                <Link to="/podcasts/uwazne-zycie" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                  Uważne Życie
                 </Link>
               </li>
             </ul>

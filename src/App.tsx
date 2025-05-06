@@ -22,6 +22,9 @@ import WebinarLive from "./pages/WebinarLive";
 import WebinarExpired from "./pages/WebinarExpired";
 import WebinarReplay from "./pages/WebinarReplay";
 import Assessment from "./pages/Assessment";
+import Podcasts from "./pages/Podcasts";
+import LifeHackingPodcast from "./pages/LifeHackingPodcast";
+import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +56,10 @@ const App = () => (
           <Route path="/webinar-expired" element={<WebinarExpired />} />
           <Route path="/webinar-replay" element={<WebinarReplay />} />
           <Route path="/assessment" element={<Assessment />} />
+          {/* Podcast routes */}
+          <Route path="/podcasts" element={<Podcasts />} />
+          <Route path="/podcasts/life-hacking" element={<LifeHackingPodcast />} />
+          <Route path="/podcasts/uwazne-zycie" element={<UwazneZyciePodcast />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

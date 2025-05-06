@@ -32,7 +32,7 @@ export default function Hero({
       
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl">
-          <h1 className="mb-4 font-bold !leading-tight text-neural-violet dark:text-neural-violet-light">
+          <h1 className="mb-4 font-bold !leading-tight text-neural-violet">
             {title}
           </h1>
           

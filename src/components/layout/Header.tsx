@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -55,6 +56,12 @@ export default function Header() {
             className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
             Programy
+          </Link>
+          <Link 
+            to="/podcasts"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+          >
+            Podcasty
           </Link>
           <Link 
             to="/newsletter"
@@ -126,6 +133,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Programy
+            </Link>
+            <Link 
+              to="/podcasts"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Podcasty
             </Link>
             <Link 
               to="/newsletter"
