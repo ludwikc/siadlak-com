@@ -56,7 +56,7 @@ export default function Hero({
             {title}
           </h1>
           
-          <p className={`text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in ${backgroundImage ? 'text-white/90' : 'text-deep-charcoal/80 dark:text-silver-mist/80'}`} style={{ animationDelay: '0.2s' }}>
+          <p className={`text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in ${backgroundImage ? 'text-white/90' : 'text-deep-charcoal/80 dark:text-white/80'}`} style={{ animationDelay: '0.2s' }}>
             {subtitle}
           </p>
           

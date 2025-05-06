@@ -29,12 +29,12 @@ const Index = () => {
   // Personas
   const personas = [
     {
-      title: "Eksperci techniczni wchodzący w role przywódcze",
+      title: "Eksperci wchodzący w role przywódcze",
       description: "Opanowałeś technikalia, ale teraz stajesz przed wyzwaniem prowadzenia innych. Potrzebujesz strategii, które honorują zarówno Twój techniczny umysł, jak i rosnącą rolę lidera.",
       icon: <Brain size={24} />
     },
     {
-      title: "Profesjonaliści czujący się kontrolowani przez technologię",
+      title: "Profesjonaliści, a jednak przytłoczeni przez technologię",
       description: "Jesteś wykwalifikowany w swojej dziedzinie, ale czujesz się coraz bardziej zdominowany przez cyfrowe narzędzia, które miały Ci pomóc. Szukasz sposobów, by te narzędzia służyły Tobie, a nie odwrotnie.",
       icon: <Settings size={24} />
     },
@@ -62,14 +62,14 @@ const Index = () => {
   return (
     <Layout>
       <Hero 
-        title="Przejmij kontrolę."
+        title="Odzyskaj kontrolę."
         subtitle="Przestań być kontrolowanym przez technologię. Zacznij nią świadomie sterować."
         ctaText="Sprawdź swój poziom kontroli"
         ctaLink="/assessment"
-        secondaryCtaText="Otrzymuj cotygodniowe inspiracje"
+        secondaryCtaText="Przeczytaj moje przemyślenia"
         secondaryCtaLink="/newsletter"
-        backgroundImage="/public/lovable-uploads/75c4c96b-c9d6-4fd5-b7ce-1e9b76b3392e.png"
-        imageDescription="Ludwik Siadlak - Technology Coach"
+        backgroundImage="/lovable-uploads/SIADLAK-Screenshot-202505061335umpdi.jpg"
+        imageDescription="Ludwik C. Siadlak - Lifehacker"
         fullHeight={true}
       />
       
@@ -87,7 +87,7 @@ const Index = () => {
       </div>
       
       <HowItWorks 
-        title="Trzy kroki do cyfrowego mistrzostwa"
+        title="Trzy kroki do odzyskania kontroli"
         steps={steps}
       />
       

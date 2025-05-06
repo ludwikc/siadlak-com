@@ -57,7 +57,7 @@ const Assessment = () => {
   return (
     <Layout>
       <Hero 
-        title="Test Black Panther Energy: Odkryj swój potencjał przywódczy"
+        title="Kompas równowagi: Odkryj swój potencjał przywódczy"
         subtitle="10-minutowa ocena, która zidentyfikuje Twoje mocne strony i obszary do rozwoju w kontekście metodologii Black Panther"
         ctaText="Rozpocznij test"
         ctaLink="#assessment"
@@ -71,8 +71,7 @@ const Assessment = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6">Odkryj swoją Energię Czarnej Pantery</h2>
               
               <p className="text-lg mb-6">
-                Ten krótki test pomoże Ci zidentyfikować Twoje naturalne predyspozycje przywódcze oraz obszary, 
-                które mogą blokować Twój potencjał. Na podstawie wyników otrzymasz spersonalizowany raport.
+              Ten szybki test odsłoni unikalny wzorzec równoważenia ambicji, odpowiedzialności i regeneracji. Zarówno osoby zarządzające kodem, projektami czy ludźmi – jak i te balansujące wielość ról dom-praca – odkryją, gdzie naprawdę tracą siłę oraz jak wprowadzić mikrokorekty, by codziennie działać z lekkością i klarownością.
               </p>
               
               <div className="mb-8">
