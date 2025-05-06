@@ -7,7 +7,7 @@ import { ArrowRight, Calendar, Mail, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const approachPoints = [
-    "Technologia powinna Tobie służyć, nie odwrotnie",
+    "Technologia powinna służyć Tobie - nie odwrotnie!",
     "Twoje ludzkie zdolności są niezastąpione i muszą być chronione",
     "Odpowiednie systemy pozwalają kierować technologią, pozostając człowiekiem",
     "Równowaga nie polega na używaniu mniejszej ilości technologii, ale na sprawowaniu nad nią kontroli"
@@ -27,7 +27,7 @@ const About = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="/public/lovable-uploads/acfe5513-536a-4e0b-a176-0adb69c86dbf.png"
-            alt="Ludwik Siadlak" 
+            alt="Ludwik C. Siadlak" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-deep-space/80 via-deep-space/70 to-deep-space/90"></div>
@@ -150,7 +150,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
                 <Button className="bg-white text-neural-violet hover:bg-white/90">
-                  Otrzymuj cotygodniowe spostrzeżenia
+                  Poczytaj moje aktualne przemyślenia
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

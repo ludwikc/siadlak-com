@@ -40,7 +40,7 @@ export default function Community() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              🏙️ Dzielnice Naszej Metropolii
+              🏙️ Dzielnice Naszego Miasta
             </h2>
             <p className="text-lg text-subtle-slate dark:text-silver-mist/80 max-w-3xl mx-auto">
               W naszej cyfrowej przestrzeni każda dzielnica ma swój unikalny charakter i mieszkańców. Zobacz, która z nich będzie Twoim nowym domem:
@@ -136,15 +136,15 @@ export default function Community() {
                   <Award className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
                 <div className="absolute top-3 right-3 bg-neural-violet/20 dark:bg-neural-violet/40 px-2 py-1 rounded-full">
-                  <span className="text-xs font-bold text-neural-violet dark:text-luminal-magenta">Polecane</span>
+                  <span className="text-xs font-bold text-neural-violet dark:text-luminal-magenta">Absolutnie Najlepszy Wybór</span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">⚡ LIFEHACKERZY</h3>
                 <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
-                  Dla absolwentów naszych kursów
+                  Ekskluzywna społeczność moich Klientów
                 </p>
                 <div className="mb-6 flex-grow">
                   <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
-                    <strong>Dla kogo?</strong> Dla absolwentów naszych kursów - osób, które zdecydowały się zainwestować w swój rozwój.
+                    <strong>Dla kogo?</strong> WYŁCZĄNIE la absolwentów moich programów rozwojowych - osób, które zdecydowały się zainwestować w siebie.
                   </p>
                   <p className="mb-2 text-deep-charcoal dark:text-silver-mist">
                     <strong>Co otrzymujesz?</strong>
@@ -208,7 +208,7 @@ export default function Community() {
                   to="/contact" 
                   className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
-                  Zapytaj o NFT
+                  Dostęp tylko na zaproszenie 🔒
                 </Link>
               </div>
             </div>
@@ -219,9 +219,9 @@ export default function Community() {
                 <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">🙏 PATRONI FUNDACJI HACKERZY.PL</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">PATRONI FUNDACJI HACKERZY.PL</h3>
                 <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
-                  Dla wspierających misję
+                  Dla wspierających naszą misję
                 </p>
                 <div className="mb-6 flex-grow">
                   <p className="mb-4 font-medium text-deep-charcoal dark:text-silver-mist">
@@ -288,7 +288,7 @@ export default function Community() {
                   to="/contact" 
                   className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
-                  Dowiedz się więcej
+                  Dowiedz się więcej (wkrótce)
                 </Link>
               </div>
             </div>
@@ -326,12 +326,12 @@ export default function Community() {
               },
               {
                 icon: <Award className="h-6 w-6" />,
-                title: "Super Produktywność",
+                title: "Hakowanie Produktywności",
                 description: "Gdzie rozwijasz mistrzowskie flow"
               },
               {
                 icon: <Heart className="h-6 w-6" />,
-                title: "Wewnętrzna Lekkość",
+                title: "Ogród Uważnego Życia",
                 description: "Gdzie cieszysz się wolnością spełnionego życia"
               }
             ].map((point, index) => (
@@ -356,7 +356,7 @@ export default function Community() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              ✨ Dlaczego warto dołączyć już teraz?
+              ✨ Dlaczego warto dołączyć wczoraj? (A jeśli nie wczoraj, to przynajmniej dzisiaj)
             </h2>
           </div>
           
