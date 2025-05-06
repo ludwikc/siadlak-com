@@ -171,57 +171,61 @@ export default function NewsletterPage() {
                   </a>
                 </div>
 
-                {/* Premium Tier */}
-                <div className="glass-card p-6 rounded-xl text-center border-2 border-neural-violet dark:border-luminal-magenta transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,15,119,0.4)] dark:hover:shadow-[0_0_20px_rgba(218,30,174,0.4)] relative">
-                  <div className="absolute -top-1 -right-1 bg-[#FEF7CD] text-neural-violet px-4 py-1 rounded-tr-lg rounded-bl-lg border-t-2 border-r-2 border-neural-violet/20 shadow-md">
-                    <span className="text-sm font-semibold flex items-center gap-1">
-                      <Ribbon className="w-4 h-4" />
-                      tylko teraz
-                    </span>
+                {/* Premium Tier with highlighted glow effect */}
+                <div className="glass-card p-6 rounded-xl text-center relative animate-pulse-subtle">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-ascension-pink rounded-xl blur-md opacity-50 group-hover:opacity-75 transition-opacity animate-glow"></div>
+                  <div className="absolute inset-0 border-2 border-neural-violet/50 dark:border-luminal-magenta/50 rounded-xl"></div>
+                  <div className="relative z-10 bg-white/80 dark:bg-deep-space/80 p-6 rounded-lg">
+                    <div className="absolute -top-1 -right-1 bg-[#FEF7CD] text-neural-violet px-4 py-1 rounded-tr-lg rounded-bl-lg border-t-2 border-r-2 border-neural-violet/20 shadow-md">
+                      <span className="text-sm font-semibold flex items-center gap-1">
+                        <Ribbon className="w-4 h-4" />
+                        tylko teraz
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                      EDGE
+                    </h3>
+                    <div className="mb-6">
+                      <span className="line-through text-subtle-slate dark:text-silver-mist/60">99 PLN</span>
+                      <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">
+                        0 PLN
+                      </p>
+                      <span className="text-sm text-subtle-slate dark:text-silver-mist/60">
+                        z kodem "EARLYBIRD"
+                      </span>
+                    </div>
+                    <ul className="space-y-4 mb-8 text-left">
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-deep-charcoal dark:text-silver-mist">Wszystko z planu podstawowego</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-deep-charcoal dark:text-silver-mist">Rozszerzone studia przypadków</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-deep-charcoal dark:text-silver-mist">Zaawansowane ramy implementacyjne</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-deep-charcoal dark:text-silver-mist">Dostęp do zamkniętych treści</span>
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-deep-charcoal dark:text-silver-mist">Pytania i odpowiedzi w wersji rozszerzonej</span>
+                      </li>
+                    </ul>
+                    <a 
+                      href="https://app.easycart.pl/checkout/siadlak/newsletter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block w-full bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 dark:from-neural-violet dark:to-luminal-magenta dark:hover:from-neural-violet/90 dark:hover:to-luminal-magenta/90 text-white py-3 px-6 rounded-lg transition-colors shadow-md shadow-neural-violet/30 dark:shadow-luminal-magenta/30"
+                    >
+                      Wybierz EDGE
+                    </a>
                   </div>
-                  
-                  <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                    EDGE
-                  </h3>
-                  <div className="mb-6">
-                    <span className="line-through text-subtle-slate dark:text-silver-mist/60">99 PLN</span>
-                    <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">
-                      0 PLN
-                    </p>
-                    <span className="text-sm text-subtle-slate dark:text-silver-mist/60">
-                      z kodem "EARLYBIRD"
-                    </span>
-                  </div>
-                  <ul className="space-y-4 mb-8 text-left">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-deep-charcoal dark:text-silver-mist">Wszystko z planu podstawowego</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-deep-charcoal dark:text-silver-mist">Rozszerzone studia przypadków</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-deep-charcoal dark:text-silver-mist">Zaawansowane ramy implementacyjne</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-deep-charcoal dark:text-silver-mist">Dostęp do zamkniętych treści</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-deep-charcoal dark:text-silver-mist">Pytania i odpowiedzi w wersji rozszerzonej</span>
-                    </li>
-                  </ul>
-                  <a 
-                    href="https://app.easycart.pl/checkout/siadlak/newsletter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full bg-ascension-pink hover:bg-luminal-magenta text-white py-3 px-6 rounded-lg transition-colors"
-                  >
-                    Wybierz EDGE
-                  </a>
                 </div>
               </div>
 
@@ -255,4 +259,3 @@ export default function NewsletterPage() {
     </Layout>
   );
 }
-

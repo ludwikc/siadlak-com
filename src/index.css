@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -164,6 +165,17 @@ body.dev-light {
   h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
   p { font-size: 1rem; line-height: 1.6; color: var(--text-color); margin-bottom: 16px; }
   small, .caption { font-size: 0.875rem; line-height: 1.4; }
+  
+  /* Page transitions */
+  .page-transition-container {
+    animation: fadeInZoom 0.3s ease-out forwards;
+  }
+  
+  /* Smooth scrolling and scroll to top behavior */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust based on header height */
+  }
 }
 
 /* === Specialty Layout Spacing === */
@@ -251,6 +263,18 @@ body.dev-light {
 }
 
 /* === Animations === */
+/* Page transitions */
+@keyframes fadeInZoom {
+  from { 
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -261,6 +285,18 @@ body.dev-light {
   to { transform: translateX(0); }
 }
 
+@keyframes glow {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes pulse-subtle {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
@@ -269,4 +305,12 @@ body.dev-light {
 .animate-slide-in {
   transform: translateX(-100%);
   animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 3s infinite ease-in-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s infinite ease-in-out;
 }

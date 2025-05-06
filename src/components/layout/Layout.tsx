@@ -1,7 +1,9 @@
+
 import React, { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { ThemeProvider, useTheme } from '../../contexts/ThemeContext';
+import { useLocation } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,6 +11,12 @@ interface LayoutProps {
 
 function LayoutContent({ children }: LayoutProps) {
   const { theme } = useTheme();
+  const location = useLocation();
+  
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   
   useEffect(() => {
     // Apply theme class to body
@@ -28,7 +36,7 @@ function LayoutContent({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-20 page-transition-container">
         {children}
       </main>
       <Footer />

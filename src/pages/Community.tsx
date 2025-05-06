@@ -13,7 +13,7 @@ export default function Community() {
     <Layout>
       {/* Hero Section with Background Image */}
       <Hero
-        title="SIADLAXITY: Nasze Cyfrowe Miasto Rozwoju 🌆"
+        title="SIADLAXITY: Nasze Cyfrowe Miasto Rozwoju"
         subtitle="Zobacz, w jakiej dzielnicy naszej społeczności odnajdziesz swoje miejsce"
         ctaText="Dołącz do społeczności"
         ctaLink="#community-districts"
@@ -127,11 +127,16 @@ export default function Community() {
               </div>
             </div>
             
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-luminal-magenta/20 opacity-70 group-hover:opacity-90 transition-opacity"></div>
-              <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
+            {/* Highlighted Lifehackerzy card with glow effect */}
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-deep-space/60 shadow-lg transition-all hover:shadow-xl animate-pulse-subtle">
+              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/20 to-ascension-pink/30 dark:from-neural-violet/40 dark:to-luminal-magenta/40 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-ascension-pink rounded-xl blur-md opacity-50 group-hover:opacity-75 transition-opacity animate-glow"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full border-2 border-neural-violet/50 dark:border-luminal-magenta/50 rounded-xl bg-white/80 dark:bg-deep-space/80 z-10">
+                <div className="w-12 h-12 bg-neural-violet/20 dark:bg-neural-violet/40 rounded-full flex items-center justify-center mb-4">
                   <Award className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
+                </div>
+                <div className="absolute top-3 right-3 bg-neural-violet/20 dark:bg-neural-violet/40 px-2 py-1 rounded-full">
+                  <span className="text-xs font-bold text-neural-violet dark:text-luminal-magenta">Polecane</span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">⚡ LIFEHACKERZY</h3>
                 <p className="text-subtle-slate dark:text-silver-mist/70 mb-4">
@@ -161,7 +166,7 @@ export default function Community() {
                 </div>
                 <Link 
                   to="/courses" 
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 dark:from-neural-violet dark:to-luminal-magenta dark:hover:from-neural-violet/90 dark:hover:to-luminal-magenta/90 text-white text-center rounded-md transition-colors mt-auto shadow-md shadow-neural-violet/30 dark:shadow-luminal-magenta/30"
                 >
                   Sprawdź nasze kursy
                 </Link>

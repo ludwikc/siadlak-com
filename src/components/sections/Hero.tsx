@@ -34,7 +34,7 @@ export default function Hero({
             alt={imageDescription || "Background"} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
         </div>
       )}
       

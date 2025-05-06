@@ -15,6 +15,7 @@ export default function CommunityCallToAction({ minimal = false, className = '' 
         <Link 
           to="/community" 
           className="btn-primary inline-flex items-center space-x-2 py-2 px-4"
+          onClick={() => window.scrollTo(0, 0)}
         >
           <Users size={18} />
           <span>Dołącz do Społeczności Lifehackerów</span>
@@ -41,6 +42,7 @@ export default function CommunityCallToAction({ minimal = false, className = '' 
         <Link 
           to="/community" 
           className="btn-primary inline-flex items-center space-x-2"
+          onClick={() => window.scrollTo(0, 0)}
         >
           <Users size={18} />
           <span>Odkryj nasze cyfrowe miasto</span>
