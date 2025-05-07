@@ -60,7 +60,7 @@ export default function Hero({
           : isLightMode 
             ? lightModeGradient
             : darkModeGradient
-      }`}
+      } flex items-center`}
       aria-label="Hero section"
     >
       {/* Add a lighter overlay in light mode for better gradient text visibility */}
@@ -80,13 +80,13 @@ export default function Hero({
         </div>
       )}
       
-      {/* Hero Image (if provided) */}
+      {/* Hero Image (if provided) - positioned differently for desktop and mobile */}
       {heroImage && (
-        <div className={`absolute ${isMobile ? 'relative top-0 w-full z-10 order-2 mt-8' : 'top-0 right-0 h-full z-0'} flex ${isMobile ? 'justify-center' : 'items-center justify-end'}`}>
+        <div className={`${isMobile ? 'relative w-full z-10 order-2 mt-8' : 'absolute right-0 top-0 h-full z-0 flex items-center'}`}>
           <img 
             src={heroImage} 
             alt={imageDescription || "Hero"} 
-            className={`${isMobile ? 'h-auto max-h-[60vh] w-auto object-contain' : 'h-full object-contain object-right'}`}
+            className={`${isMobile ? 'h-auto max-h-[60vh] w-auto object-contain mx-auto' : 'h-full object-contain object-right'}`}
           />
         </div>
       )}
@@ -102,7 +102,7 @@ export default function Hero({
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? 'flex flex-col justify-center h-full' : ''}`}>
         <div className={`
           ${fullHeight ? 'my-auto py-12' : ''}
-          ${isMobile && heroImage ? 'w-full order-1 mb-8' : heroImage ? 'w-3/5 md:w-1/2' : 'max-w-4xl mx-auto'}
+          ${isMobile ? 'w-full order-1 mb-8 text-center' : heroImage ? 'w-[55%] md:max-w-[600px]' : 'max-w-4xl mx-auto'}
           ${location.pathname === '/' ? 'text-center mx-auto' : ''}`
         }>
           <h1 className={`
@@ -116,8 +116,8 @@ export default function Hero({
           </h1>
           
           <p className={`
-            mb-10 max-w-3xl mx-auto animate-fade-in
-            ${location.pathname === '/' ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}
+            mb-10 mx-auto animate-fade-in
+            ${location.pathname === '/' ? 'text-2xl md:text-3xl max-w-xl' : 'text-xl md:text-2xl max-w-lg'}
             ${isLightMode && !isPodcastsOrCommunity
               ? 'text-deep-charcoal' 
               : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
@@ -176,3 +176,4 @@ export default function Hero({
     </section>
   );
 }
+
