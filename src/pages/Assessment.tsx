@@ -9,6 +9,7 @@ import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/hooks/use-toast';
 import Hero from '@/components/sections/Hero';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
@@ -17,6 +18,9 @@ import WebinarCountdown from '@/components/webinar/WebinarCountdown';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Imię jest wymagane' }),
   email: z.string().email({ message: 'Podaj prawidłowy adres email' }),
+  consent: z.literal(true, {
+    errorMap: () => ({ message: "Zgoda jest wymagana do przetwarzania Twoich danych" }),
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -29,7 +33,8 @@ const Assessment = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
-      email: ''
+      email: '',
+      consent: false,
     }
   });
 
@@ -117,6 +122,27 @@ const Assessment = () => {
                             <Input placeholder="jan@example.com" {...field} />
                           </FormControl>
                           <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="consent"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 mt-4">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-sm font-normal">
+                              Wyrażam dobrowolną zgodę na przetwarzanie mojego imienia i adresu e-mail przez SIADLAK Holding Group sp. z o.o. w Warszawie w celu przesłania wyniku testu, materiałów uzupełniających oraz uzyskania bezpłatnego dostępu do newslettera. Zgodę mogę cofnąć w dowolnym momencie. Szczegóły w Polityce Prywatności.
+                            </FormLabel>
+                            <FormMessage />
+                          </div>
                         </FormItem>
                       )}
                     />
