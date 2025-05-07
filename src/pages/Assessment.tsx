@@ -18,8 +18,8 @@ import WebinarCountdown from '@/components/webinar/WebinarCountdown';
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Imię jest wymagane' }),
   email: z.string().email({ message: 'Podaj prawidłowy adres email' }),
-  consent: z.boolean().refine(val => val === true, {
-    message: "Zgoda jest wymagana do przetwarzania Twoich danych",
+  consent: z.literal<boolean>(true, {
+    errorMap: () => ({ message: "Zgoda jest wymagana do przetwarzania Twoich danych" }),
   }),
 });
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Calendar, Clock, CheckCheck } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -30,13 +30,14 @@ type FormValues = z.infer<typeof formSchema>;
 
 const Webinar = () => {
   const navigate = useNavigate();
-  const [selectedTime, setSelectedTime] = useState<string | null>(null);
   
-  // Define webinar date options - using 24h format for Polish audience
-  const webinarOptions = [
-    { id: '1', date: '12 czerwca 2025', day: 'Czwartek', time: '18:00', timezone: 'CEST (Warszawa)' },
-    { id: '2', date: '14 czerwca 2025', day: 'Sobota', time: '11:00', timezone: 'CEST (Warszawa)' },
-  ];
+  // Define webinar date info - use the first option from previous implementation
+  const webinarDate = { 
+    date: '12 czerwca 2025', 
+    day: 'Czwartek', 
+    time: '18:00', 
+    timezone: 'CEST (Warszawa)' 
+  };
 
   // Initialize the form
   const form = useForm<FormValues>({
@@ -48,17 +49,8 @@ const Webinar = () => {
   });
 
   const onSubmit = (data: FormValues) => {
-    if (!selectedTime) {
-      toast({
-        title: "Wybierz termin",
-        description: "Proszę wybrać dogodny termin webinaru",
-        variant: "destructive"
-      });
-      return;
-    }
-
     // Handle form submission (in a real app this would send data to a server)
-    console.log("Form submitted:", { ...data, selectedTime });
+    console.log("Form submitted:", data);
     
     // Navigate to thank you page
     toast({
@@ -103,47 +95,22 @@ const Webinar = () => {
                   Specjalny webinar transformacyjny dla programistów, którzy chcą przejąć kontrolę nad swoją karierą i zbudować coś własnego.
                 </p>
                 
-                <WebinarCountdown />
+                <div className="max-w-md mx-auto lg:mx-0">
+                  <WebinarCountdown />
+                </div>
               </div>
               
               <div className="w-full lg:w-2/5">
-                <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-2">
-                      <Calendar className="h-5 w-5 text-neural-violet" />
-                      <h3 className="font-semibold">Wybierz termin</h3>
+                <div id="registration-form" className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+                  {/* Date Badge */}
+                  <div className="mb-6 flex items-center justify-center bg-neural-violet/10 rounded-lg p-4 border border-neural-violet/20">
+                    <div className="flex items-center text-neural-violet">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      <span className="font-medium">{webinarDate.day}, {webinarDate.date}</span>
+                      <span className="mx-2">•</span>
+                      <Clock className="h-5 w-5 mr-2" />
+                      <span className="font-medium">{webinarDate.time} {webinarDate.timezone}</span>
                     </div>
-                    <span className="px-2 py-1 text-xs bg-neural-violet/10 text-neural-violet rounded-md">Darmowy</span>
-                  </div>
-                  
-                  {/* Date Selection */}
-                  <div className="space-y-3 mb-6">
-                    {webinarOptions.map((option) => (
-                      <button
-                        key={option.id}
-                        onClick={() => setSelectedTime(option.id)}
-                        className={`w-full text-left p-4 border rounded-lg transition-all ${
-                          selectedTime === option.id
-                            ? 'border-neural-violet bg-neural-violet/5'
-                            : 'border-gray-200 dark:border-gray-700 hover:border-neural-violet/50'
-                        }`}
-                      >
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="font-medium">{option.day}, {option.date}</p>
-                            <div className="flex items-center mt-1 text-sm text-gray-600 dark:text-gray-400">
-                              <Clock className="h-4 w-4 mr-1" />
-                              <span>{option.time} {option.timezone}</span>
-                            </div>
-                          </div>
-                          {selectedTime === option.id && (
-                            <div className="h-6 w-6 rounded-full bg-neural-violet/20 flex items-center justify-center">
-                              <CheckCheck className="h-4 w-4 text-neural-violet" />
-                            </div>
-                          )}
-                        </div>
-                      </button>
-                    ))}
                   </div>
                   
                   {/* Registration Form */}
@@ -179,12 +146,12 @@ const Webinar = () => {
                       
                       <Button 
                         type="submit" 
-                        className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                        className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
                       >
-                        Zarezerwuj miejsce
+                        Zarezerwuj miejsce <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                       
-                      <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-3">
+                      <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-2">
                         Twoje dane są bezpieczne. Nie udostępniamy Twoich informacji.
                       </p>
                     </form>
