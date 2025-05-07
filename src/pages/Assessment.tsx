@@ -100,7 +100,7 @@ const Assessment = () => {
                         <FormItem>
                           <FormLabel>Imię i nazwisko</FormLabel>
                           <FormControl>
-                            <Input placeholder="Jan Kowalski" {...field} />
+                            <Input placeholder="Janek Kowalski" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
