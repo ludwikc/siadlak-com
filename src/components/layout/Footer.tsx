@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-                Ludwik C. Siadlak
+                Ludwik&nbsp;C. Siadlak
               </h3>
             </Link>
             <p className="text-subtle-slate dark:text-silver-mist/70 max-w-xs">
-              Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.<br /> <br /> Buduję społeczności, w których liczy się Człowiek, a nie (tylko) hajs.
+              Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.<br /> <br /> Buduję społeczności, w których liczy się Człowiek, a nie <em>tylko hajs</em>.
             </p>
             <div className="flex space-x-4 text-subtle-slate">
               <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">

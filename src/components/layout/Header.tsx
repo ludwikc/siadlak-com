@@ -39,7 +39,7 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold font-heading bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
-            Ludwik C. Siadlak
+            Ludwik&nbsp;C. Siadlak
           </span>
         </Link>
         
