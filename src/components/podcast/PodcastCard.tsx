@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { ArrowRight } from 'lucide-react';
 
 interface PodcastCardProps {
@@ -14,32 +14,37 @@ interface PodcastCardProps {
 
 const PodcastCard = ({ title, description, imageUrl, link, schedule }: PodcastCardProps) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg h-full flex flex-col bg-luminous-white dark:bg-deep-space/80 border-border">
-      <div className="relative h-64 overflow-hidden">
+    <div className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+      <div className="relative aspect-square w-full overflow-hidden">
         <img 
           src={imageUrl} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
-      <CardHeader className="pb-3">
-        <h3 className="text-xl font-semibold text-neural-violet dark:text-neural-violet-light">{title}</h3>
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-deep-charcoal dark:text-silver-mist text-xl mb-2 font-semibold">
+          {title}
+        </h3>
+        
         {schedule && (
-          <p className="text-sm text-subtle-slate dark:text-gentle-lavender">{schedule}</p>
+          <p className="text-sm text-subtle-slate dark:text-gentle-lavender mb-3">
+            {schedule}
+          </p>
         )}
-      </CardHeader>
-      <CardContent className="pb-4 flex-grow">
-        <p className="text-deep-charcoal dark:text-silver-mist/80">{description}</p>
-      </CardContent>
-      <CardFooter className="pt-0">
+        
+        <p className="text-subtle-slate dark:text-silver-mist/80 mb-6 flex-grow">
+          {description}
+        </p>
+        
         <Link 
           to={link}
-          className="inline-flex items-center text-neural-violet hover:text-ascension-pink dark:text-neural-violet-light dark:hover:text-luminal-magenta transition-colors"
+          className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium group"
         >
-          Słuchaj teraz <ArrowRight className="ml-2 h-4 w-4" />
+          Słuchaj teraz <ArrowRight size={18} className="ml-2 group-hover:ml-3 transition-all" />
         </Link>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 };
 

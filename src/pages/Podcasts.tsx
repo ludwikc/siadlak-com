@@ -28,7 +28,7 @@ const Podcasts = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
             <PodcastCard
               title="Life Hacking Podcast"
               description="Praktyczne scenariusze przejmowania władzy nad światem. Docenisz konkretne, oparte na doświadczeniu strategie zamiast teoretycznych koncepcji."
