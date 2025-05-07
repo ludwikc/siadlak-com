@@ -95,7 +95,7 @@ const Webinar = () => {
                   <span className="text-sm font-medium">Webinar na żywo</span>
                 </div>
                 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-neural-violet-light dark:from-neural-violet to-ascension-pink-light dark:to-ascension-pink dark:bg-clip-text dark:text-transparent bg-clip-text text-[#BDBDBD] dark:text-transparent">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-neural-violet dark:from-neural-violet to-ascension-pink dark:to-ascension-pink bg-clip-text text-transparent">
                   Wiesz, że już w dwie godziny możesz rozbudzić w sobie Czarną Panterę?
                 </h1>
                 

@@ -69,13 +69,13 @@ export default function Courses() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-[#BDBDBD]">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Przejmij kontrolę nad swoim potencjałem
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-[#BDBDBD]/90">
+            <p className="text-lg md:text-xl mb-8 text-white/90">
               Sprawdzone programy, które faktycznie transformują, a nie tylko dostarczają kolejnych informacji bez wdrożenia.
             </p>
           </div>
@@ -168,14 +168,14 @@ export default function Courses() {
                     <div className="flex flex-col sm:flex-row gap-4">
                       {course.id === 'mental-elevator' ? (
                         <Link to="/mental-elevator">
-                          <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
+                          <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
                             Szczegóły programu
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>
                         </Link>
                       ) : (
                         <Link to={`/kursy/${course.id}`}>
-                          <Button className="bg-neural-violet hover:bg-ascension-pink text-[#BDBDBD] dark:text-white">
+                          <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
                             Szczegóły programu
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Button>
@@ -183,7 +183,7 @@ export default function Courses() {
                       )}
                       
                       <Link to="/kontakt">
-                        <Button variant="outline" className="text-[#BDBDBD] dark:text-white">
+                        <Button variant="outline" className="text-white">
                           {course.id === 'mental-elevator' ? 'Umów sesję Discovery' : 'Zapytaj o program'}
                         </Button>
                       </Link>

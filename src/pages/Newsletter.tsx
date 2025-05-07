@@ -11,16 +11,16 @@ export default function NewsletterPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Uwolnij Swój Potencjał z AI: Gdzie Technologia Spotyka Człowieka
             </h1>
             <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
               "Każda technologia wystarczająco zaawansowana jest nieodróżnialna od magii" – Arthur C. Clarke
             </p>
-            <p className="text-base md:text-lg mb-8">
+            <p className="text-base md:text-lg mb-8  text-silver-mist/90 ">
               Wyobraź sobie, że budzisz się rano z jasnym planem wykorzystania AI nie tylko do automatyzacji zadań, ale do <strong>faktycznego przełomu w Twoim rozwoju osobistym i zawodowym</strong>.
             </p>
-            <p className="text-lg">
+            <p className="text-lg md:text-lg mb-8  text-silver-mist/90">
               To właśnie oferuję Ci w tym newsletterze.
             </p>
           </div>
@@ -240,13 +240,13 @@ export default function NewsletterPage() {
             </div>
             
             <div className="mt-16 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#BDBDBD] dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                 Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
               
               <Button 
                 size="lg" 
-                className="bg-neural-violet hover:bg-neural-violet/90 text-[#BDBDBD] dark:text-white"
+                className="bg-neural-violet hover:bg-neural-violet/90 text-white"
                 onClick={() => window.location.href = 'https://app.easycart.pl/checkout/siadlak/newsletter'}
               >
                 DOŁĄCZ TERAZ DO SPOŁECZNOŚCI

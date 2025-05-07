@@ -63,6 +63,12 @@ const About = () => {
                 className="w-full h-auto min-h-[300px] rounded-xl shadow-xl" 
                 style={{ display: 'block' }}
               />
+               <img 
+                src="/lovable-uploads/SIADLAK-ig.png" 
+                alt="Ludwik Siadlak" 
+                className="w-full h-auto min-h-[300px] rounded-xl shadow-xl" 
+                style={{ display: 'block' }}
+              />
             </div>
             
             {/* Content */}

@@ -30,7 +30,7 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section 
-      className={`relative ${fullHeight ? 'min-h-[90vh]' : 'pt-24 pb-16 md:pt-32 md:pb-24'} ${backgroundImage || heroImage ? '' : 'bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30'}`}
+      className={`relative ${fullHeight ? 'min-h-[90vh]' : 'pt-24 pb-16 md:pt-32 md:pb-24'} ${backgroundImage || heroImage ? '' : 'bg-gradient-to-br from-deep-space to-quantum-blue'}`}
     >
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
@@ -65,11 +65,11 @@ export default function Hero({
       
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? 'flex flex-col justify-center h-full' : ''}`}>
         <div className={`max-w-4xl ${fullHeight ? 'my-auto py-12' : ''} ${heroImage ? 'w-3/5 md:w-1/2' : ''}`}>
-          <h1 className={`mb-4 font-bold !leading-tight ${backgroundImage ? 'text-white' : 'text-neural-violet'} animate-fade-in`}>
+          <h1 className="mb-4 font-bold !leading-tight text-white animate-fade-in">
             {title}
           </h1>
           
-          <p className={`text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in ${backgroundImage ? 'text-white/90' : 'text-deep-charcoal/80 dark:text-white/80'}`} style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in text-white/90" style={{ animationDelay: '0.2s' }}>
             {subtitle}
           </p>
           
@@ -86,7 +86,7 @@ export default function Hero({
             {secondaryCtaText && secondaryCtaLink && (
               <Link 
                 to={secondaryCtaLink} 
-                className={`btn-secondary ${backgroundImage ? 'text-white border-white hover:bg-white/20' : 'text-deep-charcoal dark:text-white'}`}
+                className="btn-secondary text-white border-white hover:bg-white/20"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 {secondaryCtaText}
