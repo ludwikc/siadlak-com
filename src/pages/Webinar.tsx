@@ -19,6 +19,7 @@ import {
 import { toast } from '@/hooks/use-toast';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
 import WebinarTestimonials from '@/components/webinar/WebinarTestimonials';
+import { Badge } from '@/components/ui/badge';
 
 // Define the form schema
 const formSchema = z.object({
@@ -102,14 +103,19 @@ const Webinar = () => {
               
               <div className="w-full lg:w-2/5">
                 <div id="registration-form" className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
-                  {/* Date Badge */}
-                  <div className="mb-6 flex items-center justify-center bg-neural-violet/10 rounded-lg p-4 border border-neural-violet/20">
-                    <div className="flex items-center text-neural-violet">
-                      <Calendar className="h-5 w-5 mr-2" />
-                      <span className="font-medium">{webinarDate.day}, {webinarDate.date}</span>
-                      <span className="mx-2">•</span>
-                      <Clock className="h-5 w-5 mr-2" />
-                      <span className="font-medium">{webinarDate.time} {webinarDate.timezone}</span>
+                  {/* Date Badge - More prominent styling */}
+                  <div className="mb-8 text-center">
+                    <Badge variant="outline" className="bg-neural-violet text-white text-sm px-3 py-1 mb-2">
+                      Zarezerwuj swoje miejsce
+                    </Badge>
+                    <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
+                      <h3 className="font-bold text-xl mb-3 text-neural-violet">
+                        {webinarDate.day}, {webinarDate.date}
+                      </h3>
+                      <div className="flex items-center justify-center gap-2 text-lg font-medium text-neural-violet">
+                        <Clock className="h-5 w-5" />
+                        <span>{webinarDate.time} {webinarDate.timezone}</span>
+                      </div>
                     </div>
                   </div>
                   
