@@ -12,6 +12,7 @@ interface HeroProps {
   secondaryCtaLink?: string;
   imageDescription?: string;
   backgroundImage?: string;
+  heroImage?: string;
   fullHeight?: boolean;
 }
 
@@ -24,14 +25,15 @@ export default function Hero({
   secondaryCtaLink,
   imageDescription,
   backgroundImage,
+  heroImage,
   fullHeight = false
 }: HeroProps) {
   return (
     <section 
-      className={`relative ${fullHeight ? 'min-h-[90vh]' : 'pt-24 pb-16 md:pt-32 md:pb-24'} ${backgroundImage ? '' : 'bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30'}`}
+      className={`relative ${fullHeight ? 'min-h-[90vh]' : 'pt-24 pb-16 md:pt-32 md:pb-24'} ${backgroundImage || heroImage ? '' : 'bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30'}`}
     >
       {/* Background Image (if provided) */}
-      {backgroundImage && (
+      {backgroundImage && !heroImage && (
         <div className="absolute inset-0 z-0">
           <img 
             src={backgroundImage} 
@@ -42,16 +44,27 @@ export default function Hero({
         </div>
       )}
       
+      {/* Hero Image (if provided) */}
+      {heroImage && (
+        <div className="absolute top-0 right-0 h-full z-0 flex items-center justify-end">
+          <img 
+            src={heroImage} 
+            alt={imageDescription || "Hero"} 
+            className="h-full object-contain object-right"
+          />
+        </div>
+      )}
+      
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet/30 dark:to-ascension-pink/30 rounded-full blur-3xl"></div>
-        {!backgroundImage && (
+        {!backgroundImage && !heroImage && (
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-secondary/80 to-transparent dark:from-deep-space/80 pointer-events-none"></div>
         )}
       </div>
       
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? 'flex flex-col justify-center h-full' : ''}`}>
-        <div className={`max-w-4xl ${fullHeight ? 'my-auto py-12' : ''}`}>
+        <div className={`max-w-4xl ${fullHeight ? 'my-auto py-12' : ''} ${heroImage ? 'w-3/5 md:w-1/2' : ''}`}>
           <h1 className={`mb-4 font-bold !leading-tight ${backgroundImage ? 'text-white' : 'text-neural-violet'} animate-fade-in`}>
             {title}
           </h1>

@@ -68,7 +68,7 @@ const Index = () => {
         ctaLink="/assessment"
         secondaryCtaText="Przeczytaj moje przemyślenia"
         secondaryCtaLink="/newsletter"
-        backgroundImage="/lovable-uploads/SIADLAK-Screenshot-202505061335umpdi.jpg"
+        heroImage="/lovable-uploads/SIADLAK-coffee-transparent.png"
         imageDescription="Ludwik C. Siadlak - Lifehacker"
         fullHeight={true}
       />
