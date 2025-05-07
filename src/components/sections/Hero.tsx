@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { Button } from '@/components/ui/button';
@@ -31,7 +31,20 @@ export default function Hero({
   fullHeight = false
 }: HeroProps) {
   const { theme } = useTheme();
-  const isLightMode = theme === 'light' || theme === 'dev-light';
+  const location = useLocation();
+  
+  // Check if current page is Podcasts or Community
+  const isPodcastsOrCommunity = 
+    location.pathname === '/podcasts' || 
+    location.pathname === '/community' ||
+    location.pathname.includes('/podcasts/') || 
+    location.pathname.includes('/community/');
+  
+  // For Podcasts and Community pages, always use dark mode styling
+  // For other pages, use the theme-based styling
+  const isLightMode = isPodcastsOrCommunity 
+    ? false 
+    : (theme === 'light' || theme === 'dev-light');
   
   // Define a more accessible gradient for light mode with better contrast
   const lightModeGradient = "bg-gradient-to-r from-neural-violet to-ascension-pink relative";
@@ -48,7 +61,7 @@ export default function Hero({
       aria-label="Hero section"
     >
       {/* Add a lighter overlay in light mode for better gradient text visibility */}
-      {isLightMode && !backgroundImage && !heroImage && (
+      {isLightMode && !backgroundImage && !heroImage && !isPodcastsOrCommunity && (
         <div className="absolute inset-0 bg-luminous-white/30 z-0"></div>
       )}
       {/* Background Image (if provided) */}
@@ -85,7 +98,7 @@ export default function Hero({
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? 'flex flex-col justify-center h-full' : ''}`}>
         <div className={`max-w-4xl ${fullHeight ? 'my-auto py-12' : ''} ${heroImage ? 'w-3/5 md:w-1/2' : ''}`}>
           <h1 className={`mb-4 font-bold !leading-tight animate-fade-in ${
-            isLightMode 
+            isLightMode && !isPodcastsOrCommunity
               ? 'bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent' 
               : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
           }`}>
@@ -93,7 +106,7 @@ export default function Hero({
           </h1>
           
           <p className={`text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in ${
-            isLightMode 
+            isLightMode && !isPodcastsOrCommunity
               ? 'text-deep-charcoal' 
               : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
           }`} style={{ animationDelay: '0.2s' }}>
@@ -107,8 +120,8 @@ export default function Hero({
               aria-label={`${ctaText} - primary action`}
             >
               <Button 
-                variant={isLightMode ? "default" : "special"}
-                className={isLightMode ? "bg-luminous-white text-neural-violet" : ""}
+                variant={(isLightMode && !isPodcastsOrCommunity) ? "default" : "special"}
+                className={(isLightMode && !isPodcastsOrCommunity) ? "bg-luminous-white text-neural-violet" : ""}
               >
                 {ctaText}
                 <ArrowRight size={18} />
@@ -123,7 +136,7 @@ export default function Hero({
               >
                 <Button 
                   variant="secondary"
-                  className={isLightMode 
+                  className={(isLightMode && !isPodcastsOrCommunity)
                     ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90" 
                     : "text-white border-white hover:bg-white/20"
                   }
