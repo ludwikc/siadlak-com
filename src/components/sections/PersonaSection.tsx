@@ -2,6 +2,7 @@
 import React from 'react';
 import { Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 interface Persona {
   title: string;
@@ -57,8 +58,10 @@ export default function PersonaSection({
             
             {ctaText && ctaLink && (
               <div className="mt-8">
-                <Link to={ctaLink} className="btn-primary inline-flex items-center">
-                  {ctaText}
+                <Link to={ctaLink}>
+                  <Button variant="default">
+                    {ctaText}
+                  </Button>
                 </Link>
               </div>
             )}

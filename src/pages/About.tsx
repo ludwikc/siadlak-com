@@ -42,9 +42,13 @@ const About = () => {
               Pomagam profesjonalistom kierować technologią, zamiast jej służyć
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <Button 
+                variant="default"
+                className="animate-fade-in" 
+                style={{ animationDelay: '0.4s' }}
+              >
                 Umów rozmowę
-                <Calendar className="ml-2 h-4 w-4" />
+                <Calendar className="h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -133,9 +137,9 @@ const About = () => {
               
               <div className="mt-8">
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                  <Button className="bg-neural-violet hover:bg-ascension-pink text-silver-mist">
+                  <Button variant="default">
                     Umów rozmowę
-                    <Calendar className="ml-2 h-4 w-4" />
+                    <Calendar className="h-4 w-4" />
                   </Button>
                 </Link>
               </div>
@@ -208,16 +212,22 @@ const About = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
-                <Button className="bg-white text-neural-violet hover:bg-white/90">
+                <Button 
+                  variant="default"
+                  className="bg-white text-neural-violet hover:bg-white/90"
+                >
                   Poczytaj moje aktualne przemyślenia
-                  <Mail className="ml-2 h-4 w-4" />
+                  <Mail className="h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-[rgba(255,255,255,0.1)]"
+                >
                   Umów Rozmowę Discovery
-                  <Calendar className="ml-2 h-4 w-4" />
+                  <Calendar className="h-4 w-4" />
                 </Button>
               </Link>
             </div>

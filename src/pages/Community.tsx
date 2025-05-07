@@ -7,6 +7,7 @@ import CTASection from '../components/sections/CTASection';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import ValueProposition from '../components/podcast/ValueProposition';
 import PersonaSection from '../components/sections/PersonaSection';
+import { Button } from '@/components/ui/button';
 
 export default function Community() {
   return (
@@ -379,11 +380,13 @@ export default function Community() {
               </div>
               
               <div className="mt-8 text-center">
-                <Link 
-                  to="/contact?subject=Dołączenie do społeczności"
-                  className="btn-primary inline-flex items-center py-3 px-8 bg-neural-violet hover:bg-neural-violet/80 dark:bg-luminal-magenta dark:hover:bg-luminal-magenta/80 text-white rounded-md transition-colors text-lg"
-                >
-                  Dołącz do SIADLAXITY TERAZ
+                <Link to="/contact?subject=Dołączenie do społeczności">
+                  <Button 
+                    variant="default" 
+                    size="lg"
+                  >
+                    Dołącz do SIADLAXITY TERAZ
+                  </Button>
                 </Link>
               </div>
             </div>

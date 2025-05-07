@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
 import { Home } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const NotFound = () => {
   return (
@@ -21,12 +22,11 @@ const NotFound = () => {
             Strona została przeniesiona, zmieniono jej nazwę lub jest tymczasowo niedostępna. Zacznij od nowa i wróć na stronę główną.
           </p>
           
-          <Link 
-            to="/" 
-            className="btn-primary inline-flex items-center gap-2"
-          >
-            <Home size={18} />
-            Strona główna
+          <Link to="/">
+            <Button variant="default">
+              <Home size={18} />
+              Strona główna
+            </Button>
           </Link>
         </div>
       </div>

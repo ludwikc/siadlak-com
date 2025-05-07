@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 export default function AboutSection() {
   return (
@@ -35,10 +36,11 @@ export default function AboutSection() {
             
             <Link 
               to="/about" 
-              className="btn-secondary inline-block"
               onClick={() => window.scrollTo(0, 0)}
             >
-              Learn More About Ludwik
+              <Button variant="secondary">
+                Learn More About Ludwik
+              </Button>
             </Link>
           </div>
         </div>

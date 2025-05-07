@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface CTASectionProps {
   title: string;
@@ -26,12 +27,15 @@ export default function CTASection({
             {description}
           </p>
           
-          <Link 
-            to={buttonLink} 
-            className="bg-white hover:bg-white/90 text-neural-violet font-medium py-3 px-8 rounded-md transition-all shadow-lg hover:shadow-xl inline-flex items-center"
-          >
-            {buttonText}
-            <ArrowRight size={18} className="ml-2" />
+          <Link to={buttonLink}>
+            <Button 
+              variant="default" 
+              size="lg"
+              className="bg-white hover:bg-white/90 text-neural-violet"
+            >
+              {buttonText}
+              <ArrowRight size={18} />
+            </Button>
           </Link>
         </div>
       </div>

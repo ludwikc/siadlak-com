@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
+import { Button } from '@/components/ui/button';
 
 interface HeroProps {
   title: string;
@@ -102,30 +103,33 @@ export default function Hero({
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Link 
               to={ctaLink} 
-              className={`btn-primary flex items-center gap-2 ${
-                isLightMode 
-                  ? 'bg-luminous-white hover:bg-luminous-white/90 text-neural-violet font-medium shadow-lg' 
-                  : 'bg-neural-violet-light hover:bg-neural-violet dark:bg-neural-violet hover:dark:bg-neural-violet/80 text-white'
-              }`}
               onClick={() => window.scrollTo(0, 0)}
               aria-label={`${ctaText} - primary action`}
             >
-              {ctaText}
-              <ArrowRight size={18} />
+              <Button 
+                variant={isLightMode ? "default" : "special"}
+                className={isLightMode ? "bg-luminous-white text-neural-violet" : ""}
+              >
+                {ctaText}
+                <ArrowRight size={18} />
+              </Button>
             </Link>
             
             {secondaryCtaText && secondaryCtaLink && (
               <Link 
                 to={secondaryCtaLink} 
-                className={`btn-secondary ${
-                  isLightMode 
-                    ? 'text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90 shadow-lg' 
-                    : 'text-white border-white hover:bg-white/20'
-                }`}
                 onClick={() => window.scrollTo(0, 0)}
                 aria-label={`${secondaryCtaText} - secondary action`}
               >
-                {secondaryCtaText}
+                <Button 
+                  variant="secondary"
+                  className={isLightMode 
+                    ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90" 
+                    : "text-white border-white hover:bg-white/20"
+                  }
+                >
+                  {secondaryCtaText}
+                </Button>
               </Link>
             )}
           </div>

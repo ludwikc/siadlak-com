@@ -292,14 +292,19 @@ const CourseDetail = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact">
-                <Button className="bg-ascension-pink hover:bg-luminal-magenta">
+                <Button 
+                  variant="special"
+                >
                   Apply Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-[rgba(255,255,255,0.1)]"
+                >
                   Request More Information
                 </Button>
               </Link>
@@ -509,14 +514,20 @@ const CourseDetail = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button className="bg-white text-neural-violet hover:bg-white/90">
+                <Button 
+                  variant="default"
+                  className="bg-white text-neural-violet hover:bg-white/90"
+                >
                   Apply Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               
               <Link to="/contact">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button 
+                  variant="outline" 
+                  className="border-white text-white hover:bg-[rgba(255,255,255,0.1)]"
+                >
                   Request More Information
                 </Button>
               </Link>

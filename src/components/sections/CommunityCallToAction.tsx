@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface CommunityCallToActionProps {
   minimal?: boolean;
@@ -14,11 +15,12 @@ export default function CommunityCallToAction({ minimal = false, className = '' 
       <div className={`flex flex-col items-center space-y-4 ${className}`}>
         <Link 
           to="/community" 
-          className="btn-primary inline-flex items-center space-x-2 py-2 px-4"
           onClick={() => window.scrollTo(0, 0)}
         >
-          <Users size={18} />
-          <span>Dołącz do Społeczności Lifehackerów</span>
+          <Button variant="default">
+            <Users size={18} />
+            <span>Dołącz do Społeczności Lifehackerów</span>
+          </Button>
         </Link>
       </div>
     );
@@ -41,11 +43,12 @@ export default function CommunityCallToAction({ minimal = false, className = '' 
         
         <Link 
           to="/community" 
-          className="btn-primary inline-flex items-center space-x-2"
           onClick={() => window.scrollTo(0, 0)}
         >
-          <Users size={18} />
-          <span>Odkryj nasze cyfrowe miasto</span>
+          <Button variant="default">
+            <Users size={18} />
+            <span>Odkryj nasze cyfrowe miasto</span>
+          </Button>
         </Link>
       </div>
     </div>

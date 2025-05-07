@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface Course {
   title: string;
@@ -79,8 +80,10 @@ export default function CoursePreview({ title, subtitle, courses }: CoursePrevie
         </div>
         
         <div className="text-center mt-12">
-          <Link to="/courses" className="btn-secondary">
-            View All Courses
+          <Link to="/courses">
+            <Button variant="secondary">
+              View All Courses
+            </Button>
           </Link>
         </div>
       </div>

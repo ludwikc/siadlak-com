@@ -195,9 +195,12 @@ const Testimonials = () => {
             </p>
             
             <Link to="/contact">
-              <Button className="bg-white text-neural-violet hover:bg-white/90">
+              <Button 
+                variant="default"
+                className="bg-white text-neural-violet hover:bg-white/90"
+              >
                 Book a Discovery Call
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </div>

@@ -17,6 +17,50 @@
   --highlight-color: #e74c3c;
   --border-color: rgba(0,0,0,0.1);
   --shadow: 0 5px 15px rgba(0,0,0,0.2);
+  
+  /* Design System Variables */
+  --background-primary: #F2F3F5;
+  --background-secondary: #E3E5E8;
+  --background-tertiary: #EBEDEF;
+  --text-primary: #2E3338;
+  --text-secondary: #4F545C;
+  --border-primary: #D4D7DC;
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  
+  /* Brand Colors */
+  --color-primary: #7C00FF;
+  --color-primary-light: #B100FF;
+  --color-primary-dark: #4A36C2;
+  --color-accent: #C961E3;
+  --color-indigo: #383B6C;
+  --color-premium: #D4AF37;
+  
+  /* UI States */
+  --color-success: #36D399;
+  --color-warning: #FBBD23;
+  --color-error: #F87272;
+  --color-info: #4A36C2;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', sans-serif;
+  --font-weight-medium: 500;
+  
+  /* Borders */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-pill: 999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.12);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
 }
 
 /* Dark mode selector: .dark or .dark-mode for max compatibility */
@@ -29,6 +73,21 @@
   --accent-text: #E0E0E5;
   --border-color: rgba(255,255,255,0.1);
   --shadow: 0 5px 15px rgba(0,0,0,0.3);
+  
+  /* Design System Dark Mode Variables */
+  --background-primary: #1E1F22;
+  --background-secondary: #2B2D31;
+  --background-tertiary: #313338;
+  --text-primary: #B5BAC1;
+  --text-secondary: #A0A5AC;
+  --border-primary: #3F4147;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* Dev-inspired theme from design system swatches - Dark */
@@ -194,35 +253,69 @@ body.dev-light {
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
   }
 
-  /* Button */
+  /* Button Styles from Design System */
   .button,
   .btn-primary {
-    background-color: var(--accent-color);
-    color: var(--accent-text);
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: var(--border-radius-sm);
     border: none;
-    box-shadow: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
   }
+  
   .button:hover,
   .btn-primary:hover {
-    filter: brightness(1.1);
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
   }
+  
+  .btn-special,
+  .btn-primary.special {
+    background: linear-gradient(90deg, #B100FF, #9900FF 60%, #7C00FF);
+    box-shadow: 0 0 10px rgba(177, 0, 255, 0.2);
+  }
+  
+  .btn-special:hover,
+  .btn-primary.special:hover {
+    box-shadow: 0 0 15px rgba(177, 0, 255, 0.3);
+  }
+  
   .btn-secondary {
-    background: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-medium);
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-primary);
+    transition: all var(--transition-fast);
+    cursor: pointer;
   }
+  
   .btn-secondary:hover {
-    background: var(--accent-color);
-    color: var(--accent-text);
-    filter: brightness(1.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: var(--text-secondary);
+  }
+  
+  .dark .btn-secondary:hover,
+  .dark-mode .btn-secondary:hover,
+  .dev .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   /* Section Container */
