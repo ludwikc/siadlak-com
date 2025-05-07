@@ -1,65 +1,21 @@
 
-import React, { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Clock } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { toast } from '@/hooks/use-toast';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
 import WebinarTestimonials from '@/components/webinar/WebinarTestimonials';
 import { Badge } from '@/components/ui/badge';
 
-// Define the form schema
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Imię jest wymagane' }),
-  email: z.string().email({ message: 'Podaj prawidłowy adres email' }),
-});
-
-type FormValues = z.infer<typeof formSchema>;
+// Webinar component
 
 const Webinar = () => {
-  const navigate = useNavigate();
-  
   // Define webinar date info - use the first option from previous implementation
   const webinarDate = { 
     date: '12 czerwca 2025', 
     day: 'Czwartek', 
     time: '18:00', 
     timezone: 'CEST (Warszawa)' 
-  };
-
-  // Initialize the form
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-    },
-  });
-
-  const onSubmit = (data: FormValues) => {
-    // Handle form submission (in a real app this would send data to a server)
-    console.log("Form submitted:", data);
-    
-    // Navigate to thank you page
-    toast({
-      title: "Zapisano pomyślnie!",
-      description: "Sprawdź swoją skrzynkę email, aby uzyskać szczegóły webinaru."
-    });
-    
-    navigate('/thank-you/webinar');
   };
 
   // Bullet points of what attendees will learn
@@ -119,49 +75,8 @@ const Webinar = () => {
                     </div>
                   </div>
                   
-                  {/* Registration Form */}
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Imię</FormLabel>
-                            <FormControl>
-                              <Input placeholder="Jan Kowalski" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                              <Input placeholder="jan@example.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <Button 
-                        type="submit" 
-                        className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
-                      >
-                        Zarezerwuj miejsce <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                      
-                      <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-2">
-                        Twoje dane są bezpieczne. Nie udostępniamy Twoich informacji.
-                      </p>
-                    </form>
-                  </Form>
+                  {/* Embedded Registration Form */}
+                  <div className="ml-embedded" data-form="ZfnmS1"></div>
                 </div>
               </div>
             </div>
