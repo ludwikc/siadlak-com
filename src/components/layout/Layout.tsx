@@ -37,7 +37,7 @@ function LayoutContent({ children }: LayoutProps) {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow pt-20 animate-page-transition">
-        <div className="page-content">
+        <div className="page-content animate-fade-in">
           {children}
         </div>
       </main>

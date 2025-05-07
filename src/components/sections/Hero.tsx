@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface HeroProps {
   title: string;
@@ -32,6 +33,7 @@ export default function Hero({
 }: HeroProps) {
   const { theme } = useTheme();
   const location = useLocation();
+  const isMobile = useIsMobile();
   
   // Check if current page is Podcasts or Community
   const isPodcastsOrCommunity = 
@@ -49,6 +51,7 @@ export default function Hero({
   // Define a more accessible gradient for light mode with better contrast
   const lightModeGradient = "bg-gradient-to-r from-neural-violet to-ascension-pink relative";
   const darkModeGradient = "bg-gradient-to-br from-deep-space to-quantum-blue";
+  
   return (
     <section 
       className={`relative ${fullHeight ? 'min-h-[90vh]' : 'pt-24 pb-16 md:pt-32 md:pb-24'} ${
@@ -64,6 +67,7 @@ export default function Hero({
       {isLightMode && !backgroundImage && !heroImage && !isPodcastsOrCommunity && (
         <div className="absolute inset-0 bg-luminous-white/30 z-0"></div>
       )}
+      
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
         <div className="absolute inset-0 z-0">
@@ -78,11 +82,11 @@ export default function Hero({
       
       {/* Hero Image (if provided) */}
       {heroImage && (
-        <div className="absolute top-0 right-0 h-full z-0 flex items-center justify-end">
+        <div className={`absolute ${isMobile ? 'relative top-0 w-full z-10 order-2 mt-8' : 'top-0 right-0 h-full z-0'} flex ${isMobile ? 'justify-center' : 'items-center justify-end'}`}>
           <img 
             src={heroImage} 
             alt={imageDescription || "Hero"} 
-            className="h-full object-contain object-right"
+            className={`${isMobile ? 'h-auto max-h-[60vh] w-auto object-contain' : 'h-full object-contain object-right'}`}
           />
         </div>
       )}
@@ -96,32 +100,48 @@ export default function Hero({
       </div>
       
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? 'flex flex-col justify-center h-full' : ''}`}>
-        <div className={`max-w-4xl ${fullHeight ? 'my-auto py-12' : ''} ${heroImage ? 'w-3/5 md:w-1/2' : ''}`}>
-          <h1 className={`mb-4 font-bold !leading-tight animate-fade-in ${
-            isLightMode && !isPodcastsOrCommunity
+        <div className={`
+          ${fullHeight ? 'my-auto py-12' : ''}
+          ${isMobile && heroImage ? 'w-full order-1 mb-8' : heroImage ? 'w-3/5 md:w-1/2' : 'max-w-4xl mx-auto'}
+          ${location.pathname === '/' ? 'text-center mx-auto' : ''}`
+        }>
+          <h1 className={`
+            mb-6 font-bold !leading-tight animate-fade-in
+            ${location.pathname === '/' ? 'text-5xl md:text-6xl lg:text-7xl' : ''} 
+            ${isLightMode && !isPodcastsOrCommunity
               ? 'bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent' 
               : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
           }`}>
             {title}
           </h1>
           
-          <p className={`text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in ${
-            isLightMode && !isPodcastsOrCommunity
+          <p className={`
+            mb-10 max-w-3xl mx-auto animate-fade-in
+            ${location.pathname === '/' ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}
+            ${isLightMode && !isPodcastsOrCommunity
               ? 'text-deep-charcoal' 
               : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
           }`} style={{ animationDelay: '0.2s' }}>
             {subtitle}
           </p>
           
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className={`
+            flex ${isMobile ? 'flex-col' : 'flex-row'} ${location.pathname === '/' ? 'justify-center' : ''} 
+            gap-4 animate-fade-in
+          `} style={{ animationDelay: '0.4s' }}>
             <Link 
               to={ctaLink} 
               onClick={() => window.scrollTo(0, 0)}
               aria-label={`${ctaText} - primary action`}
+              className={`${isMobile ? 'w-full' : ''}`}
             >
               <Button 
                 variant={(isLightMode && !isPodcastsOrCommunity) ? "default" : "special"}
-                className={(isLightMode && !isPodcastsOrCommunity) ? "bg-luminous-white text-neural-violet" : ""}
+                className={`
+                  ${(isLightMode && !isPodcastsOrCommunity) ? "bg-luminous-white text-neural-violet" : ""}
+                  ${isMobile ? 'w-full justify-center' : 'px-6 py-3 text-base'}
+                `}
+                size={isMobile ? "default" : "lg"}
               >
                 {ctaText}
                 <ArrowRight size={18} />
@@ -133,13 +153,18 @@ export default function Hero({
                 to={secondaryCtaLink} 
                 onClick={() => window.scrollTo(0, 0)}
                 aria-label={`${secondaryCtaText} - secondary action`}
+                className={`${isMobile ? 'w-full' : ''}`}
               >
                 <Button 
                   variant="secondary"
-                  className={(isLightMode && !isPodcastsOrCommunity)
-                    ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90" 
-                    : "text-white border-white hover:bg-white/20"
-                  }
+                  className={`
+                    ${(isLightMode && !isPodcastsOrCommunity)
+                      ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90" 
+                      : "text-white border-white hover:bg-white/20"
+                    }
+                    ${isMobile ? 'w-full justify-center' : 'px-6 py-3 text-base'}
+                  `}
+                  size={isMobile ? "default" : "lg"}
                 >
                   {secondaryCtaText}
                 </Button>
