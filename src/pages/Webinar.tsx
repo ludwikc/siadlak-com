@@ -76,7 +76,7 @@ const Webinar = () => {
                   </div>
                   
                   {/* Embedded Registration Form */}
-                  <div className="ml-embedded" data-form="ZfnmS1"></div>
+                  <div class="ml-embedded" data-form="ZfnmS1"></div>
                 </div>
               </div>
             </div>
