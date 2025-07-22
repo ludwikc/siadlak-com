@@ -1,96 +1,79 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Courses from "./pages/Courses";
-import CourseDetail from "./pages/CourseDetail";
-import Newsletter from "./pages/Newsletter";
-import Testimonials from "./pages/Testimonials";
-import ThankYou from "./pages/ThankYou";
-import MentalElevator from "./pages/MentalElevator";
-import Webinar from "./pages/Webinar";
-import Legal from "./pages/Legal";
-import WebinarRegistration from "./pages/WebinarRegistration";
-import WebinarLobby from "./pages/WebinarLobby";
-import WebinarLive from "./pages/WebinarLive";
-import WebinarExpired from "./pages/WebinarExpired";
-import WebinarReplay from "./pages/WebinarReplay";
-import Assessment from "./pages/Assessment";
-import Podcasts from "./pages/Podcasts";
-import LifeHackingPodcast from "./pages/LifeHackingPodcast";
-import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
-import Community from "./pages/Community";
+import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Newsletter from './pages/Newsletter';
+import NotFound from './pages/NotFound';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import Services from './pages/Services';
+import Team from './pages/Team';
+import Pricing from './pages/Pricing';
+import Faq from './pages/Faq';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import CaseStudies from './pages/CaseStudies';
+import CaseStudyDetail from './pages/CaseStudyDetail';
+import Careers from './pages/Careers';
+import CareerDetail from './pages/CareerDetail';
+import Events from './pages/Events';
+import EventDetail from './pages/EventDetail';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PasswordReset from './pages/PasswordReset';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import Courses from './pages/Courses';
+import CourseDetail from './pages/CourseDetail';
+
+import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/programs" element={<Courses />} />
-          <Route path="/programs/:courseSlug" element={<CourseDetail />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-          <Route
-            path="/thank-you/contact"
-            element={<ThankYou type="contact" />}
-          />
-          <Route
-            path="/thank-you/newsletter"
-            element={<ThankYou type="newsletter" />}
-          />
-          <Route
-            path="/thank-you/discovery-call"
-            element={<ThankYou type="discovery-call" />}
-          />
-          <Route
-            path="/thank-you/webinar"
-            element={<ThankYou type="webinar" />}
-          />
-          <Route path="/mental-elevator" element={<MentalElevator />} />
-          <Route path="/webinar" element={<Webinar />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/privacy" element={<Legal />} />
-          <Route path="/terms" element={<Legal />} />
-          <Route
-            path="/webinar-registration"
-            element={<WebinarRegistration />}
-          />
-          <Route path="/webinar-lobby" element={<WebinarLobby />} />
-          <Route path="/webinar-live" element={<WebinarLive />} />
-          <Route path="/webinar-expired" element={<WebinarExpired />} />
-          <Route path="/webinar-replay" element={<WebinarReplay />} />
-          <Route path="/assessment" element={<Assessment />} />
-          {/* Podcast routes */}
-          <Route path="/podcasts" element={<Podcasts />} />
-          <Route
-            path="/podcasts/life-hacking"
-            element={<LifeHackingPodcast />}
-          />
-          <Route
-            path="/podcasts/uwazne-zycie"
-            element={<UwazneZyciePodcast />}
-          />
-          {/* Community route */}
-          <Route path="/community" element={<Community />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/newsletter" element={<Newsletter />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/careers/:slug" element={<CareerDetail />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:slug" element={<EventDetail />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/password-reset" element={<PasswordReset />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+            
+            <Route path="/programs" element={<Courses />} />
+            <Route path="/programs/:courseSlug" element={<CourseDetail />} />
+            <Route path="/programs/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
+            
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
