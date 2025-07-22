@@ -6,8 +6,6 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme, isDevTheme } = useTheme();
-
   const { theme, toggleTheme } = useTheme();
   
   // Handle scroll effect
