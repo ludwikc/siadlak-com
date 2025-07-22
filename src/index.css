@@ -241,6 +241,23 @@ body.dev-light {
 .section { padding-top: 40px; padding-bottom: 40px; }
 
 @layer components {
+  /* Navigation */
+  .nav-link {
+    @apply text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors;
+  }
+
+  .nav-link-mobile {
+    @apply nav-link py-2;
+  }
+
+  .container-default {
+    @apply container mx-auto px-4;
+  }
+
+  .container-narrow {
+    @apply container max-w-6xl mx-auto px-4;
+  }
+
   /* Card */
   .card,
   .glass-card {

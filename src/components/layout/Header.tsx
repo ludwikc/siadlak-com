@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { Moon, Sun, Menu, X } from 'lucide-react';
@@ -47,25 +47,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <Link 
             to="/about"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+            className="nav-link"
           >
             O mnie
           </Link>
           <Link 
             to="/courses"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+            className="nav-link"
           >
             Programy
           </Link>
           <Link 
             to="/podcasts"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+            className="nav-link"
           >
             Podcasty
           </Link>
           <Link 
             to="/community"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+            className="nav-link"
           >
             Społeczność
           </Link>
