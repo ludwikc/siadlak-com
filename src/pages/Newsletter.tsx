@@ -1,7 +1,6 @@
 
-import React from 'react';
 import Layout from '@/components/layout/Layout';
-import { ArrowRight, Mail, BookOpen, Bell, CheckCircle, Ribbon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Ribbon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function NewsletterPage() {

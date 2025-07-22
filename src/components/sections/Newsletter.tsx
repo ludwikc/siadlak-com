@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import CommunityCallToAction from './CommunityCallToAction';
 
 export default function Newsletter() {

@@ -1,7 +1,6 @@
 
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
+
 import { ArrowRight } from 'lucide-react';
 
 interface PodcastCardProps {

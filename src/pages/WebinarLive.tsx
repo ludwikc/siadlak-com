@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { MessageSquare, HelpCircle, Download, ExternalLink } from 'lucide-react';
+import { HelpCircle, Download, ExternalLink } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from '@/hooks/use-toast';
 

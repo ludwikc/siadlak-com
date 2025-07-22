@@ -11,7 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from '@/hooks/use-toast';
 import Hero from '@/components/sections/Hero';
-import WebinarCountdown from '@/components/webinar/WebinarCountdown';
+
 
 // Define form schema
 const formSchema = z.object({

@@ -1,10 +1,10 @@
-import React from 'react';
+
 import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Diamond, Award, Compass, Heart, MapPin } from 'lucide-react';
 import CTASection from '../components/sections/CTASection';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
 import ValueProposition from '../components/podcast/ValueProposition';
 import PersonaSection from '../components/sections/PersonaSection';
 import { Button } from '@/components/ui/button';

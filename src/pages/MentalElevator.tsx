@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap } from 'lucide-react';

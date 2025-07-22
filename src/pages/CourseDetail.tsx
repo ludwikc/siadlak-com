@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
@@ -259,11 +259,11 @@ const CourseDetail = () => {
   const { courseSlug } = useParams();
   
   // If course doesn't exist, redirect to courses page
-  if (!courseSlug || !coursesData[courseSlug]) {
+  if (!courseSlug || !coursesData[courseSlug as keyof typeof coursesData]) {
     return <Navigate to="/programs" />;
   }
   
-  const course = coursesData[courseSlug];
+  const course = coursesData[courseSlug as keyof typeof coursesData];
 
   return (
     <Layout>
@@ -368,7 +368,7 @@ const CourseDetail = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {course.features.map((feature, index) => (
+                {course.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
                     <CheckCircle className="h-6 w-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                     <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
@@ -384,7 +384,7 @@ const CourseDetail = () => {
               </h2>
               
               <div className="space-y-4">
-                {course.curriculum.map((week, index) => (
+                {course.curriculum.map((week: any, index: number) => (
                   <div key={index} className="p-4 glass-card rounded-lg">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 rounded-full bg-neural-violet dark:bg-luminal-magenta text-white flex items-center justify-center mr-3">
@@ -409,7 +409,7 @@ const CourseDetail = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {course.outcomes.map((outcome, index) => (
+                {course.outcomes.map((outcome: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
                     <CheckCircle className="h-6 w-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                     <span className="text-subtle-slate dark:text-silver-mist/90">{outcome}</span>
@@ -430,7 +430,7 @@ const CourseDetail = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {course.testimonials.map((testimonial, index) => (
+              {course.testimonials.map((testimonial: any, index: number) => (
                 <div key={index} className="glass-card p-6 rounded-xl">
                   <p className="text-subtle-slate dark:text-silver-mist/90 mb-4 italic">
                     "{testimonial.quote}"

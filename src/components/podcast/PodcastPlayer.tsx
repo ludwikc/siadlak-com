@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import { Volume2, Play, Headphones } from 'lucide-react';
 
 interface PodcastPlayerProps {
