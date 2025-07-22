@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -44,16 +43,31 @@ const App = () => (
           <Route path="/programs/:courseSlug" element={<CourseDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
-          <Route path="/thank-you/newsletter" element={<ThankYou type="newsletter" />} />
-          <Route path="/thank-you/discovery-call" element={<ThankYou type="discovery-call" />} />
-          <Route path="/thank-you/webinar" element={<ThankYou type="webinar" />} />
+          <Route
+            path="/thank-you/contact"
+            element={<ThankYou type="contact" />}
+          />
+          <Route
+            path="/thank-you/newsletter"
+            element={<ThankYou type="newsletter" />}
+          />
+          <Route
+            path="/thank-you/discovery-call"
+            element={<ThankYou type="discovery-call" />}
+          />
+          <Route
+            path="/thank-you/webinar"
+            element={<ThankYou type="webinar" />}
+          />
           <Route path="/mental-elevator" element={<MentalElevator />} />
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/privacy" element={<Legal />} />
           <Route path="/terms" element={<Legal />} />
-          <Route path="/webinar-registration" element={<WebinarRegistration />} />
+          <Route
+            path="/webinar-registration"
+            element={<WebinarRegistration />}
+          />
           <Route path="/webinar-lobby" element={<WebinarLobby />} />
           <Route path="/webinar-live" element={<WebinarLive />} />
           <Route path="/webinar-expired" element={<WebinarExpired />} />
@@ -61,8 +75,14 @@ const App = () => (
           <Route path="/assessment" element={<Assessment />} />
           {/* Podcast routes */}
           <Route path="/podcasts" element={<Podcasts />} />
-          <Route path="/podcasts/life-hacking" element={<LifeHackingPodcast />} />
-          <Route path="/podcasts/uwazne-zycie" element={<UwazneZyciePodcast />} />
+          <Route
+            path="/podcasts/life-hacking"
+            element={<LifeHackingPodcast />}
+          />
+          <Route
+            path="/podcasts/uwazne-zycie"
+            element={<UwazneZyciePodcast />}
+          />
           {/* Community route */}
           <Route path="/community" element={<Community />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

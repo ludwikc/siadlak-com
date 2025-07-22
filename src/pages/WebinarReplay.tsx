@@ -1,10 +1,17 @@
-
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Layout from '../components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Download, ArrowRight, BookOpen, FileText, ExternalLink } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Layout from "../components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import {
+  Calendar,
+  Clock,
+  Download,
+  ArrowRight,
+  BookOpen,
+  FileText,
+  ExternalLink,
+} from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 // Timeline links for the webinar navigation
 const timelineLinks = [
@@ -14,14 +21,14 @@ const timelineLinks = [
   { time: "43:21", label: "Praktyczne przykłady transformacji klientów" },
   { time: "54:30", label: "Jak wdrożyć te koncepcje w swoim życiu" },
   { time: "01:05:45", label: "Przewodnik po następnych krokach" },
-  { time: "01:12:33", label: "Sesja Q&A z uczestnikami" }
+  { time: "01:12:33", label: "Sesja Q&A z uczestnikami" },
 ];
 
 const WebinarReplay = () => {
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState(7 * 24 * 60 * 60); // 7 days in seconds
   const [offerExpired, setOfferExpired] = useState(false);
-  
+
   useEffect(() => {
     // Set up the interval to update the timer
     const timer = setInterval(() => {
@@ -34,39 +41,40 @@ const WebinarReplay = () => {
         return prevTime - 1;
       });
     }, 1000);
-    
+
     // Clear interval on component unmount
     return () => clearInterval(timer);
   }, []);
-  
+
   // Format time as dd:hh:mm:ss
   const formatTime = (seconds: number) => {
     const days = Math.floor(seconds / (24 * 60 * 60));
     const hours = Math.floor((seconds % (24 * 60 * 60)) / (60 * 60));
     const minutes = Math.floor((seconds % (60 * 60)) / 60);
     const secs = seconds % 60;
-    
-    return `${days.toString().padStart(2, '0')}:${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+    return `${days.toString().padStart(2, "0")}:${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
-  
+
   const handleResourceDownload = (resource: string) => {
     toast({
       title: "Pobieranie",
       description: `Pobieranie: ${resource}`,
     });
   };
-  
+
   const handleMentalElevator = () => {
-    navigate('/mental-elevator');
+    navigate("/mental-elevator");
   };
-  
+
   const handleUnlockBonus = () => {
     toast({
       title: "Materiały odblokowane",
-      description: "Dodatkowe materiały zostały odblokowane i są dostępne do pobrania.",
+      description:
+        "Dodatkowe materiały zostały odblokowane i są dostępne do pobrania.",
     });
   };
-  
+
   const handleShare = (platform: string) => {
     toast({
       title: "Udostępnianie",
@@ -83,15 +91,16 @@ const WebinarReplay = () => {
               <Clock className="h-4 w-4 mr-2" />
               <span className="text-sm font-medium">[REPLAY]</span>
             </div>
-            
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
-              Jak przejąć kontrolę nad swoją karierą i życiem w erze sztucznej inteligencji
+
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+              Jak przejąć kontrolę nad swoją karierą i życiem w erze sztucznej
+              inteligencji
             </h1>
-            
-            <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/80">
+
+            <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90">
               Nagranie dostępne tylko do 27 maja 2025
             </p>
-            
+
             <div className="max-w-xs mx-auto mb-8 bg-white/80 dark:bg-deep-space/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200 dark:border-gray-800">
               <p className="font-medium mb-2">Nagranie wygasa za:</p>
               <div className="font-mono text-2xl font-bold text-neural-violet">
@@ -99,219 +108,248 @@ const WebinarReplay = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Main Content - 2 columns wide */}
             <div className="lg:col-span-2 space-y-8">
               {/* Replay Video */}
               <div className="bg-black aspect-video rounded-lg flex items-center justify-center">
-                <p className="text-white text-lg">Okno odtwarzania nagrania webinaru</p>
+                <p className="text-white text-lg">
+                  Okno odtwarzania nagrania webinaru
+                </p>
               </div>
-              
+
               {/* Timeline Navigation */}
               <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
-                <h3 className="text-lg font-semibold mb-4">Nawigacja po rozdziałach:</h3>
-                
+                <h3 className="text-lg font-semibold mb-4">
+                  Nawigacja po rozdziałach:
+                </h3>
+
                 <div className="space-y-3">
                   {timelineLinks.map((link, index) => (
-                    <button 
+                    <button
                       key={index}
                       className="w-full text-left p-3 hover:bg-neural-violet/5 rounded-lg flex items-center justify-between transition-colors"
                     >
                       <span className="font-medium">{link.label}</span>
-                      <span className="text-neural-violet font-mono">{link.time}</span>
+                      <span className="text-neural-violet font-mono">
+                        {link.time}
+                      </span>
                     </button>
                   ))}
                 </div>
               </div>
-              
+
               {/* Limited-Time Offer */}
-              <div className={`rounded-2xl p-8 border shadow-lg ${
-                offerExpired 
-                  ? 'bg-gray-100 dark:bg-gray-800/60 border-gray-300 dark:border-gray-700' 
-                  : 'bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20'
-              }`}>
+              <div
+                className={`rounded-2xl p-8 border shadow-lg ${
+                  offerExpired
+                    ? "bg-gray-100 dark:bg-gray-800/60 border-gray-300 dark:border-gray-700"
+                    : "bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20"
+                }`}
+              >
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className={`text-xl font-bold ${offerExpired ? 'text-gray-500' : 'text-neural-violet'}`}>
-                    {offerExpired ? '⏱️ Było, minęło...' : '🔥 Specjalna oferta dla oglądających replay:'}
+                  <h3
+                    className={`text-xl font-bold ${offerExpired ? "text-gray-500" : "text-neural-violet"}`}
+                  >
+                    {offerExpired
+                      ? "⏱️ Było, minęło..."
+                      : "🔥 Specjalna oferta dla oglądających replay:"}
                   </h3>
-                  
-                  <div className={`px-3 py-1 rounded-full text-sm ${
-                    offerExpired 
-                      ? 'bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400' 
-                      : 'bg-neural-violet/20 text-neural-violet'
-                  }`}>
-                    {offerExpired ? 'Oferta wygasła' : 'Oferta specjalna'}
+
+                  <div
+                    className={`px-3 py-1 rounded-full text-sm ${
+                      offerExpired
+                        ? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
+                        : "bg-neural-violet/20 text-neural-violet"
+                    }`}
+                  >
+                    {offerExpired ? "Oferta wygasła" : "Oferta specjalna"}
                   </div>
                 </div>
-                
-                <p className={`text-lg mb-6 ${offerExpired ? 'text-gray-500' : ''}`}>
-                  {offerExpired 
-                    ? 'Ta specjalna oferta wygasła. Sprawdź stronę Mental Elevator, aby poznać aktualne możliwości.' 
-                    : 'Podczas webinaru na żywo, przedstawiłem ekskluzywną ofertę dla uczestników. Zdecydowałem się przedłużyć ją dla osób oglądających nagranie, ale tylko do końca odliczania powyżej.'}
+
+                <p
+                  className={`text-lg mb-6 ${offerExpired ? "text-gray-500" : ""}`}
+                >
+                  {offerExpired
+                    ? "Ta specjalna oferta wygasła. Sprawdź stronę Mental Elevator, aby poznać aktualne możliwości."
+                    : "Podczas webinaru na żywo, przedstawiłem ekskluzywną ofertę dla uczestników. Zdecydowałem się przedłużyć ją dla osób oglądających nagranie, ale tylko do końca odliczania powyżej."}
                 </p>
-                
+
                 <Button
                   size="lg"
                   className={`w-full ${
-                    offerExpired 
-                      ? 'bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed' 
-                      : 'bg-neural-violet hover:bg-neural-violet/90 text-white'
+                    offerExpired
+                      ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
+                      : "bg-neural-violet hover:bg-neural-violet/90 text-white"
                   }`}
                   onClick={handleMentalElevator}
                   disabled={offerExpired}
                 >
-                  {offerExpired 
-                    ? 'Oferta wygasła - Było, minęło...' 
-                    : 'ODKRYJ PROGRAM MENTAL ELEVATOR I SPECJALNĄ OFERTĘ'}
+                  {offerExpired
+                    ? "Oferta wygasła - Było, minęło..."
+                    : "ODKRYJ PROGRAM MENTAL ELEVATOR I SPECJALNĄ OFERTĘ"}
                 </Button>
-                
+
                 {!offerExpired && (
                   <p className="text-sm text-center mt-2">
                     Oferta wygasa razem z dostępem do nagrania
                   </p>
                 )}
               </div>
-              
+
               {/* Bonus Section */}
               <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
-                  Ekskluzywne materiały, o których nie wspomniałem podczas webinaru:
+                  Ekskluzywne materiały, o których nie wspomniałem podczas
+                  webinaru:
                 </h3>
-                
+
                 <p className="mb-6">
-                  Przygotowałem dodatkowy zestaw narzędzi "Suwerenny strateg IT" - dostępny TYLKO dla osób, 
-                  które obejrzały cały webinar i klikną poniższy przycisk:
+                  Przygotowałem dodatkowy zestaw narzędzi "Suwerenny strateg IT"
+                  - dostępny TYLKO dla osób, które obejrzały cały webinar i
+                  klikną poniższy przycisk:
                 </p>
-                
+
                 <Button
                   className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
                   onClick={handleUnlockBonus}
                 >
                   Odblokuj dodatkowe materiały
                 </Button>
-                
+
                 <p className="text-xs text-center mt-2">
                   Dostępne po obejrzeniu minimum 80% nagrania
                 </p>
               </div>
-              
+
               {/* Social Sharing */}
               <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
                   Znasz kogoś, kto potrzebuje tej wiedzy?
                 </h3>
-                
+
                 <p className="mb-6">
-                  Możesz udostępnić to nagranie osobom, które mogłyby skorzystać z metodologii Black Panther. 
-                  Nagranie będzie aktywne tylko przez 7 dni od daty webinaru.
+                  Możesz udostępnić to nagranie osobom, które mogłyby skorzystać
+                  z metodologii Black Panther. Nagranie będzie aktywne tylko
+                  przez 7 dni od daty webinaru.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-3">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-blue-500 text-blue-500"
-                    onClick={() => handleShare('Facebook')}
+                    onClick={() => handleShare("Facebook")}
                   >
                     Facebook
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-blue-400 text-blue-400"
-                    onClick={() => handleShare('Twitter')}
+                    onClick={() => handleShare("Twitter")}
                   >
                     Twitter
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-blue-700 text-blue-700"
-                    onClick={() => handleShare('LinkedIn')}
+                    onClick={() => handleShare("LinkedIn")}
                   >
                     LinkedIn
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-green-500 text-green-500"
-                    onClick={() => handleShare('WhatsApp')}
+                    onClick={() => handleShare("WhatsApp")}
                   >
                     WhatsApp
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="border-neural-violet text-neural-violet"
-                    onClick={() => handleShare('Email')}
+                    onClick={() => handleShare("Email")}
                   >
                     Email
                   </Button>
                 </div>
               </div>
             </div>
-            
+
             {/* Sidebar - 1 column wide */}
             <div className="space-y-6">
               {/* Engagement Features */}
               <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
-                <h3 className="text-lg font-semibold mb-6">Maksymalizuj swoją naukę:</h3>
-                
+                <h3 className="text-lg font-semibold mb-6">
+                  Maksymalizuj swoją naukę:
+                </h3>
+
                 <div className="space-y-4">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
-                    onClick={() => handleResourceDownload('Chaptered Navigation')}
+                    onClick={() =>
+                      handleResourceDownload("Chaptered Navigation")
+                    }
                   >
                     <Calendar className="mr-2 h-4 w-4" /> Chaptered Navigation
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
-                    onClick={() => handleResourceDownload('Workbook')}
+                    onClick={() => handleResourceDownload("Workbook")}
                   >
                     <BookOpen className="mr-2 h-4 w-4" /> Workbook
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
-                    onClick={() => handleResourceDownload('Transcript')}
+                    onClick={() => handleResourceDownload("Transcript")}
                   >
                     <FileText className="mr-2 h-4 w-4" /> Transcript
                   </Button>
-                  
-                  <Button 
-                    variant="outline" 
+
+                  <Button
+                    variant="outline"
                     className="w-full justify-start"
-                    onClick={() => handleResourceDownload('Resources')}
+                    onClick={() => handleResourceDownload("Resources")}
                   >
                     <ExternalLink className="mr-2 h-4 w-4" /> Resources
                   </Button>
                 </div>
               </div>
-              
+
               {/* Call to Action */}
               <div className="bg-gradient-to-r from-neural-violet/20 to-ascension-pink/20 backdrop-blur-lg rounded-2xl p-6 border border-neural-violet/30 shadow-lg">
-                <h3 className="text-xl font-bold mb-4">Gotowy na transformację?</h3>
-                
+                <h3 className="text-xl font-bold mb-4">
+                  Gotowy na transformację?
+                </h3>
+
                 <p className="mb-6">
-                  Jeśli to, co usłyszałeś na webinarze, rezonuje z Tobą, rozważ przejście do następnego kroku 
-                  i dołączenie do programu Mental Elevator.
+                  Jeśli to, co usłyszałeś na webinarze, rezonuje z Tobą, rozważ
+                  przejście do następnego kroku i dołączenie do programu Mental
+                  Elevator.
                 </p>
-                
-                <Button 
+
+                <Button
                   className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
                   onClick={handleMentalElevator}
                 >
                   Dowiedz się więcej <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
-              
+
               {/* Testimonial */}
               <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
                 <p className="italic mb-4">
-                  "Po implementacji tylko trzech technik z metodologii Black Panther, moja efektywność 
-                  wzrosła o 40%, a co ważniejsze - odzyskałem kontrolę nad swoim czasem i energią."
+                  "Po implementacji tylko trzech technik z metodologii Black
+                  Panther, moja efektywność wzrosła o 40%, a co ważniejsze -
+                  odzyskałem kontrolę nad swoim czasem i energią."
                 </p>
-                <p className="font-medium text-right">– Marcin K., DevOps Engineer</p>
+                <p className="font-medium text-right">
+                  – Marcin K., DevOps Engineer
+                </p>
               </div>
             </div>
           </div>

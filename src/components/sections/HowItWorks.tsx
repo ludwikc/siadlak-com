@@ -1,5 +1,5 @@
-import React from 'react';
-import { Check } from 'lucide-react';
+import React from "react";
+import { Check } from "lucide-react";
 
 interface Step {
   title: string;
@@ -17,9 +17,11 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">{title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+            {title}
+          </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="glass-card p-6 rounded-xl relative">
@@ -30,11 +32,11 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
                   </div>
                 )}
               </div>
-              
+
               <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
                 {step.title}
               </h3>
-              
+
               <p className="text-subtle-slate dark:text-silver-mist/80">
                 {step.description}
               </p>

@@ -1,8 +1,7 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface CTASectionProps {
   title: string;
@@ -11,25 +10,25 @@ interface CTASectionProps {
   buttonLink: string;
 }
 
-export default function CTASection({ 
-  title, 
-  description, 
-  buttonText, 
-  buttonLink 
+export default function CTASection({
+  title,
+  description,
+  buttonText,
+  buttonLink,
 }: CTASectionProps) {
   return (
     <section className="py-16 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet/80 dark:to-ascension-pink/80">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-white mb-4">{title}</h2>
-          
+
           <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
             {description}
           </p>
-          
+
           <Link to={buttonLink}>
-            <Button 
-              variant="default" 
+            <Button
+              variant="default"
               size="lg"
               className="bg-white hover:bg-white/90 text-neural-violet"
             >

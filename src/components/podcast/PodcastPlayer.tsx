@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Volume2, Play, Headphones } from 'lucide-react';
+import React from "react";
+import { Volume2, Play, Headphones } from "lucide-react";
 
 interface PodcastPlayerProps {
   title: string;
@@ -14,7 +13,11 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
       <div className="flex items-center p-4 border-b border-border">
         {coverArt && (
           <div className="mr-4 w-12 h-12 overflow-hidden rounded">
-            <img src={coverArt} alt={`${title} cover art`} className="w-full h-full object-cover" />
+            <img
+              src={coverArt}
+              alt={`${title} cover art`}
+              className="w-full h-full object-cover"
+            />
           </div>
         )}
         <div className="flex-grow">
@@ -24,10 +27,16 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
           </h3>
         </div>
         <div className="flex items-center space-x-2 text-neural-violet dark:text-neural-violet-light">
-          <button className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors" aria-label="Play">
+          <button
+            className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors"
+            aria-label="Play"
+          >
             <Play className="h-5 w-5" />
           </button>
-          <button className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors" aria-label="Adjust volume">
+          <button
+            className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors"
+            aria-label="Adjust volume"
+          >
             <Volume2 className="h-5 w-5" />
           </button>
         </div>

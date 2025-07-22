@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Play, Calendar } from 'lucide-react';
+import React from "react";
+import { Play, Calendar } from "lucide-react";
 
 export interface PodcastEpisode {
   id: string;
@@ -17,18 +16,26 @@ interface PodcastEpisodeListProps {
   onPlayEpisode?: (episode: PodcastEpisode) => void;
 }
 
-const PodcastEpisodeList = ({ episodes, onPlayEpisode }: PodcastEpisodeListProps) => {
+const PodcastEpisodeList = ({
+  episodes,
+  onPlayEpisode,
+}: PodcastEpisodeListProps) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">Najnowsze odcinki</h2>
+      <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+        Najnowsze odcinki
+      </h2>
       <div className="divide-y divide-border">
         {episodes.map((episode) => (
-          <div key={episode.id} className="py-4 flex flex-col sm:flex-row gap-4">
+          <div
+            key={episode.id}
+            className="py-4 flex flex-col sm:flex-row gap-4"
+          >
             {episode.imageUrl && (
               <div className="flex-shrink-0 w-full sm:w-32 h-32 overflow-hidden rounded-md">
-                <img 
-                  src={episode.imageUrl} 
-                  alt={episode.title} 
+                <img
+                  src={episode.imageUrl}
+                  alt={episode.title}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -46,7 +53,7 @@ const PodcastEpisodeList = ({ episodes, onPlayEpisode }: PodcastEpisodeListProps
               <p className="text-deep-charcoal/80 dark:text-silver-mist/70 mb-3 line-clamp-2 sm:line-clamp-3">
                 {episode.description}
               </p>
-              <button 
+              <button
                 onClick={() => onPlayEpisode && onPlayEpisode(episode)}
                 className="inline-flex items-center px-3 py-1.5 rounded-md bg-ascension-pink hover:bg-luminal-magenta text-white transition-colors"
               >

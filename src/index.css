@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,55 +7,55 @@
 /* === Brand Color Variables and Gradients === */
 :root {
   /* Light Mode */
-  --bg-color: #F5F5FA;
+  --bg-color: #f5f5fa;
   --text-color: #222226;
-  --card-bg: #FFFFFF;
+  --card-bg: #ffffff;
   --card-text: #333338;
-  --accent-color: #0072EF;
-  --accent-text: #FFFFFF;
+  --accent-color: #0072ef;
+  --accent-text: #ffffff;
   --highlight-color: #e74c3c;
-  --border-color: rgba(0,0,0,0.1);
-  --shadow: 0 5px 15px rgba(0,0,0,0.2);
-  
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
   /* Design System Variables */
-  --background-primary: #F2F3F5;
-  --background-secondary: #E3E5E8;
-  --background-tertiary: #EBEDEF;
-  --text-primary: #2E3338;
-  --text-secondary: #4F545C;
-  --border-primary: #D4D7DC;
+  --background-primary: #f2f3f5;
+  --background-secondary: #e3e5e8;
+  --background-tertiary: #ebedef;
+  --text-primary: #2e3338;
+  --text-secondary: #4f545c;
+  --border-primary: #d4d7dc;
   --border-subtle: rgba(0, 0, 0, 0.1);
-  
+
   /* Brand Colors */
-  --color-primary: #7C00FF;
-  --color-primary-light: #B100FF;
-  --color-primary-dark: #4A36C2;
-  --color-accent: #C961E3;
-  --color-indigo: #383B6C;
-  --color-premium: #D4AF37;
-  
-  /* UI States */
-  --color-success: #36D399;
-  --color-warning: #FBBD23;
-  --color-error: #F87272;
-  --color-info: #4A36C2;
-  
+  --color-primary: #7c00ff;
+  --color-primary-light: #b100ff;
+  --color-primary-dark: #4a36c2;
+  --color-accent: #c961e3;
+  --color-indigo: #383b6c;
+  --color-premium: #d4af37;
+
+  /* UI States - WCAG AA compliant with white text */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #4a36c2;
+
   /* Typography */
-  --font-family-primary: 'Inter', sans-serif;
+  --font-family-primary: "Inter", sans-serif;
   --font-weight-medium: 500;
-  
+
   /* Borders */
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 16px;
   --border-radius-pill: 999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.12);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
@@ -66,23 +65,23 @@
 /* Dark mode selector: .dark or .dark-mode for max compatibility */
 .dark,
 .dark-mode {
-  --bg-color: #0B0B0D;
-  --text-color: #BDBDBD;
-  --card-bg: #1A1A24;
-  --card-text: #E0E0E5;
-  --accent-text: #E0E0E5;
-  --border-color: rgba(255,255,255,0.1);
-  --shadow: 0 5px 15px rgba(0,0,0,0.3);
-  
+  --bg-color: #0b0b0d;
+  --text-color: #bdbdbd;
+  --card-bg: #1a1a24;
+  --card-text: #e0e0e5;
+  --accent-text: #e0e0e5;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
   /* Design System Dark Mode Variables */
-  --background-primary: #1E1F22;
-  --background-secondary: #2B2D31;
+  --background-primary: #1e1f22;
+  --background-secondary: #2b2d31;
   --background-tertiary: #313338;
-  --text-primary: #B5BAC1;
-  --text-secondary: #A0A5AC;
-  --border-primary: #3F4147;
+  --text-primary: #b5bac1;
+  --text-secondary: #a0a5ac;
+  --border-primary: #3f4147;
   --border-subtle: rgba(255, 255, 255, 0.1);
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -93,75 +92,75 @@
 /* Dev-inspired theme from design system swatches - Dark */
 .dev {
   /* Background colors */
-  --bg-color: #1E1F22;
-  --card-bg: #2B2D31;
-  --card-text: #B5BAC1;
-  --text-color: #B5BAC1;
-  --accent-color: #7C00FF;
-  --accent-text: #FFFFFF;
-  --highlight-color: #B100FF;
-  --border-color: #3F4147;
-  --shadow: 0 8px 16px rgba(0,0,0,0.3);
-  
+  --bg-color: #1e1f22;
+  --card-bg: #2b2d31;
+  --card-text: #b5bac1;
+  --text-color: #b5bac1;
+  --accent-color: #7c00ff;
+  --accent-text: #ffffff;
+  --highlight-color: #b100ff;
+  --border-color: #3f4147;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
   /* Additional Dev-inspired variables */
-  --background-primary: #1E1F22;
-  --background-secondary: #2B2D31;
+  --background-primary: #1e1f22;
+  --background-secondary: #2b2d31;
   --background-tertiary: #313338;
-  --text-primary: #B5BAC1;
-  --text-secondary: #A0A5AC;
-  --border-primary: #3F4147;
-  --border-subtle: rgba(255,255,255,0.1);
-  
+  --text-primary: #b5bac1;
+  --text-secondary: #a0a5ac;
+  --border-primary: #3f4147;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+
   /* Brand Colors */
-  --color-primary: #7C00FF;
-  --color-primary-light: #B100FF;
-  --color-primary-dark: #4A36C2;
-  --color-accent: #C961E3;
-  --color-indigo: #383B6C;
-  --color-premium: #D4AF37;
-  
-  /* UI States */
-  --color-success: #36D399;
-  --color-warning: #FBBD23;
-  --color-error: #F87272;
-  --color-info: #4A36C2;
+  --color-primary: #7c00ff;
+  --color-primary-light: #b100ff;
+  --color-primary-dark: #4a36c2;
+  --color-accent: #c961e3;
+  --color-indigo: #383b6c;
+  --color-premium: #d4af37;
+
+  /* UI States - WCAG AA compliant with white text */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #4a36c2;
 }
 
 /* Dev-inspired theme from design system swatches - Light */
 .dev-light {
   /* Background colors */
-  --bg-color: #F2F3F5;
-  --card-bg: #E3E5E8;
-  --card-text: #2E3338;
-  --text-color: #2E3338;
-  --accent-color: #7C00FF;
-  --accent-text: #FFFFFF;
-  --highlight-color: #B100FF;
-  --border-color: #D4D7DC;
-  --shadow: 0 8px 16px rgba(0,0,0,0.1);
-  
+  --bg-color: #f2f3f5;
+  --card-bg: #e3e5e8;
+  --card-text: #2e3338;
+  --text-color: #2e3338;
+  --accent-color: #7c00ff;
+  --accent-text: #ffffff;
+  --highlight-color: #b100ff;
+  --border-color: #d4d7dc;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
   /* Additional Dev-inspired variables */
-  --background-primary: #F2F3F5;
-  --background-secondary: #E3E5E8;
-  --background-tertiary: #EBEDEF;
-  --text-primary: #2E3338;
-  --text-secondary: #4F545C;
-  --border-primary: #D4D7DC;
+  --background-primary: #f2f3f5;
+  --background-secondary: #e3e5e8;
+  --background-tertiary: #ebedef;
+  --text-primary: #2e3338;
+  --text-secondary: #4f545c;
+  --border-primary: #d4d7dc;
   --border-subtle: rgba(0, 0, 0, 0.1);
-  
+
   /* Brand Colors */
-  --color-primary: #7C00FF;
-  --color-primary-light: #B100FF;
-  --color-primary-dark: #4A36C2;
-  --color-accent: #C961E3;
-  --color-indigo: #383B6C;
-  --color-premium: #D4AF37;
-  
-  /* UI States */
-  --color-success: #36D399;
-  --color-warning: #FBBD23;
-  --color-error: #F87272;
-  --color-info: #4A36C2;
+  --color-primary: #7c00ff;
+  --color-primary-light: #b100ff;
+  --color-primary-dark: #4a36c2;
+  --color-accent: #c961e3;
+  --color-indigo: #383b6c;
+  --color-premium: #d4af37;
+
+  /* UI States - WCAG AA compliant with white text */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #4a36c2;
 }
 
 /* === Gradient Backgrounds === */
@@ -169,38 +168,72 @@ body {
   font-family: ui-sans-serif, sans-serif;
   color: var(--text-color);
   background:
-    radial-gradient(circle at top left, rgba(124, 0, 255, 0.2), transparent 20%) fixed,
-    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.2), transparent 30%) fixed,
+    radial-gradient(circle at top left, rgba(124, 0, 255, 0.2), transparent 20%)
+      fixed,
+    radial-gradient(
+        circle at bottom right,
+        rgba(74, 54, 194, 0.2),
+        transparent 30%
+      )
+      fixed,
     var(--bg-color) fixed;
   min-height: 100vh;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 body.dark:not(.dev),
 body.dark-mode:not(.dev) {
   background:
-    radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%) fixed,
-    radial-gradient(circle at bottom right, rgba(30, 0, 96, 0.3), transparent 35%) fixed,
+    radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%)
+      fixed,
+    radial-gradient(
+        circle at bottom right,
+        rgba(30, 0, 96, 0.3),
+        transparent 35%
+      )
+      fixed,
     var(--bg-color) fixed;
   color: var(--text-color);
 }
 
 body.dev {
   background:
-    radial-gradient(circle at top left, rgba(177, 0, 255, 0.15), transparent 20%) fixed,
-    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.15), transparent 30%) fixed,
+    radial-gradient(
+        circle at top left,
+        rgba(177, 0, 255, 0.15),
+        transparent 20%
+      )
+      fixed,
+    radial-gradient(
+        circle at bottom right,
+        rgba(74, 54, 194, 0.15),
+        transparent 30%
+      )
+      fixed,
     var(--bg-color) fixed;
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body.dev-light {
   background:
-    radial-gradient(circle at top left, rgba(177, 0, 255, 0.05), transparent 20%) fixed,
-    radial-gradient(circle at bottom right, rgba(74, 54, 194, 0.05), transparent 30%) fixed,
+    radial-gradient(
+        circle at top left,
+        rgba(177, 0, 255, 0.05),
+        transparent 20%
+      )
+      fixed,
+    radial-gradient(
+        circle at bottom right,
+        rgba(74, 54, 194, 0.05),
+        transparent 30%
+      )
+      fixed,
     var(--bg-color) fixed;
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* === Base Typography and Spacing === */
@@ -213,23 +246,47 @@ body.dev-light {
     @apply font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: ui-sans-serif, sans-serif;
     font-weight: 700;
     color: var(--text-color);
   }
 
-  h1 { font-size: 2.5rem; line-height: 1.2; }
-  h2 { font-size: 1.8rem; line-height: 1.3; }
-  h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
-  p { font-size: 1rem; line-height: 1.6; color: var(--text-color); margin-bottom: 16px; }
-  small, .caption { font-size: 0.875rem; line-height: 1.4; }
-  
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 16px;
+  }
+  small,
+  .caption {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
   /* Page transitions */
   .page-content {
     animation: fadeInZoom 0.4s ease-out forwards;
   }
-  
+
   /* Smooth scrolling and scroll to top behavior */
   html {
     scroll-behavior: smooth;
@@ -238,7 +295,10 @@ body.dev-light {
 }
 
 /* === Specialty Layout Spacing === */
-.section { padding-top: 40px; padding-bottom: 40px; }
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 @layer components {
   /* Navigation */
@@ -267,7 +327,10 @@ body.dev-light {
     padding: 24px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    transition:
+      background 0.3s,
+      color 0.3s,
+      box-shadow 0.3s;
   }
 
   /* Button Styles from Design System */
@@ -288,25 +351,25 @@ body.dev-light {
     transition: all var(--transition-fast);
     cursor: pointer;
   }
-  
+
   .button:hover,
   .btn-primary:hover {
     background-color: var(--color-primary-light);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
   }
-  
+
   .btn-special,
   .btn-primary.special {
-    background: linear-gradient(90deg, #B100FF, #9900FF 60%, #7C00FF);
+    background: linear-gradient(90deg, #b100ff, #9900ff 60%, #7c00ff);
     box-shadow: 0 0 10px rgba(177, 0, 255, 0.2);
   }
-  
+
   .btn-special:hover,
   .btn-primary.special:hover {
     box-shadow: 0 0 15px rgba(177, 0, 255, 0.3);
   }
-  
+
   .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -323,12 +386,12 @@ body.dev-light {
     transition: all var(--transition-fast);
     cursor: pointer;
   }
-  
+
   .btn-secondary:hover {
     background-color: rgba(0, 0, 0, 0.05);
     border-color: var(--text-secondary);
   }
-  
+
   .dark .btn-secondary:hover,
   .dark-mode .btn-secondary:hover,
   .dev .btn-secondary:hover {
@@ -340,32 +403,43 @@ body.dev-light {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  
+
   /* Transparent section backgrounds for both light and dark mode */
   .bg-transparent-section {
-    @apply bg-white/20 dark:bg-deep-space/20 backdrop-blur-sm;
+    @apply bg-white/40 dark:bg-deep-space/40 backdrop-blur-sm;
   }
-  
+
   .bg-transparent-section-darker {
-    @apply bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm;
+    @apply bg-white/60 dark:bg-deep-space/60 backdrop-blur-sm;
   }
 }
 
 /* === Prose Styles for Rich Content === */
 .prose h2 {
-  font-size: 1.8rem; font-weight: bold; margin-top: 32px; margin-bottom: 16px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 16px;
   color: var(--text-color);
 }
 .prose h3 {
-  font-size: 1.5rem; font-weight: 600; margin-top: 24px; margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
 }
 .prose p,
 .prose ul,
 .prose li {
   color: var(--text-color);
 }
-.prose ul { margin-left: 24px; margin-bottom: 16px; }
-.prose li { margin-bottom: 8px; }
+.prose ul {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+.prose li {
+  margin-bottom: 8px;
+}
 
 /* === Utility and Shadow/Borders Adjustments === */
 .border {
@@ -375,36 +449,56 @@ body.dev-light {
 /* === Animations === */
 /* Page transitions */
 @keyframes fadeInZoom {
-  from { 
+  from {
     opacity: 0;
     transform: scale(0.98);
   }
-  to { 
+  to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes glow {
-  0% { opacity: 0.5; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.5; }
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 @keyframes pulse-subtle {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in {

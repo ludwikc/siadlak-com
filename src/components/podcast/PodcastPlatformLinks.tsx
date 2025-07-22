@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import React from "react";
+import { ExternalLink } from "lucide-react";
 
 interface PlatformLink {
   name: string;
@@ -27,10 +26,10 @@ const PodcastPlatformLinks = ({ platforms }: PodcastPlatformLinksProps) => {
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 rounded-md bg-secondary/50 hover:bg-secondary dark:bg-deep-space dark:hover:bg-deep-space/80 text-deep-charcoal dark:text-silver-mist transition-colors"
           >
-            <img 
-              src={platform.icon} 
-              alt={platform.name} 
-              className="h-5 w-5 mr-2" 
+            <img
+              src={platform.icon}
+              alt={platform.name}
+              className="h-5 w-5 mr-2"
             />
             {platform.name}
             <ExternalLink className="h-4 w-4 ml-1 opacity-70" />

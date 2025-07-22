@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import React from "react";
+import { CheckCircle } from "lucide-react";
 
 interface ValuePropositionProps {
   title: string;
@@ -17,7 +16,9 @@ const ValueProposition = ({ title, items }: ValuePropositionProps) => {
         {items.map((item, index) => (
           <li key={index} className="flex items-start">
             <CheckCircle className="h-5 w-5 mr-2 text-ascension-pink dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-            <span className="text-deep-charcoal/90 dark:text-silver-mist/90">{item}</span>
+            <span className="text-deep-charcoal/90 dark:text-silver-mist/90">
+              {item}
+            </span>
           </li>
         ))}
       </ul>

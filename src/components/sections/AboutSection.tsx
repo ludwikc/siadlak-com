@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   return (
@@ -19,28 +18,33 @@ export default function AboutSection() {
             </div>
             <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full blur-2xl opacity-30 dark:opacity-50"></div>
           </div>
-          
+
           {/* Content Column */}
           <div className="md:w-1/2">
             <h2 className="text-deep-charcoal dark:text-silver-mist mb-6">
-              About <span className="text-ascension-pink dark:text-luminal-magenta">Ludwik</span>
+              About{" "}
+              <span className="text-ascension-pink dark:text-luminal-magenta">
+                Ludwik
+              </span>
             </h2>
-            
+
             <p className="text-subtle-slate dark:text-silver-mist/80 mb-4">
-              Ludwik Siadlak is a premier coach and mentor working at the intersection of technology and human potential. With over 15 years of experience in tech leadership, he helps professionals amplify their capabilities while maintaining their humanity in our rapidly evolving digital landscape.
+              Ludwik Siadlak is a premier coach and mentor working at the
+              intersection of technology and human potential. With over 15 years
+              of experience in tech leadership, he helps professionals amplify
+              their capabilities while maintaining their humanity in our rapidly
+              evolving digital landscape.
             </p>
-            
+
             <p className="text-subtle-slate dark:text-silver-mist/80 mb-8">
-              His unique approach combines cutting-edge technical expertise with deep understanding of human psychology and performance optimization, helping clients develop systems that enhance their effectiveness without sacrificing their well-being.
+              His unique approach combines cutting-edge technical expertise with
+              deep understanding of human psychology and performance
+              optimization, helping clients develop systems that enhance their
+              effectiveness without sacrificing their well-being.
             </p>
-            
-            <Link 
-              to="/about" 
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              <Button variant="secondary">
-                Learn More About Ludwik
-              </Button>
+
+            <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+              <Button variant="secondary">Learn More About Ludwik</Button>
             </Link>
           </div>
         </div>
