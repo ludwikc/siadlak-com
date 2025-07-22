@@ -85,15 +85,7 @@ The app uses React Router with routes defined in `src/App.tsx`. Main route categ
 
 ## Brand Design System
 
-The project uses a custom color palette defined in `tailwind.config.ts`:
-
-- `deep-space` - Primary dark background (#0A0A0D)
-- `neural-violet` - Primary brand color (#3B0F77)
-- `quantum-blue` - Secondary dark (#061A40)
-- `ascension-pink` - Accent color (#B0128C)
-- `luminal-magenta` - Bright accent (#DA1EAE)
-- `silver-mist` - Light text (#E1E1E6)
-- `luminous-white` - Primary light (#F9F9FB)
+The project uses a custom color palette defined in `tailwind.config.ts`:22
 
 Custom fonts: Inter (sans-serif), Montserrat (headings)
 

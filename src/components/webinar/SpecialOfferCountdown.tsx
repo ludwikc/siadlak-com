@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+
+import { useState, useEffect } from 'react';
 
 // Seven minutes in milliseconds
 const COUNTDOWN_DURATION = 7 * 60 * 1000;

@@ -1,15 +1,10 @@
-import React, { useState } from "react";
-import Layout from "../components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import {
-  Download,
-  MessageSquare,
-  CheckCircle,
-  HelpCircle,
-  Volume2,
-} from "lucide-react";
-import WebinarCountdown from "@/components/webinar/WebinarCountdown";
-import { toast } from "@/hooks/use-toast";
+
+import { useState } from 'react';
+import Layout from '../components/layout/Layout';
+import { Button } from '@/components/ui/button';
+import { Download, MessageSquare, CheckCircle, HelpCircle, Volume2 } from 'lucide-react';
+import WebinarCountdown from '@/components/webinar/WebinarCountdown';
+import { toast } from '@/hooks/use-toast';
 
 const WebinarLobby = () => {
   const [audioTested, setAudioTested] = useState(false);

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+
+import { useState, useEffect } from 'react';
 
 // Set the webinar date (example: June 12, 2025 at 18:00 CEST)
 const WEBINAR_DATE = new Date("2025-06-12T18:00:00+02:00").getTime();

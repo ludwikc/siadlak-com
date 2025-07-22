@@ -1,8 +1,8 @@
-import React from "react";
-import Layout from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Quote } from "lucide-react";
+
+import Layout from '@/components/layout/Layout';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {

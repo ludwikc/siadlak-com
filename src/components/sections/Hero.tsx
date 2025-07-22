@@ -1,9 +1,10 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { useTheme } from "../../contexts/ThemeContext";
-import { Button } from "@/components/ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
+
+
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { useTheme } from '../../contexts/ThemeContext';
+import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface HeroProps {
   title: string;

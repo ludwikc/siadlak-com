@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Layout from "../components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import {
-  Calendar,
-  Clock,
-  Download,
-  ArrowRight,
-  BookOpen,
-  FileText,
-  ExternalLink,
-} from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Layout from '../components/layout/Layout';
+import { Button } from '@/components/ui/button';
+import { Calendar, Clock, ArrowRight, BookOpen, FileText, ExternalLink } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 // Timeline links for the webinar navigation
 const timelineLinks = [

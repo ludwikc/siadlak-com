@@ -1,13 +1,12 @@
-import React from "react";
-import Layout from "../components/layout/Layout";
-import Hero from "../components/sections/Hero";
-import PodcastPlayer from "../components/podcast/PodcastPlayer";
-import PodcastPlatformLinks from "../components/podcast/PodcastPlatformLinks";
-import ValueProposition from "../components/podcast/ValueProposition";
-import PodcastEpisodeList, {
-  PodcastEpisode,
-} from "../components/podcast/PodcastEpisodeList";
-import { ArrowRight } from "lucide-react";
+
+
+import Layout from '../components/layout/Layout';
+import Hero from '../components/sections/Hero';
+import PodcastPlayer from '../components/podcast/PodcastPlayer';
+import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
+import ValueProposition from '../components/podcast/ValueProposition';
+import PodcastEpisodeList, { PodcastEpisode } from '../components/podcast/PodcastEpisodeList';
+import { ArrowRight } from 'lucide-react';
 
 const LifeHackingPodcast = () => {
   // Sample episodes data - would be fetched from an API in a real scenario

@@ -8,6 +8,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme, isDevTheme } = useTheme();
 
+  const { theme, toggleTheme } = useTheme();
+  
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {

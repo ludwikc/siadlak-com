@@ -1,5 +1,5 @@
-import React from "react";
-import { Star, Users, Award } from "lucide-react";
+
+import { Star, Users, Award } from 'lucide-react';
 
 interface Testimonial {
   quote: string;

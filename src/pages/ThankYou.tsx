@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import Layout from "../components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import {
-  Zap,
-  Calendar,
-  Mail,
-  Clock,
-  ArrowRight,
-  CheckCheck,
-} from "lucide-react";
-import SpecialOfferCountdown from "@/components/webinar/SpecialOfferCountdown";
+
+import { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Layout from '../components/layout/Layout';
+import { Button } from '@/components/ui/button';
+import { Zap, Calendar, Mail, Clock, ArrowRight, CheckCheck } from 'lucide-react';
+import SpecialOfferCountdown from '@/components/webinar/SpecialOfferCountdown';
 
 type ThankYouProps = {
   type?: "contact" | "newsletter" | "discovery-call" | "webinar";
