@@ -52,7 +52,7 @@ export default function Header() {
             O mnie
           </Link>
           <Link 
-            to="/courses"
+            to="/programs"
             className="nav-link"
           >
             Programy
@@ -134,7 +134,7 @@ export default function Header() {
               O mnie
             </Link>
             <Link 
-              to="/courses"
+              to="/programs"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >

@@ -80,7 +80,7 @@ export default function CoursePreview({ title, subtitle, courses }: CoursePrevie
         </div>
         
         <div className="text-center mt-12">
-          <Link to="/courses">
+          <Link to="/programs">
             <Button variant="secondary">
               View All Courses
             </Button>

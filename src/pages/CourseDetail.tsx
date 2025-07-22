@@ -260,7 +260,7 @@ const CourseDetail = () => {
   
   // If course doesn't exist, redirect to courses page
   if (!courseSlug || !coursesData[courseSlug]) {
-    return <Navigate to="/courses" />;
+    return <Navigate to="/programs" />;
   }
   
   const course = coursesData[courseSlug];

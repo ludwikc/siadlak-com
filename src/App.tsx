@@ -40,8 +40,8 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:courseSlug" element={<CourseDetail />} />
+          <Route path="/programs" element={<Courses />} />
+          <Route path="/programs/:courseSlug" element={<CourseDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/thank-you/contact" element={<ThankYou type="contact" />} />
@@ -51,6 +51,8 @@ const App = () => (
           <Route path="/mental-elevator" element={<MentalElevator />} />
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/privacy" element={<Legal />} />
+          <Route path="/terms" element={<Legal />} />
           <Route path="/webinar-registration" element={<WebinarRegistration />} />
           <Route path="/webinar-lobby" element={<WebinarLobby />} />
           <Route path="/webinar-live" element={<WebinarLive />} />

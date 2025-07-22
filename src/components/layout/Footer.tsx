@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram, Twitter, Linkedin, Youtube, Users } from 'lucide-react';
 
@@ -20,16 +19,16 @@ export default function Footer() {
               Prowadzę profesjonalistów na styku technologii i ludzkiego potencjału.<br /> <br /> Buduję społeczności, w których liczy się Człowiek, a nie <em>tylko hajs</em>.
             </p>
             <div className="flex space-x-4 text-subtle-slate">
-              <a href="https://instagram.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://linkedin.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/ludwikc" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="YouTube">
+              <a href="https://youtube.com/ludwikcsiadlak" className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors" aria-label="YouTube">
                 <Youtube size={20} />
               </a>
             </div>
@@ -45,7 +44,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/courses" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                <Link to="/programs" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Programy
                 </Link>
               </li>
@@ -82,12 +81,12 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">Programy</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses/mental-elevator" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                <Link to="/programs/mental-elevator" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Mental Elevator
                 </Link>
               </li>
               <li>
-                <Link to="/courses/hakowanie-produktywnosci" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
+                <Link to="/programs/hakowanie-produktywnosci" className="text-subtle-slate hover:text-neural-violet dark:text-silver-mist/70 dark:hover:text-luminal-magenta transition-colors">
                   Hakowanie Produktywności
                 </Link>
               </li>

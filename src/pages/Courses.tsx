@@ -1,5 +1,4 @@
 
-import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -174,7 +173,7 @@ export default function Courses() {
                           </Button>
                         </Link>
                       ) : (
-                        <Link to={`/kursy/${course.id}`}>
+                        <Link to={`/programs/${course.id}`}>
                           <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
                             Szczegóły programu
                             <ArrowRight className="ml-2 h-4 w-4" />
@@ -182,7 +181,7 @@ export default function Courses() {
                         </Link>
                       )}
                       
-                      <Link to="/kontakt">
+                      <Link to="/contact">
                         <Button variant="outline" className="text-white">
                           {course.id === 'mental-elevator' ? 'Umów sesję Discovery' : 'Zapytaj o program'}
                         </Button>
@@ -210,7 +209,7 @@ export default function Courses() {
               do strategicznej.
             </p>
             
-            <Link to="/kontakt">
+            <Link to="/contact">
               <Button className="bg-neural-violet hover:bg-ascension-pink">
                 Zapytaj o program dla zespołu
               </Button>
