@@ -1,76 +1,65 @@
-import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  Users,
-  Clock,
-  Calendar,
-  Star,
-  CheckCircle,
-} from "lucide-react";
+import Layout from '@/components/layout/Layout';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Users, Clock, Calendar, CheckCircle, Star, MessageSquare, Zap, Shield } from 'lucide-react';
 
-const coursesData = [
+const fundamentalPrograms = [
   {
-    id: "mental-elevator",
-    title: "Mental Elevator",
-    subtitle: "Program transformacyjny dla świadomych profesjonalistów",
-    description:
-      "Program dla wybranych profesjonalistów gotowych przejąć kontrolę nad swoją karierą i cyfrowym życiem. Transformacja zaczyna się od decyzji, nie od kolejnego kursu.",
+    id: 'hakowanie-produktywnosci',
+    title: 'Hakowanie Produktywności',
+    subtitle: 'System produktywności zgodny z Twoimi wartościami',
+    description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
     features: [
-      "Indywidualne sesje mentoringowe (8 tygodni)",
-      "Metodologia Black Panther dla naturalnego autorytetu",
-      "Strategiczne ramy wdrożeniowe dopasowane do Twojego stylu",
-      "Dostęp do ekskluzywnej społeczności praktyków",
-      "Pełna suwerenność zawodowa i osobista",
+      'Kompleksowa diagnoza Twoich blokad produktywności',
+      'Zintegrowany system zarządzania zadaniami i energią',
+      'Protokoły głębokiej pracy dostosowane do Twojego kontekstu',
+      'Praktyczne wdrożenie narzędzi, nie tylko teoria'
     ],
-    duration: "8 tygodni",
-    format: "Sesje 1:1 + Wdrożenie",
-    level: "Dla zdecydowanych na zmianę",
-    startDate: "Ograniczona dostępność (max 5 miejsc)",
-    featured: true,
-    image: "",
+    duration: '6 tygodni',
+    format: 'Online + Spotkania grupowe',
+    level: 'Dla świadomych optymalizatorów',
+    startDate: 'Rekrutacja kwartalna'
   },
   {
-    id: "hakowanie-produktywnosci",
-    title: "Hakowanie Produktywności",
-    subtitle: "System produktywności zgodny z Twoimi wartościami",
-    description:
-      "Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele, zamiast generować kolejne frustracje.",
+    id: 'silna-glowa',
+    title: 'Silna Głowa',
+    subtitle: 'Odporność psychiczna w wymagającym świecie',
+    description: 'Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.',
     features: [
-      "Kompleksowa diagnoza Twoich blokad produktywności",
-      "Zintegrowany system zarządzania zadaniami i energią",
-      "Protokoły głębokiej pracy dostosowane do Twojego kontekstu",
-      "Praktyczne wdrożenie narzędzi, nie tylko teoria",
-      "Społeczność praktyków do długoterminowego wsparcia",
+      'Praktyczne techniki redukcji stresu',
+      'Protokoły zarządzania energią mentalną',
+      'Strategie podejmowania decyzji pod presją',
+      'Metody budowania długoterminowej odporności'
     ],
-    duration: "6 tygodni",
-    format: "Online + Spotkania grupowe",
-    level: "Dla świadomych optymalizatorów",
-    startDate: "Rekrutacja kwartalna",
-    featured: false,
-    image: "",
+    duration: '5 tygodni',
+    format: 'Kurs online + praktyki',
+    level: 'Dla poszukujących balansu',
+    startDate: 'Dostęp natychmiastowy'
+  }
+];
+
+const communityBenefits = [
+  {
+    icon: Clock,
+    title: 'Daily meetings 12:34',
+    description: 'Codzienne spotkania o stałej porze'
   },
   {
-    id: "silna-glowa",
-    title: "Silna Głowa",
-    subtitle: "Odporność psychiczna w wymagającym świecie",
-    description:
-      "Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.",
-    features: [
-      "Praktyczne techniki redukcji stresu do natychmiastowego wdrożenia",
-      "Protokoły zarządzania energią mentalną w trudnych sytuacjach",
-      "Strategie podejmowania decyzji pod presją",
-      "Metody budowania długoterminowej odporności psychicznej",
-      "Narzędzia równoważenia intensywnej pracy i regeneracji",
-    ],
-    duration: "5 tygodni",
-    format: "Kurs online + praktyki",
-    level: "Dla poszukujących balansu",
-    startDate: "Dostęp natychmiastowy",
-    featured: false,
-    image: "",
+    icon: MessageSquare,
+    title: 'Discord & Platforma',
+    description: 'Dostęp do ekskluzywnych kanałów'
   },
+  {
+    icon: Users,
+    title: 'Networking z profesjonalistami',
+    description: 'Sieć kontaktów z branży'
+  },
+  {
+    icon: Calendar,
+    title: 'Cotygodniowe warsztaty',
+    description: 'Regularne sesje rozwojowe'
+  }
 ];
 
 export default function Courses() {
@@ -81,260 +70,269 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Przejmij kontrolę nad swoim potencjałem
+              Twoja ścieżka do transformacji
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90">
-              Sprawdzone programy, które faktycznie transformują, a nie tylko
-              dostarczają kolejnych informacji bez wdrożenia.
+              Sprawdzone programy, które prowadzą Cię przez kolejne etapy rozwoju – od podstaw po program premium dla wybranych.
             </p>
           </div>
         </div>
       </section>
-
-      {/* Courses Overview */}
+      
+      {/* Section 1: Fundamental Programs (50%/50%) */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            {coursesData.map((course) => (
-              <div
-                key={course.id}
-                className={`mb-12 glass-card rounded-xl overflow-hidden ${
-                  course.featured
-                    ? "border-2 border-ascension-pink dark:border-luminal-magenta"
-                    : "border border-border"
-                }`}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-3">
-                  {/* Course Image/Gradient */}
-                  <div className="lg:col-span-1 h-48 lg:h-auto bg-gradient-to-br from-neural-violet to-ascension-pink flex items-center justify-center">
-                    {course.featured && (
-                      <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <Star className="h-6 w-6 text-white inline mr-2" />
-                        <span className="text-white font-medium">
-                          Program Flagowy
-                        </span>
-                      </div>
-                    )}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4 text-neural-violet dark:text-luminal-magenta border-neural-violet dark:border-luminal-magenta">
+                KROK 1
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                Programy Fundamentalne
+              </h2>
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
+                Zacznij swoją podróż transformacji od solidnych podstaw
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {fundamentalPrograms.map((program) => (
+                <div 
+                  key={program.id}
+                  className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-fit"
+                >
+                  <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
+                    <span className="text-white text-lg font-medium text-center px-4">
+                      {program.title}
+                    </span>
                   </div>
-
-                  {/* Course Details */}
-                  <div className="lg:col-span-2 p-6 md:p-8">
-                    {course.featured && (
-                      <div className="inline-block bg-ascension-pink/10 dark:bg-ascension-pink/20 text-ascension-pink dark:text-luminal-magenta px-3 py-1 rounded-full text-sm font-medium mb-4">
-                        Program Flagowy
-                      </div>
-                    )}
-
-                    <h2 className="text-2xl md:text-3xl font-bold mb-1 text-deep-charcoal dark:text-silver-mist">
-                      {course.title}
-                    </h2>
-
-                    <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-4">
-                      {course.subtitle}
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                      {program.title}
+                    </h3>
+                    
+                    <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-3 text-sm">
+                      {program.subtitle}
                     </p>
-
-                    <p className="text-subtle-slate dark:text-silver-mist/90 mb-6">
-                      {course.description}
+                    
+                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 text-sm">
+                      {program.description}
                     </p>
-
-                    {/* Course Quick Info */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    
+                    {/* Course Quick Info - Compact */}
+                    <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
                       <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-sm text-subtle-slate dark:text-silver-mist/90">
-                          {course.duration}
-                        </span>
+                        <Clock className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80">{program.duration}</span>
                       </div>
-
+                      
                       <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-sm text-subtle-slate dark:text-silver-mist/90">
-                          {course.format}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-sm text-subtle-slate dark:text-silver-mist/90">
-                          {course.level}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-sm text-subtle-slate dark:text-silver-mist/90">
-                          {course.startDate}
-                        </span>
+                        <Star className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                        <span className="text-subtle-slate dark:text-silver-mist/80">{program.level}</span>
                       </div>
                     </div>
-
-                    {/* Course Features */}
-                    <div className="mb-8">
-                      <h3 className="text-lg font-medium mb-3 text-deep-charcoal dark:text-silver-mist">
-                        Co otrzymasz:
-                      </h3>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {course.features.map((feature, index) => (
-                          <div key={index} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                            <span className="text-subtle-slate dark:text-silver-mist/90">
-                              {feature}
-                            </span>
+                    
+                    {/* Key Features - Compact */}
+                    <div className="mb-6">
+                      <div className="space-y-1">
+                        {program.features.slice(0, 3).map((feature, index) => (
+                          <div key={index} className="flex items-start text-xs">
+                            <CheckCircle className="h-3 w-3 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                            <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
-
+                    
+                    <Link to={`/programs/${program.id}`}>
+                      <Button className="w-full bg-neural-violet hover:bg-ascension-pink text-white">
+                        Zacznij swoją podróż
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Section 2: Community Bridge (100% Width) */}
+      <section className="py-16 bg-gradient-to-r from-neural-violet/5 to-ascension-pink/5 dark:from-neural-violet/10 dark:to-ascension-pink/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="outline" className="mb-4 text-ascension-pink dark:text-luminal-magenta border-ascension-pink dark:border-luminal-magenta">
+              KROK 2 • BONUS
+            </Badge>
+            
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+              Dołącz do społeczności Lifehackerzy
+            </h2>
+            
+            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
+              <strong>Zakup dowolnego kursu = Dostęp LIFETIME do ekskluzywnej społeczności Klientów</strong>
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {communityBenefits.map((benefit, index) => (
+                <div 
+                  key={index} 
+                  className="glass-card p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-all duration-300"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
+                  </div>
+                  
+                  <h3 className="font-medium mb-2 text-deep-charcoal dark:text-silver-mist">
+                    {benefit.title}
+                  </h3>
+                  
+                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Section 3: Premium Mental Elevator (100% Width, Hero Treatment) */}
+      <section className="py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet relative overflow-hidden">
+        {/* Premium Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <Badge className="mb-4 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-4 py-1">
+                PROGRAM PREMIUM • KROK 3
+              </Badge>
+              
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Mental Elevator
+              </h2>
+              
+              <p className="text-xl md:text-2xl font-medium mb-6 text-white/90">
+                Ekskluzywny Program Mentoringowy
+              </p>
+            </div>
+            
+            <div className="glass-card backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-ascension-pink/20">
+              <div className="p-8 md:p-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                  {/* Left Column - Social Proof */}
+                  <div className="lg:col-span-1 text-center lg:text-left">
+                    <div className="mb-6">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
+                        <Star className="h-5 w-5 text-yellow-400" />
+                      </div>
+                      <p className="text-sm text-white/80 italic">
+                        "Rzeczywista transformacja zawsze zaczyna się od decyzji, nie od informacji."
+                      </p>
+                    </div>
+                    
+                    <div className="bg-ascension-pink/20 rounded-lg p-4 mb-4">
+                      <p className="text-white font-medium text-sm">
+                        🔥 Tylko 50 miejsc rocznie
+                      </p>
+                      <p className="text-white/80 text-xs">
+                        Ograniczona dostępność
+                      </p>
+                    </div>
+                    
+                    <div className="text-center">
+                      <p className="text-2xl font-bold text-ascension-pink mb-1">
+                        12 000 PLN
+                      </p>
+                      <p className="text-white/80 text-sm">
+                        Inwestycja w transformację
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Center Column - Main Content */}
+                  <div className="lg:col-span-2">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                      Dla Wybranych Profesjonalistów Gotowych Przejąć Kontrolę
+                    </h3>
+                    
+                    <p className="text-white/90 mb-6 text-lg">
+                      Program dla wybranych profesjonalistów gotowych przejąć kontrolę nad swoją karierą i cyfrowym życiem. 
+                      Transformacja zaczyna się od decyzji, nie od kolejnego kursu.
+                    </p>
+                    
+                    {/* Premium Features */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                      {[
+                        { icon: Shield, text: 'Indywidualne sesje mentoringowe (8 tygodni)' },
+                        { icon: Zap, text: 'Metodologia Black Panther dla naturalnego autorytetu' },
+                        { icon: Star, text: 'Strategiczne ramy wdrożeniowe' },
+                        { icon: Users, text: 'Dostęp do ekskluzywnej społeczności praktyków' }
+                      ].map((feature, index) => (
+                        <div key={index} className="flex items-start">
+                          <div className="w-6 h-6 bg-ascension-pink/20 rounded flex items-center justify-center mr-3 flex-shrink-0">
+                            <feature.icon className="h-3 w-3 text-ascension-pink" />
+                          </div>
+                          <span className="text-white/90 text-sm">{feature.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
                     <div className="flex flex-col sm:flex-row gap-4">
-                      {course.id === "mental-elevator" ? (
-                        <Link to="/mental-elevator">
-                          <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
-                            Szczegóły programu
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      ) : (
-                        <Link to={`/programs/${course.id}`}>
-                          <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
-                            Szczegóły programu
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </Link>
-                      )}
-
+                      <Link to="/mental-elevator" className="flex-1">
+                        <Button className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white py-6 text-lg shadow-lg hover:shadow-xl transition-all">
+                          Sprawdź dostępność
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Button>
+                      </Link>
+                      
                       <Link to="/contact">
-                        <Button variant="outline" className="text-white">
-                          {course.id === "mental-elevator"
-                            ? "Umów sesję Discovery"
-                            : "Zapytaj o program"}
+                        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 py-6 px-6">
+                          Zarezerwuj rozmowę kwalifikacyjną
                         </Button>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Personalized Programs Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-              Programy dla zespołów i organizacji
-            </h2>
-
-            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/90">
-              Potrzebujesz dedykowanego programu dla swojego zespołu? Tworzę
-              spersonalizowane rozwiązania dla organizacji, które chcą przejść
-              od produktywności reaktywnej do strategicznej.
-            </p>
-
-            <Link to="/contact">
-              <Button className="bg-neural-violet hover:bg-ascension-pink">
-                Zapytaj o program dla zespołu
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Najczęściej zadawane pytania
-            </h2>
-
-            <div className="space-y-8">
-              <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  Skąd mam wiedzieć, który program jest dla mnie odpowiedni?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
-                  Każdy program jest stworzony z myślą o konkretnych potrzebach.
-                  Mental Elevator to program dla liderów gotowych na
-                  transformację, Hakowanie Produktywności dla osób szukających
-                  spójnego systemu działania, a Silna Głowa dla tych, którzy
-                  potrzebują większej odporności psychicznej. Jeśli masz
-                  wątpliwości, umów bezpłatną rozmowę Discovery.
-                </p>
-              </div>
-
-              <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  Jaka jest polityka zwrotów?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
-                  Wszystkie programy objęte są 14-dniową gwarancją satysfakcji.
-                  Jeśli po pierwszych dwóch sesjach nie będziesz
-                  usatysfakcjonowany, otrzymasz pełny zwrot środków. W przypadku
-                  Mental Elevator, ze względu na intesywność procesu i
-                  limitowane miejsca, wymagana jest pełna płatność z góry.
-                </p>
-              </div>
-
-              <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  Czy oferujesz plany płatności?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
-                  Tak, elastyczne opcje płatności są dostępne dla programów
-                  Hakowanie Produktywności i Silna Głowa. Szczegóły są
-                  przedstawiane podczas procesu zapisów lub można je omówić
-                  podczas rozmowy Discovery. Mental Elevator wymaga pełnej
-                  płatności z góry.
-                </p>
-              </div>
-
-              <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
-                  Ile czasu tygodniowo powinienem przeznaczyć na te programy?
-                </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
-                  Większość programów wymaga 3-5 godzin tygodniowo, w tym sesje
-                  na żywo i pracę samodzielną. Mental Elevator wymaga większego
-                  zaangażowania (6-8 godzin tygodniowo) ze względu na
-                  intensywność transformacji. Dokładny zakres czasowy zostanie
-                  jasno określony przed zapisaniem się.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-neural-violet to-ascension-pink">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Gotowy przejąć kontrolę?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              Gotowy na transformację?
             </h2>
-
-            <p className="text-lg mb-8 text-white/90">
-              Nie potrzebujesz kolejnego kursu. Potrzebujesz konkretnej
-              transformacji, która pozwoli Ci wykorzystać technologię, zamiast
-              być przez nią wykorzystywanym.
+            
+            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
+              Wybierz swój punkt wejścia i rozpocznij podróż ku pełnemu potencjałowi. 
+              Każdy krok przybliża Cię do celu.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button className="bg-white text-neural-violet hover:bg-white/90">
+                <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
                   Umów rozmowę Discovery
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-
+              
               <Link to="/newsletter">
-                <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10"
-                >
+                <Button variant="outline">
                   Dołącz do newslettera
                 </Button>
               </Link>
