@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Courses from "./pages/Courses";
+import ProgramsV2 from "./pages/ProgramsV2";
 import CourseDetail from "./pages/CourseDetail";
 import Newsletter from "./pages/Newsletter";
 import Testimonials from "./pages/Testimonials";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/programs" element={<Courses />} />
+          <Route path="/programs-v2" element={<ProgramsV2 />} />
           <Route path="/programs/:courseSlug" element={<CourseDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/thank-you" element={<ThankYou />} />
