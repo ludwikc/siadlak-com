@@ -41,14 +41,6 @@ export default function Hero({
     return "bg-hero-light dark:bg-hero-dark";
   };
 
-  // Theme-aware text colors
-  const getTextClasses = () => {
-    if (backgroundImage) {
-      return "text-white";
-    }
-    // Dark text on light background, white text on dark background
-    return "text-deep-charcoal dark:text-white";
-  };
 
   return (
     <section
@@ -98,7 +90,7 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 mx-auto animate-fade-in ${getTextClasses()}/80
+              mb-10 mx-auto animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl" : "text-xl md:text-2xl max-w-lg"}
               `}
               style={{ animationDelay: "0.2s" }}
