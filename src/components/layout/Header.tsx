@@ -77,12 +77,12 @@ export default function Header() {
               <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
-            {/* Asana-style Mega Menu - Almost Fullscreen */}
+            {/* Asana-style Mega Menu - Responsive */}
             {isDropdownOpen && (
-              <div className="fixed inset-x-0 top-full z-50 pt-1">
-                <div className="bg-luminous-white dark:bg-deep-space shadow-xl border-t border-slate-200 dark:border-slate-700 min-h-[90vh] overflow-y-auto">
+              <div className="fixed left-0 right-0 top-full z-50 pt-1">
+                <div className="bg-luminous-white dark:bg-deep-space shadow-xl border-t border-slate-200 dark:border-slate-700 max-h-[80vh] overflow-y-auto">
                   {/* Desktop Layout - Simple Sections */}
-                  <div className="hidden lg:block max-w-6xl mx-auto px-16 py-12">
+                  <div className="hidden lg:block max-w-6xl mx-auto px-8 py-8">
                     <div className="grid grid-cols-3 gap-16">
                       
                       {/* Section 1: ROZWÓJ */}
@@ -237,9 +237,9 @@ export default function Header() {
                   </div>
 
                   {/* Tablet Layout */}
-                  <div className="hidden md:block lg:hidden w-[700px]">
-                    <div className="flex">
-                      <div className="w-[350px] p-6">
+                  <div className="hidden md:block lg:hidden max-w-4xl mx-auto px-4">
+                    <div className="flex flex-wrap">
+                      <div className="flex-1 min-w-[300px] p-6">
                         <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-4">
                           TWOJA ŚCIEŻKA
                         </h3>
@@ -274,7 +274,7 @@ export default function Header() {
                         </div>
                       </div>
 
-                      <div className="w-[350px] p-6 border-l border-slate-200 dark:border-slate-700">
+                      <div className="flex-1 min-w-[300px] p-6 border-l border-slate-200 dark:border-slate-700">
                         <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-4">
                           MOŻLIWOŚCI
                         </h3>
