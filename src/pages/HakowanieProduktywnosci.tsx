@@ -1,7 +1,7 @@
 
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   ArrowRight, 
@@ -14,13 +14,9 @@ import {
   Brain, 
   Sparkles, 
   ShieldCheck, 
-  HelpCircle,
-  Star,
-  Timer,
-  ChevronDown,
-  ChevronUp
+  Star
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+
 import CountdownTimer from '@/components/sales/CountdownTimer';
 import FAQAccordion from '@/components/sales/FAQAccordion';
 import ValueCalculator from '@/components/sales/ValueCalculator';
@@ -76,13 +72,13 @@ export default function HakowanieProduktywnosci() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {[
                 "prokrastynujesz, przekładasz i nie możesz się zabrać za robotę, choć terminy gonią?",
-                "ciągle się rozpraszasz na telefon, media społecznościowe, wiadomości i inne „pilne" sprawy?",
+                "ciągle się rozpraszasz na telefon, media społecznościowe, wiadomości i inne \"pilne\" sprawy?",
                 "masz wrażenie, że pracujesz non-stop, ale efektów nie widać?",
                 "zaczynasz mnóstwo projektów, ale kończysz niewiele?",
                 "czujesz się przytłoczony ilością zadań i nie wiesz, od czego zacząć?",
-                "odkładasz ważne rzeczy „na potem", a potem nigdy nie nadchodzi?",
+                "odkładasz ważne rzeczy \"na potem\", a potem nigdy nie nadchodzi?",
                 "masz problemy z utrzymaniem rutyn i nawyków, które chcesz wprowadzić?",
-                "kończy Ci się energia w połowie dnia i dalej pracujesz „na oparach"?"
+                "kończy Ci się energia w połowie dnia i dalej pracujesz \"na oparach\"?"
               ].map((problem, index) => (
                 <Card key={index} className="glass-card border-l-4 border-l-color-error hover:shadow-lg transition-all">
                   <CardContent className="p-6">
@@ -252,7 +248,7 @@ export default function HakowanieProduktywnosci() {
             </div>
             
             <div className="bg-gradient-to-r from-color-success/10 to-color-info/10 p-8 rounded-xl">
-              <h4 class="text-xl font-bold mb-6 text-text-primary">Dodatkowo zyskasz:</h4>
+              <h4 className="text-xl font-bold mb-6 text-text-primary">Dodatkowo zyskasz:</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   "odzyskasz radość życia i poczucie sensu",
@@ -469,7 +465,7 @@ export default function HakowanieProduktywnosci() {
               size="lg" 
               className="text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-ascension-pink/25"
             >
-              Chcę przestać zwlekać! Zamawiam >>>
+              Chcę przestać zwlekać! Zamawiam
               <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
             
@@ -554,7 +550,7 @@ export default function HakowanieProduktywnosci() {
             
             <div className="text-center">
               <Button variant="default" size="lg" className="text-lg px-8 py-4">
-                Ufam Ci, Ludwik. Chcę ruszyć z miejsca. Zamawiam >>>
+                Ufam Ci, Ludwik. Chcę ruszyć z miejsca. Zamawiam
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
