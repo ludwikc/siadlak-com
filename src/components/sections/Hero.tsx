@@ -33,14 +33,14 @@ export default function Hero({
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Use light background with dark text for better readability
+  // Theme-aware background
   const getBackgroundClasses = () => {
     if (backgroundImage) {
       return "";
     }
     
-    // Light gradient background that works across all themes
-    return "bg-gradient-to-br from-white to-purple-50";
+    // Light gradient in light mode, dark gradient in dark mode
+    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-quantum-blue";
   };
 
   // Use dark text on light background
