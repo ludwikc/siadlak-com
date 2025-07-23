@@ -19,7 +19,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     if (
       savedTheme &&
-      (savedTheme === "light" || savedTheme === "dark" || savedTheme === "dev")
+      (savedTheme === "light" || savedTheme === "dark" || savedTheme === "dev" || savedTheme === "dev-light")
     ) {
       setTheme(savedTheme);
     } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {

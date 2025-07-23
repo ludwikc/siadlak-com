@@ -297,7 +297,7 @@ body.dev-light {
   h5,
   h6 {
     font-family: var(--font-family-heading), Montserrat, sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--text-color);
   }
 
