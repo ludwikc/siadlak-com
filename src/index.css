@@ -17,13 +17,13 @@
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-  /* Design System Variables */
-  --background-primary: 242 243 245;
-  --background-secondary: 227 229 232;
-  --background-tertiary: 235 237 239;
-  --text-primary: 46 51 56;
-  --text-secondary: 79 84 92;
-  --border-primary: 212 215 220;
+  /* Design System Variables - Proper HSL values */
+  --background-primary: 210 10% 96%;
+  --background-secondary: 210 10% 90%;
+  --background-tertiary: 210 10% 93%;
+  --text-primary: 210 10% 20%;
+  --text-secondary: 221 8% 34%;
+  --border-primary: 210 10% 84%;
   --border-subtle: rgba(0, 0, 0, 0.1);
 
   /* Brand Colors - HSL values */
@@ -95,7 +95,7 @@
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
-  /* Design System Dark Mode Variables - HSL values */
+  /* Design System Dark Mode Variables - Proper HSL values */
   --background-primary: 216 9% 11%;
   --background-secondary: 217 10% 18%;
   --background-tertiary: 215 9% 20%;
@@ -145,28 +145,28 @@
   --border-color: #3f4147;
   --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 
-  /* Additional Dev-inspired variables */
-  --background-primary: #1e1f22;
-  --background-secondary: #2b2d31;
-  --background-tertiary: #313338;
-  --text-primary: #b5bac1;
-  --text-secondary: #a0a5ac;
-  --border-primary: #3f4147;
+  /* Additional Dev-inspired variables - Proper HSL values */
+  --background-primary: 210 8% 12%;
+  --background-secondary: 210 8% 18%;
+  --background-tertiary: 210 8% 20%;
+  --text-primary: 210 8% 72%;
+  --text-secondary: 210 8% 65%;
+  --border-primary: 210 8% 25%;
   --border-subtle: rgba(255, 255, 255, 0.1);
 
   /* Brand Colors */
-  --color-primary: #7c00ff;
-  --color-primary-light: #b100ff;
-  --color-primary-dark: #4a36c2;
-  --color-accent: #c961e3;
-  --color-indigo: #383b6c;
-  --color-premium: #d4af37;
+  --color-primary: 267 100% 50%;
+  --color-primary-light: 267 100% 65%;
+  --color-primary-dark: 249 56% 49%;
+  --color-accent: 291 62% 64%;
+  --color-indigo: 233 31% 32%;
+  --color-premium: 45 74% 52%;
 
   /* UI States - WCAG AA compliant with white text */
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
-  --color-info: #4a36c2;
+  --color-success: 160 84% 39%;
+  --color-warning: 25 95% 53%;
+  --color-error: 0 84% 60%;
+  --color-info: 249 56% 49%;
 }
 
 /* Dev-inspired theme from design system swatches - Light */
@@ -182,28 +182,28 @@
   --border-color: #d4d7dc;
   --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
-  /* Additional Dev-inspired variables */
-  --background-primary: #f2f3f5;
-  --background-secondary: #e3e5e8;
-  --background-tertiary: #ebedef;
-  --text-primary: #2e3338;
-  --text-secondary: #4f545c;
-  --border-primary: #d4d7dc;
+  /* Additional Dev-inspired variables - Proper HSL values */
+  --background-primary: 210 10% 96%;
+  --background-secondary: 210 10% 90%;
+  --background-tertiary: 210 10% 93%;
+  --text-primary: 210 10% 20%;
+  --text-secondary: 221 8% 34%;
+  --border-primary: 210 10% 84%;
   --border-subtle: rgba(0, 0, 0, 0.1);
 
   /* Brand Colors */
-  --color-primary: #7c00ff;
-  --color-primary-light: #b100ff;
-  --color-primary-dark: #4a36c2;
-  --color-accent: #c961e3;
-  --color-indigo: #383b6c;
-  --color-premium: #d4af37;
+  --color-primary: 267 100% 50%;
+  --color-primary-light: 267 100% 65%;
+  --color-primary-dark: 249 56% 49%;
+  --color-accent: 291 62% 64%;
+  --color-indigo: 233 31% 32%;
+  --color-premium: 45 74% 52%;
 
   /* UI States - WCAG AA compliant with white text */
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
-  --color-info: #4a36c2;
+  --color-success: 160 84% 39%;
+  --color-warning: 25 95% 53%;
+  --color-error: 0 84% 60%;
+  --color-info: 249 56% 49%;
 }
 
 /* === Gradient Backgrounds === */
