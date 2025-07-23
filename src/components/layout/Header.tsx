@@ -80,86 +80,349 @@ export default function Header() {
             {isDropdownOpen && (
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-2 z-50">
                 <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden">
-                  <div className="grid grid-cols-2 gap-0 w-[600px]">
-                    {/* Left Column */}
-                    <div className="p-6 space-y-4">
-                      <Link 
-                        to="/program" 
-                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                          Programy
-                        </div>
-                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                          Programy rozwojowe i szkolenia
-                        </div>
-                      </Link>
+                  {/* Desktop Layout - 3 columns */}
+                  <div className="hidden lg:grid lg:grid-cols-3 w-[1060px]">
+                    {/* Column 1: Ścieżka rozwoju (280px) */}
+                    <div className="w-[280px] p-6 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-neural-violet/10 dark:to-luminal-magenta/10">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">Twoja ścieżka rozwoju</h3>
+                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-6">3 kroki do transformacji</p>
                       
-                      <Link 
-                        to="/podcast" 
-                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                          Podcasty
+                      <div className="space-y-4">
+                        {/* Step 1 */}
+                        <div className="flex gap-3">
+                          <span className="flex-shrink-0 w-8 h-8 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Wybierz kurs</h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Rozpocznij od fundamentów (nawet jeśli <em>wydaje Ci się</em>, że je znasz)</p>
+                            <Link 
+                              to="/program" 
+                              className="text-sm text-neural-violet dark:text-luminal-magenta hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Wybierz ścieżkę rozwoju →
+                            </Link>
+                          </div>
                         </div>
-                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                          Lifehacking i Uważne Życie
+
+                        {/* Step 2 */}
+                        <div className="flex gap-3">
+                          <span className="flex-shrink-0 w-8 h-8 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Dołącz do Lifehackerów</h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Najsilniej wspierającej społeczności w polskim internecie</p>
+                            <Link 
+                              to="/community" 
+                              className="text-sm text-neural-violet dark:text-luminal-magenta hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Jak dołączyć? →
+                            </Link>
+                          </div>
                         </div>
-                      </Link>
-                      
-                      <Link 
-                        to="/community" 
-                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                          Społeczność
+
+                        {/* Step 3 - Featured */}
+                        <div className="flex gap-3 p-3 bg-ascension-pink/10 dark:bg-luminal-magenta/10 rounded-lg border border-ascension-pink/20 dark:border-luminal-magenta/20">
+                          <span className="flex-shrink-0 w-8 h-8 bg-ascension-pink text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Pracuj ze mną 1:1</h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">8 tygodni, tylko Ty i ja, rozstanie ze schematami, które tak długo Cię ograniczały</p>
+                            <Link 
+                              to="/contact" 
+                              className="text-sm text-ascension-pink dark:text-luminal-magenta font-medium hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Aplikuj →
+                            </Link>
+                          </div>
                         </div>
-                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                          Zamknięta grupa Lifehackerów
-                        </div>
-                      </Link>
+                      </div>
                     </div>
-                    
-                    {/* Right Column */}
-                    <div className="p-6 space-y-4 border-l border-silver-mist/20 dark:border-silver-mist/10">
-                      <Link 
-                        to="/newsletter" 
-                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                          Newsletter
-                        </div>
-                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                          Cotygodniowe inspiracje technologiczne
-                        </div>
-                      </Link>
+
+                    {/* Column 2: Główna nawigacja (500px) */}
+                    <div className="w-[500px] p-6 border-l border-r border-silver-mist/20 dark:border-silver-mist/10">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-6">Wszystkie możliwości</h3>
                       
-                      <Link 
-                        to="/webinar" 
-                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                          Webinar
-                        </div>
-                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                          Live sesje i masterclassy
-                        </div>
-                      </Link>
-                      
-                      <div className="pt-2 mt-4 border-t border-silver-mist/20 dark:border-silver-mist/10">
+                      <div className="grid grid-cols-2 gap-4">
+                        {/* Programy */}
                         <Link 
-                          to="/work" 
-                          className="block group p-3 rounded-lg hover:bg-neural-violet/10 dark:hover:bg-luminal-magenta/10 transition-colors"
+                          to="/program" 
+                          className="p-4 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="font-medium text-neural-violet dark:text-luminal-magenta">
-                            Zobacz wszystkie możliwości →
+                          <div className="text-2xl mb-2">📚</div>
+                          <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors mb-1">Programy rozwojowe</h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Kursy online i szkolenia korporacyjne</p>
+                          <span className="text-sm text-neural-violet dark:text-luminal-magenta">Zobacz programy</span>
+                        </Link>
+
+                        {/* Expanded - Dostępne materiały */}
+                        <div className="p-4 rounded-lg border border-neural-violet/20 dark:border-luminal-magenta/20 bg-neural-violet/5 dark:bg-luminal-magenta/5 col-span-2">
+                          <div className="flex items-start gap-3 mb-3">
+                            <div className="text-2xl">📡</div>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Dostępne materiały</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Podcasty i vlogi</p>
+                            </div>
                           </div>
+                          
+                          <div className="space-y-2">
+                            <Link 
+                              to="/lifehacking-podcast" 
+                              className="flex items-center gap-3 p-2 rounded hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              <span className="text-lg">🎧</span>
+                              <div>
+                                <div className="font-medium text-deep-charcoal dark:text-silver-mist text-sm">Lifehacking Podcast</div>
+                                <div className="text-xs text-deep-charcoal/70 dark:text-silver-mist/70">Produktywność i rozwój</div>
+                              </div>
+                            </Link>
+                            
+                            <Link 
+                              to="/uwazne-zycie" 
+                              className="flex items-center gap-3 p-2 rounded hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              <span className="text-lg">🧘</span>
+                              <div>
+                                <div className="font-medium text-deep-charcoal dark:text-silver-mist text-sm flex items-center gap-2">
+                                  Uważne Życie 
+                                  <span className="px-2 py-0.5 bg-ascension-pink text-luminous-white text-xs rounded-full">na żywo</span>
+                                </div>
+                                <div className="text-xs text-deep-charcoal/70 dark:text-silver-mist/70">Mindfulness i balans</div>
+                              </div>
+                            </Link>
+                            
+                            <a 
+                              href="https://youtube.com/@ludwiksiadlak" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-3 p-2 rounded hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                            >
+                              <span className="text-lg">📹</span>
+                              <div>
+                                <div className="font-medium text-deep-charcoal dark:text-silver-mist text-sm">Trenerskie Życie w Obrazkach</div>
+                                <div className="text-xs text-deep-charcoal/70 dark:text-silver-mist/70">300+ odcinków daily vloga</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+
+                        {/* Lifehackerzy */}
+                        <Link 
+                          to="/community" 
+                          className="p-4 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="text-2xl mb-2">👥</div>
+                          <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors mb-1">Lifehackerzy</h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Bezpłatna, ekskluzywna grupa moich Klientów</p>
+                          <span className="text-sm text-neural-violet dark:text-luminal-magenta">Dołącz</span>
+                        </Link>
+
+                        {/* Newsletter */}
+                        <Link 
+                          to="/newsletter" 
+                          className="p-4 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="text-2xl mb-2">📬</div>
+                          <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors mb-1">Newsletter</h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Przemyślenia</p>
+                          <span className="text-sm text-neural-violet dark:text-luminal-magenta">Zapisz się</span>
+                        </Link>
+
+                        {/* Wydarzenia na żywo */}
+                        <Link 
+                          to="/webinar" 
+                          className="p-4 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="text-2xl mb-2">🎥</div>
+                          <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors mb-1">Wydarzenia na żywo (online)</h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-2">Sesje live i masterclassy</p>
+                          <span className="text-sm text-neural-violet dark:text-luminal-magenta">Zapisz się</span>
+                        </Link>
+
+                        {/* CTA */}
+                        <Link 
+                          to="/work" 
+                          className="col-span-2 p-4 text-center bg-neural-violet/10 dark:bg-luminal-magenta/10 rounded-lg hover:bg-neural-violet/20 dark:hover:bg-luminal-magenta/20 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <span className="font-medium text-neural-violet dark:text-luminal-magenta">Zobacz wszystkie możliwości →</span>
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Column 3: Strefa Lifehackerów (280px) */}
+                    <div className="w-[280px] p-6 bg-gradient-to-br from-ascension-pink/5 to-neural-violet/5 dark:from-luminal-magenta/10 dark:to-neural-violet/10">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">🔐 Strefa Lifehackerów</h3>
+                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-6">Witaj z powrotem!</p>
+                      
+                      <div className="space-y-3">
+                        <a 
+                          href="https://portal.siadlak.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 p-3 rounded-lg bg-luminous-white/50 dark:bg-deep-space/50 hover:bg-luminous-white dark:hover:bg-deep-space transition-colors"
+                        >
+                          <span className="text-lg">🍑</span>
+                          <span className="font-medium text-deep-charcoal dark:text-silver-mist">Portal Lifehackerów</span>
+                        </a>
+                        
+                        <a 
+                          href="/discord" 
+                          className="flex items-center gap-3 p-3 rounded-lg bg-luminous-white/50 dark:bg-deep-space/50 hover:bg-luminous-white dark:hover:bg-deep-space transition-colors"
+                        >
+                          <span className="text-lg">🔢</span>
+                          <span className="font-medium text-deep-charcoal dark:text-silver-mist">12:34 Daily Coaching</span>
+                        </a>
+                        
+                        <a 
+                          href="/zasoby" 
+                          className="flex items-center gap-3 p-3 rounded-lg bg-luminous-white/50 dark:bg-deep-space/50 hover:bg-luminous-white dark:hover:bg-deep-space transition-colors"
+                        >
+                          <span className="text-lg">💡</span>
+                          <span className="font-medium text-deep-charcoal dark:text-silver-mist">Protipy</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tablet Layout - 2 columns */}
+                  <div className="hidden md:grid lg:hidden md:grid-cols-2 w-[700px]">
+                    {/* Column 1: Ścieżka rozwoju */}
+                    <div className="p-6 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-neural-violet/10 dark:to-luminal-magenta/10">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">Twoja ścieżka rozwoju</h3>
+                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-6">3 kroki do transformacji</p>
+                      
+                      <div className="space-y-4">
+                        <div className="flex gap-3">
+                          <span className="flex-shrink-0 w-8 h-8 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Wybierz kurs</h4>
+                            <Link 
+                              to="/program" 
+                              className="text-sm text-neural-violet dark:text-luminal-magenta hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Wybierz ścieżkę rozwoju →
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3">
+                          <span className="flex-shrink-0 w-8 h-8 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Dołącz do Lifehackerów</h4>
+                            <Link 
+                              to="/community" 
+                              className="text-sm text-neural-violet dark:text-luminal-magenta hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Jak dołączyć? →
+                            </Link>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3 p-3 bg-ascension-pink/10 dark:bg-luminal-magenta/10 rounded-lg border border-ascension-pink/20 dark:border-luminal-magenta/20">
+                          <span className="flex-shrink-0 w-8 h-8 bg-ascension-pink text-luminous-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                          <div className="flex-1">
+                            <h4 className="font-medium text-deep-charcoal dark:text-silver-mist mb-1">Pracuj ze mną 1:1</h4>
+                            <Link 
+                              to="/contact" 
+                              className="text-sm text-ascension-pink dark:text-luminal-magenta font-medium hover:underline"
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              Aplikuj →
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Column 2: Główna nawigacja - rozszerzona */}
+                    <div className="p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-6">Wszystkie możliwości</h3>
+                      
+                      <div className="space-y-4">
+                        <Link 
+                          to="/program" 
+                          className="block p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">📚</span>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">Programy rozwojowe</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Kursy online i szkolenia</p>
+                            </div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          to="/podcast" 
+                          className="block p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">🎧</span>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">Podcasty</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Lifehacking i Uważne Życie</p>
+                            </div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          to="/community" 
+                          className="block p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">👥</span>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">Lifehackerzy</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Społeczność</p>
+                            </div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          to="/newsletter" 
+                          className="block p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">📬</span>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">Newsletter</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Przemyślenia</p>
+                            </div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          to="/webinar" 
+                          className="block p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors group"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg">🎥</span>
+                            <div>
+                              <h4 className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">Wydarzenia na żywo</h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">Sesje live i masterclassy</p>
+                            </div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          to="/work" 
+                          className="block p-3 text-center bg-neural-violet/10 dark:bg-luminal-magenta/10 rounded-lg hover:bg-neural-violet/20 dark:hover:bg-luminal-magenta/20 transition-colors"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <span className="font-medium text-neural-violet dark:text-luminal-magenta">Zobacz wszystkie możliwości →</span>
                         </Link>
                       </div>
                     </div>
