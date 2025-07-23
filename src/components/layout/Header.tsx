@@ -233,42 +233,64 @@ export default function Header() {
                           </div>
                         </Link>
 
-                        {/* 50% Width Cards */}
-                        <div className="grid grid-cols-2 gap-3">
+                        {/* 3 Small Cards */}
+                        <div className="grid grid-cols-3 gap-2">
                           <Link 
                             to="/podcasts" 
-                            className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <div className="text-center">
-                              <div className="nav-icon w-8 h-8 flex items-center justify-center mx-auto mb-2">
-                                <Headphones size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
+                                <Headphones size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                               </div>
-                              <h4 className="text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Krótkie treści
+                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Podcast
                               </h4>
-                              <p className="text-xs text-deep-charcoal/70 dark:text-silver-mist/70">
-                                Podcasty i vlogi
-                              </p>
                             </div>
                           </Link>
 
+                          <a 
+                            href="https://youtube.com/@siadlak" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          >
+                            <div className="text-center">
+                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
+                                <Video size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                              </div>
+                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                YouTube
+                              </h4>
+                            </div>
+                          </a>
+
                           <Link 
                             to="/newsletter" 
-                            className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <div className="text-center">
-                              <div className="nav-icon w-8 h-8 flex items-center justify-center mx-auto mb-2">
-                                <Mail size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
+                                <Mail size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                               </div>
-                              <h4 className="text-sm font-medium text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
                                 Newsletter
                               </h4>
-                              <p className="text-xs text-deep-charcoal/70 dark:text-silver-mist/70">
-                                Moje przemyślenia
-                              </p>
                             </div>
+                          </Link>
+                        </div>
+
+                        {/* Zobacz wszystkie możliwości button */}
+                        <div className="mt-4 pt-3 border-t border-slate-200 dark:border-silver-mist/10">
+                          <Link 
+                            to="/work" 
+                            className="flex items-center justify-center p-2 text-sm text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            Zobacz wszystkie możliwości
+                            <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
                           </Link>
                         </div>
                       </div>

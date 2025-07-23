@@ -14,11 +14,7 @@ export default function Community() {
     <Layout>
       {/* Hero Section with Background Image */}
         <Hero
-          title={
-            <>
-          SIADLAXITY: <br /> Miasto Lifehackerów
-            </>
-          }
+          title="SIADLAXITY: Miasto Lifehackerów"
           subtitle="Najbardziej wspierająca społeczność w polskim internecie"
           ctaText="Jak zostać Lifehackerem?"
           ctaLink="#community-districts"
@@ -26,7 +22,7 @@ export default function Community() {
           imageDescription="SIADLAXITY: Miasto Lifehackerów"
         />
 
-        {/* Intro Section */}}
+        {/* Intro Section */}
       <section className="py-16 bg-secondary/30 dark:bg-quantum-blue/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
