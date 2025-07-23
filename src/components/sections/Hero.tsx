@@ -39,8 +39,8 @@ export default function Hero({
       return "";
     }
     
-    // Light gradient in light mode, dark background with gradient blurs in dark mode
-    return "bg-gradient-to-br from-white to-purple-50 dark:bg-deep-space";
+    // Light gradient in light mode, transparent in dark mode to show body background and gradient blurs
+    return "bg-gradient-to-br from-white to-purple-50 dark:bg-transparent";
   };
 
   // Use dark text on light background
