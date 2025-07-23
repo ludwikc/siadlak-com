@@ -40,7 +40,7 @@ export default function Hero({
     }
     
     // Light gradient in light mode, dark gradient in dark mode
-    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-quantum-blue";
+    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-neural-violet";
   };
 
   // Use dark text on light background
