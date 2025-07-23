@@ -32,10 +32,10 @@ export default function HakowanieProduktywnosci() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-locked-white">
-              Jak się wziąć do pracy, przestać odwlekać i utrzymać skupienie{' '}
-              <span className="text-locked-gradient">
-                bez przymuszania się?
-              </span>
+              <b>Czy umiesz</b> <br/>☑️ wziąć się do pracy,<br/>☑️ przestać (wreszcie) odwlekać<br/>☑️ i utrzymać skupienie{' '}
+              <br/><span className="text-locked-gradient">
+                 i to   bez przymuszania się?
+              </span> 🤔
             </h1>
             
             <h3 className="text-xl md:text-2xl font-medium mb-8 text-locked-silver leading-relaxed">
@@ -109,11 +109,11 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
-                Są dwa dobra, o które walczą największe korporacje tego świata
+                To nie jest teoria spiskowa. Wiesz doskonale, że są dwa dobra, o które walczą największe korporacje tego świata
               </h2>
-              <div className="flex justify-center items-center gap-8 text-2xl font-bold text-ascension-pink">
-                <span>👉 czas</span>
-                <span>👉 uwaga</span>
+              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-ascension-pink">
+                <span>⌚️ czas</span>
+                <span>👀 uwaga</span>
               </div>
             </div>
             
