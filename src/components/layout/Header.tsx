@@ -180,7 +180,7 @@ export default function Header() {
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
                             <div className="nav-content pr-16">
-                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Programy rozwojowe
                               </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
@@ -203,7 +203,7 @@ export default function Header() {
                               <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
                             <div className="nav-content pr-16">
-                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Wydarzenia na żywo
                               </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
@@ -223,7 +223,7 @@ export default function Header() {
                               <Users size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
                             <div className="nav-content">
-                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Medytacje na żywo
                               </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
@@ -244,7 +244,7 @@ export default function Header() {
                               <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
                                 <Headphones size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                               </div>
-                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Podcast
                               </h4>
                             </div>
@@ -260,7 +260,7 @@ export default function Header() {
                               <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
                                 <Video size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                               </div>
-                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 YouTube
                               </h4>
                             </div>
@@ -275,7 +275,7 @@ export default function Header() {
                               <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
                                 <Mail size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                               </div>
-                              <h4 className="text-xs font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Newsletter
                               </h4>
                             </div>
