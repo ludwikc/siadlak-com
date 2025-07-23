@@ -77,227 +77,229 @@ export default function Header() {
               <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
-            {/* Asana-style Mega Menu */}
+            {/* Asana-style Mega Menu - Almost Fullscreen */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-3 z-50">
-                <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
-                  {/* Desktop Layout - Asana-like design */}
-                  <div className="hidden lg:flex w-[1000px]">
-                    {/* Column 1: Twoja Ścieżka (320px) */}
-                    <div className="w-[320px] p-6 bg-slate-50 dark:bg-slate-800/50">
-                      <div className="mb-6">
-                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
-                          TWOJA ŚCIEŻKA
-                        </h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300">
-                          3 kroki do transformacji
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-6">
-                        <div className="flex items-start gap-4">
-                          <div className="flex flex-col items-center">
-                            <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-sm font-medium">
-                              1
-                            </div>
-                            <div className="w-0.5 h-8 bg-slate-200 dark:bg-slate-600 mt-2"></div>
-                          </div>
-                          <div className="pt-1">
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-1">
-                              Wybierz kurs
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Programy rozwojowe i szkolenia
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex flex-col items-center">
-                            <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-sm font-medium">
-                              2
-                            </div>
-                            <div className="w-0.5 h-8 bg-slate-200 dark:bg-slate-600 mt-2"></div>
-                          </div>
-                          <div className="pt-1">
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-1">
-                              Dołącz do Lifehackerów
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Zamknięta grupa moich klientów
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start gap-4">
-                          <div className="flex flex-col items-center">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-sm font-medium">
-                              3
-                            </div>
-                          </div>
-                          <div className="pt-1">
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-1">
-                              Pracuj ze mną 1:1
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Mentoring indywidualny
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Column 2: Wszystkie Możliwości (420px) */}
-                    <div className="w-[420px] p-6">
-                      <div className="mb-6">
-                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
-                          WSZYSTKIE MOŻLIWOŚCI
-                        </h3>
-                      </div>
-                      
-                      <div className="space-y-1">
-                        <Link 
-                          to="/program" 
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center mr-3">
-                            <Book size={18} className="text-slate-500 dark:text-slate-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-0.5">
-                              Programy rozwojowe
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Kursy online i szkolenia
-                            </p>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/podcasts" 
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center mr-3">
-                            <Headphones size={18} className="text-slate-500 dark:text-slate-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-0.5">
-                              Krótkie treści
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Podcasty i 300+ vlogów
-                            </p>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/community" 
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center mr-3">
-                            <Users size={18} className="text-slate-500 dark:text-slate-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-0.5">
-                              Ludzie
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Społeczność Lifehackerów
-                            </p>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/newsletter" 
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center mr-3">
-                            <Mail size={18} className="text-slate-500 dark:text-slate-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-0.5">
-                              Newsletter
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Moje przemyślenia
-                            </p>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/webinar" 
-                          className="flex items-center p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="w-10 h-10 flex items-center justify-center mr-3">
-                            <Video size={18} className="text-slate-500 dark:text-slate-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-0.5">
-                              Wydarzenia na żywo
-                            </h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">
-                              Sesje live i masterclassy
-                            </p>
-                          </div>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Column 3: Strefa Lifehackerów (260px) */}
-                    <div className="w-[260px] p-6 bg-slate-50 dark:bg-slate-800/50 border-l border-slate-200 dark:border-slate-700">
-                      <div className="mb-6">
-                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
-                          STREFA LIFEHACKERÓW
-                        </h3>
-                      </div>
-                      
-                      <div className="bg-luminous-white dark:bg-deep-space border border-slate-200 dark:border-slate-700 rounded-lg p-4">
-                        <div className="flex items-center mb-4">
-                          <div className="w-8 h-8 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center mr-3">
-                            <Lock size={14} className="text-amber-600 dark:text-amber-400" />
-                          </div>
-                          <div>
-                            <h4 className="font-medium text-slate-900 dark:text-slate-100">
-                              Dla członków
-                            </h4>
-                          </div>
+              <div className="fixed inset-x-0 top-full z-50 pt-1">
+                <div className="bg-luminous-white dark:bg-deep-space shadow-xl border-t border-slate-200 dark:border-slate-700 min-h-[90vh] overflow-y-auto">
+                  {/* Desktop Layout - Almost Fullscreen */}
+                  <div className="hidden lg:block max-w-7xl mx-auto px-12 py-16">
+                    <div className="grid grid-cols-3 gap-20">
+                      {/* Column 1: Twoja Ścieżka */}
+                      <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                        <div className="mb-8">
+                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+                            TWOJA ŚCIEŻKA
+                          </h3>
+                          <p className="text-base text-slate-600 dark:text-slate-300">
+                            3 kroki do transformacji
+                          </p>
                         </div>
                         
-                        <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
-                          Witaj z powrotem!
-                        </p>
+                        <div className="space-y-8">
+                          <div className="flex items-start gap-6">
+                            <div className="flex flex-col items-center">
+                              <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-base font-medium">
+                                1
+                              </div>
+                              <div className="w-0.5 h-12 bg-slate-200 dark:bg-slate-600 mt-3"></div>
+                            </div>
+                            <div className="pt-2">
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
+                                Wybierz kurs
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Programy rozwojowe i szkolenia
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-6">
+                            <div className="flex flex-col items-center">
+                              <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-base font-medium">
+                                2
+                              </div>
+                              <div className="w-0.5 h-12 bg-slate-200 dark:bg-slate-600 mt-3"></div>
+                            </div>
+                            <div className="pt-2">
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
+                                Dołącz do Lifehackerów
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Zamknięta grupa moich klientów
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-6">
+                            <div className="flex flex-col items-center">
+                              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-base font-medium">
+                                3
+                              </div>
+                            </div>
+                            <div className="pt-2">
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
+                                Pracuj ze mną 1:1
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Mentoring indywidualny
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Column 2: Wszystkie Możliwości */}
+                      <div className="p-8">
+                        <div className="mb-8">
+                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+                            WSZYSTKIE MOŻLIWOŚCI
+                          </h3>
+                        </div>
                         
-                        <div className="space-y-2">
-                          <a 
-                            href="https://portal.siadlak.com" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-sm"
+                        <div className="space-y-4">
+                          <Link 
+                            to="/program" 
+                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
                           >
-                            <Home size={14} className="text-slate-500 dark:text-slate-400 mr-2" />
-                            <span className="text-slate-700 dark:text-slate-300">Portal Lifehackerów</span>
-                          </a>
+                            <div className="w-12 h-12 flex items-center justify-center mr-4">
+                              <Book size={22} className="text-slate-500 dark:text-slate-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
+                                Programy rozwojowe
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Kursy online i szkolenia
+                              </p>
+                            </div>
+                          </Link>
+
+                          <Link 
+                            to="/podcasts" 
+                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="w-12 h-12 flex items-center justify-center mr-4">
+                              <Headphones size={22} className="text-slate-500 dark:text-slate-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
+                                Krótkie treści
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Podcasty i 300+ vlogów
+                              </p>
+                            </div>
+                          </Link>
+
+                          <Link 
+                            to="/community" 
+                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="w-12 h-12 flex items-center justify-center mr-4">
+                              <Users size={22} className="text-slate-500 dark:text-slate-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
+                                Ludzie
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Społeczność Lifehackerów
+                              </p>
+                            </div>
+                          </Link>
+
+                          <Link 
+                            to="/newsletter" 
+                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="w-12 h-12 flex items-center justify-center mr-4">
+                              <Mail size={22} className="text-slate-500 dark:text-slate-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
+                                Newsletter
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Moje przemyślenia
+                              </p>
+                            </div>
+                          </Link>
+
+                          <Link 
+                            to="/webinar" 
+                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="w-12 h-12 flex items-center justify-center mr-4">
+                              <Video size={22} className="text-slate-500 dark:text-slate-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
+                                Wydarzenia na żywo
+                              </h4>
+                              <p className="text-base text-slate-600 dark:text-slate-400">
+                                Sesje live i masterclassy
+                              </p>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Column 3: Strefa Lifehackerów */}
+                      <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                        <div className="mb-8">
+                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
+                            STREFA LIFEHACKERÓW
+                          </h3>
+                        </div>
+                        
+                        <div className="bg-luminous-white dark:bg-deep-space border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+                          <div className="flex items-center mb-6">
+                            <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center mr-4">
+                              <Lock size={18} className="text-amber-600 dark:text-amber-400" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100">
+                                Dla członków
+                              </h4>
+                            </div>
+                          </div>
                           
-                          <a 
-                            href="/discord" 
-                            className="flex items-center p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-sm"
-                          >
-                            <Calendar size={14} className="text-slate-500 dark:text-slate-400 mr-2" />
-                            <span className="text-slate-700 dark:text-slate-300">12:34 Daily Coaching</span>
-                          </a>
+                          <p className="text-base text-slate-600 dark:text-slate-400 mb-6">
+                            Witaj z powrotem!
+                          </p>
                           
-                          <a 
-                            href="/zasoby" 
-                            className="flex items-center p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-sm"
-                          >
-                            <FileText size={14} className="text-slate-500 dark:text-slate-400 mr-2" />
-                            <span className="text-slate-700 dark:text-slate-300">Protipy</span>
-                          </a>
+                          <div className="space-y-3">
+                            <a 
+                              href="https://portal.siadlak.com" 
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                            >
+                              <Home size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
+                              <span className="text-slate-700 dark:text-slate-300">Portal Lifehackerów</span>
+                            </a>
+                            
+                            <a 
+                              href="/discord" 
+                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                            >
+                              <Calendar size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
+                              <span className="text-slate-700 dark:text-slate-300">12:34 Daily Coaching</span>
+                            </a>
+                            
+                            <a 
+                              href="/zasoby" 
+                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                            >
+                              <FileText size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
+                              <span className="text-slate-700 dark:text-slate-300">Protipy</span>
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
