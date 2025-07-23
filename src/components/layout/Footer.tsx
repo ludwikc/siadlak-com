@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Instagram,
-  X,
   Linkedin,
   Youtube,
   Users,
 } from "lucide-react";
+import XIcon from "../ui/x-icon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -41,7 +41,7 @@ export default function Footer() {
                 className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors"
                 aria-label="X (formerly Twitter)"
               >
-                <X size={20} />
+                <XIcon size={20} />
               </a>
               <a
                 href="https://linkedin.com/in/ludwikc"
