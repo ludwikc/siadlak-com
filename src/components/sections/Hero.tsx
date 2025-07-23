@@ -69,7 +69,8 @@ export default function Hero({
   return (
     <section
       className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center ${shouldApplyLockedClasses ? 'section-locked' : ''}`}
-      aria-label="Hero section"
+      aria-labelledby="hero-title"
+      role="banner"
     >
 
       {/* Background Image (if provided) */}
@@ -104,6 +105,7 @@ export default function Hero({
           `}
           >
             <h1
+              id="hero-title"
               className={`
               mb-6 font-heading font-bold !leading-tight animate-fade-in text-white
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
