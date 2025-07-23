@@ -53,21 +53,14 @@ export default function Hero({
     ? false
     : theme === "light" || theme === "dev-light";
 
-  // Determine background classes
+  // Determine background classes - simplified to match /newsletter and /program
   const getBackgroundClasses = () => {
     if (backgroundImage || heroImage) {
       return "";
     }
     
-    if (isThemeLockedPage) {
-      // Always use dark gradient for theme-locked pages
-      return "bg-gradient-locked-hero";
-    }
-    
-    // Theme-adaptive backgrounds for regular pages
-    return isLightMode
-      ? "bg-gradient-to-r from-neural-violet to-ascension-pink relative"
-      : "bg-gradient-to-br from-deep-space to-quantum-blue";
+    // Use the same gradient for all pages unless background image provided
+    return "bg-gradient-to-br from-deep-space to-quantum-blue";
   };
 
   // Determine if we should apply locked classes
@@ -78,13 +71,6 @@ export default function Hero({
       className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center ${shouldApplyLockedClasses ? 'section-locked' : ''}`}
       aria-label="Hero section"
     >
-      {/* Add a lighter overlay in light mode for theme-adaptive sections only */}
-      {isLightMode &&
-        !backgroundImage &&
-        !heroImage &&
-        !isThemeLockedPage && (
-          <div className="absolute inset-0 bg-luminous-white/30 z-0"></div>
-        )}
 
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
@@ -122,30 +108,18 @@ export default function Hero({
           >
             <h1
               className={`
-              mb-6 font-bold !leading-tight animate-fade-in
+              mb-6 font-bold !leading-tight animate-fade-in text-white
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
-              ${
-                isThemeLockedPage
-                  ? "text-locked-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-                  : isLightMode
-                    ? "text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent"
-                    : "text-locked-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-              }`}
+              `}
             >
               {title}
             </h1>
 
             <p
               className={`
-              mb-10 mx-auto animate-fade-in
+              mb-10 mx-auto animate-fade-in text-white/90
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl" : "text-xl md:text-2xl max-w-lg"}
-              ${
-                isThemeLockedPage
-                  ? "text-locked-silver drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-                  : isLightMode
-                    ? "text-deep-charcoal"
-                    : "text-locked-silver drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
-              }`}
+              `}
               style={{ animationDelay: "0.2s" }}
             >
               {subtitle}
@@ -165,27 +139,15 @@ export default function Hero({
                 className={`${isMobile ? "w-full" : ""}`}
               >
                 <Button
-                  variant={
-                    isThemeLockedPage
-                      ? "special"
-                      : isLightMode
-                        ? "default"
-                        : "special"
-                  }
+                  variant="special"
                   className={`
-                    ${
-                      isThemeLockedPage
-                        ? "btn-locked-primary"
-                        : isLightMode
-                          ? "bg-luminous-white text-neural-violet"
-                          : "btn-locked-primary"
-                    }
+                    btn-locked-primary
                     ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                   `}
                   size={isMobile ? "default" : "lg"}
                 >
                   {ctaText}
-                  <ArrowRight size={18} className={isThemeLockedPage || (!isLightMode) ? "text-neural-violet" : ""} />
+                  <ArrowRight size={18} className="text-neural-violet" />
                 </Button>
               </Link>
 
@@ -199,13 +161,7 @@ export default function Hero({
                   <Button
                     variant="secondary"
                     className={`
-                      ${
-                        isThemeLockedPage
-                          ? "btn-locked-secondary"
-                          : isLightMode
-                            ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90"
-                            : "btn-locked-secondary"
-                      }
+                      btn-locked-secondary
                       ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                     `}
                     size={isMobile ? "default" : "lg"}
