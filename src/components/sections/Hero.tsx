@@ -1,5 +1,3 @@
-
-
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -40,7 +38,7 @@ export default function Hero({
     }
     
     // Light gradient in light mode, dark gradient in dark mode
-    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-neural-violet";
+    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-quantum-blue";
   };
 
   // Use dark text on light background
@@ -173,4 +171,3 @@ export default function Hero({
     </section>
   );
 }
-
