@@ -84,12 +84,9 @@ export default function Hero({
         </div>
       )}
 
-      {/* Background Decoration */}
+      {/* Background Decoration - simplified to match /newsletter and /program */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet/30 dark:to-ascension-pink/30 rounded-full blur-3xl"></div>
-        {!backgroundImage && !heroImage && (
-          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-secondary/80 to-transparent dark:from-deep-space/80 pointer-events-none"></div>
-        )}
+        {/* Removed decorative elements to match clean /newsletter and /program background */}
       </div>
 
       <div
