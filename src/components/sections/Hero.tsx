@@ -33,22 +33,22 @@ export default function Hero({
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Use same gradient as Header logo
+  // Use light background with dark text for better readability
   const getBackgroundClasses = () => {
     if (backgroundImage) {
       return "";
     }
     
-    // Same gradient as Header logo
-    return "bg-gradient-to-r from-neural-violet to-ascension-pink dark:from-silver-mist dark:to-luminal-magenta";
+    // Light gradient background that works across all themes
+    return "bg-gradient-to-br from-white to-purple-50";
   };
 
-  // Use white text on gradient background
+  // Use dark text on light background
   const getTextClasses = () => {
     if (backgroundImage) {
       return "text-white";
     }
-    return "text-white";
+    return "text-deep-charcoal";
   };
 
   return (
