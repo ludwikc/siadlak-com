@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, FileText } from "lucide-react";
@@ -11,14 +11,19 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   // Hover handlers for dropdown with delay
+  const timeoutRef = useRef<NodeJS.Timeout>();
+  
   const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setIsDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 300);
+    }, 200);
   };
   
   // Handle scroll effect
@@ -81,13 +86,17 @@ export default function Header() {
             
             {/* Simplified Mega Menu */}
             {isDropdownOpen && (
-              <div className="fixed left-0 right-0 top-full pt-3 z-50">
-                <div className="mx-auto max-w-[95vw] bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden">
+              <div 
+                className="fixed left-0 right-0 top-full pt-3 z-50"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div className="mx-auto max-w-[95vw] bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden">
                   {/* Desktop Layout - 3 columns, responsive width */}
                   <div className="hidden lg:flex max-w-[1060px] w-full mx-auto">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) - Information Only */}
-                    <div className="flex-[280] min-w-0 p-6">
-                      <div className="journey-header mb-6">
+                    <div className="flex-[280] min-w-0 p-4">
+                      <div className="journey-header mb-4">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
                           Twoja ścieżka rozwoju
                         </h3>
@@ -96,7 +105,7 @@ export default function Header() {
                         </p>
                       </div>
                       
-                      <div className="journey-steps space-y-8">
+                      <div className="journey-steps space-y-6">
                         <div className="step-item flex items-start">
                           <div className="step-visual flex flex-col items-center mr-4">
                             <div className="step-number w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
@@ -150,9 +159,9 @@ export default function Header() {
                     </div>
 
                     {/* Column 2: Możliwości Cards (480px) */}
-                    <div className="flex-[480] min-w-0 p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
-                      <div className="possibilities-header mb-6">
-                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
+                    <div className="flex-[480] min-w-0 p-8 border-l border-slate-200 dark:border-silver-mist/10">
+                      <div className="possibilities-header mb-8">
+                        <h3 className="text-xl font-semibold text-deep-charcoal dark:text-silver-mist">
                           Wszystkie możliwości
                         </h3>
                       </div>
@@ -161,7 +170,7 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-4 bg-secondary/30 dark:bg-secondary/20 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/30 transition-all duration-200 group border border-silver-mist/20 dark:border-silver-mist/10"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
@@ -181,7 +190,7 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-4 bg-secondary/30 dark:bg-secondary/20 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/30 transition-all duration-200 group border border-silver-mist/20 dark:border-silver-mist/10"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
@@ -201,7 +210,7 @@ export default function Header() {
 
                         <Link 
                           to="/community" 
-                          className="nav-card block p-4 bg-secondary/30 dark:bg-secondary/20 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/30 transition-all duration-200 group border border-silver-mist/20 dark:border-silver-mist/10"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
@@ -223,7 +232,7 @@ export default function Header() {
                         <div className="grid grid-cols-2 gap-3">
                           <Link 
                             to="/podcasts" 
-                            className="nav-card block p-3 bg-secondary/30 dark:bg-secondary/20 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/30 transition-all duration-200 group border border-silver-mist/20 dark:border-silver-mist/10"
+                            className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <div className="text-center">
@@ -241,7 +250,7 @@ export default function Header() {
 
                           <Link 
                             to="/newsletter" 
-                            className="nav-card block p-3 bg-secondary/30 dark:bg-secondary/20 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/30 transition-all duration-200 group border border-silver-mist/20 dark:border-silver-mist/10"
+                            className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <div className="text-center">
@@ -261,11 +270,11 @@ export default function Header() {
                     </div>
 
                     {/* Column 3: Strefa Lifehackerów (280px) - Different Background */}
-                    <div className="flex-[280] min-w-0 p-6 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-neural-violet/10 dark:to-ascension-pink/10">
+                    <div className="flex-[280] min-w-0 p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 border-l border-slate-200 dark:border-silver-mist/10">
                       <div className="members-zone">
-                        <div className="members-header flex items-center mb-5">
-                          <div className="lock-icon w-8 h-8 flex items-center justify-center bg-amber-100 dark:bg-amber-900/30 rounded-lg mr-3">
-                            <Lock size={16} className="text-amber-600 dark:text-amber-400" />
+                        <div className="members-header flex items-center mb-4">
+                          <div className="lock-icon w-8 h-8 flex items-center justify-center bg-amber-50 dark:bg-amber-900/30 rounded-lg mr-3 border border-amber-200 dark:border-amber-700">
+                            <Lock size={16} className="text-amber-700 dark:text-amber-400" />
                           </div>
                           <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
                             Strefa Lifehackerów
@@ -282,7 +291,7 @@ export default function Header() {
                               href="https://portal.siadlak.com" 
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="member-link flex items-center p-3 bg-luminous-white dark:bg-deep-space/80 rounded-lg hover:bg-secondary/30 dark:hover:bg-secondary/20 transition-all duration-200 group"
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             >
                               <Home size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
                               <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
@@ -292,7 +301,7 @@ export default function Header() {
                             
                             <a 
                               href="/discord" 
-                              className="member-link flex items-center p-3 bg-luminous-white dark:bg-deep-space/80 rounded-lg hover:bg-secondary/30 dark:hover:bg-secondary/20 transition-all duration-200 group"
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             >
                               <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
                               <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
@@ -302,7 +311,25 @@ export default function Header() {
                             
                             <a 
                               href="/zasoby" 
-                              className="member-link flex items-center p-3 bg-luminous-white dark:bg-deep-space/80 rounded-lg hover:bg-secondary/30 dark:hover:bg-secondary/20 transition-all duration-200 group"
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                            >
+                              <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
+                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Protipy
+                              </span>
+                            </a> 
+                            <a 
+                              href="/zasoby" 
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                            >
+                              <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
+                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Protipy
+                              </span>
+                            </a> 
+                            <a 
+                              href="/zasoby" 
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             >
                               <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
                               <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
@@ -325,7 +352,7 @@ export default function Header() {
                         <div className="space-y-4">
                           <Link 
                             to="/program" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <span className="w-6 h-6 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">1</span>
@@ -334,7 +361,7 @@ export default function Header() {
 
                           <Link 
                             to="/community" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <span className="w-6 h-6 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">2</span>
@@ -343,7 +370,7 @@ export default function Header() {
 
                           <Link 
                             to="/contact" 
-                            className="flex items-center p-3 bg-ascension-pink/10 dark:bg-luminal-magenta/10 rounded-lg hover:bg-ascension-pink/20 dark:hover:bg-luminal-magenta/20 transition-colors"
+                            className="flex items-center p-3 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/5 dark:from-luminal-magenta/10 dark:to-neural-violet/10 rounded-lg hover:from-ascension-pink/20 hover:to-neural-violet/10 dark:hover:from-luminal-magenta/20 dark:hover:to-neural-violet/20 transition-colors border border-ascension-pink/20 dark:border-luminal-magenta/20 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <span className="w-6 h-6 bg-ascension-pink text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">3</span>
@@ -353,13 +380,13 @@ export default function Header() {
                       </div>
 
                       {/* Column 2: Główna nawigacja */}
-                      <div className="flex-1 min-w-0 p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                      <div className="flex-1 min-w-0 p-6 border-l border-slate-200 dark:border-silver-mist/10">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Możliwości</h3>
                         
                         <div className="space-y-2">
                           <Link 
                             to="/program" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <Book size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -368,7 +395,7 @@ export default function Header() {
 
                           <Link 
                             to="/podcasts" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <Headphones size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -377,7 +404,7 @@ export default function Header() {
 
                           <Link 
                             to="/community" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <Users size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -386,7 +413,7 @@ export default function Header() {
 
                           <Link 
                             to="/newsletter" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <Mail size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -395,7 +422,7 @@ export default function Header() {
 
                           <Link 
                             to="/webinar" 
-                            className="flex items-center p-3 rounded-lg hover:bg-secondary/50 dark:hover:bg-secondary/20 transition-colors"
+                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
                             <Video size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
