@@ -577,8 +577,8 @@ const CourseDetail = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button
-                  variant="default"
-                  className="bg-white text-neural-violet hover:bg-white/90"
+                  variant="outline"
+                  className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
                 >
                   Apply Now
                   <ArrowRight className="h-4 w-4" />

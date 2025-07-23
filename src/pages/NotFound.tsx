@@ -26,7 +26,7 @@ const NotFound = () => {
           </p>
 
           <Link to="/">
-            <Button variant="default">
+            <Button variant="secondary">
               <Home size={18} />
               Strona główna
             </Button>

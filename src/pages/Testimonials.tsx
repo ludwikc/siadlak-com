@@ -208,8 +208,8 @@ const Testimonials = () => {
 
             <Link to="/contact">
               <Button
-                variant="default"
-                className="bg-white text-neural-violet hover:bg-white/90"
+                variant="outline"
+                className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
               >
                 Book a Discovery Call
                 <ArrowRight className="h-4 w-4" />

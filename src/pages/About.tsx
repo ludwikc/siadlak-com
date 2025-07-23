@@ -45,7 +45,7 @@ const About = () => {
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button
-                variant="default"
+                variant="secondary"
                 className="animate-fade-in"
                 style={{ animationDelay: "0.4s" }}
               >
@@ -178,7 +178,7 @@ const About = () => {
 
               <div className="mt-8">
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                  <Button variant="default">
+                  <Button variant="secondary">
                     Umów rozmowę
                     <Calendar className="h-4 w-4" />
                   </Button>
@@ -262,8 +262,8 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
                 <Button
-                  variant="default"
-                  className="bg-white text-neural-violet hover:bg-white/90"
+                  variant="outline"
+                  className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
                 >
                   Poczytaj moje aktualne przemyślenia
                   <Mail className="h-4 w-4" />

@@ -17,7 +17,7 @@ export default function CommunityCallToAction({
     return (
       <div className={`flex flex-col items-center space-y-4 ${className}`}>
         <Link to="/community" onClick={() => window.scrollTo(0, 0)}>
-          <Button variant="default">
+          <Button variant="secondary">
             <Users size={18} />
             <span>Dołącz do Społeczności Lifehackerów</span>
           </Button>
@@ -46,7 +46,7 @@ export default function CommunityCallToAction({
         </p>
 
         <Link to="/community" onClick={() => window.scrollTo(0, 0)}>
-          <Button variant="default">
+          <Button variant="secondary">
             <Users size={18} />
             <span>Odkryj nasze cyfrowe miasto</span>
           </Button>

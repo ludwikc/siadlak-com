@@ -28,7 +28,7 @@ export default function CTASection({
 
           <Link to={buttonLink}>
             <Button
-              variant="default"
+              variant="secondary"
               size="lg"
               className="btn-locked-primary"
             >
