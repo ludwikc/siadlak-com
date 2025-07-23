@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { ThemeProvider, useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/ThemeContext";
 import { useLocation } from "react-router-dom";
 
 interface LayoutProps {
@@ -50,9 +50,5 @@ function LayoutContent({ children }: LayoutProps) {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  return (
-    <ThemeProvider>
-      <LayoutContent children={children} />
-    </ThemeProvider>
-  );
+  return <LayoutContent children={children} />;
 }
