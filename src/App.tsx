@@ -16,20 +16,18 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/newsletter" element={<Newsletter />} />
-            
-            <Route path="/programs" element={<Courses />} />
-            <Route path="/programs/:courseSlug" element={<CourseDetail />} />
-            <Route path="/programs/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/newsletter" element={<Newsletter />} />
+          
+          <Route path="/programs" element={<Courses />} />
+          <Route path="/programs/:courseSlug" element={<CourseDetail />} />
+          <Route path="/programs/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
+          
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Router>
     </QueryClientProvider>
   );
