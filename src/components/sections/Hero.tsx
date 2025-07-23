@@ -105,7 +105,7 @@ export default function Hero({
           >
             <h1
               className={`
-              mb-6 font-bold !leading-tight animate-fade-in text-white
+              mb-6 font-heading font-bold !leading-tight animate-fade-in text-white
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               `}
             >
