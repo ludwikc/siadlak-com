@@ -18,27 +18,49 @@
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
   /* Design System Variables */
-  --background-primary: #f2f3f5;
-  --background-secondary: #e3e5e8;
-  --background-tertiary: #ebedef;
-  --text-primary: #2e3338;
-  --text-secondary: #4f545c;
-  --border-primary: #d4d7dc;
+  --background-primary: 242 243 245;
+  --background-secondary: 227 229 232;
+  --background-tertiary: 235 237 239;
+  --text-primary: 46 51 56;
+  --text-secondary: 79 84 92;
+  --border-primary: 212 215 220;
   --border-subtle: rgba(0, 0, 0, 0.1);
 
-  /* Brand Colors */
-  --color-primary: #7c00ff;
-  --color-primary-light: #b100ff;
-  --color-primary-dark: #4a36c2;
-  --color-accent: #c961e3;
-  --color-indigo: #383b6c;
-  --color-premium: #d4af37;
+  /* Brand Colors - HSL values */
+  --color-primary: 267 100% 50%;
+  --color-primary-light: 267 100% 65%;
+  --color-primary-dark: 249 56% 49%;
+  --color-accent: 291 62% 64%;
+  --color-indigo: 233 31% 32%;
+  --color-premium: 45 74% 52%;
 
   /* UI States - WCAG AA compliant with white text */
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
-  --color-info: #4a36c2;
+  --color-success: 160 84% 39%;
+  --color-warning: 25 95% 53%;
+  --color-error: 0 84% 60%;
+  --color-info: 249 56% 49%;
+
+  /* Shadcn/UI variables */
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+  --primary: 267 100% 50%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 9% 46%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 220 9% 46%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 267 100% 50%;
+  --radius: 0.5rem;
 
   /* Typography */
   --font-family-primary: "Inter", sans-serif;
@@ -73,14 +95,35 @@
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 
-  /* Design System Dark Mode Variables */
-  --background-primary: #1e1f22;
-  --background-secondary: #2b2d31;
-  --background-tertiary: #313338;
-  --text-primary: #b5bac1;
-  --text-secondary: #a0a5ac;
-  --border-primary: #3f4147;
+  /* Design System Dark Mode Variables - HSL values */
+  --background-primary: 216 9% 11%;
+  --background-secondary: 217 10% 18%;
+  --background-tertiary: 215 9% 20%;
+  --text-primary: 220 9% 72%;
+  --text-secondary: 215 8% 65%;
+  --border-primary: 216 8% 25%;
   --border-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Shadcn/UI Dark Mode */
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --card: 224 71% 4%;
+  --card-foreground: 213 31% 91%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 213 31% 91%;
+  --primary: 267 100% 50%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 28% 17%;
+  --muted-foreground: 217 10% 64%;
+  --accent: 215 28% 17%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 215 28% 17%;
+  --input: 215 28% 17%;
+  --ring: 267 100% 50%;
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);

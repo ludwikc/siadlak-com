@@ -57,7 +57,7 @@ const config: Config = {
         "subtle-slate": "#79788C",
         "luminous-white": "#F9F9FB",
         "deep-charcoal": "#2B2B33",
-        "gentle-lavender": "#A9A8BD",
+        "gentle-lavender": "#C9C9D6", // Improved contrast - was #A9A8BD
         
         // Shadcn/UI Colors
         border: "hsl(var(--border))",
