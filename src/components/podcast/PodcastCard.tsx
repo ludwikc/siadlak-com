@@ -1,5 +1,5 @@
 
-
+import { Link } from 'react-router-dom';
 
 import { ArrowRight } from 'lucide-react';
 
@@ -19,7 +19,7 @@ const PodcastCard = ({
   schedule,
 }: PodcastCardProps) => {
   return (
-    <a href={link} className="block h-full" target="_blank" rel="noopener noreferrer">
+    <Link to={link} className="block h-full">
       <div className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
           <img
@@ -52,7 +52,7 @@ const PodcastCard = ({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
