@@ -9,6 +9,7 @@ import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
 import Community from './pages/Community';
 import Podcasts from './pages/Podcasts';
+import NewPodcast from './pages/NewPodcast';
 import LifeHackingPodcast from './pages/LifeHackingPodcast';
 import UwazneZyciePodcast from './pages/UwazneZyciePodcast';
 import Webinar from './pages/Webinar';
@@ -53,6 +54,7 @@ function App() {
           <Route path="/program/mental-elevator" element={<MentalElevator />} />
           
           <Route path="/podcast" element={<Podcasts />} />
+          <Route path="/new-podcast" element={<NewPodcast />} />
           <Route path="/podcast/life-hacking" element={<LifeHackingPodcast />} />
           <Route path="/podcast/uwazne-zycie" element={<UwazneZyciePodcast />} />
           
