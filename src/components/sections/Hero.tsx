@@ -1,5 +1,3 @@
-
-
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -72,13 +70,13 @@ export default function Hero({
         className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}
       >
         <div
-          className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${fullHeight ? "h-full" : ""} ${isUwazneZyciePage ? "justify-end" : ""}`}
+          className={`flex ${isMobile ? "flex-col" : "flex-row"} ${fullHeight && !isUwazneZyciePage ? "items-center h-full" : fullHeight && isUwazneZyciePage ? "items-start pt-20 h-full" : "items-center"} ${isUwazneZyciePage ? "justify-end" : ""}`}
         >
           {/* Left column - Text content (2/3 width on desktop) */}
           <div
             className={`
-            ${isMobile ? "w-full text-center order-1 mb-8" : isUwazneZyciePage ? "w-1/2 pl-8 text-right" : "w-2/3 pr-8"} 
-            ${fullHeight ? "flex flex-col justify-center" : ""}
+            ${isMobile ? "w-full text-center order-1 mb-8" : isUwazneZyciePage ? "w-1/2 pr-16 text-right" : "w-2/3 pr-8"} 
+            ${fullHeight && !isUwazneZyciePage ? "flex flex-col justify-center" : ""}
             ${location.pathname === "/" ? "text-center" : isUwazneZyciePage ? "text-right" : "text-left"}
           `}
           >
@@ -172,4 +170,3 @@ export default function Hero({
     </section>
   );
 }
-
