@@ -238,11 +238,14 @@ export default function HakowanieProduktywnosci() {
                   "wzmocni Twoją siłę mentalną i odporność na presję",
                   "nauczy Cię, jak odpoczywać tak, żeby faktycznie się zregenerować"
                 ].map((benefit, index) => (
-                  <Card key={index} className="glass-card border-l-4 border-l-color-success">
-                    <CardContent className="p-4">
+                  <Card key={index} className="group glass-card border-0 bg-gradient-to-br from-color-success/5 to-color-success/10 hover:from-color-success/10 hover:to-color-success/15 hover:shadow-xl hover:shadow-color-success/10 transition-all duration-300 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-color-success/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <CardContent className="p-4 relative z-10">
                       <div className="flex items-start">
-                        <CheckCircle2 className="h-5 w-5 text-color-success mr-3 flex-shrink-0 mt-1" />
-                        <p className="text-text-secondary">{benefit}</p>
+                        <div className="flex-shrink-0 w-8 h-8 bg-color-success/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-color-success/20 transition-colors duration-300">
+                          <CheckCircle2 className="h-4 w-4 text-color-success group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 leading-relaxed">{benefit}</p>
                       </div>
                     </CardContent>
                   </Card>
