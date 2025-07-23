@@ -1,5 +1,4 @@
 
-
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -35,40 +34,52 @@ export default function Hero({
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Check if current page is Podcasts or Community
+  // Check if current page is Podcasts, Community, or other pages that should be theme-locked
   const isPodcastsOrCommunity =
     location.pathname === "/podcasts" ||
     location.pathname === "/community" ||
     location.pathname.includes("/podcasts/") ||
     location.pathname.includes("/community/");
 
-  // For Podcasts and Community pages, always use dark mode styling
-  // For other pages, use the theme-based styling
-  const isLightMode = isPodcastsOrCommunity
+  // Check if this is a sales page or special page that should be theme-locked
+  const isThemeLockedPage = 
+    location.pathname.includes("/programs/") ||
+    location.pathname.includes("/webinar") ||
+    isPodcastsOrCommunity;
+
+  // For theme-locked pages, always use dark styling
+  // For other pages, use theme-based styling
+  const isLightMode = isThemeLockedPage
     ? false
     : theme === "light" || theme === "dev-light";
 
-  // Define a more accessible gradient for light mode with better contrast
-  const lightModeGradient =
-    "bg-gradient-to-r from-neural-violet to-ascension-pink relative";
-  const darkModeGradient = "bg-gradient-to-br from-deep-space to-quantum-blue";
+  // Determine background classes
+  const getBackgroundClasses = () => {
+    if (backgroundImage || heroImage) {
+      return "";
+    }
+    
+    if (isThemeLockedPage) {
+      // Always use dark gradient for theme-locked pages
+      return "bg-gradient-locked-hero";
+    }
+    
+    // Theme-adaptive backgrounds for regular pages
+    return isLightMode
+      ? "bg-gradient-to-r from-neural-violet to-ascension-pink relative"
+      : "bg-gradient-to-br from-deep-space to-quantum-blue";
+  };
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${
-        backgroundImage || heroImage
-          ? ""
-          : isLightMode
-            ? lightModeGradient
-            : darkModeGradient
-      } flex items-center`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center`}
       aria-label="Hero section"
     >
-      {/* Add a lighter overlay in light mode for better gradient text visibility */}
+      {/* Add a lighter overlay in light mode for theme-adaptive sections only */}
       {isLightMode &&
         !backgroundImage &&
         !heroImage &&
-        !isPodcastsOrCommunity && (
+        !isThemeLockedPage && (
           <div className="absolute inset-0 bg-luminous-white/30 z-0"></div>
         )}
 
@@ -111,9 +122,11 @@ export default function Hero({
               mb-6 font-bold !leading-tight animate-fade-in
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               ${
-                isLightMode && !isPodcastsOrCommunity
-                  ? "text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent"
-                  : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                isThemeLockedPage
+                  ? "text-locked-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                  : isLightMode
+                    ? "text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent"
+                    : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
               }`}
             >
               {title}
@@ -124,9 +137,11 @@ export default function Hero({
               mb-10 mx-auto animate-fade-in
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl" : "text-xl md:text-2xl max-w-lg"}
               ${
-                isLightMode && !isPodcastsOrCommunity
-                  ? "text-deep-charcoal"
-                  : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                isThemeLockedPage
+                  ? "text-locked-silver drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                  : isLightMode
+                    ? "text-deep-charcoal"
+                    : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
               }`}
               style={{ animationDelay: "0.2s" }}
             >
@@ -148,12 +163,20 @@ export default function Hero({
               >
                 <Button
                   variant={
-                    isLightMode && !isPodcastsOrCommunity
-                      ? "default"
-                      : "special"
+                    isThemeLockedPage
+                      ? "special"
+                      : isLightMode
+                        ? "default"
+                        : "special"
                   }
                   className={`
-                    ${isLightMode && !isPodcastsOrCommunity ? "bg-luminous-white text-neural-violet" : ""}
+                    ${
+                      isThemeLockedPage
+                        ? ""
+                        : isLightMode
+                          ? "bg-luminous-white text-neural-violet"
+                          : ""
+                    }
                     ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                   `}
                   size={isMobile ? "default" : "lg"}
@@ -174,9 +197,11 @@ export default function Hero({
                     variant="secondary"
                     className={`
                       ${
-                        isLightMode && !isPodcastsOrCommunity
-                          ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90"
-                          : "text-white border-white hover:bg-white/20"
+                        isThemeLockedPage
+                          ? "text-white border-white hover:bg-white/20"
+                          : isLightMode
+                            ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90"
+                            : "text-white border-white hover:bg-white/20"
                       }
                       ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                     `}

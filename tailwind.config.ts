@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -258,7 +257,26 @@ const config: Config = {
             border: '1px solid rgba(255, 255, 255, 0.1)',
           },
         },
-        // Theme-agnostic gradient utilities for design-locked sections
+        // Theme-locked gradient utilities - these never change regardless of theme
+        '.bg-gradient-locked-primary': {
+          background: 'linear-gradient(to bottom right, #3B0F77, #B0128C)',
+        },
+        '.bg-gradient-locked-dark': {
+          background: 'linear-gradient(to bottom right, #0A0A0D, #061A40)',
+        },
+        '.bg-gradient-locked-hero': {
+          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)',
+        },
+        '.bg-gradient-locked-hero-complex': {
+          background: 'linear-gradient(to bottom right, #3B0F77 0%, #061A40 50%, #0A0A0D 100%)',
+        },
+        '.bg-gradient-locked-cta': {
+          background: 'linear-gradient(to right, #3B0F77, #B0128C)',
+        },
+        '.bg-gradient-locked-pricing': {
+          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)',
+        },
+        // Theme-adaptive gradient utilities (these were the original ones)
         '.bg-gradient-brand-primary': {
           background: 'linear-gradient(to bottom right, #3B0F77, #B0128C)',
         },
@@ -284,6 +302,19 @@ const config: Config = {
             backgroundClip: 'text',
             '-webkit-background-clip': 'text',
           },
+        },
+        // Text utilities for locked sections
+        '.text-locked-white': {
+          color: '#ffffff',
+        },
+        '.text-locked-silver': {
+          color: '#E1E1E6',
+        },
+        '.text-locked-gradient': {
+          background: 'linear-gradient(to right, #B0128C, #DA1EAE)',
+          backgroundClip: 'text',
+          '-webkit-background-clip': 'text',
+          color: 'transparent',
         },
       });
     },

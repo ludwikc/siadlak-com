@@ -1,4 +1,3 @@
-
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 
@@ -24,8 +23,8 @@ import ValueCalculator from '@/components/sales/ValueCalculator';
 export default function HakowanieProduktywnosci() {
   return (
     <Layout>
-      {/* 2.2. Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space text-white relative overflow-hidden">
+      {/* 2.2. Hero Section - Theme Locked */}
+      <section className="py-16 md:py-24 bg-gradient-locked-hero text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
         
@@ -33,12 +32,12 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
               Jak się wziąć do pracy, przestać odwlekać i utrzymać skupienie{' '}
-              <span className="bg-gradient-to-r from-ascension-pink to-luminal-magenta bg-clip-text text-transparent">
+              <span className="text-locked-gradient">
                 bez przymuszania się?
               </span>
             </h1>
             
-            <h3 className="text-xl md:text-2xl font-medium mb-8 text-silver-mist leading-relaxed">
+            <h3 className="text-xl md:text-2xl font-medium mb-8 text-locked-silver leading-relaxed">
               Poznaj program, który pomoże Ci zbudować żelazną dyscyplinę i utrzymać uwagę, 
               nawet gdy masz gorszy dzień albo życie prywatne wywala Ci plan.
             </h3>
@@ -54,14 +53,14 @@ export default function HakowanieProduktywnosci() {
               </Button>
             </div>
             
-            <p className="text-silver-mist/80 hover:text-ascension-pink transition-colors cursor-pointer underline">
+            <p className="text-locked-silver hover:text-ascension-pink transition-colors cursor-pointer underline">
               Wiem, o co chodzi. Zamawiam od razu
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2.3. Problem Agitation Section */}
+      {/* 2.3. Problem Agitation Section - Theme Adaptive */}
       <section className="py-16 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -103,7 +102,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.4. Enemy/Context Section */}
+      {/* 2.4. Enemy/Context Section - Theme Adaptive */}
       <section className="py-16 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -153,7 +152,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.5. Solution Introduction */}
+      {/* 2.5. Solution Introduction - Theme Adaptive */}
       <section className="py-16 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -192,7 +191,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.6. Benefits/Future Vision */}
+      {/* 2.6. Benefits/Future Vision - Theme Adaptive */}
       <section className="py-16 bg-background-tertiary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -268,7 +267,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.7. Program Modules */}
+      {/* 2.7. Program Modules - Theme Adaptive */}
       <section className="py-16 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -351,7 +350,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.8. Community & Bonuses */}
+      {/* 2.8. Community & Bonuses - Theme Adaptive */}
       <section className="py-16 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -399,8 +398,8 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.9. Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space text-white relative overflow-hidden">
+      {/* 2.9. Pricing Section - Theme Locked */}
+      <section className="py-20 bg-gradient-locked-pricing text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
         
@@ -436,7 +435,7 @@ export default function HakowanieProduktywnosci() {
             
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-4">Ile kosztowało mnie zdobycie tej wiedzy?</h3>
-              <p className="text-lg text-silver-mist/90 mb-6">
+              <p className="text-lg text-locked-silver mb-6">
                 XXXXX zł na kursy, XXXXX zł na książki, XXXXX godzin penelowania badań, 
                 XXXXX lat doświadczenia w pracy z ludźmi. Ty otrzymujesz to wszystko w 6 tygodni.
               </p>
@@ -485,7 +484,7 @@ export default function HakowanieProduktywnosci() {
               <p className="text-lg font-bold text-ascension-pink mb-4">
                 Podejmij akcję już teraz...
               </p>
-              <p className="text-silver-mist/90">
+              <p className="text-locked-silver">
                 Bo jutro będziesz tego samego miejsca co dziś. A za rok? 
                 Nadal będziesz mówić "kiedyś to zrobię".
               </p>
@@ -494,7 +493,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.10. Testimonials */}
+      {/* 2.10. Testimonials - Theme Adaptive */}
       <section className="py-16 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -558,7 +557,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.11. Guarantee */}
+      {/* 2.11. Guarantee - Theme Adaptive */}
       <section className="py-16 bg-gradient-to-r from-color-success/10 to-color-info/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -573,7 +572,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.12. Objections & FAQ */}
+      {/* 2.12. Objections & FAQ - Theme Adaptive */}
       <section className="py-16 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
