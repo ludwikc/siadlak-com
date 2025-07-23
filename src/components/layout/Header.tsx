@@ -81,12 +81,12 @@ export default function Header() {
             
             {/* Simplified Mega Menu */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-3 z-50">
-                <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden">
-                  {/* Desktop Layout - 3 columns, 1060px total */}
-                  <div className="hidden lg:flex w-[1060px]">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-3 z-50 w-screen max-w-[95vw]">
+                <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden w-full">
+                  {/* Desktop Layout - 3 columns, responsive width */}
+                  <div className="hidden lg:flex max-w-[1060px] w-full mx-auto">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) */}
-                    <div className="w-[280px] p-6">
+                    <div className="flex-[280] min-w-0 p-6">
                       <div className="journey-header mb-6">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
                           Twoja ścieżka rozwoju
@@ -150,7 +150,7 @@ export default function Header() {
                     </div>
 
                     {/* Column 2: Możliwości (480px) */}
-                    <div className="w-[480px] p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                    <div className="flex-[480] min-w-0 p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
                       <div className="possibilities-header mb-6">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
                           Wszystkie możliwości
@@ -251,7 +251,7 @@ export default function Header() {
                     </div>
 
                     {/* Column 3: Strefa Lifehackerów (280px) */}
-                    <div className="w-[280px] p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                    <div className="flex-[280] min-w-0 p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
                       <div className="members-zone bg-gradient-to-br from-secondary/30 to-secondary/10 dark:from-secondary/20 dark:to-secondary/5 border border-silver-mist/20 dark:border-silver-mist/10 rounded-xl p-6">
                         <div className="members-header flex items-center mb-5">
                           <div className="lock-icon w-8 h-8 flex items-center justify-center bg-amber-100 dark:bg-amber-900/30 rounded-lg mr-3">
@@ -306,10 +306,10 @@ export default function Header() {
                   </div>
 
                   {/* Tablet Layout - 2 columns */}
-                  <div className="hidden md:block lg:hidden w-[760px]">
+                  <div className="hidden md:block lg:hidden max-w-[760px] w-full mx-auto">
                     <div className="flex">
                       {/* Column 1: Ścieżka rozwoju */}
-                      <div className="w-[380px] p-6">
+                      <div className="flex-1 min-w-0 p-6">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Twoja ścieżka</h3>
                         
                         <div className="space-y-4">
@@ -343,7 +343,7 @@ export default function Header() {
                       </div>
 
                       {/* Column 2: Główna nawigacja */}
-                      <div className="w-[380px] p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                      <div className="flex-1 min-w-0 p-6 border-l border-silver-mist/20 dark:border-silver-mist/10">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Możliwości</h3>
                         
                         <div className="space-y-2">
