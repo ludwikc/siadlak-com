@@ -170,17 +170,22 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-4 bg-gradient-to-br from-red-50 to-red-100/50 dark:from-red-950/30 dark:to-red-900/20 rounded-lg hover:from-red-100 hover:to-red-200/50 dark:hover:from-red-900/40 dark:hover:to-red-800/30 transition-all duration-200 group border border-red-200 dark:border-red-800/30 shadow-sm hover:shadow-md animate-pulse"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content">
-                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Programy rozwojowe
-                              </h4>
+                            <div className="nav-content flex-1">
+                              <div className="flex items-center gap-2 mb-0.5">
+                                <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                  Programy rozwojowe
+                                </h4>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700/50">
+                                  Zacznij tutaj
+                                </span>
+                              </div>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Kursy online i szkolenia
                               </p>
@@ -190,17 +195,22 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 rounded-lg hover:from-blue-100 hover:to-blue-200/50 dark:hover:from-blue-900/40 dark:hover:to-blue-800/30 transition-all duration-200 group border border-blue-200 dark:border-blue-800/30 shadow-sm hover:shadow-md animate-pulse"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content">
-                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Wydarzenia na żywo
-                              </h4>
+                            <div className="nav-content flex-1">
+                              <div className="flex items-center gap-2 mb-0.5">
+                                <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                  Wydarzenia na żywo
+                                </h4>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-700/50">
+                                  Jeszcze dostępne miejsca!
+                                </span>
+                              </div>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Sesje live i masterclassy
                               </p>
