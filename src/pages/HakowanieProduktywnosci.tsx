@@ -80,11 +80,14 @@ export default function HakowanieProduktywnosci() {
                 "masz problemy z utrzymaniem rutyn i nawyków, które chcesz wprowadzić?",
                 "kończy Ci się energia w połowie dnia i dalej pracujesz \"na oparach\"?"
               ].map((problem, index) => (
-                <Card key={index} className="glass-card border-l-4 border-l-color-error hover:shadow-lg transition-all">
-                  <CardContent className="p-6">
+                <Card key={index} className="group glass-card border-0 bg-gradient-to-br from-color-error/5 to-color-error/10 hover:from-color-error/10 hover:to-color-error/15 hover:shadow-xl hover:shadow-color-error/10 transition-all duration-300 hover:scale-105 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-color-error/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <CardContent className="p-6 relative z-10">
                     <div className="flex items-start">
-                      <XCircle className="h-6 w-6 text-color-error mr-3 flex-shrink-0 mt-1" />
-                      <p className="text-text-secondary">{problem}</p>
+                      <div className="flex-shrink-0 w-10 h-10 bg-color-error/10 rounded-full flex items-center justify-center mr-4 group-hover:bg-color-error/20 transition-colors duration-300">
+                        <XCircle className="h-5 w-5 text-color-error group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                      <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 leading-relaxed">{problem}</p>
                     </div>
                   </CardContent>
                 </Card>
