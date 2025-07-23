@@ -1,4 +1,5 @@
 
+
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -32,26 +33,27 @@ export default function Hero({
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Always use dark styling for hero section (like /newsletter and /program)
-  // unless a background image is provided
-  const shouldUseDarkStyling = !backgroundImage && !heroImage;
-
-  // Determine background classes - always use dark gradient unless background image provided
+  // Use light background with dark text for better readability
   const getBackgroundClasses = () => {
-    if (backgroundImage || heroImage) {
+    if (backgroundImage) {
       return "";
     }
     
-    // Always use the dark gradient for consistent styling across all pages
-    return "bg-gradient-to-br from-deep-space to-quantum-blue";
+    // Light gradient background that works across all themes
+    return "bg-gradient-to-br from-white to-purple-50";
   };
 
-  // Apply locked classes when using dark gradient background
-  const shouldApplyLockedClasses = shouldUseDarkStyling;
+  // Use dark text on light background
+  const getTextClasses = () => {
+    if (backgroundImage) {
+      return "text-white";
+    }
+    return "text-deep-charcoal";
+  };
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center ${shouldApplyLockedClasses ? 'section-locked' : ''}`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center`}
       aria-labelledby="hero-title"
       role="banner"
     >
@@ -67,11 +69,6 @@ export default function Hero({
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
         </div>
       )}
-
-      {/* Background Decoration - simplified to match /newsletter and /program */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        {/* Removed decorative elements to match clean /newsletter and /program background */}
-      </div>
 
       <div
         className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}
@@ -90,7 +87,7 @@ export default function Hero({
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in text-white
+              mb-6 font-heading font-bold !leading-tight animate-fade-in ${getTextClasses()}
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               `}
             >
@@ -99,7 +96,7 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 mx-auto animate-fade-in text-white/90
+              mb-10 mx-auto animate-fade-in ${getTextClasses()}/80
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl" : "text-xl md:text-2xl max-w-lg"}
               `}
               style={{ animationDelay: "0.2s" }}
@@ -123,13 +120,12 @@ export default function Hero({
                 <Button
                   variant="special"
                   className={`
-                    btn-locked-primary
                     ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                   `}
                   size={isMobile ? "default" : "lg"}
                 >
                   {ctaText}
-                  <ArrowRight size={18} className="text-neural-violet" />
+                  <ArrowRight size={18} className="text-white" />
                 </Button>
               </Link>
 
@@ -143,7 +139,6 @@ export default function Hero({
                   <Button
                     variant="secondary"
                     className={`
-                      btn-locked-secondary
                       ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                     `}
                     size={isMobile ? "default" : "lg"}
@@ -178,3 +173,4 @@ export default function Hero({
     </section>
   );
 }
+
