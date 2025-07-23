@@ -81,8 +81,8 @@ export default function Header() {
             
             {/* Simplified Mega Menu */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-3 z-50 w-screen max-w-[95vw]">
-                <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden w-full">
+              <div className="fixed left-0 right-0 top-full pt-3 z-50">
+                <div className="mx-auto max-w-[95vw] bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden">
                   {/* Desktop Layout - 3 columns, responsive width */}
                   <div className="hidden lg:flex max-w-[1060px] w-full mx-auto">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) */}
