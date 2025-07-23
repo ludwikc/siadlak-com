@@ -1,18 +1,24 @@
 
 
 import Layout from '../components/layout/Layout';
-import Hero from '../components/sections/Hero';
 import PodcastCard from '../components/podcast/PodcastCard';
 
 const Podcasts = () => {
   return (
     <Layout>
-      <Hero
-        title="Podcasty"
-        subtitle="Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie"
-        ctaText="Wybierz podcast"
-        ctaLink="#podcasts"
-      />
+      {/* Hero Section from /program style */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              Podcasty
+            </h1>
+            <p className="text-lg md:text-xl mb-8 text-white/90">
+              Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section
         id="podcasts"
