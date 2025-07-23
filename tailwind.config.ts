@@ -94,17 +94,17 @@ const config: Config = {
         },
       },
       fontFamily: {
-        primary: ["var(--font-family-primary)", "Inter", "sans-serif"],
-        heading: ["var(--font-family-heading)", "Montserrat", "sans-serif"],
-        sans: ["var(--font-family-primary)", "Inter", "sans-serif"],
+        primary: ["Inter", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
       },
       fontWeight: {
-        light: "var(--font-weight-light)",
-        normal: "var(--font-weight-normal)",
-        medium: "var(--font-weight-medium)",
-        semibold: "var(--font-weight-semibold)",
-        bold: "var(--font-weight-bold)",
-        extrabold: "var(--font-weight-extrabold)",
+        light: "300",
+        normal: "400",
+        medium: "500",
+        semibold: "600",
+        bold: "700",
+        extrabold: "800",
         300: "300",
         400: "400",
         500: "500",
@@ -219,8 +219,9 @@ const config: Config = {
     },
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     require("tailwindcss-animate"),
-    function({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
+    function({ addUtilities }: { addUtilities: (utilities: Record<string, Record<string, string | Record<string, string>>>) => void }) {
       addUtilities({
         '.story-link': {
           position: 'relative',
