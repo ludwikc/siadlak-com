@@ -60,7 +60,7 @@ export default function PersonaSection({
             {ctaText && ctaLink && (
               <div className="mt-8">
                 <Link to={ctaLink}>
-                  <Button variant="default">{ctaText}</Button>
+                  <Button variant="secondary">{ctaText}</Button>
                 </Link>
               </div>
             )}
