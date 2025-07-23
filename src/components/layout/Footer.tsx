@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Instagram,
-  Twitter,
+  X,
   Linkedin,
   Youtube,
   Users,
@@ -39,9 +39,9 @@ export default function Footer() {
               <a
                 href="https://twitter.com/ludwikc"
                 className="hover:text-ascension-pink dark:hover:text-luminal-magenta transition-colors"
-                aria-label="Twitter"
+                aria-label="X (formerly Twitter)"
               >
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a
                 href="https://linkedin.com/in/ludwikc"
