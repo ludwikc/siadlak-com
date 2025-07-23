@@ -274,7 +274,7 @@ const config: Config = {
           background: 'linear-gradient(to right, #3B0F77, #B0128C)',
         },
         '.bg-gradient-locked-pricing': {
-          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)',
+          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D) !important',
         },
         // Theme-adaptive gradient utilities (these were the original ones)
         '.bg-gradient-brand-primary': {
