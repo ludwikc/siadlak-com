@@ -1,5 +1,3 @@
-
-
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -91,7 +89,7 @@ export default function Hero({
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in text-deep-charcoal dark:text-white
+              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               `}
             >
@@ -177,4 +175,3 @@ export default function Hero({
     </section>
   );
 }
-
