@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   
   // Handle scroll effect
@@ -21,7 +22,10 @@ export default function Header() {
   // Handle escape key for accessibility
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsMenuOpen(false);
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+        setIsDropdownOpen(false);
+      }
     };
 
     document.addEventListener("keydown", handleEscape);
@@ -49,35 +53,100 @@ export default function Header() {
           <Link to="/about" className="nav-link">
             O mnie
           </Link>
-          <Link to="/program" className="nav-link">
-            Programy
-          </Link>
-          <Link to="/podcast" className="nav-link">
-            Podcasty
-          </Link>
-          <Link to="/work" className="nav-link">
-            Możliwości
-          </Link>
-          <Link to="/community" className="nav-link">
-            Społeczność
-          </Link>
-          <Link
-            to="/newsletter"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
-          >
-            Newsletter
-          </Link>
-          <Link
-            to="/webinar"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
-          >
-            Webinar
-          </Link>
+          
+          {/* Dropdown for Możliwości */}
+          <div className="relative group">
+            <button
+              className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
+              Możliwości
+              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {/* Megamenu Dropdown */}
+            {isDropdownOpen && (
+              <div 
+                className="absolute top-full left-0 mt-2 w-80 bg-luminous-white dark:bg-deep-space shadow-lg rounded-lg border border-silver-mist/20 dark:border-silver-mist/10 p-6 z-50"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <div className="space-y-4">
+                  <Link 
+                    to="/program" 
+                    className="block group"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                      Programy
+                    </div>
+                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                      Programy rozwojowe i szkolenia
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    to="/podcast" 
+                    className="block group"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                      Podcasty
+                    </div>
+                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                      Lifehacking i Uważne Życie
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    to="/community" 
+                    className="block group"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                      Społeczność
+                    </div>
+                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                      Zamknięta grupa Lifehackerów
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    to="/newsletter" 
+                    className="block group"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                      Newsletter
+                    </div>
+                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                      Cotygodniowe inspiracje technologiczne
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    to="/webinar" 
+                    className="block group"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                      Webinar
+                    </div>
+                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                      Live sesje i masterclassy
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+
           <Link
             to="/contact"
-            className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors"
+            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
           >
-            Porozmawiajmy
+            Kontakt
           </Link>
 
           {/* Theme Toggle */}
@@ -133,47 +202,57 @@ export default function Header() {
             >
               O mnie
             </Link>
-            <Link
-              to="/program"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Programy
-            </Link>
-            <Link
-              to="/podcast"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Podcasty
-            </Link>
-            <Link
-              to="/community"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Społeczność
-            </Link>
-            <Link
-              to="/newsletter"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Newsletter
-            </Link>
-            <Link
-              to="/webinar"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Webinar
-            </Link>
+            
+            {/* Mobile Możliwości Section */}
+            <div className="py-2">
+              <div className="font-medium text-deep-charcoal dark:text-silver-mist mb-3">
+                Możliwości
+              </div>
+              <div className="ml-4 space-y-3">
+                <Link
+                  to="/program"
+                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Programy
+                </Link>
+                <Link
+                  to="/podcast"
+                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Podcasty
+                </Link>
+                <Link
+                  to="/community"
+                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Społeczność
+                </Link>
+                <Link
+                  to="/newsletter"
+                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Newsletter
+                </Link>
+                <Link
+                  to="/webinar"
+                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Webinar
+                </Link>
+              </div>
+            </div>
+            
             <Link
               to="/contact"
-              className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors inline-block"
+              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Porozmawiajmy
+              Kontakt
             </Link>
           </nav>
         </div>
