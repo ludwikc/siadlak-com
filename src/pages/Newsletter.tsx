@@ -286,7 +286,7 @@ export default function NewsletterPage() {
             </div>
 
             <div className="mt-16 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
                 Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
 
