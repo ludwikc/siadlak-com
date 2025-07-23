@@ -1,4 +1,5 @@
 
+
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -42,6 +43,8 @@ export default function Hero({
     return "bg-hero-light dark:bg-hero-dark";
   };
 
+  // Special case for /podcast/uwazne-zycie - align content to the right
+  const isUwazneZyciePage = location.pathname === "/podcast/uwazne-zycie";
 
   return (
     <section
@@ -69,21 +72,22 @@ export default function Hero({
         className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}
       >
         <div
-          className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${fullHeight ? "h-full" : ""}`}
+          className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${fullHeight ? "h-full" : ""} ${isUwazneZyciePage ? "justify-end" : ""}`}
         >
           {/* Left column - Text content (2/3 width on desktop) */}
           <div
             className={`
-            ${isMobile ? "w-full text-center order-1 mb-8" : "w-2/3 pr-8"} 
+            ${isMobile ? "w-full text-center order-1 mb-8" : isUwazneZyciePage ? "w-1/2 pl-8 text-right" : "w-2/3 pr-8"} 
             ${fullHeight ? "flex flex-col justify-center" : ""}
-            ${location.pathname === "/" ? "text-center" : "text-left"}
+            ${location.pathname === "/" ? "text-center" : isUwazneZyciePage ? "text-right" : "text-left"}
           `}
           >
             <h1
               id="hero-title"
               className={`
               mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent
-              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl text-left"} 
+              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
+              ${isUwazneZyciePage ? "text-right" : location.pathname === "/" ? "text-center" : "text-left"}
               `}
             >
               {title}
@@ -92,7 +96,7 @@ export default function Hero({
             <p
               className={`
               mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
-              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : "text-xl md:text-2xl max-w-lg text-left"}
+              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
               `}
               style={{ animationDelay: "0.2s" }}
             >
@@ -101,8 +105,8 @@ export default function Hero({
 
             <div
               className={`
-              flex ${isMobile ? "flex-col" : "flex-row"} ${location.pathname === "/" ? "justify-center" : "justify-start"} 
-              gap-4 animate-fade-in
+              flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in
+              ${location.pathname === "/" ? "justify-center" : isUwazneZyciePage ? "justify-end" : "justify-start"}
             `}
               style={{ animationDelay: "0.4s" }}
             >
@@ -168,3 +172,4 @@ export default function Hero({
     </section>
   );
 }
+
