@@ -86,7 +86,6 @@ const UwazneZyciePodcast = () => {
         ctaLink="#player"
         secondaryCtaText="Zapisz się na sesję live"
         secondaryCtaLink="#live-sessions"
-        fullHeight={true}
       />
 
       <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/20">

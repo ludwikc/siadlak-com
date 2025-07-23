@@ -86,7 +86,6 @@ const LifeHackingPodcast = () => {
         ctaLink="#player"
         secondaryCtaText="Przeglądaj wszystkie odcinki"
         secondaryCtaLink="#episodes"
-        fullHeight={true}
       />
 
       <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/20">

@@ -12,7 +12,6 @@ const Podcasts = () => {
         subtitle="Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie"
         ctaText="Wybierz podcast"
         ctaLink="#podcasts"
-        fullHeight={true}
       />
 
       <section
