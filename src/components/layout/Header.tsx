@@ -170,9 +170,12 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
                           onClick={() => setIsDropdownOpen(false)}
                         >
+                          <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
+                            Zacznij tutaj
+                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -190,9 +193,12 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
                           onClick={() => setIsDropdownOpen(false)}
                         >
+                          <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
+                            Jeszcze dostępne miejsca!
+                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
