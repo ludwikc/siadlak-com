@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -75,14 +76,14 @@ export default function Hero({
             className={`
             ${isMobile ? "w-full text-center order-1 mb-8" : "w-2/3 pr-8"} 
             ${fullHeight ? "flex flex-col justify-center" : ""}
-            ${location.pathname === "/" ? "text-center" : ""}
+            ${location.pathname === "/" ? "text-center" : "text-left"}
           `}
           >
             <h1
               id="hero-title"
               className={`
               mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent
-              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
+              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl text-left"} 
               `}
             >
               {title}
@@ -90,8 +91,8 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 mx-auto animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
-              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl" : "text-xl md:text-2xl max-w-lg"}
+              mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
+              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : "text-xl md:text-2xl max-w-lg text-left"}
               `}
               style={{ animationDelay: "0.2s" }}
             >
@@ -100,7 +101,7 @@ export default function Hero({
 
             <div
               className={`
-              flex ${isMobile ? "flex-col" : "flex-row"} ${location.pathname === "/" ? "justify-center" : ""} 
+              flex ${isMobile ? "flex-col" : "flex-row"} ${location.pathname === "/" ? "justify-center" : "justify-start"} 
               gap-4 animate-fade-in
             `}
               style={{ animationDelay: "0.4s" }}
