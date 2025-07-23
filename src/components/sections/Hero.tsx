@@ -39,16 +39,17 @@ export default function Hero({
       return "";
     }
     
-    // Light gradient in light mode, dark background in dark mode
-    return "bg-gradient-to-br from-white to-purple-50 dark:bg-deep-space";
+    // Theme-adaptive: #FCFAFF in light mode, #0A0A0A in dark mode
+    return "bg-hero-light dark:bg-hero-dark";
   };
 
-  // Use dark text on light background
+  // Theme-aware text colors
   const getTextClasses = () => {
     if (backgroundImage) {
       return "text-white";
     }
-    return "text-deep-charcoal";
+    // Dark text on light background, white text on dark background
+    return "text-deep-charcoal dark:text-white";
   };
 
   return (
@@ -57,9 +58,9 @@ export default function Hero({
       aria-labelledby="hero-title"
       role="banner"
     >
-      {/* Dark mode gradient blur elements */}
-      <div className="hidden dark:block absolute w-96 h-96 -top-40 -right-40 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full blur-[56px] z-0"></div>
-      <div className="hidden dark:block absolute w-80 h-80 -bottom-32 -left-32 bg-gradient-to-tl from-blue-500/30 to-indigo-700/30 rounded-full blur-[48px] z-0"></div>
+      {/* Dark mode gradient blur elements matching reference CSS */}
+      <div className="hidden dark:block gradient-blur-top-right z-0"></div>
+      <div className="hidden dark:block gradient-blur-bottom-left z-0"></div>
 
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
@@ -90,7 +91,7 @@ export default function Hero({
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta
+              mb-6 font-heading font-bold !leading-tight animate-fade-in text-deep-charcoal dark:text-white
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               `}
             >

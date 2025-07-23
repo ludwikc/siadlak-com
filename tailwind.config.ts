@@ -47,7 +47,7 @@ const config: Config = {
         "border-subtle": "hsl(var(--border-subtle))",
         
         // Tailwind Custom Colors
-        "deep-space": "#0A0A0D",
+        "deep-space": "#0A0A0A",
         "neural-violet": "#3B0F77",
         "quantum-blue": "#061A40",
         "ascension-pink": "#B0128C",
@@ -426,6 +426,34 @@ const config: Config = {
           '& svg': {
             color: '#ffffff !important',
           },
+        },
+        // Hero-specific theme-adaptive background utilities
+        '.bg-hero-light': {
+          backgroundColor: '#FCFAFF',
+        },
+        '.bg-hero-dark': {
+          backgroundColor: '#0A0A0A',
+        },
+        // Hero gradient blur elements matching reference CSS
+        '.gradient-blur-top-right': {
+          width: '24rem',
+          height: '24rem',
+          top: '-10rem',
+          right: '-10rem',
+          backgroundImage: 'linear-gradient(to bottom right, rgba(177, 0, 255, 0.3), rgba(255, 0, 177, 0.3))',
+          filter: 'blur(56px)',
+          borderRadius: '50%',
+          position: 'absolute',
+        },
+        '.gradient-blur-bottom-left': {
+          width: '20rem',
+          height: '20rem',
+          bottom: '-8rem',
+          left: '-8rem',
+          backgroundImage: 'linear-gradient(to top left, rgba(0, 100, 255, 0.3), rgba(75, 0, 130, 0.3))',
+          filter: 'blur(48px)',
+          borderRadius: '50%',
+          position: 'absolute',
         },
       });
     },
