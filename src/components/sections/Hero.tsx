@@ -39,8 +39,8 @@ export default function Hero({
       return "";
     }
     
-    // Light gradient in light mode, dark gradient in dark mode
-    return "bg-gradient-to-br from-white to-purple-50 dark:from-deep-space dark:to-quantum-blue";
+    // Light gradient in light mode, dark background with gradient blurs in dark mode
+    return "bg-gradient-to-br from-white to-purple-50 dark:bg-deep-space";
   };
 
   // Use dark text on light background
@@ -53,10 +53,13 @@ export default function Hero({
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center overflow-hidden`}
       aria-labelledby="hero-title"
       role="banner"
     >
+      {/* Dark mode gradient blur elements */}
+      <div className="hidden dark:block absolute w-96 h-96 -top-40 -right-40 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-full blur-[56px] z-0"></div>
+      <div className="hidden dark:block absolute w-80 h-80 -bottom-32 -left-32 bg-gradient-to-tl from-blue-500/30 to-indigo-700/30 rounded-full blur-[48px] z-0"></div>
 
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
