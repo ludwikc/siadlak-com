@@ -45,8 +45,8 @@ const About = () => {
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button
-                variant="secondary"
-                className="animate-fade-in"
+                variant="outline"
+                className="animate-fade-in bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
                 style={{ animationDelay: "0.4s" }}
                 aria-label="Umów rozmowę - przejdź do formularza kontaktowego"
               >
