@@ -170,12 +170,9 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
+                          className="nav-card block p-4 bg-gradient-to-br from-red-50 to-red-100/50 dark:from-red-950/30 dark:to-red-900/20 rounded-lg hover:from-red-100 hover:to-red-200/50 dark:hover:from-red-900/40 dark:hover:to-red-800/30 transition-all duration-200 group border border-red-200 dark:border-red-800/30 shadow-sm hover:shadow-md animate-pulse"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
-                            Zacznij tutaj
-                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -193,12 +190,9 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
+                          className="nav-card block p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 rounded-lg hover:from-blue-100 hover:to-blue-200/50 dark:hover:from-blue-900/40 dark:hover:to-blue-800/30 transition-all duration-200 group border border-blue-200 dark:border-blue-800/30 shadow-sm hover:shadow-md animate-pulse"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
-                            Jeszcze dostępne miejsca!
-                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
