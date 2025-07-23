@@ -1,7 +1,6 @@
 
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { useTheme } from '../../contexts/ThemeContext';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -30,41 +29,25 @@ export default function Hero({
   heroImage,
   fullHeight = false,
 }: HeroProps) {
-  const { theme } = useTheme();
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Check if current page is Podcasts, Community, or other pages that should be theme-locked
-  const isPodcastsOrCommunity =
-    location.pathname === "/podcast" ||
-    location.pathname === "/community" ||
-    location.pathname.includes("/podcast/") ||
-    location.pathname.includes("/community/");
+  // Always use dark styling for hero section (like /newsletter and /program)
+  // unless a background image is provided
+  const shouldUseDarkStyling = !backgroundImage && !heroImage;
 
-  // Check if this is a sales page or special page that should be theme-locked
-  const isThemeLockedPage = 
-    location.pathname.includes("/program/") ||
-    location.pathname.includes("/webinar") ||
-    isPodcastsOrCommunity;
-
-  // For theme-locked pages, always use dark styling
-  // For other pages, use theme-based styling
-  const isLightMode = isThemeLockedPage
-    ? false
-    : theme === "light" || theme === "dev-light";
-
-  // Determine background classes - simplified to match /newsletter and /program
+  // Determine background classes - always use dark gradient unless background image provided
   const getBackgroundClasses = () => {
     if (backgroundImage || heroImage) {
       return "";
     }
     
-    // Use the same gradient for all pages unless background image provided
+    // Always use the dark gradient for consistent styling across all pages
     return "bg-gradient-to-br from-deep-space to-quantum-blue";
   };
 
-  // Determine if we should apply locked classes
-  const shouldApplyLockedClasses = isThemeLockedPage || (!backgroundImage && !heroImage && !isLightMode);
+  // Apply locked classes when using dark gradient background
+  const shouldApplyLockedClasses = shouldUseDarkStyling;
 
   return (
     <section
