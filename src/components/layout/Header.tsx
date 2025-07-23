@@ -118,7 +118,7 @@ export default function Header() {
                               Wybierz kurs
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Programy rozwojowe i szkolenia
+                              Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. <br/>Podejmij decyzję.
                             </p>
                           </div>
                         </div>
@@ -135,7 +135,7 @@ export default function Header() {
                               Dołącz do Lifehackerów
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Zamknięta grupa moich klientów
+                              Dostęp LIFETIME otrzymasz <strong>jeszcze dzisiaj</strong>.
                             </p>
                           </div>
                         </div>
@@ -151,7 +151,7 @@ export default function Header() {
                               Pracuj ze mną 1:1
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Mentoring indywidualny
+                              Towarzyszę Lifehackerom codziennie. Bez wyjątków. Dołącz do nas i działamy.
                             </p>
                           </div>
                         </div>
@@ -174,8 +174,7 @@ export default function Header() {
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="absolute top-2 right-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
-                            Start here
-                          </div>
+                          <span style={{ display: "inline-block", transform: "scaleX(-1)" }}>⤵</span> Tu chcesz zacząć ⤵                         </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
@@ -197,7 +196,7 @@ export default function Header() {
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm animate-pulse">
-                            Available
+                            Liczba miejsc na żywo ograniczona
                           </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
@@ -225,10 +224,10 @@ export default function Header() {
                             </div>
                             <div className="nav-content">
                               <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Ludzie
+                                Medytacje na żywo
                               </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                                Społeczność Lifehackerów
+                                Każdy wtorek o 6:30 rano w Polsce
                               </p>
                             </div>
                           </div>
@@ -314,6 +313,16 @@ export default function Header() {
                                 12:34 Daily Coaching
                               </span>
                             </a>
+
+                            <a 
+                              href="/discord" 
+                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                            >
+                              <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
+                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Silent Cowork
+                              </span>
+                            </a>
                             
                             <a 
                               href="/zasoby" 
@@ -330,7 +339,7 @@ export default function Header() {
                             >
                               <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
                               <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Protipy
+                                Warsztaty Hackerów
                               </span>
                             </a> 
                             <a 
@@ -339,7 +348,7 @@ export default function Header() {
                             >
                               <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
                               <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Protipy
+                                Dodatkowe materiały
                               </span>
                             </a>
                           </div>
