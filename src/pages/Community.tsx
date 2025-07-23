@@ -210,7 +210,7 @@ export default function Community() {
                   </ul>
                 </div>
                 <Link
-                  to="/programs"
+                  to="/program"
                   className="block w-full py-3 px-4 bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 dark:from-neural-violet dark:to-luminal-magenta dark:hover:from-neural-violet/90 dark:hover:to-luminal-magenta/90 text-white text-center rounded-md transition-colors mt-auto shadow-md shadow-neural-violet/30 dark:shadow-luminal-magenta/30"
                 >
                   Sprawdź nasze kursy

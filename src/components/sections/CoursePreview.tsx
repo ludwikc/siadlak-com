@@ -93,7 +93,7 @@ export default function CoursePreview({
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/programs">
+          <Link to="/program">
             <Button variant="secondary">View All Courses</Button>
           </Link>
         </div>

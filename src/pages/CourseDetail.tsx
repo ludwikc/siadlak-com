@@ -293,7 +293,7 @@ const CourseDetail = () => {
 
   // If course doesn't exist, redirect to courses page
   if (!courseSlug || !coursesData[courseSlug as keyof typeof coursesData]) {
-    return <Navigate to="/programs" />;
+    return <Navigate to="/program" />;
   }
   
   const course = coursesData[courseSlug as keyof typeof coursesData];

@@ -145,7 +145,7 @@ export default function Courses() {
                       </div>
                     </div>
                     
-                    <Link to={`/programs/${program.id}`}>
+                    <Link to={`/program/${program.id}`}>
                       <Button className="w-full bg-neural-violet hover:bg-ascension-pink text-white">
                         Zacznij swoją podróż
                         <ArrowRight className="ml-2 h-4 w-4" />

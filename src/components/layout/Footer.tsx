@@ -76,7 +76,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/programs"
+                  to="/program"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Programy
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/podcasts"
+                  to="/podcast"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Podcasty
@@ -133,7 +133,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/programs/mental-elevator"
+                  to="/program/mental-elevator"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Mental Elevator
@@ -141,7 +141,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/programs/hakowanie-produktywnosci"
+                  to="/program/hakowanie-produktywnosci"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Hakowanie Produktywności
@@ -155,7 +155,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/podcasts/life-hacking"
+                  to="/podcast/life-hacking"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Life Hacking Podcast
@@ -163,7 +163,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/podcasts/uwazne-zycie"
+                  to="/podcast/uwazne-zycie"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Uważne Życie

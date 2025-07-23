@@ -49,10 +49,10 @@ export default function Header() {
           <Link to="/about" className="nav-link">
             O mnie
           </Link>
-          <Link to="/programs" className="nav-link">
+          <Link to="/program" className="nav-link">
             Programy
           </Link>
-          <Link to="/podcasts" className="nav-link">
+          <Link to="/podcast" className="nav-link">
             Podcasty
           </Link>
           <Link to="/community" className="nav-link">
@@ -131,14 +131,14 @@ export default function Header() {
               O mnie
             </Link>
             <Link
-              to="/programs"
+              to="/program"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Programy
             </Link>
             <Link
-              to="/podcasts"
+              to="/podcast"
               className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >

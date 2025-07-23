@@ -36,14 +36,14 @@ export default function Hero({
 
   // Check if current page is Podcasts, Community, or other pages that should be theme-locked
   const isPodcastsOrCommunity =
-    location.pathname === "/podcasts" ||
+    location.pathname === "/podcast" ||
     location.pathname === "/community" ||
-    location.pathname.includes("/podcasts/") ||
+    location.pathname.includes("/podcast/") ||
     location.pathname.includes("/community/");
 
   // Check if this is a sales page or special page that should be theme-locked
   const isThemeLockedPage = 
-    location.pathname.includes("/programs/") ||
+    location.pathname.includes("/program/") ||
     location.pathname.includes("/webinar") ||
     isPodcastsOrCommunity;
 

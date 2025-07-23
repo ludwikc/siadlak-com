@@ -42,6 +42,11 @@ function App() {
           <Route path="/legal" element={<Legal />} />
           <Route path="/community" element={<Community />} />
           
+          {/* Placeholder routes for footer links */}
+          <Route path="/resources" element={<NotFound />} />
+          <Route path="/privacy" element={<NotFound />} />
+          <Route path="/terms" element={<NotFound />} />
+          
           <Route path="/program" element={<Courses />} />
           <Route path="/program/:courseSlug" element={<CourseDetail />} />
           <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
