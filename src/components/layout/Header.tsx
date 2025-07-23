@@ -131,7 +131,7 @@ export default function Header() {
                             <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-secondary to-transparent"></div>
                           </div>
                           <div className="step-content pt-1">
-                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
                               Dołącz do Lifehackerów
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
@@ -147,7 +147,7 @@ export default function Header() {
                             </div>
                           </div>
                           <div className="step-content pt-1">
-                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
                               Pracuj ze mną 1:1
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
