@@ -170,22 +170,20 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
                           onClick={() => setIsDropdownOpen(false)}
                         >
+                          <div className="absolute top-2 right-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
+                            Start here
+                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content flex-1">
-                              <div className="flex items-center gap-2 mb-0.5">
-                                <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                  Programy rozwojowe
-                                </h4>
-                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700/50">
-                                  Zacznij tutaj
-                                </span>
-                              </div>
+                            <div className="nav-content pr-16">
+                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Programy rozwojowe
+                              </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Kursy online i szkolenia
                               </p>
@@ -195,22 +193,20 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
                           onClick={() => setIsDropdownOpen(false)}
                         >
+                          <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm animate-pulse">
+                            Available
+                          </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
                               <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content flex-1">
-                              <div className="flex items-center gap-2 mb-0.5">
-                                <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                  Wydarzenia na żywo
-                                </h4>
-                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-700/50">
-                                  Jeszcze dostępne miejsca!
-                                </span>
-                              </div>
+                            <div className="nav-content pr-16">
+                              <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Wydarzenia na żywo
+                              </h4>
                               <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Sesje live i masterclassy
                               </p>
