@@ -13,16 +13,20 @@ export default function Community() {
   return (
     <Layout>
       {/* Hero Section with Background Image */}
-      <Hero
-        title="SIADLAXITY: Nasze Cyfrowe Miasto Rozwoju"
-        subtitle="Zobacz, w jakiej dzielnicy naszej społeczności odnajdziesz swoje miejsce"
-        ctaText="Dołącz do społeczności"
-        ctaLink="#community-districts"
-        backgroundImage="/lovable-uploads/5eb2feb4-928a-4b2b-baea-129edbb57b25.png"
-        imageDescription="Cyfrowe miasto społeczności SIADLAXITY"
-      />
+        <Hero
+          title={
+            <>
+          SIADLAXITY: <br /> Miasto Lifehackerów
+            </>
+          }
+          subtitle="Najbardziej wspierająca społeczność w polskim internecie"
+          ctaText="Jak zostać Lifehackerem?"
+          ctaLink="#community-districts"
+          backgroundImage="/lovable-uploads/5eb2feb4-928a-4b2b-baea-129edbb57b25.png"
+          imageDescription="SIADLAXITY: Miasto Lifehackerów"
+        />
 
-      {/* Intro Section */}
+        {/* Intro Section */}}
       <section className="py-16 bg-secondary/30 dark:bg-quantum-blue/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
