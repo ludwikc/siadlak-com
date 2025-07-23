@@ -170,20 +170,20 @@ export default function Header() {
                         {/* Full Width Cards */}
                         <Link 
                           to="/program" 
-                          className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute top-1 right-1 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
+                          <div className="absolute top-2 right-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
                           <span style={{ display: "inline-block", transform: "scaleX(-1)" }}>⤵</span> Tu chcesz zacząć ⤵                         </div>
                           <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-3">
-                              <Book size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                            <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
+                              <Book size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content pr-12">
+                            <div className="nav-content pr-16">
                               <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Programy rozwojowe
                               </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-tight">
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Kursy online i szkolenia
                               </p>
                             </div>
@@ -192,21 +192,21 @@ export default function Header() {
 
                         <Link 
                           to="/webinar" 
-                          className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute top-1 right-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded-md shadow-sm animate-pulse">
+                          <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm animate-pulse">
                             Liczba miejsc na żywo ograniczona
                           </div>
                           <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-3">
-                              <Video size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                            <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
+                              <Video size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
-                            <div className="nav-content pr-12">
+                            <div className="nav-content pr-16">
                               <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Wydarzenia na żywo
                               </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-tight">
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Sesje live i masterclassy
                               </p>
                             </div>
@@ -215,18 +215,18 @@ export default function Header() {
 
                         <Link 
                           to="/community" 
-                          className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                           onClick={() => setIsDropdownOpen(false)}
                         >
                           <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-3">
-                              <Users size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
+                            <div className="nav-icon w-10 h-10 flex items-center justify-center mr-4">
+                              <Users size={20} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
                             </div>
                             <div className="nav-content">
                               <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0.5 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
                                 Medytacje na żywo
                               </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-tight">
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                                 Każdy wtorek o 6:30 rano w Polsce
                               </p>
                             </div>
