@@ -17,7 +17,7 @@ export default function CTASection({
   buttonLink,
 }: CTASectionProps) {
   return (
-    <section className="py-16 bg-gradient-locked-cta">
+    <section className="py-16 bg-gradient-locked-cta section-locked">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-locked-white mb-4">{title}</h2>
@@ -30,10 +30,10 @@ export default function CTASection({
             <Button
               variant="default"
               size="lg"
-              className="bg-white hover:bg-white/90 text-neural-violet"
+              className="btn-locked-primary"
             >
               {buttonText}
-              <ArrowRight size={18} />
+              <ArrowRight size={18} className="text-neural-violet" />
             </Button>
           </Link>
         </div>

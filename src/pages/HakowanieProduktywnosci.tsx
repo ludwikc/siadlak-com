@@ -1,3 +1,4 @@
+
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 
@@ -24,13 +25,13 @@ export default function HakowanieProduktywnosci() {
   return (
     <Layout>
       {/* 2.2. Hero Section - Theme Locked */}
-      <section className="py-16 md:py-24 bg-gradient-locked-hero text-locked-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-locked-white">
               Jak się wziąć do pracy, przestać odwlekać i utrzymać skupienie{' '}
               <span className="text-locked-gradient">
                 bez przymuszania się?
@@ -46,10 +47,10 @@ export default function HakowanieProduktywnosci() {
               <Button 
                 variant="special" 
                 size="lg"
-                className="text-lg px-8 py-4 shadow-2xl hover:shadow-ascension-pink/25"
+                className="btn-locked-primary text-lg px-8 py-4 shadow-2xl hover:shadow-ascension-pink/25"
               >
                 Tak! Chcę Hakować Produktywność!
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 text-neural-violet" />
               </Button>
             </div>
             
@@ -399,20 +400,20 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.9. Pricing Section - Theme Locked */}
-      <section className="py-20 bg-gradient-locked-pricing text-locked-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-locked-pricing section-locked text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Podsumowując:</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-locked-white">Podsumowując:</h2>
             
-            <Card className="glass-card bg-white/10 border-white/20 mb-12">
+            <Card className="card-locked mb-12">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                   <div>
-                    <h4 className="font-bold text-lg mb-4">Otrzymujesz:</h4>
-                    <ul className="space-y-2 text-sm">
+                    <h4 className="font-bold text-lg mb-4 text-locked-white">Otrzymujesz:</h4>
+                    <ul className="space-y-2 text-sm text-locked-silver">
                       <li>• Kurs Hakowanie Produktywności – 3 000 zł</li>
                       <li>• Społeczność Hakerów – bezcenne</li>
                       <li>• 5 warsztatów eksperckich – 5 000 zł</li>
@@ -423,10 +424,10 @@ export default function HakowanieProduktywnosci() {
                     </ul>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold mb-4">Razem: 28 900 zł</p>
+                    <p className="text-2xl font-bold mb-4 text-locked-white">Razem: 28 900 zł</p>
                     <div className="bg-gradient-to-r from-ascension-pink to-luminal-magenta p-6 rounded-xl">
-                      <p className="text-3xl font-extrabold mb-2">Twoja cena:</p>
-                      <p className="text-5xl font-extrabold">1197 zł</p>
+                      <p className="text-3xl font-extrabold mb-2 text-locked-white">Twoja cena:</p>
+                      <p className="text-5xl font-extrabold text-locked-white">1197 zł</p>
                     </div>
                   </div>
                 </div>
@@ -434,7 +435,7 @@ export default function HakowanieProduktywnosci() {
             </Card>
             
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4">Ile kosztowało mnie zdobycie tej wiedzy?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-locked-white">Ile kosztowało mnie zdobycie tej wiedzy?</h3>
               <p className="text-lg text-locked-silver mb-6">
                 XXXXX zł na kursy, XXXXX zł na książki, XXXXX godzin penelowania badań, 
                 XXXXX lat doświadczenia w pracy z ludźmi. Ty otrzymujesz to wszystko w 6 tygodni.
@@ -442,19 +443,19 @@ export default function HakowanieProduktywnosci() {
             </div>
             
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-4">Ile to jest warte dla Ciebie?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-locked-white">Ile to jest warte dla Ciebie?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                <div className="glass-card bg-white/5 p-4 rounded-lg">
-                  <p className="font-bold mb-2">Ile tracisz rocznie przez prokrastynację?</p>
-                  <p>Średnio 2-4 godziny dziennie × 365 dni × Twoja stawka godzinowa</p>
+                <div className="card-locked-transparent p-4 rounded-lg">
+                  <p className="font-bold mb-2 text-locked-white">Ile tracisz rocznie przez prokrastynację?</p>
+                  <p className="text-locked-silver">Średnio 2-4 godziny dziennie × 365 dni × Twoja stawka godzinowa</p>
                 </div>
-                <div className="glass-card bg-white/5 p-4 rounded-lg">
-                  <p className="font-bold mb-2">Ile kosztuje Cię stres?</p>
-                  <p>Wizyty u lekarzy, leki, wypoczynki "na nerwy"</p>
+                <div className="card-locked-transparent p-4 rounded-lg">
+                  <p className="font-bold mb-2 text-locked-white">Ile kosztuje Cię stres?</p>
+                  <p className="text-locked-silver">Wizyty u lekarzy, leki, wypoczynki "na nerwy"</p>
                 </div>
-                <div className="glass-card bg-white/5 p-4 rounded-lg">  
-                  <p className="font-bold mb-2">Ile tracisz na nieefektywności?</p>
-                  <p>Przegapione okazje, niedokończone projekty, chaos w życiu</p>
+                <div className="card-locked-transparent p-4 rounded-lg">  
+                  <p className="font-bold mb-2 text-locked-white">Ile tracisz na nieefektywności?</p>
+                  <p className="text-locked-silver">Przegapione okazje, niedokończone projekty, chaos w życiu</p>
                 </div>
               </div>
             </div>
@@ -462,15 +463,15 @@ export default function HakowanieProduktywnosci() {
             <Button 
               variant="special" 
               size="lg" 
-              className="text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-ascension-pink/25"
+              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-ascension-pink/25"
             >
               Chcę przestać zwlekać! Zamawiam
-              <ArrowRight className="ml-2 h-6 w-6" />
+              <ArrowRight className="ml-2 h-6 w-6 text-neural-violet" />
             </Button>
             
             <div className="mb-8">
-              <h4 className="text-lg font-bold mb-4">Ile to jest 1197 zł?</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <h4 className="text-lg font-bold mb-4 text-locked-white">Ile to jest 1197 zł?</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-locked-silver">
                 <div>3 obiady w restauracji</div>
                 <div>1 para dobrych butów</div>
                 <div>2 tankownia auta</div>

@@ -70,9 +70,12 @@ export default function Hero({
       : "bg-gradient-to-br from-deep-space to-quantum-blue";
   };
 
+  // Determine if we should apply locked classes
+  const shouldApplyLockedClasses = isThemeLockedPage || (!backgroundImage && !heroImage && !isLightMode);
+
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center ${shouldApplyLockedClasses ? 'section-locked' : ''}`}
       aria-label="Hero section"
     >
       {/* Add a lighter overlay in light mode for theme-adaptive sections only */}
@@ -126,7 +129,7 @@ export default function Hero({
                   ? "text-locked-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                   : isLightMode
                     ? "text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent"
-                    : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                    : "text-locked-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
               }`}
             >
               {title}
@@ -141,7 +144,7 @@ export default function Hero({
                   ? "text-locked-silver drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                   : isLightMode
                     ? "text-deep-charcoal"
-                    : "text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                    : "text-locked-silver drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
               }`}
               style={{ animationDelay: "0.2s" }}
             >
@@ -172,17 +175,17 @@ export default function Hero({
                   className={`
                     ${
                       isThemeLockedPage
-                        ? ""
+                        ? "btn-locked-primary"
                         : isLightMode
                           ? "bg-luminous-white text-neural-violet"
-                          : ""
+                          : "btn-locked-primary"
                     }
                     ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                   `}
                   size={isMobile ? "default" : "lg"}
                 >
                   {ctaText}
-                  <ArrowRight size={18} />
+                  <ArrowRight size={18} className={isThemeLockedPage || (!isLightMode) ? "text-neural-violet" : ""} />
                 </Button>
               </Link>
 
@@ -198,10 +201,10 @@ export default function Hero({
                     className={`
                       ${
                         isThemeLockedPage
-                          ? "text-white border-white hover:bg-white/20"
+                          ? "btn-locked-secondary"
                           : isLightMode
                             ? "text-white border-white bg-neural-violet/70 hover:bg-neural-violet/90"
-                            : "text-white border-white hover:bg-white/20"
+                            : "btn-locked-secondary"
                       }
                       ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
                     `}

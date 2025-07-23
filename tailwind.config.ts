@@ -259,19 +259,19 @@ const config: Config = {
         },
         // Theme-locked gradient utilities - these never change regardless of theme
         '.bg-gradient-locked-primary': {
-          background: 'linear-gradient(to bottom right, #3B0F77, #B0128C)',
+          background: 'linear-gradient(to bottom right, #3B0F77, #B0128C) !important',
         },
         '.bg-gradient-locked-dark': {
-          background: 'linear-gradient(to bottom right, #0A0A0D, #061A40)',
+          background: 'linear-gradient(to bottom right, #0A0A0D, #061A40) !important',
         },
         '.bg-gradient-locked-hero': {
-          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)',
+          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D) !important',
         },
         '.bg-gradient-locked-hero-complex': {
-          background: 'linear-gradient(to bottom right, #3B0F77 0%, #061A40 50%, #0A0A0D 100%)',
+          background: 'linear-gradient(to bottom right, #3B0F77 0%, #061A40 50%, #0A0A0D 100%) !important',
         },
         '.bg-gradient-locked-cta': {
-          background: 'linear-gradient(to right, #3B0F77, #B0128C)',
+          background: 'linear-gradient(to right, #3B0F77, #B0128C) !important',
         },
         '.bg-gradient-locked-pricing': {
           background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D) !important',
@@ -303,18 +303,128 @@ const config: Config = {
             '-webkit-background-clip': 'text',
           },
         },
+        // COMPREHENSIVE LOCKED UTILITIES FOR DARK GRADIENT SECTIONS
         // Text utilities for locked sections
         '.text-locked-white': {
-          color: '#ffffff',
+          color: '#ffffff !important',
         },
         '.text-locked-silver': {
-          color: '#E1E1E6',
+          color: '#E1E1E6 !important',
+        },
+        '.text-locked-primary': {
+          color: '#ffffff !important',
+        },
+        '.text-locked-secondary': {
+          color: '#E1E1E6 !important',
+        },
+        '.text-locked-muted': {
+          color: '#C9C9D6 !important',
         },
         '.text-locked-gradient': {
-          background: 'linear-gradient(to right, #B0128C, #DA1EAE)',
-          backgroundClip: 'text',
-          '-webkit-background-clip': 'text',
-          color: 'transparent',
+          background: 'linear-gradient(to right, #B0128C, #DA1EAE) !important',
+          backgroundClip: 'text !important',
+          '-webkit-background-clip': 'text !important',
+          color: 'transparent !important',
+        },
+        // Card utilities for locked sections
+        '.card-locked': {
+          backgroundColor: 'rgba(255, 255, 255, 0.1) !important',
+          backdropFilter: 'blur(10px) !important',
+          border: '1px solid rgba(255, 255, 255, 0.2) !important',
+          color: '#ffffff !important',
+        },
+        '.card-locked-transparent': {
+          backgroundColor: 'rgba(255, 255, 255, 0.05) !important',
+          backdropFilter: 'blur(10px) !important',
+          border: '1px solid rgba(255, 255, 255, 0.1) !important',
+          color: '#ffffff !important',
+        },
+        '.card-locked-solid': {
+          backgroundColor: 'rgba(255, 255, 255, 0.15) !important',
+          backdropFilter: 'blur(10px) !important',
+          border: '1px solid rgba(255, 255, 255, 0.3) !important',
+          color: '#ffffff !important',
+        },
+        // Border utilities for locked sections
+        '.border-locked': {
+          borderColor: 'rgba(255, 255, 255, 0.2) !important',
+        },
+        '.border-locked-solid': {
+          borderColor: 'rgba(255, 255, 255, 0.4) !important',
+        },
+        '.border-locked-accent': {
+          borderColor: '#B0128C !important',
+        },
+        '.border-locked-success': {
+          borderColor: '#10B981 !important',
+        },
+        '.border-locked-warning': {
+          borderColor: '#F59E0B !important',
+        },
+        '.border-locked-error': {
+          borderColor: '#EF4444 !important',
+        },
+        // Icon utilities for locked sections
+        '.icon-locked': {
+          color: '#ffffff !important',
+        },
+        '.icon-locked-accent': {
+          color: '#B0128C !important',
+        },
+        '.icon-locked-success': {
+          color: '#10B981 !important',
+        },
+        '.icon-locked-warning': {
+          color: '#F59E0B !important',
+        },
+        '.icon-locked-error': {
+          color: '#EF4444 !important',
+        },
+        // Button utilities for locked sections
+        '.btn-locked-primary': {
+          backgroundColor: '#ffffff !important',
+          color: '#3B0F77 !important',
+          border: 'none !important',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.9) !important',
+          },
+        },
+        '.btn-locked-secondary': {
+          backgroundColor: 'transparent !important',
+          color: '#ffffff !important',
+          border: '1px solid rgba(255, 255, 255, 0.4) !important',
+          '&:hover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.1) !important',
+          },
+        },
+        '.btn-locked-accent': {
+          backgroundColor: '#B0128C !important',
+          color: '#ffffff !important',
+          border: 'none !important',
+          '&:hover': {
+            backgroundColor: '#DA1EAE !important',
+          },
+        },
+        // Section-level locked utility
+        '.section-locked': {
+          '& h1, & h2, & h3, & h4, & h5, & h6': {
+            color: '#ffffff !important',
+          },
+          '& p': {
+            color: '#E1E1E6 !important',
+          },
+          '& .text-muted, & .text-secondary': {
+            color: '#C9C9D6 !important',
+          },
+          '& .card, & [class*="card"]': {
+            backgroundColor: 'rgba(255, 255, 255, 0.1) !important',
+            backdropFilter: 'blur(10px) !important',
+            border: '1px solid rgba(255, 255, 255, 0.2) !important',
+            color: '#ffffff !important',
+          },
+          '& svg': {
+            color: '#ffffff !important',
+          },
         },
       });
     },
