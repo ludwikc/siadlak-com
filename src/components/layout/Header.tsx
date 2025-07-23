@@ -111,7 +111,7 @@ export default function Header() {
                             <div className="step-number w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
                               1
                             </div>
-                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/30 dark:from-silver-mist/30 to-transparent"></div>
+                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
                           </div>
                           <div className="step-content">
                             <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
@@ -128,7 +128,7 @@ export default function Header() {
                             <div className="step-number w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
                               2
                             </div>
-                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-secondary to-transparent"></div>
+                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
                           </div>
                           <div className="step-content pt-1">
                             <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
