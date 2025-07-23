@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
-import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, FileText } from "lucide-react";
+import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,227 +81,158 @@ export default function Header() {
             {isDropdownOpen && (
               <div className="fixed inset-x-0 top-full z-50 pt-1">
                 <div className="bg-luminous-white dark:bg-deep-space shadow-xl border-t border-slate-200 dark:border-slate-700 min-h-[90vh] overflow-y-auto">
-                  {/* Desktop Layout - Almost Fullscreen */}
-                  <div className="hidden lg:block max-w-7xl mx-auto px-12 py-16">
-                    <div className="grid grid-cols-3 gap-20">
-                      {/* Column 1: Twoja Ścieżka */}
-                      <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
-                        <div className="mb-8">
-                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
-                            TWOJA ŚCIEŻKA
-                          </h3>
-                          <p className="text-base text-slate-600 dark:text-slate-300">
-                            3 kroki do transformacji
-                          </p>
-                        </div>
+                  {/* Desktop Layout - Simple Sections */}
+                  <div className="hidden lg:block max-w-6xl mx-auto px-16 py-12">
+                    <div className="grid grid-cols-3 gap-16">
+                      
+                      {/* Section 1: ROZWÓJ */}
+                      <div>
+                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-8">
+                          ROZWÓJ
+                        </h3>
                         
-                        <div className="space-y-8">
-                          <div className="flex items-start gap-6">
-                            <div className="flex flex-col items-center">
-                              <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-base font-medium">
-                                1
-                              </div>
-                              <div className="w-0.5 h-12 bg-slate-200 dark:bg-slate-600 mt-3"></div>
-                            </div>
-                            <div className="pt-2">
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
-                                Wybierz kurs
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Programy rozwojowe i szkolenia
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start gap-6">
-                            <div className="flex flex-col items-center">
-                              <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center text-base font-medium">
-                                2
-                              </div>
-                              <div className="w-0.5 h-12 bg-slate-200 dark:bg-slate-600 mt-3"></div>
-                            </div>
-                            <div className="pt-2">
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
-                                Dołącz do Lifehackerów
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Zamknięta grupa moich klientów
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start gap-6">
-                            <div className="flex flex-col items-center">
-                              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-base font-medium">
-                                3
-                              </div>
-                            </div>
-                            <div className="pt-2">
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-2">
-                                Pracuj ze mną 1:1
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Mentoring indywidualny
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Column 2: Wszystkie Możliwości */}
-                      <div className="p-8">
-                        <div className="mb-8">
-                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
-                            WSZYSTKIE MOŻLIWOŚCI
-                          </h3>
-                        </div>
-                        
-                        <div className="space-y-4">
+                        <div className="space-y-6">
                           <Link 
                             to="/program" 
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
                             onClick={() => setIsDropdownOpen(false)}
                           >
-                            <div className="w-12 h-12 flex items-center justify-center mr-4">
-                              <Book size={22} className="text-slate-500 dark:text-slate-400" />
-                            </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
-                                Programy rozwojowe
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Kursy online i szkolenia
-                              </p>
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Programy rozwojowe
                             </div>
                           </Link>
 
                           <Link 
-                            to="/podcasts" 
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            to="/courses" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
                             onClick={() => setIsDropdownOpen(false)}
                           >
-                            <div className="w-12 h-12 flex items-center justify-center mr-4">
-                              <Headphones size={22} className="text-slate-500 dark:text-slate-400" />
-                            </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
-                                Krótkie treści
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Podcasty i 300+ vlogów
-                              </p>
-                            </div>
-                          </Link>
-
-                          <Link 
-                            to="/community" 
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <div className="w-12 h-12 flex items-center justify-center mr-4">
-                              <Users size={22} className="text-slate-500 dark:text-slate-400" />
-                            </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
-                                Ludzie
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Społeczność Lifehackerów
-                              </p>
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Kursy i szkolenia
                             </div>
                           </Link>
 
                           <Link 
                             to="/newsletter" 
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
                             onClick={() => setIsDropdownOpen(false)}
                           >
-                            <div className="w-12 h-12 flex items-center justify-center mr-4">
-                              <Mail size={22} className="text-slate-500 dark:text-slate-400" />
-                            </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
-                                Newsletter
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Moje przemyślenia
-                              </p>
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Newsletter
                             </div>
                           </Link>
 
                           <Link 
                             to="/webinar" 
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group"
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
                             onClick={() => setIsDropdownOpen(false)}
                           >
-                            <div className="w-12 h-12 flex items-center justify-center mr-4">
-                              <Video size={22} className="text-slate-500 dark:text-slate-400" />
-                            </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100 mb-1">
-                                Wydarzenia na żywo
-                              </h4>
-                              <p className="text-base text-slate-600 dark:text-slate-400">
-                                Sesje live i masterclassy
-                              </p>
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Wydarzenia na żywo
                             </div>
                           </Link>
                         </div>
                       </div>
 
-                      {/* Column 3: Strefa Lifehackerów */}
-                      <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
-                        <div className="mb-8">
-                          <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">
-                            STREFA LIFEHACKERÓW
-                          </h3>
-                        </div>
+                      {/* Section 2: TREŚCI */}
+                      <div>
+                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-8">
+                          TREŚCI
+                        </h3>
                         
-                        <div className="bg-luminous-white dark:bg-deep-space border border-slate-200 dark:border-slate-700 rounded-xl p-6">
-                          <div className="flex items-center mb-6">
-                            <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center mr-4">
-                              <Lock size={18} className="text-amber-600 dark:text-amber-400" />
+                        <div className="space-y-6">
+                          <Link 
+                            to="/podcasts" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Podcasty
                             </div>
-                            <div>
-                              <h4 className="text-lg font-medium text-slate-900 dark:text-slate-100">
-                                Dla członków
-                              </h4>
+                          </Link>
+
+                          <a 
+                            href="https://youtube.com/@LudwikSiadlak" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Vlogi YouTube
                             </div>
-                          </div>
-                          
-                          <p className="text-base text-slate-600 dark:text-slate-400 mb-6">
-                            Witaj z powrotem!
-                          </p>
-                          
-                          <div className="space-y-3">
-                            <a 
-                              href="https://portal.siadlak.com" 
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-                            >
-                              <Home size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
-                              <span className="text-slate-700 dark:text-slate-300">Portal Lifehackerów</span>
-                            </a>
-                            
-                            <a 
-                              href="/discord" 
-                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-                            >
-                              <Calendar size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
-                              <span className="text-slate-700 dark:text-slate-300">12:34 Daily Coaching</span>
-                            </a>
-                            
-                            <a 
-                              href="/zasoby" 
-                              className="flex items-center p-3 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
-                            >
-                              <FileText size={18} className="text-slate-500 dark:text-slate-400 mr-3" />
-                              <span className="text-slate-700 dark:text-slate-300">Protipy</span>
-                            </a>
-                          </div>
+                          </a>
+
+                          <Link 
+                            to="/testimonials" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Opinie klientów
+                            </div>
+                          </Link>
+
+                          <Link 
+                            to="/work" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Portfolio
+                            </div>
+                          </Link>
                         </div>
                       </div>
+
+                      {/* Section 3: SPOŁECZNOŚĆ */}
+                      <div>
+                        <h3 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-8">
+                          SPOŁECZNOŚĆ
+                        </h3>
+                        
+                        <div className="space-y-6">
+                          <Link 
+                            to="/community" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Lifehackerzy
+                            </div>
+                          </Link>
+
+                          <a 
+                            href="https://portal.siadlak.com" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Portal członków
+                            </div>
+                          </a>
+
+                          <a 
+                            href="/discord" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              12:34 Daily Coaching
+                            </div>
+                          </a>
+
+                          <Link 
+                            to="/contact" 
+                            className="block hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                            onClick={() => setIsDropdownOpen(false)}
+                          >
+                            <div className="text-base font-medium text-slate-900 dark:text-slate-100">
+                              Praca 1:1
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
