@@ -95,7 +95,7 @@ export default function Header() {
                   {/* Desktop Layout - 3 columns, responsive width */}
                   <div className="hidden lg:flex max-w-[1060px] w-full mx-auto">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) - Information Only */}
-                    <div className="flex-[280] min-w-0 p-4">
+                    <div className="flex-[280] min-w-0 p-6">
                       <div className="journey-header mb-4">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
                           Twoja ścieżka rozwoju
@@ -159,7 +159,7 @@ export default function Header() {
                     </div>
 
                     {/* Column 2: Możliwości Cards (480px) */}
-                    <div className="flex-[480] min-w-0 p-8 border-l border-slate-200 dark:border-silver-mist/10">
+                    <div className="flex-[480] min-w-0 p-6 border-l border-slate-200 dark:border-silver-mist/10">
                       <div className="possibilities-header mb-8">
                         <h3 className="text-xl font-semibold text-deep-charcoal dark:text-silver-mist">
                           Wszystkie możliwości
@@ -270,7 +270,7 @@ export default function Header() {
                     </div>
 
                     {/* Column 3: Strefa Lifehackerów (280px) - Different Background */}
-                    <div className="flex-[280] min-w-0 p-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 border-l border-slate-200 dark:border-silver-mist/10">
+                    <div className="flex-[280] min-w-0 p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 border-l border-slate-200 dark:border-silver-mist/10">
                       <div className="members-zone">
                         <div className="members-header flex items-center mb-4">
                           <div className="lock-icon w-8 h-8 flex items-center justify-center bg-amber-50 dark:bg-amber-900/30 rounded-lg mr-3 border border-amber-200 dark:border-amber-700">
