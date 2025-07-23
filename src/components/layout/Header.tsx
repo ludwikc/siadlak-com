@@ -8,6 +8,15 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  // Hover handlers for dropdown
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
+  };
   
   // Handle scroll effect
   useEffect(() => {
@@ -55,88 +64,106 @@ export default function Header() {
           </Link>
           
           {/* Dropdown for Możliwości */}
-          <div className="relative group">
+          <div 
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
             >
               Możliwości
               <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
-            {/* Megamenu Dropdown */}
+            {/* Mega Menu Dropdown */}
             {isDropdownOpen && (
-              <div 
-                className="absolute top-full left-0 mt-2 w-80 bg-luminous-white dark:bg-deep-space shadow-lg rounded-lg border border-silver-mist/20 dark:border-silver-mist/10 p-6 z-50"
-                onMouseEnter={() => setIsDropdownOpen(true)}
-                onMouseLeave={() => setIsDropdownOpen(false)}
-              >
-                <div className="space-y-4">
-                  <Link 
-                    to="/program" 
-                    className="block group"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                      Programy
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-2 z-50">
+                <div className="bg-luminous-white dark:bg-deep-space shadow-xl rounded-xl border border-silver-mist/20 dark:border-silver-mist/10 overflow-hidden">
+                  <div className="grid grid-cols-2 gap-0 w-[600px]">
+                    {/* Left Column */}
+                    <div className="p-6 space-y-4">
+                      <Link 
+                        to="/program" 
+                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          Programy
+                        </div>
+                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                          Programy rozwojowe i szkolenia
+                        </div>
+                      </Link>
+                      
+                      <Link 
+                        to="/podcast" 
+                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          Podcasty
+                        </div>
+                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                          Lifehacking i Uważne Życie
+                        </div>
+                      </Link>
+                      
+                      <Link 
+                        to="/community" 
+                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          Społeczność
+                        </div>
+                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                          Zamknięta grupa Lifehackerów
+                        </div>
+                      </Link>
                     </div>
-                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                      Programy rozwojowe i szkolenia
+                    
+                    {/* Right Column */}
+                    <div className="p-6 space-y-4 border-l border-silver-mist/20 dark:border-silver-mist/10">
+                      <Link 
+                        to="/newsletter" 
+                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          Newsletter
+                        </div>
+                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                          Cotygodniowe inspiracje technologiczne
+                        </div>
+                      </Link>
+                      
+                      <Link 
+                        to="/webinar" 
+                        className="block group p-3 rounded-lg hover:bg-silver-mist/10 dark:hover:bg-silver-mist/5 transition-colors"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          Webinar
+                        </div>
+                        <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
+                          Live sesje i masterclassy
+                        </div>
+                      </Link>
+                      
+                      <div className="pt-2 mt-4 border-t border-silver-mist/20 dark:border-silver-mist/10">
+                        <Link 
+                          to="/work" 
+                          className="block group p-3 rounded-lg hover:bg-neural-violet/10 dark:hover:bg-luminal-magenta/10 transition-colors"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          <div className="font-medium text-neural-violet dark:text-luminal-magenta">
+                            Zobacz wszystkie możliwości →
+                          </div>
+                        </Link>
+                      </div>
                     </div>
-                  </Link>
-                  
-                  <Link 
-                    to="/podcast" 
-                    className="block group"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                      Podcasty
-                    </div>
-                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                      Lifehacking i Uważne Życie
-                    </div>
-                  </Link>
-                  
-                  <Link 
-                    to="/community" 
-                    className="block group"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                      Społeczność
-                    </div>
-                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                      Zamknięta grupa Lifehackerów
-                    </div>
-                  </Link>
-                  
-                  <Link 
-                    to="/newsletter" 
-                    className="block group"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                      Newsletter
-                    </div>
-                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                      Cotygodniowe inspiracje technologiczne
-                    </div>
-                  </Link>
-                  
-                  <Link 
-                    to="/webinar" 
-                    className="block group"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    <div className="font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                      Webinar
-                    </div>
-                    <div className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mt-1">
-                      Live sesje i masterclassy
-                    </div>
-                  </Link>
+                  </div>
                 </div>
               </div>
             )}
