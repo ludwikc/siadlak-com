@@ -91,9 +91,9 @@ export default function Header() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="mx-auto max-w-[95vw] bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden">
+                <div className="mx-auto w-fit bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden">
                   {/* Desktop Layout - 3 columns, responsive width */}
-                  <div className="hidden lg:flex max-w-[1060px] w-full mx-auto">
+                  <div className="hidden lg:flex w-[1064px]">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) - Information Only */}
                     <div className="flex-[280] min-w-0 p-6">
                       <div className="journey-header mb-4">
