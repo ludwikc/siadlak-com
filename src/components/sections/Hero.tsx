@@ -87,7 +87,7 @@ export default function Hero({
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in ${getTextClasses()}
+              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl" : ""} 
               `}
             >
