@@ -173,7 +173,7 @@ export default function Header() {
                           className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute top-0 right-0 bg-red-500 text-white text-xs font-semibold px-4 py-2 transform rotate-45 origin-top-right translate-x-[14px] translate-y-[14px] shadow-md">
+                          <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
                             Zacznij tutaj
                           </div>
                           <div className="flex items-center">
@@ -196,7 +196,7 @@ export default function Header() {
                           className="nav-card block p-4 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-semibold px-2 py-2 transform rotate-45 origin-top-right translate-x-[20px] translate-y-[20px] shadow-md">
+                          <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">
                             Jeszcze dostępne miejsca!
                           </div>
                           <div className="flex items-center">
