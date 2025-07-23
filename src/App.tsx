@@ -7,6 +7,21 @@ import Newsletter from './pages/Newsletter';
 import NotFound from './pages/NotFound';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
+import Community from './pages/Community';
+import Podcasts from './pages/Podcasts';
+import LifeHackingPodcast from './pages/LifeHackingPodcast';
+import UwazneZyciePodcast from './pages/UwazneZyciePodcast';
+import Webinar from './pages/Webinar';
+import WebinarExpired from './pages/WebinarExpired';
+import WebinarLive from './pages/WebinarLive';
+import WebinarLobby from './pages/WebinarLobby';
+import WebinarRegistration from './pages/WebinarRegistration';
+import WebinarReplay from './pages/WebinarReplay';
+import Testimonials from './pages/Testimonials';
+import Assessment from './pages/Assessment';
+import ThankYou from './pages/ThankYou';
+import Legal from './pages/Legal';
+import MentalElevator from './pages/MentalElevator';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 
@@ -21,10 +36,27 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/assessment" element={<Assessment />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/community" element={<Community />} />
           
-          <Route path="/programs" element={<Courses />} />
-          <Route path="/programs/:courseSlug" element={<CourseDetail />} />
-          <Route path="/programs/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
+          <Route path="/program" element={<Courses />} />
+          <Route path="/program/:courseSlug" element={<CourseDetail />} />
+          <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
+          <Route path="/program/mental-elevator" element={<MentalElevator />} />
+          
+          <Route path="/podcast" element={<Podcasts />} />
+          <Route path="/podcast/life-hacking" element={<LifeHackingPodcast />} />
+          <Route path="/podcast/uwazne-zycie" element={<UwazneZyciePodcast />} />
+          
+          <Route path="/webinar" element={<Webinar />} />
+          <Route path="/webinar/registration" element={<WebinarRegistration />} />
+          <Route path="/webinar/lobby" element={<WebinarLobby />} />
+          <Route path="/webinar/live" element={<WebinarLive />} />
+          <Route path="/webinar/expired" element={<WebinarExpired />} />
+          <Route path="/webinar/replay" element={<WebinarReplay />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
