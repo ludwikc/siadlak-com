@@ -350,6 +350,15 @@ body.dev-light {
   }
 }
 
+/* Hero section backgrounds */
+.bg-hero-light {
+  background-color: transparent;
+}
+
+.dark .bg-hero-dark {
+  background-color: transparent;
+}
+
 /* === Specialty Layout Spacing === */
 .section {
   padding-top: 40px;
