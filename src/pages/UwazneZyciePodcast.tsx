@@ -1,6 +1,7 @@
 
 
 import Layout from '../components/layout/Layout';
+import Hero from '../components/sections/Hero';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
 import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
 import ValueProposition from '../components/podcast/ValueProposition';
@@ -78,19 +79,15 @@ const UwazneZyciePodcast = () => {
 
   return (
     <Layout>
-      {/* Hero Section from /program style */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Uważne Życie
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/90">
-              Odnajdź równowagę w świecie ciągłych wymagań
-            </p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Uważne Życie"
+        subtitle="Odnajdź równowagę w świecie ciągłych wymagań"
+        ctaText="Posłuchaj najnowszego odcinka"
+        ctaLink="#player"
+        backgroundImage="/lovable-uploads/83c4de73-257e-4763-9477-2e4a54d8f95b.png"
+        imageDescription="Osoba w pozie medytacyjnej w spokojnym otoczeniu"
+        fullHeight={true}
+      />
 
       <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/20">
         <div className="container mx-auto px-4">
