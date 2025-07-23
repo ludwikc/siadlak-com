@@ -16,7 +16,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-gradient-text-brand-dark">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:bg-gradient-text-brand-dark dark:text-transparent">
             {title}
           </h2>
         </div>
