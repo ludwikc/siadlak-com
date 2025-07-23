@@ -24,6 +24,7 @@ import Assessment from './pages/Assessment';
 import ThankYou from './pages/ThankYou';
 import Legal from './pages/Legal';
 import MentalElevator from './pages/MentalElevator';
+import Work from './pages/Work';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work" element={<Work />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/assessment" element={<Assessment />} />

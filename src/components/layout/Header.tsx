@@ -55,6 +55,9 @@ export default function Header() {
           <Link to="/podcast" className="nav-link">
             Podcasty
           </Link>
+          <Link to="/work" className="nav-link">
+            Możliwości
+          </Link>
           <Link to="/community" className="nav-link">
             Społeczność
           </Link>
