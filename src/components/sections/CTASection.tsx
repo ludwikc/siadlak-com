@@ -18,7 +18,7 @@ export default function CTASection({
   buttonLink,
 }: CTASectionProps) {
   return (
-    <section className="py-16 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet/80 dark:to-ascension-pink/80">
+    <section className="py-16 bg-gradient-brand-primary">
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-white mb-4">{title}</h2>

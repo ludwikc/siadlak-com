@@ -221,7 +221,7 @@ const config: Config = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    function({ addUtilities }: any) {
+    function({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
       addUtilities({
         '.story-link': {
           position: 'relative',
@@ -256,6 +256,33 @@ const config: Config = {
           '.dark &': {
             backgroundColor: 'rgba(0, 0, 0, 0.2)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
+          },
+        },
+        // Theme-agnostic gradient utilities for design-locked sections
+        '.bg-gradient-brand-primary': {
+          background: 'linear-gradient(to bottom right, #3B0F77, #B0128C)',
+        },
+        '.bg-gradient-brand-dark': {
+          background: 'linear-gradient(to bottom right, #0A0A0D, #061A40)',
+        },
+        '.bg-gradient-brand-hero': {
+          background: 'linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)',
+        },
+        '.bg-gradient-text-brand': {
+          background: 'linear-gradient(to right, #3B0F77, #B0128C)',
+          backgroundClip: 'text',
+          '-webkit-background-clip': 'text',
+          color: 'transparent',
+        },
+        '.bg-gradient-text-brand-dark': {
+          background: 'linear-gradient(to right, #E1E1E6, #DA1EAE)',
+          backgroundClip: 'text',
+          '-webkit-background-clip': 'text',
+          color: 'transparent',
+          '.dark &': {
+            background: 'linear-gradient(to right, #E1E1E6, #DA1EAE)',
+            backgroundClip: 'text',
+            '-webkit-background-clip': 'text',
           },
         },
       });

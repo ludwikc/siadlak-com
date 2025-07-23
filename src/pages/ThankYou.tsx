@@ -60,7 +60,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
               Wiadomość dotarła. Ale to nie jest automatyczna odpowiedź.
             </h2>
 
@@ -117,7 +117,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
               ⚡ ZAPISANO ⚡ <br />
               (Ale to dopiero początek...)
             </h2>
@@ -168,7 +168,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
               Gratulacje. Twoje życie właśnie weszło na inny tor.
             </h2>
 
@@ -245,7 +245,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
               Zarezerwowano miejsce. A teraz mam pytanie...
             </h2>
 
@@ -367,7 +367,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
               Dziękujemy za kontakt!
             </h2>
 

@@ -58,7 +58,7 @@ export default function TestimonialCarousel({
                     className="w-16 h-16 rounded-full object-cover mb-3"
                   />
                 ) : (
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta mb-3"></div>
+                  <div className="w-16 h-16 rounded-full bg-gradient-brand-primary mb-3"></div>
                 )}
                 <div className="text-deep-charcoal dark:text-silver-mist font-semibold">
                   {currentTestimonial.name}

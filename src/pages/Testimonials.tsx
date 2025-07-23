@@ -123,7 +123,7 @@ const Testimonials = () => {
                   </p>
 
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink mr-4"></div>
+                    <div className="w-12 h-12 rounded-full bg-gradient-brand-primary mr-4"></div>
                     <div>
                       <p className="font-bold text-deep-charcoal dark:text-silver-mist">
                         {testimonial.name}
@@ -169,7 +169,7 @@ const Testimonials = () => {
                   </p>
 
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink mr-3"></div>
+                    <div className="w-10 h-10 rounded-full bg-gradient-brand-primary mr-3"></div>
                     <div>
                       <p className="font-bold text-deep-charcoal dark:text-silver-mist">
                         {testimonial.name}
@@ -195,7 +195,7 @@ const Testimonials = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-gradient-to-br from-neural-violet to-ascension-pink">
+      <section className="py-12 bg-gradient-brand-primary">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">

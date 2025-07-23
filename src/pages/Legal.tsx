@@ -8,7 +8,7 @@ const Legal = () => {
       <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 pt-20 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-text-brand-dark">
               Informacje prawne
             </h1>
 
