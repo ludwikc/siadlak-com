@@ -48,9 +48,10 @@ const About = () => {
                 variant="secondary"
                 className="animate-fade-in"
                 style={{ animationDelay: "0.4s" }}
+                aria-label="Umów rozmowę - przejdź do formularza kontaktowego"
               >
                 Umów rozmowę
-                <Calendar className="h-4 w-4" />
+                <Calendar className="h-4 w-4" aria-hidden="true" />
               </Button>
             </Link>
           </div>
@@ -264,9 +265,10 @@ const About = () => {
                 <Button
                   variant="outline"
                   className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
+                  aria-label="Poczytaj moje aktualne przemyślenia - przejdź do newslettera"
                 >
                   Poczytaj moje aktualne przemyślenia
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4" aria-hidden="true" />
                 </Button>
               </Link>
 
@@ -274,9 +276,10 @@ const About = () => {
                 <Button
                   variant="outline"
                   className="border-white text-white hover:bg-[rgba(255,255,255,0.1)]"
+                  aria-label="Umów Rozmowę Discovery - przejdź do formularza kontaktowego"
                 >
                   Umów Rozmowę Discovery
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
