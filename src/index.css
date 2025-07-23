@@ -64,6 +64,7 @@
 
   /* Typography */
   --font-family-primary: "Inter", sans-serif;
+  --font-family-heading: "Montserrat", sans-serif;
   --font-weight-medium: 500;
 
   /* Borders */
@@ -295,7 +296,7 @@ body.dev-light {
   h4,
   h5,
   h6 {
-    font-family: ui-sans-serif, sans-serif;
+    font-family: var(--font-family-heading), Montserrat, sans-serif;
     font-weight: 700;
     color: var(--text-color);
   }

@@ -294,8 +294,7 @@ export default function NewsletterPage() {
                 size="lg"
                 className="bg-neural-violet hover:bg-neural-violet/90 text-white"
                 onClick={() =>
-                  (window.location.href =
-                    "https://app.easycart.pl/checkout/siadlak/newsletter")
+                  window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")
                 }
               >
                 DOŁĄCZ TERAZ DO SPOŁECZNOŚCI

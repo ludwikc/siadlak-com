@@ -80,7 +80,7 @@ const Contact = () => {
                 <div className="flex flex-col space-y-4">
                   <Button
                     onClick={() =>
-                      (window.location.href = "mailto:connect@siadlak.email")
+                      window.open("mailto:connect@siadlak.email", "_self")
                     }
                     className="w-full h-14 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
                   >
@@ -90,8 +90,7 @@ const Contact = () => {
 
                   <Button
                     onClick={() =>
-                      (window.location.href =
-                        "https://www.linkedin.com/in/ludwikc")
+                      window.open("https://www.linkedin.com/in/ludwikc", "_blank")
                     }
                     className="w-full h-14 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
                   >
