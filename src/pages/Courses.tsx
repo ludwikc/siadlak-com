@@ -19,7 +19,8 @@ const fundamentalPrograms = [
     duration: '6 tygodni',
     format: 'Online + Spotkania grupowe',
     level: 'Dla świadomych optymalizatorów',
-    startDate: 'Rekrutacja kwartalna'
+    startDate: 'Rekrutacja kwartalna',
+    category: 'Produktywność'
   },
   {
     id: 'silna-glowa',
@@ -35,7 +36,8 @@ const fundamentalPrograms = [
     duration: '5 tygodni',
     format: 'Kurs online + praktyki',
     level: 'Dla poszukujących balansu',
-    startDate: 'Dostęp natychmiastowy'
+    startDate: 'Dostęp natychmiastowy',
+    category: 'Odporność psychiczna'
   }
 ];
 
@@ -103,7 +105,7 @@ export default function Courses() {
                 >
                   <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
                     <span className="text-white text-lg font-medium text-center px-4">
-                      {program.title}
+                      {program.category}
                     </span>
                   </div>
                   
