@@ -138,44 +138,53 @@ export default function MentalElevator() {
                 Jak to działa? (Bo wiem, że potrzebujesz zrozumieć mechanizm)
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-ascension-pink rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
-                    <h4 className="text-xl font-bold">Destabilizacja</h4>
+              <p className="text-xl text-center mb-12 text-silver-mist font-medium">
+                8 tygodni. 8 sesji. Całkowita transformacja.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-ascension-pink rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">1</div>
+                    <h4 className="text-lg font-bold">Destabilizacja</h4>
                   </div>
-                  <p className="text-silver-mist/90 mb-4 font-medium">Sesje 1-2</p>
-                  <ul className="space-y-2 text-silver-mist/80">
-                    <li>• Identyfikujemy Twoje wewnętrzne "części"</li>
-                    <li>• Odkrywamy konflikty sabotujące decyzje</li>
-                    <li>• Ustanawiamy somatyczną świadomość</li>
-                  </ul>
+                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 1-2</p>
+                  <p className="text-silver-mist/80 text-sm">
+                    Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. To będzie intensywne.
+                  </p>
                 </div>
 
-                <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
-                    <h4 className="text-xl font-bold">Dezintegracja</h4>
+                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">2</div>
+                    <h4 className="text-lg font-bold">Dezorientacja</h4>
                   </div>
-                  <p className="text-silver-mist/90 mb-4 font-medium">Sesje 3-5</p>
-                  <ul className="space-y-2 text-silver-mist/80">
-                    <li>• Kontrolowana dezorientacja</li>
-                    <li>• Praca z paradoksem kontroli</li>
-                    <li>• Niepewność jako przestrzeń kreatywna</li>
-                  </ul>
+                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 3-4</p>
+                  <p className="text-silver-mist/80 text-sm">
+                    Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. To dokładnie to, czego potrzebujesz.
+                  </p>
                 </div>
 
-                <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-neural-violet rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">3</div>
-                    <h4 className="text-xl font-bold">Nowy OS</h4>
+                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-neural-violet rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">3</div>
+                    <h4 className="text-lg font-bold">Integracja</h4>
                   </div>
-                  <p className="text-silver-mist/90 mb-4 font-medium">Sesje 6-8</p>
-                  <ul className="space-y-2 text-silver-mist/80">
-                    <li>• Łączenie analityki z intuicją</li>
-                    <li>• Instalacja nowego systemu operacyjnego</li>
-                    <li>• Testowanie w rzeczywistych sytuacjach</li>
-                  </ul>
+                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 5-6</p>
+                  <p className="text-silver-mist/80 text-sm">
+                    Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. Pierwsze przebłyski nowego sposobu bycia.
+                  </p>
+                </div>
+
+                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-quantum-blue rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">4</div>
+                    <h4 className="text-lg font-bold">Droga do Mistrzostwa</h4>
+                  </div>
+                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 7-8</p>
+                  <p className="text-silver-mist/80 text-sm">
+                    Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.
+                  </p>
                 </div>
               </div>
             </div>
