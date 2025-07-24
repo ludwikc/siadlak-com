@@ -93,7 +93,7 @@ export default function Courses() {
                 Programy Fundamentalne
               </h2>
               <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
-                Zacznij swoją podróż transformacji od solidnych podstaw
+                Zacznij swoją podróż transformacji od solidnych podstaw. <br />Czego teraz bardziej potrzebujesz? <br /> (Wiesz czego, zacznij sobie ufać) <br />
               </p>
             </div>
             
