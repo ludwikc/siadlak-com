@@ -142,49 +142,73 @@ export default function MentalElevator() {
                 8 tygodni. 8 sesji. Całkowita transformacja.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-ascension-pink rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">1</div>
-                    <h4 className="text-lg font-bold">Destabilizacja</h4>
+              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="relative">
+                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-ascension-pink/30">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-ascension-pink rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">1</div>
+                      <div>
+                        <h4 className="text-2xl font-bold text-white">Destabilizacja</h4>
+                        <p className="text-ascension-pink font-semibold text-lg">Tydzień 1-2</p>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-lg leading-relaxed">
+                      Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. <span className="text-ascension-pink font-semibold">To będzie intensywne.</span>
+                    </p>
                   </div>
-                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 1-2</p>
-                  <p className="text-silver-mist/80 text-sm">
-                    Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. To będzie intensywne.
-                  </p>
+                  {/* Arrow to next step */}
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 text-ascension-pink">
+                    <ArrowRight className="w-8 h-8" />
+                  </div>
                 </div>
 
-                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">2</div>
-                    <h4 className="text-lg font-bold">Dezorientacja</h4>
+                <div className="relative">
+                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-luminal-magenta/30">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-luminal-magenta rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">2</div>
+                      <div>
+                        <h4 className="text-2xl font-bold text-white">Dezorientacja</h4>
+                        <p className="text-luminal-magenta font-semibold text-lg">Tydzień 3-4</p>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-lg leading-relaxed">
+                      Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. <span className="text-luminal-magenta font-semibold">To dokładnie to, czego potrzebujesz.</span>
+                    </p>
                   </div>
-                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 3-4</p>
-                  <p className="text-silver-mist/80 text-sm">
-                    Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. To dokładnie to, czego potrzebujesz.
-                  </p>
                 </div>
 
-                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-neural-violet rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">3</div>
-                    <h4 className="text-lg font-bold">Integracja</h4>
+                <div className="relative">
+                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-neural-violet/30">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-neural-violet rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">3</div>
+                      <div>
+                        <h4 className="text-2xl font-bold text-white">Integracja</h4>
+                        <p className="text-neural-violet font-semibold text-lg">Tydzień 5-6</p>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-lg leading-relaxed">
+                      Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. <span className="text-neural-violet font-semibold">Pierwsze przebłyski nowego sposobu bycia.</span>
+                    </p>
                   </div>
-                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 5-6</p>
-                  <p className="text-silver-mist/80 text-sm">
-                    Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. Pierwsze przebłyski nowego sposobu bycia.
-                  </p>
+                  {/* Arrow to final step */}
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 text-neural-violet">
+                    <ArrowRight className="w-8 h-8" />
+                  </div>
                 </div>
 
-                <div className="glass-card p-6 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-quantum-blue rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">4</div>
-                    <h4 className="text-lg font-bold">Droga do Mistrzostwa</h4>
+                <div className="relative">
+                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-quantum-blue/30">
+                    <div className="flex items-center mb-6">
+                      <div className="w-16 h-16 bg-quantum-blue rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">4</div>
+                      <div>
+                        <h4 className="text-2xl font-bold text-white">Droga do Mistrzostwa</h4>
+                        <p className="text-quantum-blue font-semibold text-lg">Tydzień 7-8</p>
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-lg leading-relaxed">
+                      Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. <span className="text-quantum-blue font-semibold">Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.</span>
+                    </p>
                   </div>
-                  <p className="text-silver-mist/90 mb-3 font-medium text-sm">Tydzień 7-8</p>
-                  <p className="text-silver-mist/80 text-sm">
-                    Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.
-                  </p>
                 </div>
               </div>
             </div>
