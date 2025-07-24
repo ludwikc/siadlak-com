@@ -104,7 +104,7 @@ export default function Courses() {
                   className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-fit"
                 >
                   <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
-                    <span className="text-white text-lg font-medium text-center px-4">
+                    <span className="text-white text-lg font-medium text-center px-4 uppercase">
                       {program.category}
                     </span>
                   </div>
