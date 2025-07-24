@@ -15,15 +15,17 @@ export default function MentalElevator() {
               MENTAL ELEVATOR
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
-              8-tygodniowy program transformacji dla analitycznych profesjonalistów, którzy mają dość <span className="italic text-ascension-pink">udawania</span>, że wszystko mają pod kontrolą
+              8-tygodniowy program transformacji dla tych, którzy mają dość <span className="italic text-ascension-pink">udawania</span>, że wszystko mają pod kontrolą
             </h2>
             <Link to="/contact">
-              <Button className="bg-ascension-pink hover:bg-luminal-magenta text-white py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold">
+              <Button 
+                className="bg-ascension-pink hover:bg-luminal-magenta text-white py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold"
+                aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+              >
                 Zarezerwuj Discovery Session
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <ArrowRight className="ml-3 h-6 w-6" aria-hidden="true" />
               </Button>
             </Link>
-            <p className="text-sm mt-4 text-silver-mist/70">500 PLN • Odliczane od ceny programu</p>
           </div>
         </div>
       </section>
@@ -45,7 +47,7 @@ export default function MentalElevator() {
                 ].map((item, index) => (
                   <div key={index} className="flex items-start glass-card p-6 rounded-xl hover:shadow-lg transition-all">
                     <AlertCircle className="h-6 w-6 mr-4 text-red-500 flex-shrink-0 mt-1" />
-                    <p className="text-lg text-subtle-slate dark:text-silver-mist/90">{item}</p>
+                    <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
                   </div>
                 ))}
               </div>
@@ -58,7 +60,7 @@ export default function MentalElevator() {
                 ].map((item, index) => (
                   <div key={index} className="flex items-start glass-card p-6 rounded-xl hover:shadow-lg transition-all">
                     <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-lg text-subtle-slate dark:text-silver-mist/90">{item}</p>
+                    <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
                   </div>
                 ))}
               </div>
@@ -68,8 +70,8 @@ export default function MentalElevator() {
               <p className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
                 Twój problem leży w <span className="text-ascension-pink">fragmentacji</span>
               </p>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
-                Nie potrzebujesz więcej wiedzy czy motivacji. Potrzebujesz integracji.
+              <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/80">
+                Nie potrzebujesz więcej wiedzy czy motywacji. Potrzebujesz integracji.
               </p>
             </div>
           </div>
@@ -81,29 +83,29 @@ export default function MentalElevator() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Dlaczego dotychczasowe rozwiązania cię zawiodły
+              Dlaczego dotychczasowe rozwiązania Cię zawiodły
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="glass-card p-8 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-                <h3 className="text-xl font-bold mb-4 text-red-700 dark:text-red-300">Tradycyjny Coaching</h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <h3 className="text-xl font-bold mb-4 text-red-700 dark:text-red-300">Coaching / Mentoring</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Zakłada, że potrzebujesz więcej strategii, lepszych nawyków, mocniejszej motywacji. 
                   To jak próba naprawienia komputera przez instalowanie kolejnych programów.
                 </p>
               </div>
 
               <div className="glass-card p-8 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
-                <h3 className="text-xl font-bold mb-4 text-orange-700 dark:text-orange-300">Terapia</h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <h3 className="text-xl font-bold mb-4 text-orange-800 dark:text-orange-300">Terapia<sup>*</sup></h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Skupia się na przeszłości i emocjach, ale nie łączy tego z twoją dzisiejszą rzeczywistością zawodową. 
-                  Rozumiesz skąd perfekcjonizm, ale wciąż nie wiesz jak działać.
+                  Rozumiesz skąd perfekcjonizm, ale wciąż nie wiesz jak działać. <br /><br /> (Terapia jest ważnym i skutecznym narzędziem, z którego sam korzystam i polecam! Tu jednak)
                 </p>
               </div>
 
               <div className="glass-card p-8 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
-                <h3 className="text-xl font-bold mb-4 text-yellow-700 dark:text-yellow-300">Kursy Produktywności</h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <h3 className="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">Kursy Online</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Dają ci kolejne narzędzia, ale nie radzą sobie z podstawowym problemem: 
                   nie potrafisz zintegrować swojej analitycznej natury z intuicyjnym działaniem.
                 </p>
@@ -112,7 +114,7 @@ export default function MentalElevator() {
 
             <div className="text-center bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-2xl">
               <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
-                Rezultat? Żyjesz w ciągłym napięciu między potrzebą kontroli a świadomością, że ta kontrola cię paraliżuje.
+                Rezultat? Żyjesz w ciągłym napięciu między potrzebą kontroli a świadomością, że ta kontrola Cię paraliżuje.
               </p>
             </div>
           </div>
@@ -128,7 +130,7 @@ export default function MentalElevator() {
             </h2>
             
             <p className="text-xl text-center mb-12 text-silver-mist">
-              Mental Elevator to nie coaching. To nie terapia. To <span className="text-ascension-pink font-bold">integracyjna transformacja</span> zaprojektowana specjalnie dla analitycznych profesjonalistów.
+              Mental Elevator to nie coaching. To nie terapia. To <span className="text-ascension-pink font-bold"> realna transformacja</span> zaprojektowana specjalnie dla analitycznych profesjonalistów.
             </p>
 
             <div className="mb-16">
@@ -140,11 +142,11 @@ export default function MentalElevator() {
                 <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-ascension-pink rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
-                    <h4 className="text-xl font-bold">Mapowanie Systemu</h4>
+                    <h4 className="text-xl font-bold">Destabilizacja</h4>
                   </div>
                   <p className="text-silver-mist/90 mb-4 font-medium">Sesje 1-2</p>
                   <ul className="space-y-2 text-silver-mist/80">
-                    <li>• Identyfikujemy twoje wewnętrzne "części"</li>
+                    <li>• Identyfikujemy Twoje wewnętrzne "części"</li>
                     <li>• Odkrywamy konflikty sabotujące decyzje</li>
                     <li>• Ustanawiamy somatyczną świadomość</li>
                   </ul>
@@ -153,7 +155,7 @@ export default function MentalElevator() {
                 <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 hover:bg-white/15 transition-all">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
-                    <h4 className="text-xl font-bold">Destabilizacja</h4>
+                    <h4 className="text-xl font-bold">Dezintegracja</h4>
                   </div>
                   <p className="text-silver-mist/90 mb-4 font-medium">Sesje 3-5</p>
                   <ul className="space-y-2 text-silver-mist/80">
@@ -180,9 +182,12 @@ export default function MentalElevator() {
 
             <div className="text-center">
               <Link to="/contact">
-                <Button className="bg-ascension-pink hover:bg-luminal-magenta text-white py-4 px-10 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all">
+                <Button 
+                  className="bg-ascension-pink hover:bg-luminal-magenta text-white py-4 px-10 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all"
+                  aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+                >
                   Zarezerwuj Discovery Session
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
@@ -209,7 +214,7 @@ export default function MentalElevator() {
                   </div>
                 </div>
               </div>
-              <blockquote className="text-lg text-subtle-slate dark:text-silver-mist/90 italic mb-4">
+              <blockquote className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90 italic mb-4">
                 "Przez lata czułam się jak osoba o dwóch twarzach – analityczna w pracy, kreatywna prywatnie. Po Mental Elevator odkryłam, że jestem naturalnym amplifikatorem – generuję sukces dla innych przez to, kim jestem, nie co robię."
               </blockquote>
               <p className="text-ascension-pink font-bold text-lg">
@@ -227,13 +232,13 @@ export default function MentalElevator() {
                 },
                 {
                   icon: <Brain className="w-8 h-8" />,
-                  title: "Praca przestaje ciążyć po godzinach",
-                  description: "Umysł się faktycznie wyłącza"
+                  title: "Praca przestaje Ci ciążyć po godzinach",
+                  description: "Uczysz się odpoczywać i umysł faktycznie się wyłącza"
                 },
                 {
                   icon: <Users className="w-8 h-8" />,
-                  title: "Liderowanie bez wysiłku",
-                  description: "Zespół podąża za tobą naturalnie, nie przez presję"
+                  title: "Lidership bez wysiłku",
+                  description: "Zespół podąża za Tobą naturalnie, nie przez presję"
                 },
                 {
                   icon: <Target className="w-8 h-8" />,
@@ -260,7 +265,7 @@ export default function MentalElevator() {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-subtle-slate dark:text-silver-mist/80">
+                  <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                     {item.description}
                   </p>
                 </div>
@@ -284,7 +289,7 @@ export default function MentalElevator() {
                   <Brain className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
                   <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Metodologia oparta na neurobiologii</h3>
                 </div>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Integracja świadomości somatycznej z procesami poznawczymi tworzy nowe ścieżki neuronowe. 
                   Decyzje podejmujesz z "whole-brain intelligence".
                 </p>
@@ -295,7 +300,7 @@ export default function MentalElevator() {
                   <Shield className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
                   <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Praca z archetypami</h3>
                 </div>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Łączysz się z uniwersalnymi wzorcami przywództwa (Kreator, Ojciec/Ochrona, Wojownik, Transformator), 
                   które dają ci naturalny autorytet bez wysiłku.
                 </p>
@@ -306,8 +311,8 @@ export default function MentalElevator() {
                   <Zap className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
                   <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Systemowe podejście</h3>
                 </div>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
-                  Nie walczymy z twoim perfekcjonizmem czy analityczną naturą – 
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
+                  Nie walczymy z Twoim perfekcjonizmem czy analityczną naturą – 
                   integrujemy je w spójny system operacyjny.
                 </p>
               </div>
@@ -328,15 +333,15 @@ export default function MentalElevator() {
               <div className="glass-card p-8 rounded-xl">
                 <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">Program</h3>
                 <ul className="space-y-4 text-left">
-                  <li className="flex items-center text-subtle-slate dark:text-silver-mist/90">
+                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
                     <Clock className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
                     8 tygodni, 8 intensywnych sesji
                   </li>
-                  <li className="flex items-center text-subtle-slate dark:text-silver-mist/90">
+                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
                     <Calendar className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                    50-140 minut na sesję
+                    Sesje od 50 minut do 2,5 godziny
                   </li>
-                  <li className="flex items-center text-subtle-slate dark:text-silver-mist/90">
+                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
                     <Users className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
                     Dożywotni dostęp do społeczności Lifehackerzy
                   </li>
@@ -349,7 +354,7 @@ export default function MentalElevator() {
                   <p className="text-5xl font-bold text-neural-violet dark:text-luminal-magenta mb-4">
                     16.000 PLN
                   </p>
-                  <p className="text-lg text-subtle-slate dark:text-silver-mist/90">
+                  <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">
                     za pełen, 8-tygodniowy program transformacyjny
                   </p>
                 </div>
@@ -360,10 +365,10 @@ export default function MentalElevator() {
               <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">Dlaczego taka cena?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="text-left">
-                  <p className="text-subtle-slate dark:text-silver-mist/90 mb-4">
+                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90 mb-4">
                     To nie jest kurs online czy pakiet coachingowy. To głęboka, integracyjna transformacja wymagająca:
                   </p>
-                  <ul className="space-y-2 text-subtle-slate dark:text-silver-mist/80">
+                  <ul className="space-y-2 text-deep-charcoal/90 dark:text-silver-mist/80">
                     <li>• Pełnej obecności przez 8 tygodni</li>
                     <li>• Pracy na poziomie tożsamości</li>
                     <li>• Dostępu do unikalnej metodologii</li>
@@ -372,9 +377,9 @@ export default function MentalElevator() {
                 </div>
                 <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-xl">
                   <h4 className="font-bold mb-2 text-green-700 dark:text-green-300">ROI</h4>
-                  <p className="text-sm text-green-600 dark:text-green-400">
-                    Klienci raportują zwrot inwestycji w pierwszym roku przez zwiększoną skuteczność decyzyjną, 
-                    efektywność zespołu i redukcję kosztów stresu.
+                  <p className="text-sm text-green-700 dark:text-green-400">
+                    Moi klienci już po pierwszych sesjach wracają ze zwiększoną skutecznością, podnoszą
+                    efektywność swoich zespołów i redukują stres.
                   </p>
                 </div>
               </div>
@@ -402,7 +407,7 @@ export default function MentalElevator() {
             <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 mb-8">
               <div className="flex items-center justify-center mb-4">
                 <Users className="w-8 h-8 mr-3 text-ascension-pink" />
-                <span className="text-2xl font-bold">Przestrzeń: 3/5</span>
+                <span className="text-2xl font-bold">Obecnie dostępna przestrzeń: 2</span>
               </div>
               <p className="text-lg text-silver-mist/90">
                 <span className="text-ascension-pink font-bold">2 dostępne miejsca</span>
@@ -410,7 +415,7 @@ export default function MentalElevator() {
             </div>
 
             <p className="text-lg text-silver-mist/80">
-              Po zapełnieniu, następna możliwość dopiero jesienią 2025.
+              First come, first served. Jeśli czujesz, że to dla Ciebie, nie zwlekaj. Ale wiesz co? Sprawdźmy: 
             </p>
           </div>
         </div>
@@ -424,7 +429,7 @@ export default function MentalElevator() {
               Czy to dla Ciebie?
             </h2>
 
-            <p className="text-xl text-center mb-12 text-subtle-slate dark:text-silver-mist/90">
+            <p className="text-xl text-center mb-12 text-deep-charcoal/90 dark:text-silver-mist/90">
               Mental Elevator to <strong>nie jest</strong> dla każdego. Sprawdź, czy pasujesz do profilu:
             </p>
 
@@ -484,7 +489,7 @@ export default function MentalElevator() {
             </h2>
 
             <p className="text-xl mb-8">
-              Zanim zaakceptuję cię do programu, musimy przeprowadzić <strong>30-minutową Discovery Session</strong>.
+              Zanim zaakceptuję Cię do programu, musimy przeprowadzić <strong>30-minutową Discovery Session</strong>.
             </p>
 
             <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 mb-8">
@@ -496,7 +501,7 @@ export default function MentalElevator() {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <Target className="w-5 h-5 mr-3 text-ascension-pink" />
-                    Analizujemy twoje obecne wzorce i ograniczenia
+                    Analizujemy Twoje obecne wzorce i ograniczenia
                   </li>
                   <li className="flex items-center">
                     <Brain className="w-5 h-5 mr-3 text-ascension-pink" />
@@ -530,9 +535,12 @@ export default function MentalElevator() {
             </p>
 
             <Link to="/contact">
-              <Button className="bg-white text-neural-violet hover:bg-silver-mist py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold">
+              <Button 
+                className="bg-white text-neural-violet hover:bg-silver-mist py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold"
+                aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+              >
                 Zarezerwuj Discovery Session
-                <Calendar className="ml-3 h-6 w-6" />
+                <Calendar className="ml-3 h-6 w-6" aria-hidden="true" />
               </Button>
             </Link>
 
@@ -556,7 +564,7 @@ export default function MentalElevator() {
             <div className="bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-6 rounded-xl">
               <p className="text-lg">
                 <strong>P.S.</strong> Jeśli dotarłeś do tego miejsca i wciąż się wahasz – to prawdopodobnie znaczy, 
-                że twoja analityczna natura próbuje znaleźć "pewność" przed podjęciem kroków. To jeden z wzorców, 
+                że Twoja analityczna natura próbuje znaleźć "pewność" przed podjęciem kroków. To jeden z wzorców, 
                 z którymi będziemy pracować. Discovery Session to bezpieczny sposób na zbadanie tej niepewności 
                 bez pełnego zobowiązania.
               </p>
