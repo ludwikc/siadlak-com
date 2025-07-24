@@ -1,6 +1,6 @@
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap, AlertCircle, Users, Target, Brain, TrendingUp, Clock } from 'lucide-react';
+import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap, AlertCircle, Users, Target, Brain, TrendingUp, Clock, HelpCircle, GitMerge, Crown, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MentalElevator() {
@@ -142,71 +142,80 @@ export default function MentalElevator() {
                 8 tygodni. 8 sesji. Całkowita transformacja.
               </p>
 
-              <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div className="relative">
-                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-ascension-pink/30">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-ascension-pink rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">1</div>
+              <div className="max-w-4xl mx-auto space-y-6">
+                <div className="group relative">
+                  <div className="bg-gradient-to-br from-ascension-pink/15 to-ascension-pink/5 p-12 rounded-3xl border-2 border-ascension-pink/30 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-2xl hover:shadow-ascension-pink/20">
+                    <div className="flex items-center gap-6 mb-8">
+                      <div className="bg-ascension-pink/20 p-4 rounded-2xl">
+                        <Zap className="w-8 h-8 text-ascension-pink" />
+                      </div>
                       <div>
-                        <h4 className="text-2xl font-bold text-white">Destabilizacja</h4>
-                        <p className="text-ascension-pink font-semibold text-lg">Tydzień 1-2</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Destabilizacja</h3>
+                        <p className="text-ascension-pink/80 text-lg font-medium">Tydzień 1-2</p>
                       </div>
                     </div>
                     <p className="text-white/90 text-lg leading-relaxed">
-                      Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. <span className="text-ascension-pink font-semibold">To będzie intensywne.</span>
+                      Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. To będzie intensywne.
                     </p>
                   </div>
-                  {/* Arrow to next step */}
-                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 text-ascension-pink">
-                    <ArrowRight className="w-8 h-8" />
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-ascension-pink/60">
+                    <ArrowDown className="w-8 h-8" />
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-luminal-magenta/30">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-luminal-magenta rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">2</div>
+                <div className="group relative">
+                  <div className="bg-gradient-to-br from-luminal-magenta/15 to-luminal-magenta/5 p-12 rounded-3xl border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 transition-all duration-300 hover:shadow-2xl hover:shadow-luminal-magenta/20">
+                    <div className="flex items-center gap-6 mb-8">
+                      <div className="bg-luminal-magenta/20 p-4 rounded-2xl">
+                        <HelpCircle className="w-8 h-8 text-luminal-magenta" />
+                      </div>
                       <div>
-                        <h4 className="text-2xl font-bold text-white">Dezorientacja</h4>
-                        <p className="text-luminal-magenta font-semibold text-lg">Tydzień 3-4</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Dezorientacja</h3>
+                        <p className="text-luminal-magenta/80 text-lg font-medium">Tydzień 3-4</p>
                       </div>
                     </div>
                     <p className="text-white/90 text-lg leading-relaxed">
-                      Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. <span className="text-luminal-magenta font-semibold">To dokładnie to, czego potrzebujesz.</span>
+                      Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. To dokładnie to, czego potrzebujesz.
                     </p>
+                  </div>
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-luminal-magenta/60">
+                    <ArrowDown className="w-8 h-8" />
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-neural-violet/30">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-neural-violet rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">3</div>
+                <div className="group relative">
+                  <div className="bg-gradient-to-br from-neural-violet/15 to-neural-violet/5 p-12 rounded-3xl border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all duration-300 hover:shadow-2xl hover:shadow-neural-violet/20">
+                    <div className="flex items-center gap-6 mb-8">
+                      <div className="bg-neural-violet/20 p-4 rounded-2xl">
+                        <GitMerge className="w-8 h-8 text-neural-violet" />
+                      </div>
                       <div>
-                        <h4 className="text-2xl font-bold text-white">Integracja</h4>
-                        <p className="text-neural-violet font-semibold text-lg">Tydzień 5-6</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Integracja</h3>
+                        <p className="text-neural-violet/80 text-lg font-medium">Tydzień 5-6</p>
                       </div>
                     </div>
                     <p className="text-white/90 text-lg leading-relaxed">
-                      Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. <span className="text-neural-violet font-semibold">Pierwsze przebłyski nowego sposobu bycia.</span>
+                      Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. Pierwsze przebłyski nowego sposobu bycia.
                     </p>
                   </div>
-                  {/* Arrow to final step */}
-                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 text-neural-violet">
-                    <ArrowRight className="w-8 h-8" />
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-neural-violet/60">
+                    <ArrowDown className="w-8 h-8" />
                   </div>
                 </div>
 
-                <div className="relative">
-                  <div className="glass-card p-8 rounded-2xl backdrop-blur-sm bg-white/20 hover:bg-white/25 transition-all border-2 border-quantum-blue/30">
-                    <div className="flex items-center mb-6">
-                      <div className="w-16 h-16 bg-quantum-blue rounded-2xl flex items-center justify-center text-white font-bold text-2xl mr-4 shadow-lg">4</div>
+                <div className="group relative">
+                  <div className="bg-gradient-to-br from-quantum-blue/15 to-quantum-blue/5 p-12 rounded-3xl border-2 border-quantum-blue/30 hover:border-quantum-blue/50 transition-all duration-300 hover:shadow-2xl hover:shadow-quantum-blue/20">
+                    <div className="flex items-center gap-6 mb-8">
+                      <div className="bg-quantum-blue/20 p-4 rounded-2xl">
+                        <Crown className="w-8 h-8 text-quantum-blue" />
+                      </div>
                       <div>
-                        <h4 className="text-2xl font-bold text-white">Droga do Mistrzostwa</h4>
-                        <p className="text-quantum-blue font-semibold text-lg">Tydzień 7-8</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">Droga do Mistrzostwa</h3>
+                        <p className="text-quantum-blue/80 text-lg font-medium">Tydzień 7-8</p>
                       </div>
                     </div>
                     <p className="text-white/90 text-lg leading-relaxed">
-                      Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. <span className="text-quantum-blue font-semibold">Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.</span>
+                      Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.
                     </p>
                   </div>
                 </div>
