@@ -92,73 +92,75 @@ export default function Courses() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
                 Programy Fundamentalne
               </h2>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
-                Zacznij swoją podróż transformacji od solidnych podstaw. <br />Czego teraz bardziej potrzebujesz? <br /> (Wiesz czego, zacznij sobie ufać) <br />
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {fundamentalPrograms.map((program) => (
+                <div className="text-lg text-subtle-slate dark:text-silver-mist/80">
+                <p>Zacznij swoją podróż transformacji od solidnych podstaw.</p>
+                <p>Czego teraz bardziej potrzebujesz?</p>
+                <p>(Wiesz czego, zacznij sobie ufać)</p>
+                </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {fundamentalPrograms.map((program) => (
                 <div 
                   key={program.id}
                   className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-fit"
                 >
                   <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
-                    <span className="text-white text-lg font-medium text-center px-4 uppercase">
-                      {program.category}
-                    </span>
+                  <span className="text-white text-lg font-medium text-center px-4 uppercase">
+                    {program.category}
+                  </span>
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                      {program.title}
-                    </h3>
-                    
-                    <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-3 text-sm">
-                      {program.subtitle}
-                    </p>
-                    
-                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 text-sm">
-                      {program.description}
-                    </p>
-                    
-                    {/* Course Quick Info - Compact */}
-                    <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-                      <div className="flex items-center">
-                        <Clock className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-subtle-slate dark:text-silver-mist/80">{program.duration}</span>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <Star className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
-                        <span className="text-subtle-slate dark:text-silver-mist/80">{program.level}</span>
-                      </div>
+                  <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                    {program.title}
+                  </h3>
+                  
+                  <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-3 text-sm">
+                    {program.subtitle}
+                  </p>
+                  
+                  <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 text-sm">
+                    {program.description}
+                  </p>
+                  
+                  {/* Course Quick Info - Compact */}
+                  <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                    <div className="flex items-center">
+                    <Clock className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-subtle-slate dark:text-silver-mist/80">{program.duration}</span>
                     </div>
                     
-                    {/* Key Features - Compact */}
-                    <div className="mb-6">
-                      <div className="space-y-1">
-                        {program.features.slice(0, 3).map((feature, index) => (
-                          <div key={index} className="flex items-start text-xs">
-                            <CheckCircle className="h-3 w-3 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                            <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="flex items-center">
+                    <Star className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                    <span className="text-subtle-slate dark:text-silver-mist/80">{program.level}</span>
                     </div>
-                    
-                    <Link to={`/program/${program.id}`}>
-                      <Button className="w-full bg-neural-violet hover:bg-ascension-pink text-white">
-                        Zacznij swoją podróż
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
+                  </div>
+                  
+                  {/* Key Features - Compact */}
+                  <div className="mb-6">
+                    <div className="space-y-1">
+                    {program.features.slice(0, 3).map((feature, index) => (
+                      <div key={index} className="flex items-start text-xs">
+                      <CheckCircle className="h-3 w-3 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                      <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
+                      </div>
+                    ))}
+                    </div>
+                  </div>
+                  
+                  <Link to={`/program/${program.id}`}>
+                    <Button className="w-full bg-neural-violet hover:bg-ascension-pink text-white">
+                    Zacznij swoją podróż
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                   </div>
                 </div>
-              ))}
+                ))}
+              </div>
+              </div>
             </div>
           </div>
-        </div>
       </section>
       
       {/* Section 2: Community Bridge (100% Width) */}
