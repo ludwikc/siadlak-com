@@ -121,115 +121,140 @@ export default function MentalElevator() {
         </div>
       </section>
 
-      {/* Mental Elevator Solution */}
-      <section className="py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
-        <div className="container mx-auto px-4">
+      {/* Mental Elevator - Basement to Penthouse Journey */}
+      <section className="relative py-20 bg-gradient-to-b from-gray-900 via-gray-700 to-silver-mist overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent"></div>
+        
+        {/* Progress Indicator - Elevator Shaft */}
+        <div className="absolute left-8 top-20 bottom-20 w-2 bg-gradient-to-b from-gray-800 to-silver-mist rounded-full hidden lg:block">
+          <div className="absolute top-0 w-full h-1/4 bg-ascension-pink rounded-full animate-pulse"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-              Mental Elevator: Metodologia dla umysłów, które myślą systemowo
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
+              Mental Elevator
             </h2>
             
-            <p className="text-xl text-center mb-12 text-silver-mist">
-              Mental Elevator to nie coaching. To nie terapia. To <span className="text-ascension-pink font-bold"> realna transformacja</span> zaprojektowana specjalnie dla analitycznych profesjonalistów.
+            <p className="text-2xl text-center mb-4 text-silver-mist font-bold">
+              Od piwnicy umysłu do penthouse'u potencjału w 8 tygodni
+            </p>
+            
+            <p className="text-xl text-center mb-16 text-silver-mist/80">
+              Mental Elevator to nie coaching. To nie terapia. To <span className="text-ascension-pink font-bold">realna transformacja</span> zaprojektowana specjalnie dla analitycznych profesjonalistów.
             </p>
 
-            <div className="mb-16">
-              <h3 className="text-2xl font-bold mb-8 text-center text-ascension-pink">
-                Jak to działa? (Bo wiem, że potrzebujesz zrozumieć mechanizm)
-              </h3>
+            <div className="max-w-4xl mx-auto space-y-8">
+              {/* BASEMENT - Destabilizacja */}
+              <div className="group relative">
+                <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 p-12 rounded-3xl border-2 border-red-600/50 backdrop-blur-sm">
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-red-600/20 p-4 rounded-2xl">
+                        <Zap className="w-8 h-8 text-red-400" />
+                      </div>
+                      <div className="bg-gray-700/50 p-2 rounded-lg">
+                        <span className="text-red-400 font-mono text-sm">B</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-red-400 mb-2">PIWNICA - DESTABILIZACJA</h3>
+                      <p className="text-red-300/80 text-lg font-medium">Tydzień 1-2</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-200 text-lg leading-relaxed">
+                    Rozbijamy systemy myślenia, które Cię więzią w podziemiach potencjału. Tu mieszkają Twoje demony.
+                  </p>
+                </div>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-red-400/60 animate-bounce">
+                  <ArrowDown className="w-8 h-8" />
+                </div>
+              </div>
 
-              <p className="text-xl text-center mb-12 text-silver-mist font-medium">
-                8 tygodni. 8 sesji. Całkowita transformacja.
-              </p>
+              {/* GROUND FLOOR - Dezorientacja */}
+              <div className="group relative">
+                <div className="bg-gradient-to-br from-gray-700/90 to-gray-600/90 p-12 rounded-3xl border-2 border-orange-500/50 backdrop-blur-sm">
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-orange-500/20 p-4 rounded-2xl">
+                        <HelpCircle className="w-8 h-8 text-orange-400" />
+                      </div>
+                      <div className="bg-gray-600/50 p-2 rounded-lg">
+                        <span className="text-orange-400 font-mono text-sm">0</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-orange-400 mb-2">PARTER - DEZORIENTACJA</h3>
+                      <p className="text-orange-300/80 text-lg font-medium">Tydzień 3-4</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-100 text-lg leading-relaxed">
+                    Zabiorę Ci stare mapy. Teraz jesteś gotowy na prawdziwe wybicie się w górę.
+                  </p>
+                </div>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-orange-400/60 animate-bounce">
+                  <ArrowDown className="w-8 h-8" />
+                </div>
+              </div>
 
-              <div className="max-w-4xl mx-auto space-y-6">
-                <div className="group relative">
-                  <div className="bg-gradient-to-br from-ascension-pink/15 to-ascension-pink/5 p-12 rounded-3xl border-2 border-ascension-pink/30 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-2xl hover:shadow-ascension-pink/20">
-                    <div className="flex items-center gap-6 mb-8">
+              {/* NEXT FLOORS - Integracja */}
+              <div className="group relative">
+                <div className="bg-gradient-to-br from-gray-500/90 to-gray-400/90 p-12 rounded-3xl border-2 border-blue-500/50 backdrop-blur-sm">
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-blue-500/20 p-4 rounded-2xl">
+                        <GitMerge className="w-8 h-8 text-blue-400" />
+                      </div>
+                      <div className="bg-gray-500/50 p-2 rounded-lg">
+                        <span className="text-blue-400 font-mono text-sm">15</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-blue-400 mb-2">KOLEJNE PIĘTRA - INTEGRACJA</h3>
+                      <p className="text-blue-300/80 text-lg font-medium">Tydzień 5-6</p>
+                    </div>
+                  </div>
+                  <p className="text-white text-lg leading-relaxed">
+                    Konfliktowe części uczą się współpracy. Zaczynasz już widzieć miasto z lotu ptaka.
+                  </p>
+                </div>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-blue-400/60 animate-bounce">
+                  <ArrowDown className="w-8 h-8" />
+                </div>
+              </div>
+
+              {/* PENTHOUSE - Droga do Mistrzostwa */}
+              <div className="group relative">
+                <div className="bg-gradient-to-br from-white/95 to-silver-mist/95 p-12 rounded-3xl border-2 border-ascension-pink/70 backdrop-blur-sm shadow-2xl shadow-ascension-pink/20">
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="flex items-center gap-4">
                       <div className="bg-ascension-pink/20 p-4 rounded-2xl">
-                        <Zap className="w-8 h-8 text-ascension-pink" />
+                        <Crown className="w-8 h-8 text-ascension-pink" />
                       </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Destabilizacja</h3>
-                        <p className="text-ascension-pink/80 text-lg font-medium">Tydzień 1-2</p>
-                      </div>
-                    </div>
-                    <p className="text-white/90 text-lg leading-relaxed">
-                      Identyfikujemy i rozbijamy systemy myślenia, które Cię ograniczają. Wprowadzamy świadomość somatyczną. To będzie intensywne.
-                    </p>
-                  </div>
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-ascension-pink/60">
-                    <ArrowDown className="w-8 h-8" />
-                  </div>
-                </div>
-
-                <div className="group relative">
-                  <div className="bg-gradient-to-br from-luminal-magenta/15 to-luminal-magenta/5 p-12 rounded-3xl border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 transition-all duration-300 hover:shadow-2xl hover:shadow-luminal-magenta/20">
-                    <div className="flex items-center gap-6 mb-8">
-                      <div className="bg-luminal-magenta/20 p-4 rounded-2xl">
-                        <HelpCircle className="w-8 h-8 text-luminal-magenta" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Dezorientacja</h3>
-                        <p className="text-luminal-magenta/80 text-lg font-medium">Tydzień 3-4</p>
+                      <div className="bg-ascension-pink/10 p-2 rounded-lg">
+                        <span className="text-ascension-pink font-mono text-sm font-bold">P</span>
                       </div>
                     </div>
-                    <p className="text-white/90 text-lg leading-relaxed">
-                      Celowo zabieramy Ci znane mapy myślowe. Będziesz czuł się zagubiony. To dokładnie to, czego potrzebujesz.
-                    </p>
-                  </div>
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-luminal-magenta/60">
-                    <ArrowDown className="w-8 h-8" />
-                  </div>
-                </div>
-
-                <div className="group relative">
-                  <div className="bg-gradient-to-br from-neural-violet/15 to-neural-violet/5 p-12 rounded-3xl border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all duration-300 hover:shadow-2xl hover:shadow-neural-violet/20">
-                    <div className="flex items-center gap-6 mb-8">
-                      <div className="bg-neural-violet/20 p-4 rounded-2xl">
-                        <GitMerge className="w-8 h-8 text-neural-violet" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Integracja</h3>
-                        <p className="text-neural-violet/80 text-lg font-medium">Tydzień 5-6</p>
-                      </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-ascension-pink mb-2">PENTHOUSE - DROGA DO MISTRZOSTWA</h3>
+                      <p className="text-ascension-pink/80 text-lg font-medium">Tydzień 7-8</p>
                     </div>
-                    <p className="text-white/90 text-lg leading-relaxed">
-                      Identyfikujemy konfliktowe części Twojej osobowości i uczymy je współpracy. Pierwsze przebłyski nowego sposobu bycia.
-                    </p>
                   </div>
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-neural-violet/60">
-                    <ArrowDown className="w-8 h-8" />
-                  </div>
-                </div>
-
-                <div className="group relative">
-                  <div className="bg-gradient-to-br from-quantum-blue/15 to-quantum-blue/5 p-12 rounded-3xl border-2 border-quantum-blue/30 hover:border-quantum-blue/50 transition-all duration-300 hover:shadow-2xl hover:shadow-quantum-blue/20">
-                    <div className="flex items-center gap-6 mb-8">
-                      <div className="bg-quantum-blue/20 p-4 rounded-2xl">
-                        <Crown className="w-8 h-8 text-quantum-blue" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Droga do Mistrzostwa</h3>
-                        <p className="text-quantum-blue/80 text-lg font-medium">Tydzień 7-8</p>
-                      </div>
-                    </div>
-                    <p className="text-white/90 text-lg leading-relaxed">
-                      Nowy sposób bycia staje się Twoją naturalną ekspresją. Zmiana jest już zintegrowana i trwała. Ruszasz w tę podróż uzbrojony w nową, silniejszą wersję siebie, która jest nie-do-zatrzymania.
-                    </p>
-                  </div>
+                  <p className="text-deep-charcoal text-lg leading-relaxed">
+                    360° widok na swój potencjał. Tu zaczyna się nowy poziom życia. Nowy sposób bycia staje się Twoją naturalną ekspresją.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center mt-16">
               <Link to="/contact">
                 <Button 
-                  className="bg-ascension-pink hover:bg-luminal-magenta text-white py-4 px-10 text-lg rounded-xl shadow-xl hover:shadow-2xl transition-all"
-                  aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+                  className="bg-ascension-pink hover:bg-luminal-magenta text-white py-6 px-12 text-xl rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 font-bold"
+                  aria-label="Wsiądź do Mental Elevator - przejdź do formularza kontaktowego"
                 >
-                  Zarezerwuj Discovery Session
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                  WSIĄDŹ DO MENTAL ELEVATOR
+                  <ArrowRight className="ml-3 h-6 w-6" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
