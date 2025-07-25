@@ -6,16 +6,17 @@ import PodcastCard from '../components/podcast/PodcastCard';
 const Podcasts = () => {
   return (
     <Layout>
-      {/* Hero Section from /program style */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Podcasty
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              PODCASTY
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
               Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie
-            </p>
+            </h2>
           </div>
         </div>
       </section>

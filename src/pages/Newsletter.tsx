@@ -7,26 +7,19 @@ export default function NewsletterPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Uwolnij Swój Potencjał z AI: Gdzie Technologia Spotyka Człowieka
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              AI & CZŁOWIEK
             </h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
+              Uwolnij swój potencjał z AI: gdzie technologia spotyka <span className="italic text-ascension-pink">człowieka</span>
+            </h2>
             <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
               "Każda technologia wystarczająco zaawansowana jest nieodróżnialna
               od magii" – Arthur C. Clarke
-            </p>
-            <p className="text-base md:text-lg mb-8  text-silver-mist/90 ">
-              Wyobraź sobie, że budzisz się rano z jasnym planem wykorzystania
-              AI nie tylko do automatyzacji zadań, ale do{" "}
-              <strong>
-                faktycznego przełomu w Twoim rozwoju osobistym i zawodowym
-              </strong>
-              .
-            </p>
-            <p className="text-lg md:text-lg mb-8  text-silver-mist/90">
-              To właśnie oferuję Ci w tym newsletterze.
             </p>
           </div>
         </div>
