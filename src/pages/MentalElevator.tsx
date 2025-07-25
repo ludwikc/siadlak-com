@@ -548,39 +548,39 @@ export default function MentalElevator() {
       </section>
 
       {/* Discovery Session CTA */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet to-ascension-pink text-white">
+      <section className="py-20 bg-gradient-to-br from-neural-violet to-ascension-pink">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
               Następny krok: Discovery Session
             </h2>
 
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-white">
               Zanim zaakceptuję Cię do programu, musimy przeprowadzić <strong>30-minutową Discovery Session</strong>.
             </p>
 
             <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 mb-8">
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-white">
                 To nie jest "sprzedażowa" rozmowa. To <strong>wzajemna ocena dopasowania</strong>:
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <ul className="space-y-3">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-white">
                     <Target className="w-5 h-5 mr-3 text-ascension-pink" />
                     Analizujemy Twoje obecne wzorce i ograniczenia
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-white">
                     <Brain className="w-5 h-5 mr-3 text-ascension-pink" />
                     Sprawdzamy dopasowanie metodologii
                   </li>
                 </ul>
                 <ul className="space-y-3">
-                  <li className="flex items-center">
+                  <li className="flex items-center text-white">
                     <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink" />
                     Ustalamy jasne oczekiwania
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-white">
                     <Shield className="w-5 h-5 mr-3 text-ascension-pink" />
                     Podejmujemy decyzję o współpracy – oboje
                   </li>
@@ -589,7 +589,7 @@ export default function MentalElevator() {
             </div>
 
             <div className="bg-black/20 p-6 rounded-xl mb-8">
-              <p className="text-lg font-medium mb-2">
+              <p className="text-lg font-medium mb-2 text-white">
                 <strong>Discovery Session jest płatna</strong>
               </p>
               <p className="text-2xl font-bold text-ascension-pink mb-2">500 PLN</p>
@@ -619,17 +619,17 @@ export default function MentalElevator() {
       </section>
 
       {/* Final CTA & PS */}
-      <section className="py-16 bg-deep-space text-silver-mist">
+      <section className="py-16 bg-deep-space">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg mb-8 italic">
+            <p className="text-lg mb-8 italic text-silver-mist">
               <em>Mental Elevator to metodologia dla profesjonalistów, którzy przestali wierzyć w powierzchowne rozwiązania 
               i są gotowi na fundamentalną zmianę sposobu funkcjonowania. To nie coaching, nie terapia – 
               to integracyjna transformacja dla umysłów, które myślą systemowo.</em>
             </p>
 
             <div className="bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-6 rounded-xl">
-              <p className="text-lg">
+              <p className="text-lg text-silver-mist">
                 <strong>P.S.</strong> Jeśli dotarłeś do tego miejsca i wciąż się wahasz – to prawdopodobnie znaczy, 
                 że Twoja analityczna natura próbuje znaleźć "pewność" przed podjęciem kroków. To jeden z wzorców, 
                 z którymi będziemy pracować. Discovery Session to bezpieczny sposób na zbadanie tej niepewności 
