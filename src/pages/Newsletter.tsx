@@ -1,29 +1,22 @@
 
 import Layout from '@/components/layout/Layout';
-import { ArrowRight, CheckCircle, Ribbon } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { CheckCircle, Ribbon } from '@/lib/icons';
+import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
+import HeroSection from '@/components/sections/HeroSection';
 
 export default function NewsletterPage() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              AI & CZŁOWIEK
-            </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
-              Uwolnij swój potencjał z AI: gdzie technologia spotyka <span className="italic text-ascension-pink">człowieka</span>
-            </h2>
-            <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
-              "Każda technologia wystarczająco zaawansowana jest nieodróżnialna
-              od magii" – Arthur C. Clarke
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="AI & CZŁOWIEK"
+        subtitle={<>Uwolnij swój potencjał z AI: gdzie technologia spotyka <span className="italic text-ascension-pink">człowieka</span></>}
+      >
+        <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
+          "Każda technologia wystarczająco zaawansowana jest nieodróżnialna
+          od magii" – Arthur C. Clarke
+        </p>
+      </HeroSection>
 
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
@@ -64,7 +57,7 @@ export default function NewsletterPage() {
                 Co dokładnie otrzymasz?
               </h2>
 
-              <div className="glass-card p-6 md:p-8 rounded-xl space-y-6">
+              <GlassCard padding="lg" className="space-y-6">
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
                   <p className="text-deep-charcoal dark:text-silver-mist">
@@ -97,7 +90,7 @@ export default function NewsletterPage() {
                     jako katalizator swojego rozwoju, z konkretnymi wnioskami
                   </p>
                 </div>
-              </div>
+              </GlassCard>
 
               <p className="mt-6 text-subtle-slate dark:text-silver-mist/80">
                 Ten newsletter <strong>nie jest</strong> kolejnym przeglądem
@@ -112,7 +105,7 @@ export default function NewsletterPage() {
                 Dla kogo stworzyłem ten newsletter?
               </h2>
 
-              <div className="glass-card p-6 md:p-8 rounded-xl">
+              <GlassCard padding="lg">
                 <p className="mb-4 text-deep-charcoal dark:text-silver-mist">
                   Ten newsletter jest dla Ciebie, jeśli:
                 </p>
@@ -146,7 +139,7 @@ export default function NewsletterPage() {
                     </span>
                   </li>
                 </ul>
-              </div>
+              </GlassCard>
             </div>
 
             {/* Pricing Tiers */}
@@ -283,16 +276,15 @@ export default function NewsletterPage() {
                 Narzędzia AI dla ludzkiej ewolucji, nie zastąpienia.
               </h2>
 
-              <Button
-                size="lg"
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white"
+              <CTAButton
+                size="xl"
                 onClick={() =>
                   window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")
                 }
+                aria-label="Dołącz do newslettera - otwiera formularz rejestracji"
               >
                 DOŁĄCZ TERAZ DO SPOŁECZNOŚCI
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              </CTAButton>
             </div>
           </div>
         </div>

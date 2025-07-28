@@ -1,6 +1,8 @@
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap, AlertCircle, Users, Target, Brain, TrendingUp, Clock, HelpCircle, GitMerge, Crown, ArrowDown } from 'lucide-react';
+import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
+import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap, AlertCircle, Users, Target, Brain, TrendingUp, Clock, HelpCircle, GitMerge, Crown, ArrowDown } from '@/lib/icons';
 import { Link } from 'react-router-dom';
 
 export default function MentalElevator() {
@@ -18,13 +20,15 @@ export default function MentalElevator() {
               8-tygodniowy program transformacji dla tych, którzy mają dość <span className="italic text-ascension-pink">udawania</span>, że wszystko mają pod kontrolą
             </h2>
             <Link to="/contact">
-              <Button 
-                className="bg-ascension-pink hover:bg-luminal-magenta text-white py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold"
+              <CTAButton
+                variant="premium"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl"
                 aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+                showArrow
               >
                 Zarezerwuj Discovery Session
-                <ArrowRight className="ml-3 h-6 w-6" aria-hidden="true" />
-              </Button>
+              </CTAButton>
             </Link>
           </div>
         </div>

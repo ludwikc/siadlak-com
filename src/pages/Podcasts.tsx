@@ -2,24 +2,15 @@
 
 import Layout from '../components/layout/Layout';
 import PodcastCard from '../components/podcast/PodcastCard';
+import HeroSection from '../components/sections/HeroSection';
 
 const Podcasts = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              PODCASTY
-            </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
-              Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie
-            </h2>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="PODCASTY"
+        subtitle="Zoptymalizuj czas w drodze i zamień go w prawdziwy czas dla siebie"
+      />
 
       <section
         id="podcasts"
