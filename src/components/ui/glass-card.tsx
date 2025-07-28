@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, CSSProperties, HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
-interface GlassCardProps {
+interface GlassCardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
   /** Card content */
   children: ReactNode;
   /** Additional CSS classes */
@@ -12,6 +12,8 @@ interface GlassCardProps {
   hover?: boolean;
   /** Card variant for different contexts */
   variant?: 'default' | 'bordered' | 'subtle';
+  /** Inline styles */
+  style?: CSSProperties;
 }
 
 /**
@@ -25,6 +27,7 @@ export function GlassCard({
   padding = 'md',
   hover = true,
   variant = 'default',
+  style,
   ...props 
 }: GlassCardProps) {
   const paddingClasses = {
@@ -54,6 +57,7 @@ export function GlassCard({
         // Custom classes
         className
       )}
+      style={style}
       {...props}
     >
       {children}

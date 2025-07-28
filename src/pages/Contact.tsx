@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Calendar, Mail, Linkedin } from "lucide-react";
+import { CTAButton } from "@/components/ui/cta-button";
+import { GlassCard } from "@/components/ui/glass-card";
+import { Calendar, Mail } from "@/lib/icons";
+import { Linkedin } from "lucide-react";
 
 const Contact = () => {
   useEffect(() => {

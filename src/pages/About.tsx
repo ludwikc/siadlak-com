@@ -1,8 +1,9 @@
 
 import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
+import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
 import { Link } from 'react-router-dom';
-import { Calendar, Mail, CheckCircle } from 'lucide-react';
+import { Calendar, Mail, CheckCircle } from '@/lib/icons';
 
 const About = () => {
   const approachPoints = [
@@ -44,15 +45,16 @@ const About = () => {
               Pomagam profesjonalistom kierować technologią, zamiast jej służyć
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <Button
-                variant="outline"
+              <CTAButton
+                variant="secondary"
                 className="animate-fade-in bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
                 style={{ animationDelay: "0.4s" }}
+                showArrow={false}
                 aria-label="Umów rozmowę - przejdź do formularza kontaktowego"
               >
                 Umów rozmowę
-                <Calendar className="h-4 w-4" aria-hidden="true" />
-              </Button>
+                <Calendar className="h-4 w-4 ml-2" aria-hidden="true" />
+              </CTAButton>
             </Link>
           </div>
         </div>

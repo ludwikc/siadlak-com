@@ -1,10 +1,9 @@
 import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
 import { CTAButton } from '@/components/ui/cta-button';
 import { GlassCard } from '@/components/ui/glass-card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Clock, Calendar, CheckCircle, Star, MessageSquare, Zap, Shield } from '@/lib/icons';
+import { Users, Clock, Calendar, CheckCircle, Star, MessageSquare, Zap, Shield } from '@/lib/icons';
 import HeroSection from '@/components/sections/HeroSection';
 
 const fundamentalPrograms = [
