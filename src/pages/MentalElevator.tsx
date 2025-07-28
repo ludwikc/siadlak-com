@@ -49,10 +49,10 @@ export default function MentalElevator() {
                   "Analizujesz kolejne frameworki produktywności, ale wciąż czujesz się przytłoczony",
                   "W głowie ciągle refaktorujesz problemy z pracy – nawet w weekendy"
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start glass-card p-6 rounded-xl hover:shadow-lg transition-all">
+                  <GlassCard key={index} className="flex items-start">
                     <AlertCircle className="h-6 w-6 mr-4 text-red-500 flex-shrink-0 mt-1" />
                     <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
-                  </div>
+                  </GlassCard>
                 ))}
               </div>
 
@@ -62,10 +62,10 @@ export default function MentalElevator() {
                   "Ale w środku? Chroniczne napięcie. Paraliż decyzyjny. Lęk przed zmarnowaniem potencjału",
                   "Próbowałeś już tradyjnego coachingu. Otrzymałeś listę \"actionable steps\" i motywacyjne gadanie"
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start glass-card p-6 rounded-xl hover:shadow-lg transition-all">
+                  <GlassCard key={index} className="flex items-start">
                     <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
                     <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
-                  </div>
+                  </GlassCard>
                 ))}
               </div>
             </div>
@@ -91,21 +91,21 @@ export default function MentalElevator() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="glass-card p-8 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+              <GlassCard padding="lg" className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
                 <h3 className="text-xl font-bold mb-4 text-red-700 dark:text-red-300">Coaching / Mentoring</h3>
                 <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Zakłada, że potrzebujesz więcej strategii, lepszych nawyków, mocniejszej motywacji. 
                   To jak próba naprawienia komputera przez instalowanie kolejnych programów.
                 </p>
-              </div>
+              </GlassCard>
 
-              <div className="glass-card p-8 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
+              <GlassCard padding="lg" className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
                 <h3 className="text-xl font-bold mb-4 text-orange-800 dark:text-orange-300">Terapia<sup>*</sup></h3>
                 <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
                   Skupia się na przeszłości i emocjach, ale nie łączy tego z twoją dzisiejszą rzeczywistością zawodową. 
                   Rozumiesz skąd perfekcjonizm, ale wciąż nie wiesz jak działać. <br /><br /> (Terapia jest ważnym i skutecznym narzędziem, z którego sam korzystam i polecam! Tu jednak)
                 </p>
-              </div>
+              </GlassCard>
 
               <div className="glass-card p-8 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
                 <h3 className="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">Kursy Online</h3>

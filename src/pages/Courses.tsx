@@ -1,8 +1,10 @@
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
+import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Clock, Calendar, CheckCircle, Star, MessageSquare, Zap, Shield } from 'lucide-react';
+import { ArrowRight, Users, Clock, Calendar, CheckCircle, Star, MessageSquare, Zap, Shield } from '@/lib/icons';
 import HeroSection from '@/components/sections/HeroSection';
 
 const fundamentalPrograms = [
@@ -92,9 +94,10 @@ export default function Courses() {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {fundamentalPrograms.map((program) => (
-                <div 
+                <GlassCard 
                   key={program.id}
-                  className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-fit"
+                  className="overflow-hidden h-fit"
+                  padding="sm"
                 >
                   <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
                   <span className="text-white text-lg font-medium text-center px-4 uppercase">
@@ -141,13 +144,16 @@ export default function Courses() {
                   </div>
                   
                   <Link to={`/program/${program.id}`}>
-                    <Button className="w-full bg-neural-violet hover:bg-ascension-pink text-white">
-                    Zacznij swoją podróż
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <CTAButton 
+                      className="w-full" 
+                      size="default"
+                      aria-label={`Zacznij kurs ${program.title}`}
+                    >
+                      Zacznij swoją podróż
+                    </CTAButton>
                   </Link>
                   </div>
-                </div>
+                </GlassCard>
                 ))}
               </div>
               </div>
@@ -173,9 +179,9 @@ export default function Courses() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {communityBenefits.map((benefit, index) => (
-                <div 
+                <GlassCard 
                   key={index} 
-                  className="glass-card p-6 rounded-xl text-center hover:transform hover:-translate-y-1 transition-all duration-300"
+                  className="text-center"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -189,7 +195,7 @@ export default function Courses() {
                   <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
                     {benefit.description}
                   </p>
-                </div>
+                </GlassCard>
               ))}
             </div>
           </div>
@@ -219,8 +225,11 @@ export default function Courses() {
               </p>
             </div>
             
-            <div className="glass-card backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-ascension-pink/20">
-              <div className="p-8 md:p-12">
+            <GlassCard 
+              variant="subtle" 
+              className="overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-ascension-pink/20"
+              padding="xl"
+            >
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                   {/* Left Column - Social Proof */}
                   <div className="lg:col-span-1 text-center lg:text-left">
@@ -286,22 +295,31 @@ export default function Courses() {
                     
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Link to="/mental-elevator" className="flex-1">
-                        <Button className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white py-6 text-lg shadow-lg hover:shadow-xl transition-all">
+                        <CTAButton 
+                          variant="premium" 
+                          className="w-full shadow-lg hover:shadow-xl" 
+                          size="lg"
+                          aria-label="Sprawdź dostępność Mental Elevator"
+                        >
                           Sprawdź dostępność
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
+                        </CTAButton>
                       </Link>
                       
                       <Link to="/contact">
-                        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 py-6 px-6">
+                        <CTAButton 
+                          variant="secondary" 
+                          className="border-white/30 text-white hover:bg-white/10" 
+                          size="lg"
+                          showArrow={false}
+                          aria-label="Zarezerwuj rozmowę kwalifikacyjną"
+                        >
                           Zarezerwuj rozmowę kwalifikacyjną
-                        </Button>
+                        </CTAButton>
                       </Link>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+            </GlassCard>
           </div>
         </div>
       </section>
@@ -321,16 +339,21 @@ export default function Courses() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button className="bg-neural-violet hover:bg-ascension-pink text-white">
+                <CTAButton 
+                  aria-label="Umów rozmowę Discovery - przejdź do formularza kontaktowego"
+                >
                   Umów rozmowę Discovery
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                </CTAButton>
               </Link>
               
               <Link to="/newsletter">
-                <Button variant="outline">
+                <CTAButton 
+                  variant="secondary" 
+                  showArrow={false}
+                  aria-label="Dołącz do newslettera"
+                >
                   Dołącz do newslettera
-                </Button>
+                </CTAButton>
               </Link>
             </div>
           </div>
