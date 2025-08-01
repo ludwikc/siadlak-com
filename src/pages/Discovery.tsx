@@ -2,10 +2,29 @@ import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/components/ui/glass-card';
 import HeroSection from '@/components/sections/HeroSection';
 import { CheckCircle, Users, Target, Heart } from '@/lib/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Discovery() {
   const [status, setStatus] = useState<'initial' | 'loading' | 'success'>('initial');
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (status === 'loading') {
+      const interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            clearInterval(interval);
+            return 100;
+          }
+          return prev + 4; // Increase by 4% every 100ms (2.5s total)
+        });
+      }, 100);
+
+      return () => clearInterval(interval);
+    } else {
+      setProgress(0);
+    }
+  }, [status]);
 
   const handleCheckAvailability = () => {
     setStatus('loading');
@@ -132,10 +151,23 @@ export default function Discovery() {
                 
                 {status === 'loading' && (
                   <div className="py-8">
-                    <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-4"></div>
-                    <h3 className="text-xl font-semibold text-deep-charcoal dark:text-silver-mist">
+                    <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-6"></div>
+                    <h3 className="text-xl font-semibold mb-6 text-deep-charcoal dark:text-silver-mist">
                       Trwa sprawdzanie dostępności...
                     </h3>
+                    
+                    {/* Progress Bar */}
+                    <div className="w-full max-w-md mx-auto">
+                      <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                        <div 
+                          className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-full transition-all duration-300 ease-out"
+                          style={{ width: `${progress}%` }}
+                        ></div>
+                      </div>
+                      <p className="text-sm text-subtle-slate dark:text-silver-mist/70 mt-2">
+                        {Math.round(progress)}% zakończone
+                      </p>
+                    </div>
                   </div>
                 )}
                 
