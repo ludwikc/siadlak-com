@@ -269,11 +269,11 @@ export default function Courses() {
                   <div className="lg:col-span-1 text-center lg:text-left">
                     <div className="mb-6">
                       <div className="flex items-center justify-center lg:justify-start mb-2">
-                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
-                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
-                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
-                        <Star className="h-5 w-5 text-yellow-400 mr-1" />
-                        <Star className="h-5 w-5 text-yellow-400" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" fill="currentColor" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" fill="currentColor" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" fill="currentColor" />
+                        <Star className="h-5 w-5 text-yellow-400 mr-1" fill="currentColor" />
+                        <Star className="h-5 w-5 text-yellow-400" fill="currentColor" />
                       </div>
                       <p className="text-sm text-white/80 italic">
                         "Rzeczywista transformacja zawsze zaczyna się od decyzji."
