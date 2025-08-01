@@ -94,7 +94,7 @@ export default function Courses() {
               </h2>
                 <div className="text-lg text-subtle-slate dark:text-silver-mist/80">
                 <p>Zacznij swoją podróż transformacji od solidnych podstaw.</p>
-                <p>Czego teraz bardziej potrzebujesz?</p>
+                <p><span className="handwritten-circle">Czego teraz bardziej potrzebujesz?</span></p>
                 <p>(Wiesz czego, zacznij sobie ufać)</p>
                 </div>
               
