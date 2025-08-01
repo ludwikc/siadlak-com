@@ -238,25 +238,26 @@ export default function Courses() {
             >
               {/* Privacy Overlay */}
               {isOverlayVisible && (
-                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in">
+                <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in">
                   <div className="mb-6">
                     <Shield className="h-16 w-16 text-ascension-pink mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-3">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
                       Ta sekcja jest dla zaawansowanych
                     </h3>
-                    <p className="text-white/80 text-lg">
+                    <p className="text-white/80 text-base sm:text-lg px-2">
                       Rozpocznij swoją podróż od fundamentów, a później odblokuj dostęp do programu premium.
                     </p>
                   </div>
                   
                   <CTAButton 
                     variant="premium" 
-                    className="shadow-lg hover:shadow-xl px-8 py-3" 
+                    className="shadow-lg hover:shadow-xl px-4 py-2 sm:px-8 sm:py-3 text-sm sm:text-base" 
                     size="lg"
                     onClick={handleUnlockAccess}
                     aria-label="Odblokuj dostęp do Mental Elevator"
                   >
-                    Jestem zaawansowanym Lifehackerem i... chcę od życia WIĘCEJ. Odblokuj dostęp ≫ 
+                    <span className="hidden sm:inline">Jestem zaawansowanym Lifehackerem i... chcę od życia WIĘCEJ. Odblokuj dostęp ≫</span>
+                    <span className="sm:hidden">Chcę od życia WIĘCEJ. Odblokuj ≫</span>
                   </CTAButton>
                 </div>
               )}
