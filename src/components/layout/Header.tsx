@@ -135,7 +135,7 @@ export default function Header() {
                               Dołącz do Lifehackerów
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Dostęp LIFETIME otrzymasz <strong>jeszcze dzisiaj</strong>.
+                              <span className="yellow-highlight">Dostęp LIFETIME otrzymasz</span> <strong>jeszcze dzisiaj</strong>.
                             </p>
                           </div>
                         </div>
