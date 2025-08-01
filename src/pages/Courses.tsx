@@ -105,8 +105,9 @@ export default function Courses() {
                   className="overflow-hidden h-fit"
                   padding="sm"
                 >
-                  <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center">
-                  <span className="text-white text-lg font-medium text-center px-4 uppercase">
+                  <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 animate-pulse"></div>
+                  <span className="text-white text-2xl font-bold text-center px-6 uppercase tracking-wider drop-shadow-lg relative z-10 bg-black/20 rounded-lg py-3 backdrop-blur-sm border border-white/20">
                     {program.category}
                   </span>
                   </div>
