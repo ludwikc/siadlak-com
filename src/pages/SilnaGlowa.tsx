@@ -593,7 +593,7 @@ const SilnaGlowa = () => {
                         <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
                           <span className="text-2xl">💰</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-color-error">"Nie mam teraz pieniędzy"</h3>
+                        <h3 className="text-2xl font-bold text-color-error">Nie mam teraz pieniędzy</h3>
                       </div>
                     </div>
                     
@@ -601,7 +601,23 @@ const SilnaGlowa = () => {
                       <div className="space-y-6">
                         <div className="bg-ascension-pink/10 p-6 rounded-lg border-l-4 border-l-ascension-pink">
                           <p className="text-lg font-bold text-ascension-pink mb-3">W tym cały problem.</p>
-                          <p className="text-text-secondary">Twój mental blokuje Cię przed zarobieniem dobrych pieniędzy. I będzie Cię blokował przez całe życie, jeśli tak to zostawisz.</p>
+                          <p className="text-text-secondary mb-4">Twój mental blokuje Cię przed zarobieniem dobrych pieniędzy. I będzie Cię blokował przez całe życie, jeśli tak to zostawisz.</p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Otoczenie nauczyło Cię myśleć źle o pieniądzach. Że są domeną chciwych i chytrych ludzi. Że można je stracić. Że można z ich powodu cierpieć albo dostać w dziób na ulicy.
+                          </p>
+                          
+                          <p className="text-lg font-bold text-ascension-pink mb-4">Twój umysł broni Cię przed dużymi pieniędzmi!</p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Weźmy znowu tę łódź – boisz się wypłynąć na szerokie wody, bo Ci ktoś naopowiadał, że tam pływają tylko piraci. I że można łatwo zatonąć.
+                          </p>
+                          
+                          <p className="text-lg font-bold text-ascension-pink mb-4">To nieprawda!</p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Na pewno masz marzenia. Bez pieniędzy ich nie zrealizujesz. Musisz coś zrobić. Musisz przełamać ten schemat. To może być kurs Silna Głowa, może być mentoring, coaching, YouTube, terapia. Ale coś musi być.
+                          </p>
                         </div>
                         
                         <div className="bg-gradient-to-r from-ascension-pink/10 to-ascension-pink/5 p-6 rounded-lg">
@@ -625,18 +641,89 @@ const SilnaGlowa = () => {
                         <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
                           <span className="text-2xl">⏰</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-color-error">"Nie mam czasu na kursy"</h3>
+                        <h3 className="text-2xl font-bold text-color-error">Nie mam czasu na kursy</h3>
+                      </div>
+                    </div>
+                    
+                    <CardContent className="p-8">
+                      <div className="space-y-6">
+                        <p className="text-text-secondary mb-4">
+                          Oczywiście. Świat pędzi, nie czeka, presja, hustlowanie, wyścig szczurów.
+                        </p>
+                        
+                        <p className="text-text-secondary mb-4">
+                          Gnasz ze spotkania na spotkanie. Gdzie tu jeszcze wcisnąć kurs?
+                        </p>
+                        
+                        <div className="bg-ascension-pink/10 p-6 rounded-lg">
+                          <p className="text-text-secondary mb-4">
+                            Ale pomyśl o tych wszystkich momentach, kiedy się martwisz. Kiedy nie możesz zasnąć. Kiedy łapiesz się na rozpamiętywaniu stresujących sytuacji.
+                          </p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Kiedy utrudnia Ci to pracę, powoduje prokrastynację, niewytłumaczalny strach.
+                          </p>
+                          
+                          <div className="text-center space-y-3">
+                            <p className="text-xl font-bold text-ascension-pink">Ile czasu na to tracisz?</p>
+                            <p className="text-xl font-bold text-ascension-pink">Ile czasu możesz odzyskać?</p>
+                          </div>
+                          
+                          <p className="text-text-secondary mt-4">
+                            Pomyśl o tym, jak kolejne trudne wydarzenia z życia powstrzymują Cię przed działaniem.
+                          </p>
+                          
+                          <p className="text-text-secondary">
+                            Ile masz takich złych dni? Ile są warte w przeliczeniu na pieniądze? Ile kursów możesz za to kupić?
+                          </p>
+                        </div>
+                        
+                        <div className="text-center">
+                          <Button variant="special" size="lg" className="btn-locked-primary">
+                            Wskakuję na pokład. Zamawiam dostęp
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+                
+                {/* Investment Section */}
+                <div className="group">
+                  <Card className="glass-card overflow-hidden border-2 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-xl">
+                    <div className="bg-gradient-to-r from-color-success/10 to-color-success/5 p-6 border-b">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-color-success/20 rounded-full flex items-center justify-center">
+                          <span className="text-2xl">📈</span>
+                        </div>
+                        <h3 className="text-2xl font-bold text-color-success">Czy to mi się zwróci?</h3>
                       </div>
                     </div>
                     
                     <CardContent className="p-8">
                       <div className="space-y-6">
                         <div className="bg-ascension-pink/10 p-6 rounded-lg">
-                          <h4 className="font-bold mb-4 text-ascension-pink">Ale pomyśl o tym:</h4>
-                          <div className="text-center space-y-3">
-                            <p className="text-xl font-bold text-ascension-pink">Ile czasu na to tracisz?</p>
-                            <p className="text-xl font-bold text-ascension-pink">Ile czasu możesz odzyskać?</p>
+                          <p className="text-text-secondary mb-4">
+                            Warren Buffett powiedział, że najlepszą inwestycją jest inwestycja w siebie. Jeśli tak mówi najwybitniejszy inwestor wszech czasów, to widocznie musi tak być.
+                          </p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Cokolwiek robisz w życiu, czymkolwiek się zajmujesz, Twój mental pozwoli Ci osiągać cele, ale też przed nimi powstrzyma.
+                          </p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Spójrz na ludzi, którzy osiągają sukces. Przebojowi, może nieco aroganccy, ale przede wszystkim wierzą w siebie.
+                          </p>
+                          
+                          <div className="bg-card-bg p-4 rounded-lg mb-4">
+                            <p className="text-lg font-medium text-ascension-pink italic">
+                              "Nie trafiłem ponad 9000 rzutów w moim życiu. Przegrałem ponad 300 meczów. 26 razu zaufano mi, gdy miałem oddać rzut na miarę zwycięstwa i spudłowałem. Przegrywałem w moim życiu ciągle. Dlatego właśnie osiągnąłem sukces." - Michael Jordan
+                            </p>
                           </div>
+                          
+                          <p className="text-lg font-bold text-ascension-pink text-center">
+                            A kiedy będziesz mieć Silną Głowę, osiągniesz wszystko, co chcesz. Przede wszystkim spokój.
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -651,7 +738,7 @@ const SilnaGlowa = () => {
                         <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
                           <span className="text-2xl">🧠</span>
                         </div>
-                        <h3 className="text-2xl font-bold text-color-error">"Z moim mentalem już nic nie da się zrobić"</h3>
+                        <h3 className="text-2xl font-bold text-color-error">Z moim mentalem już nic nie da się zrobić</h3>
                       </div>
                     </div>
                     
@@ -659,15 +746,26 @@ const SilnaGlowa = () => {
                       <div className="space-y-6">
                         <div className="text-center bg-ascension-pink/10 p-6 rounded-lg">
                           <p className="text-2xl font-bold text-ascension-pink mb-4">Z każdym mentalem się da.</p>
+                          <p className="text-text-secondary mb-4">
+                            Spotykałem w swojej pracy ludzi, którzy mieli, nazwijmy to, łatwe życie. I spotykałem też takich, których życie nie rozpieszczało od najmłodszych lat. Większość z nich wyszła z tego. Dzisiaj są w innym, o wiele lepszym miejscu.
+                          </p>
                           <p className="text-lg text-ascension-pink">Nigdy nie jest za późno na zmiany.</p>
                         </div>
                         
                         <div className="bg-gradient-to-r from-ascension-pink/10 to-ascension-pink/5 p-6 rounded-lg border border-ascension-pink/20">
+                          <p className="text-text-secondary mb-4">
+                            Zwłaszcza na zmiany na lepsze. Umysł to dość giętkie narzędzie. Tak jak mięśnie można rozciągać, żeby zrobić szpagat, tak samo można gimnastykować umysł.
+                          </p>
+                          
                           <p className="text-lg font-bold text-center mb-4 text-text-primary">To jest biologia, a biologii nie oszukasz.</p>
+                          
+                          <p className="text-text-secondary mb-4">
+                            Jedyny sposób, żeby celu nie osiągnąć, to nie podjąć działania, czyli zrobić to, co właśnie teraz chcesz zrobić.
+                          </p>
                           
                           <div className="text-center space-y-3">
                             <p className="text-lg font-bold text-ascension-pink">
-                              Ale wierzę, że jesteś na tej stronie, bo chcesz czegoś więcej.
+                              Ale wierzę, że jesteś na tej stronie, bo chcesz czegoś więcej. Chcesz przełamać schemat.
                             </p>
                             <p className="text-lg text-text-primary">Jeśli tak, zapraszam na pokład 🙂</p>
                           </div>
@@ -676,6 +774,13 @@ const SilnaGlowa = () => {
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+              
+              <div className="text-center mt-16">
+                <Button variant="special" size="lg" className="btn-locked-primary text-lg px-8 py-4">
+                  Nie mam już wątpliwości, dołączam do kursu
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </div>
             </div>
           </div>
