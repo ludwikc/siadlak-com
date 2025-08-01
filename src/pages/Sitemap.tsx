@@ -12,45 +12,42 @@ const Sitemap = () => {
         { name: 'Strona główna', path: '/', description: 'Główna strona siadlak.com' },
         { name: 'O mnie', path: '/about', description: 'Poznaj moją historię i podejście' },
         { name: 'Kontakt', path: '/contact', description: 'Umów rozmowę lub zadaj pytanie' },
-        { name: 'Moja praca', path: '/work', description: 'Zobacz przykłady mojej pracy' },
+        { name: 'Programy szkoleniowe', path: '/work', description: 'Zobacz możliwości współpracy' },
         { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na cotygodniowe przemyślenia' },
-        { name: 'Testimoniale', path: '/testimonials', description: 'Co mówią moi klienci' },
-        { name: 'Ocena', path: '/assessment', description: 'Oceń swój poziom produktywności' },
-        { name: 'Społeczność', path: '/community', description: 'Dołącz do społeczności Hackerzy' },
-        { name: 'Podziękowania', path: '/thank-you', description: 'Strona potwierdzenia' },
-        { name: 'Regulamin', path: '/legal', description: 'Warunki użytkowania i polityka prywatności' },
+        { name: 'Opinie Klientów', path: '/testimonials', description: 'Co mówią moi klienci' },
+        { name: 'Assesment', path: '/assessment', description: 'Oceń swój poziom produktywności' },
+        { name: 'Społeczność', path: '/community', description: 'Dołącz do społeczności Lifehackerów' },
+        { name: 'Strona podziękowania', path: '/thank-you', description: 'Strona potwierdzenia' },
+        { name: 'Regulaminy', path: '/legal', description: 'Warunki użytkowania i polityka prywatności' },
       ]
     },
     {
       category: 'Programy szkoleniowe',
       icon: <Book className="h-5 w-5" />,
       pages: [
-        { name: 'Przegląd programów', path: '/program', description: 'Wszystkie dostępne kursy i programy' },
+        { name: 'Przegląd programów rozwojowych', path: '/program', description: 'Wszystkie dostępne kursy i programy' },
         { name: 'Hakowanie Produktywności', path: '/program/hakowanie-produktywnosci', description: 'Kompleksowy program produktywności' },
         { name: 'Mental Elevator', path: '/program/mental-elevator', description: 'Program rozwoju mentalnego' },
-        { name: 'Szczegóły kursu', path: '/program/:courseSlug', description: 'Dynamiczne strony szczegółów kursów' },
-      ]
+        ]
     },
     {
       category: 'Podcasty',
       icon: <Mic2 className="h-5 w-5" />,
       pages: [
-        { name: 'Wszystkie podcasty', path: '/podcast', description: 'Przegląd wszystkich podcastów' },
-        { name: 'Nowy podcast', path: '/new-podcast', description: 'Najnowsze odcinki podcastu' },
-        { name: 'Life Hacking', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
+        { name: 'Life Hacking Podcast', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
         { name: 'Uważne Życie', path: '/podcast/uwazne-zycie', description: 'Podcast o świadomym życiu' },
       ]
     },
     {
-      category: 'Webinarium',
+      category: 'Wydarzenia',
       icon: <Video className="h-5 w-5" />,
       pages: [
-        { name: 'Webinarium', path: '/webinar', description: 'Główna strona webinarium' },
-        { name: 'Rejestracja', path: '/webinar/registration', description: 'Zarejestruj się na webinarium' },
-        { name: 'Poczekalnia', path: '/webinar/lobby', description: 'Poczekaj na rozpoczęcie webinarium' },
-        { name: 'Na żywo', path: '/webinar/live', description: 'Webinarium na żywo' },
-        { name: 'Powtórka', path: '/webinar/replay', description: 'Obejrzyj powtórkę webinarium' },
-        { name: 'Wygasłe', path: '/webinar/expired', description: 'Webinarium już się zakończyło' },
+        { name: 'Strona główna wydarzenia', path: '/webinar', description: 'Główna strona webinaru' },
+        { name: 'Wydarzenie: Rejestracja', path: '/webinar/registration', description: 'Zarejestruj się na webinar' },
+        { name: 'Wydarzenie: Poczekalnia', path: '/webinar/lobby', description: 'Poczekaj na rozpoczęcie webinaru' },
+        { name: 'Wydarzenie: Pokój LIVE', path: '/webinar/live', description: 'Webinar na żywo' },
+        { name: 'Wydarzenie: Powtórka', path: '/webinar/replay', description: 'Obejrzyj powtórkę webinaru' },
+        { name: 'Wydarzenie: Wygasłe', path: '/webinar/expired', description: 'Webinar już się zakończył' },
       ]
     },
     {
