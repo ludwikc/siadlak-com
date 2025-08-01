@@ -25,6 +25,7 @@ import ThankYou from './pages/ThankYou';
 import Legal from './pages/Legal';
 import MentalElevator from './pages/MentalElevator';
 import Work from './pages/Work';
+import Sitemap from './pages/Sitemap';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/community" element={<Community />} />
           
           {/* Placeholder routes for footer links */}
