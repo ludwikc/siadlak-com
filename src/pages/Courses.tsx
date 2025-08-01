@@ -238,7 +238,7 @@ export default function Courses() {
             >
               {/* Privacy Overlay */}
               {isOverlayVisible && (
-                <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in">
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in">
                   <div className="mb-6">
                     <Shield className="h-16 w-16 text-ascension-pink mx-auto mb-4" />
                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
