@@ -87,7 +87,9 @@ export default function Header() {
             {/* Simplified Mega Menu */}
             {isDropdownOpen && (
               <div 
-                className="fixed left-0 right-0 top-full pt-3 z-50"
+                className={`fixed left-0 right-0 pt-3 z-[9999] ${
+                  isScrolled ? 'top-[56px]' : 'top-[72px]'
+                }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
