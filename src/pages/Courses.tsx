@@ -226,9 +226,33 @@ export default function Courses() {
             
             <GlassCard 
               variant="subtle" 
-              className="overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-ascension-pink/20"
+              className="overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-ascension-pink/20 relative"
               padding="xl"
             >
+              {/* Privacy Overlay */}
+              <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8">
+                <div className="mb-6">
+                  <Shield className="h-16 w-16 text-ascension-pink mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    Ta sekcja jest dla zaawansowanych
+                  </h3>
+                  <p className="text-white/80 text-lg">
+                    Rozpocznij swoją podróż od fundamentów, a później odblokuj dostęp do programu premium.
+                  </p>
+                </div>
+                
+                <CTAButton 
+                  variant="premium" 
+                  className="shadow-lg hover:shadow-xl px-8 py-3" 
+                  size="lg"
+                  aria-label="Odblokuj dostęp do Mental Elevator"
+                >
+                  Jestem Lifehackerem, ale chcę od życia WIĘCEJ. Odblokuj dostęp
+                </CTAButton>
+              </div>
+
+              {/* Blurred Content Behind */}
+              <div className="filter blur-sm">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                   {/* Left Column - Social Proof */}
                   <div className="lg:col-span-1 text-center lg:text-left">
@@ -318,6 +342,7 @@ export default function Courses() {
                     </div>
                   </div>
                 </div>
+              </div>
             </GlassCard>
           </div>
         </div>
