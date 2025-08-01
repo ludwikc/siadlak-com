@@ -118,7 +118,7 @@ export default function Header() {
                               Wybierz kurs
                             </h4>
                             <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. <br/>Podejmij decyzję.
+                              <span className="handwritten-underline">Zrób to <strong>teraz</strong></span> - wiesz czego potrzebujesz. <br/>Podejmij decyzję.
                             </p>
                           </div>
                         </div>
