@@ -124,7 +124,7 @@ export default function Discovery() {
                 <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-luminal-magenta/5 dark:from-neural-violet/10 dark:to-luminal-magenta/10"></div>
                 
                 {/* Animated border glow */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-luminal-magenta/20 to-quantum-blue/20 opacity-0 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-luminal-magenta/20 to-quantum-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
                 <div className="relative z-10">
                   {status === 'initial' && (
