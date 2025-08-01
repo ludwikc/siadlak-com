@@ -39,9 +39,11 @@ export {
   Volume2,
   Headphones,
   Video,
+  Book,
   BookOpen,
   FileText,
   Quote,
+  Mic2,
 } from 'lucide-react';
 
 // Feature/Category icons
