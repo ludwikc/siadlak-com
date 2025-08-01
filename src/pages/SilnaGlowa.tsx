@@ -634,145 +634,188 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Objections Section */}
-      <section className="px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Możesz się wahać
-          </h2>
-          
-          <Card className="p-8 mb-12">
-            <CardContent className="p-0">
-              <p className="text-lg mb-6">Wcale mnie to nie dziwi.</p>
-              <p className="text-muted-foreground mb-6">
-                Życie nauczyło Cię nie podejmować ryzyka, unikać wystawiania się na krytykę, omijać okazje.
-              </p>
-              <p className="text-lg font-medium mb-6">"Ja go nie widzę, to ono też mnie nie widzi".</p>
-              <p className="text-xl font-bold text-primary">Ale życie Cię widzi.</p>
-            </CardContent>
-          </Card>
-          
-          <div className="space-y-8">
-            <Card className="p-8">
-              <CardContent className="p-0">
-                <h3 className="text-2xl font-bold text-destructive mb-6">"Nie mam teraz pieniędzy"</h3>
-                <p className="text-lg font-medium mb-4">W tym cały problem. Twój mental blokuje Cię przed zarobieniem dobrych pieniędzy. I będzie Cię blokował przez całe życie, jeśli tak to zostawisz.</p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Otoczenie nauczyło Cię myśleć źle o pieniądzach. Że są domeną chciwych i chytrych ludzi. Że można je stracić. Że można z ich powodu cierpieć albo dostać w dziób na ulicy.
-                </p>
-                
-                <p className="text-lg font-bold mb-4">Twój umysł broni Cię przed dużymi pieniędzmi!</p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Weźmy znowu tę łódź – boisz się wypłynąć na szerokie wody, bo Ci ktoś naopowiadał, że tam pływają tylko piraci. I że można łatwo zatonąć.
-                </p>
-                
-                <p className="text-lg font-bold mb-4">To nieprawda!</p>
-                
-                <div className="bg-primary/10 p-6 rounded-lg">
-                  <p className="text-muted-foreground mb-4">
-                    Na pewno masz marzenia. Bez pieniędzy ich nie zrealizujesz. Musisz coś zrobić.
-                    Musisz przełamać ten schemat. To może być kurs Silna Głowa, może być mentoring, coaching, YouTube, terapia. Ale coś musi być. Bo możesz też łudzić się, że ciężką pracą zasłużysz na dobry grosz. Że Twój pracodawca w swej łaskawości da Ci awans. Ale wierz mi – to się nie stanie.
-                  </p>
-                  
-                  <p className="text-lg font-medium">Osobiście wolę sam decydować o tym, ile zarabiam 🙂.</p>
-                  
-                  <p className="text-lg font-bold text-primary mt-4">
-                    Gdyby Twój umysł był zaprogramowany na dobrą kasę, to już byś ją miał.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+      <section className="px-4 py-16 bg-gradient-to-b from-background to-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Możesz się wahać
+            </h2>
             
-            <Card className="p-8">
+            <Card className="p-8 max-w-3xl mx-auto border-l-4 border-l-primary">
               <CardContent className="p-0">
-                <h3 className="text-2xl font-bold text-destructive mb-6">"Nie mam czasu na kursy"</h3>
+                <p className="text-lg mb-4 text-muted-foreground">Wcale mnie to nie dziwi.</p>
                 <p className="text-muted-foreground mb-4">
-                  Oczywiście. Świat pędzi, nie czeka, presja, hustlowanie, wyścig szczurów.
+                  Życie nauczyło Cię nie podejmować ryzyka, unikać wystawiania się na krytykę, omijać okazje.
                 </p>
-                <p className="text-muted-foreground mb-4">
-                  Gnasz ze spotkania na spotkanie. Gdzie tu jeszcze wcisnąć kurs?
-                </p>
-                
-                <p className="text-lg font-medium mb-4">
-                  Ale pomyśl o tych wszystkich momentach, kiedy się martwisz. Kiedy nie możesz zasnąć. Kiedy łapiesz się na rozpamiętywaniu stresujących sytuacji.
-                </p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Kiedy utrudnia Ci to pracę, powoduje prokrastynację, niewytłumaczalny strach.
-                </p>
-                
-                <div className="bg-primary/10 p-6 rounded-lg">
-                  <p className="text-lg font-bold mb-2 text-primary">Ile czasu na to tracisz?</p>
-                  <p className="text-lg font-bold mb-4 text-primary">Ile czasu możesz odzyskać?</p>
-                  
-                  <p className="text-muted-foreground mb-4">
-                    Pomyśl o tym, jak kolejne trudne wydarzenia z życia powstrzymują Cię przed działaniem.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Ile masz takich złych dni? Ile są warte w przeliczeniu na pieniądze? Ile kursów możesz za to kupić?
-                  </p>
+                <div className="bg-muted/50 p-4 rounded-lg mb-4">
+                  <p className="text-lg font-medium text-center italic">"Ja go nie widzę, to ono też mnie nie widzi".</p>
                 </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="p-8">
-              <CardContent className="p-0">
-                <h3 className="text-2xl font-bold text-destructive mb-6">"Z moim mentalem już nic nie da się zrobić"</h3>
-                <p className="text-lg font-bold mb-4">Z każdym mentalem się da.</p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Spotykałem w swojej pracy ludzi, którzy mieli, nazwijmy to, łatwe życie.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  I spotykałem też takich, których życie nie rozpieszczało od najmłodszych lat.
-                  Większość z nich wyszła z tego. Dzisiaj są w innym, o wiele lepszym miejscu.
-                </p>
-                
-                <p className="text-lg font-bold mb-4 text-primary">Nigdy nie jest za późno na zmiany.</p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Zwłaszcza na zmiany na lepsze. Umysł to dość giętkie narzędzie.
-                </p>
-                
-                <p className="text-muted-foreground mb-4">
-                  Tak jak mięśnie można rozciągać, żeby zrobić szpagat, tak samo można gimnastykować umysł. I jeśli tylko będziesz trenować, osiągniesz cel.
-                </p>
-                
-                <p className="text-lg font-medium mb-4">Prędzej czy później, ale go osiągniesz.</p>
-                
-                <div className="bg-primary/10 p-6 rounded-lg">
-                  <p className="text-lg font-bold mb-4">To jest biologia, a biologii nie oszukasz.</p>
-                  
-                  <p className="text-muted-foreground mb-4">
-                    Jedyny sposób, żeby celu nie osiągnąć, to nie podjąć działania, czyli zrobić to, co właśnie teraz chcesz zrobić.
-                  </p>
-                  
-                  <p className="text-destructive font-medium mb-4">
-                    "Mnie się nie da pomóc". Cyk, wymówka, odhaczone.
-                  </p>
-                  
-                  <p className="text-muted-foreground mb-4">
-                    Przekonanie potwierdziło się. Schemat pozostaje bez zmian.
-                  </p>
-                  
-                  <p className="text-muted-foreground mb-4">
-                    Jeśli właśnie tego chcesz od życia, to nie mnie nakazywać Ci wybór.
-                  </p>
-                  
-                  <p className="text-lg font-bold text-primary">
-                    Ale wierzę, że jesteś na tej stronie, że czytasz te słowa, bo chcesz czegoś więcej. Chcesz przełamać schemat.
-                  </p>
-                  
-                  <p className="text-lg mt-4">Jeśli tak, zapraszam na pokład 🙂.</p>
-                </div>
+                <p className="text-xl font-bold text-primary text-center">Ale życie Cię widzi.</p>
               </CardContent>
             </Card>
           </div>
           
+          <div className="grid lg:grid-cols-1 gap-12">
+            {/* Money Objection */}
+            <div className="group">
+              <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                <div className="bg-gradient-to-r from-destructive/10 to-destructive/5 p-6 border-b">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-destructive">"Nie mam teraz pieniędzy"</h3>
+                  </div>
+                </div>
+                
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-l-primary">
+                      <p className="text-lg font-bold text-primary mb-3">W tym cały problem.</p>
+                      <p className="text-muted-foreground">Twój mental blokuje Cię przed zarobieniem dobrych pieniędzy. I będzie Cię blokował przez całe życie, jeśli tak to zostawisz.</p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-muted/50 p-4 rounded-lg">
+                        <p className="text-sm text-muted-foreground">
+                          Otoczenie nauczyło Cię myśleć źle o pieniądzach. Że są domeną chciwych i chytrych ludzi.
+                        </p>
+                      </div>
+                      <div className="bg-muted/50 p-4 rounded-lg">
+                        <p className="text-sm font-bold">Twój umysł broni Cię przed dużymi pieniędzmi!</p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg">
+                      <h4 className="font-bold mb-4 flex items-center gap-2">
+                        <span className="text-primary">⚓</span>
+                        Metafora łodzi
+                      </h4>
+                      <p className="text-muted-foreground mb-4">
+                        Boisz się wypłynąć na szerokie wody, bo Ci ktoś naopowiadał, że tam pływają tylko piraci. I że można łatwo zatonąć.
+                      </p>
+                      <p className="text-lg font-bold text-primary">To nieprawda!</p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-accent/10 to-accent/5 p-6 rounded-lg border border-accent/20">
+                      <p className="text-lg font-bold text-primary mb-4">
+                        Gdyby Twój umysł był zaprogramowany na dobrą kasę, to już byś ją miał.
+                      </p>
+                      <p className="text-muted-foreground">
+                        Osobiście wolę sam decydować o tym, ile zarabiam 🙂
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Time Objection */}
+            <div className="group">
+              <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                <div className="bg-gradient-to-r from-destructive/10 to-destructive/5 p-6 border-b">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">⏰</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-destructive">"Nie mam czasu na kursy"</h3>
+                  </div>
+                </div>
+                
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    <p className="text-muted-foreground italic">
+                      Oczywiście. Świat pędzi, nie czeka, presja, hustlowanie, wyścig szczurów...
+                    </p>
+                    
+                    <div className="bg-primary/10 p-6 rounded-lg">
+                      <h4 className="font-bold mb-4 text-primary">Ale pomyśl o tym:</h4>
+                      <div className="grid md:grid-cols-3 gap-4 mb-4">
+                        <div className="text-center p-4 bg-white/50 rounded-lg">
+                          <p className="text-sm text-muted-foreground">Kiedy się martwisz</p>
+                        </div>
+                        <div className="text-center p-4 bg-white/50 rounded-lg">
+                          <p className="text-sm text-muted-foreground">Kiedy nie możesz zasnąć</p>
+                        </div>
+                        <div className="text-center p-4 bg-white/50 rounded-lg">
+                          <p className="text-sm text-muted-foreground">Kiedy rozpamiętujesz</p>
+                        </div>
+                      </div>
+                      
+                      <div className="text-center space-y-3">
+                        <p className="text-xl font-bold text-primary">Ile czasu na to tracisz?</p>
+                        <p className="text-xl font-bold text-primary">Ile czasu możesz odzyskać?</p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-l-accent">
+                      <p className="text-muted-foreground">
+                        Ile masz takich złych dni? Ile są warte w przeliczeniu na pieniądze? Ile kursów możesz za to kupić?
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Mindset Objection */}
+            <div className="group">
+              <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                <div className="bg-gradient-to-r from-destructive/10 to-destructive/5 p-6 border-b">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🧠</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-destructive">"Z moim mentalem już nic nie da się zrobić"</h3>
+                  </div>
+                </div>
+                
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    <div className="text-center bg-primary/10 p-6 rounded-lg">
+                      <p className="text-2xl font-bold text-primary mb-4">Z każdym mentalem się da.</p>
+                      <p className="text-lg text-primary">Nigdy nie jest za późno na zmiany.</p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-muted/50 p-6 rounded-lg">
+                        <h4 className="font-bold mb-3">💪 Jak mięśnie</h4>
+                        <p className="text-sm text-muted-foreground">
+                          Tak jak mięśnie można rozciągać, żeby zrobić szpagat...
+                        </p>
+                      </div>
+                      <div className="bg-muted/50 p-6 rounded-lg">
+                        <h4 className="font-bold mb-3">🧠 Tak umysł</h4>
+                        <p className="text-sm text-muted-foreground">
+                          ...tak samo można gimnastykować umysł.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-lg border border-primary/20">
+                      <p className="text-lg font-bold text-center mb-4">To jest biologia, a biologii nie oszukasz.</p>
+                      
+                      <div className="bg-destructive/10 p-4 rounded-lg mb-4">
+                        <p className="text-center italic text-destructive font-medium">
+                          "Mnie się nie da pomóc". Cyk, wymówka, odhaczone.
+                        </p>
+                      </div>
+                      
+                      <div className="text-center space-y-3">
+                        <p className="text-lg font-bold text-primary">
+                          Ale wierzę, że jesteś na tej stronie, bo chcesz czegoś więcej.
+                        </p>
+                        <p className="text-lg">Jeśli tak, zapraszam na pokład 🙂</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          
           {/* Investment Section */}
-          <section className="mt-16">
+          <div className="mt-16">
             <Card className="p-8">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold mb-6">"Czy to mi się zwróci?"</h3>
@@ -823,7 +866,7 @@ const SilnaGlowa = () => {
                 <p className="text-xl font-bold text-primary mt-4">Przede wszystkim spokój.</p>
               </CardContent>
             </Card>
-          </section>
+          </div>
         </div>
       </section>
 
