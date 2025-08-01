@@ -172,7 +172,7 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4 text-ascension-pink dark:text-luminal-magenta border-ascension-pink dark:border-luminal-magenta">
-              KROK 2 • BONUS
+              KROK 2 • BONUS 🎁
             </Badge>
             
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
@@ -180,7 +180,7 @@ export default function Courses() {
             </h2>
             
             <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
-              <strong>Zakup dowolnego kursu = Dostęp LIFETIME do ekskluzywnej społeczności Klientów</strong>
+              <strong>Dołączając do dowolnego Programu otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności Klientów. P.S. To jedyny sposób, aby dołączyć do Lifehackerów.</strong>
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -227,7 +227,7 @@ export default function Courses() {
               </h2>
               
               <p className="text-xl md:text-2xl font-medium mb-6 text-white/90">
-                Ekskluzywny Program Mentoringowy
+                Indywidualny Program Mentoringowy
               </p>
             </div>
             
@@ -256,7 +256,7 @@ export default function Courses() {
                     onClick={handleUnlockAccess}
                     aria-label="Odblokuj dostęp do Mental Elevator"
                   >
-                    Jestem Lifehackerem, ale chcę od życia WIĘCEJ. Odblokuj dostęp
+                    Jestem zaawansowanym Lifehackerem i... chcę od życia WIĘCEJ. Odblokuj dostęp ≫ 
                   </CTAButton>
                 </div>
               )}
@@ -275,13 +275,13 @@ export default function Courses() {
                         <Star className="h-5 w-5 text-yellow-400" />
                       </div>
                       <p className="text-sm text-white/80 italic">
-                        "Rzeczywista transformacja zawsze zaczyna się od decyzji, nie od informacji."
+                        "Rzeczywista transformacja zawsze zaczyna się od decyzji."
                       </p>
                     </div>
                     
                     <div className="bg-ascension-pink/20 rounded-lg p-4 mb-4">
                       <p className="text-white font-medium text-sm">
-                        🔥 Tylko 50 miejsc rocznie
+                        🔥 Prowadzę max 5 osób w tym samym czasie. 
                       </p>
                       <p className="text-white/80 text-xs">
                         Ograniczona dostępność
@@ -290,7 +290,7 @@ export default function Courses() {
                     
                     <div className="text-center">
                       <p className="text-2xl font-bold text-ascension-pink mb-1">
-                        12 000 PLN
+                        16 000 PLN
                       </p>
                       <p className="text-white/80 text-sm">
                         Inwestycja w transformację
@@ -344,9 +344,9 @@ export default function Courses() {
                           className="border-white/30 text-white hover:bg-white/10" 
                           size="lg"
                           showArrow={false}
-                          aria-label="Zarezerwuj rozmowę kwalifikacyjną"
+                          aria-label="Zarezerwuj Sesję Discovery"
                         >
-                          Zarezerwuj rozmowę kwalifikacyjną
+                          Umów Sesję Discovery
                         </CTAButton>
                       </Link>
                     </div>
@@ -374,9 +374,9 @@ export default function Courses() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <CTAButton 
-                  aria-label="Umów rozmowę Discovery - przejdź do formularza kontaktowego"
+                  aria-label="Umów Sesję Discovery - przejdź do formularza kontaktowego"
                 >
-                  Umów rozmowę Discovery
+                  Umów Sesję Discovery
                 </CTAButton>
               </Link>
               
