@@ -36,34 +36,19 @@ export default function Discovery() {
   };
 
   const handleScheduleSession = () => {
-    // Load Google Calendar script if not already loaded
-    if (!document.querySelector('[src*="calendar.google.com/calendar/scheduling-button-script.js"]')) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
-      document.head.appendChild(link);
-      
-      const script = document.createElement('script');
-      script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
-      script.async = true;
-      script.onload = () => {
-        // @ts-ignore
-        window.calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true',
-          color: '#8E24AA',
-          label: 'Umów Sesję Discovery',
-          target: document.body,
-        });
-      };
-      document.head.appendChild(script);
+    // Create a popup window for the Google Calendar booking
+    const calendarUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true';
+    const popup = window.open(
+      calendarUrl,
+      'calendar-booking',
+      'width=600,height=700,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
+    );
+    
+    if (popup) {
+      popup.focus();
     } else {
-      // @ts-ignore
-      window.calendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true',
-        color: '#8E24AA',
-        label: 'Umów Sesję Discovery',
-        target: document.body,
-      });
+      // Fallback: redirect to the calendar page
+      window.open(calendarUrl, '_blank');
     }
   };
 
@@ -134,62 +119,76 @@ export default function Discovery() {
             
             {/* Availability Check Card */}
             <div className="max-w-4xl mx-auto">
-              <GlassCard padding="xl" className="text-center">
-                {status === 'initial' && (
-                  <div>
-                    <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                      Sprawdź dostępność Sesji Discovery
-                    </h3>
-                    <button 
-                      onClick={handleCheckAvailability}
-                      className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1"
-                    >
-                      Sprawdź dostępność
-                    </button>
-                  </div>
-                )}
+              <GlassCard padding="xl" className="text-center relative overflow-hidden border-2 border-neural-violet/20 dark:border-luminal-magenta/20">
+                {/* Subtle gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-luminal-magenta/5 dark:from-neural-violet/10 dark:to-luminal-magenta/10"></div>
                 
-                {status === 'loading' && (
-                  <div className="py-8">
-                    <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-6"></div>
-                    <h3 className="text-xl font-semibold mb-6 text-deep-charcoal dark:text-silver-mist">
-                      Trwa sprawdzanie dostępności...
-                    </h3>
-                    
-                    {/* Progress Bar */}
-                    <div className="w-full max-w-md mx-auto">
-                      <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                        <div 
-                          className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-full transition-all duration-300 ease-out"
-                          style={{ width: `${progress}%` }}
-                        ></div>
+                {/* Animated border glow */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-luminal-magenta/20 to-quantum-blue/20 opacity-0 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                
+                <div className="relative z-10">
+                  {status === 'initial' && (
+                    <div className="py-4">
+                      <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <CheckCircle className="h-10 w-10 text-white animate-pulse" />
                       </div>
-                      <p className="text-sm text-subtle-slate dark:text-silver-mist/70 mt-2">
-                        {Math.round(progress)}% zakończone
+                      <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                        Sprawdź dostępność Sesji Discovery
+                      </h3>
+                      <p className="text-subtle-slate dark:text-silver-mist/80 mb-8 max-w-md mx-auto">
+                        Kliknij poniżej, aby sprawdzić czy mam obecnie wolne miejsca w programie mentoringowym
                       </p>
+                      <button 
+                        onClick={handleCheckAvailability}
+                        className="bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                      >
+                        Sprawdź dostępność
+                      </button>
                     </div>
-                  </div>
-                )}
+                  )}
                 
-                {status === 'success' && (
-                  <div>
-                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <CheckCircle className="h-8 w-8 text-green-500" />
+                  {status === 'loading' && (
+                    <div className="py-8 relative z-10">
+                      <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-6"></div>
+                      <h3 className="text-xl font-semibold mb-6 text-deep-charcoal dark:text-silver-mist">
+                        Trwa sprawdzanie dostępności...
+                      </h3>
+                      
+                      {/* Progress Bar */}
+                      <div className="w-full max-w-md mx-auto">
+                        <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                          <div 
+                            className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-full transition-all duration-300 ease-out"
+                            style={{ width: `${progress}%` }}
+                          ></div>
+                        </div>
+                        <p className="text-sm text-subtle-slate dark:text-silver-mist/70 mt-2">
+                          {Math.round(progress)}% zakończone
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                      Tak, mam obecnie miejsce w programie mentoringowym
-                    </h3>
-                    <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
-                      Możesz umówić Sesję Discovery
-                    </p>
-                    <button 
-                      onClick={handleScheduleSession}
-                      className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1"
-                    >
-                      Umów Sesję Discovery
-                    </button>
-                  </div>
-                )}
+                  )}
+                  
+                  {status === 'success' && (
+                    <div className="py-4 relative z-10">
+                      <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg animate-bounce">
+                        <CheckCircle className="h-10 w-10 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                        Tak, mam obecnie miejsce w programie mentoringowym
+                      </h3>
+                      <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80 max-w-md mx-auto">
+                        Możesz umówić Sesję Discovery już teraz
+                      </p>
+                      <button 
+                        onClick={handleScheduleSession}
+                        className="bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                      >
+                        Umów Sesję Discovery
+                      </button>
+                    </div>
+                  )}
+                </div>
               </GlassCard>
             </div>
             
