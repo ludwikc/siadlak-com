@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
-import { CTAButton } from "@/components/ui/cta-button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { Button } from "@/components/ui/button";
 import { Calendar, Mail } from "@/lib/icons";
 import { Linkedin } from "lucide-react";
 

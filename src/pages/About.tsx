@@ -1,7 +1,7 @@
 
 import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, Mail, CheckCircle } from '@/lib/icons';
 
@@ -48,7 +48,6 @@ const About = () => {
               <CTAButton
                 variant="secondary"
                 className="animate-fade-in bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
-                style={{ animationDelay: "0.4s" }}
                 showArrow={false}
                 aria-label="Umów rozmowę - przejdź do formularza kontaktowego"
               >

@@ -80,7 +80,7 @@ export function CTAButton({
     <Button
       onClick={onClick}
       className={cn(baseClasses, variantClasses[variant])}
-      size={size}
+      size={size === "xl" ? "lg" : size}
       aria-label={ariaLabel}
       {...props}
     >
