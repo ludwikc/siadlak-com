@@ -2,8 +2,52 @@ import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/components/ui/glass-card';
 import HeroSection from '@/components/sections/HeroSection';
 import { Calendar, Clock, CheckCircle } from '@/lib/icons';
+import { useState } from 'react';
 
 export default function Discovery() {
+  const [status, setStatus] = useState<'initial' | 'loading' | 'success'>('initial');
+
+  const handleCheckAvailability = () => {
+    setStatus('loading');
+    
+    // Simulate checking availability
+    setTimeout(() => {
+      setStatus('success');
+    }, 2500);
+  };
+
+  const handleScheduleSession = () => {
+    // Load Google Calendar script if not already loaded
+    if (!document.querySelector('[src*="calendar.google.com/calendar/scheduling-button-script.js"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://calendar.google.com/calendar/scheduling-button-script.css';
+      document.head.appendChild(link);
+      
+      const script = document.createElement('script');
+      script.src = 'https://calendar.google.com/calendar/scheduling-button-script.js';
+      script.async = true;
+      script.onload = () => {
+        // @ts-ignore
+        window.calendar.schedulingButton.load({
+          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true',
+          color: '#8E24AA',
+          label: 'Umów Sesję Discovery',
+          target: document.body,
+        });
+      };
+      document.head.appendChild(script);
+    } else {
+      // @ts-ignore
+      window.calendar.schedulingButton.load({
+        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true',
+        color: '#8E24AA',
+        label: 'Umów Sesję Discovery',
+        target: document.body,
+      });
+    }
+  };
+
   return (
     <Layout>
       <HeroSection
@@ -60,24 +104,51 @@ export default function Discovery() {
               </div>
             </div>
             
-            {/* Calendar Embed */}
+            {/* Availability Check Card */}
             <div className="max-w-4xl mx-auto">
-              <GlassCard padding="lg" className="overflow-hidden">
-                <h3 className="text-xl font-bold mb-6 text-center text-deep-charcoal dark:text-silver-mist">
-                  Wybierz termin, który Ci odpowiada
-                </h3>
+              <GlassCard padding="xl" className="text-center">
+                {status === 'initial' && (
+                  <div>
+                    <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                      Sprawdź dostępność Sesji Discovery
+                    </h3>
+                    <button 
+                      onClick={handleCheckAvailability}
+                      className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                    >
+                      Sprawdź dostępność
+                    </button>
+                  </div>
+                )}
                 
-                <div className="relative w-full" style={{ minHeight: '600px' }}>
-                  <iframe 
-                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true" 
-                    style={{ border: 0 }} 
-                    width="100%" 
-                    height="600" 
-                    frameBorder="0"
-                    title="Kalendarz Discovery Session"
-                    className="rounded-lg"
-                  />
-                </div>
+                {status === 'loading' && (
+                  <div className="py-8">
+                    <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-4"></div>
+                    <h3 className="text-xl font-semibold text-deep-charcoal dark:text-silver-mist">
+                      Trwa sprawdzanie dostępności...
+                    </h3>
+                  </div>
+                )}
+                
+                {status === 'success' && (
+                  <div>
+                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <CheckCircle className="h-8 w-8 text-green-500" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                      Tak, mam obecnie miejsce w programie mentoringowym
+                    </h3>
+                    <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+                      Możesz umówić Sesję Discovery
+                    </p>
+                    <button 
+                      onClick={handleScheduleSession}
+                      className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                    >
+                      Umów Sesję Discovery
+                    </button>
+                  </div>
+                )}
               </GlassCard>
             </div>
             
