@@ -27,6 +27,7 @@ import Legal from './pages/Legal';
 import MentalElevator from './pages/MentalElevator';
 import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
+import SilnaGlowa from './pages/SilnaGlowa';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/program/:courseSlug" element={<CourseDetail />} />
           <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
           <Route path="/program/mental-elevator" element={<MentalElevator />} />
+          <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
           
           <Route path="/podcast" element={<Podcasts />} />
           <Route path="/new-podcast" element={<NewPodcast />} />
