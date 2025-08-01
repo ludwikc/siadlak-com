@@ -1,6 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useLocation } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface HeroProps {
@@ -17,17 +15,11 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title,
-  subtitle,
-  ctaText,
-  ctaLink,
-  secondaryCtaText,
-  secondaryCtaLink,
   imageDescription,
   backgroundImage,
   heroImage,
   fullHeight = false,
-}: HeroProps) {
+}: Partial<HeroProps>) {
   const location = useLocation();
   const isMobile = useIsMobile();
 
@@ -82,69 +74,12 @@ export default function Hero({
           >
             <h1
               id="hero-title"
-              className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent
-              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
-              ${isUwazneZyciePage ? "text-right" : location.pathname === "/" ? "text-center" : "text-left"}
-              `}
+              className="text-white font-heading font-bold !leading-tight animate-fade-in text-right text-5xl md:text-6xl lg:text-7xl flex flex-col items-end justify-center h-full"
             >
-              {title}
+              <span className="block">Cześć.</span>
+              <span className="block mt-4">Nareszcie jesteś.</span>
+              <span className="block mt-8">Czekałem na Ciebie.</span>
             </h1>
-
-            <p
-              className={`
-              mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
-              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
-              `}
-              style={{ animationDelay: "0.2s" }}
-            >
-              {subtitle}
-            </p>
-
-            <div
-              className={`
-              flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in
-              ${location.pathname === "/" ? "justify-center" : isUwazneZyciePage ? "justify-end" : "justify-start"}
-            `}
-              style={{ animationDelay: "0.4s" }}
-            >
-              <Link
-                to={ctaLink}
-                onClick={() => window.scrollTo(0, 0)}
-                aria-label={`${ctaText} - primary action`}
-                className={`${isMobile ? "w-full" : ""}`}
-              >
-                <Button
-                  variant="special"
-                  className={`
-                    ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
-                  `}
-                  size={isMobile ? "default" : "lg"}
-                >
-                  {ctaText}
-                  <ArrowRight size={18} className="text-white" />
-                </Button>
-              </Link>
-
-              {secondaryCtaText && secondaryCtaLink && (
-                <Link
-                  to={secondaryCtaLink}
-                  onClick={() => window.scrollTo(0, 0)}
-                  aria-label={`${secondaryCtaText} - secondary action`}
-                  className={`${isMobile ? "w-full" : ""}`}
-                >
-                  <Button
-                    variant="secondary"
-                    className={`
-                      ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
-                    `}
-                    size={isMobile ? "default" : "lg"}
-                  >
-                    {secondaryCtaText}
-                  </Button>
-                </Link>
-              )}
-            </div>
           </div>
 
           {/* Right column - Image (1/3 width on desktop) */}
