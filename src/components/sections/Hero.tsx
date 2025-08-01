@@ -74,7 +74,7 @@ export default function Hero({
           >
             <h1
               id="hero-title"
-              className="text-white font-heading font-bold !leading-tight animate-fade-in text-right text-5xl md:text-6xl lg:text-7xl flex flex-col items-end justify-start h-full w-4/5 ml-auto pt-[20vh]"
+              className="text-white font-heading font-bold !leading-tight animate-fade-in text-right text-5xl md:text-6xl lg:text-7xl flex flex-col items-end w-4/5 ml-auto mt-[20vh]"
             >
               <span className="block">Cześć.</span>
               <span className="block mt-4">Nareszcie jesteś.</span>
