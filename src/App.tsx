@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Index from './pages/Index';
 import About from './pages/About';
+import Discovery from './pages/Discovery';
 import Contact from './pages/Contact';
 import Newsletter from './pages/Newsletter';
 import NotFound from './pages/NotFound';
@@ -39,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/discovery" element={<Discovery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
           <Route path="/newsletter" element={<Newsletter />} />

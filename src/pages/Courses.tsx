@@ -328,7 +328,7 @@ export default function Courses() {
                     </div>
                     
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Link to="/mental-elevator" className="flex-1">
+                      <Link to="/discovery" className="flex-1">
                         <CTAButton 
                           variant="premium" 
                           className="w-full shadow-lg hover:shadow-xl" 
@@ -339,7 +339,7 @@ export default function Courses() {
                         </CTAButton>
                       </Link>
                       
-                      <Link to="/contact">
+                      <Link to="/discovery">
                         <CTAButton 
                           variant="secondary" 
                           className="border-white/30 text-white hover:bg-white/10" 
@@ -373,7 +373,7 @@ export default function Courses() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/discovery">
                 <CTAButton 
                   aria-label="Umów Sesję Discovery - przejdź do formularza kontaktowego"
                 >
