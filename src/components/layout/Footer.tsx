@@ -155,7 +155,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/podcast/uwazne-zycie"
+                  to="/program/uwazne-zycie"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Uważne Życie

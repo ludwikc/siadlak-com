@@ -50,7 +50,7 @@ export default function NewPodcast() {
               title="Uważne Życie"
               description="Odnajdź równowagę w świecie ciągłych wymagań. Praktyczne ćwiczenia uważności, które możesz wykonać podczas porannej kawy, w drodze do pracy, czy wieczorem."
               imageUrl="/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png"
-              link="/podcast/uwazne-zycie"
+              link="/program/uwazne-zycie"
               schedule="Sesje live: Każdy wtorek o 6:30 rano"
             />
           </div>

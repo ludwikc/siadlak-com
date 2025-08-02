@@ -70,7 +70,7 @@ function App() {
           <Route path="/podcast" element={<Podcasts />} />
           <Route path="/new-podcast" element={<NewPodcast />} />
           <Route path="/podcast/life-hacking" element={<LifeHackingPodcast />} />
-          <Route path="/podcast/uwazne-zycie" element={<UwazneZyciePodcast />} />
+          <Route path="/program/uwazne-zycie" element={<UwazneZyciePodcast />} />
           
           <Route path="/webinar" element={<Webinar />} />
           <Route path="/webinar/registration" element={<WebinarRegistration />} />

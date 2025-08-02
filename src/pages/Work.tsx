@@ -54,7 +54,7 @@ export default function Work() {
                     <p className="text-subtle-slate dark:text-silver-mist/80 mb-4">
                       W każdy wtorek o 6:30 - Twoja kotwica uważności w każdym tygodniu. Ja jestem zawsze. A Ty będziesz? :)
                     </p>
-                    <Link to="/podcast/uwazne-zycie">
+                    <Link to="/program/uwazne-zycie">
                       <Button variant="secondary">
                         <Headphones size={18} />
                         Przejdź do podcastu

@@ -42,7 +42,7 @@ export default function Hero({
   };
 
   // Special case for /podcast/uwazne-zycie - align content to the right
-  const isUwazneZyciePage = location.pathname === "/podcast/uwazne-zycie";
+  const isUwazneZyciePage = location.pathname === "/program/uwazne-zycie";
 
   return (
     <section
