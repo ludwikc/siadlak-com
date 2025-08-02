@@ -14,6 +14,8 @@ import Podcasts from './pages/Podcasts';
 import NewPodcast from './pages/NewPodcast';
 import LifeHackingPodcast from './pages/LifeHackingPodcast';
 import UwazneZyciePodcast from './pages/UwazneZyciePodcast';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 import Webinar from './pages/Webinar';
 import WebinarExpired from './pages/WebinarExpired';
 import WebinarLive from './pages/WebinarLive';
@@ -49,6 +51,8 @@ function App() {
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/legal/privacy" element={<Privacy />} />
+          <Route path="/legal/terms" element={<Terms />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/community" element={<Community />} />
           

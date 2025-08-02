@@ -238,7 +238,7 @@ export default function Header() {
                         {/* 3 Small Cards */}
                         <div className="grid grid-cols-3 gap-2">
                           <Link 
-                            to="/podcasts" 
+                            to="/podcast" 
                             className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
@@ -433,7 +433,7 @@ export default function Header() {
                           </Link>
 
                           <Link 
-                            to="/podcasts" 
+                            to="/podcast"
                             className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                             onClick={() => setIsDropdownOpen(false)}
                           >
@@ -549,7 +549,7 @@ export default function Header() {
                   Programy
                 </Link>
                 <Link
-                  to="/podcasts"
+                  to="/podcast"
                   className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >

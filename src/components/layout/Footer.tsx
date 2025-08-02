@@ -108,14 +108,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/resources"
-                  className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
-                >
-                  Materiały
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/contact"
                   className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
@@ -205,13 +197,13 @@ export default function Footer() {
               Informacje Prawne
             </Link>
             <Link
-              to="/privacy"
+              to="/legal/privacy"
               className="text-sm text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
             >
               Polityka Prywatności
             </Link>
             <Link
-              to="/terms"
+              to="/legal/terms"
               className="text-sm text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
             >
               Regulamin
