@@ -175,8 +175,8 @@ export default function Header() {
                           className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <div className="absolute top-2 right-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
-                          <span style={{ display: "inline-block", transform: "scaleX(-1)" }}>⤵</span> Tu chcesz zacząć ⤵                         </div>
+                          <div className="absolute top-2 left-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
+                          Tu chcesz zacząć ⤵                         </div>
                           <div className="flex items-center">
                             <div className="nav-icon w-8 h-8 flex items-center justify-center mr-4">
                               <Book size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
