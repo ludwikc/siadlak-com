@@ -27,7 +27,7 @@ export default function HeroSection({
       <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             {title}
           </h1>
           {subtitle && (
