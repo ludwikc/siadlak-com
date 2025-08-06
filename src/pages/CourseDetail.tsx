@@ -286,6 +286,93 @@ const coursesData = {
       },
     ],
   },
+  "7-technik": {
+    title: "7 Technik",
+    subtitle: "Master 7 Essential Techniques for Peak Performance",
+    description:
+      "Learn the 7 fundamental techniques that separate high performers from the rest. A comprehensive system for optimizing your cognitive and physical capabilities.",
+    longDescription:
+      "7 Technik is a concentrated program that distills years of research and practical application into seven essential techniques that form the foundation of peak performance. Each technique is designed to work synergistically with the others, creating a comprehensive system for optimizing both cognitive and physical capabilities in high-pressure environments.",
+    features: [
+      "7 core performance techniques",
+      "Daily practice protocols",
+      "Progress tracking system",
+      "Implementation worksheets",
+      "Video demonstrations",
+    ],
+    curriculum: [
+      {
+        week: 1,
+        title: "Technika 1: Cognitive Anchoring",
+        description:
+          "Master the art of maintaining mental clarity under pressure through cognitive anchoring techniques.",
+      },
+      {
+        week: 2,
+        title: "Technika 2: Energy Cycling",
+        description: "Learn to optimize your energy cycles for sustained peak performance throughout the day.",
+      },
+      {
+        week: 3,
+        title: "Technika 3: Decision Filtering",
+        description:
+          "Develop rapid decision-making frameworks that maintain quality while increasing speed.",
+      },
+      {
+        week: 4,
+        title: "Technika 4: Focus Stacking",
+        description:
+          "Master the technique of layering different types of focus for maximum concentration depth.",
+      },
+      {
+        week: 5,
+        title: "Technika 5: Stress Inoculation",
+        description:
+          "Build resistance to stress and pressure through controlled exposure and recovery protocols.",
+      },
+      {
+        week: 6,
+        title: "Technika 6: Pattern Recognition",
+        description:
+          "Enhance your ability to quickly identify and respond to complex patterns and trends.",
+      },
+      {
+        week: 7,
+        title: "Technika 7: System Integration",
+        description:
+          "Learn to seamlessly integrate all techniques into a unified performance system.",
+      },
+    ],
+    outcomes: [
+      "Mastery of 7 fundamental performance techniques",
+      "Improved performance under pressure",
+      "Enhanced decision-making speed and quality",
+      "Better stress management and resilience",
+      "Increased focus and concentration abilities",
+      "Sustainable high-performance habits",
+    ],
+    duration: "7 weeks",
+    format: "Online Self-Paced",
+    level: "All Levels",
+    startDate: "Available Now",
+    price: "€890",
+    featured: false,
+    image: "",
+    testimonials: [
+      {
+        quote:
+          "The 7 techniques completely transformed my approach to high-pressure situations. I now feel confident and clear even in the most demanding scenarios.",
+        name: "Katarzyna M.",
+        title: "Business Development Director",
+      },
+      {
+        quote:
+          "Simple, practical, and incredibly effective. These techniques have become part of my daily routine and the results speak for themselves.",
+        name: "Marcin L.",
+        title: "Senior Software Engineer",
+      },
+    ],
+  },
 };
 
 const CourseDetail = () => {
