@@ -70,4 +70,5 @@ export {
   User,
   MailIcon,
   CheckCheck,
+  Lock,
 } from 'lucide-react';
