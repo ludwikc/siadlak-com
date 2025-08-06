@@ -9,8 +9,8 @@ export default function NewsletterPage() {
   return (
     <Layout>
       <HeroSection
-        title="AI & CZŁOWIEK"
-        subtitle={<>Uwolnij swój potencjał z AI: gdzie technologia spotyka <span className="italic text-ascension-pink">człowieka</span></>}
+        title="(🧠 + 🤖)^💜"
+        subtitle={<>Rozszerz swój Intelekt o możliwości AI: i wtedy podnieś do potęgi <span className="italic text-ascension-pink">serca</span></>}
       >
         <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
           "Każda technologia wystarczająco zaawansowana jest nieodróżnialna
