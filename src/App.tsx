@@ -62,11 +62,10 @@ function App() {
           <Route path="/terms" element={<NotFound />} />
           
           <Route path="/program" element={<Courses />} />
-          <Route path="/program/:courseSlug" element={<CourseDetail />} />
           <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
           <Route path="/program/mental-elevator" element={<MentalElevator />} />
           <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
-          <Route path="/program/7-technik" element={<CourseDetail />} />
+          <Route path="/program/:courseSlug" element={<CourseDetail />} />
           
           <Route path="/podcast" element={<Podcasts />} />
           <Route path="/new-podcast" element={<NewPodcast />} />
