@@ -14,7 +14,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="container mx-auto px-4 max-w-4xl py-16">
           {/* Opening Message */}
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
               Właśnie zapisałeś się na mój webinar.
             </h1>
             
