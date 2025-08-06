@@ -11,6 +11,7 @@ export default function NewsletterPage() {
       <HeroSection
         title="(🧠 + 🤖)^💜"
         subtitle={<>Rozszerz swój Intelekt o możliwości AI: i wtedy podnieś do potęgi <span className="italic text-ascension-pink">serca</span></>}
+        titleBold={false}
       >
         <p className="text-lg md:text-xl mb-4 text-silver-mist/90 italic">
           "Każda technologia wystarczająco zaawansowana jest nieodróżnialna
