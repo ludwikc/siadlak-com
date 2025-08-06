@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ReferrerGuard } from '@/components/oto/ReferrerGuard';
-import { ExpiredOverlay } from '@/components/oto/ExpiredOverlay';
 import { OTOProductDisplay } from '@/components/oto/OTOProductDisplay';
 import { getOTOCookie, setOTOCookie, isOfferExpired } from '@/lib/oto-utils';
 
@@ -56,7 +55,6 @@ function OTOContent() {
   return (
     <div className="relative">
       <OTOProductDisplay onExpired={handleExpired} />
-      {state === OTOState.EXPIRED && <ExpiredOverlay />}
     </div>
   );
 }
