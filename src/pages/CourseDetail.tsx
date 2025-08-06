@@ -681,6 +681,20 @@ const CourseDetail = () => {
                 </Button>
               </Link>
             </div>
+            
+            {/* Hidden OTO access button - only for 7-technik course */}
+            {courseSlug === '7-technik' && (
+              <div className="mt-8 opacity-30 hover:opacity-100 transition-opacity duration-300">
+                <Link to="/oto">
+                  <Button
+                    variant="ghost"
+                    className="text-white/60 hover:text-white text-xs px-2 py-1 h-auto"
+                  >
+                    •••
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </section>
