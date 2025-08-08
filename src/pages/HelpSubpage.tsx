@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import { helpPages } from './help';
+import { helpPages } from './help/index';
 
 type HelpComponent = React.ComponentType;
 
