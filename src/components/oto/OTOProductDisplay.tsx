@@ -145,7 +145,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
             className="w-full h-full object-contain object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-background/20 to-transparent"></div>
         </div>
       </div>
 
