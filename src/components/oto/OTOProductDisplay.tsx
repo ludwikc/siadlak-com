@@ -143,7 +143,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           <img 
             src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
             alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
         </div>
