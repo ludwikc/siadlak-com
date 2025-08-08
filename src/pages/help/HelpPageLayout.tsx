@@ -45,7 +45,7 @@ export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
             </div>
             <div className="flex items-center">
               <User className="h-4 w-4 mr-1" />
-              Zespół Ludwika C. Siadlaka
+              Ludwik C. Siadlak
             </div>
             <div>
               Zaktualizowano: {new Date(data.lastUpdated).toLocaleDateString('pl-PL')}
@@ -64,14 +64,14 @@ export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
             <div className="text-center">
               <h3 className="text-lg font-semibold mb-2">Czy ten artykuł był pomocny?</h3>
               <p className="text-muted-foreground mb-4">
-                Jeśli masz dodatkowe pytania, skontaktuj się z naszym zespołem wsparcia.
+                Jeśli masz dodatkowe pytania - napisz, jestem.
               </p>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                Skontaktuj się z nami
+                Kontakt
               </Link>
             </div>
           </GlassCard>

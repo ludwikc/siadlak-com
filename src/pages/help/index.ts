@@ -8,7 +8,7 @@ const helpPages: Record<string, () => Promise<{ default: ComponentType }>> = {
   'ustawienia-konta': () => import('./UstawieniaKonta'),
   'zmiana-hasla': () => import('./ZmianaHasla'),
   'powiadomienia': () => import('./Powiadomienia'),
-  'metody-platnosci': () => import('./MetodyPlatnosci'),
+  'pierwsze-kroki-z-discordem': () => import('./PierwszeKrokiZDiscordem'),
   'faq': () => import('./FAQ'),
   'kontakt-support': () => import('./KontaktSupport'),
   'rozwiazywanie-problemow': () => import('./RozwiazywanieProblemow'),

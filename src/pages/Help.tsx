@@ -26,12 +26,12 @@ const helpSections = [
     ]
   },
   {
-    title: "Płatności i subskrypcje",
-    description: "Informacje o płatnościach, fakturach i subskrypcjach",
+    title: "Discord",
+    description: "Informacje o platformie społecznościowej Discord",
     icon: CreditCard,
     articles: [
-      { title: "Metody płatności", slug: "metody-platnosci" },
-      { title: "Historia płatności", slug: "historia-platnosci" },
+      { title: "Pierwsze kroki z Discordem", slug: "pierwsze-kroki-z-discordem" },
+      { title: "Rozwiązywanie problemów", slug: "historia-platnosci" },
       { title: "Anulowanie subskrypcji", slug: "anulowanie-subskrypcji" }
     ]
   },
