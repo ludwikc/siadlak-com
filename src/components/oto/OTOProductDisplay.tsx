@@ -10,17 +10,39 @@ interface OTOProductDisplayProps {
 export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
   return (
     <div className="min-h-screen">
-      {/* Letter from my desk */}
-      <section aria-label="List z mojego biurka" className="bg-muted/30">
-        <div className="container mx-auto px-4 max-w-3xl py-8 md:py-12">
-          <GlassCard variant="bordered" padding="lg" className="text-foreground">
-            <div className="space-y-4 text-lg md:text-xl leading-relaxed">
-              <p>Właśnie zapisałeś się na mój webinar.</p>
-              <p><strong>Mój</strong> webinar.</p>
-              <p>A to oznacza, że jesteś moim gościem. A to oznacza, że traktuję Cię z należytym szacunkiem. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
-              <p>I mam już pomysł, jak zrobić to najlepiej.</p>
+      {/* Gmail-style email */}
+      <section aria-label="Email z mojego biurka" className="bg-gray-100 py-8 md:py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* Gmail header */}
+            <div className="bg-white border-b border-gray-200 p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                    LS
+                  </div>
+                  <div>
+                    <div className="font-medium text-gray-900">Ludwik C. Siadlak</div>
+                    <div className="text-sm text-gray-500">ludwik@siadlak.com</div>
+                  </div>
+                </div>
+                <div className="text-sm text-gray-500">dzisiaj, 14:32</div>
+              </div>
+              <div className="text-sm text-gray-600">
+                <span className="font-medium">Do:</span> Ty &lt;ty@email.com&gt;
+              </div>
             </div>
-          </GlassCard>
+            
+            {/* Email content */}
+            <div className="p-6 bg-white">
+              <div className="space-y-4 text-base leading-relaxed text-gray-800">
+                <p>Właśnie zapisałeś się na mój webinar.</p>
+                <p><strong>Mój</strong> webinar.</p>
+                <p>A to oznacza, że jesteś moim gościem. A to oznacza, że traktuję Cię z należytym szacunkiem. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
+                <p>I mam już pomysł, jak zrobić to najlepiej.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
