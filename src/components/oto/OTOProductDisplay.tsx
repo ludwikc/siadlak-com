@@ -19,19 +19,19 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             </h1>
             
             <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed">
-              <p><strong>Właśnie zapisałeś się na mój webinar.</strong></p>
-              <p><strong><span className="font-semibold">Mój</span> webinar.</strong></p>
+              <p className="text-foreground font-medium">Dziękuję. Serio.</p>
+              <p>Zapisałeś się na mój webinar — to dla mnie sygnał, że inwestujesz w siebie.</p>
               <p>
-                A to znaczy, że jesteś <strong>moim gościem</strong>.
-              </p>
-              <p className="text-muted-foreground">
-                U mnie goście są traktowani z należnym szacunkiem: konkretnie, bez lania wody i z czymś, co realnie robi różnicę.
-              </p>
-              <p>
-                Zaczniemy od podziękowania — <strong>za to, że... jesteś</strong>. I za to, że dajesz sobie czas na rozwój.
+                Skoro jesteś <strong>moim gościem</strong>, chcę się odwdzięczyć.
               </p>
               <p className="text-foreground">
-                I mam już pomysł, jak zrobić to najlepiej: <strong>dam Ci dostęp do krótkiego kursu, który jest esencją mojej pracy nad skutecznością.</strong> To najlepszy pierwszy krok — do przerobienia dziś, z efektami od jutra.
+                Dam Ci dostęp do krótkiego, konkretnego kursu — esencji mojej pracy nad skutecznością.
+              </p>
+              <p className="text-muted-foreground">
+                Nie chodzi mi o sprzedaż. <strong>Chcę, żebyś to miał</strong>. Dlatego schodzę z ceną tak nisko, jak potrafię.
+              </p>
+              <p className="text-foreground">
+                Weź to ode mnie i użyj dziś — jutro poczujesz różnicę.
               </p>
             </div>
           </div>
