@@ -248,7 +248,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 <img
                   src="/lovable-uploads/a9baf98d-289f-4338-9750-826624bc8b69.png"
                   alt="Logo płatności BLIK – bezpieczna płatność SSL"
-                  className="mt-1 h-5 md:h-6 w-auto object-contain opacity-90"
+                  className="mt-1 h-6 md:h-7 w-auto object-contain opacity-90 rounded-full bg-white/10 px-2 py-1"
                   loading="lazy"
                 />
               </div>
