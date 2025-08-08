@@ -18,9 +18,11 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <div className="bg-white border-b border-gray-200 p-4">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium text-sm">
-                    LS
-                  </div>
+                  <img 
+                    src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png" 
+                    alt="Ludwik C. Siadlak"
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
                   <div>
                     <div className="font-medium text-gray-900">Ludwik C. Siadlak</div>
                     <div className="text-sm text-gray-500">ludwik@siadlak.com</div>
