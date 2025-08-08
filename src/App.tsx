@@ -31,7 +31,6 @@ import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
 import SilnaGlowa from './pages/SilnaGlowa';
 import OTO from './pages/OTO';
-import OTOv2 from './pages/OTOv2';
 import Layout from './components/layout/Layout';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
@@ -71,7 +70,6 @@ function App() {
           <Route path="/program/:courseSlug" element={<CourseDetail />} />
           
           <Route path="/oto" element={<Layout><OTO /></Layout>} />
-          <Route path="/otov2" element={<OTOv2 />} />
           
           <Route path="/podcast" element={<Podcasts />} />
           <Route path="/new-podcast" element={<NewPodcast />} />
