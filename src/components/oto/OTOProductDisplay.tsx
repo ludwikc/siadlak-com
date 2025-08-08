@@ -66,6 +66,30 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </div>
       </section>
 
+      {/* Course Logo Section */}
+      <section className="py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center">
+            <div className="relative max-w-2xl mx-auto">
+              <img 
+                src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                alt="7 Technik Produktywności - Logo kursu"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
+            </div>
+            <div className="mt-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Witaj w świecie efektywności
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                77 minut, które zmienią sposób, w jaki organizujesz swój dzień
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero section */}
       <HeroSection 
         title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności" 
