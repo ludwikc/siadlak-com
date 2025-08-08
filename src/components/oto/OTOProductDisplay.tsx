@@ -15,30 +15,23 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           {/* Opening Message */}
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-3xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
-              Właśnie zapisałeś się na mój webinar.
+              7 Technik Produktywności — 77 minut, które ustawiają Ci dzień
             </h1>
             
             <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed">
+              <p><strong>Właśnie zapisałeś się na mój webinar.</strong></p>
+              <p><strong><span className="font-semibold">Mój</span> webinar.</strong></p>
               <p>
-                <span className="font-semibold text-primary">Mój</span> webinar. A to oznacza, że jesteś moim gościem.
+                A to znaczy, że jesteś <strong>moim gościem</strong>.
               </p>
-              
               <p className="text-muted-foreground">
-                To oznacza też, że traktuję Cię z należbym moim gościom szacunkiem. I zacznę od tego, że chcę Ci podziękować za to, że… jesteś.
+                U mnie goście są traktowani z należnym szacunkiem: konkretnie, bez lania wody i z czymś, co realnie robi różnicę.
               </p>
-              
-              <p className="text-2xl font-medium text-foreground">Serio.</p>
-              
-              <p className="text-muted-foreground">
-                Bo wiem, jak to wygląda. Kolejny webinar, kolejna obietnica zmiany życia, kolejne "musisz tylko chcieć". Znamy to wszyscy.
+              <p>
+                Zaczniemy od podziękowania — <strong>za to, że... jesteś</strong>. I za to, że dajesz sobie czas na rozwój.
               </p>
-              
               <p className="text-foreground">
-                Ale Ty mimo to kliknąłeś. Zapisałeś się. Chcesz dać sobie ten czas. Chcesz sięgnąć kawałek poza swoją strefę komfortu.
-              </p>
-              
-              <p className="text-lg font-medium text-primary border-l-4 border-primary/30 pl-4 italic">
-                I właśnie dlatego mam dla ciebie coś, co przygotowałem jako fundament do tego, o czym będziemy rozmawiać na webinarze.
+                I mam już pomysł, jak zrobić to najlepiej: <strong>dam Ci dostęp do krótkiego kursu, który jest esencją mojej pracy nad skutecznością.</strong> To najlepszy pierwszy krok — do przerobienia dziś, z efektami od jutra.
               </p>
             </div>
           </div>
@@ -49,56 +42,35 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       <div className="container mx-auto px-4 max-w-4xl py-16">
         <GlassCard className="mb-16" padding="xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">7 Technik Produktywności</h2>
-            <p className="text-xl text-muted-foreground mb-2">Twój pierwszy krok</p>
-            <p className="text-lg font-medium">77 minut materiału, który nauczy Cię siedmiu technik</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
+            <ul className="text-left max-w-2xl mx-auto space-y-3 text-lg leading-relaxed">
+              <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach — zero „teorii dla teorii”.</li>
+              <li className="text-foreground">• <strong>Po każdej technice jedno zadanie</strong>, które wdrażasz od razu.</li>
+              <li className="text-foreground">• <strong>Zero aplikacji</strong> — wystarczy zwykły timer.</li>
+              <li className="text-foreground">• <strong>Dostęp natychmiast</strong> po zakupie.</li>
+            </ul>
+          </div>
+          
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Szybkie przypomnienie technik (po jednym zdaniu)</h3>
           </div>
           
           <div className="grid gap-6 md:gap-8">
             {[
-              {
-                number: "1",
-                title: "Blokowanie zadań",
-                description: "grupujesz podobne aktywności w bloki. Koniec z przeskakiwaniem mail-telefon-mail-spotkanie. Najpierw wszystkie maile, potem telefony. Jak jazda z punktu A do B - nie zatrzymujesz się na każdą myśl."
-              },
-              {
-                number: "2", 
-                title: "Praca głęboka",
-                description: "wyłączasz powiadomienia na 25 minut. Tyle. Żaden Facebook, żaden Instagram. Czyja agenda się liczy - twoja czy ich?"
-              },
-              {
-                number: "3",
-                title: "Zatrudnij pierwszego robota", 
-                description: "Zapier, IFTTT, Make. Wszystkie mają darmowe plany. Gmail z gwiazdką automatycznie staje się zadaniem w Todoist. Trzy kroki: zaloguj się, połącz aplikacje, kliknij start."
-              },
-              {
-                number: "4",
-                title: "Hack własnego maila",
-                description: "ludwik@gmail.com = ludwik+facebook@gmail.com = lu.dw.ik@gmail.com. Jeden mail, różne tożsamości. Różne filtry. Różne automatyzacje."
-              },
-              {
-                number: "5", 
-                title: "Werwa do pracy",
-                description: "usuń Gmaila z telefonu na weekend. Zainstaluj w poniedziałek. Zobaczysz, co się stanie. FOMW (Fear of Missing Work) zamiast prokrastynacji."
-              },
-              {
-                number: "6",
-                title: "Oszacowania +50%",
-                description: "myślisz, że zadanie zajmie godzinę? Zaplanuj półtorej. Silnik na komfortowych obrotach pracuje dłużej niż na maksymalnych."
-              },
-              {
-                number: "7",
-                title: "Otaczanie się skutecznymi", 
-                description: "jesteś wypadkową 5 osób, którymi się otaczasz. Silent co-working, społeczności skupione na działaniu. Konkretne miejsca, gdzie to znajdziesz."
-              }
-            ].map((technique, index) => (
-              <div key={index} className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  {technique.number}
+              { number: "1", title: "Blokowanie zadań", description: "grupujesz podobne rzeczy w jednym bloku; jedziesz A→B bez postojów." },
+              { number: "2", title: "Praca głęboka", description: "25 minut w trybie „samolot”: powiadomienia OFF, Ty ON." },
+              { number: "3", title: "Zatrudnij pierwszego robota", description: "Zapier/IFTTT/Make: zaloguj → połącz → start; ⭐ w Gmailu = zadanie w Todoist." },
+              { number: "4", title: "Hack własnego maila", description: "plusy i kropki (ludwik+fb@… / lu.dw.ik@…) = porządek, filtry i automaty." },
+              { number: "5", title: "Werwa do pracy", description: "zrób „próżnię”: usuń Gmail z telefonu na weekend, zainstaluj w poniedziałek." },
+              { number: "6", title: "Oszacowania +50%", description: "doliczasz połowę czasu i pracujesz spokojnie, bez czerwonego pola." },
+              { number: "7", title: "Otaczanie się skutecznymi", description: "silent co-working i społeczność siadlak.wip (PL kanał) trzymają Cię w działaniu." }
+            ].map((t, i) => (
+              <div key={i} className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
+                  {t.number}
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">{technique.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{technique.description}</p>
+                <div className="text-foreground">
+                  <p className="leading-relaxed"><strong>{t.title}</strong> — {t.description}</p>
                 </div>
               </div>
             ))}
@@ -106,43 +78,49 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </GlassCard>
       </div>
 
-      {/* Why Now Section */}
+      {/* Wartość vs. cena */}
       <div className="bg-muted/30 py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Dlaczego ci to oferuję teraz?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena (gest gospodarza)</h2>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed">
-            <p className="text-center text-xl font-medium text-primary">
-              Bo jestem pewny, że webinar będzie wartościowy. Na tyle pewny, że chcę Ci dać solidny fundament już teraz.
-            </p>
-            
-            <p className="text-muted-foreground">
-              Te techniki testowałem na sobie przez 19 lat. W Microsoft, Hewlett Packard, General Electric. W polskiej policji, norweskiej policji, Departamencie Obrony USA. Podczas 256+ dni vloga codziennie. Podczas 100+ lotów rocznie przed pandemią.
-            </p>
-            
             <div className="text-center py-8">
-              <div className="inline-flex items-center gap-4 p-6 bg-gradient-to-r from-destructive/10 to-primary/10 rounded-xl border border-primary/20">
+              <div className="inline-flex items-center gap-6 p-6 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Normalna cena</p>
+                  <p className="text-sm text-muted-foreground mb-1">Regularnie</p>
                   <p className="text-2xl font-bold line-through text-muted-foreground">497 PLN</p>
                 </div>
                 <div className="text-3xl text-muted-foreground">→</div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla mojego gościa</p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla gości webinaru — teraz</p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
             </div>
             
-            <p className="text-center font-medium">
-              Dlaczego tyle? Bo to nie jest darmowy ebook, który przeczytasz (albo tylko ściągniesz) i zapomnisz. To konkretne techniki, które wdrożysz i zobaczysz różnicę.
+            <p className="text-center">
+              To <strong>jednorazowa oferta</strong> aktywna <strong>przez 7 minut</strong> od kliknięcia.
             </p>
+            
+            <div className="text-center">
+              <p className="mb-3 text-muted-foreground"><strong>Zegar tyka:</strong></p>
+              <div className="max-w-md mx-auto">
+                <OTOCountdown onExpired={onExpired} />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca cena 497 PLN.</p>
+              <div className="mt-6">
+                <button className="w-full md:w-auto bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3">
+                  Dodaj kurs za 77 PLN
+                  <ArrowRight className="h-6 w-6" />
+                </button>
+                <p className="mt-2 text-sm text-muted-foreground">Dostęp natychmiast</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       {/* Urgency Section */}
       <div className="container mx-auto px-4 max-w-4xl py-16">
         <div className="text-center mb-12">
