@@ -137,6 +137,18 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </GlassCard>
       </div>
 
+      {/* Course Preview Visual */}
+      <div className="w-full -mx-4 md:-mx-8 lg:-mx-16 xl:-mx-32 mb-16">
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+          <img 
+            src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
+            alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
+        </div>
+      </div>
+
       {/* Wartość vs. cena */}
       <div className="bg-muted/30 py-16">
         <div className="container mx-auto px-4 max-w-4xl">
