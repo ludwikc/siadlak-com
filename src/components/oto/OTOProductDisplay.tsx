@@ -2,12 +2,30 @@ import { ArrowRight } from '@/lib/icons';
 import { GlassCard } from '@/components/ui/glass-card';
 import { OTOCountdown } from './OTOCountdown';
 import HeroSection from '@/components/sections/HeroSection';
+import { useState, useEffect } from 'react';
 
 interface OTOProductDisplayProps {
   onExpired: () => void;
 }
 
 export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
+  const [currentDateTime, setCurrentDateTime] = useState('');
+
+  useEffect(() => {
+    const now = new Date();
+    const monthNames = [
+      'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca',
+      'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'
+    ];
+    
+    const day = now.getDate();
+    const month = monthNames[now.getMonth()];
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    
+    setCurrentDateTime(`${day} ${month} (dzisiaj), ${hours}:${minutes}`);
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Gmail-style email */}
@@ -25,13 +43,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                   />
                   <div>
                     <div className="font-medium text-gray-900">Ludwik C. Siadlak</div>
-                    <div className="text-sm text-gray-500">ludwik@siadlak.com</div>
+                    <div className="text-sm text-gray-500">ludwik@siadlak.email</div>
                   </div>
                 </div>
-                <div className="text-sm text-gray-500">dzisiaj, 14:32</div>
+                <div className="text-sm text-gray-500">{currentDateTime}</div>
               </div>
               <div className="text-sm text-gray-600">
-                <span className="font-medium">Do:</span> Ty &lt;ty@email.com&gt;
+                <span className="font-medium">Do:</span> Ciebie &lt;****@gmail.com&gt;
               </div>
             </div>
             
@@ -40,8 +58,8 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               <div className="space-y-4 text-base leading-relaxed text-gray-800">
                 <p>Właśnie zapisałeś się na mój webinar.</p>
                 <p><strong>Mój</strong> webinar.</p>
-                <p>A to oznacza, że jesteś moim gościem. A to oznacza, że traktuję Cię z należytym szacunkiem. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
-                <p>I mam już pomysł, jak zrobić to najlepiej.</p>
+                <p>A to oznacza, że jesteś <strong>moim gościem</strong>. A to oznacza, że traktuję Cię szacunkiem, należnym moim Gościom. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
+                <p>I mam już pomysł, jak zrobić to najlepiej.</p> <p>Mam coś dla Ciebie:</p>
               </div>
             </div>
           </div>
@@ -49,7 +67,10 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       </section>
 
       {/* Hero section */}
-      <HeroSection title="7 Technik Produktywności — 77 minut, które ustawiają Ci dzień" />
+      <HeroSection 
+        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności" 
+        subtitle="czyli 77 minut, które ustawią Ci (każdy!) dzień"
+      />
 
 
       {/* Product Section */}
