@@ -1,6 +1,7 @@
 import { ArrowRight } from '@/lib/icons';
 import { GlassCard } from '@/components/ui/glass-card';
 import { OTOCountdown } from './OTOCountdown';
+import HeroSection from '@/components/sections/HeroSection';
 
 interface OTOProductDisplayProps {
   onExpired: () => void;
@@ -9,34 +10,23 @@ interface OTOProductDisplayProps {
 export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
   return (
     <div className="min-h-screen">
-      {/* Hero gradient background */}
-      <div className="relative bg-gradient-to-br from-background via-background/95 to-muted/20">
-        <div className="container mx-auto px-4 max-w-4xl py-16">
-          {/* Opening Message */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-3xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
-              7 Technik Produktywności — 77 minut, które ustawiają Ci dzień
-            </h1>
-            
-            <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed">
-              <p className="text-foreground font-medium">Dziękuję. Serio.</p>
-              <p>Zapisałeś się na mój webinar — to dla mnie sygnał, że inwestujesz w siebie.</p>
-              <p>
-                Skoro jesteś <strong>moim gościem</strong>, chcę się odwdzięczyć.
-              </p>
-              <p className="text-foreground">
-                Dam Ci dostęp do krótkiego, konkretnego kursu — esencji mojej pracy nad skutecznością.
-              </p>
-              <p className="text-muted-foreground">
-                Nie chodzi mi o sprzedaż. <strong>Chcę, żebyś to miał</strong>. Dlatego schodzę z ceną tak nisko, jak potrafię.
-              </p>
-              <p className="text-foreground">
-                Weź to ode mnie i użyj dziś — jutro poczujesz różnicę.
-              </p>
+      {/* Letter from my desk */}
+      <section aria-label="List z mojego biurka" className="bg-muted/30">
+        <div className="container mx-auto px-4 max-w-3xl py-8 md:py-12">
+          <GlassCard variant="bordered" padding="lg" className="text-foreground">
+            <div className="space-y-4 text-lg md:text-xl leading-relaxed">
+              <p>Właśnie zapisałeś się na mój webinar.</p>
+              <p><strong>Mój</strong> webinar.</p>
+              <p>A to oznacza, że jesteś moim gościem. A to oznacza, że traktuję Cię z należytym szacunkiem. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
+              <p>I mam już pomysł, jak zrobić to najlepiej.</p>
             </div>
-          </div>
+          </GlassCard>
         </div>
-      </div>
+      </section>
+
+      {/* Hero section */}
+      <HeroSection title="7 Technik Produktywności — 77 minut, które ustawiają Ci dzień" />
+
 
       {/* Product Section */}
       <div className="container mx-auto px-4 max-w-4xl py-16">
