@@ -119,10 +119,10 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               { number: "1", title: "Blokowanie zadań", description: "grupujesz podobne rzeczy w jednym bloku; jedziesz A→B bez postojów." },
               { number: "2", title: "Praca głęboka", description: "25 minut w trybie „samolot”: powiadomienia OFF, Ty ON." },
               { number: "3", title: "Zatrudnij pierwszego robota", description: "Zapier/IFTTT/Make: zaloguj → połącz → start; ⭐ w Gmailu = zadanie w Todoist." },
-              { number: "4", title: "Hack własnego maila", description: "plusy i kropki (ludwik+fb@… / lu.dw.ik@…) = porządek, filtry i automaty." },
+              { number: "4", title: "Hackowanie własnego maila", description: "plusy i kropki (ludwik+fb@… / lu.dw.ik@…) = porządek, filtry i automaty." },
               { number: "5", title: "Werwa do pracy", description: "zrób „próżnię”: usuń Gmail z telefonu na weekend, zainstaluj w poniedziałek." },
-              { number: "6", title: "Oszacowania +50%", description: "doliczasz połowę czasu i pracujesz spokojnie, bez czerwonego pola." },
-              { number: "7", title: "Otaczanie się skutecznymi", description: "silent co-working i społeczność siadlak.wip (PL kanał) trzymają Cię w działaniu." }
+              { number: "6", title: "Estymowanie czasochłonności", description: "doliczasz połowę czasu i pracujesz spokojnie, bez czerwonego pola." },
+              { number: "7", title: "Otaczanie się skutecznymi Ludźmi", description: "silent co-working i społeczność siadlak.wip (PL kanał) trzymają Cię w działaniu." }
             ].map((t, i) => (
               <div key={i} className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
@@ -141,7 +141,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       <div className="bg-muted/30 py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena (gest gospodarza)</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena</h2>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed">
@@ -153,7 +153,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 </div>
                 <div className="text-3xl text-muted-foreground">→</div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla gości webinaru — teraz</p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa — i tylko teraz</p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               <div className="max-w-md mx-auto">
                 <OTOCountdown onExpired={onExpired} />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca cena 497 PLN.</p>
+              <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca katalogowa cena 497 PLN.</p>
               <div className="mt-6">
                 <button className="w-full md:w-auto bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3">
                   Dodaj kurs za 77 PLN
@@ -187,7 +187,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           
           <div className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed">
             <p className="font-medium">
-              To nie jest sztuczka marketingowa. System automatycznie wyłączy tę ofertę za 7 minut od otwarcia tej strony.
+             Cenię sobie ludzi decyzyjnych. I mówiąc wprost: to jest świetna oferta. Nie potrzebujesz więcej informacji. Dlatego system automatycznie wyłączy tę ofertę za 7 minut od otwarcia tej strony.
             </p>
             
             <p className="text-muted-foreground">
@@ -195,11 +195,11 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             </p>
             
             <p className="text-muted-foreground">
-              Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze.
+              Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
             </p>
             
             <p className="text-lg font-medium text-primary">
-              Jeśli widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
+              Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
             </p>
           </div>
         </div>
@@ -232,7 +232,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="text-center">
           <GlassCard variant="subtle" className="max-w-2xl mx-auto">
             <p className="text-muted-foreground italic">
-              <strong>PS.</strong> Nie będzie przypominających maili. Nie będzie "ostatniej szansy". To jest jedyna okazja, żeby dostać ten kurs w tej cenie. Decyzja należy do Ciebie.
+              <strong>PS.</strong> Nie będzie przypominających maili. Nie będzie "ostatniej szansy". To jest jedyna okazja, żeby dostać ten kurs w tej (tak, wiem, nieprzyzwoicie niskiej) cenie. Decyzja należy do Ciebie.
             </p>
           </GlassCard>
         </div>
