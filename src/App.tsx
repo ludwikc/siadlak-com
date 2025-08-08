@@ -31,6 +31,8 @@ import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
 import SilnaGlowa from './pages/SilnaGlowa';
 import OTO from './pages/OTO';
+import Help from './pages/Help';
+import HelpSubpage from './pages/HelpSubpage';
 import Layout from './components/layout/Layout';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
@@ -82,6 +84,9 @@ function App() {
           <Route path="/webinar/live" element={<WebinarLive />} />
           <Route path="/webinar/expired" element={<WebinarExpired />} />
           <Route path="/webinar/replay" element={<WebinarReplay />} />
+          
+          <Route path="/help" element={<Help />} />
+          <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
