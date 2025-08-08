@@ -243,7 +243,15 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-4">
               <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <span>Bezpieczna płatność SSL </span> 
+              <div className="flex flex-col items-center">
+                <span>Bezpieczna płatność SSL</span>
+                <img
+                  src="/lovable-uploads/a9baf98d-289f-4338-9750-826624bc8b69.png"
+                  alt="Logo płatności BLIK – bezpieczna płatność SSL"
+                  className="mt-1 h-5 md:h-6 w-auto object-contain opacity-90"
+                  loading="lazy"
+                />
+              </div>
               <div className="h-2 w-2 bg-green-500 rounded-full"></div>
               <span>Dostęp NATYCHMIAST</span>
               <div className="h-2 w-2 bg-green-500 rounded-full"></div>
