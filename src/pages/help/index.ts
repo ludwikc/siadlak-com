@@ -11,6 +11,7 @@ const helpPages: Record<string, () => Promise<{ default: ComponentType }>> = {
   'metody-platnosci': () => import('./MetodyPlatnosci'),
   'faq': () => import('./FAQ'),
   'kontakt-support': () => import('./KontaktSupport'),
+  'rozwiazywanie-problemow': () => import('./RozwiazywanieProblemow'),
   // Add more as you create them
 };
 
