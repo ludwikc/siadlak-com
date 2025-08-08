@@ -13,7 +13,28 @@ export function ReferrerGuard({ children, redirectTo = '/' }: ReferrerGuardProps
   useEffect(() => {
     // Check referrer authorization
     const authorized = isAuthorizedReferrer();
-    setIsAuthorized(authorized);
+
+    // Preview/dev bypass options:
+    // - ?preview=1 in URL
+    // - same-origin navigation
+    // - localhost/127.0.0.1 or lovable preview hosts
+    let sameOrigin = false;
+    try {
+      if (document.referrer) {
+        const refUrl = new URL(document.referrer);
+        sameOrigin = refUrl.origin === window.location.origin;
+      }
+    } catch {
+      sameOrigin = false;
+    }
+
+    const previewFlag = new URLSearchParams(window.location.search).get('preview') === '1';
+    const devHost =
+      window.location.hostname.includes('localhost') ||
+      window.location.hostname.includes('127.0.0.1') ||
+      window.location.hostname.includes('lovable');
+
+    setIsAuthorized(authorized || previewFlag || sameOrigin || devHost);
   }, []);
   
   // Loading state
