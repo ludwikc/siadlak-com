@@ -55,7 +55,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             
             {/* Email content */}
             <div className="p-6 bg-white">
-              <div className="space-y-4 text-base leading-relaxed text-gray-800">
+              <div className="space-y-4 text-base leading-relaxed text-foreground">
                 <p>Właśnie zapisałeś się na mój webinar.</p>
                 <p><strong>Mój</strong> webinar.</p>
                 <p>A to oznacza, że jesteś <strong>moim gościem</strong>. A to oznacza, że traktuję Cię szacunkiem, należnym moim Gościom. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
