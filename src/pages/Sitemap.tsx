@@ -15,10 +15,12 @@ const Sitemap = () => {
         { name: 'Programy szkoleniowe', path: '/work', description: 'Zobacz możliwości współpracy' },
         { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na cotygodniowe przemyślenia' },
         { name: 'Opinie Klientów', path: '/testimonials', description: 'Co mówią moi klienci' },
-        { name: 'Assesment', path: '/assessment', description: 'Oceń swój poziom produktywności' },
+        { name: 'Assessment', path: '/assessment', description: 'Oceń swój poziom produktywności' },
         { name: 'Społeczność', path: '/community', description: 'Dołącz do społeczności Lifehackerów' },
+        { name: 'Discovery Call', path: '/discovery', description: 'Umów rozmowę odkrywczą' },
         { name: 'Strona podziękowania', path: '/thank-you', description: 'Strona potwierdzenia' },
         { name: 'Regulaminy', path: '/legal', description: 'Warunki użytkowania i polityka prywatności' },
+        { name: 'Mapa strony', path: '/sitemap', description: 'Przegląd wszystkich stron' },
       ]
     },
     {
@@ -28,14 +30,17 @@ const Sitemap = () => {
         { name: 'Przegląd programów rozwojowych', path: '/program', description: 'Wszystkie dostępne kursy i programy' },
         { name: 'Hakowanie Produktywności', path: '/program/hakowanie-produktywnosci', description: 'Kompleksowy program produktywności' },
         { name: 'Mental Elevator', path: '/program/mental-elevator', description: 'Program rozwoju mentalnego' },
+        { name: 'Silna Głowa', path: '/program/silna-glowa', description: 'Program wzmocnienia mentalnego' },
         ]
     },
     {
       category: 'Podcasty',
       icon: <Mic2 className="h-5 w-5" />,
       pages: [
+        { name: 'Przegląd podcastów', path: '/podcast', description: 'Wszystkie dostępne podcasty' },
+        { name: 'New Podcast', path: '/new-podcast', description: 'Nowy format podcastu' },
         { name: 'Life Hacking Podcast', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
-        { name: 'Uważne Życie', path: '/program/uwazne-zycie', description: 'Podcast o świadomym życiu' },
+        { name: 'Uważne Życie', path: '/program/uwazne-zycie', description: 'Podcast o świadomym życiu (pod programami)' },
       ]
     },
     {
@@ -51,12 +56,27 @@ const Sitemap = () => {
       ]
     },
     {
+      category: 'Oferty specjalne',
+      icon: <ExternalLink className="h-5 w-5" />,
+      pages: [
+        { name: 'OTO - Oferta specjalna', path: '/oto', description: 'Jednorazowa oferta dla uczestników webinaru' },
+      ]
+    },
+    {
+      category: 'Dokumenty prawne',
+      icon: <FileText className="h-5 w-5" />,
+      pages: [
+        { name: 'Polityka prywatności', path: '/legal/privacy', description: 'Szczegóły polityki prywatności' },
+        { name: 'Warunki użytkowania', path: '/legal/terms', description: 'Warunki korzystania z serwisu' },
+      ]
+    },
+    {
       category: 'Strony w przygotowaniu',
       icon: <ExternalLink className="h-5 w-5" />,
       pages: [
         { name: 'Zasoby', path: '/resources', description: 'Przydatne materiały i narzędzia (w przygotowaniu)' },
-        { name: 'Polityka prywatności', path: '/privacy', description: 'Szczegóły polityki prywatności (w przygotowaniu)' },
-        { name: 'Warunki użytkowania', path: '/terms', description: 'Warunki korzystania z serwisu (w przygotowaniu)' },
+        { name: 'Polityka prywatności (stara)', path: '/privacy', description: 'Przekierowanie (w przygotowaniu)' },
+        { name: 'Warunki użytkowania (stare)', path: '/terms', description: 'Przekierowanie (w przygotowaniu)' },
       ]
     }
   ];
