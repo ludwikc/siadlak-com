@@ -257,6 +257,15 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               <div className="h-2 w-2 bg-green-500 rounded-full"></div>
               <span>Dostęp LIFETIME</span>
             </div>
+            
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <img
+                src="/lovable-uploads/a2adb657-64da-4917-87f6-a210a7afb8a4.png"
+                alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
+                className="h-8 w-auto object-contain opacity-80"
+                loading="lazy"
+              />
+            </div>
           </GlassCard>
         </div>
 
