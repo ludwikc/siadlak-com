@@ -166,7 +166,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 </div>
                 <div className="text-3xl text-muted-foreground">→</div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa — i tylko teraz</p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa — i <s>tylko teraz</s></p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
@@ -243,11 +243,11 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-4">
               <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <span>Bezpieczne płatności</span>
-              <span>•</span>
-              <span>SSL</span>
-              <span>•</span>
-              <span>Natychmiastowy dostęp</span>
+              <span>Bezpieczna płatność SSL </span> 
+              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
+              <span>Dostęp NATYCHMIAST</span>
+              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
+              <span>Dostęp LIFETIME</span>
             </div>
           </GlassCard>
         </div>
@@ -256,7 +256,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="text-center">
           <GlassCard variant="subtle" className="max-w-2xl mx-auto">
             <p className="text-muted-foreground italic">
-              <strong>PS.</strong> Nie będzie przypominających maili. Nie będzie "ostatniej szansy". To jest jedyna okazja, żeby dostać ten kurs w tej (tak, wiem, nieprzyzwoicie niskiej) cenie. Decyzja należy do Ciebie.
+              <strong>PS.</strong> Nie będzie przypominających maili. Nie będzie "ostatniej szansy". To jest jedyna okazja, żeby dostać ten kurs w tej (tak, wiem, że nieprzyzwoicie niskiej) cenie. Decyzja należy do Ciebie.
             </p>
           </GlassCard>
         </div>
