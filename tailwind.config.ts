@@ -383,11 +383,13 @@ const config: Config = {
         },
         // Button utilities for locked sections
         '.btn-locked-primary': {
-          backgroundColor: '#ffffff !important',
+          background: 'linear-gradient(to right, #ffffff, #f8fafc) !important',
           color: '#3B0F77 !important',
           border: 'none !important',
+          boxShadow: '0 4px 12px rgba(59, 15, 119, 0.15) !important',
           '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.9) !important',
+            background: 'linear-gradient(to right, #f8fafc, #f1f5f9) !important',
+            boxShadow: '0 6px 16px rgba(59, 15, 119, 0.2) !important',
           },
         },
         '.btn-locked-secondary': {
