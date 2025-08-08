@@ -195,25 +195,36 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       </div>
       {/* Urgency Section */}
       <div className="container mx-auto px-4 max-w-4xl py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-destructive">Ważne: masz 7 minut</h2>
-          
-          <div className="max-w-2xl mx-auto space-y-6 text-lg leading-relaxed">
-            <p className="font-medium">
-             Cenię sobie ludzi decyzyjnych. I mówiąc wprost: to jest świetna oferta. Nie potrzebujesz więcej informacji. Dlatego system automatycznie wyłączy tę ofertę za 7 minut od otwarcia tej strony.
-            </p>
-            
-            <p className="text-muted-foreground">
-              Dlaczego? Bo albo widzisz w tym wartość, albo nie. Nie potrzebujesz godziny na zastanawianie się.
-            </p>
-            
-            <p className="text-muted-foreground">
-              Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
-            </p>
-            
-            <p className="text-lg font-medium text-primary">
-              Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
-            </p>
+        <div className="mb-12">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-destructive">Ważne: masz 7 minut</h2>
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p className="font-medium">
+                 Cenię sobie ludzi decyzyjnych. I mówiąc wprost: to jest świetna oferta. Nie potrzebujesz więcej informacji. Dlatego system automatycznie wyłączy tę ofertę za 7 minut od otwarcia tej strony.
+                </p>
+                
+                <p className="text-muted-foreground">
+                  Dlaczego? Bo albo widzisz w tym wartość, albo nie. Nie potrzebujesz godziny na zastanawianie się.
+                </p>
+                
+                <p className="text-muted-foreground">
+                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
+                </p>
+                
+                <p className="text-lg font-medium text-primary">
+                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="/lovable-uploads/7e50788e-1ddd-4b3c-900f-62fd313d17e5.png"
+                alt="7 Technik Produktywności – podgląd kursu na telewizorze"
+                className="w-full h-auto rounded-xl shadow-2xl object-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
 
