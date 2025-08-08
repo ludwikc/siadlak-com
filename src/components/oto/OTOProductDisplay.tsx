@@ -30,7 +30,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
     <div className="min-h-screen">
       {/* Gmail-style email */}
       <section aria-label="Email z mojego biurka" className="bg-background py-8 md:py-12">
-        <div className="container mx-auto px-4 py-4 md:py-6 max-w-4xl bg-muted/30 dark:bg-muted/20 rounded-2xl transition-colors">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-card rounded-2xl border border-border/70 shadow-2xl overflow-hidden">
             {/* macOS window title bar */}
             <div className="bg-muted/40 dark:bg-muted/30 border-b border-border px-4 py-2 flex items-center justify-between">
@@ -64,7 +64,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             </div>
             
             {/* Email content */}
-            <div className="p-6 bg-card">
+            <div className="p-6 bg-muted/30 dark:bg-muted/20">
               <div className="space-y-4 text-base leading-relaxed">
                 <p>Właśnie zapisałeś się na mój webinar.</p>
                 <p><strong>Mój</strong> webinar.</p>
