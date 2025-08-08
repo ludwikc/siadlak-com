@@ -29,7 +29,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
   return (
     <div className="min-h-screen">
       {/* Gmail-style email */}
-      <section aria-label="Email z mojego biurka" className="bg-muted/30 py-8 md:py-12">
+      <section aria-label="Email z mojego biurka" className="bg-gray-100 py-8 md:py-12">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             {/* Gmail header */}
@@ -55,7 +55,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             
             {/* Email content */}
             <div className="p-6 bg-white">
-              <div className="space-y-4 text-base leading-relaxed !text-gray-900 dark:!text-gray-900">
+              <div className="space-y-4 text-base leading-relaxed text-gray-800">
                 <p>Właśnie zapisałeś się na mój webinar.</p>
                 <p><strong>Mój</strong> webinar.</p>
                 <p>A to oznacza, że jesteś <strong>moim gościem</strong>. A to oznacza, że traktuję Cię szacunkiem, należnym moim Gościom. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
