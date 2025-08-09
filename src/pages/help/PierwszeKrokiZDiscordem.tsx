@@ -13,9 +13,6 @@ const data: HelpPageData = {
        <div style={{ position: "relative", paddingBottom: "56.648308418568064%", height: 0 }}>
   <iframe
     src="https://www.loom.com/embed/1afc7e8a9c6b4a60a501cbe7f2b7742e?sid=d3b41a9a-a295-4347-abda-27e475736afe"
-    frameBorder="0"
-    webkitallowfullscreen="true"
-    mozallowfullscreen="true"
     allowFullScreen
     style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
   />
