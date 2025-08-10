@@ -105,7 +105,7 @@ export default function NewsletterPage() {
               <img 
                 src="/lovable-uploads/e9cfea53-36f8-4170-92f4-ea7b4b064a53.png" 
                 alt="Newsletter - Brain and AI working together"
-                className="w-full max-w-4xl mx-auto rounded-xl shadow-lg"
+                className="w-screen max-w-none -mx-4 md:-mx-8 lg:-mx-16 rounded-xl shadow-lg"
               />
             </div>
 
