@@ -1,0 +1,4 @@
+# SPA fallback - redirect all routes to index.html for client-side routing
+# This works for Netlify, Surge.sh, and other static hosts that support _redirects
+
+/*    /index.html   200
