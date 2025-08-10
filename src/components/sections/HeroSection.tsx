@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 interface HeroSectionProps {
   /** Main title text - will be displayed in large, bold typography */
-  title: string;
+  title: string | ReactNode;
   /** Subtitle text - displayed below title with accent styling */
   subtitle?: string | ReactNode;
   /** Optional children to render below subtitle (e.g., CTAs, additional content) */

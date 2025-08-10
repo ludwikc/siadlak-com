@@ -9,7 +9,7 @@ export default function NewsletterPage() {
   return (
     <Layout>
       <HeroSection
-        title="(🧠 + 🤖)<sup>^💜</sup>"
+        title={<>(🧠 + 🤖)<sup>💜</sup></>}
         subtitle={<>Rozszerz swój Intelekt o możliwości AI: i wtedy podnieś do potęgi <span className="italic text-ascension-pink">serca</span></>}
         titleBold={false}
       >
