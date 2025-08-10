@@ -100,6 +100,15 @@ export default function NewsletterPage() {
               </p>
             </div>
 
+            {/* Newsletter Visual */}
+            <div className="mb-16">
+              <img 
+                src="/lovable-uploads/e9cfea53-36f8-4170-92f4-ea7b4b064a53.png" 
+                alt="Newsletter - Brain and AI working together"
+                className="w-screen max-w-none -mx-4 md:-mx-8 lg:-mx-16 rounded-xl shadow-lg"
+              />
+            </div>
+
             {/* For Whom */}
             <div className="mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
