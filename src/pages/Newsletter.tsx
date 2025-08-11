@@ -25,79 +25,35 @@ export default function NewsletterPage() {
             {/* Why Section */}
             <div className="mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                Dlaczego stworzyłem ten newsletter?
+                Dlaczego?
               </h2>
 
               <div className="prose dark:prose-invert max-w-none">
                 <p>
-                  Przez 19 lat jako Microsoft Certified Trainer przeprowadziłem
-                  setki szkoleń technicznych dla profesjonalistów IT. W tym
-                  czasie odkryłem coś fascynującego:
-                </p>
-                <p className="font-bold">
-                  Największa luka na rynku nie istnieje między różnymi
-                  technologiami, ale między światem zaawansowanej AI a
-                  niewykorzystanym ludzkim potencjałem.
+                  Tematyka AI rozrasta się w takim tempie, że nie sposób nadążyć nad wszystkimi trendami: [PLACEHOLDER] Trochę jak w 2010, kiedy "chmura", to była tylko pojedyncza VM na Azure.
                 </p>
                 <p>
-                  Z jednej strony mamy coraz potężniejsze narzędzia AI, z
-                  drugiej – specjalistów, którzy używają ich zaledwie
-                  powierzchownie, nie dostrzegając ich transformacyjnego
-                  potencjału.
+                  A tymczasem jest 2025 i LinkedIn to wylęgarnia speców od LLM, AI i vibe codingu.
                 </p>
-                <p className="font-bold">
-                  Co się dzieje, gdy świadomie połączysz te dwa światy? To jest
-                  właśnie pytanie, na które odpowiadam co tydzień.
+                <p>
+                  Komu wierzyć? Gdzie jest original content?
+                </p>
+                <p>
+                  Ja nie wiem. Ale wiem co działa. I zamiast rzucać się na każdą nowinkę, starannie wybieram narzędzia, na które może nie ma ultra-hype'u, ale za to są po prostu skuteczne.
+                </p>
+                <p>
+                  Jeśli chcesz wiedzieć z jakich narzędzi korzystam - to jest miejsce dla Ciebie.
+                </p>
+                <p>
+                  Ale to nie koniec.
+                </p>
+                <p>
+                  W tym wszystkim wielu ludzi zapomina o human connection. Pamiętasz Nokię 3310 i slogan Connecting People?
+                </p>
+                <p>
+                  Chcę o sobie myśleć jak o takiej Nokii. Tak twarda, że rozbija podłogę o którą uderza. Snake 🐍 jest minimalistyczną, ale wystarczającą rozrywką. A reszta? Absolutnie doskonała esencja: Rejestr połączeń, smsy i łączenie ludzi ze sobą, a nie konsumowanie tego co podpowiada nam algorytm. Dlatego zapraszam. Let's connect some people!
                 </p>
               </div>
-            </div>
-
-            {/* What You Get */}
-            <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
-                Co dokładnie otrzymasz?
-              </h2>
-
-              <GlassCard padding="lg" className="space-y-6">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    Praktyczne ramy implementacji – nie tylko "co", ale
-                    dokładnie "jak" wykorzystać AI do konkretnych obszarów
-                    Twojego rozwoju
-                  </p>
-                </div>
-
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    Strategiczne ścieżki transformacji – jak przejść od
-                    specjalisty technicznego do lidera o szerszym wpływie
-                  </p>
-                </div>
-
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    Tygodniowe wyzwania wdrożeniowe – małe kroki, które możesz
-                    zacząć stosować jeszcze tego samego dnia
-                  </p>
-                </div>
-
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    Analizy przypadków – historie osób, które wykorzystały AI
-                    jako katalizator swojego rozwoju, z konkretnymi wnioskami
-                  </p>
-                </div>
-              </GlassCard>
-
-              <p className="mt-6 text-subtle-slate dark:text-silver-mist/80">
-                Ten newsletter <strong>nie jest</strong> kolejnym przeglądem
-                narzędzi AI ani ogólnikowym poradnikiem rozwoju osobistego. To
-                precyzyjny pomost między światami, którego brakuje na rynku.
-              </p>
             </div>
 
             {/* Newsletter Visual */}
@@ -112,44 +68,76 @@ export default function NewsletterPage() {
             {/* For Whom */}
             <div className="mb-16">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
-                Dla kogo stworzyłem ten newsletter?
+                Dla kogo?
               </h2>
 
-              <GlassCard padding="lg">
-                <p className="mb-4 text-deep-charcoal dark:text-silver-mist">
-                  Ten newsletter jest dla Ciebie, jeśli:
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+              <div className="prose dark:prose-invert max-w-none">
+                <p>Czy rozpoznajesz się w którymś z tych zdań?</p>
+                <ul className="space-y-4 mt-6">
+                  <li className="flex items-start">
+                    <span className="text-neural-violet dark:text-luminal-magenta mr-3 mt-1">•</span>
                     <span className="text-deep-charcoal dark:text-silver-mist">
-                      Pracujesz w obszarze technologii i czujesz, że Twój
-                      potencjał wykracza daleko poza role czysto techniczne
+                      Jesteś z branży, więc "oczekuje się" od Ciebie znajomości każdego nowego narzędzia
                     </span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                  <li className="flex items-start">
+                    <span className="text-neural-violet dark:text-luminal-magenta mr-3 mt-1">•</span>
                     <span className="text-deep-charcoal dark:text-silver-mist">
-                      Widzisz w AI zarówno szansę, jak i wyzwanie dla swojej
-                      przyszłości zawodowej
+                      Potrafisz docenić wartość jednej głębokiej rozkminy nad płytkimi rozmowami o niczym
                     </span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                  <li className="flex items-start">
+                    <span className="text-neural-violet dark:text-luminal-magenta mr-3 mt-1">•</span>
                     <span className="text-deep-charcoal dark:text-silver-mist">
-                      Masz dość teoretyzowania i potrzebujesz konkretnych ram
-                      implementacji
+                      Rozumiesz, że mądrość to nie ćpanie wiedzy, ale jakość zrozumienia
                     </span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
+                  <li className="flex items-start">
+                    <span className="text-neural-violet dark:text-luminal-magenta mr-3 mt-1">•</span>
                     <span className="text-deep-charcoal dark:text-silver-mist">
-                      Dążysz do większego wpływu i głębszego znaczenia w swojej
-                      pracy
+                      Chcesz używać AI, a nie dostawać zadyszki od "trzymania ręki na pulsie"
                     </span>
                   </li>
                 </ul>
+                <p className="mt-6">Jeśli tak - masz tutaj miejsce.</p>
+              </div>
+            </div>
+
+            {/* What I Send */}
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+                Co wysyłam w niedzielę o 19.?
+              </h2>
+
+              <GlassCard padding="lg" className="space-y-6">
+                <div className="flex items-start">
+                  <span className="text-2xl mr-4 flex-shrink-0">🧠</span>
+                  <div>
+                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2">Jedną myśl</h3>
+                    <p className="text-deep-charcoal dark:text-silver-mist">
+                      To, co intensywnie towarzyszyło mi w tym tygodniu. Produktywność? Mindfulness? leadership? Bycie Człowiekiem w świecie AI-first? Nie jestem filozofem, ale dzielę się swoimi przemyśleniami, które zmieniają sposób, w jaki konstruuję rzeczywistość.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <span className="text-2xl mr-4 flex-shrink-0">🔧</span>
+                  <div>
+                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2">Jedno narzędzie AI</h3>
+                    <p className="text-deep-charcoal dark:text-silver-mist">
+                      Przetestowane. Z konkretnym zastosowaniem. Z moją szczerą oceną. Czasem aplikacja, czasem prompt, czasem zupełnie nowe rozwiązanie starego problemu.
+                    </p>
+                  </div>
+                </div>
               </GlassCard>
+
+              <p className="mt-6 text-subtle-slate dark:text-silver-mist/80">
+                Zero szumu. Żadnych "10 najlepszych AI tego miesiąca", ani "agregacji linków" (a są do tego super prompty).
+              </p>
+              
+              <p className="mt-4 text-deep-charcoal dark:text-silver-mist font-semibold">
+                Wybierz plan i dołącz:
+              </p>
             </div>
 
             {/* Pricing Tiers */}
