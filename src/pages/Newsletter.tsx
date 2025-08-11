@@ -56,14 +56,20 @@ export default function NewsletterPage() {
               </div>
             </div>
 
-            {/* Newsletter Visual */}
-            <div className="mb-16">
-              <img 
-                src="/lovable-uploads/e9cfea53-36f8-4170-92f4-ea7b4b064a53.png" 
-                alt="Newsletter - Brain and AI working together"
-                className="w-screen max-w-none -mx-4 md:-mx-8 lg:-mx-16 rounded-xl shadow-lg"
-              />
-            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Visual - Full Width */}
+        <div className="mb-16">
+          <img 
+            src="/lovable-uploads/e9cfea53-36f8-4170-92f4-ea7b4b064a53.png" 
+            alt="Newsletter - Brain and AI working together"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
 
             {/* For Whom */}
             <div className="mb-16">
