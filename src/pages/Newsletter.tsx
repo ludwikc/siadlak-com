@@ -117,9 +117,9 @@ export default function NewsletterPage() {
 
               <GlassCard padding="lg" className="space-y-6">
                 <div className="flex items-start">
-                  <span className="text-2xl mr-4 flex-shrink-0">🧠</span>
+                  <span className="text-2xl mr-4 flex-shrink-0 leading-none">🧠</span>
                   <div>
-                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2">Jedną myśl</h3>
+                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2 leading-tight -mt-1">Jedną myśl</h3>
                     <p className="text-deep-charcoal dark:text-silver-mist">
                       To, co intensywnie towarzyszyło mi w tym tygodniu. Produktywność? Mindfulness? leadership? Bycie Człowiekiem w świecie AI-first? Nie jestem filozofem, ale dzielę się swoimi przemyśleniami, które zmieniają sposób, w jaki konstruuję rzeczywistość.
                     </p>
@@ -127,9 +127,9 @@ export default function NewsletterPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <span className="text-2xl mr-4 flex-shrink-0">🔧</span>
+                  <span className="text-2xl mr-4 flex-shrink-0 leading-none">🔧</span>
                   <div>
-                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2">Jedno narzędzie AI</h3>
+                    <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-2 leading-tight -mt-1">Jedno narzędzie AI</h3>
                     <p className="text-deep-charcoal dark:text-silver-mist">
                       Przetestowane. Z konkretnym zastosowaniem. Z moją szczerą oceną. Czasem aplikacja, czasem prompt, czasem zupełnie nowe rozwiązanie starego problemu.
                     </p>
