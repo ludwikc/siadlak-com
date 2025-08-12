@@ -101,7 +101,7 @@ const Webinar = () => {
         <section className="py-8 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
           <div className="container max-w-6xl mx-auto px-4 text-center">
             <p className="text-lg font-medium text-deep-charcoal/80 dark:text-silver-mist/90">
-              Liczba miejsc ograniczona – to ma być kameralne spotkanie w gronie nowych znajomych, konferencja na Narodowym.
+              Liczba miejsc ograniczona – to kameralne spotkanie w gronie nowych znajomych, a nie konferencja na Narodowym.
             </p>
           </div>
         </section>
@@ -129,7 +129,7 @@ const Webinar = () => {
                   Twórca społeczności Lifehackerzy, gdzie codziennie o 12:34 pomagam ludziom ostrzyć ich narzędzia
                 </p>
                 <p className="font-medium">
-                  Przeczytałem wszystkie najważniejsze książki rozwojowe, przetestowałem niemal wszystkie aplikacje TODO i wykarczowałem ścieżkę, którą możesz przejść znacznie szybciej i wygodniej.
+                  Przeczytałem wszystkie topowe książki rozwojowe, przetestowałem niemal wszystkie aplikacje TODO i wykarczowałem ścieżkę, którą możesz przejść znacznie szybciej i wygodniej.
                 </p>
               </div>
               
