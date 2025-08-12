@@ -1,6 +1,3 @@
-
-
-
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
@@ -15,19 +12,12 @@ const Webinar = () => {
     date: "18–21 sierpnia 2025",
     day: "",
     time: "kiedy będę gotowy",
-    timezone: "",
+    timezone: ""
   };
 
   // What attendees will learn during the workshop
-  const workshopPromises = [
-    "Czy Twoja biznesowa, korporacyjna lub freelancerska siekiera jest ostra, czy raczej tępa — i dlaczego większość ludzi wybiera to drugie.",
-    "Jak rozpoznać, czy to w ogóle jest Twoje narzędzie — takie, które pasuje do Twojej natury i stylu pracy.",
-    "Jak upewnić się, że jesteś we właściwym lesie — i jak wyjść z tego, który prowadzi donikąd.",
-    "MEGA BONUS: jednodniowy dostęp do #1234-daily-coaching — przyjdź z własnym problemem, wyjdź z gotowym planem działania (tak codziennie pracują Lifehackerzy).",
-  ];
-
-  return (
-    <Layout>
+  const workshopPromises = ["Czy Twoja biznesowa, korporacyjna lub freelancerska siekiera jest ostra, czy raczej tępa — i dlaczego większość ludzi wybiera to drugie.", "Jak rozpoznać, czy to w ogóle jest Twoje narzędzie — takie, które pasuje do Twojej natury i stylu pracy.", "Jak upewnić się, że jesteś we właściwym lesie — i jak wyjść z tego, który prowadzi donikąd.", "MEGA BONUS: jednodniowy dostęp do #1234-daily-coaching — przyjdź z własnym problemem, wyjdź z gotowym planem działania (tak codziennie pracują Lifehackerzy)."];
+  return <Layout>
       <div className="bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 min-h-screen">
         {/* Event Header Section with Countdown */}
         <section className="relative pt-10 pb-20 overflow-hidden">
@@ -64,9 +54,7 @@ const Webinar = () => {
                     <div className="text-lg font-medium text-neural-violet">
                       🕒 Godzina: {workshopDate.time}
                     </div>
-                    <div className="text-lg font-medium text-neural-violet">
-                      🎥 Video tylko na żywo + nagrania (tylko audio)
-                    </div>
+                    <div className="text-lg font-medium text-neural-violet">🎥 Spotkania live (dostęp do nagrań tylko audio)</div>
                   </div>
                 </div>
 
@@ -76,16 +64,10 @@ const Webinar = () => {
               </div>
 
               <div className="w-full lg:w-2/5">
-                <div
-                  id="registration-form"
-                  className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in"
-                >
+                <div id="registration-form" className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
                   {/* Date Badge - More prominent styling */}
                   <div className="mb-8 text-center">
-                    <Badge
-                      variant="outline"
-                      className="bg-neural-violet text-white text-sm px-3 py-1 mb-2"
-                    >
+                    <Badge variant="outline" className="bg-neural-violet text-white text-sm px-3 py-1 mb-2">
                       Zarezerwuj swoje miejsce
                     </Badge>
                     <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
@@ -153,17 +135,12 @@ const Webinar = () => {
             </h2>
 
             <div className="grid gap-6 max-w-3xl mx-auto">
-              {workshopPromises.map((promise, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 p-6 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm"
-                >
+              {workshopPromises.map((promise, index) => <div key={index} className="flex items-start gap-4 p-6 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
                   <div className="bg-neural-violet text-white h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                     <span className="font-medium">{index + 1}</span>
                   </div>
                   <p className="text-lg">{promise}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -212,14 +189,9 @@ const Webinar = () => {
               </div>
 
               <div className="mt-12 text-center">
-                <Button
-                  onClick={() =>
-                    document
-                      .getElementById("registration-form")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg"
-                >
+                <Button onClick={() => document.getElementById("registration-form")?.scrollIntoView({
+                behavior: "smooth"
+              })} className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg">
                   Zarezerwuj swoje miejsce
                 </Button>
               </div>
@@ -231,8 +203,6 @@ const Webinar = () => {
         <WebinarTestimonials />
 
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Webinar;
