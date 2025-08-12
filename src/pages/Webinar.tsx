@@ -85,14 +85,7 @@ const Webinar = () => {
                     </Badge>
                     
                     {/* MailerLite embed will be inserted here */}
-                    <div className="bg-neural-violet/10 rounded-xl p-8 border-2 border-dashed border-neural-violet/30">
-                      <p className="text-neural-violet font-medium">
-                        MailerLite embed section
-                      </p>
-                      <p className="text-sm text-neural-violet/70 mt-2">
-                        Registration form will be embedded here
-                      </p>
-                    </div>
+                    <div className="ml-embedded" data-form="QWxEaM"></div>
                   </div>
                   <div className="ml-embedded" data-form="ZfnmS1"></div>
                   <script
