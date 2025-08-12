@@ -87,16 +87,16 @@ const Webinar = () => {
                     {/* MailerLite embed will be inserted here */}
                     <div className="ml-embedded" data-form="QWxEaM"></div>
                   </div>
-                  <div className="ml-embedded" data-form="ZfnmS1"></div>
+                  
                   <script
                     dangerouslySetInnerHTML={{
                       __html: `
                       if (window.ml && window.ml.fn && window.ml.fn.jsonpRequest) {
-                        window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/ZfnmS1', 'renderEmbeddedForm');
+                        window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/QWxEaM', 'renderEmbeddedForm');
                       } else {
                         window.addEventListener('DOMContentLoaded', function() {
                         if (window.ml && window.ml.fn && window.ml.fn.jsonpRequest) {
-                          window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/ZfnmS1', 'renderEmbeddedForm');
+                          window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/QWxEaM', 'renderEmbeddedForm');
                         }
                         });
                       }
