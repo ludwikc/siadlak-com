@@ -86,8 +86,24 @@ const Webinar = () => {
                     
                     {/* MailerLite embed will be inserted here */}
                     <div className="ml-embedded" data-form="QWxEaM"></div>
+
+                    {/* On-click fallback to open the form via MailerLite */}
+                    <button
+                      className="ml-onclick-form mt-4 inline-flex items-center justify-center rounded-md bg-neural-violet px-6 py-3 text-white transition hover:bg-neural-violet/90"
+                      onClick={() => {
+                        const ml = (window as any).ml;
+                        if (ml) {
+                          ml('show', 'QWxEaM', true);
+                        } else {
+                          console.warn('MailerLite not loaded yet');
+                        }
+                      }}
+                      aria-label="Pokaż formularz zapisu"
+                    >
+                      Click here to show form
+                    </button>
                   </div>
-                  
+
                   <script
                     dangerouslySetInnerHTML={{
                       __html: `
