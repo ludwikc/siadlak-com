@@ -87,9 +87,11 @@ const Webinar = () => {
                       </div>
                     </div>
                   </div>
+                 {/* DO NOT EDIT  CODE BELOW UNDER ANY CIRCUMSTANCES */}
                   <div className="ml-embedded" data-form="QWxEaM"></div>
-                  <button className="ml-onclick-form mt-4 px-4 py-2 bg-neural-violet text-white rounded" onClick={() => (window as any).ml('show', 'QWxEaM', true)}>Click here to show form</button>
-                </div>
+                  {/* DO NOT EDIT  CODE ABOVE UNDER ANY CIRCUMSTANCES */}
+
+              </div>
               </div>
             </div>
           </div>
@@ -99,7 +101,7 @@ const Webinar = () => {
         <section className="py-8 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
           <div className="container max-w-6xl mx-auto px-4 text-center">
             <p className="text-lg font-medium text-deep-charcoal/80 dark:text-silver-mist/90">
-              Liczba miejsc ograniczona – Discord ma swoje limity.
+              Liczba miejsc ograniczona – to ma być kameralne spotkanie w gronie nowych znajomych, konferencja na Narodowym.
             </p>
           </div>
         </section>
