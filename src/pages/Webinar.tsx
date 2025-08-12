@@ -1,6 +1,6 @@
 
 
-import { Clock } from 'lucide-react';
+
 import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
@@ -10,21 +10,20 @@ import { Badge } from '@/components/ui/badge';
 // Webinar component
 
 const Webinar = () => {
-  // Define webinar date info - use the first option from previous implementation
-  const webinarDate = {
-    date: "12 czerwca 2025",
-    day: "Czwartek",
-    time: "18:00",
-    timezone: "CEST (Warszawa)",
+  // Define workshop date info
+  const workshopDate = {
+    date: "18–21 sierpnia 2025",
+    day: "",
+    time: "kiedy będę gotowy",
+    timezone: "",
   };
 
-  // Bullet points of what attendees will learn
-  const webinarPromises = [
-    "Odkryjesz 3 kluczowe blokady psychologiczne, które powstrzymują programistów przed założeniem własnej działalności - nawet tych z 10+ latami doświadczenia",
-    "Poznasz fundamentalną różnicę między pracą z kodem a pracą z klientami - i dlaczego większość programistów nigdy tego nie rozumie",
-    "Nauczysz się, jak zamienić swoją techniczną wiedzę w produkt, który ludzie będą chcieli kupić - bez zgadywania i straty czasu",
-    "Zrozumiesz, dlaczego większość programistów nie potrafi zakomunikować swojej wartości, i jak Ty możesz to zmienić w ciągu 48 godzin",
-    "Dowiesz się, jak zaplanować swoje pierwsze 90 dni transformacji od pracownika do przedsiębiorcy - z jasnym planem działania",
+  // What attendees will learn during the workshop
+  const workshopPromises = [
+    "Czy Twoja biznesowa, korporacyjna lub freelancerska siekiera jest ostra, czy raczej tępa — i dlaczego większość ludzi wybiera to drugie.",
+    "Jak rozpoznać, czy to w ogóle jest Twoje narzędzie — takie, które pasuje do Twojej natury i stylu pracy.",
+    "Jak upewnić się, że jesteś we właściwym lesie — i jak wyjść z tego, który prowadzi donikąd.",
+    "MEGA BONUS: jednodniowy dostęp do #1234-daily-coaching — przyjdź z własnym problemem, wyjdź z gotowym planem działania (tak codziennie pracują Lifehackerzy).",
   ];
 
   return (
@@ -41,18 +40,19 @@ const Webinar = () => {
               <div className="w-full lg:w-3/5">
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/30 backdrop-blur-sm border border-neural-violet/30 text-neural-violet dark:text-neural-violet-light mb-4">
                   <span className="animate-pulse mr-2 h-2 w-2 rounded-full bg-neural-violet"></span>
-                  <span className="text-sm font-medium">Webinar na żywo</span>
+                  <span className="text-sm font-medium">Warsztat na żywo</span>
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-neural-violet dark:text-neural-violet bg-gradient-to-r from-neural-violet dark:from-neural-violet to-ascension-pink dark:to-ascension-pink bg-clip-text text-transparent">
-                  Wiesz, że już w dwie godziny możesz rozbudzić w sobie Czarną
-                  Panterę?
+                  Drwal w Białym Kołnierzyku: 4-dniowy warsztat ostrzenia życiowej siekiery
                 </h1>
 
                 <p className="text-xl md:text-2xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/90">
-                  Specjalny webinar transformacyjny dla programistów, którzy
-                  chcą przejąć kontrolę nad swoją karierą i zbudować coś
-                  własnego.
+                  Przestań machać tępym narzędziem w przypadkowym kierunku, "bo tak trzeba". Naucz się ostrzyć swoją produktywność tak, by wreszcie docierać do tego, co naprawdę się liczy.
+                </p>
+
+                <p className="text-lg mb-8 text-deep-charcoal/70 dark:text-silver-mist/80 font-medium">
+                  Intensywny 4-dniowy warsztat z Ludwikiem C. Siadlakiem: Jak przestać rąbać nie ten las i nie tą siekierą
                 </p>
 
                 <div className="max-w-md mx-auto lg:mx-0">
@@ -74,14 +74,16 @@ const Webinar = () => {
                       Zarezerwuj swoje miejsce
                     </Badge>
                     <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
-                      <h3 className="font-bold text-xl mb-3 text-neural-violet">
-                        {webinarDate.day}, {webinarDate.date}
-                      </h3>
-                      <div className="flex items-center justify-center gap-2 text-lg font-medium text-neural-violet">
-                        <Clock className="h-5 w-5" />
-                        <span>
-                          {webinarDate.time} {webinarDate.timezone}
-                        </span>
+                    <div className="space-y-2">
+                        <div className="text-lg font-medium text-neural-violet">
+                          📅 {workshopDate.date}
+                        </div>
+                        <div className="text-lg font-medium text-neural-violet">
+                          🕒 Godzina: {workshopDate.time}
+                        </div>
+                        <div className="text-lg font-medium text-neural-violet">
+                          🎥 Video tylko na żywo + nagrania (tylko audio)
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -107,50 +109,58 @@ const Webinar = () => {
           </div>
         </section>
 
-        {/* Host Credentials Section */}
-        <section className="py-16 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/3">
-                <img
-                  src="/placeholder.svg"
-                  alt="Ludwik C. Siadlak"
-                  className="rounded-2xl shadow-lg w-full max-w-xs mx-auto"
-                />
-              </div>
+        {/* Notice Section */}
+        <section className="py-8 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
+          <div className="container max-w-6xl mx-auto px-4 text-center">
+            <p className="text-lg font-medium text-deep-charcoal/80 dark:text-silver-mist/90">
+              Liczba miejsc ograniczona – Discord ma swoje limity.
+            </p>
+          </div>
+        </section>
 
-              <div className="w-full md:w-2/3">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                  Twój gospodarz: Ludwik C. Siadlak
-                </h2>
-                <p className="text-lg mb-4">
-                  Przez prawie dwie dekady funkcjonuję na styku technologii i
-                  rozwoju ludzkiego potencjału. Pomogłem dziesiątkom
-                  programistów i specjalistów IT przejść od korporacyjnego
-                  burnoutu do sukcesu w ich własnym biznesie, wykorzystując moją
-                  metodologię Black Panther.
+        {/* Host Credentials Section */}
+        <section className="py-16 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm border-t border-b border-gray-200 dark:border-gray-800">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-8">
+                <span className="text-4xl">⸻</span>
+              </div>
+              
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                Prowadzi: Ludwik C. Siadlak
+              </h2>
+              
+              <div className="space-y-4 text-lg text-deep-charcoal/80 dark:text-silver-mist/90">
+                <p>
+                  Prawie 20 lat "rąbania" przez wszystkie możliwe systemy produktywności
                 </p>
-                <p className="text-lg">
-                  Nie mówię o teorii, ale o praktyce - Moje podejście opiera się
-                  na konkretnych działaniach, które przynoszą rzeczywiste
-                  rezultaty. To, co odróżnia mnie od innych mentorów, to
-                  połączenie głębokiej znajomości technologii z prawdziwym
-                  zrozumieniem biznesu.
+                <p>
+                  Autor kursu Hakowanie Produktywności, który przeszedł drogę od aplikacji po duchowość
                 </p>
+                <p>
+                  Twórca społeczności Lifehackerzy, gdzie codziennie o 12:34 pomagam ludziom ostrzyć ich narzędzia
+                </p>
+                <p className="font-medium">
+                  Przeczytałem wszystkie najważniejsze książki rozwojowe, przetestowałem niemal wszystkie aplikacje TODO i wykarczowałem ścieżkę, którą możesz przejść znacznie szybciej i wygodniej.
+                </p>
+              </div>
+              
+              <div className="mt-8">
+                <span className="text-4xl">⸻</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Webinar Promise Section */}
+        {/* Workshop Content Section */}
         <section className="py-16">
           <div className="container max-w-6xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              Co odkryjesz podczas tego webinaru?
+              Podczas tych warsztatów dowiesz się:
             </h2>
 
             <div className="grid gap-6 max-w-3xl mx-auto">
-              {webinarPromises.map((promise, index) => (
+              {workshopPromises.map((promise, index) => (
                 <div
                   key={index}
                   className="flex items-start gap-4 p-6 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm"
@@ -162,21 +172,64 @@ const Webinar = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            <div className="mt-12 text-center">
-              <p className="text-xl font-medium mb-4">
-                Miejsca ograniczone do 100 uczestników
+        {/* Target Audience Section */}
+        <section className="py-16 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-8 text-center">
+                <span className="text-4xl">⸻</span>
+              </div>
+              
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                Dla kogo jest ten warsztat?
+              </h2>
+              
+              <p className="text-xl text-center mb-8 font-medium">
+                Jesteś "drwalem w białym kołnierzyku", jeśli:
               </p>
-              <Button
-                onClick={() =>
-                  document
-                    .getElementById("registration-form")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg"
-              >
-                Zarezerwuj swoje miejsce teraz
-              </Button>
+
+              <div className="space-y-4 max-w-3xl mx-auto">
+                <div className="flex items-start gap-4 p-4">
+                  <span className="text-neural-violet font-bold text-xl">→</span>
+                  <p className="text-lg">
+                    Masz narzędzia AI (może nawet zbyt wiele), ale nie wiesz, czy używasz ich właściwie.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 p-4">
+                  <span className="text-neural-violet font-bold text-xl">→</span>
+                  <p className="text-lg">
+                    Pracujesz ciężko, a mimo to masz wrażenie, że oddalasz się od tego, co jest dla Ciebie najważniejsze.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 p-4">
+                  <span className="text-neural-violet font-bold text-xl">→</span>
+                  <p className="text-lg">
+                    Znasz dziesiątki technik produktywności, słuchasz podcastów, inwestowałeś w kursy — ale z wdrożeniem… sam wiesz, że bywa różnie.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 p-4">
+                  <span className="text-neural-violet font-bold text-xl">→</span>
+                  <p className="text-lg">
+                    A najgorzej… czasem zastanawiasz się, czy w ogóle jesteś w tym lesie, w którym naprawdę chcesz być.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <Button
+                  onClick={() =>
+                    document
+                      .getElementById("registration-form")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg"
+                >
+                  Zarezerwuj swoje miejsce
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -184,28 +237,6 @@ const Webinar = () => {
         {/* Social Proof */}
         <WebinarTestimonials />
 
-        {/* Final CTA */}
-        <section className="py-16 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-ascension-pink/20">
-          <div className="container max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Transformacja zaczyna się od decyzji. Nie od kolejnego kursu.
-            </h2>
-            <p className="text-xl mb-8">
-              Dołącz do mnie na tym wyjątkowym webinarze i poznaj pierwszy krok
-              do przejęcia kontroli nad swoją karierą i życiem.
-            </p>
-            <Button
-              onClick={() =>
-                document
-                  .getElementById("registration-form")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg"
-            >
-              Zarezerwuj swoje miejsce teraz
-            </Button>
-          </div>
-        </section>
       </div>
     </Layout>
   );
