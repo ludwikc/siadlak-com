@@ -55,6 +55,21 @@ const Webinar = () => {
                   Intensywny 4-dniowy warsztat z Ludwikiem C. Siadlakiem: Jak przestać rąbać nie ten las i nie tą siekierą
                 </p>
 
+                {/* Workshop Details */}
+                <div className="bg-neural-violet/10 rounded-xl p-6 mb-8 border border-neural-violet/20">
+                  <div className="space-y-3">
+                    <div className="text-lg font-medium text-neural-violet">
+                      📅 {workshopDate.date}
+                    </div>
+                    <div className="text-lg font-medium text-neural-violet">
+                      🕒 Godzina: {workshopDate.time}
+                    </div>
+                    <div className="text-lg font-medium text-neural-violet">
+                      🎥 Video tylko na żywo + nagrania (tylko audio)
+                    </div>
+                  </div>
+                </div>
+
                 <div className="max-w-md mx-auto lg:mx-0">
                   <WebinarCountdown />
                 </div>
@@ -74,17 +89,7 @@ const Webinar = () => {
                       Zarezerwuj swoje miejsce
                     </Badge>
                     <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
-                    <div className="space-y-2">
-                        <div className="text-lg font-medium text-neural-violet">
-                          📅 {workshopDate.date}
-                        </div>
-                        <div className="text-lg font-medium text-neural-violet">
-                          🕒 Godzina: {workshopDate.time}
-                        </div>
-                        <div className="text-lg font-medium text-neural-violet">
-                          🎥 Video tylko na żywo + nagrania (tylko audio)
-                        </div>
-                      </div>
+                      {/* Reserved for MailerLite embed */}
                     </div>
                   </div>
                  {/* DO NOT EDIT  CODE BELOW UNDER ANY CIRCUMSTANCES */}
