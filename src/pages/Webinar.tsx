@@ -87,7 +87,9 @@ const Webinar = () => {
                       </div>
                     </div>
                   </div>
-                 <div class="ml-embedded" data-form="QWxEaM"></div>
+                  <div className="ml-embedded" data-form="QWxEaM"></div>
+                  <button className="ml-onclick-form mt-4 px-4 py-2 bg-neural-violet text-white rounded" onClick={() => (window as any).ml('show', 'QWxEaM', true)}>Click here to show form</button>
+                </div>
               </div>
             </div>
           </div>
