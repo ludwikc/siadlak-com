@@ -10,6 +10,13 @@ import { Badge } from '@/components/ui/badge';
 // Webinar component
 
 const Webinar = () => {
+  // Define workshop date info
+  const workshopDate = {
+    date: "18–21 sierpnia 2025",
+    day: "",
+    time: "kiedy będę gotowy",
+    timezone: "",
+  };
 
   // What attendees will learn during the workshop
   const workshopPromises = [
@@ -48,23 +55,6 @@ const Webinar = () => {
                   Intensywny 4-dniowy warsztat z Ludwikiem C. Siadlakiem: Jak przestać rąbać nie ten las i nie tą siekierą
                 </p>
 
-                <div className="bg-white/20 dark:bg-deep-space/20 backdrop-blur-sm rounded-xl p-6 mb-8 border border-neural-violet/30">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-lg font-medium text-neural-violet dark:text-neural-violet-light">
-                      <span>📅</span>
-                      <span>18–21 sierpnia 2025</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-lg font-medium text-neural-violet dark:text-neural-violet-light">
-                      <span>🕒</span>
-                      <span>Godzina: kiedy będę gotowy</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-lg font-medium text-neural-violet dark:text-neural-violet-light">
-                      <span>🎥</span>
-                      <span>Video tylko na żywo + nagrania (tylko audio)</span>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="max-w-md mx-auto lg:mx-0">
                   <WebinarCountdown />
                 </div>
@@ -75,51 +65,29 @@ const Webinar = () => {
                   id="registration-form"
                   className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in"
                 >
-                  {/* MailerLite embed placeholder */}
-                  <div className="text-center">
+                  {/* Date Badge - More prominent styling */}
+                  <div className="mb-8 text-center">
                     <Badge
                       variant="outline"
-                      className="bg-neural-violet text-white text-sm px-3 py-1 mb-6"
+                      className="bg-neural-violet text-white text-sm px-3 py-1 mb-2"
                     >
                       Zarezerwuj swoje miejsce
                     </Badge>
-                    
-                    {/* MailerLite embed will be inserted here */}
-                    <div className="ml-embedded" data-form="QWxEaM"></div>
-
-                    {/* On-click fallback to open the form via MailerLite */}
-                    <button
-                      className="ml-onclick-form mt-4 inline-flex items-center justify-center rounded-md bg-neural-violet px-6 py-3 text-white transition hover:bg-neural-violet/90"
-                      onClick={() => {
-                        const ml = (window as any).ml;
-                        if (ml) {
-                          ml('show', 'QWxEaM', true);
-                        } else {
-                          console.warn('MailerLite not loaded yet');
-                        }
-                      }}
-                      aria-label="Pokaż formularz zapisu"
-                    >
-                      Click here to show form
-                    </button>
+                    <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
+                    <div className="space-y-2">
+                        <div className="text-lg font-medium text-neural-violet">
+                          📅 {workshopDate.date}
+                        </div>
+                        <div className="text-lg font-medium text-neural-violet">
+                          🕒 Godzina: {workshopDate.time}
+                        </div>
+                        <div className="text-lg font-medium text-neural-violet">
+                          🎥 Video tylko na żywo + nagrania (tylko audio)
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                      if (window.ml && window.ml.fn && window.ml.fn.jsonpRequest) {
-                        window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/QWxEaM', 'renderEmbeddedForm');
-                      } else {
-                        window.addEventListener('DOMContentLoaded', function() {
-                        if (window.ml && window.ml.fn && window.ml.fn.jsonpRequest) {
-                          window.ml.fn.jsonpRequest.make('/jsonp/484845/forms/QWxEaM', 'renderEmbeddedForm');
-                        }
-                        });
-                      }
-                      `,
-                    }}
-                  />{" "}
-                </div>
+                 <div class="ml-embedded" data-form="QWxEaM"></div>
               </div>
             </div>
           </div>
