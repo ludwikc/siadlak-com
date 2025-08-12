@@ -11,7 +11,7 @@ const Webinar = () => {
   const workshopDate = {
     date: "18–21 sierpnia 2025",
     day: "",
-    time: "kiedy będę gotowy",
+    time: "11:30-12:34",
     timezone: ""
   };
 
@@ -34,7 +34,7 @@ const Webinar = () => {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-neural-violet dark:text-neural-violet bg-gradient-to-r from-neural-violet dark:from-neural-violet to-ascension-pink dark:to-ascension-pink bg-clip-text text-transparent">
-                  Drwal w Białym Kołnierzyku: 4-dniowy warsztat ostrzenia życiowej siekiery
+                  Drwal w Białym Kołnierzyku: <br/>4-dniowy warsztat ostrzenia życiowej siekiery
                 </h1>
 
                 <p className="text-xl md:text-2xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/90">
