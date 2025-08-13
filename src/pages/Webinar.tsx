@@ -1,3 +1,4 @@
+import Layout from '../components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import WebinarCountdown from '@/components/webinar/WebinarCountdown';
 import WebinarTestimonials from '@/components/webinar/WebinarTestimonials';
@@ -16,7 +17,8 @@ const Webinar = () => {
 
   // What attendees will learn during the workshop
   const workshopPromises = ["Czy Twoja biznesowa, korporacyjna lub freelancerska siekiera jest ostra, czy raczej tępa — i dlaczego większość ludzi wybiera to drugie.", "Jak rozpoznać, czy to w ogóle jest Twoje narzędzie — takie, które pasuje do Twojej natury i stylu pracy.", "Jak upewnić się, że jesteś we właściwym lesie — i jak wyjść z tego, który prowadzi donikąd.", "MEGA BONUS: jednodniowy dostęp do #1234-daily-coaching — przyjdź z własnym problemem, wyjdź z gotowym planem działania (tak codziennie pracują Lifehackerzy)."];
-  return <div className="bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 min-h-screen">
+  return <Layout>
+      <div className="bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 min-h-screen">
         {/* Event Header Section with Countdown */}
         <section className="relative pt-10 pb-20 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0">
@@ -200,6 +202,7 @@ const Webinar = () => {
         {/* Social Proof */}
         <WebinarTestimonials />
 
-      </div>;
+      </div>
+    </Layout>;
 };
 export default Webinar;

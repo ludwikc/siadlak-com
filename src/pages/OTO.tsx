@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Layout from '../components/layout/Layout';
 import { ReferrerGuard } from '@/components/oto/ReferrerGuard';
 import { OTOProductDisplay } from '@/components/oto/OTOProductDisplay';
 import { getOTOCookie, setOTOCookie, isOfferExpired } from '@/lib/oto-utils';
@@ -61,8 +62,10 @@ function OTOContent() {
 
 export default function OTO() {
   return (
-    <ReferrerGuard>
-      <OTOContent />
-    </ReferrerGuard>
+    <Layout>
+      <ReferrerGuard>
+        <OTOContent />
+      </ReferrerGuard>
+    </Layout>
   );
 }
