@@ -45,50 +45,50 @@ function App() {
       <ThemeProvider>
         <Router>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/discovery" element={<Discovery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/assessment" element={<Assessment />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/legal/privacy" element={<Privacy />} />
-          <Route path="/legal/terms" element={<Terms />} />
-          <Route path="/sitemap" element={<Sitemap />} />
-          <Route path="/community" element={<Community />} />
+          <Route path="/" element={<Layout><Index /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/discovery" element={<Layout><Discovery /></Layout>} />
+          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          <Route path="/work" element={<Layout><Work /></Layout>} />
+          <Route path="/newsletter" element={<Layout><Newsletter /></Layout>} />
+          <Route path="/testimonials" element={<Layout><Testimonials /></Layout>} />
+          <Route path="/assessment" element={<Layout><Assessment /></Layout>} />
+          <Route path="/thank-you" element={<Layout><ThankYou /></Layout>} />
+          <Route path="/legal" element={<Layout><Legal /></Layout>} />
+          <Route path="/legal/privacy" element={<Layout><Privacy /></Layout>} />
+          <Route path="/legal/terms" element={<Layout><Terms /></Layout>} />
+          <Route path="/sitemap" element={<Layout><Sitemap /></Layout>} />
+          <Route path="/community" element={<Layout><Community /></Layout>} />
           
           {/* Placeholder routes for footer links */}
-          <Route path="/resources" element={<NotFound />} />
-          <Route path="/privacy" element={<NotFound />} />
-          <Route path="/terms" element={<NotFound />} />
+          <Route path="/resources" element={<Layout><NotFound /></Layout>} />
+          <Route path="/privacy" element={<Layout><NotFound /></Layout>} />
+          <Route path="/terms" element={<Layout><NotFound /></Layout>} />
           
-          <Route path="/program" element={<Courses />} />
-          <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
-          <Route path="/program/mental-elevator" element={<MentalElevator />} />
-          <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
-          <Route path="/program/:courseSlug" element={<CourseDetail />} />
+          <Route path="/program" element={<Layout><Courses /></Layout>} />
+          <Route path="/program/hakowanie-produktywnosci" element={<Layout><HakowanieProduktywnosci /></Layout>} />
+          <Route path="/program/mental-elevator" element={<Layout><MentalElevator /></Layout>} />
+          <Route path="/program/silna-glowa" element={<Layout><SilnaGlowa /></Layout>} />
+          <Route path="/program/:courseSlug" element={<Layout><CourseDetail /></Layout>} />
           
           <Route path="/oto" element={<Layout><OTO /></Layout>} />
           
-          <Route path="/podcast" element={<Podcasts />} />
-          <Route path="/new-podcast" element={<NewPodcast />} />
-          <Route path="/podcast/life-hacking" element={<LifeHackingPodcast />} />
-          <Route path="/program/uwazne-zycie" element={<UwazneZyciePodcast />} />
+          <Route path="/podcast" element={<Layout><Podcasts /></Layout>} />
+          <Route path="/new-podcast" element={<Layout><NewPodcast /></Layout>} />
+          <Route path="/podcast/life-hacking" element={<Layout><LifeHackingPodcast /></Layout>} />
+          <Route path="/program/uwazne-zycie" element={<Layout><UwazneZyciePodcast /></Layout>} />
           
-          <Route path="/webinar" element={<Webinar />} />
-          <Route path="/webinar/registration" element={<WebinarRegistration />} />
-          <Route path="/webinar/lobby" element={<WebinarLobby />} />
-          <Route path="/webinar/live" element={<WebinarLive />} />
-          <Route path="/webinar/expired" element={<WebinarExpired />} />
-          <Route path="/webinar/replay" element={<WebinarReplay />} />
+          <Route path="/webinar" element={<Layout><Webinar /></Layout>} />
+          <Route path="/webinar/registration" element={<Layout><WebinarRegistration /></Layout>} />
+          <Route path="/webinar/lobby" element={<Layout><WebinarLobby /></Layout>} />
+          <Route path="/webinar/live" element={<Layout><WebinarLive /></Layout>} />
+          <Route path="/webinar/expired" element={<Layout><WebinarExpired /></Layout>} />
+          <Route path="/webinar/replay" element={<Layout><WebinarReplay /></Layout>} />
           
-          <Route path="/help" element={<Help />} />
-          <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
+          <Route path="/help" element={<Layout><Help /></Layout>} />
+          <Route path="/help/:subpageSlug" element={<Layout><HelpSubpage /></Layout>} />
           
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
         </Routes>
         </Router>
       </ThemeProvider>
