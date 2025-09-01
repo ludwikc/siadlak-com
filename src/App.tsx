@@ -30,6 +30,7 @@ import MentalElevator from './pages/MentalElevator';
 import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
 import SilnaGlowa from './pages/SilnaGlowa';
+import MeskiKompas from './pages/MeskiKompas';
 import OTO from './pages/OTO';
 import Help from './pages/Help';
 import HelpSubpage from './pages/HelpSubpage';
@@ -68,6 +69,7 @@ function App() {
           <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
           <Route path="/program/mental-elevator" element={<MentalElevator />} />
           <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
+          <Route path="/program/meski-kompas" element={<MeskiKompas />} />
           <Route path="/program/:courseSlug" element={<CourseDetail />} />
           
           <Route path="/oto" element={<OTO />} />
