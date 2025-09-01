@@ -368,13 +368,20 @@ export default function MeskiKompas() {
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                  Mateusz Lizak
-                </h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
-                  Praktyk, który przeszedł przez wszystkie pułapki analitycznego umysłu. Od operatora maszyn CNC po mentora świadomych mężczyzn. 
-                  Dostarcza konkretne narzędzia i trzyma za rękę w trudnych momentach.
-                </p>
+                <div className="flex flex-col items-center text-center">
+                  <img 
+                    src="/lovable-uploads/4c324741-f8fb-4fbf-8a33-9e099e8422e3.png" 
+                    alt="Mateusz Lizak - Mentor świadomych mężczyzn"
+                    className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/20"
+                  />
+                  <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                    Mateusz Lizak
+                  </h3>
+                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
+                    Praktyk, który przeszedł przez wszystkie pułapki analitycznego umysłu. Od operatora maszyn CNC po mentora świadomych mężczyzn. 
+                    Dostarcza konkretne narzędzia i trzyma za rękę w trudnych momentach.
+                  </p>
+                </div>
               </GlassCard>
             </div>
 
