@@ -356,40 +356,50 @@ export default function MeskiKompas() {
               Kim jesteśmy?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <GlassCard padding="lg">
-                <div className="flex flex-col items-center text-center">
-                  <img 
-                    src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png" 
-                    alt="Ludwik C. Siadlak - Ekspert od produktywności i uważnego życia"
-                    className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/20"
-                  />
-                  <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                    Ludwik C. Siadlak
-                  </h3>
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
-                    Twórca społeczności Lifehackerzy, ekspert od produktywności i uważnego życia. 
-                    Prowadzi wizyjnie i daje kontekst emocjonalny.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 rounded-3xl overflow-hidden shadow-2xl">
+              {/* Ludwik - Black (Yin) */}
+              <div className="bg-deep-charcoal p-12 flex flex-col items-center text-center relative">
+                <div className="absolute top-4 right-4 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-deep-charcoal rounded-full"></div>
                 </div>
-              </GlassCard>
+                <img 
+                  src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png" 
+                  alt="Ludwik C. Siadlak - Ekspert od produktywności i uważnego życia"
+                  className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/30"
+                />
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  Ludwik C. Siadlak
+                </h3>
+                <p className="text-white/90 leading-relaxed">
+                  Twórca społeczności Lifehackerzy, ekspert od produktywności i uważnego życia. 
+                  Prowadzi wizyjnie i daje kontekst emocjonalny.
+                </p>
+                <div className="mt-4 text-sm text-white/70 font-medium">
+                  WIZJA • ENERGIA • EMOCJE
+                </div>
+              </div>
 
-              <GlassCard padding="lg">
-                <div className="flex flex-col items-center text-center">
-                  <img 
-                    src="/lovable-uploads/4c324741-f8fb-4fbf-8a33-9e099e8422e3.png" 
-                    alt="Mateusz Lizak - Mentor świadomych mężczyzn"
-                    className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/20"
-                  />
-                  <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                    Mateusz Lizak
-                  </h3>
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
-                    Praktyk, który przeszedł przez wszystkie pułapki analitycznego umysłu. Od operatora maszyn CNC po mentora świadomych mężczyzn. 
-                    Dostarcza konkretne narzędzia i trzyma za rękę w trudnych momentach.
-                  </p>
+              {/* Mateusz - White (Yang) */}
+              <div className="bg-white p-12 flex flex-col items-center text-center relative">
+                <div className="absolute top-4 left-4 w-6 h-6 bg-deep-charcoal rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
-              </GlassCard>
+                <img 
+                  src="/lovable-uploads/4c324741-f8fb-4fbf-8a33-9e099e8422e3.png" 
+                  alt="Mateusz Lizak - Mentor świadomych mężczyzn"
+                  className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-deep-charcoal/30"
+                />
+                <h3 className="text-2xl font-bold mb-4 text-deep-charcoal">
+                  Mateusz Lizak
+                </h3>
+                <p className="text-deep-charcoal/90 leading-relaxed">
+                  Praktyk, który przeszedł przez wszystkie pułapki analitycznego umysłu. Od operatora maszyn CNC po mentora świadomych mężczyzn. 
+                  Dostarcza konkretne narzędzia i trzyma za rękę w trudnych momentach.
+                </p>
+                <div className="mt-4 text-sm text-deep-charcoal/70 font-medium">
+                  KONKRET • NARZĘDZIA • WARSZTAT
+                </div>
+              </div>
             </div>
 
             <div className="text-center bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 p-8 rounded-2xl mb-12">
