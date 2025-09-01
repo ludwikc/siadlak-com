@@ -358,13 +358,20 @@ export default function MeskiKompas() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                  Ludwik C. Siadlak
-                </h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
-                  Twórca społeczności Lifehackerzy, ekspert od produktywności i uważnego życia. 
-                  Prowadzi wizyjnie i daje kontekst emocjonalny.
-                </p>
+                <div className="flex flex-col items-center text-center">
+                  <img 
+                    src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png" 
+                    alt="Ludwik C. Siadlak - Ekspert od produktywności i uważnego życia"
+                    className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/20"
+                  />
+                  <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                    Ludwik C. Siadlak
+                  </h3>
+                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
+                    Twórca społeczności Lifehackerzy, ekspert od produktywności i uważnego życia. 
+                    Prowadzi wizyjnie i daje kontekst emocjonalny.
+                  </p>
+                </div>
               </GlassCard>
 
               <GlassCard padding="lg">
