@@ -365,17 +365,15 @@ export default function MeskiKompas() {
             </div>
 
             <Link to="/contact">
-              <div className="inline-block p-1 rounded-xl" style={{ background: 'hsl(45, 85%, 50%)' }}>
-                <CTAButton
-                  variant="premium"
-                  size="xl"
-                  className="shadow-2xl hover:shadow-3xl mb-6 !bg-transparent !text-black border-0"
-                  aria-label="Zapisuję się i zaczynam nawigować"
-                  showArrow
-                >
-                  ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ
-                </CTAButton>
-              </div>
+              <CTAButton
+                variant="primary"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl mb-6 font-bold !text-black border-0 px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600"
+                aria-label="Zapisuję się i zaczynam nawigować"
+                showArrow
+              >
+                ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ
+              </CTAButton>
             </Link>
 
             <div className="text-sm font-bold" style={{ color: 'hsl(0, 60%, 50%)' }}>
