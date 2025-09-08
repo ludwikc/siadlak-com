@@ -8,7 +8,7 @@ export default function MeskiKompas() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: 'hsl(210, 45%, 12%)' }}>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -21,22 +21,24 @@ export default function MeskiKompas() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
               Zgubiony kurs? Czas skalibrować wewnętrzny kompas.
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-8 text-silver-mist leading-relaxed">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-8 leading-relaxed" style={{ color: 'hsl(210, 20%, 95%)' }}>
               Męski Kompas to 5-tygodniowy, intensywny program dla mężczyzn po 30-tce z analitycznym umysłem. 
               Odzyskaj kierunek, spokój i wewnętrzną spójność – bez natchnionego czary-mary, a z konkretem i strukturą.
             </h2>
             <Link to="/contact">
-              <CTAButton
-                variant="premium"
-                size="xl"
-                className="shadow-2xl hover:shadow-3xl mb-6"
-                aria-label="Zarezerwuj jedno z 10 miejsc"
-                showArrow
-              >
-                Zarezerwuj jedno z 10 miejsc
-              </CTAButton>
+              <div className="inline-block p-1 rounded-xl" style={{ background: 'hsl(45, 85%, 50%)' }}>
+                <CTAButton
+                  variant="premium"
+                  size="xl"
+                  className="shadow-2xl hover:shadow-3xl mb-6 !bg-transparent !text-black border-0"
+                  aria-label="Zarezerwuj jedno z 10 miejsc"
+                  showArrow
+                >
+                  Zarezerwuj jedno z 10 miejsc
+                </CTAButton>
+              </div>
             </Link>
-            <div className="text-silver-mist/80 text-sm">
+            <div className="text-sm" style={{ color: 'hsl(210, 20%, 95%)' }}>
               Startujemy 27.10 | Tylko 10 miejsc | Inwestycja: 497 zł
             </div>
           </div>
@@ -44,10 +46,10 @@ export default function MeskiKompas() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 99%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Czy to o Tobie?
             </h2>
 
@@ -59,15 +61,15 @@ export default function MeskiKompas() {
                 "Masz dość górnolotnych frazesów i szukasz męskiej, rzeczowej przestrzeni do rozwoju?",
                 "Czujesz, że to, co robisz, rozmija się z tym, co jest dla Ciebie naprawdę ważne?"
               ].map((item, index) => (
-                <GlassCard key={index} className="flex items-start gap-4 p-6">
-                  <div className="w-4 h-4 border-2 border-neural-violet dark:border-luminal-magenta rounded-sm flex-shrink-0 mt-1" />
-                  <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
+                <GlassCard key={index} className="flex items-start gap-4 p-6" style={{ backgroundColor: 'hsl(210, 20%, 95%)', border: '1px solid hsl(210, 40%, 15%)' }}>
+                  <div className="w-4 h-4 border-2 rounded-sm flex-shrink-0 mt-1" style={{ borderColor: 'hsl(45, 85%, 50%)' }} />
+                  <p className="text-lg" style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
                 </GlassCard>
               ))}
             </div>
 
             <div className="text-center mt-12">
-              <p className="text-xl font-bold text-neural-violet dark:text-luminal-magenta">
+              <p className="text-xl font-bold" style={{ color: 'hsl(45, 85%, 50%)' }}>
                 Jeśli kiwasz głową, czytając te słowa – jesteś we właściwym miejscu.
               </p>
             </div>
@@ -76,21 +78,21 @@ export default function MeskiKompas() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 20%, 95%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Odzyskaj stery. Zbuduj swój Męski Kompas.
             </h2>
             
             <div className="text-center mb-12">
-              <p className="text-xl text-deep-charcoal/90 dark:text-silver-mist/90 leading-relaxed">
+              <p className="text-xl leading-relaxed" style={{ color: 'hsl(210, 10%, 45%)' }}>
                 Męski Kompas nie jest kolejnym kursem motywacyjnym. To warsztat, w którym przez 5 tygodni, 
                 krok po kroku, zbudujesz swój osobisty system nawigacji.
               </p>
             </div>
 
-            <h3 className="text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+            <h3 className="text-3xl font-bold mb-8 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Co zyskasz?
             </h3>
 
@@ -113,19 +115,19 @@ export default function MeskiKompas() {
                   description: "Poprawisz jakość swoich relacji przez autentyczność i prawdziwą obecność."
                 }
               ].map((item, index) => (
-                <GlassCard key={index} className="p-6">
-                  <h4 className="text-xl font-bold mb-3 text-neural-violet dark:text-luminal-magenta">
+                <GlassCard key={index} className="p-6" style={{ backgroundColor: 'hsl(0, 0%, 99%)', border: '1px solid hsl(210, 40%, 15%)' }}>
+                  <h4 className="text-xl font-bold mb-3" style={{ color: 'hsl(45, 85%, 50%)' }}>
                     {item.title}
                   </h4>
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
+                  <p style={{ color: 'hsl(210, 10%, 45%)' }}>
                     {item.description}
                   </p>
                 </GlassCard>
               ))}
             </div>
 
-            <div className="text-center bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 p-8 rounded-2xl">
-              <p className="text-xl text-deep-charcoal dark:text-silver-mist">
+            <div className="text-center p-8 rounded-2xl" style={{ backgroundColor: 'hsl(210, 40%, 15%)' }}>
+              <p className="text-xl text-white">
                 Po 5 tygodniach wyjdziesz z własnym, skalibrowanym kompasem – zestawem wartości, rytuałów, 
                 granic i zasad podejmowania decyzji, który będzie Cię prowadził długo po zakończeniu programu.
               </p>
@@ -135,31 +137,32 @@ export default function MeskiKompas() {
       </section>
 
       {/* Leaders Section - YIN & YANG */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 99%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Dwóch liderów. Dwie perspektywy. Jeden cel.
             </h2>
             
             <div className="text-center mb-12">
-              <p className="text-xl text-deep-charcoal/90 dark:text-silver-mist/90">
+              <p className="text-xl" style={{ color: 'hsl(210, 10%, 45%)' }}>
                 Wierzymy w siłę synergii. Dlatego program prowadzą dwie silne, ale uzupełniające się osobowości.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-12 rounded-3xl overflow-hidden shadow-2xl">
               {/* Ludwik - Black (Yin) */}
-              <div className="bg-deep-charcoal p-12 flex flex-col items-center text-center">
+              <div className="p-12 flex flex-col items-center text-center" style={{ backgroundColor: 'hsl(210, 20%, 8%)' }}>
                 <img 
                   src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png" 
                   alt="Ludwik Siadlak - Mistrz porywania ludzi i pracy z emocjami"
-                  className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-white/30"
+                  className="w-32 h-32 rounded-full mb-6 object-cover border-4"
+                  style={{ borderColor: 'hsl(45, 85%, 50%)' }}
                 />
                 <h3 className="text-2xl font-bold mb-4 text-white">
                   Ludwik Siadlak
                 </h3>
-                <p className="text-white/90 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: 'hsl(210, 20%, 95%)' }}>
                   Mistrz porywania ludzi i pracy z emocjami. Ludwik zapala iskrę, inspiruje do sięgania głębiej 
                   i pomaga nazwać to, co nienazwane. To on dba o to, by podróż miała sens i serce.
                 </p>
@@ -170,20 +173,21 @@ export default function MeskiKompas() {
                 <img 
                   src="/lovable-uploads/4c324741-f8fb-4fbf-8a33-9e099e8422e3.png" 
                   alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
-                  className="w-32 h-32 rounded-full mb-6 object-cover border-4 border-deep-charcoal/30"
+                  className="w-32 h-32 rounded-full mb-6 object-cover border-4"
+                  style={{ borderColor: 'hsl(210, 40%, 15%)' }}
                 />
-                <h3 className="text-2xl font-bold mb-4 text-deep-charcoal">
+                <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(210, 20%, 8%)' }}>
                   Mateusz Lizak
                 </h3>
-                <p className="text-deep-charcoal/90 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: 'hsl(210, 10%, 45%)' }}>
                   Mistrz konkretu i pracy warsztatowej. Mateusz twardo stąpa po ziemi, dostarcza sprawdzonych narzędzi 
                   i dba o to, by każda idea została przełożona na praktyczne działanie.
                 </p>
               </div>
             </div>
 
-            <div className="text-center bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 p-8 rounded-2xl">
-              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
+            <div className="text-center p-8 rounded-2xl" style={{ backgroundColor: 'hsl(45, 85%, 50%)' }}>
+              <p className="text-xl font-bold" style={{ color: 'hsl(210, 20%, 8%)' }}>
                 Razem tworzymy przestrzeń, gdzie wielkie wizje spotykają się z realnym działaniem.
               </p>
             </div>
@@ -192,15 +196,15 @@ export default function MeskiKompas() {
       </section>
 
       {/* Program Structure */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 20%, 95%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Twój 5-tygodniowy rejs po wewnętrzne mistrzostwo
             </h2>
             
             <div className="text-center mb-12">
-              <p className="text-xl text-deep-charcoal/90 dark:text-silver-mist/90">
+              <p className="text-xl" style={{ color: 'hsl(210, 10%, 45%)' }}>
                 Program jest podzielony na 5 intensywnych, tematycznych tygodni. W każdym tygodniu otrzymasz 
                 konkretne narzędzia (w formie PDF i wideo/audio) oraz weźmiesz udział w sesjach na żywo.
               </p>
@@ -239,20 +243,20 @@ export default function MeskiKompas() {
                   tools: "Kompas 5-punktowy, Męska Deklaracja."
                 }
               ].map((week, index) => (
-                <GlassCard key={index} padding="lg" className="border-l-4 border-neural-violet">
+                <GlassCard key={index} className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
                   <div className="flex items-start gap-6">
-                    <div className="bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full p-4">
-                      <span className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">{week.week}</span>
+                    <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                      <span className="text-2xl font-bold">{week.week}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                      <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
                         Tydzień {week.week}: {week.title}
                       </h3>
-                      <p className="text-lg mb-3 text-deep-charcoal/90 dark:text-silver-mist/90">
-                        <strong>Cel:</strong> {week.goal}
+                      <p className="text-lg mb-3" style={{ color: 'hsl(210, 10%, 45%)' }}>
+                        <strong style={{ color: 'hsl(210, 20%, 8%)' }}>Cel:</strong> {week.goal}
                       </p>
-                      <p className="text-deep-charcoal/80 dark:text-silver-mist/80">
-                        <strong>Narzędzia:</strong> {week.tools}
+                      <p style={{ color: 'hsl(210, 10%, 45%)' }}>
+                        <strong style={{ color: 'hsl(210, 20%, 8%)' }}>Narzędzia:</strong> {week.tools}
                       </p>
                     </div>
                   </div>
@@ -264,15 +268,15 @@ export default function MeskiKompas() {
       </section>
 
       {/* Target Audience */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 99%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Dla kogo jest Męski Kompas?
             </h2>
             
             <div className="text-center mb-12">
-              <p className="text-xl text-deep-charcoal/90 dark:text-silver-mist/90">
+              <p className="text-xl" style={{ color: 'hsl(210, 10%, 45%)' }}>
                 Ten program jest stworzony z myślą o konkretnym typie mężczyzny. Zapraszamy Cię, jeśli:
               </p>
             </div>
@@ -280,7 +284,7 @@ export default function MeskiKompas() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* FOR */}
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-green-600 dark:text-green-400">
+                <h3 className="text-2xl font-bold mb-6" style={{ color: 'hsl(45, 85%, 50%)' }}>
                   To JEST dla Ciebie, jeśli:
                 </h3>
                 <div className="space-y-4">
@@ -290,9 +294,9 @@ export default function MeskiKompas() {
                     "Jesteś gotów na konkretną pracę w kameralnej, męskiej grupie (tylko 10 osób).",
                     "Cenisz sobie strukturę, rytm i działanie ponad niekończące się dyskusje."
                   ].map((item, index) => (
-                    <GlassCard key={index} className="flex items-start gap-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                      <p className="text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
+                    <GlassCard key={index} className="flex items-start gap-4 p-4" style={{ backgroundColor: 'hsl(120, 40%, 95%)', border: '1px solid hsl(120, 40%, 70%)' }}>
+                      <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(120, 60%, 40%)' }} />
+                      <p style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
                     </GlassCard>
                   ))}
                 </div>
@@ -300,13 +304,13 @@ export default function MeskiKompas() {
 
               {/* NOT FOR */}
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-red-600 dark:text-red-400">
+                <h3 className="text-2xl font-bold mb-6" style={{ color: 'hsl(0, 60%, 50%)' }}>
                   To NIE jest dla Ciebie, jeśli:
                 </h3>
                 <div className="space-y-4">
-                  <GlassCard className="flex items-start gap-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
-                    <p className="text-deep-charcoal/90 dark:text-silver-mist/90">
+                  <GlassCard className="flex items-start gap-4 p-4" style={{ backgroundColor: 'hsl(0, 40%, 95%)', border: '1px solid hsl(0, 40%, 70%)' }}>
+                    <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(0, 60%, 50%)' }} />
+                    <p style={{ color: 'hsl(210, 10%, 45%)' }}>
                       Szukasz magicznej pigułki, terapii grupowej lub kolejnego kręgu, w którym tylko się rozmawia.
                     </p>
                   </GlassCard>
@@ -318,20 +322,20 @@ export default function MeskiKompas() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 20%, 95%)' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8" style={{ color: 'hsl(210, 20%, 8%)' }}>
               Jesteś gotów, by obrać właściwy kurs?
             </h2>
             
-            <p className="text-xl text-deep-charcoal/90 dark:text-silver-mist/90 mb-12">
+            <p className="text-xl mb-12" style={{ color: 'hsl(210, 10%, 45%)' }}>
               Pierwsza, pilotażowa edycja Męskiego Kompasu to wyjątkowa okazja. Dołącz do kameralnej grupy 
               10 mężczyzn, którzy razem z nami wyruszą w tę podróż.
             </p>
 
-            <div className="bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 p-8 rounded-2xl mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+            <div className="p-8 rounded-2xl mb-12" style={{ backgroundColor: 'hsl(0, 0%, 99%)', border: '1px solid hsl(210, 40%, 15%)' }}>
+              <h3 className="text-2xl font-bold mb-6" style={{ color: 'hsl(210, 20%, 8%)' }}>
                 Co otrzymujesz:
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
@@ -343,36 +347,38 @@ export default function MeskiKompas() {
                   "Możliwość indywidualnej konsultacji z Mateuszem"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
+                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(45, 85%, 50%)' }} />
+                    <p style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="text-center mb-8">
-              <p className="text-3xl font-bold text-neural-violet dark:text-luminal-magenta mb-4">
+              <p className="text-3xl font-bold mb-4" style={{ color: 'hsl(45, 85%, 50%)' }}>
                 Twoja inwestycja w odzyskanie kierunku: 497 zł
               </p>
-              <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/80">
+              <p className="text-lg" style={{ color: 'hsl(210, 10%, 45%)' }}>
                 Miejsca są ograniczone, a o przyjęciu decyduje kolejność zgłoszeń. 
                 Nie ma skomplikowanych formularzy – po prostu dołącz i zacznij działać.
               </p>
             </div>
 
             <Link to="/contact">
-              <CTAButton
-                variant="premium"
-                size="xl"
-                className="shadow-2xl hover:shadow-3xl mb-6"
-                aria-label="Zapisuję się i zaczynam nawigować"
-                showArrow
-              >
-                ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ
-              </CTAButton>
+              <div className="inline-block p-1 rounded-xl" style={{ background: 'hsl(45, 85%, 50%)' }}>
+                <CTAButton
+                  variant="premium"
+                  size="xl"
+                  className="shadow-2xl hover:shadow-3xl mb-6 !bg-transparent !text-black border-0"
+                  aria-label="Zapisuję się i zaczynam nawigować"
+                  showArrow
+                >
+                  ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ
+                </CTAButton>
+              </div>
             </Link>
 
-            <div className="text-sm text-neural-violet dark:text-luminal-magenta font-bold">
+            <div className="text-sm font-bold" style={{ color: 'hsl(0, 60%, 50%)' }}>
               Zostały tylko 4 miejsca!
             </div>
           </div>
