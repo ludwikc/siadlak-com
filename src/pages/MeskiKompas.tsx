@@ -12,34 +12,34 @@ export default function MeskiKompas() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/lovable-uploads/5aa99b7d-34e9-41ad-b7bb-bffc39e3773f.png')`,
+            backgroundImage: `url('/lovable-uploads/a4fb6895-f87c-44d6-aab9-c77f08e52f54.png')`,
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              Zgubiony kurs? Czas skalibrować wewnętrzny kompas.
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+              Zgubiony kurs?<br />
+              <span style={{ color: 'hsl(45, 85%, 50%)' }}>Czas skalibrować</span><br />
+              wewnętrzny kompas.
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-8 leading-relaxed" style={{ color: 'hsl(210, 20%, 95%)' }}>
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium mb-8 leading-relaxed max-w-3xl mx-auto" style={{ color: 'hsl(210, 20%, 95%)' }}>
               Męski Kompas to 5-tygodniowy, intensywny program dla mężczyzn po 30-tce z analitycznym umysłem. 
-              Odzyskaj kierunek, spokój i wewnętrzną spójność – bez natchnionego czary-mary, a z konkretem i strukturą.
+              Odzyskaj kierunek, spokój i wewnętrzną spójność – bez duchowego bullshitu, z konkretem i strukturą.
             </h2>
             <Link to="/contact">
-              <div className="inline-block p-1 rounded-xl" style={{ background: 'hsl(45, 85%, 50%)' }}>
-                <CTAButton
-                  variant="premium"
-                  size="xl"
-                  className="shadow-2xl hover:shadow-3xl mb-6 !bg-transparent !text-black border-0"
-                  aria-label="Zarezerwuj jedno z 10 miejsc"
-                  showArrow
-                >
-                  Zarezerwuj jedno z 10 miejsc
-                </CTAButton>
-              </div>
+              <CTAButton
+                variant="primary"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl mb-6 font-bold !text-black border-0 px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600"
+                aria-label="Zarezerwuj jedno z 10 miejsc"
+                showArrow
+              >
+                Zarezerwuj jedno z 10 miejsc
+              </CTAButton>
             </Link>
-            <div className="text-sm" style={{ color: 'hsl(210, 20%, 95%)' }}>
-              Startujemy 27.10 | Tylko 10 miejsc | Inwestycja: 497 zł
+            <div className="text-sm font-medium" style={{ color: 'hsl(210, 20%, 95%)' }}>
+              Startujemy [Data] | Tylko 10 miejsc | Inwestycja: 497 zł
             </div>
           </div>
         </div>
