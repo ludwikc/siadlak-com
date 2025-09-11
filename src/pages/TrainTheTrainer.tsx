@@ -8,7 +8,7 @@ export default function TrainTheTrainer() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: 'hsl(220, 70%, 20%)' }}>
+      <section className="relative py-20 md:py-32 overflow-hidden bg-premium">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
@@ -21,23 +21,23 @@ export default function TrainTheTrainer() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <Badge className="bg-red-600 text-white border-0">8 miejsc dostępnych</Badge>
-                  <Badge className="border-2" style={{ borderColor: 'hsl(45, 95%, 60%)', color: 'hsl(45, 95%, 60%)' }}>
+                  <Badge className="bg-destructive text-destructive-foreground border-0">8 miejsc dostępnych</Badge>
+                  <Badge className="border-2 border-gold text-gold bg-transparent">
                     8-tygodniowa transformacja
                   </Badge>
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-premium-foreground leading-tight">
                   Jesteś Ekspertem.<br />
-                  <span style={{ color: 'hsl(45, 95%, 60%)' }}>Pora zostać<br />Przewodnikiem.</span>
+                  <span className="text-gold">Pora zostać<br />Przewodnikiem.</span>
                 </h1>
                 
-                <p className="text-lg md:text-xl mb-8 text-gray-300 leading-relaxed">
+                <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed">
                   Prawdziwa wartość twojej wiedzy (nawet, jeśli to najsuchszy nawet temat – jak konfiguracja SQL, 
                   czy architektura Azure) objawia się dopiero wtedy, gdy zmienia myślenie i umiejętności innych ludzi.
                 </p>
                 
-                <p className="text-base md:text-lg mb-8 text-gray-400 leading-relaxed">
+                <p className="text-base md:text-lg mb-8 text-muted-foreground/80 leading-relaxed">
                   Naucz się świadomie kształtować umysły swoich słuchaczy i zostawiać po sobie trwały ślad. 
                   Zdobywaj kompetencje, które pozwolą ci nie tylko uczyć, ale i inspirować do prawdziwej zmiany.
                 </p>
@@ -47,7 +47,7 @@ export default function TrainTheTrainer() {
                     <CTAButton
                       variant="primary"
                       size="lg"
-                      className="font-bold px-8 py-4 border-0 !bg-yellow-400 !text-black hover:!bg-yellow-500"
+                      className="font-bold px-8 py-4 border-0 bg-gold text-gold-foreground hover:bg-gold/90"
                       showArrow
                     >
                       Przejdź do aplikacji
@@ -56,14 +56,14 @@ export default function TrainTheTrainer() {
                   <CTAButton
                     variant="secondary"
                     size="lg"
-                    className="font-bold px-8 py-4 text-white border-2 border-yellow-400"
+                    className="font-bold px-8 py-4 text-premium-foreground border-2 border-gold bg-transparent hover:bg-gold/10"
                   >
                     Dowiedz się więcej
                   </CTAButton>
                 </div>
                 
                 <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
-                  <p className="text-sm text-white/90 italic">
+                  <p className="text-sm text-premium-foreground/90 italic">
                     "Exceptional training methodology that transformed our technical capabilities" 
                     <span className="font-semibold">- US Department of Defense</span>
                   </p>
@@ -109,17 +109,17 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Program Section */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220, 70%, 20%)' }}>
+      <section className="py-20 bg-premium">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                Train The Trainer: <span style={{ color: 'hsl(45, 95%, 60%)' }}>Elite Academy</span>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-premium-foreground">
+                Train The Trainer: <span className="text-gold">Elite Academy</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
                 8-tygodniowa transformacja z inżyniera w międzynarodowego trenera technologii
               </p>
-              <Badge className="text-lg px-6 py-2 bg-red-600 text-white border-0">
+              <Badge className="text-lg px-6 py-2 bg-destructive text-destructive-foreground border-0">
                 Ograniczone do 8 miejsc - hard cap. Żadnych wyjątków.
               </Badge>
             </div>
@@ -133,9 +133,9 @@ export default function TrainTheTrainer() {
                 { title: "Bezcenna Sieć Kontaktów", icon: GitMerge, description: "Dostęp do sieci międzynarodowych trenerów" }
               ].map((feature, index) => (
                 <GlassCard key={index} className="p-8 text-center bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
-                  <feature.icon className="w-12 h-12 mx-auto mb-4" style={{ color: 'hsl(45, 95%, 60%)' }} />
-                  <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <feature.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                  <h3 className="text-xl font-bold mb-3 text-premium-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </GlassCard>
               ))}
             </div>
@@ -147,7 +147,7 @@ export default function TrainTheTrainer() {
       <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center" style={{ color: 'hsl(220, 70%, 20%)' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-premium">
               Zaufali nam globalni liderzy
             </h2>
             
@@ -157,14 +157,14 @@ export default function TrainTheTrainer() {
                 { company: "NATO", text: "Exceptional methodology and results", rating: 5 },
                 { company: "Fortune 500 Corp", text: "Transformed our technical capabilities", rating: 5 }
               ].map((testimonial, index) => (
-                <GlassCard key={index} className="p-6 bg-white dark:bg-gray-800">
+                <GlassCard key={index} className="p-6 bg-card">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'hsl(45, 95%, 60%)' }} />
+                      <Star key={i} className="w-5 h-5 fill-current text-gold" />
                     ))}
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 italic">"{testimonial.text}"</p>
-                  <p className="font-semibold" style={{ color: 'hsl(220, 70%, 20%)' }}>- {testimonial.company}</p>
+                  <p className="text-card-foreground mb-4 italic">"{testimonial.text}"</p>
+                  <p className="font-semibold text-premium">- {testimonial.company}</p>
                 </GlassCard>
               ))}
             </div>
@@ -173,10 +173,10 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220, 70%, 20%)' }}>
+      <section className="py-20 bg-premium">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-premium-foreground">
               Program dedykowany dla
             </h2>
             
@@ -188,19 +188,19 @@ export default function TrainTheTrainer() {
                 { title: "Administrator", icon: Shield, description: "Administracja systemów i infrastruktury" }
               ].map((persona, index) => (
                 <GlassCard key={index} className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
-                  <persona.icon className="w-12 h-12 mx-auto mb-4" style={{ color: 'hsl(45, 95%, 60%)' }} />
-                  <h3 className="text-lg font-bold mb-3 text-white">{persona.title}</h3>
-                  <p className="text-sm text-gray-300">{persona.description}</p>
+                  <persona.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
+                  <h3 className="text-lg font-bold mb-3 text-premium-foreground">{persona.title}</h3>
+                  <p className="text-sm text-muted-foreground">{persona.description}</p>
                 </GlassCard>
               ))}
             </div>
             
-            <div className="p-6 rounded-lg bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700">
+            <div className="p-6 rounded-lg bg-accent/10 border border-accent/30">
               <div className="flex items-start gap-4">
-                <AlertCircle className="w-6 h-6 flex-shrink-0 mt-1 text-yellow-600" />
+                <AlertCircle className="w-6 h-6 flex-shrink-0 mt-1 text-accent" />
                 <div>
-                  <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2">Ważne:</h3>
-                  <p className="text-yellow-700 dark:text-yellow-400">
+                  <h3 className="font-bold text-accent-foreground mb-2">Ważne:</h3>
+                  <p className="text-accent-foreground/80">
                     Materiały szkoleniowe są w języku angielskim. Wymagana jest dobra znajomość języka angielskiego w mowie i piśmie.
                   </p>
                 </div>
@@ -216,10 +216,10 @@ export default function TrainTheTrainer() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'hsl(220, 70%, 20%)' }}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-premium">
                   Ludwik C. Siadlak
                 </h2>
-                <p className="text-xl mb-8 text-gray-600 dark:text-gray-400 italic">
+                <p className="text-xl mb-8 text-muted-foreground italic">
                   "From Code to Classroom. From Technician to Travelling Trainer."
                 </p>
                 
@@ -232,28 +232,28 @@ export default function TrainTheTrainer() {
                     "Ekspert w transformacji wiedzy technicznej w umiejętności szkoleniowe"
                   ].map((achievement, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(45, 95%, 60%)' }} />
-                      <p className="text-gray-700 dark:text-gray-300">{achievement}</p>
+                      <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1 text-gold" />
+                      <p className="text-card-foreground">{achievement}</p>
                     </div>
                   ))}
                 </div>
                 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'hsl(220, 70%, 20%)' }}>19</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">lat doświadczenia</div>
+                    <div className="text-3xl font-bold text-premium">19</div>
+                    <div className="text-sm text-muted-foreground">lat doświadczenia</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'hsl(220, 70%, 20%)' }}>500+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">międzynarodowych szkoleń</div>
+                    <div className="text-3xl font-bold text-premium">500+</div>
+                    <div className="text-sm text-muted-foreground">międzynarodowych szkoleń</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'hsl(220, 70%, 20%)' }}>10K+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">wyszkolonych specjalistów</div>
+                    <div className="text-3xl font-bold text-premium">10K+</div>
+                    <div className="text-sm text-muted-foreground">wyszkolonych specjalistów</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold" style={{ color: 'hsl(220, 70%, 20%)' }}>50+</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">organizacji Fortune 500</div>
+                    <div className="text-3xl font-bold text-premium">50+</div>
+                    <div className="text-sm text-muted-foreground">organizacji Fortune 500</div>
                   </div>
                 </div>
               </div>
@@ -271,21 +271,21 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220, 70%, 20%)' }}>
+      <section className="py-20 bg-premium">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 text-lg px-6 py-2 bg-red-600 text-white border-0">
+            <Badge className="mb-6 text-lg px-6 py-2 bg-destructive text-destructive-foreground border-0">
               Ilość miejsc jest bezwzględnie ograniczona do 8 osób
             </Badge>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-premium-foreground">
               Transformacja kariery nie zaczyna się za tydzień.<br />
-              <span style={{ color: 'hsl(45, 95%, 60%)' }}>Zaczyna się od jednej decyzji.</span>
+              <span className="text-gold">Zaczyna się od jednej decyzji.</span>
             </h2>
             
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-white">Sesja Discovery</h3>
-              <p className="text-lg text-gray-300 mb-8">30-minutowa konsultacja online, podczas której:</p>
+              <h3 className="text-2xl font-bold mb-6 text-premium-foreground">Sesja Discovery</h3>
+              <p className="text-lg text-muted-foreground mb-8">30-minutowa konsultacja online, podczas której:</p>
               
               <div className="space-y-4 mb-8 text-left max-w-2xl mx-auto">
                 {[
@@ -294,8 +294,8 @@ export default function TrainTheTrainer() {
                   "Przedstawimy szczegółowy plan transformacji kariery"
                 ].map((point, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(45, 95%, 60%)' }} />
-                    <p className="text-gray-300">{point}</p>
+                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1 text-gold" />
+                    <p className="text-muted-foreground">{point}</p>
                   </div>
                 ))}
               </div>
@@ -305,14 +305,14 @@ export default function TrainTheTrainer() {
               <CTAButton
                 variant="primary"
                 size="xl"
-                className="font-bold px-12 py-6 text-xl border-0 mb-6 !bg-yellow-400 !text-black hover:!bg-yellow-500"
+                className="font-bold px-12 py-6 text-xl border-0 mb-6 bg-gold text-gold-foreground hover:bg-gold/90"
                 showArrow
               >
                 Sprawdź dostępne terminy
               </CTAButton>
             </a>
             
-            <div className="flex justify-center gap-8 text-sm text-gray-400">
+            <div className="flex justify-center gap-8 text-sm text-muted-foreground">
               <span>✓ Bez opłat</span>
               <span>✓ Bez zobowiązań</span>
               <span>✓ 30 minut wartościowej rozmowy</span>

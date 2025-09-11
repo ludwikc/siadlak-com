@@ -40,27 +40,61 @@
   --color-error: 0 84% 60%;
   --color-info: 249 56% 49%;
 
-  /* Shadcn/UI variables */
+  /* TrainTheTrainer Design System */
   --background: 0 0% 100%;
-  --foreground: 224 71% 4%;
+  --foreground: 215 25% 15%;
+
   --card: 0 0% 100%;
-  --card-foreground: 224 71% 4%;
+  --card-foreground: 215 25% 15%;
+
   --popover: 0 0% 100%;
-  --popover-foreground: 224 71% 4%;
-  --primary: 267 100% 50%;
-  --primary-foreground: 210 20% 98%;
-  --secondary: 220 14% 96%;
-  --secondary-foreground: 220 9% 46%;
-  --muted: 220 14% 96%;
-  --muted-foreground: 220 9% 46%;
-  --accent: 220 14% 96%;
-  --accent-foreground: 220 9% 46%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 20% 98%;
-  --border: 220 13% 91%;
-  --input: 220 13% 91%;
-  --ring: 267 100% 50%;
+  --popover-foreground: 215 25% 15%;
+
+  --primary: 220 60% 25%;
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: 215 20% 95%;
+  --secondary-foreground: 215 25% 15%;
+
+  --muted: 215 15% 96%;
+  --muted-foreground: 215 10% 55%;
+
+  --accent: 45 90% 55%;
+  --accent-foreground: 215 25% 15%;
+
+  --premium: 220 70% 20%;
+  --premium-foreground: 0 0% 98%;
+  
+  --gold: 45 95% 60%;
+  --gold-foreground: 215 25% 15%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 15% 92%;
+  --input: 215 15% 94%;
+  --ring: 220 60% 25%;
+
+  /* Premium gradients */
+  --gradient-premium: linear-gradient(135deg, hsl(220 60% 25%), hsl(220 70% 35%));
+  --gradient-gold: linear-gradient(135deg, hsl(45 95% 60%), hsl(45 90% 70%));
+  --gradient-hero: linear-gradient(135deg, hsl(220 60% 25%) 0%, hsl(220 70% 35%) 50%, hsl(45 90% 55%) 100%);
+  
+  /* Shadows */
+  --shadow-premium: 0 20px 40px -10px hsl(220 60% 25% / 0.2);
+  --shadow-card: 0 4px 20px hsl(220 60% 25% / 0.1);
+  --shadow-glow: 0 0 30px hsl(45 95% 60% / 0.3);
+
   --radius: 0.5rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
 
   /* Typography */
   --font-family-primary: "Inter", sans-serif;
@@ -110,26 +144,42 @@
   --border-primary: 216 8% 25%;
   --border-subtle: rgba(255, 255, 255, 0.1);
 
-  /* Shadcn/UI Dark Mode */
-  --background: 224 71% 4%;
-  --foreground: 213 31% 91%;
-  --card: 224 71% 4%;
-  --card-foreground: 213 31% 91%;
-  --popover: 224 71% 4%;
-  --popover-foreground: 213 31% 91%;
-  --primary: 267 100% 50%;
-  --primary-foreground: 210 20% 98%;
-  --secondary: 215 28% 17%;
-  --secondary-foreground: 210 20% 98%;
-  --muted: 215 28% 17%;
-  --muted-foreground: 217 10% 64%;
-  --accent: 215 28% 17%;
-  --accent-foreground: 210 20% 98%;
-  --destructive: 0 63% 31%;
-  --destructive-foreground: 210 20% 98%;
-  --border: 215 28% 17%;
-  --input: 215 28% 17%;
-  --ring: 267 100% 50%;
+  /* TrainTheTrainer Dark Mode */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
 
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
