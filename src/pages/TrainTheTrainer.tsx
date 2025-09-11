@@ -8,74 +8,76 @@ export default function TrainTheTrainer() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-premium">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage: `url('/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.png')`,
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/40"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <Badge className="bg-destructive text-destructive-foreground border-0">8 miejsc dostępnych</Badge>
-                  <Badge className="border-2 border-gold text-gold bg-transparent">
-                    8-tygodniowa transformacja
-                  </Badge>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-premium-foreground leading-tight">
-                  Jesteś Ekspertem.<br />
-                  <span className="text-gold">Pora zostać<br />Przewodnikiem.</span>
-                </h1>
-                
-                <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed">
-                  Prawdziwa wartość twojej wiedzy (nawet, jeśli to najsuchszy nawet temat – jak konfiguracja SQL, 
-                  czy architektura Azure) objawia się dopiero wtedy, gdy zmienia myślenie i umiejętności innych ludzi.
-                </p>
-                
-                <p className="text-base md:text-lg mb-8 text-muted-foreground/80 leading-relaxed">
-                  Naucz się świadomie kształtować umysły swoich słuchaczy i zostawiać po sobie trwały ślad. 
-                  Zdobywaj kompetencje, które pozwolą ci nie tylko uczyć, ale i inspirować do prawdziwej zmiany.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <a href="https://link.siadlak.com/discovery" target="_blank" rel="noopener noreferrer">
-                    <CTAButton
-                      variant="primary"
-                      size="lg"
-                      className="font-bold px-8 py-4 border-0 bg-gold text-gold-foreground hover:bg-gold/90"
-                      showArrow
-                    >
-                      Przejdź do aplikacji
-                    </CTAButton>
-                  </a>
-                  <CTAButton
-                    variant="secondary"
-                    size="lg"
-                    className="font-bold px-8 py-4 text-premium-foreground border-2 border-gold bg-transparent hover:bg-gold/10"
-                  >
-                    Dowiedz się więcej
-                  </CTAButton>
-                </div>
-                
-                <div className="p-4 rounded-lg bg-white/10 backdrop-blur-sm">
-                  <p className="text-sm text-premium-foreground/90 italic">
-                    "Exceptional training methodology that transformed our technical capabilities" 
-                    <span className="font-semibold">- US Department of Defense</span>
-                  </p>
-                </div>
+      <section className="hero-section">
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="flex items-center gap-4 mb-6">
+              <Badge className="bg-destructive text-destructive-foreground border-0">8 miejsc dostępnych</Badge>
+              <Badge className="border-2 border-gold text-gold bg-transparent">
+                8-tygodniowa transformacja
+              </Badge>
+            </div>
+            
+            <h1 className="hero-title">
+              Jesteś Ekspertem.<br />
+              <span className="hero-gradient-text">Pora zostać<br />Przewodnikiem.</span>
+            </h1>
+            
+            <p className="hero-description">
+              Prawdziwa wartość twojej wiedzy (nawet, jeśli to najsuchszy nawet temat – jak konfiguracja SQL, 
+              czy architektura Azure) objawia się dopiero wtedy, gdy zmienia myślenie i umiejętności innych ludzi.
+            </p>
+            
+            <p className="text-base md:text-lg mb-8 text-muted-foreground leading-relaxed">
+              Naucz się świadomie kształtować umysły swoich słuchaczy i zostawiać po sobie trwały ślad. 
+              Zdobywaj kompetencje, które pozwolą ci nie tylko uczyć, ale i inspirować do prawdziwej zmiany.
+            </p>
+            
+            <div className="hero-buttons">
+              <a href="https://link.siadlak.com/discovery" target="_blank" rel="noopener noreferrer">
+                <CTAButton
+                  variant="primary"
+                  size="lg"
+                  className="btn-hero border-0"
+                  showArrow
+                >
+                  Przejdź do aplikacji
+                </CTAButton>
+              </a>
+              <CTAButton
+                variant="secondary"
+                size="lg"
+                className="btn-outline"
+              >
+                Dowiedz się więcej
+              </CTAButton>
+            </div>
+            
+            <div className="hero-status">
+              <div className="status-indicator">
+                <div className="status-dot status-dot--gold"></div>
+                <span>Tylko 8 miejsc</span>
               </div>
-              
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.png" 
-                  alt="Professional training presentation"
-                  className="w-full rounded-2xl shadow-2xl"
-                />
+              <div className="status-indicator">
+                <div className="status-dot status-dot--premium"></div>
+                <span>8 tygodni intensywnej pracy</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="hero-image-container">
+            <div className="hero-image-wrapper">
+              <img 
+                src="/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.png" 
+                alt="Professional training presentation"
+                className="hero-image"
+              />
+              <div className="hero-image-overlay"></div>
+            </div>
+            <div className="hero-testimonial">
+              <div className="testimonial-label">US Department of Defense</div>
+              <div className="testimonial-text">
+                "Exceptional training methodology that transformed our technical capabilities"
               </div>
             </div>
           </div>
@@ -109,11 +111,11 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Program Section */}
-      <section className="py-20 bg-premium">
+      <section className="py-20 bg-gradient-to-br from-background via-secondary/30 to-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-premium-foreground">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
                 Train The Trainer: <span className="text-gold">Elite Academy</span>
               </h2>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
@@ -132,9 +134,9 @@ export default function TrainTheTrainer() {
                 { title: "System Pozyskiwania Klientów", icon: Compass, description: "Budowanie marki osobistej i pozyskiwanie zleceń" },
                 { title: "Bezcenna Sieć Kontaktów", icon: GitMerge, description: "Dostęp do sieci międzynarodowych trenerów" }
               ].map((feature, index) => (
-                <GlassCard key={index} className="p-8 text-center bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all">
+                <GlassCard key={index} className="p-8 text-center bg-card/80 backdrop-blur-sm border border-border hover:bg-card/90 transition-all hover:shadow-lg hover:shadow-premium/10">
                   <feature.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
-                  <h3 className="text-xl font-bold mb-3 text-premium-foreground">{feature.title}</h3>
+                  <h3 className="text-xl font-bold mb-3 text-card-foreground">{feature.title}</h3>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </GlassCard>
               ))}
@@ -144,10 +146,10 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-premium">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
               Zaufali nam globalni liderzy
             </h2>
             
@@ -173,10 +175,10 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-20 bg-premium">
+      <section className="py-20 bg-gradient-to-br from-background via-secondary/30 to-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-premium-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-foreground">
               Program dedykowany dla
             </h2>
             
@@ -187,9 +189,9 @@ export default function TrainTheTrainer() {
                 { title: "IT Manager", icon: Users, description: "Zarządzanie zespołami technicznymi" },
                 { title: "Administrator", icon: Shield, description: "Administracja systemów i infrastruktury" }
               ].map((persona, index) => (
-                <GlassCard key={index} className="p-6 text-center bg-white/10 backdrop-blur-sm border border-white/20">
+                <GlassCard key={index} className="p-6 text-center bg-card/80 backdrop-blur-sm border border-border hover:bg-card/90 transition-all">
                   <persona.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
-                  <h3 className="text-lg font-bold mb-3 text-premium-foreground">{persona.title}</h3>
+                  <h3 className="text-lg font-bold mb-3 text-card-foreground">{persona.title}</h3>
                   <p className="text-sm text-muted-foreground">{persona.description}</p>
                 </GlassCard>
               ))}
@@ -211,12 +213,12 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Mentor Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-premium">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                   Ludwik C. Siadlak
                 </h2>
                 <p className="text-xl mb-8 text-muted-foreground italic">
@@ -239,19 +241,19 @@ export default function TrainTheTrainer() {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
+                  <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
                     <div className="text-3xl font-bold text-premium">19</div>
                     <div className="text-sm text-muted-foreground">lat doświadczenia</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
                     <div className="text-3xl font-bold text-premium">500+</div>
                     <div className="text-sm text-muted-foreground">międzynarodowych szkoleń</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
                     <div className="text-3xl font-bold text-premium">10K+</div>
                     <div className="text-sm text-muted-foreground">wyszkolonych specjalistów</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center p-6 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
                     <div className="text-3xl font-bold text-premium">50+</div>
                     <div className="text-sm text-muted-foreground">organizacji Fortune 500</div>
                   </div>
@@ -271,20 +273,20 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-premium">
+      <section className="py-20 bg-gradient-to-br from-premium/5 via-background to-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 text-lg px-6 py-2 bg-destructive text-destructive-foreground border-0">
               Ilość miejsc jest bezwzględnie ograniczona do 8 osób
             </Badge>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-premium-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
               Transformacja kariery nie zaczyna się za tydzień.<br />
               <span className="text-gold">Zaczyna się od jednej decyzji.</span>
             </h2>
             
             <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-premium-foreground">Sesja Discovery</h3>
+              <h3 className="text-2xl font-bold mb-6 text-foreground">Sesja Discovery</h3>
               <p className="text-lg text-muted-foreground mb-8">30-minutowa konsultacja online, podczas której:</p>
               
               <div className="space-y-4 mb-8 text-left max-w-2xl mx-auto">
@@ -305,7 +307,7 @@ export default function TrainTheTrainer() {
               <CTAButton
                 variant="primary"
                 size="xl"
-                className="font-bold px-12 py-6 text-xl border-0 mb-6 bg-gold text-gold-foreground hover:bg-gold/90"
+                className="btn-hero text-xl px-12 py-6 mb-6 border-0"
                 showArrow
               >
                 Sprawdź dostępne terminy
