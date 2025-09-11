@@ -2,7 +2,7 @@ import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
 import { GlassCard } from '@/components/ui/glass-card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Star, Users, BookOpen, Compass, GitMerge, Book, Crown, Shield, AlertCircle } from '@/lib/icons';
+import { CheckCircle, Star, Users, Compass, GitMerge, Book, Crown, Shield, AlertCircle } from '@/lib/icons';
 
 export default function TrainTheTrainer() {
   return (
@@ -110,36 +110,67 @@ export default function TrainTheTrainer() {
         </div>
       </section>
 
-      {/* Program Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-secondary/30 to-muted">
+      {/* Mentoring Program Section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-                Train The Trainer: <span className="text-gold">Elite Academy</span>
-              </h2>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                8-tygodniowa transformacja z inżyniera w międzynarodowego trenera technologii
-              </p>
-              <Badge className="text-lg px-6 py-2 bg-destructive text-destructive-foreground border-0">
-                Ograniczone do 8 miejsc - hard cap. Żadnych wyjątków.
+              <Badge className="mb-6 text-sm px-4 py-2 bg-premium text-white border-0 rounded-full">
+                Program Mentoringowy
               </Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Train The Trainer: Elite <span className="text-gold">Academy</span>
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
+                8-tygodniowa transformacja z inżyniera w międzynarodowego trenera technologii.
+              </p>
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto">
+                To program, którego sam potrzebowałem 19 lat temu. To esencja wszystkiego, czego nauczyłem się 
+                prowadząc szkolenia dla US Army, US Navy, NATO, Norweskiej Policji, GM, GE, ING Banku i dziesiątek 
+                innych prestiżowych organizacji.
+              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {[
-                { title: "Mindset Elity", icon: Star, description: "Transformacja mentalności z programisty na lidera myśli" },
-                { title: "Architektura Emocji", icon: Users, description: "Zarządzanie energią i emocjami grupy szkoleniowej" },
-                { title: "Warsztat Mistrza", icon: BookOpen, description: "Techniki prezentacji i storytelling dla IT" },
-                { title: "System Pozyskiwania Klientów", icon: Compass, description: "Budowanie marki osobistej i pozyskiwanie zleceń" },
-                { title: "Bezcenna Sieć Kontaktów", icon: GitMerge, description: "Dostęp do sieci międzynarodowych trenerów" }
+                { 
+                  title: "Mindset Elity", 
+                  icon: Star, 
+                  description: "Odetniesz się od mentalności 'technicznego najemnika'. Nauczysz się myśleć jak consultant premium, a nie techniczny najemnik." 
+                },
+                { 
+                  title: "Architektura Emocji", 
+                  icon: Users, 
+                  description: "Nauczysz się projektować szkolenia tak, aby budować zaangażowanie w pierwsze do ostatni minuty. Zastapisz nudne wykłady historiami, metaforami i ćwiczeniami." 
+                },
+                { 
+                  title: "Warsztat Mistrza", 
+                  icon: Book, 
+                  description: "Dowiesz się, jak radzić sobie z trudnymi uczestnikami, jak prowadzić grupę przez techniczne labirynty i jak zawsze wyjść z twarzą z najtu¬dnej sytuacji." 
+                },
+                { 
+                  title: "System Pozyskiwania Klientów", 
+                  icon: Compass, 
+                  description: "Pokażę Ci sprawdzone metody na dotarcie do klientów korporacyjnych i rządowych. Jak wykonać usługę? Jak budować ofertę nie do odrzucenia?" 
+                },
+                { 
+                  title: "Bezcenna Sieć Kontaktów", 
+                  icon: GitMerge, 
+                  description: "Dołączysz do zamkniętej grupy absolwentów - przyszłych i obecnych trenerów premium, z którymi będziesz dzielić się zleceniami i wspierać w rozwoju." 
+                }
               ].map((feature, index) => (
-                <GlassCard key={index} className="p-8 text-center bg-card/80 backdrop-blur-sm border border-border hover:bg-card/90 transition-all hover:shadow-lg hover:shadow-premium/10">
-                  <feature.icon className="w-12 h-12 mx-auto mb-4 text-gold" />
-                  <h3 className="text-xl font-bold mb-3 text-card-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                <GlassCard key={index} className="p-6 text-left bg-card/50 backdrop-blur-sm border border-border hover:bg-card/90 transition-all hover:shadow-lg hover:shadow-premium/10">
+                  <feature.icon className="w-8 h-8 mb-4 text-gold" />
+                  <h3 className="text-lg font-bold mb-3 text-card-foreground">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </GlassCard>
               ))}
+            </div>
+            
+            <div className="text-center">
+              <Badge className="text-base px-6 py-3 bg-gold/20 text-gold border border-gold/30 rounded-full">
+                ⚠️ Ograniczone do 8 miejsc - hard cap. Żadnych wyjątków.
+              </Badge>
             </div>
           </div>
         </div>
@@ -268,6 +299,20 @@ export default function TrainTheTrainer() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Testimonials Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Zaufali nam najwięksi <span className="text-gold">gracze</span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-12">
+              19 lat na rynku szkoleniowym IT. Doświadczenie z największymi organizacjami świata.
+            </p>
           </div>
         </div>
       </section>
