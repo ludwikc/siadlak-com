@@ -9,14 +9,19 @@ import { Badge } from '@/components/ui/badge';
 const Webinar = () => {
   // Define workshop date info
   const workshopDate = {
-    date: "18–21 sierpnia 2025",
+    date: "16.10",
     day: "",
-    time: "11:30-12:34",
+    time: "19:00",
     timezone: ""
   };
 
-  // What attendees will learn during the workshop
-  const workshopPromises = ["Czy Twoja biznesowa, korporacyjna lub freelancerska siekiera jest ostra, czy raczej tępa — i dlaczego większość ludzi wybiera to drugie.", "Jak rozpoznać, czy to w ogóle jest Twoje narzędzie — takie, które pasuje do Twojej natury i stylu pracy.", "Jak upewnić się, że jesteś we właściwym lesie — i jak wyjść z tego, który prowadzi donikąd.", "MEGA BONUS: jednodniowy dostęp do #1234-daily-coaching — przyjdź z własnym problemem, wyjdź z gotowym planem działania (tak codziennie pracują Lifehackerzy)."];
+  // Workshop agenda points
+  const workshopAgenda = [
+    "KRYZYS CZY PRZEMIANA? - Dialog: Dlaczego tak wielu facetów czuje, że się gubi? Zderzymy perspektywę tożsamości (Ludwik) z codziennymi wyzwaniami braku struktury (Mateusz).",
+    "KOMPAS MĘŻCZYZNY - Mini-warsztat z Mateuszem: Otrzymasz proste narzędzie do zmapowania swojego 'tu i teraz' i wyznaczenia kierunku na przyszłość.", 
+    "MAPA + ZAŁOGA = NOWA DROGA - Rozmowa: Dlaczego wizja bez działania to marzycielstwo, a plan bez wizji to pusta checklista?",
+    "Q&A - Sesja pytań i odpowiedzi, podczas której będziesz mógł zadać nam każde pytanie."
+  ];
   return <Layout>
       <div className="bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 min-h-screen">
         {/* Event Header Section with Countdown */}
@@ -34,27 +39,23 @@ const Webinar = () => {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-neural-violet dark:text-neural-violet bg-gradient-to-r from-neural-violet dark:from-neural-violet to-ascension-pink dark:to-ascension-pink bg-clip-text text-transparent">
-                  Drwal w Białym Kołnierzyku: <br/>4-dniowy warsztat ostrzenia życiowej siekiery
+                  Borykasz się z męskim kryzysem? <br/>Czas zbudować nową siłę.
                 </h1>
 
                 <p className="text-xl md:text-2xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/90">
-                  Przestań machać tępym narzędziem w przypadkowym kierunku, "bo tak trzeba". Naucz się ostrzyć swoją produktywność tak, by wreszcie docierać do tego, co naprawdę się liczy.
-                </p>
-
-                <p className="text-lg mb-8 text-deep-charcoal/70 dark:text-silver-mist/80 font-medium">
-                  Intensywny 4-dniowy warsztat z Ludwikiem C. Siadlakiem: Jak przestać rąbać nie ten las i nie tą siekierą
+                  Weź udział w bezpłatnym webinarze dla mężczyzn 30+ z analitycznym umysłem, którzy mają dość dryfowania. Pokażemy Ci, jak odzyskać kontrolę i spokój, używając konkretnych, systemowych narzędzi.
                 </p>
 
                 {/* Workshop Details */}
                 <div className="bg-neural-violet/10 rounded-xl p-6 mb-8 border border-neural-violet/20">
                   <div className="space-y-3">
                     <div className="text-lg font-medium text-neural-violet">
-                      📅 {workshopDate.date}
+                      📅 Data: {workshopDate.date}
                     </div>
                     <div className="text-lg font-medium text-neural-violet">
                       🕒 Godzina: {workshopDate.time}
                     </div>
-                    <div className="text-lg font-medium text-neural-violet">🎥 Spotkania live (dostęp do nagrań tylko audio)</div>
+                    <div className="text-lg font-medium text-neural-violet">🎥 Miejsce: Online (link otrzymasz po zapisie)</div>
                   </div>
                 </div>
 
@@ -68,7 +69,7 @@ const Webinar = () => {
                   {/* Date Badge - More prominent styling */}
                   <div className="mb-8 text-center">
                     <Badge variant="outline" className="bg-neural-violet text-white text-sm px-3 py-1 mb-2">
-                      Zarezerwuj swoje miejsce
+                      Zarezerwuj swoje miejsce na bezpłatny warsztat online
                     </Badge>
                     <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
                       {/* Reserved for MailerLite embed */}
@@ -84,117 +85,156 @@ const Webinar = () => {
           </div>
         </section>
 
-        {/* Notice Section */}
-        <section className="py-8 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
-          <div className="container max-w-6xl mx-auto px-4 text-center">
-            <p className="text-lg font-medium text-deep-charcoal/80 dark:text-silver-mist/90">
-              Liczba miejsc ograniczona – to kameralne spotkanie w gronie nowych znajomych, a nie konferencja na Narodowym.
-            </p>
+        {/* Problem Section */}
+        <section className="py-16 bg-red-50 dark:bg-red-950/20">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-red-800 dark:text-red-300">
+                Masz wrażenie, że biegniesz w miejscu, chociaż robisz wszystko "jak należy"?
+              </h2>
+              
+              <p className="text-xl mb-8 text-center text-deep-charcoal/80 dark:text-silver-mist/90">
+                To spotkanie jest dla Ciebie, jeśli:
+              </p>
+
+              <div className="space-y-4 mb-12">
+                {[
+                  "Czujesz, że utknąłeś w pętli myśli i analiz, które nie prowadzą do żadnych konkretnych decyzji.",
+                  "Z jednej strony słyszysz o 'kryzysie męskości', z drugiej o 'toksyczności'. Trudno się w tym odnaleźć.",
+                  "Szukasz praktycznych narzędzi, a nie kolejnej dawki motywacyjnego 'bullshitu'.",
+                  "Chcesz zrozumieć, jak połączyć swoje wartości z codziennym planem działania, aby Twoje życie nabrało sensu i spójności."
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 p-6 bg-white dark:bg-red-900/30 rounded-xl border border-red-200 dark:border-red-800">
+                    <span className="text-red-600 font-bold text-xl flex-shrink-0">✓</span>
+                    <p className="text-lg text-red-800 dark:text-red-200">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-neural-violet/10 rounded-xl p-8 border border-neural-violet/20">
+                <h3 className="text-2xl font-bold mb-6 text-neural-violet">
+                  Podczas tego 60-minutowego, intensywnego warsztatu online:
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    "Zdiagnozujesz, czy to, czego doświadczasz, to kryzys, czy naturalna przemiana, która wymaga nowych narzędzi.",
+                    "Otrzymasz proste, praktyczne narzędzie do zdefiniowania swojego punktu 'tu i teraz' w 4 kluczowych obszarach życia.",
+                    "Zrozumiesz, dlaczego sama wizja (wartości) lub sam plan (checklista) nie działają – i co jest brakującym ogniwem.",
+                    "Zobaczysz, jak zbudować wewnętrzny kompas, który stanie się Twoim systemem nawigacyjnym w chaosie codzienności."
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-4">
+                      <div className="bg-neural-violet text-white h-8 w-8 rounded-full flex items-center justify-center shrink-0">
+                        <span className="font-medium">{index + 1}</span>
+                      </div>
+                      <p className="text-lg text-neural-violet">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Host Credentials Section */}
         <section className="py-16 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm border-t border-b border-gray-200 dark:border-gray-800">
           <div className="container max-w-6xl mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-8">
-                <span className="text-4xl">⸻</span>
-              </div>
-              
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                Prowadzi: Ludwik C. Siadlak
-              </h2>
-              
-              <div className="space-y-4 text-lg text-deep-charcoal/80 dark:text-silver-mist/90">
-                <p>
-                  Prawie 20 lat "rąbania" przez wszystkie możliwe systemy produktywności
-                </p>
-                <p>
-                  Autor kursu Hakowanie Produktywności, który przeszedł drogę od aplikacji po duchowość
-                </p>
-                <p>
-                  Twórca społeczności Lifehackerzy, gdzie codziennie o 12:34 pomagam ludziom ostrzyć ich narzędzia
-                </p>
-                <p className="font-medium">
-                  Przeczytałem wszystkie topowe książki rozwojowe, przetestowałem niemal wszystkie aplikacje TODO i wykarczowałem ścieżkę, którą możesz przejść znacznie szybciej i wygodniej.
-                </p>
-              </div>
-              
-              <div className="mt-8">
-                <span className="text-4xl">⸻</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Workshop Content Section */}
-        <section className="py-16">
-          <div className="container max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              Podczas tych warsztatów dowiesz się:
-            </h2>
-
-            <div className="grid gap-6 max-w-3xl mx-auto">
-              {workshopPromises.map((promise, index) => <div key={index} className="flex items-start gap-4 p-6 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-                  <div className="bg-neural-violet text-white h-8 w-8 rounded-full flex items-center justify-center shrink-0">
-                    <span className="font-medium">{index + 1}</span>
-                  </div>
-                  <p className="text-lg">{promise}</p>
-                </div>)}
-            </div>
-          </div>
-        </section>
-
-        {/* Target Audience Section */}
-        <section className="py-16 bg-white/50 dark:bg-deep-space/50 backdrop-blur-sm">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <div className="mb-8 text-center">
                 <span className="text-4xl">⸻</span>
               </div>
               
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-                Dla kogo jest ten warsztat?
+              <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+                Poznaj dwie strony męskiej drogi.
               </h2>
               
-              <p className="text-xl text-center mb-8 font-medium">
-                Jesteś "drwalem w białym kołnierzyku", jeśli:
+              <p className="text-xl mb-12 text-center text-deep-charcoal/80 dark:text-silver-mist/90">
+                Webinar poprowadzi duet, który łączy wizję ze strukturą, serce z działaniem.
               </p>
 
-              <div className="space-y-4 max-w-3xl mx-auto">
-                <div className="flex items-start gap-4 p-4">
-                  <span className="text-neural-violet font-bold text-xl">→</span>
-                  <p className="text-lg">
-                    Masz narzędzia AI (może nawet zbyt wiele), ale nie wiesz, czy używasz ich właściwie.
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Ludwik C. Siadlak</h3>
+                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90">
+                    Ekspert od męskiej tożsamości i wewnętrznej siły. Pomoże Ci zrozumieć "dlaczego" – co jest Twoim prawdziwym napędem i gdzie leżą Twoje blokady.
                   </p>
                 </div>
-                <div className="flex items-start gap-4 p-4">
-                  <span className="text-neural-violet font-bold text-xl">→</span>
-                  <p className="text-lg">
-                    Pracujesz ciężko, a mimo to masz wrażenie, że oddalasz się od tego, co jest dla Ciebie najważniejsze.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4 p-4">
-                  <span className="text-neural-violet font-bold text-xl">→</span>
-                  <p className="text-lg">
-                    Znasz dziesiątki technik produktywności, słuchasz podcastów, inwestowałeś w kursy — ale z wdrożeniem… sam wiesz, że bywa różnie.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4 p-4">
-                  <span className="text-neural-violet font-bold text-xl">→</span>
-                  <p className="text-lg">
-                    A najgorzej… czasem zastanawiasz się, czy w ogóle jesteś w tym lesie, w którym naprawdę chcesz być.
+                
+                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Mateusz Lizak</h3>
+                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90">
+                    Mistrz systemów i wdrażania. Pokaże Ci "jak" – da konkretne narzędzia i frameworki, które zamienią Twoje cele w realny, codzienny plan.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-12 text-center">
-                <Button onClick={() => document.getElementById("registration-form")?.scrollIntoView({
-                behavior: "smooth"
-              })} className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-6 text-lg">
-                  Zarezerwuj swoje miejsce
-                </Button>
+              <p className="text-center text-lg font-medium text-deep-charcoal/80 dark:text-silver-mist/90">
+                Razem tworzymy przestrzeń, w której męski rozwój to nie puste słowa, ale konkretny, inżynierski proces.
+              </p>
+              
+              <div className="mt-8 text-center">
+                <span className="text-4xl">⸻</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Workshop Agenda Section */}
+        <section className="py-16">
+          <div className="container max-w-6xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+              Co dokładnie wydarzy się na webinarze?
+            </h2>
+            
+            <p className="text-xl font-bold text-center mb-12 text-neural-violet">
+              ZERO LANIA WODY. CZYSTY KONKRET.
+            </p>
+
+            <div className="grid gap-6 max-w-4xl mx-auto">
+              {workshopAgenda.map((item, index) => {
+                const titles = ["CZĘŚĆ 1:", "CZĘŚĆ 2:", "CZĘŚĆ 3:", "CZĘŚĆ 4:"];
+                const [title, ...description] = item.split(" - ");
+                return (
+                  <div key={index} className="flex items-start gap-4 p-6 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+                    <div className="bg-neural-violet text-white h-8 w-8 rounded-full flex items-center justify-center shrink-0">
+                      <span className="font-medium">{index + 1}</span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-neural-violet mb-2">{titles[index]} {title}</h3>
+                      <p className="text-lg">{description.join(" - ")}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-neural-violet/5 via-background to-ascension-pink/5">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+                Przestań zbierać informacje. <br/>
+                <span className="text-neural-violet">Czas zdobyć narzędzia.</span>
+              </h2>
+              
+              <p className="text-xl mb-8 text-deep-charcoal/80 dark:text-silver-mist/90">
+                Liczba miejsc jest ograniczona, aby zapewnić komfort i możliwość interakcji. Jeśli czujesz, że to czas, aby przestać dryfować i zacząć świadomie nawigować, dołącz do nas.
+              </p>
+
+              <p className="text-lg mb-12 font-medium text-neural-violet">
+                Zapis jest bezpłatny i niezobowiązujący. Przychodzimy szczerze pogadać o tym turbo-ważnym temacie
+              </p>
+              
+              <Button onClick={() => document.getElementById("registration-form")?.scrollIntoView({
+                behavior: "smooth"
+              })} className="bg-neural-violet hover:bg-neural-violet/90 text-white px-12 py-6 text-xl mb-6">
+                TAK, ZAPISUJĘ SIĘ NA SPOTKANIE
+              </Button>
+              
+              <p className="text-sm text-deep-charcoal/60 dark:text-silver-mist/70">
+                Gwarantujemy 100% wartości i zero bullshitu. Po prostu przyjdź i sprawdź.
+              </p>
             </div>
           </div>
         </section>
