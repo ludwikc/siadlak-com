@@ -14,6 +14,7 @@ const Webinar = () => {
     time: "19:00",
     timezone: ""
   };
+  
   return <Layout>
       <div className="bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 min-h-screen">
         {/* Event Header Section with Countdown */}
@@ -47,7 +48,7 @@ const Webinar = () => {
                     <div className="text-lg font-medium text-neural-violet">
                       🕒 Godzina: {workshopDate.time}
                     </div>
-                    <div className="text-lg font-medium text-neural-violet">🎥 Miejsce: Online (link otrzymasz po zapisie)</div>
+                    <div className="text-lg font-medium text-neural-violet">🖥️ Format: Spotkanie LIVE na Zoom</div>
                   </div>
                 </div>
 
@@ -61,7 +62,7 @@ const Webinar = () => {
                   {/* Date Badge - More prominent styling */}
                   <div className="mb-8 text-center">
                     <Badge variant="outline" className="bg-neural-violet text-white text-sm px-3 py-1 mb-2">
-                      Zarezerwuj swoje miejsce na bezpłatny warsztat online
+                      Zarezerwuj swoje miejsce na warsztat online
                     </Badge>
                     <div className="bg-neural-violet/10 rounded-xl p-4 border-2 border-neural-violet/30 shadow-inner">
                       {/* Reserved for MailerLite embed */}
@@ -99,109 +100,6 @@ const Webinar = () => {
                     Jeśli tkwisz w pętli myśli, zamiast podejmować działania – to spotkanie jest frameworkiem, którego szukasz.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Host Credentials Section */}
-        <section className="py-16 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm border-t border-b border-gray-200 dark:border-gray-800">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center text-neural-violet">
-                Kto prowadzi? Dwa bieguny, jeden cel.
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Ludwik Siadlak</h3>
-                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
-                    twórca społeczności Lifehackerzy. Architekt wizji i sensu. Specjalizuje się w docieraniu do sedna tego, co napędza i blokuje świadomych mężczyzn.
-                  </p>
-                </div>
-                
-                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
-                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Mateusz Lizak</h3>
-                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
-                    praktyk rozwoju, inżynier systemów i działania. Przekłada wielkie idee na konkretne, codzienne procesy i narzędzia.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20 text-center">
-                <p className="text-lg font-medium text-neural-violet">
-                  Razem tworzymy Męski Kompas – przestrzeń dla facetów, którzy chcą iść własną drogą, ale potrzebują do tego mapy i niezawodnych narzędzi.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Logistics and Transparency Section */}
-        <section className="py-16 bg-gradient-to-br from-neural-violet/5 via-background to-ascension-pink/5">
-          <div className="container max-w-6xl mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-neural-violet">
-                Szczegóły spotkania
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-gray-800">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">📅</span>
-                      <div>
-                        <p className="font-medium text-neural-violet">Kiedy:</p>
-                        <p className="text-lg">{workshopDate.date} | {workshopDate.time}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">🖥️</span>
-                      <div>
-                        <p className="font-medium text-neural-violet">Gdzie:</p>
-                        <p className="text-lg">Interaktywny warsztat na Zoom</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-gray-800">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">💰</span>
-                      <div>
-                        <p className="font-medium text-neural-violet">Inwestycja:</p>
-                        <p className="text-lg">Twój czas i uwaga. Udział bezpłatny.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">⏱️</span>
-                      <div>
-                        <p className="font-medium text-neural-violet">Czas trwania:</p>
-                        <p className="text-lg">60-75 minut konkretów i pracy na żywo</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20 mb-8">
-                <h3 className="text-xl font-bold mb-4 text-neural-violet">Nota transparentności:</h3>
-                <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
-                  Pod koniec warsztatu otworzymy rekrutację do pierwszej, zamkniętej kohorty programu "Męski Kompas". Pokażemy, co budujemy i dla kogo. Bez presji i agresywnej sprzedaży. Po prostu przedstawimy logiczny, kolejny krok dla tych, którzy będą gotowy.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <p className="text-xl font-medium mb-6 text-neural-violet">
-                  Zarezerwuj swoje miejsce i dołącz do rozmowy, która może być Twoim nowym początkiem.
-                </p>
-                
-                <Button onClick={() => document.getElementById("registration-form")?.scrollIntoView({
-                  behavior: "smooth"
-                })} className="bg-neural-violet hover:bg-neural-violet/90 text-white px-12 py-6 text-xl">
-                  ZAREZERWUJ MIEJSCE
-                </Button>
               </div>
             </div>
           </div>
@@ -274,19 +172,33 @@ const Webinar = () => {
                 </p>
 
                 <div className="space-y-6">
-                  {[
-                    "Masz dość powierzchownych porad typu \"bądź alfa\" czy \"znajdź balans\".",
-                    "Myślisz systemowo i szukasz frameworków do wdrożenia, a nie kolejnych teorii do przemyślenia.",
-                    "Chcesz budować życie w oparciu o własny, wewnętrzny system operacyjny, a nie cudze oczekiwania.",
-                    "Rozumiesz, że prawdziwa siła to spójność wewnętrzna, a nie zewnętrzne pozory."
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-neural-violet/5 rounded-xl border border-neural-violet/10">
-                      <div className="bg-neural-violet text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm">
-                        ✓
-                      </div>
-                      <p className="text-lg text-neural-violet font-medium">{item}</p>
+                  <div className="flex items-start gap-4 p-4 bg-neural-violet/5 rounded-xl border border-neural-violet/10">
+                    <div className="bg-neural-violet text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm">
+                      •
                     </div>
-                  ))}
+                    <p className="text-lg text-neural-violet font-medium">Masz dość powierzchownych porad typu "bądź alfa" czy "znajdź balans".</p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-neural-violet/5 rounded-xl border border-neural-violet/10">
+                    <div className="bg-neural-violet text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm">
+                      •
+                    </div>
+                    <p className="text-lg text-neural-violet font-medium">Myślisz systemowo i szukasz <strong>frameworków do wdrożenia</strong>, a nie kolejnych teorii do przemyślenia.</p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-neural-violet/5 rounded-xl border border-neural-violet/10">
+                    <div className="bg-neural-violet text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm">
+                      •
+                    </div>
+                    <p className="text-lg text-neural-violet font-medium">Chcesz budować życie w oparciu o własny, wewnętrzny system operacyjny, a nie cudze oczekiwania.</p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-neural-violet/5 rounded-xl border border-neural-violet/10">
+                    <div className="bg-neural-violet text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm">
+                      •
+                    </div>
+                    <p className="text-lg text-neural-violet font-medium">Rozumiesz, że prawdziwa siła to spójność wewnętrzna, a nie zewnętrzne pozory.</p>
+                  </div>
                 </div>
                 
                 <div className="mt-8 text-center">
@@ -299,7 +211,108 @@ const Webinar = () => {
           </div>
         </section>
 
-        {/* Final CTA Section - Removed as it's integrated above */}
+        {/* Host Credentials Section */}
+        <section className="py-16 bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm border-t border-b border-gray-200 dark:border-gray-800">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center text-neural-violet">
+                Kto prowadzi? Dwa bieguny, jeden cel.
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Ludwik Siadlak</h3>
+                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
+                    – twórca społeczności Lifehackerzy. Architekt wizji i sensu. Specjalizuje się w docieraniu do sedna tego, co napędza i blokuje świadomych mężczyzn.
+                  </p>
+                </div>
+                
+                <div className="bg-white/50 dark:bg-deep-space/50 rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+                  <h3 className="text-xl font-bold mb-4 text-neural-violet">Mateusz Lizak</h3>
+                  <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
+                    – praktyk rozwoju, inżynier systemów i działania. Przekłada wielkie idee na konkretne, codzienne procesy i narzędzia.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20 text-center">
+                <p className="text-lg font-medium text-neural-violet">
+                  Razem tworzymy Męski Kompas – przestrzeń dla facetów, którzy chcą iść własną drogą, ale potrzebują do tego mapy i niezawodnych narzędzi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Logistics and Transparency Section */}
+        <section className="py-16 bg-gradient-to-br from-neural-violet/5 via-background to-ascension-pink/5">
+          <div className="container max-w-6xl mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-neural-violet">
+                Szczegóły spotkania:
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-gray-800">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">📅</span>
+                      <div>
+                        <p className="font-medium text-neural-violet">Kiedy:</p>
+                        <p className="text-lg">{workshopDate.date} | {workshopDate.time}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">🖥️</span>
+                      <div>
+                        <p className="font-medium text-neural-violet">Gdzie:</p>
+                        <p className="text-lg">Interaktywny warsztat na Zoom (link otrzymasz po zapisie)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/70 dark:bg-deep-space/70 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-gray-800">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">💰</span>
+                      <div>
+                        <p className="font-medium text-neural-violet">Inwestycja:</p>
+                        <p className="text-lg">Twój czas i uwaga. Udział jest bezpłatny.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl">⏱️</span>
+                      <div>
+                        <p className="font-medium text-neural-violet">Czas trwania:</p>
+                        <p className="text-lg">60-75 minut konkretów i pracy na żywo.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20 mb-8">
+                <h3 className="text-xl font-bold mb-4 text-neural-violet">Nota transparentności:</h3>
+                <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/90 leading-relaxed">
+                  Pod koniec warsztatu otworzymy rekrutację do pierwszej, zamkniętej kohorty programu "Męski Kompas". Pokażemy, co budujemy i dla kogo. Bez presji i agresywnej sprzedaży. Po prostu przedstawimy logiczny, kolejny krok dla tych, którzy będą gotowi.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <p className="text-xl font-medium mb-6 text-neural-violet">
+                  Zarezerwuj swoje miejsce i dołącz do rozmowy, która może być Twoim nowym początkiem.
+                </p>
+                
+                <Button onClick={() => document.getElementById("registration-form")?.scrollIntoView({
+                  behavior: "smooth"
+                })} className="bg-neural-violet hover:bg-neural-violet/90 text-white px-12 py-6 text-xl">
+                  ZAREZERWUJ MIEJSCE
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Social Proof */}
         <WebinarTestimonials />
@@ -307,4 +320,5 @@ const Webinar = () => {
       </div>
     </Layout>;
 };
+
 export default Webinar;
