@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vite build && npm run prerender",
     "build:spa": "vite build",
-    "build:dev": "vite-ssg build --mode development",
+    "build:dev": "vite build --mode development",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "preview:ssg": "vite preview --outDir dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -70,7 +70,6 @@
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@unhead/vue": "^2.0.17",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
@@ -79,11 +78,11 @@
     "globals": "^15.9.0",
     "lovable-tagger": "^1.1.7",
     "postcss": "^8.4.47",
+    "puppeteer": "^24.22.0",
     "react-helmet-async": "^2.0.5",
     "tailwindcss": "^3.4.11",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1",
-    "vite-ssg": "^28.1.0"
+    "vite": "^5.4.1"
   }
 }

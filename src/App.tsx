@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Index from './pages/Index';
@@ -44,7 +44,8 @@ function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider>
-          <Routes>
+          <Router>
+            <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/discovery" element={<Discovery />} />
@@ -90,6 +91,7 @@ function App() {
             
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Router>
         </ThemeProvider>
       </QueryClientProvider>
     </HelmetProvider>

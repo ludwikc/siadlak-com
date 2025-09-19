@@ -231,6 +231,52 @@ export const seoRouteConfig: RouteConfig[] = [
       keywords: 'mapa strony, nawigacja, struktura, treści',
       url: '/sitemap'
     }
+  },
+  {
+    path: '/oto',
+    seo: {
+      title: 'Oferta Specjalna',
+      description: 'Wyjątkowa oferta rozwojowa dostępna przez ograniczony czas. Skorzystaj z okazji i rozwijaj się.',
+      keywords: 'oferta specjalna, promocja, rozwój osobisty, szkolenie',
+      url: '/oto'
+    }
+  },
+  {
+    path: '/new-podcast',
+    seo: {
+      title: 'Nowy Podcast',
+      description: 'Poznaj nasz najnowszy podcast o rozwoju osobistym, produktywności i transformacji życia.',
+      keywords: 'nowy podcast, rozwój osobisty, produktywność, inspiracja',
+      url: '/new-podcast',
+      type: 'podcast'
+    }
+  },
+  {
+    path: '/webinar/expired',
+    seo: {
+      title: 'Webinar Zakończony',
+      description: 'Ten webinar już się zakończył, ale możesz obejrzeć nagranie lub zapisać się na kolejne wydarzenia.',
+      keywords: 'webinar zakończony, nagranie, kolejne wydarzenia',
+      url: '/webinar/expired'
+    }
+  },
+  {
+    path: '/webinar/replay',
+    seo: {
+      title: 'Nagranie Webinaru',
+      description: 'Obejrzyj nagranie z naszego webinaru o rozwoju osobistym i poznaj kluczowe strategie sukcesu.',
+      keywords: 'nagranie webinaru, rozwój osobisty, strategie sukcesu',
+      url: '/webinar/replay'
+    }
+  },
+  {
+    path: '/thank-you',
+    seo: {
+      title: 'Dziękujemy',
+      description: 'Dziękujemy za zainteresowanie naszymi programami rozwoju osobistego. Sprawdź swoją skrzynkę e-mail.',
+      keywords: 'dziękujemy, potwierdzenie, rozwój osobisty',
+      url: '/thank-you'
+    }
   }
 ];
 

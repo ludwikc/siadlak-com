@@ -3,6 +3,8 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Calendar, Mail } from "@/lib/icons";
 import { Linkedin } from "lucide-react";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
 
 const Contact = () => {
   useEffect(() => {
@@ -19,6 +21,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/contact")} />
       {/* Hero Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
