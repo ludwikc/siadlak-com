@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Book, MessageCircle, Settings, Shield, CreditCard, Users } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/components/ui/glass-card';
+import SEO from '@/components/SEO';
+import { getSEOConfig } from '@/lib/seo-config';
 
 const helpSections = [
   {
@@ -68,16 +69,9 @@ const helpSections = [
 ];
 
 export default function Help() {
-  useEffect(() => {
-    document.title = "Centrum pomocy - Ludwik C. Siadlak";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Centrum pomocy i baza wiedzy - znajdź odpowiedzi na najczęściej zadawane pytania o platformę Ludwika C. Siadlaka.');
-    }
-  }, []);
-
   return (
     <Layout>
+      <SEO {...getSEOConfig("/help")} />
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">

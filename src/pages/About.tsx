@@ -4,6 +4,8 @@ import { CTAButton } from '@/components/ui/cta-button';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, Mail, CheckCircle } from '@/lib/icons';
+import SEO from '@/components/SEO';
+import { getSEOConfig } from '@/lib/seo-config';
 
 const About = () => {
   const approachPoints = [
@@ -22,6 +24,7 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/about")} />
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center relative text-center">
         <div className="absolute inset-0 z-0">

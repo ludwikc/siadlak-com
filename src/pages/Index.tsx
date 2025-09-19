@@ -5,6 +5,8 @@ import PersonaSection from "../components/sections/PersonaSection";
 import TrustElements from "../components/sections/TrustElements";
 import Newsletter from "../components/sections/Newsletter";
 import CTASection from "../components/sections/CTASection";
+import SEO from "../components/SEO";
+import { getSEOConfig } from "../lib/seo-config";
 import { Brain, Settings, Briefcase } from "lucide-react";
 
 const Index = () => {
@@ -67,6 +69,7 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/")} />
       <Hero
         title="Odzyskaj kontrolę."
         subtitle="Przestań być kontrolowanym przez technologię. Zacznij nią świadomie sterować."

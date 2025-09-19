@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, Clock, User, MessageCircle } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/components/ui/glass-card';
+import SEO from '@/components/SEO';
 import type { HelpPageData } from './types';
 
 interface HelpPageLayoutProps {
@@ -10,16 +10,15 @@ interface HelpPageLayoutProps {
 }
 
 export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
-  useEffect(() => {
-    document.title = `${data.title} - Centrum pomocy - Ludwik C. Siadlak`;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', `${data.title} - centrum pomocy i baza wiedzy.`);
-    }
-  }, [data.title]);
-
   return (
     <Layout>
+      <SEO 
+        title={`${data.title} - Centrum Pomocy`}
+        description={`${data.title} - centrum pomocy i baza wiedzy. Znajdź odpowiedzi na pytania dotyczące platformy.`}
+        url={`/help/${data.slug || ''}`}
+        type="article"
+        publishedDate={data.lastUpdated}
+      />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Breadcrumb navigation */}
         <nav className="mb-8">
