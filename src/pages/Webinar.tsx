@@ -203,19 +203,52 @@ const Webinar = () => {
               
               <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
                 {/* Countdown */}
-                <div className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground p-8 rounded-3xl text-center shadow-2xl border border-primary/20">
-                  <h3 className="text-2xl font-bold mb-6">Do startu warsztatu pozostało:</h3>
+                <div className="bg-white dark:bg-card border-2 border-primary/30 p-8 rounded-3xl text-center shadow-2xl">
+                  <h3 className="text-2xl font-bold mb-6 text-foreground">Do startu warsztatu pozostało:</h3>
                   <div 
-                    className="text-5xl md:text-6xl font-bold tracking-wider mb-6 font-mono"
+                    className="mb-6"
                     aria-live="polite"
                     aria-label={`Czas do rozpoczęcia warsztatu: ${timeLeft}`}
                   >
-                    {timeLeft}
+                    {(() => {
+                      if (timeLeft === "WEBINAR ZAKOŃCZONY") {
+                        return (
+                          <div className="text-2xl font-bold text-destructive">
+                            WEBINAR ZAKOŃCZONY
+                          </div>
+                        );
+                      }
+                      
+                      const parts = timeLeft.split(':');
+                      if (parts.length === 4) {
+                        const days = parts[0];
+                        const hours = parts[1];
+                        const minutes = parts[2];
+                        const seconds = parts[3];
+                        
+                        return (
+                          <div className="space-y-2">
+                            <div className="text-4xl md:text-5xl font-bold text-primary font-mono">
+                              {days} {parseInt(days) === 1 ? 'dzień' : 'dni'}
+                            </div>
+                            <div className="text-3xl md:text-4xl font-bold text-foreground font-mono tracking-wider">
+                              {hours}:{minutes}:{seconds}
+                            </div>
+                          </div>
+                        );
+                      }
+                      
+                      return (
+                        <div className="text-3xl md:text-4xl font-bold text-foreground font-mono tracking-wider">
+                          {timeLeft}
+                        </div>
+                      );
+                    })()}
                   </div>
-                  <div className="space-y-3 text-lg">
-                    <p><strong>📅 Data:</strong> Czwartek, 16 października 2025</p>
-                    <p><strong>🕐 Godzina:</strong> 19:00 CET (czasu polskiego)</p>
-                    <p><strong>💻 Format:</strong> Live online (otrzymasz link po zapisie)</p>
+                  <div className="space-y-3 text-lg text-muted-foreground">
+                    <p><strong className="text-foreground">📅 Data:</strong> Czwartek, 16 października 2025</p>
+                    <p><strong className="text-foreground">🕐 Godzina:</strong> 19:00 CET (czasu polskiego)</p>
+                    <p><strong className="text-foreground">💻 Format:</strong> Live online (otrzymasz link po zapisie)</p>
                   </div>
                 </div>
 
