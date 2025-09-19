@@ -51,7 +51,7 @@ const Webinar = () => {
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold font-heading leading-tight mb-6 text-primary-foreground">
+              <h1 className="text-4xl md:text-6xl font-bold font-heading leading-relaxed mb-6 text-primary-foreground">
                 Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground/90 leading-relaxed">
