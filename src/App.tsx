@@ -19,8 +19,6 @@ import Terms from './pages/Terms';
 import Webinar from './pages/Webinar';
 import WebinarExpired from './pages/WebinarExpired';
 import WebinarLive from './pages/WebinarLive';
-import WebinarLobby from './pages/WebinarLobby';
-import WebinarRegistration from './pages/WebinarRegistration';
 import WebinarReplay from './pages/WebinarReplay';
 import Testimonials from './pages/Testimonials';
 import Assessment from './pages/Assessment';
@@ -82,8 +80,6 @@ function App() {
           <Route path="/program/uwazne-zycie" element={<UwazneZyciePodcast />} />
           
           <Route path="/webinar" element={<Webinar />} />
-          <Route path="/webinar/registration" element={<WebinarRegistration />} />
-          <Route path="/webinar/lobby" element={<WebinarLobby />} />
           <Route path="/webinar/live" element={<WebinarLive />} />
           <Route path="/webinar/expired" element={<WebinarExpired />} />
           <Route path="/webinar/replay" element={<WebinarReplay />} />
