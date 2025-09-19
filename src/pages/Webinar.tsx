@@ -73,8 +73,12 @@ const Webinar = () => {
               {/* Registration Form */}
               <div id="registration-form" className="inline-block bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-2xl max-w-md mx-auto">
                 <form 
-                  action="https://buy.siadlak.com/checkout/spotkanie-online?lang=pl" 
-                  method="post"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const email = (e.target as HTMLFormElement).email.value;
+                    const encodedEmail = encodeURIComponent(email);
+                    window.location.href = `https://buy.siadlak.com/checkout/spotkanie-online?email=${encodedEmail}&lang=pl`;
+                  }}
                   className="space-y-4"
                 >
                   <label htmlFor="email" className="sr-only">Adres e-mail</label>
