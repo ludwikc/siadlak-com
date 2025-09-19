@@ -30,18 +30,6 @@ const Webinar = () => {
     return () => clearInterval(timerInterval);
   }, []);
 
-  const scrollToForm = () => {
-    const formElement = document.getElementById('registration-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-      // Focus for accessibility
-      const emailInput = formElement.querySelector('input[type="email"]') as HTMLInputElement;
-      if (emailInput) {
-        emailInput.focus();
-      }
-    }
-  };
-
   return (
     <>
       <title>Męski Kompas - Webinar: Jak odzyskać kierunek?</title>
@@ -299,13 +287,13 @@ const Webinar = () => {
               <p className="text-xl mb-10 text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Zdobądź framework, który pozwoli Ci odzyskać kontrolę nad swoim kierunkiem, bez rezygnacji z analitycznego myślenia. Po prostu wykorzystaj je we właściwy sposób.
               </p>
-              <button 
-                onClick={scrollToForm}
+              <a 
+                href="https://buy.siadlak.com/checkout/spotkanie-online"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-5 text-xl font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-accent focus:ring-offset-2 inline-flex items-center gap-3"
               >
                 Zarezerwuj swoje bezpłatne miejsce
-                <span aria-hidden="true">↑</span>
-              </button>
+                <span aria-hidden="true">→</span>
+              </a>
               <p className="mt-6 text-muted-foreground">
                 Liczba miejsc jest ograniczona, aby zapewnić jakość sesji Q&A.
               </p>
