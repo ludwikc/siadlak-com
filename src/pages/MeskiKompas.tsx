@@ -650,6 +650,11 @@ export default function MeskiKompas() {
               {/* Community Logo & Visual */}
               <div className="order-2 lg:order-1 text-center">
                 <img 
+                  src="/lovable-uploads/lifehackerzy-community-call.png" 
+                  alt="Lifehackerzy - Codzienne spotkania społeczności"
+                  className="w-full h-auto rounded-2xl shadow-2xl mb-8"
+                />
+                <img 
                   src="/lovable-uploads/lifehackerzy.svg" 
                   alt="Lifehackerzy - Ekskluzywna społeczność"
                   className="w-full max-w-md h-auto mx-auto mb-6"
