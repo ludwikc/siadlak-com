@@ -540,6 +540,91 @@ export default function MeskiKompas() {
         </div>
       </section>
 
+      {/* Bonus Section - 7 Technik */}
+      <section className="py-20" style={{ backgroundColor: 'hsl(210, 40%, 15%)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block px-6 py-2 rounded-full mb-6" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                <span className="text-lg font-bold">BONUS WARTOŚCI 497 ZŁ</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                2 w 1: Dostaniesz także kurs
+                <br />
+                <span style={{ color: 'hsl(45, 85%, 50%)' }}>
+                  "7 technik produktywności"
+                </span>
+              </h2>
+              <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+                Zapisując się na Męski Kompas, automatycznie otrzymujesz dostęp do pełnego kursu 
+                "7 technik, które natychmiast zwiększą Twoją produktywność" - normalnie sprzedawanego za 497 zł.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Course Image */}
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="/lovable-uploads/7technik_transparent.png" 
+                  alt="7 technik produktywności - kurs bonus"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                />
+              </div>
+
+              {/* Course Details */}
+              <div className="order-1 lg:order-2">
+                <GlassCard className="p-8" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    Co znajdziesz w bonusowym kursie:
+                  </h3>
+                  
+                  <div className="space-y-4 mb-8">
+                    {[
+                      "7 sprawdzonych technik zwiększania produktywności",
+                      "Konkretne narzędzia do natychmiastowego wdrożenia",
+                      "Praktyczne ćwiczenia i case studies",
+                      "Materiały video i audio w wysokiej jakości",
+                      "Dostęp na zawsze - bez ograniczeń czasowych"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(45, 85%, 50%)' }} />
+                        <p className="text-white/90">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-6 rounded-xl text-center" style={{ backgroundColor: 'hsl(45, 85%, 50%)' }}>
+                    <p className="text-xl font-bold" style={{ color: 'hsl(210, 20%, 8%)' }}>
+                      Wartość bonusu: <span className="line-through">497 zł</span>
+                    </p>
+                    <p className="text-2xl font-bold" style={{ color: 'hsl(210, 20%, 8%)' }}>
+                      Dla Ciebie: GRATIS!
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="p-8 rounded-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(45, 85%, 50%)' }}>
+                  Razem otrzymujesz pakiet o wartości 994 zł
+                </h3>
+                <p className="text-xl text-white/90 mb-4">
+                  Męski Kompas (497 zł) + 7 Technik Produktywności (497 zł)
+                </p>
+                <p className="text-3xl font-bold text-white">
+                  Twoja cena: tylko 497 zł
+                </p>
+                <p className="text-lg text-white/70 mt-2">
+                  To prawdziwa oferta 2 w 1 - płacisz za jeden, dostajesz dwa kursy!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Target Audience */}
       <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 99%)' }}>
         <div className="container mx-auto px-4">
