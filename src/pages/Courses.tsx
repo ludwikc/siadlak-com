@@ -41,6 +41,23 @@ const fundamentalPrograms = [
     level: 'Dla poszukujących balansu',
     startDate: 'Dostęp natychmiastowy',
     category: 'Odporność psychiczna'
+  },
+  {
+    id: 'meski-kompas',
+    title: 'Męski Kompas',
+    subtitle: 'Mapa transformacji dla świadomych mężczyzn',
+    description: 'Program dla mężczyzn gotowych przejąć pełną odpowiedzialność za swoje życie. Odkryj i wzmocnij swoją autentyczną męskość w zgodzie z własnymi wartościami.',
+    features: [
+      'Kompleksowa analiza aktualnej sytuacji życiowej',
+      'Praktyczne narzędzia przywództwa osobistego',
+      'Strategie budowania autentycznych relacji',
+      'Protokoły rozwoju fizycznego i mentalnego'
+    ],
+    duration: '8 tygodni',
+    format: 'Intensywny program + community',
+    level: 'Dla gotowych na transformację',
+    startDate: 'Rekrutacja otwarta',
+    category: 'Rozwój osobisty'
   }
 ];
 
@@ -98,7 +115,7 @@ export default function Courses() {
                 <p>(Wiesz czego, zacznij sobie ufać)</p>
                 </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {fundamentalPrograms.map((program) => (
                 <GlassCard 
                   key={program.id}
