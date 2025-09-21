@@ -4,4 +4,5 @@ export interface HelpPageData {
   lastUpdated: string;
   readTime: string;
   category: string;
+  slug?: string;
 }

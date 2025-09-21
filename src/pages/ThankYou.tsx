@@ -49,7 +49,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
     switch (type) {
       case "contact":
         return (
-          <div className="max-w-md w-full space-y-8 bg-white dark:bg-deep-space/60 backdrop-blur-lg p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
@@ -60,29 +60,33 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
-              Wiadomość dotarła. Ale to nie jest automatyczna odpowiedź.
-            </h2>
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-2">
+              Wiadomość dotarła
+            </h1>
+            <p className="text-lg font-medium text-muted-foreground mb-4">
+              Ale to nie jest automatyczna odpowiedź
+            </p>
 
-            <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               Twoja wiadomość trafiła do{" "}
-              <span className="font-bold">prawdziwego człowieka</span>, nie do
+              <span className="font-semibold text-foreground">prawdziwego człowieka</span>, nie do
               bota. Odezwę się do Ciebie w ciągu najbliższych 24 godzin (zwykle
               szybciej).
             </p>
 
-            <div className="bg-gray-50 dark:bg-deep-space p-4 rounded-lg border border-gray-100 dark:border-gray-800">
-              <h3 className="font-medium mb-2 text-neural-violet">
-                💡 Podczas czekania:
-              </h3>
-              <p className="text-sm">
-                <span className="font-medium">83% osób</span>, które wysyłają do
+            <div className="bg-muted/50 p-6 rounded-2xl border border-border/50">
+              <h2 className="font-semibold mb-3 text-primary flex items-center">
+                <span className="text-xl mr-2">💡</span>
+                Podczas czekania:
+              </h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-foreground">83% osób</span>, które wysyłają do
                 mnie wiadomość, zapoznaje się z moim bezpłatnym webinarem o
                 transformacji kariery.
               </p>
               <Button
                 variant="link"
-                className="text-neural-violet p-0 mt-2 font-medium"
+                className="text-primary p-0 mt-3 font-medium hover:text-primary/80"
                 onClick={() => navigate("/webinar")}
               >
                 Sprawdź termin webinaru <ArrowRight className="ml-1 h-4 w-4" />
@@ -90,14 +94,18 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </div>
 
             <Button
-              className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-xl shadow-md transition-all hover:shadow-lg"
               onClick={() => window.open("mailto:", "_blank")}
             >
               Sprawdź swoją skrzynkę email
             </Button>
 
-            <div className="flex justify-center mt-4">
-              <Button variant="ghost" onClick={() => navigate("/")}>
+            <div className="flex justify-center mt-6">
+              <Button 
+                variant="ghost" 
+                onClick={() => navigate("/")}
+                className="text-muted-foreground hover:text-foreground"
+              >
                 Wróć do strony głównej
               </Button>
             </div>
@@ -106,7 +114,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "newsletter":
         return (
-          <div className="max-w-md w-full space-y-8 bg-white dark:bg-deep-space/60 backdrop-blur-lg p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Zap className="h-4 w-4 mr-2" />
@@ -117,38 +125,50 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
-              ⚡ ZAPISANO ⚡ <br />
-              (Ale to dopiero początek...)
-            </h2>
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl mb-4">
+                <Zap className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-2">
+                Zapisano!
+              </h1>
+              <p className="text-lg font-medium text-muted-foreground">
+                Ale to dopiero początek...
+              </p>
+            </div>
 
-            <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
               Właśnie dołączyłeś do{" "}
-              <span className="font-bold">elitarnego grona</span> osób, które
+              <span className="font-semibold text-foreground">elitarnego grona</span> osób, które
               zdecydowały się wziąć swoją karierę we własne ręce. Pierwszy email
               otrzymasz w ciągu 24 godzin.
             </p>
 
-            <div className="bg-gray-50 dark:bg-deep-space p-4 rounded-lg border border-gray-100 dark:border-gray-800">
-              <h3 className="font-medium mb-2 text-neural-violet">
-                🔍 Czy wiedziałeś?
-              </h3>
-              <p className="text-sm">
+            <div className="bg-muted/50 p-6 rounded-2xl border border-border/50">
+              <h2 className="font-semibold mb-3 text-primary flex items-center">
+                <span className="text-xl mr-2">🔍</span>
+                Czy wiedziałeś?
+              </h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 Należysz do elitarnych{" "}
-                <span className="font-medium">13% osób</span>, które faktycznie
+                <span className="font-semibold text-foreground">13% osób</span>, które faktycznie
                 czytają newslettery, na które się zapisują. Potwierdź to teraz.
               </p>
             </div>
 
             <Button
-              className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-xl shadow-md transition-all hover:shadow-lg"
               onClick={() => window.open("mailto:", "_blank")}
             >
               Sprawdź teraz swoją skrzynkę → Pierwszy prezent już czeka
             </Button>
 
-            <div className="flex justify-center mt-4">
-              <Button variant="ghost" onClick={() => navigate("/")}>
+            <div className="flex justify-center mt-6">
+              <Button 
+                variant="ghost" 
+                onClick={() => navigate("/")}
+                className="text-muted-foreground hover:text-foreground"
+              >
                 Wróć do strony głównej
               </Button>
             </div>
@@ -157,7 +177,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "discovery-call":
         return (
-          <div className="max-w-md w-full space-y-8 bg-white dark:bg-deep-space/60 backdrop-blur-lg p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
@@ -168,9 +188,17 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
-              Gratulacje. Twoje życie właśnie weszło na inny tor.
-            </h2>
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl mb-4">
+                <Calendar className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-2">
+                Gratulacje!
+              </h1>
+              <p className="text-lg font-medium text-muted-foreground">
+                Twoje życie właśnie weszło na inny tor
+              </p>
+            </div>
 
             <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
               Doceniam Twoją odwagę. Większość ludzi nigdy nie podejmuje tego
@@ -234,7 +262,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "webinar":
         return (
-          <div className="max-w-md w-full space-y-8 bg-white dark:bg-deep-space/60 backdrop-blur-lg p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Clock className="h-4 w-4 mr-2" />
@@ -245,9 +273,17 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
-              Zarezerwowano miejsce. A teraz mam pytanie...
-            </h2>
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl mb-4">
+                <Clock className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-2">
+                Zarezerwowano miejsce
+              </h1>
+              <p className="text-lg font-medium text-muted-foreground">
+                A teraz mam pytanie...
+              </p>
+            </div>
 
             <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
               Twoje miejsce zostało potwierdzone! Wysłałem szczegóły na Twój
@@ -356,7 +392,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       default:
         return (
-          <div className="max-w-md w-full space-y-8 bg-white dark:bg-deep-space/60 backdrop-blur-lg p-8 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg animate-fade-in">
+          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <CheckCheck className="h-4 w-4 mr-2" />
@@ -367,9 +403,14 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold bg-gradient-text-brand-dark">
-              Dziękujemy za kontakt!
-            </h2>
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl mb-4">
+                <CheckCheck className="h-8 w-8 text-primary-foreground" />
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight mb-2">
+                Dziękujemy za kontakt!
+              </h1>
+            </div>
 
             <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
               Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie
