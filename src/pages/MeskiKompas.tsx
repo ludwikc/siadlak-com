@@ -1,7 +1,7 @@
 import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
 import { GlassCard } from '@/components/ui/glass-card';
-import { CheckCircle, AlertCircle } from '@/lib/icons';
+import { CheckCircle, AlertCircle, Users } from '@/lib/icons';
 import { Link } from 'react-router-dom';
 
 export default function MeskiKompas() {
@@ -618,6 +618,98 @@ export default function MeskiKompas() {
                 </p>
                 <p className="text-lg text-white/70 mt-2">
                   To prawdziwa oferta 2 w 1 - płacisz za jeden, dostajesz dwa kursy!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lifehackerzy Community Bonus Section */}
+      <section className="py-20" style={{ backgroundColor: 'hsl(270, 70%, 8%)' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block px-6 py-2 rounded-full mb-6" style={{ backgroundColor: 'hsl(270, 90%, 60%)', color: 'white' }}>
+                <span className="text-lg font-bold">BONUS BEZCENNY</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Dożywotni dostęp do społeczności
+                <br />
+                <span style={{ color: 'hsl(270, 90%, 60%)' }}>
+                  LIFEHACKERZY
+                </span>
+              </h2>
+              <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+                Ekskluzywna społeczność dostępna wyłącznie dla klientów moich programów rozwojowych. 
+                Miejsce, gdzie spotkasz ludzi o podobnych wartościach, gotowych do wspólnego rozwoju.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Community Logo & Visual */}
+              <div className="order-2 lg:order-1 text-center">
+                <img 
+                  src="/lovable-uploads/lifehackerzy.svg" 
+                  alt="Lifehackerzy - Ekskluzywna społeczność"
+                  className="w-full max-w-md h-auto mx-auto mb-6"
+                />
+                <div className="p-6 rounded-xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <p className="text-2xl font-bold text-white mb-2">
+                    Hackerzy łamią ograniczenia systemów.
+                  </p>
+                  <p className="text-xl" style={{ color: 'hsl(270, 90%, 60%)' }}>
+                    Z nami złamiesz ograniczenia swojego życia.
+                  </p>
+                </div>
+              </div>
+
+              {/* Community Benefits */}
+              <div className="order-1 lg:order-2">
+                <GlassCard className="p-8" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    Co zyskujesz w społeczności Lifehackerów:
+                  </h3>
+                  
+                  <div className="space-y-4 mb-8">
+                    {[
+                      "Codzienne spotkania live z ekspertami i uczestnikami",
+                      "Wymiana wiedzy i doświadczeń z profesjonalistami",
+                      "Sekrety produktywności niedostępne nigdzie indziej",
+                      "Eksperymentalne warsztaty i kreatywne metody pracy",
+                      "Wsparcie motywacyjne i inspiracja każdego dnia",
+                      "Społeczność z całego świata o podobnych wartościach",
+                      "Dostęp dożywotni - bez ograniczeń czasowych"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <Users className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: 'hsl(270, 90%, 60%)' }} />
+                        <p className="text-white/90">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-6 rounded-xl text-center" style={{ backgroundColor: 'hsl(270, 90%, 60%)' }}>
+                    <p className="text-2xl font-bold text-white mb-2">
+                      Wartość społeczności: BEZCENNA
+                    </p>
+                    <p className="text-xl font-bold text-white">
+                      Dla Ciebie: GRATIS na zawsze!
+                    </p>
+                  </div>
+                </GlassCard>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <div className="p-8 rounded-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(270, 90%, 60%)' }}>
+                  Społeczność dostępna wyłącznie dla moich klientów
+                </h3>
+                <p className="text-xl text-white/90 mb-4">
+                  "Jesteśmy wypadkową pięciu osób, z którymi spędzamy najwięcej czasu" - Jim Rohn
+                </p>
+                <p className="text-lg text-white/70">
+                  Otocz się ludźmi, którzy tak jak Ty chcą od życia czegoś więcej
                 </p>
               </div>
             </div>
