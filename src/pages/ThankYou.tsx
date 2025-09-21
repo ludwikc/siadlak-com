@@ -49,7 +49,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
     switch (type) {
       case "contact":
         return (
-          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
+          <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
@@ -94,9 +94,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </div>
 
             <Button
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-xl shadow-md transition-all hover:shadow-lg"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group"
               onClick={() => window.open("mailto:", "_blank")}
             >
+              <Mail className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
               Sprawdź swoją skrzynkę email
             </Button>
 
@@ -114,7 +115,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "newsletter":
         return (
-          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
+          <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Zap className="h-4 w-4 mr-2" />
@@ -157,9 +158,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </div>
 
             <Button
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-xl shadow-md transition-all hover:shadow-lg"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group"
               onClick={() => window.open("mailto:", "_blank")}
             >
+              <Zap className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
               Sprawdź teraz swoją skrzynkę → Pierwszy prezent już czeka
             </Button>
 
@@ -177,7 +179,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "discovery-call":
         return (
-          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
+          <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
@@ -244,11 +246,12 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </div>
 
             <Button
-              className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group"
               onClick={() =>
                 window.open("https://calendar.google.com", "_blank")
               }
             >
+              <Calendar className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
               Dodaj spotkanie do kalendarza TERAZ → Zarezerwuj transformację
             </Button>
 
@@ -262,7 +265,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       case "webinar":
         return (
-          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
+          <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <Clock className="h-4 w-4 mr-2" />
@@ -351,37 +354,45 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </div>
             </div>
 
-            <div className="flex flex-col space-y-4 mt-4">
+            <div className="flex flex-col space-y-5 mt-6">
               <Button
-                className={`w-full ${
+                className={`w-full font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group ${
                   isOfferExpired
-                    ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
-                    : "bg-neural-violet hover:bg-neural-violet/90 text-white"
+                    ? "bg-muted text-muted-foreground cursor-not-allowed"
+                    : "bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground"
                 }`}
                 onClick={() =>
                   !isOfferExpired && navigate("/checkout/special-offer")
                 }
                 disabled={isOfferExpired}
               >
-                {isOfferExpired
-                  ? "Oferta wygasła - Było, minęło..."
-                  : "Tak, chcę natychmiastowe rezultaty (77 PLN)"}
+                {isOfferExpired ? (
+                  <>
+                    <Clock className="mr-3 h-5 w-5" />
+                    Oferta wygasła - Było, minęło...
+                  </>
+                ) : (
+                  <>
+                    <Zap className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
+                    Tak, chcę natychmiastowe rezultaty (77 PLN)
+                  </>
+                )}
               </Button>
 
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full py-4 px-6 rounded-2xl border-2 hover:bg-accent/50 transition-all duration-300 hover:shadow-md group"
                 onClick={() =>
                   window.open("https://calendar.google.com", "_blank")
                 }
               >
-                Dodaj webinar do kalendarza{" "}
-                <Calendar className="ml-2 h-4 w-4" />
+                <Calendar className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Dodaj webinar do kalendarza
               </Button>
 
               <Button
                 variant="ghost"
-                className="text-sm"
+                className="text-muted-foreground hover:text-foreground py-3"
                 onClick={() => navigate("/")}
               >
                 Nie teraz, wróć do strony głównej
@@ -392,7 +403,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
       default:
         return (
-          <div className="max-w-md w-full space-y-6 bg-card/80 backdrop-blur-lg p-8 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
+          <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div className="bg-neural-violet/10 px-3 py-1 rounded-full text-sm text-neural-violet flex items-center">
                 <CheckCheck className="h-4 w-4 mr-2" />
@@ -418,9 +429,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </p>
 
             <Button
-              className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-4"
+              className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-4 px-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group"
               onClick={() => navigate("/")}
             >
+              <ArrowRight className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
               Wróć do strony głównej
             </Button>
           </div>
@@ -436,7 +448,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-ascension-pink/20 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative z-10 w-full max-w-md">
+        <div className="relative z-10 w-full max-w-lg">
           {renderThankYouContent()}
         </div>
       </div>
