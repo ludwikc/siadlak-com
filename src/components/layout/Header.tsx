@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
-import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, FileText } from "lucide-react";
+import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,21 +11,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
   // Refs for dropdown management
-  const timeoutRef = useRef<NodeJS.Timeout>();
   const dropdownRef = useRef<HTMLDivElement>(null);
-  
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setIsDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsDropdownOpen(false);
-    }, 150);
-  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -84,12 +70,7 @@ export default function Header() {
           </Link>
           
           {/* Dropdown for Możliwości */}
-          <div 
-            className="relative group"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            ref={dropdownRef}
-          >
+          <div className="relative" ref={dropdownRef}>
             <button
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -103,396 +84,8 @@ export default function Header() {
               aria-haspopup="true"
             >
               Możliwości
-              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''} group-hover:rotate-180`} />
+              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-            
-            {/* Mega Menu with CSS hover + JavaScript enhancement */}
-            <div className={`hidden md:group-hover:block ${isDropdownOpen ? 'md:block' : ''} absolute right-0 xl:left-1/2 xl:-translate-x-1/2 pt-3 z-[9999] ${
-              isScrolled ? 'top-[56px]' : 'top-[72px]'
-            }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            >
-                <div className="bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden w-fit min-w-[320px] max-w-[min(95vw,1064px)] origin-top-right xl:origin-top">
-                  {/* Desktop Layout - 3 columns, responsive width */}
-                  <div className="hidden lg:flex">
-                    {/* Column 1: Twoja Ścieżka Rozwoju (280px) - Information Only */}
-                    <div className="flex-[280] min-w-0 p-6">
-                      <div className="journey-header mb-4">
-                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
-                          Twoja ścieżka rozwoju
-                        </h3>
-                        <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
-                          3 kroki do transformacji
-                        </p>
-                      </div>
-                      
-                      <div className="journey-steps space-y-6">
-                        <div className="step-item flex items-start">
-                          <div className="step-visual flex flex-col items-center mr-4">
-                            <div className="step-number w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
-                              1
-                            </div>
-                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
-                          </div>
-                          <div className="step-content">
-                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
-                              Wybierz kurs
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              <span className="handwritten-underline">Zrób to <strong>teraz</strong></span> - wiesz czego potrzebujesz. <br/>Podejmij decyzję.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="step-item flex items-start">
-                          <div className="step-visual flex flex-col items-center mr-4">
-                            <div className="step-number w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
-                              2
-                            </div>
-                            <div className="step-line w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
-                          </div>
-                          <div className="step-content pt-1">
-                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
-                              Dołącz do Lifehackerów
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              <span className="yellow-highlight">Dostęp LIFETIME otrzymasz</span> <strong>jeszcze dzisiaj</strong>.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="step-item flex items-start">
-                          <div className="step-visual flex flex-col items-center mr-4">
-                            <div className="step-number w-8 h-8 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-sm font-semibold">
-                              3
-                            </div>
-                          </div>
-                          <div className="step-content pt-1">
-                            <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1 mt-0">
-                              Pracuj ze mną 1:1
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                              Towarzyszę Lifehackerom codziennie. Bez wyjątków. Dołącz do nas i działamy.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Column 2: Możliwości Cards (480px) */}
-                    <div className="flex-[480] min-w-0 p-6 border-l border-slate-200 dark:border-silver-mist/10">
-                      <div className="possibilities-header mb-8">
-                        <h3 className="text-xl font-semibold text-deep-charcoal dark:text-silver-mist">
-                          Wszystkie możliwości
-                        </h3>
-                      </div>
-                      
-                      <div className="possibilities-grid space-y-3">
-                        {/* Full Width Cards */}
-                        <Link 
-                          to="/program" 
-                          className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="absolute top-2 left-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm transform rotate-2 group-hover:rotate-0 transition-transform duration-200">
-                          Tu chcesz zacząć ⤵                         </div>
-                          <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-4">
-                              <Book size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            </div>
-                            <div className="nav-content pr-16">
-                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                Programy rozwojowe
-                              </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                                Kursy online i szkolenia
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/webinar" 
-                          className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="absolute top-2 right-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-[10px] font-semibold px-2 py-1 rounded-md shadow-sm animate-pulse">
-                            Liczba miejsc na żywo ograniczona
-                          </div>
-                          <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-4">
-                              <Video size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            </div>
-                            <div className="nav-content pr-16">
-                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                Wydarzenia na żywo
-                              </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                                Sesje live i masterclassy
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        <Link 
-                          to="/community" 
-                          className="nav-card block p-3 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          <div className="flex items-center">
-                            <div className="nav-icon w-8 h-8 flex items-center justify-center mr-4">
-                              <Users size={18} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            </div>
-                            <div className="nav-content">
-                              <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-0 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                Medytacje na żywo
-                              </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
-                                Każdy wtorek o 6:30 rano w Polsce
-                              </p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        {/* 3 Small Cards */}
-                        <div className="grid grid-cols-3 gap-2">
-                          <Link 
-                            to="/podcast" 
-                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <div className="text-center">
-                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
-                                <Headphones size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                              </div>
-                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                Podcast
-                              </h4>
-                            </div>
-                          </Link>
-
-                          <a 
-                            href="https://youtube.com/@siadlak" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                          >
-                            <div className="text-center">
-                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
-                                <Video size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                              </div>
-                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                YouTube
-                              </h4>
-                            </div>
-                          </a>
-
-                          <Link 
-                            to="/newsletter" 
-                            className="nav-card block p-2 bg-slate-50 dark:bg-secondary/20 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <div className="text-center">
-                              <div className="nav-icon w-6 h-6 flex items-center justify-center mx-auto mb-1">
-                                <Mail size={14} className="text-deep-charcoal/70 dark:text-silver-mist/70" />
-                              </div>
-                              <h4 className="text-sm font-bold text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors tracking-tight">
-                                Newsletter
-                              </h4>
-                            </div>
-                          </Link>
-                        </div>
-
-                        {/* Zobacz wszystkie możliwości button */}
-                        <div className="mt-4 pt-3 border-t border-slate-200 dark:border-silver-mist/10">
-                          <Link 
-                            to="/work" 
-                            className="flex items-center justify-center p-2 text-sm text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors group"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            Zobacz wszystkie możliwości
-                            <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Column 3: Strefa Lifehackerów (280px) - Different Background */}
-                    <div className="flex-[280] min-w-0 p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 border-l border-slate-200 dark:border-silver-mist/10">
-                      <div className="members-zone">
-                        <div className="members-header flex items-center mb-4">
-                          <div className="lock-icon w-8 h-8 flex items-center justify-center bg-amber-50 dark:bg-amber-900/30 rounded-lg mr-3 border border-amber-200 dark:border-amber-700">
-                            <Lock size={16} className="text-amber-700 dark:text-amber-400" />
-                          </div>
-                          <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
-                            Strefa Lifehackerów
-                          </h3>
-                        </div>
-                        
-                        <div className="members-content">
-                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-4">
-                            Witaj z powrotem!
-                          </p>
-                          
-                          <div className="member-links space-y-2">
-                            <a 
-                              href="https://portal.siadlak.com" 
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <Home size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Portal Lifehackerów
-                              </span>
-                            </a>
-                            
-                            <a 
-                              href="/discord" 
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                12:34 Daily Coaching
-                              </span>
-                            </a>
-
-                            <a 
-                              href="/discord" 
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Silent Cowork
-                              </span>
-                            </a>
-                            
-                            <a 
-                              href="/zasoby" 
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Protipy
-                              </span>
-                            </a> 
-                            <a 
-                              href="/zasoby" 
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Warsztaty Hackerów
-                              </span>
-                            </a> 
-                            <a 
-                              href="/zasoby" 
-                              className="member-link flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            >
-                              <FileText size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                              <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                                Dodatkowe materiały
-                              </span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tablet Layout - 2 columns */}
-                  <div className="block lg:hidden w-full">
-                    <div className="flex flex-col md:flex-row">
-                      {/* Column 1: Ścieżka rozwoju */}
-                      <div className="flex-1 min-w-0 p-4 md:p-6">
-                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Twoja ścieżka</h3>
-                        
-                        <div className="space-y-4">
-                          <Link 
-                            to="/program" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <span className="w-6 h-6 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">1</span>
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Wybierz kurs</span>
-                          </Link>
-
-                          <Link 
-                            to="/community" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <span className="w-6 h-6 bg-neural-violet text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">2</span>
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Dołącz do społeczności</span>
-                          </Link>
-
-                          <Link 
-                            to="/contact" 
-                            className="flex items-center p-3 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/5 dark:from-luminal-magenta/10 dark:to-neural-violet/10 rounded-lg hover:from-ascension-pink/20 hover:to-neural-violet/10 dark:hover:from-luminal-magenta/20 dark:hover:to-neural-violet/20 transition-colors border border-ascension-pink/20 dark:border-luminal-magenta/20 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <span className="w-6 h-6 bg-ascension-pink text-luminous-white rounded-full flex items-center justify-center text-xs font-semibold mr-3">3</span>
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Pracuj ze mną 1:1</span>
-                          </Link>
-                        </div>
-                      </div>
-
-                      {/* Column 2: Główna nawigacja */}
-                      <div className="flex-1 min-w-0 p-4 md:p-6 border-t md:border-t-0 md:border-l border-slate-200 dark:border-silver-mist/10">
-                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Możliwości</h3>
-                        
-                        <div className="space-y-2">
-                          <Link 
-                            to="/program" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <Book size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Programy</span>
-                          </Link>
-
-                          <Link 
-                            to="/podcast"
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <Headphones size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Podcasty</span>
-                          </Link>
-
-                          <Link 
-                            to="/community" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <Users size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Społeczność</span>
-                          </Link>
-
-                          <Link 
-                            to="/newsletter" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <Mail size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Newsletter</span>
-                          </Link>
-
-                          <Link 
-                            to="/webinar" 
-                            className="flex items-center p-3 rounded-lg bg-slate-50 dark:bg-secondary/20 hover:bg-slate-100 dark:hover:bg-secondary/30 transition-colors border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
-                            onClick={() => setIsDropdownOpen(false)}
-                          >
-                            <Video size={18} className="mr-3 text-deep-charcoal/70 dark:text-silver-mist/70" />
-                            <span className="font-medium text-deep-charcoal dark:text-silver-mist">Wydarzenia</span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
           </div>
 
           <Link
@@ -541,6 +134,284 @@ export default function Header() {
           </button>
         </div>
       </div>
+
+      {/* Full-Screen Navigation Popup */}
+      {isDropdownOpen && (
+        <div className="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm animate-fade-in">
+          <div className="flex items-center justify-center min-h-screen p-4">
+            <div className="bg-white dark:bg-deep-space rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-silver-mist/10">
+                <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
+                  Wszystkie możliwości
+                </h2>
+                <button
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-secondary/20 transition-colors"
+                  aria-label="Zamknij menu"
+                >
+                  <X size={24} className="text-deep-charcoal dark:text-silver-mist" />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="grid lg:grid-cols-3 gap-8">
+                  {/* Column 1: Twoja Ścieżka Rozwoju */}
+                  <div className="lg:col-span-1">
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
+                        Twoja ścieżka rozwoju
+                      </h3>
+                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                        3 kroki do transformacji
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="flex items-start">
+                        <div className="flex flex-col items-center mr-4">
+                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
+                            1
+                          </div>
+                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                            Wybierz kurs
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                            Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. Podejmij decyzję.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start">
+                        <div className="flex flex-col items-center mr-4">
+                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
+                            2
+                          </div>
+                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                            Dołącz do Lifehackerów
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                            Dostęp LIFETIME otrzymasz <strong>jeszcze dzisiaj</strong>.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start">
+                        <div className="flex flex-col items-center mr-4">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-sm font-semibold">
+                            3
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                            Pracuj ze mną 1:1
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                            Towarzyszę Lifehackerom codziennie. Bez wyjątków. Dołącz do nas i działamy.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Column 2: Main Navigation */}
+                  <div className="lg:col-span-2">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {/* Featured Cards */}
+                      <Link 
+                        to="/program" 
+                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm">
+                          Tu chcesz zacząć ⤵
+                        </div>
+                        <div className="flex items-center pt-8">
+                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Book size={24} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              Programy rozwojowe
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Kursy online i szkolenia
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to="/webinar" 
+                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm animate-pulse">
+                          Liczba miejsc ograniczona
+                        </div>
+                        <div className="flex items-center">
+                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Video size={24} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              Wydarzenia na żywo
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Sesje live i masterclassy
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* Regular Cards */}
+                      <Link 
+                        to="/community" 
+                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Users size={20} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              Medytacje na żywo
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Każdy wtorek o 6:30
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to="/podcast" 
+                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Headphones size={20} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              Podcast
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Słuchaj i ucz się
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to="/newsletter" 
+                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Mail size={20} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              Newsletter
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Cotygodniowe tipy
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      <a 
+                        href="https://youtube.com/@siadlak" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                      >
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <Video size={20} className="text-neural-violet" />
+                          </div>
+                          <div>
+                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              YouTube
+                            </h4>
+                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              Video content
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    {/* Members Zone */}
+                    <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 rounded-xl border border-slate-200 dark:border-silver-mist/10">
+                      <div className="flex items-center mb-4">
+                        <div className="w-8 h-8 flex items-center justify-center bg-amber-50 dark:bg-amber-900/30 rounded-lg mr-3 border border-amber-200 dark:border-amber-700">
+                          <Lock size={16} className="text-amber-700 dark:text-amber-400" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
+                          Strefa Lifehackerów
+                        </h3>
+                      </div>
+                      
+                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-4">
+                        Witaj z powrotem!
+                      </p>
+                      
+                      <div className="grid sm:grid-cols-2 gap-3">
+                        <a 
+                          href="https://portal.siadlak.com" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        >
+                          <Home size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
+                          <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            Portal Lifehackerów
+                          </span>
+                        </a>
+                        
+                        <a 
+                          href="/discord" 
+                          className="flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        >
+                          <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
+                          <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            12:34 Daily Coaching
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Footer Action */}
+                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-silver-mist/10 text-center">
+                      <Link 
+                        to="/work" 
+                        className="inline-flex items-center text-sm text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors group"
+                        onClick={() => setIsDropdownOpen(false)}
+                      >
+                        Zobacz wszystkie możliwości
+                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Mobile Menu */}
       {isMenuOpen && (
