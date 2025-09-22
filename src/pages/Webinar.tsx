@@ -170,7 +170,7 @@ const Webinar = () => {
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
                 
-                <div className="relative flex flex-col lg:flex-row items-center gap-12 p-12">
+                <div className="relative flex flex-col lg:flex-row-reverse items-center gap-12 p-12">
                   {/* Enhanced Photo Section */}
                   <div className="flex-shrink-0 relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -188,14 +188,14 @@ const Webinar = () => {
                   </div>
                   
                   {/* Enhanced Content Section */}
-                  <div className="flex-1 text-center lg:text-left space-y-6">
+                  <div className="flex-1 text-center lg:text-right space-y-6">
                     <div className="space-y-2">
                       <h3 className="text-4xl font-bold text-foreground font-heading tracking-tight">
                         Mateusz Lizak
                       </h3>
-                      <div className="flex items-center justify-center lg:justify-start gap-2 text-primary font-medium">
-                        <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                      <div className="flex items-center justify-center lg:justify-end gap-2 text-primary font-medium">
                         <span>Mentor Świadomych Mężczyzn</span>
+                        <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                       </div>
                     </div>
                     
@@ -209,7 +209,7 @@ const Webinar = () => {
                     </div>
                     
                     {/* Leadership qualities */}
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
+                    <div className="flex flex-wrap justify-center lg:justify-end gap-3 pt-4">
                       <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                         Warsztatowy podział pracy
                       </span>
@@ -231,7 +231,7 @@ const Webinar = () => {
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
                 
-                <div className="relative flex flex-col lg:flex-row-reverse items-center gap-12 p-12">
+                <div className="relative flex flex-col lg:flex-row items-center gap-12 p-12">
                   {/* Enhanced Photo Section */}
                   <div className="flex-shrink-0 relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -243,20 +243,20 @@ const Webinar = () => {
                       />
                     </div>
                     {/* Leadership badge */}
-                    <div className="absolute -bottom-2 -left-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                       ZAŁOŻYCIEL
                     </div>
                   </div>
                   
                   {/* Enhanced Content Section */}
-                  <div className="flex-1 text-center lg:text-right space-y-6">
+                  <div className="flex-1 text-center lg:text-left space-y-6">
                     <div className="space-y-2">
                       <h3 className="text-4xl font-bold text-foreground font-heading tracking-tight">
                         Ludwik C. Siadlak
                       </h3>
-                      <div className="flex items-center justify-center lg:justify-end gap-2 text-accent font-medium">
-                        <span>Założyciel i Architekt Systemu</span>
+                      <div className="flex items-center justify-center lg:justify-start gap-2 text-accent font-medium">
                         <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                        <span>Założyciel i Architekt Systemu</span>
                       </div>
                     </div>
                     
@@ -270,7 +270,7 @@ const Webinar = () => {
                     </div>
                     
                     {/* Leadership qualities */}
-                    <div className="flex flex-wrap justify-center lg:justify-end gap-3 pt-4">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
                       <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
                         Architekt systemu
                       </span>
