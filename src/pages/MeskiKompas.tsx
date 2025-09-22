@@ -12,7 +12,7 @@ export default function MeskiKompas() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/lovable-uploads/a4fb6895-f87c-44d6-aab9-c77f08e52f54.png')`,
+            backgroundImage: `url('/lovable-uploads/meski-kompas-hero.png')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
