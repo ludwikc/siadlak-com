@@ -57,7 +57,7 @@ const fundamentalPrograms = [
     format: 'Intensywny program + community',
     level: 'Dla gotowych na transformację',
     startDate: 'Rekrutacja otwarta',
-    category: 'Rozwój osobisty'
+    category: 'Męskość'
   }
 ];
 
@@ -115,8 +115,8 @@ export default function Courses() {
                 <p>(Wiesz czego, zacznij sobie ufać)</p>
                 </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {fundamentalPrograms.map((program) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                {fundamentalPrograms.slice(0, 2).map((program) => (
                 <GlassCard 
                   key={program.id}
                   className="overflow-hidden h-fit"
@@ -179,6 +179,79 @@ export default function Courses() {
                   </div>
                 </GlassCard>
                 ))}
+              </div>
+              
+              {/* Męski Kompas - Centered below */}
+              <div className="flex justify-center">
+                <div className="w-full max-w-md">
+                  <GlassCard 
+                    className="overflow-hidden h-fit relative"
+                    padding="sm"
+                  >
+                    {/* Nowość Badge */}
+                    <div className="absolute top-4 right-4 z-10">
+                      <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-xs">
+                        NOWOŚĆ
+                      </Badge>
+                    </div>
+                    
+                    <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 animate-pulse"></div>
+                    <span className="text-white text-3xl font-bold text-center px-6 uppercase drop-shadow-lg relative z-10">
+                      {fundamentalPrograms[2].category}
+                    </span>
+                    </div>
+                    
+                    <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                      {fundamentalPrograms[2].title}
+                    </h3>
+                    
+                    <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-3 text-sm">
+                      {fundamentalPrograms[2].subtitle}
+                    </p>
+                    
+                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 text-sm">
+                      {fundamentalPrograms[2].description}
+                    </p>
+                    
+                    {/* Course Quick Info - Compact */}
+                    <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
+                      <div className="flex items-center">
+                      <Clock className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                      <span className="text-subtle-slate dark:text-silver-mist/80">{fundamentalPrograms[2].duration}</span>
+                      </div>
+                      
+                      <div className="flex items-center">
+                      <Star className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
+                      <span className="text-subtle-slate dark:text-silver-mist/80">{fundamentalPrograms[2].level}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Key Features - Compact */}
+                    <div className="mb-6">
+                      <div className="space-y-1">
+                      {fundamentalPrograms[2].features.slice(0, 3).map((feature, index) => (
+                        <div key={index} className="flex items-start text-xs">
+                        <CheckCircle className="h-3 w-3 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                        <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
+                        </div>
+                      ))}
+                      </div>
+                    </div>
+                    
+                    <Link to={`/program/${fundamentalPrograms[2].id}`}>
+                      <CTAButton 
+                        className="w-full" 
+                        size="default"
+                        aria-label={`Zacznij kurs ${fundamentalPrograms[2].title}`}
+                      >
+                        Zacznij swoją podróż
+                      </CTAButton>
+                    </Link>
+                    </div>
+                  </GlassCard>
+                </div>
               </div>
               </div>
             </div>
