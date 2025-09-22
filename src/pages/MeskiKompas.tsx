@@ -232,7 +232,7 @@ export default function MeskiKompas() {
               {/* Mateusz - White (Yang) */}
               <div className="bg-white p-12 flex flex-col items-center text-center">
                 <img 
-                  src="/lovable-uploads/4c324741-f8fb-4fbf-8a33-9e099e8422e3.png" 
+                  src="/lovable-uploads/mateusz-lizak-profile.png" 
                   alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
                   className="w-32 h-32 rounded-full mb-6 object-cover border-4"
                   style={{ borderColor: 'hsl(210, 40%, 15%)' }}
