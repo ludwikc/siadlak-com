@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const Webinar = () => {
   const [timeLeft, setTimeLeft] = useState('');
+  const [email, setEmail] = useState('');
   
   useEffect(() => {
     const targetDate = new Date('2025-10-16T19:00:00').getTime();
@@ -63,9 +64,10 @@ const Webinar = () => {
                 <form 
                   onSubmit={(e) => {
                     e.preventDefault();
-                    const email = (e.target as HTMLFormElement).email.value;
-                    const encodedEmail = encodeURIComponent(email);
-                    window.location.href = `https://buy.siadlak.com/checkout/spotkanie-online?email=${encodedEmail}&lang=pl`;
+                    if (email.trim()) {
+                      const encodedEmail = encodeURIComponent(email.trim());
+                      window.location.href = `https://buy.siadlak.com/checkout/spotkanie-online?email=${encodedEmail}&lang=pl`;
+                    }
                   }}
                   className="space-y-4"
                 >
@@ -74,6 +76,8 @@ const Webinar = () => {
                     id="email"
                     type="email" 
                     name="email" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Twój adres e-mail" 
                     required 
                     aria-required="true"
