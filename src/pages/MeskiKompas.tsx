@@ -2,6 +2,7 @@ import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
 import { GlassCard } from '@/components/ui/glass-card';
 import { CheckCircle, AlertCircle, Users } from '@/lib/icons';
+import { AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MeskiKompas() {
@@ -62,7 +63,7 @@ export default function MeskiKompas() {
                 "Czujesz, że to, co robisz, rozmija się z tym, co jest dla Ciebie naprawdę ważne?"
               ].map((item, index) => (
                 <GlassCard key={index} className="flex items-start gap-4 p-6" style={{ backgroundColor: 'hsl(210, 20%, 95%)', border: '1px solid hsl(210, 40%, 15%)' }}>
-                  <span className="text-2xl flex-shrink-0 mt-1">🚨</span>
+                  <AlertTriangle className="flex-shrink-0 mt-1" size={20} style={{ color: 'hsl(0, 65%, 51%)' }} />
                   <p className="text-lg" style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
                 </GlassCard>
               ))}
