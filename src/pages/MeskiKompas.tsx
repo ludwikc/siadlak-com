@@ -28,7 +28,7 @@ export default function MeskiKompas() {
               Męski Kompas to 5-tygodniowy, intensywny program dla mężczyzn po 30-tce z analitycznym umysłem. 
               Odzyskaj kierunek, spokój i wewnętrzną spójność – bez duchowego bullshitu, z konkretem i strukturą.
             </h2>
-            <Link to="/contact">
+            <Link to="https://buy.siadlak.com/checkout/meski-kompas">
               <CTAButton
                 variant="primary"
                 size="xl"
@@ -618,7 +618,7 @@ export default function MeskiKompas() {
               </h2>
               <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
                 Zapisując się na Męski Kompas, automatycznie otrzymujesz dostęp do pełnego kursu 
-                "7 technik, które natychmiast zwiększą Twoją produktywność" - normalnie sprzedawanego za 497 zł.
+                "7 technik, które natychmiast zwiększą Twoją produktywność" - <Link to="https://buy.siadlak.com/checkout/7technik">normalnie sprzedawanego za 497 zł</Link>.
               </p>
             </div>
 
@@ -880,7 +880,7 @@ export default function MeskiKompas() {
               </p>
             </div>
 
-            <Link to="/contact">
+            <Link to="https://buy.siadlak.com/checkout/meski-kompas">
               <CTAButton
                 variant="primary"
                 size="xl"
