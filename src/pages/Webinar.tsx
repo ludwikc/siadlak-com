@@ -158,12 +158,13 @@ const Webinar = () => {
 
           {/* Host Section */}
           <section aria-labelledby="host-heading" className="py-20 bg-card">
-            <div className="max-w-5xl mx-auto px-6">
+            <div className="max-w-6xl mx-auto px-6">
               <h2 id="host-heading" className="text-4xl md:text-5xl font-bold font-heading text-center mb-16 text-foreground">
                 Kto prowadzi ten warsztat?
               </h2>
               
-              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5 dark:from-card dark:via-card/90 dark:to-primary/10 rounded-3xl shadow-2xl border border-primary/20">
+              {/* Mateusz Lizak */}
+              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5 dark:from-card dark:via-card/90 dark:to-primary/10 rounded-3xl shadow-2xl border border-primary/20 mb-12">
                 {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
@@ -217,6 +218,67 @@ const Webinar = () => {
                       </span>
                       <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                         Praktyczne działania
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ludwik C. Siadlak */}
+              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-accent/5 dark:from-card dark:via-card/90 dark:to-accent/10 rounded-3xl shadow-2xl border border-accent/20">
+                {/* Background accent */}
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-primary/5"></div>
+                <div className="absolute -top-20 -left-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                
+                <div className="relative flex flex-col lg:flex-row-reverse items-center gap-12 p-12">
+                  {/* Enhanced Photo Section */}
+                  <div className="flex-shrink-0 relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div className="relative bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-700 p-2 rounded-full shadow-xl">
+                      <img 
+                        src="/lovable-uploads/ludwik-siadlak-profile.png" 
+                        alt="Ludwik C. Siadlak - Założyciel i wizjoner systemu Męskiego Kompasu" 
+                        className="w-56 h-56 rounded-full object-cover border-4 border-white dark:border-gray-600 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    {/* Leadership badge */}
+                    <div className="absolute -bottom-2 -left-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      ZAŁOŻYCIEL
+                    </div>
+                  </div>
+                  
+                  {/* Enhanced Content Section */}
+                  <div className="flex-1 text-center lg:text-right space-y-6">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold text-foreground font-heading tracking-tight">
+                        Ludwik C. Siadlak
+                      </h3>
+                      <div className="flex items-center justify-center lg:justify-end gap-2 text-accent font-medium">
+                        <span>Założyciel i Architekt Systemu</span>
+                        <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6 text-lg leading-relaxed">
+                      <p className="text-muted-foreground font-medium">
+                        <strong className="text-foreground">Wizjoner i architekt systemu Męskiego Kompasu.</strong> Autor bestsellera "Hakowanie Produktywności", mentor tysięcy profesjonalistów, twórca strukturalnych rozwiązań dla analitycznych umysłów.
+                      </p>
+                      <p className="text-muted-foreground">
+                        Ludwik łączy głęboką analizę systemu z praktycznym doświadczeniem w budowaniu <strong className="text-accent">strukturalnych rozwiązań</strong> dla mężczyzn, którzy myślą systemowo.
+                      </p>
+                    </div>
+                    
+                    {/* Leadership qualities */}
+                    <div className="flex flex-wrap justify-center lg:justify-end gap-3 pt-4">
+                      <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                        Architekt systemu
+                      </span>
+                      <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                        Strukturalne rozwiązania
+                      </span>
+                      <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                        Systemowe myślenie
                       </span>
                     </div>
                   </div>
