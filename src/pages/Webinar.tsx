@@ -159,26 +159,61 @@ const Webinar = () => {
                 Kto prowadzi ten warsztat?
               </h2>
               
-              <div className="bg-white dark:bg-card rounded-3xl p-8 shadow-2xl border border-border">
-                <div className="flex flex-col lg:flex-row items-center gap-10">
-                  <div className="flex-shrink-0">
-                    <img 
-                      src="https://via.placeholder.com/200" 
-                      alt="Portret Mateusza Lizaka - prowadzącego warsztat" 
-                      className="w-48 h-48 rounded-full object-cover border-4 border-accent shadow-xl"
-                    />
+              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5 dark:from-card dark:via-card/90 dark:to-primary/10 rounded-3xl shadow-2xl border border-primary/20">
+                {/* Background accent */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
+                
+                <div className="relative flex flex-col lg:flex-row items-center gap-12 p-12">
+                  {/* Enhanced Photo Section */}
+                  <div className="flex-shrink-0 relative group">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div className="relative bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-700 p-2 rounded-full shadow-xl">
+                      <img 
+                        src="/lovable-uploads/mateusz-lizak-webinar-leader.png" 
+                        alt="Mateusz Lizak - Mentor świadomych mężczyzn i mistrz pracy warsztatowej" 
+                        className="w-56 h-56 rounded-full object-cover border-4 border-white dark:border-gray-600 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    {/* Leadership badge */}
+                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-primary to-accent text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                      MENTOR
+                    </div>
                   </div>
-                  <div className="flex-1 text-center lg:text-left">
-                    <h3 className="text-3xl font-bold mb-6 text-foreground font-heading">
-                      Mateusz Lizak
-                    </h3>
-                    <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                      <p>
-                        Twórca <strong className="text-foreground">"Męskiego Kompasu"</strong>. Przez ponad 10 lat optymalizował systemy i procesy w branży technologicznej, aż odkrył, że najtrudniejszym systemem do zoptymalizowania jest jego własne życie. Zderzył się z wypaleniem, paraliżem decyzyjnym i pułapką własnego analitycznego umysłu.
+                  
+                  {/* Enhanced Content Section */}
+                  <div className="flex-1 text-center lg:text-left space-y-6">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold text-foreground font-heading tracking-tight">
+                        Mateusz Lizak
+                      </h3>
+                      <div className="flex items-center justify-center lg:justify-start gap-2 text-primary font-medium">
+                        <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                        <span>Mentor Świadomych Mężczyzn</span>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6 text-lg leading-relaxed">
+                      <p className="text-muted-foreground font-medium">
+                        <strong className="text-foreground">Praktyk, który przeszedł przez wszystkie pułapki analitycznego umysłu.</strong> Od operatora maszyn CNC po mentora świadomych mężczyzn. Mistrz konkretu i pracy warsztatowej.
                       </p>
-                      <p>
-                        Dziś pomaga mężczyznom takim jak on – inteligentnym, analitycznym profesjonalistom – budować wewnętrzne systemy nawigacji, które łączą ambicję ze spokojem. <strong className="text-foreground">Bez ogólników i motywacyjnej papki. Tylko sprawdzone w boju, logiczne narzędzia.</strong>
+                      <p className="text-muted-foreground">
+                        Mateusz twardo stąpa po ziemi, dostarcza sprawdzonych narzędzi i dba o to, by każda idea została przełożona na <strong className="text-primary">praktyczne działanie</strong>.
                       </p>
+                    </div>
+                    
+                    {/* Leadership qualities */}
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
+                      <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                        Warsztatowy podział pracy
+                      </span>
+                      <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                        Sprawdzone narzędzia
+                      </span>
+                      <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                        Praktyczne działania
+                      </span>
                     </div>
                   </div>
                 </div>
