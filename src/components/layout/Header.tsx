@@ -10,8 +10,9 @@ export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
-  // Hover handlers for dropdown with delay
+  // Refs for dropdown management
   const timeoutRef = useRef<NodeJS.Timeout>();
+  const dropdownRef = useRef<HTMLDivElement>(null);
   
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -23,7 +24,13 @@ export default function Header() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 200);
+    }, 150);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsDropdownOpen(false);
+    }
   };
   
   // Handle scroll effect
@@ -36,7 +43,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle escape key for accessibility
+  // Handle click outside and escape key for accessibility
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -46,7 +53,12 @@ export default function Header() {
     };
 
     document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -73,29 +85,37 @@ export default function Header() {
           
           {/* Dropdown for Możliwości */}
           <div 
-            className="relative"
+            className="relative group"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            ref={dropdownRef}
           >
             <button
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setIsDropdownOpen(!isDropdownOpen);
+                }
+              }}
+              aria-expanded={isDropdownOpen}
+              aria-haspopup="true"
             >
               Możliwości
-              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''} group-hover:rotate-180`} />
             </button>
             
-            {/* Simplified Mega Menu */}
-            {isDropdownOpen && (
-              <div 
-                className={`fixed left-0 right-0 pt-3 z-[9999] ${
-                  isScrolled ? 'top-[56px]' : 'top-[72px]'
-                }`}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div className="mx-auto w-fit bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden">
+            {/* Mega Menu with CSS hover + JavaScript enhancement */}
+            <div className={`hidden md:group-hover:block ${isDropdownOpen ? 'md:block' : ''} absolute right-0 xl:left-1/2 xl:-translate-x-1/2 pt-3 z-[9999] ${
+              isScrolled ? 'top-[56px]' : 'top-[72px]'
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            >
+                <div className="bg-white dark:bg-deep-space shadow-2xl rounded-xl border border-slate-200 dark:border-silver-mist/10 overflow-hidden w-fit min-w-[320px] max-w-[min(95vw,1064px)] origin-top-right xl:origin-top">
                   {/* Desktop Layout - 3 columns, responsive width */}
-                  <div className="hidden lg:flex w-[1064px]">
+                  <div className="hidden lg:flex">
                     {/* Column 1: Twoja Ścieżka Rozwoju (280px) - Information Only */}
                     <div className="flex-[280] min-w-0 p-6">
                       <div className="journey-header mb-4">
@@ -382,10 +402,10 @@ export default function Header() {
                   </div>
 
                   {/* Tablet Layout - 2 columns */}
-                  <div className="hidden md:block lg:hidden max-w-[760px] w-full mx-auto">
-                    <div className="flex">
+                  <div className="block lg:hidden w-full">
+                    <div className="flex flex-col md:flex-row">
                       {/* Column 1: Ścieżka rozwoju */}
-                      <div className="flex-1 min-w-0 p-6">
+                      <div className="flex-1 min-w-0 p-4 md:p-6">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Twoja ścieżka</h3>
                         
                         <div className="space-y-4">
@@ -419,7 +439,7 @@ export default function Header() {
                       </div>
 
                       {/* Column 2: Główna nawigacja */}
-                      <div className="flex-1 min-w-0 p-6 border-l border-slate-200 dark:border-silver-mist/10">
+                      <div className="flex-1 min-w-0 p-4 md:p-6 border-t md:border-t-0 md:border-l border-slate-200 dark:border-silver-mist/10">
                         <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">Możliwości</h3>
                         
                         <div className="space-y-2">
@@ -472,8 +492,7 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+            </div>
           </div>
 
           <Link
