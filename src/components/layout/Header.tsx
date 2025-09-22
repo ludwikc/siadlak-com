@@ -12,6 +12,20 @@ export default function Header() {
 
   // Refs for dropdown management
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 150);
+  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -70,7 +84,12 @@ export default function Header() {
           </Link>
           
           {/* Dropdown for Możliwości */}
-          <div className="relative" ref={dropdownRef}>
+          <div 
+            className="relative group" 
+            ref={dropdownRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -84,7 +103,7 @@ export default function Header() {
               aria-haspopup="true"
             >
               Możliwości
-              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''} group-hover:rotate-180`} />
             </button>
           </div>
 
@@ -136,10 +155,16 @@ export default function Header() {
       </div>
 
       {/* Full-Screen Navigation Popup */}
-      {isDropdownOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm animate-fade-in">
+      <div 
+        className={`${isDropdownOpen ? 'block' : 'hidden'} group-hover:block fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm animate-fade-in`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
           <div className="flex items-center justify-center min-h-screen p-4">
-            <div className="bg-white dark:bg-deep-space rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in">
+            <div 
+              className="bg-white dark:bg-deep-space rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
+              onMouseEnter={handleMouseEnter}
+            >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-silver-mist/10">
                 <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
@@ -178,7 +203,7 @@ export default function Header() {
                         </div>
                         <div>
                           <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
-                            Wybierz kurs
+                            Wybierz program dla siebie
                           </h4>
                           <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
                             Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. Podejmij decyzję.
@@ -273,7 +298,7 @@ export default function Header() {
 
                       {/* Regular Cards */}
                       <Link 
-                        to="/community" 
+                        to="https://uwaznezycie.pl" 
                         className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                         onClick={() => setIsDropdownOpen(false)}
                       >
@@ -333,7 +358,7 @@ export default function Header() {
                       </Link>
 
                       <a 
-                        href="https://youtube.com/@siadlak" 
+                        href="https://youtube.com/@ludwikcsiadlak" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
@@ -411,7 +436,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-      )}
 
       {/* Mobile Menu */}
       {isMenuOpen && (
