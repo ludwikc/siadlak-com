@@ -40,7 +40,7 @@ export default function MeskiKompas() {
               </CTAButton>
             </Link>
             <div className="text-sm font-medium" style={{ color: 'hsl(210, 20%, 95%)' }}>
-              Startujemy [Data] | Tylko 10 miejsc | Inwestycja: 497 zł
+              Startujemy w październiku | Tylko 10 miejsc | Inwestycja: <span className="line-through">1997 PLN</span> 497 zł (pilot)
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@ export default function MeskiKompas() {
                   style={{ borderColor: 'hsl(45, 85%, 50%)' }}
                 />
                 <h3 className="text-2xl font-bold mb-4 text-white">
-                  Ludwik Siadlak
+                  Ludwik C. Siadlak
                 </h3>
                 <p className="leading-relaxed" style={{ color: 'hsl(210, 20%, 95%)' }}>
                   Mistrz porywania ludzi i pracy z emocjami. Ludwik zapala iskrę, inspiruje do sięgania głębiej 
@@ -607,10 +607,10 @@ export default function MeskiKompas() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block px-6 py-2 rounded-full mb-6" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                <span className="text-lg font-bold">BONUS WARTOŚCI 497 ZŁ</span>
+                <span className="text-lg font-bold">BONUS O WARTOŚCI 497 ZŁ</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                2 w 1: Dostaniesz także kurs
+                BONUS: Otrzymasz również kurs
                 <br />
                 <span style={{ color: 'hsl(45, 85%, 50%)' }}>
                   "7 technik produktywności"
@@ -659,7 +659,7 @@ export default function MeskiKompas() {
                       Wartość bonusu: <span className="line-through">497 zł</span>
                     </p>
                     <p className="text-2xl font-bold" style={{ color: 'hsl(210, 20%, 8%)' }}>
-                      Dla Ciebie: GRATIS!
+                      Dla Ciebie: Bezpłatnie!
                     </p>
                   </div>
                 </GlassCard>
@@ -669,13 +669,13 @@ export default function MeskiKompas() {
             <div className="text-center mt-12">
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
                 <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(45, 85%, 50%)' }}>
-                  Razem otrzymujesz pakiet o wartości 994 zł
+                  Razem otrzymujesz pakiet o wartości 2494 zł
                 </h3>
                 <p className="text-xl text-white/90 mb-4">
-                  Męski Kompas (497 zł) + 7 Technik Produktywności (497 zł)
+                  Męski Kompas (1997 zł) + 7 Technik Produktywności (497 zł)
                 </p>
                 <p className="text-3xl font-bold text-white">
-                  Twoja cena: tylko 497 zł
+                  Twoja cena: tylko 497 zł (pilot)
                 </p>
                 <p className="text-lg text-white/70 mt-2">
                   To prawdziwa oferta 2 w 1 - płacisz za jeden, dostajesz dwa kursy!
@@ -759,7 +759,7 @@ export default function MeskiKompas() {
                       Wartość społeczności: BEZCENNA
                     </p>
                     <p className="text-xl font-bold text-white">
-                      Dla Ciebie: GRATIS na zawsze!
+                      Dla Ciebie: DOSTĘP LIFETIME. W cenie Kompasu.
                     </p>
                   </div>
                 </GlassCard>
@@ -769,7 +769,7 @@ export default function MeskiKompas() {
             <div className="text-center mt-12">
               <div className="p-8 rounded-2xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
                 <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(270, 90%, 60%)' }}>
-                  Społeczność dostępna wyłącznie dla moich klientów
+                  Społeczność dostępna wyłącznie dla moich Klientów
                 </h3>
                 <p className="text-xl text-white/90 mb-4">
                   "Jesteśmy wypadkową pięciu osób, z którymi spędzamy najwięcej czasu" - Jim Rohn
@@ -893,7 +893,7 @@ export default function MeskiKompas() {
             </Link>
 
             <div className="text-sm font-bold" style={{ color: 'hsl(0, 60%, 50%)' }}>
-              Zostały tylko 4 miejsca!
+              W tej edycji zostały tylko 4 miejsca!
             </div>
           </div>
         </div>
