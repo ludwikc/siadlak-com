@@ -181,77 +181,104 @@ export default function Courses() {
                 ))}
               </div>
               
-              {/* Męski Kompas - Centered below */}
-              <div className="flex justify-center">
-                <div className="w-full max-w-md">
-                  <GlassCard 
-                    className="overflow-hidden h-fit relative"
-                    padding="sm"
-                  >
-                    {/* Nowość Badge */}
-                    <div className="absolute top-4 right-4 z-10">
-                      <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-xs">
-                        NOWOŚĆ
-                      </Badge>
-                    </div>
-                    
-                    <div className="h-32 bg-gradient-to-br from-neural-violet to-ascension-pink dark:from-neural-violet dark:to-luminal-magenta flex items-center justify-center relative overflow-hidden">
+              {/* Męski Kompas - Prominent New Course */}
+              <div className="mt-12">
+                <div className="text-center mb-6">
+                  <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-sm px-4 py-2 animate-pulse">
+                    🔥 REKRUTACJA OTWARTA - DOŁĄCZ TERAZ!
+                  </Badge>
+                </div>
+                
+                <GlassCard 
+                  className="overflow-hidden h-fit relative border-2 border-ascension-pink/30 dark:border-luminal-magenta/30"
+                  padding="lg"
+                >
+                  {/* Multiple Badges */}
+                  <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
+                    <Badge className="bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0 text-xs">
+                      NOWOŚĆ
+                    </Badge>
+                    <Badge className="bg-green-500 text-white border-0 text-xs animate-pulse">
+                      DOSTĘPNY
+                    </Badge>
+                  </div>
+                  
+                  <div className="h-48 bg-gradient-to-br from-neural-violet via-ascension-pink to-luminal-magenta dark:from-neural-violet dark:via-ascension-pink dark:to-luminal-magenta flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 animate-pulse"></div>
-                    <span className="text-white text-3xl font-bold text-center px-6 uppercase drop-shadow-lg relative z-10">
-                      {fundamentalPrograms[2].category}
-                    </span>
+                    <div className="text-center relative z-10">
+                      <span className="text-white text-5xl md:text-6xl font-bold uppercase drop-shadow-lg block">
+                        {fundamentalPrograms[2].category}
+                      </span>
+                      <span className="text-white/90 text-lg font-medium mt-2 block">
+                        Nowy program już dostępny
+                      </span>
                     </div>
-                    
-                    <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
-                      {fundamentalPrograms[2].title}
-                    </h3>
-                    
-                    <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-3 text-sm">
-                      {fundamentalPrograms[2].subtitle}
-                    </p>
-                    
-                    <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 text-sm">
-                      {fundamentalPrograms[2].description}
-                    </p>
-                    
-                    {/* Course Quick Info - Compact */}
-                    <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-                      <div className="flex items-center">
-                      <Clock className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80">{fundamentalPrograms[2].duration}</span>
+                  </div>
+                  
+                  <div className="p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                      {/* Left Column - Course Info */}
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                          {fundamentalPrograms[2].title}
+                        </h3>
+                        
+                        <p className="text-neural-violet dark:text-luminal-magenta font-medium mb-4 text-lg">
+                          {fundamentalPrograms[2].subtitle}
+                        </p>
+                        
+                        <p className="text-subtle-slate dark:text-silver-mist/80 mb-6 text-base leading-relaxed">
+                          {fundamentalPrograms[2].description}
+                        </p>
+                        
+                        {/* Course Quick Info */}
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+                          <div className="flex items-center">
+                            <Clock className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
+                            <span className="text-subtle-slate dark:text-silver-mist/80 font-medium">{fundamentalPrograms[2].duration}</span>
+                          </div>
+                          
+                          <div className="flex items-center">
+                            <Star className="h-4 w-4 mr-2 text-neural-violet dark:text-luminal-magenta" />
+                            <span className="text-subtle-slate dark:text-silver-mist/80 font-medium">{fundamentalPrograms[2].level}</span>
+                          </div>
+                        </div>
                       </div>
                       
-                      <div className="flex items-center">
-                      <Star className="h-3 w-3 mr-1 text-neural-violet dark:text-luminal-magenta" />
-                      <span className="text-subtle-slate dark:text-silver-mist/80">{fundamentalPrograms[2].level}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Key Features - Compact */}
-                    <div className="mb-6">
-                      <div className="space-y-1">
-                      {fundamentalPrograms[2].features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="flex items-start text-xs">
-                        <CheckCircle className="h-3 w-3 mr-2 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
-                        <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
+                      {/* Right Column - Features & CTA */}
+                      <div>
+                        <h4 className="text-lg font-semibold mb-4 text-deep-charcoal dark:text-silver-mist">
+                          Co otrzymasz:
+                        </h4>
+                        
+                        <div className="space-y-3 mb-8">
+                          {fundamentalPrograms[2].features.map((feature, index) => (
+                            <div key={index} className="flex items-start">
+                              <CheckCircle className="h-5 w-5 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-0.5" />
+                              <span className="text-subtle-slate dark:text-silver-mist/90">{feature}</span>
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                        
+                        <div className="bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-ascension-pink/20 p-4 rounded-lg mb-6">
+                          <p className="text-center text-sm font-medium text-ascension-pink dark:text-luminal-magenta">
+                            ⚡ Rekrutacja trwa - miejsca ograniczone!
+                          </p>
+                        </div>
+                        
+                        <Link to={`/program/${fundamentalPrograms[2].id}`}>
+                          <CTAButton 
+                            className="w-full text-lg py-4" 
+                            size="lg"
+                            aria-label={`Dołącz do kursu ${fundamentalPrograms[2].title}`}
+                          >
+                            Dołącz do Męskiego Kompasu →
+                          </CTAButton>
+                        </Link>
                       </div>
                     </div>
-                    
-                    <Link to={`/program/${fundamentalPrograms[2].id}`}>
-                      <CTAButton 
-                        className="w-full" 
-                        size="default"
-                        aria-label={`Zacznij kurs ${fundamentalPrograms[2].title}`}
-                      >
-                        Zacznij swoją podróż
-                      </CTAButton>
-                    </Link>
-                    </div>
-                  </GlassCard>
-                </div>
+                  </div>
+                </GlassCard>
               </div>
               </div>
             </div>
