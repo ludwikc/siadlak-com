@@ -342,13 +342,29 @@ const Webinar = () => {
             <p className="text-lg mb-4">
               &copy; 2025 Ludwik C. Siadlak & Fundacja HACKERZY.PL. Wszelkie prawa zastrzeżone.
             </p>
-            <nav aria-label="Footer navigation">
-              <a 
-                href="#" 
-                className="text-primary-foreground/80 hover:text-primary-foreground underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded"
-              >
-                Polityka Prywatności
-              </a>
+            <nav aria-label="Nawigacja prawna">
+              <ul className="flex flex-wrap justify-center gap-6 text-sm">
+                <li>
+                  <a 
+                    href="https://docs.siadlak.com/legal/regulaminy/b/A1991136-C165-40B4-9C1E-21CBAEC4C8D7/Polityka-Prywatno%C5%9Bci-Serwis%C3%B3w-Grupy-"
+                    className="text-primary-foreground/80 hover:text-primary-foreground underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-2 py-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Polityka Prywatności
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://docs.siadlak.com/legal/regulaminy"
+                    className="text-primary-foreground/80 hover:text-primary-foreground underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded px-2 py-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Regulaminy i Warunki Użytkowania
+                  </a>
+                </li>
+              </ul>
             </nav>
           </div>
         </footer>
