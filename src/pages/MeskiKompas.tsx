@@ -47,32 +47,92 @@ export default function MeskiKompas() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(0, 0%, 99%)' }}>
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(0, 0%, 97%) 0%, hsl(210, 20%, 94%) 100%)' }}>
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-10" style={{ 
+          backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(0, 65%, 51%) 1px, transparent 0)',
+          backgroundSize: '20px 20px'
+        }}></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{ color: 'hsl(210, 20%, 8%)' }}>
-              Czy to o Tobie?
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'hsl(210, 20%, 8%)' }}>
+                Czy to o Tobie?
+              </h2>
+              <p className="text-xl" style={{ color: 'hsl(0, 65%, 45%)' }}>
+                Rozpoznajesz się w tych sytuacjach?
+              </p>
+            </div>
 
-            <div className="space-y-6">
-               {[
+            <div className="space-y-4">
+              {[
                 "Czujesz, że utknąłeś, a Twoje życie toczy się siłą rozpędu, bez jasno określonego kierunku?",
                 "Masz analityczny umysł, ale gubisz się w natłoku myśli i wewnętrznych konfliktów?",
                 "Brakuje Ci konkretnych narzędzi, by przełożyć swoje wartości na codzienne działania?",
                 "Masz dość górnolotnych frazesów i szukasz męskiej, rzeczowej przestrzeni do rozwoju?",
                 "Czujesz, że to, co robisz, rozmija się z tym, co jest dla Ciebie naprawdę ważne?"
               ].map((item, index) => (
-                <GlassCard key={index} className="flex items-start gap-4 p-6" style={{ backgroundColor: 'hsl(210, 20%, 95%)', border: '1px solid hsl(210, 40%, 15%)' }}>
-                  <AlertTriangle className="flex-shrink-0 mt-1" size={20} style={{ color: 'hsl(0, 65%, 51%)' }} />
-                  <p className="text-lg" style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
-                </GlassCard>
+                <div 
+                  key={index} 
+                  className="animate-fade-in hover-scale group cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <GlassCard 
+                    className="flex items-start gap-5 p-6 transition-all duration-300 group-hover:shadow-xl"
+                    style={{ 
+                      backgroundColor: 'hsl(0, 0%, 99%)', 
+                      border: '2px solid hsl(0, 65%, 85%)',
+                      borderRadius: '16px',
+                      boxShadow: '0 4px 6px -1px hsl(0, 65%, 51% / 0.1), 0 2px 4px -1px hsl(0, 65%, 51% / 0.06)'
+                    }}
+                  >
+                    <div className="relative">
+                      <div 
+                        className="rounded-full p-2 transition-colors duration-300"
+                        style={{ backgroundColor: 'hsl(0, 65%, 95%)' }}
+                      >
+                        <AlertTriangle 
+                          className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110" 
+                          size={24} 
+                          style={{ color: 'hsl(0, 65%, 51%)' }} 
+                        />
+                      </div>
+                      {/* Subtle glow effect */}
+                      <div 
+                        className="absolute inset-0 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+                        style={{ 
+                          background: 'radial-gradient(circle, hsl(0, 65%, 51%) 0%, transparent 70%)',
+                          transform: 'scale(1.5)'
+                        }}
+                      ></div>
+                    </div>
+                    <p 
+                      className="text-lg font-medium leading-relaxed transition-colors duration-300 group-hover:text-gray-900" 
+                      style={{ color: 'hsl(210, 10%, 45%)' }}
+                    >
+                      {item}
+                    </p>
+                  </GlassCard>
+                </div>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <p className="text-xl font-bold" style={{ color: 'hsl(45, 85%, 50%)' }}>
-                Jeśli kiwasz głową, czytając te słowa – jesteś we właściwym miejscu.
-              </p>
+            <div className="text-center mt-16">
+              <div 
+                className="inline-block p-8 rounded-2xl animate-fade-in"
+                style={{ 
+                  background: 'linear-gradient(135deg, hsl(45, 85%, 50%) 0%, hsl(45, 85%, 45%) 100%)',
+                  animationDelay: '500ms'
+                }}
+              >
+                <p className="text-xl font-bold text-white mb-2">
+                  Jeśli kiwasz głową, czytając te słowa –
+                </p>
+                <p className="text-2xl font-extrabold text-white">
+                  jesteś we właściwym miejscu.
+                </p>
+              </div>
             </div>
           </div>
         </div>
