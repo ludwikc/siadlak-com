@@ -54,7 +54,7 @@ export default function MeskiKompas() {
             </h2>
 
             <div className="space-y-6">
-              {[
+               {[
                 "Czujesz, że utknąłeś, a Twoje życie toczy się siłą rozpędu, bez jasno określonego kierunku?",
                 "Masz analityczny umysł, ale gubisz się w natłoku myśli i wewnętrznych konfliktów?",
                 "Brakuje Ci konkretnych narzędzi, by przełożyć swoje wartości na codzienne działania?",
@@ -62,7 +62,7 @@ export default function MeskiKompas() {
                 "Czujesz, że to, co robisz, rozmija się z tym, co jest dla Ciebie naprawdę ważne?"
               ].map((item, index) => (
                 <GlassCard key={index} className="flex items-start gap-4 p-6" style={{ backgroundColor: 'hsl(210, 20%, 95%)', border: '1px solid hsl(210, 40%, 15%)' }}>
-                  <div className="w-4 h-4 border-2 rounded-sm flex-shrink-0 mt-1" style={{ borderColor: 'hsl(45, 85%, 50%)' }} />
+                  <span className="text-2xl flex-shrink-0 mt-1">🚨</span>
                   <p className="text-lg" style={{ color: 'hsl(210, 10%, 45%)' }}>{item}</p>
                 </GlassCard>
               ))}
