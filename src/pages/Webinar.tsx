@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Layout from '../components/layout/Layout';
 
 const Webinar = () => {
   const [timeLeft, setTimeLeft] = useState('');
@@ -32,7 +31,7 @@ const Webinar = () => {
   }, []);
 
   return (
-    <Layout hideFooter={true}>
+    <>
       <title>Męski Kompas - Webinar: Jak odzyskać kierunek?</title>
       <meta name="description" content="Bezpłatny warsztat online dla profesjonalistów 30+, którzy mają dość dryfowania i szukają logicznego systemu do nawigacji w karierze i życiu." />
       
@@ -370,7 +369,7 @@ const Webinar = () => {
           </div>
         </footer>
       </div>
-    </Layout>
+    </>
   );
 };
 
