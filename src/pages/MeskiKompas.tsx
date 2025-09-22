@@ -229,21 +229,74 @@ export default function MeskiKompas() {
                 </p>
               </div>
 
-              {/* Mateusz - White (Yang) */}
-              <div className="bg-white p-12 flex flex-col items-center text-center">
-                <img 
-                  src="/lovable-uploads/mateusz-lizak-profile.png" 
-                  alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
-                  className="w-32 h-32 rounded-full mb-6 object-cover border-4"
-                  style={{ borderColor: 'hsl(210, 40%, 15%)' }}
-                />
-                <h3 className="text-2xl font-bold mb-4" style={{ color: 'hsl(210, 20%, 8%)' }}>
-                  Mateusz Lizak
-                </h3>
-                <p className="leading-relaxed" style={{ color: 'hsl(210, 10%, 45%)' }}>
-                  Mistrz konkretu i pracy warsztatowej. Mateusz twardo stąpa po ziemi, dostarcza sprawdzonych narzędzi 
-                  i dba o to, by każda idea została przełożona na praktyczne działanie.
-                </p>
+              {/* Mateusz - Leadership Section */}
+              <div className="relative bg-gradient-to-br from-quantum-blue via-deep-space to-neural-violet p-16 flex flex-col lg:flex-row items-center gap-12 overflow-hidden">
+                {/* Background decorative elements */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neural-violet/5 to-ascension-pink/10"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-luminal-magenta/20 to-transparent rounded-full blur-3xl"></div>
+                
+                {/* Photo Section - Hero Treatment */}
+                <div className="relative lg:w-1/2 flex justify-center">
+                  <div className="relative group">
+                    {/* Glow effect behind photo */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-neural-violet rounded-full blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                    
+                    {/* Main photo container */}
+                    <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-silver-mist/30 shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+                      <img 
+                        src="/lovable-uploads/mateusz-lizak-leader.png" 
+                        alt="Mateusz Lizak - Lider praktycznego rozwoju męskości"
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Overlay gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-deep-space/20 to-transparent"></div>
+                    </div>
+                    
+                    {/* Floating accent */}
+                    <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-ascension-pink to-luminal-magenta rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-xl">★</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="lg:w-1/2 text-center lg:text-left relative z-10">
+                  <div className="mb-4">
+                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white text-sm font-bold rounded-full mb-4 shadow-lg">
+                      LIDER PRAKTYCZNEGO ROZWOJU
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-4xl lg:text-5xl font-bold mb-6 text-silver-mist leading-tight">
+                    Mateusz Lizak
+                  </h3>
+                  
+                  <div className="space-y-4 text-silver-mist/90 text-lg leading-relaxed">
+                    <p className="font-medium">
+                      <span className="text-luminal-magenta font-bold">Praktyk</span>, który przeszedł przez wszystkie pułapki analitycznego umysłu. 
+                      Od operatora maszyn CNC po mentora świadomych mężczyzn.
+                    </p>
+                    
+                    <p>
+                      <span className="text-ascension-pink font-bold">Mistrz konkretu</span> i pracy warsztatowej. 
+                      Mateusz twardo stąpa po ziemi, dostarcza sprawdzonych narzędzi i dba o to, 
+                      by każda idea została przełożona na <span className="text-luminal-magenta font-semibold">praktyczne działanie</span>.
+                    </p>
+                  </div>
+                  
+                  {/* Leadership indicators */}
+                  <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-silver-mist/20">
+                      <span className="text-silver-mist font-semibold">15+ lat doświadczenia</span>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-silver-mist/20">
+                      <span className="text-silver-mist font-semibold">Mentor praktyków</span>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-silver-mist/20">
+                      <span className="text-silver-mist font-semibold">Konkretne rezultaty</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
