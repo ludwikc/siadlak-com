@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
 import compassBg from '../assets/compass-hero-bg.png';
+import SEO from '../components/SEO';
 
 const Webinar = () => {
   const [timeLeft, setTimeLeft] = useState('');
   const [email, setEmail] = useState('');
-  
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
     const targetDate = new Date('2025-10-16T19:00:00').getTime();
     
     const updateTimer = () => {
@@ -30,12 +37,18 @@ const Webinar = () => {
     const timerInterval = setInterval(updateTimer, 1000);
     
     return () => clearInterval(timerInterval);
-  }, []);
+  }, [isClient]);
 
   return (
     <>
-      <title>Męski Kompas - Webinar: Jak odzyskać kierunek?</title>
-      <meta name="description" content="Bezpłatny warsztat online dla profesjonalistów 30+, którzy mają dość dryfowania i szukają logicznego systemu do nawigacji w karierze i życiu." />
+      <SEO
+        title="Męski Kompas - Webinar: Jak odzyskać kierunek?"
+        description="Bezpłatny warsztat online dla profesjonalistów 30+, którzy mają dość dryfowania i szukają logicznego systemu do nawigacji w karierze i życiu."
+        keywords="męski kompas, webinar, kryzys męskości, rozwój osobisty, coaching dla mężczyzn, Ludwik Siadlak, Mateusz Lizak"
+        type="article"
+        url="/webinar"
+        image="/og-webinar.jpg"
+      />
       
       {/* Skip to main content for accessibility */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
@@ -53,23 +66,22 @@ const Webinar = () => {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          {/* Decorative background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-accent/15 to-accent/5 rounded-full blur-2xl"></div>
+          {/* Simplified decorative background */}
+          <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
           </div>
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-center space-y-4">
-                <div className="text-2xl md:text-3xl font-medium text-primary-foreground/80 italic">
+                <span className="block text-2xl md:text-3xl font-medium text-primary-foreground italic">
                   Kryzys Męskości?
-                </div>
-                <div className="text-4xl md:text-6xl font-bold text-primary-foreground bg-gradient-to-r from-luminal-magenta to-neural-violet bg-clip-text text-transparent">
-                  Czy po prostu czas na <span className="font-black">upgrade systemu</span>?
-                </div>
+                </span>
+                <span className="block text-4xl md:text-6xl font-bold text-primary-foreground">
+                  Czy po prostu czas na <strong className="font-black">upgrade systemu</strong>?
+                </span>
               </h1>
-              <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground/90 leading-relaxed">
+              <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground leading-relaxed">
                 Weź udział w bezpłatnym warsztacie LIVE dla mężczyzn z analitycznym umysłem, którzy mają dość poczucia, że stoją w miejscu. Otrzymasz konkretny framework do odzyskania kontroli, spokoju i kierunku.
               </p>
               
@@ -312,12 +324,12 @@ const Webinar = () => {
                 {/* Countdown */}
                 <div className="bg-white dark:bg-card border-2 border-primary/30 p-8 rounded-3xl text-center shadow-2xl">
                   <h3 className="text-2xl font-bold mb-6 text-foreground">Do startu warsztatu pozostało:</h3>
-                  <div 
+                  <div
                     className="mb-6"
                     aria-live="polite"
                     aria-label={`Czas do rozpoczęcia warsztatu: ${timeLeft}`}
                   >
-                    {(() => {
+                    {isClient ? (() => {
                       if (timeLeft === "WEBINAR ZAKOŃCZONY") {
                         return (
                           <div className="text-2xl font-bold text-destructive">
@@ -350,7 +362,11 @@ const Webinar = () => {
                           {timeLeft}
                         </div>
                       );
-                    })()}
+                    })() : (
+                      <div className="text-3xl md:text-4xl font-bold text-foreground font-mono tracking-wider">
+                        Ładowanie...
+                      </div>
+                    )}
                   </div>
                   <div className="space-y-3 text-lg text-muted-foreground">
                     <p><strong className="text-foreground">📅 Data:</strong> Czwartek, 16 października 2025</p>
