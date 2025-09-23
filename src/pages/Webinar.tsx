@@ -104,7 +104,7 @@ const Webinar = () => {
                   Diagnoza systemu: Czy to o Tobie?
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Sprawdź, czy rozpoznajesz te wzorce w swoim życiu
+                  Sprawdź, czy rozpoznajesz te wzorce w swoim wewnętrznym systemie operacyjnym.
                 </p>
               </div>
               
@@ -112,14 +112,14 @@ const Webinar = () => {
                 {/* Problems */}
                 <div className="bg-destructive/5 rounded-2xl p-8 border border-destructive/20 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-destructive border-b-3 border-destructive pb-3">
-                    🚫 Identyfikacja problemów:
+                    🚫 BŁĘDY W SYSTEMIE (Co Cię blokuje):
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
-                      'Czy czujesz, że Twój analityczny umysł, zamiast pomagać, prowadzi do **paraliżu decyzyjnego** i gromadzenia zasobów (kursów, książek), których nie przerabiasz?',
-                      'Czy masz problem z mentalnym **"wyłączeniem się" po pracy**, a Twój mózg ciągle optymalizuje, analizuje i przetwarza problemy zawodowe?',
-                      'Czy towarzyszy Ci ciągła presja, że "powinieneś być już dalej" i **lęk przed zmarnowaniem swojego potencjału**, który odbiera satysfakcję z osiągnięć?',
-                      'Czy dążysz do spokoju przez budowanie systemów i kontrolę, tylko po to, by odkryć, że **generują one jeszcze więcej stresu** i poczucia uwięzienia?'
+                      '**PĘTLA ANALITYCZNA:** Twój analityczny umysł, zamiast rozwiązywać problemy, wpada w pętlę? Gromadzisz zasoby (kursy, książki), ale brakuje Ci systemu do ich wdrożenia, co prowadzi do paraliżu decyzyjnego.',
+                      '**PRZEGRZANIE PROCESORA:** Masz problem z mentalnym "wyłączeniem się" po pracy? Twój mózg ciągle optymalizuje i analizuje, przez co tracisz dostęp do regeneracji i głębokiego odpoczynku.',
+                      '**CIĄGŁA PRESJA WYDAJNOŚCI:** Towarzyszy Ci poczucie, że "powinieneś być już dalej"? Lęk przed zmarnowaniem potencjału odbiera satysfakcję z tego, co już osiągnąłeś, i generuje chroniczny stres.',
+                      '**ZBYT SKOMPLIKOWANY SYSTEM:** Dążysz do spokoju przez budowanie złożonych systemów i próby kontroli, tylko po to, by odkryć, że generują one jeszcze więcej napięcia i poczucia uwięzienia we własnych zasadach.'
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-4 p-4 bg-white/50 rounded-lg" role="listitem">
                         <span className="flex-shrink-0 w-6 h-6 bg-destructive text-white rounded-full flex items-center justify-center font-bold text-sm" aria-hidden="true">
@@ -134,14 +134,14 @@ const Webinar = () => {
                 {/* Benefits */}
                 <div className="bg-green-50 dark:bg-green-950/20 rounded-2xl p-8 border border-green-200 dark:border-green-800 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-400 border-b-3 border-green-500 pb-3">
-                    ✅ Co wdrożysz po tym warsztacie:
+                    ✅ UPGRADE SYSTEMU (Co wdrożysz na tym warsztacie):
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
-                      '**Zrozumiesz, dlaczego** mimo inteligencji i kompetencji czujesz, że utknąłeś – zidentyfikujesz główną blokadę w swoim systemie operacyjnym.',
-                      '**Poznasz framework** do podejmowania trudnych decyzji, który pozwoli Ci wyjść z pętli wiecznej analizy i zacząć działać z przekonaniem.',
-                      '**Dowiesz się, dlaczego rytm i obecność** są skuteczniejsze niż idealny, ale nierealistyczny plan – i jak wdrożyć je w 4 minuty dziennie.',
-                      '**Odkryjesz, czym jest siła mężczyzny** w 2025 roku – nie w teorii, ale w praktyce, w codziennych wyborach i działaniach.'
+                      '**KLAROWNA DIAGNOZA:** Otrzymasz precyzyjną diagnozę, dlaczego Twój system wpada w pętlę. Zobaczysz na żywo, gdzie leży konflikt między Twoimi wartościami (wizją) a brakiem codziennej struktury (planem) – to sedno rozmowy Ludwika i Mateusza.',
+                      '**PRAKTYCZNE NARZĘDZIE DO MAPOWANIA:** Wyjdziesz z prostą matrycą 4 obszarów życia, którą pokaże Mateusz. W 5 minut zmapujesz, gdzie naprawdę jesteś. To konkret, który da Ci jasność i pozwoli "zamknąć otwarte pętle" w głowie.',
+                      '**SYNTEZA: PLAN + WARTOŚCI:** Zrozumiesz, dlaczego sam plan to pusta checklista, a sama wizja to marzycielstwo. Pokażemy Ci, jak połączyć te dwa światy, aby Twoje codzienne działania nabrały sensu i przestały generować poczucie straty.',
+                      '**DEFINICJA NOWEJ SIŁY:** Zobaczysz, na czym polega upgrade męskiego systemu operacyjnego na 2025 rok. Dowiesz się, jak przejść od skomplikowanej kontroli do prostej spójności, która daje autentyczną siłę i spokój w działaniu.'
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-4 p-4 bg-white/50 dark:bg-green-900/20 rounded-lg" role="listitem">
                         <span className="flex-shrink-0 w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm" aria-hidden="true">
