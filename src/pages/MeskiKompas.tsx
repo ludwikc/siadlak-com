@@ -19,17 +19,18 @@ export default function MeskiKompas() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-wider">
-              <span className="text-white">MĘSKI</span>{' '}
-              <span 
-                style={{ 
-                  color: 'hsl(45, 85%, 50%)',
-                  textShadow: '0 0 20px hsl(45, 85%, 50% / 0.5), 0 0 40px hsl(45, 85%, 50% / 0.3), 0 0 60px hsl(45, 85%, 50% / 0.2)',
-                  filter: 'drop-shadow(0 4px 8px hsl(0, 0%, 0% / 0.3))'
-                }}
-              >
-                KOMPAS
-              </span>
+            <h1 
+              className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-wider"
+              style={{
+                background: 'linear-gradient(135deg, white 0%, #ECB614 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 20px hsl(45, 85%, 50% / 0.3)',
+                filter: 'drop-shadow(0 4px 8px hsl(0, 0%, 0% / 0.3))'
+              }}
+            >
+              MĘSKI KOMPAS
             </h1>
             <h2 className="text-lg md:text-xl lg:text-2xl font-medium mb-8 leading-relaxed max-w-3xl mx-auto" style={{ color: 'hsl(210, 20%, 95%)' }}>
               Męski Kompas to 5-tygodniowy, intensywny program dla mężczyzn po 30-tce z analitycznym umysłem. 
