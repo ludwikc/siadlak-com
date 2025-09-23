@@ -12,6 +12,7 @@ export default function Header() {
 
   // Refs for dropdown management
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const handleMouseEnter = () => {
@@ -28,9 +29,14 @@ export default function Header() {
   };
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-      setIsDropdownOpen(false);
+    const target = event.target as Node;
+    if (
+      (dropdownRef.current && dropdownRef.current.contains(target)) ||
+      (overlayRef.current && overlayRef.current.contains(target))
+    ) {
+      return; // click inside menu or overlay content, do nothing
     }
+    setIsDropdownOpen(false);
   };
   
   // Handle scroll effect
@@ -162,6 +168,7 @@ export default function Header() {
       >
           <div className="flex items-center justify-center min-h-screen p-4">
             <div 
+              ref={overlayRef}
               className="bg-white dark:bg-deep-space rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
               onMouseEnter={handleMouseEnter}
             >
