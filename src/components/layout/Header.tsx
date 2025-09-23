@@ -297,8 +297,10 @@ export default function Header() {
                       </Link>
 
                       {/* Regular Cards */}
-                      <Link 
-                        to="https://uwaznezycie.pl" 
+                      <a 
+                        href="https://uwaznezycie.pl" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
                         onClick={() => setIsDropdownOpen(false)}
                       >
@@ -315,7 +317,7 @@ export default function Header() {
                             </p>
                           </div>
                         </div>
-                      </Link>
+                      </a>
 
                       <Link 
                         to="/podcast" 
