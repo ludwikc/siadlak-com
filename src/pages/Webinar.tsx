@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import compassBg from '../assets/compass-hero-bg.png';
+import compassBg from '../assets/pixel-compass-hero-bg.png';
 import SEO from '../components/SEO';
 
 const Webinar = () => {
