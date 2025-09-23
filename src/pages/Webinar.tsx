@@ -74,11 +74,11 @@ const Webinar = () => {
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-center space-y-4">
-                <span className="block text-2xl md:text-3xl font-medium text-primary-foreground italic">
+                <span className="block text-2xl md:text-3xl font-bold text-primary-foreground">
                   Kryzys Męskości?
                 </span>
                 <span className="block text-4xl md:text-6xl font-bold text-primary-foreground">
-                  Czy po prostu czas na <strong className="font-black">upgrade systemu</strong>?
+                  Czy po prostu czas na <br/><strong className="font-black">UPGRADE SYSTEMU</strong>?
                 </span>
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground leading-relaxed">
@@ -209,7 +209,7 @@ const Webinar = () => {
                     </div>
                     {/* Leadership badge */}
                     <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                      ZAŁOŻYCIEL
+                      Lifehacker
                     </div>
                   </div>
                   
