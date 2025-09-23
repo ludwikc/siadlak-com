@@ -58,14 +58,18 @@ const Webinar = () => {
       <div className="min-h-screen bg-background text-foreground font-primary animate-fade-in">
         {/* Hero Section */}
         <header 
-          className="hero relative overflow-hidden bg-gradient-to-br from-primary to-primary/90" 
+          className="hero relative overflow-hidden" 
           style={{
-            backgroundImage: `linear-gradient(rgba(59, 15, 119, 0.85), rgba(59, 15, 119, 0.75)), url(${compassBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundColor: 'hsl(210, 45%, 12%)'
           }}
         >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${compassBg})`,
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
           {/* Simplified decorative background */}
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
