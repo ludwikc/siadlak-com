@@ -78,11 +78,11 @@ const Webinar = () => {
                   Kryzys Męskości?
                 </span>
                 <span className="block text-4xl md:text-6xl font-bold text-primary-foreground">
-                  Czy po prostu czas na <br/><strong className="font-black glow-text">UPGRADE SYSTEMU</strong>?
+                  Czy po prostu czas&nbsp;na długooczekiwany <br/><strong className="font-black glow-text">UPGRADE SYSTEMU</strong>?
                 </span>
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground leading-relaxed">
-                Weź udział w bezpłatnym warsztacie LIVE dla mężczyzn z analitycznym umysłem, którzy mają dość poczucia, że stoją w miejscu. Otrzymasz konkretny framework do odzyskania kontroli, spokoju i kierunku.
+                Weź udział w warsztacie LIVE dla mężczyzn z analitycznym umysłem, którzy mają dość poczucia, że stoją w miejscu. Otrzymasz konkretny framework do odzyskania kontroli, spokoju i kierunku.
               </p>
               
               {/* Registration Form */}
@@ -138,12 +138,12 @@ const Webinar = () => {
                 {/* Problems */}
                 <div className="bg-destructive/5 rounded-2xl p-8 border border-destructive/20 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-destructive border-b-3 border-destructive pb-3">
-                    🚫 BŁĘDY W SYSTEMIE (Co Cię blokuje):
+                    🚫 CO NIE DZIAŁA? <br/>Jak działa Twój obecny system?
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
-                      '**PĘTLA ANALITYCZNA:** Twój analityczny umysł, zamiast rozwiązywać problemy, wpada w pętlę? Gromadzisz zasoby (kursy, książki), ale brakuje Ci systemu do ich wdrożenia, co prowadzi do paraliżu decyzyjnego.',
-                      '**PRZEGRZANIE PROCESORA:** Masz problem z mentalnym "wyłączeniem się" po pracy? Twój mózg ciągle optymalizuje i analizuje, przez co tracisz dostęp do regeneracji i głębokiego odpoczynku.',
+                      '**DŁUGO MYŚLI:** Twój analityczny umysł, zamiast rozwiązywać problemy, wpada w pętlę? Gromadzisz zasoby (kursy, książki), ale brakuje Ci systemu do ich wdrożenia, co prowadzi do paraliżu decyzyjnego.',
+                      '**PRZEGRZEWA SIĘ:** Masz problem z mentalnym "wyłączeniem się" po pracy? Twój mózg ciągle optymalizuje i analizuje, przez co tracisz dostęp do regeneracji i głębokiego odpoczynku.',
                       '**CIĄGŁA PRESJA WYDAJNOŚCI:** Towarzyszy Ci poczucie, że "powinieneś być już dalej"? Lęk przed zmarnowaniem potencjału odbiera satysfakcję z tego, co już osiągnąłeś, i generuje chroniczny stres.',
                       '**ZBYT SKOMPLIKOWANY SYSTEM:** Dążysz do spokoju przez budowanie złożonych systemów i próby kontroli, tylko po to, by odkryć, że generują one jeszcze więcej napięcia i poczucia uwięzienia we własnych zasadach.'
                     ].map((item, index) => (
@@ -160,7 +160,7 @@ const Webinar = () => {
                 {/* Benefits */}
                 <div className="bg-green-50 dark:bg-green-950/20 rounded-2xl p-8 border border-green-200 dark:border-green-800 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-400 border-b-3 border-green-500 pb-3">
-                    ✅ UPGRADE SYSTEMU (Co wdrożysz na tym warsztacie):
+                    ✅ UPGRADE SYSTEMU <br/>Co wdrożysz na tym warsztacie?
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
@@ -209,7 +209,7 @@ const Webinar = () => {
                     </div>
                     {/* Leadership badge */}
                     <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-accent to-primary text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                      Lifehacker
+                      LIFEHACKER
                     </div>
                   </div>
                   
@@ -221,29 +221,26 @@ const Webinar = () => {
                       </h3>
                       <div className="flex items-center justify-center lg:justify-start gap-2 text-accent font-medium">
                         <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                        <span>Założyciel i Architekt Systemu</span>
+                        <span>Twórca Lifehackerów</span>
                       </div>
                     </div>
                     
                     <div className="space-y-6 text-lg leading-relaxed">
                       <p className="text-muted-foreground font-medium">
-                        <strong className="text-foreground">Wizjoner i architekt systemu Męskiego Kompasu.</strong> Autor bestsellera "Hakowanie Produktywności", mentor tysięcy profesjonalistów, twórca strukturalnych rozwiązań dla analitycznych umysłów.
+                        Microsoft Certified Trainer, który nauczył się różnicy między <strong className="text-foreground"> byciem najlepszym a byciem prawdziwym</strong>. Od instruktora najsilniejszych armii świata po architekta mentalnych przełomów. Mistrz przekształcania myślenia w życie.
                       </p>
                       <p className="text-muted-foreground">
-                        Ludwik łączy głęboką analizę systemu z praktycznym doświadczeniem w budowaniu <strong className="text-accent">strukturalnych rozwiązań</strong> dla mężczyzn, którzy myślą systemowo.
-                      </p>
-                    </div>
+Ludwik pomaga dostrzec pułapki umysłu, dostarcza narzędzi ze styku mindset/mental i dba o to, by każda zmiana była autentyczna i trwała.                    
+</p></div>
                     
                     {/* Leadership qualities */}
                     <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-4">
                       <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                        Architekt systemu
-                      </span>
+Kontrola nad potencjałem                      </span>
                       <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        Strukturalne rozwiązania
-                      </span>
+Narzędzia świadomości                      </span>
                       <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                        Systemowe myślenie
+                        Autentyczna transformacja
                       </span>
                     </div>
                   </div>
