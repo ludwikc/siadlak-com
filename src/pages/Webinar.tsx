@@ -347,17 +347,38 @@ const Webinar = () => {
 
                 {/* Agenda */}
                 <div className="bg-white dark:bg-card rounded-3xl p-8 shadow-2xl border border-border">
-                  <h3 className="text-2xl font-bold mb-6 text-foreground">Agenda spotkania (ok. 75 minut):</h3>
-                  <ul className="space-y-4" role="list">
+                  <h3 className="text-2xl font-bold mb-6 text-foreground">Agenda warsztatu: Czysty system, zero bullshitu.</h3>
+                  <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
+                    To nie będzie pasywne słuchanie. To interaktywna sesja, podczas której przeprowadzimy Cię przez 3 kluczowe etapy:
+                  </p>
+                  <ul className="space-y-6" role="list">
                     {[
-                      { title: 'Blok 1: Diagnoza', desc: 'Gdzie jesteś i dlaczego to ważne? Analiza obecnego stanu bez oceny.' },
-                      { title: 'Blok 2: Pułapki Analitycznego Umysłu', desc: 'Co się dzieje, gdy działasz bez kierunku lub masz kierunek, ale nie działasz?' },
-                      { title: 'Blok 3: Fundamenty Wewnętrznego Systemu', desc: 'Czym jest siła, rytm i obecność w praktyce? Konkretne narzędzia.' },
-                      { title: 'Blok 4: Sesja Q&A', desc: 'Odpowiedzi na najtrudniejsze pytania. Zero lania wody.' }
+                      { 
+                        number: '1', 
+                        title: 'DIAGNOZA: KRYZYS CZY PRZEMIANA?', 
+                        desc: 'W otwartym dialogu zderzymy dwie perspektywy. Ludwik poruszy fundamenty: tożsamość i wartości. Mateusz przełoży to na twardą rzeczywistość: brak struktury, planu i wytrwałości. Zrozumiesz źródło swojego problemu.' 
+                      },
+                      { 
+                        number: '2', 
+                        title: 'NARZĘDZIE: TWÓJ OSOBISTY KOMPAS', 
+                        desc: 'Mateusz poprowadzi krótką, praktyczną mini-lekcję. Otrzymasz proste, ale potężne narzędzie (matrycę 4 obszarów), aby zdefiniować swój punkt "tu i teraz". Wyjdziesz z jasnością, od czego zacząć.' 
+                      },
+                      { 
+                        number: '3', 
+                        title: 'SYSTEM: MAPA + ZAŁOGA', 
+                        desc: 'Połączymy kropki. Dowiesz się, dlaczego wizja bez działania to marzycielstwo, a plan bez wartości to pusta checklista. Zobaczysz, jak te dwa elementy tworzą spójny system nawigacyjny – Męski Kompas.' 
+                      }
                     ].map((block, index) => (
-                      <li key={index} className="bg-muted/50 p-4 border-l-4 border-accent rounded-lg" role="listitem">
-                        <h4 className="font-bold text-foreground mb-2">{block.title}</h4>
-                        <p className="text-muted-foreground">{block.desc}</p>
+                      <li key={index} className="bg-muted/50 p-6 border-l-4 border-accent rounded-lg" role="listitem">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center font-bold text-lg">
+                            {block.number}
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="font-bold text-foreground mb-3 text-lg">{block.title}</h4>
+                            <p className="text-muted-foreground leading-relaxed">{block.desc}</p>
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
