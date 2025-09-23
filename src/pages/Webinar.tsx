@@ -138,11 +138,11 @@ const Webinar = () => {
                 {/* Problems */}
                 <div className="bg-destructive/5 rounded-2xl p-8 border border-destructive/20 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-destructive border-b-3 border-destructive pb-3">
-                    🚫 CO NIE DZIAŁA? <br/>Jak działa Twój obecny system?
+                    🚫 CO JEST NIE TAK? <br/>(Jak działa Twój obecny system)
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
-                      '**DŁUGO MYŚLI:** Twój analityczny umysł, zamiast rozwiązywać problemy, wpada w pętlę? Gromadzisz zasoby (kursy, książki), ale brakuje Ci systemu do ich wdrożenia, co prowadzi do paraliżu decyzyjnego.',
+                      '**ZA DŁUGO MYŚLI:** Twój analityczny umysł, zamiast rozwiązywać problemy, wpada w pętlę? Gromadzisz zasoby (kursy, książki), ale brakuje Ci systemu do ich wdrożenia, co prowadzi do paraliżu decyzyjnego.',
                       '**PRZEGRZEWA SIĘ:** Masz problem z mentalnym "wyłączeniem się" po pracy? Twój mózg ciągle optymalizuje i analizuje, przez co tracisz dostęp do regeneracji i głębokiego odpoczynku.',
                       '**CIĄGŁA PRESJA WYDAJNOŚCI:** Towarzyszy Ci poczucie, że "powinieneś być już dalej"? Lęk przed zmarnowaniem potencjału odbiera satysfakcję z tego, co już osiągnąłeś, i generuje chroniczny stres.',
                       '**ZBYT SKOMPLIKOWANY SYSTEM:** Dążysz do spokoju przez budowanie złożonych systemów i próby kontroli, tylko po to, by odkryć, że generują one jeszcze więcej napięcia i poczucia uwięzienia we własnych zasadach.'
@@ -160,7 +160,7 @@ const Webinar = () => {
                 {/* Benefits */}
                 <div className="bg-green-50 dark:bg-green-950/20 rounded-2xl p-8 border border-green-200 dark:border-green-800 shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-400 border-b-3 border-green-500 pb-3">
-                    ✅ UPGRADE SYSTEMU <br/>Co wdrożysz na tym warsztacie?
+                    ✅ UPGRADE SYSTEMU <br/>(Co wdrożysz na tym warsztacie)
                   </h3>
                   <ul className="space-y-6" role="list">
                     {[
@@ -227,10 +227,10 @@ const Webinar = () => {
                     
                     <div className="space-y-6 text-lg leading-relaxed">
                       <p className="text-muted-foreground font-medium">
-                        Microsoft Certified Trainer, który nauczył się różnicy między <strong className="text-foreground"> byciem najlepszym a byciem prawdziwym</strong>. Od instruktora najsilniejszych armii świata po architekta mentalnych przełomów. Mistrz przekształcania myślenia w życie.
+                        MCT (Microsoft Certified Trainer), który nauczył się różnicy między <strong className="text-foreground"> byciem najlepszym a byciem prawdziwym</strong>. Od instruktora najsilniejszych armii świata po architekta mentalnych przełomów. Mistrz przekształcania myślenia w życie.
                       </p>
                       <p className="text-muted-foreground">
-Ludwik pomaga dostrzec pułapki umysłu, dostarcza narzędzi ze styku mindset/mental i dba o to, by każda zmiana była autentyczna i trwała.                    
+Ludwik pomaga dostrzec pułapki umysłu, dostarcza narzędzi ze styku mindset/mental i dba o to, by każda zmiana była <strong className="text-primary">autentyczna i trwała.     </strong>               
 </p></div>
                     
                     {/* Leadership qualities */}
