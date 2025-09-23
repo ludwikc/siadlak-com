@@ -53,10 +53,10 @@ const Webinar = () => {
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="font-bold text-primary-foreground">
-                Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
+                KRYZYS MĘSKOŚCI? CZY CZAS NA UPGRADE WEWNĘTRZNEGO SYSTEMU?
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground/90 leading-relaxed">
-                Bezpłatny warsztat online dla profesjonalistów 30+, którzy mają dość dryfowania i szukają logicznego systemu do nawigacji w karierze i życiu. <span className="font-bold">Bez bullshitu.</span>
+                Weź udział w bezpłatnym warsztacie LIVE dla mężczyzn z analitycznym umysłem, którzy mają dość poczucia, że stoją w miejscu. Otrzymasz konkretny framework do odzyskania kontroli, spokoju i kierunku.
               </p>
               
               {/* Registration Form */}
