@@ -78,7 +78,7 @@ const Webinar = () => {
                   Kryzys Męskości?
                 </span>
                 <span className="block text-4xl md:text-6xl font-bold text-primary-foreground">
-                  Czy po prostu czas na <br/><strong className="font-black">UPGRADE SYSTEMU</strong>?
+                  Czy po prostu czas na <br/><strong className="font-black glow-text">UPGRADE SYSTEMU</strong>?
                 </span>
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground leading-relaxed">

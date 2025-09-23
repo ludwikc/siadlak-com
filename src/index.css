@@ -1005,3 +1005,8 @@ body.dev-light {
     gap: 0.5rem;
   }
 }
+
+/* Glow text utility */
+.glow-text {
+  text-shadow: 0 0 20px hsl(var(--primary-foreground) / 0.5);
+}
