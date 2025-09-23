@@ -61,26 +61,9 @@ const Webinar = () => {
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center space-y-6">
-                <div className="space-y-2">
-                  <h2 className="text-2xl md:text-3xl font-light text-primary-foreground/70 tracking-wide">
-                    Kryzys Męskości?
-                  </h2>
-                  <p className="text-lg md:text-xl font-normal text-primary-foreground/60 tracking-wide">
-                    Czy po prostu czas na
-                  </p>
-                </div>
-                
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9]">
-                  <span className="bg-gradient-to-r from-accent via-accent/90 to-accent/70 bg-clip-text text-transparent drop-shadow-lg">
-                    UPGRADE
-                  </span>
-                  <br />
-                  <span className="text-primary-foreground font-bold text-4xl md:text-6xl lg:text-7xl tracking-wide">
-                    SYSTEMU?
-                  </span>
-                </h1>
-              </div>
+              <h1 className="font-bold text-primary-foreground">
+                KRYZYS MĘSKOŚCI? CZY CZAS NA UPGRADE WEWNĘTRZNEGO SYSTEMU?
+              </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground/90 leading-relaxed">
                 Weź udział w bezpłatnym warsztacie LIVE dla mężczyzn z analitycznym umysłem, którzy mają dość poczucia, że stoją w miejscu. Otrzymasz konkretny framework do odzyskania kontroli, spokoju i kierunku.
               </p>
