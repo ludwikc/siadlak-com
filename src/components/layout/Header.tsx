@@ -259,14 +259,14 @@ export default function Header() {
                       {/* Featured Cards */}
                       <Link 
                         to="/program" 
-                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden min-h-[120px]"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm">
                           Tu chcesz zacząć ⤵
                         </div>
-                        <div className="flex items-center justify-between pt-8">
-                          <div className="flex items-center">
+                        <div className="flex items-stretch justify-between pt-8 h-full">
+                          <div className="flex items-center flex-1">
                             <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
                               <Book size={24} className="text-neural-violet" />
                             </div>
@@ -279,11 +279,11 @@ export default function Header() {
                               </p>
                             </div>
                           </div>
-                          <div className="hidden md:block ml-4 flex-shrink-0">
+                          <div className="hidden md:flex items-center ml-4 flex-shrink-0">
                             <img 
-                              src="/lovable-uploads/63443166-1ce7-4e56-addb-70b236d9b04a.png" 
+                              src="/lovable-uploads/b2282be8-5d99-4b31-a63c-8760647510ae.png" 
                               alt="Programy rozwojowe - podgląd na różnych urządzeniach" 
-                              className="h-32 w-auto group-hover:scale-105 transition-transform duration-200"
+                              className="h-full max-h-24 w-auto group-hover:scale-105 transition-transform duration-200"
                             />
                           </div>
                         </div>
