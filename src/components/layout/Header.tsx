@@ -283,7 +283,7 @@ export default function Header() {
                             <img 
                               src="/lovable-uploads/63443166-1ce7-4e56-addb-70b236d9b04a.png" 
                               alt="Programy rozwojowe - podgląd na różnych urządzeniach" 
-                              className="h-20 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-200"
+                              className="h-32 w-auto group-hover:scale-105 transition-transform duration-200"
                             />
                           </div>
                         </div>
