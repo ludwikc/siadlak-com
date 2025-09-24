@@ -265,17 +265,26 @@ export default function Header() {
                         <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm">
                           Tu chcesz zacząć ⤵
                         </div>
-                        <div className="flex items-center pt-8">
-                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
-                            <Book size={24} className="text-neural-violet" />
+                        <div className="flex items-center justify-between pt-8">
+                          <div className="flex items-center">
+                            <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                              <Book size={24} className="text-neural-violet" />
+                            </div>
+                            <div>
+                              <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                                Programy rozwojowe
+                              </h4>
+                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                                Kursy online i szkolenia
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
-                              Programy rozwojowe
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
-                              Kursy online i szkolenia
-                            </p>
+                          <div className="hidden md:block ml-4 flex-shrink-0">
+                            <img 
+                              src="/lovable-uploads/63443166-1ce7-4e56-addb-70b236d9b04a.png" 
+                              alt="Programy rozwojowe - podgląd na różnych urządzeniach" 
+                              className="h-20 w-auto rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-200"
+                            />
                           </div>
                         </div>
                       </Link>
