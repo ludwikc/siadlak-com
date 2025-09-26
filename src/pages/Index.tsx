@@ -72,7 +72,7 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("/")} />
       <Hero
-        title="LUDWIK C. SIADLAK"
+        title="Life OS: Czas na Upgrade Systemu"
         subtitle={<>Dbasz o aktualizacje swojego telefonu i laptopa. Wymieniasz w nich oprogramowanie na nowsze, by działały sprawniej, lepiej i bezpieczniej.<br /><br />A kiedy ostatni raz <strong>świadomie</strong> zaktualizowałeś oprogramowanie <strong>w swojej głowie</strong>?</>}
         ctaText="Sprawdź gotowość na upgrade"
         ctaLink="/assessment"
