@@ -1,13 +1,11 @@
 import Layout from "../components/layout/Layout";
 import Hero from "../components/sections/Hero";
 import HowItWorks from "../components/sections/HowItWorks";
-import PersonaSection from "../components/sections/PersonaSection";
 import TrustElements from "../components/sections/TrustElements";
 import Newsletter from "../components/sections/Newsletter";
 import CTASection from "../components/sections/CTASection";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
-import { Brain, Settings, Briefcase } from "lucide-react";
 
 const Index = () => {
   // How It Works steps
@@ -28,28 +26,6 @@ const Index = () => {
       title: "Społeczność Lifehackerów",
       description: "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. <br/><br/> Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u."
     }
-  ];
-
-  // Personas
-  const personas = [
-    {
-      title: "Profesjonaliści z... nieaktualnym systemem",
-      description:
-        "Masz umiejętności i doświadczenie, ale wewnętrznie wiesz, że działasz na starym oprogramowaniu. Analizujesz zamiast działać, utknąłeś w sofistykowanych mechanizmach obronnych.",
-      icon: <Brain size={24} />,
-    },
-    {
-      title: "Eksperci gotowi na fundamentalną zmianę",
-      description:
-        "Czujesz, że nadszedł czas nie na kolejny kurs, ale na transformację tego, kim jesteś. Szukasz upgrade'u systemu, nie tylko nowych aplikacji.",
-      icon: <Settings size={24} />,
-    },
-    {
-      title: "Liderzy, którzy odmawiają powierzchownych rozwiązań",
-      description:
-        "Potrzebujesz głębokiej zmiany sposobu funkcjonowania. Chcesz przejść od reaktywności do autonomii, od szukania akceptacji do tworzenia wartości.",
-      icon: <Briefcase size={24} />,
-    },
   ];
 
   // Testimonials
@@ -98,13 +74,29 @@ const Index = () => {
 
       <HowItWorks title="Dwie opcje aktualizacji" steps={steps} />
 
-      <PersonaSection
-        title="Czy to dla Ciebie?"
-        personas={personas}
-        callout="Jeśli to rozpoznajesz, nie potrzebujesz więcej informacji. Potrzebujesz upgrade'u systemu. Pracuję metodą, która wymaga odwagi - zarówno ode mnie, jak i od ciebie."
-        ctaText="Zobacz LifeOS AppStore"
-        ctaLink="/program"
-      />
+      <div className="py-20 bg-gradient-to-br from-background via-secondary/10 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+              Czy Life OS jest dla Ciebie?
+            </h2>
+            <div className="space-y-6 text-lg text-deep-charcoal/80 dark:text-silver-mist/80 text-left">
+              <p>
+                <strong>Jesteś liderem lub ekspertem</strong>, który osiągnął sukces dzięki dotychczasowym metodom, ale czujesz, że stare podejście przestaje wystarczać w nowej, bardziej złożonej rzeczywistości.
+              </p>
+              <p>
+                <strong>Jesteś przedsiębiorcą</strong>, który rozumie, że rozwój firmy jest nierozerwalnie związany z rozwojem jego własnego umysłu i sposobu myślenia.
+              </p>
+              <p>
+                <strong>Jesteś profesjonalistą</strong>, który dba o dietę, kondycję fizyczną i najlepsze narzędzia, a teraz czuje, że czas zająć się najważniejszym zasobem – tym, co ma w głowie.
+              </p>
+              <p className="text-center pt-6 text-xl font-medium text-neural-violet dark:text-luminal-magenta">
+                Jeśli jesteś gotów, by zadbać o swój umysł z taką samą uwagą, z jaką dbasz o technologię, której używasz – jesteś we właściwym miejscu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <TrustElements
         title="Dlaczego to podejście działa"
