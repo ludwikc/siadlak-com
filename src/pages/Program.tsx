@@ -251,23 +251,74 @@ export default function Program() {
                     </div>
                   )}
 
-                  <AppCard
-                    title="Mental Elevator"
-                    subtitle="Indywidualny Program Mentoringowy"
-                    description="Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie."
-                    category="Męskość"
-                    rating={5.0}
-                    downloads="Ekskluzywne"
-                    status="NIEDOSTĘPNA"
-                    features={[
-                      'Indywidualna sesja diagnostyczna',
-                      'Tygodniowe sesje mentoringowe 1:1',
-                      'Dostęp do społeczności absolwentów',
-                      'Materiały i narzędzia premium'
-                    ]}
-                    link="/program/mental-elevator"
-                    premium={true}
-                  />
+                  {/* Custom Mental Elevator Card */}
+                  <div className="p-6 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-xl">
+                    {/* Header */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-lg flex items-center justify-center">
+                          <span className="text-white text-xl font-bold">ME</span>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white">Mental Elevator</h3>
+                          <p className="text-white/70 text-sm">Indywidualny Program Mentoringowy</p>
+                        </div>
+                      </div>
+                      
+                      {/* Price */}
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-ascension-pink">16 000 PLN</div>
+                        <div className="text-xs text-white/60">8 tygodni</div>
+                      </div>
+                    </div>
+                    
+                    {/* Rating */}
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="text-yellow-400 text-sm">★</span>
+                        ))}
+                      </div>
+                      <span className="text-white/70 text-sm">5.0</span>
+                    </div>
+                    
+                    {/* Description */}
+                    <p className="text-white/80 text-sm mb-4 leading-relaxed">
+                      Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.
+                    </p>
+                    
+                    {/* Exclusivity Message */}
+                    <div className="bg-ascension-pink/10 border border-ascension-pink/20 rounded-lg p-3 mb-4">
+                      <p className="text-ascension-pink text-sm font-medium text-center">
+                        Prowadzę max 5 osób w tym samym czasie
+                      </p>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="space-y-2 mb-6">
+                      {[
+                        'Indywidualna sesja diagnostyczna',
+                        'Tygodniowe sesje mentoringowe 1:1',
+                        'Dostęp do społeczności absolwentów',
+                        'Materiały i narzędzia premium'
+                      ].map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-white/80 text-sm">
+                          <div className="w-1.5 h-1.5 bg-ascension-pink rounded-full"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* CTA Button */}
+                    <div className="block">
+                      <CTAButton 
+                        className="w-full bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
+                        showArrow={false}
+                      >
+                        Obecnie niedostępne
+                      </CTAButton>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
