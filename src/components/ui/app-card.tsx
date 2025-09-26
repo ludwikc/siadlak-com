@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Star, Download, Zap, Brain, Compass, Clock, Users } from '@/lib/icons';
+import { Star, Download, Clock, Users } from '@/lib/icons';
 import { Badge } from '@/components/ui/badge';
 import { CTAButton } from '@/components/ui/cta-button';
 
@@ -16,24 +16,30 @@ interface AppCardProps {
   premium?: boolean;
   duration?: string;
   target?: string;
+  icon?: string;
+  badges?: string[];
 }
 
 const categoryConfig = {
   'Produktywność': {
-    icon: Zap,
-    gradient: 'from-neural-violet to-purple-600',
+    gradient: 'from-neural-violet to-ascension-pink',
     color: 'text-neural-violet dark:text-luminal-magenta'
   },
   'Odporność psychiczna': {
-    icon: Brain,
     gradient: 'from-blue-600 to-purple-600',
     color: 'text-blue-600 dark:text-blue-400'
   },
   'Męskość': {
-    icon: Compass,
     gradient: 'from-red-500 to-pink-600',
     color: 'text-red-600 dark:text-red-400'
   }
+};
+
+const badgeConfig = {
+  'NOWA': 'bg-green-500 text-white',
+  'POLECANE': 'bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0',
+  'NIEDOSTĘPNA': 'bg-gray-500 text-white',
+  'DOSTĘPNA': 'bg-neural-violet text-white'
 };
 
 export default function AppCard({ 
@@ -48,18 +54,32 @@ export default function AppCard({
   featured = false,
   premium = false,
   duration = "6 tygodni",
-  target = "Dla świadomych optymalizatorów"
+  target = "Dla świadomych optymalizatorów",
+  icon,
+  badges = []
 }: AppCardProps) {
-  const CategoryIcon = categoryConfig[category].icon;
   const gradient = categoryConfig[category].gradient;
   const categoryColor = categoryConfig[category].color;
+  const ctaText = badges.includes('NOWA') ? 'Zainstaluj Teraz' : 'Zainstaluj';
 
   return (
-    <div className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale ${featured ? 'border-2 border-ascension-pink/30 dark:border-luminal-magenta/30' : 'border border-gray-200 dark:border-gray-700'} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
-      {/* App Icon */}
+    <div className={`bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale relative ${featured ? 'border-2 border-ascension-pink/30 dark:border-luminal-magenta/30' : 'border border-gray-200 dark:border-gray-700'} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
+      
+      {/* Badges */}
+      {badges.length > 0 && (
+        <div className="absolute top-4 right-4 flex flex-col gap-1">
+          {badges.map((badge, index) => (
+            <Badge key={index} className={`text-xs px-3 py-1 ${badgeConfig[badge as keyof typeof badgeConfig]} ${badge === 'POLECANE' ? 'animate-pulse' : ''}`}>
+              {badge}
+            </Badge>
+          ))}
+        </div>
+      )}
+
+      {/* App Icon and Title */}
       <div className="flex items-center mb-6">
-        <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mr-6`}>
-          <CategoryIcon className="w-8 h-8 text-white" />
+        <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mr-6 text-2xl`}>
+          {icon}
         </div>
         
         <div className="flex-1">
@@ -72,7 +92,7 @@ export default function AppCard({
         </div>
       </div>
 
-      {/* Rating and Users */}
+      {/* Rating and Downloads */}
       <div className="flex items-center mb-4">
         <div className="flex items-center mr-6">
           {[...Array(5)].map((_, i) => (
@@ -142,7 +162,7 @@ export default function AppCard({
           aria-label={`Zainstaluj aplikację ${title}`}
         >
           <Download className="w-5 h-5 mr-3" />
-          Zainstaluj
+          {ctaText}
         </CTAButton>
       </Link>
     </div>

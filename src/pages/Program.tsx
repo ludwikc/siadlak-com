@@ -13,17 +13,20 @@ const apps = [
   {
     title: 'Hakowanie Produktywności',
     subtitle: 'System produktywności zgodny z Twoimi wartościami',
-    description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
+    description: 'Przestań być kontrolowanym przez technologie. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
     category: 'Produktywność' as const,
     rating: 5.0,
-    downloads: '115 instalacji',
+    downloads: '150+ użytkowników',
     features: [
       'Kompleksowa diagnoza Twoich blokad produktywności',
-      'Zintegrowany system zarządzania zadaniami i energią'
+      'Zintegrowany system zarządzania zadaniami i energią',
+      'Protokoły głębokiej pracy dostosowane do Twojego kontekstu',
+      'Praktyczne wdrożenie narzędzi, nie tylko teoria'
     ],
     link: '/program/hakowanie-produktywnosci',
     duration: '6 tygodni',
-    target: 'Dla świadomych optymalizatorów'
+    target: 'Dla świadomych optymalizatorów',
+    icon: '⚡'
   },
   {
     title: 'Silna Głowa',
@@ -31,14 +34,15 @@ const apps = [
     description: 'Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.',
     category: 'Odporność psychiczna' as const,
     rating: 5.0,
-    downloads: '64 instalacji',
+    downloads: '150+ użytkowników',
     features: [
       'Praktyczne techniki redukcji stresu',
       'Protokoły zarządzania energią mentalną'
     ],
     link: '/program/silna-glowa',
-    duration: '8 tygodni',
-    target: 'Dla wymagających profesjonalistów'
+    duration: '5 tygodni',
+    target: 'Dla poszukujących balansu',
+    icon: '🧠'
   },
   {
     title: 'Męski Kompas',
@@ -46,15 +50,17 @@ const apps = [
     description: 'Program dla mężczyzn gotowych przejąć pełną odpowiedzialność za swoje życie. Odkryj i wzmocnij swoją autentyczną męskość.',
     category: 'Męskość' as const,
     rating: 5.0,
-    downloads: '6 instalacji',
+    downloads: '50+ użytkowników',
     features: [
       'Kompleksowa analiza sytuacji życiowej',
       'Praktyczne narzędzia przywództwa osobistego'
     ],
     link: '/program/meski-kompas',
     featured: true,
-    duration: '12 tygodni',
-    target: 'Dla gotowych na transformację'
+    duration: '8 tygodni',
+    target: 'Dla gotowych na transformację',
+    icon: '🧭',
+    badges: ['NOWA', 'POLECANE']
   }
 ];
 
@@ -139,7 +145,7 @@ export default function Program() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-sm px-4 py-2 animate-pulse">
-                🔥 NOWA APLIKACJA - ZAINSTALUJ TERAZ!
+                🔥 NOWY PROGRAM - DOŁĄCZ TERAZ!
               </Badge>
             </div>
             
