@@ -13,40 +13,40 @@ const Index = () => {
   // How It Works steps
   const steps = [
     {
-      title: "Odzyskaj wpływ",
+      title: "Instaluj aplikacje",
       description:
-        "Zidentyfikujesz, gdzie technologia przejęła nad Tobą kontrolę. Dzięki sprawdzonym metodom, odzyskasz panowanie nad swoim swoim zmieniającym się środowiskiem pracy i przestaniesz czuć się przytłoczony.",
+        "Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu. Szybki upgrade konkretnego obszaru.",
     },
     {
-      title: "Zbuduj systemy, które Ci służą",
+      title: "Life OS Upgrade",
       description:
-        "Stworzysz systemy, które sprawią, że technologia pracuje na i dla Ciebie, a nie przeciwko Tobie. To meta-system, który respektuje Twoje naturalne mocne strony, jednocześnie wzmacniając Twoje możliwości.",
+        "Fundamentalna rekonstrukcja całego systemu operacyjnego. Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.",
     },
     {
-      title: "Utrzymaj kontrolę długoterminowo",
+      title: "Społeczność jako nagroda",
       description:
-        "Na koniec opanujesz metody wdrażania, które zintegrujesz ze swoim życiem tak, aby zachować kontrolę nad technologią bez poświęcania tego, co czyni Cię człowiekiem.",
+        "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u.",
     },
   ];
 
   // Personas
   const personas = [
     {
-      title: "Eksperci wchodzący w role przywódcze",
+      title: "Profesjonaliści wysokiego poziomu z przestarzałym systemem",
       description:
-        "Opanowałeś technikalia, ale teraz stajesz przed wyzwaniem prowadzenia innych. Potrzebujesz strategii, które honorują zarówno Twój techniczny umysł, jak i rosnącą rolę lidera.",
+        "Masz umiejętności i doświadczenie, ale wewnętrznie wiesz, że działasz na starym oprogramowaniu. Analizujesz zamiast działać, utknąłeś w sofistykowanych mechanizmach obronnych.",
       icon: <Brain size={24} />,
     },
     {
-      title: "Profesjonaliści, a jednak przytłoczeni przez technologię",
+      title: "Eksperci gotowi na fundamentalną zmianę",
       description:
-        "Jesteś wykwalifikowany w swojej dziedzinie, ale czujesz się coraz bardziej zdominowany przez cyfrowe narzędzia, które miały Ci pomóc. Szukasz sposobów, by te narzędzia służyły Tobie, a nie odwrotnie.",
+        "Czujesz, że nadszedł czas nie na kolejny kurs, ale na transformację tego, kim jesteś. Szukasz upgrade'u systemu, nie tylko nowych aplikacji.",
       icon: <Settings size={24} />,
     },
     {
-      title: "Przedsiębiorcy balansujący między rozwojem a dobrostanem",
+      title: "Liderzy, którzy odmawiają powierzchownych rozwiązań",
       description:
-        "Budujesz coś wartościowego, ale zmagasz się z ciągłymi cyfrowymi wymaganiami. Potrzebujesz podejścia, które wspiera Twój biznes, nie niszcząc przy tym Twojego zdrowia i relacji.",
+        "Potrzebujesz głębokiej zmiany sposobu funkcjonowania. Chcesz przejść od reaktywności do suwerenności, od szukania akceptacji do tworzenia wartości.",
       icon: <Briefcase size={24} />,
     },
   ];
@@ -71,12 +71,12 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("/")} />
       <Hero
-        title="Odzyskaj kontrolę."
-        subtitle="Przestań być kontrolowanym przez technologię. Zacznij nią świadomie sterować."
-        ctaText="Sprawdź swój poziom kontroli"
+        title="LUDWIK C. SIADLAK"
+        subtitle="Aktualizacja Oprogramowania"
+        ctaText="Sprawdź gotowość na upgrade"
         ctaLink="/assessment"
-        secondaryCtaText="Przeczytaj moje przemyślenia"
-        secondaryCtaLink="/newsletter"
+        secondaryCtaText="Zarezerwuj sesję Discovery"
+        secondaryCtaLink="/discovery"
         heroImage="/lovable-uploads/SIADLAK-coffee-transparent.png"
         imageDescription="Ludwik C. Siadlak - Lifehacker"
         fullHeight={true}
@@ -84,27 +84,25 @@ const Index = () => {
 
       <div className="py-12 md:py-16 bg-secondary/30 dark:bg-quantum-blue/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl mb-4 text-deep-charcoal dark:text-silver-mist">
-              Technologia powinna pracować na Ciebie, nie dodawać Ci zadań.
+              Aktualizuj swój system. Dbasz o swój telefon, instalujesz nowe aplikacje, robisz upgrade systemu. Kiedy ostatnio zaktualizowałeś oprogramowanie <strong>w głowie</strong>?
             </h2>
             <p className="text-xl text-deep-charcoal/80 dark:text-silver-mist/80">
-              Pomagam profesjonalistom przejść od poczucia przytłoczenia do
-              pełnej kontroli nad narzędziami AI, ale przede wszystkim - własnym
-              życiem.
+              AI jest wszędzie, ale to kombinacja głowa+serce zapala iskrę i dolewa oliwy do ognia. Pomagam profesjonalistom przejść z Windows 98 na współczesny macOS - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
             </p>
           </div>
         </div>
       </div>
 
-      <HowItWorks title="Trzy kroki do odzyskania kontroli" steps={steps} />
+      <HowItWorks title="Dwie opcje aktualizacji" steps={steps} />
 
       <PersonaSection
         title="Czy to dla Ciebie?"
         personas={personas}
-        callout="Jeśli odnajdujesz się w tych opisach, jesteś we właściwym miejscu. Metody, którymi się dzielę, są stworzone specjalnie dla tych, którzy odmawiają bycia kontrolowanymi przez technologię, która miała im pomóc odnieść sukces."
-        ctaText="Znajdź swoją ścieżkę"
-        ctaLink="/contact"
+        callout="Jeśli to rozpoznajesz, nie potrzebujesz więcej informacji. Potrzebujesz upgrade'u systemu. Pracuję metodą, która wymaga odwagi - zarówno ode mnie, jak i od ciebie."
+        ctaText="Zobacz LifeOS AppStore"
+        ctaLink="/program"
       />
 
       <TrustElements
@@ -117,10 +115,10 @@ const Index = () => {
       <Newsletter />
 
       <CTASection
-        title="Gotów przejąć kontrolę nad swoim życiem?"
-        description="Wykonaj pierwszy krok w kierunku transformacji swojej relacji z technologią."
-        buttonText="Umów się na konsultację"
-        buttonLink="/contact"
+        title="Gotów na upgrade systemu?"
+        description="Jeśli to rozpoznajesz, nie potrzebujesz więcej informacji. Potrzebujesz upgrade'u systemu."
+        buttonText="Zobacz LifeOS AppStore"
+        buttonLink="/program"
       />
     </Layout>
   );
