@@ -12,21 +12,19 @@ import AppStoreStats from '@/components/sections/AppStoreStats';
 const apps = [
   {
     title: 'Hakowanie Produktywności',
-    subtitle: 'System produktywności zgodny z Twoimi wartościami',
-    description: 'Przestań być kontrolowanym przez technologie. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
+    subtitle: 'System produktywności zgodny z wartościami',
+    description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
     category: 'Produktywność' as const,
     rating: 5.0,
-    downloads: '150+ użytkowników',
+    downloads: '115 instalacji',
+    status: 'DOSTĘPNA' as const,
     features: [
-      'Kompleksowa diagnoza Twoich blokad produktywności',
-      'Zintegrowany system zarządzania zadaniami i energią',
-      'Protokoły głębokiej pracy dostosowane do Twojego kontekstu',
-      'Praktyczne wdrożenie narzędzi, nie tylko teoria'
+      'Kompleksowa diagnoza blokad produktywności',
+      'Zintegrowany system zarządzania zadaniami',
+      'Protokoły głębokiej pracy',
+      'Praktyczne wdrożenie narzędzi'
     ],
-    link: '/program/hakowanie-produktywnosci',
-    duration: '6 tygodni',
-    target: 'Dla świadomych optymalizatorów',
-    icon: '⚡'
+    link: '/program/hakowanie-produktywnosci'
   },
   {
     title: 'Silna Głowa',
@@ -34,15 +32,15 @@ const apps = [
     description: 'Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.',
     category: 'Odporność psychiczna' as const,
     rating: 5.0,
-    downloads: '150+ użytkowników',
+    downloads: '64 instalacji',
+    status: 'DOSTĘPNA' as const,
     features: [
       'Praktyczne techniki redukcji stresu',
-      'Protokoły zarządzania energią mentalną'
+      'Protokoły zarządzania energią mentalną',
+      'Strategie podejmowania decyzji pod presją',
+      'Metody budowania długoterminowej odporności'
     ],
-    link: '/program/silna-glowa',
-    duration: '5 tygodni',
-    target: 'Dla poszukujących balansu',
-    icon: '🧠'
+    link: '/program/silna-glowa'
   },
   {
     title: 'Męski Kompas',
@@ -50,17 +48,16 @@ const apps = [
     description: 'Program dla mężczyzn gotowych przejąć pełną odpowiedzialność za swoje życie. Odkryj i wzmocnij swoją autentyczną męskość.',
     category: 'Męskość' as const,
     rating: 5.0,
-    downloads: '50+ użytkowników',
+    downloads: '6 instalacji',
+    status: 'NOWA' as const,
     features: [
       'Kompleksowa analiza sytuacji życiowej',
-      'Praktyczne narzędzia przywództwa osobistego'
+      'Praktyczne narzędzia przywództwa osobistego',
+      'Strategie budowania autentycznych relacji',
+      'Protokoły rozwoju fizycznego i mentalnego'
     ],
     link: '/program/meski-kompas',
-    featured: true,
-    duration: '8 tygodni',
-    target: 'Dla gotowych na transformację',
-    icon: '🧭',
-    badges: ['NOWA', 'POLECANE']
+    featured: true
   }
 ];
 
@@ -97,8 +94,8 @@ export default function Program() {
   return (
     <Layout>
       <HeroSection
-        title="MENTAL APPSTORE"
-        subtitle={<>Zainstaluj aplikacje, które zmieniają sposób myślenia. Od podstawowych narzędzi po <span className="italic text-ascension-pink">premium</span> transformację dla wybranych.</>}
+        title="LifeOS AppStore"
+        subtitle={<>Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie <span className="italic text-ascension-pink">w głowie</span></>}
       />
       
       {/* App Store Statistics */}
@@ -117,16 +114,10 @@ export default function Program() {
                 PODSTAWOWE APLIKACJE
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                Zacznij od fundamentów
+                Instaluj Aplikacje
               </h2>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-2">
-                Wybierz aplikację, której właśnie potrzebujesz.
-              </p>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-2">
-                Czego teraz bardziej potrzebujesz?
-              </p>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8 italic">
-                (Wiesz czego, zacznij sobie ufać)
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8">
+                Konkretne umiejętności: produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -145,7 +136,7 @@ export default function Program() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-sm px-4 py-2 animate-pulse">
-                🔥 NOWY PROGRAM - DOŁĄCZ TERAZ!
+                🔥 NOWA APLIKACJA - ZAINSTALUJ TERAZ!
               </Badge>
             </div>
             
@@ -267,14 +258,15 @@ export default function Program() {
                     category="Męskość"
                     rating={5.0}
                     downloads="Ekskluzywne"
+                    status="NIEDOSTĘPNA"
                     features={[
                       'Indywidualna sesja diagnostyczna',
-                      'Tygodniowe sesje mentoringowe 1:1'
+                      'Tygodniowe sesje mentoringowe 1:1',
+                      'Dostęp do społeczności absolwentów',
+                      'Materiały i narzędzia premium'
                     ]}
                     link="/program/mental-elevator"
                     premium={true}
-                    duration="8 tygodni"
-                    target="Maksymalnie 5 osób"
                   />
                 </div>
               </div>
