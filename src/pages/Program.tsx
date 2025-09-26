@@ -16,7 +16,7 @@ const apps = [
     description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
     category: 'Produktywność' as const,
     rating: 5.0,
-    downloads: '89 instalacji',
+    downloads: '115 instalacji',
     status: 'DOSTĘPNA' as const,
     features: [
       'Kompleksowa diagnoza blokad produktywności',
@@ -48,7 +48,7 @@ const apps = [
     description: 'Program dla mężczyzn gotowych przejąć pełną odpowiedzialność za swoje życie. Odkryj i wzmocnij swoją autentyczną męskość.',
     category: 'Męskość' as const,
     rating: 5.0,
-    downloads: '12 instalacji',
+    downloads: '6 instalacji',
     status: 'NOWA' as const,
     features: [
       'Kompleksowa analiza sytuacji życiowej',
@@ -69,7 +69,7 @@ const communityBenefits = [
   },
   {
     icon: MessageSquare,
-    title: 'Discord & Platforma',
+    title: 'Discord & Portal Lifehackeró',
     description: 'Dostęp do ekskluzywnych kanałów'
   },
   {
@@ -95,7 +95,7 @@ export default function Program() {
     <Layout>
       <HeroSection
         title="LifeOS AppStore"
-        subtitle={<>Sklep z aplikacjami mentalnej transformacji. Zainstaluj nowe oprogramowanie <span className="italic text-ascension-pink">w głowie</span></>}
+        subtitle={<>Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie <span className="italic text-ascension-pink">w głowie</span></>}
       />
       
       {/* App Store Statistics */}
@@ -117,7 +117,7 @@ export default function Program() {
                 Instaluj Aplikacje
               </h2>
               <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8">
-                Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu.
+                Konkretne umiejętności: produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
