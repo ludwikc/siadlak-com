@@ -13,7 +13,7 @@ const Index = () => {
   // How It Works steps
   const steps = [
     {
-      title: "Instaluj aplikacje",
+      title: "Zainstaluj aplikacje",
       description: "Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu. Szybki upgrade konkretnego obszaru.",
       link: "/program",
       linkText: "Zobacz dostępne aplikacje ≫"
@@ -25,15 +25,15 @@ const Index = () => {
       linkText: "Sprawdź dostępność ≫"
     },
     {
-      title: "Społeczność jako nagroda",
-      description: "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u."
+      title: "Społeczność Lifehackerów",
+      description: "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. <br/><br/> Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u."
     }
   ];
 
   // Personas
   const personas = [
     {
-      title: "Profesjonaliści wysokiego poziomu z przestarzałym systemem",
+      title: "Profesjonaliści z... nieaktualnym systemem",
       description:
         "Masz umiejętności i doświadczenie, ale wewnętrznie wiesz, że działasz na starym oprogramowaniu. Analizujesz zamiast działać, utknąłeś w sofistykowanych mechanizmach obronnych.",
       icon: <Brain size={24} />,
@@ -47,7 +47,7 @@ const Index = () => {
     {
       title: "Liderzy, którzy odmawiają powierzchownych rozwiązań",
       description:
-        "Potrzebujesz głębokiej zmiany sposobu funkcjonowania. Chcesz przejść od reaktywności do suwerenności, od szukania akceptacji do tworzenia wartości.",
+        "Potrzebujesz głębokiej zmiany sposobu funkcjonowania. Chcesz przejść od reaktywności do autonomii, od szukania akceptacji do tworzenia wartości.",
       icon: <Briefcase size={24} />,
     },
   ];
@@ -72,8 +72,8 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("/")} />
       <Hero
-        title="Life OS: Czas na Upgrade Systemu"
-        subtitle={<>Dbasz o aktualizacje swojego telefonu i laptopa. Wymieniasz w nich oprogramowanie na nowsze, by działały sprawniej, lepiej i bezpieczniej.<br /><br />A kiedy ostatni raz <strong>świadomie</strong> zaktualizowałeś oprogramowanie <strong>w swojej głowie</strong>?</>}
+        title="Czas na Upgrade Systemu"
+        subtitle={<>Dbasz o swój telefon, instalujesz nowe aplikacje, robisz upgrade systemu. <br /><br />A kiedy ostatni raz <strong>świadomie</strong> zaktualizowałeś oprogramowanie <strong>w swojej głowie</strong>?</>}
         ctaText="Sprawdź gotowość na upgrade"
         ctaLink="/assessment"
         secondaryCtaText="Zarezerwuj sesję Discovery"
@@ -87,10 +87,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl mb-4 text-deep-charcoal dark:text-silver-mist">
-              Aktualizuj swój system. Dbasz o swój telefon, instalujesz nowe aplikacje, robisz upgrade systemu. Kiedy ostatnio zaktualizowałeś oprogramowanie <strong>w głowie</strong>?
+              Zaktualizuj swój system. 
             </h2>
             <p className="text-xl text-deep-charcoal/80 dark:text-silver-mist/80">
-              AI jest wszędzie, ale to kombinacja głowa+serce zapala iskrę i dolewa oliwy do ognia. Pomagam profesjonalistom przejść z Windows 98 na współczesny macOS - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
+              AI jest wszędzie, ale to kombinacja (🧠+🤖)^💜 zapala iskrę i dolewa oliwy do ognia. Pomagam profesjonalistom przejść z Windows 98 na współczesny macOS - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
             </p>
           </div>
         </div>
