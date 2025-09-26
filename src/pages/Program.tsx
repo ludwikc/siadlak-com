@@ -94,8 +94,8 @@ export default function Program() {
   return (
     <Layout>
       <HeroSection
-        title="LifeOS AppStore"
-        subtitle={<>Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie <span className="italic text-ascension-pink">w głowie</span></>}
+        title="MENTAL APPSTORE"
+        subtitle={<>Zainstaluj aplikacje, które zmieniają sposób myślenia. Od podstawowych narzędzi po <span className="italic text-ascension-pink">premium</span> transformację dla wybranych.</>}
       />
       
       {/* App Store Statistics */}
@@ -114,10 +114,16 @@ export default function Program() {
                 PODSTAWOWE APLIKACJE
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-                Instaluj Aplikacje
+                Zacznij od fundamentów
               </h2>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8">
-                Konkretne umiejętności: produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu.
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-2">
+                Wybierz aplikację, której właśnie potrzebujesz.
+              </p>
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-2">
+                Czego teraz bardziej potrzebujesz?
+              </p>
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8 italic">
+                (Wiesz czego, zacznij sobie ufać)
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
