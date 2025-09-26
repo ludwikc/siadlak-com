@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
-import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { Users, Clock, Calendar, MessageSquare, Shield } from '@/lib/icons';
+import AppStoreStats from '@/components/sections/AppStoreStats';
 import HeroSection from '@/components/sections/HeroSection';
 import AppCard from '@/components/ui/app-card';
-import AppStoreStats from '@/components/sections/AppStoreStats';
+import { Badge } from '@/components/ui/badge';
+import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
+import { Calendar, Clock, MessageSquare, Shield, Users } from '@/lib/icons';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const apps = [
   {
@@ -35,8 +35,8 @@ const apps = [
     category: 'Odporność psychiczna' as const,
     rating: 5.0,
     downloads: '64 instalacji',
-    status: 'DOSTĘPNA' as const,
-    duration: '5 tygodni',
+    status: 'WAITLISTA - DOŁĄCZ' as const,
+    duration: '6 tygodni',
     target: 'Dla poszukujących balansu',
     features: [
       'Praktyczne techniki redukcji stresu',
@@ -53,8 +53,8 @@ const apps = [
     category: 'Męskość' as const,
     rating: 5.0,
     downloads: '6 instalacji',
-    status: 'NOWA' as const,
-    duration: '8 tygodni',
+    status: 'NABÓR OTWARTY' as const,
+    duration: '5 tygodni',
     target: 'Dla gotowych na transformację',
     features: [
       'Kompleksowa analiza sytuacji życiowej',
@@ -75,7 +75,7 @@ const communityBenefits = [
   },
   {
     icon: MessageSquare,
-    title: 'Discord & Portal Lifehackeró',
+    title: 'Discord & Portal Lifehackerów',
     description: 'Dostęp do ekskluzywnych kanałów'
   },
   {
@@ -100,7 +100,7 @@ export default function Program() {
   return (
     <Layout>
       <HeroSection
-        title="LifeOS AppStore"
+        title="Mental AppStore"
         subtitle={<>Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie <span className="italic text-ascension-pink">w głowie</span></>}
       />
       
@@ -142,7 +142,7 @@ export default function Program() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-sm px-4 py-2 animate-pulse">
-                🔥 NOWA APLIKACJA - ZAINSTALUJ TERAZ!
+                🔥 NOWY PROGRAM - DOŁĄCZ TERAZ!
               </Badge>
             </div>
             
@@ -164,11 +164,11 @@ export default function Program() {
             </Badge>
             
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              Społeczność Lifehackerzy
+              Społeczność Lifehackerów
             </h2>
             
             <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
-              <strong>Instalując dowolną aplikację otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności klientów. To jedyny sposób, aby dołączyć do Lifehackerów.</strong>
+              <strong>Dołączając do dowolnego programu otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności Klientów Premium. To jedyny sposób, aby dołączyć do Lifehackerów.</strong>
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -207,11 +207,11 @@ export default function Program() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-6 py-2 text-lg font-medium">
-                💎 PREMIUM APP • FINAL BOSS • LIFE OS UPGRADE
+                💎 LIFE OS UPGRADE
               </Badge>
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Mental Elevator
+                Life OS: System Upgrade
               </h2>
               
               <p className="text-xl md:text-2xl font-medium mb-8 text-white/90 max-w-4xl mx-auto">
@@ -228,7 +228,7 @@ export default function Program() {
                     <div className="mb-8">
                       <Shield className="h-20 w-20 text-ascension-pink mx-auto mb-6" />
                       <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                        Ta aplikacja jest dla zaawansowanych
+                        Ten program jest dla zaawansowanych
                       </h3>
                       <p className="text-white/80 text-lg sm:text-xl px-4 max-w-2xl mx-auto">
                         Rozpocznij swoją podróż od podstawowych aplikacji, a później odblokuj dostęp do programu premium.
@@ -265,10 +265,10 @@ export default function Program() {
                       {/* Header */}
                       <div className="flex items-center gap-6 mb-8">
                         <div className="w-20 h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-2xl flex items-center justify-center">
-                          <span className="text-white text-3xl font-bold">ME</span>
+                          <span className="text-white text-3xl font-bold">OS</span>
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold text-white mb-2">Mental Elevator</h3>
+                          <h3 className="text-3xl font-bold text-white mb-2">System Upgrade</h3>
                           <p className="text-white/70 text-lg">Indywidualny Program Mentoringowy</p>
                         </div>
                       </div>
@@ -285,7 +285,7 @@ export default function Program() {
                       
                       {/* Description */}
                       <p className="text-white/80 mb-8 text-xl leading-relaxed">
-                        Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie całego systemu operacyjnego w Twojej głowie.
+                        Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie całego systemu operacyjnego w Twojej głowie. I w emocjach.
                       </p>
                       
                       {/* Features */}
@@ -336,7 +336,7 @@ export default function Program() {
                       </CTAButton>
                       
                       <p className="text-white/50 text-sm mt-4">
-                        Następny nabór: Q2 2025
+                        Następny nabór: Q4 2025
                       </p>
                     </div>
                   </div>
