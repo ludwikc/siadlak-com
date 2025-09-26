@@ -196,7 +196,7 @@ export default function Program() {
         </div>
       </section>
       
-      {/* Section 4: Premium App - Mental Elevator */}
+      {/* Section 4: Premium App - Mental Elevator - FULL WIDTH "FINAL BOSS" */}
       <section className="py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet relative overflow-hidden">
         {/* Premium Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
@@ -204,125 +204,140 @@ export default function Program() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-8">
-              <Badge className="mb-4 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-4 py-1">
-                PREMIUM APP • LIFE OS UPGRADE
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-6 py-2 text-lg font-medium">
+                💎 PREMIUM APP • FINAL BOSS • LIFE OS UPGRADE
               </Badge>
               
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 Mental Elevator
               </h2>
               
-              <p className="text-xl md:text-2xl font-medium mb-6 text-white/90">
-                Fundamentalna rekonstrukcja całego systemu operacyjnego
+              <p className="text-xl md:text-2xl font-medium mb-8 text-white/90 max-w-4xl mx-auto">
+                Fundamentalna rekonstrukcja całego systemu operacyjnego. Nie aplikacja - cały nowy system.
               </p>
             </div>
             
-            <div className="flex justify-center">
-              <div className="w-full max-w-md">
-                <div className="glass-card rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 bg-gradient-to-br from-deep-space/50 to-quantum-blue/50 relative">
-                  {/* Privacy Overlay */}
-                  {isOverlayVisible && (
-                    <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in rounded-xl">
-                      <div className="mb-6">
-                        <Shield className="h-16 w-16 text-ascension-pink mx-auto mb-4" />
-                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
-                          Ta aplikacja jest dla zaawansowanych
-                        </h3>
-                        <p className="text-white/80 text-base sm:text-lg px-2">
-                          Rozpocznij swoją podróż od podstawowych aplikacji, a później odblokuj dostęp do programu premium.
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 w-full max-w-xs">
-                        <CTAButton 
-                          onClick={handleUnlockAccess}
-                          className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90"
-                          size="lg"
-                        >
-                          Sprawdź dostępność
-                        </CTAButton>
-                        
-                        <Link to="/discovery" className="block">
-                        <CTAButton 
-                          variant="secondary"
-                          className="w-full"
-                          size="lg"
-                        >
-                          Zarezerwuj sesję Discovery
-                        </CTAButton>
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Custom Mental Elevator Card */}
-                  <div className="p-6 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-xl">
-                    {/* Header */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xl font-bold">ME</span>
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white">Mental Elevator</h3>
-                          <p className="text-white/70 text-sm">Indywidualny Program Mentoringowy</p>
-                        </div>
-                      </div>
-                      
-                      {/* Price */}
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-ascension-pink">16 000 PLN</div>
-                        <div className="text-xs text-white/60">8 tygodni</div>
-                      </div>
-                    </div>
-                    
-                    {/* Rating */}
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                          <span key={i} className="text-yellow-400 text-sm">★</span>
-                        ))}
-                      </div>
-                      <span className="text-white/70 text-sm">5.0</span>
-                    </div>
-                    
-                    {/* Description */}
-                    <p className="text-white/80 text-sm mb-4 leading-relaxed">
-                      Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.
-                    </p>
-                    
-                    {/* Exclusivity Message */}
-                    <div className="bg-ascension-pink/10 border border-ascension-pink/20 rounded-lg p-3 mb-4">
-                      <p className="text-ascension-pink text-sm font-medium text-center">
-                        Prowadzę max 5 osób w tym samym czasie
+            {/* FULL WIDTH PREMIUM CARD */}
+            <div className="w-full">
+              <div className="glass-card rounded-2xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-2xl hover:shadow-neural-violet/20 bg-gradient-to-br from-deep-space/50 to-quantum-blue/50 relative border-2 border-ascension-pink/30">
+                {/* Privacy Overlay */}
+                {isOverlayVisible && (
+                  <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in rounded-2xl">
+                    <div className="mb-8">
+                      <Shield className="h-20 w-20 text-ascension-pink mx-auto mb-6" />
+                      <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Ta aplikacja jest dla zaawansowanych
+                      </h3>
+                      <p className="text-white/80 text-lg sm:text-xl px-4 max-w-2xl mx-auto">
+                        Rozpocznij swoją podróż od podstawowych aplikacji, a później odblokuj dostęp do programu premium.
                       </p>
                     </div>
                     
-                    {/* Features */}
-                    <div className="space-y-2 mb-6">
-                      {[
-                        'Indywidualna sesja diagnostyczna',
-                        'Tygodniowe sesje mentoringowe 1:1',
-                        'Dostęp do społeczności absolwentów',
-                        'Materiały i narzędzia premium'
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 text-white/80 text-sm">
-                          <div className="w-1.5 h-1.5 bg-ascension-pink rounded-full"></div>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    {/* CTA Button */}
-                    <div className="block">
+                    <div className="space-y-4 w-full max-w-md">
                       <CTAButton 
-                        className="w-full bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
+                        onClick={handleUnlockAccess}
+                        className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90"
+                        size="lg"
+                      >
+                        Sprawdź dostępność
+                      </CTAButton>
+                      
+                      <Link to="/discovery" className="block">
+                      <CTAButton 
+                        variant="secondary"
+                        className="w-full"
+                        size="lg"
+                      >
+                        Zarezerwuj sesję Discovery
+                      </CTAButton>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+
+                {/* WIDE 2-COLUMN LAYOUT */}
+                <div className="p-8 md:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl">
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Left Column - Content */}
+                    <div>
+                      {/* Header */}
+                      <div className="flex items-center gap-6 mb-8">
+                        <div className="w-20 h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-2xl flex items-center justify-center">
+                          <span className="text-white text-3xl font-bold">ME</span>
+                        </div>
+                        <div>
+                          <h3 className="text-3xl font-bold text-white mb-2">Mental Elevator</h3>
+                          <p className="text-white/70 text-lg">Indywidualny Program Mentoringowy</p>
+                        </div>
+                      </div>
+                      
+                      {/* Rating */}
+                      <div className="flex items-center gap-3 mb-8">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i} className="text-yellow-400 text-2xl">★</span>
+                          ))}
+                        </div>
+                        <span className="text-white/70 text-lg">5.0 • Ekskluzywny</span>
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-white/80 mb-8 text-xl leading-relaxed">
+                        Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie całego systemu operacyjnego w Twojej głowie.
+                      </p>
+                      
+                      {/* Features */}
+                      <div className="space-y-4">
+                        {[
+                          'Indywidualna sesja diagnostyczna (3h)',
+                          '8 x sesje mentoringowe 1:1 (90 min)',
+                          'Dostęp LIFETIME do społeczności absolwentów',
+                          'Materiały i narzędzia premium',
+                          '24/7 wsparcie przez cały program',
+                          'Gwarancja rezultatu lub zwrot pieniędzy'
+                        ].map((feature, index) => (
+                          <div key={index} className="flex items-center gap-4 text-white/90 text-lg">
+                            <div className="w-3 h-3 bg-ascension-pink rounded-full flex-shrink-0"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right Column - Price & CTA */}
+                    <div className="text-center lg:text-right">
+                      {/* Price */}
+                      <div className="mb-8">
+                        <div className="text-5xl lg:text-6xl font-bold text-ascension-pink mb-3">16 000 PLN</div>
+                        <div className="text-white/60 text-xl">8 tygodni intensywnej transformacji</div>
+                        <div className="text-white/40 text-lg mt-2">≈ 2000 PLN / tydzień</div>
+                      </div>
+                      
+                      {/* Exclusivity Badge */}
+                      <div className="bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 border-2 border-ascension-pink/40 rounded-2xl p-6 mb-8">
+                        <div className="text-ascension-pink text-2xl mb-2">👑</div>
+                        <p className="text-ascension-pink font-bold text-lg">
+                          Prowadzę max 5 osób jednocześnie
+                        </p>
+                        <p className="text-white/70 text-sm mt-2">
+                          Najbardziej ekskluzywny program w portfolio
+                        </p>
+                      </div>
+                      
+                      {/* CTA Button */}
+                      <CTAButton 
+                        className="w-full lg:w-auto px-12 py-4 text-xl bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
+                        size="lg"
                         showArrow={false}
                       >
                         Obecnie niedostępne
                       </CTAButton>
+                      
+                      <p className="text-white/50 text-sm mt-4">
+                        Następny nabór: Q2 2025
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -357,8 +372,8 @@ export default function Program() {
                 size="lg" 
                 className="text-lg px-8 py-4"
               >
-                  Zarezerwuj sesję Discovery
-                </CTAButton>
+                Zarezerwuj sesję Discovery
+              </CTAButton>
               </Link>
             </div>
           </div>
