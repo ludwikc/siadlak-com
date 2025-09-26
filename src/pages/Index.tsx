@@ -73,7 +73,7 @@ const Index = () => {
       <SEO {...getSEOConfig("/")} />
       <Hero
         title="LUDWIK C. SIADLAK"
-        subtitle="Aktualizacja Oprogramowania"
+        subtitle={<>Dbasz o aktualizacje swojego telefonu i laptopa. Wymieniasz w nich oprogramowanie na nowsze, by działały sprawniej, lepiej i bezpieczniej.<br /><br />A kiedy ostatni raz <strong>świadomie</strong> zaktualizowałeś oprogramowanie <strong>w swojej głowie</strong>?</>}
         ctaText="Sprawdź gotowość na upgrade"
         ctaLink="/assessment"
         secondaryCtaText="Zarezerwuj sesję Discovery"

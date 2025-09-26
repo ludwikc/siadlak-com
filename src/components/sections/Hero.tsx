@@ -5,7 +5,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 interface HeroProps {
   title: string;
-  subtitle: string;
+  subtitle: string | React.ReactNode;
   ctaText: string;
   ctaLink: string;
   secondaryCtaText?: string;
