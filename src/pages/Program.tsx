@@ -18,6 +18,8 @@ const apps = [
     rating: 5.0,
     downloads: '115 instalacji',
     status: 'DOSTĘPNA' as const,
+    duration: '6 tygodni',
+    target: 'Dla świadomych optymalizatorów',
     features: [
       'Kompleksowa diagnoza blokad produktywności',
       'Zintegrowany system zarządzania zadaniami',
@@ -34,6 +36,8 @@ const apps = [
     rating: 5.0,
     downloads: '64 instalacji',
     status: 'DOSTĘPNA' as const,
+    duration: '5 tygodni',
+    target: 'Dla poszukujących balansu',
     features: [
       'Praktyczne techniki redukcji stresu',
       'Protokoły zarządzania energią mentalną',
@@ -50,6 +54,8 @@ const apps = [
     rating: 5.0,
     downloads: '6 instalacji',
     status: 'NOWA' as const,
+    duration: '8 tygodni',
+    target: 'Dla gotowych na transformację',
     features: [
       'Kompleksowa analiza sytuacji życiowej',
       'Praktyczne narzędzia przywództwa osobistego',

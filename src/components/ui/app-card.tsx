@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Star, Download, Zap, Brain, Compass } from '@/lib/icons';
+import { Star, Download, Zap, Brain, Compass, Clock, Users } from '@/lib/icons';
 import { Badge } from '@/components/ui/badge';
 import { CTAButton } from '@/components/ui/cta-button';
+import { GlassCard } from '@/components/ui/glass-card';
 
 interface AppCardProps {
   title: string;
@@ -13,6 +14,8 @@ interface AppCardProps {
   status: 'NOWA' | 'POLECANE' | 'NIEDOSTĘPNA' | 'DOSTĘPNA';
   features: string[];
   link: string;
+  duration?: string;
+  target?: string;
   featured?: boolean;
   premium?: boolean;
 }
@@ -20,21 +23,21 @@ interface AppCardProps {
 const categoryConfig = {
   'Produktywność': {
     icon: Zap,
-    gradient: 'from-yellow-400 to-orange-500'
+    gradient: 'from-neural-violet to-ascension-pink'
   },
   'Odporność psychiczna': {
     icon: Brain,
-    gradient: 'from-blue-400 to-purple-500'
+    gradient: 'from-neural-violet to-luminal-magenta'
   },
   'Męskość': {
     icon: Compass,
-    gradient: 'from-red-400 to-pink-500'
+    gradient: 'from-ascension-pink to-luminal-magenta'
   }
 };
 
 const statusConfig = {
   'NOWA': 'bg-green-500 text-white',
-  'POLECANE': 'bg-blue-500 text-white',
+  'POLECANE': 'bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0',
   'NIEDOSTĘPNA': 'bg-gray-500 text-white',
   'DOSTĘPNA': 'bg-neural-violet text-white'
 };
@@ -48,7 +51,9 @@ export default function AppCard({
   downloads, 
   status, 
   features, 
-  link, 
+  link,
+  duration,
+  target,
   featured = false,
   premium = false 
 }: AppCardProps) {
@@ -56,30 +61,60 @@ export default function AppCard({
   const gradient = categoryConfig[category].gradient;
 
   return (
-    <div className={`glass-card rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 ${featured ? 'border-2 border-ascension-pink/30 dark:border-luminal-magenta/30' : ''} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
-      {/* App Icon Header */}
-      <div className="relative">
-        <div className={`h-20 bg-gradient-to-br ${gradient} flex items-center justify-center relative overflow-hidden`}>
-          <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10"></div>
-          <CategoryIcon className="w-10 h-10 text-white relative z-10" />
-        </div>
-        
-        {/* Status Badge */}
-        <Badge className={`absolute top-2 right-2 text-xs ${statusConfig[status]}`}>
-          {status}
-        </Badge>
-      </div>
+    <GlassCard className={`rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 relative ${featured ? 'border-2 border-ascension-pink/30 dark:border-luminal-magenta/30' : ''} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
+      {/* Status Badge - Top Right */}
+      <Badge className={`absolute top-3 right-3 text-xs z-10 ${statusConfig[status]}`}>
+        {status}
+      </Badge>
 
-      <div className="p-6">
-        {/* App Title and Category */}
-        <div className="mb-3">
-          <h3 className={`text-lg font-bold ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
-            {title}
-          </h3>
-          <p className={`text-sm ${premium ? 'text-white/80' : 'text-neural-violet dark:text-luminal-magenta'}`}>
-            {category}
-          </p>
+      {/* Icon Container - 64x64px with 16px border radius */}
+      <div className="p-6 pb-0">
+        <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mb-4`}>
+          <CategoryIcon className="w-8 h-8 text-white" />
         </div>
+
+        {/* Typography Hierarchy */}
+        {/* Title: Bold, 18px, primary text color */}
+        <h3 className={`text-lg font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`} style={{ fontSize: '18px' }}>
+          {title}
+        </h3>
+        
+        {/* Subtitle: Medium weight, neural-violet/luminal-magenta */}
+        <p className={`text-sm font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
+          {subtitle}
+        </p>
+
+        {/* Description: 14px, subtle secondary text */}
+        <p className={`text-sm mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
+          {description}
+        </p>
+
+        {/* Category Badge */}
+        <Badge variant="outline" className={`mb-4 text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
+          {category}
+        </Badge>
+
+        {/* Stats Row: Small text with clock and users icons showing duration and level */}
+        {(duration || target) && (
+          <div className="flex items-center gap-4 mb-4">
+            {duration && (
+              <div className="flex items-center gap-1">
+                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                  {duration}
+                </span>
+              </div>
+            )}
+            {target && (
+              <div className="flex items-center gap-1">
+                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                  {target}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Rating and Downloads */}
         <div className="flex items-center justify-between mb-4">
@@ -90,36 +125,25 @@ export default function AppCard({
                 className={`h-3 w-3 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
               />
             ))}
-            <span className={`ml-2 text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+            <span className={`ml-2 text-xs font-medium ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
               {rating.toFixed(1)}
             </span>
           </div>
           
           <div className="flex items-center">
-            <Download className={`h-3 w-3 mr-1 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
             <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
               {downloads}
             </span>
           </div>
         </div>
 
-        {/* Subtitle */}
-        <p className={`text-sm font-medium mb-3 ${premium ? 'text-white/90' : 'text-deep-charcoal dark:text-silver-mist'}`}>
-          {subtitle}
-        </p>
-
-        {/* Description */}
-        <p className={`text-sm mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
-          {description}
-        </p>
-
-        {/* Key Features */}
+        {/* Features: Bulleted list (first 2 features shown) */}
         <div className="mb-6">
-          <div className="space-y-1">
+          <div className="space-y-2">
             {features.slice(0, 2).map((feature, index) => (
               <div key={index} className="flex items-start text-xs">
-                <div className={`w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0 ${premium ? 'bg-white/60' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
-                <span className={`${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
+                <div className={`w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
+                <span className={`${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
                   {feature}
                 </span>
               </div>
@@ -127,7 +151,7 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* Install Button */}
+        {/* CTA Button: Full-width download button with download icon */}
         <Link to={link} className="block">
           <CTAButton 
             className={`w-full ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
@@ -139,6 +163,6 @@ export default function AppCard({
           </CTAButton>
         </Link>
       </div>
-    </div>
+    </GlassCard>
   );
 }
