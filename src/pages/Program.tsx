@@ -12,19 +12,18 @@ import AppStoreStats from '@/components/sections/AppStoreStats';
 const apps = [
   {
     title: 'Hakowanie Produktywności',
-    subtitle: 'System produktywności zgodny z wartościami',
+    subtitle: 'System produktywności zgodny z Twoimi wartościami',
     description: 'Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.',
     category: 'Produktywność' as const,
     rating: 5.0,
     downloads: '115 instalacji',
-    status: 'DOSTĘPNA' as const,
     features: [
-      'Kompleksowa diagnoza blokad produktywności',
-      'Zintegrowany system zarządzania zadaniami',
-      'Protokoły głębokiej pracy',
-      'Praktyczne wdrożenie narzędzi'
+      'Kompleksowa diagnoza Twoich blokad produktywności',
+      'Zintegrowany system zarządzania zadaniami i energią'
     ],
-    link: '/program/hakowanie-produktywnosci'
+    link: '/program/hakowanie-produktywnosci',
+    duration: '6 tygodni',
+    target: 'Dla świadomych optymalizatorów'
   },
   {
     title: 'Silna Głowa',
@@ -33,14 +32,13 @@ const apps = [
     category: 'Odporność psychiczna' as const,
     rating: 5.0,
     downloads: '64 instalacji',
-    status: 'DOSTĘPNA' as const,
     features: [
       'Praktyczne techniki redukcji stresu',
-      'Protokoły zarządzania energią mentalną',
-      'Strategie podejmowania decyzji pod presją',
-      'Metody budowania długoterminowej odporności'
+      'Protokoły zarządzania energią mentalną'
     ],
-    link: '/program/silna-glowa'
+    link: '/program/silna-glowa',
+    duration: '8 tygodni',
+    target: 'Dla wymagających profesjonalistów'
   },
   {
     title: 'Męski Kompas',
@@ -49,15 +47,14 @@ const apps = [
     category: 'Męskość' as const,
     rating: 5.0,
     downloads: '6 instalacji',
-    status: 'NOWA' as const,
     features: [
       'Kompleksowa analiza sytuacji życiowej',
-      'Praktyczne narzędzia przywództwa osobistego',
-      'Strategie budowania autentycznych relacji',
-      'Protokoły rozwoju fizycznego i mentalnego'
+      'Praktyczne narzędzia przywództwa osobistego'
     ],
     link: '/program/meski-kompas',
-    featured: true
+    featured: true,
+    duration: '12 tygodni',
+    target: 'Dla gotowych na transformację'
   }
 ];
 
@@ -264,15 +261,14 @@ export default function Program() {
                     category="Męskość"
                     rating={5.0}
                     downloads="Ekskluzywne"
-                    status="NIEDOSTĘPNA"
                     features={[
                       'Indywidualna sesja diagnostyczna',
-                      'Tygodniowe sesje mentoringowe 1:1',
-                      'Dostęp do społeczności absolwentów',
-                      'Materiały i narzędzia premium'
+                      'Tygodniowe sesje mentoringowe 1:1'
                     ]}
                     link="/program/mental-elevator"
                     premium={true}
+                    duration="8 tygodni"
+                    target="Maksymalnie 5 osób"
                   />
                 </div>
               </div>
