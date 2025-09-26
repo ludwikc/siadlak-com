@@ -14,19 +14,20 @@ const Index = () => {
   const steps = [
     {
       title: "Instaluj aplikacje",
-      description:
-        "Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu. Szybki upgrade konkretnego obszaru.",
+      description: "Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu. Szybki upgrade konkretnego obszaru.",
+      link: "/program",
+      linkText: "Zobacz dostępne aplikacje ≫"
     },
     {
       title: "Life OS Upgrade",
-      description:
-        "Fundamentalna rekonstrukcja całego systemu operacyjnego. Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.",
+      description: "Fundamentalna rekonstrukcja całego systemu operacyjnego. Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.",
+      link: "/program/mental-elevator",
+      linkText: "Sprawdź dostępność ≫"
     },
     {
       title: "Społeczność jako nagroda",
-      description:
-        "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u.",
-    },
+      description: "Lifehackerzy to ekskluzywna przestrzeń dla absolwentów programów. Daily Coaching o 12:34, Sesje DeepWork, warsztaty i zamknięte szkolenia. Nie grupa na Facebooku czy Skool - społeczność dla tych, którzy już się podjęli upgrade'u."
+    }
   ];
 
   // Personas

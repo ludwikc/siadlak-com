@@ -8,7 +8,7 @@ import Discovery from './pages/Discovery';
 import Contact from './pages/Contact';
 import Newsletter from './pages/Newsletter';
 import NotFound from './pages/NotFound';
-import Courses from './pages/Courses';
+import Program from './pages/Program';
 import CourseDetail from './pages/CourseDetail';
 import Community from './pages/Community';
 import Podcasts from './pages/Podcasts';
@@ -66,7 +66,7 @@ function App() {
             <Route path="/privacy" element={<NotFound />} />
             <Route path="/terms" element={<NotFound />} />
             
-            <Route path="/program" element={<Courses />} />
+            <Route path="/program" element={<Program />} />
             <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
             <Route path="/program/mental-elevator" element={<MentalElevator />} />
             <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
