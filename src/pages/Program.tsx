@@ -35,7 +35,7 @@ const apps = [
     category: 'Odporność psychiczna' as const,
     rating: 5.0,
     downloads: '64 instalacji',
-    status: 'WAITLISTA - DOŁĄCZ' as const,
+    status: 'NIEDOSTĘPNA' as const,
     duration: '6 tygodni',
     target: 'Dla poszukujących balansu',
     features: [
@@ -53,7 +53,7 @@ const apps = [
     category: 'Męskość' as const,
     rating: 5.0,
     downloads: '6 instalacji',
-    status: 'NABÓR OTWARTY' as const,
+    status: 'DOSTĘPNA' as const,
     duration: '5 tygodni',
     target: 'Dla gotowych na transformację',
     features: [

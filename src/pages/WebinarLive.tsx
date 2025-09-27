@@ -36,11 +36,14 @@ const WebinarLive = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white">
-              Jak przejąć kontrolę nad swoją karierą i życiem w erze sztucznej
-              inteligencji
+              KRYZYS MĘSKOŚCI
             </h1>
 
             <p className="text-lg mb-6 text-gray-300">
+              Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
+            </p>
+            
+            <p className="text-md mb-6 text-gray-400">
               z Ludwikiem C. Siadlakiem
             </p>
           </div>
