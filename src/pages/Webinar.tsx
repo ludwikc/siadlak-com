@@ -81,10 +81,10 @@ const Webinar = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-center space-y-4">
                 <span className="block text-2xl md:text-3xl font-bold text-primary-foreground">
-                  Kryzys Męskości?
+                  KRYZYS MĘSKOŚCI
                 </span>
-                <span className="block text-4xl md:text-6xl font-bold text-primary-foreground">
-                  Czy po prostu czas&nbsp;na długooczekiwany <br/><strong className="font-black glow-text">UPGRADE SYSTEMU</strong>?
+                <span className="block text-xl md:text-2xl font-medium text-primary-foreground">
+                  Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
                 </span>
               </h1>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto mb-10 text-primary-foreground leading-relaxed">
