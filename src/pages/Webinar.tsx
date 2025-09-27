@@ -116,7 +116,7 @@ const Webinar = () => {
                     type="submit" 
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-bold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-accent focus:ring-offset-2"
                   >
-                    Zarezerwuj swoje bezpłatne miejsce
+                    Rezerwuj swoje miejsce
                   </button>
                 </form>
               </div>
@@ -443,7 +443,7 @@ Narzędzia świadomości                      </span>
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-5 text-xl font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-accent focus:ring-offset-2 inline-flex items-center gap-3"
               >
-                Zarezerwuj swoje bezpłatne miejsce
+                Rezerwuj swoje miejsce
                 <span aria-hidden="true">→</span>
               </a>
               <p className="mt-6 text-muted-foreground">
