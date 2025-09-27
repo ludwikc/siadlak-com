@@ -4,7 +4,6 @@ import SEO from '../components/SEO';
 
 const Webinar = () => {
   const [timeLeft, setTimeLeft] = useState('');
-  const [email, setEmail] = useState('');
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -88,37 +87,19 @@ const Webinar = () => {
                 </span>
               </h1>
               
-              {/* Registration Form */}
-              <div id="registration-form" className="inline-block bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 shadow-2xl max-w-md mx-auto">
-                <form 
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    if (email.trim()) {
-                      const encodedEmail = encodeURIComponent(email.trim());
-                      window.location.href = `https://buy.siadlak.com/checkout/spotkanie-online?email=${encodedEmail}&lang=pl`;
-                    }
+              {/* CTA Button */}
+              <div className="inline-block max-w-md mx-auto">
+                <button 
+                  onClick={() => {
+                    document.getElementById('bottom-cta')?.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'center'
+                    });
                   }}
-                  className="space-y-4"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-bold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-accent focus:ring-offset-2"
                 >
-                  <label htmlFor="email" className="sr-only">Adres e-mail</label>
-                  <input 
-                    id="email"
-                    type="email" 
-                    name="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Twój adres e-mail" 
-                    required 
-                    aria-required="true"
-                    className="w-full p-4 text-lg border border-gray-300 rounded-lg text-foreground bg-white focus:ring-2 focus:ring-accent focus:border-accent transition-all"
-                  />
-                  <button 
-                    type="submit" 
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg font-bold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-accent focus:ring-offset-2"
-                  >
-                    Rezerwuj swoje miejsce
-                  </button>
-                </form>
+                  Rezerwuj swoje miejsce
+                </button>
               </div>
             </div>
           </div>
@@ -431,7 +412,7 @@ Narzędzia świadomości                      </span>
           </section>
 
           {/* Final CTA Section */}
-          <section className="py-20 bg-gradient-to-br from-accent/10 to-primary/10 text-center">
+          <section id="bottom-cta" className="py-20 bg-gradient-to-br from-accent/10 to-primary/10 text-center">
             <div className="max-w-4xl mx-auto px-6">
               <h2 className="text-4xl md:text-5xl font-bold font-heading mb-8 text-foreground">
                 Przestań analizować. Zacznij nawigować.
