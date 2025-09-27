@@ -83,7 +83,7 @@ const Webinar = () => {
                 <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground tracking-tight">
                   KRYZYS MĘSKOŚCI
                 </span>
-                <span className="block text-lg md:text-xl lg:text-2xl font-medium text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
+                <span className="block text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
                   Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
                 </span>
               </h1>
