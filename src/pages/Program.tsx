@@ -438,7 +438,7 @@ export default function Program() {
       </section>
 
       {/* Red Pill GIF Section */}
-      <section className="py-8">
+      <section className="py-8 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <img 
@@ -446,7 +446,7 @@ export default function Program() {
               alt="Red pill choice matrix scene"
               className="w-full rounded-lg shadow-2xl"
             />
-            <p className="text-xs text-muted-foreground mt-4 mb-8">
+            <p className="text-xs text-muted-foreground mt-4 mb-12">
               Źródło: Matrix (1999), Warner Bros.
             </p>
             
