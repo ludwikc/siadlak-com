@@ -1,24 +1,11 @@
-import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Calendar, Mail } from "@/lib/icons";
-import { Linkedin } from "lucide-react";
+import { Mail } from "@/lib/icons";
+import { Linkedin, Instagram } from "lucide-react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 
 const Contact = () => {
-  useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <Layout>
       <SEO {...getSEOConfig("/contact")} />
@@ -42,29 +29,7 @@ const Contact = () => {
       {/* Contact Options Section */}
       <section className="py-16 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Calendly Section */}
-            <div className="glass-card p-6 md:p-8 rounded-xl">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mr-4">
-                  <Calendar className="text-neural-violet dark:text-luminal-magenta" />
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  Umów rozmowę
-                </h2>
-              </div>
-
-              <p className="text-subtle-slate dark:text-silver-mist/90 mb-6">
-                Preferujesz rozmowę? Wybierz termin w moim kalendarzu.
-              </p>
-
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/ludwikc/quick-call?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=d400ff"
-                style={{ minWidth: "320px", height: "700px" }}
-              />
-            </div>
-
+          <div className="max-w-2xl mx-auto">
             {/* Direct Contact Options */}
             <div className="glass-card p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-6">
@@ -100,6 +65,16 @@ const Contact = () => {
                   >
                     <Linkedin className="w-5 h-5" />
                     Połącz się na LinkedIn
+                  </Button>
+
+                  <Button
+                    onClick={() =>
+                      window.open("https://instagram.com/ludwikc", "_blank")
+                    }
+                    className="w-full h-14 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
+                  >
+                    <Instagram className="w-5 h-5" />
+                    Wyślij DM na IG
                   </Button>
                 </div>
               </div>
