@@ -74,18 +74,18 @@ export default function AppCard({
         </div>
 
         {/* Typography Hierarchy */}
-        {/* Title: Bold, 18px, primary text color */}
-        <h3 className={`text-lg font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`} style={{ fontSize: '18px' }}>
+        {/* Title: Bold, 20px, primary text color */}
+        <h3 className={`text-xl font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
           {title}
         </h3>
         
         {/* Subtitle: Medium weight, neural-violet/luminal-magenta */}
-        <p className={`text-sm font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
+        <p className={`text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
           {subtitle}
         </p>
 
-        {/* Description: 14px, subtle secondary text */}
-        <p className={`text-sm mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
+        {/* Description: 16px, subtle secondary text */}
+        <p className={`text-base mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
           {description}
         </p>
 
@@ -141,8 +141,8 @@ export default function AppCard({
         <div className="mb-6">
           <div className="space-y-2">
             {features.slice(0, 2).map((feature, index) => (
-              <div key={index} className="flex items-start text-xs">
-                <div className={`w-1.5 h-1.5 rounded-full mt-1.5 mr-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
+              <div key={index} className="flex items-start text-sm">
+                <div className={`w-1.5 h-1.5 rounded-full mt-2 mr-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
                 <span className={`${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
                   {feature}
                 </span>
