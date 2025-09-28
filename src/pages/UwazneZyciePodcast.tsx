@@ -3,6 +3,7 @@
 import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
+import NextSessionCountdown from '../components/podcast/NextSessionCountdown';
 import { Calendar } from 'lucide-react';
 
 const UwazneZyciePodcast = () => {
@@ -67,21 +68,7 @@ const UwazneZyciePodcast = () => {
               poniedziałkowych pożarów.
             </p>
 
-            <div className="bg-secondary/50 dark:bg-quantum-blue/30 p-4 rounded-md mb-6">
-              <h3 className="font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
-                Następna sesja:
-              </h3>
-              <p className="text-deep-charcoal dark:text-silver-mist mb-1">
-                <strong>Data:</strong> Wtorek, 7 maja 2025
-              </p>
-              <p className="text-deep-charcoal dark:text-silver-mist mb-1">
-                <strong>Godzina:</strong> 6:30 - 7:00 (czas polski)
-              </p>
-              <p className="text-deep-charcoal dark:text-silver-mist">
-                <strong>Temat:</strong> Technika "Mental Elevator" - medytacja
-                dla zwiększenia świadomości swojej wartości
-              </p>
-            </div>
+            <NextSessionCountdown />
 
             <form className="mb-4">
               <h4 className="font-semibold text-deep-charcoal dark:text-silver-mist mb-3">
