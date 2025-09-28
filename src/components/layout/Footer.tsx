@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
   Instagram,
   Linkedin,
   Youtube,
   Users,
+  ExternalLink,
 } from "lucide-react";
 import XIcon from "../ui/x-icon";
 
@@ -91,12 +91,15 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/community"
-                  className="text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
+                <a
+                  href="https://lifehackerzy.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-deep-charcoal hover:text-neural-violet dark:text-silver-mist/90 dark:hover:text-luminal-magenta transition-colors"
                 >
                   Społeczność
-                </Link>
+                  <ExternalLink size={14} />
+                </a>
               </li>
               <li>
                 <Link
@@ -173,14 +176,16 @@ export default function Footer() {
               Dołącz do grupy profesjonalistów dążących do rozwoju na styku
               technologii i ludzkiego potencjału.
             </p>
-            <Link
-              to="/community"
+            <a
+              href="https://lifehackerzy.pl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-neural-violet hover:text-ascension-pink dark:text-luminal-magenta dark:hover:text-luminal-magenta/80 transition-colors"
             >
               <Users size={18} />
               <span>Dołącz do Społeczności Lifehackerów</span>
-              <ArrowRight size={16} />
-            </Link>
+              <ExternalLink size={16} />
+            </a>
           </div>
         </div>
 
