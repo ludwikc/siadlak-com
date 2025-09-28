@@ -451,11 +451,11 @@ export default function Program() {
             </p>
             
             <div className="relative inline-block">
-              <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-red-700 rounded-lg blur-sm opacity-60 transition-opacity duration-300 hover:opacity-80"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-500 to-red-700 rounded-xl blur-sm opacity-60 transition-opacity duration-300 hover:opacity-80"></div>
               <Link to="/discovery" className="relative z-10">
                 <CTAButton 
-                  size="lg" 
-                  className="text-lg px-8 py-4 font-bold bg-red-600 hover:bg-red-700 text-white border-0 relative transition-all duration-300"
+                  size="xl" 
+                  className="text-xl px-12 py-6 font-bold bg-red-600 hover:bg-red-700 text-white border-0 relative transition-all duration-300"
                 >
                   Zarezerwuj sesję Discovery
                 </CTAButton>
