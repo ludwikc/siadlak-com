@@ -3,35 +3,9 @@
 import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
-import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
-import ValueProposition from '../components/podcast/ValueProposition';
 import { Calendar } from 'lucide-react';
 
 const UwazneZyciePodcast = () => {
-  const platforms = [
-    {
-      name: "Spotify",
-      url: "https://open.spotify.com/show/0M0P2V6eQfwzJ4fow7wsIc?si=9b348bf9a4a14044",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
-    },
-    {
-      name: "Apple Podcasts",
-      url: "https://podcasts.apple.com/pl/podcast/uwa%C5%BCne-%C5%BCycie-medytacje/id1811281657",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Podcasts_%28iOS%29.svg",
-    },
-    {
-      name: "YouTube",
-      url: "https://www.youtube.com/@uwaznezycie",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg",
-    },
-  ];
-
-  const valuePropositionItems = [
-    "Szukasz równowagi między wysokimi ambicjami a spokojem wewnętrznym",
-    "Potrzebujesz metod na szybki reset umysłu między intensywnymi zadaniami",
-    "Chcesz poprawić jakość snu i regeneracji, by zwiększyć wydajność",
-    "Zmagasz się z nadmiarem informacji i potrzebujesz technik na oczyszczenie umysłu",
-  ];
 
   return (
     <Layout>
@@ -73,13 +47,6 @@ const UwazneZyciePodcast = () => {
               title="Uważne Życie"
               embedUrl="https://open.spotify.com/embed/show/0M0P2V6eQfwzJ4fow7wsIc"
               coverArt="/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png"
-            />
-
-            <PodcastPlatformLinks platforms={platforms} />
-
-            <ValueProposition
-              title="Te medytacje są dla Ciebie, jeśli:"
-              items={valuePropositionItems}
             />
           </div>
         </div>
