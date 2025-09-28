@@ -68,25 +68,29 @@ export default function AppCard({
       </Badge>
 
       <div className="p-4 sm:p-6">
-        {/* Header Section - Icon + Title/Subtitle + Social Proof */}
-        <div className="flex items-start gap-3 mb-4">
-          {/* Icon Container */}
-          <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${gradient} rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0`}>
-            <CategoryIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+        {/* Mobile-optimized Header Section */}
+        <div className="mb-3">
+          {/* Icon + Title Row - Better mobile alignment */}
+          <div className="flex items-center gap-3 mb-2">
+            <div className={`w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br ${gradient} rounded-lg sm:rounded-2xl flex items-center justify-center flex-shrink-0`}>
+              <CategoryIcon className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
+            </div>
+            
+            <div className="flex-1">
+              <h3 className={`text-base sm:text-xl font-bold leading-tight ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
+                {title}
+              </h3>
+            </div>
           </div>
 
-          {/* Title + Subtitle + Rating */}
-          <div className="flex-1 min-w-0">
-            <h3 className={`text-lg sm:text-xl font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
-              {title}
-            </h3>
-            
-            <p className={`text-sm sm:text-base font-medium mb-2 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
-              {subtitle}
-            </p>
+          {/* Subtitle - Full width on mobile */}
+          <p className={`text-sm sm:text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
+            {subtitle}
+          </p>
 
-            {/* Social Proof - Critical for conversions */}
-            <div className="flex items-center gap-3 mb-2">
+          {/* Social Proof Row - Left aligned */}
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
                   <Star 
@@ -98,53 +102,50 @@ export default function AppCard({
                   {rating.toFixed(1)}
                 </span>
               </div>
-              
-              <div className="flex items-center">
-                <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/70'}`}>
-                  {downloads}
+              <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/70'}`}>
+                {downloads}
+              </span>
+            </div>
+          </div>
+
+          {/* Category + Key Stats - Better mobile flow */}
+          <div className="flex items-center gap-2 flex-wrap mb-3">
+            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
+              {category}
+            </Badge>
+            
+            {duration && (
+              <div className="flex items-center gap-1">
+                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                  {duration}
                 </span>
               </div>
-            </div>
-
-            {/* Category + Key Stats */}
-            <div className="flex items-center gap-2 flex-wrap">
-              <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
-                {category}
-              </Badge>
-              
-              {duration && (
-                <div className="flex items-center gap-1">
-                  <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
-                  <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-                    {duration}
-                  </span>
-                </div>
-              )}
-              
-              {target && (
-                <div className="flex items-center gap-1">
-                  <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
-                  <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-                    {target}
-                  </span>
-                </div>
-              )}
-            </div>
+            )}
+            
+            {target && (
+              <div className="flex items-center gap-1">
+                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                  {target}
+                </span>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Value Proposition - Essential for conversion */}
-        <p className={`text-sm sm:text-base mb-4 leading-relaxed ${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
+        {/* Value Proposition - Left aligned */}
+        <p className={`text-sm sm:text-base mb-4 leading-relaxed text-left ${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
           {description}
         </p>
 
-        {/* Key Benefits - What they get */}
+        {/* Key Benefits - Clean left alignment */}
         <div className="mb-4">
           <div className="space-y-2">
             {features.slice(0, 3).map((feature, index) => (
               <div key={index} className="flex items-start gap-2">
                 <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
-                <span className={`text-sm leading-relaxed ${premium ? 'text-white/85' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
+                <span className={`text-sm leading-relaxed text-left ${premium ? 'text-white/85' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
                   {feature}
                 </span>
               </div>
@@ -152,8 +153,8 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* Enhanced CTA - More compelling */}
-        <Link to={link} className="block">
+        {/* CTA Button */}
+        <Link to={link} className="block mb-2">
           <CTAButton 
             className={`w-full font-semibold ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
             size="default"
@@ -164,8 +165,8 @@ export default function AppCard({
           </CTAButton>
         </Link>
         
-        {/* Trust signal below CTA */}
-        <p className={`text-center text-xs mt-2 ${premium ? 'text-white/50' : 'text-subtle-slate/60 dark:text-silver-mist/50'}`}>
+        {/* Trust signal - Left aligned on mobile */}
+        <p className={`text-left sm:text-center text-xs ${premium ? 'text-white/50' : 'text-subtle-slate/60 dark:text-silver-mist/50'}`}>
           Dołącz do {downloads} uczestników
         </p>
       </div>
