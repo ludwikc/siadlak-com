@@ -396,39 +396,39 @@ export default function Program() {
                   </div>
                 )}
 
-                {/* WIDE 2-COLUMN LAYOUT */}
-                <div className="p-8 md:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl overflow-hidden">
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* MOBILE-OPTIMIZED PREMIUM CARD */}
+                <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl overflow-hidden">
+                  <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start lg:items-center">
                     {/* Left Column - Content */}
-                    <div>
-                      {/* Header */}
-                      <div className="flex items-center gap-6 mb-8 min-w-0">
-                        <div className="w-20 h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-2xl flex items-center justify-center">
-                          <span className="text-white text-3xl font-bold">OS</span>
+                    <div className="order-2 lg:order-1">
+                      {/* Header - Mobile optimized */}
+                      <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 mb-6 min-w-0">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-lg sm:text-2xl lg:text-3xl font-bold">OS</span>
                         </div>
-                        <div className="min-w-0">
-                          <h3 className="text-3xl font-bold text-white mb-2 break-words">System Upgrade</h3>
-                          <p className="text-white/70 text-lg break-words">Indywidualny Program Mentoringowy</p>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2 break-words leading-tight">System Upgrade</h3>
+                          <p className="text-white/70 text-sm sm:text-base lg:text-lg break-words">Indywidualny Program Mentoringowy</p>
                         </div>
                       </div>
                       
-                      {/* Rating */}
-                      <div className="flex items-center gap-3 mb-8">
+                      {/* Rating - Mobile optimized */}
+                      <div className="flex items-center gap-2 sm:gap-3 mb-6 flex-wrap">
                         <div className="flex">
                           {[...Array(5)].map((_, i) => (
-                            <span key={i} className="text-yellow-400 text-2xl">★</span>
+                            <span key={i} className="text-yellow-400 text-lg sm:text-xl lg:text-2xl">★</span>
                           ))}
                         </div>
-                        <span className="text-white/70 text-lg">5.0 • Ekskluzywny</span>
+                        <span className="text-white/70 text-sm sm:text-base lg:text-lg">5.0 • Ekskluzywny</span>
                       </div>
                       
-                      {/* Description */}
-                      <p className="text-white/80 mb-8 text-lg md:text-xl leading-relaxed break-words">
+                      {/* Description - Mobile optimized */}
+                      <p className="text-white/80 mb-6 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed break-words">
                         Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie całego systemu operacyjnego w Twojej głowie. I w emocjach.
                       </p>
                       
-                      {/* Features */}
-                      <div className="space-y-4">
+                      {/* Features - Mobile optimized */}
+                      <div className="space-y-3 sm:space-y-4">
                         {[
                           'Indywidualna sesja diagnostyczna (3h)',
                           '8 x sesje mentoringowe 1:1 (90 min)',
@@ -437,44 +437,44 @@ export default function Program() {
                           '24/7 wsparcie przez cały program',
                           'Gwarancja rezultatu lub zwrot pieniędzy'
                         ].map((feature, index) => (
-                          <div key={index} className="flex items-start gap-3 md:gap-4 text-white/90 text-base md:text-lg min-w-0">
-                            <div className="w-3 h-3 bg-ascension-pink rounded-full flex-shrink-0 mt-1"></div>
-                            <span className="flex-1 min-w-0 break-words">{feature}</span>
+                          <div key={index} className="flex items-start gap-2 sm:gap-3 lg:gap-4 text-white/90 text-sm sm:text-base lg:text-lg min-w-0">
+                            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-ascension-pink rounded-full flex-shrink-0 mt-1.5 sm:mt-1"></div>
+                            <span className="flex-1 min-w-0 break-words leading-relaxed">{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    {/* Right Column - Price & CTA */}
-                    <div className="text-center lg:text-right">
-                      {/* Price */}
-                      <div className="mb-8">
-                        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-ascension-pink mb-3 break-words">16 000 PLN</div>
-                        <div className="text-white/60 text-lg md:text-xl break-words">8 tygodni intensywnej transformacji</div>
-                        <div className="text-white/40 text-base md:text-lg mt-2 break-words">≈ 2000 PLN / tydzień</div>
+                    {/* Right Column - Price & CTA - Mobile optimized */}
+                    <div className="text-center lg:text-right order-1 lg:order-2">
+                      {/* Price - Mobile friendly */}
+                      <div className="mb-6 lg:mb-8">
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-ascension-pink mb-2 sm:mb-3 break-words leading-tight">16 000 PLN</div>
+                        <div className="text-white/60 text-sm sm:text-base md:text-lg lg:text-xl break-words">8 tygodni intensywnej transformacji</div>
+                        <div className="text-white/40 text-xs sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-2 break-words">≈ 2000 PLN / tydzień</div>
                       </div>
                       
-                      {/* Exclusivity Badge */}
-                      <div className="bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 border-2 border-ascension-pink/40 rounded-2xl p-6 mb-8">
-                        <div className="text-ascension-pink text-2xl mb-2">👑</div>
-                        <p className="text-ascension-pink font-bold text-lg">
+                      {/* Exclusivity Badge - Mobile optimized */}
+                      <div className="bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 border-2 border-ascension-pink/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
+                        <div className="text-ascension-pink text-xl sm:text-2xl mb-2">👑</div>
+                        <p className="text-ascension-pink font-bold text-sm sm:text-base lg:text-lg break-words">
                           Prowadzę max 5 osób jednocześnie
                         </p>
-                        <p className="text-white/70 text-sm mt-2">
+                        <p className="text-white/70 text-xs sm:text-sm mt-2 break-words">
                           Najbardziej ekskluzywny program w portfolio
                         </p>
                       </div>
                       
-                      {/* CTA Button */}
+                      {/* CTA Button - Mobile responsive */}
                       <CTAButton 
-                        className="w-full lg:w-auto px-12 py-4 text-xl bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
+                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
                         size="lg"
                         showArrow={false}
                       >
                         Obecnie niedostępne
                       </CTAButton>
                       
-                      <p className="text-white/50 text-sm mt-4">
+                      <p className="text-white/50 text-xs sm:text-sm mt-3 sm:mt-4 break-words">
                         Następny nabór: Q4 2025
                       </p>
                     </div>
