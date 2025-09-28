@@ -4,7 +4,6 @@ import HeroSection from '@/components/sections/HeroSection';
 import AppCard from '@/components/ui/app-card';
 import { Badge } from '@/components/ui/badge';
 import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
 import { Calendar, Clock, MessageSquare, Shield, Users } from '@/lib/icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -77,7 +76,7 @@ const communityBenefits = [
   },
   {
     icon: MessageSquare,
-    title: 'Discord & Portal Lifehackerów',
+    title: 'Discord & Platforma',
     description: 'Dostęp do ekskluzywnych kanałów'
   },
   {
@@ -223,40 +222,40 @@ export default function Program() {
       </section>
       
       {/* Section 3: Community Benefits - Installation Bonus */}
-      <section className="py-16">
+      <section className="py-16" style={{ backgroundColor: '#EEEAF4' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4 text-ascension-pink dark:text-luminal-magenta border-ascension-pink dark:border-luminal-magenta">
-              BONUS INSTALACJI 🎁
+            <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-6 py-2 text-lg font-medium">
+              BONUS PRZY INSTALACJI 🎁
             </Badge>
             
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
-              Społeczność Lifehackerów
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
+              Dostęp do społeczności Lifehackerzy
             </h2>
             
-            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
-              <strong>Dołączając do dowolnego programu otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności Klientów Premium. To jedyny sposób, aby dołączyć do Lifehackerów.</strong>
+            <p className="text-lg mb-12 text-subtle-slate max-w-4xl mx-auto">
+              Instalując dowolną aplikację otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności użytkowników. P.S. To jedyny sposób, aby dołączyć do Lifehackerów.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {communityBenefits.map((benefit, index) => (
-                <GlassCard 
+                <div 
                   key={index} 
-                  className="text-center"
+                  className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
+                  <div className="w-16 h-16 bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="h-8 w-8 text-neural-violet" />
                   </div>
                   
-                  <h3 className="font-medium mb-2 text-deep-charcoal dark:text-silver-mist">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                     {benefit.title}
                   </h3>
                   
-                  <p className="text-sm text-subtle-slate dark:text-silver-mist/80">
+                  <p className="text-subtle-slate">
                     {benefit.description}
                   </p>
-                </GlassCard>
+                </div>
               ))}
             </div>
           </div>
