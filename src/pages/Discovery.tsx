@@ -37,7 +37,7 @@ export default function Discovery() {
 
   const handleScheduleSession = () => {
     // Create a popup window for the Google Calendar booking
-    const calendarUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1LW9thGbkrCT1Gm1BohgCD-zaCfgmf6QyKibe-fnnIZVHhxXs3cDk0m8JkybKyZ-hm0T8qUD1I?gv=true';
+    const calendarUrl = 'https://calendar.app.google/Xj5U39t9HaVNqS1HA';
     const popup = window.open(
       calendarUrl,
       'calendar-booking',
@@ -211,7 +211,7 @@ export default function Discovery() {
                   <div className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mr-3 mt-0.5" />
                     <span className="text-subtle-slate dark:text-silver-mist/90">
-                      Intuicja podpowiada Ci, że <em>to jest to, czego tak długo szukałeś</em> i rozpoczynamy pracę w programie Mental Elevator
+                      Intuicja podpowiada Ci, że <em>to jest to, czego tak długo szukałeś</em> i rozpoczynamy plan wdrożenia Life OS Upgrade.
                     </span>
                   </div>
                   <div className="flex items-start">
