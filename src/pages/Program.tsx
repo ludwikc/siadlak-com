@@ -112,7 +112,7 @@ export default function Program() {
       />
       
       {/* App Store Statistics */}
-      <section className="py-8">
+      <section className="py-12" style={{ backgroundColor: '#EEEAF4' }}>
         <div className="container mx-auto px-4">
           <AppStoreStats />
         </div>
