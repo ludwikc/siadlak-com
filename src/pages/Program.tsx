@@ -397,18 +397,18 @@ export default function Program() {
                 )}
 
                 {/* WIDE 2-COLUMN LAYOUT */}
-                <div className="p-8 md:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl">
+                <div className="p-8 md:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl overflow-hidden">
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Column - Content */}
                     <div>
                       {/* Header */}
-                      <div className="flex items-center gap-6 mb-8">
+                      <div className="flex items-center gap-6 mb-8 min-w-0">
                         <div className="w-20 h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-2xl flex items-center justify-center">
                           <span className="text-white text-3xl font-bold">OS</span>
                         </div>
-                        <div>
-                          <h3 className="text-3xl font-bold text-white mb-2">System Upgrade</h3>
-                          <p className="text-white/70 text-lg">Indywidualny Program Mentoringowy</p>
+                        <div className="min-w-0">
+                          <h3 className="text-3xl font-bold text-white mb-2 break-words">System Upgrade</h3>
+                          <p className="text-white/70 text-lg break-words">Indywidualny Program Mentoringowy</p>
                         </div>
                       </div>
                       
@@ -437,9 +437,9 @@ export default function Program() {
                           '24/7 wsparcie przez cały program',
                           'Gwarancja rezultatu lub zwrot pieniędzy'
                         ].map((feature, index) => (
-                          <div key={index} className="flex items-start gap-3 md:gap-4 text-white/90 text-base md:text-lg">
+                          <div key={index} className="flex items-start gap-3 md:gap-4 text-white/90 text-base md:text-lg min-w-0">
                             <div className="w-3 h-3 bg-ascension-pink rounded-full flex-shrink-0 mt-1"></div>
-                            <span className="break-words">{feature}</span>
+                            <span className="flex-1 min-w-0 break-words">{feature}</span>
                           </div>
                         ))}
                       </div>
