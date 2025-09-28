@@ -429,18 +429,8 @@ export default function Program() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/assessment">
                 <CTAButton size="lg" className="text-lg px-8 py-4">
-                  Sprawdź gotowość na upgrade
+                  Wróć na górę i dołącz do nas
                 </CTAButton>
-              </Link>
-              
-              <Link to="/discovery">
-              <CTAButton 
-                variant="secondary" 
-                size="lg" 
-                className="text-lg px-8 py-4"
-              >
-                Zarezerwuj sesję Discovery
-              </CTAButton>
               </Link>
             </div>
           </div>
@@ -456,9 +446,18 @@ export default function Program() {
               alt="Red pill choice matrix scene"
               className="w-full rounded-lg shadow-2xl"
             />
-            <p className="text-xs text-muted-foreground mt-4">
+            <p className="text-xs text-muted-foreground mt-4 mb-8">
               Źródło: Matrix (1999), Warner Bros.
             </p>
+            
+            <Link to="/discovery">
+              <CTAButton 
+                size="lg" 
+                className="text-lg px-8 py-4 font-bold bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/50 hover:shadow-red-500/70 animate-pulse border-0"
+              >
+                Zarezerwuj sesję Discovery
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </section>
