@@ -3,28 +3,15 @@ import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Calendar, Mail, CheckCircle } from '@/lib/icons';
+import { Calendar, CheckCircle } from '@/lib/icons';
 import SEO from '@/components/SEO';
 import { getSEOConfig } from '@/lib/seo-config';
 
 const About = () => {
-  const approachPoints = [
-    "Technologia powinna służyć Tobie - nie odwrotnie!",
-    "Twoje ludzkie zdolności są niezastąpione i muszą być chronione",
-    "Odpowiednie systemy pozwalają kierować technologią, pozostając człowiekiem",
-    "Równowaga nie polega na używaniu mniejszej ilości technologii, ale na sprawowaniu nad nią kontroli",
-  ];
-
-  const credentials = [
-    "Ponad 19 lat jako certyfikowany trener Microsoft",
-    "Szkolenia zespołów w firmach z listy Fortune 500 i organizacjach wojskowych",
-    "Twórca społeczności Hackerzy z ponad 150 aktywnymi członkami",
-    "Twórca Metody Cyfrowego Dowodzenia wykorzystywanej przez profesjonalistów na całym świecie",
-  ];
-
   return (
     <Layout>
       <SEO {...getSEOConfig("/about")} />
+      
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center relative text-center">
         <div className="absolute inset-0 z-0">
@@ -37,24 +24,24 @@ const About = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">
-              O mnie
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">
+              Większość "guru produktywności" kłamie. Nie potrzebujesz kolejnej aplikacji. Potrzebujesz odzyskać kontrolę.
             </h1>
             <p
-              className="text-lg md:text-xl mb-8 text-silver-mist/90 animate-fade-in"
+              className="text-lg md:text-xl mb-8 text-silver-mist/90 animate-fade-in max-w-3xl mx-auto"
               style={{ animationDelay: "0.2s" }}
             >
-              Pomagam profesjonalistom kierować technologią, zamiast jej służyć
+              <strong>Dla liderów, founderów i topowych specjalistów IT, którzy mimo sukcesu czują, że technologia zaczyna nimi rządzić, zamiast im służyć.</strong>
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <CTAButton
                 variant="secondary"
                 className="animate-fade-in bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
                 showArrow={false}
-                aria-label="Umów rozmowę - przejdź do formularza kontaktowego"
+                aria-label="Umów bezpłatną Rozmowę strategiczną"
               >
-                Umów rozmowę
+                Umów bezpłatną Rozmowę strategiczną
                 <Calendar className="h-4 w-4 ml-2" aria-hidden="true" />
               </CTAButton>
             </Link>
@@ -62,190 +49,192 @@ const About = () => {
         </div>
       </section>
 
-      {/* Bio Section */}
+      {/* Problem Section */}
       <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Image - Now first on all screen sizes */}
-            <div className="lg:w-1/2 bg-gray-200 dark:bg-gray-800 rounded-2xl p-2">
-              <img
-                src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
-                alt="Ludwik Siadlak"
-                className="w-full h-auto min-h-[300px] rounded-xl shadow-xl"
-                style={{ display: "block" }}
-              />
-              <img
-                src="/lovable-uploads/SIADLAK-ig.png"
-                alt="Ludwik Siadlak"
-                className="w-full h-auto min-h-[300px] rounded-xl shadow-xl"
-                style={{ display: "block" }}
-              />
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+              Zarabiasz świetne pieniądze i jesteś na szczycie w swojej dziedzinie. Ale prawda jest taka, że stałeś się niewolnikiem własnych systemów.
+            </h2>
+            
+            <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              Jeśli tu trafiłeś, prawdopodobnie rozpoznajesz ten scenariusz:
+            </p>
 
-            {/* Content */}
-            <div className="lg:w-1/2">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <h2 className="text-4xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
-                  Przewodnik na styku technologii i człowieczeństwa
-                </h2>
-                <p className="text-lg mb-4">
-                  Przez ponad 19 lat działam na styku najnowocześniejszej
-                  technologii i ludzkiej wydajności. Łącząc ekspertyzę z obu
-                  światów, prowadzę profesjonalistów do odzyskania kontroli nad
-                  ich cyfrowym życiem bez poświęcania tego, co czyni ich
-                  wyjątkowo ludzkimi. Moja droga rozpoczęła się jako
-                  certyfikowany trener Microsoft, gdzie na własne oczy
-                  zobaczyłem, jak technologia może albo wzmacniać, albo
-                  przytłaczać. Podczas gdy inni koncentrowali się wyłącznie na
-                  umiejętnościach technicznych, ja dostrzegłem, że brakującym
-                  elementem jest nauczenie ludzi, jak zachować ludzką przewagę
-                  przy jednoczesnym wykorzystaniu cyfrowych narzędzi.
-                </p>
-                <h2 className="text-4xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
-                  Między zaawansowaną technologią a głębokim człowieczeństwem.
-                </h2>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <strong className="text-deep-charcoal dark:text-silver-mist">Jesteś w pułapce "produktywności":</strong>
+                  <span className="text-subtle-slate dark:text-silver-mist/80"> Testowałeś już wszystko – GTD, Notion, Asanę, Slack... i sto innych narzędzi. Każde z nich obiecywało wolność, a w efekcie dodało tylko kolejną warstwę chaosu i powiadomień.</span>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <strong className="text-deep-charcoal dark:text-silver-mist">Twój kalendarz Cię nienawidzi:</strong>
+                  <span className="text-subtle-slate dark:text-silver-mist/80"> Dni są wypełnione po brzegi spotkaniami i zadaniami, ale wieczorem masz poczucie, że nie zrobiłeś nic naprawdę <em>ważnego</em>. Jesteś zajęty, ale niekoniecznie efektywny.</span>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <strong className="text-deep-charcoal dark:text-silver-mist">Technologia Cię rozprasza, zamiast wspierać:</strong>
+                  <span className="text-subtle-slate dark:text-silver-mist/80"> Miała być lewarem, a stała się kulą u nogi. Zamiast realizować wizję, gasisz pożary i reagujesz na ciągły strumień informacji.</span>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <strong className="text-deep-charcoal dark:text-silver-mist">Straciłeś "ludzką przewagę":</strong>
+                  <span className="text-subtle-slate dark:text-silver-mist/80"> Twoja kreatywność i zdolność do głębokiego myślenia są degradowane przez powierzchowną, reaktywną pracę, której wymaga od Ciebie cyfrowy ekosystem.</span>
+                </div>
+              </li>
+            </ul>
 
-                <p className="text-lg mb-4">
-                  Pamiętam moment, gdy siedząc w korporacyjnej sali
-                  szkoleniowej, obserwowałem, jak błyskotliwy developer próbuje
-                  implementować kolejne narzędzie automatyzacji, podczas gdy
-                  jego zespół czuł się coraz bardziej zagubiony i przytłoczony.
-                  Wtedy zrozumiałem swoje powołanie – być tłumaczem między
-                  światami, pomagać profesjonalistom wykorzystywać technologię
-                  bez bycia przez nią zdominowanym.
-                </p>
-                <p className="text-lg mb-4">
-                  Moje podejście różni się od typowych szkoleń technicznych czy
-                  kursów produktywności. Nie uczę tylko technik i narzędzi, ale
-                  pokazuję, jak zintegrować je ze swoim unikalnym stylem pracy i
-                  wartościami. Pomagam odnaleźć równowagę, gdzie technologia
-                  staje się katalizatorem Twojego potencjału, zamiast go
-                  zastępować.
-                </p>
-                <h2 className="text-4xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
-                  Zrozumienie Twojego świata
-                </h2>
-                <p className="text-lg mb-4">
-                  Rozumiem codzienne wyzwania, z którymi się mierzysz. Sam
-                  doświadczyłem przytłoczenia nieskończoną listą zadań i
-                  powiadomień. Znalazłem się w sytuacji, gdy technologia,
-                  zamiast pomagać, zaczęła kontrolować moje decyzje i czas. Na
-                  własnej drodze odkryłem, że kluczem nie jest odrzucenie
-                  technologii, ale nauczenie się świadomego jej wykorzystania w
-                  służbie naszym głęboko ludzkim celom. Gdy nie prowadzę
-                  warsztatów czy nie mentoruję klientów, znajdziesz mnie na
-                  torze wyścigowym z moim motocyklem CBR, doskonalącego
-                  umiejętności baritonu, lub spędzającego czas z rodziną. Te
-                  różnorodne doświadczenia pozwalają mi lepiej rozumieć pełnię
-                  ludzkiego doświadczenia, które wykracza daleko poza cyfrowy
-                  świat.
-                </p>
-                <h2 className="text-4xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
-                  Nasze wspólne wartości
-                </h2>
-                <p className="text-lg mb-4">
-                  <ul className="space-y-4 mt-4">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3" />
-                      <span className="text-deep-charcoal dark:text-silver-mist text-lg">
-                        Technologia służy Tobie, nie odwrotnie
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3" />
-                      <span className="text-deep-charcoal dark:text-silver-mist text-lg">
-                        Twoje człowieczeństwo jest Twoją największą przewagą
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3" />
-                      <span className="text-deep-charcoal dark:text-silver-mist text-lg">
-                        Świadome systemy pozwalają kierować technologią,
-                        pozostając w pełni sobą
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3" />
-                      <span className="text-deep-charcoal dark:text-silver-mist text-lg">
-                        Równowaga nie polega na używaniu mniejszej ilości
-                        technologii, ale na mądrzejszym jej wykorzystaniu
-                      </span>
-                    </li>
-                  </ul>
-                </p>
-                <p className="text-lg">
-                  Jeśli te wartości rezonują z Tobą, jesteśmy na tej samej
-                  drodze. Moją misją jest pomóc Ci odnaleźć swoją własną
-                  ścieżkę, gdzie technologia staje się potężnym narzędziem
-                  Twojego rozwoju, a nie źródłem przytłoczenia.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                  <Button variant="secondary">
-                    Umów rozmowę
-                    <Calendar className="h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            <p className="text-xl text-deep-charcoal dark:text-silver-mist font-medium">
+              <strong>Problem jest prosty:</strong> Próbujesz rozwiązać ludzki problem za pomocą technologicznych narzędzi. To nigdy nie zadziała.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Approach Section */}
+      {/* Story Section with Image */}
       <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-              Moje podejście jest proste, ale potężne
-            </h2>
-
-            <div className="space-y-6">
-              {approachPoints.map((point, index) => (
-                <div key={index} className="flex glass-card p-5 rounded-xl">
-                  <div className="mr-4">
-                    <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta" />
-                  </div>
-                  <p className="text-deep-charcoal dark:text-silver-mist text-lg">
-                    {point}
-                  </p>
-                </div>
-              ))}
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2">
+              <img
+                src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
+                alt="Ludwik Siadlak"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
-
-            <div className="mt-12 text-center">
-              <p className="text-xl text-deep-charcoal dark:text-silver-mist">
-                To, co wyróżnia moją pracę, to skupienie na utrzymaniu Cię w
-                roli dowodzącego. Nie uczę jedynie umiejętności technicznych czy
-                uważności osobno — pokazuję, jak integrować oba aspekty dla
-                prawdziwego cyfrowego mistrzostwa.
+            
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                Moja historia: Jak odkryłem błąd w systemie
+              </h2>
+              
+              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+                Przez 19 lat, jako certyfikowany trener Microsoft, widziałem to z pierwszej ręki. Pracowałem z najlepszymi – od zespołów w firmach z listy Fortune 500 po elitarne jednostki wojskowe. Wszędzie widziałem ten sam schemat: genialni ludzie, przytłoczeni przez technologię, której mieli być panami.
+              </p>
+              
+              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+                Przełom nastąpił, gdy obserwowałem w korporacyjnej sali szkoleniowej dewelopera-gwiazdę, który próbował wdrożyć kolejne narzędzie do automatyzacji. Zamiast ulgi, na twarzach jego zespołu widziałem tylko rezygnację i zmęczenie.
+              </p>
+              
+              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+                Zrozumiałem wtedy, że <strong>brakującym elementem nie jest technologia, ale człowiek</strong>. Wszyscy uczyli <em>jak używać narzędzi</em>. Nikt nie uczył, <em>jak pozostać człowiekiem, który tymi narzędziami dowodzi</em>.
+              </p>
+              
+              <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+                Dlatego porzuciłem tradycyjne szkolenia i stworzyłem <strong>Metodę Cyfrowego Dowodzenia™</strong>.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Credentials Section */}
+      {/* Method Section */}
       <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
-              Doświadczenie, które przynosi rezultaty
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+              Nie uczę Cię obsługi narzędzi. Uczę Cię, jak zbudować system, w którym to Ty wydajesz rozkazy.
             </h2>
+            
+            <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              Moje podejście jest inne, bo opiera się na brutalnie prostej prawdzie:
+            </p>
+            
+            <p className="text-2xl font-bold mb-8 text-neural-violet dark:text-luminal-magenta text-center">
+              Twoje człowieczeństwo jest Twoją największą przewagą konkurencyjną.
+            </p>
+            
+            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
+              Zamiast wciskać Ci kolejną aplikację, pracujemy nad trzema filarami <strong>Cyfrowego Dowodzenia™</strong>:
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {credentials.map((credential, index) => (
-                <div key={index} className="glass-card p-6 rounded-xl">
-                  <div className="w-12 h-12 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mb-4">
-                    <CheckCircle className="text-neural-violet dark:text-luminal-magenta" />
-                  </div>
-                  <p className="text-deep-charcoal dark:text-silver-mist">
-                    {credential}
-                  </p>
-                </div>
-              ))}
+            <div className="space-y-6">
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  1. Filozofia Dowódcy:
+                </h3>
+                <p className="text-subtle-slate dark:text-silver-mist/80">
+                  Najpierw definiujemy Twoje cele, wartości i unikalny styl pracy. Zanim dotkniemy technologii, musimy wiedzieć, <em>czemu</em> ma służyć.
+                </p>
+              </div>
+              
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  2. Architektura Systemu:
+                </h3>
+                <p className="text-subtle-slate dark:text-silver-mist/80">
+                  Projektujemy spersonalizowany, minimalistyczny system, w którym technologia jest Twoim posłusznym żołnierzem, a nie chaotycznym najemnikiem.
+                </p>
+              </div>
+              
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  3. Integracja, nie adaptacja:
+                </h3>
+                <p className="text-subtle-slate dark:text-silver-mist/80">
+                  Pokazuję, jak zintegrować ten system z Twoim życiem, aby działał w tle, dając Ci przestrzeń na to, co najważniejsze – myślenie, tworzenie i przewodzenie.
+                </p>
+              </div>
+            </div>
+            
+            <p className="text-xl font-bold text-center mt-8 text-deep-charcoal dark:text-silver-mist">
+              To nie jest kolejny kurs produktywności. To odzyskanie Twojej cyfrowej suwerenności.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials Section with Image */}
+      <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                Dlaczego możesz mi zaufać? Bo nie jestem teoretykiem.
+              </h2>
+              
+              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+                To, czego uczę, przetestowałem w ogniu walki – na sobie i setkach klientów w najbardziej wymagających środowiskach.
+              </p>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>19+ lat doświadczenia</strong> jako Certyfikowany Trener Microsoft.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Szkoliłem zespoły w firmach z listy Fortune 500</strong> i organizacjach wojskowych.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Twórca Metody Hakowania Produktywnosci™</strong>, używanej przez profesjonalistów na całym świecie.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Założyciel społeczności "Lifehackerzy"</strong> z ponad 150 aktywnymi członkami, którzy odzyskali kontrolę.</span>
+                </li>
+              </ul>
+              
+              <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
+                A kiedy nie pracuję, nie znajdziesz mnie medytującego nad aplikacją do mindfulness. Znajdziesz mnie na torze wyścigowym z moim motocyklem, gdzie liczy się 100% skupienia, albo ćwiczącego śpiew, gdzie technika musi służyć emocjom. Rozumiem, że prawdziwe życie dzieje się poza ekranem.
+              </p>
+            </div>
+            
+            <div className="lg:w-1/2">
+              <img
+                src="/lovable-uploads/SIADLAK-ig.png"
+                alt="Ludwik Siadlak - życie poza ekranem"
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
@@ -256,37 +245,33 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Gotowy odzyskać kontrolę nad swoim cyfrowym życiem?
+              Jesteś gotów, by technologia znów zaczęła pracować dla Ciebie?
             </h2>
 
+            <p className="text-lg mb-4 text-white/90">
+              Jeśli rezonuje z Tobą idea, że to <strong>Ty masz być dowódcą, a nie sługą technologii</strong>, mamy o czym rozmawiać.
+            </p>
+            
             <p className="text-lg mb-8 text-white/90">
-              Zacznij od moich cotygodniowych spostrzeżeń lub umów Rozmowę
-              Discovery.
+              Przestań szukać magicznych rozwiązań w kolejnej aplikacji. Zainwestuj w system, który przywróci Ci kontrolę.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
-                <Button
-                  variant="outline"
-                  className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
-                  aria-label="Poczytaj moje aktualne przemyślenia - przejdź do newslettera"
-                >
-                  Poczytaj moje aktualne przemyślenia
-                  <Mail className="h-4 w-4" aria-hidden="true" />
-                </Button>
-              </Link>
-
+            <div className="mb-4">
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                 <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-[rgba(255,255,255,0.1)]"
-                  aria-label="Umów Rozmowę Discovery - przejdź do formularza kontaktowego"
+                  size="lg"
+                  className="bg-white text-neural-violet hover:bg-white/90 text-lg px-8 py-4"
+                  aria-label="Umów bezpłatną Rozmowę strategiczną"
                 >
-                  Umów Rozmowę Discovery
-                  <Calendar className="h-4 w-4" aria-hidden="true" />
+                  Umów bezpłatną Rozmowę strategiczną
+                  <Calendar className="h-5 w-5 ml-2" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
+            
+            <p className="text-sm text-white/70 italic">
+              (Liczba miejsc ograniczona, aby zapewnić najwyższą jakość pracy z każdym Klientem)
+            </p>
           </div>
         </div>
       </section>
