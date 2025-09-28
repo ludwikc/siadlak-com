@@ -41,45 +41,45 @@ const Contact = () => {
                 </h2>
               </div>
 
-              <div className="space-y-6">
-                <p className="text-subtle-slate dark:text-silver-mist/90 text-center">
+              <div className="space-y-8">
+                <p className="text-subtle-slate dark:text-silver-mist/90 text-center text-lg">
                   Wybierz preferowaną formę kontaktu:
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <Button
                     onClick={() =>
                       window.open("mailto:connect@siadlak.email", "_self")
                     }
-                    className="aspect-square p-6 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
+                    className="h-32 md:h-40 p-8 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-bold flex flex-col items-center justify-center gap-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 rounded-2xl group"
                   >
-                    <Mail className="w-8 h-8 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-semibold">Wyślij email</span>
+                    <Mail className="w-12 h-12 md:w-16 md:h-16 group-hover:scale-110 transition-transform" />
+                    <span className="text-base md:text-xl font-bold">Wyślij email</span>
                   </Button>
 
                   <Button
                     onClick={() =>
                       window.open("https://www.linkedin.com/in/ludwikc", "_blank")
                     }
-                    className="aspect-square p-6 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
+                    className="h-32 md:h-40 p-8 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-bold flex flex-col items-center justify-center gap-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 rounded-2xl group"
                   >
-                    <Linkedin className="w-8 h-8 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-semibold">LinkedIn</span>
+                    <Linkedin className="w-12 h-12 md:w-16 md:h-16 group-hover:scale-110 transition-transform" />
+                    <span className="text-base md:text-xl font-bold">LinkedIn</span>
                   </Button>
 
                   <Button
                     onClick={() =>
                       window.open("https://instagram.com/ludwikc", "_blank")
                     }
-                    className="aspect-square p-6 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
+                    className="h-32 md:h-40 p-8 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold flex flex-col items-center justify-center gap-4 shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 rounded-2xl group"
                   >
-                    <Instagram className="w-8 h-8 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm font-semibold">Instagram DM</span>
+                    <Instagram className="w-12 h-12 md:w-16 md:h-16 group-hover:scale-110 transition-transform" />
+                    <span className="text-base md:text-xl font-bold">Instagram DM</span>
                   </Button>
                 </div>
 
-                <div className="text-center pt-4">
-                  <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
+                <div className="text-center pt-6">
+                  <p className="text-subtle-slate dark:text-silver-mist/70 text-base">
                     Odpowiadam osobiście na wszystkie wiadomości
                   </p>
                 </div>
