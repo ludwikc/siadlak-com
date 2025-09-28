@@ -5,53 +5,9 @@ import Hero from '../components/sections/Hero';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
 import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
 import ValueProposition from '../components/podcast/ValueProposition';
-import PodcastEpisodeList, { PodcastEpisode } from '../components/podcast/PodcastEpisodeList';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const UwazneZyciePodcast = () => {
-  // Sample episodes data - would be fetched from an API in a real scenario
-  const episodes: PodcastEpisode[] = [
-    {
-      id: "featured",
-      title: "Odcinek specjalny - Jak odnaleźć spokój w chaosie",
-      description:
-        "W tym wyjątkowym odcinku przedstawiam kompletny system budowania wewnętrznego spokoju nawet w najbardziej wymagających okresach. Idealny punkt startowy dla osób, które chcą wprowadzić uważność do swojego życia zawodowego.",
-      date: "15 maja 2025",
-      duration: "32 min",
-      audioUrl: "https://open.spotify.com/episode/3JrY7PH83X94yUoDt60EHY?si=5a6d0bb83b0c4e18",
-      imageUrl: "/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png",
-    },
-    {
-      id: "1",
-      title: "Technika 4-7-8 dla szybkiego powrotu do równowagi",
-      description:
-        "W tym odcinku omawiam prostą, ale niezwykle skuteczną technikę oddechową, którą możesz zastosować w dowolnym momencie dnia, aby szybko zresetować swój układ nerwowy. Idealny sposób na powrót do równowagi po stresującej sytuacji.",
-      date: "2 maja 2025",
-      duration: "23 min",
-      audioUrl: "#",
-      imageUrl: "/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png",
-    },
-    {
-      id: "2",
-      title: "Poranna medytacja dla zwiększenia klarowności umysłu",
-      description:
-        "Zaledwie 9 minut porannej praktyki może radykalnie zmienić przebieg całego dnia. W tym odcinku prezentuję krok po kroku prowadzoną medytację, którą możesz wykonać zaraz po przebudzeniu.",
-      date: "25 kwietnia 2025",
-      duration: "19 min",
-      audioUrl: "#",
-      imageUrl: "/lovable-uploads/871b0063-2208-416c-bc20-62cb3afaa171.png",
-    },
-    {
-      id: "3",
-      title: 'Medytacja "Skanowanie ciała" dla lepszego snu',
-      description:
-        "Problemy ze snem dotykają coraz więcej profesjonalistów. W tym odcinku prowadzę Cię przez medytację skanowania ciała, która pomaga wyciszyć umysł i przygotować się do głębokiego, regenerującego snu.",
-      date: "18 kwietnia 2025",
-      duration: "27 min",
-      audioUrl: "#",
-    },
-  ];
-
   const platforms = [
     {
       name: "Spotify",
@@ -60,13 +16,8 @@ const UwazneZyciePodcast = () => {
     },
     {
       name: "Apple Podcasts",
-      url: "https://apple.com/apple-podcasts",
+      url: "https://podcasts.apple.com/pl/podcast/uwa%C5%BCne-%C5%BCycie-medytacje/id1811281657",
       icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Podcasts_%28iOS%29.svg",
-    },
-    {
-      name: "Google Podcasts",
-      url: "https://podcasts.google.com",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/42/Google_Podcasts_icon.svg",
     },
     {
       name: "YouTube",
@@ -81,11 +32,6 @@ const UwazneZyciePodcast = () => {
     "Chcesz poprawić jakość snu i regeneracji, by zwiększyć wydajność",
     "Zmagasz się z nadmiarem informacji i potrzebujesz technik na oczyszczenie umysłu",
   ];
-
-  const handlePlayEpisode = (episode: PodcastEpisode) => {
-    console.log("Playing episode:", episode.title);
-    // Here you would typically interact with an audio player API
-  };
 
   return (
     <Layout>
@@ -216,25 +162,6 @@ const UwazneZyciePodcast = () => {
         </div>
       </section>
 
-      <section
-        id="episodes"
-        className="py-12 bg-secondary/30 dark:bg-quantum-blue/20"
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <PodcastEpisodeList
-              episodes={episodes}
-              onPlayEpisode={handlePlayEpisode}
-            />
-
-            <div className="mt-10 text-center">
-              <button className="inline-flex items-center px-6 py-3 bg-ascension-pink hover:bg-luminal-magenta text-white rounded-lg transition-colors">
-                Załaduj więcej odcinków <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

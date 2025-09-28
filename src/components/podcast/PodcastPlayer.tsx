@@ -1,6 +1,6 @@
 
 
-import { Volume2, Play, Headphones } from 'lucide-react';
+import { Headphones } from 'lucide-react';
 
 interface PodcastPlayerProps {
   title: string;
@@ -26,20 +26,6 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
             <Headphones className="mr-2 h-5 w-5 text-ascension-pink" />
             {title}
           </h3>
-        </div>
-        <div className="flex items-center space-x-2 text-neural-violet dark:text-neural-violet-light">
-          <button
-            className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors"
-            aria-label="Play"
-          >
-            <Play className="h-5 w-5" />
-          </button>
-          <button
-            className="p-2 rounded-full hover:bg-neural-violet/10 dark:hover:bg-neural-violet-light/10 transition-colors"
-            aria-label="Adjust volume"
-          >
-            <Volume2 className="h-5 w-5" />
-          </button>
         </div>
       </div>
       <div className="podcast-embed h-[180px] sm:h-[200px] w-full">
