@@ -1,81 +1,73 @@
+import React from 'react';
 import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
 import { CTAButton } from '@/components/ui/cta-button';
 import { GlassCard } from '@/components/ui/glass-card';
-import { CheckCircle, ArrowRight, Calendar, Shield, Star, Zap, AlertCircle, Users, Target, Brain, TrendingUp, Clock, HelpCircle, GitMerge, Crown, ArrowDown } from '@/lib/icons';
+import { CheckCircle, Shield, Zap, AlertCircle, Users, Target, Brain, Clock, GitMerge, Crown } from '@/lib/icons';
 import { Link } from 'react-router-dom';
 
 export default function MentalElevator() {
   return (
     <Layout>
-      {/* Hero Section - Conversion Focused */}
+      {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              MENTAL ELEVATOR
+              Life OS: System Upgrade
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
-              8-tygodniowy program transformacji dla tych, którzy mają dość <span className="italic text-ascension-pink">udawania</span>, że wszystko mają pod kontrolą
+              8-tygodniowy program dla liderów, którzy osiągnęli sukces, ale czują, że grają poniżej swoich prawdziwych możliwości.
             </h2>
             <Link to="/contact">
               <CTAButton
                 variant="premium"
                 size="xl"
                 className="shadow-2xl hover:shadow-3xl"
-                aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+                aria-label="Zarezerwuj Sesję Discovery - przejdź do formularza kontaktowego"
                 showArrow
               >
-                Zarezerwuj Discovery Session
+                Zarezerwuj Sesję Discovery
               </CTAButton>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Reality Check - Pain Points */}
+      {/* Problem Recognition */}
       <section className="py-20 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Rozpoznajesz to?
+              Rozpoznajesz ten stan?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              <div className="space-y-6">
-                {[
-                  "Masz 47 otwartych zakładek z kursami, które \"kiedyś przerobisz\"",
-                  "Analizujesz kolejne frameworki produktywności, ale wciąż czujesz się przytłoczony",
-                  "W głowie ciągle refaktorujesz problemy z pracy – nawet w weekendy"
-                ].map((item, index) => (
-                  <GlassCard key={index} className="flex items-start">
-                    <AlertCircle className="h-6 w-6 mr-4 text-red-500 flex-shrink-0 mt-1" />
-                    <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
-                  </GlassCard>
-                ))}
-              </div>
-
-              <div className="space-y-6">
-                {[
-                  "Z zewnątrz wyglądasz na osobę sukcesu. Wysoka kompetencja, świetne rezultaty, szacunek zespołu",
-                  "Ale w środku? Chroniczne napięcie. Paraliż decyzyjny. Lęk przed zmarnowaniem potencjału",
-                  "Próbowałeś już tradyjnego coachingu. Otrzymałeś listę \"actionable steps\" i motywacyjne gadanie"
-                ].map((item, index) => (
-                  <GlassCard key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
-                  </GlassCard>
-                ))}
-              </div>
+            <div className="space-y-8 mb-16">
+              {[
+                "Osiągnąłeś wszystko, co miało dać Ci spokój – a jednak czujesz wewnętrzne napięcie, którego nie potrafisz nazwać.",
+                "Twój kalendarz jest perfekcyjnie zorganizowany, ale w głowie panuje chaos i paraliż analityczny.",
+                "Z zewnątrz jesteś wzorem kompetencji i sukcesu. Wzbudzasz szacunek.",
+                "Ale w środku? Poczucie fragmentacji. Wrażenie, że żonglujesz różnymi tożsamościami – lidera, partnera, wizjonera – i boisz się, że zaraz upuścisz jedną z piłek."
+              ].map((item, index) => (
+                <GlassCard key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
+                  <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
+                </GlassCard>
+              ))}
             </div>
 
-            <div className="text-center bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-8 rounded-2xl">
-              <p className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
-                Twój problem leży w <span className="text-ascension-pink">fragmentacji</span>
+            <div className="text-center bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-8 rounded-2xl mb-8">
+              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+                Próbowałeś już standardowych rozwiązań. Dostałeś listy "actionable steps", motywacyjne cytaty i kolejne frameworki. Ale problem nie leży w braku narzędzi.
               </p>
-              <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/80">
-                Nie potrzebujesz więcej wiedzy czy motywacji. Potrzebujesz integracji.
+              <p className="text-2xl font-bold text-ascension-pink">
+                Twój problem to wewnętrzny konflikt systemowy.
+              </p>
+            </div>
+
+            <div className="text-center bg-gradient-to-r from-neural-violet/10 to-quantum-blue/10 p-8 rounded-2xl">
+              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
+                Nie potrzebujesz kolejnej aplikacji mentalnej. Potrzebujesz upgrade'u całego systemu operacyjnego, na którym działasz.
               </p>
             </div>
           </div>
@@ -87,557 +79,398 @@ export default function MentalElevator() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Dlaczego dotychczasowe rozwiązania Cię zawiodły
+              Dlaczego dotychczasowe rozwiązania zawiodły?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <GlassCard padding="lg" className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
                 <h3 className="text-xl font-bold mb-4 text-red-700 dark:text-red-300">Coaching / Mentoring</h3>
                 <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Zakłada, że potrzebujesz więcej strategii, lepszych nawyków, mocniejszej motywacji. 
-                  To jak próba naprawienia komputera przez instalowanie kolejnych programów.
+                  Daje Ci nowe strategie i "hacki". To jak instalowanie kolejnych aplikacji na systemie, który jest wewnętrznie skonfliktowany. Efekt jest chwilowy, a problem fundamentalny pozostaje.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg" className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
-                <h3 className="text-xl font-bold mb-4 text-orange-800 dark:text-orange-300">Terapia<sup>*</sup></h3>
+                <h3 className="text-xl font-bold mb-4 text-orange-800 dark:text-orange-300">Terapia</h3>
                 <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Skupia się na przeszłości i emocjach, ale nie łączy tego z twoją dzisiejszą rzeczywistością zawodową. 
-                  Rozumiesz skąd perfekcjonizm, ale wciąż nie wiesz jak działać. <br /><br /> (Terapia jest ważnym i skutecznym narzędziem, z którego sam korzystam i polecam! Tu jednak)
+                  Skupia się na analizie przeszłości, ale często nie potrafi przełożyć tych wglądów na Twoją dzisiejszą presję zawodową. Rozumiesz, skąd bierze się Twój perfekcjonizm, ale nadal nie wiesz, jak podejmować odważne decyzje w poniedziałek o 9:00 rano.
                 </p>
               </GlassCard>
 
-              <div className="glass-card p-8 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
+              <GlassCard padding="lg" className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
                 <h3 className="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">Kursy Online</h3>
                 <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Dają ci kolejne narzędzia, ale nie radzą sobie z podstawowym problemem: 
-                  nie potrafisz zintegrować swojej analitycznej natury z intuicyjnym działaniem.
+                  Dostarczają wiedzy, ale ignorują fakt, że prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Dają Ci narzędzia, ale nie potrafią zintegrować Twojej analitycznej natury z intuicją i wewnętrzną mądrością.
                 </p>
-              </div>
+              </GlassCard>
             </div>
 
             <div className="text-center bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-2xl">
               <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
-                Rezultat? Żyjesz w ciągłym napięciu między potrzebą kontroli a świadomością, że ta kontrola Cię paraliżuje.
+                Rezultat? Żyjesz w ciągłym napięciu. Między tym, kim czujesz, że jesteś, a tym, kim "powinieneś" być w biznesie. Między potrzebą kontroli a świadomością, że ta kontrola Cię wyczerpuje.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mental Elevator - Basement to Penthouse Journey */}
-      <section className="relative py-20 bg-gradient-to-b from-slate-900 via-slate-700 via-slate-500 to-slate-100 dark:from-deep-space dark:via-muted dark:to-background overflow-hidden">
+      {/* Life OS System Upgrade */}
+      <section className="relative py-20 bg-gradient-to-b from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent"></div>
-        
-        {/* Progress Indicator - Elevator Shaft */}
-        <div className="absolute left-8 top-20 bottom-20 w-1 bg-gradient-to-b from-slate-600 to-slate-300 rounded-full hidden lg:block opacity-50">
-          <div className="absolute top-0 w-full h-1/4 bg-primary/60 rounded-full"></div>
-        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-foreground">
-              Mental Elevator
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
+              Life OS: System Upgrade
             </h2>
             
-            <p className="text-2xl text-center mb-4 text-muted-foreground font-bold">
-              Od piwnicy umysłu do penthouse'u potencjału w 8 tygodni
+            <p className="text-2xl text-center mb-4 text-silver-mist font-bold">
+              Od wewnętrznej fragmentacji do zintegrowanego przywództwa w 8 tygodni.
             </p>
             
-            <p className="text-xl text-center mb-16 text-muted-foreground/80">
-              Mental Elevator to nie coaching. To nie terapia. To <span className="text-primary font-bold">realna transformacja</span> zaprojektowana specjalnie dla analitycznych profesjonalistów.
+            <p className="text-xl text-center mb-16 text-silver-mist/80">
+              Life OS to nie jest coaching. To nie jest terapia. To <span className="text-ascension-pink font-bold">głęboka praca na poziomie Twojej tożsamości</span>, zaprojektowana dla liderów, którzy myślą systemowo i są gotowi na prawdziwą transformację.
             </p>
 
             <div className="max-w-4xl mx-auto space-y-8">
-              {/* BASEMENT - Destabilizacja */}
+              {/* Phase 1: Diagnostyka */}
               <div className="group relative">
-                <div className="bg-slate-900/80 backdrop-blur-sm p-12 rounded-3xl border border-slate-700/50 transition-all duration-500">
+                <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-slate-800/80 p-4 rounded-2xl">
-                        <Zap className="w-8 h-8 text-slate-300" />
-                      </div>
-                      <div className="bg-slate-700/60 p-2 rounded-lg">
-                        <span className="text-slate-300 font-mono text-sm">B</span>
-                      </div>
+                    <div className="bg-ascension-pink/20 p-4 rounded-2xl">
+                      <Brain className="w-8 h-8 text-ascension-pink" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-200 mb-2">PIWNICA - DESTABILIZACJA</h3>
-                      <p className="text-slate-400 text-lg font-medium">Tydzień 1-2</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">FAZA 1: DIAGNOSTYKA SYSTEMU</h3>
+                      <p className="text-silver-mist text-lg font-medium">Tydzień 1-2</p>
                     </div>
                   </div>
-                  <p className="text-slate-300 text-lg leading-relaxed">
-                    Rozbijamy systemy myślenia, które Cię więzią w podziemiach potencjału. Tu mieszkają Twoje demony.
+                  <p className="text-silver-mist/90 text-lg leading-relaxed">
+                    Zaczynamy od głębokiej analizy Twojego obecnego "systemu operacyjnego". Identyfikujemy ukryte konflikty, nieświadome wzorce i wewnętrznych sabotażystów, którzy blokują Twój pełen potencjał. To faza brutalnej szczerości z samym sobą, prowadzona w bezpiecznej przestrzeni.
                   </p>
-                </div>
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-slate-400/60 animate-bounce">
-                  <ArrowDown className="w-8 h-8" />
-                </div>
+                </GlassCard>
               </div>
 
-              {/* GROUND FLOOR - Dezorientacja */}
+              {/* Phase 2: Dekonstrukcja */}
               <div className="group relative">
-                <div className="bg-slate-700/80 backdrop-blur-sm p-12 rounded-3xl border border-slate-600/50 transition-all duration-500">
+                <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-slate-600/80 p-4 rounded-2xl">
-                        <HelpCircle className="w-8 h-8 text-slate-200" />
-                      </div>
-                      <div className="bg-slate-600/60 p-2 rounded-lg">
-                        <span className="text-slate-200 font-mono text-sm">0</span>
-                      </div>
+                    <div className="bg-luminal-magenta/20 p-4 rounded-2xl">
+                      <Zap className="w-8 h-8 text-luminal-magenta" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-100 mb-2">PARTER - DEZORIENTACJA</h3>
-                      <p className="text-slate-300 text-lg font-medium">Tydzień 3-4</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">FAZA 2: DEKONSTRUKCJA I WYZWANIE</h3>
+                      <p className="text-silver-mist text-lg font-medium">Tydzień 3-4</p>
                     </div>
                   </div>
-                  <p className="text-slate-200 text-lg leading-relaxed">
-                    Zabiorę Ci stare mapy. Teraz jesteś gotowy na prawdziwe wybicie się w górę.
+                  <p className="text-silver-mist/90 text-lg leading-relaxed">
+                    Tutaj zaczyna się prawdziwa praca. Konfrontujemy to, co Ci nie służy. W zależności od Twojej gotowości, ten proces może być ostry i bezpośredni, albo delikatny i wspierający. To nie jest komfortowe, ale jest konieczne, by zrobić miejsce na nowe.
                   </p>
-                </div>
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-slate-300/60 animate-bounce">
-                  <ArrowDown className="w-8 h-8" />
-                </div>
+                </GlassCard>
               </div>
 
-              {/* NEXT FLOORS - Integracja */}
+              {/* Phase 3: Integracja */}
               <div className="group relative">
-                <div className="bg-slate-500/80 backdrop-blur-sm p-12 rounded-3xl border border-slate-400/50 transition-all duration-500">
+                <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-slate-400/80 p-4 rounded-2xl">
-                        <GitMerge className="w-8 h-8 text-slate-700" />
-                      </div>
-                      <div className="bg-slate-400/60 p-2 rounded-lg">
-                        <span className="text-slate-700 font-mono text-sm">15</span>
-                      </div>
+                    <div className="bg-neural-violet/20 p-4 rounded-2xl">
+                      <GitMerge className="w-8 h-8 text-neural-violet" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-800 mb-2">KOLEJNE PIĘTRA - INTEGRACJA</h3>
-                      <p className="text-slate-700 text-lg font-medium">Tydzień 5-6</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">FAZA 3: INTEGRACJA RDZENIA</h3>
+                      <p className="text-silver-mist text-lg font-medium">Tydzień 5-6</p>
                     </div>
                   </div>
-                  <p className="text-slate-800 text-lg leading-relaxed">
-                    Konfliktowe części uczą się współpracy. Zaczynasz już widzieć miasto z lotu ptaka.
+                  <p className="text-silver-mist/90 text-lg leading-relaxed">
+                    Konfliktowe części Twojej tożsamości (np. bezwzględny CEO i wrażliwy wizjoner) uczą się ze sobą współpracować. Zamiast eliminować "słabości", integrujemy je jako źródła siły. Zaczynasz działać z poczuciem wewnętrznej spójności.
                   </p>
-                </div>
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-slate-600/60 animate-bounce">
-                  <ArrowDown className="w-8 h-8" />
-                </div>
+                </GlassCard>
               </div>
 
-              {/* PENTHOUSE - Droga do Mistrzostwa */}
+              {/* Phase 4: Nowy Standard */}
               <div className="group relative">
-                <div className="bg-slate-100/95 backdrop-blur-sm p-12 rounded-3xl border border-slate-300/70 shadow-2xl shadow-primary/10 transition-all duration-500">
+                <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="bg-primary/20 p-4 rounded-2xl">
-                        <Crown className="w-8 h-8 text-primary" />
-                      </div>
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <span className="text-primary font-mono text-sm font-bold">P</span>
-                      </div>
+                    <div className="bg-quantum-blue/20 p-4 rounded-2xl">
+                      <Crown className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-primary mb-2">PENTHOUSE - DROGA DO MISTRZOSTWA</h3>
-                      <p className="text-primary/80 text-lg font-medium">Tydzień 7-8</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">FAZA 4: NOWY STANDARD DZIAŁANIA</h3>
+                      <p className="text-silver-mist text-lg font-medium">Tydzień 7-8</p>
                     </div>
                   </div>
-                  <p className="text-slate-800 text-lg leading-relaxed">
-                    360° widok na swój potencjał. Tu zaczyna się nowy poziom życia. Nowy sposób bycia staje się Twoją naturalną ekspresją.
+                  <p className="text-silver-mist/90 text-lg leading-relaxed">
+                    Nowy, zintegrowany sposób bycia staje się Twoją drugą naturą. Decyzje stają się lżejsze, przywództwo bardziej naturalne, a praca przestaje być walką. Działasz z poziomu autentycznej mocy, a nie wymuszonej dyscypliny.
                   </p>
-                </div>
+                </GlassCard>
               </div>
             </div>
 
             <div className="text-center mt-16">
               <Link to="/contact">
-                <Button 
-                  className="py-6 px-12 text-xl rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 font-bold"
-                  aria-label="Wsiądź do Mental Elevator - przejdź do formularza kontaktowego"
+                <CTAButton
+                  variant="premium"
+                  size="xl"
+                  className="shadow-2xl hover:shadow-3xl"
+                  showArrow
                 >
-                  WSIĄDŹ DO MENTAL ELEVATOR
-                  <ArrowRight className="ml-3 h-6 w-6" aria-hidden="true" />
-                </Button>
+                  ZAINSTALUJ NOWY SYSTEM
+                </CTAButton>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Results & Testimonial */}
+      {/* Real Effects */}
       <section className="py-20 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Co się zmienia? (Konkretne rezultaty, nie obietnice)
+              Jakie są realne efekty upgrade'u?
             </h2>
 
-            {/* Featured Testimonial */}
-            <div className="glass-card p-10 rounded-2xl mb-16 bg-gradient-to-r from-ascension-pink/5 to-neural-violet/5 dark:from-ascension-pink/10 dark:to-neural-violet/10 border border-ascension-pink/20">
-              <div className="flex items-start mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-xl mr-6">A</div>
-                <div>
-                  <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Anna, Marketing Strategist, 34 lata</h3>
-                  <div className="flex text-yellow-500 mt-1">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
-                  </div>
-                </div>
-              </div>
-              <blockquote className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90 italic mb-4">
-                "Przez lata czułam się jak osoba o dwóch twarzach – analityczna w pracy, kreatywna prywatnie. Po Mental Elevator odkryłam, że jestem naturalnym amplifikatorem – generuję sukces dla innych przez to, kim jestem, nie co robię."
-              </blockquote>
-              <p className="text-ascension-pink font-bold text-lg">
-                Akwizycja klientów wzrosła o 340% w 6 miesięcy, ale co ważniejsze – pracuję mniej, a osiągam więcej.
-              </p>
-            </div>
-
-            {/* Results Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {[
                 {
-                  icon: <Clock className="w-8 h-8" />,
-                  title: "Decyzje podejmujesz szybciej",
-                  description: "Bez analizowania każdej opcji przez tygodnie"
-                },
-                {
-                  icon: <Brain className="w-8 h-8" />,
-                  title: "Praca przestaje Ci ciążyć po godzinach",
-                  description: "Uczysz się odpoczywać i umysł faktycznie się wyłącza"
+                  icon: <Target className="w-8 h-8" />,
+                  title: "Decyzyjność oparta na klarowności",
+                  description: "Podejmujesz kluczowe decyzje szybciej i z większą pewnością, bo wypływają ze zintegrowanego połączenia analizy i intuicji."
                 },
                 {
                   icon: <Users className="w-8 h-8" />,
-                  title: "Lidership bez wysiłku",
-                  description: "Zespół podąża za Tobą naturalnie, nie przez presję"
+                  title: "Przywództwo bez wysiłku",
+                  description: "Twój zespół podąża za Tobą naturalnie, bo czuje Twoją wewnętrzną spójność i autentyczność, a nie presję i kontrolę."
                 },
                 {
-                  icon: <Target className="w-8 h-8" />,
-                  title: "Integracja analityki z intuicją",
-                  description: "Wykorzystujesz pełny potencjał swojego umysłu"
+                  icon: <Zap className="w-8 h-8" />,
+                  title: "Koniec z wewnętrzną walką",
+                  description: "Uciszasz wewnętrznego krytyka i integrujesz różne części siebie w spójną całość. Odzyskujesz ogromne pokłady energii."
+                },
+                {
+                  icon: <Clock className="w-8 h-8" />,
+                  title: "Prawdziwy odpoczynek",
+                  description: "Uczysz się wyłączać tryb 'praca', dzięki czemu czas wolny faktycznie regeneruje, a nie jest tylko przerwą."
                 },
                 {
                   icon: <Shield className="w-8 h-8" />,
-                  title: "Autentyczność bez straty kompetencji",
-                  description: "Przestajesz udawać, że masz wszystko pod kontrolą"
-                },
-                {
-                  icon: <TrendingUp className="w-8 h-8" />,
-                  title: "Fundamentalne przeprogramowanie",
-                  description: "Nowy sposób funkcjonowania jako lider i profesjonalista"
+                  title: "Odporność na chaos",
+                  description: "Zewnętrzne kryzysy i niepewność przestają Cię destabilizować, bo masz dostęp do stabilnego, wewnętrznego rdzenia."
                 }
               ].map((item, index) => (
-                <div key={index} className="glass-card p-6 rounded-xl hover:shadow-lg transition-all">
+                <GlassCard key={index} padding="lg" className="flex flex-col">
                   <div className="flex items-center mb-4">
-                    <div className="text-neural-violet dark:text-luminal-magenta mr-4">
-                      {item.icon}
+                    <div className="bg-neural-violet/10 dark:bg-luminal-magenta/10 p-3 rounded-lg mr-4">
+                      {React.cloneElement(item.icon, { className: "w-8 h-8 text-neural-violet dark:text-luminal-magenta" })}
                     </div>
-                    <h3 className="text-lg font-bold text-deep-charcoal dark:text-silver-mist">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">{item.title}</h3>
                   </div>
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                    {item.description}
-                  </p>
-                </div>
+                  <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item.description}</p>
+                </GlassCard>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why It Works - 3 Pillars */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 dark:from-deep-space dark:to-quantum-blue/20">
+      {/* Why This Method Works */}
+      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Dlaczego Mental Elevator działa tam, gdzie inne podejścia zawodzą?
+              Dlaczego ta metoda działa tam, gdzie inne zawodzą?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="glass-card p-8 rounded-xl hover:shadow-xl transition-all">
-                <div className="flex items-center mb-6">
-                  <Brain className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
-                  <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Metodologia oparta na neurobiologii</h3>
-                </div>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Integracja świadomości somatycznej z procesami poznawczymi tworzy nowe ścieżki neuronowe. 
-                  Decyzje podejmujesz z "whole-brain intelligence".
+            <div className="space-y-8">
+              <GlassCard padding="lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Podejście Adaptacyjne, nie Szablonowe</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                  Proces jest w 100% dostosowany do Ciebie. Dla jednych będzie jak ostra, konfrontacyjna "terapia szokowa", dla innych jak delikatne, sokratejskie prowadzenie. Diagnozuję, czego naprawdę potrzebujesz do przełomu.
                 </p>
-              </div>
+              </GlassCard>
 
-              <div className="glass-card p-8 rounded-xl hover:shadow-xl transition-all">
-                <div className="flex items-center mb-6">
-                  <Shield className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
-                  <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Praca z archetypami</h3>
-                </div>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Łączysz się z uniwersalnymi wzorcami przywództwa (Kreator, Ojciec/Ochrona, Wojownik, Transformator), 
-                  które dają ci naturalny autorytet bez wysiłku.
+              <GlassCard padding="lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Praca na Poziomie Tożsamości, nie Zachowań</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                  Nie zmieniamy tylko tego, co robisz. Zmieniamy to, kim jesteś jako lider i człowiek. Integrujemy Twoje role, talenty i "cienie" w jedną, potężną całość.
                 </p>
-              </div>
+              </GlassCard>
 
-              <div className="glass-card p-8 rounded-xl hover:shadow-xl transition-all">
-                <div className="flex items-center mb-6">
-                  <Zap className="w-12 h-12 text-neural-violet dark:text-luminal-magenta mr-4" />
-                  <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">Systemowe podejście</h3>
-                </div>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
-                  Nie walczymy z Twoim perfekcjonizmem czy analityczną naturą – 
-                  integrujemy je w spójny system operacyjny.
+              <GlassCard padding="lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Integracja, a nie Eliminacja</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                  Nie walczymy z Twoim analitycznym umysłem czy perfekcjonizmem. Uczymy je współpracować z Twoją intuicją, kreatywnością i wrażliwością, tworząc pełniejszy i bardziej skuteczny model działania.
                 </p>
-              </div>
+              </GlassCard>
+
+              <GlassCard padding="lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Kontener Bezpieczeństwa</h3>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                  To intensywny proces. Dlatego tworzę dla Ciebie bezpieczną przestrzeń, w której możesz się rozpaść, by zbudować się na nowo, silniejszym. Zapewniam wsparcie i jestem dostępny również między sesjami.
+                </p>
+              </GlassCard>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Investment Section */}
+      {/* Investment & Commitment */}
       <section className="py-20 bg-luminous-white dark:bg-deep-space">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
               Inwestycja i Zobowiązanie
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="glass-card p-8 rounded-xl">
-                <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">Program</h3>
-                <ul className="space-y-4 text-left">
-                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
-                    <Clock className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                    8 tygodni, 8 intensywnych sesji
-                  </li>
-                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
-                    <Calendar className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                    Sesje od 50 minut do 2,5 godziny
-                  </li>
-                  <li className="flex items-center text-deep-charcoal/90 dark:text-silver-mist/90">
-                    <Users className="w-5 h-5 mr-3 text-neural-violet dark:text-luminal-magenta" />
-                    Dożywotni dostęp do społeczności Lifehackerzy
-                  </li>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <GlassCard padding="lg">
+                <h3 className="text-2xl font-bold mb-6 text-neural-violet dark:text-luminal-magenta">Program:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">8 tygodni, 8 intensywnych, transformujących sesji (od 50 min do 2,5h)</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">Dostęp do mnie pomiędzy sesjami w razie potrzeby</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">Dożywotni dostęp do społeczności absolwentów programu</p>
+                  </div>
+                </div>
+              </GlassCard>
+
+              <GlassCard padding="lg" className="bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
+                <h3 className="text-2xl font-bold mb-6 text-neural-violet dark:text-luminal-magenta">Inwestycja:</h3>
+                <div className="text-center mb-6">
+                  <p className="text-4xl font-bold text-ascension-pink mb-2">16.000 PLN</p>
+                  <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/80">za pełen, 8-tygodniowy proces transformacyjny</p>
+                </div>
+                
+                <h4 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">Dlaczego taka cena?</h4>
+                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 mb-4">
+                  To nie jest kurs online ani pakiet coachingowy. To głęboka, wymagająca praca na poziomie Twojej tożsamości. Płacisz za:
+                </p>
+                <ul className="space-y-2 text-deep-charcoal/90 dark:text-silver-mist/80">
+                  <li>• Moją pełną obecność i zaangażowanie przez 8 tygodni</li>
+                  <li>• Dostęp do unikalnej, adaptacyjnej metodologii</li>
+                  <li>• Bezpieczną przestrzeń do najtrudniejszych konfrontacji</li>
+                  <li>• Realną transformację, a nie tymczasową motywację</li>
                 </ul>
-              </div>
-
-              <div className="glass-card p-8 rounded-xl bg-gradient-to-br from-ascension-pink/5 to-neural-violet/5 dark:from-ascension-pink/10 dark:to-neural-violet/10">
-                <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">Inwestycja</h3>
-                <div className="text-center">
-                  <p className="text-5xl font-bold text-neural-violet dark:text-luminal-magenta mb-4">
-                    16.000 PLN
-                  </p>
-                  <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">
-                    za pełen, 8-tygodniowy program transformacyjny
-                  </p>
-                </div>
-              </div>
+              </GlassCard>
             </div>
-
-            <div className="glass-card p-8 rounded-xl mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">Dlaczego taka cena?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-left">
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/90 mb-4">
-                    To nie jest kurs online czy pakiet coachingowy. To głęboka, integracyjna transformacja wymagająca:
-                  </p>
-                  <ul className="space-y-2 text-deep-charcoal/90 dark:text-silver-mist/80">
-                    <li>• Pełnej obecności przez 8 tygodni</li>
-                    <li>• Pracy na poziomie tożsamości</li>
-                    <li>• Dostępu do unikalnej metodologii</li>
-                    <li>• Wsparcia ekskluzywnej społeczności</li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-xl">
-                  <h4 className="font-bold mb-2 text-green-700 dark:text-green-300">ROI</h4>
-                  <p className="text-sm text-green-700 dark:text-green-400">
-                    Moi klienci już po pierwszych sesjach wracają ze zwiększoną skutecznością, podnoszą
-                    efektywność swoich zespołów i redukują stres.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <blockquote className="text-xl italic text-deep-charcoal dark:text-silver-mist">
-              "Nie ma nic gorszego niż wybierać rozwiązanie życiowych wyzwań, kierując się ceną."
-            </blockquote>
           </div>
         </div>
       </section>
 
-      {/* Exclusivity */}
-      <section className="py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      {/* Qualification */}
+      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Ekskluzywność ma sens
-            </h2>
-            
-            <p className="text-xl mb-8 text-silver-mist">
-              Pracuję jednocześnie maksymalnie z <strong>5 osobami</strong>. I to nie jest marketingowy <em>bullshit</em> – to konieczność.
-            </p>
-
-            <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 mb-8">
-              <div className="flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 mr-3 text-ascension-pink" />
-                <span className="text-2xl font-bold">Obecnie dostępna przestrzeń: 2</span>
-              </div>
-              <p className="text-lg text-silver-mist/90">
-                <span className="text-ascension-pink font-bold">2 dostępne miejsca</span>
-              </p>
-            </div>
-
-            <p className="text-lg text-silver-mist/80">
-              First come, first served. Jeśli czujesz, że to dla Ciebie, nie zwlekaj. Ale wiesz co? Sprawdźmy: 
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Qualification Section */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
-              Czy to dla Ciebie?
+              Czy ten program jest dla Ciebie?
             </h2>
 
-            <p className="text-xl text-center mb-12 text-deep-charcoal/90 dark:text-silver-mist/90">
-              Mental Elevator to <strong>nie jest</strong> dla każdego. Sprawdź, czy pasujesz do profilu:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* YES Column */}
-              <div className="glass-card p-8 rounded-xl border-2 border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20">
-                <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300 text-center">
-                  ✅ TAK, jeśli:
-                </h3>
-                <ul className="space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <GlassCard padding="lg" className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
+                <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300">✅ TAK, jeśli:</h3>
+                <div className="space-y-4">
                   {[
-                    "Masz udokumentowane sukcesy zawodowe, ale czujesz, że działasz poniżej swojego potencjału",
-                    "Potrafisz tolerować tymczasową niepewność podczas procesu transformacji",
-                    "Zależy ci na autentycznej zmianie, nie na szybkich \"hackach\"",
-                    "Szukasz integracji, nie kolejnych narzędzi czy strategii",
-                    "Jesteś gotowy na 6-miesięczne pełne zaangażowanie"
+                    "Masz na koncie sukcesy, ale czujesz, że prawdziwy potencjał wciąż jest zablokowany",
+                    "Jesteś gotów na konfrontację z własnymi cieniami i mechanizmami obronnymi",
+                    "Cenisz sobie głębię i autentyczność bardziej niż szybkie \"hacki\" i powierzchowne rozwiązania",
+                    "Szukasz integracji i spójności, a nie kolejnych narzędzi do zarządzania chaosem"
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-green-700 dark:text-green-300">{item}</span>
-                    </li>
+                    <div key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
+                      <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item}</p>
+                    </div>
                   ))}
-                </ul>
-              </div>
+                </div>
+              </GlassCard>
 
-              {/* NO Column */}
-              <div className="glass-card p-8 rounded-xl border-2 border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20">
-                <h3 className="text-2xl font-bold mb-6 text-red-700 dark:text-red-300 text-center">
-                  ❌ NIE, jeśli:
-                </h3>
-                <ul className="space-y-4">
+              <GlassCard padding="lg" className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+                <h3 className="text-2xl font-bold mb-6 text-red-700 dark:text-red-300">❌ NIE, jeśli:</h3>
+                <div className="space-y-4">
                   {[
-                    "Szukasz szybkich rozwiązań lub motywacyjnego \"kopa\"",
-                    "Nie jesteś gotowy na kwestionowanie swoich dotychczasowych sposobów funkcjonowania",
-                    "Potrzebujesz stabilizacji w kryzysie (to nie jest terapia kryzysowa)",
-                    "Chcesz jedynie nowych narzędzi produktywności",
-                    "Nie możesz zobowiązać się do regularnych, intensywnych sesji"
+                    "Szukasz motywacyjnego \"kopa\" i szybkich rozwiązań",
+                    "Nie jesteś gotowy, by zakwestionować dotychczasowy sposób, w jaki funkcjonujesz",
+                    "Przeżywasz ostry kryzys i potrzebujesz natychmiastowej stabilizacji (to nie jest terapia kryzysowa)",
+                    "Oczekujesz gotowej listy \"5 kroków do sukcesu\""
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <AlertCircle className="w-5 h-5 mr-3 text-red-600 dark:text-red-400 flex-shrink-0 mt-1" />
-                      <span className="text-red-700 dark:text-red-300">{item}</span>
-                    </li>
+                    <div key={index} className="flex items-start">
+                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 dark:text-red-400 flex-shrink-0 mt-1" />
+                      <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item}</p>
+                    </div>
                   ))}
-                </ul>
-              </div>
+                </div>
+              </GlassCard>
             </div>
           </div>
         </div>
       </section>
 
       {/* Discovery Session CTA */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet to-ascension-pink">
+      <section className="py-20 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
-              Następny krok: Discovery Session
+              Następny krok: Sesja Discovery
             </h2>
-
-            <p className="text-xl mb-8 text-white">
-              Zanim zaakceptuję Cię do programu, musimy przeprowadzić <strong>30-minutową Discovery Session</strong>.
-            </p>
-
-            <div className="glass-card p-8 rounded-xl backdrop-blur-sm bg-white/10 mb-8">
-              <p className="text-lg mb-6 text-white">
-                To nie jest "sprzedażowa" rozmowa. To <strong>wzajemna ocena dopasowania</strong>:
+            
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-8">
+              <p className="text-xl text-silver-mist mb-6">
+                Zanim zdecydujemy o współpracy, musimy przeprowadzić <span className="text-ascension-pink font-bold">30-minutową Sesję Discovery.</span>
+              </p>
+              
+              <p className="text-lg text-silver-mist/90 mb-6">
+                To nie jest rozmowa sprzedażowa. To <span className="font-bold">wzajemna ocena dopasowania:</span>
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <ul className="space-y-3">
-                  <li className="flex items-center text-white">
-                    <Target className="w-5 h-5 mr-3 text-ascension-pink" />
-                    Analizujemy Twoje obecne wzorce i ograniczenia
-                  </li>
-                  <li className="flex items-center text-white">
-                    <Brain className="w-5 h-5 mr-3 text-ascension-pink" />
-                    Sprawdzamy dopasowanie metodologii
-                  </li>
-                </ul>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink" />
-                    Ustalamy jasne oczekiwania
-                  </li>
-                  <li className="flex items-center text-white">
-                    <Shield className="w-5 h-5 mr-3 text-ascension-pink" />
-                    Podejmujemy decyzję o współpracy – oboje
-                  </li>
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <p className="text-silver-mist/90">Zdiagnozujemy Twój obecny system i kluczowe blokady</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <p className="text-silver-mist/90">Sprawdzimy, czy moja metodologia jest odpowiedzią na Twoje wyzwania</p>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <p className="text-silver-mist/90">Określimy, czy jesteś gotowy na ten rodzaj głębokiej pracy</p>
+                  </div>
+                  <div className="flex items-start">
+                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <p className="text-silver-mist/90">Oboje podejmiemy decyzję, czy chcemy razem pracować</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-black/20 p-6 rounded-xl mb-8">
-              <p className="text-lg font-medium mb-2 text-white">
-                <strong>Discovery Session jest płatna</strong>
-              </p>
-              <p className="text-2xl font-bold text-ascension-pink mb-2">500 PLN</p>
-              <p className="text-silver-mist/80">odliczane od ceny programu w przypadku akceptacji</p>
-            </div>
-
-            <p className="text-lg mb-8 text-silver-mist">
-              <strong>Dlaczego?</strong> Bo to już część procesu. Ludzie, którzy są gotowi zainwestować w samo poznanie swojej sytuacji, 
-              to ci, którzy osiągają najlepsze rezultaty.
-            </p>
-
             <Link to="/contact">
-              <Button 
-                className="bg-white text-neural-violet hover:bg-silver-mist py-6 px-12 text-xl rounded-xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 font-bold"
-                aria-label="Zarezerwuj Discovery Session - przejdź do formularza kontaktowego"
+              <CTAButton
+                variant="premium"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl mb-8"
+                showArrow
               >
-                Zarezerwuj Discovery Session
-                <Calendar className="ml-3 h-6 w-6" aria-hidden="true" />
-              </Button>
+                Zarezerwuj Sesję Discovery
+              </CTAButton>
             </Link>
 
-            <p className="text-sm mt-4 text-silver-mist/70">
-              Miejsca rezerwuję w kolejności zgłoszeń
+            <p className="text-silver-mist/80 italic text-sm mb-4">
+              Liczba miejsc w programie jest ściśle ograniczona do 5 osób jednocześnie, aby zapewnić maksymalną jakość i moje zaangażowanie.
             </p>
-          </div>
-        </div>
-      </section>
+            <p className="text-ascension-pink font-bold">Obecnie dostępne: 2</p>
 
-      {/* Final CTA & PS */}
-      <section className="py-16 bg-deep-space">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-lg mb-8 italic text-silver-mist">
-              <em>Mental Elevator to metodologia dla profesjonalistów, którzy przestali wierzyć w powierzchowne rozwiązania 
-              i są gotowi na fundamentalną zmianę sposobu funkcjonowania. To nie coaching, nie terapia – 
-              to integracyjna transformacja dla umysłów, które myślą systemowo.</em>
-            </p>
-
-            <div className="bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-6 rounded-xl">
-              <p className="text-lg text-silver-mist">
-                <strong>P.S.</strong> Jeśli dotarłeś do tego miejsca i wciąż się wahasz – to prawdopodobnie znaczy, 
-                że Twoja analityczna natura próbuje znaleźć "pewność" przed podjęciem kroków. To jeden z wzorców, 
-                z którymi będziemy pracować. Discovery Session to bezpieczny sposób na zbadanie tej niepewności 
-                bez pełnego zobowiązania.
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 mt-8">
+              <p className="text-silver-mist/90">
+                <strong>P.S.</strong> Jeśli dotarłeś aż tutaj i wciąż się wahasz, analizując wszystkie "za" i "przeciw" – to jest właśnie jeden ze wzorców, z którym będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie 100% pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny sposób, by zbadać tę niepewność bez pełnego zobowiązania.
               </p>
             </div>
           </div>
