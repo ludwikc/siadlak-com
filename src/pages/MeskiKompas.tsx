@@ -331,10 +331,19 @@ export default function MeskiKompas() {
 
                     <div className="mb-6">
                       <h4 className="text-lg font-bold mb-2" style={{ color: 'hsl(210, 20%, 8%)' }}>Narzędzia:</h4>
-                      <ul className="list-disc list-inside space-y-2" style={{ color: 'hsl(210, 10%, 45%)' }}>
-                        <li><strong>Mapa dnia vs wartości:</strong> Audit tego, na co faktycznie tracisz czas vs. co deklarujesz jako ważne</li>
-                        <li><strong>Zasada 3xP:</strong> Projects/People/Principles - tylko 3 priorytety w każdej kategorii</li>
-                        <li><strong>Energy/Impact Matrix:</strong> Gdzie inwestować czas dla maksymalnego efektu</li>
+                      <ul className="space-y-3" style={{ color: 'hsl(210, 10%, 45%)' }}>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Mapa dnia vs wartości:</strong> Audit tego, na co faktycznie tracisz czas vs. co deklarujesz jako ważne</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Zasada 3xP:</strong> Projects/People/Principles - tylko 3 priorytety w każdej kategorii</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Energy/Impact Matrix:</strong> Gdzie inwestować czas dla maksymalnego efektu</span>
+                        </li>
                       </ul>
                     </div>
 
@@ -374,10 +383,19 @@ export default function MeskiKompas() {
 
                     <div className="mb-6">
                       <h4 className="text-lg font-bold mb-2" style={{ color: 'hsl(210, 20%, 8%)' }}>Narzędzia:</h4>
-                      <ul className="list-disc list-inside space-y-2" style={{ color: 'hsl(210, 10%, 45%)' }}>
-                        <li><strong>Pętla tygodniowa:</strong> Stały rytm planowania/wykonania/przeglądu</li>
-                        <li><strong>Focus Sprint:</strong> Technika dla analityków - 25 min full focus + 5 min analiza</li>
-                        <li><strong>Trigger System:</strong> Automatyczne reakcje na typowe sytuacje</li>
+                      <ul className="space-y-3" style={{ color: 'hsl(210, 10%, 45%)' }}>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Pętla tygodniowa:</strong> Stały rytm planowania/wykonania/przeglądu</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Focus Sprint:</strong> Technika dla analityków - 25 min full focus + 5 min analiza</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Trigger System:</strong> Automatyczne reakcje na typowe sytuacje</span>
+                        </li>
                       </ul>
                     </div>
 
@@ -417,10 +435,19 @@ export default function MeskiKompas() {
 
                     <div className="mb-6">
                       <h4 className="text-lg font-bold mb-2" style={{ color: 'hsl(210, 20%, 8%)' }}>Narzędzia:</h4>
-                      <ul className="list-disc list-inside space-y-2" style={{ color: 'hsl(210, 10%, 45%)' }}>
-                        <li><strong>Kompas 3W:</strong> Who/What/When - kto może to zrobić zamiast ciebie</li>
-                        <li><strong>Ćwiczenie "NIE":</strong> Systematyczne ćwiczenie odmawiania bez usprawiedliwiania się</li>
-                        <li><strong>Decision Framework:</strong> Algorytmy decyzyjne dla powtarzających się sytuacji</li>
+                      <ul className="space-y-3" style={{ color: 'hsl(210, 10%, 45%)' }}>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Kompas 3W:</strong> Who/What/When - kto może to zrobić zamiast ciebie</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Ćwiczenie "NIE":</strong> Systematyczne ćwiczenie odmawiania bez usprawiedliwiania się</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-neural-violet dark:text-luminal-magenta text-lg leading-none mt-1">•</span>
+                          <span className="break-words"><strong>Decision Framework:</strong> Algorytmy decyzyjne dla powtarzających się sytuacji</span>
+                        </li>
                       </ul>
                     </div>
 

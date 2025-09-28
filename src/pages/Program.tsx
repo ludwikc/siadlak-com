@@ -423,7 +423,7 @@ export default function Program() {
                       </div>
                       
                       {/* Description */}
-                      <p className="text-white/80 mb-8 text-xl leading-relaxed">
+                      <p className="text-white/80 mb-8 text-lg md:text-xl leading-relaxed break-words">
                         Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie całego systemu operacyjnego w Twojej głowie. I w emocjach.
                       </p>
                       
@@ -437,9 +437,9 @@ export default function Program() {
                           '24/7 wsparcie przez cały program',
                           'Gwarancja rezultatu lub zwrot pieniędzy'
                         ].map((feature, index) => (
-                          <div key={index} className="flex items-center gap-4 text-white/90 text-lg">
-                            <div className="w-3 h-3 bg-ascension-pink rounded-full flex-shrink-0"></div>
-                            {feature}
+                          <div key={index} className="flex items-start gap-3 md:gap-4 text-white/90 text-base md:text-lg">
+                            <div className="w-3 h-3 bg-ascension-pink rounded-full flex-shrink-0 mt-1"></div>
+                            <span className="break-words">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -449,9 +449,9 @@ export default function Program() {
                     <div className="text-center lg:text-right">
                       {/* Price */}
                       <div className="mb-8">
-                        <div className="text-5xl lg:text-6xl font-bold text-ascension-pink mb-3">16 000 PLN</div>
-                        <div className="text-white/60 text-xl">8 tygodni intensywnej transformacji</div>
-                        <div className="text-white/40 text-lg mt-2">≈ 2000 PLN / tydzień</div>
+                        <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-ascension-pink mb-3 break-words">16 000 PLN</div>
+                        <div className="text-white/60 text-lg md:text-xl break-words">8 tygodni intensywnej transformacji</div>
+                        <div className="text-white/40 text-base md:text-lg mt-2 break-words">≈ 2000 PLN / tydzień</div>
                       </div>
                       
                       {/* Exclusivity Badge */}
