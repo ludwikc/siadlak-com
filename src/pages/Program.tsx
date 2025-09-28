@@ -8,6 +8,7 @@ import { GlassCard } from '@/components/ui/glass-card';
 import { Calendar, Clock, MessageSquare, Shield, Users } from '@/lib/icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import effectGif from '@/assets/I-know-kung-fu.gif';
 
 const apps = [
   {
@@ -92,9 +93,14 @@ const communityBenefits = [
 
 export default function Program() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+  const [isFaqOverlayVisible, setIsFaqOverlayVisible] = useState(true);
 
   const handleUnlockAccess = () => {
     setIsOverlayVisible(false);
+  };
+
+  const handleShowEffect = () => {
+    setIsFaqOverlayVisible(false);
   };
 
   return (
@@ -149,6 +155,63 @@ export default function Program() {
             <div className="flex justify-center">
               <div className="w-full max-w-md">
                 <AppCard {...apps[2]} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ: Efekt? Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-4 text-neural-violet dark:text-luminal-magenta border-neural-violet dark:border-luminal-magenta">
+                FAQ: EFEKT?
+              </Badge>
+              
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                Pokaż mi jak wygląda proces instalacji
+              </h2>
+            </div>
+            
+            {/* Effect Display with Overlay */}
+            <div className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden">
+              {/* Privacy Overlay */}
+              {isFaqOverlayVisible && (
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-2xl">
+                  <div className="space-y-6">
+                    <div className="w-16 h-16 bg-neural-violet/20 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mx-auto">
+                      <MessageSquare className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-white">
+                        Chcesz zobaczyć efekt?
+                      </h3>
+                      <p className="text-white/80 text-lg">
+                        Zobacz jak wygląda proces mentalnej transformacji
+                      </p>
+                    </div>
+                    
+                    <CTAButton 
+                      onClick={handleShowEffect}
+                      className="bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90"
+                      size="lg"
+                    >
+                      Pokaż Efekt
+                    </CTAButton>
+                  </div>
+                </div>
+              )}
+
+              {/* GIF Content */}
+              <div className="bg-gradient-to-br from-deep-space/50 to-quantum-blue/50 p-8 rounded-2xl border border-neural-violet/20">
+                <img 
+                  src={effectGif} 
+                  alt="Mental transformation effect demonstration"
+                  className="w-full rounded-lg shadow-2xl"
+                />
               </div>
             </div>
           </div>
