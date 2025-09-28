@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//LCS//Uwazne Zycie//EN
+BEGIN:VEVENT
+UID:uwazne-zycie-wt-0628@lcs
+DTSTAMP:20250928T200000Z
+SUMMARY:Uważne Życie – medytacje prowadzone (live)
+DTSTART;TZID=Europe/Warsaw:20250930T062800
+DTEND;TZID=Europe/Warsaw:20250930T065000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+LOCATION:https://discord.com/events/428530875085619200/1384400577311670313
+DESCRIPTION:Słyszymy się na Discordzie, na kanale #warszataty:\nhttps://discord.com/channels/428530875085619200/988452597549641758\n\n→ https://uwaznezycie.pl
+END:VEVENT
+END:VCALENDAR

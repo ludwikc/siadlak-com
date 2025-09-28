@@ -96,20 +96,20 @@ const UwazneZyciePodcast = () => {
 
             <div className="flex justify-center space-x-4">
               <a
-                href="https://calendar.google.com"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Uwa%C5%BCne%20%C5%BBycie%20%E2%80%93%20medytacje%20prowadzone%20%28live%29&location=https%3A%2F%2Fdiscord.com%2Fevents%2F428530875085619200%2F1384400577311670313&details=S%C5%82yszymy%20si%C4%99%20na%20Discordzie%2C%20na%20kanale%20%23warszataty%3A%20%0Ahttps%3A%2F%2Fdiscord.com%2Fchannels%2F428530875085619200%2F988452597549641758%0A%0A%E2%86%92%20https%3A%2F%2Fuwaznezycie.pl%20&dates=20250930T062800%2F20250930T065000&recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DTU&ctz=Europe%2FWarsaw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-neural-violet hover:text-ascension-pink dark:text-neural-violet-light dark:hover:text-luminal-magenta transition-colors"
               >
-                Dodaj do Google Calendar
+                Dodaj do swojego Google Calendar
               </a>
               <a
-                href="https://calendar.apple.com"
+                href="/assets/UwazneZycie.ics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-neural-violet hover:text-ascension-pink dark:text-neural-violet-light dark:hover:text-luminal-magenta transition-colors"
               >
-                Dodaj do Apple Calendar
+                Dodaj do iCloud/Outlook
               </a>
             </div>
           </div>
