@@ -42,40 +42,46 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                <p className="text-subtle-slate dark:text-silver-mist/90">
+                <p className="text-subtle-slate dark:text-silver-mist/90 text-center">
                   Wybierz preferowaną formę kontaktu:
                 </p>
 
-                <div className="flex flex-col space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Button
                     onClick={() =>
                       window.open("mailto:connect@siadlak.email", "_self")
                     }
-                    className="w-full h-14 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
+                    className="aspect-square p-6 bg-ascension-pink hover:bg-ascension-pink/80 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
                   >
-                    <Mail className="w-5 h-5" />
-                    Wyślij email
+                    <Mail className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-semibold">Wyślij email</span>
                   </Button>
 
                   <Button
                     onClick={() =>
                       window.open("https://www.linkedin.com/in/ludwikc", "_blank")
                     }
-                    className="w-full h-14 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
+                    className="aspect-square p-6 bg-[#0077B5] hover:bg-[#0077B5]/80 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
                   >
-                    <Linkedin className="w-5 h-5" />
-                    Połącz się na LinkedIn
+                    <Linkedin className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-semibold">LinkedIn</span>
                   </Button>
 
                   <Button
                     onClick={() =>
                       window.open("https://instagram.com/ludwikc", "_blank")
                     }
-                    className="w-full h-14 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium flex items-center justify-center gap-3 text-lg shadow-md transition-all duration-300 hover:shadow-xl"
+                    className="aspect-square p-6 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium flex flex-col items-center justify-center gap-3 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-105 rounded-xl group"
                   >
-                    <Instagram className="w-5 h-5" />
-                    Wyślij DM na IG
+                    <Instagram className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                    <span className="text-sm font-semibold">Instagram DM</span>
                   </Button>
+                </div>
+
+                <div className="text-center pt-4">
+                  <p className="text-subtle-slate dark:text-silver-mist/70 text-sm">
+                    Odpowiadam osobiście na wszystkie wiadomości
+                  </p>
                 </div>
               </div>
             </div>
