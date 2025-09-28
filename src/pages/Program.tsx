@@ -4,7 +4,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AppCard from '@/components/ui/app-card';
 import { Badge } from '@/components/ui/badge';
 import { CTAButton } from '@/components/ui/cta-button';
-import { Calendar, Clock, MessageSquare, Shield, Users } from '@/lib/icons';
+import { BookOpen, Brain, Clock, Diamond, GraduationCap, Heart, Lock, MapPin, MessageSquare, Mic2, Shield, Users, Video } from '@/lib/icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import effectGif from '@/assets/I-know-kung-fu.gif';
@@ -71,23 +71,68 @@ const apps = [
 const communityBenefits = [
   {
     icon: Clock,
-    title: 'Daily meetings 12:34',
+    title: '12:34 Daily Coaching',
     description: 'Codzienne spotkania o stałej porze'
   },
   {
+    icon: Mic2,
+    title: 'Wsparcie na Żywo',
+    description: 'Motywacja i inspiracja każdego dnia'
+  },
+  {
     icon: MessageSquare,
-    title: 'Discord & Platforma',
-    description: 'Dostęp do ekskluzywnych kanałów'
+    title: 'Forum Dyskusyjne',
+    description: '180+ aktywnych wątków'
+  },
+  {
+    icon: MapPin,
+    title: 'Globalna Społeczność',
+    description: 'Lifehackerzy z 8+ krajów'
   },
   {
     icon: Users,
-    title: 'Networking z profesjonalistami',
-    description: 'Sieć kontaktów z branży'
+    title: 'Autentyczne Przyjaźnie',
+    description: 'Silne więzi i motywacja'
   },
   {
-    icon: Calendar,
-    title: 'Cotygodniowe warsztaty',
-    description: 'Regularne sesje rozwojowe'
+    icon: Heart,
+    title: 'Wzajemne Wsparcie',
+    description: 'Wymiana wiedzy i doświadczeń'
+  },
+  {
+    icon: Lock,
+    title: 'Sekrety Lifehackerów',
+    description: 'Ukryte strategie efektywności'
+  },
+  {
+    icon: GraduationCap,
+    title: 'Warsztaty Eksperckie',
+    description: 'Sesje o GTD, Notion, Apple/Windows'
+  },
+  {
+    icon: Video,
+    title: '50+ Protipów',
+    description: 'Wewnętrzne nagrania niedostępne publicznie'
+  },
+  {
+    icon: Brain,
+    title: 'Mindset & Motywacja',
+    description: 'Materiały o odporności psychicznej'
+  },
+  {
+    icon: Users,
+    title: 'Lekcje Co-Trenerów',
+    description: 'Eksperci od delegowania, automatyzacji, medytacji'
+  },
+  {
+    icon: Diamond,
+    title: 'Toolbox Lifehackera',
+    description: 'Notatki i strategie społeczności'
+  },
+  {
+    icon: BookOpen,
+    title: 'Wiedza w Pigułce',
+    description: 'Skondensowane notatki najlepszych'
   }
 ];
 
@@ -237,7 +282,7 @@ export default function Program() {
               Instalując dowolną aplikację otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności użytkowników. P.S. To jedyny sposób, aby dołączyć do Lifehackerów.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {communityBenefits.map((benefit, index) => (
                 <div 
                   key={index} 
