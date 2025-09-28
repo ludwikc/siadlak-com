@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import effectGif from '@/assets/I-know-kung-fu.gif';
 import redPillGif from '@/assets/red-pill.gif';
+import lifehackerzyLogo from '@/assets/lifehackerzy-logo.png';
 
 const apps = [
   {
@@ -148,6 +149,11 @@ export default function Program() {
     setIsFaqOverlayVisible(false);
   };
 
+  const scrollToApps = () => {
+    const appsSection = document.querySelector('.apps-section');
+    appsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Layout>
       <HeroSection
@@ -163,7 +169,7 @@ export default function Program() {
       </section>
       
       {/* Section 1: Basic Apps (50%/50%) */}
-      <section className="py-16">
+      <section className="py-16 apps-section">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -282,7 +288,7 @@ export default function Program() {
               Instalując dowolną aplikację otrzymujesz dostęp LIFETIME do ekskluzywnej społeczności użytkowników. P.S. To jedyny sposób, aby dołączyć do Lifehackerów.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {communityBenefits.map((benefit, index) => (
                 <div 
                   key={index} 
@@ -302,6 +308,28 @@ export default function Program() {
                   </p>
                 </div>
               ))}
+              
+              {/* Highlighted CTA Card */}
+              <div 
+                onClick={scrollToApps}
+                className="col-span-full bg-gradient-to-br from-neural-violet to-ascension-pink rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src={lifehackerzyLogo} 
+                    alt="Lifehackerzy logo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  To wszystko i więcej
+                </h3>
+                
+                <p className="text-white/90">
+                  Dostęp otrzymasz natychmiast i na zawsze
+                </p>
+              </div>
             </div>
           </div>
         </div>
