@@ -213,6 +213,9 @@ export default function Program() {
                   alt="Mental transformation effect demonstration"
                   className="w-full rounded-lg shadow-2xl"
                 />
+                <p className="text-xs text-white/50 mt-4 text-center">
+                  Źródło: Matrix (1999), Warner Bros.
+                </p>
               </div>
             </div>
           </div>
@@ -453,6 +456,9 @@ export default function Program() {
               alt="Red pill choice matrix scene"
               className="w-full rounded-lg shadow-2xl"
             />
+            <p className="text-xs text-muted-foreground mt-4">
+              Źródło: Matrix (1999), Warner Bros.
+            </p>
           </div>
         </div>
       </section>
