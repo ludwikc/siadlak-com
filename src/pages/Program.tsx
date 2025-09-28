@@ -9,6 +9,7 @@ import { Calendar, Clock, MessageSquare, Shield, Users } from '@/lib/icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import effectGif from '@/assets/I-know-kung-fu.gif';
+import redPillGif from '@/assets/red-pill.gif';
 
 const apps = [
   {
@@ -439,6 +440,19 @@ export default function Program() {
               </CTAButton>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Red Pill GIF Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <img 
+              src={redPillGif} 
+              alt="Red pill choice matrix scene"
+              className="w-full rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       </section>
