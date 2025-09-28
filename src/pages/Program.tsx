@@ -450,14 +450,17 @@ export default function Program() {
               Źródło: Matrix (1999), Warner Bros.
             </p>
             
-            <Link to="/discovery">
-              <CTAButton 
-                size="lg" 
-                className="text-lg px-8 py-4 font-bold bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/50 hover:shadow-red-500/70 animate-pulse border-0"
-              >
-                Zarezerwuj sesję Discovery
-              </CTAButton>
-            </Link>
+            <div className="relative inline-block">
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-red-700 rounded-lg blur-sm opacity-60 transition-opacity duration-300 hover:opacity-80"></div>
+              <Link to="/discovery" className="relative z-10">
+                <CTAButton 
+                  size="lg" 
+                  className="text-lg px-8 py-4 font-bold bg-red-600 hover:bg-red-700 text-white border-0 relative transition-all duration-300"
+                >
+                  Zarezerwuj sesję Discovery
+                </CTAButton>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
