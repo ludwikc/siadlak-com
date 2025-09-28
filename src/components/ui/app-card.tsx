@@ -67,87 +67,84 @@ export default function AppCard({
         {status}
       </Badge>
 
-      {/* Mobile-optimized layout */}
-      <div className="p-4 sm:p-6 pb-0">
-        {/* Header Section - Icon + Title/Subtitle */}
-        <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-          {/* Icon Container - Smaller on mobile */}
+      <div className="p-4 sm:p-6">
+        {/* Header Section - Icon + Title/Subtitle + Social Proof */}
+        <div className="flex items-start gap-3 mb-4">
+          {/* Icon Container */}
           <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${gradient} rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0`}>
             <CategoryIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </div>
 
-          {/* Title + Subtitle */}
+          {/* Title + Subtitle + Rating */}
           <div className="flex-1 min-w-0">
             <h3 className={`text-lg sm:text-xl font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
               {title}
             </h3>
             
-            <p className={`text-sm sm:text-base font-medium mb-2 sm:mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
+            <p className={`text-sm sm:text-base font-medium mb-2 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
               {subtitle}
             </p>
 
-            {/* Category Badge - Mobile inline */}
-            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
-              {category}
-            </Badge>
+            {/* Social Proof - Critical for conversions */}
+            <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className={`h-3 w-3 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                  />
+                ))}
+                <span className={`ml-1 text-xs font-medium ${premium ? 'text-yellow-400' : 'text-yellow-600'}`}>
+                  {rating.toFixed(1)}
+                </span>
+              </div>
+              
+              <div className="flex items-center">
+                <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/70'}`}>
+                  {downloads}
+                </span>
+              </div>
+            </div>
+
+            {/* Category + Key Stats */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
+                {category}
+              </Badge>
+              
+              {duration && (
+                <div className="flex items-center gap-1">
+                  <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                  <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                    {duration}
+                  </span>
+                </div>
+              )}
+              
+              {target && (
+                <div className="flex items-center gap-1">
+                  <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
+                  <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
+                    {target}
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Description - Hidden on mobile, shown on larger screens */}
-        <p className={`hidden sm:block text-sm sm:text-base mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
+        {/* Value Proposition - Essential for conversion */}
+        <p className={`text-sm sm:text-base mb-4 leading-relaxed ${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
           {description}
         </p>
 
-        {/* Stats Row - Hidden on mobile */}
-        {(duration || target) && (
-          <div className="hidden sm:flex items-center gap-4 mb-4">
-            {duration && (
-              <div className="flex items-center gap-1">
-                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-                  {duration}
-                </span>
-              </div>
-            )}
-            {target && (
-              <div className="flex items-center gap-1">
-                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-                  {target}
-                </span>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Rating and Downloads - Hidden on mobile */}
-        <div className="hidden sm:flex items-center justify-between mb-4">
-          <div className="flex items-center">
-            {[...Array(5)].map((_, i) => (
-              <Star 
-                key={i} 
-                className={`h-3 w-3 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-              />
-            ))}
-            <span className={`ml-2 text-xs font-medium ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-              {rating.toFixed(1)}
-            </span>
-          </div>
-          
-          <div className="flex items-center">
-            <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`}>
-              {downloads}
-            </span>
-          </div>
-        </div>
-
-        {/* Features: Simplified for mobile */}
-        <div className="mb-4 sm:mb-6">
+        {/* Key Benefits - What they get */}
+        <div className="mb-4">
           <div className="space-y-2">
-            {features.slice(0, 2).map((feature, index) => (
-              <div key={index} className="flex items-start text-sm">
-                <div className={`w-1.5 h-1.5 rounded-full mt-2 mr-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
-                <span className={`leading-relaxed ${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
+            {features.slice(0, 3).map((feature, index) => (
+              <div key={index} className="flex items-start gap-2">
+                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
+                <span className={`text-sm leading-relaxed ${premium ? 'text-white/85' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
                   {feature}
                 </span>
               </div>
@@ -155,17 +152,22 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* CTA Button: Slightly smaller on mobile */}
+        {/* Enhanced CTA - More compelling */}
         <Link to={link} className="block">
           <CTAButton 
-            className={`w-full ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
+            className={`w-full font-semibold ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
             size="default"
-            aria-label={`Zainstaluj aplikację ${title}`}
+            aria-label={`Rozpocznij kurs ${title}`}
           >
             <Download className="w-4 h-4 mr-2" />
-            Zainstaluj
+            Rozpocznij kurs
           </CTAButton>
         </Link>
+        
+        {/* Trust signal below CTA */}
+        <p className={`text-center text-xs mt-2 ${premium ? 'text-white/50' : 'text-subtle-slate/60 dark:text-silver-mist/50'}`}>
+          Dołącz do {downloads} uczestników
+        </p>
       </div>
     </GlassCard>
   );
