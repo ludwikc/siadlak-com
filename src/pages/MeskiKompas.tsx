@@ -308,10 +308,10 @@ export default function MeskiKompas() {
             {/* PROGRAM CURRICULUM */}
             <div className="space-y-12">
               {/* TYDZIEŃ 1 */}
-              <GlassCard className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
-                <div className="flex items-start gap-4 sm:gap-6 min-w-0">
-                  <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                    <span className="text-2xl font-bold">1</span>
+              <GlassCard className="border-l-4 p-6 sm:p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
+                <div className="flex items-start gap-3 sm:gap-6 min-w-0">
+                  <div className="rounded-full p-3 sm:p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                    <span className="text-xl sm:text-2xl font-bold">1</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
@@ -360,10 +360,10 @@ export default function MeskiKompas() {
               </GlassCard>
 
               {/* TYDZIEŃ 2 */}
-              <GlassCard className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
-                <div className="flex items-start gap-4 sm:gap-6 min-w-0">
-                  <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                    <span className="text-2xl font-bold">2</span>
+              <GlassCard className="border-l-4 p-6 sm:p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
+                <div className="flex items-start gap-3 sm:gap-6 min-w-0">
+                  <div className="rounded-full p-3 sm:p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                    <span className="text-xl sm:text-2xl font-bold">2</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
@@ -412,10 +412,10 @@ export default function MeskiKompas() {
               </GlassCard>
 
               {/* TYDZIEŃ 3 */}
-              <GlassCard className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
-                <div className="flex items-start gap-4 sm:gap-6 min-w-0">
-                  <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                    <span className="text-2xl font-bold">3</span>
+              <GlassCard className="border-l-4 p-6 sm:p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
+                <div className="flex items-start gap-3 sm:gap-6 min-w-0">
+                  <div className="rounded-full p-3 sm:p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                    <span className="text-xl sm:text-2xl font-bold">3</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
@@ -464,10 +464,10 @@ export default function MeskiKompas() {
               </GlassCard>
 
               {/* TYDZIEŃ 4 */}
-              <GlassCard className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
-                <div className="flex items-start gap-4 sm:gap-6 min-w-0">
-                  <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                    <span className="text-2xl font-bold">4</span>
+              <GlassCard className="border-l-4 p-6 sm:p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
+                <div className="flex items-start gap-3 sm:gap-6 min-w-0">
+                  <div className="rounded-full p-3 sm:p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                    <span className="text-xl sm:text-2xl font-bold">4</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
@@ -507,10 +507,10 @@ export default function MeskiKompas() {
               </GlassCard>
 
               {/* TYDZIEŃ 5 */}
-              <GlassCard className="border-l-4 p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
-                <div className="flex items-start gap-4 sm:gap-6 min-w-0">
-                  <div className="rounded-full p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
-                    <span className="text-2xl font-bold">5</span>
+              <GlassCard className="border-l-4 p-6 sm:p-8" style={{ backgroundColor: 'hsl(0, 0%, 99%)', borderLeftColor: 'hsl(45, 85%, 50%)' }}>
+                <div className="flex items-start gap-3 sm:gap-6 min-w-0">
+                  <div className="rounded-full p-3 sm:p-4" style={{ backgroundColor: 'hsl(45, 85%, 50%)', color: 'hsl(210, 20%, 8%)' }}>
+                    <span className="text-xl sm:text-2xl font-bold">5</span>
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-2xl font-bold mb-3" style={{ color: 'hsl(210, 20%, 8%)' }}>
