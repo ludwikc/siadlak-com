@@ -12,6 +12,16 @@ const UwazneZyciePodcast = () => {
   // Sample episodes data - would be fetched from an API in a real scenario
   const episodes: PodcastEpisode[] = [
     {
+      id: "featured",
+      title: "Odcinek specjalny - Jak odnaleźć spokój w chaosie",
+      description:
+        "W tym wyjątkowym odcinku przedstawiam kompletny system budowania wewnętrznego spokoju nawet w najbardziej wymagających okresach. Idealny punkt startowy dla osób, które chcą wprowadzić uważność do swojego życia zawodowego.",
+      date: "15 maja 2025",
+      duration: "32 min",
+      audioUrl: "https://open.spotify.com/episode/3JrY7PH83X94yUoDt60EHY?si=5a6d0bb83b0c4e18",
+      imageUrl: "/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png",
+    },
+    {
       id: "1",
       title: "Technika 4-7-8 dla szybkiego powrotu do równowagi",
       description:
@@ -45,7 +55,7 @@ const UwazneZyciePodcast = () => {
   const platforms = [
     {
       name: "Spotify",
-      url: "https://spotify.com",
+      url: "https://open.spotify.com/show/0M0P2V6eQfwzJ4fow7wsIc?si=9b348bf9a4a14044",
       icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
     },
     {
@@ -60,7 +70,7 @@ const UwazneZyciePodcast = () => {
     },
     {
       name: "YouTube",
-      url: "https://youtube.com",
+      url: "https://www.youtube.com/@uwaznezycie",
       icon: "https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg",
     },
   ];
@@ -115,7 +125,7 @@ const UwazneZyciePodcast = () => {
           <div id="player" className="max-w-3xl mx-auto">
             <PodcastPlayer
               title="Uważne Życie"
-              embedUrl="https://open.spotify.com/embed/show/example"
+              embedUrl="https://open.spotify.com/embed/show/0M0P2V6eQfwzJ4fow7wsIc"
               coverArt="/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png"
             />
 
