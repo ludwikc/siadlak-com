@@ -67,36 +67,40 @@ export default function AppCard({
         {status}
       </Badge>
 
-      {/* Icon Container - 64x64px with 16px border radius */}
-      <div className="p-6 pb-0">
-        <div className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mb-4`}>
-          <CategoryIcon className="w-8 h-8 text-white" />
+      {/* Mobile-optimized layout */}
+      <div className="p-4 sm:p-6 pb-0">
+        {/* Header Section - Icon + Title/Subtitle */}
+        <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+          {/* Icon Container - Smaller on mobile */}
+          <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${gradient} rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0`}>
+            <CategoryIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+          </div>
+
+          {/* Title + Subtitle */}
+          <div className="flex-1 min-w-0">
+            <h3 className={`text-lg sm:text-xl font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
+              {title}
+            </h3>
+            
+            <p className={`text-sm sm:text-base font-medium mb-2 sm:mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
+              {subtitle}
+            </p>
+
+            {/* Category Badge - Mobile inline */}
+            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
+              {category}
+            </Badge>
+          </div>
         </div>
 
-        {/* Typography Hierarchy */}
-        {/* Title: Bold, 20px, primary text color */}
-        <h3 className={`text-xl font-bold leading-tight mb-1 ${premium ? 'text-white' : 'text-deep-charcoal dark:text-silver-mist'}`}>
-          {title}
-        </h3>
-        
-        {/* Subtitle: Medium weight, neural-violet/luminal-magenta */}
-        <p className={`text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet dark:text-luminal-magenta'}`}>
-          {subtitle}
-        </p>
-
-        {/* Description: 16px, subtle secondary text */}
-        <p className={`text-base mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
+        {/* Description - Hidden on mobile, shown on larger screens */}
+        <p className={`hidden sm:block text-sm sm:text-base mb-4 leading-relaxed ${premium ? 'text-white/70' : 'text-subtle-slate dark:text-silver-mist/80'}`}>
           {description}
         </p>
 
-        {/* Category Badge */}
-        <Badge variant="outline" className={`mb-4 text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet dark:border-luminal-magenta/20 dark:text-luminal-magenta'}`}>
-          {category}
-        </Badge>
-
-        {/* Stats Row: Small text with clock and users icons showing duration and level */}
+        {/* Stats Row - Hidden on mobile */}
         {(duration || target) && (
-          <div className="flex items-center gap-4 mb-4">
+          <div className="hidden sm:flex items-center gap-4 mb-4">
             {duration && (
               <div className="flex items-center gap-1">
                 <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate dark:text-silver-mist/60'}`} />
@@ -116,8 +120,8 @@ export default function AppCard({
           </div>
         )}
 
-        {/* Rating and Downloads */}
-        <div className="flex items-center justify-between mb-4">
+        {/* Rating and Downloads - Hidden on mobile */}
+        <div className="hidden sm:flex items-center justify-between mb-4">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <Star 
@@ -137,13 +141,13 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* Features: Bulleted list (first 2 features shown) */}
-        <div className="mb-6">
+        {/* Features: Simplified for mobile */}
+        <div className="mb-4 sm:mb-6">
           <div className="space-y-2">
             {features.slice(0, 2).map((feature, index) => (
               <div key={index} className="flex items-start text-sm">
                 <div className={`w-1.5 h-1.5 rounded-full mt-2 mr-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet dark:bg-luminal-magenta'}`} />
-                <span className={`${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
+                <span className={`leading-relaxed ${premium ? 'text-white/80' : 'text-subtle-slate dark:text-silver-mist/90'}`}>
                   {feature}
                 </span>
               </div>
@@ -151,7 +155,7 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* CTA Button: Full-width download button with download icon */}
+        {/* CTA Button: Slightly smaller on mobile */}
         <Link to={link} className="block">
           <CTAButton 
             className={`w-full ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
