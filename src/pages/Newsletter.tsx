@@ -33,17 +33,17 @@ export default function NewsletterPage() {
               {/* Left side - Content */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <div className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta mb-4">
+                  <div className="text-lg font-bold text-neural-violet dark:text-luminal-magenta mb-4">
                     (🧠 + 🤖)💜
                   </div>
-                  <div className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
+                  <div className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
                     INTELIGENCJA DO POTĘGI SERCA
                   </div>
-                  <h1 className="text-4xl md:text-6xl font-bold text-deep-charcoal dark:text-silver-mist leading-tight">
+                  <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal dark:text-silver-mist leading-tight">
                     Nie newsletter.<br />
                     <span className="text-neural-violet dark:text-luminal-magenta">Wymiana myśli.</span>
                   </h1>
-                  <p className="text-xl md:text-2xl text-deep-charcoal/70 dark:text-silver-mist/70">
+                  <p className="text-lg md:text-xl text-deep-charcoal/70 dark:text-silver-mist/70">
                     Każda niedziela o 19:00: Jedna myśl. Tysiąc możliwości.
                   </p>
                 </div>
@@ -108,8 +108,8 @@ export default function NewsletterPage() {
       {/* Introduction Section */}
       <section className="py-20 bg-white dark:bg-deep-charcoal/50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8 text-lg text-deep-charcoal dark:text-silver-mist leading-relaxed">
-            <p className="text-xl">
+          <div className="max-w-4xl mx-auto space-y-6 text-base text-deep-charcoal dark:text-silver-mist leading-relaxed">
+            <p className="text-lg">
               Cześć,
             </p>
             <p>
@@ -122,13 +122,13 @@ export default function NewsletterPage() {
               Każdego tygodnia dzielę się z Tobą <strong>jedną myślą</strong>, która intensywnie towarzyszyła mi przez ostatnie dni. Czasem o balansie między sztuczną inteligencją a ludzką intuicją. Czasem o mindfulness w świecie notyfikacji. Czasem o leadership, gdy każdy ma dostęp do tych samych narzędzi.
             </p>
             <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 p-8 rounded-2xl border-l-4 border-neural-violet my-12">
-              <p className="font-bold text-2xl text-deep-charcoal dark:text-silver-mist mb-4">
+              <p className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
                 Ale tu jest haczyk:
               </p>
-              <p className="text-xl mb-4">
+              <p className="text-base mb-4">
                 Nie chcę, żebyś po prostu czytał.
               </p>
-              <p className="font-bold text-2xl text-neural-violet dark:text-luminal-magenta">
+              <p className="font-bold text-lg text-neural-violet dark:text-luminal-magenta">
                 Chcę, żeby te myśli ZDERZYŁY się z Twoimi.
               </p>
             </div>
@@ -140,37 +140,37 @@ export default function NewsletterPage() {
       <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
               JAK TO DZIAŁA:
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-6">📧</div>
-                <h3 className="font-bold text-xl text-deep-charcoal dark:text-silver-mist mb-4">
+                <div className="text-3xl mb-6">📧</div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
                   NIEDZIELA, 19:00: Rzucam myśl
                 </h3>
-                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
                   Jeden temat. Jedna perspektywa. Czasem kontrowersyjna. Zawsze szczera.
                 </p>
               </div>
 
               <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-6">💬</div>
-                <h3 className="font-bold text-xl text-deep-charcoal dark:text-silver-mist mb-4">
+                <div className="text-3xl mb-6">💬</div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
                   PONIEDZIAŁEK-PIĄTEK: Ty odpowiadasz
                 </h3>
-                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
                   Reply na maila. Podziel się swoją perspektywą. Podważ moją. Rozbuduj ją.
                 </p>
               </div>
 
               <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-6">🔥</div>
-                <h3 className="font-bold text-xl text-deep-charcoal dark:text-silver-mist mb-4">
+                <div className="text-3xl mb-6">🔥</div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
                   SOBOTA: Najlepsze insights
                 </h3>
-                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
                   Kompilacja najbardziej przełomowych wymian myśli z tygodnia. Anonimowo, z szacunkiem.
                 </p>
               </div>
@@ -186,7 +186,7 @@ export default function NewsletterPage() {
             <div className="grid md:grid-cols-2 gap-16">
               {/* Not For You */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
                   TO NIE JEST DLA CIEBIE, JEŚLI:
                 </h3>
                 <div className="space-y-6">
@@ -197,8 +197,8 @@ export default function NewsletterPage() {
                     "Unikasz głębokich rozmów"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <span className="text-red-500 text-2xl">❌</span>
-                      <span className="text-lg text-deep-charcoal dark:text-silver-mist">{item}</span>
+                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -206,7 +206,7 @@ export default function NewsletterPage() {
 
               {/* For You */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
                   TO JEST DLA CIEBIE, JEŚLI:
                 </h3>
                 <div className="space-y-6">
@@ -218,8 +218,8 @@ export default function NewsletterPage() {
                     "Wierzysz, że najlepsze idee rodzą się w zderzeniu"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <span className="text-green-500 text-2xl">✅</span>
-                      <span className="text-lg text-deep-charcoal dark:text-silver-mist">{item}</span>
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -233,7 +233,7 @@ export default function NewsletterPage() {
       <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
               DWA POZIOMY ROZMOWY:
             </h2>
 
@@ -264,7 +264,7 @@ export default function NewsletterPage() {
                   href="https://app.easycart.pl/checkout/siadlak/newsletter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full bg-neural-violet hover:bg-neural-violet/90 text-white py-5 px-8 rounded-2xl text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-neural-violet/25"
+                  className="inline-block w-full bg-neural-violet hover:bg-neural-violet/90 text-white py-5 px-8 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-neural-violet/25"
                 >
                   Dołącz do Otwartego Kręgu
                 </a>
@@ -275,18 +275,18 @@ export default function NewsletterPage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-ascension-pink rounded-3xl blur-sm opacity-20"></div>
                 <div className="relative">
                   <div className="flex items-center justify-center mb-6">
-                    <span className="text-4xl mr-4">💎</span>
-                    <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                    <span className="text-3xl mr-4">💎</span>
+                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
                       WEWNĘTRZNY KRĄG
                     </h3>
                   </div>
                   
-                  <p className="text-3xl font-bold mb-8 text-neural-violet dark:text-luminal-magenta">
+                  <p className="text-2xl font-bold mb-8 text-neural-violet dark:text-luminal-magenta">
                     147 PLN/mies.
                   </p>
                   
-                  <div className="mb-10 text-left space-y-6">
-                    <p className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-4">
+                    <div className="mb-10 text-left space-y-6">
+                    <p className="text-base font-semibold text-deep-charcoal dark:text-silver-mist mb-4">
                       Wszystko z Otwartego Kręgu +
                     </p>
                     {[
@@ -297,7 +297,7 @@ export default function NewsletterPage() {
                     ].map((feature, index) => (
                       <div key={index} className="flex items-start gap-4">
                         <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                        <span className="text-deep-charcoal dark:text-silver-mist">{feature}</span>
+                        <span className="text-base text-deep-charcoal dark:text-silver-mist">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -306,7 +306,7 @@ export default function NewsletterPage() {
                     href="https://app.easycart.pl/checkout/siadlak/newsletter"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block w-full bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 text-white py-5 px-8 rounded-2xl text-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-luminal-magenta/25"
+                    className="inline-block w-full bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 text-white py-5 px-8 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-luminal-magenta/25"
                   >
                     Dołącz do Wewnętrznego Kręgu
                   </a>
@@ -324,14 +324,14 @@ export default function NewsletterPage() {
             <div className="text-center p-16 rounded-3xl bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-2 border-neural-violet/30 relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(218,30,174,0.1),transparent)]"></div>
               <div className="relative z-10 space-y-8">
-                <h3 className="text-4xl md:text-5xl font-bold text-neural-violet dark:text-luminal-magenta flex items-center justify-center">
-                  <Zap className="h-10 w-10 mr-4" />
+                <h3 className="text-2xl md:text-3xl font-bold text-neural-violet dark:text-luminal-magenta flex items-center justify-center">
+                  <Zap className="h-8 w-8 mr-4" />
                   MOMENT ZAŁOŻYCIELSKI
                 </h3>
-                <p className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <p className="text-lg md:text-xl font-bold text-deep-charcoal dark:text-silver-mist">
                   Pierwsze 50 osób wchodzi do <span className="text-neural-violet dark:text-luminal-magenta">WEWNĘTRZNEGO KRĘGU za 47 PLN/mies. DOŻYWOTNIO</span>
                 </p>
-                <p className="text-xl text-deep-charcoal dark:text-silver-mist/80 max-w-3xl mx-auto">
+                <p className="text-base text-deep-charcoal dark:text-silver-mist/80 max-w-3xl mx-auto">
                   Bo buduję coś, czego świat potrzebuje. Społeczność ludzi, którzy <strong>myślą razem</strong>, nie obok siebie.
                 </p>
               </div>
@@ -347,7 +347,7 @@ export default function NewsletterPage() {
             <div className="grid lg:grid-cols-2 gap-16">
               {/* What's NOT Here */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
                   NIE MA TUTAJ MIEJSCA NA:
                 </h3>
                 <div className="space-y-6">
@@ -358,8 +358,8 @@ export default function NewsletterPage() {
                     "Grzeczne kłamstwa zamiast niewygodnej prawdy"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <span className="text-red-500 text-2xl">❌</span>
-                      <span className="text-lg text-deep-charcoal dark:text-silver-mist">{item}</span>
+                      <span className="text-red-500 text-xl">❌</span>
+                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -367,7 +367,7 @@ export default function NewsletterPage() {
 
               {/* What IS Here */}
               <div className="space-y-8">
-                <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
                   W ZAMIAN, TO JEST MIEJSCE NA:
                 </h3>
                 <div className="space-y-6">
@@ -379,8 +379,8 @@ export default function NewsletterPage() {
                     "Ewolucję myślenia"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <span className="text-green-500 text-2xl">✅</span>
-                      <span className="text-lg text-deep-charcoal dark:text-silver-mist">{item}</span>
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -394,14 +394,14 @@ export default function NewsletterPage() {
       <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-12">
-            <h3 className="text-4xl font-bold text-deep-charcoal dark:text-silver-mist">
+            <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
               MOJA OBIETNICA:
             </h3>
-            <div className="space-y-6 text-xl text-deep-charcoal dark:text-silver-mist leading-relaxed">
+            <div className="space-y-6 text-lg text-deep-charcoal dark:text-silver-mist leading-relaxed">
               <p>Nigdy nie dam Ci gotowej odpowiedzi.</p>
               <p>Zawsze dam Ci nową perspektywę.</p>
               <p>I zawsze będę słuchał, gdy podzielisz się swoją.</p>
-              <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta mt-8">
+              <p className="text-xl font-bold text-neural-violet dark:text-luminal-magenta mt-8">
                 Bo prawda jest taka: <span className="underline">najlepsze myśli rodzą się nie w pojedynczych głowach, ale w zderzeniu między nimi.</span>
               </p>
             </div>
@@ -413,18 +413,18 @@ export default function NewsletterPage() {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-12">
-            <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+            <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
               PRZYKŁAD NEWSLETTERA:
             </h3>
             <div className="p-8 rounded-2xl bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 border border-neural-violet/20">
-              <blockquote className="text-2xl italic text-neural-violet dark:text-luminal-magenta mb-6">
+              <blockquote className="text-lg italic text-neural-violet dark:text-luminal-magenta mb-6">
                 "Fake it till you make it - robisz to dobrze czy.... źle?"
               </blockquote>
               <a 
                 href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-neural-violet dark:text-luminal-magenta hover:underline text-lg"
+                className="inline-block text-neural-violet dark:text-luminal-magenta hover:underline text-base"
               >
                 Zobacz pełny przykład →
               </a>
@@ -440,12 +440,12 @@ export default function NewsletterPage() {
       <section className="py-20 bg-white dark:bg-deep-charcoal/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
               TESTIMONIALE:
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-lg italic mb-6 text-deep-charcoal dark:text-silver-mist">
+                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
                   "To nie jest newsletter. To laboratoryjna rozmowy. Myśli, które dostaję w niedzielę, noszę w sobie cały tydzień."
                 </p>
                 <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
@@ -453,7 +453,7 @@ export default function NewsletterPage() {
                 </cite>
               </blockquote>
               <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-lg italic mb-6 text-deep-charcoal dark:text-silver-mist">
+                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
                   "Po raz pierwszy mam ochotę odpowiadać na emaile, nie je kasować."
                 </p>
                 <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
@@ -461,7 +461,7 @@ export default function NewsletterPage() {
                 </cite>
               </blockquote>
               <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-lg italic mb-6 text-deep-charcoal dark:text-silver-mist">
+                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
                   "Marcin nie ma racji w 40% przypadków. I właśnie dlatego warto z nim rozmawiać."
                 </p>
                 <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
@@ -481,12 +481,12 @@ export default function NewsletterPage() {
               <Button
                 onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
                 size="lg"
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white text-2xl px-16 py-8 rounded-2xl shadow-xl shadow-neural-violet/30 hover:shadow-2xl hover:shadow-neural-violet/40 transition-all duration-300 hover:scale-105"
+                className="bg-neural-violet hover:bg-neural-violet/90 text-white text-lg px-16 py-8 rounded-2xl shadow-xl shadow-neural-violet/30 hover:shadow-2xl hover:shadow-neural-violet/40 transition-all duration-300 hover:scale-105"
               >
                 DOŁĄCZ TERAZ
               </Button>
 
-              <p className="text-lg text-deep-charcoal/70 dark:text-silver-mist/70 italic max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70 italic max-w-2xl mx-auto leading-relaxed">
                 <strong>P.S.</strong> Pamiętasz stare Nokia 3310? Ja właśnie tak myślę o rozmowach. Proste. Niezawodne. <strong>Connecting People</strong>
               </p>
             </div>
