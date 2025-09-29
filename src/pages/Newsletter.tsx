@@ -161,53 +161,6 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-            {/* Target Audience - Side by Side */}
-            <div className="mb-20">
-              <div className="grid md:grid-cols-2 gap-12">
-                {/* Not For You */}
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist flex items-center">
-                    <X className="h-6 w-6 mr-3 text-red-500" />
-                    TO NIE JEST DLA CIEBIE, JEŚLI:
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      "Szukasz gotowych odpowiedzi",
-                      "Chcesz być bierny w konsumpcji treści", 
-                      "Nie lubisz, gdy ktoś kwestionuje Twoje przekonania",
-                      "Unikasz głębokich rozmów"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start">
-                        <span className="text-red-500 mr-3 mt-1 text-xl">❌</span>
-                        <span className="text-deep-charcoal dark:text-silver-mist">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* For You */}
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist flex items-center">
-                    <CheckCircle className="h-6 w-6 mr-3 text-green-500" />
-                    TO JEST DLA CIEBIE, JEŚLI:
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      "Myśli innych zmieniają Twój sposób patrzenia na świat",
-                      "Lubisz inteligentne spory konstruktywne",
-                      "Cenisz jakość myślenia nad ilością informacji",
-                      "Jesteś gotowy/a podzielić się swoją perspektywą",
-                      "Wierzysz, że najlepsze idee rodzą się w zderzeniu"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start">
-                        <span className="text-green-500 mr-3 mt-1 text-xl">✅</span>
-                        <span className="text-deep-charcoal dark:text-silver-mist">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Two Levels - Cards without boxes */}
             <div className="mb-20">
