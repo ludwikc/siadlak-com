@@ -1,139 +1,165 @@
 
 import Layout from '@/components/layout/Layout';
-import { CheckCircle } from '@/lib/icons';
-import { X, Brain, Bot, Heart, MessageSquare, Zap, Users } from 'lucide-react';
-import { CTAButton } from '@/components/ui/cta-button';
+import { CheckCircle, Mail, Users, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState } from 'react';
+import SEO from '@/components/SEO';
+import { getSEOConfig } from '@/lib/seo-config';
 
 export default function NewsletterPage() {
+  const [email, setEmail] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
+      setIsSubmitted(true);
+    }
+  };
+
   return (
     <Layout>
-      {/* Hero Section with Gradient Background */}
-      <section className="relative min-h-screen bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(218,30,174,0.15),transparent)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,15,119,0.2),transparent)] pointer-events-none" />
-        
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-              {/* Left Content */}
-              <div className="text-center lg:text-left space-y-8">
+      <SEO {...getSEOConfig("/newsletter")} />
 
-                <div className="space-y-6">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
-                    Nie newsletter.<br />
-                    <span className="text-luminal-magenta">Rozmowa.</span>
-                  </h2>
-                  <p className="text-lg md:text-xl text-silver-mist/80">
-                    Każda niedziela o 19:00: Jedna myśl. Tysiąc możliwości.
-                  </p>
-                </div>
+      {/* Hero Section */}
+      <section className="min-h-screen bg-gradient-to-b from-background to-secondary/20 flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            {/* Main Headline */}
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-deep-charcoal dark:text-silver-mist leading-tight">
+                Cotygodniowa Rozmowa<br />
+                <span className="text-neural-violet dark:text-luminal-magenta">o Myślach, Które Zmieniają</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-deep-charcoal/70 dark:text-silver-mist/70 max-w-3xl mx-auto">
+                Każda niedziela: jedna prowokująca myśl. Ty odpowiadasz. Razem tworzymy coś więcej niż newsletter – prawdziwą rozmowę.
+              </p>
+            </div>
 
-                <CTAButton
-                  size="xl"
-                  onClick={() =>
-                    window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")
-                  }
-                  className="text-lg px-8 py-4 shadow-lg shadow-luminal-magenta/25"
+            {/* Email Form */}
+            <div className="max-w-lg mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+                <Input
+                  type="email"
+                  placeholder="Twój adres email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="text-lg px-6 py-4 flex-1"
+                  required
+                />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 text-lg font-semibold"
                 >
-                  ZACZNIJ ROZMOWĘ
-                </CTAButton>
-              </div>
+                  Zacznij Rozmowę
+                </Button>
+              </form>
+              {isSubmitted && (
+                <p className="text-green-600 dark:text-green-400 mt-4 text-sm">
+                  Dziękuję! Zaraz zostaniesz przekierowany do rejestracji.
+                </p>
+              )}
+            </div>
 
-              {/* Right Visual */}
-              <div className="relative hidden lg:block">
-                <div className="absolute inset-0 bg-gradient-to-r from-luminal-magenta/20 to-neural-violet/20 rounded-full blur-3xl" />
-                <div className="relative z-10 flex items-center justify-center h-96">
-                  <div className="grid grid-cols-3 gap-8 items-center">
-                    <MessageSquare className="h-16 w-16 text-luminal-magenta/60 animate-pulse" />
-                    <Brain className="h-20 w-20 text-white" />
-                    <Zap className="h-16 w-16 text-luminal-magenta/60 animate-pulse delay-1000" />
-                    <Bot className="h-16 w-16 text-luminal-magenta/60 animate-pulse delay-500" />
-                    <Heart className="h-24 w-24 text-luminal-magenta animate-pulse delay-300" />
-                    <Users className="h-16 w-16 text-luminal-magenta/60 animate-pulse delay-700" />
-                  </div>
-                </div>
+            {/* Trust Indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-deep-charcoal/60 dark:text-silver-mist/60">
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                <span>150+ profesjonalistów</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                <span>0 spamu, tylko wartość</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="h-5 w-5" />
+                <span>Każda niedziela o 19:00</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      {/* Social Proof */}
+      <section className="py-16 bg-white dark:bg-deep-charcoal/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist">
+              Dołącz do Rozmowy
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <blockquote className="p-6 bg-secondary/30 dark:bg-white/5 rounded-xl">
+                <p className="text-lg italic mb-4 text-deep-charcoal dark:text-silver-mist">
+                  "Praca z Ludwikiem zmieniła wszystko w sposobie, w jaki korzystam z technologii. Przeszedłem od ciągłego poczucia bycia w tyle do skutecznego wykorzystywania narzędzi AI."
+                </p>
+                <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
+                  Dyrektor marketingu, sektor technologiczny
+                </cite>
+              </blockquote>
+              <blockquote className="p-6 bg-secondary/30 dark:bg-white/5 rounded-xl">
+                <p className="text-lg italic mb-4 text-deep-charcoal dark:text-silver-mist">
+                  "Zwiększyłem swoją wydajność o 40%, spędzając przy tym mniej czasu przed ekranami. Nie chodzi o więcej technologii — chodzi o mądrzejszą kontrolę."
+                </p>
+                <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
+                  Starszy kierownik projektów, branża finansowa
+                </cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 bg-secondary/20 dark:bg-quantum-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            
-            {/* Introduction */}
-            <div className="mb-20 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
-                Cześć,
-              </h2>
-              <div className="prose prose-lg dark:prose-invert max-w-3xl mx-auto text-deep-charcoal dark:text-silver-mist">
-                <p className="mb-6 text-xl leading-relaxed">
-                  To nie jest kolejny newsletter, który przeczytasz i zapomnisz.
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-deep-charcoal dark:text-silver-mist">
+              Jak to działa?
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-6 rounded-xl bg-white dark:bg-deep-charcoal/30 shadow-sm">
+                <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                </div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
+                  Niedziela, 19:00
+                </h3>
+                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                  Otrzymujesz jedną prowokującą myśl. Czasem kontrowersyjną, zawsze szczerą.
                 </p>
-                <p className="mb-6 text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
-                  To zaproszenie.
+              </div>
+
+              <div className="text-center p-6 rounded-xl bg-white dark:bg-deep-charcoal/30 shadow-sm">
+                <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                </div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
+                  Ty odpowiadasz
+                </h3>
+                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                  Reply na email. Podziel się swoją perspektywą. Podważ moją. Rozbuduj ją.
                 </p>
-                <p className="mb-6 leading-relaxed">
-                  Każdego tygodnia dzielę się z Tobą jedną myślą, która intensywnie towarzyszyła mi przez ostatnie dni. Czasem o balansie między sztuczną inteligencją a ludzką intuicją. Czasem o mindfulness w świecie notyfikacji. Czasem o leadership, gdy każdy ma dostęp do tych samych narzędzi.
-                </p>
-                <p className="mb-6 text-lg font-medium">
-                  <strong>Ale tu jest haczyk:</strong>
-                </p>
-                <p className="mb-6">
-                  Nie chcę, żebyś po prostu czytał.
-                </p>
-                <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">
-                  Chcę, żeby te myśli ZDERZYŁY się z Twoimi.
+              </div>
+
+              <div className="text-center p-6 rounded-xl bg-white dark:bg-deep-charcoal/30 shadow-sm">
+                <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                </div>
+                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
+                  Społeczność myśli
+                </h3>
+                <p className="text-deep-charcoal/70 dark:text-silver-mist/70">
+                  Najlepsze insights ze wszystkich rozmów. Kompilacja przełomowych wymian myśli.
                 </p>
               </div>
             </div>
-
-            {/* How It Works - More Visual */}
-            <div className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-deep-charcoal dark:text-silver-mist">
-                JAK TO DZIAŁA:
-              </h2>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center p-8 rounded-2xl bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-neural-violet/20 hover:border-luminal-magenta/40 transition-all duration-300 hover:scale-105">
-                  <div className="mb-6">
-                    <span className="text-4xl">📧</span>
-                  </div>
-                  <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
-                    NIEDZIELA, 19:00
-                  </h3>
-                  <p className="text-deep-charcoal dark:text-silver-mist/80">
-                    Rzucam myśl. Jeden temat. Jedna perspektywa. Czasem kontrowersyjna. Zawsze szczera.
-                  </p>
-                </div>
-
-                <div className="text-center p-8 rounded-2xl bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-neural-violet/20 hover:border-luminal-magenta/40 transition-all duration-300 hover:scale-105">
-                  <div className="mb-6">
-                    <span className="text-4xl">💬</span>
-                  </div>
-                  <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
-                    PONIEDZIAŁEK-PIĄTEK
-                  </h3>
-                  <p className="text-deep-charcoal dark:text-silver-mist/80">
-                    Ty odpowiadasz. Reply na maila. Podziel się swoją perspektywą. Podważ moją. Rozbuduj ją.
-                  </p>
-                </div>
-
-                <div className="text-center p-8 rounded-2xl bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-neural-violet/20 hover:border-luminal-magenta/40 transition-all duration-300 hover:scale-105">
-                  <div className="mb-6">
-                    <span className="text-4xl">🔥</span>
-                  </div>
-                  <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-3">
-                    SOBOTA
-                  </h3>
-                  <p className="text-deep-charcoal dark:text-silver-mist/80">
-                    Najlepsze insights ze wszystkich rozmów. Kompilacja przełomowych wymian myśli z tygodnia.
-                  </p>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+      </section>
 
             {/* Target Audience - Side by Side */}
             <div className="mb-20">
@@ -284,100 +310,46 @@ export default function NewsletterPage() {
               </div>
             </div>
 
-            {/* Rules - No Boxes */}
-            <div className="mb-20">
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                    NIE MA TUTAJ MIEJSCA NA:
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      "Klepanie się po plecach i przytakiwanie sobie nawzajem",
-                      "Content generowany przez AI",
-                      "\"Jesteś zwycięzcą\" i inne puste afirmacje",
-                      "Grzeczne kłamstwa zamiast niewygodnej prawdy"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start">
-                        <span className="text-red-500 mr-3 mt-1 text-xl">❌</span>
-                        <span className="text-deep-charcoal dark:text-silver-mist">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                    Jest miejsce na:
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      "Konstruktywne spory",
-                      "Zmienianie perspektyw",
-                      "Głębokie pytania",
-                      "Inteligentną niewiedzy",
-                      "Ewolucję myślenia"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start">
-                        <span className="text-green-500 mr-3 mt-1 text-xl">✅</span>
-                        <span className="text-deep-charcoal dark:text-silver-mist">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Promise */}
-            <div className="mb-20">
-              <div className="text-center p-12 rounded-3xl bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-sm">
-                <h3 className="text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
-                  MOJA OBIETNICA:
-                </h3>
-                <div className="space-y-6 text-deep-charcoal dark:text-silver-mist max-w-2xl mx-auto">
-                  <p className="text-lg">Nigdy nie dam Ci gotowej odpowiedzi.</p>
-                  <p className="text-lg">Zawsze dam Ci nową perspektywę.</p>
-                  <p className="text-lg">I zawsze będę słuchał, gdy podzielisz się swoją.</p>
-                  <p className="text-xl md:text-2xl font-bold text-neural-violet dark:text-luminal-magenta">
-                    Bo prawda jest taka: najlepsze myśli rodzą się nie w pojedynczych głowach, ale w zderzeniu między nimi.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Example */}
-            <div className="mb-20">
-              <div className="p-8 rounded-2xl bg-gradient-to-r from-neural-violet/5 to-ascension-pink/5 border border-neural-violet/20">
-                <h3 className="text-xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
-                  PRZYKŁAD Z TEGO TYGODNIA:
-                </h3>
-                <blockquote className="text-xl md:text-2xl italic text-neural-violet dark:text-luminal-magenta mb-4 font-medium">
-                  "Czy AI czyni nas mądrzejszymi, czy tylko bardziej wydajnymi? I czy to w ogóle ta sama rzecz?"
-                </blockquote>
-                <p className="text-sm text-subtle-slate dark:text-silver-mist/60">
-                  (Zobacz, jak na to odpowiedzieli inni w komentarzach poniżej)
+      {/* Promise & Final CTA */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-12">
+            <div>
+              <h3 className="text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+                Moja obietnica:
+              </h3>
+              <div className="space-y-4 text-lg text-deep-charcoal dark:text-silver-mist">
+                <p>Nigdy nie dam Ci gotowej odpowiedzi.</p>
+                <p>Zawsze dam Ci nową perspektywę.</p>
+                <p>I zawsze będę słuchał, gdy podzielisz się swoją.</p>
+                <p className="text-xl font-bold text-neural-violet dark:text-luminal-magenta mt-6">
+                  Bo najlepsze myśli rodzą się w zderzeniu między umysłami.
                 </p>
               </div>
             </div>
 
-            {/* Final CTA */}
-            <div className="text-center">
-              <CTAButton
-                size="xl"
-                onClick={() =>
-                  window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")
-                }
-                aria-label="Zacznij rozmowę - dołącz do newslettera"
-                className="mb-8 text-xl px-12 py-6 shadow-xl shadow-luminal-magenta/25"
-              >
-                ZACZNIJ ROZMOWĘ
-              </CTAButton>
-              
-              <p className="text-subtle-slate dark:text-silver-mist/70 italic max-w-2xl mx-auto">
-                P.S. Pamiętasz stare Nokie 3310? Ja właśnie tak myślę o rozmowach. Proste. Niezawodne. I łączące ludzi, nie algorytmy.
-              </p>
+            <div className="p-8 rounded-xl bg-gradient-to-r from-neural-violet/5 to-luminal-magenta/5 border border-neural-violet/20">
+              <h4 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                Przykład z tego tygodnia:
+              </h4>
+              <blockquote className="text-xl italic text-neural-violet dark:text-luminal-magenta mb-2">
+                "Czy AI czyni nas mądrzejszymi, czy tylko bardziej wydajnymi? I czy to w ogóle ta sama rzecz?"
+              </blockquote>
             </div>
 
+            <div className="space-y-6">
+              <Button
+                onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
+                size="lg"
+                className="bg-neural-violet hover:bg-neural-violet/90 text-white text-xl px-12 py-6"
+              >
+                Zacznij Rozmowę
+              </Button>
+
+              <p className="text-deep-charcoal/60 dark:text-silver-mist/60 italic">
+                P.S. Pamiętasz stare Nokia 3310? Ja właśnie tak myślę o rozmowach. Proste. Niezawodne. I łączące ludzi, nie algorytmy.
+              </p>
+            </div>
           </div>
         </div>
       </section>
