@@ -1,518 +1,599 @@
 import Layout from '@/components/layout/Layout';
-import { CheckCircle, Mail, Users, Zap, ExternalLink } from 'lucide-react';
+import { CheckCircle, X, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import { getSEOConfig } from '@/lib/seo-config';
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
-      setIsSubmitted(true);
+    if (!email) {
+      toast.error('Proszę wprowadź adres email');
+      return;
     }
+
+    setIsLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
+      setIsLoading(false);
+    }, 1000);
   };
 
   return (
     <Layout>
       <SEO {...getSEOConfig("/newsletter")} />
+      
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-neural-violet/20 via-quantum-blue/10 to-background relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-neural-violet dark:text-luminal-magenta">
+                  (🧠 + 🤖)^💜
+                </h1>
+                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                  INTELIGENCJA DO POTĘGI SERCA
+                </h2>
+                <p className="text-xl text-deep-charcoal dark:text-silver-mist">
+                  Przestrzeń głębokich rozmów dla myślących ludzi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/10 flex items-center relative overflow-hidden">
-        {/* Animated background element */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-l from-neural-violet/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left side - Content */}
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <div className="text-lg font-bold text-neural-violet dark:text-luminal-magenta mb-4">
-                    (🧠 + 🤖)💜
+        {/* Main Promise */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                GŁÓWNA OBIETNICA
+              </h2>
+              <div className="space-y-6">
+                <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                  Przestań konsumować trendy AI. Zacznij budować mądrość.
+                </p>
+                <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+                  Każda niedziela, punktualnie o 19:00:
+                </p>
+                <ul className="text-left space-y-3 max-w-2xl mx-auto">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">Jedna prowokacyjna myśl, która zmienia sposób patrzenia</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">Zaproszenie do dialogu z najbardziej refleksyjnymi umysłami w Polsce</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal dark:text-silver-mist">Dostęp do społeczności, gdzie rozmowy naprawdę coś znaczą</span>
+                  </li>
+                </ul>
+                
+                <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-6 border border-neural-violet/20">
+                  <p className="text-lg font-semibold text-neural-violet dark:text-luminal-magenta mb-4">
+                    Pierwsze 100 osób: dostęp za 97 PLN miesięcznie. DOŻYWOTNIO.
+                  </p>
+                  <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-6">
+                    (Sponsorowane przez Fundację HACKERZY.PL)
+                  </p>
+                  
+                  <div className="bg-background/50 rounded-lg p-4 mb-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist">POZOSTAŁO</span>
+                      <span className="text-lg font-bold text-neural-violet dark:text-luminal-magenta">23/100</span>
+                    </div>
+                    <div className="w-full bg-deep-charcoal/20 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-2 rounded-full" style={{width: '77%'}}></div>
+                    </div>
                   </div>
-                  <div className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-6">
-                    INTELIGENCJA DO POTĘGI SERCA
-                  </div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal dark:text-silver-mist leading-tight">
-                    Nie newsletter.<br />
-                    <span className="text-neural-violet dark:text-luminal-magenta">Wymiana myśli.</span>
-                  </h1>
-                  <p className="text-lg md:text-xl text-deep-charcoal/70 dark:text-silver-mist/70">
-                    Każda niedziela o 19:00: Jedna myśl. Tysiąc możliwości.
+                  
+                  <Button 
+                    onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
+                    className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white font-semibold py-3 text-lg shadow-lg shadow-neural-violet/25"
+                  >
+                    ZAREZERWUJ MIEJSCE ZAŁOŻYCIELSKIE
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem Section */}
+        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                PROBLEM
+              </h2>
+              
+              <div className="space-y-6 text-lg text-deep-charcoal dark:text-silver-mist">
+                <p className="font-semibold text-xl">Znasz to uczucie?</p>
+                
+                <div className="bg-background rounded-xl p-6 border-l-4 border-neural-violet">
+                  <p className="italic">
+                    6:47 rano. Budzik. Telefon. LinkedIn.<br />
+                    47 powiadomień. "10 narzędzi AI które zmienią twoje życie". "ChatGPT właśnie wypuścił...". "Zostajesz w tyle jeśli nie..."<br />
+                    Przewijasz dalej.
                   </p>
                 </div>
+                
+                <p>
+                  Wszyscy mówią o tym samym. Wszyscy udają ekspertów. Nikt nie mówi prawdy: im więcej mamy narzędzi, tym bardziej czujemy się zagubieni.
+                </p>
+                
+                <div className="text-center space-y-4">
+                  <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                    Problem nie leży w narzędziach.
+                  </p>
+                  <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                    Problem leży w utracie zdolności do głębokiego myślenia.
+                  </p>
+                </div>
+                
+                <p>Zamieniamy mądrość na przeciążenie informacyjne.</p>
+                <p className="font-semibold">A najgorsze? Nie masz z kim o tym porozmawiać.</p>
+                
+                <div className="bg-background rounded-xl p-6">
+                  <p className="font-semibold mb-4">Twoi znajomi:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3">
+                      <X className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" />
+                      <span>Konsumują te same powierzchowne trendy</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <X className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" />
+                      <span>Nie rozumieją, o czym mówisz</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <X className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" />
+                      <span>Są zbyt zajęci budowaniem sieci kontaktów, by naprawdę rozmawiać</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <p className="text-center text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                  I czujesz się samotny w tłumie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                {/* Email Form */}
-                <div className="space-y-4">
-                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+        {/* Solution Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                ROZWIĄZANIE
+              </h2>
+              
+              <div className="text-center space-y-6">
+                <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                  Przedstawiam: (🧠 + 🤖)^💜
+                </p>
+                <p className="text-lg">
+                  To nie jest kolejny newsletter o sztucznej inteligencji.
+                </p>
+                <p className="text-lg font-semibold">
+                  To klucz do miejsca, gdzie najbardziej refleksyjni ludzie w polskiej technologii rozmawiają o tym, co naprawdę ma znaczenie.
+                </p>
+              </div>
+              
+              <div className="space-y-8">
+                <h3 className="text-xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                  JAK TO DZIAŁA:
+                </h3>
+                
+                <div className="grid gap-6">
+                  <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 border border-neural-violet/20">
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">📧</div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                          NIEDZIELA, 19:00: Rzucam prowokacyjną myśl
+                        </h4>
+                        <p className="text-deep-charcoal dark:text-silver-mist mb-4">
+                          Nie porada. Nie "5 kroków do...". Perspektywa, która zderza się z twoją.
+                        </p>
+                        <div>
+                          <p className="font-semibold mb-2">Przykłady tematów z ostatnich tygodni:</p>
+                          <ul className="text-sm space-y-1 text-deep-charcoal/80 dark:text-silver-mist/80">
+                            <li>• "Udawaj, aż ci się uda - robisz to dobrze czy źle?"</li>
+                            <li>• "Czy sztuczna inteligencja czyni nas mądrzejszymi, czy tylko bardziej wydajnymi?"</li>
+                            <li>• "Dlaczego najlepsi liderzy w erze AI mówią 'nie wiem' częściej niż kiedykolwiek?"</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-luminal-magenta/10 to-neural-violet/10 rounded-xl p-6 border border-luminal-magenta/20">
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">💬</div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                          TY ODPOWIADASZ: Twoja perspektywa ma znaczenie
+                        </h4>
+                        <p className="text-deep-charcoal dark:text-silver-mist">
+                          Odpowiedź na wiadomość. Podważ moją myśl. Rozbuduj ją. Podziel się swoją historią.<br />
+                          Tu nie chodzi o mnie. Chodzi o zderzenie twoich myśli z moimi i z innymi.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 border border-neural-violet/20">
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">🔥</div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                          SOBOTA: Zderzenie perspektyw
+                        </h4>
+                        <p className="text-deep-charcoal dark:text-silver-mist">
+                          Najlepsze wymiany z tygodnia. 12 różnych punktów widzenia na jeden temat. Zero zgody. Mnóstwo mądrości.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-luminal-magenta/10 to-neural-violet/10 rounded-xl p-6 border border-luminal-magenta/20">
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">💎</div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                          A POTEM... COŚ WIĘCEJ
+                        </h4>
+                        <p className="text-deep-charcoal dark:text-silver-mist">
+                          Najlepsze rozmowy przenoszą się do społeczności Lifehackerzy.pl - miejsca, gdzie spotykają się ludzie, dla których głębokie myślenie to nie hobby, ale sposób życia.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                DOWODY - PRAWDZIWE ŚWIADECTWA
+              </h2>
+              
+              <div className="grid gap-8">
+                <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
+                  <div className="mb-4">
+                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Tomasz M., założyciel startupu technologicznego</p>
+                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członek od 4 miesięcy)</p>
+                  </div>
+                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                    "Przed newsletterem Ludwika: produktywność oznaczała 60 godzin tygodniowo, wypalenie, zero czasu na myślenie.
+                    Po 8 tygodniach: Przestałem gonić za trendami AI. Zacząłem budować mądrość. Zmieniłem całe podejście do pracy - 2 godziny dziennie głębokiej pracy przynoszą więcej niż 10 godzin zajętości.
+                    Najważniejsze? Znalazłem ludzi, którzy myślą podobnie. Albo zupełnie inaczej. I obie rzeczy są równie cenne. Trzy osoby z newslettera to teraz moi najbliżsi doradcy."
+                  </blockquote>
+                </div>
+                
+                <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
+                  <div className="mb-4">
+                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Anna K., trenerka przywództwa</p>
+                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członkini od 6 miesięcy)</p>
+                  </div>
+                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                    "Jedna myśl z newslettera Ludwika zmieniła więcej niż 100 'porad produktywności' z LinkedIn.
+                    Przestałam optymalizować czas. Zacząłem optymalizować jakość myślenia.
+                    A społeczność Lifehackerzy.pl? To miejsce, gdzie w końcu mogę być sobą. Gdzie nie muszę udawać, że mam wszystkie odpowiedzi."
+                  </blockquote>
+                </div>
+                
+                <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
+                  <div className="mb-4">
+                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Katarzyna L., konsultantka AI</p>
+                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członkini od 3 miesięcy)</p>
+                  </div>
+                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                    "Ludwik nie ma racji w 40% przypadków. I właśnie dlatego rozmowy z nim są najcenniejsze.
+                    Kwestionuje moje założenia, nie potakuje im. A społeczność? Pełna ludzi, którzy wolą niewygodną prawdę od grzecznego kłamstwa."
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto space-y-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                STRUKTURA OFERTY
+              </h2>
+              
+              <div className="grid lg:grid-cols-3 gap-8">
+                {/* Free Tier */}
+                <div className="bg-background rounded-xl p-6 border border-deep-charcoal/20">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                      🆓 KRĄG OTWARTY
+                    </h3>
+                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla każdego</p>
+                    <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta mt-4">BEZPŁATNIE</p>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Cotygodniowy newsletter (niedziela 19:00)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Możliwość dialogu przez email</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Comiesięczna kompilacja wymian</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Dostęp do 3 ostatnich wydań</span>
+                    </li>
+                  </ul>
+                  
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
+                  >
+                    DOŁĄCZ BEZPŁATNIE
+                  </Button>
+                </div>
+                
+                {/* Premium Tier */}
+                <div className="bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 border border-neural-violet/20 relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-neural-violet text-white px-4 py-1 rounded-full text-sm font-semibold">NAJPOPULARNIEJSZY</span>
+                  </div>
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                      💎 KRĄG WEWNĘTRZNY
+                    </h3>
+                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla myślących</p>
+                    <div className="mt-4">
+                      <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">97 PLN/mies.</p>
+                      <p className="text-sm text-deep-charcoal/60 dark:text-silver-mist/60 line-through">197 PLN/mies.</p>
+                      <p className="text-sm text-neural-violet dark:text-luminal-magenta font-semibold">DOŻYWOTNIO dla pierwszych 100</p>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Wszystko z Kręgu Otwartego</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Pełny dostęp do społeczności Lifehackerzy.pl</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Moje osobiste odpowiedzi na każdą wymianę</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Comiesięczne sesje Q&A na żywo</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Pełne archiwum od 2024</span>
+                    </li>
+                  </ul>
+                  
+                  <Button 
+                    className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                    onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
+                  >
+                    DOŁĄCZ DO KRĘGU WEWNĘTRZNEGO
+                  </Button>
+                </div>
+                
+                {/* Elite Tier */}
+                <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                      🏆 LIFEHACKERZY PREMIUM
+                    </h3>
+                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla gotowych na transformację</p>
+                    <p className="text-lg font-semibold text-luminal-magenta mt-4">TYLKO NA ZAPROSZENIE</p>
+                  </div>
+                  
+                  <div className="text-center mb-6">
+                    <p className="text-sm text-deep-charcoal dark:text-silver-mist">
+                      Dostęp tylko dla członków Kręgu Wewnętrznego gotowych na więcej.
+                    </p>
+                    <p className="text-sm text-deep-charcoal dark:text-silver-mist mt-4">
+                      Po 3-6 miesiącach w społeczności, najaktywniejsze osoby otrzymują zaproszenie do poziomu premium.
+                    </p>
+                  </div>
+                  
+                  <Button variant="outline" className="w-full" disabled>
+                    WIĘCEJ PO DOŁĄCZENIU
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Example Newsletter */}
+        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h3 className="text-2xl font-bold text-center mb-12 text-deep-charcoal dark:text-silver-mist">
+                PRZYKŁAD PRAWDZIWEJ TREŚCI
+              </h3>
+              
+              <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border border-neural-violet/20">
+                <div className="flex flex-col lg:flex-row gap-8 items-center">
+                  <div className="lg:w-1/2">
+                    <div className="relative group cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/newsletter-example.png"
+                        alt="Przykład newslettera - Fake it till you make it"
+                        className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-neural-violet/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                        <ExternalLink className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="lg:w-1/2 space-y-6">
+                    <blockquote className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                      "Udawaj, aż ci się uda - robisz to dobrze czy źle?"
+                    </blockquote>
+                    <p className="text-base text-deep-charcoal dark:text-silver-mist">
+                      47 odpowiedzi. 12 zupełnie przeciwstawnych perspektyw. Zero zgody. Mnóstwo mądrości.
+                    </p>
+                    <p className="text-sm text-deep-charcoal/80 dark:text-silver-mist/80">
+                      To nie jest "artykuł". To żywa rozmowa, która ewoluuje przez tydzień.
+                    </p>
+                    <a 
+                      href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 bg-neural-violet hover:bg-neural-violet/90 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold text-base shadow-lg shadow-neural-violet/25"
+                    >
+                      Czytaj newsletter i wszystkie wymiany
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-20 bg-gradient-to-r from-neural-violet/20 to-luminal-magenta/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                DWA WYBORY
+              </h2>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-neural-violet/20 space-y-4">
+                  <h3 className="text-lg font-bold text-neural-violet dark:text-luminal-magenta">
+                    Wybór 1: Dołącz do pierwszych 100
+                  </h3>
+                  <ul className="text-sm space-y-2 text-left">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>97 PLN miesięcznie dożywotnio</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Natychmiastowy dostęp do społeczności</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Oszczędzasz 12 000 PLN przez 10 lat</span>
+                    </li>
+                  </ul>
+                  
+                  <form onSubmit={handleSubmit} className="space-y-3">
                     <Input
                       type="email"
                       placeholder="Twój adres email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="text-lg px-6 py-4 flex-1 bg-white/80 dark:bg-white/10 backdrop-blur-sm border-neural-violet/30"
-                      required
+                      className="text-center"
+                      disabled={isLoading}
                     />
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="bg-neural-violet hover:bg-neural-violet/90 text-white px-8 py-4 text-lg font-semibold shadow-lg shadow-neural-violet/25 hover:shadow-xl hover:shadow-neural-violet/30 transition-all duration-300"
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white font-semibold"
+                      disabled={isLoading}
                     >
-                      Dołącz Teraz
+                      {isLoading ? 'REJESTRUJĘ...' : 'TAK, CHCĘ JEDNO Z 23 MIEJSC'}
                     </Button>
                   </form>
-                  {isSubmitted && (
-                    <p className="text-green-600 dark:text-green-400 text-sm">
-                      Dziękuję! Zaraz zostaniesz przekierowany do rejestracji.
-                    </p>
-                  )}
                 </div>
-
-                {/* Trust Indicators */}
-                <div className="flex flex-wrap items-center gap-6 text-deep-charcoal/60 dark:text-silver-mist/60">
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5" />
-                    <span>150+ profesjonalistów</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-5 w-5" />
-                    <span>0 spamu, tylko wartość</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="h-5 w-5" />
-                    <span>Każda niedziela o 19:00</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right side - Visual element */}
-              <div className="hidden lg:block">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-gradient-to-br from-neural-violet/30 to-luminal-magenta/30 rounded-full blur-3xl animate-pulse"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-6xl animate-bounce">💬</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Introduction Section */}
-      <section className="py-20 bg-white dark:bg-deep-charcoal/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-6 text-base text-deep-charcoal dark:text-silver-mist leading-relaxed">
-            <p className="text-lg">
-              Cześć,
-            </p>
-            <p>
-              To nie jest kolejny newsletter, który przeczytasz i zapomnisz.
-            </p>
-            <p>
-              To zaproszenie.
-            </p>
-            <p>
-              Każdego tygodnia dzielę się z Tobą <strong>jedną myślą</strong>, która intensywnie towarzyszyła mi przez ostatnie dni. Czasem o balansie między sztuczną inteligencją a ludzką intuicją. Czasem o mindfulness w świecie notyfikacji. Czasem o leadership, gdy każdy ma dostęp do tych samych narzędzi.
-            </p>
-            <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 p-8 rounded-2xl border-l-4 border-neural-violet my-12">
-              <p className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
-                Ale tu jest haczyk:
-              </p>
-              <p className="text-base mb-4">
-                Nie chcę, żebyś po prostu czytał.
-              </p>
-              <p className="font-bold text-lg text-neural-violet dark:text-luminal-magenta">
-                Chcę, żeby te myśli ZDERZYŁY się z Twoimi.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
-              JAK TO DZIAŁA:
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-3xl mb-6">📧</div>
-                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
-                  NIEDZIELA, 19:00: Rzucam myśl
-                </h3>
-                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
-                  Jeden temat. Jedna perspektywa. Czasem kontrowersyjna. Zawsze szczera.
-                </p>
-              </div>
-
-              <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-3xl mb-6">💬</div>
-                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
-                  PONIEDZIAŁEK-PIĄTEK: Ty odpowiadasz
-                </h3>
-                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
-                  Reply na maila. Podziel się swoją perspektywą. Podważ moją. Rozbuduj ją.
-                </p>
-              </div>
-
-              <div className="text-center p-8 rounded-2xl bg-white dark:bg-deep-charcoal/30 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-3xl mb-6">🔥</div>
-                <h3 className="font-bold text-lg text-deep-charcoal dark:text-silver-mist mb-4">
-                  SOBOTA: Najlepsze insights
-                </h3>
-                <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70">
-                  Kompilacja najbardziej przełomowych wymian myśli z tygodnia. Anonimowo, z szacunkiem.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Audience */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16">
-              {/* Not For You */}
-              <div className="space-y-8">
-                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  TO NIE JEST DLA CIEBIE, JEŚLI:
-                </h3>
-                <div className="space-y-6">
-                  {[
-                    "Szukasz gotowych odpowiedzi",
-                    "Chcesz być bierny w konsumpcji treści", 
-                    "Nie lubisz, gdy ktoś kwestionuje Twoje przekonania",
-                    "Unikasz głębokich rozmów"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <span className="text-red-500 text-xl">❌</span>
-                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* For You */}
-              <div className="space-y-8">
-                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  TO JEST DLA CIEBIE, JEŚLI:
-                </h3>
-                <div className="space-y-6">
-                  {[
-                    "Myśli innych zmieniają Twój sposób patrzenia na świat",
-                    "Lubisz inteligentne spory konstruktywne",
-                    "Cenisz jakość myślenia nad ilością informacji",
-                    "Jesteś gotowy/a podzielić się swoją perspektywą",
-                    "Wierzysz, że najlepsze idee rodzą się w zderzeniu"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Tiers */}
-      <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
-              DWA POZIOMY ROZMOWY:
-            </h2>
-
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Free Tier */}
-              <div className="relative p-10 rounded-3xl text-center bg-gradient-to-br from-white/80 to-white/60 dark:from-white/10 dark:to-white/5 backdrop-blur-sm border border-neural-violet/20 hover:border-luminal-magenta/40 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center mb-8">
-                  <span className="text-4xl mr-4">🆓</span>
-                  <h3 className="text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-                    OTWARTY KRĄG
+                
+                <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-deep-charcoal/20 space-y-4">
+                  <h3 className="text-lg font-bold text-deep-charcoal dark:text-silver-mist">
+                    Wybór 2: Krąg Otwarty
                   </h3>
-                </div>
-                
-                <div className="space-y-6 mb-10 text-left">
-                  {[
-                    "Cotygodniowa myśl w niedzielę",
-                    "Możliwość odpowiedzi przez email",
-                    "Comiesięczne kompilacje najlepszych wymian"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                      <span className="text-lg text-deep-charcoal dark:text-silver-mist">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <a
-                  href="https://app.easycart.pl/checkout/siadlak/newsletter"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block w-full bg-neural-violet hover:bg-neural-violet/90 text-white py-5 px-8 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-neural-violet/25"
-                >
-                  Dołącz do Otwartego Kręgu
-                </a>
-              </div>
-
-              {/* Premium Tier */}
-              <div className="relative p-10 rounded-3xl text-center bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 backdrop-blur-sm border-2 border-luminal-magenta/40 hover:border-luminal-magenta/60 transition-all duration-300 hover:scale-105">
-                <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-ascension-pink rounded-3xl blur-sm opacity-20"></div>
-                <div className="relative">
-                  <div className="flex items-center justify-center mb-6">
-                    <span className="text-3xl mr-4">💎</span>
-                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
-                      WEWNĘTRZNY KRĄG
-                    </h3>
-                  </div>
+                  <ul className="text-sm space-y-2 text-left">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Newsletter bezpłatnie</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span>Możliwość dialogu przez email</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <span>Bez dostępu do społeczności</span>
+                    </li>
+                  </ul>
                   
-                  <p className="text-2xl font-bold mb-8 text-neural-violet dark:text-luminal-magenta">
-                    147 PLN/mies.
-                  </p>
-                  
-                    <div className="mb-10 text-left space-y-6">
-                    <p className="text-base font-semibold text-deep-charcoal dark:text-silver-mist mb-4">
-                      Wszystko z Otwartego Kręgu +
-                    </p>
-                    {[
-                      "Prywatna grupa zamkniętych rozmów (max 50 osób)",
-                      "Cotygodniowe live Q&A (czwartek 20:00)",
-                      "Dostęp do archiwum wszystkich \"Zderzeń myśli\"",
-                      "Priorytet w odpowiedziach na Twoje perspektywy"
-                    ].map((feature, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                        <span className="text-base text-deep-charcoal dark:text-silver-mist">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a
-                    href="https://app.easycart.pl/checkout/siadlak/newsletter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block w-full bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 text-white py-5 px-8 rounded-2xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-luminal-magenta/25"
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
                   >
-                    Dołącz do Wewnętrznego Kręgu
-                  </a>
+                    DOŁĄCZ DO KRĘGU OTWARTEGO
+                  </Button>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founding Moment - Special Highlight */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center p-16 rounded-3xl bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-2 border-neural-violet/30 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(218,30,174,0.1),transparent)]"></div>
-              <div className="relative z-10 space-y-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-neural-violet dark:text-luminal-magenta flex items-center justify-center">
-                  <Zap className="h-8 w-8 mr-4" />
-                  MOMENT ZAŁOŻYCIELSKI
-                </h3>
-                <p className="text-lg md:text-xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  Pierwsze 50 osób wchodzi do <span className="text-neural-violet dark:text-luminal-magenta">WEWNĘTRZNEGO KRĘGU za 47 PLN/mies. DOŻYWOTNIO</span>
-                </p>
-                <p className="text-base text-deep-charcoal dark:text-silver-mist/80 max-w-3xl mx-auto">
-                  Bo buduję coś, czego świat potrzebuje. Społeczność ludzi, którzy <strong>myślą razem</strong>, nie obok siebie.
+              
+              <div className="text-center space-y-4">
+                <p className="text-sm text-deep-charcoal/60 dark:text-silver-mist/60">
+                  P.S. 23 miejsca. Przy 2-3 zapisach dziennie, ostatnie miejsce zniknie za około 10 dni.
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Values */}
-      <section className="py-20 bg-white dark:bg-deep-charcoal/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16">
-              {/* What's NOT Here */}
-              <div className="space-y-8">
-                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  NIE MA TUTAJ MIEJSCA NA:
-                </h3>
-                <div className="space-y-6">
-                  {[
-                    "Klepanie się po plecach i przytakiwanie sobie nawzajem",
-                    "Content generowany przez AI",
-                    "\"Jesteś zwycięzcą\" i inne puste afirmacje",
-                    "Grzeczne kłamstwa zamiast niewygodnej prawdy"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <span className="text-red-500 text-xl">❌</span>
-                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
-                    </div>
-                  ))}
-                </div>
+        {/* Footer */}
+        <section className="py-12 bg-background border-t border-deep-charcoal/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <div className="space-y-2">
+                <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                  Sponsorowane przez: Fundacja HACKERZY.PL
+                </p>
+                <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                  Napędzane przez: Społeczność Lifehackerzy.pl - ponad 150 założycieli, liderów i twórców
+                </p>
               </div>
-
-              {/* What IS Here */}
-              <div className="space-y-8">
-                <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
-                  W ZAMIAN, TO JEST MIEJSCE NA:
-                </h3>
-                <div className="space-y-6">
-                  {[
-                    "Konstruktywne spory",
-                    "Zmienianie perspektyw",
-                    "Głębokie pytania",
-                    "Inteligentną niewiedzy",
-                    "Ewolucję myślenia"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="text-base text-deep-charcoal dark:text-silver-mist">{item}</span>
-                    </div>
-                  ))}
-                </div>
+              
+              <div className="pt-6 border-t border-deep-charcoal/10">
+                <p className="text-deep-charcoal dark:text-silver-mist font-semibold">
+                  Ludwik C. Siadlak - Kurator myśli. Facylitator dialogu. Człowiek, który woli niewygodną prawdę od grzecznego kłamstwa.
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Promise */}
-      <section className="py-20 bg-secondary/20 dark:bg-quantum-blue/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
-              MOJA OBIETNICA:
-            </h3>
-            <div className="space-y-6 text-lg text-deep-charcoal dark:text-silver-mist leading-relaxed">
-              <p>Nigdy nie dam Ci gotowej odpowiedzi.</p>
-              <p>Zawsze dam Ci nową perspektywę.</p>
-              <p>I zawsze będę słuchał, gdy podzielisz się swoją.</p>
-              <p className="text-xl font-bold text-neural-violet dark:text-luminal-magenta mt-8">
-                Bo prawda jest taka: <span className="underline">najlepsze myśli rodzą się nie w pojedynczych głowach, ale w zderzeniu między nimi.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Example Newsletter */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-bold text-center mb-12 text-deep-charcoal dark:text-silver-mist">
-              PRZYKŁAD NEWSLETTERA:
-            </h3>
-            
-            <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border border-neural-violet/20 hover:border-neural-violet/40 transition-all duration-300">
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="lg:w-1/2">
-                  <div className="relative group cursor-pointer">
-                    <img 
-                      src="/lovable-uploads/newsletter-example.png"
-                      alt="Przykład newslettera - Fake it till you make it"
-                      className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-neural-violet/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                      <ExternalLink className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="lg:w-1/2 space-y-6">
-                  <blockquote className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
-                    "Fake it till you make it - robisz to dobrze czy.... źle?"
-                  </blockquote>
-                  <p className="text-base text-deep-charcoal dark:text-silver-mist">
-                    Przykład rzeczywistej wymiany myśli, która wywołała dziesiątki odpowiedzi i debat. 
-                    Zobacz, jak jedna prowokacyjna myśl może zmienić perspektywy całej społeczności.
-                  </p>
-                  <a 
-                    href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-neural-violet hover:bg-neural-violet/90 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold text-base shadow-lg shadow-neural-violet/25 hover:shadow-xl hover:shadow-neural-violet/30 transform hover:scale-105"
-                  >
-                    Czytaj newsletter i komentarze
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-white dark:bg-deep-charcoal/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center text-deep-charcoal dark:text-silver-mist">
-              TESTIMONIALE:
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
-                  "To nie jest newsletter. To laboratoryjna rozmowy. Myśli, które dostaję w niedzielę, noszę w sobie cały tydzień."
-                </p>
-                <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
-                  - Anna K.
-                </cite>
-              </blockquote>
-              <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
-                  "Po raz pierwszy mam ochotę odpowiadać na emaile, nie je kasować."
-                </p>
-                <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
-                  - Tomasz M.
-                </cite>
-              </blockquote>
-              <blockquote className="p-8 bg-secondary/30 dark:bg-white/5 rounded-2xl shadow-lg">
-                <p className="text-base italic mb-6 text-deep-charcoal dark:text-silver-mist">
-                  "Marcin nie ma racji w 40% przypadków. I właśnie dlatego warto z nim rozmawiać."
-                </p>
-                <cite className="text-neural-violet dark:text-luminal-magenta font-semibold">
-                  - Katarzyna L.
-                </cite>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <div className="space-y-8">
-              <Button
-                onClick={() => window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank")}
-                size="lg"
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white text-lg px-16 py-8 rounded-2xl shadow-xl shadow-neural-violet/30 hover:shadow-2xl hover:shadow-neural-violet/40 transition-all duration-300 hover:scale-105"
-              >
-                DOŁĄCZ TERAZ
-              </Button>
-
-              <p className="text-base text-deep-charcoal/70 dark:text-silver-mist/70 italic max-w-2xl mx-auto leading-relaxed">
-                <strong>P.S.</strong> Pamiętasz stare Nokia 3310? Ja właśnie tak myślę o rozmowach. Proste. Niezawodne. <strong>Connecting People</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 }
