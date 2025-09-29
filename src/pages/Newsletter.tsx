@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/Layout';
-import { CheckCircle, Mail, Users, Zap } from 'lucide-react';
+import { CheckCircle, Mail, Users, Zap, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
@@ -412,25 +412,45 @@ export default function NewsletterPage() {
       {/* Example Newsletter */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <h3 className="text-xl md:text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold text-center mb-12 text-deep-charcoal dark:text-silver-mist">
               PRZYKŁAD NEWSLETTERA:
             </h3>
-            <div className="p-8 rounded-2xl bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 border border-neural-violet/20">
-              <blockquote className="text-lg italic text-neural-violet dark:text-luminal-magenta mb-6">
-                "Fake it till you make it - robisz to dobrze czy.... źle?"
-              </blockquote>
-              <a 
-                href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-neural-violet dark:text-luminal-magenta hover:underline text-base"
-              >
-                Zobacz pełny przykład →
-              </a>
-              <p className="text-deep-charcoal/70 dark:text-silver-mist/70 mt-4">
-                (Zobacz, jak na to odpowiedzieli inni w komentarzach poniżej)
-              </p>
+            
+            <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border border-neural-violet/20 hover:border-neural-violet/40 transition-all duration-300">
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="lg:w-1/2">
+                  <div className="relative group cursor-pointer">
+                    <img 
+                      src="/lovable-uploads/newsletter-example.png"
+                      alt="Przykład newslettera - Fake it till you make it"
+                      className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-neural-violet/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                      <ExternalLink className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="lg:w-1/2 space-y-6">
+                  <blockquote className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                    "Fake it till you make it - robisz to dobrze czy.... źle?"
+                  </blockquote>
+                  <p className="text-base text-deep-charcoal dark:text-silver-mist">
+                    Przykład rzeczywistej wymiany myśli, która wywołała dziesiątki odpowiedzi i debat. 
+                    Zobacz, jak jedna prowokacyjna myśl może zmienić perspektywy całej społeczności.
+                  </p>
+                  <a 
+                    href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-neural-violet hover:bg-neural-violet/90 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold text-base shadow-lg shadow-neural-violet/25 hover:shadow-xl hover:shadow-neural-violet/30 transform hover:scale-105"
+                  >
+                    Czytaj newsletter i komentarze
+                    <ExternalLink className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
