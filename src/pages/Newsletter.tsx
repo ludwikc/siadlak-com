@@ -17,24 +17,6 @@ export default function NewsletterPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
               {/* Left Content */}
               <div className="text-center lg:text-left space-y-8">
-                {/* Icon Visual */}
-                <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                  <div className="flex items-center space-x-2 p-4 rounded-full border-2 border-luminal-magenta/30 bg-white/5 backdrop-blur-sm">
-                    <Brain className="h-8 w-8 text-luminal-magenta" />
-                    <span className="text-2xl text-white">+</span>
-                    <Bot className="h-8 w-8 text-luminal-magenta" />
-                  </div>
-                  <Heart className="h-6 w-6 text-luminal-magenta animate-pulse" />
-                </div>
-
-                <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black text-white leading-tight">
-                    (🧠 + 🤖)💜
-                  </h1>
-                  <p className="text-xl md:text-2xl text-silver-mist/90 font-medium">
-                    INTELIGENCJA DO POTĘGI SERCA
-                  </p>
-                </div>
 
                 <div className="space-y-6">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
