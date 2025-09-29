@@ -82,8 +82,21 @@ const Webinar = () => {
                 <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground tracking-tight">
                   Chaos w głowie?
                 </span>
-                <span className="block text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
-                  Czy po prostu czas na konkretną <strong>KALIBRACJĘ KOMPASU</strong>?
+                <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
+                  Czy po prostu czas na konkretną{" "}
+                  <span 
+                    className="font-black tracking-wider"
+                    style={{
+                      background: 'linear-gradient(135deg, white 0%, #ECB614 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      textShadow: '0 0 20px hsl(45, 85%, 50% / 0.3)',
+                      filter: 'drop-shadow(0 4px 8px hsl(0, 0%, 0% / 0.3))'
+                    }}
+                  >
+                    KALIBRACJĘ KOMPASU
+                  </span>?
                 </span>
               </h1>
               
