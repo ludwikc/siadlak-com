@@ -6,6 +6,13 @@ import { CheckCircle, Shield, Zap, AlertCircle, Users, Target, Brain, Clock, Git
 import { Link } from 'react-router-dom';
 
 export default function MentalElevator() {
+  const scrollToDiscovery = () => {
+    const discoverySection = document.getElementById('discovery-section');
+    if (discoverySection) {
+      discoverySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -19,17 +26,16 @@ export default function MentalElevator() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
               8-tygodniowy program dla liderów, którzy osiągnęli sukces, ale czują, że grają poniżej swoich prawdziwych możliwości.
             </h2>
-            <Link to="/contact">
-              <CTAButton
-                variant="premium"
-                size="xl"
-                className="shadow-2xl hover:shadow-3xl"
-                aria-label="Zarezerwuj Sesję Discovery - przejdź do formularza kontaktowego"
-                showArrow
-              >
-                Zarezerwuj Sesję Discovery
-              </CTAButton>
-            </Link>
+            <CTAButton
+              variant="premium"
+              size="xl"
+              className="shadow-2xl hover:shadow-3xl"
+              aria-label="Zarezerwuj Sesję Discovery - przejdź do sekcji rejestracji"
+              showArrow
+              onClick={scrollToDiscovery}
+            >
+              Zarezerwuj Sesję Discovery
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -412,7 +418,7 @@ export default function MentalElevator() {
       </section>
 
       {/* Discovery Session CTA */}
-      <section className="py-20 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue">
+      <section id="discovery-section" className="py-20 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
@@ -452,7 +458,7 @@ export default function MentalElevator() {
               </div>
             </div>
 
-            <Link to="/contact">
+            <Link to="/discovery">
               <CTAButton
                 variant="premium"
                 size="xl"
