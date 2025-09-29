@@ -80,12 +80,16 @@ const Webinar = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-center space-y-6 mb-8">
                 <span className="block text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground tracking-tight">
-                  KRYZYS MĘSKOŚCI
+                  Chaos w głowie?
                 </span>
                 <span className="block text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground/90 leading-relaxed max-w-4xl mx-auto">
-                  Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
+                  Czy po prostu czas na konkretną <strong>KALIBRACJĘ KOMPASU</strong>?
                 </span>
               </h1>
+              
+              <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Warsztat LIVE dla osób z analitycznym umysłem, po którym odzyskasz kontrolę, spokój i kierunek.
+              </p>
               
               {/* CTA Button */}
               <div className="inline-block max-w-md mx-auto">
