@@ -632,7 +632,7 @@ export default function Wyzwanie() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
-              <div className="bg-card border border-border border-l-4 border-l-red-500 rounded-xl p-6">
+              <div className="bg-red-500/5 border border-border border-l-4 border-l-red-500 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">SCENARIUSZ A:</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Nie zapiszesz się. Za miesiąc będziesz dokładnie tam, gdzie jesteś teraz. 
@@ -640,7 +640,7 @@ export default function Wyzwanie() {
                 </p>
               </div>
 
-              <div className="bg-card border border-border border-l-4 border-l-green-500 rounded-xl p-6">
+              <div className="bg-green-500/5 border border-border border-l-4 border-l-green-500 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">SCENARIUSZ B:</h3>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   Zapiszesz się. Za 4 dni będziesz wiedział:
@@ -665,7 +665,7 @@ export default function Wyzwanie() {
               Sprawdzam, w którym lesie stoję (4 dni, 0 zł)
             </a>
 
-            <div className="bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto text-left">
+            <div className="bg-green-500/5 border border-green-500/30 rounded-xl p-8 max-w-2xl mx-auto text-left">
               <p className="font-semibold text-foreground mb-3">Dostaniesz:</p>
               <ul className="space-y-2 text-muted-foreground list-disc list-inside">
                 <li>Link do Discord (natychmiast)</li>
