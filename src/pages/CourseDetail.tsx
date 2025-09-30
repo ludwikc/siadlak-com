@@ -432,63 +432,63 @@ const CourseDetail = () => {
       </section>
 
       {/* Course Overview */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="glass-card p-6 md:p-8 rounded-xl mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
                 Program Overview
               </h2>
 
-              <p className="text-subtle-slate dark:text-silver-mist/90 mb-8">
+              <p className="text-subtle-slate mb-8">
                 {course.longDescription}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Clock className="h-8 w-8 mb-3 text-neural-violet dark:text-luminal-magenta" />
-                  <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-1">
+                  <Clock className="h-8 w-8 mb-3 text-neural-violet" />
+                  <h3 className="font-bold text-deep-charcoal mb-1">
                     Duration
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/90">
+                  <p className="text-subtle-slate">
                     {course.duration}
                   </p>
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Users className="h-8 w-8 mb-3 text-neural-violet dark:text-luminal-magenta" />
-                  <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-1">
+                  <Users className="h-8 w-8 mb-3 text-neural-violet" />
+                  <h3 className="font-bold text-deep-charcoal mb-1">
                     Format
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/90">
+                  <p className="text-subtle-slate">
                     {course.format}
                   </p>
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <BarChart className="h-8 w-8 mb-3 text-neural-violet dark:text-luminal-magenta" />
-                  <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-1">
+                  <BarChart className="h-8 w-8 mb-3 text-neural-violet" />
+                  <h3 className="font-bold text-deep-charcoal mb-1">
                     Level
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/90">
+                  <p className="text-subtle-slate">
                     {course.level}
                   </p>
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Calendar className="h-8 w-8 mb-3 text-neural-violet dark:text-luminal-magenta" />
-                  <h3 className="font-bold text-deep-charcoal dark:text-silver-mist mb-1">
+                  <Calendar className="h-8 w-8 mb-3 text-neural-violet" />
+                  <h3 className="font-bold text-deep-charcoal mb-1">
                     Start Date
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/90">
+                  <p className="text-subtle-slate">
                     {course.startDate}
                   </p>
                 </div>
               </div>
 
               <div className="flex justify-center">
-                <div className="px-6 py-3 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-lg">
-                  <span className="text-neural-violet dark:text-luminal-magenta font-bold text-xl">
+                <div className="px-6 py-3 bg-neural-violet/10 rounded-lg">
+                  <span className="text-neural-violet font-bold text-xl">
                     Investment: {course.price}
                   </span>
                 </div>
@@ -497,15 +497,15 @@ const CourseDetail = () => {
 
             {/* What You'll Get */}
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
                 What You'll Get
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
-                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                    <span className="text-subtle-slate dark:text-silver-mist/90">
+                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet flex-shrink-0" />
+                    <span className="text-subtle-slate">
                       {feature}
                     </span>
                   </div>
@@ -515,7 +515,7 @@ const CourseDetail = () => {
 
             {/* Program Curriculum */}
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
                 Program Curriculum
               </h2>
 
@@ -523,14 +523,14 @@ const CourseDetail = () => {
                 {course.curriculum.map((week: any, index: number) => (
                   <div key={index} className="p-4 glass-card rounded-lg">
                     <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-neural-violet dark:bg-luminal-magenta text-white flex items-center justify-center mr-3">
+                      <div className="w-8 h-8 rounded-full bg-neural-violet text-white flex items-center justify-center mr-3">
                         {week.week}
                       </div>
-                      <h3 className="text-lg font-bold text-deep-charcoal dark:text-silver-mist">
+                      <h3 className="text-lg font-bold text-deep-charcoal">
                         {week.title}
                       </h3>
                     </div>
-                    <p className="text-subtle-slate dark:text-silver-mist/90 ml-11">
+                    <p className="text-subtle-slate ml-11">
                       {week.description}
                     </p>
                   </div>
@@ -540,15 +540,15 @@ const CourseDetail = () => {
 
             {/* Outcomes */}
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
                 Expected Outcomes
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.outcomes.map((outcome: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
-                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
-                    <span className="text-subtle-slate dark:text-silver-mist/90">
+                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet flex-shrink-0" />
+                    <span className="text-subtle-slate">
                       {outcome}
                     </span>
                   </div>
@@ -560,25 +560,25 @@ const CourseDetail = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal text-center">
               What Participants Are Saying
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {course.testimonials.map((testimonial: any, index: number) => (
                 <div key={index} className="glass-card p-6 rounded-xl">
-                  <p className="text-subtle-slate dark:text-silver-mist/90 mb-4 italic">
+                  <p className="text-subtle-slate mb-4 italic">
                     "{testimonial.quote}"
                   </p>
 
                   <div>
-                    <p className="font-bold text-deep-charcoal dark:text-silver-mist">
+                    <p className="font-bold text-deep-charcoal">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-subtle-slate dark:text-silver-mist/90">
+                    <p className="text-sm text-subtle-slate">
                       {testimonial.title}
                     </p>
                   </div>
@@ -590,19 +590,19 @@ const CourseDetail = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal text-center">
               Frequently Asked Questions
             </h2>
 
             <div className="space-y-6">
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-lg font-bold mb-2 text-deep-charcoal">
                   How is this program delivered?
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
+                <p className="text-subtle-slate">
                   This program combines live sessions (via Zoom) with self-paced
                   materials and exercises. All materials are accessible through
                   a private online platform, and recordings of live sessions are
@@ -611,10 +611,10 @@ const CourseDetail = () => {
               </div>
 
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-lg font-bold mb-2 text-deep-charcoal">
                   What happens after I apply?
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
+                <p className="text-subtle-slate">
                   After applying, you'll receive an invitation for a 30-minute
                   fit assessment call. This helps ensure the program aligns with
                   your goals and that you'll benefit from the experience. If
@@ -623,10 +623,10 @@ const CourseDetail = () => {
               </div>
 
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-lg font-bold mb-2 text-deep-charcoal">
                   What's your refund policy?
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
+                <p className="text-subtle-slate">
                   The program comes with a 14-day satisfaction guarantee. If
                   after the first two sessions you feel this isn't right for
                   you, you'll receive a full refund.
@@ -634,10 +634,10 @@ const CourseDetail = () => {
               </div>
 
               <div className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-bold mb-2 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-lg font-bold mb-2 text-deep-charcoal">
                   How much time will I need to commit?
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/90">
+                <p className="text-subtle-slate">
                   Plan for 3-5 hours weekly, including live sessions and
                   implementation work. The program is designed for busy
                   professionals, with flexibility in how you schedule the work.

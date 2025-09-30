@@ -36,13 +36,13 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-neural-violet dark:text-luminal-magenta">
+                <h1 className="text-4xl md:text-5xl font-bold text-neural-violet">
                   (🧠 + 🤖)^💜
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
                   INTELIGENCJA DO POTĘGI SERCA
                 </h2>
-                <p className="text-xl text-deep-charcoal dark:text-silver-mist">
+                <p className="text-xl text-deep-charcoal">
                   Przestrzeń głębokich rozmów dla myślących ludzi.
                 </p>
               </div>
@@ -54,43 +54,43 @@ export default function NewsletterPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
                 GŁÓWNA OBIETNICA
               </h2>
               <div className="space-y-6">
-                <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                <p className="text-xl font-semibold text-neural-violet">
                   Przestań konsumować trendy AI. Zacznij budować mądrość.
                 </p>
-                <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+                <p className="text-lg text-deep-charcoal">
                   Każda niedziela, punktualnie o 19:00:
                 </p>
                 <ul className="text-left space-y-3 max-w-2xl mx-auto">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
-                    <span className="text-deep-charcoal dark:text-silver-mist">Jedna prowokacyjna myśl, która zmienia sposób patrzenia</span>
+                    <CheckCircle className="h-5 w-5 text-neural-violet mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal">Jedna prowokacyjna myśl, która zmienia sposób patrzenia</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
-                    <span className="text-deep-charcoal dark:text-silver-mist">Zaproszenie do dialogu z najbardziej refleksyjnymi umysłami w Polsce</span>
+                    <CheckCircle className="h-5 w-5 text-neural-violet mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal">Zaproszenie do dialogu z najbardziej refleksyjnymi umysłami w Polsce</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 flex-shrink-0" />
-                    <span className="text-deep-charcoal dark:text-silver-mist">Dostęp do społeczności, gdzie rozmowy naprawdę coś znaczą</span>
+                    <CheckCircle className="h-5 w-5 text-neural-violet mt-1 flex-shrink-0" />
+                    <span className="text-deep-charcoal">Dostęp do społeczności, gdzie rozmowy naprawdę coś znaczą</span>
                   </li>
                 </ul>
                 
                 <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-6 border border-neural-violet/20">
-                  <p className="text-lg font-semibold text-neural-violet dark:text-luminal-magenta mb-4">
+                  <p className="text-lg font-semibold text-neural-violet mb-4">
                     Pierwsze 100 osób: dostęp za 97 PLN miesięcznie. DOŻYWOTNIO.
                   </p>
-                  <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-6">
+                  <p className="text-sm text-deep-charcoal/70 mb-6">
                     (Sponsorowane przez Fundację HACKERZY.PL)
                   </p>
                   
                   <div className="bg-background/50 rounded-lg p-4 mb-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist">POZOSTAŁO</span>
-                      <span className="text-lg font-bold text-neural-violet dark:text-luminal-magenta">23/100</span>
+                      <span className="text-sm font-medium text-deep-charcoal">POZOSTAŁO</span>
+                      <span className="text-lg font-bold text-neural-violet">23/100</span>
                     </div>
                     <div className="w-full bg-deep-charcoal/20 rounded-full h-2">
                       <div className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-2 rounded-full" style={{width: '77%'}}></div>
@@ -110,14 +110,14 @@ export default function NewsletterPage() {
         </section>
 
         {/* Problem Section */}
-        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+        <section className="py-20 bg-deep-charcoal/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
                 PROBLEM
               </h2>
               
-              <div className="space-y-6 text-lg text-deep-charcoal dark:text-silver-mist">
+              <div className="space-y-6 text-lg text-deep-charcoal">
                 <p className="font-semibold text-xl">Znasz to uczucie?</p>
                 
                 <div className="bg-background rounded-xl p-6 border-l-4 border-neural-violet">
@@ -133,10 +133,10 @@ export default function NewsletterPage() {
                 </p>
                 
                 <div className="text-center space-y-4">
-                  <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                  <p className="text-xl font-semibold text-neural-violet">
                     Problem nie leży w narzędziach.
                   </p>
-                  <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                  <p className="text-xl font-semibold text-neural-violet">
                     Problem leży w utracie zdolności do głębokiego myślenia.
                   </p>
                 </div>
@@ -162,7 +162,7 @@ export default function NewsletterPage() {
                   </ul>
                 </div>
                 
-                <p className="text-center text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                <p className="text-center text-xl font-semibold text-neural-violet">
                   I czujesz się samotny w tłumie.
                 </p>
               </div>
@@ -174,12 +174,12 @@ export default function NewsletterPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
                 ROZWIĄZANIE
               </h2>
               
               <div className="text-center space-y-6">
-                <p className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                <p className="text-xl font-semibold text-neural-violet">
                   Przedstawiam: (🧠 + 🤖)^💜
                 </p>
                 <p className="text-lg">
@@ -191,7 +191,7 @@ export default function NewsletterPage() {
               </div>
               
               <div className="space-y-8">
-                <h3 className="text-xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl font-bold text-center text-deep-charcoal">
                   JAK TO DZIAŁA:
                 </h3>
                 
@@ -200,15 +200,15 @@ export default function NewsletterPage() {
                     <div className="flex items-start gap-4">
                       <div className="text-2xl">📧</div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal">
                           NIEDZIELA, 19:00: Rzucam prowokacyjną myśl
                         </h4>
-                        <p className="text-deep-charcoal dark:text-silver-mist mb-4">
+                        <p className="text-deep-charcoal mb-4">
                           Nie porada. Nie "5 kroków do...". Perspektywa, która zderza się z twoją.
                         </p>
                         <div>
                           <p className="font-semibold mb-2">Przykłady tematów z ostatnich tygodni:</p>
-                          <ul className="text-sm space-y-1 text-deep-charcoal/80 dark:text-silver-mist/80">
+                          <ul className="text-sm space-y-1 text-deep-charcoal/80">
                             <li>• "Udawaj, aż ci się uda - robisz to dobrze czy źle?"</li>
                             <li>• "Czy sztuczna inteligencja czyni nas mądrzejszymi, czy tylko bardziej wydajnymi?"</li>
                             <li>• "Dlaczego najlepsi liderzy w erze AI mówią 'nie wiem' częściej niż kiedykolwiek?"</li>
@@ -222,10 +222,10 @@ export default function NewsletterPage() {
                     <div className="flex items-start gap-4">
                       <div className="text-2xl">💬</div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal">
                           TY ODPOWIADASZ: Twoja perspektywa ma znaczenie
                         </h4>
-                        <p className="text-deep-charcoal dark:text-silver-mist">
+                        <p className="text-deep-charcoal">
                           Odpowiedź na wiadomość. Podważ moją myśl. Rozbuduj ją. Podziel się swoją historią.<br />
                           Tu nie chodzi o mnie. Chodzi o zderzenie twoich myśli z moimi i z innymi.
                         </p>
@@ -237,10 +237,10 @@ export default function NewsletterPage() {
                     <div className="flex items-start gap-4">
                       <div className="text-2xl">🔥</div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal">
                           SOBOTA: Zderzenie perspektyw
                         </h4>
-                        <p className="text-deep-charcoal dark:text-silver-mist">
+                        <p className="text-deep-charcoal">
                           Najlepsze wymiany z tygodnia. 12 różnych punktów widzenia na jeden temat. Zero zgody. Mnóstwo mądrości.
                         </p>
                       </div>
@@ -251,10 +251,10 @@ export default function NewsletterPage() {
                     <div className="flex items-start gap-4">
                       <div className="text-2xl">💎</div>
                       <div>
-                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal dark:text-silver-mist">
+                        <h4 className="font-bold text-lg mb-2 text-deep-charcoal">
                           A POTEM... COŚ WIĘCEJ
                         </h4>
-                        <p className="text-deep-charcoal dark:text-silver-mist">
+                        <p className="text-deep-charcoal">
                           Najlepsze rozmowy przenoszą się do społeczności Lifehackerzy.pl - miejsca, gdzie spotykają się ludzie, dla których głębokie myślenie to nie hobby, ale sposób życia.
                         </p>
                       </div>
@@ -267,20 +267,20 @@ export default function NewsletterPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+        <section className="py-20 bg-deep-charcoal/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
                 DOWODY - PRAWDZIWE ŚWIADECTWA
               </h2>
               
               <div className="grid gap-8">
                 <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
                   <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Tomasz M., założyciel startupu technologicznego</p>
-                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członek od 4 miesięcy)</p>
+                    <p className="font-semibold text-deep-charcoal">Tomasz M., założyciel startupu technologicznego</p>
+                    <p className="text-sm text-deep-charcoal/70">(członek od 4 miesięcy)</p>
                   </div>
-                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                  <blockquote className="text-deep-charcoal italic">
                     "Przed newsletterem Ludwika: produktywność oznaczała 60 godzin tygodniowo, wypalenie, zero czasu na myślenie.
                     Po 8 tygodniach: Przestałem gonić za trendami AI. Zacząłem budować mądrość. Zmieniłem całe podejście do pracy - 2 godziny dziennie głębokiej pracy przynoszą więcej niż 10 godzin zajętości.
                     Najważniejsze? Znalazłem ludzi, którzy myślą podobnie. Albo zupełnie inaczej. I obie rzeczy są równie cenne. Trzy osoby z newslettera to teraz moi najbliżsi doradcy."
@@ -289,10 +289,10 @@ export default function NewsletterPage() {
                 
                 <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
                   <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Anna K., trenerka przywództwa</p>
-                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członkini od 6 miesięcy)</p>
+                    <p className="font-semibold text-deep-charcoal">Anna K., trenerka przywództwa</p>
+                    <p className="text-sm text-deep-charcoal/70">(członkini od 6 miesięcy)</p>
                   </div>
-                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                  <blockquote className="text-deep-charcoal italic">
                     "Jedna myśl z newslettera Ludwika zmieniła więcej niż 100 'porad produktywności' z LinkedIn.
                     Przestałam optymalizować czas. Zacząłem optymalizować jakość myślenia.
                     A społeczność Lifehackerzy.pl? To miejsce, gdzie w końcu mogę być sobą. Gdzie nie muszę udawać, że mam wszystkie odpowiedzi."
@@ -301,10 +301,10 @@ export default function NewsletterPage() {
                 
                 <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
                   <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal dark:text-silver-mist">Katarzyna L., konsultantka AI</p>
-                    <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">(członkini od 3 miesięcy)</p>
+                    <p className="font-semibold text-deep-charcoal">Katarzyna L., konsultantka AI</p>
+                    <p className="text-sm text-deep-charcoal/70">(członkini od 3 miesięcy)</p>
                   </div>
-                  <blockquote className="text-deep-charcoal dark:text-silver-mist italic">
+                  <blockquote className="text-deep-charcoal italic">
                     "Ludwik nie ma racji w 40% przypadków. I właśnie dlatego rozmowy z nim są najcenniejsze.
                     Kwestionuje moje założenia, nie potakuje im. A społeczność? Pełna ludzi, którzy wolą niewygodną prawdę od grzecznego kłamstwa."
                   </blockquote>
@@ -318,7 +318,7 @@ export default function NewsletterPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
                 STRUKTURA OFERTY
               </h2>
               
@@ -326,29 +326,29 @@ export default function NewsletterPage() {
                 {/* Free Tier */}
                 <div className="bg-background rounded-xl p-6 border border-deep-charcoal/20">
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
                       🆓 KRĄG OTWARTY
                     </h3>
-                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla każdego</p>
-                    <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta mt-4">BEZPŁATNIE</p>
+                    <p className="text-deep-charcoal/70">Dla każdego</p>
+                    <p className="text-2xl font-bold text-neural-violet mt-4">BEZPŁATNIE</p>
                   </div>
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Cotygodniowy newsletter (niedziela 19:00)</span>
+                      <span className="text-sm text-deep-charcoal">Cotygodniowy newsletter (niedziela 19:00)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Możliwość dialogu przez email</span>
+                      <span className="text-sm text-deep-charcoal">Możliwość dialogu przez email</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Comiesięczna kompilacja wymian</span>
+                      <span className="text-sm text-deep-charcoal">Comiesięczna kompilacja wymian</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Dostęp do 3 ostatnich wydań</span>
+                      <span className="text-sm text-deep-charcoal">Dostęp do 3 ostatnich wydań</span>
                     </li>
                   </ul>
                   
@@ -368,37 +368,37 @@ export default function NewsletterPage() {
                   </div>
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
                       💎 KRĄG WEWNĘTRZNY
                     </h3>
-                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla myślących</p>
+                    <p className="text-deep-charcoal/70">Dla myślących</p>
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-neural-violet dark:text-luminal-magenta">97 PLN/mies.</p>
-                      <p className="text-sm text-deep-charcoal/60 dark:text-silver-mist/60 line-through">197 PLN/mies.</p>
-                      <p className="text-sm text-neural-violet dark:text-luminal-magenta font-semibold">DOŻYWOTNIO dla pierwszych 100</p>
+                      <p className="text-2xl font-bold text-neural-violet">97 PLN/mies.</p>
+                      <p className="text-sm text-deep-charcoal/60 line-through">197 PLN/mies.</p>
+                      <p className="text-sm text-neural-violet font-semibold">DOŻYWOTNIO dla pierwszych 100</p>
                     </div>
                   </div>
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Wszystko z Kręgu Otwartego</span>
+                      <span className="text-sm text-deep-charcoal">Wszystko z Kręgu Otwartego</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Pełny dostęp do społeczności Lifehackerzy.pl</span>
+                      <span className="text-sm text-deep-charcoal">Pełny dostęp do społeczności Lifehackerzy.pl</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Moje osobiste odpowiedzi na każdą wymianę</span>
+                      <span className="text-sm text-deep-charcoal">Moje osobiste odpowiedzi na każdą wymianę</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Comiesięczne sesje Q&A na żywo</span>
+                      <span className="text-sm text-deep-charcoal">Comiesięczne sesje Q&A na żywo</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal dark:text-silver-mist">Pełne archiwum od 2024</span>
+                      <span className="text-sm text-deep-charcoal">Pełne archiwum od 2024</span>
                     </li>
                   </ul>
                   
@@ -413,18 +413,18 @@ export default function NewsletterPage() {
                 {/* Elite Tier */}
                 <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-2">
+                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
                       🏆 LIFEHACKERZY PREMIUM
                     </h3>
-                    <p className="text-deep-charcoal/70 dark:text-silver-mist/70">Dla gotowych na transformację</p>
+                    <p className="text-deep-charcoal/70">Dla gotowych na transformację</p>
                     <p className="text-lg font-semibold text-luminal-magenta mt-4">TYLKO NA ZAPROSZENIE</p>
                   </div>
                   
                   <div className="text-center mb-6">
-                    <p className="text-sm text-deep-charcoal dark:text-silver-mist">
+                    <p className="text-sm text-deep-charcoal">
                       Dostęp tylko dla członków Kręgu Wewnętrznego gotowych na więcej.
                     </p>
-                    <p className="text-sm text-deep-charcoal dark:text-silver-mist mt-4">
+                    <p className="text-sm text-deep-charcoal mt-4">
                       Po 3-6 miesiącach w społeczności, najaktywniejsze osoby otrzymują zaproszenie do poziomu premium.
                     </p>
                   </div>
@@ -439,10 +439,10 @@ export default function NewsletterPage() {
         </section>
 
         {/* Example Newsletter */}
-        <section className="py-20 bg-deep-charcoal/5 dark:bg-deep-charcoal/20">
+        <section className="py-20 bg-deep-charcoal/5">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h3 className="text-2xl font-bold text-center mb-12 text-deep-charcoal dark:text-silver-mist">
+              <h3 className="text-2xl font-bold text-center mb-12 text-deep-charcoal">
                 PRZYKŁAD PRAWDZIWEJ TREŚCI
               </h3>
               
@@ -462,13 +462,13 @@ export default function NewsletterPage() {
                   </div>
                   
                   <div className="lg:w-1/2 space-y-6">
-                    <blockquote className="text-xl font-semibold text-neural-violet dark:text-luminal-magenta">
+                    <blockquote className="text-xl font-semibold text-neural-violet">
                       "Udawaj, aż ci się uda - robisz to dobrze czy źle?"
                     </blockquote>
-                    <p className="text-base text-deep-charcoal dark:text-silver-mist">
+                    <p className="text-base text-deep-charcoal">
                       47 odpowiedzi. 12 zupełnie przeciwstawnych perspektyw. Zero zgody. Mnóstwo mądrości.
                     </p>
-                    <p className="text-sm text-deep-charcoal/80 dark:text-silver-mist/80">
+                    <p className="text-sm text-deep-charcoal/80">
                       To nie jest "artykuł". To żywa rozmowa, która ewoluuje przez tydzień.
                     </p>
                     <a 
@@ -491,13 +491,13 @@ export default function NewsletterPage() {
         <section className="py-20 bg-gradient-to-r from-neural-violet/20 to-luminal-magenta/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
                 DWA WYBORY
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-neural-violet/20 space-y-4">
-                  <h3 className="text-lg font-bold text-neural-violet dark:text-luminal-magenta">
+                  <h3 className="text-lg font-bold text-neural-violet">
                     Wybór 1: Dołącz do pierwszych 100
                   </h3>
                   <ul className="text-sm space-y-2 text-left">
@@ -535,7 +535,7 @@ export default function NewsletterPage() {
                 </div>
                 
                 <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-deep-charcoal/20 space-y-4">
-                  <h3 className="text-lg font-bold text-deep-charcoal dark:text-silver-mist">
+                  <h3 className="text-lg font-bold text-deep-charcoal">
                     Wybór 2: Krąg Otwarty
                   </h3>
                   <ul className="text-sm space-y-2 text-left">
@@ -564,7 +564,7 @@ export default function NewsletterPage() {
               </div>
               
               <div className="text-center space-y-4">
-                <p className="text-sm text-deep-charcoal/60 dark:text-silver-mist/60">
+                <p className="text-sm text-deep-charcoal/60">
                   P.S. 23 miejsca. Przy 2-3 zapisach dziennie, ostatnie miejsce zniknie za około 10 dni.
                 </p>
               </div>
@@ -577,16 +577,16 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <div className="space-y-2">
-                <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                <p className="text-sm text-deep-charcoal/70">
                   Sponsorowane przez: Fundacja HACKERZY.PL
                 </p>
-                <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                <p className="text-sm text-deep-charcoal/70">
                   Napędzane przez: Społeczność Lifehackerzy.pl - ponad 150 założycieli, liderów i twórców
                 </p>
               </div>
               
               <div className="pt-6 border-t border-deep-charcoal/10">
-                <p className="text-deep-charcoal dark:text-silver-mist font-semibold">
+                <p className="text-deep-charcoal font-semibold">
                   Ludwik C. Siadlak - Kurator myśli. Facylitator dialogu. Człowiek, który woli niewygodną prawdę od grzecznego kłamstwa.
                 </p>
               </div>

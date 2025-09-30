@@ -23,7 +23,7 @@ const PodcastEpisodeList = ({
 }: PodcastEpisodeListProps) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+      <h2 className="text-2xl font-bold text-deep-charcoal mb-4">
         Najnowsze odcinki
       </h2>
       <div className="divide-y divide-border">
@@ -42,16 +42,16 @@ const PodcastEpisodeList = ({
               </div>
             )}
             <div className="flex-grow">
-              <h3 className="text-lg font-medium text-neural-violet dark:text-neural-violet-light mb-1">
+              <h3 className="text-lg font-medium text-neural-violet mb-1">
                 {episode.title}
               </h3>
-              <div className="flex items-center text-sm text-subtle-slate dark:text-gentle-lavender mb-2">
+              <div className="flex items-center text-sm text-subtle-slate mb-2">
                 <Calendar className="h-4 w-4 mr-1" />
                 <span>{episode.date}</span>
                 <span className="mx-2">•</span>
                 <span>{episode.duration}</span>
               </div>
-              <p className="text-deep-charcoal/80 dark:text-silver-mist/70 mb-3 line-clamp-2 sm:line-clamp-3">
+              <p className="text-deep-charcoal/80 mb-3 line-clamp-2 sm:line-clamp-3">
                 {episode.description}
               </p>
               <button

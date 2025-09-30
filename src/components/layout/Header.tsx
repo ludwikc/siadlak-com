@@ -1,14 +1,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from "../../contexts/ThemeContext";
-import { Moon, Sun, Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, ExternalLink } from "lucide-react";
+import { Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, ExternalLink } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   // Refs for dropdown management
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -71,14 +69,14 @@ export default function Header() {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-luminous-white dark:bg-deep-space shadow-md py-2"
-          : "bg-luminous-white/80 dark:bg-deep-space/80 backdrop-blur-sm py-4"
+          ? "bg-luminous-white shadow-md py-2"
+          : "bg-luminous-white/80 backdrop-blur-sm py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold font-heading text-neural-violet dark:text-silver-mist bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:from-silver-mist dark:to-luminal-magenta">
+          <span className="text-2xl font-bold font-heading text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
             Ludwik&nbsp;C. Siadlak
           </span>
         </Link>
@@ -115,43 +113,17 @@ export default function Header() {
 
           <Link
             to="/contact"
-            className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+            className="text-deep-charcoal hover:text-neural-violet transition-colors"
           >
             Kontakt
           </Link>
-
-          {/* Theme Toggle */}
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-              aria-label={`Przełącz na tryb ${theme === "dark" || theme === "dev" ? "jasny" : "ciemny"}`}
-            >
-              {theme === "dark" || theme === "dev" ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              )}
-            </button>
-          </div>
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-2">
           <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal dark:text-silver-mist transition-colors"
-            aria-label={`Przełącz na tryb ${theme === "dark" || theme === "dev" ? "jasny" : "ciemny"}`}
-          >
-            {theme === "dark" || theme === "dev" ? (
-              <Sun size={20} />
-            ) : (
-              <Moon size={20} />
-            )}
-          </button>
-          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-deep-charcoal dark:text-silver-mist"
+            className="p-2 text-deep-charcoal"
             aria-label="Menu nawigacyjne"
             aria-expanded={isMenuOpen}
           >
@@ -169,20 +141,20 @@ export default function Header() {
           <div className="flex items-center justify-center min-h-screen p-4">
             <div 
               ref={overlayRef}
-              className="bg-white dark:bg-deep-space rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
               onMouseEnter={handleMouseEnter}
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-silver-mist/10">
-                <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist">
+              <div className="flex items-center justify-between p-6 border-b border-slate-200">
+                <h2 className="text-2xl font-bold text-deep-charcoal">
                   Wszystkie możliwości
                 </h2>
                 <button
                   onClick={() => setIsDropdownOpen(false)}
-                  className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-secondary/20 transition-colors"
+                  className="p-2 rounded-full hover:bg-slate-100 transition-colors"
                   aria-label="Zamknij menu"
                 >
-                  <X size={24} className="text-deep-charcoal dark:text-silver-mist" />
+                  <X size={24} className="text-deep-charcoal" />
                 </button>
               </div>
 
@@ -192,10 +164,10 @@ export default function Header() {
                   {/* Column 1: Twoja Ścieżka Rozwoju */}
                   <div className="lg:col-span-1">
                     <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
+                      <h3 className="text-lg font-semibold text-deep-charcoal mb-2">
                         Twoja ścieżka rozwoju
                       </h3>
-                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                      <p className="text-sm text-deep-charcoal/70">
                         3 kroki do transformacji
                       </p>
                     </div>
@@ -203,16 +175,16 @@ export default function Header() {
                     <div className="space-y-6">
                       <div className="flex items-start">
                         <div className="flex flex-col items-center mr-4">
-                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
+                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 flex items-center justify-center text-sm font-semibold">
                             1
                           </div>
-                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
+                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 to-transparent"></div>
                         </div>
                         <div>
-                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
                             Wybierz program dla siebie
                           </h4>
-                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                             Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. Podejmij decyzję.
                           </p>
                         </div>
@@ -220,16 +192,16 @@ export default function Header() {
 
                       <div className="flex items-start">
                         <div className="flex flex-col items-center mr-4">
-                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 dark:text-silver-mist/70 flex items-center justify-center text-sm font-semibold">
+                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 flex items-center justify-center text-sm font-semibold">
                             2
                           </div>
-                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 dark:from-silver-mist/60 to-transparent"></div>
+                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 to-transparent"></div>
                         </div>
                         <div>
-                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
                             Dołącz do Lifehackerów
                           </h4>
-                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                             Dostęp LIFETIME otrzymasz <strong>jeszcze dzisiaj</strong>.
                           </p>
                         </div>
@@ -242,10 +214,10 @@ export default function Header() {
                           </div>
                         </div>
                         <div>
-                          <h4 className="text-base font-medium text-deep-charcoal dark:text-silver-mist mb-1">
+                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
                             Pracuj ze mną 1:1
                           </h4>
-                          <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 leading-relaxed">
+                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                             Towarzyszę Lifehackerom codziennie. Bez wyjątków. Dołącz do nas i działamy.
                           </p>
                         </div>
@@ -259,7 +231,7 @@ export default function Header() {
                       {/* Featured Cards */}
                       <Link 
                         to="/program" 
-                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden min-h-[120px]"
+                        className="md:col-span-2 block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md relative overflow-hidden min-h-[120px]"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm">
@@ -267,14 +239,14 @@ export default function Header() {
                         </div>
                         <div className="flex items-stretch justify-between pt-8 h-full">
                           <div className="flex items-center flex-1">
-                            <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                            <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white rounded-lg shadow-sm">
                               <Book size={24} className="text-neural-violet" />
                             </div>
                             <div>
-                              <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                              <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                                 Programy rozwojowe
                               </h4>
-                              <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                              <p className="text-sm text-deep-charcoal/70">
                                 Kursy online i szkolenia
                               </p>
                             </div>
@@ -291,21 +263,21 @@ export default function Header() {
 
                       <Link 
                         to="/webinar" 
-                        className="md:col-span-2 block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md relative overflow-hidden"
+                        className="md:col-span-2 block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md relative overflow-hidden"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm animate-pulse">
                           Liczba miejsc ograniczona
                         </div>
                         <div className="flex items-center">
-                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white rounded-lg shadow-sm">
                             <Video size={24} className="text-neural-violet" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               Wydarzenia na żywo
                             </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                            <p className="text-sm text-deep-charcoal/70">
                               Sesje live i masterclassy
                             </p>
                           </div>
@@ -317,18 +289,18 @@ export default function Header() {
                         href="https://uwaznezycie.pl" 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
                             <Users size={20} className="text-neural-violet" />
                           </div>
                           <div>
-                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               Medytacje na żywo
                             </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                            <p className="text-sm text-deep-charcoal/70">
                               Każdy wtorek o 6:30
                             </p>
                           </div>
@@ -337,18 +309,18 @@ export default function Header() {
 
                       <Link 
                         to="/podcast" 
-                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
                             <Headphones size={20} className="text-neural-violet" />
                           </div>
                           <div>
-                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               Podcast
                             </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                            <p className="text-sm text-deep-charcoal/70">
                               Słuchaj i ucz się
                             </p>
                           </div>
@@ -357,18 +329,18 @@ export default function Header() {
 
                       <Link 
                         to="/newsletter" 
-                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
                             <Mail size={20} className="text-neural-violet" />
                           </div>
                           <div>
-                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               Newsletter
                             </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                            <p className="text-sm text-deep-charcoal/70">
                               Cotygodniowe tipy
                             </p>
                           </div>
@@ -379,17 +351,17 @@ export default function Header() {
                         href="https://youtube.com/@ludwikcsiadlak" 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-4 bg-slate-50 dark:bg-secondary/20 rounded-xl hover:bg-slate-100 dark:hover:bg-secondary/30 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                       >
                         <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white dark:bg-deep-space rounded-lg shadow-sm">
+                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
                             <Video size={20} className="text-neural-violet" />
                           </div>
                           <div>
-                            <h4 className="text-base font-bold text-deep-charcoal dark:text-silver-mist mb-1 group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               YouTube
                             </h4>
-                            <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70">
+                            <p className="text-sm text-deep-charcoal/70">
                               Video content
                             </p>
                           </div>
@@ -398,17 +370,17 @@ export default function Header() {
                     </div>
 
                     {/* Members Zone */}
-                    <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-neural-violet/10 dark:to-ascension-pink/10 rounded-xl border border-slate-200 dark:border-silver-mist/10">
+                    <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200">
                       <div className="flex items-center mb-4">
-                        <div className="w-8 h-8 flex items-center justify-center bg-amber-50 dark:bg-amber-900/30 rounded-lg mr-3 border border-amber-200 dark:border-amber-700">
-                          <Lock size={16} className="text-amber-700 dark:text-amber-400" />
+                        <div className="w-8 h-8 flex items-center justify-center bg-amber-50 rounded-lg mr-3 border border-amber-200">
+                          <Lock size={16} className="text-amber-700" />
                         </div>
-                        <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
+                        <h3 className="text-lg font-semibold text-deep-charcoal">
                           Strefa Lifehackerów
                         </h3>
                       </div>
                       
-                      <p className="text-sm text-deep-charcoal/70 dark:text-silver-mist/70 mb-4">
+                      <p className="text-sm text-deep-charcoal/70 mb-4">
                         Witaj z powrotem!
                       </p>
                       
@@ -417,20 +389,20 @@ export default function Header() {
                           href="https://portal.siadlak.com" 
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="flex items-center p-3 bg-white rounded-lg hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                         >
-                          <Home size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                          <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          <Home size={16} className="text-deep-charcoal/70 mr-3" />
+                          <span className="text-sm font-medium text-deep-charcoal group-hover:text-neural-violet transition-colors">
                             Portal Lifehackerów
                           </span>
                         </a>
                         
                         <a 
                           href="/discord" 
-                          className="flex items-center p-3 bg-white dark:bg-deep-space/80 rounded-lg hover:bg-slate-100 dark:hover:bg-secondary/20 transition-all duration-200 group border border-slate-200 dark:border-silver-mist/10 shadow-sm hover:shadow-md"
+                          className="flex items-center p-3 bg-white rounded-lg hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
                         >
-                          <Calendar size={16} className="text-deep-charcoal/70 dark:text-silver-mist/70 mr-3" />
-                          <span className="text-sm font-medium text-deep-charcoal dark:text-silver-mist group-hover:text-neural-violet dark:group-hover:text-luminal-magenta transition-colors">
+                          <Calendar size={16} className="text-deep-charcoal/70 mr-3" />
+                          <span className="text-sm font-medium text-deep-charcoal group-hover:text-neural-violet transition-colors">
                             12:34 Daily Coaching
                           </span>
                         </a>
@@ -438,10 +410,10 @@ export default function Header() {
                     </div>
 
                     {/* Footer Action */}
-                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-silver-mist/10 text-center">
+                    <div className="mt-6 pt-4 border-t border-slate-200 text-center">
                       <Link 
                         to="/work" 
-                        className="inline-flex items-center text-sm text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors group"
+                        className="inline-flex items-center text-sm text-deep-charcoal/70 hover:text-neural-violet transition-colors group"
                         onClick={() => setIsDropdownOpen(false)}
                       >
                         Zobacz wszystkie możliwości
@@ -457,11 +429,11 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-luminous-white dark:bg-deep-space shadow-lg animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-luminous-white shadow-lg animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               to="/about"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              className="text-deep-charcoal hover:text-neural-violet transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               O mnie
@@ -469,20 +441,20 @@ export default function Header() {
             
             {/* Mobile Możliwości Section */}
             <div className="py-2">
-              <div className="font-medium text-deep-charcoal dark:text-silver-mist mb-3">
+              <div className="font-medium text-deep-charcoal mb-3">
                 Możliwości
               </div>
               <div className="ml-4 space-y-3">
                 <Link
                   to="/program"
-                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Programy
                 </Link>
                 <Link
                   to="/podcast"
-                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Podcasty
@@ -491,7 +463,7 @@ export default function Header() {
                   href="https://lifehackerzy.pl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  className="flex items-center gap-1 text-deep-charcoal/70 hover:text-neural-violet transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Społeczność
@@ -499,14 +471,14 @@ export default function Header() {
                 </a>
                 <Link
                   to="/newsletter"
-                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Newsletter
                 </Link>
                 <Link
                   to="/webinar"
-                  className="block text-deep-charcoal/70 dark:text-silver-mist/70 hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Webinar
@@ -516,7 +488,7 @@ export default function Header() {
             
             <Link
               to="/contact"
-              className="text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors py-2"
+              className="text-deep-charcoal hover:text-neural-violet transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Kontakt

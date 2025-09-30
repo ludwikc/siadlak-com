@@ -3,19 +3,19 @@ import Layout from "../components/layout/Layout";
 export default function Privacy() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-secondary via-luminous-white to-secondary dark:from-deep-space dark:via-deep-space dark:to-charcoal-night">
+      <div className="min-h-screen bg-gradient-to-br from-secondary via-luminous-white to-secondary">
         <div className="container mx-auto px-4 pt-24 pb-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal mb-4">
                 Polityka Prywatności
               </h1>
-              <p className="text-lg text-deep-charcoal/70 dark:text-silver-mist/70">
+              <p className="text-lg text-deep-charcoal/70">
                 Informacje o przetwarzaniu danych osobowych
               </p>
             </div>
 
-            <div className="prose prose-lg max-w-none text-deep-charcoal dark:text-silver-mist">
+            <div className="prose prose-lg max-w-none text-deep-charcoal">
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">1. Informacje ogólne</h2>
                 <p>

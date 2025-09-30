@@ -54,48 +54,48 @@ const NextSessionCountdown = () => {
   const nextSessionDate = getNextTuesday630AM();
 
   return (
-    <div className="bg-secondary/50 dark:bg-quantum-blue/30 p-4 rounded-md mb-6">
-      <h3 className="font-semibold text-deep-charcoal dark:text-silver-mist mb-2">
+    <div className="bg-secondary/50 p-4 rounded-md mb-6">
+      <h3 className="font-semibold text-deep-charcoal mb-2">
         Następna sesja:
       </h3>
-      <p className="text-deep-charcoal dark:text-silver-mist mb-1">
+      <p className="text-deep-charcoal mb-1">
         <strong>Data:</strong> Wtorek, {format(nextSessionDate, 'd MMMM yyyy')}
       </p>
-      <p className="text-deep-charcoal dark:text-silver-mist mb-4">
+      <p className="text-deep-charcoal mb-4">
         <strong>Godzina:</strong> 6:30 - 6:45 (Warszawa/Berlin)
       </p>
       
-      <div className="bg-neural-violet/10 dark:bg-neural-violet-light/10 p-3 rounded-md">
-        <p className="text-sm text-deep-charcoal dark:text-silver-mist mb-2 font-medium">
+      <div className="bg-neural-violet/10 p-3 rounded-md">
+        <p className="text-sm text-deep-charcoal mb-2 font-medium">
           Czas do rozpoczęcia:
         </p>
         <div className="flex items-center justify-center space-x-4 text-lg font-mono">
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet dark:text-neural-violet-light">
+            <div className="text-2xl font-bold text-neural-violet">
               {timeLeft.days}
             </div>
-            <div className="text-xs text-subtle-slate dark:text-gentle-lavender">dni</div>
+            <div className="text-xs text-subtle-slate">dni</div>
           </div>
-          <div className="text-neural-violet dark:text-neural-violet-light text-2xl">:</div>
+          <div className="text-neural-violet text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet dark:text-neural-violet-light">
+            <div className="text-2xl font-bold text-neural-violet">
               {timeLeft.hours.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs text-subtle-slate dark:text-gentle-lavender">godzin</div>
+            <div className="text-xs text-subtle-slate">godzin</div>
           </div>
-          <div className="text-neural-violet dark:text-neural-violet-light text-2xl">:</div>
+          <div className="text-neural-violet text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet dark:text-neural-violet-light">
+            <div className="text-2xl font-bold text-neural-violet">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs text-subtle-slate dark:text-gentle-lavender">minut</div>
+            <div className="text-xs text-subtle-slate">minut</div>
           </div>
-          <div className="text-neural-violet dark:text-neural-violet-light text-2xl">:</div>
+          <div className="text-neural-violet text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet dark:text-neural-violet-light">
+            <div className="text-2xl font-bold text-neural-violet">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs text-subtle-slate dark:text-gentle-lavender">sekund</div>
+            <div className="text-xs text-subtle-slate">sekund</div>
           </div>
         </div>
       </div>

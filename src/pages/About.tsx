@@ -50,49 +50,49 @@ const About = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 md:py-24 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal">
               Zarabiasz świetne pieniądze i jesteś na szczycie w swojej dziedzinie. Ale prawda jest taka, że stałeś się niewolnikiem własnych systemów.
             </h2>
             
-            <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+            <p className="text-lg mb-6 text-subtle-slate">
               Jeśli tu trafiłeś, prawdopodobnie rozpoznajesz ten scenariusz:
             </p>
 
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <strong className="text-deep-charcoal dark:text-silver-mist">Jesteś w pułapce "produktywności":</strong>
-                  <span className="text-subtle-slate dark:text-silver-mist/80"> Testowałeś już wszystko – GTD, Notion, Asanę, Slack... i sto innych narzędzi. Każde z nich obiecywało wolność, a w efekcie dodało tylko kolejną warstwę chaosu i powiadomień.</span>
+                  <strong className="text-deep-charcoal">Jesteś w pułapce "produktywności":</strong>
+                  <span className="text-subtle-slate"> Testowałeś już wszystko – GTD, Notion, Asanę, Slack... i sto innych narzędzi. Każde z nich obiecywało wolność, a w efekcie dodało tylko kolejną warstwę chaosu i powiadomień.</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <strong className="text-deep-charcoal dark:text-silver-mist">Twój kalendarz Cię nienawidzi:</strong>
-                  <span className="text-subtle-slate dark:text-silver-mist/80"> Dni są wypełnione po brzegi spotkaniami i zadaniami, ale wieczorem masz poczucie, że nie zrobiłeś nic naprawdę <em>ważnego</em>. Jesteś zajęty, ale niekoniecznie efektywny.</span>
+                  <strong className="text-deep-charcoal">Twój kalendarz Cię nienawidzi:</strong>
+                  <span className="text-subtle-slate"> Dni są wypełnione po brzegi spotkaniami i zadaniami, ale wieczorem masz poczucie, że nie zrobiłeś nic naprawdę <em>ważnego</em>. Jesteś zajęty, ale niekoniecznie efektywny.</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <strong className="text-deep-charcoal dark:text-silver-mist">Technologia Cię rozprasza, zamiast wspierać:</strong>
-                  <span className="text-subtle-slate dark:text-silver-mist/80"> Miała być lewarem, a stała się kulą u nogi. Zamiast realizować wizję, gasisz pożary i reagujesz na ciągły strumień informacji.</span>
+                  <strong className="text-deep-charcoal">Technologia Cię rozprasza, zamiast wspierać:</strong>
+                  <span className="text-subtle-slate"> Miała być lewarem, a stała się kulą u nogi. Zamiast realizować wizję, gasisz pożary i reagujesz na ciągły strumień informacji.</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet dark:text-luminal-magenta mt-1 mr-4 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
                 <div>
-                  <strong className="text-deep-charcoal dark:text-silver-mist">Straciłeś "ludzką przewagę":</strong>
-                  <span className="text-subtle-slate dark:text-silver-mist/80"> Twoja kreatywność i zdolność do głębokiego myślenia są degradowane przez powierzchowną, reaktywną pracę, której wymaga od Ciebie cyfrowy ekosystem.</span>
+                  <strong className="text-deep-charcoal">Straciłeś "ludzką przewagę":</strong>
+                  <span className="text-subtle-slate"> Twoja kreatywność i zdolność do głębokiego myślenia są degradowane przez powierzchowną, reaktywną pracę, której wymaga od Ciebie cyfrowy ekosystem.</span>
                 </div>
               </li>
             </ul>
 
-            <p className="text-xl text-deep-charcoal dark:text-silver-mist font-medium">
+            <p className="text-xl text-deep-charcoal font-medium">
               <strong>Problem jest prosty:</strong> Próbujesz rozwiązać ludzki problem za pomocą technologicznych narzędzi. To nigdy nie zadziała.
             </p>
           </div>
@@ -100,7 +100,7 @@ const About = () => {
       </section>
 
       {/* Story Section with Image */}
-      <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
@@ -112,23 +112,23 @@ const About = () => {
             </div>
             
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
                 Moja historia: Jak odkryłem błąd w systemie
               </h2>
               
-              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              <p className="text-lg mb-6 text-subtle-slate">
                 Przez 19 lat, jako certyfikowany trener Microsoft, widziałem to z pierwszej ręki. Pracowałem z najlepszymi – od zespołów w firmach z listy Fortune 500 po elitarne jednostki wojskowe. Wszędzie widziałem ten sam schemat: genialni ludzie, przytłoczeni przez technologię, której mieli być panami.
               </p>
               
-              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              <p className="text-lg mb-6 text-subtle-slate">
                 Przełom nastąpił, gdy obserwowałem w korporacyjnej sali szkoleniowej dewelopera-gwiazdę, który próbował wdrożyć kolejne narzędzie do automatyzacji. Zamiast ulgi, na twarzach jego zespołu widziałem tylko rezygnację i zmęczenie.
               </p>
               
-              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              <p className="text-lg mb-6 text-subtle-slate">
                 Zrozumiałem wtedy, że <strong>brakującym elementem nie jest technologia, ale człowiek</strong>. Wszyscy uczyli <em>jak używać narzędzi</em>. Nikt nie uczył, <em>jak pozostać człowiekiem, który tymi narzędziami dowodzi</em>.
               </p>
               
-              <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+              <p className="text-lg text-deep-charcoal">
                 Dlatego porzuciłem tradycyjne szkolenia i stworzyłem <strong>Metodę Cyfrowego Dowodzenia™</strong>.
               </p>
             </div>
@@ -137,55 +137,55 @@ const About = () => {
       </section>
 
       {/* Method Section */}
-      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 md:py-24 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal">
               Nie uczę Cię obsługi narzędzi. Uczę Cię, jak zbudować system, w którym to Ty wydajesz rozkazy.
             </h2>
             
-            <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+            <p className="text-lg mb-6 text-subtle-slate">
               Moje podejście jest inne, bo opiera się na brutalnie prostej prawdzie:
             </p>
             
-            <p className="text-2xl font-bold mb-8 text-neural-violet dark:text-luminal-magenta text-center">
+            <p className="text-2xl font-bold mb-8 text-neural-violet text-center">
               Twoje człowieczeństwo jest Twoją największą przewagą konkurencyjną.
             </p>
             
-            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
+            <p className="text-lg mb-8 text-subtle-slate">
               Zamiast wciskać Ci kolejną aplikację, pracujemy nad trzema filarami <strong>Cyfrowego Dowodzenia™</strong>:
             </p>
 
             <div className="space-y-6">
               <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                   1. Filozofia Dowódcy:
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <p className="text-subtle-slate">
                   Najpierw definiujemy Twoje cele, wartości i unikalny styl pracy. Zanim dotkniemy technologii, musimy wiedzieć, <em>czemu</em> ma służyć.
                 </p>
               </div>
               
               <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                   2. Architektura Systemu:
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <p className="text-subtle-slate">
                   Projektujemy spersonalizowany, minimalistyczny system, w którym technologia jest Twoim posłusznym żołnierzem, a nie chaotycznym najemnikiem.
                 </p>
               </div>
               
               <div className="glass-card p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                   3. Integracja, nie adaptacja:
                 </h3>
-                <p className="text-subtle-slate dark:text-silver-mist/80">
+                <p className="text-subtle-slate">
                   Pokazuję, jak zintegrować ten system z Twoim życiem, aby działał w tle, dając Ci przestrzeń na to, co najważniejsze – myślenie, tworzenie i przewodzenie.
                 </p>
               </div>
             </div>
             
-            <p className="text-xl font-bold text-center mt-8 text-deep-charcoal dark:text-silver-mist">
+            <p className="text-xl font-bold text-center mt-8 text-deep-charcoal">
               To nie jest kolejny kurs produktywności. To odzyskanie Twojej cyfrowej suwerenności.
             </p>
           </div>
@@ -193,38 +193,38 @@ const About = () => {
       </section>
 
       {/* Credentials Section with Image */}
-      <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
                 Dlaczego możesz mi zaufać? Bo nie jestem teoretykiem.
               </h2>
               
-              <p className="text-lg mb-6 text-subtle-slate dark:text-silver-mist/80">
+              <p className="text-lg mb-6 text-subtle-slate">
                 To, czego uczę, przetestowałem w ogniu walki – na sobie i setkach klientów w najbardziej wymagających środowiskach.
               </p>
 
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>19+ lat doświadczenia</strong> jako Certyfikowany Trener Microsoft.</span>
+                  <CheckCircle className="h-5 w-5 text-neural-violet mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal"><strong>19+ lat doświadczenia</strong> jako Certyfikowany Trener Microsoft.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Szkoliłem zespoły w firmach z listy Fortune 500</strong> i organizacjach wojskowych.</span>
+                  <CheckCircle className="h-5 w-5 text-neural-violet mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal"><strong>Szkoliłem zespoły w firmach z listy Fortune 500</strong> i organizacjach wojskowych.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Twórca Metody Hakowania Produktywnosci™</strong>, używanej przez profesjonalistów na całym świecie.</span>
+                  <CheckCircle className="h-5 w-5 text-neural-violet mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal"><strong>Twórca Metody Hakowania Produktywnosci™</strong>, używanej przez profesjonalistów na całym świecie.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-deep-charcoal dark:text-silver-mist"><strong>Założyciel społeczności "Lifehackerzy"</strong> z ponad 150 aktywnymi członkami, którzy odzyskali kontrolę.</span>
+                  <CheckCircle className="h-5 w-5 text-neural-violet mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-deep-charcoal"><strong>Założyciel społeczności "Lifehackerzy"</strong> z ponad 150 aktywnymi członkami, którzy odzyskali kontrolę.</span>
                 </li>
               </ul>
               
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80">
+              <p className="text-lg text-subtle-slate">
                 A kiedy nie pracuję, nie znajdziesz mnie medytującego nad aplikacją do mindfulness. Znajdziesz mnie na torze wyścigowym z moim motocyklem, gdzie liczy się 100% skupienia, albo ćwiczącego śpiew, gdzie technika musi służyć emocjom. Rozumiem, że prawdziwe życie dzieje się poza ekranem.
               </p>
             </div>

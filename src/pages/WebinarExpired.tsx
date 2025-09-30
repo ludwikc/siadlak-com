@@ -22,7 +22,7 @@ const WebinarExpired = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 pt-16 pb-20">
+      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-16 pb-20">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 backdrop-blur-sm border border-gray-500/30 text-gray-500 mb-6">
             <Clock className="h-4 w-4 mr-2" />
@@ -37,7 +37,7 @@ const WebinarExpired = () => {
             Dziękujemy za Twoje zainteresowanie metodologią Black Panther
           </p>
 
-          <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg max-w-3xl mx-auto mb-12">
+          <div className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-gray-200 shadow-lg max-w-3xl mx-auto mb-12">
             <p className="text-xl mb-8">
               Niestety, transmisja na żywo już się odbyła.
               <br />
@@ -51,7 +51,7 @@ const WebinarExpired = () => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 dark:bg-deep-space p-6 rounded-xl border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                 <MailIcon className="h-10 w-10 text-neural-violet mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
                   Zapisz się na powiadomienie o kolejnym webinarze
@@ -91,7 +91,7 @@ const WebinarExpired = () => {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">📚 Podczas gdy czekasz:</h2>
 
-            <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg mb-12">
+            <div className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-gray-200 shadow-lg mb-12">
               <p className="text-lg mb-6">
                 Pobierz bezpłatny przewodnik "5 technik Czarnej Pantery, które
                 możesz wdrożyć od zaraz", aby rozpocząć swoją transformację:
@@ -108,7 +108,7 @@ const WebinarExpired = () => {
             </div>
 
             {/* Social Proof */}
-            <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+            <div className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-gray-200 shadow-lg">
               <p className="italic text-lg mb-4">
                 "Webinar Ludwika był przełomowym momentem w mojej karierze.
                 Metodologia Black Panther pomogła mi odzyskać kontrolę nad swoim

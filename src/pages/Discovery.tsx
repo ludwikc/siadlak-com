@@ -65,63 +65,63 @@ export default function Discovery() {
             
             {/* Main Content */}
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal">
                 30 minut autentycznej rozmowy o Twoich wyzwaniach
               </h2>
               
-              <p className="text-lg mb-12 text-subtle-slate dark:text-silver-mist/80 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg mb-12 text-subtle-slate max-w-3xl mx-auto leading-relaxed">
                 Sesja Discovery to nasze pierwsze spotkanie - moment, w którym poznajemy się nawzajem i sprawdzamy, czy moja metoda pracy pasuje do tego, czego szukasz. To obustronny proces odkrywania kompatybilności.
               </p>
               
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="h-8 w-8 text-neural-violet" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                     Indywidualna rozmowa
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/80">
+                  <p className="text-subtle-slate">
                     30 minut 1:1, aby się poznać.
                   </p>
                 </GlassCard>
 
                 <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Target className="h-8 w-8 text-neural-violet" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                     Obustronny proces
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/80">
+                  <p className="text-subtle-slate">
                     Sprawdzamy, czy do siebie pasujemy: rezultaty dostarczam pracując w specyficzny sposób, a Ty już trochę siebie znasz.
                   </p>
                 </GlassCard>
 
                 <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 dark:bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Heart className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Heart className="h-8 w-8 text-neural-violet" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal dark:text-silver-mist">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
                     Autentyczne podejście
                   </h3>
-                  <p className="text-subtle-slate dark:text-silver-mist/80">
+                  <p className="text-subtle-slate">
                     Szczere rozmowy, prawdziwe rozwiązania
                   </p>
                 </GlassCard>
               </div>
 
-              <h3 className="text-2xl font-bold mb-8 text-deep-charcoal dark:text-silver-mist">
+              <h3 className="text-2xl font-bold mb-8 text-deep-charcoal">
                 Wybierz termin, który Ci odpowiada
               </h3>
             </div>
             
             {/* Availability Check Card */}
             <div className="max-w-4xl mx-auto">
-              <GlassCard padding="xl" className="text-center relative overflow-hidden border-2 border-neural-violet/20 dark:border-luminal-magenta/20">
+              <GlassCard padding="xl" className="text-center relative overflow-hidden border-2 border-neural-violet/20">
                 {/* Subtle gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-luminal-magenta/5 dark:from-neural-violet/10 dark:to-luminal-magenta/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-luminal-magenta/5"></div>
                 
                 {/* Animated border glow */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-luminal-magenta/20 to-quantum-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
@@ -132,10 +132,10 @@ export default function Discovery() {
                       <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <CheckCircle className="h-10 w-10 text-white animate-pulse" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                      <h3 className="text-2xl font-bold mb-6 text-deep-charcoal">
                         Sprawdź dostępność Sesji Discovery
                       </h3>
-                      <p className="text-subtle-slate dark:text-silver-mist/80 mb-8 max-w-md mx-auto">
+                      <p className="text-subtle-slate mb-8 max-w-md mx-auto">
                         Kliknij poniżej, aby sprawdzić czy mam obecnie wolne miejsca w programie mentoringowym
                       </p>
                       <button 
@@ -150,19 +150,19 @@ export default function Discovery() {
                   {status === 'loading' && (
                     <div className="py-8 relative z-10">
                       <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-6"></div>
-                      <h3 className="text-xl font-semibold mb-6 text-deep-charcoal dark:text-silver-mist">
+                      <h3 className="text-xl font-semibold mb-6 text-deep-charcoal">
                         Trwa sprawdzanie dostępności...
                       </h3>
                       
                       {/* Progress Bar */}
                       <div className="w-full max-w-md mx-auto">
-                        <div className="bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                        <div className="bg-gray-200 rounded-full h-2 overflow-hidden">
                           <div 
                             className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-full transition-all duration-300 ease-out"
                             style={{ width: `${progress}%` }}
                           ></div>
                         </div>
-                        <p className="text-sm text-subtle-slate dark:text-silver-mist/70 mt-2">
+                        <p className="text-sm text-subtle-slate mt-2">
                           {Math.round(progress)}% zakończone
                         </p>
                       </div>
@@ -174,10 +174,10 @@ export default function Discovery() {
                       <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg animate-bounce">
                         <CheckCircle className="h-10 w-10 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+                      <h3 className="text-2xl font-bold mb-4 text-deep-charcoal">
                         Tak, mam obecnie miejsce w programie mentoringowym
                       </h3>
-                      <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80 max-w-md mx-auto">
+                      <p className="text-lg mb-8 text-subtle-slate max-w-md mx-auto">
                         Możesz umówić Sesję Discovery już teraz
                       </p>
                       <button 
@@ -194,43 +194,43 @@ export default function Discovery() {
             
             {/* How it works in practice */}
             <div className="max-w-4xl mx-auto mt-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-deep-charcoal">
                 Jak to wygląda w praktyce?
               </h2>
               
               <GlassCard padding="xl" className="mb-12">
-                <p className="text-lg text-subtle-slate dark:text-silver-mist/90 mb-8 leading-relaxed">
+                <p className="text-lg text-subtle-slate mb-8 leading-relaxed">
                   Podczas naszej rozmowy wspólnie odkryjemy, z czym przychodzisz i jak mogę Ci pomóc. Autentycznie wysłucham Twojej sytuacji i szczerze powiem, czy widzę szansę na skuteczną współpracę.
                 </p>
                 
-                <h3 className="text-xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+                <h3 className="text-xl font-bold mb-6 text-deep-charcoal">
                   Możliwe scenariusze po naszej sesji:
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate dark:text-silver-mist/90">
+                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
+                    <span className="text-subtle-slate">
                       Intuicja podpowiada Ci, że <em>to jest to, czego tak długo szukałeś</em> i rozpoczynamy plan wdrożenia Life OS Upgrade.
                     </span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate dark:text-silver-mist/90">
-                      Skieruję Cię do odpowiedniego <a href="/program" className="text-neural-violet dark:text-luminal-magenta hover:underline">Programu Fundamentalnego</a>
+                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
+                    <span className="text-subtle-slate">
+                      Skieruję Cię do odpowiedniego <a href="/program" className="text-neural-violet hover:underline">Programu Fundamentalnego</a>
                     </span>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate dark:text-silver-mist/90">
+                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
+                    <span className="text-subtle-slate">
                       Po prostu spędzimy pół godziny na sympatycznej rozmowie, podczas której dowiesz się więcej o swoich opcjach
                     </span>
                   </div>
                 </div>
                 
-                <div className="mt-8 p-6 bg-quantum-blue/10 dark:bg-quantum-blue/5 rounded-lg border border-quantum-blue/20">
-                  <p className="text-subtle-slate dark:text-silver-mist/90 leading-relaxed">
-                    <strong className="text-deep-charcoal dark:text-silver-mist">To nie jest sprzedażowa prezentacja</strong> - to rzeczywiste odkrywanie, czy jesteśmy dla siebie odpowiedni. Czasem najlepsza pomoc to szczera informacja o tym, że drogi się rozchodzą.
+                <div className="mt-8 p-6 bg-quantum-blue/10 rounded-lg border border-quantum-blue/20">
+                  <p className="text-subtle-slate leading-relaxed">
+                    <strong className="text-deep-charcoal">To nie jest sprzedażowa prezentacja</strong> - to rzeczywiste odkrywanie, czy jesteśmy dla siebie odpowiedni. Czasem najlepsza pomoc to szczera informacja o tym, że drogi się rozchodzą.
                   </p>
                 </div>
               </GlassCard>

@@ -156,12 +156,12 @@ export default function WebinarMeskiKompas() {
 
             <div className="space-y-8">
               {/* Outcome 1 */}
-              <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 p-8">
+              <Card className="bg-green-50 border-green-200 p-8">
                 <div className="flex items-start gap-6 mb-4">
-                  <span className="text-5xl font-bold text-green-600 dark:text-green-400">1</span>
+                  <span className="text-5xl font-bold text-green-600">1</span>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">KLAROWNA DIAGNOZA</h3>
-                    <span className="text-green-600 dark:text-green-400 font-semibold">20 minut</span>
+                    <span className="text-green-600 font-semibold">20 minut</span>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed ml-16">
@@ -176,12 +176,12 @@ export default function WebinarMeskiKompas() {
               </Card>
 
               {/* Outcome 2 */}
-              <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 p-8">
+              <Card className="bg-green-50 border-green-200 p-8">
                 <div className="flex items-start gap-6 mb-4">
-                  <span className="text-5xl font-bold text-green-600 dark:text-green-400">2</span>
+                  <span className="text-5xl font-bold text-green-600">2</span>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">FRAMEWORK DO NATYCHMIASTOWEGO UŻYCIA</h3>
-                    <span className="text-green-600 dark:text-green-400 font-semibold">45 minut</span>
+                    <span className="text-green-600 font-semibold">45 minut</span>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed ml-16">
@@ -197,12 +197,12 @@ export default function WebinarMeskiKompas() {
               </Card>
 
               {/* Outcome 3 */}
-              <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 p-8">
+              <Card className="bg-green-50 border-green-200 p-8">
                 <div className="flex items-start gap-6 mb-4">
-                  <span className="text-5xl font-bold text-green-600 dark:text-green-400">3</span>
+                  <span className="text-5xl font-bold text-green-600">3</span>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">KONKRETNY PLAN NA NASTĘPNY TYDZIEŃ</h3>
-                    <span className="text-green-600 dark:text-green-400 font-semibold">25 minut</span>
+                    <span className="text-green-600 font-semibold">25 minut</span>
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed ml-16">
@@ -309,7 +309,7 @@ export default function WebinarMeskiKompas() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Ludwik */}
-              <Card className="bg-gradient-to-br from-white via-gray-50 to-accent/5 dark:from-card dark:via-card/90 dark:to-accent/10 border-accent/20 p-8">
+              <Card className="bg-gradient-to-br from-white via-gray-50 to-accent/5 border-accent/20 p-8">
                 <div className="mb-6">
                   <img 
                     src="/lovable-uploads/ludwik-siadlak-profile.png" 
@@ -335,7 +335,7 @@ export default function WebinarMeskiKompas() {
               </Card>
 
               {/* Mateusz */}
-              <Card className="bg-gradient-to-br from-white via-gray-50 to-primary/5 dark:from-card dark:via-card/90 dark:to-primary/10 border-primary/20 p-8">
+              <Card className="bg-gradient-to-br from-white via-gray-50 to-primary/5 border-primary/20 p-8">
                 <div className="mb-6">
                   <img 
                     src="/lovable-uploads/mateusz-lizak-profile.png" 
@@ -378,31 +378,31 @@ export default function WebinarMeskiKompas() {
 
             <div className="space-y-8">
               {/* FOR WHO - YES */}
-              <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 border-l-4 p-8">
+              <Card className="bg-green-50 border-green-200 border-l-4 p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6">✓ TO JEST DLA CIEBIE, JEŚLI:</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Masz 30+ lat i analityczny, systematyczny umysł</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Pracujesz w IT jako team leader, inżynier lub architekt, jesteś konsultantem, freelancerem lub właścicielem biznesu</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Masz stabilną sytuację, ale brakuje ci klarownego kierunku</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Gubisz się w natłoku opcji i projektów (wszystko ważne = nic ważne)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Masz dość teorii i szukasz praktycznych narzędzi</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 dark:text-green-400 mt-1">→</span>
+                    <span className="text-green-600 mt-1">→</span>
                     <span>Cenisz konkret i strukturę ponad niekończące się dyskusje</span>
                   </li>
                 </ul>

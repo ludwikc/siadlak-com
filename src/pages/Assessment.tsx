@@ -72,7 +72,7 @@ const Assessment = () => {
 
       <section
         id="assessment"
-        className="py-16 bg-white/20 dark:bg-deep-space/20 backdrop-blur-sm"
+        className="py-16 bg-white/20 backdrop-blur-sm"
       >
         <div className="container max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
@@ -106,7 +106,7 @@ const Assessment = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-8 border border-gray-200 shadow-lg">
                 <h3 className="text-xl font-semibold mb-6">
                   Podaj swoje dane, aby otrzymać wyniki
                 </h3>
@@ -178,7 +178,7 @@ const Assessment = () => {
                       Rozpocznij test <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
 
-                    <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-2">
+                    <p className="text-xs text-center text-gray-500 mt-2">
                       Twoje dane są bezpieczne. Nie udostępniamy Twoich
                       informacji.
                     </p>
@@ -190,7 +190,7 @@ const Assessment = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-ascension-pink/20">
+      <section className="py-16 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Transformacja zaczyna się od samopoznania

@@ -157,7 +157,7 @@ Perform this analysis for every MAJOR function you added or edited (skip minor c
 When I type "qcheckt", this means:
 
 ```
-You are a SKEPTICAL senior software engineer.
+You are a SKEPTICAL senior software engiwneer.
 Perform this analysis for every MAJOR test you added or edited (skip minor changes):
 
 1. CLAUDE.md checklist Writing Tests Best Practices.

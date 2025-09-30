@@ -68,7 +68,7 @@ const SpecialOfferCountdown = () => {
 
   return (
     <div className="text-center py-2">
-      <div className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+      <div className="mb-2 text-sm font-medium text-gray-600">
         OFERTA SPECJALNA WYGASA ZA:
       </div>
       <div

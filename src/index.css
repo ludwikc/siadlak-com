@@ -132,143 +132,6 @@
   --transition-slow: 0.5s ease;
 }
 
-/* Dark mode selector: .dark or .dark-mode for max compatibility */
-.dark,
-.dark-mode {
-  --bg-color: #0b0b0d;
-  --text-color: #bdbdbd;
-  --card-bg: #1a1a24;
-  --card-text: #e0e0e5;
-  --accent-text: #e0e0e5;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
-  /* Design System Dark Mode Variables - Proper HSL values */
-  --background-primary: 216 9% 11%;
-  --background-secondary: 217 10% 18%;
-  --background-tertiary: 215 9% 20%;
-  --text-primary: 220 9% 72%;
-  --text-secondary: 215 8% 65%;
-  --border-primary: 216 8% 25%;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-
-  /* TrainTheTrainer Dark Mode */
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
-
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.35);
-}
-
-/* Dev-inspired theme from design system swatches - Dark */
-.dev {
-  /* Background colors */
-  --bg-color: #1e1f22;
-  --card-bg: #2b2d31;
-  --card-text: #b5bac1;
-  --text-color: #b5bac1;
-  --accent-color: #7c00ff;
-  --accent-text: #ffffff;
-  --highlight-color: #b100ff;
-  --border-color: #3f4147;
-  --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-
-  /* Additional Dev-inspired variables - Proper HSL values */
-  --background-primary: 210 8% 12%;
-  --background-secondary: 210 8% 18%;
-  --background-tertiary: 210 8% 20%;
-  --text-primary: 210 8% 72%;
-  --text-secondary: 210 8% 65%;
-  --border-primary: 210 8% 25%;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-
-  /* Brand Colors */
-  --color-primary: 267 100% 50%;
-  --color-primary-light: 267 100% 65%;
-  --color-primary-dark: 249 56% 49%;
-  --color-accent: 291 62% 64%;
-  --color-indigo: 233 31% 32%;
-  --color-premium: 45 74% 52%;
-
-  /* UI States - WCAG AA compliant with white text */
-  --color-success: 160 84% 39%;
-  --color-warning: 25 95% 53%;
-  --color-error: 0 84% 60%;
-  --color-info: 249 56% 49%;
-}
-
-/* Dev-inspired theme from design system swatches - Light */
-.dev-light {
-  /* Background colors */
-  --bg-color: #f2f3f5;
-  --card-bg: #e3e5e8;
-  --card-text: #2e3338;
-  --text-color: #2e3338;
-  --accent-color: #7c00ff;
-  --accent-text: #ffffff;
-  --highlight-color: #b100ff;
-  --border-color: #d4d7dc;
-  --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-
-  /* Additional Dev-inspired variables - Proper HSL values */
-  --background-primary: 210 10% 96%;
-  --background-secondary: 210 10% 90%;
-  --background-tertiary: 210 10% 93%;
-  --text-primary: 210 10% 20%;
-  --text-secondary: 221 8% 34%;
-  --border-primary: 210 10% 84%;
-  --border-subtle: rgba(0, 0, 0, 0.1);
-
-  /* Brand Colors */
-  --color-primary: 267 100% 50%;
-  --color-primary-light: 267 100% 65%;
-  --color-primary-dark: 249 56% 49%;
-  --color-accent: 291 62% 64%;
-  --color-indigo: 233 31% 32%;
-  --color-premium: 45 74% 52%;
-
-  /* UI States - WCAG AA compliant with white text */
-  --color-success: 160 84% 39%;
-  --color-warning: 25 95% 53%;
-  --color-error: 0 84% 60%;
-  --color-info: 249 56% 49%;
-}
 
 /* === Gradient Backgrounds === */
 body {
@@ -290,58 +153,6 @@ body {
     color 0.3s;
 }
 
-body.dark:not(.dev),
-body.dark-mode:not(.dev) {
-  background:
-    radial-gradient(circle at top left, rgba(30, 0, 96, 0.3), transparent 25%)
-      fixed,
-    radial-gradient(
-        circle at bottom right,
-        rgba(30, 0, 96, 0.3),
-        transparent 35%
-      )
-      fixed,
-    var(--bg-color) fixed;
-  color: var(--text-color);
-}
-
-body.dev {
-  background:
-    radial-gradient(
-        circle at top left,
-        rgba(177, 0, 255, 0.15),
-        transparent 20%
-      )
-      fixed,
-    radial-gradient(
-        circle at bottom right,
-        rgba(74, 54, 194, 0.15),
-        transparent 30%
-      )
-      fixed,
-    var(--bg-color) fixed;
-  color: var(--text-color);
-  font-family: "Inter", sans-serif;
-}
-
-body.dev-light {
-  background:
-    radial-gradient(
-        circle at top left,
-        rgba(177, 0, 255, 0.05),
-        transparent 20%
-      )
-      fixed,
-    radial-gradient(
-        circle at bottom right,
-        rgba(74, 54, 194, 0.05),
-        transparent 30%
-      )
-      fixed,
-    var(--bg-color) fixed;
-  color: var(--text-color);
-  font-family: "Inter", sans-serif;
-}
 
 /* === Base Typography and Spacing === */
 @layer base {
@@ -413,10 +224,6 @@ body.dev-light {
   background-color: transparent;
 }
 
-.dark .bg-hero-dark {
-  background-color: transparent;
-}
-
 /* === Specialty Layout Spacing === */
 .section {
   padding-top: 40px;
@@ -426,7 +233,7 @@ body.dev-light {
 @layer components {
   /* Navigation */
   .nav-link {
-    @apply text-deep-charcoal dark:text-silver-mist hover:text-neural-violet dark:hover:text-luminal-magenta transition-colors;
+    @apply text-deep-charcoal hover:text-neural-violet transition-colors;
   }
 
   .nav-link-mobile {
@@ -515,25 +322,19 @@ body.dev-light {
     border-color: var(--text-secondary);
   }
 
-  .dark .btn-secondary:hover,
-  .dark-mode .btn-secondary:hover,
-  .dev .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
   /* Section Container */
   .section {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  /* Transparent section backgrounds for both light and dark mode */
+  /* Transparent section backgrounds */
   .bg-transparent-section {
-    @apply bg-white/40 dark:bg-deep-space/40 backdrop-blur-sm;
+    @apply bg-white/40 backdrop-blur-sm;
   }
 
   .bg-transparent-section-darker {
-    @apply bg-white/60 dark:bg-deep-space/60 backdrop-blur-sm;
+    @apply bg-white/60 backdrop-blur-sm;
   }
 }
 

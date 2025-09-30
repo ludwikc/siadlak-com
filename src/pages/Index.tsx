@@ -59,13 +59,13 @@ const Index = () => {
         fullHeight={true}
       />
 
-      <div className="py-12 md:py-16 bg-secondary/30 dark:bg-quantum-blue/20">
+      <div className="py-12 md:py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl mb-4 text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-2xl md:text-3xl mb-4 text-deep-charcoal">
               Zaktualizuj swój system. 
             </h2>
-            <p className="text-xl text-deep-charcoal/80 dark:text-silver-mist/80">
+            <p className="text-xl text-deep-charcoal/80">
               AI jest wszędzie, ale to kombinacja (🧠+🤖)^💜 zapala iskrę i dolewa oliwy do ognia. Pomagam profesjonalistom przejść z Windows 98 na współczesny macOS - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
             </p>
           </div>
@@ -78,7 +78,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal">
                 Czy Life OS jest dla Ciebie?
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-neural-violet to-luminal-magenta mx-auto rounded-full"></div>
@@ -91,8 +91,8 @@ const Index = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Lider lub Ekspert</h3>
-                <p className="text-deep-charcoal/80 dark:text-silver-mist/80 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4 text-neural-violet">Lider lub Ekspert</h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
                   Osiągnąłeś sukces dzięki dotychczasowym metodom, ale czujesz, że stare podejście przestaje wystarczać w nowej, bardziej złożonej rzeczywistości.
                 </p>
               </div>
@@ -103,8 +103,8 @@ const Index = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Przedsiębiorca</h3>
-                <p className="text-deep-charcoal/80 dark:text-silver-mist/80 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4 text-neural-violet">Przedsiębiorca</h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
                   Rozumiesz, że rozwój firmy jest nierozerwalnie związany z rozwojem Twojego własnego umysłu i sposobu myślenia.
                 </p>
               </div>
@@ -115,15 +115,15 @@ const Index = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Profesjonalista</h3>
-                <p className="text-deep-charcoal/80 dark:text-silver-mist/80 leading-relaxed">
+                <h3 className="text-xl font-bold mb-4 text-neural-violet">Profesjonalista</h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
                   Dbasz o dietę, kondycję fizyczną i najlepsze narzędzia, a teraz czujesz, że czas zająć się najważniejszym zasobem – tym, co masz w głowie.
                 </p>
               </div>
             </div>
 
             <div className="glass-card p-8 md:p-12 text-center bg-gradient-to-r from-neural-violet/5 to-luminal-magenta/5">
-              <p className="text-xl md:text-2xl font-medium text-neural-violet dark:text-luminal-magenta leading-relaxed">
+              <p className="text-xl md:text-2xl font-medium text-neural-violet leading-relaxed">
                 Jeśli jesteś gotów, by zadbać o swój umysł z taką samą uwagą, z jaką dbasz o technologię, której używasz – jesteś we właściwym miejscu.
               </p>
             </div>

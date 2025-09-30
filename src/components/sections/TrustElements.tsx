@@ -24,7 +24,7 @@ export default function TrustElements({
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent dark:bg-gradient-text-brand-dark dark:text-transparent">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
             {title}
           </h2>
         </div>
@@ -33,10 +33,10 @@ export default function TrustElements({
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Users
-                className="text-neural-violet dark:text-luminal-magenta mr-2 flex-shrink-0"
+                className="text-neural-violet mr-2 flex-shrink-0"
                 size={24}
               />
-              <p className="text-xl font-medium text-deep-charcoal dark:text-silver-mist">
+              <p className="text-xl font-medium text-deep-charcoal">
                 {communityStats}
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function TrustElements({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="glass-card p-6 rounded-xl">
-              <div className="flex mb-4 text-neural-violet dark:text-luminal-magenta">
+              <div className="flex mb-4 text-neural-violet">
                 <Star size={18} fill="currentColor" />
                 <Star size={18} fill="currentColor" />
                 <Star size={18} fill="currentColor" />
@@ -54,11 +54,11 @@ export default function TrustElements({
                 <Star size={18} fill="currentColor" />
               </div>
 
-              <p className="text-subtle-slate dark:text-silver-mist/80 mb-4 italic">
+              <p className="text-subtle-slate mb-4 italic">
                 "{testimonial.quote}"
               </p>
 
-              <div className="text-deep-charcoal dark:text-silver-mist font-medium">
+              <div className="text-deep-charcoal font-medium">
                 {testimonial.name}, {testimonial.title}
               </div>
             </div>
@@ -69,10 +69,10 @@ export default function TrustElements({
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center mb-4">
               <Award
-                className="text-neural-violet dark:text-luminal-magenta mr-2 flex-shrink-0"
+                className="text-neural-violet mr-2 flex-shrink-0"
                 size={24}
               />
-              <p className="text-lg font-medium text-deep-charcoal dark:text-silver-mist">
+              <p className="text-lg font-medium text-deep-charcoal">
                 {credentialsSummary}
               </p>
             </div>

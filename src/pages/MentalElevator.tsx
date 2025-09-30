@@ -41,10 +41,10 @@ export default function MentalElevator() {
       </section>
 
       {/* Problem Recognition */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Rozpoznajesz ten stan?
             </h2>
 
@@ -56,14 +56,14 @@ export default function MentalElevator() {
                 "Ale w środku? Poczucie fragmentacji. Wrażenie, że żonglujesz różnymi tożsamościami – lidera, partnera, wizjonera – i boisz się, że zaraz upuścisz jedną z piłek."
               ].map((item, index) => (
                 <GlassCard key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                  <p className="text-lg text-deep-charcoal/90 dark:text-silver-mist/90">{item}</p>
+                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet flex-shrink-0 mt-1" />
+                  <p className="text-lg text-deep-charcoal/90">{item}</p>
                 </GlassCard>
               ))}
             </div>
 
             <div className="text-center bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-8 rounded-2xl mb-8">
-              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+              <p className="text-xl font-bold text-deep-charcoal mb-4">
                 Próbowałeś już standardowych rozwiązań. Dostałeś listy "actionable steps", motywacyjne cytaty i kolejne frameworki. Ale problem nie leży w braku narzędzi.
               </p>
               <p className="text-2xl font-bold text-ascension-pink">
@@ -72,7 +72,7 @@ export default function MentalElevator() {
             </div>
 
             <div className="text-center bg-gradient-to-r from-neural-violet/10 to-quantum-blue/10 p-8 rounded-2xl">
-              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
+              <p className="text-xl font-bold text-deep-charcoal">
                 Nie potrzebujesz kolejnej aplikacji mentalnej. Potrzebujesz upgrade'u całego systemu operacyjnego, na którym działasz.
               </p>
             </div>
@@ -81,38 +81,38 @@ export default function MentalElevator() {
       </section>
 
       {/* Why Traditional Solutions Failed */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Dlaczego dotychczasowe rozwiązania zawiodły?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <GlassCard padding="lg" className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-                <h3 className="text-xl font-bold mb-4 text-red-700 dark:text-red-300">Coaching / Mentoring</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
+              <GlassCard padding="lg" className="bg-red-50 border border-red-200">
+                <h3 className="text-xl font-bold mb-4 text-red-700">Coaching / Mentoring</h3>
+                <p className="text-deep-charcoal/90">
                   Daje Ci nowe strategie i "hacki". To jak instalowanie kolejnych aplikacji na systemie, który jest wewnętrznie skonfliktowany. Efekt jest chwilowy, a problem fundamentalny pozostaje.
                 </p>
               </GlassCard>
 
-              <GlassCard padding="lg" className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800">
-                <h3 className="text-xl font-bold mb-4 text-orange-800 dark:text-orange-300">Terapia</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
+              <GlassCard padding="lg" className="bg-orange-50 border border-orange-200">
+                <h3 className="text-xl font-bold mb-4 text-orange-800">Terapia</h3>
+                <p className="text-deep-charcoal/90">
                   Skupia się na analizie przeszłości, ale często nie potrafi przełożyć tych wglądów na Twoją dzisiejszą presję zawodową. Rozumiesz, skąd bierze się Twój perfekcjonizm, ale nadal nie wiesz, jak podejmować odważne decyzje w poniedziałek o 9:00 rano.
                 </p>
               </GlassCard>
 
-              <GlassCard padding="lg" className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
-                <h3 className="text-xl font-bold mb-4 text-yellow-800 dark:text-yellow-300">Kursy Online</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80">
+              <GlassCard padding="lg" className="bg-yellow-50 border border-yellow-200">
+                <h3 className="text-xl font-bold mb-4 text-yellow-800">Kursy Online</h3>
+                <p className="text-deep-charcoal/90">
                   Dostarczają wiedzy, ale ignorują fakt, że prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Dają Ci narzędzia, ale nie potrafią zintegrować Twojej analitycznej natury z intuicją i wewnętrzną mądrością.
                 </p>
               </GlassCard>
             </div>
 
             <div className="text-center bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-2xl">
-              <p className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">
+              <p className="text-xl font-bold text-deep-charcoal">
                 Rezultat? Żyjesz w ciągłym napięciu. Między tym, kim czujesz, że jesteś, a tym, kim "powinieneś" być w biznesie. Między potrzebą kontroli a świadomością, że ta kontrola Cię wyczerpuje.
               </p>
             </div>
@@ -229,10 +229,10 @@ export default function MentalElevator() {
       </section>
 
       {/* Real Effects */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Jakie są realne efekty upgrade'u?
             </h2>
 
@@ -266,12 +266,12 @@ export default function MentalElevator() {
               ].map((item, index) => (
                 <GlassCard key={index} padding="lg" className="flex flex-col">
                   <div className="flex items-center mb-4">
-                    <div className="bg-neural-violet/10 dark:bg-luminal-magenta/10 p-3 rounded-lg mr-4">
-                      {React.cloneElement(item.icon, { className: "w-8 h-8 text-neural-violet dark:text-luminal-magenta" })}
+                    <div className="bg-neural-violet/10 p-3 rounded-lg mr-4">
+                      {React.cloneElement(item.icon, { className: "w-8 h-8 text-neural-violet" })}
                     </div>
-                    <h3 className="text-xl font-bold text-deep-charcoal dark:text-silver-mist">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-deep-charcoal">{item.title}</h3>
                   </div>
-                  <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item.description}</p>
+                  <p className="text-deep-charcoal/90">{item.description}</p>
                 </GlassCard>
               ))}
             </div>
@@ -280,38 +280,38 @@ export default function MentalElevator() {
       </section>
 
       {/* Why This Method Works */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Dlaczego ta metoda działa tam, gdzie inne zawodzą?
             </h2>
 
             <div className="space-y-8">
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Podejście Adaptacyjne, nie Szablonowe</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Podejście Adaptacyjne, nie Szablonowe</h3>
+                <p className="text-deep-charcoal/90 text-lg">
                   Proces jest w 100% dostosowany do Ciebie. Dla jednych będzie jak ostra, konfrontacyjna "terapia szokowa", dla innych jak delikatne, sokratejskie prowadzenie. Diagnozuję, czego naprawdę potrzebujesz do przełomu.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Praca na Poziomie Tożsamości, nie Zachowań</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Praca na Poziomie Tożsamości, nie Zachowań</h3>
+                <p className="text-deep-charcoal/90 text-lg">
                   Nie zmieniamy tylko tego, co robisz. Zmieniamy to, kim jesteś jako lider i człowiek. Integrujemy Twoje role, talenty i "cienie" w jedną, potężną całość.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Integracja, a nie Eliminacja</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Integracja, a nie Eliminacja</h3>
+                <p className="text-deep-charcoal/90 text-lg">
                   Nie walczymy z Twoim analitycznym umysłem czy perfekcjonizmem. Uczymy je współpracować z Twoją intuicją, kreatywnością i wrażliwością, tworząc pełniejszy i bardziej skuteczny model działania.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet dark:text-luminal-magenta">Kontener Bezpieczeństwa</h3>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 text-lg">
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Kontener Bezpieczeństwa</h3>
+                <p className="text-deep-charcoal/90 text-lg">
                   To intensywny proces. Dlatego tworzę dla Ciebie bezpieczną przestrzeń, w której możesz się rozpaść, by zbudować się na nowo, silniejszym. Zapewniam wsparcie i jestem dostępny również między sesjami.
                 </p>
               </GlassCard>
@@ -321,44 +321,44 @@ export default function MentalElevator() {
       </section>
 
       {/* Investment & Commitment */}
-      <section className="py-20 bg-luminous-white dark:bg-deep-space">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Inwestycja i Zobowiązanie
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-6 text-neural-violet dark:text-luminal-magenta">Program:</h3>
+                <h3 className="text-2xl font-bold mb-6 text-neural-violet">Program:</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">8 tygodni, 8 intensywnych, transformujących sesji (od 50 min do 2,5h)</p>
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90">8 tygodni, 8 intensywnych, transformujących sesji (od 50 min do 2,5h)</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">Dostęp do mnie pomiędzy sesjami w razie potrzeby</p>
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90">Dostęp do mnie pomiędzy sesjami w razie potrzeby</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet dark:text-luminal-magenta flex-shrink-0 mt-1" />
-                    <p className="text-deep-charcoal/90 dark:text-silver-mist/80">Dożywotni dostęp do społeczności absolwentów programu</p>
+                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <p className="text-deep-charcoal/90">Dożywotni dostęp do społeczności absolwentów programu</p>
                   </div>
                 </div>
               </GlassCard>
 
               <GlassCard padding="lg" className="bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
-                <h3 className="text-2xl font-bold mb-6 text-neural-violet dark:text-luminal-magenta">Inwestycja:</h3>
+                <h3 className="text-2xl font-bold mb-6 text-neural-violet">Inwestycja:</h3>
                 <div className="text-center mb-6">
                   <p className="text-4xl font-bold text-ascension-pink mb-2">16.000 PLN</p>
-                  <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/80">za pełen, 8-tygodniowy proces transformacyjny</p>
+                  <p className="text-lg text-deep-charcoal/80">za pełen, 8-tygodniowy proces transformacyjny</p>
                 </div>
                 
-                <h4 className="text-xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">Dlaczego taka cena?</h4>
-                <p className="text-deep-charcoal/90 dark:text-silver-mist/80 mb-4">
+                <h4 className="text-xl font-bold mb-4 text-deep-charcoal">Dlaczego taka cena?</h4>
+                <p className="text-deep-charcoal/90 mb-4">
                   To nie jest kurs online ani pakiet coachingowy. To głęboka, wymagająca praca na poziomie Twojej tożsamości. Płacisz za:
                 </p>
-                <ul className="space-y-2 text-deep-charcoal/90 dark:text-silver-mist/80">
+                <ul className="space-y-2 text-deep-charcoal/90">
                   <li>• Moją pełną obecność i zaangażowanie przez 8 tygodni</li>
                   <li>• Dostęp do unikalnej, adaptacyjnej metodologii</li>
                   <li>• Bezpieczną przestrzeń do najtrudniejszych konfrontacji</li>
@@ -371,16 +371,16 @@ export default function MentalElevator() {
       </section>
 
       {/* Qualification */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5 dark:from-deep-space dark:to-quantum-blue/20">
+      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Czy ten program jest dla Ciebie?
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <GlassCard padding="lg" className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-                <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300">✅ TAK, jeśli:</h3>
+              <GlassCard padding="lg" className="bg-green-50 border border-green-200">
+                <h3 className="text-2xl font-bold mb-6 text-green-700">✅ TAK, jeśli:</h3>
                 <div className="space-y-4">
                   {[
                     "Masz na koncie sukcesy, ale czujesz, że prawdziwy potencjał wciąż jest zablokowany",
@@ -389,15 +389,15 @@ export default function MentalElevator() {
                     "Szukasz integracji i spójności, a nie kolejnych narzędzi do zarządzania chaosem"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 dark:text-green-400 flex-shrink-0 mt-1" />
-                      <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item}</p>
+                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <p className="text-deep-charcoal/90">{item}</p>
                     </div>
                   ))}
                 </div>
               </GlassCard>
 
-              <GlassCard padding="lg" className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-                <h3 className="text-2xl font-bold mb-6 text-red-700 dark:text-red-300">❌ NIE, jeśli:</h3>
+              <GlassCard padding="lg" className="bg-red-50 border border-red-200">
+                <h3 className="text-2xl font-bold mb-6 text-red-700">❌ NIE, jeśli:</h3>
                 <div className="space-y-4">
                   {[
                     "Szukasz motywacyjnego \"kopa\" i szybkich rozwiązań",
@@ -406,8 +406,8 @@ export default function MentalElevator() {
                     "Oczekujesz gotowej listy \"5 kroków do sukcesu\""
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 dark:text-red-400 flex-shrink-0 mt-1" />
-                      <p className="text-deep-charcoal/90 dark:text-silver-mist/80">{item}</p>
+                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <p className="text-deep-charcoal/90">{item}</p>
                     </div>
                   ))}
                 </div>

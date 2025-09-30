@@ -52,7 +52,7 @@ export function CTAButton({
 
   const variantClasses = {
     primary: 'bg-neural-violet hover:bg-ascension-pink text-white',
-    secondary: 'bg-transparent border-2 border-neural-violet text-neural-violet hover:bg-neural-violet hover:text-white dark:border-luminal-magenta dark:text-luminal-magenta dark:hover:bg-luminal-magenta dark:hover:text-white',
+    secondary: 'bg-transparent border-2 border-neural-violet text-neural-violet hover:bg-neural-violet hover:text-white
     premium: 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white'
   };
 

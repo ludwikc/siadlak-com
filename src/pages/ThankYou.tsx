@@ -202,13 +202,13 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-md text-deep-charcoal/80">
               Doceniam Twoją odwagę. Większość ludzi nigdy nie podejmuje tego
               pierwszego kroku. Wysłałem szczegóły spotkania na Twój adres
               email. Sprawdź swoją skrzynkę i dodaj spotkanie do kalendarza.
             </p>
 
-            <div className="bg-gray-50 dark:bg-deep-space p-4 rounded-lg border border-gray-100 dark:border-gray-800">
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
               <h3 className="font-medium mb-2 text-neural-violet">
                 🔍 Zaskakujący fakt:
               </h3>
@@ -288,7 +288,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-md text-deep-charcoal/80">
               Twoje miejsce zostało potwierdzone! Wysłałem szczegóły na Twój
               adres email. Sprawdź swoją skrzynkę i dodaj wydarzenie do
               kalendarza, aby nie przegapić webinaru.
@@ -299,7 +299,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <div
               className={`p-4 rounded-lg border ${
                 isOfferExpired
-                  ? "bg-gray-100 dark:bg-gray-800/60 border-gray-300 dark:border-gray-700"
+                  ? "bg-gray-100 border-gray-300"
                   : "bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20"
               }`}
             >
@@ -314,7 +314,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full ${
                     isOfferExpired
-                      ? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
+                      ? "bg-gray-200 text-gray-500"
                       : "bg-neural-violet/20 text-neural-violet"
                   }`}
                 >
@@ -423,7 +423,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </h1>
             </div>
 
-            <p className="text-md text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-md text-deep-charcoal/80">
               Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie
               wkrótce.
             </p>
@@ -442,10 +442,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-luminous-white to-secondary/30 dark:from-deep-space dark:to-neural-violet/30 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-luminous-white to-secondary/30 py-12 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 overflow-hidden z-0">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 dark:from-neural-violet/30 dark:to-ascension-pink/30 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 dark:from-neural-violet/20 dark:to-ascension-pink/20 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-neural-violet/20 to-ascension-pink/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 w-full max-w-lg">

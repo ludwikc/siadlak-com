@@ -1,59 +1,15 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-
-type Theme = "light" | "dark" | "dev" | "dev-light";
+import type React from "react";
+import { createContext, useContext } from "react";
 
 type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-  isDevTheme: boolean;
+  theme: "light";
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
-
-  useEffect(() => {
-    // Check user preference
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-
-    if (
-      savedTheme &&
-      (savedTheme === "light" || savedTheme === "dark" || savedTheme === "dev" || savedTheme === "dev-light")
-    ) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  useEffect(() => {
-    // Apply theme to document
-    document.documentElement.classList.remove("dark", "dev", "dev-light");
-
-    if (theme === "dark" || theme === "dev") {
-      document.documentElement.classList.add("dark");
-    }
-
-    if (theme === "dev") {
-      document.documentElement.classList.add("dev");
-    } else if (theme === "dev-light") {
-      document.documentElement.classList.add("dev-light");
-    }
-
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  function toggleTheme() {
-    setTheme((prevTheme) => {
-      if (prevTheme === "dev") return "dev-light";
-      if (prevTheme === "dev-light") return "dev";
-      return prevTheme === "dark" ? "light" : "dark";
-    });
-  }
-
-  const isDevTheme = theme === "dev" || theme === "dev-light";
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, isDevTheme }}>
+    <ThemeContext.Provider value={{ theme: "light" }}>
       {children}
     </ThemeContext.Provider>
   );

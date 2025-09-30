@@ -173,13 +173,13 @@ export default function Program() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4 text-neural-violet dark:text-luminal-magenta border-neural-violet dark:border-luminal-magenta">
+              <Badge variant="outline" className="mb-4 text-neural-violet border-neural-violet">
                 PODSTAWOWE APLIKACJE
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-deep-charcoal">
                 Instaluj Aplikacje
               </h2>
-              <p className="text-lg text-subtle-slate dark:text-silver-mist/80 mb-8">
+              <p className="text-lg text-subtle-slate mb-8">
                 Konkretne umiejętności: produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu.
               </p>
               
@@ -194,7 +194,7 @@ export default function Program() {
       </section>
 
       {/* Section 2: Featured New App - Męski Kompas */}
-      <section className="py-16 bg-gradient-to-r from-neural-violet/5 to-ascension-pink/5 dark:from-neural-violet/10 dark:to-ascension-pink/10">
+      <section className="py-16 bg-gradient-to-r from-neural-violet/5 to-ascension-pink/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -217,11 +217,11 @@ export default function Program() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <Badge variant="outline" className="mb-4 text-neural-violet dark:text-luminal-magenta border-neural-violet dark:border-luminal-magenta">
+              <Badge variant="outline" className="mb-4 text-neural-violet border-neural-violet">
                 FAQ: EFEKT?
               </Badge>
               
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal dark:text-silver-mist">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal">
                 Pokaż mi jak wygląda proces instalacji
               </h2>
             </div>
@@ -232,8 +232,8 @@ export default function Program() {
               {isFaqOverlayVisible && (
                 <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-2xl">
                   <div className="space-y-6">
-                    <div className="w-16 h-16 bg-neural-violet/20 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mx-auto">
-                      <MessageSquare className="h-8 w-8 text-neural-violet dark:text-luminal-magenta" />
+                    <div className="w-16 h-16 bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto">
+                      <MessageSquare className="h-8 w-8 text-neural-violet" />
                     </div>
                     
                     <div className="space-y-3">
@@ -490,11 +490,11 @@ export default function Program() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
               Gotowy na upgrade systemu?
             </h3>
             
-            <p className="text-lg mb-8 text-subtle-slate dark:text-silver-mist/80">
+            <p className="text-lg mb-8 text-subtle-slate">
               Nie potrzebujesz więcej informacji. Potrzebujesz upgrade'u systemu. Wybierz aplikację i zacznij transformację już dziś.
             </p>
             

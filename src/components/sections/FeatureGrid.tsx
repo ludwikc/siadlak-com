@@ -23,11 +23,11 @@ export default function FeatureGrid({
     <section className="section">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-deep-charcoal dark:text-silver-mist mb-4">
+          <h2 className="text-deep-charcoal mb-4">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-subtle-slate dark:text-silver-mist/80 text-lg">
+            <p className="text-subtle-slate text-lg">
               {subtitle}
             </p>
           )}
@@ -39,22 +39,22 @@ export default function FeatureGrid({
               key={index}
               className="glass-card p-6 rounded-xl hover:transform hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="text-neural-violet dark:text-luminal-magenta mb-4 flex items-center">
+              <div className="text-neural-violet mb-4 flex items-center">
                 {feature.icon}
               </div>
 
-              <h3 className="text-deep-charcoal dark:text-silver-mist text-xl mb-3">
+              <h3 className="text-deep-charcoal text-xl mb-3">
                 {feature.title}
               </h3>
 
-              <p className="text-subtle-slate dark:text-silver-mist/80 mb-4">
+              <p className="text-subtle-slate mb-4">
                 {feature.description}
               </p>
 
               {feature.link && (
                 <a
                   href={feature.link}
-                  className="flex items-center text-neural-violet dark:text-luminal-magenta font-medium group"
+                  className="flex items-center text-neural-violet font-medium group"
                 >
                   Learn more
                   <ArrowRight

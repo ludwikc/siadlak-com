@@ -33,7 +33,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-card rounded-2xl border border-border/70 shadow-2xl overflow-hidden">
             {/* macOS window title bar */}
-            <div className="bg-muted/40 dark:bg-muted/30 border-b border-border px-4 py-2 flex items-center justify-between">
+            <div className="bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-[#ff5f57] border border-black/10"></span>
                 <span className="h-3 w-3 rounded-full bg-[#ffbd2e] border border-black/10"></span>
@@ -64,7 +64,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             </div>
             
             {/* Email content */}
-            <div className="p-6 bg-muted/30 dark:bg-muted/20">
+            <div className="p-6 bg-muted/30">
               <div className="space-y-4 text-base leading-relaxed">
                 <p>Właśnie zapisałeś się na mój webinar.</p>
                 <p><strong>Mój</strong> webinar.</p>

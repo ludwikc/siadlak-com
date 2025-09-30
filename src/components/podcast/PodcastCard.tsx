@@ -29,21 +29,21 @@ const PodcastCard = ({
           />
         </div>
         <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-deep-charcoal dark:text-silver-mist text-xl mb-2 font-semibold">
+          <h3 className="text-deep-charcoal text-xl mb-2 font-semibold">
             {title}
           </h3>
 
           {schedule && (
-            <p className="text-sm text-subtle-slate dark:text-gentle-lavender mb-3">
+            <p className="text-sm text-subtle-slate mb-3">
               {schedule}
             </p>
           )}
 
-          <p className="text-subtle-slate dark:text-silver-mist/80 mb-6 flex-grow">
+          <p className="text-subtle-slate mb-6 flex-grow">
             {description}
           </p>
 
-          <div className="inline-flex items-center text-neural-violet dark:text-luminal-magenta font-medium group">
+          <div className="inline-flex items-center text-neural-violet font-medium group">
             Słuchaj teraz{" "}
             <ArrowRight
               size={18}

@@ -33,7 +33,7 @@ export default function TestimonialCarousel({
     <section className="section">
       <div className="container mx-auto px-4">
         {title && (
-          <h2 className="text-center text-deep-charcoal dark:text-silver-mist mb-16">
+          <h2 className="text-center text-deep-charcoal mb-16">
             {title}
           </h2>
         )}
@@ -41,12 +41,12 @@ export default function TestimonialCarousel({
         <div className="max-w-4xl mx-auto">
           <div className="relative py-8 px-6 md:p-12 glass-card rounded-2xl">
             {/* Quote icon */}
-            <div className="absolute top-6 left-6 text-neural-violet/20 dark:text-luminal-magenta/20">
+            <div className="absolute top-6 left-6 text-neural-violet/20">
               <Quote size={48} />
             </div>
 
             <div className="text-center">
-              <blockquote className="text-lg md:text-xl text-deep-charcoal dark:text-silver-mist italic mb-8 relative z-10 px-4">
+              <blockquote className="text-lg md:text-xl text-deep-charcoal italic mb-8 relative z-10 px-4">
                 "{currentTestimonial.quote}"
               </blockquote>
 
@@ -60,10 +60,10 @@ export default function TestimonialCarousel({
                 ) : (
                   <div className="w-16 h-16 rounded-full bg-gradient-brand-primary mb-3"></div>
                 )}
-                <div className="text-deep-charcoal dark:text-silver-mist font-semibold">
+                <div className="text-deep-charcoal font-semibold">
                   {currentTestimonial.name}
                 </div>
-                <div className="text-subtle-slate dark:text-silver-mist/70 text-sm">
+                <div className="text-subtle-slate text-sm">
                   {currentTestimonial.title}
                 </div>
               </div>
@@ -75,14 +75,14 @@ export default function TestimonialCarousel({
                 <button
                   onClick={goToPrev}
                   aria-label="Previous testimonial"
-                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 dark:bg-quantum-blue/30 dark:hover:bg-quantum-blue/50 text-deep-charcoal dark:text-silver-mist transition-colors"
+                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal transition-colors"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
                   onClick={goToNext}
                   aria-label="Next testimonial"
-                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 dark:bg-quantum-blue/30 dark:hover:bg-quantum-blue/50 text-deep-charcoal dark:text-silver-mist transition-colors"
+                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-deep-charcoal transition-colors"
                 >
                   <ChevronRight size={20} />
                 </button>

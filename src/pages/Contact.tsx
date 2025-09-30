@@ -13,7 +13,7 @@ const Contact = () => {
       <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD] dark:text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#BDBDBD]">
               Kontakt
             </h1>
             <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
@@ -27,22 +27,22 @@ const Contact = () => {
       </section>
 
       {/* Contact Options Section */}
-      <section className="py-16 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             {/* Direct Contact Options */}
             <div className="glass-card p-6 md:p-8 rounded-xl">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-ascension-pink/10 dark:bg-ascension-pink/30 rounded-full flex items-center justify-center mr-4">
-                  <Mail className="text-ascension-pink dark:text-luminal-magenta" />
+                <div className="w-12 h-12 bg-ascension-pink/10 rounded-full flex items-center justify-center mr-4">
+                  <Mail className="text-ascension-pink" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
                   Kontakt bezpośredni
                 </h2>
               </div>
 
               <div className="space-y-8">
-                <p className="text-subtle-slate dark:text-silver-mist/90 text-center text-lg">
+                <p className="text-subtle-slate text-center text-lg">
                   Wybierz preferowaną formę kontaktu:
                 </p>
 
@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
 
                 <div className="text-center pt-6">
-                  <p className="text-subtle-slate dark:text-silver-mist/70 text-base">
+                  <p className="text-subtle-slate text-base">
                     Odpowiadam osobiście na wszystkie wiadomości
                   </p>
                 </div>

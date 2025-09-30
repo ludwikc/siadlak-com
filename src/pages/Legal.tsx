@@ -5,17 +5,17 @@ import Layout from '../components/layout/Layout';
 const Legal = () => {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 pt-20 pb-20">
+      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-20 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-text-brand-dark">
               Informacje prawne
             </h1>
 
-            <div className="bg-white/80 dark:bg-deep-space/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg mb-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-lg mb-12">
               <h2 className="text-2xl font-bold mb-6">Polityka prywatności</h2>
 
-              <div className="prose dark:prose-invert max-w-none">
+              <div className="prose max-w-none">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
@@ -68,10 +68,10 @@ const Legal = () => {
               </div>
             </div>
 
-            <div className="bg-white/80 dark:bg-deep-space/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg mb-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-lg mb-12">
               <h2 className="text-2xl font-bold mb-6">Regulamin usług</h2>
 
-              <div className="prose dark:prose-invert max-w-none">
+              <div className="prose max-w-none">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
@@ -119,10 +119,10 @@ const Legal = () => {
               </div>
             </div>
 
-            <div className="bg-white/80 dark:bg-deep-space/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-lg">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-lg">
               <h2 className="text-2xl font-bold mb-6">Polityka cookies</h2>
 
-              <div className="prose dark:prose-invert max-w-none">
+              <div className="prose max-w-none">
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie

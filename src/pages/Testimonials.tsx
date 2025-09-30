@@ -102,7 +102,7 @@ const Testimonials = () => {
       {/* Featured Testimonials */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+          <h2 className="text-3xl font-bold mb-12 text-deep-charcoal text-center">
             Transformation Stories
           </h2>
 
@@ -112,33 +112,33 @@ const Testimonials = () => {
               .map((testimonial, index) => (
                 <div
                   key={index}
-                  className="glass-card p-8 rounded-xl border-2 border-ascension-pink dark:border-luminal-magenta relative"
+                  className="glass-card p-8 rounded-xl border-2 border-ascension-pink relative"
                 >
                   <div className="absolute top-4 right-4">
-                    <Quote className="h-8 w-8 text-neural-violet/20 dark:text-luminal-magenta/20" />
+                    <Quote className="h-8 w-8 text-neural-violet/20" />
                   </div>
 
-                  <p className="text-subtle-slate dark:text-silver-mist/90 mb-6 italic">
+                  <p className="text-subtle-slate mb-6 italic">
                     "{testimonial.quote}"
                   </p>
 
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-brand-primary mr-4"></div>
                     <div>
-                      <p className="font-bold text-deep-charcoal dark:text-silver-mist">
+                      <p className="font-bold text-deep-charcoal">
                         {testimonial.name}
                       </p>
-                      <p className="text-sm text-subtle-slate dark:text-silver-mist/70">
+                      <p className="text-sm text-subtle-slate">
                         {testimonial.title}, {testimonial.company}
                       </p>
-                      <p className="text-sm text-neural-violet dark:text-luminal-magenta">
+                      <p className="text-sm text-neural-violet">
                         {testimonial.program} Program
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-neural-violet/5 dark:bg-luminal-magenta/10 p-4 rounded-lg">
-                    <p className="text-sm text-deep-charcoal dark:text-silver-mist">
+                  <div className="bg-neural-violet/5 p-4 rounded-lg">
+                    <p className="text-sm text-deep-charcoal">
                       <strong>Results:</strong> {testimonial.results}
                     </p>
                   </div>
@@ -151,7 +151,7 @@ const Testimonials = () => {
       {/* All Testimonials */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-deep-charcoal dark:text-silver-mist text-center">
+          <h2 className="text-3xl font-bold mb-12 text-deep-charcoal text-center">
             More Success Stories
           </h2>
 
@@ -161,30 +161,30 @@ const Testimonials = () => {
               .map((testimonial, index) => (
                 <div key={index} className="glass-card p-6 rounded-xl relative">
                   <div className="absolute top-4 right-4">
-                    <Quote className="h-6 w-6 text-neural-violet/20 dark:text-luminal-magenta/20" />
+                    <Quote className="h-6 w-6 text-neural-violet/20" />
                   </div>
 
-                  <p className="text-subtle-slate dark:text-silver-mist/90 mb-4 italic">
+                  <p className="text-subtle-slate mb-4 italic">
                     "{testimonial.quote}"
                   </p>
 
                   <div className="flex items-center mb-4">
                     <div className="w-10 h-10 rounded-full bg-gradient-brand-primary mr-3"></div>
                     <div>
-                      <p className="font-bold text-deep-charcoal dark:text-silver-mist">
+                      <p className="font-bold text-deep-charcoal">
                         {testimonial.name}
                       </p>
-                      <p className="text-xs text-subtle-slate dark:text-silver-mist/70">
+                      <p className="text-xs text-subtle-slate">
                         {testimonial.title}, {testimonial.company}
                       </p>
-                      <p className="text-xs text-neural-violet dark:text-luminal-magenta">
+                      <p className="text-xs text-neural-violet">
                         {testimonial.program} Program
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-neural-violet/5 dark:bg-luminal-magenta/10 p-3 rounded-lg">
-                    <p className="text-xs text-deep-charcoal dark:text-silver-mist">
+                  <div className="bg-neural-violet/5 p-3 rounded-lg">
+                    <p className="text-xs text-deep-charcoal">
                       <strong>Results:</strong> {testimonial.results}
                     </p>
                   </div>

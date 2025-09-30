@@ -21,17 +21,17 @@ export default function NewPodcast() {
       {/* Content from /podcast page */}
       <section
         id="podcasts"
-        className="py-16 bg-secondary/30 dark:bg-quantum-blue/20"
+        className="py-16 bg-secondary/30"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+            <p className="text-lg text-deep-charcoal">
               Codzienne dojazdy do pracy, bieganie, czy poranne przygotowania to
               idealny czas na rozwój. Nagrywam te podcasty z myślą o Was -
               zapracowanych profesjonalistach, którzy cenią efektywność i chcą
               wykorzystać każdą minutę na zwiększenie swojego potencjału.
             </p>
-            <p className="mt-4 text-lg text-deep-charcoal dark:text-silver-mist">
+            <p className="mt-4 text-lg text-deep-charcoal">
               Wybierz format, który najlepiej pasuje do Twojego celu: praktyczne
               strategie zwiększania produktywności lub ćwiczenia uważności,
               które wzmocnią Twoją odporność psychiczną.

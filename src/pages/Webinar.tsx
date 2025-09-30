@@ -159,8 +159,8 @@ const Webinar = () => {
                 </div>
 
                 {/* Benefits */}
-                <div className="bg-green-50 dark:bg-green-950/20 rounded-2xl p-8 border border-green-200 dark:border-green-800 shadow-lg">
-                  <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-400 border-b-3 border-green-500 pb-3">
+                <div className="bg-green-50 rounded-2xl p-8 border border-green-200 shadow-lg">
+                  <h3 className="text-2xl font-bold mb-6 text-green-700 border-b-3 border-green-500 pb-3">
                     ✅ UPGRADE SYSTEMU <br/>(Co wdrożysz na tym warsztacie)
                   </h3>
                   <ul className="space-y-6" role="list">
@@ -170,7 +170,7 @@ const Webinar = () => {
                       '**SYNTEZA: PLAN + WARTOŚCI:** Zrozumiesz, dlaczego sam plan to pusta checklista, a sama wizja to marzycielstwo. Pokażemy Ci, jak połączyć te dwa światy, aby Twoje codzienne działania nabrały sensu i przestały generować poczucie straty.',
                       '**DEFINICJA NOWEJ SIŁY:** Zobaczysz, na czym polega upgrade męskiego systemu operacyjnego na 2025 rok. Dowiesz się, jak przejść od skomplikowanej kontroli do prostej spójności, która daje autentyczną siłę i spokój w działaniu.'
                     ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-4 p-4 bg-white/50 dark:bg-green-900/20 rounded-lg" role="listitem">
+                      <li key={index} className="flex items-start gap-4 p-4 bg-white/50 rounded-lg" role="listitem">
                         <span className="flex-shrink-0 w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm" aria-hidden="true">
                           ✓
                         </span>
@@ -191,7 +191,7 @@ const Webinar = () => {
               </h2>
               
               {/* Ludwik C. Siadlak */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-accent/5 dark:from-card dark:via-card/90 dark:to-accent/10 rounded-3xl shadow-2xl border border-accent/20 mb-12">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-accent/5 rounded-3xl shadow-2xl border border-accent/20 mb-12">
                 {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-primary/5"></div>
                 <div className="absolute -top-20 -left-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
@@ -201,11 +201,11 @@ const Webinar = () => {
                   {/* Enhanced Photo Section */}
                   <div className="flex-shrink-0 relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <div className="relative bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-700 p-2 rounded-full shadow-xl">
+                    <div className="relative bg-gradient-to-br from-white to-gray-100 p-2 rounded-full shadow-xl">
                       <img 
                         src="/lovable-uploads/ludwik-siadlak-profile.png" 
                         alt="Ludwik C. Siadlak - Założyciel i wizjoner systemu Męskiego Kompasu" 
-                        className="w-56 h-56 rounded-full object-cover border-4 border-white dark:border-gray-600 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                        className="w-56 h-56 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     {/* Leadership badge */}
@@ -249,7 +249,7 @@ Narzędzia świadomości                      </span>
               </div>
 
               {/* Mateusz Lizak */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5 dark:from-card dark:via-card/90 dark:to-primary/10 rounded-3xl shadow-2xl border border-primary/20">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-primary/5 rounded-3xl shadow-2xl border border-primary/20">
                 {/* Background accent */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
@@ -259,11 +259,11 @@ Narzędzia świadomości                      </span>
                   {/* Enhanced Photo Section */}
                   <div className="flex-shrink-0 relative group">
                     <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <div className="relative bg-gradient-to-br from-white to-gray-100 dark:from-gray-800 dark:to-gray-700 p-2 rounded-full shadow-xl">
+                    <div className="relative bg-gradient-to-br from-white to-gray-100 p-2 rounded-full shadow-xl">
                       <img 
                         src="/lovable-uploads/mateusz-lizak-webinar-leader.png" 
                         alt="Mateusz Lizak - Mentor świadomych mężczyzn i mistrz pracy warsztatowej" 
-                        className="w-56 h-56 rounded-full object-cover border-4 border-white dark:border-gray-600 shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                        className="w-56 h-56 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     {/* Leadership badge */}
@@ -320,7 +320,7 @@ Narzędzia świadomości                      </span>
               
               <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
                 {/* Countdown */}
-                <div className="bg-white dark:bg-card border-2 border-primary/30 p-8 rounded-3xl text-center shadow-2xl">
+                <div className="bg-white border-2 border-primary/30 p-8 rounded-3xl text-center shadow-2xl">
                   <h3 className="text-2xl font-bold mb-6 text-foreground">Do startu warsztatu pozostało:</h3>
                   <div
                     className="mb-6"
@@ -374,7 +374,7 @@ Narzędzia świadomości                      </span>
                 </div>
 
                 {/* Agenda */}
-                <div className="bg-white dark:bg-card rounded-3xl p-8 shadow-2xl border border-border">
+                <div className="bg-white rounded-3xl p-8 shadow-2xl border border-border">
                   <h3 className="text-2xl font-bold mb-6 text-foreground">Agenda warsztatu: Czysty system, zero bullshitu.</h3>
                   <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
                     To nie będzie pasywne słuchanie. To interaktywna sesja, podczas której przeprowadzimy Cię przez 3 kluczowe etapy:
@@ -414,7 +414,7 @@ Narzędzia świadomości                      </span>
               </div>
               
               {/* Target Audience */}
-              <div className="mt-16 bg-white dark:bg-card rounded-3xl p-8 shadow-2xl border border-border max-w-4xl mx-auto">
+              <div className="mt-16 bg-white rounded-3xl p-8 shadow-2xl border border-border max-w-4xl mx-auto">
                 <h3 className="text-2xl font-bold mb-6 text-foreground">Dla kogo jest ten warsztat?</h3>
                 <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
                   Dla analitycznych profesjonalistów, developerów, team leaderów, managerów i freelancerów (30+), którzy czują, że utknęli w pętli analizy, presji i braku klarownego kierunku. Dla mężczyzn, którzy cenią logikę, strukturę i konkretne rozwiązania, a nie puste frazesy.

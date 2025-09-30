@@ -38,7 +38,7 @@ export default function Hero({
     }
     
     // Theme-adaptive: #FCFAFF in light mode, #0A0A0A in dark mode
-    return "bg-hero-light dark:bg-hero-dark";
+    return "bg-hero-light";
   };
 
   // Special case for /podcast/uwazne-zycie - align content to the right
@@ -51,8 +51,8 @@ export default function Hero({
       role="banner"
     >
       {/* Dark mode gradient blur elements matching reference CSS */}
-      <div className="hidden dark:block gradient-blur-top-right z-0"></div>
-      <div className="hidden dark:block gradient-blur-bottom-left z-0"></div>
+      <div className="hidden gradient-blur-top-right z-0"></div>
+      <div className="hidden gradient-blur-bottom-left z-0"></div>
 
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
@@ -93,7 +93,7 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90 dark:text-white/95"}
+              mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90"}
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
               `}
               style={{ animationDelay: "0.2s" }}

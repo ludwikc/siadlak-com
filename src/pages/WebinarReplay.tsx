@@ -77,7 +77,7 @@ const WebinarReplay = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary dark:from-deep-space dark:to-neural-violet/30 pt-12 pb-20">
+      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 text-purple-500 mb-4">
@@ -90,11 +90,11 @@ const WebinarReplay = () => {
               inteligencji
             </h1>
 
-            <p className="text-lg mb-4 text-deep-charcoal/80 dark:text-silver-mist/90">
+            <p className="text-lg mb-4 text-deep-charcoal/80">
               Nagranie dostępne tylko do 27 maja 2025
             </p>
 
-            <div className="max-w-xs mx-auto mb-8 bg-white/80 dark:bg-deep-space/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+            <div className="max-w-xs mx-auto mb-8 bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200">
               <p className="font-medium mb-2">Nagranie wygasa za:</p>
               <div className="font-mono text-2xl font-bold text-neural-violet">
                 {formatTime(timeLeft)}
@@ -113,7 +113,7 @@ const WebinarReplay = () => {
               </div>
 
               {/* Timeline Navigation */}
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
                   Nawigacja po rozdziałach:
                 </h3>
@@ -137,7 +137,7 @@ const WebinarReplay = () => {
               <div
                 className={`rounded-2xl p-8 border shadow-lg ${
                   offerExpired
-                    ? "bg-gray-100 dark:bg-gray-800/60 border-gray-300 dark:border-gray-700"
+                    ? "bg-gray-100 border-gray-300"
                     : "bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20"
                 }`}
               >
@@ -153,7 +153,7 @@ const WebinarReplay = () => {
                   <div
                     className={`px-3 py-1 rounded-full text-sm ${
                       offerExpired
-                        ? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
+                        ? "bg-gray-200 text-gray-500"
                         : "bg-neural-violet/20 text-neural-violet"
                     }`}
                   >
@@ -192,7 +192,7 @@ const WebinarReplay = () => {
               </div>
 
               {/* Bonus Section */}
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
                   Ekskluzywne materiały, o których nie wspomniałem podczas
                   webinaru:
@@ -217,7 +217,7 @@ const WebinarReplay = () => {
               </div>
 
               {/* Social Sharing */}
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
                   Znasz kogoś, kto potrzebuje tej wiedzy?
                 </h3>
@@ -271,7 +271,7 @@ const WebinarReplay = () => {
             {/* Sidebar - 1 column wide */}
             <div className="space-y-6">
               {/* Engagement Features */}
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-6">
                   Maksymalizuj swoją naukę:
                 </h3>
@@ -334,7 +334,7 @@ const WebinarReplay = () => {
               </div>
 
               {/* Testimonial */}
-              <div className="bg-white dark:bg-deep-space/60 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <p className="italic mb-4">
                   "Po implementacji tylko trzech technik z metodologii Black
                   Panther, moja efektywność wzrosła o 40%, a co ważniejsze -

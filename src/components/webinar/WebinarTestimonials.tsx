@@ -27,7 +27,7 @@ const testimonials = [
 
 const WebinarTestimonials = () => {
   return (
-    <section className="py-16 bg-white/20 dark:bg-deep-space/20 backdrop-blur-sm">
+    <section className="py-16 bg-white/20 backdrop-blur-sm">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
           Co mówią uczestnicy poprzednich webinarów
@@ -37,7 +37,7 @@ const WebinarTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-deep-space/80 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-800"
+              className="bg-white rounded-xl p-6 shadow-lg border border-gray-200"
             >
               <div className="flex items-center mb-4">
                 <img
@@ -47,12 +47,12 @@ const WebinarTestimonials = () => {
                 />
                 <div>
                   <p className="font-medium">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600">
                     {testimonial.role}
                   </p>
                 </div>
               </div>
-              <p className="italic text-gray-700 dark:text-gray-300">
+              <p className="italic text-gray-700">
                 "{testimonial.quote}"
               </p>
             </div>
@@ -60,9 +60,9 @@ const WebinarTestimonials = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <div className="flex items-center space-x-4 bg-white/80 dark:bg-deep-space/80 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="flex items-center space-x-4 bg-white/80 p-4 rounded-lg border border-gray-200">
             <div className="text-3xl font-bold text-neural-violet">98%</div>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700">
               uczestników ocenia webinary Ludwika jako "warte każdej minuty"
             </p>
           </div>

@@ -3,19 +3,19 @@ import Layout from "../components/layout/Layout";
 export default function Terms() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-secondary via-luminous-white to-secondary dark:from-deep-space dark:via-deep-space dark:to-charcoal-night">
+      <div className="min-h-screen bg-gradient-to-br from-secondary via-luminous-white to-secondary">
         <div className="container mx-auto px-4 pt-24 pb-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-deep-charcoal mb-4">
                 Regulamin Usług
               </h1>
-              <p className="text-lg text-deep-charcoal/70 dark:text-silver-mist/70">
+              <p className="text-lg text-deep-charcoal/70">
                 Warunki korzystania z naszych usług
               </p>
             </div>
 
-            <div className="prose prose-lg max-w-none text-deep-charcoal dark:text-silver-mist">
+            <div className="prose prose-lg max-w-none text-deep-charcoal">
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">1. Postanowienia ogólne</h2>
                 <p>
@@ -125,7 +125,7 @@ export default function Terms() {
                 <p>
                   W sprawach związanych z niniejszym regulaminem prosimy o kontakt poprzez formularz kontaktowy dostępny na stronie internetowej lub pod adresem e-mail podanym w stopce strony.
                 </p>
-                <p className="mt-4 text-sm text-deep-charcoal/60 dark:text-silver-mist/60">
+                <p className="mt-4 text-sm text-deep-charcoal/60">
                   Regulamin obowiązuje od dnia jego publikacji na stronie internetowej.
                 </p>
               </section>

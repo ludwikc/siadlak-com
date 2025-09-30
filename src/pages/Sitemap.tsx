@@ -98,18 +98,18 @@ const Sitemap = () => {
       </section>
 
       {/* Sitemap Content */}
-      <section className="py-16 md:py-24 bg-luminous-white dark:bg-deep-space">
+      <section className="py-16 md:py-24 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {siteStructure.map((section, sectionIndex) => (
               <div key={sectionIndex} className="mb-12">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-neural-violet/10 dark:bg-neural-violet/30 rounded-full flex items-center justify-center mr-4">
-                    <div className="text-neural-violet dark:text-luminal-magenta">
+                  <div className="w-10 h-10 bg-neural-violet/10 rounded-full flex items-center justify-center mr-4">
+                    <div className="text-neural-violet">
                       {section.icon}
                     </div>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal dark:text-silver-mist">
+                  <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
                     {section.category}
                   </h2>
                 </div>
@@ -119,32 +119,32 @@ const Sitemap = () => {
                     <GlassCard key={pageIndex} className="p-6 h-full">
                       <div className="flex flex-col h-full">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-lg font-semibold text-deep-charcoal dark:text-silver-mist">
+                          <h3 className="text-lg font-semibold text-deep-charcoal">
                             {page.name}
                           </h3>
                           {page.path.includes(':') || section.category === 'Strony w przygotowaniu' ? (
-                            <span className="text-gray-400 dark:text-gray-500 text-sm">
+                            <span className="text-gray-400 text-sm">
                               {section.category === 'Strony w przygotowaniu' ? 'Wkrótce' : 'Dynamiczne'}
                             </span>
                           ) : (
-                            <ExternalLink className="h-4 w-4 text-neural-violet dark:text-luminal-magenta flex-shrink-0" />
+                            <ExternalLink className="h-4 w-4 text-neural-violet flex-shrink-0" />
                           )}
                         </div>
                         
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                        <p className="text-gray-600 text-sm mb-4 flex-grow">
                           {page.description}
                         </p>
                         
                         <div className="mt-auto">
                           {page.path.includes(':') || section.category === 'Strony w przygotowaniu' ? (
-                            <code className="text-xs bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-gray-600 dark:text-gray-400">
+                            <code className="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">
                               {page.path}
                             </code>
                           ) : (
                             <Link 
                               to={page.path} 
                               onClick={() => window.scrollTo(0, 0)}
-                              className="inline-flex items-center text-neural-violet dark:text-luminal-magenta hover:text-neural-violet/80 dark:hover:text-luminal-magenta/80 transition-colors text-sm font-medium"
+                              className="inline-flex items-center text-neural-violet hover:text-neural-violet/80 transition-colors text-sm font-medium"
                             >
                               Przejdź do strony
                               <ExternalLink className="h-3 w-3 ml-1" />
@@ -162,13 +162,13 @@ const Sitemap = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 md:py-24 bg-secondary/30 dark:bg-quantum-blue/30">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal dark:text-silver-mist">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
               Nie możesz znaleźć tego, czego szukasz?
             </h2>
-            <p className="text-lg mb-8 text-gray-600 dark:text-gray-300">
+            <p className="text-lg mb-8 text-gray-600">
               Skontaktuj się ze mną bezpośrednio - chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>

@@ -41,7 +41,7 @@ const WebinarCountdown = () => {
 
   return (
     <div className="my-8">
-      <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
+      <p className="text-sm font-medium text-gray-600 mb-2">
         WEBINAR ROZPOCZYNA SIĘ ZA:
       </p>
       <div className="flex space-x-4">
@@ -57,7 +57,7 @@ const WebinarCountdown = () => {
 const CountdownItem = ({ label, value }: { label: string; value: number }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="text-2xl font-bold min-w-[60px] px-4 py-3 text-center bg-white dark:bg-deep-space backdrop-blur-lg rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm">
+      <div className="text-2xl font-bold min-w-[60px] px-4 py-3 text-center bg-white backdrop-blur-lg rounded-lg border border-gray-200 shadow-sm">
         {value.toString().padStart(2, "0")}
       </div>
       <span className="text-xs font-medium mt-1">{label}</span>

@@ -85,10 +85,10 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-20 bg-red-50 dark:bg-red-950/20">
+      <section className="py-20 bg-red-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-red-800 dark:text-red-300">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-red-800">
               Czy to brzmi znajomo?
             </h2>
             
@@ -100,9 +100,9 @@ export default function TrainTheTrainer() {
                 "Czujesz frustrację, gdy widzisz, jak inni 'szkoleniowcy' marnują czas i potencjał grupy...",
                 "Wiesz, że masz to 'coś', ale nie wiesz, jak to opakować i sprzedać jako premiumową usługę szkoleniową?"
               ].map((item, index) => (
-                <GlassCard key={index} className="flex items-start gap-4 p-6 bg-white dark:bg-red-900/30 border border-red-200 dark:border-red-800">
+                <GlassCard key={index} className="flex items-start gap-4 p-6 bg-white border border-red-200">
                   <CheckCircle className="w-6 h-6 flex-shrink-0 mt-1 text-red-600" />
-                  <p className="text-lg text-red-800 dark:text-red-200">{item}</p>
+                  <p className="text-lg text-red-800">{item}</p>
                 </GlassCard>
               ))}
             </div>

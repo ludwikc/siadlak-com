@@ -92,34 +92,34 @@ const LifeHackingPodcast = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/20">
+      <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg text-deep-charcoal dark:text-silver-mist mb-6">
+            <p className="text-lg text-deep-charcoal mb-6">
               Jeśli jesteś freelancerem, przedsiębiorcą, prawnikiem, politykiem
               czy płatnym zabójcą - ten podcast jest dla CIebie.
             </p>
-            <p className="text-lg text-deep-charcoal dark:text-silver-mist mb-6">
+            <p className="text-lg text-deep-charcoal mb-6">
               Docenisz konkretne, oparte na doświadczeniu strategie zamiast
               teoretycznych koncepcji. Dlatego każdy odcinek skupia się na
               sprawdzonych rozwiązaniach, które można natychmiast wdrożyć –
               idealny towarzysz podczas dojazdów do pracy czy na siłownię.
             </p>
-            <p className="text-lg text-deep-charcoal dark:text-silver-mist">
+            <p className="text-lg text-deep-charcoal">
               Jeśli zmagasz się z równoważeniem wysokich ambicji i potrzeby
               odpoczynku, ten podcast dostarczy Ci narzędzi, które zoptymalizują
               Twój czas i energię bez ryzyka wypalenia.
             </p>
 
-            <div className="mt-8 p-4 bg-luminous-white dark:bg-deep-space/80 rounded-lg border border-border">
-              <h3 className="font-semibold text-neural-violet dark:text-neural-violet-light mb-2">
+            <div className="mt-8 p-4 bg-luminous-white rounded-lg border border-border">
+              <h3 className="font-semibold text-neural-violet mb-2">
                 Informacje o podcaście:
               </h3>
-              <p className="text-deep-charcoal dark:text-silver-mist">
+              <p className="text-deep-charcoal">
                 <strong>Nowe odcinki:</strong> Co czwartek – idealny moment na
                 refleksję przed końcem tygodnia
               </p>
-              <p className="text-deep-charcoal dark:text-silver-mist">
+              <p className="text-deep-charcoal">
                 <strong>Prowadzi:</strong> Ludwik C. Siadlak - life hacker,
                 trener, mentor, absolwent Oksfordu i motocyklista w jednym
               </p>
@@ -160,12 +160,12 @@ const LifeHackingPodcast = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-secondary/30 dark:bg-quantum-blue/20">
+      <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-deep-charcoal dark:text-silver-mist mb-4">
+          <h2 className="text-2xl font-bold text-deep-charcoal mb-4">
             Zasubskrybuj i nigdy nie przegap nowego odcinka
           </h2>
-          <p className="text-lg text-deep-charcoal/80 dark:text-silver-mist/80 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-deep-charcoal/80 mb-6 max-w-2xl mx-auto">
             Dołącz do społeczności słuchaczy, którzy co tydzień otrzymują
             powiadomienia o nowych odcinkach i ekskluzywne materiały, które nie
             są publikowane nigdzie indziej.
@@ -174,7 +174,7 @@ const LifeHackingPodcast = () => {
             <input
               type="email"
               placeholder="Twój adres email"
-              className="flex-grow py-2 px-4 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-neural-violet dark:bg-deep-space dark:text-silver-mist"
+              className="flex-grow py-2 px-4 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-neural-violet"
               required
             />
             <button
