@@ -39,8 +39,8 @@ export function GlassCard({
 
   const variantClasses = {
     default: 'glass-card',
-    bordered: 'glass-card border-2 border-white/20
-    subtle: 'bg-white/5 backdrop-blur-sm border border-white/10
+    bordered: 'glass-card border-2 border-white/20',
+    subtle: 'bg-white/5 backdrop-blur-sm border border-white/10'
   };
 
   return (

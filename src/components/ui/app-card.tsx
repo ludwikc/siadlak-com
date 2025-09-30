@@ -61,7 +61,7 @@ export default function AppCard({
   const gradient = categoryConfig[category].gradient;
 
   return (
-    <GlassCard className={`rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 relative ${featured ? 'border-2 border-ascension-pink/30 : ''} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
+    <GlassCard className={`rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 relative ${featured ? 'border-2 border-ascension-pink/30' : ''} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
       {/* Status Badge - Top Right */}
       <Badge className={`absolute top-3 right-3 text-xs z-10 ${statusConfig[status]}`}>
         {status}
@@ -77,14 +77,13 @@ export default function AppCard({
             </div>
             
             <div className="flex-1">
-              <h3 className={`text-base sm:text-xl font-bold leading-tight ${premium ? 'text-white' : 'text-deep-charcoal
+              <h3 className={`text-base sm:text-xl font-bold leading-tight ${premium ? 'text-white' : 'text-deep-charcoal'}`}>
                 {title}
               </h3>
             </div>
           </div>
 
-          {/* Subtitle - Full width on mobile */}
-          <p className={`text-sm sm:text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet
+          <p className={`text-sm sm:text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet'}`}>
             {subtitle}
           </p>
 
@@ -102,7 +101,7 @@ export default function AppCard({
                   {rating.toFixed(1)}
                 </span>
               </div>
-              <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate
+              <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate'}`}>
                 {downloads}
               </span>
             </div>
@@ -110,14 +109,14 @@ export default function AppCard({
 
           {/* Category + Key Stats - Better mobile flow */}
           <div className="flex items-center gap-2 flex-wrap mb-3">
-            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet
+            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet'}`}>
               {category}
             </Badge>
             
             {duration && (
               <div className="flex items-center gap-1">
-                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate
+                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate'}`}>
                   {duration}
                 </span>
               </div>
@@ -125,8 +124,8 @@ export default function AppCard({
             
             {target && (
               <div className="flex items-center gap-1">
-                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate
+                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate'}`} />
+                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate'}`}>
                   {target}
                 </span>
               </div>
@@ -134,8 +133,7 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* Value Proposition - Left aligned */}
-        <p className={`text-sm sm:text-base mb-4 leading-relaxed text-left ${premium ? 'text-white/80' : 'text-subtle-slate
+        <p className={`text-sm sm:text-base mb-4 leading-relaxed text-left ${premium ? 'text-white/80' : 'text-subtle-slate'}`}>
           {description}
         </p>
 
@@ -144,8 +142,8 @@ export default function AppCard({
           <div className="space-y-2">
             {features.slice(0, 3).map((feature, index) => (
               <div key={index} className="flex items-start gap-2">
-                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet />
-                <span className={`text-sm leading-relaxed text-left ${premium ? 'text-white/85' : 'text-subtle-slate
+                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet'}`} />
+                <span className={`text-sm leading-relaxed text-left ${premium ? 'text-white/85' : 'text-subtle-slate'}`}>
                   {feature}
                 </span>
               </div>
@@ -165,8 +163,7 @@ export default function AppCard({
           </CTAButton>
         </Link>
         
-        {/* Trust signal - Left aligned on mobile */}
-        <p className={`text-left sm:text-center text-xs ${premium ? 'text-white/50' : 'text-subtle-slate/60
+        <p className={`text-left sm:text-center text-xs ${premium ? 'text-white/50' : 'text-subtle-slate/60'}`}>
           Dołącz do {downloads} uczestników
         </p>
       </div>
