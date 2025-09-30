@@ -1,7 +1,19 @@
-
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, ExternalLink } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Book,
+  Headphones,
+  Users,
+  Mail,
+  Video,
+  Lock,
+  Home,
+  Calendar,
+  ExternalLink,
+} from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +48,7 @@ export default function Header() {
     }
     setIsDropdownOpen(false);
   };
-  
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +70,7 @@ export default function Header() {
 
     document.addEventListener("keydown", handleEscape);
     document.addEventListener("mousedown", handleClickOutside);
-    
+
     return () => {
       document.removeEventListener("keydown", handleEscape);
       document.removeEventListener("mousedown", handleClickOutside);
@@ -86,10 +98,10 @@ export default function Header() {
           <Link to="/about" className="nav-link">
             O mnie
           </Link>
-          
+
           {/* Dropdown for Możliwości */}
-          <div 
-            className="relative group" 
+          <div
+            className="relative group"
             ref={dropdownRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -98,7 +110,7 @@ export default function Header() {
               className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
                   setIsDropdownOpen(!isDropdownOpen);
                 }
@@ -107,7 +119,10 @@ export default function Header() {
               aria-haspopup="true"
             >
               Możliwości
-              <ChevronDown size={16} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''} group-hover:rotate-180`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""} group-hover:rotate-180`}
+              />
             </button>
           </div>
 
@@ -133,299 +148,320 @@ export default function Header() {
       </div>
 
       {/* Full-Screen Navigation Popup */}
-      <div 
-        className={`${isDropdownOpen ? 'block' : 'hidden'} group-hover:block fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm animate-fade-in`}
+      <div
+        className={`${isDropdownOpen ? "block" : "hidden"} group-hover:block fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm animate-fade-in`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-          <div className="flex items-center justify-center min-h-screen p-4">
-            <div 
-              ref={overlayRef}
-              className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
-              onMouseEnter={handleMouseEnter}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-slate-200">
-                <h2 className="text-2xl font-bold text-deep-charcoal">
-                  Wszystkie możliwości
-                </h2>
-                <button
-                  onClick={() => setIsDropdownOpen(false)}
-                  className="p-2 rounded-full hover:bg-slate-100 transition-colors"
-                  aria-label="Zamknij menu"
-                >
-                  <X size={24} className="text-deep-charcoal" />
-                </button>
-              </div>
+        <div className="flex items-center justify-center min-h-screen p-4">
+          <div
+            ref={overlayRef}
+            className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto animate-scale-in"
+            onMouseEnter={handleMouseEnter}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
+                Wszystkie możliwości
+              </h2>
+              <button
+                onClick={() => setIsDropdownOpen(false)}
+                className="p-2 rounded-full hover:bg-slate-200 transition-all hover:scale-110"
+                aria-label="Zamknij menu"
+              >
+                <X size={24} className="text-deep-charcoal" />
+              </button>
+            </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <div className="grid lg:grid-cols-3 gap-8">
-                  {/* Column 1: Twoja Ścieżka Rozwoju */}
-                  <div className="lg:col-span-1">
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-deep-charcoal mb-2">
-                        Twoja ścieżka rozwoju
-                      </h3>
-                      <p className="text-sm text-deep-charcoal/70">
-                        3 kroki do transformacji
-                      </p>
+            {/* Content */}
+            <div className="p-6 sm:p-8">
+              <div className="grid lg:grid-cols-3 gap-8">
+                {/* Column 1: Twoja Ścieżka Rozwoju */}
+                <div className="lg:col-span-1">
+                  <div className="mb-6 p-4 bg-gradient-to-br from-[#2563eb]/5 to-accent/5 rounded-xl border border-[#2563eb]/20">
+                    <h3 className="text-lg font-bold text-deep-charcoal mb-2 flex items-center gap-2">
+                      <span className="text-xl">🎯</span>
+                      <span>Twoja ścieżka rozwoju</span>
+                    </h3>
+                    <p className="text-sm text-deep-charcoal/70">
+                      3 kroki do transformacji
+                    </p>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start group">
+                      <div className="flex flex-col items-center mr-4">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb]/20 to-[#2563eb]/10 text-[#2563eb] flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                          1
+                        </div>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-[#2563eb]/30 to-transparent"></div>
+                      </div>
+                      <div>
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          Wybierz program dla siebie
+                        </h4>
+                        <p className="text-sm text-deep-charcoal/70 leading-relaxed">
+                          Zrób to{" "}
+                          <strong className="text-[#2563eb]">teraz</strong> -
+                          wiesz czego potrzebujesz. Podejmij decyzję.
+                        </p>
+                      </div>
                     </div>
-                    
-                    <div className="space-y-6">
-                      <div className="flex items-start">
-                        <div className="flex flex-col items-center mr-4">
-                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 flex items-center justify-center text-sm font-semibold">
-                            1
-                          </div>
-                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 to-transparent"></div>
+
+                    <div className="flex items-start group">
+                      <div className="flex flex-col items-center mr-4">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb]/30 to-[#2563eb]/15 text-[#2563eb] flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                          2
                         </div>
-                        <div>
-                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
-                            Wybierz program dla siebie
-                          </h4>
-                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
-                            Zrób to <strong>teraz</strong> - wiesz czego potrzebujesz. Podejmij decyzję.
-                          </p>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-[#2563eb]/40 to-transparent"></div>
+                      </div>
+                      <div>
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          Dołącz do Lifehackerów
+                        </h4>
+                        <p className="text-sm text-deep-charcoal/70 leading-relaxed">
+                          Dostęp LIFETIME otrzymasz{" "}
+                          <strong className="text-[#2563eb]">
+                            jeszcze dzisiaj
+                          </strong>
+                          .
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start group">
+                      <div className="flex flex-col items-center mr-4">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
+                          3
                         </div>
                       </div>
-
-                      <div className="flex items-start">
-                        <div className="flex flex-col items-center mr-4">
-                          <div className="w-8 h-8 rounded-full bg-secondary text-deep-charcoal/70 flex items-center justify-center text-sm font-semibold">
-                            2
-                          </div>
-                          <div className="w-0.5 h-10 mt-2 bg-gradient-to-b from-deep-charcoal/50 to-transparent"></div>
-                        </div>
-                        <div>
-                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
-                            Dołącz do Lifehackerów
-                          </h4>
-                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
-                            Dostęp LIFETIME otrzymasz <strong>jeszcze dzisiaj</strong>.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <div className="flex flex-col items-center mr-4">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink text-luminous-white flex items-center justify-center text-sm font-semibold">
-                            3
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-base font-medium text-deep-charcoal mb-1">
-                            Pracuj ze mną 1:1
-                          </h4>
-                          <p className="text-sm text-deep-charcoal/70 leading-relaxed">
-                            Towarzyszę Lifehackerom codziennie. Bez wyjątków. Dołącz do nas i działamy.
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          Pracuj ze mną 1:1
+                        </h4>
+                        <p className="text-sm text-deep-charcoal/70 leading-relaxed">
+                          Towarzyszę Lifehackerom codziennie.{" "}
+                          <strong className="text-[#2563eb]">
+                            Bez wyjątków.
+                          </strong>{" "}
+                          Dołącz do nas i działamy.
+                        </p>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  {/* Column 2: Main Navigation */}
-                  <div className="lg:col-span-2">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {/* Featured Cards */}
-                      <Link 
-                        to="/program" 
-                        className="md:col-span-2 block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md relative overflow-hidden min-h-[120px]"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="absolute top-3 left-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm">
-                          Tu chcesz zacząć ⤵
-                        </div>
-                        <div className="flex items-stretch justify-between pt-8 h-full">
-                          <div className="flex items-center flex-1">
-                            <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white rounded-lg shadow-sm">
-                              <Book size={24} className="text-neural-violet" />
-                            </div>
-                            <div>
-                              <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                                Programy rozwojowe
-                              </h4>
-                              <p className="text-sm text-deep-charcoal/70">
-                                Kursy online i szkolenia
-                              </p>
-                            </div>
-                          </div>
-                          <div className="hidden md:flex items-center ml-4 flex-shrink-0">
-                            <img 
-                              src="/lovable-uploads/b2282be8-5d99-4b31-a63c-8760647510ae.png" 
-                              alt="Programy rozwojowe - podgląd na różnych urządzeniach" 
-                              className="h-full max-h-24 w-auto group-hover:scale-105 transition-transform duration-200"
-                            />
-                          </div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        to="/webinar" 
-                        className="md:col-span-2 block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md relative overflow-hidden"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-lg shadow-sm animate-pulse">
-                          Liczba miejsc ograniczona
-                        </div>
-                        <div className="flex items-center">
-                          <div className="w-12 h-12 flex items-center justify-center mr-4 bg-white rounded-lg shadow-sm">
-                            <Video size={24} className="text-neural-violet" />
+                {/* Column 2: Main Navigation */}
+                <div className="lg:col-span-2">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {/* Featured Cards */}
+                    <Link
+                      to="/program"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-green-500/5 to-green-500/10 rounded-xl hover:shadow-lg transition-all duration-200 group border-2 border-green-500/30 hover:border-green-500/50 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
+                        <span>⭐</span>
+                        <span>Tu chcesz zacząć</span>
+                      </div>
+                      <div className="flex items-stretch justify-between pt-8 h-full">
+                        <div className="flex items-center flex-1">
+                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-white rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                            <Book size={28} className="text-[#2563eb]" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                              Wydarzenia na żywo
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                              Programy rozwojowe
                             </h4>
                             <p className="text-sm text-deep-charcoal/70">
-                              Sesje live i masterclassy
+                              Kursy online i szkolenia
                             </p>
                           </div>
                         </div>
-                      </Link>
+                        <div className="hidden md:flex items-center ml-4 flex-shrink-0">
+                          <img
+                            src="/lovable-uploads/b2282be8-5d99-4b31-a63c-8760647510ae.png"
+                            alt="Programy rozwojowe - podgląd na różnych urządzeniach"
+                            className="h-full max-h-24 w-auto group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    </Link>
 
-                      {/* Regular Cards */}
-                      <a 
-                        href="https://uwaznezycie.pl" 
+                    <Link
+                      to="/webinar"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[#2563eb]/5 to-[#2563eb]/10 rounded-xl hover:shadow-lg transition-all duration-200 group border-2 border-[#2563eb]/30 hover:border-[#2563eb]/50 relative overflow-hidden hover:-translate-y-1"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
+                        <span>🔥</span>
+                        <span>Liczba miejsc ograniczona</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-white rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                          <Video size={28} className="text-[#2563eb]" />
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            Wydarzenia na żywo
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70">
+                            Sesje live i masterclassy
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Regular Cards */}
+                    <a
+                      href="https://uwaznezycie.pl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Users size={22} className="text-[#2563eb]" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            Medytacje na żywo
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70">
+                            Każdy wtorek o 6:30
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+
+                    <Link
+                      to="/podcast"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Headphones size={22} className="text-[#2563eb]" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            Podcast
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70">
+                            Słuchaj i ucz się
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <Link
+                      to="/newsletter"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Mail size={22} className="text-[#2563eb]" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            Newsletter
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70">
+                            Cotygodniowe tipy
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+
+                    <a
+                      href="https://youtube.com/@ludwikcsiadlak"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                    >
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Video size={22} className="text-[#2563eb]" />
+                        </div>
+                        <div>
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            YouTube
+                          </h4>
+                          <p className="text-sm text-deep-charcoal/70">
+                            Video content
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  {/* Members Zone */}
+                  <div className="mt-8 p-6 bg-gradient-to-br from-amber-50/50 to-amber-100/30 rounded-xl border-2 border-amber-200/50 shadow-sm">
+                    <div className="flex items-center mb-4">
+                      <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg mr-3 border-2 border-amber-300 shadow-sm">
+                        <Lock size={18} className="text-amber-700" />
+                      </div>
+                      <h3 className="text-lg font-bold text-deep-charcoal">
+                        Strefa Lifehackerów
+                      </h3>
+                    </div>
+
+                    <p className="text-sm text-deep-charcoal/80 mb-4 font-medium">
+                      🎉 Witaj z powrotem!
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      <a
+                        href="https://portal.siadlak.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                        onClick={() => setIsDropdownOpen(false)}
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[#2563eb] hover:-translate-y-0.5"
                       >
-                        <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
-                            <Users size={20} className="text-neural-violet" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                              Medytacje na żywo
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70">
-                              Każdy wtorek o 6:30
-                            </p>
-                          </div>
-                        </div>
+                        <Home
+                          size={18}
+                          className="text-amber-700 group-hover:text-[#2563eb] mr-3 transition-colors"
+                        />
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[#2563eb] transition-colors">
+                          Portal Lifehackerów
+                        </span>
                       </a>
 
-                      <Link 
-                        to="/podcast" 
-                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                        onClick={() => setIsDropdownOpen(false)}
+                      <a
+                        href="/discord"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[#2563eb] hover:-translate-y-0.5"
                       >
-                        <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
-                            <Headphones size={20} className="text-neural-violet" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                              Podcast
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70">
-                              Słuchaj i ucz się
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        to="/newsletter" 
-                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
-                            <Mail size={20} className="text-neural-violet" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                              Newsletter
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70">
-                              Cotygodniowe tipy
-                            </p>
-                          </div>
-                        </div>
-                      </Link>
-
-                      <a 
-                        href="https://youtube.com/@ludwikcsiadlak" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                      >
-                        <div className="flex items-center">
-                          <div className="w-10 h-10 flex items-center justify-center mr-3 bg-white rounded-lg shadow-sm">
-                            <Video size={20} className="text-neural-violet" />
-                          </div>
-                          <div>
-                            <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
-                              YouTube
-                            </h4>
-                            <p className="text-sm text-deep-charcoal/70">
-                              Video content
-                            </p>
-                          </div>
-                        </div>
+                        <Calendar
+                          size={18}
+                          className="text-amber-700 group-hover:text-[#2563eb] mr-3 transition-colors"
+                        />
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[#2563eb] transition-colors">
+                          12:34 Daily Coaching
+                        </span>
                       </a>
                     </div>
+                  </div>
 
-                    {/* Members Zone */}
-                    <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl border border-slate-200">
-                      <div className="flex items-center mb-4">
-                        <div className="w-8 h-8 flex items-center justify-center bg-amber-50 rounded-lg mr-3 border border-amber-200">
-                          <Lock size={16} className="text-amber-700" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-deep-charcoal">
-                          Strefa Lifehackerów
-                        </h3>
-                      </div>
-                      
-                      <p className="text-sm text-deep-charcoal/70 mb-4">
-                        Witaj z powrotem!
-                      </p>
-                      
-                      <div className="grid sm:grid-cols-2 gap-3">
-                        <a 
-                          href="https://portal.siadlak.com" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center p-3 bg-white rounded-lg hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                        >
-                          <Home size={16} className="text-deep-charcoal/70 mr-3" />
-                          <span className="text-sm font-medium text-deep-charcoal group-hover:text-neural-violet transition-colors">
-                            Portal Lifehackerów
-                          </span>
-                        </a>
-                        
-                        <a 
-                          href="/discord" 
-                          className="flex items-center p-3 bg-white rounded-lg hover:bg-slate-100 transition-all duration-200 group border border-slate-200 shadow-sm hover:shadow-md"
-                        >
-                          <Calendar size={16} className="text-deep-charcoal/70 mr-3" />
-                          <span className="text-sm font-medium text-deep-charcoal group-hover:text-neural-violet transition-colors">
-                            12:34 Daily Coaching
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Footer Action */}
-                    <div className="mt-6 pt-4 border-t border-slate-200 text-center">
-                      <Link 
-                        to="/work" 
-                        className="inline-flex items-center text-sm text-deep-charcoal/70 hover:text-neural-violet transition-colors group"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Zobacz wszystkie możliwości
-                        <span className="ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
-                      </Link>
-                    </div>
+                  {/* Footer Action */}
+                  <div className="mt-6 pt-4 border-t border-slate-200 text-center">
+                    <Link
+                      to="/work"
+                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-[#2563eb] transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      Zobacz wszystkie możliwości
+                      <span className="ml-2 transform group-hover:translate-x-1 transition-transform text-base">
+                        →
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
@@ -438,7 +474,7 @@ export default function Header() {
             >
               O mnie
             </Link>
-            
+
             {/* Mobile Możliwości Section */}
             <div className="py-2">
               <div className="font-medium text-deep-charcoal mb-3">
@@ -485,7 +521,7 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            
+
             <Link
               to="/contact"
               className="text-deep-charcoal hover:text-neural-violet transition-colors py-2"
