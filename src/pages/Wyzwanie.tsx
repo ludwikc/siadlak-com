@@ -446,7 +446,12 @@ export default function Wyzwanie() {
       <section className="py-20 px-4 bg-muted/30">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-foreground">
-            To nie jest kolejny webinar motywacyjny
+            To <span className="relative inline-block text-red-600">
+              nie jest
+              <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0,5 Q25,2 50,5 T100,5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+              </svg>
+            </span> kolejny webinar motywacyjny
           </h2>
 
           <div className="bg-card border border-border rounded-xl p-8 md:p-12 max-w-5xl mx-auto">
