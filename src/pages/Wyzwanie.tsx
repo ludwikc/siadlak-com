@@ -136,11 +136,11 @@ export default function Wyzwanie() {
             {/* Main promise */}
             <div className="py-12 space-y-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
-                4 dni, które pokażą ci,<br />
+                4 dni, które pokażą Ci,<br />
                 <span className="text-[#2563eb]">GDZIE</span> powinieneś rąbać
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
-                (Zamiast DAĆ ci ostrzejszą siekierę<br />do rąbania w złym miejscu)
+                (Zamiast DAĆ Ci ostrzejszą siekierę<br />do rąbania w złym miejscu)
               </p>
             </div>
 
@@ -171,7 +171,7 @@ export default function Wyzwanie() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Godzina</p>
-                        <p className="text-lg text-foreground">Codziennie o godzinie, której nie oczekujesz</p>
+                        <p className="text-lg text-foreground">Codziennie o 11:30</p>
                       </div>
                     </div>
                     
@@ -261,11 +261,11 @@ export default function Wyzwanie() {
               </h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>Nie robisz. Ty RĄBIESZ.<br/>
-                Problem: <strong className="text-foreground">To nie twoje drzewa.</strong></p>
+                Problem: <strong className="text-foreground">To nie Twoje drzewa.</strong></p>
                 
                 <p>To cele, które brzmią dobrze na LinkedIn.<br/>
                 To projekty, które "trzeba" zrobić.<br/>
-                To oczekiwania rodziców/szefa/społeczeństwa zamaskowane jako "twoja ambicja".</p>
+                To oczekiwania rodziców/szefa/społeczeństwa zamaskowane jako "Twoja ambicja".</p>
               </div>
             </div>
 
@@ -274,7 +274,7 @@ export default function Wyzwanie() {
                 "Przeczytałem 30 książek o produktywności. Żadna nie pomogła na dłużej"
               </h3>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>Bo książki dają ci <strong className="text-foreground">narzędzia</strong>.<br/>
+                <p>Bo książki dają Ci <strong className="text-foreground">narzędzia</strong>.<br/>
                 Ty potrzebujesz <strong className="text-foreground">kierunku</strong>.</p>
                 
                 <p>Najostrzejsza siekiera na świecie nie pomoże, jeśli rąbiesz w cudzym lesie.</p>
@@ -302,7 +302,7 @@ export default function Wyzwanie() {
                 <p>To nie ADHD.<br/>
                 To nie brak dyscypliny.</p>
                 
-                <p>To <strong className="text-foreground">paralysis analysis</strong> - objaw tego, że nie wiesz, KTÓRY las jest twój.</p>
+                <p>To <strong className="text-foreground">paralysis analysis</strong> - objaw tego, że nie wiesz, KTÓRY las jest Twój.</p>
                 
                 <p>Więc rąbiesz trochę tu, trochę tam, licząc że "w końcu trafi".</p>
               </div>
@@ -352,7 +352,7 @@ export default function Wyzwanie() {
                     DZIEŃ 1: "Sprawdzian Lasu"
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Odkryjesz, ile z twoich obecnych "priorytetów" wybrałeś świadomie, a ile przejąłeś od kogoś innego.
+                    Odkryjesz, ile z Twoich obecnych "priorytetów" wybrałeś świadomie, a ile przejąłeś od kogoś innego.
                   </p>
                   <p className="text-muted-foreground">
                     <strong className="text-foreground">Ćwiczenie:</strong> Konfrontacja z kartką (7 min, które mogą zmienić 7 lat)
@@ -515,8 +515,8 @@ export default function Wyzwanie() {
                 Dobra wiadomość: Nie próbowałeś TEGO.
               </p>
               
-              <p>Tamte kursy dawały ci narzędzia.<br/>
-              To wyzwanie pokaże ci, CZY RĄBIESZ WE WŁAŚCIWYM LESIE.</p>
+              <p>Tamte kursy dawały Ci narzędzia.<br/>
+              To wyzwanie pokaże Ci, CZY RĄBIESZ WE WŁAŚCIWYM LESIE.</p>
               
               <p>Jeśli nie - żadne narzędzie nie pomoże.<br/>
               Jeśli tak - w końcu będziesz wiedział, dlaczego warto kontynuować.</p>
@@ -684,7 +684,7 @@ export default function Wyzwanie() {
             <div className="space-y-3 text-muted-foreground leading-relaxed">
               <p>Jeśli szukasz motywacyjnych frazesów - odpuść.<br/>
               Jeśli chcesz magicznej pigułki - odpuść.<br/>
-              Jeśli chcesz, żebym ci powiedział, że "wszystko jest OK" - odpuść.</p>
+              Jeśli chcesz, żebym Ci powiedział, że "wszystko jest OK" - odpuść.</p>
               
               <p className="font-semibold text-foreground">To wyzwanie jest dla ludzi, którzy:</p>
               <ul className="space-y-1 list-disc list-inside">
