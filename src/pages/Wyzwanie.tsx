@@ -92,12 +92,12 @@ export default function Wyzwanie() {
           <div className="text-center space-y-12">
             {/* Main headline with staggered animation */}
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
                 Ile kursów produktywności<br />
                 <span className="text-[#2563eb]">już kupiłeś?</span>
               </h1>
               
-              <div className="flex items-center justify-center gap-4 text-3xl md:text-4xl text-muted-foreground font-light">
+              <div className="flex items-center justify-center gap-4 text-xl md:text-2xl text-muted-foreground">
                 <span className="inline-block hover:scale-110 transition-transform cursor-default">3?</span>
                 <span className="inline-block hover:scale-110 transition-transform cursor-default">5?</span>
                 <span className="inline-block hover:scale-110 transition-transform cursor-default">7?</span>
@@ -107,7 +107,7 @@ export default function Wyzwanie() {
             {/* The uncomfortable question */}
             <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="absolute -inset-4 bg-[#2563eb]/5 blur-xl rounded-full"></div>
-              <p className="relative text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold max-w-4xl mx-auto leading-tight">
+              <p className="relative text-3xl md:text-4xl text-foreground font-bold max-w-4xl mx-auto leading-tight">
                 I pytanie drugie:<br />
                 <span className="text-[#2563eb]">Dlaczego nadal czujesz,<br />że coś jest nie tak?</span>
               </p>
@@ -121,11 +121,11 @@ export default function Wyzwanie() {
             </div>
 
             {/* The answer */}
-            <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="space-y-6 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <p className="leading-relaxed">
                 Nie dlatego, że tamte kursy były złe.
               </p>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
+              <p className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 Dlatego, że <span className="text-[#2563eb] relative">
                   rąbiesz drzewa<br />w cudzym lesie.
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#2563eb]/20"></span>
@@ -135,11 +135,11 @@ export default function Wyzwanie() {
 
             {/* Main promise */}
             <div className="py-12 space-y-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
                 4 dni, które pokażą Ci,<br />
                 <span className="text-[#2563eb]">GDZIE</span> powinieneś rąbać
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto italic">
                 (Zamiast DAĆ Ci ostrzejszą siekierę<br />do rąbania w złym miejscu)
               </p>
             </div>
@@ -171,7 +171,7 @@ export default function Wyzwanie() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Godzina</p>
-                        <p className="text-lg text-foreground">Codziennie o 11:30</p>
+                        <p className="text-base md:text-lg text-foreground">Codziennie o 11:30</p>
                       </div>
                     </div>
                     
@@ -181,7 +181,7 @@ export default function Wyzwanie() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Format</p>
-                        <p className="text-lg text-foreground">Live na Discord</p>
+                        <p className="text-base md:text-lg text-foreground">Live na Discord</p>
                       </div>
                     </div>
                     
@@ -191,12 +191,12 @@ export default function Wyzwanie() {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Nagrania</p>
-                        <p className="text-lg text-foreground">Zostają (ale energia live'a nie)</p>
+                        <p className="text-base md:text-lg text-foreground">Zostają (ale energia live'a nie)</p>
                       </div>
                     </div>
                     
                     <div className="pt-4 border-t border-border/50">
-                      <p className="text-xl font-bold text-[#2563eb] text-center">
+                      <p className="text-xl md:text-2xl font-bold text-[#2563eb] text-center">
                         ZERO kosztów • Zero bullshitu • Zero motywacyjnych frazesów
                       </p>
                     </div>
@@ -211,7 +211,7 @@ export default function Wyzwanie() {
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)]"
+                className="group inline-flex items-center justify-center px-10 py-5 text-xl md:text-2xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)]"
               >
                 Tak, chcę sprawdzić czy rąbię w swoim lesie
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -219,7 +219,7 @@ export default function Wyzwanie() {
                 </svg>
               </a>
               
-              <div className="space-y-3 text-sm text-muted-foreground max-w-lg mx-auto">
+              <div className="space-y-3 text-base md:text-lg text-muted-foreground max-w-lg mx-auto">
                 <p className="flex items-center justify-center gap-2">
                   <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -235,10 +235,10 @@ export default function Wyzwanie() {
               </div>
               
               <div className="pt-4">
-                <p className="text-lg font-semibold text-foreground">
+                <p className="text-base md:text-lg font-semibold text-foreground">
                   Już dołączyło: <span className="text-[#2563eb]">34 profesjonalistów</span>
                 </p>
-                <p className="text-sm text-muted-foreground italic mt-1">
+                <p className="text-base md:text-lg text-muted-foreground italic mt-1">
                   (Którzy mają dość udawania, że wszystko jest OK)
                 </p>
               </div>
