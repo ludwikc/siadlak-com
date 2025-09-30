@@ -77,79 +77,110 @@ export default function Wyzwanie() {
       />
 
       {/* HERO SECTION */}
-      <section className="bg-white py-20 md:py-24 px-4">
-        <div className="container max-w-[1200px] mx-auto">
-          <div className="text-center max-w-[800px] mx-auto space-y-8 md:space-y-12">
+      <section className="relative bg-gradient-to-b from-white via-[#FAFAFA] to-white py-16 md:py-24 lg:py-32 px-6">
+        {/* Subtle background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-[#D97706]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-10 w-96 h-96 bg-[#059669]/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container max-w-[1200px] mx-auto relative">
+          <div className="text-center max-w-[800px] mx-auto">
             
             {/* POZIOM 1: Pattern Interrupt */}
-            <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold leading-[1.2] text-[#1a1a1a]">
-              Ile kursów produktywności już kupiłeś?
-            </h1>
+            <div className="mb-8">
+              <h1 className="text-[40px] md:text-[52px] lg:text-[64px] font-bold leading-[1.2] tracking-tight text-[#1a1a1a]">
+                Ile kursów produktywności już kupiłeś?
+              </h1>
+            </div>
 
             {/* POZIOM 2: Hook Amplifier */}
-            <p className="text-[24px] md:text-[32px] lg:text-[40px] font-normal text-[#666666] italic mt-4">
-              3? 5? 7?
-            </p>
+            <div className="mb-16">
+              <p className="text-[28px] md:text-[36px] lg:text-[40px] font-normal text-[#666666] italic">
+                3? 5? 7?
+              </p>
+            </div>
 
             {/* POZIOM 3: Konfrontacja */}
-            <p className="text-[20px] md:text-[28px] lg:text-[36px] font-semibold leading-tight text-[#1a1a1a] mt-8">
-              I pytanie drugie: <strong>Dlaczego nadal czujesz, że coś jest nie tak?</strong>
-            </p>
+            <div className="mb-20 md:mb-24">
+              <p className="text-[22px] md:text-[30px] lg:text-[36px] font-semibold leading-[1.3] text-[#1a1a1a]">
+                I pytanie drugie:{' '}
+                <span className="font-bold">Dlaczego nadal czujesz, że coś jest nie tak?</span>
+              </p>
+            </div>
 
             {/* VISUAL BREAK */}
-            <div className="h-12 md:h-16"></div>
+            <div className="relative py-12 mb-20 md:mb-24">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-12 bg-gradient-to-b from-transparent via-[#e5e7eb] to-transparent"></div>
+            </div>
 
             {/* POZIOM 4: Problem Statement */}
-            <div className="text-[16px] md:text-[20px] lg:text-[24px] font-normal leading-[1.6] text-[#333333] space-y-2">
-              <p>Nie dlatego, że tamte kursy były złe.</p>
-              <p>
+            <div className="mb-16 md:mb-20 space-y-6">
+              <p className="text-[18px] md:text-[22px] lg:text-[24px] font-normal leading-[1.6] text-[#333333]">
+                Nie dlatego, że tamte kursy były złe.
+              </p>
+              <p className="text-[18px] md:text-[22px] lg:text-[24px] font-normal leading-[1.6] text-[#333333]">
                 Dlatego, że{' '}
-                <span className="font-bold bg-[#FFF9E6] px-2 py-1">
+                <span className="inline-block font-bold bg-[#FFF9E6] px-3 py-1 rounded border-b-2 border-[#D97706]/30">
                   rąbiesz drzewa w cudzym lesie.
                 </span>
               </p>
             </div>
 
             {/* POZIOM 5: Promise (główny) */}
-            <h2 className="text-[24px] md:text-[36px] lg:text-[48px] font-bold leading-tight text-[#D97706] mt-12">
-              4 dni, które pokażą ci, GDZIE powinieneś rąbać
-            </h2>
+            <div className="mb-6">
+              <h2 className="text-[28px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] text-[#D97706]">
+                4 dni, które pokażą ci, GDZIE powinieneś rąbać
+              </h2>
+            </div>
 
             {/* POZIOM 6: Subheadline */}
-            <p className="text-[16px] md:text-[18px] font-normal text-[#666666] italic mt-3">
-              (Zamiast DAĆ ci ostrzejszą siekierę do rąbania w złym miejscu)
-            </p>
+            <div className="mb-20 md:mb-28">
+              <p className="text-[16px] md:text-[18px] font-normal text-[#666666] italic leading-relaxed">
+                (Zamiast DAĆ ci ostrzejszą siekierę do rąbania w złym miejscu)
+              </p>
+            </div>
 
             {/* VISUAL BREAK */}
-            <div className="h-16 md:h-20"></div>
+            <div className="relative py-12 mb-16">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[#e5e7eb]"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#D97706]"></div>
+                  <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[#e5e7eb]"></div>
+                </div>
+              </div>
+            </div>
 
             {/* POZIOM 7: Countdown Timer */}
-            <div className="mt-12">
+            <div className="mb-12">
               <ChallengeCountdown />
             </div>
 
             {/* POZIOM 8: Event Details */}
-            <div className="text-[16px] md:text-[18px] leading-[1.8] text-[#333333] space-y-2 mt-6">
-              <p className="font-semibold">7-10 października 2025</p>
-              <p>Codziennie o godzinie, której nie oczekujesz</p>
-              <p>Live na Discord</p>
-              <p>Nagrania zostają (ale energia live'a nie)</p>
+            <div className="mb-16 space-y-3">
+              <p className="text-[17px] md:text-[18px] font-semibold text-[#1a1a1a]">7-10 października 2025</p>
+              <p className="text-[16px] md:text-[17px] text-[#333333] leading-relaxed">Codziennie o godzinie, której nie oczekujesz</p>
+              <p className="text-[16px] md:text-[17px] text-[#333333] leading-relaxed">Live na Discord</p>
+              <p className="text-[16px] md:text-[17px] text-[#333333] leading-relaxed">Nagrania zostają (ale energia live'a nie)</p>
             </div>
 
             {/* POZIOM 9: Zero Bullshit Statement */}
-            <div className="border-t border-b border-[#e5e7eb] py-4 mt-8">
-              <p className="text-[18px] md:text-[20px] font-bold text-[#059669]">
-                ZERO kosztów. Zero bullshitu. Zero motywacyjnych frazesów.
+            <div className="relative mb-16 py-6">
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#e5e7eb] to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-[#e5e7eb] to-transparent"></div>
+              <p className="text-[18px] md:text-[20px] font-bold text-[#059669] tracking-wide">
+                ZERO kosztów • Zero bullshitu • Zero motywacyjnych frazesów
               </p>
             </div>
 
             {/* CTA BUTTON */}
-            <div className="mt-12">
+            <div className="pt-4">
               <a 
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 md:px-12 py-5 text-[18px] md:text-[20px] font-bold text-white bg-[#D97706] hover:bg-[#B45309] rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D97706] focus:ring-offset-2"
+                className="inline-block px-10 md:px-12 py-5 text-[18px] md:text-[20px] font-bold text-white bg-[#D97706] hover:bg-[#B45309] rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_24px_rgba(217,119,6,0.3)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D97706] focus:ring-offset-4"
               >
                 Sprawdzam, w którym lesie stoję (4 dni, 0 zł)
               </a>
