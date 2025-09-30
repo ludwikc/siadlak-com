@@ -36,6 +36,7 @@ import Help from './pages/Help';
 import HelpSubpage from './pages/HelpSubpage';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
+import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,7 @@ function App() {
             <Route path="/webinar/live" element={<WebinarLive />} />
             <Route path="/webinar/expired" element={<WebinarExpired />} />
             <Route path="/webinar/replay" element={<WebinarReplay />} />
+            <Route path="/webinar/meski-kompas" element={<WebinarMeskiKompas />} />
             
             <Route path="/help" element={<Help />} />
             <Route path="/help/:subpageSlug" element={<HelpSubpage />} />

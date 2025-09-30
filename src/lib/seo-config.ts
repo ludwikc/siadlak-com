@@ -270,6 +270,15 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/webinar/meski-kompas',
+    seo: {
+      title: 'Warsztat: Upgrade Systemu dla Analityków 30+',
+      description: '90-minutowy warsztat dla facetów, którzy mają chaos w priorytetach. Bez teorii - konkretny plan na poniedziałek. Ludwik Siadlak + Mateusz Lizak.',
+      keywords: 'warsztat, męski kompas, rozwój osobisty, analitycy, programiści, produktywność',
+      url: '/webinar/meski-kompas'
+    }
+  },
+  {
     path: '/thank-you',
     seo: {
       title: 'Dziękujemy',
