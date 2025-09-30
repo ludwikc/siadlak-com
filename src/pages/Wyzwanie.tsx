@@ -366,126 +366,165 @@ export default function Wyzwanie() {
       </section>
 
       {/* PAIN SECTION */}
-      <section id="pain-section" className="py-20 px-4 bg-muted/30">
+      <section id="pain-section" className="py-12 sm:py-20 px-4 bg-muted/30">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8 sm:mb-12 text-foreground text-center">
             Rozpoznajesz któreś z tych?
           </h2>
 
-          <div className="space-y-8 mb-12">
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                "Pracuję 50+ godzin tygodniowo i mam wrażenie, że robię w kółko
-                to samo"
-              </h3>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  Nie robisz. Ty RĄBIESZ.
-                  <br />
-                  Problem:{" "}
-                  <strong className="text-foreground">
-                    To nie Twoje drzewa.
-                  </strong>
-                </p>
+          <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
+            {/* Pain Card 1 */}
+            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                  ⏰
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+                    "Pracuję 50+ godzin tygodniowo i mam wrażenie, że robię w
+                    kółko to samo"
+                  </h3>
+                  <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p>
+                      Nie robisz. Ty RĄBIESZ.
+                      <br />
+                      Problem:{" "}
+                      <strong className="text-foreground">
+                        To nie Twoje drzewa.
+                      </strong>
+                    </p>
 
-                <p>
-                  To cele, które brzmią dobrze na LinkedIn.
-                  <br />
-                  To projekty, które "trzeba" zrobić.
-                  <br />
-                  To oczekiwania rodziców/szefa/społeczeństwa zamaskowane jako
-                  "Twoja ambicja".
-                </p>
+                    <p>
+                      To cele, które brzmią dobrze na LinkedIn.
+                      <br />
+                      To projekty, które "trzeba" zrobić.
+                      <br />
+                      To oczekiwania rodziców/szefa/społeczeństwa zamaskowane
+                      jako "Twoja ambicja".
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                "Przeczytałem 30 książek o produktywności. Żadna nie pomogła na
-                dłużej"
-              </h3>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  Bo książki dają Ci{" "}
-                  <strong className="text-foreground">narzędzia</strong>.<br />
-                  Ty potrzebujesz{" "}
-                  <strong className="text-foreground">kierunku</strong>.
-                </p>
+            {/* Pain Card 2 */}
+            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                  📚
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+                    "Przeczytałem 30 książek o produktywności. Żadna nie pomogła
+                    na dłużej"
+                  </h3>
+                  <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p>
+                      Bo książki dają Ci{" "}
+                      <strong className="text-foreground">narzędzia</strong>.
+                      <br />
+                      Ty potrzebujesz{" "}
+                      <strong className="text-foreground">kierunku</strong>.
+                    </p>
 
-                <p>
-                  Najostrzejsza siekiera na świecie nie pomoże, jeśli rąbiesz w
-                  cudzym lesie.
-                </p>
+                    <p>
+                      Najostrzejsza siekiera na świecie nie pomoże, jeśli
+                      rąbiesz w cudzym lesie.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                "Osiągam cele. Czuję pustkę."
-              </h3>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  To nie depresja.
-                  <br />
-                  To{" "}
-                  <strong className="text-foreground">
-                    cognitive dissonance
-                  </strong>
-                  .
-                </p>
+            {/* Pain Card 3 */}
+            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                  🎯
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+                    "Osiągam cele. Czuję pustkę."
+                  </h3>
+                  <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p>
+                      To nie depresja.
+                      <br />
+                      To{" "}
+                      <strong className="text-foreground">
+                        cognitive dissonance
+                      </strong>
+                      .
+                    </p>
 
-                <p>
-                  Twój mózg wie, że rąbiesz w cudzym lesie.
-                  <br />
-                  Ale nie chcesz się do tego przyznać. Bo wtedy trzeba zmienić.
-                </p>
+                    <p>
+                      Twój mózg wie, że rąbiesz w cudzym lesie.
+                      <br />
+                      Ale nie chcesz się do tego przyznać. Bo wtedy trzeba
+                      zmienić.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                "Mam 5 rozpoczętych projektów. 0 ukończonych."
-              </h3>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  To nie ADHD.
-                  <br />
-                  To nie brak dyscypliny.
-                </p>
+            {/* Pain Card 4 */}
+            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                  🔄
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+                    "Mam 5 rozpoczętych projektów. 0 ukończonych."
+                  </h3>
+                  <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p>
+                      To nie ADHD.
+                      <br />
+                      To nie brak dyscypliny.
+                    </p>
 
-                <p>
-                  To{" "}
-                  <strong className="text-foreground">
-                    paralysis analysis
-                  </strong>{" "}
-                  - objaw tego, że nie wiesz, KTÓRY las jest Twój.
-                </p>
+                    <p>
+                      To{" "}
+                      <strong className="text-foreground">
+                        paralysis analysis
+                      </strong>{" "}
+                      - objaw tego, że nie wiesz, KTÓRY las jest Twój.
+                    </p>
 
-                <p>
-                  Więc rąbiesz trochę tu, trochę tam, licząc że "w końcu trafi".
-                </p>
+                    <p>
+                      Więc rąbiesz trochę tu, trochę tam, licząc że "w końcu
+                      trafi".
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+          {/* Summary Box with Badge */}
+          <div className="relative bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-xl p-6 sm:p-8 md:p-10 max-w-4xl mx-auto">
+            <div className="absolute -top-3 left-4 sm:left-6 bg-[#2563eb] text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+              💡 Kluczowa prawda
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 pt-2">
               Prawdziwy problem (którego nikt nie nazywa)
             </h3>
-            <p className="text-xl text-foreground leading-relaxed mb-4">
+            <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4">
               Większość ludzi optymalizuje <strong>DROGĘ</strong> do
               niewłaściwego <strong>MIEJSCA</strong>.
             </p>
-            <ul className="space-y-2 text-muted-foreground list-disc list-inside mb-4">
+            <ul className="space-y-2 text-sm sm:text-base text-muted-foreground list-disc list-inside mb-4">
               <li>Mają techniki Pomodoro</li>
               <li>Mają aplikacje GTD</li>
               <li>Mają morning routines</li>
             </ul>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               I nadal czują, że{" "}
               <strong className="text-foreground">coś jest nie tak</strong>.
             </p>
-            <p className="text-xl font-bold text-foreground mt-6">
+            <p className="text-lg sm:text-xl font-bold text-foreground mt-4 sm:mt-6">
               Bo problem nie jest w siekierze. Problem jest w lesie.
             </p>
           </div>
@@ -493,123 +532,150 @@ export default function Wyzwanie() {
       </section>
 
       {/* WHAT YOU'LL GET SECTION */}
-      <section className="py-20 px-4 bg-background">
+      <section className="py-12 sm:py-20 px-4 bg-background">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8 sm:mb-12 text-center text-foreground">
             4 DNI, 4 DIAGNOZ
           </h2>
 
-          <div className="space-y-8 max-w-5xl mx-auto">
-            {/* Day 1 */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="flex items-start gap-6">
+          <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
+            {/* Day 1 - Light Blue */}
+            <div className="relative bg-[#2563eb]/5 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-[#2563eb]/20 flex items-center justify-center text-2xl font-bold text-[#2563eb]">
-                    1
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                    <span className="relative z-10">1</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
                 </div>
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     DZIEŃ 1: "Sprawdzian Lasu"
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     Odkryjesz, ile z Twoich obecnych "priorytetów" wybrałeś
                     świadomie, a ile przejąłeś od kogoś innego.
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     <strong className="text-foreground">Ćwiczenie:</strong>{" "}
                     Konfrontacja z kartką (7 min, które mogą zmienić 7 lat)
                   </p>
-                  <p className="text-foreground font-semibold">
-                    <strong>Output:</strong> Lista "drzew", które przestaniesz
-                    rąbać
-                  </p>
+                  <div className="flex items-start gap-2 mt-3 sm:mt-4 p-3 bg-green-500/10 border-l-2 border-green-500 rounded">
+                    <span className="text-green-500 text-lg flex-shrink-0">
+                      ✅
+                    </span>
+                    <p className="text-sm sm:text-base text-foreground font-semibold flex-1">
+                      <strong>Output:</strong> Lista "drzew", które przestaniesz
+                      rąbać
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Day 2 */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="flex items-start gap-6">
+            {/* Day 2 - Medium Blue */}
+            <div className="relative bg-[#2563eb]/10 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-[#2563eb]/20 flex items-center justify-center text-2xl font-bold text-[#2563eb]">
-                    2
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                    <span className="relative z-10">2</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
                 </div>
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     DZIEŃ 2: "Kompas, Nie Mapa"
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     Dostaniesz framework, który pokazuje TWÓJ las (nie cel na
                     LinkedIn, nie rada rodzica, nie artykuł z Harvard Business
                     Review)
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     <strong className="text-foreground">Ćwiczenie:</strong>{" "}
                     Kalibracja Kompasu - Twoje TOP 5 wartości
                   </p>
-                  <p className="text-foreground font-semibold">
-                    <strong>Output:</strong> Wiedza, które cele są cudze (i
-                    dlaczego możesz je odpuścić bez poczucia winy)
-                  </p>
+                  <div className="flex items-start gap-2 mt-3 sm:mt-4 p-3 bg-green-500/10 border-l-2 border-green-500 rounded">
+                    <span className="text-green-500 text-lg flex-shrink-0">
+                      ✅
+                    </span>
+                    <p className="text-sm sm:text-base text-foreground font-semibold flex-1">
+                      <strong>Output:</strong> Wiedza, które cele są cudze (i
+                      dlaczego możesz je odpuścić bez poczucia winy)
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Day 3 */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="flex items-start gap-6">
+            {/* Day 3 - Bold Blue */}
+            <div className="relative bg-[#2563eb]/15 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-[#2563eb]/20 flex items-center justify-center text-2xl font-bold text-[#2563eb]">
-                    3
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                    <span className="relative z-10">3</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
                 </div>
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     DZIEŃ 3: "System, Nie Motywacja"
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     Dostaniesz 3 narzędzia (Siekiera, Piła, Kompas) i nauczysz
                     się, KTÓREGO użyć KIEDY (i przestaniesz używać piły do
                     siekiery jak 99% ludzi)
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     <strong className="text-foreground">Ćwiczenie:</strong>{" "}
                     Design Your Week
                   </p>
-                  <p className="text-foreground font-semibold">
-                    <strong>Output:</strong> Twój idealny tydzień na kartce
-                    (gotowy do wdrożenia w poniedziałek)
-                  </p>
+                  <div className="flex items-start gap-2 mt-3 sm:mt-4 p-3 bg-green-500/10 border-l-2 border-green-500 rounded">
+                    <span className="text-green-500 text-lg flex-shrink-0">
+                      ✅
+                    </span>
+                    <p className="text-sm sm:text-base text-foreground font-semibold flex-1">
+                      <strong>Output:</strong> Twój idealny tydzień na kartce
+                      (gotowy do wdrożenia w poniedziałek)
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Day 4 */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <div className="flex items-start gap-6">
+            {/* Day 4 - Gradient Special */}
+            <div className="relative bg-gradient-to-br from-[#2563eb]/20 to-accent/15 border border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl group">
+              <div className="absolute -top-3 right-4 sm:right-6 bg-gradient-to-r from-[#2563eb] to-accent text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+                🎁 Bonus Day
+              </div>
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 pt-2">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-[#2563eb]/20 flex items-center justify-center text-2xl font-bold text-[#2563eb]">
-                    4
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-accent flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform">
+                    <span className="relative z-10">4</span>
+                    <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
                 </div>
                 <div className="flex-1 space-y-3">
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     DZIEŃ 4: "Live Daily 12:34"
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     Coaching session na żywo. 3-4 osoby dostaną coaching przy
                     całej grupie. Reszta uczy się z ich problemów.
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     <strong className="text-foreground">Format:</strong>{" "}
                     Przychodzisz z problemem → Wychodzisz z planem
                   </p>
-                  <p className="text-foreground font-semibold">
-                    <strong>Bonus:</strong> Prezentacja kursu "Hakowanie
-                    Produktywności" (dla tych, którzy chcą pełny system)
-                  </p>
+                  <div className="flex items-start gap-2 mt-3 sm:mt-4 p-3 bg-accent/10 border-l-2 border-accent rounded">
+                    <span className="text-accent text-lg flex-shrink-0">
+                      🎁
+                    </span>
+                    <p className="text-sm sm:text-base text-foreground font-semibold flex-1">
+                      <strong>Bonus:</strong> Prezentacja kursu "Hakowanie
+                      Produktywności" (dla tych, którzy chcą pełny system)
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -618,9 +684,9 @@ export default function Wyzwanie() {
       </section>
 
       {/* PROOF SECTION */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-12 sm:py-20 px-4 bg-muted/30">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8 sm:mb-12 text-center text-foreground">
             To{" "}
             <span className="relative inline-block text-red-600">
               nie jest
@@ -641,46 +707,75 @@ export default function Wyzwanie() {
             kolejny webinar motywacyjny
           </h2>
 
-          <div className="bg-card border border-border rounded-xl p-8 md:p-12 max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-[300px_1fr] gap-8 items-start">
-              <div className="mx-auto md:mx-0">
+          <div className="bg-card border border-border hover:shadow-xl rounded-xl p-6 sm:p-8 md:p-12 max-w-5xl mx-auto transition-all duration-300">
+            <div className="grid md:grid-cols-[300px_1fr] gap-6 sm:gap-8 items-start">
+              <div className="mx-auto md:mx-0 relative group/img">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
                 <img
                   src="/lovable-uploads/ludwik-siadlak-profile.png"
                   alt="Ludwik C. Siadlak"
-                  className="rounded-lg w-full max-w-[300px]"
+                  className="relative rounded-xl w-full max-w-[300px] shadow-lg"
                 />
+                {/* Stats Badges */}
+                <div className="absolute -top-3 -right-3 bg-white border border-border shadow-lg rounded-full px-3 py-1.5 text-xs sm:text-sm">
+                  <span className="font-bold text-[#2563eb]">10+ lat</span>
+                  <span className="text-muted-foreground"> coaching</span>
+                </div>
+                <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center">
+                  <span className="text-xs px-3 py-1 bg-muted rounded-full">
+                    📚 30+ kursów
+                  </span>
+                  <span className="text-xs px-3 py-1 bg-muted rounded-full">
+                    👥 500+ klientów
+                  </span>
+                </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">
                     Prowadzi: Ludwik C. Siadlak
                   </h3>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-base sm:text-lg text-muted-foreground">
                     Nie guru. Nie coach life. Nie motivational speaker.
                   </p>
                 </div>
 
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p className="text-lg font-semibold text-foreground">
+                <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-base sm:text-lg font-semibold text-foreground">
                     Facet, który:
                   </p>
-                  <ul className="space-y-2 list-disc list-inside">
-                    <li>
-                      Przeszedł tę samą ścieżkę (30+ kursów produktywności, 0
-                      transformacji)
+                  <ul className="space-y-2 list-none">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 flex-shrink-0 text-lg">
+                        ✓
+                      </span>
+                      <span>
+                        Przeszedł tę samą ścieżkę (30+ kursów produktywności, 0
+                        transformacji)
+                      </span>
                     </li>
-                    <li>
-                      Znalazł własny las (i wyciął już ścieżkę, którą możesz
-                      pójść)
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 flex-shrink-0 text-lg">
+                        ✓
+                      </span>
+                      <span>
+                        Znalazł własny las (i wyciął już ścieżkę, którą możesz
+                        pójść)
+                      </span>
                     </li>
-                    <li>
-                      Prowadzi Daily Coaching 12:34 dla społeczności
-                      Lifehackerzy od lat
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 flex-shrink-0 text-lg">
+                        ✓
+                      </span>
+                      <span>
+                        Prowadzi Daily Coaching 12:34 dla społeczności
+                        Lifehackerzy od lat
+                      </span>
                     </li>
                   </ul>
 
-                  <p className="text-xl font-bold text-foreground pt-4">
+                  <p className="text-lg sm:text-xl font-bold text-foreground pt-3 sm:pt-4">
                     Nie uczę produktywności. Uczę, jak przestać rąbać w cudzym
                     lesie.
                   </p>
@@ -692,71 +787,112 @@ export default function Wyzwanie() {
       </section>
 
       {/* OBJECTIONS SECTION */}
-      <section className="py-20 px-4 bg-background">
-        <div className="container max-w-4xl mx-auto space-y-8">
-          <div className="bg-card border border-border border-l-4 border-l-[#2563eb] rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              "Nie mam czasu na 4-dniowe wyzwanie"
-            </h3>
-            <div className="space-y-3 text-muted-foreground leading-relaxed">
-              <p>
-                Masz czas na scrollowanie LinkedIn 40 min dziennie.
-                <br />
-                Masz czas na "ważne" spotkania, które mogły być mailem.
-                <br />
-                Masz czas na rąbanie w cudzym lesie.
-              </p>
+      <section className="py-12 sm:py-20 px-4 bg-background">
+        <div className="container max-w-4xl mx-auto space-y-6 sm:space-y-8">
+          {/* Objection 1 - Time */}
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                ⏱️
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                  "Nie mam czasu na 4-dniowe wyzwanie"
+                </h3>
+                <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p>
+                    Masz czas na scrollowanie LinkedIn 40 min dziennie.
+                    <br />
+                    Masz czas na "ważne" spotkania, które mogły być mailem.
+                    <br />
+                    Masz czas na rąbanie w cudzym lesie.
+                  </p>
 
-              <p className="text-foreground font-semibold text-lg">
-                Pytanie: Czy masz czas na 4 dni, które mogą zmienić następne 4
-                lata?
-              </p>
+                  <p className="text-foreground font-semibold text-base sm:text-lg">
+                    Pytanie: Czy masz czas na 4 dni, które mogą zmienić następne
+                    4 lata?
+                  </p>
+                </div>
+                {/* Social Proof */}
+                <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
+                  💬 "To samo myślałem. Ale te 4 dni zaoszczędziły mi 4
+                  miesiące." - Michał K.
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-card border border-border border-l-4 border-l-[#2563eb] rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              "Już próbowałem tysiąca rzeczy. To też nie zadziała."
-            </h3>
-            <div className="space-y-3 text-muted-foreground leading-relaxed">
-              <p className="text-foreground font-semibold text-lg">
-                Dobra wiadomość: Nie próbowałeś TEGO.
-              </p>
+          {/* Objection 2 - Skepticism */}
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                😔
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                  "Już próbowałem tysiąca rzeczy. To też nie zadziała."
+                </h3>
+                <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-foreground font-semibold text-base sm:text-lg">
+                    Dobra wiadomość: Nie próbowałeś TEGO.
+                  </p>
 
-              <p>
-                Tamte kursy dawały Ci narzędzia.
-                <br />
-                To wyzwanie pokaże Ci, CZY RĄBIESZ WE WŁAŚCIWYM LESIE.
-              </p>
+                  <p>
+                    Tamte kursy dawały Ci narzędzia.
+                    <br />
+                    To wyzwanie pokaże Ci, CZY RĄBIESZ WE WŁAŚCIWYM LESIE.
+                  </p>
 
-              <p>
-                Jeśli nie - żadne narzędzie nie pomoże.
-                <br />
-                Jeśli tak - w końcu będziesz wiedział, dlaczego warto
-                kontynuować.
-              </p>
+                  <p>
+                    Jeśli nie - żadne narzędzie nie pomoże.
+                    <br />
+                    Jeśli tak - w końcu będziesz wiedział, dlaczego warto
+                    kontynuować.
+                  </p>
+                </div>
+                {/* Social Proof */}
+                <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
+                  💬 "Wreszcie ktoś mi powiedział, GDZIE kopać, zamiast dać mi
+                  lepszą łopatę." - Anna W.
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-card border border-border border-l-4 border-l-[#2563eb] rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              "Co jeśli odkryję, że rąbię w cudzym lesie i... będę musiał to
-              zmienić?"
-            </h3>
-            <div className="space-y-3 text-muted-foreground leading-relaxed">
-              <p className="text-2xl font-bold text-foreground">Tak.</p>
+          {/* Objection 3 - Fear */}
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
+                🤔
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                  "Co jeśli odkryję, że rąbię w cudzym lesie i... będę musiał to
+                  zmienić?"
+                </h3>
+                <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-xl sm:text-2xl font-bold text-foreground">
+                    Tak.
+                  </p>
 
-              <p>
-                I to jest powód, dlaczego większość ludzi tego nie robi.
-                <br />
-                Łatwiej kupić kolejny kurs produktywności niż skonfrontować się
-                z prawdą.
-              </p>
+                  <p>
+                    I to jest powód, dlaczego większość ludzi tego nie robi.
+                    <br />
+                    Łatwiej kupić kolejny kurs produktywności niż skonfrontować
+                    się z prawdą.
+                  </p>
 
-              <p className="text-foreground font-semibold text-lg">
-                Ale prawda nie zniknie. Tylko będzie głośniejsza z każdym
-                rokiem.
-              </p>
+                  <p className="text-foreground font-semibold text-base sm:text-lg">
+                    Ale prawda nie zniknie. Tylko będzie głośniejsza z każdym
+                    rokiem.
+                  </p>
+                </div>
+                {/* Social Proof */}
+                <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
+                  💬 "Przestałem udawać. Najlepsza decyzja w karierze." - Tomasz
+                  P.
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -765,105 +901,149 @@ export default function Wyzwanie() {
       {/* FAQ SECTION */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-foreground">
-            Najczęstsze pytania
-          </h2>
+          <div className="text-center space-y-3 sm:space-y-4 mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
+              Najczęstsze pytania
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Wszystko, co musisz wiedzieć przed zapisem
+            </p>
+          </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-3 sm:space-y-4"
+          >
             <AccordionItem
               value="item-1"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Czy to naprawdę za darmo?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">💰</span>
+                  <span>Czy to naprawdę za darmo?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Tak. Zero kosztów. Wyzwanie jest darmowe. W dniu 4 przedstawię
-                płatny kurs, ale udział w wyzwaniu nie zobowiązuje do niczego.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                <strong className="text-foreground">Tak. Zero kosztów.</strong>{" "}
+                Wyzwanie jest darmowe. W dniu 4 przedstawię płatny kurs, ale
+                udział w wyzwaniu nie zobowiązuje do niczego.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-2"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Co jeśli nie mogę być na żywo?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">📹</span>
+                  <span>Co jeśli nie mogę być na żywo?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Nagrania zostają dostępne dla wszystkich zapisanych. Ale
-                interakcja na żywo jest najważniejsza - szczególnie w dniu 4
-                (live coaching).
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                Nagrania zostają dostępne dla wszystkich zapisanych. Ale{" "}
+                <strong className="text-foreground">
+                  interakcja na żywo jest najważniejsza
+                </strong>{" "}
+                - szczególnie w dniu 4 (live coaching).
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-3"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Czy to kolejny kurs o Pomodoro i GTD?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">🤔</span>
+                  <span>Czy to kolejny kurs o Pomodoro i GTD?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Nie. To nie jest o technikach. To o fundamentach. Najpierw
-                wybieramy właściwy las, potem ostrzymy siekierę.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                <strong className="text-foreground">
+                  Nie. To nie jest o technikach.
+                </strong>{" "}
+                To o fundamentach. Najpierw wybieramy właściwy las, potem
+                ostrzymy siekierę.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-4"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Dla kogo to NIE jest?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">⚠️</span>
+                  <span>Dla kogo to NIE jest?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Dla osób szukających quick fix. Dla osób, które nie są gotowe
-                skonfrontować się z pytaniem "czy to naprawdę moje cele?". Dla
-                osób bez 60 minut dziennie przez 4 dni.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                Dla osób szukających{" "}
+                <strong className="text-foreground">quick fix</strong>. Dla
+                osób, które nie są gotowe skonfrontować się z pytaniem "czy to
+                naprawdę moje cele?". Dla osób bez 60 minut dziennie przez 4
+                dni.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-5"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Jak wygląda techniczne setup?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">⚙️</span>
+                  <span>Jak wygląda techniczne setup?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Potrzebujesz: 1) Konto Discord (za darmo), 2) Link dostaniesz w
-                mailu po zapisie, 3) Instrukcja wideo: "Jak dołączyć" w
-                pierwszym mailu.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                Potrzebujesz: <strong className="text-foreground">1)</strong>{" "}
+                Konto Discord (za darmo),{" "}
+                <strong className="text-foreground">2)</strong> Link dostaniesz
+                w mailu po zapisie,{" "}
+                <strong className="text-foreground">3)</strong> Instrukcja
+                wideo: "Jak dołączyć" w pierwszym mailu.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-6"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Co po wyzwaniu?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">🚀</span>
+                  <span>Co po wyzwaniu?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Zależy od Ciebie. Możesz wdrożyć narzędzia samodzielnie. Możesz
-                dołączyć do kursu "Hakowanie Produktywności" (8 tygodni, daily
-                coaching, społeczność). Możesz nic nie robić. Żadnych
-                zobowiązań.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                <strong className="text-foreground">Zależy od Ciebie.</strong>{" "}
+                Możesz wdrożyć narzędzia samodzielnie. Możesz dołączyć do kursu
+                "Hakowanie Produktywności" (8 tygodni, daily coaching,
+                społeczność). Możesz nic nie robić. Żadnych zobowiązań.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-7"
-              className="bg-card border border-border rounded-lg px-6"
+              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-[#2563eb]">
-                Kto jeszcze będzie na wyzwaniu?
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl">👥</span>
+                  <span>Kto jeszcze będzie na wyzwaniu?</span>
+                </span>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Profesjonaliści z różnych branż: IT, biznes, freelancing,
-                zarządzanie. Wiek: 30-45. Wspólny mianownik: wysoka ambicja,
-                poczucie, że coś jest nie tak z obecnym sposobem pracy.
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
+                Profesjonaliści z różnych branż:{" "}
+                <strong className="text-foreground">
+                  IT, biznes, freelancing, zarządzanie
+                </strong>
+                . Wiek: 30-45. Wspólny mianownik: wysoka ambicja, poczucie, że
+                coś jest nie tak z obecnym sposobem pracy.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -873,120 +1053,203 @@ export default function Wyzwanie() {
       {/* FINAL CTA SECTION */}
       <section
         id="signup"
-        className="py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
+        className="py-16 sm:py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
       >
-        <div className="container max-w-5xl mx-auto space-y-12">
-          <div className="text-center space-y-8">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+        <div className="container max-w-5xl mx-auto space-y-10 sm:space-y-12">
+          <div className="text-center space-y-6 sm:space-y-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
               Dwa scenariusze:
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
-              <div
-                className="border border-border border-l-4 border-l-red-500 rounded-xl p-6"
-                style={{ backgroundColor: "rgb(239 68 68 / 0.45)" }}
-              >
-                <h3 className="text-xl font-bold text-foreground mb-3">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 text-left max-w-4xl mx-auto">
+              {/* Scenario A - Negative */}
+              <div className="relative group bg-red-500/5 border-2 border-red-500/30 hover:border-red-500/50 rounded-xl p-6 sm:p-8 transition-all hover:shadow-lg">
+                <div className="absolute -top-3 left-4 sm:left-6 bg-red-500 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+                  ❌ Status Quo
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-2">
                   SCENARIUSZ A:
                 </h3>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-foreground leading-relaxed">
                   Nie zapiszesz się. Za miesiąc będziesz dokładnie tam, gdzie
-                  jesteś teraz. Tylko starszy o miesiąc. I nadal będziesz rąbał
-                  w cudzym lesie.
+                  jesteś teraz. <strong>Tylko starszy o miesiąc.</strong> I
+                  nadal będziesz rąbał w cudzym lesie.
                 </p>
               </div>
 
-              <div
-                className="border border-border border-l-4 border-l-green-500 rounded-xl p-6"
-                style={{ backgroundColor: "rgb(34 197 94 / 0.45)" }}
-              >
-                <h3 className="text-xl font-bold text-foreground mb-3">
+              {/* Scenario B - Positive */}
+              <div className="relative group bg-green-500/5 border-2 border-green-500/30 hover:border-green-500/50 rounded-xl p-6 sm:p-8 transition-all hover:shadow-lg">
+                <div className="absolute -top-3 left-4 sm:left-6 bg-green-500 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+                  ✅ Zmiana
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 mt-2">
                   SCENARIUSZ B:
                 </h3>
-                <p className="text-foreground leading-relaxed mb-3">
-                  Zapiszesz się. Za 4 dni będziesz wiedział:
+                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3 sm:mb-4">
+                  Zapiszesz się. <strong>Za 4 dni będziesz wiedział:</strong>
                 </p>
-                <ul className="space-y-1 text-foreground list-disc list-inside">
-                  <li>W którym lesie stoję</li>
-                  <li>Gdzie powinienem być</li>
-                  <li>Którędy iść</li>
-                  <li>Jak to wdrożyć</li>
+                <ul className="space-y-2 text-sm sm:text-base text-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 flex-shrink-0">✓</span>
+                    <span>W którym lesie stoję</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 flex-shrink-0">✓</span>
+                    <span>Gdzie powinienem być</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 flex-shrink-0">✓</span>
+                    <span>Którędy iść</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 flex-shrink-0">✓</span>
+                    <span>Jak to wdrożyć</span>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="text-center space-y-8">
-            <a
-              href="https://buy.siadlak.com/checkout/spotkanie-online"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-12 py-6 text-xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-colors"
-            >
-              Sprawdzam, w którym lesie stoję (4 dni, 0 zł)
-            </a>
+          {/* Primary CTA */}
+          <div className="text-center space-y-6 sm:space-y-8">
+            <div className="relative group inline-block">
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <a
+                href="https://buy.siadlak.com/checkout/spotkanie-online"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative inline-flex items-center justify-center px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all shadow-lg"
+              >
+                <span className="flex flex-col items-center gap-1">
+                  <span className="text-xs sm:text-sm uppercase tracking-wider opacity-90">
+                    Darmowe wyzwanie
+                  </span>
+                  <span>Sprawdzam, w którym lesie stoję →</span>
+                  <span className="text-xs sm:text-sm opacity-90">
+                    (4 dni, 0 zł)
+                  </span>
+                </span>
+              </a>
+            </div>
 
-            <div
-              className="border border-green-500/30 rounded-xl p-8 max-w-2xl mx-auto text-left"
-              style={{ backgroundColor: "rgb(34 197 94 / 0.45)" }}
-            >
-              <p className="font-semibold text-foreground mb-3">Dostaniesz:</p>
-              <ul className="space-y-2 text-foreground list-disc list-inside">
-                <li>Link do Discord (natychmiast)</li>
-                <li>Materiały przygotowawcze (dzień przed startem)</li>
-                <li>Przypomnienia o live'ach (żebyś nie przegapił)</li>
-                <li>Dostęp do nagrań (jeśli nie zdążysz na live)</li>
-              </ul>
-              <p className="text-lg font-semibold text-foreground mt-6 text-center">
-                Start: 7 października, godz. będzie niespodzianka
+            {/* What you'll get box */}
+            <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6 sm:p-8 max-w-2xl mx-auto text-left shadow-md">
+              <p className="font-bold text-base sm:text-lg text-foreground mb-4 flex items-center gap-2">
+                <span className="text-xl sm:text-2xl">📦</span>
+                <span>Dostaniesz natychmiast:</span>
               </p>
+              <ul className="space-y-3 text-sm sm:text-base text-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 flex-shrink-0 text-lg">
+                    ✓
+                  </span>
+                  <span>
+                    <strong>Link do Discord</strong> (natychmiast)
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 flex-shrink-0 text-lg">
+                    ✓
+                  </span>
+                  <span>
+                    <strong>Materiały przygotowawcze</strong> (dzień przed
+                    startem)
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 flex-shrink-0 text-lg">
+                    ✓
+                  </span>
+                  <span>
+                    <strong>Przypomnienia o live'ach</strong> (żebyś nie
+                    przegapił)
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 flex-shrink-0 text-lg">
+                    ✓
+                  </span>
+                  <span>
+                    <strong>Dostęp do nagrań</strong> (jeśli nie zdążysz na
+                    live)
+                  </span>
+                </li>
+              </ul>
+              <div className="mt-6 pt-6 border-t border-green-500/30 text-center">
+                <p className="text-base sm:text-lg font-bold text-foreground">
+                  🗓️ Start:{" "}
+                  <span className="text-[#2563eb]">7 października</span>, godz.
+                  będzie niespodzianka
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-xl p-8 max-w-3xl mx-auto">
-            <p className="text-xl font-bold text-foreground mb-4">
+          {/* P.S. Section */}
+          <div className="bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-xl p-6 sm:p-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl font-bold text-foreground mb-4">
               P.S. To nie jest dla każdego.
             </p>
-            <div className="space-y-3 text-muted-foreground leading-relaxed">
+            <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
               <p>
-                Jeśli szukasz motywacyjnych frazesów - odpuść.
+                Jeśli szukasz{" "}
+                <strong className="text-foreground">
+                  motywacyjnych frazesów
+                </strong>{" "}
+                - odpuść.
                 <br />
-                Jeśli chcesz magicznej pigułki - odpuść.
-                <br />
-                Jeśli chcesz, żebym Ci powiedział, że "wszystko jest OK" -
+                Jeśli chcesz{" "}
+                <strong className="text-foreground">magicznej pigułki</strong> -
                 odpuść.
+                <br />
+                Jeśli chcesz, żebym Ci powiedział, że{" "}
+                <strong className="text-foreground">
+                  "wszystko jest OK"
+                </strong>{" "}
+                - odpuść.
               </p>
 
-              <p className="font-semibold text-foreground">
+              <p className="font-semibold text-foreground text-base sm:text-lg pt-2">
                 To wyzwanie jest dla ludzi, którzy:
               </p>
-              <ul className="space-y-1 list-disc list-inside">
-                <li>Mają dość udawania, że wszystko jest OK</li>
-                <li>Są gotowi skonfrontować się z prawdą</li>
-                <li>
-                  Chcą wiedzieć, CZY rąbią w swoim lesie (nawet jeśli odpowiedź
-                  będzie trudna)
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span>Mają dość udawania, że wszystko jest OK</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span>Są gotowi skonfrontować się z prawdą</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span>
+                    Chcą wiedzieć, CZY rąbią w swoim lesie (nawet jeśli
+                    odpowiedź będzie trudna)
+                  </span>
                 </li>
               </ul>
 
-              <p className="text-lg font-bold text-foreground pt-4">
+              <p className="text-base sm:text-lg font-bold text-foreground pt-4">
                 Jeśli to Ty - widzimy się 7 października.
               </p>
             </div>
           </div>
 
+          {/* Final CTA */}
           <div className="text-center">
             <a
               href="https://buy.siadlak.com/checkout/spotkanie-online"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              Ostatnia szansa: Zapisuję się teraz
+              Ostatnia szansa: Zapisuję się teraz →
             </a>
-            <p className="text-sm text-muted-foreground mt-4">
-              Dołącz do 34 profesjonalistów, którzy już sprawdzają, czy rąbią w
-              swoim lesie.
+            <p className="text-xs sm:text-sm text-muted-foreground mt-4 max-w-md mx-auto">
+              Dołącz do{" "}
+              <strong className="text-foreground">34 profesjonalistów</strong>,
+              którzy już sprawdzają, czy rąbią w swoim lesie.
             </p>
           </div>
         </div>
