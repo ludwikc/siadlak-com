@@ -80,74 +80,168 @@ export default function Wyzwanie() {
       />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted py-20 px-4">
-        <div className="container max-w-5xl mx-auto">
-          <div className="text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-              Ile kursów produktywności już kupiłeś?
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-foreground font-semibold">
-              3? 5? 7?
-            </p>
-
-            <p className="text-xl md:text-2xl text-foreground max-w-3xl mx-auto">
-              I pytanie drugie: <strong>Dlaczego nadal czujesz, że coś jest nie tak?</strong>
-            </p>
-
-            <div className="space-y-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto py-6">
-              <p>
-                Nie dlatego, że tamte kursy były złe.<br/>
-                Dlatego, że <strong className="text-foreground">rąbiesz drzewa w cudzym lesie.</strong>
-              </p>
-            </div>
-
-            <div className="py-8 space-y-4">
-              <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-                4 dni, które pokażą ci, GDZIE powinieneś rąbać
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                (Zamiast DAĆ ci ostrzejszą siekierę do rąbania w złym miejscu)
-              </p>
-            </div>
-
-            <ChallengeCountdown />
-
-            <div className="bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto">
-              <div className="space-y-3 text-muted-foreground">
-                <p className="text-xl font-semibold text-foreground">7-10 października 2025</p>
-                <p>Codziennie o godzinie, której nie oczekujesz</p>
-                <p>💬 Live na Discord</p>
-                <p>📹 Nagrania zostają (ale energia live'a nie)</p>
-                <p className="text-lg font-semibold text-foreground pt-4">
-                  ZERO kosztów. Zero bullshitu. Zero motywacyjnych frazesów.
-                </p>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/50 py-20 px-4">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+        
+        {/* Gradient orbs for depth */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        
+        <div className="container max-w-6xl mx-auto relative z-10">
+          <div className="text-center space-y-12">
+            {/* Main headline with staggered animation */}
+            <div className="space-y-6 animate-fade-in">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.1] tracking-tight">
+                Ile kursów produktywności<br />
+                <span className="text-[#2563eb]">już kupiłeś?</span>
+              </h1>
+              
+              <div className="flex items-center justify-center gap-4 text-3xl md:text-4xl text-muted-foreground font-light">
+                <span className="inline-block hover:scale-110 transition-transform cursor-default">3?</span>
+                <span className="inline-block hover:scale-110 transition-transform cursor-default">5?</span>
+                <span className="inline-block hover:scale-110 transition-transform cursor-default">7?</span>
               </div>
             </div>
 
-            {/* CTA #1 */}
-            <div className="pt-8 space-y-4">
+            {/* The uncomfortable question */}
+            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute -inset-4 bg-[#2563eb]/5 blur-xl rounded-full"></div>
+              <p className="relative text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold max-w-4xl mx-auto leading-tight">
+                I pytanie drugie:<br />
+                <span className="text-[#2563eb]">Dlaczego nadal czujesz,<br />że coś jest nie tak?</span>
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div className="flex items-center justify-center gap-4 py-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-border"></div>
+              <div className="w-2 h-2 rounded-full bg-[#2563eb]"></div>
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-border"></div>
+            </div>
+
+            {/* The answer */}
+            <div className="space-y-6 text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <p className="leading-relaxed">
+                Nie dlatego, że tamte kursy były złe.
+              </p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
+                Dlatego, że <span className="text-[#2563eb] relative">
+                  rąbiesz drzewa<br />w cudzym lesie.
+                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#2563eb]/20"></span>
+                </span>
+              </p>
+            </div>
+
+            {/* Main promise */}
+            <div className="py-12 space-y-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
+                4 dni, które pokażą ci,<br />
+                <span className="text-[#2563eb]">GDZIE</span> powinieneś rąbać
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
+                (Zamiast DAĆ ci ostrzejszą siekierę<br />do rąbania w złym miejscu)
+              </p>
+            </div>
+
+            {/* Countdown */}
+            <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
+              <ChallengeCountdown />
+            </div>
+
+            {/* Event details card */}
+            <div className="animate-fade-in" style={{ animationDelay: '1.2s' }}>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
+                  <div className="grid gap-4 text-left">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
+                        <span className="text-2xl">📅</span>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Data</p>
+                        <p className="text-xl font-semibold text-foreground">7-10 października 2025</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
+                        <span className="text-2xl">⏰</span>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Godzina</p>
+                        <p className="text-lg text-foreground">Codziennie o godzinie, której nie oczekujesz</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
+                        <span className="text-2xl">💬</span>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Format</p>
+                        <p className="text-lg text-foreground">Live na Discord</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
+                        <span className="text-2xl">📹</span>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Nagrania</p>
+                        <p className="text-lg text-foreground">Zostają (ale energia live'a nie)</p>
+                      </div>
+                    </div>
+                    
+                    <div className="pt-4 border-t border-border/50">
+                      <p className="text-xl font-bold text-[#2563eb] text-center">
+                        ZERO kosztów • Zero bullshitu • Zero motywacyjnych frazesów
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="pt-8 space-y-6 animate-fade-in" style={{ animationDelay: '1.4s' }}>
               <a 
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-colors"
+                className="group inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)]"
               >
                 Tak, chcę sprawdzić czy rąbię w swoim lesie
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </a>
-              <p className="text-sm text-muted-foreground">
-                Dostaniesz: Link do Discord + Materiały + Przypomnienia
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Bezpłatny dostęp. Bez karty. Bez subskrypcji.<br/>
-                Twoje dane są bezpieczne. Zero spamu.
-              </p>
-              <p className="text-sm font-semibold text-foreground">
-                Już dołączyło: 34 profesjonalistów
-              </p>
-              <p className="text-xs text-muted-foreground italic">
-                (Którzy mają dość udawania, że wszystko jest OK)
-              </p>
+              
+              <div className="space-y-3 text-sm text-muted-foreground max-w-lg mx-auto">
+                <p className="flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Bezpłatny dostęp • Bez karty • Bez subskrypcji
+                </p>
+                <p className="flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Dostaniesz: Link do Discord + Materiały + Przypomnienia
+                </p>
+              </div>
+              
+              <div className="pt-4">
+                <p className="text-lg font-semibold text-foreground">
+                  Już dołączyło: <span className="text-[#2563eb]">34 profesjonalistów</span>
+                </p>
+                <p className="text-sm text-muted-foreground italic mt-1">
+                  (Którzy mają dość udawania, że wszystko jest OK)
+                </p>
+              </div>
             </div>
           </div>
         </div>
