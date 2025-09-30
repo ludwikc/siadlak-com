@@ -632,20 +632,20 @@ export default function Wyzwanie() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
-              <div className="bg-red-500/5 border border-border border-l-4 border-l-red-500 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3">SCENARIUSZ A:</h3>
-                <p className="text-muted-foreground leading-relaxed">
+              <div className="bg-red-500/20 border-2 border-red-500/40 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-3">SCENARIUSZ A:</h3>
+                <p className="text-white/90 leading-relaxed">
                   Nie zapiszesz się. Za miesiąc będziesz dokładnie tam, gdzie jesteś teraz. 
                   Tylko starszy o miesiąc. I nadal będziesz rąbał w cudzym lesie.
                 </p>
               </div>
 
-              <div className="bg-green-500/5 border border-border border-l-4 border-l-green-500 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3">SCENARIUSZ B:</h3>
-                <p className="text-muted-foreground leading-relaxed mb-3">
+              <div className="bg-green-500/20 border-2 border-green-500/40 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-3">SCENARIUSZ B:</h3>
+                <p className="text-white/90 leading-relaxed mb-3">
                   Zapiszesz się. Za 4 dni będziesz wiedział:
                 </p>
-                <ul className="space-y-1 text-muted-foreground list-disc list-inside">
+                <ul className="space-y-1 text-white/90 list-disc list-inside">
                   <li>W którym lesie stoję</li>
                   <li>Gdzie powinienem być</li>
                   <li>Którędy iść</li>
@@ -665,15 +665,15 @@ export default function Wyzwanie() {
               Sprawdzam, w którym lesie stoję (4 dni, 0 zł)
             </a>
 
-            <div className="bg-green-500/5 border border-green-500/30 rounded-xl p-8 max-w-2xl mx-auto text-left">
-              <p className="font-semibold text-foreground mb-3">Dostaniesz:</p>
-              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+            <div className="bg-green-500/20 border-2 border-green-500/40 rounded-xl p-8 max-w-2xl mx-auto text-left">
+              <p className="font-semibold text-white mb-3">Dostaniesz:</p>
+              <ul className="space-y-2 text-white/90 list-disc list-inside">
                 <li>Link do Discord (natychmiast)</li>
                 <li>Materiały przygotowawcze (dzień przed startem)</li>
                 <li>Przypomnienia o live'ach (żebyś nie przegapił)</li>
                 <li>Dostęp do nagrań (jeśli nie zdążysz na live)</li>
               </ul>
-              <p className="text-lg font-semibold text-foreground mt-6 text-center">
+              <p className="text-lg font-semibold text-white mt-6 text-center">
                 Start: 7 października, godz. będzie niespodzianka
               </p>
             </div>
