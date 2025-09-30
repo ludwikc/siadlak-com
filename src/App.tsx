@@ -37,6 +37,8 @@ import HelpSubpage from './pages/HelpSubpage';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
+import Wyzwanie from './pages/Wyzwanie';
+import { Toaster } from "@/components/ui/sonner";
 
 const queryClient = new QueryClient();
 
@@ -88,11 +90,14 @@ function App() {
             <Route path="/webinar/replay" element={<WebinarReplay />} />
             <Route path="/webinar/meski-kompas" element={<WebinarMeskiKompas />} />
             
+            <Route path="/wyzwanie" element={<Wyzwanie />} />
+            
             <Route path="/help" element={<Help />} />
             <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Toaster />
           </Router>
         </ThemeProvider>
       </QueryClientProvider>

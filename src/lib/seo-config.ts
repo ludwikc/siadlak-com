@@ -279,6 +279,15 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/wyzwanie',
+    seo: {
+      title: 'Drwal w Białej Koszuli - 4-dniowe wyzwanie produktywności',
+      description: 'Darmowe 4-dniowe wyzwanie dla profesjonalistów, którzy osiągają cele, ale nie czują spełnienia. 7-9 października 2025. Live na Discord.',
+      keywords: 'produktywność, wyzwanie, cele, wartości, efektywność, coaching, Ludwik Siadlak, lifehackerzy',
+      url: '/wyzwanie'
+    }
+  },
+  {
     path: '/thank-you',
     seo: {
       title: 'Dziękujemy',

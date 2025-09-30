@@ -28,6 +28,7 @@ export const routes = [
   '/webinar/expired',
   '/webinar/replay',
   '/webinar/meski-kompas',
+  '/wyzwanie',
   '/help',
   '/thank-you'
 ];
