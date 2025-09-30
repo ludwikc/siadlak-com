@@ -40,29 +40,26 @@ function ChallengeCountdown() {
   }, []);
 
   return (
-    <div className="flex justify-center gap-4 mb-12">
-      <div className="text-center">
-        <div className="bg-card border border-border rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-foreground">{timeLeft.days}</div>
-          <div className="text-sm text-muted-foreground uppercase">dni</div>
+    <div className="bg-[#1a1a1a] rounded-xl p-8 max-w-2xl mx-auto">
+      <div className="flex justify-center gap-3 md:gap-6">
+        <div className="text-center">
+          <div className="text-3xl md:text-5xl font-bold text-white mb-1">{timeLeft.days}</div>
+          <div className="text-sm text-white/70 uppercase tracking-wide">dni</div>
         </div>
-      </div>
-      <div className="text-center">
-        <div className="bg-card border border-border rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-foreground">{timeLeft.hours}</div>
-          <div className="text-sm text-muted-foreground uppercase">godz</div>
+        <div className="text-white/30 text-3xl md:text-5xl">:</div>
+        <div className="text-center">
+          <div className="text-3xl md:text-5xl font-bold text-white mb-1">{timeLeft.hours}</div>
+          <div className="text-sm text-white/70 uppercase tracking-wide">godz</div>
         </div>
-      </div>
-      <div className="text-center">
-        <div className="bg-card border border-border rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-foreground">{timeLeft.minutes}</div>
-          <div className="text-sm text-muted-foreground uppercase">min</div>
+        <div className="text-white/30 text-3xl md:text-5xl">:</div>
+        <div className="text-center">
+          <div className="text-3xl md:text-5xl font-bold text-white mb-1">{timeLeft.minutes}</div>
+          <div className="text-sm text-white/70 uppercase tracking-wide">min</div>
         </div>
-      </div>
-      <div className="text-center">
-        <div className="bg-card border border-border rounded-lg p-4 min-w-[80px]">
-          <div className="text-3xl font-bold text-foreground">{timeLeft.seconds}</div>
-          <div className="text-sm text-muted-foreground uppercase">sek</div>
+        <div className="text-white/30 text-3xl md:text-5xl">:</div>
+        <div className="text-center">
+          <div className="text-3xl md:text-5xl font-bold text-white mb-1">{timeLeft.seconds}</div>
+          <div className="text-sm text-white/70 uppercase tracking-wide">sek</div>
         </div>
       </div>
     </div>
@@ -80,169 +77,84 @@ export default function Wyzwanie() {
       />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/50 py-20 px-4">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
-        
-        {/* Gradient orbs for depth */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="container max-w-6xl mx-auto relative z-10">
-          <div className="text-center space-y-12">
-            {/* Main headline with staggered animation */}
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
-                Ile kursów produktywności<br />
-                <span className="text-[#2563eb]">już kupiłeś?</span>
-              </h1>
-              
-              <div className="flex items-center justify-center gap-4 text-xl md:text-2xl text-muted-foreground">
-                <span className="inline-block hover:scale-110 transition-transform cursor-default">3?</span>
-                <span className="inline-block hover:scale-110 transition-transform cursor-default">5?</span>
-                <span className="inline-block hover:scale-110 transition-transform cursor-default">7?</span>
-              </div>
-            </div>
+      <section className="bg-white py-20 md:py-24 px-4">
+        <div className="container max-w-[1200px] mx-auto">
+          <div className="text-center max-w-[800px] mx-auto space-y-8 md:space-y-12">
+            
+            {/* POZIOM 1: Pattern Interrupt */}
+            <h1 className="text-[32px] md:text-[48px] lg:text-[64px] font-bold leading-[1.2] text-[#1a1a1a]">
+              Ile kursów produktywności już kupiłeś?
+            </h1>
 
-            {/* The uncomfortable question */}
-            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute -inset-4 bg-[#2563eb]/5 blur-xl rounded-full"></div>
-              <p className="relative text-3xl md:text-4xl text-foreground font-bold max-w-4xl mx-auto leading-tight">
-                I pytanie drugie:<br />
-                <span className="text-[#2563eb]">Dlaczego nadal czujesz,<br />że coś jest nie tak?</span>
-              </p>
-            </div>
+            {/* POZIOM 2: Hook Amplifier */}
+            <p className="text-[24px] md:text-[32px] lg:text-[40px] font-normal text-[#666666] italic mt-4">
+              3? 5? 7?
+            </p>
 
-            {/* Divider */}
-            <div className="flex items-center justify-center gap-4 py-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="h-px w-20 bg-gradient-to-r from-transparent to-border"></div>
-              <div className="w-2 h-2 rounded-full bg-[#2563eb]"></div>
-              <div className="h-px w-20 bg-gradient-to-l from-transparent to-border"></div>
-            </div>
+            {/* POZIOM 3: Konfrontacja */}
+            <p className="text-[20px] md:text-[28px] lg:text-[36px] font-semibold leading-tight text-[#1a1a1a] mt-8">
+              I pytanie drugie: <strong>Dlaczego nadal czujesz, że coś jest nie tak?</strong>
+            </p>
 
-            {/* The answer */}
-            <div className="space-y-6 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <p className="leading-relaxed">
-                Nie dlatego, że tamte kursy były złe.
-              </p>
-              <p className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                Dlatego, że <span className="text-[#2563eb] relative">
-                  rąbiesz drzewa<br />w cudzym lesie.
-                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#2563eb]/20"></span>
+            {/* VISUAL BREAK */}
+            <div className="h-12 md:h-16"></div>
+
+            {/* POZIOM 4: Problem Statement */}
+            <div className="text-[16px] md:text-[20px] lg:text-[24px] font-normal leading-[1.6] text-[#333333] space-y-2">
+              <p>Nie dlatego, że tamte kursy były złe.</p>
+              <p>
+                Dlatego, że{' '}
+                <span className="font-bold bg-[#FFF9E6] px-2 py-1">
+                  rąbiesz drzewa w cudzym lesie.
                 </span>
               </p>
             </div>
 
-            {/* Main promise */}
-            <div className="py-12 space-y-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
-                4 dni, które pokażą Ci,<br />
-                <span className="text-[#2563eb]">GDZIE</span> powinieneś rąbać
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto italic">
-                (Zamiast DAĆ Ci ostrzejszą siekierę<br />do rąbania w złym miejscu)
-              </p>
-            </div>
+            {/* POZIOM 5: Promise (główny) */}
+            <h2 className="text-[24px] md:text-[36px] lg:text-[48px] font-bold leading-tight text-[#D97706] mt-12">
+              4 dni, które pokażą ci, GDZIE powinieneś rąbać
+            </h2>
 
-            {/* Countdown */}
-            <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
+            {/* POZIOM 6: Subheadline */}
+            <p className="text-[16px] md:text-[18px] font-normal text-[#666666] italic mt-3">
+              (Zamiast DAĆ ci ostrzejszą siekierę do rąbania w złym miejscu)
+            </p>
+
+            {/* VISUAL BREAK */}
+            <div className="h-16 md:h-20"></div>
+
+            {/* POZIOM 7: Countdown Timer */}
+            <div className="mt-12">
               <ChallengeCountdown />
             </div>
 
-            {/* Event details card */}
-            <div className="animate-fade-in" style={{ animationDelay: '1.2s' }}>
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
-                  <div className="grid gap-4 text-left">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                        <span className="text-2xl">📅</span>
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Data</p>
-                        <p className="text-xl font-semibold text-foreground">7-10 października 2025</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                        <span className="text-2xl">⏰</span>
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Godzina</p>
-                        <p className="text-base md:text-lg text-foreground">Codziennie o 11:30</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                        <span className="text-2xl">💬</span>
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Format</p>
-                        <p className="text-base md:text-lg text-foreground">Live na Discord</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center">
-                        <span className="text-2xl">📹</span>
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">Nagrania</p>
-                        <p className="text-base md:text-lg text-foreground">Zostają (ale energia live'a nie)</p>
-                      </div>
-                    </div>
-                    
-                    <div className="pt-4 border-t border-border/50">
-                      <p className="text-xl md:text-2xl font-bold text-[#2563eb] text-center">
-                        ZERO kosztów • Zero bullshitu • Zero motywacyjnych frazesów
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* POZIOM 8: Event Details */}
+            <div className="text-[16px] md:text-[18px] leading-[1.8] text-[#333333] space-y-2 mt-6">
+              <p className="font-semibold">7-10 października 2025</p>
+              <p>Codziennie o godzinie, której nie oczekujesz</p>
+              <p>Live na Discord</p>
+              <p>Nagrania zostają (ale energia live'a nie)</p>
             </div>
 
-            {/* CTA */}
-            <div className="pt-8 space-y-6 animate-fade-in" style={{ animationDelay: '1.4s' }}>
+            {/* POZIOM 9: Zero Bullshit Statement */}
+            <div className="border-t border-b border-[#e5e7eb] py-4 mt-8">
+              <p className="text-[18px] md:text-[20px] font-bold text-[#059669]">
+                ZERO kosztów. Zero bullshitu. Zero motywacyjnych frazesów.
+              </p>
+            </div>
+
+            {/* CTA BUTTON */}
+            <div className="mt-12">
               <a 
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center px-10 py-5 text-xl md:text-2xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_-10px_rgba(37,99,235,0.5)]"
+                className="inline-block px-8 md:px-12 py-5 text-[18px] md:text-[20px] font-bold text-white bg-[#D97706] hover:bg-[#B45309] rounded-lg shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D97706] focus:ring-offset-2"
               >
-                Tak, chcę sprawdzić czy rąbię w swoim lesie
-                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+                Sprawdzam, w którym lesie stoję (4 dni, 0 zł)
               </a>
-              
-              <div className="space-y-3 text-base md:text-lg text-muted-foreground max-w-lg mx-auto">
-                <p className="flex items-center justify-center gap-2">
-                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Bezpłatny dostęp • Bez karty • Bez subskrypcji
-                </p>
-                <p className="flex items-center justify-center gap-2">
-                  <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Dostaniesz: Link do Discord + Materiały + Przypomnienia
-                </p>
-              </div>
-              
-              <div className="pt-4">
-                <p className="text-base md:text-lg font-semibold text-foreground">
-                  Już dołączyło: <span className="text-[#2563eb]">34 profesjonalistów</span>
-                </p>
-                <p className="text-base md:text-lg text-muted-foreground italic mt-1">
-                  (Którzy mają dość udawania, że wszystko jest OK)
-                </p>
-              </div>
             </div>
+
           </div>
         </div>
       </section>
