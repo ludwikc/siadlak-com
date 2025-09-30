@@ -270,15 +270,6 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/webinar/meski-kompas',
-    seo: {
-      title: 'Upgrade Systemu - Warsztat LIVE Męski Kompas',
-      description: '90-minutowy warsztat LIVE dla analitycznych profesjonalistów. Prosty framework do mapowania priorytetów i konkretny plan na następny tydzień. Bezpłatnie.',
-      keywords: 'męski kompas, warsztat live, rozwój osobisty, produktywność, coaching, framework, analityczny umysł',
-      url: '/webinar/meski-kompas'
-    }
-  },
-  {
     path: '/thank-you',
     seo: {
       title: 'Dziękujemy',

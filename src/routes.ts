@@ -27,7 +27,6 @@ export const routes = [
   '/webinar',
   '/webinar/expired',
   '/webinar/replay',
-  '/webinar/meski-kompas',
   '/help',
   '/thank-you'
 ];

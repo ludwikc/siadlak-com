@@ -21,7 +21,6 @@ import Webinar from './pages/Webinar';
 import WebinarExpired from './pages/WebinarExpired';
 import WebinarLive from './pages/WebinarLive';
 import WebinarReplay from './pages/WebinarReplay';
-import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
 import Testimonials from './pages/Testimonials';
 import Assessment from './pages/Assessment';
 import ThankYou from './pages/ThankYou';
@@ -86,7 +85,6 @@ function App() {
             <Route path="/webinar/live" element={<WebinarLive />} />
             <Route path="/webinar/expired" element={<WebinarExpired />} />
             <Route path="/webinar/replay" element={<WebinarReplay />} />
-            <Route path="/webinar/meski-kompas" element={<WebinarMeskiKompas />} />
             
             <Route path="/help" element={<Help />} />
             <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
