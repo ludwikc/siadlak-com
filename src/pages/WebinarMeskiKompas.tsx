@@ -27,7 +27,7 @@ export default function WebinarMeskiKompas() {
               "POWINIENEM TO OGARNĄĆ SAM."
             </h1>
             
-            <div className="text-xl md:text-2xl text-primary-foreground/80 mb-8 leading-relaxed space-y-4">
+            <div className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed space-y-4">
               <p>Jako facet. Jako senior. Jako ten, który "ma głowę na karku".</p>
               <p>Ale w środku? Chaos. 20 projektów. Zero priorytetu.<br/>
               I nie możesz przyznać, że nie wiesz, od czego zacząć.</p>
@@ -40,7 +40,7 @@ export default function WebinarMeskiKompas() {
               WARSZTAT: PRZESTRZEŃ BEZ OCENY
             </h2>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
               90 minut z Ludwikiem i Mateuszem:<br/>
               Szczera diagnoza + prosty framework + konkretny plan.<br/><br/>
               
@@ -55,7 +55,7 @@ export default function WebinarMeskiKompas() {
               </Button>
             </a>
 
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-primary-foreground/70">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-white/80">
               <span className="flex items-center gap-2">📅 16 października 2025</span>
               <span className="flex items-center gap-2">🕐 19:00 CET</span>
               <span className="flex items-center gap-2">💻 Online (Zoom)</span>
