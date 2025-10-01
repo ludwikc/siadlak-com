@@ -35,21 +35,52 @@ export default function NewsletterPage() {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="py-16 sm:py-20 bg-gradient-to-br from-neural-violet/20 via-quantum-blue/10 to-background relative overflow-hidden">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 sm:py-28 bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space text-white overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-20 left-10 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+              <div className="inline-block mb-4 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <span className="text-sm font-medium text-white">
+                  Newsletter dla myślących ludzi
+                </span>
+              </div>
+
               <div className="space-y-4 sm:space-y-6">
                 <div className="inline-block">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-neural-violet">
+                  <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white drop-shadow-lg">
                     (🧠 + 🤖)^💜
                   </h1>
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-deep-charcoal">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-md">
                   INTELIGENCJA DO POTĘGI SERCA
                 </h2>
-                <p className="text-lg sm:text-xl text-deep-charcoal/80 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed font-medium">
                   Przestrzeń głębokich rozmów dla myślących ludzi.
                 </p>
+              </div>
+
+              {/* Trust indicators */}
+              <div className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-white/20">
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-white">150+</p>
+                  <p className="text-sm text-white/80">Członków społeczności</p>
+                </div>
+                <div className="w-px bg-white/20"></div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-white">23/100</p>
+                  <p className="text-sm text-white/80">Miejsca założycielskie</p>
+                </div>
+                <div className="w-px bg-white/20"></div>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-white">~10 dni</p>
+                  <p className="text-sm text-white/80">Do wyczerpania</p>
+                </div>
               </div>
             </div>
           </div>
@@ -96,46 +127,51 @@ export default function NewsletterPage() {
                   </li>
                 </ul>
 
-                <div className="bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all shadow-lg hover:shadow-xl">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-neural-violet to-luminal-magenta text-white px-4 sm:px-6 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-md">
+                <div className="relative bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 sm:p-10 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all shadow-2xl hover:shadow-3xl">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-neural-violet to-luminal-magenta text-white px-6 sm:px-8 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg animate-pulse">
                       🔥 OFERTA ZAŁOŻYCIELSKA
                     </span>
                   </div>
-                  <div className="mt-4">
-                    <p className="text-lg sm:text-xl font-bold text-neural-violet mb-2">
-                      Pierwsze 100 osób: dostęp za 97 PLN miesięcznie
-                    </p>
-                    <p className="text-xl sm:text-2xl font-bold text-luminal-magenta mb-4">
-                      DOŻYWOTNIO.
-                    </p>
-                    <p className="text-sm text-deep-charcoal/70 mb-6">
-                      (Sponsorowane przez Fundację HACKERZY.PL)
-                    </p>
+
+                  <div className="mt-6 mb-8">
+                    <div className="text-center space-y-4">
+                      <p className="text-xl sm:text-2xl font-bold text-neural-violet">
+                        Pierwsze 100 osób: dostęp za 97 PLN miesięcznie
+                      </p>
+                      <p className="text-2xl sm:text-3xl font-bold text-luminal-magenta">
+                        DOŻYWOTNIO.
+                      </p>
+                      <div className="inline-block bg-white/80 rounded-lg px-4 py-2 mt-4">
+                        <p className="text-sm text-deep-charcoal/80 font-medium">
+                          Sponsorowane przez Fundację HACKERZY.PL
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 sm:p-5 mb-6 border border-neural-violet/20">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm font-semibold text-deep-charcoal">
-                        POZOSTAŁO MIEJSC
+                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 sm:p-6 mb-8 border-2 border-neural-violet/30 shadow-lg">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm font-bold text-deep-charcoal uppercase tracking-wide">
+                        Pozostało miejsc
                       </span>
-                      <span className="text-2xl font-bold text-neural-violet">
+                      <span className="text-3xl font-bold text-neural-violet">
                         23/100
                       </span>
                     </div>
-                    <div className="w-full bg-deep-charcoal/20 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-deep-charcoal/20 rounded-full h-4 overflow-hidden mb-3">
                       <div
-                        className="bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet h-3 rounded-full animate-pulse"
+                        className="bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet h-4 rounded-full animate-pulse shadow-inner"
                         style={{ width: "77%" }}
                       ></div>
                     </div>
-                    <p className="text-xs text-deep-charcoal/60 mt-2 text-center">
+                    <p className="text-sm text-deep-charcoal/70 text-center font-semibold">
                       77% wyprzedane • ~10 dni do wyczerpania
                     </p>
                   </div>
 
-                  <div className="relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-luminal-magenta rounded-xl blur opacity-50 group-hover:opacity-75 transition duration-300"></div>
+                  <div className="relative group mb-6">
+                    <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                     <Button
                       onClick={() =>
                         window.open(
@@ -143,10 +179,16 @@ export default function NewsletterPage() {
                           "_blank",
                         )
                       }
-                      className="relative w-full bg-neural-violet hover:bg-neural-violet/90 text-white font-bold py-4 sm:py-5 text-base sm:text-lg shadow-lg"
+                      className="relative w-full bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white font-bold py-6 sm:py-7 text-lg sm:text-xl shadow-xl transform hover:scale-[1.02] transition-all"
                     >
                       ZAREZERWUJ MIEJSCE ZAŁOŻYCIELSKIE →
                     </Button>
+                  </div>
+
+                  <div className="text-center">
+                    <p className="text-xs text-deep-charcoal/60">
+                      💳 Bezpieczna płatność • 🔒 Dane chronione • ⚡ Natychmiastowy dostęp
+                    </p>
                   </div>
                 </div>
               </div>
@@ -398,25 +440,39 @@ export default function NewsletterPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-deep-charcoal/5">
+        <section className="py-20 bg-gradient-to-b from-deep-charcoal/5 to-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
-                DOWODY - PRAWDZIWE ŚWIADECTWA
-              </h2>
+            <div className="max-w-5xl mx-auto space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+                  DOWODY - PRAWDZIWE ŚWIADECTWA
+                </h2>
+                <p className="text-lg text-deep-charcoal/70">
+                  Nie musisz wierzyć mi na słowo. Posłuchaj członków społeczności.
+                </p>
+              </div>
 
               <div className="grid gap-8">
-                <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
-                  <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal">
-                      Tomasz M., założyciel startupu technologicznego
-                    </p>
-                    <p className="text-sm text-deep-charcoal/70">
-                      (członek od 4 miesięcy)
-                    </p>
+                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                      TM
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg text-deep-charcoal">
+                        Tomasz M.
+                      </p>
+                      <p className="text-sm text-deep-charcoal/70">
+                        Założyciel startupu technologicznego
+                      </p>
+                      <p className="text-xs text-neural-violet font-semibold mt-1">
+                        Członek od 4 miesięcy
+                      </p>
+                    </div>
                   </div>
-                  <blockquote className="text-deep-charcoal italic">
-                    "Przed newsletterem Ludwika: produktywność oznaczała 60
+                  <blockquote className="text-deep-charcoal leading-relaxed">
+                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
+                    Przed newsletterem Ludwika: produktywność oznaczała 60
                     godzin tygodniowo, wypalenie, zero czasu na myślenie. Po 8
                     tygodniach: Przestałem gonić za trendami AI. Zacząłem
                     budować mądrość. Zmieniłem całe podejście do pracy - 2
@@ -424,43 +480,76 @@ export default function NewsletterPage() {
                     godzin zajętości. Najważniejsze? Znalazłem ludzi, którzy
                     myślą podobnie. Albo zupełnie inaczej. I obie rzeczy są
                     równie cenne. Trzy osoby z newslettera to teraz moi
-                    najbliżsi doradcy."
+                    najbliżsi doradcy.
                   </blockquote>
+                  <div className="mt-6 flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-neural-violet text-xl">★</span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
-                  <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal">
-                      Anna K., trenerka przywództwa
-                    </p>
-                    <p className="text-sm text-deep-charcoal/70">
-                      (członkini od 6 miesięcy)
-                    </p>
+                <div className="group bg-white rounded-2xl p-8 border-2 border-luminal-magenta/20 hover:border-luminal-magenta/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-luminal-magenta to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                      AK
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg text-deep-charcoal">
+                        Anna K.
+                      </p>
+                      <p className="text-sm text-deep-charcoal/70">
+                        Trenerka przywództwa
+                      </p>
+                      <p className="text-xs text-luminal-magenta font-semibold mt-1">
+                        Członkini od 6 miesięcy
+                      </p>
+                    </div>
                   </div>
-                  <blockquote className="text-deep-charcoal italic">
-                    "Jedna myśl z newslettera Ludwika zmieniła więcej niż 100
+                  <blockquote className="text-deep-charcoal leading-relaxed">
+                    <span className="text-4xl text-luminal-magenta/30 float-left mr-2 leading-none">"</span>
+                    Jedna myśl z newslettera Ludwika zmieniła więcej niż 100
                     'porad produktywności' z LinkedIn. Przestałam optymalizować
                     czas. Zacząłem optymalizować jakość myślenia. A społeczność
                     Lifehackerzy.pl? To miejsce, gdzie w końcu mogę być sobą.
-                    Gdzie nie muszę udawać, że mam wszystkie odpowiedzi."
+                    Gdzie nie muszę udawać, że mam wszystkie odpowiedzi.
                   </blockquote>
+                  <div className="mt-6 flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-luminal-magenta text-xl">★</span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="bg-background rounded-xl p-6 border border-neural-violet/20">
-                  <div className="mb-4">
-                    <p className="font-semibold text-deep-charcoal">
-                      Katarzyna L., konsultantka AI
-                    </p>
-                    <p className="text-sm text-deep-charcoal/70">
-                      (członkini od 3 miesięcy)
-                    </p>
+                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                      KL
+                    </div>
+                    <div>
+                      <p className="font-bold text-lg text-deep-charcoal">
+                        Katarzyna L.
+                      </p>
+                      <p className="text-sm text-deep-charcoal/70">
+                        Konsultantka AI
+                      </p>
+                      <p className="text-xs text-neural-violet font-semibold mt-1">
+                        Członkini od 3 miesięcy
+                      </p>
+                    </div>
                   </div>
-                  <blockquote className="text-deep-charcoal italic">
-                    "Ludwik nie ma racji w 40% przypadków. I właśnie dlatego
+                  <blockquote className="text-deep-charcoal leading-relaxed">
+                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
+                    Ludwik nie ma racji w 40% przypadków. I właśnie dlatego
                     rozmowy z nim są najcenniejsze. Kwestionuje moje założenia,
                     nie potakuje im. A społeczność? Pełna ludzi, którzy wolą
-                    niewygodną prawdę od grzecznego kłamstwa."
+                    niewygodną prawdę od grzecznego kłamstwa.
                   </blockquote>
+                  <div className="mt-6 flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-neural-violet text-xl">★</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -468,48 +557,56 @@ export default function NewsletterPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gradient-to-b from-background to-luminous-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-charcoal">
-                STRUKTURA OFERTY
-              </h2>
+            <div className="max-w-6xl mx-auto space-y-12">
+              <div className="text-center space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+                  STRUKTURA OFERTY
+                </h2>
+                <p className="text-lg text-deep-charcoal/70">
+                  Wybierz poziom zaangażowania odpowiedni dla Ciebie
+                </p>
+              </div>
 
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Free Tier */}
-                <div className="bg-background rounded-xl p-6 border border-deep-charcoal/20">
+                <div className="bg-white rounded-2xl p-8 border-2 border-deep-charcoal/20 hover:border-deep-charcoal/40 shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
-                      🆓 KRĄG OTWARTY
+                    <div className="w-16 h-16 bg-deep-charcoal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">🆓</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
+                      KRĄG OTWARTY
                     </h3>
-                    <p className="text-deep-charcoal/70">Dla każdego</p>
-                    <p className="text-2xl font-bold text-neural-violet mt-4">
+                    <p className="text-deep-charcoal/70 mb-4">Dla każdego</p>
+                    <p className="text-3xl font-bold text-neural-violet">
                       BEZPŁATNIE
                     </p>
                   </div>
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-4 mb-8 min-h-[240px]">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed">
                         Cotygodniowy newsletter (niedziela 19:00)
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed">
                         Możliwość dialogu przez email
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed">
                         Comiesięczna kompilacja wymian
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed">
                         Dostęp do 3 ostatnich wydań
                       </span>
                     </li>
@@ -517,7 +614,7 @@ export default function NewsletterPage() {
 
                   <Button
                     variant="outline"
-                    className="w-full"
+                    className="w-full py-6 text-base font-semibold border-2 hover:bg-deep-charcoal/5"
                     onClick={() =>
                       window.open(
                         "https://app.easycart.pl/checkout/siadlak/newsletter",
@@ -530,66 +627,71 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Premium Tier */}
-                <div className="bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 border border-neural-violet/20 relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-neural-violet text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      NAJPOPULARNIEJSZY
+                <div className="relative bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border-2 border-neural-violet/50 shadow-2xl transform scale-105 lg:scale-110">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-neural-violet to-luminal-magenta text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                      ⭐ NAJPOPULARNIEJSZY
                     </span>
                   </div>
 
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
-                      💎 KRĄG WEWNĘTRZNY
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">💎</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
+                      KRĄG WEWNĘTRZNY
                     </h3>
-                    <p className="text-deep-charcoal/70">Dla myślących</p>
-                    <div className="mt-4">
-                      <p className="text-2xl font-bold text-neural-violet">
-                        97 PLN/mies.
+                    <p className="text-deep-charcoal/70 mb-4">Dla myślących</p>
+                    <div className="space-y-2">
+                      <p className="text-4xl font-bold text-neural-violet">
+                        97 PLN<span className="text-lg">/mies.</span>
                       </p>
-                      <p className="text-sm text-deep-charcoal/60 line-through">
+                      <p className="text-base text-deep-charcoal/60 line-through">
                         197 PLN/mies.
                       </p>
-                      <p className="text-sm text-neural-violet font-semibold">
-                        DOŻYWOTNIO dla pierwszych 100
-                      </p>
+                      <div className="inline-block bg-neural-violet/20 rounded-lg px-4 py-2">
+                        <p className="text-sm text-neural-violet font-bold">
+                          DOŻYWOTNIO dla pierwszych 100
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-4 mb-8 min-h-[240px]">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed font-medium">
                         Wszystko z Kręgu Otwartego
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed font-medium">
                         Pełny dostęp do społeczności Lifehackerzy.pl
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed font-medium">
                         Moje osobiste odpowiedzi na każdą wymianę
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed font-medium">
                         Comiesięczne sesje Q&A na żywo
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
-                      <span className="text-sm text-deep-charcoal">
+                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-deep-charcoal leading-relaxed font-medium">
                         Pełne archiwum od 2024
                       </span>
                     </li>
                   </ul>
 
                   <Button
-                    className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                    className="w-full bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white py-6 text-base font-bold shadow-xl transform hover:scale-[1.02] transition-all"
                     onClick={() =>
                       window.open(
                         "https://app.easycart.pl/checkout/siadlak/newsletter",
@@ -602,31 +704,40 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Elite Tier */}
-                <div className="bg-background rounded-xl p-6 border border-luminal-magenta/20">
+                <div className="bg-white rounded-2xl p-8 border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-deep-charcoal mb-2">
-                      🏆 LIFEHACKERZY PREMIUM
+                    <div className="w-16 h-16 bg-luminal-magenta/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl">🏆</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
+                      LIFEHACKERZY PREMIUM
                     </h3>
-                    <p className="text-deep-charcoal/70">
+                    <p className="text-deep-charcoal/70 mb-4">
                       Dla gotowych na transformację
                     </p>
-                    <p className="text-lg font-semibold text-luminal-magenta mt-4">
-                      TYLKO NA ZAPROSZENIE
-                    </p>
+                    <div className="inline-block bg-luminal-magenta/20 rounded-lg px-4 py-3">
+                      <p className="text-base font-bold text-luminal-magenta">
+                        TYLKO NA ZAPROSZENIE
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="text-center mb-6">
-                    <p className="text-sm text-deep-charcoal">
+                  <div className="text-center mb-8 min-h-[240px] flex flex-col justify-center">
+                    <p className="text-sm text-deep-charcoal leading-relaxed mb-4">
                       Dostęp tylko dla członków Kręgu Wewnętrznego gotowych na
                       więcej.
                     </p>
-                    <p className="text-sm text-deep-charcoal mt-4">
+                    <p className="text-sm text-deep-charcoal leading-relaxed">
                       Po 3-6 miesiącach w społeczności, najaktywniejsze osoby
                       otrzymują zaproszenie do poziomu premium.
                     </p>
                   </div>
 
-                  <Button variant="outline" className="w-full" disabled>
+                  <Button
+                    variant="outline"
+                    className="w-full py-6 text-base font-semibold border-2 border-luminal-magenta/30"
+                    disabled
+                  >
                     WIĘCEJ PO DOŁĄCZENIU
                   </Button>
                 </div>

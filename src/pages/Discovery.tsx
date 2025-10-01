@@ -54,65 +54,97 @@ export default function Discovery() {
 
   return (
     <Layout>
-      <HeroSection
-        title="SESJA DISCOVERY"
-        subtitle="Sprawdźmy, czy nadajemy na podobnych falach"
-      />
-      
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-10 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-6 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-sm font-medium text-white">
+                Bezpłatna 30-minutowa rozmowa
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+              SESJA DISCOVERY
+            </h1>
+            <p className="text-2xl md:text-3xl text-white/90 mb-8 font-medium">
+              Sprawdźmy, czy nadajemy na podobnych falach
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 md:py-24 bg-gradient-to-b from-luminous-white to-background overflow-hidden">
+        {/* Subtle background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-40 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+
             {/* Main Content */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal">
+            <div className="text-center mb-16">
+              <div className="inline-block mb-4 px-5 py-2 bg-neural-violet/10 rounded-full border border-neural-violet/20">
+                <span className="text-sm font-semibold text-neural-violet uppercase tracking-wide">
+                  Autentyczna rozmowa
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 30 minut autentycznej rozmowy o Twoich wyzwaniach
               </h2>
-              
-              <p className="text-lg mb-12 text-subtle-slate max-w-3xl mx-auto leading-relaxed">
+              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg mb-8"></div>
+
+              <p className="text-xl mb-12 text-deep-charcoal/80 max-w-3xl mx-auto leading-relaxed">
                 Sesja Discovery to nasze pierwsze spotkanie - moment, w którym poznajemy się nawzajem i sprawdzamy, czy moja metoda pracy pasuje do tego, czego szukasz. To obustronny proces odkrywania kompatybilności.
               </p>
-              
+
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-8 w-8 text-neural-violet" />
+                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
                     Indywidualna rozmowa
                   </h3>
-                  <p className="text-subtle-slate">
+                  <p className="text-deep-charcoal/80 leading-relaxed">
                     30 minut 1:1, aby się poznać.
                   </p>
-                </GlassCard>
+                </div>
 
-                <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target className="h-8 w-8 text-neural-violet" />
+                <div className="bg-white rounded-2xl p-8 border-2 border-luminal-magenta/20 hover:border-luminal-magenta/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-luminal-magenta to-quantum-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-luminal-magenta transition-colors">
                     Obustronny proces
                   </h3>
-                  <p className="text-subtle-slate">
+                  <p className="text-deep-charcoal/80 leading-relaxed">
                     Sprawdzamy, czy do siebie pasujemy: rezultaty dostarczam pracując w specyficzny sposób, a Ty już trochę siebie znasz.
                   </p>
-                </GlassCard>
+                </div>
 
-                <GlassCard className="text-center" padding="lg">
-                  <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Heart className="h-8 w-8 text-neural-violet" />
+                <div className="bg-white rounded-2xl p-8 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                    <Heart className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-quantum-blue transition-colors">
                     Autentyczne podejście
                   </h3>
-                  <p className="text-subtle-slate">
+                  <p className="text-deep-charcoal/80 leading-relaxed">
                     Szczere rozmowy, prawdziwe rozwiązania
                   </p>
-                </GlassCard>
+                </div>
               </div>
 
-              <h3 className="text-2xl font-bold mb-8 text-deep-charcoal">
+              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-deep-charcoal">
                 Wybierz termin, który Ci odpowiada
               </h3>
             </div>
@@ -193,47 +225,68 @@ export default function Discovery() {
             </div>
             
             {/* How it works in practice */}
-            <div className="max-w-4xl mx-auto mt-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-deep-charcoal">
-                Jak to wygląda w praktyce?
-              </h2>
-              
-              <GlassCard padding="xl" className="mb-12">
-                <p className="text-lg text-subtle-slate mb-8 leading-relaxed">
+            <div className="max-w-5xl mx-auto mt-16">
+              <div className="text-center mb-12">
+                <div className="inline-block mb-4 px-5 py-2 bg-quantum-blue/10 rounded-full border border-quantum-blue/20">
+                  <span className="text-sm font-semibold text-quantum-blue uppercase tracking-wide">
+                    Transparentny proces
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
+                  Jak to wygląda w praktyce?
+                </h2>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue via-neural-violet to-luminal-magenta mx-auto rounded-full shadow-lg"></div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-10 md:p-12 border-2 border-neural-violet/20 shadow-xl mb-12">
+                <p className="text-xl text-deep-charcoal/80 mb-10 leading-relaxed text-center">
                   Podczas naszej rozmowy wspólnie odkryjemy, z czym przychodzisz i jak mogę Ci pomóc. Autentycznie wysłucham Twojej sytuacji i szczerze powiem, czy widzę szansę na skuteczną współpracę.
                 </p>
-                
-                <h3 className="text-xl font-bold mb-6 text-deep-charcoal">
+
+                <h3 className="text-2xl font-bold mb-8 text-deep-charcoal text-center">
                   Możliwe scenariusze po naszej sesji:
                 </h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate">
-                      Intuicja podpowiada Ci, że <em>to jest to, czego tak długo szukałeś</em> i rozpoczynamy plan wdrożenia Life OS Upgrade.
-                    </span>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-10">
+                  <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-xl p-6 border-2 border-green-500/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                      <CheckCircle className="h-6 w-6 text-white" />
+                    </div>
+                    <p className="text-deep-charcoal leading-relaxed">
+                      Intuicja podpowiada Ci, że <em className="font-semibold">to jest to, czego tak długo szukałeś</em> i rozpoczynamy plan wdrożenia Life OS Upgrade.
+                    </p>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate">
-                      Skieruję Cię do odpowiedniego <a href="/program" className="text-neural-violet hover:underline">Programu Fundamentalnego</a>
-                    </span>
+
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border-2 border-quantum-blue/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mb-4 shadow-lg">
+                      <CheckCircle className="h-6 w-6 text-white" />
+                    </div>
+                    <p className="text-deep-charcoal leading-relaxed">
+                      Skieruję Cię do odpowiedniego <a href="/program" className="text-neural-violet hover:underline font-semibold">Programu Fundamentalnego</a>
+                    </p>
                   </div>
-                  <div className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-neural-violet flex-shrink-0 mr-3 mt-0.5" />
-                    <span className="text-subtle-slate">
+
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-xl p-6 border-2 border-neural-violet/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mb-4 shadow-lg">
+                      <CheckCircle className="h-6 w-6 text-white" />
+                    </div>
+                    <p className="text-deep-charcoal leading-relaxed">
                       Po prostu spędzimy pół godziny na sympatycznej rozmowie, podczas której dowiesz się więcej o swoich opcjach
-                    </span>
+                    </p>
                   </div>
                 </div>
-                
-                <div className="mt-8 p-6 bg-quantum-blue/10 rounded-lg border border-quantum-blue/20">
-                  <p className="text-subtle-slate leading-relaxed">
-                    <strong className="text-deep-charcoal">To nie jest sprzedażowa prezentacja</strong> - to rzeczywiste odkrywanie, czy jesteśmy dla siebie odpowiedni. Czasem najlepsza pomoc to szczera informacja o tym, że drogi się rozchodzą.
-                  </p>
+
+                <div className="bg-gradient-to-br from-quantum-blue/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-quantum-blue/30">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <Heart className="h-6 w-6 text-white" />
+                    </div>
+                    <p className="text-deep-charcoal leading-relaxed text-lg">
+                      <strong className="text-xl">To nie jest sprzedażowa prezentacja</strong> - to rzeczywiste odkrywanie, czy jesteśmy dla siebie odpowiedni. Czasem najlepsza pomoc to szczera informacja o tym, że drogi się rozchodzą.
+                    </p>
+                  </div>
                 </div>
-              </GlassCard>
+              </div>
             </div>
             
           </div>

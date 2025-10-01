@@ -50,51 +50,89 @@ const About = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 md:py-24 bg-luminous-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-deep-charcoal">
-              Zarabiasz świetne pieniądze i jesteś na szczycie w swojej dziedzinie. Ale prawda jest taka, że stałeś się niewolnikiem własnych systemów.
-            </h2>
-            
-            <p className="text-lg mb-6 text-subtle-slate">
+      <section className="relative py-20 md:py-24 bg-gradient-to-b from-luminous-white to-background overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-40 h-40 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block mb-4 px-5 py-2 bg-red-500/10 rounded-full border border-red-500/20">
+                <span className="text-sm font-semibold text-red-600 uppercase tracking-wide">
+                  Rozpoznaj problem
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal leading-tight">
+                Zarabiasz świetne pieniądze i jesteś na szczycie w swojej dziedzinie
+              </h2>
+              <p className="text-2xl text-red-600 font-bold">
+                Ale prawda jest taka, że stałeś się niewolnikiem własnych systemów.
+              </p>
+            </div>
+
+            <p className="text-xl mb-12 text-deep-charcoal text-center font-medium">
               Jeśli tu trafiłeś, prawdopodobnie rozpoznajesz ten scenariusz:
             </p>
 
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
-                <div>
-                  <strong className="text-deep-charcoal">Jesteś w pułapce "produktywności":</strong>
-                  <span className="text-subtle-slate"> Testowałeś już wszystko – GTD, Notion, Asanę, Slack... i sto innych narzędzi. Każde z nich obiecywało wolność, a w efekcie dodało tylko kolejną warstwę chaosu i powiadomień.</span>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              <div className="bg-white rounded-2xl p-8 border-2 border-red-500/20 hover:border-red-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <CheckCircle className="h-6 w-6 text-white" />
                 </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
-                <div>
-                  <strong className="text-deep-charcoal">Twój kalendarz Cię nienawidzi:</strong>
-                  <span className="text-subtle-slate"> Dni są wypełnione po brzegi spotkaniami i zadaniami, ale wieczorem masz poczucie, że nie zrobiłeś nic naprawdę <em>ważnego</em>. Jesteś zajęty, ale niekoniecznie efektywny.</span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
-                <div>
-                  <strong className="text-deep-charcoal">Technologia Cię rozprasza, zamiast wspierać:</strong>
-                  <span className="text-subtle-slate"> Miała być lewarem, a stała się kulą u nogi. Zamiast realizować wizję, gasisz pożary i reagujesz na ciągły strumień informacji.</span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-neural-violet mt-1 mr-4 flex-shrink-0" />
-                <div>
-                  <strong className="text-deep-charcoal">Straciłeś "ludzką przewagę":</strong>
-                  <span className="text-subtle-slate"> Twoja kreatywność i zdolność do głębokiego myślenia są degradowane przez powierzchowną, reaktywną pracę, której wymaga od Ciebie cyfrowy ekosystem.</span>
-                </div>
-              </li>
-            </ul>
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  Jesteś w pułapce "produktywności"
+                </h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
+                  Testowałeś już wszystko – GTD, Notion, Asanę, Slack... i sto innych narzędzi. Każde z nich obiecywało wolność, a w efekcie dodało tylko kolejną warstwę chaosu i powiadomień.
+                </p>
+              </div>
 
-            <p className="text-xl text-deep-charcoal font-medium">
-              <strong>Problem jest prosty:</strong> Próbujesz rozwiązać ludzki problem za pomocą technologicznych narzędzi. To nigdy nie zadziała.
-            </p>
+              <div className="bg-white rounded-2xl p-8 border-2 border-red-500/20 hover:border-red-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  Twój kalendarz Cię nienawidzi
+                </h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
+                  Dni są wypełnione po brzegi spotkaniami i zadaniami, ale wieczorem masz poczucie, że nie zrobiłeś nic naprawdę <em>ważnego</em>. Jesteś zajęty, ale niekoniecznie efektywny.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 border-2 border-red-500/20 hover:border-red-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  Technologia Cię rozprasza, zamiast wspierać
+                </h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
+                  Miała być lewarem, a stała się kulą u nogi. Zamiast realizować wizję, gasisz pożary i reagujesz na ciągły strumień informacji.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 border-2 border-red-500/20 hover:border-red-500/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-deep-charcoal">
+                  Straciłeś "ludzką przewagę"
+                </h3>
+                <p className="text-deep-charcoal/80 leading-relaxed">
+                  Twoja kreatywność i zdolność do głębokiego myślenia są degradowane przez powierzchowną, reaktywną pracę, której wymaga od Ciebie cyfrowy ekosystem.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-500/10 to-neural-violet/10 rounded-2xl p-10 border-2 border-red-500/30 text-center shadow-xl">
+              <p className="text-2xl md:text-3xl text-deep-charcoal font-bold">
+                <strong>Problem jest prosty:</strong> Próbujesz rozwiązać ludzki problem za pomocą technologicznych narzędzi. To nigdy nie zadziała.
+              </p>
+            </div>
           </div>
         </div>
       </section>
