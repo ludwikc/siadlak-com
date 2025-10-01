@@ -433,11 +433,8 @@ export default function TrainTheTrainer() {
               </div>
 
               {/* Right Column - Content */}
-              <div className="order-1 lg:order-2 relative">
-                {/* Strong scrim for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-br from-deep-space/95 via-quantum-blue/90 to-deep-space/95 rounded-3xl pointer-events-none"></div>
-                
-                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+              <div className="order-1 lg:order-2">
+                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
                   <h3 className="text-2xl font-bold text-white mb-6">Track Record</h3>
 
                   <div className="space-y-4 mb-8">
