@@ -675,6 +675,26 @@ export default function HakowanieProduktywnosci() {
               </p>
             </div>
 
+            {/* Course Portal Preview */}
+            <div className="mb-12">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-3 text-text-primary">
+                  Zagląd do środka kursu
+                </h3>
+                <p className="text-text-secondary">
+                  Zobacz, jak wygląda platforma i jak działa system kursu
+                </p>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-neural-violet/20 hover:border-neural-violet/40 transition-all duration-300">
+                <img
+                  src="/src/assets/portal-hakprod.png"
+                  alt="Platforma kursu Hakowanie Produktywności - widok modułu z video"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
             <Card className="glass-card mb-12 border-l-4 border-l-color-warning">
               <CardContent className="p-6">
                 <h3 className="font-bold text-lg mb-4 text-text-primary">

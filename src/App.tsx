@@ -2,6 +2,14 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { useEffect } from 'react';
+
+const ExternalRedirect = ({ url }: { url: string }) => {
+  useEffect(() => {
+    window.location.href = url;
+  }, [url]);
+  return null;
+};
 import Index from './pages/Index';
 import About from './pages/About';
 import Discovery from './pages/Discovery';
@@ -59,9 +67,9 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/assessment" element={<Assessment />} />
             <Route path="/thank-you" element={<ThankYou />} />
-            <Route path="/legal" element={<Legal />} />
-            <Route path="/legal/privacy" element={<Privacy />} />
-            <Route path="/legal/terms" element={<Terms />} />
+            <Route path="/legal" element={<ExternalRedirect url="https://docs.siadlak.com/legal/regulaminy" />} />
+            <Route path="/legal/privacy" element={<ExternalRedirect url="https://docs.siadlak.com/legal/privacy" />} />
+            <Route path="/legal/terms" element={<ExternalRedirect url="https://docs.siadlak.com/legal/regulaminy" />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/community" element={<Community />} />
             
