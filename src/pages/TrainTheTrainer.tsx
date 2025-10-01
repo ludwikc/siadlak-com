@@ -709,9 +709,9 @@ export default function TrainTheTrainer() {
                   </div>
 
                   <div className="mt-6 mb-4">
-                    <step.icon className="w-8 h-8 text-gold mb-3" />
+                    <step.icon className="w-8 h-8 text-white mb-3" />
                     <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                    <div className="inline-flex items-center gap-2 bg-gold/20 text-gold px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                    <div className="inline-flex items-center gap-2 bg-white/10 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 border border-white/20">
                       <AlertCircle className="w-3 h-3" />
                       <span>{step.duration}</span>
                     </div>
