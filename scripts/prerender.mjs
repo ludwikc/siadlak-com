@@ -26,7 +26,7 @@ const routes = [
   '/community',
   '/program',
   '/program/hakowanie-produktywnosci',
-  '/program/mental-elevator',
+  '/program/lifeos-system-upgrade',
   '/program/silna-glowa',
   '/program/meski-kompas',
   '/train-the-trainer',

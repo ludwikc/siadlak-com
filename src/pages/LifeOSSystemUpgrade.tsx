@@ -5,7 +5,7 @@ import { GlassCard } from '@/components/ui/glass-card';
 import { CheckCircle, Shield, Zap, AlertCircle, Users, Target, Brain, Clock, GitMerge, Crown } from '@/lib/icons';
 import { Link } from 'react-router-dom';
 
-export default function MentalElevator() {
+export default function LifeOSSystemUpgrade() {
   const scrollToDiscovery = () => {
     const discoverySection = document.getElementById('discovery-section');
     if (discoverySection) {

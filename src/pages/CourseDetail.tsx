@@ -7,13 +7,13 @@ import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart } from 
 
 // Course data (would typically come from API/backend)
 const coursesData = {
-  "mental-elevator": {
-    title: "Mental Elevator",
-    subtitle: "Premium 8-Week Mentoring Program",
+  "lifeos-system-upgrade": {
+    title: "LifeOS: System Upgrade",
+    subtitle: "Premium 8-Week Transformation Program",
     description:
       "A comprehensive program designed to elevate your mental performance, decision-making capabilities, and leadership presence.",
     longDescription:
-      "Mental Elevator is a transformative 8-week journey designed for professionals seeking to enhance their cognitive capabilities in our complex, technology-driven world. This isn't just another productivity course—it's a personalized system for elevating your mental performance, decision-making framework, and overall effectiveness.",
+      "LifeOS: System Upgrade is a transformative 8-week journey designed for professionals seeking to enhance their cognitive capabilities in our complex, technology-driven world. This isn't just another productivity course—it's a personalized system for elevating your mental performance, decision-making framework, and overall effectiveness.",
     features: [
       "Weekly 1:1 coaching sessions",
       "Customized productivity system",
@@ -87,7 +87,7 @@ const coursesData = {
     testimonials: [
       {
         quote:
-          "The Mental Elevator program transformed how I approach complex decisions. I now have a framework that lets me stay clear-headed under pressure.",
+          "The LifeOS: System Upgrade program transformed how I approach complex decisions. I now have a framework that lets me stay clear-headed under pressure.",
         name: "Marta K.",
         title: "CEO & Founder",
       },

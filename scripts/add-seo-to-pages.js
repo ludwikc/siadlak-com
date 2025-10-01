@@ -17,7 +17,7 @@ const pagesToProcess = [
   { file: 'Community.tsx', route: '/community' },
   { file: 'Courses.tsx', route: '/program' },
   { file: 'HakowanieProduktywnosci.tsx', route: '/program/hakowanie-produktywnosci' },
-  { file: 'MentalElevator.tsx', route: '/program/mental-elevator' },
+  { file: 'LifeOSSystemUpgrade.tsx', route: '/program/lifeos-system-upgrade' },
   { file: 'SilnaGlowa.tsx', route: '/program/silna-glowa' },
   { file: 'MeskiKompas.tsx', route: '/program/meski-kompas' },
   { file: 'TrainTheTrainer.tsx', route: '/train-the-trainer' },

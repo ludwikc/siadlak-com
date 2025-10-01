@@ -71,7 +71,7 @@ const WebinarExpired = () => {
               <div className="bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 p-6 rounded-xl border border-neural-violet/20">
                 <ArrowRight className="h-10 w-10 text-neural-violet mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
-                  Sprawdź program Mental Elevator
+                  Sprawdź program LifeOS: System Upgrade
                 </h3>
                 <p className="text-sm mb-6">
                   Odkryj, jak możesz przejść transformację z reaktywnego
@@ -79,7 +79,7 @@ const WebinarExpired = () => {
                 </p>
                 <Button
                   className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
-                  onClick={() => navigate("/mental-elevator")}
+                  onClick={() => navigate("/program/lifeos-system-upgrade")}
                 >
                   DOWIEDZ SIĘ WIĘCEJ O PROGRAMIE
                 </Button>

@@ -11,7 +11,7 @@ const testimonials = [
     name: "Marcin K.",
     title: "CTO",
     company: "Financial Technology",
-    program: "Mental Elevator",
+    program: "LifeOS: System Upgrade",
     results:
       "Redukcja cyfrowych zakłóceń o 60%, poprawa produktywności zespołu o 35%, i uruchomienie dwóch głównych inicjatyw, które były zablokowane od miesięcy.",
     featured: true,
@@ -23,7 +23,7 @@ const testimonials = [
     name: "Anna W.",
     title: "Dyrektor Marketingu",
     company: "Agencja Kreatywna",
-    program: "Mental Elevator",
+    program: "LifeOS: System Upgrade",
     results:
       "Stworzenie usprawnionego workflow, które zaoszczędziło 12 godzin tygodniowo, podwojenie kreatywnego output'u i poprawa wyników kampanii o 28%.",
     featured: true,

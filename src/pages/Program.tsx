@@ -174,7 +174,7 @@ export default function Program() {
   return (
     <Layout>
       <HeroSection
-        title="Mental AppStore"
+        title="LifeOS AppStore"
         subtitle={
           <>
             Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie{" "}
@@ -191,7 +191,7 @@ export default function Program() {
       </section>
 
       {/* Section 1: Basic Apps (50%/50%) */}
-      <section className="py-16 sm:py-20 apps-section">
+      <section id="apps-section" className="py-16 sm:py-20 apps-section">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
@@ -200,7 +200,7 @@ export default function Program() {
                   variant="outline"
                   className="text-neural-violet border-neural-violet px-6 py-2 text-sm font-semibold hover:border-neural-violet/70 transition-colors"
                 >
-                  PODSTAWOWE APLIKACJE
+                  Programy Fundamentalne
                 </Badge>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal leading-tight">
@@ -427,7 +427,7 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Section 4: Premium App - Mental Elevator - FULL WIDTH "FINAL BOSS" */}
+      {/* Section 4: Premium App - LifeOS: System Upgrade - FULL WIDTH "FINAL BOSS" */}
       <section className="py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet relative overflow-hidden">
         {/* Premium Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
@@ -571,7 +571,7 @@ export default function Program() {
                           8 tygodni intensywnej transformacji
                         </div>
                         <div className="text-white/40 text-xs sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-2 break-words">
-                          ≈ 2000 PLN / tydzień
+                          Prowadzisz działalność? 13 008,13 PLN netto
                         </div>
                       </div>
 
@@ -623,11 +623,18 @@ export default function Program() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/assessment">
-                <CTAButton size="lg" className="text-lg px-8 py-4">
-                  Wróć na górę i dołącz do nas
-                </CTAButton>
-              </Link>
+              <CTAButton
+                size="lg"
+                className="text-lg px-8 py-4"
+                onClick={() => {
+                  const appsSection = document.getElementById('apps-section');
+                  if (appsSection) {
+                    appsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+              >
+                Wróć na górę i dołącz do nas
+              </CTAButton>
             </div>
           </div>
         </div>

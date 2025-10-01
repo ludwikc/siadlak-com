@@ -139,10 +139,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/program/mental-elevator"
+                  to="/program/lifeos-system-upgrade"
                   className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
                 >
-                  Mental Elevator
+                  LifeOS: System Upgrade
                 </Link>
               </li>
               <li>

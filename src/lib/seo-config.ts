@@ -64,12 +64,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/mental-elevator',
+    path: '/program/lifeos-system-upgrade',
     seo: {
-      title: 'Mental Elevator',
-      description: 'Program rozwoju mentalnego i emocjonalnego. Wzmocnij swoją psychikę i osiągnij równowagę życiową.',
-      keywords: 'rozwój mentalny, zdrowie psychiczne, równowaga, mindfulness, wellness',
-      url: '/program/mental-elevator',
+      title: 'LifeOS: System Upgrade',
+      description: '8-tygodniowy program fundamentalnej transformacji dla liderów. Przejdź z reaktywnego działania do zintegrowanego przywództwa.',
+      keywords: 'transformacja, przywództwo, rozwój osobisty, coaching, system operacyjny życia',
+      url: '/program/lifeos-system-upgrade',
       type: 'course'
     }
   },

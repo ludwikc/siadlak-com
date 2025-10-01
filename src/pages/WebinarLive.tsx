@@ -21,7 +21,7 @@ const WebinarLive = () => {
     setShowOffer(true);
     toast({
       title: "Dowiedz się więcej",
-      description: "Więcej informacji o programie Mental Elevator.",
+      description: "Więcej informacji o programie LifeOS: System Upgrade.",
     });
   };
 
@@ -177,7 +177,7 @@ const WebinarLive = () => {
               {showOffer && (
                 <div className="bg-gradient-to-r from-neural-violet/30 to-ascension-pink/30 backdrop-blur-lg rounded-xl p-6 border border-neural-violet/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
-                    Program Mental Elevator - Odkryj pełną transformację
+                    Program LifeOS: System Upgrade - Odkryj pełną transformację
                   </h3>
                   <p className="text-gray-300 mb-6">
                     Teraz możesz dowiedzieć się więcej o pełnym programie
@@ -187,9 +187,9 @@ const WebinarLive = () => {
                   <Button
                     size="lg"
                     className="bg-neural-violet hover:bg-neural-violet/90 text-white"
-                    onClick={() => window.open("/mental-elevator", "_blank")}
+                    onClick={() => window.open("/program/lifeos-system-upgrade", "_blank")}
                   >
-                    TAK, CHCĘ DOWIEDZIEĆ SIĘ WIĘCEJ O PROGRAMIE MENTAL ELEVATOR
+                    TAK, CHCĘ DOWIEDZIEĆ SIĘ WIĘCEJ O PROGRAMIE LIFEOS
                   </Button>
                   <p className="text-sm text-center text-gray-400 mt-2">
                     Kliknij, aby zobaczyć szczegóły - nie przegapisz żadnej

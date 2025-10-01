@@ -19,7 +19,7 @@ const Index = () => {
     {
       title: "Life OS Upgrade",
       description: "Fundamentalna rekonstrukcja całego systemu operacyjnego. Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.",
-      link: "/program/mental-elevator",
+      link: "/program/lifeos-system-upgrade",
       linkText: "Sprawdź dostępność ≫"
     },
     {

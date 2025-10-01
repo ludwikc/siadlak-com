@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Index from './pages/Index';
@@ -25,7 +25,7 @@ import Testimonials from './pages/Testimonials';
 import Assessment from './pages/Assessment';
 import ThankYou from './pages/ThankYou';
 import Legal from './pages/Legal';
-import MentalElevator from './pages/MentalElevator';
+import LifeOSSystemUpgrade from './pages/LifeOSSystemUpgrade';
 import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
 import SilnaGlowa from './pages/SilnaGlowa';
@@ -36,6 +36,7 @@ import Help from './pages/Help';
 import HelpSubpage from './pages/HelpSubpage';
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
+import SiedemTechnik from './pages/SiedemTechnik';
 import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
 import Wyzwanie from './pages/Wyzwanie';
 import { Toaster } from "@/components/ui/sonner";
@@ -71,9 +72,11 @@ function App() {
             
             <Route path="/program" element={<Program />} />
             <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
-            <Route path="/program/mental-elevator" element={<MentalElevator />} />
+            <Route path="/program/lifeos-system-upgrade" element={<LifeOSSystemUpgrade />} />
+            <Route path="/program/mental-elevator" element={<Navigate to="/program/lifeos-system-upgrade" replace />} />
             <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
             <Route path="/program/meski-kompas" element={<MeskiKompas />} />
+            <Route path="/program/7-technik" element={<SiedemTechnik />} />
             <Route path="/train-the-trainer" element={<TrainTheTrainer />} />
             <Route path="/program/:courseSlug" element={<CourseDetail />} />
             

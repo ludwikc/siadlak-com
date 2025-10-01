@@ -13,38 +13,63 @@ const About = () => {
       <SEO {...getSEOConfig("/about")} />
       
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center relative text-center">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src="/lovable-uploads/acfe5513-536a-4e0b-a176-0adb69c86dbf.png"
             alt="Ludwik C. Siadlak"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-deep-space/80 via-deep-space/70 to-deep-space/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-deep-space/85 via-quantum-blue/75 to-deep-space/90"></div>
+        </div>
+
+        {/* Animated background orbs */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-20 left-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-56 h-56 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white animate-fade-in">
-              Większość "guru produktywności" kłamie. Nie potrzebujesz kolejnej aplikacji. Potrzebujesz odzyskać kontrolę.
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Badge */}
+            <div className="inline-block mb-6 px-6 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/30 shadow-lg animate-fade-in">
+              <span className="text-sm font-semibold text-white uppercase tracking-wide">
+                Metoda Cyfrowego Dowodzenia™
+              </span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-white animate-fade-in leading-tight drop-shadow-lg">
+              Większość "guru produktywności" kłamie.<br />
+              Nie potrzebujesz kolejnej aplikacji.<br />
+              <span className="text-luminal-magenta">Potrzebujesz odzyskać kontrolę.</span>
             </h1>
+
+            {/* Subheading */}
             <p
-              className="text-lg md:text-xl mb-8 text-silver-mist/90 animate-fade-in max-w-3xl mx-auto"
+              className="text-lg md:text-xl lg:text-2xl mb-10 text-white/95 animate-fade-in max-w-3xl mx-auto leading-relaxed"
               style={{ animationDelay: "0.2s" }}
             >
               <strong>Dla liderów, founderów i topowych specjalistów IT, którzy mimo sukcesu czują, że technologia zaczyna nimi rządzić, zamiast im służyć.</strong>
             </p>
-            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <CTAButton
-                variant="secondary"
-                className="animate-fade-in bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
-                showArrow={false}
-                aria-label="Umów bezpłatną Rozmowę strategiczną"
-              >
-                Umów bezpłatną Rozmowę strategiczną
-                <Calendar className="h-4 w-4 ml-2" aria-hidden="true" />
-              </CTAButton>
-            </Link>
+
+            {/* CTA Button with gradient glow */}
+            <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <Link to="/discovery" onClick={() => window.scrollTo(0, 0)}>
+                <div className="relative inline-block group">
+                  <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                  <button className="relative bg-white hover:bg-white/95 text-neural-violet px-10 py-5 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
+                    Umów Sesję Discovery
+                    <Calendar className="h-5 w-5" aria-hidden="true" />
+                  </button>
+                </div>
+              </Link>
+              <p className="mt-4 text-sm text-white/70 italic">
+                Bezpłatna 30-minutowa rozmowa
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -289,24 +314,24 @@ const About = () => {
             <p className="text-lg mb-4 text-white/90">
               Jeśli rezonuje z Tobą idea, że to <strong>Ty masz być dowódcą, a nie sługą technologii</strong>, mamy o czym rozmawiać.
             </p>
-            
+
             <p className="text-lg mb-8 text-white/90">
               Przestań szukać magicznych rozwiązań w kolejnej aplikacji. Zainwestuj w system, który przywróci Ci kontrolę.
             </p>
 
             <div className="mb-4">
-              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+              <Link to="/discovery" onClick={() => window.scrollTo(0, 0)}>
                 <Button
                   size="lg"
                   className="bg-white text-neural-violet hover:bg-white/90 text-lg px-8 py-4"
-                  aria-label="Umów bezpłatną Rozmowę strategiczną"
+                  aria-label="Umów Sesję Discovery"
                 >
-                  Umów bezpłatną Rozmowę strategiczną
+                  Umów Sesję Discovery
                   <Calendar className="h-5 w-5 ml-2" aria-hidden="true" />
                 </Button>
               </Link>
             </div>
-            
+
             <p className="text-sm text-white/70 italic">
               (Liczba miejsc ograniczona, aby zapewnić najwyższą jakość pracy z każdym Klientem)
             </p>

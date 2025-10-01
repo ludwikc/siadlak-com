@@ -56,8 +56,8 @@ const WebinarReplay = () => {
     });
   };
 
-  const handleMentalElevator = () => {
-    navigate("/mental-elevator");
+  const handleLifeOSSystemUpgrade = () => {
+    navigate("/program/lifeos-system-upgrade");
   };
 
   const handleUnlockBonus = () => {
@@ -165,7 +165,7 @@ const WebinarReplay = () => {
                   className={`text-lg mb-6 ${offerExpired ? "text-gray-500" : ""}`}
                 >
                   {offerExpired
-                    ? "Ta specjalna oferta wygasła. Sprawdź stronę Mental Elevator, aby poznać aktualne możliwości."
+                    ? "Ta specjalna oferta wygasła. Sprawdź stronę LifeOS: System Upgrade, aby poznać aktualne możliwości."
                     : "Podczas webinaru na żywo, przedstawiłem ekskluzywną ofertę dla uczestników. Zdecydowałem się przedłużyć ją dla osób oglądających nagranie, ale tylko do końca odliczania powyżej."}
                 </p>
 
@@ -176,12 +176,12 @@ const WebinarReplay = () => {
                       ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
                       : "bg-neural-violet hover:bg-neural-violet/90 text-white"
                   }`}
-                  onClick={handleMentalElevator}
+                  onClick={handleLifeOSSystemUpgrade}
                   disabled={offerExpired}
                 >
                   {offerExpired
                     ? "Oferta wygasła - Było, minęło..."
-                    : "ODKRYJ PROGRAM MENTAL ELEVATOR I SPECJALNĄ OFERTĘ"}
+                    : "ODKRYJ PROGRAM LIFEOS: SYSTEM UPGRADE I SPECJALNĄ OFERTĘ"}
                 </Button>
 
                 {!offerExpired && (
@@ -327,7 +327,7 @@ const WebinarReplay = () => {
 
                 <Button
                   className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
-                  onClick={handleMentalElevator}
+                  onClick={handleLifeOSSystemUpgrade}
                 >
                   Dowiedz się więcej <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
