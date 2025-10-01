@@ -654,7 +654,7 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Application Process Section */}
-      <section className="relative py-20 bg-gradient-to-b from-deep-space via-quantum-blue/10 to-deep-space overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-deep-space overflow-hidden">
         {/* Background orbs */}
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-gold rounded-full blur-3xl animate-pulse"></div>
