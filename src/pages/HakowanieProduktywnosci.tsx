@@ -1,13 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   ArrowRight,
   XCircle,
@@ -29,10 +22,7 @@ import {
   Heart,
   TrendingUp,
   ListChecks,
-  AlertTriangle,
   HelpCircle,
-  Lightbulb,
-  DollarSign,
 } from "lucide-react";
 
 import CountdownTimer from "@/components/sales/CountdownTimer";

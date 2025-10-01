@@ -1,6 +1,5 @@
 import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/components/ui/glass-card';
-import HeroSection from '@/components/sections/HeroSection';
 import { CheckCircle, Users, Target, Heart } from '@/lib/icons';
 import { useState, useEffect } from 'react';
 

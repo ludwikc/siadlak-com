@@ -1,6 +1,5 @@
 
 import Layout from '@/components/layout/Layout';
-import { CTAButton } from '@/components/ui/cta-button';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, CheckCircle } from '@/lib/icons';

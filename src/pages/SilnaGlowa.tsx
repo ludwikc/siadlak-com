@@ -27,10 +27,7 @@ import {
   Sparkles,
   Compass,
   Trophy,
-  DollarSign,
   HelpCircle,
-  Lightbulb,
-  TrendingUp,
 } from "lucide-react";
 
 const SilnaGlowa = () => {

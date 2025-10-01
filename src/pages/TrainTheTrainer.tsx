@@ -1,6 +1,4 @@
 import Layout from '@/components/layout/Layout';
-import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Star, Users, Compass, GitMerge, Book, Crown, Shield, AlertCircle, ArrowRight } from '@/lib/icons';
 
@@ -468,13 +466,13 @@ export default function TrainTheTrainer() {
                             <achievement.icon className="w-5 h-5 text-white" />
                           </div>
                         </div>
-                        <p className="text-white/90 leading-relaxed pt-1.5">{achievement.text}</p>
+                        <p className="text-white leading-relaxed pt-1.5">{achievement.text}</p>
                       </div>
                     ))}
                   </div>
 
                   <div className="bg-gradient-to-r from-gold/10 to-luminal-magenta/10 rounded-2xl p-6 border border-gold/30">
-                    <p className="text-white/90 italic leading-relaxed">
+                    <p className="text-white italic leading-relaxed">
                       "Ten program to esencja wszystkiego, czego nauczyłem się prowadząc setki szkoleń na całym świecie.
                       Przekazuję Ci dokładnie to, czego sam potrzebowałem 19 lat temu – ale czego nikt mi nie pokazał."
                     </p>
@@ -495,7 +493,7 @@ export default function TrainTheTrainer() {
                   <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="text-4xl font-bold text-gold mb-2">{stat.value}</div>
-                    <div className="text-xs text-white/70 leading-tight">{stat.label}</div>
+                    <div className="text-xs text-gray-200 leading-tight">{stat.label}</div>
                   </div>
                 </div>
               ))}

@@ -3,7 +3,6 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  Users,
   ExternalLink,
   Calendar,
 } from "lucide-react";
