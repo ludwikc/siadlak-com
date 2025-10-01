@@ -723,8 +723,8 @@ export default function TrainTheTrainer() {
             </div>
 
             {/* Qualification self-check */}
-            <div className="bg-white rounded-3xl p-8 mb-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-deep-charcoal mb-6 text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-8 shadow-2xl border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">
                 Sprawdź, czy się kwalifikujesz <span className="text-gold">(self-check)</span>
               </h3>
 
@@ -737,21 +737,21 @@ export default function TrainTheTrainer() {
                   "Biegła znajomość angielskiego w mowie i piśmie",
                   "Finansowa readiness: $18,500 inwestycji"
                 ].map((criterion, index) => (
-                  <div key={index} className="flex items-start gap-3 bg-gold/5 rounded-xl p-4 border border-gold/20">
+                  <div key={index} className="flex items-start gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-gold" />
-                    <span className="text-deep-charcoal/80 text-sm">{criterion}</span>
+                    <span className="text-white text-sm">{criterion}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-gradient-to-r from-gold/10 to-luminal-magenta/10 rounded-2xl p-6 border-2 border-gold/30">
+              <div className="bg-white/5 rounded-2xl p-6 border border-gold/30">
                 <div className="flex items-start gap-3">
                   <Crown className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
                   <div>
-                    <p className="text-deep-charcoal font-semibold mb-2">
+                    <p className="text-white font-semibold mb-2">
                       Spełniasz wszystkie kryteria?
                     </p>
-                    <p className="text-deep-charcoal/70 text-sm">
+                    <p className="text-white/90 text-sm">
                       Excellent. Podczas Sesji Discovery sprawdzimy Twoje portfolio, doświadczenie i cele.
                       Jeśli jesteś fit kulturowy i masz potencjał do transformacji - dostaniesz zaproszenie do programu.
                     </p>
