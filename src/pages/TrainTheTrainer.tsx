@@ -404,7 +404,7 @@ export default function TrainTheTrainer() {
                 Ludwik C. Siadlak
               </h2>
               <div className="w-24 h-1.5 bg-gradient-to-r from-gold to-luminal-magenta rounded-full mx-auto mb-6"></div>
-              <p className="text-2xl text-gold italic font-semibold">
+              <p className="text-2xl text-white italic font-semibold">
                 "From Code to Classroom. From Technician to Travelling Trainer."
               </p>
             </div>
@@ -492,7 +492,7 @@ export default function TrainTheTrainer() {
                 <div key={index} className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center group-hover:-translate-y-1 transition-transform duration-300">
-                    <div className="text-4xl font-bold text-gold mb-2">{stat.value}</div>
+                    <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-xs text-white leading-tight">{stat.label}</div>
                   </div>
                 </div>
