@@ -738,7 +738,7 @@ export default function TrainTheTrainer() {
                   "Finansowa readiness: $18,500 inwestycji"
                 ].map((criterion, index) => (
                   <div key={index} className="flex items-start gap-3 bg-white/5 rounded-xl p-4 border border-white/10">
-                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-gold" />
+                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-white" />
                     <span className="text-white text-sm">{criterion}</span>
                   </div>
                 ))}
