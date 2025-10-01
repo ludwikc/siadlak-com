@@ -5,9 +5,10 @@
  */
 
 // Most frequently used icons (in order of usage frequency)
-export { 
+export {
   ArrowRight,        // Used in 15+ files - primary CTA icon
   CheckCircle,       // Used in 10+ files - validation/success
+  Check,             // Used in app cards - simple checkmark
   Calendar,          // Used in 8+ files - scheduling/dates
   Clock,             // Used in 6+ files - time/duration
   Users,             // Used in 6+ files - community/team

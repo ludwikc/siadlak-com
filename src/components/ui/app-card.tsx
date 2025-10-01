@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
-import { Star, Download, Zap, Brain, Compass, Clock, Users } from '@/lib/icons';
-import { Badge } from '@/components/ui/badge';
-import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
+import { Link } from "react-router-dom";
+import {
+  Star,
+  Download,
+  Zap,
+  Brain,
+  Compass,
+  Clock,
+  Users,
+  Check,
+} from "@/lib/icons";
+import { Badge } from "@/components/ui/badge";
 
 interface AppCardProps {
   title: string;
   subtitle: string;
   description: string;
-  category: 'Produktywność' | 'Odporność psychiczna' | 'Męskość';
+  category: "Produktywność" | "Odporność psychiczna" | "Męskość";
   rating: number;
   downloads: string;
-  status: 'NOWA' | 'POLECANE' | 'NIEDOSTĘPNA' | 'DOSTĘPNA';
+  status: "NOWA" | "POLECANE" | "NIEDOSTĘPNA" | "DOSTĘPNA";
   features: string[];
   link: string;
   duration?: string;
@@ -21,129 +28,201 @@ interface AppCardProps {
 }
 
 const categoryConfig = {
-  'Produktywność': {
+  Produktywność: {
     icon: Zap,
-    gradient: 'from-neural-violet to-ascension-pink'
+    gradient: "from-neural-violet to-ascension-pink",
   },
-  'Odporność psychiczna': {
+  "Odporność psychiczna": {
     icon: Brain,
-    gradient: 'from-neural-violet to-luminal-magenta'
+    gradient: "from-neural-violet to-luminal-magenta",
   },
-  'Męskość': {
+  Męskość: {
     icon: Compass,
-    gradient: 'from-ascension-pink to-luminal-magenta'
-  }
+    gradient: "from-ascension-pink to-luminal-magenta",
+  },
 };
 
 const statusConfig = {
-  'NOWA': 'bg-green-500 text-white',
-  'POLECANE': 'bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0',
-  'NIEDOSTĘPNA': 'bg-gray-500 text-white',
-  'DOSTĘPNA': 'bg-neural-violet text-white'
+  NOWA: "bg-green-500 text-white shadow-sm",
+  POLECANE:
+    "bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0 shadow-sm",
+  NIEDOSTĘPNA: "bg-gray-400 text-white shadow-sm",
+  DOSTĘPNA: "bg-neural-violet text-white shadow-sm",
 };
 
-export default function AppCard({ 
-  title, 
-  subtitle, 
-  description, 
-  category, 
-  rating, 
-  downloads, 
-  status, 
-  features, 
+export default function AppCard({
+  title,
+  subtitle,
+  description,
+  category,
+  rating,
+  downloads,
+  status,
+  features,
   link,
   duration,
   target,
   featured = false,
-  premium = false 
+  premium = false,
 }: AppCardProps) {
   const CategoryIcon = categoryConfig[category].icon;
   const gradient = categoryConfig[category].gradient;
 
+  // Calculate number of ratings (simulated from downloads)
+  const downloadNum = parseInt(downloads.replace(/[^\d]/g, ""));
+  const ratingsCount = Math.floor(downloadNum * 0.6); // 60% of downloads left ratings
+
   return (
-    <GlassCard className={`rounded-xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-xl hover:shadow-neural-violet/10 relative ${featured ? 'border-2 border-ascension-pink/30' : ''} ${premium ? 'bg-gradient-to-br from-deep-space/50 to-quantum-blue/50' : ''}`}>
-      {/* Status Badge - Top Right */}
-      <Badge className={`absolute top-3 right-3 text-xs z-10 ${statusConfig[status]}`}>
+    <div
+      className={`
+      relative bg-white rounded-3xl overflow-hidden
+      transition-all duration-300 ease-out
+      hover:-translate-y-2 hover:shadow-2xl
+      shadow-lg
+      ${featured ? "ring-2 ring-ascension-pink/40" : ""}
+      ${premium ? "bg-gradient-to-br from-deep-charcoal/95 to-neural-violet/90" : ""}
+    `}
+    >
+      {/* Status Badge - Top Right with refined styling */}
+      <Badge
+        className={`absolute top-4 right-4 text-xs font-bold z-10 ${statusConfig[status]}`}
+      >
         {status}
       </Badge>
 
-      <div className="p-4 sm:p-6">
-        {/* Mobile-optimized Header Section */}
-        <div className="mb-3">
-          {/* Icon + Title Row - Better mobile alignment */}
-          <div className="flex items-center gap-3 mb-2">
-            <div className={`w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-br ${gradient} rounded-lg sm:rounded-2xl flex items-center justify-center flex-shrink-0`}>
-              <CategoryIcon className="w-5 h-5 sm:w-8 sm:h-8 text-white" />
-            </div>
-            
-            <div className="flex-1">
-              <h3 className={`text-base sm:text-xl font-bold leading-tight ${premium ? 'text-white' : 'text-deep-charcoal'}`}>
-                {title}
-              </h3>
-            </div>
+      <div className="p-6 sm:p-8">
+        {/* App Icon + Title Section - iOS App Store style */}
+        <div className="flex items-start gap-4 mb-5">
+          {/* Large App Icon with shadow */}
+          <div
+            className={`
+            w-16 h-16 sm:w-20 sm:h-20
+            bg-gradient-to-br ${gradient}
+            rounded-2xl sm:rounded-[22px]
+            flex items-center justify-center
+            flex-shrink-0
+            shadow-lg
+            border border-white/20
+            transition-transform duration-300
+            group-hover:scale-105
+          `}
+          >
+            <CategoryIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-sm" />
           </div>
 
-          <p className={`text-sm sm:text-base font-medium mb-3 ${premium ? 'text-white/90' : 'text-neural-violet'}`}>
-            {subtitle}
-          </p>
-
-          {/* Social Proof Row - Left aligned */}
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className={`h-3 w-3 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                  />
-                ))}
-                <span className={`ml-1 text-xs font-medium ${premium ? 'text-yellow-400' : 'text-yellow-600'}`}>
-                  {rating.toFixed(1)}
-                </span>
-              </div>
-              <span className={`text-xs ${premium ? 'text-white/70' : 'text-subtle-slate'}`}>
-                {downloads}
-              </span>
-            </div>
-          </div>
-
-          {/* Category + Key Stats - Better mobile flow */}
-          <div className="flex items-center gap-2 flex-wrap mb-3">
-            <Badge variant="outline" className={`text-xs ${premium ? 'border-white/20 text-white/80' : 'border-neural-violet/20 text-neural-violet'}`}>
-              {category}
-            </Badge>
-            
-            {duration && (
-              <div className="flex items-center gap-1">
-                <Clock className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate'}`} />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate'}`}>
-                  {duration}
-                </span>
-              </div>
-            )}
-            
-            {target && (
-              <div className="flex items-center gap-1">
-                <Users className={`h-3 w-3 ${premium ? 'text-white/60' : 'text-subtle-slate'}`} />
-                <span className={`text-xs ${premium ? 'text-white/60' : 'text-subtle-slate'}`}>
-                  {target}
-                </span>
-              </div>
-            )}
+          {/* Title + Subtitle */}
+          <div className="flex-1 min-w-0">
+            <h3
+              className={`
+              text-lg sm:text-xl font-bold leading-tight mb-1
+              ${premium ? "text-white" : "text-deep-charcoal"}
+            `}
+            >
+              {title}
+            </h3>
+            <p
+              className={`
+              text-sm sm:text-base font-medium
+              ${premium ? "text-white/80" : "text-subtle-slate"}
+            `}
+            >
+              {subtitle}
+            </p>
           </div>
         </div>
 
-        <p className={`text-sm sm:text-base mb-4 leading-relaxed text-left ${premium ? 'text-white/80' : 'text-subtle-slate'}`}>
+        {/* Rating + Downloads - iOS style inline */}
+        <div className="flex items-center gap-3 mb-4 flex-wrap">
+          <div className="flex items-center gap-1">
+            <span
+              className={`text-base font-semibold ${premium ? "text-white" : "text-deep-charcoal"}`}
+            >
+              {rating.toFixed(1)}
+            </span>
+            <div className="flex items-center">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className={`h-3.5 w-3.5 ${i < Math.floor(rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300 fill-gray-300"}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <span
+            className={`text-sm ${premium ? "text-white/60" : "text-subtle-slate"}`}
+          >
+            ({ratingsCount.toLocaleString()})
+          </span>
+
+          <span
+            className={`text-sm font-medium ${premium ? "text-white/70" : "text-subtle-slate"}`}
+          >
+            • {downloads}
+          </span>
+        </div>
+
+        {/* Meta badges - Category + Stats */}
+        <div className="flex items-center gap-2 flex-wrap mb-5">
+          <Badge
+            variant="outline"
+            className={`text-xs font-semibold ${premium ? "border-white/30 text-white/90 bg-white/10" : "border-neural-violet/30 text-neural-violet bg-neural-violet/5"}`}
+          >
+            {category}
+          </Badge>
+
+          {duration && (
+            <Badge
+              variant="outline"
+              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-gray-300 text-subtle-slate"}`}
+            >
+              <Clock className="h-3 w-3" />
+              {duration}
+            </Badge>
+          )}
+
+          {target && (
+            <Badge
+              variant="outline"
+              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-gray-300 text-subtle-slate"}`}
+            >
+              <Users className="h-3 w-3" />
+              {target}
+            </Badge>
+          )}
+        </div>
+
+        {/* Description */}
+        <p
+          className={`
+          text-sm sm:text-base leading-relaxed mb-5
+          ${premium ? "text-white/85" : "text-subtle-slate"}
+        `}
+        >
           {description}
         </p>
 
-        {/* Key Benefits - Clean left alignment */}
-        <div className="mb-4">
-          <div className="space-y-2">
+        {/* Key Features - Checkmark style */}
+        <div className="mb-6">
+          <div className="space-y-2.5">
             {features.slice(0, 3).map((feature, index) => (
-              <div key={index} className="flex items-start gap-2">
-                <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${premium ? 'bg-ascension-pink' : 'bg-neural-violet'}`} />
-                <span className={`text-sm leading-relaxed text-left ${premium ? 'text-white/85' : 'text-subtle-slate'}`}>
+              <div key={index} className="flex items-start gap-2.5">
+                <div
+                  className={`
+                  w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
+                  ${premium ? "bg-ascension-pink/20" : "bg-neural-violet/10"}
+                `}
+                >
+                  <Check
+                    className={`h-3 w-3 ${premium ? "text-ascension-pink" : "text-neural-violet"}`}
+                  />
+                </div>
+                <span
+                  className={`
+                  text-sm leading-relaxed
+                  ${premium ? "text-white/90" : "text-subtle-slate"}
+                `}
+                >
                   {feature}
                 </span>
               </div>
@@ -151,22 +230,35 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* CTA Button */}
-        <Link to={link} className="block mb-2">
-          <CTAButton 
-            className={`w-full font-semibold ${premium ? 'bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90' : ''}`}
-            size="default"
-            aria-label={`Rozpocznij kurs ${title}`}
+        {/* iOS-style Install Button */}
+        <Link to={link} className="block group">
+          <button
+            className={`
+            w-full py-3.5 px-6 rounded-xl font-bold text-base
+            transition-all duration-200
+            flex items-center justify-center gap-2
+            ${
+              premium
+                ? "bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white shadow-lg shadow-ascension-pink/30 hover:shadow-xl hover:shadow-ascension-pink/40 hover:scale-[1.02]"
+                : "bg-neural-violet text-white shadow-md shadow-neural-violet/20 hover:bg-neural-violet/90 hover:shadow-lg hover:scale-[1.02]"
+            }
+          `}
           >
-            <Download className="w-4 h-4 mr-2" />
-            Rozpocznij kurs
-          </CTAButton>
+            <Download className="w-5 h-5" />
+            <span>ZAINSTALUJ</span>
+          </button>
         </Link>
-        
-        <p className={`text-left sm:text-center text-xs ${premium ? 'text-white/50' : 'text-subtle-slate/60'}`}>
+
+        {/* Small text below button */}
+        <p
+          className={`
+          text-center text-xs mt-3
+          ${premium ? "text-white/50" : "text-subtle-slate/70"}
+        `}
+        >
           Dołącz do {downloads} uczestników
         </p>
       </div>
-    </GlassCard>
+    </div>
   );
 }
