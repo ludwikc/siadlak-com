@@ -177,8 +177,8 @@ export default function Program() {
         title="LifeOS AppStore"
         subtitle={
           <>
-            Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie{" "}
-            <span className="italic text-ascension-pink">w głowie</span>
+            Aplikacje mentalnej transformacji. <br/>Zainstaluj nowe oprogramowanie.<br/>{" "}
+            <span className="italic text-ascension-pink">W głowie.</span>
           </>
         }
       />
@@ -571,7 +571,7 @@ export default function Program() {
                           8 tygodni intensywnej transformacji
                         </div>
                         <div className="text-white/40 text-xs sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-2 break-words">
-                          Prowadzisz działalność? 13 008,13 PLN netto
+                          Masz firmę? 13 008,13 PLN netto
                         </div>
                       </div>
 
