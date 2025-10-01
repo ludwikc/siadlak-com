@@ -65,9 +65,9 @@ export default function TrainTheTrainer() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a href="https://link.siadlak.com/discovery" target="_blank" rel="noopener noreferrer">
-                  <div className="relative inline-block group">
+              <div className="relative inline-block group">
                     <div className="absolute -inset-1.5 bg-gradient-to-r from-gold via-luminal-magenta to-gold rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-                    <button className="relative bg-white hover:bg-white/95 text-deep-space px-10 py-5 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
+                    <button className="relative bg-gradient-to-r from-gold to-luminal-magenta hover:from-gold/90 hover:to-luminal-magenta/90 text-white px-10 py-5 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
                       Umów Sesję Discovery
                       <ArrowRight size={20} />
                     </button>
@@ -159,7 +159,7 @@ export default function TrainTheTrainer() {
                     <div className="relative flex-shrink-0">
                       <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-xl blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></div>
                       <div className="relative w-14 h-14 bg-gradient-to-br from-gold to-luminal-magenta rounded-xl flex items-center justify-center shadow-2xl ring-2 ring-gold/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <item.icon className="w-7 h-7 text-white drop-shadow-md" />
+                        <item.icon className="w-7 h-7 text-deep-space drop-shadow-md" />
                       </div>
                     </div>
                     <p className="text-lg text-deep-charcoal leading-relaxed flex-1 pt-2">{item.text}</p>
@@ -273,7 +273,7 @@ export default function TrainTheTrainer() {
                   <div className="relative w-20 h-20 mb-8">
                     <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
                     <div className={`relative w-full h-full bg-gradient-to-br ${feature.gradient} rounded-3xl flex items-center justify-center shadow-2xl ring-2 ring-gold/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                      <feature.icon className="w-10 h-10 text-white drop-shadow-lg" />
+                      <feature.icon className="w-10 h-10 text-deep-space drop-shadow-lg" />
                     </div>
                   </div>
 
@@ -354,7 +354,7 @@ export default function TrainTheTrainer() {
                   <div className="relative w-16 h-16 mx-auto mb-4">
                     <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                     <div className={`relative w-full h-full bg-gradient-to-br ${persona.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                      <persona.icon className="w-8 h-8 text-white drop-shadow-md" />
+                      <persona.icon className="w-8 h-8 text-deep-space drop-shadow-md" />
                     </div>
                   </div>
 
@@ -365,11 +365,11 @@ export default function TrainTheTrainer() {
             </div>
 
             {/* English requirement */}
-            <div className="bg-gradient-to-r from-gold/10 via-luminal-magenta/10 to-gold/10 rounded-2xl p-6 border-2 border-gold/30">
+            <div className="bg-gold/5 rounded-2xl p-6 border-2 border-gold/30">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-gradient-to-br from-gold to-luminal-magenta rounded-full flex items-center justify-center shadow-lg">
-                    <AlertCircle className="w-6 h-6 text-white" />
+                    <AlertCircle className="w-6 h-6 text-deep-space" />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -397,7 +397,7 @@ export default function TrainTheTrainer() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-gold/20 text-gold border-2 border-gold/40 font-semibold">
+              <Badge className="mb-6 px-6 py-3 bg-gold text-deep-space border-2 border-gold font-bold">
                 Twój Mentor
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -641,7 +641,7 @@ export default function TrainTheTrainer() {
 
             {/* Scarcity reminder */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-black text-gold px-8 py-4 rounded-full border-2 border-gold shadow-2xl">
+              <div className="inline-flex items-center gap-3 bg-gold text-deep-space px-8 py-4 rounded-full border-2 border-gold shadow-2xl">
                 <AlertCircle className="w-5 h-5" />
                 <span className="font-bold">Tylko 2 miejsca pozostały na Q1 2025</span>
               </div>
@@ -664,7 +664,7 @@ export default function TrainTheTrainer() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-black text-gold border-2 border-gold font-semibold animate-pulse">
+              <Badge className="mb-6 px-6 py-3 bg-gold text-deep-space border-2 border-gold font-bold animate-pulse">
                 TYLKO 2 MIEJSCA POZOSTAŁY
               </Badge>
 
