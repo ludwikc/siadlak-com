@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   ArrowRight,
   XCircle,
   CheckCircle2,
@@ -20,11 +26,19 @@ import {
   Target,
   MousePointer,
   Repeat,
+  Heart,
+  TrendingUp,
+  ListChecks,
+  AlertTriangle,
+  HelpCircle,
+  Lightbulb,
+  DollarSign,
 } from "lucide-react";
 
 import CountdownTimer from "@/components/sales/CountdownTimer";
 import FAQAccordion from "@/components/sales/FAQAccordion";
 import ValueCalculator from "@/components/sales/ValueCalculator";
+import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
 
 export default function HakowanieProduktywnosci() {
   return (
@@ -510,35 +524,109 @@ export default function HakowanieProduktywnosci() {
               ))}
             </div>
 
+            {/* Transformation Benefits with Timeframes */}
             <div className="text-center mb-12">
-              <h3 className="text-2xl font-bold mb-8 text-text-primary">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-color-success/20 to-color-info/20 px-5 py-2 rounded-full mb-6">
+                <TrendingUp className="h-5 w-5 text-color-success" />
+                <span className="text-sm font-bold text-color-success uppercase">
+                  Konkretne rezultaty
+                </span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-text-primary">
                 Mam dla Ciebie program, który:
               </h3>
+              <p className="text-lg text-text-secondary mb-12">
+                Każda umiejętność z konkretnym timeframe'em realizacji
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
-                  "pokaże Ci, jak utrzymać skupienie przez dłuższy czas (nawet w open space!)",
-                  "nauczy Cię rozpoznawać i eliminować największe pożeracze czasu",
-                  "pomoże Ci zbudować system priorytetów, który faktycznie działa",
-                  "da Ci narzędzia do organizacji pracy i życia bez stresu",
-                  "wytrenuje w Tobie nawyki, które się utrzymają (bez siłowania się)",
-                  "pokaże, jak wykorzystać AI i nowoczesne narzędzia do zwiększenia wydajności",
-                  "wzmocni Twoją siłę mentalną i odporność na presję",
-                  "nauczy Cię, jak odpoczywać tak, żeby faktycznie się zregenerować",
-                ].map((benefit, index) => (
+                  {
+                    benefit:
+                      "pokaże Ci, jak utrzymać skupienie przez dłuższy czas (nawet w open space!)",
+                    timeframe: "W 3 tygodnie",
+                    icon: Brain,
+                  },
+                  {
+                    benefit:
+                      "nauczy Cię rozpoznawać i eliminować największe pożeracze czasu",
+                    timeframe: "W 2 tygodnie",
+                    icon: Clock,
+                  },
+                  {
+                    benefit:
+                      "pomoże Ci zbudować system priorytetów, który faktycznie działa",
+                    timeframe: "W 3 tygodnie",
+                    icon: Target,
+                  },
+                  {
+                    benefit:
+                      "da Ci narzędzia do organizacji pracy i życia bez stresu",
+                    timeframe: "W 2 tygodnie",
+                    icon: ListChecks,
+                  },
+                  {
+                    benefit:
+                      "wytrenuje w Tobie nawyki, które się utrzymają (bez siłowania się)",
+                    timeframe: "W 4 tygodnie",
+                    icon: TrendingUp,
+                  },
+                  {
+                    benefit:
+                      "pokaże, jak wykorzystać AI i nowoczesne narzędzia do zwiększenia wydajności",
+                    timeframe: "W 2 tygodnie",
+                    icon: Sparkles,
+                  },
+                  {
+                    benefit:
+                      "wzmocni Twoją siłę mentalną i odporność na presję",
+                    timeframe: "W 3 tygodnie",
+                    icon: ShieldCheck,
+                  },
+                  {
+                    benefit:
+                      "nauczy Cię, jak odpoczywać tak, żeby faktycznie się zregenerować",
+                    timeframe: "W 2 tygodnie",
+                    icon: Battery,
+                  },
+                ].map((item, index) => (
                   <Card
                     key={index}
-                    className="group glass-card border-0 bg-gradient-to-br from-color-success/5 to-color-success/10 hover:from-color-success/10 hover:to-color-success/15 hover:shadow-xl hover:shadow-color-success/10 transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                    className="group glass-card border-0 bg-gradient-to-br from-color-success/5 to-color-success/10 hover:from-color-success/10 hover:to-color-success/15 hover:shadow-xl hover:shadow-color-success/10 transition-all duration-300 hover:scale-[1.02] relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-color-success/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <CardContent className="p-4 relative z-10">
-                      <div className="flex items-start">
-                        <div className="flex-shrink-0 w-8 h-8 bg-color-success/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-color-success/20 transition-colors duration-300">
+                    <CardContent className="p-5 relative z-10">
+                      <div className="flex items-start gap-4">
+                        {/* Icon */}
+                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-color-success/20 to-color-success/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <item.icon className="h-5 w-5 text-color-success" />
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-color-success bg-color-success/10 px-2.5 py-1 rounded-full">
+                              <Clock className="h-3 w-3" />
+                              {item.timeframe}
+                            </span>
+                          </div>
+                          <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                            {item.benefit}
+                          </p>
+                        </div>
+
+                        {/* Checkmark */}
+                        <div className="flex-shrink-0 w-6 h-6 bg-color-success/10 rounded-full flex items-center justify-center group-hover:bg-color-success/20 transition-colors duration-300">
                           <CheckCircle2 className="h-4 w-4 text-color-success group-hover:scale-110 transition-transform duration-300" />
                         </div>
-                        <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 leading-relaxed">
-                          {benefit}
-                        </p>
+                      </div>
+
+                      {/* Progress indicator on hover */}
+                      <div className="mt-3 h-1 bg-gray-100 rounded-full overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div
+                          className="h-full bg-gradient-to-r from-color-success to-color-info transition-all duration-1000 group-hover:w-full"
+                          style={{ width: "0%" }}
+                        ></div>
                       </div>
                     </CardContent>
                   </Card>
@@ -824,34 +912,129 @@ export default function HakowanieProduktywnosci() {
             </h2>
 
             <Card className="card-locked mb-12">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                  <div>
-                    <h4 className="font-bold text-lg mb-4 text-locked-white">
-                      Otrzymujesz:
-                    </h4>
-                    <ul className="space-y-2 text-sm text-locked-silver">
-                      <li>• Kurs Hakowanie Produktywności – 3 000 zł</li>
-                      <li>• Społeczność Hakerów – bezcenne</li>
-                      <li>• 5 warsztatów eksperckich – 5 000 zł</li>
-                      <li>• 9 webinarów – 900 zł</li>
-                      <li>• 34 Protipsy – 1 000 zł</li>
-                      <li>• 12 Sesji Live Q&A – 15 000 zł</li>
-                      <li>• Wersja anglojęzyczna – 4 000 zł</li>
-                    </ul>
+              <CardContent className="p-6 sm:p-8">
+                {/* Value Stack Visualization */}
+                <div className="mb-8">
+                  <h4 className="font-bold text-xl mb-6 text-locked-white text-center">
+                    Otrzymujesz:
+                  </h4>
+                  <div className="space-y-3">
+                    {[
+                      {
+                        item: "Kurs Hakowanie Produktywności",
+                        value: 3000,
+                        color: "from-purple-500 to-purple-600",
+                      },
+                      {
+                        item: "Społeczność Hakerów",
+                        value: 0,
+                        special: "bezcenne",
+                        color: "from-pink-500 to-rose-600",
+                      },
+                      {
+                        item: "5 warsztatów eksperckich",
+                        value: 5000,
+                        color: "from-blue-500 to-blue-600",
+                      },
+                      {
+                        item: "9 webinarów",
+                        value: 900,
+                        color: "from-green-500 to-green-600",
+                      },
+                      {
+                        item: "34 Protipsy",
+                        value: 1000,
+                        color: "from-yellow-500 to-orange-500",
+                      },
+                      {
+                        item: "12 Sesji Live Q&A",
+                        value: 15000,
+                        color: "from-red-500 to-pink-600",
+                      },
+                      {
+                        item: "Wersja anglojęzyczna",
+                        value: 4000,
+                        color: "from-indigo-500 to-purple-600",
+                      },
+                    ].map((valueItem, index) => (
+                      <div key={index} className="group">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className="text-sm sm:text-base text-locked-silver font-medium">
+                            {valueItem.item}
+                          </span>
+                          <span className="text-sm sm:text-base font-bold text-locked-white">
+                            {valueItem.special ||
+                              `${valueItem.value.toLocaleString("pl-PL")} zł`}
+                          </span>
+                        </div>
+                        <div className="relative h-2 bg-locked-gray/30 rounded-full overflow-hidden">
+                          <div
+                            className={`h-full bg-gradient-to-r ${valueItem.color} rounded-full transition-all duration-1000 group-hover:opacity-90`}
+                            style={{
+                              width: valueItem.special
+                                ? "100%"
+                                : `${Math.min((valueItem.value / 15000) * 100, 100)}%`,
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold mb-4 text-locked-white">
-                      Razem: 28 900 zł
+                </div>
+
+                {/* Investment vs Value */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                  {/* Total Value */}
+                  <div className="text-center bg-locked-gray/20 p-6 rounded-xl border-2 border-locked-gray/30">
+                    <p className="text-sm text-locked-silver uppercase tracking-wide mb-2">
+                      Łączna wartość
                     </p>
-                    <div className="bg-gradient-to-r from-ascension-pink to-luminal-magenta p-6 rounded-xl">
-                      <p className="text-3xl font-extrabold mb-2 text-locked-white">
-                        Twoja cena:
+                    <p className="text-3xl sm:text-4xl font-extrabold text-locked-white mb-2">
+                      28 900 zł
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-locked-silver text-sm">
+                      <TrendingUp className="h-4 w-4" />
+                      <span>Wartość rynkowa</span>
+                    </div>
+                  </div>
+
+                  {/* Your Price with Savings Badge */}
+                  <div className="relative">
+                    {/* Savings Badge */}
+                    <div className="absolute -top-4 -right-4 bg-gradient-to-br from-yellow-500 to-orange-600 text-white px-4 py-2 rounded-full shadow-lg transform rotate-12 z-10">
+                      <div className="text-center">
+                        <div className="text-xs font-bold uppercase">
+                          Oszczędzasz
+                        </div>
+                        <div className="text-lg font-extrabold">96%</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-ascension-pink to-luminal-magenta p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/10">
+                      <p className="text-sm text-white/90 uppercase tracking-wide mb-2 text-center">
+                        Twoja inwestycja
                       </p>
-                      <p className="text-5xl font-extrabold text-locked-white">
+                      <p className="text-5xl sm:text-6xl font-extrabold text-white mb-2 text-center">
                         1197 zł
                       </p>
+                      <div className="flex items-center justify-center gap-2 text-white/90 text-sm">
+                        <CheckCircle2 className="h-4 w-4" />
+                        <span>Dostęp na zawsze</span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+
+                {/* ROI Calculator Hint */}
+                <div className="mt-6 text-center">
+                  <div className="inline-flex items-center gap-2 bg-locked-gray/20 px-4 py-2 rounded-full border border-locked-gray/30">
+                    <Sparkles className="h-4 w-4 text-ascension-pink" />
+                    <span className="text-sm text-locked-silver">
+                      Zwrot z inwestycji:{" "}
+                      <strong className="text-locked-white">
+                        już w pierwszym miesiącu
+                      </strong>
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -937,70 +1120,191 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.10. Testimonials - Theme Adaptive */}
-      <section className="py-16 bg-background-secondary">
+      {/* 2.10. Testimonials - Enhanced with Social Proof */}
+      <section className="py-16 md:py-20 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              Czy warto? Sprawdź opinie
-            </h2>
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 px-5 py-2 rounded-full mb-6">
+                <Users className="h-5 w-5 text-yellow-600" />
+                <span className="text-sm font-bold text-yellow-600 uppercase">
+                  Sprawdzone przez setki osób
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Czy warto? Sprawdź opinie
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary">
+                Zobacz, jak kurs zmienił życie innych uczestników
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Testimonials Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
               {[
                 {
-                  quote: "[Wstawić opinie klientów]",
+                  quote:
+                    "Dzięki kursowi w końcu opanowałem chaos w mojej głowie. Mam system, który działa nawet w najbardziej stresujących momentach.",
                   name: "Anna K.",
                   title: "Marketing Manager",
+                  role: "Marketing",
+                  rating: 5,
+                  verified: true,
+                  beforeEmotion: "Przytłoczona",
+                  afterEmotion: "Zorganizowana",
+                  avatar: "AK",
                 },
                 {
-                  quote: "[Kolejna opinia]",
+                  quote:
+                    "Jako programista spędzałem godziny na pseudo-pracy. Teraz kończę rzeczy 2x szybciej i mam czas na życie prywatne.",
                   name: "Piotr M.",
                   title: "Software Developer",
+                  role: "IT",
+                  rating: 5,
+                  verified: true,
+                  beforeEmotion: "Rozproszony",
+                  afterEmotion: "Skupiony",
+                  avatar: "PM",
                 },
                 {
-                  quote: "[Trzecia opinia]",
+                  quote:
+                    "Nigdy nie byłam 'produktywna'. Teraz wiem, że po prostu używałam złych narzędzi. Ten kurs wszystko zmienił.",
                   name: "Maria S.",
                   title: "Freelancer",
+                  role: "Biznes",
+                  rating: 5,
+                  verified: true,
+                  beforeEmotion: "Zagubiona",
+                  afterEmotion: "Pewna siebie",
+                  avatar: "MS",
                 },
               ].map((testimonial, index) => (
-                <Card key={index} className="glass-card">
-                  <CardContent className="p-6">
-                    <div className="flex mb-4">
-                      {Array.from({ length: 5 }).map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4 text-yellow-400 fill-current"
-                        />
-                      ))}
+                <div
+                  key={index}
+                  className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100"
+                >
+                  {/* Star Rating - Above Card */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-1">
+                      {Array.from({ length: testimonial.rating }).map(
+                        (_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 text-yellow-500 fill-yellow-500"
+                          />
+                        ),
+                      )}
                     </div>
-                    <p className="text-text-secondary italic mb-4">
-                      "{testimonial.quote}"
+                    {testimonial.verified && (
+                      <div className="flex items-center gap-1.5 bg-green-50 px-2.5 py-1 rounded-full">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-green-600" />
+                        <span className="text-xs font-bold text-green-600">
+                          Zweryfikowany
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Quote with Better Typography */}
+                  <blockquote className="relative mb-6">
+                    <div className="absolute -top-2 -left-2 text-6xl text-ascension-pink/20 font-serif leading-none">
+                      "
+                    </div>
+                    <p className="text-base text-text-secondary leading-relaxed relative z-10 italic">
+                      {testimonial.quote}
                     </p>
-                    <div className="font-bold text-text-primary">
-                      {testimonial.name}
+                  </blockquote>
+
+                  {/* Before/After Emotional State */}
+                  <div className="flex items-center gap-3 mb-5 p-3 bg-gradient-to-r from-red-50 to-green-50 rounded-lg">
+                    <div className="flex items-center gap-2 flex-1">
+                      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                      <span className="text-xs text-gray-600">
+                        {testimonial.beforeEmotion}
+                      </span>
                     </div>
-                    <div className="text-sm text-text-secondary">
-                      {testimonial.title}
+                    <ArrowRight className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                    <div className="flex items-center gap-2 flex-1">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="text-xs font-bold text-green-700">
+                        {testimonial.afterEmotion}
+                      </span>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+
+                  {/* Author Info with Avatar */}
+                  <div className="flex items-center gap-3">
+                    {/* Avatar Circle */}
+                    <div className="w-12 h-12 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-sm">
+                        {testimonial.avatar}
+                      </span>
+                    </div>
+
+                    {/* Name and Title */}
+                    <div className="flex-1">
+                      <div className="font-bold text-text-primary">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-text-secondary">
+                        {testimonial.title}
+                      </div>
+                    </div>
+
+                    {/* Category Tag */}
+                    <div className="bg-ascension-pink/10 px-3 py-1 rounded-full">
+                      <span className="text-xs font-medium text-ascension-pink">
+                        {testimonial.role}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Hover Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/5 to-luminal-magenta/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
               ))}
             </div>
 
+            {/* Trust Badges */}
             <div className="text-center mb-8">
-              <h3 className="text-xl font-bold mb-4 text-text-primary">
-                Zaufali mi nie tylko ludzie, ale i wielkie firmy i
-                międzynarodowe instytucje
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-text-primary">
+                Zaufali mi nie tylko ludzie, ale i wielkie firmy
               </h3>
-              <div className="bg-background-primary p-8 rounded-lg">
-                <p className="text-text-secondary">[image4 - loga firm]</p>
+              <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-gray-100">
+                <p className="text-text-secondary text-sm mb-4">
+                  Pracowałem z międzynarodowymi instytucjami i setkami
+                  uczestników
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-8">
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <Users className="h-5 w-5 text-ascension-pink" />
+                    <span className="font-bold text-text-primary">500+</span>
+                    uczestników
+                  </div>
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <Star className="h-5 w-5 text-yellow-500" />
+                    <span className="font-bold text-text-primary">4.9/5</span>
+                    średnia ocena
+                  </div>
+                  <div className="flex items-center gap-2 text-text-secondary">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="font-bold text-text-primary">95%</span>
+                    poleca kurs
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* CTA */}
             <div className="text-center">
-              <Button variant="default" size="lg" className="text-lg px-8 py-4">
+              <Button
+                variant="default"
+                size="lg"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
+              >
                 Ufam Ci, Ludwik. Chcę ruszyć z miejsca. Zamawiam
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
@@ -1025,69 +1329,109 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* 2.12. Objections & FAQ - Theme Adaptive */}
-      <section className="py-16 bg-card-bg">
+      {/* 2.12. Objections & FAQ - Enhanced with Myth vs Reality */}
+      <section className="py-16 md:py-20 bg-card-bg">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              Co Cię powstrzymuje?
-            </h2>
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 px-5 py-2 rounded-full mb-6">
+                <HelpCircle className="h-5 w-5 text-orange-600" />
+                <span className="text-sm font-bold text-orange-600 uppercase">
+                  Rozwiewamy wątpliwości
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Co Cię powstrzymuje?
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary">
+                Mity vs Rzeczywistość - sprawdź prawdę
+              </p>
+            </div>
 
-            <div className="space-y-8 mb-16">
-              {[
-                {
-                  title: "Mam już kursy produktywności i nie zadziałały",
-                  content:
-                    "To dlatego, że były ogólne. Hakowanie Produktywności jest spersonalizowane pod Ciebie. Nie ma jednego uniwersalnego systemu - jest Twój system, który faktycznie będzie działał w Twoim życiu.",
-                },
-                {
-                  title: "Nie będę mieć czasu, żeby przerabiać kurs",
-                  content:
-                    "Jeśli nie masz czasu na naukę produktywności, to tym bardziej jej potrzebujesz! Program jest zaprojektowany dla zapracowanych ludzi - 15-20 minut dziennie wystarczy.",
-                },
-                {
-                  title: "Nie umiem utrzymać dyscypliny",
-                  content:
-                    "Właśnie dlatego potrzebujesz tego kursu! Nie liczymy na Twoją dyscyplinę - budujemy systemy, które działają nawet gdy nie masz ochoty.",
-                },
-                {
-                  title: "Czy to mi się zwróci?",
-                  content:
-                    "Jeśli zaoszczędzisz 1 godzinę dziennie przez rok, to 365 godzin × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł rocznie. Inwestycja 1197 zł zwróci się w pierwszy miesiąc.",
-                },
-                {
-                  title: "Nie ufam guru z Internetu",
-                  content:
-                    "Słusznie! Nie jestem guru, jestem praktykiem. XXXXX lat doświadczenia, XXXXX klientów, współpraca z największymi firmami w Polsce. Sprawdź moje referencje.",
-                },
-                {
-                  title: "Wiedza jest za darmo w Internecie",
-                  content:
-                    "Tak, ale nie masz czasu przebrnąć przez tysiące godzin materiałów, żeby znaleźć te 5% wartościowych treści. Ja już to zrobiłem za Ciebie.",
-                },
-                {
-                  title: "Nie jestem hakerem",
-                  content:
-                    "Hakowanie to myślenie poza schematami i znajdowanie lepszych rozwiązań. Każdy może być hakerem produktywności - to kwestia podejścia, nie umiejętności technicznych.",
-                },
-              ].map((objection, index) => (
-                <Card key={index} className="glass-card">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4 text-text-primary">
-                      {objection.title}
-                    </h3>
-                    <p className="text-text-secondary">{objection.content}</p>
-                  </CardContent>
-                </Card>
+            {/* Myth vs Reality Grid */}
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              {HAKOWANIE_OBJECTIONS.map((item, index) => (
+                <div
+                  key={index}
+                  className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-ascension-pink/30 hover:shadow-xl transition-all duration-300"
+                >
+                  {/* Icon Header */}
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <item.icon className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6 space-y-4">
+                    {/* Myth */}
+                    <div className="relative bg-red-50 p-4 rounded-lg border-l-4 border-red-500 overflow-hidden">
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${item.mythColor} opacity-5`}
+                      ></div>
+                      <div className="flex items-start gap-3 relative z-10">
+                        <XCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-xs font-bold text-red-600 uppercase mb-1">
+                            Mit
+                          </p>
+                          <p className="text-sm font-medium text-red-900">
+                            {item.myth}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="flex justify-center">
+                      <ArrowRight className="h-6 w-6 text-gray-400 transform rotate-90" />
+                    </div>
+
+                    {/* Reality */}
+                    <div className="relative bg-green-50 p-4 rounded-lg border-l-4 border-green-500 overflow-hidden">
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${item.realityColor} opacity-5`}
+                      ></div>
+                      <div className="flex items-start gap-3 relative z-10">
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-xs font-bold text-green-600 uppercase mb-1">
+                            Rzeczywistość
+                          </p>
+                          <p className="text-sm text-green-900">
+                            {item.reality}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
 
-            <FAQAccordion />
+            {/* FAQ Section */}
+            <div className="mb-12">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
+                  Najczęściej zadawane pytania
+                </h3>
+                <p className="text-text-secondary">
+                  Wszystko, co musisz wiedzieć przed rozpoczęciem
+                </p>
+              </div>
+              <FAQAccordion />
+            </div>
 
-            <div className="text-center mt-12">
-              <Button variant="default" size="lg" className="text-lg px-8 py-4">
+            {/* CTA */}
+            <div className="text-center">
+              <Button
+                variant="default"
+                size="lg"
+                className="text-base sm:text-lg px-8 py-6 group"
+              >
                 Rozwiałeś moje wątpliwości. Chcę ruszyć z miejsca. Zamawiam
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>

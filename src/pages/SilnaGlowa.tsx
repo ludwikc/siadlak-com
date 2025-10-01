@@ -2,6 +2,13 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { SILNA_GLOWA_OBJECTIONS } from "@/data/course-objections";
+import {
   Shield,
   ArrowRight,
   Users,
@@ -17,6 +24,13 @@ import {
   Brain,
   Zap,
   CheckCircle2,
+  Sparkles,
+  Compass,
+  Trophy,
+  DollarSign,
+  HelpCircle,
+  Lightbulb,
+  TrendingUp,
 } from "lucide-react";
 
 const SilnaGlowa = () => {
@@ -327,9 +341,13 @@ const SilnaGlowa = () => {
                     <Anchor className="h-8 w-8 text-red-600" />
                   </div>
                   <div className="space-y-2">
-                    <p className="text-sm text-text-secondary">łódź się chwieje</p>
+                    <p className="text-sm text-text-secondary">
+                      łódź się chwieje
+                    </p>
                     <p className="text-sm text-text-secondary">żagle rwą</p>
-                    <p className="text-sm text-text-secondary">kadłub przecieka</p>
+                    <p className="text-sm text-text-secondary">
+                      kadłub przecieka
+                    </p>
                   </div>
                   <Waves className="h-6 w-6 text-red-400 animate-pulse" />
                 </div>
@@ -338,7 +356,9 @@ const SilnaGlowa = () => {
               {/* Stage 2: Stormy Waters */}
               <div className="group relative bg-white rounded-2xl p-6 sm:p-8 border-2 border-orange-200 hover:shadow-lg transition-all">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-100 px-4 py-1 rounded-full border-2 border-orange-200">
-                  <span className="text-xs font-bold text-orange-600">OCEAN</span>
+                  <span className="text-xs font-bold text-orange-600">
+                    OCEAN
+                  </span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-4 pt-2">
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
@@ -356,7 +376,9 @@ const SilnaGlowa = () => {
               {/* Stage 3: Strong Ship */}
               <div className="group relative bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 border-2 border-green-300 hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500 px-4 py-1 rounded-full border-2 border-green-400">
-                  <span className="text-xs font-bold text-white">ROZWIĄZANIE</span>
+                  <span className="text-xs font-bold text-white">
+                    ROZWIĄZANIE
+                  </span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-4 pt-2">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -378,16 +400,24 @@ const SilnaGlowa = () => {
               <div className="relative bg-white rounded-2xl p-8 sm:p-10 border-2 border-gray-200">
                 <div className="space-y-4 text-center">
                   <p className="text-lg sm:text-xl text-text-primary leading-relaxed">
-                    Owszem, są łodzie które pływają po spokojnych morzach.<br />
-                    Ba! Są takie, które nie pływają - ciągną je <span className="line-through text-gray-400">holowniki</span> <span className="font-semibold">(np. bogaci rodzice)</span>.
+                    Owszem, są łodzie które pływają po spokojnych morzach.
+                    <br />
+                    Ba! Są takie, które nie pływają - ciągną je{" "}
+                    <span className="line-through text-gray-400">
+                      holowniki
+                    </span>{" "}
+                    <span className="font-semibold">(np. bogaci rodzice)</span>.
                   </p>
                   <div className="pt-4 border-t-2 border-gray-200">
                     <p className="text-xl sm:text-2xl font-bold text-ascension-pink mb-2">
                       Ty nie jesteś jedną z nich i nie będziesz
                     </p>
                     <p className="text-base sm:text-lg text-text-secondary">
-                      W ogóle nie powinieneś się na nich oglądać.<br />
-                      <strong className="text-text-primary">Oni nie przepłyną za Ciebie Twojego kursu.</strong>
+                      W ogóle nie powinieneś się na nich oglądać.
+                      <br />
+                      <strong className="text-text-primary">
+                        Oni nie przepłyną za Ciebie Twojego kursu.
+                      </strong>
                     </p>
                   </div>
                 </div>
@@ -574,29 +604,176 @@ const SilnaGlowa = () => {
         </div>
       </section>
 
-      {/* Benefits Section - Theme Adaptive */}
-      <section className="py-16 bg-background-primary">
+      {/* Benefits Section - Theme Adaptive with Visual Roadmap */}
+      <section className="py-16 md:py-20 bg-background-primary">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              Z moją pomocą stworzysz swój własny plan wytrwałości
-            </h2>
+          <div className="max-w-5xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-color-success/20 to-ascension-pink/20 px-5 py-2 rounded-full mb-6">
+                <Sparkles className="h-5 w-5 text-color-success" />
+                <span className="text-sm font-bold text-color-success uppercase">
+                  Twoja transformacja
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Z moją pomocą stworzysz swój własny plan wytrwałości
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary">
+                Krok po kroku przejdziesz transformację od chaosu do spokoju
+              </p>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* Visual Roadmap - Progressive Journey */}
+            <div className="space-y-6">
               {[
-                "Nauczysz się nawigowania po oceanie życia i odporności na zmienną pogodę.",
-                "Przejmiesz stery nad swoim umysłem, by prowadzić go na spokojne wody życia.",
-                "Opanujesz ocean myśli i uciszysz go, tak że burza to będzie wyjątek.",
-                "Wiatr motywacji wypełni Twoje żagle, dzięki czemu będziesz przeć cała naprzód, w zgodzie ze swoimi wartościami.",
-                "Posiądziesz strategie radzenia sobie w trudnych sytuacjach, żeby wyjść z nich jeszcze silniejszym.",
-                "Stworzysz własny kompas, który zawsze będzie wskazywał właściwy kierunek.",
-              ].map((benefit, index) => (
-                <Card key={index} className="glass-card p-6">
-                  <CardContent className="p-0">
-                    <p className="text-text-secondary">{benefit}</p>
-                  </CardContent>
-                </Card>
+                {
+                  step: 1,
+                  title: "Nawigacja",
+                  benefit:
+                    "Nauczysz się nawigowania po oceanie życia i odporności na zmienną pogodę.",
+                  icon: Compass,
+                  gradient: "from-blue-500 to-blue-600",
+                  timeframe: "Tydzień 1-2",
+                },
+                {
+                  step: 2,
+                  title: "Sterowanie",
+                  benefit:
+                    "Przejmiesz stery nad swoim umysłem, by prowadzić go na spokojne wody życia.",
+                  icon: ShipWheel,
+                  gradient: "from-purple-500 to-purple-600",
+                  timeframe: "Tydzień 3-4",
+                },
+                {
+                  step: 3,
+                  title: "Spokój",
+                  benefit:
+                    "Opanujesz ocean myśli i uciszysz go, tak że burza to będzie wyjątek.",
+                  icon: Waves,
+                  gradient: "from-cyan-500 to-teal-600",
+                  timeframe: "Tydzień 5-6",
+                },
+                {
+                  step: 4,
+                  title: "Motywacja",
+                  benefit:
+                    "Wiatr motywacji wypełni Twoje żagle, dzięki czemu będziesz przeć cała naprzód, w zgodzie ze swoimi wartościami.",
+                  icon: Zap,
+                  gradient: "from-orange-500 to-orange-600",
+                  timeframe: "Tydzień 7-8",
+                },
+                {
+                  step: 5,
+                  title: "Odporność",
+                  benefit:
+                    "Posiądziesz strategie radzenia sobie w trudnych sytuacjach, żeby wyjść z nich jeszcze silniejszym.",
+                  icon: Shield,
+                  gradient: "from-green-500 to-green-600",
+                  timeframe: "Tydzień 9-10",
+                },
+                {
+                  step: 6,
+                  title: "Kompas",
+                  benefit:
+                    "Stworzysz własny kompas, który zawsze będzie wskazywał właściwy kierunek.",
+                  icon: Target,
+                  gradient: "from-ascension-pink to-luminal-magenta",
+                  timeframe: "Tydzień 11-12",
+                },
+              ].map((item, index) => (
+                <div key={index} className="group relative">
+                  {/* Connecting Line */}
+                  {index < 5 && (
+                    <div className="absolute left-8 sm:left-10 top-20 sm:top-24 w-0.5 h-6 bg-gradient-to-b from-gray-300 to-transparent"></div>
+                  )}
+
+                  <div className="relative flex items-start gap-4 sm:gap-6">
+                    {/* Icon Circle with Progress */}
+                    <div className="relative flex-shrink-0">
+                      <div
+                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center shadow-lg border-4 border-white group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <item.icon className="h-7 w-7 sm:h-9 sm:w-9 text-white drop-shadow-md" />
+                      </div>
+                      {/* Step Number Badge */}
+                      <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-100">
+                        <span className="text-xs sm:text-sm font-bold text-text-primary">
+                          {item.step}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content Card */}
+                    <div className="flex-1">
+                      <Card className="group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-gray-200 bg-white overflow-hidden">
+                        <CardContent className="p-5 sm:p-6">
+                          {/* Title Row */}
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="text-xl sm:text-2xl font-bold text-text-primary">
+                              {item.title}
+                            </h3>
+                            <span className="text-xs sm:text-sm font-medium text-text-secondary bg-gray-100 px-3 py-1 rounded-full">
+                              {item.timeframe}
+                            </span>
+                          </div>
+
+                          {/* Benefit Description */}
+                          <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-4">
+                            {item.benefit}
+                          </p>
+
+                          {/* Progress Bar */}
+                          <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden">
+                            <div
+                              className={`h-full bg-gradient-to-r ${item.gradient} rounded-full transition-all duration-500 group-hover:w-full`}
+                              style={{ width: `${(item.step / 6) * 100}%` }}
+                            ></div>
+                          </div>
+
+                          {/* Completion Indicator */}
+                          <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <CheckCircle2 className="h-4 w-4 text-color-success" />
+                            <span className="text-sm font-medium text-color-success">
+                              Odblokowujesz ten etap w trakcie kursu
+                            </span>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
               ))}
+            </div>
+
+            {/* Summary Card */}
+            <div className="mt-12 bg-gradient-to-br from-ascension-pink/10 to-luminal-magenta/10 rounded-2xl p-8 border-2 border-ascension-pink/20">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full mb-4">
+                  <Trophy className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
+                  W 12 tygodni od teraz
+                </h3>
+                <p className="text-lg sm:text-xl text-text-secondary mb-6">
+                  Będziesz miał silną głowę, gotową na każde wyzwanie życiowe
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {["Spokój", "Pewność", "Odporność", "Kierunek"].map(
+                    (trait, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm"
+                      >
+                        <CheckCircle2 className="h-5 w-5 text-color-success" />
+                        <span className="font-medium text-text-primary">
+                          {trait}
+                        </span>
+                      </div>
+                    ),
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -760,7 +937,8 @@ const SilnaGlowa = () => {
                   number: 2,
                   icon: Brain,
                   gradient: "from-purple-500 to-purple-600",
-                  title: "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
+                  title:
+                    "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
                   description:
                     "Czy zdarza Ci się, że negatywne myśli przejmują nad Tobą kontrolę? Już za chwilę poznasz techniki, które pomogą Ci wyrwać się z błędnego koła pesymizmu.",
                 },
@@ -776,7 +954,8 @@ const SilnaGlowa = () => {
                   number: 4,
                   icon: Zap,
                   gradient: "from-orange-500 to-orange-600",
-                  title: "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
+                  title:
+                    "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
                   description:
                     "Czujesz, że brakuje Ci motywacji do działania? Wspólnie odkryjemy Twoje prawdziwe wartości i nauczysz się żyć w zgodzie z nimi na co dzień.",
                 },
@@ -784,7 +963,8 @@ const SilnaGlowa = () => {
                   number: 5,
                   icon: Waves,
                   gradient: "from-teal-500 to-cyan-600",
-                  title: "Nawigacja przez burze: Skuteczne strategie radzenia sobie",
+                  title:
+                    "Nawigacja przez burze: Skuteczne strategie radzenia sobie",
                   description:
                     "Czy czasem czujesz się bezradny w obliczu życiowych wyzwań? Poznasz naprawdę skuteczne strategie radzenia sobie ze stresem i przeciwnościami.",
                 },
@@ -792,7 +972,8 @@ const SilnaGlowa = () => {
                   number: 6,
                   icon: Shield,
                   gradient: "from-indigo-500 to-purple-600",
-                  title: "Tworzenie własnego kompasu: Plan budowania odporności",
+                  title:
+                    "Tworzenie własnego kompasu: Plan budowania odporności",
                   description:
                     "Chcesz być odporny na życiowe zawirowania? Stworzysz swój personalny plan budowania odporności psychicznej.",
                 },
@@ -851,7 +1032,9 @@ const SilnaGlowa = () => {
                   {/* Unlock Button */}
                   <button className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">ODBLOKOWUJ MODUŁ</span>
+                    <span className="text-sm sm:text-base">
+                      ODBLOKOWUJ MODUŁ
+                    </span>
                   </button>
                 </div>
               ))}
@@ -888,54 +1071,123 @@ const SilnaGlowa = () => {
               Ile za ten rejs ku spokojowi ducha?
             </h2>
 
-            <Card className="glass-card p-8 max-w-lg mx-auto">
+            <Card className="glass-card p-8 max-w-2xl mx-auto border-2 border-ascension-pink/20">
               <CardContent className="p-0">
                 <div className="space-y-6">
-                  <div>
-                    <p className="text-text-secondary line-through text-xl">
-                      12 000 zł
-                    </p>
-                    <p className="text-sm text-text-secondary">
-                      (tyle kosztuje 1 dzień mentoringu 1:1)
-                    </p>
+                  {/* Value Comparison */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    {/* Regular Price */}
+                    <div className="bg-gray-50 p-6 rounded-xl text-center border-2 border-gray-200">
+                      <p className="text-sm text-text-secondary uppercase tracking-wide mb-2">
+                        Wartość mentoringu 1:1
+                      </p>
+                      <p className="text-3xl font-bold text-text-secondary line-through mb-1">
+                        12 000 zł
+                      </p>
+                      <p className="text-xs text-text-secondary">
+                        (tylko 1 dzień sesji)
+                      </p>
+                    </div>
+
+                    {/* Your Price */}
+                    <div className="relative">
+                      {/* Savings Badge */}
+                      <div className="absolute -top-3 -right-3 bg-gradient-to-br from-green-500 to-green-600 text-white px-3 py-1.5 rounded-full shadow-lg transform rotate-12 z-10">
+                        <div className="text-xs font-bold">-94%</div>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-ascension-pink to-luminal-magenta p-6 rounded-xl text-center shadow-xl border-4 border-white/20">
+                        <p className="text-sm text-white/90 uppercase tracking-wide mb-2">
+                          Twoja inwestycja
+                        </p>
+                        <p className="text-5xl font-extrabold text-white mb-1">
+                          777 zł
+                        </p>
+                        <div className="flex items-center justify-center gap-1.5 text-white/90 text-sm">
+                          <CheckCircle2 className="h-4 w-4" />
+                          <span>Dostęp na zawsze</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div>
-                    <p className="text-5xl font-bold text-ascension-pink">
-                      777 zł
-                    </p>
-                    <p className="text-text-secondary">
-                      za pełny dostęp na zawsze
-                    </p>
+                  {/* Value Stack */}
+                  <div className="bg-gradient-to-r from-ascension-pink/5 to-luminal-magenta/5 p-6 rounded-xl border border-ascension-pink/20">
+                    <h4 className="font-bold text-center mb-4 text-text-primary">
+                      W pakiecie otrzymujesz:
+                    </h4>
+                    <div className="space-y-3">
+                      {[
+                        { item: "6 modułów kursu", value: "3 000 zł" },
+                        { item: "Społeczność wsparcia", value: "Bezcenne" },
+                        { item: "Materiały do ćwiczeń", value: "500 zł" },
+                        { item: "Aktualizacje na zawsze", value: "1 000 zł" },
+                        {
+                          item: "Plan budowania odporności",
+                          value: "2 000 zł",
+                        },
+                      ].map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center justify-between"
+                        >
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <span className="text-sm text-text-secondary">
+                              {item.item}
+                            </span>
+                          </div>
+                          <span className="text-sm font-bold text-text-primary">
+                            {item.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
+                  {/* CTA Button */}
                   <Button
                     variant="special"
                     size="lg"
-                    className="btn-locked-primary w-full text-lg py-4"
+                    className="btn-locked-primary w-full text-base sm:text-lg py-4 sm:py-6 group"
                   >
                     To dobra cena za ten rejs, wchodzę na pokład
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
 
-                  <div className="mt-8 bg-ascension-pink/10 p-6 rounded-lg">
-                    <h4 className="font-bold mb-4 text-text-primary">
-                      Dopłyniesz, gdzie chcesz, albo odstawię Cię na brzeg
-                    </h4>
-                    <p className="text-text-secondary mb-4">
-                      Wierzę w to, co robię. Widziałem ludzi, którym pomogłem.
-                      Wiem, że mogę pomóc także Tobie. I wiem, że się boisz. To
-                      też rozwiąże kurs Silna Głowa.
-                    </p>
-                    <p className="text-text-secondary">
-                      Ale jeśli dołączysz do kursu, przerobisz go i stwierdzisz,
-                      że Ci się nie podoba, zwrócę Ci środki w ciągu 30 dni bez
-                      żadnego problemu.
-                    </p>
+                  {/* Guarantee Section */}
+                  <div className="mt-8 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border-2 border-green-200">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <Shield className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2 text-text-primary">
+                          Dopłyniesz, gdzie chcesz, albo odstawię Cię na brzeg
+                        </h4>
+                        <p className="text-sm text-text-secondary mb-3">
+                          Wierzę w to, co robię. Widziałem ludzi, którym
+                          pomogłem. Wiem, że mogę pomóc także Tobie. I wiem, że
+                          się boisz. To też rozwiąże kurs Silna Głowa.
+                        </p>
+                        <p className="text-sm text-text-secondary">
+                          Ale jeśli dołączysz do kursu, przerobisz go i
+                          stwierdzisz, że Ci się nie podoba,{" "}
+                          <strong className="text-text-primary">
+                            zwrócę Ci środki w ciągu 30 dni bez żadnego
+                            problemu.
+                          </strong>
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="flex items-center justify-center gap-2 text-sm text-text-secondary">
-                    <Shield className="w-4 h-4" />
-                    <span>30-dniowa gwarancja zwrotu pieniędzy</span>
+                  {/* Trust Badge */}
+                  <div className="flex items-center justify-center gap-2 text-sm text-text-secondary bg-white p-3 rounded-lg border border-gray-200">
+                    <Shield className="w-5 h-5 text-green-600" />
+                    <span className="font-medium text-text-primary">
+                      30-dniowa gwarancja zwrotu pieniędzy
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -944,314 +1196,150 @@ const SilnaGlowa = () => {
         </div>
       </section>
 
-      {/* Objections Section - Theme Adaptive */}
-      <section className="py-16 bg-background-secondary">
+      {/* Objections Section - Enhanced with Accordions */}
+      <section className="py-16 md:py-20 bg-background-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 px-5 py-2 rounded-full mb-6">
+                <HelpCircle className="h-5 w-5 text-orange-600" />
+                <span className="text-sm font-bold text-orange-600 uppercase">
+                  Rozwiązujemy wątpliwości
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
                 Możesz się wahać
               </h2>
-
-              <Card className="glass-card p-8 max-w-3xl mx-auto border-l-4 border-l-ascension-pink">
-                <CardContent className="p-0">
-                  <p className="text-lg mb-4 text-text-secondary">
-                    Wcale mnie to nie dziwi.
-                  </p>
-                  <p className="text-text-secondary mb-4">
-                    Życie nauczyło Cię nie podejmować ryzyka, unikać wystawiania
-                    się na krytykę, omijać okazje.
-                  </p>
-                  <div className="bg-card-bg p-4 rounded-lg mb-4">
-                    <p className="text-lg font-medium text-center italic text-text-primary">
-                      "Ja go nie widzę, to ono też mnie nie widzi".
-                    </p>
-                  </div>
-                  <p className="text-xl font-bold text-ascension-pink text-center">
-                    Ale życie Cię widzi.
-                  </p>
-                </CardContent>
-              </Card>
+              <p className="text-lg text-text-secondary mb-8">
+                Wcale mnie to nie dziwi. Życie nauczyło Cię unikać ryzyka.
+              </p>
+              <div className="bg-card-bg p-6 rounded-xl border-2 border-ascension-pink/20 max-w-2xl mx-auto">
+                <p className="text-lg font-medium text-center italic text-text-primary mb-2">
+                  "Ja go nie widzę, to ono też mnie nie widzi".
+                </p>
+                <p className="text-xl font-bold text-ascension-pink text-center">
+                  Ale życie Cię widzi.
+                </p>
+              </div>
             </div>
 
-            <div className="grid lg:grid-cols-1 gap-12">
-              {/* Money Objection */}
-              <div className="group">
-                <Card className="glass-card overflow-hidden border-2 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-xl">
-                  <div className="bg-gradient-to-r from-color-error/10 to-color-error/5 p-6 border-b">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">💰</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-color-error">
-                        Nie mam teraz pieniędzy
-                      </h3>
-                    </div>
-                  </div>
+            {/* Objections Accordion */}
+            <Accordion type="single" collapsible className="space-y-4">
+              {SILNA_GLOWA_OBJECTIONS.map((objection) => {
+                const colorMap = {
+                  red: {
+                    gradient: "from-red-500 to-red-600",
+                    bg: "bg-red-50",
+                    border: "border-red-500",
+                    borderLight: "border-red-200",
+                    text: "text-red-600",
+                    textBold: "text-red-700",
+                    hover: "hover:border-red-300",
+                  },
+                  orange: {
+                    gradient: "from-orange-500 to-orange-600",
+                    bg: "bg-orange-50",
+                    border: "border-orange-500",
+                    borderLight: "border-orange-200",
+                    text: "text-orange-600",
+                    textBold: "text-orange-700",
+                    hover: "hover:border-orange-300",
+                  },
+                  green: {
+                    gradient: "from-green-500 to-green-600",
+                    bg: "bg-green-50",
+                    border: "border-green-500",
+                    borderLight: "border-green-200",
+                    text: "text-green-600",
+                    textBold: "text-green-700",
+                    hover: "hover:border-green-300",
+                  },
+                  blue: {
+                    gradient: "from-blue-500 to-blue-600",
+                    bg: "bg-blue-50",
+                    border: "border-blue-500",
+                    borderLight: "border-blue-200",
+                    text: "text-blue-600",
+                    textBold: "text-blue-700",
+                    hover: "hover:border-blue-300",
+                  },
+                };
+                const colors =
+                  colorMap[objection.color as keyof typeof colorMap];
 
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      <div className="bg-ascension-pink/10 p-6 rounded-lg border-l-4 border-l-ascension-pink">
-                        <p className="text-lg font-bold text-ascension-pink mb-3">
-                          W tym cały problem.
-                        </p>
-                        <p className="text-text-secondary mb-4">
-                          Twój mental blokuje Cię przed zarobieniem dobrych
-                          pieniędzy. I będzie Cię blokował przez całe życie,
-                          jeśli tak to zostawisz.
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Otoczenie nauczyło Cię myśleć źle o pieniądzach. Że są
-                          domeną chciwych i chytrych ludzi. Że można je stracić.
-                          Że można z ich powodu cierpieć albo dostać w dziób na
-                          ulicy.
-                        </p>
-
-                        <p className="text-lg font-bold text-ascension-pink mb-4">
-                          Twój umysł broni Cię przed dużymi pieniędzmi!
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Weźmy znowu tę łódź – boisz się wypłynąć na szerokie
-                          wody, bo Ci ktoś naopowiadał, że tam pływają tylko
-                          piraci. I że można łatwo zatonąć.
-                        </p>
-
-                        <p className="text-lg font-bold text-ascension-pink mb-4">
-                          To nieprawda!
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Na pewno masz marzenia. Bez pieniędzy ich nie
-                          zrealizujesz. Musisz coś zrobić. Musisz przełamać ten
-                          schemat. To może być kurs Silna Głowa, może być
-                          mentoring, coaching, YouTube, terapia. Ale coś musi
-                          być.
-                        </p>
-                      </div>
-
-                      <div className="bg-gradient-to-r from-ascension-pink/10 to-ascension-pink/5 p-6 rounded-lg">
-                        <p className="text-lg font-bold text-ascension-pink mb-4">
-                          Gdyby Twój umysł był zaprogramowany na dobrą kasę, to
-                          już byś ją miał.
-                        </p>
-                        <p className="text-text-secondary">
-                          Osobiście wolę sam decydować o tym, ile zarabiam 🙂
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Time Objection */}
-              <div className="group">
-                <Card className="glass-card overflow-hidden border-2 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-xl">
-                  <div className="bg-gradient-to-r from-color-error/10 to-color-error/5 p-6 border-b">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">⏰</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-color-error">
-                        Nie mam czasu na kursy
-                      </h3>
-                    </div>
-                  </div>
-
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      <p className="text-text-secondary mb-4">
-                        Oczywiście. Świat pędzi, nie czeka, presja, hustlowanie,
-                        wyścig szczurów.
-                      </p>
-
-                      <p className="text-text-secondary mb-4">
-                        Gnasz ze spotkania na spotkanie. Gdzie tu jeszcze
-                        wcisnąć kurs?
-                      </p>
-
-                      <div className="bg-ascension-pink/10 p-6 rounded-lg">
-                        <p className="text-text-secondary mb-4">
-                          Ale pomyśl o tych wszystkich momentach, kiedy się
-                          martwisz. Kiedy nie możesz zasnąć. Kiedy łapiesz się
-                          na rozpamiętywaniu stresujących sytuacji.
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Kiedy utrudnia Ci to pracę, powoduje prokrastynację,
-                          niewytłumaczalny strach.
-                        </p>
-
-                        <div className="text-center space-y-3">
-                          <p className="text-xl font-bold text-ascension-pink">
-                            Ile czasu na to tracisz?
-                          </p>
-                          <p className="text-xl font-bold text-ascension-pink">
-                            Ile czasu możesz odzyskać?
-                          </p>
-                        </div>
-
-                        <p className="text-text-secondary mt-4">
-                          Pomyśl o tym, jak kolejne trudne wydarzenia z życia
-                          powstrzymują Cię przed działaniem.
-                        </p>
-
-                        <p className="text-text-secondary">
-                          Ile masz takich złych dni? Ile są warte w przeliczeniu
-                          na pieniądze? Ile kursów możesz za to kupić?
-                        </p>
-                      </div>
-
-                      <div className="text-center">
-                        <Button
-                          variant="special"
-                          size="lg"
-                          className="btn-locked-primary"
+                return (
+                  <AccordionItem
+                    key={objection.value}
+                    value={objection.value}
+                    className={`bg-white rounded-xl border-2 border-gray-200 overflow-hidden ${colors.hover} transition-colors`}
+                  >
+                    <AccordionTrigger className="px-6 hover:no-underline group">
+                      <div className="flex items-center gap-4 text-left">
+                        <div
+                          className={`w-12 h-12 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
                         >
-                          Wskakuję na pokład. Zamawiam dostęp
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Investment Section */}
-              <div className="group">
-                <Card className="glass-card overflow-hidden border-2 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-xl">
-                  <div className="bg-gradient-to-r from-color-success/10 to-color-success/5 p-6 border-b">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-color-success/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📈</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-color-success">
-                        Czy to mi się zwróci?
-                      </h3>
-                    </div>
-                  </div>
-
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      <div className="bg-ascension-pink/10 p-6 rounded-lg">
-                        <p className="text-text-secondary mb-4">
-                          Warren Buffett powiedział, że najlepszą inwestycją
-                          jest inwestycja w siebie. Jeśli tak mówi
-                          najwybitniejszy inwestor wszech czasów, to widocznie
-                          musi tak być.
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Cokolwiek robisz w życiu, czymkolwiek się zajmujesz,
-                          Twój mental pozwoli Ci osiągać cele, ale też przed
-                          nimi powstrzyma.
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Spójrz na ludzi, którzy osiągają sukces. Przebojowi,
-                          może nieco aroganccy, ale przede wszystkim wierzą w
-                          siebie.
-                        </p>
-
-                        <div className="bg-card-bg p-4 rounded-lg mb-4">
-                          <p className="text-lg font-medium text-ascension-pink italic">
-                            "Nie trafiłem ponad 9000 rzutów w moim życiu.
-                            Przegrałem ponad 300 meczów. 26 razu zaufano mi, gdy
-                            miałem oddać rzut na miarę zwycięstwa i spudłowałem.
-                            Przegrywałem w moim życiu ciągle. Dlatego właśnie
-                            osiągnąłem sukces." - Michael Jordan
-                          </p>
+                          <objection.icon className="h-6 w-6 text-white" />
                         </div>
-
-                        <p className="text-lg font-bold text-ascension-pink text-center">
-                          A kiedy będziesz mieć Silną Głowę, osiągniesz
-                          wszystko, co chcesz. Przede wszystkim spokój.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Mindset Objection */}
-              <div className="group">
-                <Card className="glass-card overflow-hidden border-2 hover:border-ascension-pink/50 transition-all duration-300 hover:shadow-xl">
-                  <div className="bg-gradient-to-r from-color-error/10 to-color-error/5 p-6 border-b">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-color-error/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">🧠</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-color-error">
-                        Z moim mentalem już nic nie da się zrobić
-                      </h3>
-                    </div>
-                  </div>
-
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      <div className="text-center bg-ascension-pink/10 p-6 rounded-lg">
-                        <p className="text-2xl font-bold text-ascension-pink mb-4">
-                          Z każdym mentalem się da.
-                        </p>
-                        <p className="text-text-secondary mb-4">
-                          Spotykałem w swojej pracy ludzi, którzy mieli,
-                          nazwijmy to, łatwe życie. I spotykałem też takich,
-                          których życie nie rozpieszczało od najmłodszych lat.
-                          Większość z nich wyszła z tego. Dzisiaj są w innym, o
-                          wiele lepszym miejscu.
-                        </p>
-                        <p className="text-lg text-ascension-pink">
-                          Nigdy nie jest za późno na zmiany.
-                        </p>
-                      </div>
-
-                      <div className="bg-gradient-to-r from-ascension-pink/10 to-ascension-pink/5 p-6 rounded-lg border border-ascension-pink/20">
-                        <p className="text-text-secondary mb-4">
-                          Zwłaszcza na zmiany na lepsze. Umysł to dość giętkie
-                          narzędzie. Tak jak mięśnie można rozciągać, żeby
-                          zrobić szpagat, tak samo można gimnastykować umysł.
-                        </p>
-
-                        <p className="text-lg font-bold text-center mb-4 text-text-primary">
-                          To jest biologia, a biologii nie oszukasz.
-                        </p>
-
-                        <p className="text-text-secondary mb-4">
-                          Jedyny sposób, żeby celu nie osiągnąć, to nie podjąć
-                          działania, czyli zrobić to, co właśnie teraz chcesz
-                          zrobić.
-                        </p>
-
-                        <div className="text-center space-y-3">
-                          <p className="text-lg font-bold text-ascension-pink">
-                            Ale wierzę, że jesteś na tej stronie, bo chcesz
-                            czegoś więcej. Chcesz przełamać schemat.
-                          </p>
-                          <p className="text-lg text-text-primary">
-                            Jeśli tak, zapraszam na pokład 🙂
+                        <div>
+                          <h3 className={`text-xl font-bold ${colors.text}`}>
+                            "{objection.title}"
+                          </h3>
+                          <p className="text-sm text-text-secondary">
+                            Kliknij, aby zobaczyć odpowiedź
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <div
+                        className={`${colors.bg} p-6 rounded-lg border-l-4 ${colors.border} space-y-4`}
+                      >
+                        <p className={`text-lg font-bold ${colors.textBold}`}>
+                          {objection.content.intro}
+                        </p>
+                        {objection.content.paragraphs.map((paragraph, idx) => (
+                          <p key={idx} className="text-text-secondary">
+                            {paragraph}
+                          </p>
+                        ))}
+                        {objection.content.highlight && (
+                          <div
+                            className={`bg-white p-4 rounded-lg border-2 ${colors.borderLight}`}
+                          >
+                            <p
+                              className={`text-lg font-bold ${colors.text} mb-2`}
+                            >
+                              {objection.content.highlight}
+                            </p>
+                          </div>
+                        )}
+                        {objection.content.conclusion && (
+                          <p className="text-lg font-bold text-ascension-pink italic">
+                            {objection.content.conclusion}
+                          </p>
+                        )}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
 
-            <div className="text-center mt-16">
+            {/* CTA */}
+            <div className="text-center mt-12">
               <Button
                 variant="special"
                 size="lg"
-                className="btn-locked-primary text-lg px-8 py-4"
+                className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
               >
-                Nie mam już wątpliwości, dołączam do kursu
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Wskakuję na pokład. Zamawiam dostęp
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
         </div>
       </section>
-
       {/* Final CTA - Theme Locked */}
       <section className="py-16 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
