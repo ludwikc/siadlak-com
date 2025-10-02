@@ -45,18 +45,18 @@ const config: Config = {
         "border-primary": "hsl(var(--border-primary))",
         "border-subtle": "hsl(var(--border-subtle))",
 
-        // Tailwind Custom Colors
-        "deep-space": "#0A0A0A",
-        "neural-violet": "#3B0F77",
-        "quantum-blue": "#061A40",
-        "ascension-pink": "#B0128C",
-        "luminal-magenta": "#DA1EAE",
+        // Tailwind Custom Colors - HSL values
+        "deep-space": "hsl(0 0% 4%)",
+        "neural-violet": "hsl(267 83% 26%)",
+        "quantum-blue": "hsl(215 85% 13%)",
+        "ascension-pink": "hsl(308 80% 38%)",
+        "luminal-magenta": "hsl(308 79% 49%)",
         "gold": "hsl(var(--gold))",
-        "silver-mist": "#E1E1E6",
-        "subtle-slate": "#79788C",
-        "luminous-white": "#F9F9FB",
-        "deep-charcoal": "#2B2B33",
-        "gentle-lavender": "#C9C9D6", // Improved contrast - was #A9A8BD
+        "silver-mist": "hsl(240 13% 89%)",
+        "subtle-slate": "hsl(242 6% 51%)",
+        "luminous-white": "hsl(240 20% 98%)",
+        "deep-charcoal": "hsl(240 9% 18%)",
+        "gentle-lavender": "hsl(240 11% 80%)", // Improved contrast - was #A9A8BD
 
         // Lifehackerzy Community Colors
         lifehacker: {
@@ -268,62 +268,62 @@ const config: Config = {
           },
         },
         ".glass-card": {
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          backgroundColor: "hsl(0 0% 100% / 0.1)",
           backdropFilter: "blur(10px)",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
+          border: "1px solid hsl(0 0% 100% / 0.2)",
           ".dark &": {
-            backgroundColor: "rgba(0, 0, 0, 0.2)",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
+            backgroundColor: "hsl(0 0% 0% / 0.2)",
+            border: "1px solid hsl(0 0% 100% / 0.1)",
           },
         },
         // Theme-locked gradient utilities - these never change regardless of theme
         ".bg-gradient-locked-primary": {
           background:
-            "linear-gradient(to bottom right, #3B0F77, #B0128C) !important",
+            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
         },
         ".bg-gradient-locked-dark": {
           background:
-            "linear-gradient(to bottom right, #0A0A0D, #061A40) !important",
+            "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%)) !important",
         },
         ".bg-gradient-locked-hero": {
           background:
-            "linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D) !important",
+            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%)) !important",
         },
         ".bg-gradient-locked-hero-complex": {
           background:
-            "linear-gradient(to bottom right, #3B0F77 0%, #061A40 50%, #0A0A0D 100%) !important",
+            "linear-gradient(to bottom right, hsl(267 83% 26%) 0%, hsl(215 85% 13%) 50%, hsl(0 0% 4%) 100%) !important",
         },
         ".bg-gradient-locked-cta": {
-          background: "linear-gradient(to right, #3B0F77, #B0128C) !important",
+          background: "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
         },
         ".bg-gradient-locked-pricing": {
           background:
-            "linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D) !important",
+            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%)) !important",
         },
         // Theme-adaptive gradient utilities (these were the original ones)
         ".bg-gradient-brand-primary": {
-          background: "linear-gradient(to bottom right, #3B0F77, #B0128C)",
+          background: "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%))",
         },
         ".bg-gradient-brand-dark": {
-          background: "linear-gradient(to bottom right, #0A0A0D, #061A40)",
+          background: "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%))",
         },
         ".bg-gradient-brand-hero": {
           background:
-            "linear-gradient(to bottom right, #3B0F77, #061A40, #0A0A0D)",
+            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%))",
         },
         ".bg-gradient-text-brand": {
-          background: "linear-gradient(to right, #3B0F77, #B0128C)",
+          background: "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
         },
         ".bg-gradient-text-brand-dark": {
-          background: "linear-gradient(to right, #E1E1E6, #DA1EAE)",
+          background: "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
           ".dark &": {
-            background: "linear-gradient(to right, #E1E1E6, #DA1EAE)",
+            background: "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
             backgroundClip: "text",
             "-webkit-background-clip": "text",
           },
@@ -331,135 +331,135 @@ const config: Config = {
         // COMPREHENSIVE LOCKED UTILITIES FOR DARK GRADIENT SECTIONS
         // Text utilities for locked sections
         ".text-locked-white": {
-          color: "#ffffff !important",
+          color: "hsl(0 0% 100%) !important",
         },
         ".text-locked-silver": {
-          color: "#E1E1E6 !important",
+          color: "hsl(240 13% 89%) !important",
         },
         ".text-locked-primary": {
-          color: "#ffffff !important",
+          color: "hsl(0 0% 100%) !important",
         },
         ".text-locked-secondary": {
-          color: "#E1E1E6 !important",
+          color: "hsl(240 13% 89%) !important",
         },
         ".text-locked-muted": {
-          color: "#C9C9D6 !important",
+          color: "hsl(240 11% 80%) !important",
         },
         ".text-locked-gradient": {
-          background: "linear-gradient(to right, #B0128C, #DA1EAE) !important",
+          background: "linear-gradient(to right, hsl(308 80% 38%), hsl(308 79% 49%)) !important",
           backgroundClip: "text !important",
           "-webkit-background-clip": "text !important",
           color: "transparent !important",
         },
         // Card utilities for locked sections
         ".card-locked": {
-          backgroundColor: "rgba(255, 255, 255, 0.1) !important",
+          backgroundColor: "hsl(0 0% 100% / 0.1) !important",
           backdropFilter: "blur(10px) !important",
-          border: "1px solid rgba(255, 255, 255, 0.2) !important",
-          color: "#ffffff !important",
+          border: "1px solid hsl(0 0% 100% / 0.2) !important",
+          color: "hsl(0 0% 100%) !important",
         },
         ".card-locked-transparent": {
-          backgroundColor: "rgba(255, 255, 255, 0.05) !important",
+          backgroundColor: "hsl(0 0% 100% / 0.05) !important",
           backdropFilter: "blur(10px) !important",
-          border: "1px solid rgba(255, 255, 255, 0.1) !important",
-          color: "#ffffff !important",
+          border: "1px solid hsl(0 0% 100% / 0.1) !important",
+          color: "hsl(0 0% 100%) !important",
         },
         ".card-locked-solid": {
-          backgroundColor: "rgba(255, 255, 255, 0.15) !important",
+          backgroundColor: "hsl(0 0% 100% / 0.15) !important",
           backdropFilter: "blur(10px) !important",
-          border: "1px solid rgba(255, 255, 255, 0.3) !important",
-          color: "#ffffff !important",
+          border: "1px solid hsl(0 0% 100% / 0.3) !important",
+          color: "hsl(0 0% 100%) !important",
         },
         // Border utilities for locked sections
         ".border-locked": {
-          borderColor: "rgba(255, 255, 255, 0.2) !important",
+          borderColor: "hsl(0 0% 100% / 0.2) !important",
         },
         ".border-locked-solid": {
-          borderColor: "rgba(255, 255, 255, 0.4) !important",
+          borderColor: "hsl(0 0% 100% / 0.4) !important",
         },
         ".border-locked-accent": {
-          borderColor: "#B0128C !important",
+          borderColor: "hsl(308 80% 38%) !important",
         },
         ".border-locked-success": {
-          borderColor: "#10B981 !important",
+          borderColor: "hsl(160 84% 39%) !important",
         },
         ".border-locked-warning": {
-          borderColor: "#F59E0B !important",
+          borderColor: "hsl(38 92% 50%) !important",
         },
         ".border-locked-error": {
-          borderColor: "#EF4444 !important",
+          borderColor: "hsl(0 84% 60%) !important",
         },
         // Icon utilities for locked sections
         ".icon-locked": {
-          color: "#ffffff !important",
+          color: "hsl(0 0% 100%) !important",
         },
         ".icon-locked-accent": {
-          color: "#B0128C !important",
+          color: "hsl(308 80% 38%) !important",
         },
         ".icon-locked-success": {
-          color: "#10B981 !important",
+          color: "hsl(160 84% 39%) !important",
         },
         ".icon-locked-warning": {
-          color: "#F59E0B !important",
+          color: "hsl(38 92% 50%) !important",
         },
         ".icon-locked-error": {
-          color: "#EF4444 !important",
+          color: "hsl(0 84% 60%) !important",
         },
         // Button utilities for locked sections
         ".btn-locked-primary": {
-          background: "linear-gradient(to right, #ffffff, #f8fafc) !important",
-          color: "#3B0F77 !important",
+          background: "linear-gradient(to right, hsl(0 0% 100%), hsl(210 40% 98%)) !important",
+          color: "hsl(267 83% 26%) !important",
           border: "none !important",
-          boxShadow: "0 4px 12px rgba(59, 15, 119, 0.15) !important",
+          boxShadow: "0 4px 12px hsl(267 83% 26% / 0.15) !important",
           "&:hover": {
             background:
-              "linear-gradient(to right, #f8fafc, #f1f5f9) !important",
-            boxShadow: "0 6px 16px rgba(59, 15, 119, 0.2) !important",
+              "linear-gradient(to right, hsl(210 40% 98%), hsl(214 32% 91%)) !important",
+            boxShadow: "0 6px 16px hsl(267 83% 26% / 0.2) !important",
           },
         },
         ".btn-locked-secondary": {
           backgroundColor: "transparent !important",
-          color: "#ffffff !important",
-          border: "1px solid rgba(255, 255, 255, 0.4) !important",
+          color: "hsl(0 0% 100%) !important",
+          border: "1px solid hsl(0 0% 100% / 0.4) !important",
           "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 0.1) !important",
+            backgroundColor: "hsl(0 0% 100% / 0.1) !important",
           },
         },
         ".btn-locked-accent": {
-          backgroundColor: "#B0128C !important",
-          color: "#ffffff !important",
+          backgroundColor: "hsl(308 80% 38%) !important",
+          color: "hsl(0 0% 100%) !important",
           border: "none !important",
           "&:hover": {
-            backgroundColor: "#DA1EAE !important",
+            backgroundColor: "hsl(308 79% 49%) !important",
           },
         },
         // Section-level locked utility
         ".section-locked": {
           "& h1, & h2, & h3, & h4, & h5, & h6": {
-            color: "#ffffff !important",
+            color: "hsl(0 0% 100%) !important",
           },
           "& p": {
-            color: "#E1E1E6 !important",
+            color: "hsl(240 13% 89%) !important",
           },
           "& .text-muted, & .text-secondary": {
-            color: "#C9C9D6 !important",
+            color: "hsl(240 11% 80%) !important",
           },
           '& .card, & [class*="card"]': {
-            backgroundColor: "rgba(255, 255, 255, 0.1) !important",
+            backgroundColor: "hsl(0 0% 100% / 0.1) !important",
             backdropFilter: "blur(10px) !important",
-            border: "1px solid rgba(255, 255, 255, 0.2) !important",
-            color: "#ffffff !important",
+            border: "1px solid hsl(0 0% 100% / 0.2) !important",
+            color: "hsl(0 0% 100%) !important",
           },
           "& svg": {
-            color: "#ffffff !important",
+            color: "hsl(0 0% 100%) !important",
           },
         },
         // Hero-specific theme-adaptive background utilities
         ".bg-hero-light": {
-          backgroundColor: "#FCFAFF",
+          backgroundColor: "hsl(270 100% 99%)",
         },
         ".bg-hero-dark": {
-          backgroundColor: "#0A0A0A",
+          backgroundColor: "hsl(0 0% 4%)",
         },
         // Hero gradient blur elements matching reference CSS
         ".gradient-blur-top-right": {

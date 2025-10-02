@@ -32,7 +32,7 @@
   --text-primary: 210 10% 20%;
   --text-secondary: 221 8% 34%;
   --border-primary: 210 10% 84%;
-  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-subtle: 0 0% 0% / 0.1;
 
   /* Brand Colors - HSL values */
   --color-primary: 267 100% 50%;
@@ -318,7 +318,7 @@ body {
   }
 
   .btn-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: hsl(0 0% 0% / 0.05);
     border-color: var(--text-secondary);
   }
 
