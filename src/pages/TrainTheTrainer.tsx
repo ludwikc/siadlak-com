@@ -99,8 +99,8 @@ export default function TrainTheTrainer() {
                   rel="noopener noreferrer"
                 >
                   <div className="relative inline-block group">
-                    <div className="absolute -inset-1.5 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-                    <button className="relative bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-quantum-blue/90 hover:to-neural-violet/90 text-white px-10 py-5 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-ascension-pink rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                    <button className="relative bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white px-10 py-5 rounded-xl text-lg font-bold shadow-2xl border border-white/20 flex items-center gap-3 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(218,30,174,0.6)]">
                       Umów Sesję Discovery
                       <ArrowRight size={20} />
                     </button>
@@ -963,13 +963,13 @@ export default function TrainTheTrainer() {
             {/* Main CTA */}
             <div className="text-center">
               <div className="relative inline-block mb-8">
-                <div className="absolute -inset-4 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-3xl blur-2xl opacity-90 animate-pulse"></div>
+                <div className="absolute -inset-6 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-ascension-pink rounded-3xl blur-3xl opacity-80 animate-pulse"></div>
                 <a
                   href="https://link.siadlak.com/discovery"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="relative bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-quantum-blue/90 hover:to-neural-violet/90 text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl transition-all duration-300 hover:scale-110 flex items-center gap-4">
+                  <button className="relative bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(218,30,174,0.8)] flex items-center gap-4">
                     Umów Sesję Discovery (30 min)
                     <ArrowRight className="w-8 h-8" />
                   </button>
