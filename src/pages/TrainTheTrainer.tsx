@@ -66,14 +66,14 @@ export default function TrainTheTrainer() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="text-gold">
+                <span className="bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
                   Jesteś
                 </span>{" "}
                 Ekspertem.
                 <br />
-                <span className="text-gold">Pora zostać</span>
+                Pora zostać
                 <br />
-                <span className="text-gold">
+                <span className="bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
                   Przewodnikiem.
                 </span>
               </h1>
