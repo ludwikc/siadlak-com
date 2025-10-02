@@ -82,7 +82,7 @@ const Index = () => {
                   AI jest wszędzie, ale to kombinacja <strong className="text-neural-violet">(🧠+🤖)^💜</strong> zapala iskrę i dolewa oliwy do ognia.
                 </p>
                 <p className="text-lg md:text-xl text-deep-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-                  Pomagam profesjonalistom przejść z <span className="line-through text-red-500">Windows 98</span> na <span className="font-bold text-neural-violet">współczesny macOS</span> - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
+                  Pomagam profesjonalistom przejść z <span className="line-through text-color-error">Windows 98</span> na <span className="font-bold text-neural-violet">współczesny macOS</span> - w głowie. Od przestarzałych wzorców myślenia do systemu, który faktycznie wykorzystuje twój potencjał.
                 </p>
               </div>
             </div>
