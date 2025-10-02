@@ -235,19 +235,19 @@ export default function Header() {
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
                         <div className="relative">
-                          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
+                          <div className="absolute inset-0 bg-gradient-to-br from-neural-violet to-ascension-pink rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
                             3
                           </div>
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-[hsl(45,95%,60%)] group-hover:to-[#DA1EAE] group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-neural-violet group-hover:to-ascension-pink group-hover:bg-clip-text group-hover:text-transparent transition-all">
                           Pracuj ze mną 1:1
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Towarzyszę Lifehackerom codziennie.{" "}
-                          <strong className="text-[hsl(45,95%,60%)]">
+                          <strong className="text-neural-violet">
                             Bez wyjątków.
                           </strong>{" "}
                           Dołącz do nas i działamy.
@@ -263,10 +263,10 @@ export default function Header() {
                     {/* Featured Cards */}
                     <Link
                       to="/program"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl hover:shadow-2xl hover:shadow-[hsl(45,95%,60%)]/20 transition-all duration-200 group border-2 border-quantum-blue/30 hover:border-[hsl(45,95%,60%)]/50 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl shadow-2xl shadow-neural-violet/30 transition-all duration-200 group border-2 border-neural-violet/50 relative overflow-hidden min-h-[120px] -translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="absolute top-3 left-3 bg-gradient-to-r from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-neural-violet to-ascension-pink text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
                         <span>⭐</span>
                         <span>Tu chcesz zacząć</span>
                       </div>
@@ -276,7 +276,7 @@ export default function Header() {
                             <Book size={28} className="text-white" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[hsl(45,95%,60%)] transition-colors">
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
                               Programy rozwojowe
                             </h4>
                             <p className="text-sm text-deep-charcoal/70">
@@ -296,14 +296,16 @@ export default function Header() {
 
                     <Link
                       to="/webinar"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-violet/5 to-quantum-blue/5 rounded-xl hover:shadow-2xl hover:shadow-[#DA1EAE]/30 transition-all duration-200 group border-2 border-neural-violet/30 hover:border-[#DA1EAE]/50 relative overflow-hidden hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-violet/5 to-quantum-blue/5 rounded-xl hover:shadow-2xl hover:shadow-ascension-pink/30 transition-all duration-200 group border-2 border-neural-violet/30 hover:border-ascension-pink/50 relative overflow-hidden hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#DA1EAE] to-neural-violet rounded-lg blur-sm opacity-60"></div>
-                        <div className="relative top-3 right-3 bg-gradient-to-r from-[#DA1EAE] to-neural-violet text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1 w-fit ml-auto">
-                          <span>🔥</span>
-                          <span>Liczba miejsc ograniczona</span>
+                      <div className="absolute top-3 right-3 w-fit">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink to-neural-violet rounded-lg blur-sm opacity-60"></div>
+                          <div className="relative bg-gradient-to-r from-ascension-pink to-neural-violet text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
+                            <span>🔥</span>
+                            <span>Liczba miejsc ograniczona</span>
+                          </div>
                         </div>
                       </div>
                       <div className="flex items-center mt-2">
@@ -311,7 +313,7 @@ export default function Header() {
                           <Video size={28} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#DA1EAE] transition-colors">
+                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-ascension-pink transition-colors">
                             Wydarzenia na żywo
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -407,11 +409,11 @@ export default function Header() {
                   </div>
 
                   {/* Members Zone */}
-                  <div className="mt-8 p-6 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border-2 border-quantum-blue/30 hover:border-[hsl(45,95%,60%)]/30 shadow-sm transition-all duration-300">
+                  <div className="mt-8 p-6 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border-2 border-quantum-blue/30 hover:border-ascension-pink/30 shadow-sm transition-all duration-300">
                     <div className="flex items-center mb-4">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(45,95%,60%)] to-quantum-blue rounded-lg blur-sm opacity-40"></div>
-                        <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[hsl(45,95%,60%)] to-quantum-blue rounded-lg mr-3 border-2 border-[hsl(45,95%,60%)]/50 shadow-sm">
+                        <div className="absolute inset-0 bg-gradient-to-br from-neural-violet to-ascension-pink rounded-lg blur-sm opacity-40"></div>
+                        <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-neural-violet to-ascension-pink rounded-lg mr-3 border-2 border-neural-violet/50 shadow-sm">
                           <Lock size={18} className="text-white" />
                         </div>
                       </div>
@@ -429,26 +431,26 @@ export default function Header() {
                         href="https://portal.siadlak.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-[hsl(45,95%,60%)]/50 hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-violet/50 hover:-translate-y-0.5"
                       >
                         <Home
                           size={18}
-                          className="text-quantum-blue group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
+                          className="text-quantum-blue group-hover:text-neural-violet mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-violet transition-colors">
                           Portal Lifehackerów
                         </span>
                       </a>
 
                       <a
                         href="/discord"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-[hsl(45,95%,60%)]/50 hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-violet/50 hover:-translate-y-0.5"
                       >
                         <Calendar
                           size={18}
-                          className="text-quantum-blue group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
+                          className="text-quantum-blue group-hover:text-neural-violet mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-violet transition-colors">
                           12:34 Daily Coaching
                         </span>
                       </a>

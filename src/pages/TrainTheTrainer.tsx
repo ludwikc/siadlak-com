@@ -66,14 +66,14 @@ export default function TrainTheTrainer() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="bg-gradient-to-r from-[hsl(220,60%,25%)] to-gold bg-clip-text text-transparent">
+                <span className="text-gold">
                   Jesteś
                 </span>{" "}
                 Ekspertem.
                 <br />
                 <span className="text-gold">Pora zostać</span>
                 <br />
-                <span className="bg-gradient-to-r from-[hsl(220,60%,25%)] to-gold bg-clip-text text-transparent">
+                <span className="text-gold">
                   Przewodnikiem.
                 </span>
               </h1>
@@ -211,13 +211,13 @@ export default function TrainTheTrainer() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-white via-deep-space/5 to-white rounded-2xl p-8 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
+                  className="group relative bg-white rounded-2xl p-8 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className="flex items-start gap-6">
                     <div className="relative flex-shrink-0">
-                      <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl blur-sm opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="relative w-14 h-14 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <item.icon className="w-7 h-7 text-white drop-shadow-md" />
+                      <div className="absolute inset-0 bg-white rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="relative w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <item.icon className="w-7 h-7 text-quantum-blue drop-shadow-lg" />
                       </div>
                     </div>
                     <p className="text-lg text-deep-charcoal leading-relaxed flex-1 pt-2">
@@ -336,7 +336,7 @@ export default function TrainTheTrainer() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative bg-gradient-to-br from-white via-deep-space/5 to-white rounded-3xl p-10 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-500 hover:-translate-y-2"
+                  className="group relative bg-white rounded-3xl p-10 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Value Indicator */}
                   <div className="absolute top-6 right-6 bg-quantum-blue/10 text-quantum-blue px-4 py-2 rounded-full text-xs font-bold border border-quantum-blue/30">
@@ -345,9 +345,9 @@ export default function TrainTheTrainer() {
 
                   {/* Premium Icon with Glow */}
                   <div className="relative w-20 h-20 mb-8">
-                    <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                    <div className="relative w-full h-full bg-gradient-to-br from-quantum-blue to-neural-violet rounded-3xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <feature.icon className="w-10 h-10 text-white drop-shadow-lg" />
+                    <div className="absolute inset-0 bg-white rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative w-full h-full bg-white rounded-3xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <feature.icon className="w-10 h-10 text-quantum-blue drop-shadow-lg" />
                     </div>
                   </div>
 
@@ -439,9 +439,9 @@ export default function TrainTheTrainer() {
                 >
                   {/* Icon with gradient */}
                   <div className="relative w-16 h-16 mx-auto mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                    <div className="relative w-full h-full bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <persona.icon className="w-8 h-8 text-white drop-shadow-md" />
+                    <div className="absolute inset-0 bg-white rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative w-full h-full bg-white rounded-2xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <persona.icon className="w-8 h-8 text-quantum-blue drop-shadow-lg" />
                     </div>
                   </div>
 
@@ -837,12 +837,11 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Application Process Section */}
-      <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-deep-space overflow-hidden">
-        {/* Background orbs */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+      <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet overflow-hidden">
+        {/* Premium Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -964,15 +963,15 @@ export default function TrainTheTrainer() {
             {/* Main CTA */}
             <div className="text-center">
               <div className="relative inline-block mb-8">
-                <div className="absolute -inset-2 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-2xl blur-xl opacity-75 animate-pulse"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-gold via-luminal-magenta to-gold rounded-3xl blur-2xl opacity-90 animate-pulse"></div>
                 <a
                   href="https://link.siadlak.com/discovery"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="relative bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-quantum-blue/90 hover:to-neural-violet/90 text-white px-12 py-6 rounded-2xl text-xl font-bold shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-3">
+                  <button className="relative bg-gradient-to-r from-gold to-luminal-magenta hover:from-gold/90 hover:to-luminal-magenta/90 text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl transition-all duration-300 hover:scale-110 flex items-center gap-4">
                     Umów Sesję Discovery (30 min)
-                    <ArrowRight className="w-6 h-6" />
+                    <ArrowRight className="w-8 h-8" />
                   </button>
                 </a>
               </div>

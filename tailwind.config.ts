@@ -51,6 +51,7 @@ const config: Config = {
         "quantum-blue": "#061A40",
         "ascension-pink": "#B0128C",
         "luminal-magenta": "#DA1EAE",
+        "gold": "hsl(var(--gold))",
         "silver-mist": "#E1E1E6",
         "subtle-slate": "#79788C",
         "luminous-white": "#F9F9FB",
