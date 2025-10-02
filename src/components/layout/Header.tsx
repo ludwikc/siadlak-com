@@ -160,10 +160,13 @@ export default function Header() {
             onMouseEnter={handleMouseEnter}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-white">
-              <h2 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
-                Wszystkie możliwości
-              </h2>
+            <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-200 bg-gradient-to-r from-quantum-blue/5 to-white">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
+                  Wszystkie możliwości
+                </h2>
+                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-full mt-2"></div>
+              </div>
               <button
                 onClick={() => setIsDropdownOpen(false)}
                 className="p-2 rounded-full hover:bg-slate-200 transition-all hover:scale-110"
@@ -178,7 +181,7 @@ export default function Header() {
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Column 1: Twoja Ścieżka Rozwoju */}
                 <div className="lg:col-span-1">
-                  <div className="mb-6 p-4 bg-gradient-to-br from-[#2563eb]/5 to-accent/5 rounded-xl border border-[#2563eb]/20">
+                  <div className="mb-6 p-4 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border border-quantum-blue/20">
                     <h3 className="text-lg font-bold text-deep-charcoal mb-2 flex items-center gap-2">
                       <span className="text-xl">🎯</span>
                       <span>Twoja ścieżka rozwoju</span>
@@ -191,18 +194,18 @@ export default function Header() {
                   <div className="space-y-6">
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb]/20 to-[#2563eb]/10 text-[#2563eb] flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-quantum-blue/20 to-quantum-blue/10 text-quantum-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
                           1
                         </div>
-                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-[#2563eb]/30 to-transparent"></div>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-quantum-blue/30 to-transparent"></div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                           Wybierz program dla siebie
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Zrób to{" "}
-                          <strong className="text-[#2563eb]">teraz</strong> -
+                          <strong className="text-quantum-blue">teraz</strong> -
                           wiesz czego potrzebujesz. Podejmij decyzję.
                         </p>
                       </div>
@@ -210,18 +213,18 @@ export default function Header() {
 
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb]/30 to-[#2563eb]/15 text-[#2563eb] flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-quantum-blue/30 to-quantum-blue/15 text-quantum-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
                           2
                         </div>
-                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-[#2563eb]/40 to-transparent"></div>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-quantum-blue/40 to-transparent"></div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                           Dołącz do Lifehackerów
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Dostęp LIFETIME otrzymasz{" "}
-                          <strong className="text-[#2563eb]">
+                          <strong className="text-quantum-blue">
                             jeszcze dzisiaj
                           </strong>
                           .
@@ -231,17 +234,17 @@ export default function Header() {
 
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
                           3
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-[hsl(45,95%,60%)] group-hover:to-[#DA1EAE] group-hover:bg-clip-text group-hover:text-transparent transition-all">
                           Pracuj ze mną 1:1
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Towarzyszę Lifehackerom codziennie.{" "}
-                          <strong className="text-[#2563eb]">
+                          <strong className="text-[hsl(45,95%,60%)]">
                             Bez wyjątków.
                           </strong>{" "}
                           Dołącz do nas i działamy.
@@ -257,20 +260,20 @@ export default function Header() {
                     {/* Featured Cards */}
                     <Link
                       to="/program"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-green-500/5 to-green-500/10 rounded-xl hover:shadow-lg transition-all duration-200 group border-2 border-green-500/30 hover:border-green-500/50 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[hsl(45,95%,60%)]/5 to-[hsl(45,95%,60%)]/10 rounded-xl hover:shadow-2xl hover:shadow-[hsl(45,95%,60%)]/20 transition-all duration-200 group border-2 border-[hsl(45,95%,60%)]/30 hover:border-[hsl(45,95%,60%)]/60 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="absolute top-3 left-3 bg-gradient-to-r from-green-500 to-green-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
                         <span>⭐</span>
                         <span>Tu chcesz zacząć</span>
                       </div>
                       <div className="flex items-stretch justify-between pt-8 h-full">
                         <div className="flex items-center flex-1">
-                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-white rounded-xl shadow-md group-hover:scale-110 transition-transform">
-                            <Book size={28} className="text-[#2563eb]" />
+                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                            <Book size={28} className="text-white" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-[hsl(45,95%,60%)] group-hover:to-[#DA1EAE] group-hover:bg-clip-text group-hover:text-transparent transition-all">
                               Programy rozwojowe
                             </h4>
                             <p className="text-sm text-deep-charcoal/70">
@@ -290,19 +293,19 @@ export default function Header() {
 
                     <Link
                       to="/webinar"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[#2563eb]/5 to-[#2563eb]/10 rounded-xl hover:shadow-lg transition-all duration-200 group border-2 border-[#2563eb]/30 hover:border-[#2563eb]/50 relative overflow-hidden hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[#DA1EAE]/5 to-[#DA1EAE]/10 rounded-xl hover:shadow-2xl hover:shadow-[#DA1EAE]/20 transition-all duration-200 group border-2 border-[#DA1EAE]/30 hover:border-[#DA1EAE]/60 relative overflow-hidden hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="absolute top-3 right-3 bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
+                      <div className="absolute top-3 right-3 bg-gradient-to-r from-[#DA1EAE] to-luminal-magenta text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
                         <span>🔥</span>
                         <span>Liczba miejsc ograniczona</span>
                       </div>
                       <div className="flex items-center">
-                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-white rounded-xl shadow-md group-hover:scale-110 transition-transform">
-                          <Video size={28} className="text-[#2563eb]" />
+                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-[#DA1EAE] to-luminal-magenta rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                          <Video size={28} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[#DA1EAE] transition-colors">
                             Wydarzenia na żywo
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -317,15 +320,15 @@ export default function Header() {
                       href="https://uwaznezycie.pl"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
-                          <Users size={22} className="text-[#2563eb]" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Users size={22} className="text-quantum-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                             Medytacje na żywo
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -337,15 +340,15 @@ export default function Header() {
 
                     <Link
                       to="/podcast"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
-                          <Headphones size={22} className="text-[#2563eb]" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Headphones size={22} className="text-quantum-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                             Podcast
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -357,15 +360,15 @@ export default function Header() {
 
                     <Link
                       to="/newsletter"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
-                          <Mail size={22} className="text-[#2563eb]" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Mail size={22} className="text-quantum-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                             Newsletter
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -379,14 +382,14 @@ export default function Header() {
                       href="https://youtube.com/@ludwikcsiadlak"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-[#2563eb]/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-[#2563eb]/10 to-[#2563eb]/5 rounded-lg group-hover:scale-110 transition-transform">
-                          <Video size={22} className="text-[#2563eb]" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                          <Video size={22} className="text-quantum-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-[#2563eb] transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
                             YouTube
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -398,10 +401,10 @@ export default function Header() {
                   </div>
 
                   {/* Members Zone */}
-                  <div className="mt-8 p-6 bg-gradient-to-br from-amber-50/50 to-amber-100/30 rounded-xl border-2 border-amber-200/50 shadow-sm">
+                  <div className="mt-8 p-6 bg-gradient-to-br from-amber-50/50 to-[hsl(45,95%,60%)]/10 rounded-xl border-2 border-[hsl(45,95%,60%)]/30 shadow-sm">
                     <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg mr-3 border-2 border-amber-300 shadow-sm">
-                        <Lock size={18} className="text-amber-700" />
+                      <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[hsl(45,95%,60%)] to-amber-300 rounded-lg mr-3 border-2 border-[hsl(45,95%,60%)]/50 shadow-sm">
+                        <Lock size={18} className="text-white" />
                       </div>
                       <h3 className="text-lg font-bold text-deep-charcoal">
                         Strefa Lifehackerów
@@ -417,26 +420,26 @@ export default function Header() {
                         href="https://portal.siadlak.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[#2563eb] hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[hsl(45,95%,60%)] hover:-translate-y-0.5"
                       >
                         <Home
                           size={18}
-                          className="text-amber-700 group-hover:text-[#2563eb] mr-3 transition-colors"
+                          className="text-amber-700 group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[#2563eb] transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
                           Portal Lifehackerów
                         </span>
                       </a>
 
                       <a
                         href="/discord"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[#2563eb] hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[hsl(45,95%,60%)] hover:-translate-y-0.5"
                       >
                         <Calendar
                           size={18}
-                          className="text-amber-700 group-hover:text-[#2563eb] mr-3 transition-colors"
+                          className="text-amber-700 group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[#2563eb] transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
                           12:34 Daily Coaching
                         </span>
                       </a>
@@ -447,7 +450,7 @@ export default function Header() {
                   <div className="mt-6 pt-4 border-t border-slate-200 text-center">
                     <Link
                       to="/work"
-                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-[#2563eb] transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
+                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:bg-gradient-to-r hover:from-[hsl(45,95%,60%)] hover:to-[#DA1EAE] hover:bg-clip-text hover:text-transparent transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Zobacz wszystkie możliwości
