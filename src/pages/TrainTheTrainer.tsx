@@ -484,8 +484,8 @@ export default function TrainTheTrainer() {
       <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-deep-space overflow-hidden">
         {/* Premium background orbs */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-20 left-20 w-80 h-80 bg-gold rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-80 h-80 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-72 h-72 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
@@ -498,7 +498,7 @@ export default function TrainTheTrainer() {
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                 Ludwik C. Siadlak
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-gold to-luminal-magenta rounded-full mx-auto mb-6"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto mb-6"></div>
               <p className="text-2xl text-white italic font-semibold">
                 "From Code to Classroom. From Technician to Travelling Trainer."
               </p>
@@ -509,16 +509,16 @@ export default function TrainTheTrainer() {
               <div className="relative order-2 lg:order-1">
                 <div className="relative">
                   {/* Glow effect behind image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-3xl blur-2xl opacity-30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-3xl blur-2xl opacity-30"></div>
                   <img
                     src="/lovable-uploads/dff62bdb-7bca-402f-ba02-85591cef2f5c.png"
                     alt="Ludwik C. Siadlak - International IT Trainer"
-                    className="relative w-full rounded-3xl shadow-2xl border-2 border-gold/30"
+                    className="relative w-full rounded-3xl shadow-2xl border-2 border-quantum-blue/30"
                   />
                 </div>
 
                 {/* Floating credential badge */}
-                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-gold to-luminal-magenta rounded-2xl p-6 shadow-2xl border-2 border-white/20">
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl p-6 shadow-2xl border-2 border-white/20">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-white mb-1">19</div>
                     <div className="text-xs text-white/90 font-semibold uppercase tracking-wide">
@@ -563,7 +563,7 @@ export default function TrainTheTrainer() {
                     ].map((achievement, index) => (
                       <div key={index} className="flex items-start gap-4 group">
                         <div className="relative flex-shrink-0">
-                          <div className="w-10 h-10 bg-gradient-to-br from-gold to-luminal-magenta rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <div className="w-10 h-10 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                             <achievement.icon className="w-5 h-5 text-white" />
                           </div>
                         </div>
@@ -574,7 +574,7 @@ export default function TrainTheTrainer() {
                     ))}
                   </div>
 
-                  <div className="bg-gradient-to-r from-gold/10 to-luminal-magenta/10 rounded-2xl p-6 border border-gold/30">
+                  <div className="bg-gradient-to-r from-quantum-blue/10 to-neural-violet/10 rounded-2xl p-6 border border-quantum-blue/30">
                     <p className="text-white italic leading-relaxed">
                       "Ten program to esencja wszystkiego, czego nauczyłem się
                       prowadząc setki szkoleń na całym świecie. Przekazuję Ci
@@ -595,7 +595,7 @@ export default function TrainTheTrainer() {
                 { value: "50+", label: "Organizacji Fortune 500" },
               ].map((stat, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold to-luminal-magenta rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="text-4xl font-bold text-white mb-2">
                       {stat.value}
