@@ -165,7 +165,7 @@ export default function Header() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
                   Wszystkie możliwości
                 </h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-full mt-2"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mt-2"></div>
               </div>
               <button
                 onClick={() => setIsDropdownOpen(false)}
@@ -234,8 +234,11 @@ export default function Header() {
 
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
-                          3
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
+                            3
+                          </div>
                         </div>
                       </div>
                       <div>
@@ -260,7 +263,7 @@ export default function Header() {
                     {/* Featured Cards */}
                     <Link
                       to="/program"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[hsl(45,95%,60%)]/5 to-[hsl(45,95%,60%)]/10 rounded-xl hover:shadow-2xl hover:shadow-[hsl(45,95%,60%)]/20 transition-all duration-200 group border-2 border-[hsl(45,95%,60%)]/30 hover:border-[hsl(45,95%,60%)]/60 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl hover:shadow-2xl hover:shadow-[hsl(45,95%,60%)]/20 transition-all duration-200 group border-2 border-quantum-blue/30 hover:border-[hsl(45,95%,60%)]/50 relative overflow-hidden min-h-[120px] hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="absolute top-3 left-3 bg-gradient-to-r from-[hsl(45,95%,60%)] to-[#DA1EAE] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
@@ -269,11 +272,11 @@ export default function Header() {
                       </div>
                       <div className="flex items-stretch justify-between pt-8 h-full">
                         <div className="flex items-center flex-1">
-                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-[hsl(45,95%,60%)] to-[#DA1EAE] rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                             <Book size={28} className="text-white" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-[hsl(45,95%,60%)] group-hover:to-[#DA1EAE] group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-[hsl(45,95%,60%)] transition-colors">
                               Programy rozwojowe
                             </h4>
                             <p className="text-sm text-deep-charcoal/70">
@@ -293,15 +296,18 @@ export default function Header() {
 
                     <Link
                       to="/webinar"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-[#DA1EAE]/5 to-[#DA1EAE]/10 rounded-xl hover:shadow-2xl hover:shadow-[#DA1EAE]/20 transition-all duration-200 group border-2 border-[#DA1EAE]/30 hover:border-[#DA1EAE]/60 relative overflow-hidden hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-violet/5 to-quantum-blue/5 rounded-xl hover:shadow-2xl hover:shadow-[#DA1EAE]/30 transition-all duration-200 group border-2 border-neural-violet/30 hover:border-[#DA1EAE]/50 relative overflow-hidden hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="absolute top-3 right-3 bg-gradient-to-r from-[#DA1EAE] to-luminal-magenta text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
-                        <span>🔥</span>
-                        <span>Liczba miejsc ograniczona</span>
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#DA1EAE] to-neural-violet rounded-lg blur-sm opacity-60"></div>
+                        <div className="relative top-3 right-3 bg-gradient-to-r from-[#DA1EAE] to-neural-violet text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1 w-fit ml-auto">
+                          <span>🔥</span>
+                          <span>Liczba miejsc ograniczona</span>
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-[#DA1EAE] to-luminal-magenta rounded-xl shadow-md group-hover:scale-110 transition-transform">
+                      <div className="flex items-center mt-2">
+                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Video size={28} className="text-white" />
                         </div>
                         <div>
@@ -324,7 +330,7 @@ export default function Header() {
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Users size={22} className="text-quantum-blue" />
                         </div>
                         <div>
@@ -344,7 +350,7 @@ export default function Header() {
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Headphones size={22} className="text-quantum-blue" />
                         </div>
                         <div>
@@ -364,7 +370,7 @@ export default function Header() {
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Mail size={22} className="text-quantum-blue" />
                         </div>
                         <div>
@@ -385,7 +391,7 @@ export default function Header() {
                       className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Video size={22} className="text-quantum-blue" />
                         </div>
                         <div>
@@ -401,10 +407,13 @@ export default function Header() {
                   </div>
 
                   {/* Members Zone */}
-                  <div className="mt-8 p-6 bg-gradient-to-br from-amber-50/50 to-[hsl(45,95%,60%)]/10 rounded-xl border-2 border-[hsl(45,95%,60%)]/30 shadow-sm">
+                  <div className="mt-8 p-6 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border-2 border-quantum-blue/30 hover:border-[hsl(45,95%,60%)]/30 shadow-sm transition-all duration-300">
                     <div className="flex items-center mb-4">
-                      <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[hsl(45,95%,60%)] to-amber-300 rounded-lg mr-3 border-2 border-[hsl(45,95%,60%)]/50 shadow-sm">
-                        <Lock size={18} className="text-white" />
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(45,95%,60%)] to-quantum-blue rounded-lg blur-sm opacity-40"></div>
+                        <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-[hsl(45,95%,60%)] to-quantum-blue rounded-lg mr-3 border-2 border-[hsl(45,95%,60%)]/50 shadow-sm">
+                          <Lock size={18} className="text-white" />
+                        </div>
                       </div>
                       <h3 className="text-lg font-bold text-deep-charcoal">
                         Strefa Lifehackerów
@@ -420,11 +429,11 @@ export default function Header() {
                         href="https://portal.siadlak.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[hsl(45,95%,60%)] hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-[hsl(45,95%,60%)]/50 hover:-translate-y-0.5"
                       >
                         <Home
                           size={18}
-                          className="text-amber-700 group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
+                          className="text-quantum-blue group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
                         />
                         <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
                           Portal Lifehackerów
@@ -433,11 +442,11 @@ export default function Header() {
 
                       <a
                         href="/discord"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-amber-200 hover:border-[hsl(45,95%,60%)] hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-[hsl(45,95%,60%)]/50 hover:-translate-y-0.5"
                       >
                         <Calendar
                           size={18}
-                          className="text-amber-700 group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
+                          className="text-quantum-blue group-hover:text-[hsl(45,95%,60%)] mr-3 transition-colors"
                         />
                         <span className="text-sm font-semibold text-deep-charcoal group-hover:text-[hsl(45,95%,60%)] transition-colors">
                           12:34 Daily Coaching
@@ -450,7 +459,7 @@ export default function Header() {
                   <div className="mt-6 pt-4 border-t border-slate-200 text-center">
                     <Link
                       to="/work"
-                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:bg-gradient-to-r hover:from-[hsl(45,95%,60%)] hover:to-[#DA1EAE] hover:bg-clip-text hover:text-transparent transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
+                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-quantum-blue transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Zobacz wszystkie możliwości
