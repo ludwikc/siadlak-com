@@ -235,7 +235,7 @@ export default function Program() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 text-sm px-4 py-2 animate-pulse">
+              <Badge className="bg-gradient-to-r from-ascension-pink to-neural-violet text-white border-0 text-sm px-4 py-2 animate-pulse">
                 🔥 NOWY PROGRAM - DOŁĄCZ TERAZ!
               </Badge>
             </div>
@@ -430,14 +430,14 @@ export default function Program() {
       {/* Section 4: Premium App - LifeOS: System Upgrade - FULL WIDTH "FINAL BOSS" */}
       <section className="py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet relative overflow-hidden">
         {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 opacity-50"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white border-0 px-6 py-2 text-lg font-medium">
+              <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-neural-violet text-white border-0 px-6 py-2 text-lg font-medium">
                 💎 LIFE OS UPGRADE
               </Badge>
 
@@ -471,7 +471,7 @@ export default function Program() {
                     <div className="space-y-4 w-full max-w-md">
                       <CTAButton
                         onClick={handleUnlockAccess}
-                        className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-ascension-pink/90 hover:to-luminal-magenta/90"
+                        className="w-full bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-ascension-pink/90 hover:to-neural-violet/90"
                         size="lg"
                       >
                         Sprawdź dostępność
@@ -497,7 +497,7 @@ export default function Program() {
                     <div className="order-2 lg:order-1">
                       {/* Header - Mobile optimized */}
                       <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 mb-6 min-w-0">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-ascension-pink to-neural-violet rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-lg sm:text-2xl lg:text-3xl font-bold">
                             OS
                           </span>
@@ -576,7 +576,7 @@ export default function Program() {
                       </div>
 
                       {/* Exclusivity Badge - Mobile optimized */}
-                      <div className="bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 border-2 border-ascension-pink/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
+                      <div className="bg-gradient-to-r from-ascension-pink/20 to-neural-violet/20 border-2 border-ascension-pink/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
                         <div className="text-ascension-pink text-xl sm:text-2xl mb-2">
                           👑
                         </div>
@@ -590,7 +590,7 @@ export default function Program() {
 
                       {/* CTA Button - Mobile responsive */}
                       <CTAButton
-                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-ascension-pink/50 to-luminal-magenta/50 hover:from-ascension-pink/50 hover:to-luminal-magenta/50 cursor-not-allowed opacity-60"
+                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-ascension-pink/50 to-neural-violet/50 hover:from-ascension-pink/50 hover:to-neural-violet/50 cursor-not-allowed opacity-60"
                         size="lg"
                         showArrow={false}
                       >

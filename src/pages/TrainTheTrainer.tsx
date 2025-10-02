@@ -48,7 +48,7 @@ export default function TrainTheTrainer() {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-48 h-48 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-56 h-56 bg-gold rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
@@ -99,9 +99,9 @@ export default function TrainTheTrainer() {
                   rel="noopener noreferrer"
                 >
                   <div className="relative inline-block group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-ascension-pink rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="absolute -inset-2 bg-gradient-to-r from-ascension-pink via-neural-violet to-ascension-pink rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
                     <a href="/discovery">
-                      <button className="relative bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white px-10 py-5 rounded-xl text-lg font-bold shadow-2xl border border-white/20 flex items-center gap-3 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(218,30,174,0.6)]">
+                      <button className="relative bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-neural-violet hover:to-ascension-pink text-white px-10 py-5 rounded-xl text-lg font-bold shadow-2xl border border-white/20 flex items-center gap-3 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(218,30,174,0.6)]">
                         Umów Sesję Discovery
                         <ArrowRight size={20} />
                       </button>
@@ -116,7 +116,7 @@ export default function TrainTheTrainer() {
                   <span className="text-white/80">Tylko 8 miejsc</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-luminal-magenta rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-neural-violet rounded-full animate-pulse"></div>
                   <span className="text-white/80">
                     8 tygodni intensywnej pracy
                   </span>
@@ -841,9 +841,9 @@ export default function TrainTheTrainer() {
       {/* Application Process Section */}
       <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet overflow-hidden">
         {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 opacity-50"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -965,9 +965,9 @@ export default function TrainTheTrainer() {
             {/* Main CTA */}
             <div className="text-center">
               <div className="relative inline-block mb-8">
-                <div className="absolute -inset-6 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-ascension-pink rounded-3xl blur-3xl opacity-80"></div>
+                <div className="absolute -inset-6 bg-gradient-to-r from-ascension-pink via-neural-violet to-ascension-pink rounded-3xl blur-3xl opacity-80"></div>
                 <a href="/discovery">
-                  <button className="relative bg-gradient-to-r from-ascension-pink to-luminal-magenta hover:from-luminal-magenta hover:to-ascension-pink text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(218,30,174,0.8)] flex items-center gap-4">
+                  <button className="relative bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-neural-violet hover:to-ascension-pink text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(218,30,174,0.8)] flex items-center gap-4">
                     Umów Sesję Discovery (30 min)
                     <ArrowRight className="w-8 h-8" />
                   </button>

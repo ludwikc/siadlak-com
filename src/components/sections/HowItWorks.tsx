@@ -21,7 +21,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
       {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-neural-violet rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -34,7 +34,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
             {title}
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg"></div>
         </div>
 
         <div className="max-w-5xl mx-auto">
@@ -42,8 +42,8 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {steps.slice(0, 2).map((step, index) => {
               const gradients = [
-                'from-neural-violet to-luminal-magenta',
-                'from-luminal-magenta to-quantum-blue',
+                'from-quantum-blue to-neural-violet',
+                'from-neural-violet to-quantum-blue',
               ];
               const gradient = gradients[index % gradients.length];
 
@@ -53,7 +53,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
                   className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                 >
                   {/* Step number badge */}
-                  <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     {index + 1}
                   </div>
 
@@ -77,7 +77,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
                   {step.link && (
                     <Link
                       to={step.link}
-                      className="inline-flex items-center text-neural-violet hover:text-luminal-magenta transition-colors font-semibold group-hover:translate-x-1 transition-transform"
+                      className="inline-flex items-center text-neural-violet hover:text-neural-violet transition-colors font-semibold group-hover:translate-x-1 transition-transform"
                     >
                       {step.linkText}
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -91,12 +91,12 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
           {/* Bottom community tile - centered and special */}
           {steps[2] && (
             <div className="flex justify-center">
-              <div className="relative bg-gradient-to-br from-neural-violet/10 via-luminal-magenta/10 to-quantum-blue/10 rounded-2xl p-10 border-2 border-neural-violet/30 shadow-2xl max-w-3xl w-full text-center group hover:-translate-y-2 transition-all duration-300">
+              <div className="relative bg-gradient-to-br from-neural-violet/10 via-neural-violet/10 to-quantum-blue/10 rounded-2xl p-10 border-2 border-neural-violet/30 shadow-2xl max-w-3xl w-full text-center group hover:-translate-y-2 transition-all duration-300">
                 {/* Gradient glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
                 <div className="relative">
-                  <div className="w-20 h-20 bg-gradient-to-br from-neural-violet via-luminal-magenta to-ascension-pink rounded-full flex items-center justify-center mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-gradient-to-br from-neural-violet via-neural-violet to-ascension-pink rounded-full flex items-center justify-center mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform">
                     <span className="text-4xl text-white">∞</span>
                   </div>
 

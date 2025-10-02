@@ -34,11 +34,11 @@ const categoryConfig = {
   },
   "Odporność psychiczna": {
     icon: Brain,
-    gradient: "from-neural-violet to-luminal-magenta",
+    gradient: "from-quantum-blue to-neural-violet",
   },
   Męskość: {
     icon: Compass,
-    gradient: "from-ascension-pink to-luminal-magenta",
+    gradient: "from-ascension-pink to-neural-violet",
   },
 };
 
@@ -239,7 +239,7 @@ export default function AppCard({
             flex items-center justify-center gap-2
             ${
               premium
-                ? "bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white shadow-lg shadow-ascension-pink/30 hover:shadow-xl hover:shadow-ascension-pink/40 hover:scale-[1.02]"
+                ? "bg-gradient-to-r from-ascension-pink to-neural-violet text-white shadow-lg shadow-ascension-pink/30 hover:shadow-xl hover:shadow-ascension-pink/40 hover:scale-[1.02]"
                 : "bg-neural-violet text-white shadow-md shadow-neural-violet/20 hover:bg-neural-violet/90 hover:shadow-lg hover:scale-[1.02]"
             }
           `}

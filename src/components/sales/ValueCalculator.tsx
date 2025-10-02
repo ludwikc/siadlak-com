@@ -33,7 +33,7 @@ const ValueCalculator = () => {
       </div>
       
       <div className="mt-8 text-center">
-        <div className="glass-card p-6 bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20">
+        <div className="glass-card p-6 bg-gradient-to-r from-ascension-pink/20 to-neural-violet/20">
           <p className="text-2xl font-bold text-text-primary mb-2">
             Łączna wartość bonusów:
           </p>

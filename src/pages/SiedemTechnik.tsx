@@ -12,7 +12,7 @@ export default function SiedemTechnik() {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
@@ -32,15 +32,15 @@ export default function SiedemTechnik() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-12">
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <CheckCircle className="w-5 h-5 text-luminal-magenta" />
+                <CheckCircle className="w-5 h-5 text-neural-violet" />
                 <span className="text-sm font-medium">Dostęp natychmiast</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <CheckCircle className="w-5 h-5 text-luminal-magenta" />
+                <CheckCircle className="w-5 h-5 text-neural-violet" />
                 <span className="text-sm font-medium">Bez aplikacji</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <CheckCircle className="w-5 h-5 text-luminal-magenta" />
+                <CheckCircle className="w-5 h-5 text-neural-violet" />
                 <span className="text-sm font-medium">Dostęp lifetime</span>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function SiedemTechnik() {
         {/* Subtle background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-40 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-neural-violet rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -82,7 +82,7 @@ export default function SiedemTechnik() {
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Co dostajesz w 77 minut
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg"></div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-3xl mx-auto">
@@ -105,7 +105,7 @@ export default function SiedemTechnik() {
               </div>
 
               <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mb-4 shadow-lg">
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-deep-charcoal leading-relaxed">
@@ -113,8 +113,8 @@ export default function SiedemTechnik() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 border-2 border-luminal-magenta/20 shadow-lg">
-                <div className="w-12 h-12 bg-gradient-to-br from-luminal-magenta to-quantum-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
+              <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-deep-charcoal leading-relaxed">
@@ -145,7 +145,7 @@ export default function SiedemTechnik() {
                   className="group bg-white rounded-2xl p-6 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex gap-4 items-start">
-                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                       {t.number}
                     </div>
                     <div className="text-deep-charcoal">
@@ -179,7 +179,7 @@ export default function SiedemTechnik() {
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
@@ -205,7 +205,7 @@ export default function SiedemTechnik() {
                 href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7K8LDgmse4Mm3C7S7M9Yx&lang=pl"
                 className="relative inline-block group"
               >
-                <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                 <button className="relative bg-white hover:bg-white/90 text-neural-violet px-8 py-6 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all">
                   Kup teraz za 497 PLN
                   <ArrowRight size={20} />

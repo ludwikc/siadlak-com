@@ -26,7 +26,7 @@ const About = () => {
         {/* Animated background orbs */}
         <div className="absolute inset-0 z-0 opacity-30">
           <div className="absolute top-20 left-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-56 h-56 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 right-10 w-56 h-56 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
@@ -43,7 +43,7 @@ const About = () => {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-white animate-fade-in leading-tight drop-shadow-lg">
               Większość "guru produktywności" kłamie.<br />
               Nie potrzebujesz kolejnej aplikacji.<br />
-              <span className="text-luminal-magenta">Potrzebujesz odzyskać kontrolę.</span>
+              <span className="text-neural-violet">Potrzebujesz odzyskać kontrolę.</span>
             </h1>
 
             {/* Subheading */}
@@ -58,7 +58,7 @@ const About = () => {
             <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <Link to="/discovery" onClick={() => window.scrollTo(0, 0)}>
                 <div className="relative inline-block group">
-                  <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                  <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-quantum-blue to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                   <button className="relative bg-white hover:bg-white/95 text-neural-violet px-10 py-5 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
                     Umów Sesję Discovery
                     <Calendar className="h-5 w-5" aria-hidden="true" />
@@ -79,7 +79,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-40 h-40 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

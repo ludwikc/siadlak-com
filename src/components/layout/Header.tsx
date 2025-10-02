@@ -88,7 +88,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold font-heading text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+          <span className="text-2xl font-bold font-heading bg-gradient-to-r from-quantum-blue to-neural-violet bg-clip-text text-transparent">
             Ludwik&nbsp;C. Siadlak
           </span>
         </Link>
@@ -107,7 +107,7 @@ export default function Header() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="bg-ascension-pink hover:bg-luminal-magenta text-luminous-white px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
+              className="bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet hover:to-quantum-blue text-luminous-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 shadow-md hover:shadow-lg"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {

@@ -85,7 +85,7 @@ export default function Work() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 border border-neural-violet/20">
+              <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-xl p-6 border border-neural-violet/20">
                 <p className="text-lg text-deep-charcoal font-medium text-center">
                   To nie jest kryzys, który można rozwiązać kolejną książką o produktywności czy urlopem. 
                   To sygnał, że Twój dotychczasowy system operacyjny wymaga fundamentalnej aktualizacji.
@@ -138,7 +138,7 @@ export default function Work() {
                   </div>
                 </div>
                 
-                <div className="mt-8 p-6 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 rounded-lg border border-ascension-pink/30">
+                <div className="mt-8 p-6 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 rounded-lg border border-ascension-pink/30">
                   <p className="text-lg text-deep-charcoal font-medium text-center">
                     W obu przypadkach celem jest to samo: nie eliminacja problematycznych części, ale ich <strong>integracja</strong>. 
                     Bo Twoja siła nie leży w wyborze między byciem skutecznym liderem a autentycznym człowiekiem. Leży w ich połączeniu.
@@ -213,7 +213,7 @@ export default function Work() {
             </section>
             
             {/* Final CTA */}
-            <section className="bg-gradient-to-r from-neural-violet/10 via-ascension-pink/10 to-luminal-magenta/10 rounded-xl p-8 text-center border border-neural-violet/20">
+            <section className="bg-gradient-to-r from-neural-violet/10 via-ascension-pink/10 to-neural-violet/10 rounded-xl p-8 text-center border border-neural-violet/20">
               <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
                 Nie jesteś skazany na ten wewnętrzny konflikt.
               </h2>

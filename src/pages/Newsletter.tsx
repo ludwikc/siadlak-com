@@ -38,7 +38,7 @@ export default function NewsletterPage() {
         <section className="relative py-20 sm:py-28 bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space text-white overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
           </div>
@@ -94,7 +94,7 @@ export default function NewsletterPage() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-deep-charcoal mb-2">
                   GŁÓWNA OBIETNICA
                 </h2>
-                <div className="h-1 bg-gradient-to-r from-neural-violet to-luminal-magenta rounded-full"></div>
+                <div className="h-1 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full"></div>
               </div>
               <div className="space-y-6 sm:space-y-8">
                 <p className="text-xl sm:text-2xl font-bold text-neural-violet leading-relaxed">
@@ -127,9 +127,9 @@ export default function NewsletterPage() {
                   </li>
                 </ul>
 
-                <div className="relative bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 sm:p-10 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all shadow-2xl hover:shadow-3xl">
+                <div className="relative bg-gradient-to-br from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 sm:p-10 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all shadow-2xl hover:shadow-3xl">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-neural-violet to-luminal-magenta text-white px-6 sm:px-8 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg animate-pulse">
+                    <span className="bg-gradient-to-r from-quantum-blue to-neural-violet text-white px-6 sm:px-8 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg animate-pulse">
                       🔥 OFERTA ZAŁOŻYCIELSKA
                     </span>
                   </div>
@@ -139,7 +139,7 @@ export default function NewsletterPage() {
                       <p className="text-xl sm:text-2xl font-bold text-neural-violet">
                         Pierwsze 100 osób: dostęp za 97 PLN miesięcznie
                       </p>
-                      <p className="text-2xl sm:text-3xl font-bold text-luminal-magenta">
+                      <p className="text-2xl sm:text-3xl font-bold text-neural-violet">
                         DOŻYWOTNIO.
                       </p>
                       <div className="inline-block bg-white/80 rounded-lg px-4 py-2 mt-4">
@@ -161,7 +161,7 @@ export default function NewsletterPage() {
                     </div>
                     <div className="w-full bg-deep-charcoal/20 rounded-full h-4 overflow-hidden mb-3">
                       <div
-                        className="bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet h-4 rounded-full animate-pulse shadow-inner"
+                        className="bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet h-4 rounded-full animate-pulse shadow-inner"
                         style={{ width: "77%" }}
                       ></div>
                     </div>
@@ -171,7 +171,7 @@ export default function NewsletterPage() {
                   </div>
 
                   <div className="relative group mb-6">
-                    <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                    <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                     <Button
                       onClick={() =>
                         window.open(
@@ -179,7 +179,7 @@ export default function NewsletterPage() {
                           "_blank",
                         )
                       }
-                      className="relative w-full bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white font-bold py-6 sm:py-7 text-lg sm:text-xl shadow-xl transform hover:scale-[1.02] transition-all"
+                      className="relative w-full bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet/90 hover:to-neural-violet/90 text-white font-bold py-6 sm:py-7 text-lg sm:text-xl shadow-xl transform hover:scale-[1.02] transition-all"
                     >
                       ZAREZERWUJ MIEJSCE ZAŁOŻYCIELSKIE →
                     </Button>
@@ -232,11 +232,11 @@ export default function NewsletterPage() {
                   </strong>
                 </p>
 
-                <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 space-y-4">
+                <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 space-y-4">
                   <p className="text-xl sm:text-2xl font-bold text-neural-violet text-center">
                     Problem nie leży w narzędziach.
                   </p>
-                  <p className="text-xl sm:text-2xl font-bold text-luminal-magenta text-center">
+                  <p className="text-xl sm:text-2xl font-bold text-neural-violet text-center">
                     Problem leży w utracie zdolności do głębokiego myślenia.
                   </p>
                 </div>
@@ -316,11 +316,11 @@ export default function NewsletterPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-deep-charcoal mb-2">
                     JAK TO DZIAŁA:
                   </h3>
-                  <div className="h-0.5 w-24 bg-gradient-to-r from-neural-violet to-luminal-magenta rounded-full mx-auto"></div>
+                  <div className="h-0.5 w-24 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto"></div>
                 </div>
 
                 <div className="grid gap-6">
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-luminal-magenta/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         📧
@@ -373,13 +373,13 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-luminal-magenta/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         💬
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-luminal-magenta transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
                           TY ODPOWIADASZ: Twoja perspektywa ma znaczenie
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
@@ -395,7 +395,7 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-luminal-magenta/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         🔥
@@ -415,13 +415,13 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-luminal-magenta/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         💎
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-luminal-magenta transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
                           A POTEM... COŚ WIĘCEJ
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
@@ -455,7 +455,7 @@ export default function NewsletterPage() {
               <div className="grid gap-8">
                 <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                       TM
                     </div>
                     <div>
@@ -489,9 +489,9 @@ export default function NewsletterPage() {
                   </div>
                 </div>
 
-                <div className="group bg-white rounded-2xl p-8 border-2 border-luminal-magenta/20 hover:border-luminal-magenta/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-luminal-magenta to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                       AK
                     </div>
                     <div>
@@ -501,13 +501,13 @@ export default function NewsletterPage() {
                       <p className="text-sm text-deep-charcoal/70">
                         Trenerka przywództwa
                       </p>
-                      <p className="text-xs text-luminal-magenta font-semibold mt-1">
+                      <p className="text-xs text-neural-violet font-semibold mt-1">
                         Członkini od 6 miesięcy
                       </p>
                     </div>
                   </div>
                   <blockquote className="text-deep-charcoal leading-relaxed">
-                    <span className="text-4xl text-luminal-magenta/30 float-left mr-2 leading-none">"</span>
+                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
                     Jedna myśl z newslettera Ludwika zmieniła więcej niż 100
                     'porad produktywności' z LinkedIn. Przestałam optymalizować
                     czas. Zacząłem optymalizować jakość myślenia. A społeczność
@@ -516,7 +516,7 @@ export default function NewsletterPage() {
                   </blockquote>
                   <div className="mt-6 flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-luminal-magenta text-xl">★</span>
+                      <span key={i} className="text-neural-violet text-xl">★</span>
                     ))}
                   </div>
                 </div>
@@ -627,15 +627,15 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Premium Tier */}
-                <div className="relative bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border-2 border-neural-violet/50 shadow-2xl transform scale-105 lg:scale-110">
+                <div className="relative bg-gradient-to-br from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-neural-violet/50 shadow-2xl transform scale-105 lg:scale-110">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-neural-violet to-luminal-magenta text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <span className="bg-gradient-to-r from-quantum-blue to-neural-violet text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                       ⭐ NAJPOPULARNIEJSZY
                     </span>
                   </div>
 
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">💎</span>
                     </div>
                     <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
@@ -691,7 +691,7 @@ export default function NewsletterPage() {
                   </ul>
 
                   <Button
-                    className="w-full bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white py-6 text-base font-bold shadow-xl transform hover:scale-[1.02] transition-all"
+                    className="w-full bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet/90 hover:to-neural-violet/90 text-white py-6 text-base font-bold shadow-xl transform hover:scale-[1.02] transition-all"
                     onClick={() =>
                       window.open(
                         "https://app.easycart.pl/checkout/siadlak/newsletter",
@@ -704,9 +704,9 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Elite Tier */}
-                <div className="bg-white rounded-2xl p-8 border-2 border-luminal-magenta/30 hover:border-luminal-magenta/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-luminal-magenta/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">🏆</span>
                     </div>
                     <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
@@ -715,8 +715,8 @@ export default function NewsletterPage() {
                     <p className="text-deep-charcoal/70 mb-4">
                       Dla gotowych na transformację
                     </p>
-                    <div className="inline-block bg-luminal-magenta/20 rounded-lg px-4 py-3">
-                      <p className="text-base font-bold text-luminal-magenta">
+                    <div className="inline-block bg-neural-violet/20 rounded-lg px-4 py-3">
+                      <p className="text-base font-bold text-neural-violet">
                         TYLKO NA ZAPROSZENIE
                       </p>
                     </div>
@@ -735,7 +735,7 @@ export default function NewsletterPage() {
 
                   <Button
                     variant="outline"
-                    className="w-full py-6 text-base font-semibold border-2 border-luminal-magenta/30"
+                    className="w-full py-6 text-base font-semibold border-2 border-neural-violet/30"
                     disabled
                   >
                     WIĘCEJ PO DOŁĄCZENIU
@@ -754,7 +754,7 @@ export default function NewsletterPage() {
                 PRZYKŁAD PRAWDZIWEJ TREŚCI
               </h3>
 
-              <div className="bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border border-neural-violet/20">
+              <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20">
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
                   <div className="lg:w-1/2">
                     <div className="relative group cursor-pointer">
@@ -798,7 +798,7 @@ export default function NewsletterPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-r from-neural-violet/20 to-luminal-magenta/20">
+        <section className="py-20 bg-gradient-to-r from-neural-violet/20 to-neural-violet/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">

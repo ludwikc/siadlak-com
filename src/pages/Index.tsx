@@ -59,19 +59,19 @@ const Index = () => {
         fullHeight={true}
       />
 
-      <div className="py-16 md:py-24 bg-gradient-to-br from-neural-violet/10 via-quantum-blue/5 to-luminal-magenta/10 relative overflow-hidden">
+      <div className="py-16 md:py-24 bg-gradient-to-br from-neural-violet/10 via-quantum-blue/5 to-neural-violet/10 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-1/4 w-24 h-24 bg-neural-violet rounded-full blur-2xl"></div>
-          <div className="absolute bottom-10 right-1/4 w-32 h-32 bg-luminal-magenta rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-1/4 w-32 h-32 bg-neural-violet rounded-full blur-2xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border-2 border-neural-violet/20">
               <div className="text-center space-y-6">
-                <div className="inline-block px-6 py-2 bg-gradient-to-r from-neural-violet/10 to-luminal-magenta/10 rounded-full border border-neural-violet/30 mb-4">
-                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-neural-violet to-luminal-magenta bg-clip-text text-transparent">
+                <div className="inline-block px-6 py-2 bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-full border border-neural-violet/30 mb-4">
+                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-neural-violet to-quantum-blue bg-clip-text text-transparent">
                     (🧠+🤖)^💜
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const Index = () => {
         {/* Subtle background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-40 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-neural-violet rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -110,12 +110,12 @@ const Index = () => {
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Czy Life OS jest dla Ciebie?
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-quantum-blue to-neural-violet mx-auto rounded-full shadow-lg"></div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-neural-violet/20 hover:border-neural-violet/50 hover:-translate-y-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -126,13 +126,13 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-luminal-magenta/20 hover:border-luminal-magenta/50 hover:-translate-y-2">
-                <div className="w-20 h-20 bg-gradient-to-br from-luminal-magenta to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+              <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 hover:-translate-y-2">
+                <div className="w-20 h-20 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-luminal-magenta">Przedsiębiorca</h3>
+                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Przedsiębiorca</h3>
                 <p className="text-deep-charcoal/80 leading-relaxed text-base">
                   Rozumiesz, że rozwój firmy jest nierozerwalnie związany z rozwojem Twojego własnego umysłu i sposobu myślenia.
                 </p>
@@ -151,10 +151,10 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="relative bg-gradient-to-br from-neural-violet/10 via-luminal-magenta/10 to-neural-violet/10 rounded-2xl p-10 md:p-16 text-center border-2 border-neural-violet/30 shadow-2xl">
-              <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet rounded-2xl blur opacity-20"></div>
+            <div className="relative bg-gradient-to-br from-neural-violet/10 via-quantum-blue/10 to-neural-violet/10 rounded-2xl p-10 md:p-16 text-center border-2 border-neural-violet/30 shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet via-quantum-blue to-neural-violet rounded-2xl blur opacity-20"></div>
               <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>

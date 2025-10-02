@@ -152,7 +152,7 @@ const LifeHackingPodcast = () => {
             />
 
             <div className="mt-10 text-center">
-              <button className="inline-flex items-center px-6 py-3 bg-ascension-pink hover:bg-luminal-magenta text-white rounded-lg transition-colors">
+              <button className="inline-flex items-center px-6 py-3 bg-ascension-pink hover:bg-neural-violet text-white rounded-lg transition-colors">
                 Załaduj więcej odcinków <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>

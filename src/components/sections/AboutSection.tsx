@@ -17,7 +17,7 @@ export default function AboutSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full blur-2xl opacity-30"></div>
+            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-neural-violet rounded-full blur-2xl opacity-30"></div>
           </div>
 
           {/* Content Column */}

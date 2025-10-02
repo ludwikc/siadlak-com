@@ -35,15 +35,15 @@ const SilnaGlowa = () => {
     <Layout>
       {/* Hero Section - Theme Locked */}
       <section className="py-12 md:py-20 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-quantum-blue/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Urgency Badge - Top */}
             <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 backdrop-blur-sm border border-ascension-pink/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
-                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-ascension-pink" />
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-quantum-blue/20 to-neural-violet/20 backdrop-blur-sm border border-quantum-blue/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
+                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-neural-violet" />
                 <span className="text-xs sm:text-sm font-bold text-locked-white">
                   PRZEDSPRZEDAŻ
                 </span>
@@ -71,7 +71,7 @@ const SilnaGlowa = () => {
             {/* Social Proof - Above CTA */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
               <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
-                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-ascension-pink" />
+                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-neural-violet" />
                 <span className="text-sm sm:text-base font-semibold text-locked-white">
                   520+ absolwentów
                 </span>
@@ -92,7 +92,7 @@ const SilnaGlowa = () => {
             {/* Primary CTA - Prominent */}
             <div className="flex flex-col items-center gap-4 mb-8">
               <div className="relative group inline-block w-full sm:w-auto">
-                <div className="absolute -inset-1 bg-gradient-to-r from-ascension-pink via-luminal-magenta to-ascension-pink rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <Button
                   variant="special"
                   size="lg"
@@ -106,11 +106,11 @@ const SilnaGlowa = () => {
               {/* Value Proposition */}
               <div className="text-center space-y-2">
                 <p className="text-base sm:text-lg font-semibold text-locked-white">
-                  <span className="text-ascension-pink line-through">
+                  <span className="text-neural-violet line-through">
                     12,000 zł
                   </span>{" "}
                   →{" "}
-                  <span className="text-ascension-pink text-xl sm:text-2xl font-bold">
+                  <span className="text-neural-violet text-xl sm:text-2xl font-bold">
                     777 zł
                   </span>
                 </p>
@@ -124,7 +124,7 @@ const SilnaGlowa = () => {
             <div className="max-w-3xl mx-auto">
               <div className="aspect-video bg-locked-white/10 rounded-2xl flex items-center justify-center border border-locked-white/20 hover:border-ascension-pink/50 transition-colors cursor-pointer group">
                 <div className="text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-ascension-pink to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
                     <div className="w-0 h-0 border-l-[12px] sm:border-l-[16px] border-l-white border-y-[9px] sm:border-y-[12px] border-y-transparent ml-1"></div>
                   </div>
                   <p className="text-sm sm:text-base text-locked-silver">
@@ -270,7 +270,7 @@ const SilnaGlowa = () => {
                 <h4 className="text-xl font-bold mb-4 text-text-primary">
                   Wiesz, kiedy ludzie najczęściej mówią: "Zmieniłeś się"?
                 </h4>
-                <p className="text-lg font-medium text-ascension-pink mb-4">
+                <p className="text-lg font-medium text-neural-violet mb-4">
                   Alex Hormozi powiedział: "Ludzie nie chcą widzieć najlepszej
                   wersji Ciebie, tylko wersję, która najlepiej im służy".
                 </p>
@@ -406,7 +406,7 @@ const SilnaGlowa = () => {
                     <span className="font-semibold">(np. bogaci rodzice)</span>.
                   </p>
                   <div className="pt-4 border-t-2 border-gray-200">
-                    <p className="text-xl sm:text-2xl font-bold text-ascension-pink mb-2">
+                    <p className="text-xl sm:text-2xl font-bold text-neural-violet mb-2">
                       Ty nie jesteś jedną z nich i nie będziesz
                     </p>
                     <p className="text-base sm:text-lg text-text-secondary">
@@ -500,7 +500,7 @@ const SilnaGlowa = () => {
                     <p className="font-bold text-color-error mb-2">
                       {example.situation}
                     </p>
-                    <p className="text-ascension-pink font-medium">
+                    <p className="text-neural-violet font-medium">
                       {example.response}
                     </p>
                   </CardContent>
@@ -525,7 +525,7 @@ const SilnaGlowa = () => {
                   <div className="flex-1 space-y-6">
                     <p className="text-lg text-text-primary">
                       Nazywam się{" "}
-                      <span className="font-bold text-ascension-pink">
+                      <span className="font-bold text-neural-violet">
                         Ludwik C. Siadlak
                       </span>{" "}
                       i od ponad 18 lat żyję z aktualizowania oprogramowania w
@@ -547,7 +547,7 @@ const SilnaGlowa = () => {
                       podopiecznych.
                     </p>
 
-                    <p className="text-lg font-medium text-ascension-pink">
+                    <p className="text-lg font-medium text-neural-violet">
                       Dzisiaj pokażę Ci, jak żeglować po oceanie życia, by
                       przetrwać każdy sztorm.
                     </p>
@@ -560,7 +560,7 @@ const SilnaGlowa = () => {
               <h3 className="text-2xl font-bold text-text-primary">
                 Moja praca już przynosi efekty
               </h3>
-              <p className="text-ascension-pink font-medium text-center">
+              <p className="text-neural-violet font-medium text-center">
                 Przedsprzedaż trwa tylko do 10 stycznia!
               </p>
 
@@ -580,7 +580,7 @@ const SilnaGlowa = () => {
                   Też tak masz?
                 </p>
 
-                <div className="bg-ascension-pink/10 p-6 rounded-lg">
+                <div className="bg-quantum-blue/10 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
                     Brian Tracy w "Psychologii sprzedaży" pisał, że osoby z
                     biednych domów i z bogatych mają szansę na bogactwo.
@@ -588,7 +588,7 @@ const SilnaGlowa = () => {
                   <p className="text-text-secondary mb-4">
                     I taką samą szansę, by popaść w biedę.
                   </p>
-                  <p className="text-xl font-bold text-ascension-pink">
+                  <p className="text-xl font-bold text-neural-violet">
                     Różnica jest w głowie.
                   </p>
                   <p className="text-lg mt-4 text-text-primary">
@@ -607,7 +607,7 @@ const SilnaGlowa = () => {
           <div className="max-w-5xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-color-success/20 to-ascension-pink/20 px-5 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-color-success/20 to-neural-violet/20 px-5 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5 text-color-success" />
                 <span className="text-sm font-bold text-color-success uppercase">
                   Twoja transformacja
@@ -675,7 +675,7 @@ const SilnaGlowa = () => {
                   benefit:
                     "Stworzysz własny kompas, który zawsze będzie wskazywał właściwy kierunek.",
                   icon: Target,
-                  gradient: "from-ascension-pink to-luminal-magenta",
+                  gradient: "from-quantum-blue to-neural-violet",
                   timeframe: "Tydzień 11-12",
                 },
               ].map((item, index) => (
@@ -744,9 +744,9 @@ const SilnaGlowa = () => {
             </div>
 
             {/* Summary Card */}
-            <div className="mt-12 bg-gradient-to-br from-ascension-pink/10 to-luminal-magenta/10 rounded-2xl p-8 border-2 border-ascension-pink/20">
+            <div className="mt-12 bg-gradient-to-br from-quantum-blue/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-quantum-blue/20">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-ascension-pink to-luminal-magenta rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full mb-4">
                   <Trophy className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
@@ -860,7 +860,7 @@ const SilnaGlowa = () => {
                   ].map((dream, index) => (
                     <p
                       key={index}
-                      className="text-lg font-medium text-ascension-pink"
+                      className="text-lg font-medium text-neural-violet"
                     >
                       {dream}
                     </p>
@@ -872,7 +872,7 @@ const SilnaGlowa = () => {
                   mentalne.
                 </p>
 
-                <div className="mt-8 bg-ascension-pink/10 p-6 rounded-lg">
+                <div className="mt-8 bg-quantum-blue/10 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
                     Wracając do metafory łodzi – wyobraź sobie, że płyniesz, i
                     nie boisz się niczego.
@@ -889,7 +889,7 @@ const SilnaGlowa = () => {
                     Wiesz, jak sterować, jak ustawić żagle, jaki obrać kurs i
                     jakie rozkazy wydać załodze.
                   </p>
-                  <p className="text-lg font-bold text-ascension-pink mt-4">
+                  <p className="text-lg font-bold text-neural-violet mt-4">
                     Masz zbudowaną strategię odporności psychicznej.
                   </p>
                 </div>
@@ -905,9 +905,9 @@ const SilnaGlowa = () => {
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-ascension-pink/20 to-luminal-magenta/20 px-5 py-2 rounded-full mb-6">
-                <ShipWheel className="h-5 w-5 text-ascension-pink" />
-                <span className="text-sm font-bold text-ascension-pink uppercase">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-quantum-blue/20 to-neural-violet/20 px-5 py-2 rounded-full mb-6">
+                <ShipWheel className="h-5 w-5 text-neural-violet" />
+                <span className="text-sm font-bold text-neural-violet uppercase">
                   Program kursu
                 </span>
               </div>
@@ -980,8 +980,8 @@ const SilnaGlowa = () => {
                   className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100"
                 >
                   {/* Progress Badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-ascension-pink/10 to-luminal-magenta/10 px-3 py-1.5 rounded-full border border-ascension-pink/20">
-                    <span className="text-xs font-bold text-ascension-pink">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-quantum-blue/10 to-neural-violet/10 px-3 py-1.5 rounded-full border border-quantum-blue/20">
+                    <span className="text-xs font-bold text-neural-violet">
                       {module.number}/6
                     </span>
                   </div>
@@ -1008,7 +1008,7 @@ const SilnaGlowa = () => {
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeDasharray={`${(module.number / 6) * 283} 283`}
-                          className="text-ascension-pink"
+                          className="text-neural-violet"
                         />
                       </svg>
                     </div>
@@ -1027,7 +1027,7 @@ const SilnaGlowa = () => {
                   </p>
 
                   {/* Unlock Button */}
-                  <button className="w-full bg-gradient-to-r from-ascension-pink to-luminal-magenta text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-gradient-to-r from-quantum-blue to-neural-violet text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">
                       ODBLOKOWUJ MODUŁ
@@ -1049,7 +1049,7 @@ const SilnaGlowa = () => {
                     załogi w oceanie Internetu
                   </h4>
                   <p className="text-text-secondary mb-4">Każdego dnia.</p>
-                  <p className="text-lg font-medium text-ascension-pink">
+                  <p className="text-lg font-medium text-neural-violet">
                     To jedna z niewielu społeczności totalnie pozbawionych
                     hejtu.
                   </p>
@@ -1068,7 +1068,7 @@ const SilnaGlowa = () => {
               Ile za ten rejs ku spokojowi ducha?
             </h2>
 
-            <Card className="glass-card p-8 max-w-2xl mx-auto border-2 border-ascension-pink/20">
+            <Card className="glass-card p-8 max-w-2xl mx-auto border-2 border-quantum-blue/20">
               <CardContent className="p-0">
                 <div className="space-y-6">
                   {/* Value Comparison */}
@@ -1093,7 +1093,7 @@ const SilnaGlowa = () => {
                         <div className="text-xs font-bold">-94%</div>
                       </div>
 
-                      <div className="bg-gradient-to-br from-ascension-pink to-luminal-magenta p-6 rounded-xl text-center shadow-xl border-4 border-white/20">
+                      <div className="bg-gradient-to-br from-quantum-blue to-neural-violet p-6 rounded-xl text-center shadow-xl border-4 border-white/20">
                         <p className="text-sm text-white/90 uppercase tracking-wide mb-2">
                           Twoja inwestycja
                         </p>
@@ -1109,7 +1109,7 @@ const SilnaGlowa = () => {
                   </div>
 
                   {/* Value Stack */}
-                  <div className="bg-gradient-to-r from-ascension-pink/5 to-luminal-magenta/5 p-6 rounded-xl border border-ascension-pink/20">
+                  <div className="bg-gradient-to-r from-ascension-pink/5 to-neural-violet/5 p-6 rounded-xl border border-quantum-blue/20">
                     <h4 className="font-bold text-center mb-4 text-text-primary">
                       W pakiecie otrzymujesz:
                     </h4>
@@ -1211,11 +1211,11 @@ const SilnaGlowa = () => {
               <p className="text-lg text-text-secondary mb-8">
                 Wcale mnie to nie dziwi. Życie nauczyło Cię unikać ryzyka.
               </p>
-              <div className="bg-card-bg p-6 rounded-xl border-2 border-ascension-pink/20 max-w-2xl mx-auto">
+              <div className="bg-card-bg p-6 rounded-xl border-2 border-quantum-blue/20 max-w-2xl mx-auto">
                 <p className="text-lg font-medium text-center italic text-text-primary mb-2">
                   "Ja go nie widzę, to ono też mnie nie widzi".
                 </p>
-                <p className="text-xl font-bold text-ascension-pink text-center">
+                <p className="text-xl font-bold text-neural-violet text-center">
                   Ale życie Cię widzi.
                 </p>
               </div>
@@ -1312,7 +1312,7 @@ const SilnaGlowa = () => {
                           </div>
                         )}
                         {objection.content.conclusion && (
-                          <p className="text-lg font-bold text-ascension-pink italic">
+                          <p className="text-lg font-bold text-neural-violet italic">
                             {objection.content.conclusion}
                           </p>
                         )}
@@ -1339,8 +1339,8 @@ const SilnaGlowa = () => {
       </section>
       {/* Final CTA - Theme Locked */}
       <section className="py-16 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-luminal-magenta/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-quantum-blue/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

@@ -161,8 +161,8 @@ export default function LifeOSSystemUpgrade() {
               <div className="group relative">
                 <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="bg-luminal-magenta/20 p-4 rounded-2xl">
-                      <Zap className="w-8 h-8 text-luminal-magenta" />
+                    <div className="bg-neural-violet/20 p-4 rounded-2xl">
+                      <Zap className="w-8 h-8 text-neural-violet" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">FAZA 2: DEKONSTRUKCJA I WYZWANIE</h3>

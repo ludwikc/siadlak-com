@@ -56,7 +56,7 @@ const PodcastEpisodeList = ({
               </p>
               <button
                 onClick={() => onPlayEpisode && onPlayEpisode(episode)}
-                className="inline-flex items-center px-3 py-1.5 rounded-md bg-ascension-pink hover:bg-luminal-magenta text-white transition-colors"
+                className="inline-flex items-center px-3 py-1.5 rounded-md bg-ascension-pink hover:bg-neural-violet text-white transition-colors"
               >
                 <Play className="h-4 w-4 mr-1" />
                 Odtwórz

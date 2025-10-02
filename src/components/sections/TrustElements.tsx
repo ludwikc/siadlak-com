@@ -41,14 +41,14 @@ export default function TrustElements({
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
             {title}
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg"></div>
         </div>
 
         {communityStats && (
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-neural-violet/20 inline-block">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center">
                   <Users className="text-white" size={24} />
                 </div>
                 <p className="text-xl font-bold text-deep-charcoal">
@@ -62,8 +62,8 @@ export default function TrustElements({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {testimonials.map((testimonial, index) => {
             const gradients = [
-              'from-neural-violet to-luminal-magenta',
-              'from-luminal-magenta to-neural-violet',
+              'from-quantum-blue to-neural-violet',
+              'from-quantum-blue to-neural-violet',
             ];
             const gradient = gradients[index % gradients.length];
 
@@ -108,9 +108,9 @@ export default function TrustElements({
 
         {credentialsSummary && (
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-neural-violet/10 to-luminal-magenta/10 rounded-2xl p-8 border-2 border-neural-violet/20">
+            <div className="bg-gradient-to-br from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-neural-violet/20">
               <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center shadow-lg">
                   <Award className="text-white" size={24} />
                 </div>
                 <p className="text-xl font-bold text-deep-charcoal">

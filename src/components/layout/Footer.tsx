@@ -16,7 +16,7 @@ export default function Footer() {
       {/* Premium background orbs */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-20 left-20 w-80 h-80 bg-gold rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-luminal-magenta rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-72 h-72 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
@@ -39,28 +39,28 @@ export default function Footer() {
             <div className="flex space-x-3">
               <a
                 href="https://instagram.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-luminal-magenta rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-gold to-neural-violet rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="Instagram"
               >
                 <Instagram size={18} className="text-white" />
               </a>
               <a
                 href="https://twitter.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-luminal-magenta rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-gold to-neural-violet rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="X (formerly Twitter)"
               >
                 <XIcon size={18} className="text-white" />
               </a>
               <a
                 href="https://linkedin.com/in/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-luminal-magenta rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-gold to-neural-violet rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} className="text-white" />
               </a>
               <a
                 href="https://youtube.com/ludwikcsiadlak"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-luminal-magenta rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-gold to-neural-violet rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="YouTube"
               >
                 <Youtube size={18} className="text-white" />
@@ -73,12 +73,12 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-2 text-white">
               Odkryj
             </h4>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-luminal-magenta rounded-full mb-4"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-neural-violet rounded-full mb-4"></div>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/about"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   O mnie
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/discovery"
-                  className="text-luminal-magenta hover:text-luminal-magenta/80 transition-colors inline-flex items-center gap-2 font-semibold"
+                  className="text-neural-violet hover:text-neural-violet/80 transition-colors inline-flex items-center gap-2 font-semibold"
                 >
                   Sesja Discovery
                   <Calendar size={16} className="flex-shrink-0" />
@@ -95,7 +95,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/newsletter"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Newsletter
                 </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/testimonials"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Opinie Klientów (120+)
                 </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/webinar"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Najbliższy Webinar
                 </Link>
@@ -119,7 +119,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Kontakt
                 </Link>
@@ -132,21 +132,21 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-2 text-white">
               Programy
             </h4>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-luminal-magenta rounded-full mb-4"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-neural-violet rounded-full mb-4"></div>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/program/lifeos-system-upgrade"
-                  className="text-white hover:text-luminal-magenta transition-colors inline-flex items-center gap-2 font-semibold group"
+                  className="text-white hover:text-neural-violet transition-colors inline-flex items-center gap-2 font-semibold group"
                 >
-                  <span className="inline-block w-2 h-2 bg-gradient-to-br from-gold to-luminal-magenta rounded-full group-hover:scale-125 transition-transform"></span>
+                  <span className="inline-block w-2 h-2 bg-gradient-to-br from-gold to-neural-violet rounded-full group-hover:scale-125 transition-transform"></span>
                   LifeOS: System Upgrade
                 </Link>
               </li>
               <li>
                 <Link
                   to="/program/hakowanie-produktywnosci"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Instaluj: Produktywność
                 </Link>
@@ -154,7 +154,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/silna-glowa"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   Instaluj: Odporność Psychiczna
                 </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/train-the-trainer"
-                  className="text-white/80 hover:text-luminal-magenta transition-colors inline-block"
+                  className="text-white/80 hover:text-neural-violet transition-colors inline-block"
                 >
                   TrainTheTrainer.pl
                 </Link>
@@ -170,7 +170,7 @@ export default function Footer() {
               <li className="pt-2 mt-2 border-t border-white/10">
                 <Link
                   to="/program"
-                  className="text-white/60 hover:text-luminal-magenta transition-colors inline-flex items-center gap-1.5 text-sm"
+                  className="text-white/60 hover:text-neural-violet transition-colors inline-flex items-center gap-1.5 text-sm"
                 >
                   Zobacz wszystkie programy
                   <ExternalLink size={12} className="rotate-[-45deg]" />

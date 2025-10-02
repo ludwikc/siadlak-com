@@ -56,7 +56,7 @@ export default function Discovery() {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
@@ -82,7 +82,7 @@ export default function Discovery() {
         {/* Subtle background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-40 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-luminal-magenta rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-neural-violet rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -98,7 +98,7 @@ export default function Discovery() {
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 30 minut autentycznej rozmowy o Twoich wyzwaniach
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-luminal-magenta to-neural-violet mx-auto rounded-full shadow-lg mb-8"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg mb-8"></div>
 
               <p className="text-xl mb-12 text-deep-charcoal/80 max-w-3xl mx-auto leading-relaxed">
                 Sesja Discovery to nasze pierwsze spotkanie - moment, w którym poznajemy się nawzajem i sprawdzamy, czy moja metoda pracy pasuje do tego, czego szukasz. To obustronny proces odkrywania kompatybilności.
@@ -107,7 +107,7 @@ export default function Discovery() {
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
@@ -118,11 +118,11 @@ export default function Discovery() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-luminal-magenta/20 hover:border-luminal-magenta/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-luminal-magenta to-quantum-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-luminal-magenta transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
                     Obustronny proces
                   </h3>
                   <p className="text-deep-charcoal/80 leading-relaxed">
@@ -152,15 +152,15 @@ export default function Discovery() {
             <div className="max-w-4xl mx-auto">
               <GlassCard padding="xl" className="text-center relative overflow-hidden border-2 border-neural-violet/20">
                 {/* Subtle gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-luminal-magenta/5"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-neural-violet/5"></div>
                 
                 {/* Animated border glow */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-luminal-magenta/20 to-quantum-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-neural-violet/20 to-quantum-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
                 
                 <div className="relative z-10">
                   {status === 'initial' && (
                     <div className="py-4">
-                      <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <CheckCircle className="h-10 w-10 text-white animate-pulse" />
                       </div>
                       <h3 className="text-2xl font-bold mb-6 text-deep-charcoal">
@@ -171,7 +171,7 @@ export default function Discovery() {
                       </p>
                       <button 
                         onClick={handleCheckAvailability}
-                        className="bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                        className="bg-gradient-to-r from-neural-violet to-quantum-blue hover:from-neural-violet/90 hover:to-neural-violet/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
                       >
                         Sprawdź dostępność
                       </button>
@@ -189,7 +189,7 @@ export default function Discovery() {
                       <div className="w-full max-w-md mx-auto">
                         <div className="bg-gray-200 rounded-full h-2 overflow-hidden">
                           <div 
-                            className="bg-gradient-to-r from-neural-violet to-luminal-magenta h-full transition-all duration-300 ease-out"
+                            className="bg-gradient-to-r from-neural-violet to-quantum-blue h-full transition-all duration-300 ease-out"
                             style={{ width: `${progress}%` }}
                           ></div>
                         </div>
@@ -213,7 +213,7 @@ export default function Discovery() {
                       </p>
                       <button 
                         onClick={handleScheduleSession}
-                        className="bg-gradient-to-r from-neural-violet to-luminal-magenta hover:from-neural-violet/90 hover:to-luminal-magenta/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                        className="bg-gradient-to-r from-neural-violet to-quantum-blue hover:from-neural-violet/90 hover:to-neural-violet/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
                       >
                         Umów Sesję Discovery
                       </button>
@@ -234,7 +234,7 @@ export default function Discovery() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
                   Jak to wygląda w praktyce?
                 </h2>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue via-neural-violet to-luminal-magenta mx-auto rounded-full shadow-lg"></div>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg"></div>
               </div>
 
               <div className="bg-white rounded-2xl p-10 md:p-12 border-2 border-neural-violet/20 shadow-xl mb-12">
@@ -266,7 +266,7 @@ export default function Discovery() {
                   </div>
 
                   <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-xl p-6 border-2 border-neural-violet/20">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-luminal-magenta rounded-full flex items-center justify-center mb-4 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                     <p className="text-deep-charcoal leading-relaxed">
