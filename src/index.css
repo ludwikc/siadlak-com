@@ -282,7 +282,7 @@ body {
 @layer components {
   /* Navigation */
   .nav-link {
-    @apply text-deep-charcoal hover:text-neural-violet transition-colors;
+    @apply text-deep-charcoal hover:text-twilight-indigo transition-colors;
   }
 
   .nav-link-mobile {
