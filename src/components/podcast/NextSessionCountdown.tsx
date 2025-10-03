@@ -65,34 +65,34 @@ const NextSessionCountdown = () => {
         <strong>Godzina:</strong> 6:30 - 6:45 (Warszawa/Berlin)
       </p>
       
-      <div className="bg-neural-violet/10 p-3 rounded-md">
+      <div className="bg-twilight-indigo/10 p-3 rounded-md">
         <p className="text-sm text-deep-charcoal mb-2 font-medium">
           Czas do rozpoczęcia:
         </p>
         <div className="flex items-center justify-center space-x-4 text-lg font-mono">
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet">
+            <div className="text-2xl font-bold text-twilight-indigo">
               {timeLeft.days}
             </div>
             <div className="text-xs text-subtle-slate">dni</div>
           </div>
-          <div className="text-neural-violet text-2xl">:</div>
+          <div className="text-twilight-indigo text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet">
+            <div className="text-2xl font-bold text-twilight-indigo">
               {timeLeft.hours.toString().padStart(2, '0')}
             </div>
             <div className="text-xs text-subtle-slate">godzin</div>
           </div>
-          <div className="text-neural-violet text-2xl">:</div>
+          <div className="text-twilight-indigo text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet">
+            <div className="text-2xl font-bold text-twilight-indigo">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </div>
             <div className="text-xs text-subtle-slate">minut</div>
           </div>
-          <div className="text-neural-violet text-2xl">:</div>
+          <div className="text-twilight-indigo text-2xl">:</div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-neural-violet">
+            <div className="text-2xl font-bold text-twilight-indigo">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </div>
             <div className="text-xs text-subtle-slate">sekund</div>

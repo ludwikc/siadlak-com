@@ -17,14 +17,14 @@ export default function AboutSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-ascension-pink to-neural-violet rounded-full blur-2xl opacity-30"></div>
+            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-zenith-gold to-twilight-indigo rounded-full blur-2xl opacity-30"></div>
           </div>
 
           {/* Content Column */}
           <div className="md:w-1/2">
             <h2 className="text-deep-charcoal mb-6">
               About{" "}
-              <span className="text-ascension-pink">
+              <span className="text-zenith-gold">
                 Ludwik
               </span>
             </h2>

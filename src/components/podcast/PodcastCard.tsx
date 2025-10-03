@@ -43,7 +43,7 @@ const PodcastCard = ({
             {description}
           </p>
 
-          <div className="inline-flex items-center text-neural-violet font-medium group">
+          <div className="inline-flex items-center text-twilight-indigo font-medium group">
             Słuchaj teraz{" "}
             <ArrowRight
               size={18}

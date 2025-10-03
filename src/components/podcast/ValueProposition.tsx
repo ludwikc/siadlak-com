@@ -16,7 +16,7 @@ const ValueProposition = ({ title, items }: ValuePropositionProps) => {
       <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index} className="flex items-start">
-            <CheckCircle className="h-5 w-5 mr-2 text-ascension-pink flex-shrink-0 mt-0.5" />
+            <CheckCircle className="h-5 w-5 mr-2 text-zenith-gold flex-shrink-0 mt-0.5" />
             <span className="text-deep-charcoal/90">
               {item}
             </span>

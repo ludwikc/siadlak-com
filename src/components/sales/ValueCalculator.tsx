@@ -24,7 +24,7 @@ const ValueCalculator = () => {
                 <CheckCircle2 className="h-5 w-5 text-color-success mr-3 flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-medium text-text-primary">{bonus.name}</p>
-                  <p className="text-sm text-ascension-pink font-bold">{bonus.value}</p>
+                  <p className="text-sm text-zenith-gold font-bold">{bonus.value}</p>
                 </div>
               </div>
             </CardContent>
@@ -33,11 +33,11 @@ const ValueCalculator = () => {
       </div>
       
       <div className="mt-8 text-center">
-        <div className="glass-card p-6 bg-gradient-to-r from-ascension-pink/20 to-neural-violet/20">
+        <div className="glass-card p-6 bg-gradient-to-r from-zenith-gold/20 to-twilight-indigo/20">
           <p className="text-2xl font-bold text-text-primary mb-2">
             Łączna wartość bonusów:
           </p>
-          <p className="text-4xl font-extrabold text-ascension-pink">
+          <p className="text-4xl font-extrabold text-zenith-gold">
             {totalValue.toLocaleString()} zł
           </p>
         </div>

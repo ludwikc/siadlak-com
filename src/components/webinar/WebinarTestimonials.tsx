@@ -61,7 +61,7 @@ const WebinarTestimonials = () => {
 
         <div className="mt-12 flex justify-center">
           <div className="flex items-center space-x-4 bg-white/80 p-4 rounded-lg border border-gray-200">
-            <div className="text-3xl font-bold text-neural-violet">98%</div>
+            <div className="text-3xl font-bold text-twilight-indigo">98%</div>
             <p className="text-gray-700">
               uczestników ocenia webinary Ludwika jako "warte każdej minuty"
             </p>

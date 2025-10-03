@@ -42,7 +42,7 @@ export default function CoursePreview({
               key={index}
               className={`glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 ${
                 course.featured
-                  ? "ring-2 ring-ascension-pink"
+                  ? "ring-2 ring-zenith-gold"
                   : ""
               }`}
             >
@@ -62,7 +62,7 @@ export default function CoursePreview({
                 )}
 
                 {course.featured && (
-                  <div className="absolute top-4 right-4 bg-ascension-pink text-white text-sm py-1 px-3 rounded-full">
+                  <div className="absolute top-4 right-4 bg-zenith-gold text-white text-sm py-1 px-3 rounded-full">
                     Featured
                   </div>
                 )}
@@ -79,7 +79,7 @@ export default function CoursePreview({
 
                 <Link
                   to={course.link}
-                  className="inline-flex items-center text-neural-violet font-medium group"
+                  className="inline-flex items-center text-twilight-indigo font-medium group"
                 >
                   Learn more
                   <ArrowRight

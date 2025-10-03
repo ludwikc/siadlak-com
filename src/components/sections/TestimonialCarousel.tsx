@@ -41,7 +41,7 @@ export default function TestimonialCarousel({
         <div className="max-w-4xl mx-auto">
           <div className="relative py-8 px-6 md:p-12 glass-card rounded-2xl">
             {/* Quote icon */}
-            <div className="absolute top-6 left-6 text-neural-violet/20">
+            <div className="absolute top-6 left-6 text-twilight-indigo/20">
               <Quote size={48} />
             </div>
 

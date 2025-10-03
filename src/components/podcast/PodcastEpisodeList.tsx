@@ -42,7 +42,7 @@ const PodcastEpisodeList = ({
               </div>
             )}
             <div className="flex-grow">
-              <h3 className="text-lg font-medium text-neural-violet mb-1">
+              <h3 className="text-lg font-medium text-twilight-indigo mb-1">
                 {episode.title}
               </h3>
               <div className="flex items-center text-sm text-subtle-slate mb-2">
@@ -56,7 +56,7 @@ const PodcastEpisodeList = ({
               </p>
               <button
                 onClick={() => onPlayEpisode && onPlayEpisode(episode)}
-                className="inline-flex items-center px-3 py-1.5 rounded-md bg-ascension-pink hover:bg-neural-violet text-white transition-colors"
+                className="inline-flex items-center px-3 py-1.5 rounded-md bg-zenith-gold hover:bg-twilight-indigo text-white transition-colors"
               >
                 <Play className="h-4 w-4 mr-1" />
                 Odtwórz

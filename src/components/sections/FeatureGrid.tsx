@@ -39,7 +39,7 @@ export default function FeatureGrid({
               key={index}
               className="glass-card p-6 rounded-xl hover:transform hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="text-neural-violet mb-4 flex items-center">
+              <div className="text-twilight-indigo mb-4 flex items-center">
                 {feature.icon}
               </div>
 
@@ -54,7 +54,7 @@ export default function FeatureGrid({
               {feature.link && (
                 <a
                   href={feature.link}
-                  className="flex items-center text-neural-violet font-medium group"
+                  className="flex items-center text-twilight-indigo font-medium group"
                 >
                   Learn more
                   <ArrowRight

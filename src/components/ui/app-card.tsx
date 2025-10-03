@@ -30,24 +30,24 @@ interface AppCardProps {
 const categoryConfig = {
   Produktywność: {
     icon: Zap,
-    gradient: "from-neural-violet to-ascension-pink",
+    gradient: "from-twilight-indigo to-zenith-gold",
   },
   "Odporność psychiczna": {
     icon: Brain,
-    gradient: "from-quantum-blue to-neural-violet",
+    gradient: "from-neural-blue to-twilight-indigo",
   },
   Męskość: {
     icon: Compass,
-    gradient: "from-ascension-pink to-neural-violet",
+    gradient: "from-zenith-gold to-twilight-indigo",
   },
 };
 
 const statusConfig = {
   NOWA: "bg-green-500 text-white shadow-sm",
   POLECANE:
-    "bg-gradient-to-r from-neural-violet to-ascension-pink text-white border-0 shadow-sm",
+    "bg-gradient-to-r from-twilight-indigo to-zenith-gold text-white border-0 shadow-sm",
   NIEDOSTĘPNA: "bg-gray-400 text-white shadow-sm",
-  DOSTĘPNA: "bg-neural-violet text-white shadow-sm",
+  DOSTĘPNA: "bg-twilight-indigo text-white shadow-sm",
 };
 
 export default function AppCard({
@@ -79,8 +79,8 @@ export default function AppCard({
       transition-all duration-300 ease-out
       hover:-translate-y-2 hover:shadow-2xl
       shadow-lg
-      ${featured ? "ring-2 ring-ascension-pink/40" : ""}
-      ${premium ? "bg-gradient-to-br from-deep-charcoal/95 to-neural-violet/90" : ""}
+      ${featured ? "ring-2 ring-zenith-gold/40" : ""}
+      ${premium ? "bg-gradient-to-br from-deep-charcoal/95 to-twilight-indigo/90" : ""}
     `}
     >
       {/* Status Badge - Top Right with refined styling */}
@@ -166,7 +166,7 @@ export default function AppCard({
         <div className="flex items-center gap-2 flex-wrap mb-5">
           <Badge
             variant="outline"
-            className={`text-xs font-semibold ${premium ? "border-white/30 text-white/90 bg-white/10" : "border-neural-violet/30 text-neural-violet bg-neural-violet/5"}`}
+            className={`text-xs font-semibold ${premium ? "border-white/30 text-white/90 bg-white/10" : "border-twilight-indigo/30 text-twilight-indigo bg-twilight-indigo/5"}`}
           >
             {category}
           </Badge>
@@ -210,11 +210,11 @@ export default function AppCard({
                 <div
                   className={`
                   w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
-                  ${premium ? "bg-ascension-pink/20" : "bg-neural-violet/10"}
+                  ${premium ? "bg-zenith-gold/20" : "bg-twilight-indigo/10"}
                 `}
                 >
                   <Check
-                    className={`h-3 w-3 ${premium ? "text-ascension-pink" : "text-neural-violet"}`}
+                    className={`h-3 w-3 ${premium ? "text-zenith-gold" : "text-twilight-indigo"}`}
                   />
                 </div>
                 <span
@@ -239,8 +239,8 @@ export default function AppCard({
             flex items-center justify-center gap-2
             ${
               premium
-                ? "bg-gradient-to-r from-ascension-pink to-neural-violet text-white shadow-lg shadow-ascension-pink/30 hover:shadow-xl hover:shadow-ascension-pink/40 hover:scale-[1.02]"
-                : "bg-neural-violet text-white shadow-md shadow-neural-violet/20 hover:bg-neural-violet/90 hover:shadow-lg hover:scale-[1.02]"
+                ? "bg-gradient-to-r from-zenith-gold to-twilight-indigo text-white shadow-lg shadow-zenith-gold/30 hover:shadow-xl hover:shadow-zenith-gold/40 hover:scale-[1.02]"
+                : "bg-twilight-indigo text-white shadow-md shadow-twilight-indigo/20 hover:bg-twilight-indigo/90 hover:shadow-lg hover:scale-[1.02]"
             }
           `}
           >
