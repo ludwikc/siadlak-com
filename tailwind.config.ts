@@ -18,13 +18,40 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Brand Colors
-        "color-primary": "hsl(var(--color-primary))",
-        "color-primary-light": "hsl(var(--color-primary-light))",
-        "color-primary-dark": "hsl(var(--color-primary-dark))",
-        "color-accent": "hsl(var(--color-accent))",
-        "color-indigo": "hsl(var(--color-indigo))",
+        // Brand Colors (DEPRECATED - Tech/SaaS aesthetic)
+        "color-primary": "hsl(var(--color-primary))", // DEPRECATED
+        "color-primary-light": "hsl(var(--color-primary-light))", // DEPRECATED
+        "color-primary-dark": "hsl(var(--color-primary-dark))", // DEPRECATED
+        "color-accent": "hsl(var(--color-accent))", // DEPRECATED
+        "color-indigo": "hsl(var(--color-indigo))", // DEPRECATED
         "color-premium": "hsl(var(--color-premium))",
+
+        // Neural Lighthouse Brand Colors (AI-enhanced mindset transformation)
+        // Primary: Neural Blue (60% usage - intelligence, guidance)
+        "neural-blue": "hsl(var(--neural-blue))",
+        "neural-blue-light": "hsl(var(--neural-blue-light))",
+        "neural-blue-dark": "hsl(var(--neural-blue-dark))",
+
+        // Secondary: Twilight Indigo (25% usage - premium transformation depth)
+        "twilight-indigo": "hsl(var(--twilight-indigo))",
+        "twilight-indigo-light": "hsl(var(--twilight-indigo-light))",
+        "twilight-indigo-dark": "hsl(var(--twilight-indigo-dark))",
+
+        // Accent: Pulse Cyan (5% usage - surgical tech edge only)
+        "pulse-cyan": "hsl(var(--pulse-cyan))",
+
+        // Premium: Zenith Gold (10% usage - achievement, breakthrough)
+        "zenith-gold": "hsl(var(--zenith-gold))",
+
+        // Legacy aliases for backward compatibility - MIGRATE TO NEW NAMES
+        transformation: {
+          blue: "hsl(var(--neural-blue))", // Use neural-blue instead
+          "blue-light": "hsl(var(--neural-blue-light))",
+          "blue-dark": "hsl(var(--neural-blue-dark))",
+        },
+        "transformation-blue": "hsl(var(--neural-blue))", // Use neural-blue instead
+        "success-green": "hsl(var(--twilight-indigo))", // REPLACED with twilight-indigo
+        "growth-gold": "hsl(var(--zenith-gold))", // Use zenith-gold instead
 
         // UI State Colors - WCAG AA compliant
         "color-success": "hsl(var(--color-success))",
@@ -45,13 +72,13 @@ const config: Config = {
         "border-primary": "hsl(var(--border-primary))",
         "border-subtle": "hsl(var(--border-subtle))",
 
-        // Tailwind Custom Colors
-        "deep-space": "#0A0A0A",
-        "neural-violet": "#3B0F77",
-        "quantum-blue": "#061A40",
-        "ascension-pink": "#B0128C",
-        "luminal-magenta": "#DA1EAE",
-        "gold": "hsl(var(--gold))",
+        // Tailwind Custom Colors (DEPRECATED - Tech/SaaS aesthetic)
+        "deep-space": "#0A0A0A", // DEPRECATED
+        "neural-violet": "#3B0F77", // DEPRECATED
+        "quantum-blue": "#061A40", // DEPRECATED
+        "ascension-pink": "#B0128C", // DEPRECATED
+        "luminal-magenta": "#DA1EAE", // DEPRECATED
+        gold: "hsl(var(--gold))",
         "silver-mist": "#E1E1E6",
         "subtle-slate": "#79788C",
         "luminous-white": "#F9F9FB",
@@ -483,6 +510,229 @@ const config: Config = {
           filter: "blur(48px)",
           borderRadius: "50%",
           position: "absolute",
+        },
+        // Premium text utilities for dark surfaces
+        ".text-premium-on-dark": {
+          color: "hsl(var(--text-on-dark-primary)) !important",
+        },
+        ".text-premium-secondary-dark": {
+          color: "hsl(var(--text-on-dark-secondary)) !important",
+        },
+        ".text-premium-tertiary-dark": {
+          color: "hsl(var(--text-on-dark-tertiary)) !important",
+        },
+        // Premium surface utilities
+        ".bg-premium-dark-base": {
+          backgroundColor: "hsl(var(--surface-dark-base)) !important",
+        },
+        ".bg-premium-dark-elevated": {
+          backgroundColor: "hsl(var(--surface-dark-elevated)) !important",
+        },
+        ".bg-premium-dark-floating": {
+          backgroundColor: "hsl(var(--surface-dark-floating)) !important",
+        },
+        // Premium gradient overlay utilities
+        ".bg-premium-gradient-overlay": {
+          background:
+            "linear-gradient(135deg, hsl(var(--surface-dark-base)), hsl(var(--surface-dark-elevated)), hsl(var(--surface-dark-floating))) !important",
+        },
+        // Premium static gradient mesh (Stripe/Linear style)
+        ".bg-premium-mesh": {
+          background: `radial-gradient(circle at 20% 30%, hsl(267 100% 50% / 0.04), transparent 40%), radial-gradient(circle at 80% 70%, hsl(233 31% 32% / 0.03), transparent 40%), hsl(var(--background-primary))`,
+        },
+        ".bg-premium-mesh-dark": {
+          background: `radial-gradient(circle at 20% 30%, hsl(267 100% 50% / 0.06), transparent 40%), radial-gradient(circle at 80% 70%, hsl(233 31% 32% / 0.04), transparent 40%), hsl(var(--surface-dark-base))`,
+        },
+        // Transformation background utilities - Life coaching aesthetic
+        ".bg-transformation-light": {
+          background:
+            "linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--background)), hsl(var(--muted) / 0.5))",
+        },
+        ".bg-transformation-grid": {
+          backgroundImage:
+            "linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        },
+        ".bg-transformation-hero": {
+          position: "relative",
+          background:
+            "linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--background)), hsl(var(--muted) / 0.3))",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            inset: "0",
+            backgroundImage:
+              "linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+            opacity: "0.2",
+          },
+        },
+        // Transformation Card Components (Neural Lighthouse Brand)
+        ".transformation-card": {
+          backgroundColor: "white",
+          borderRadius: "1rem",
+          padding: "2rem",
+          border: "2px solid hsl(217 91% 60% / 0.2)", // neural-blue
+          boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            borderColor: "hsl(244 45% 58% / 0.5)", // twilight-indigo on hover
+            boxShadow:
+              "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px hsl(244 45% 58% / 0.2)",
+            transform: "translateY(-0.5rem)",
+          },
+        },
+        ".transformation-card-elevated": {
+          backgroundColor: "white",
+          borderRadius: "1.5rem",
+          padding: "2.5rem",
+          border: "2px solid hsl(217 91% 60% / 0.2)", // neural-blue
+          boxShadow: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
+          transition: "all 0.3s ease",
+          "&:hover": {
+            borderColor: "hsl(244 45% 58% / 0.5)", // twilight-indigo on hover
+            boxShadow:
+              "0 25px 50px -12px hsl(244 45% 58% / 0.25), 0 20px 25px -5px rgb(0 0 0 / 0.1)",
+            transform: "translateY(-0.5rem)",
+          },
+        },
+        ".transformation-card-feature": {
+          backgroundColor: "white",
+          borderRadius: "1.5rem",
+          padding: "2.5rem",
+          border: "2px solid hsl(217 91% 60% / 0.2)",
+          boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+          transition: "all 0.3s ease",
+          position: "relative",
+          overflow: "hidden",
+          "&:hover": {
+            borderColor: "hsl(217 91% 60% / 0.5)",
+            boxShadow:
+              "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px hsl(217 91% 60% / 0.2)",
+            transform: "translateY(-0.5rem) rotate(-1deg)",
+          },
+        },
+        // Transformation Section Components
+        ".transformation-section-light": {
+          position: "relative",
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
+          background:
+            "linear-gradient(to bottom right, hsl(var(--background)), hsl(var(--background)), hsl(var(--muted) / 0.3))",
+          overflow: "hidden",
+        },
+        ".transformation-section-clean": {
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
+          backgroundColor: "hsl(var(--muted) / 0.3)",
+        },
+        ".transformation-section-cta": {
+          position: "relative",
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
+          background:
+            "linear-gradient(to bottom right, hsl(217 91% 60% / 0.1), hsl(38 92% 50% / 0.05))",
+          overflow: "hidden",
+        },
+        // Transformation Button Components
+        ".btn-transformation-primary": {
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+          padding: "0.75rem 2rem",
+          fontSize: "1.125rem",
+          fontWeight: "700",
+          borderRadius: "0.75rem",
+          background:
+            "linear-gradient(to right, hsl(217 91% 60%), hsl(244 45% 58%))", // neural-blue to twilight-indigo
+          color: "white",
+          border: "none",
+          boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+          transition: "all 0.3s ease",
+          cursor: "pointer",
+          "&:hover": {
+            background:
+              "linear-gradient(to right, hsl(244 45% 58%), hsl(217 91% 60%))", // reverse on hover
+            boxShadow:
+              "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px hsl(244 45% 58% / 0.5)",
+            transform: "scale(1.05)",
+          },
+        },
+        ".btn-transformation-secondary": {
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+          padding: "0.75rem 2rem",
+          fontSize: "1.125rem",
+          fontWeight: "600",
+          borderRadius: "0.75rem",
+          backgroundColor: "white",
+          color: "hsl(217 91% 60%)", // neural-blue
+          border: "2px solid hsl(217 91% 60%)",
+          boxShadow: "0 1px 3px 0 rgb(0 0 0 / 0.1)",
+          transition: "all 0.3s ease",
+          cursor: "pointer",
+          "&:hover": {
+            backgroundColor: "hsl(217 91% 60% / 0.05)",
+            borderColor: "hsl(217 91% 60%)",
+            boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+            transform: "translateY(-2px)",
+          },
+        },
+        ".btn-transformation-ghost": {
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+          padding: "0.75rem 2rem",
+          fontSize: "1rem",
+          fontWeight: "600",
+          borderRadius: "0.75rem",
+          backgroundColor: "transparent",
+          color: "hsl(217 91% 60%)",
+          border: "none",
+          transition: "all 0.2s ease",
+          cursor: "pointer",
+          "&:hover": {
+            backgroundColor: "hsl(217 91% 60% / 0.1)",
+            transform: "translateX(4px)",
+          },
+        },
+        // Transformation Badge Components
+        ".transformation-badge": {
+          display: "inline-flex",
+          alignItems: "center",
+          padding: "0.5rem 1.5rem",
+          fontSize: "0.875rem",
+          fontWeight: "600",
+          borderRadius: "9999px",
+          backgroundColor: "hsl(217 91% 60% / 0.1)",
+          color: "hsl(217 91% 60%)",
+          border: "2px solid hsl(217 91% 60% / 0.3)",
+        },
+        ".transformation-badge-success": {
+          display: "inline-flex",
+          alignItems: "center",
+          padding: "0.5rem 1.5rem",
+          fontSize: "0.875rem",
+          fontWeight: "600",
+          borderRadius: "9999px",
+          backgroundColor: "hsl(244 45% 58% / 0.1)", // twilight-indigo
+          color: "hsl(244 45% 58%)",
+          border: "2px solid hsl(244 45% 58% / 0.3)",
+        },
+        ".transformation-badge-premium": {
+          display: "inline-flex",
+          alignItems: "center",
+          padding: "0.5rem 1.5rem",
+          fontSize: "0.875rem",
+          fontWeight: "600",
+          borderRadius: "9999px",
+          backgroundColor: "hsl(38 92% 50% / 0.1)",
+          color: "hsl(38 92% 50%)",
+          border: "2px solid hsl(38 92% 50% / 0.3)",
         },
       });
     },

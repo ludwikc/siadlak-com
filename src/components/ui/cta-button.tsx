@@ -51,9 +51,9 @@ export function CTAButton({
   );
 
   const variantClasses = {
-    primary: 'bg-neural-violet hover:bg-ascension-pink text-white',
-    secondary: 'bg-transparent border-2 border-neural-violet text-neural-violet hover:bg-neural-violet hover:text-white',
-    premium: 'bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-neural-violet hover:to-ascension-pink text-white'
+    primary: 'bg-twilight-indigo hover:bg-ascension-pink text-white',
+    secondary: 'bg-transparent border-2 border-twilight-indigo text-twilight-indigo hover:bg-twilight-indigo hover:text-white',
+    premium: 'bg-gradient-to-r from-ascension-pink to-twilight-indigo hover:from-twilight-indigo hover:to-ascension-pink text-white'
   };
 
   const buttonContent = (

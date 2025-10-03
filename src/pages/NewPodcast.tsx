@@ -5,7 +5,7 @@ export default function NewPodcast() {
   return (
     <Layout>
       {/* Hero Section from /program - kept intact */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-neural-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">

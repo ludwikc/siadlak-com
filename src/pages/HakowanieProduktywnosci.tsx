@@ -35,15 +35,15 @@ export default function HakowanieProduktywnosci() {
     <Layout>
       {/* 2.2. Hero Section - Theme Locked */}
       <section className="py-12 md:py-20 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-quantum-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Urgency Badge - Top */}
             <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-quantum-blue/20 to-neural-violet/20 backdrop-blur-sm border border-quantum-blue/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg animate-pulse">
-                <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-neural-violet" />
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 backdrop-blur-sm border border-neural-blue/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg animate-pulse">
+                <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-twilight-indigo" />
                 <span className="text-xs sm:text-sm font-bold text-locked-white">
                   OSTATNIE MIEJSCA
                 </span>
@@ -69,7 +69,7 @@ export default function HakowanieProduktywnosci() {
             {/* Social Proof - Above CTA */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
               <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
-                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-neural-violet" />
+                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-twilight-indigo" />
                 <span className="text-sm sm:text-base font-semibold text-locked-white">
                   1,240+ uczestników
                 </span>
@@ -90,7 +90,7 @@ export default function HakowanieProduktywnosci() {
             {/* Primary CTA - Prominent */}
             <div className="flex flex-col items-center gap-4 mb-6">
               <div className="relative group inline-block w-full sm:w-auto">
-                <div className="absolute -inset-1 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-neural-blue via-twilight-indigo to-neural-blue rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                 <Button
                   variant="special"
                   size="lg"
@@ -110,11 +110,11 @@ export default function HakowanieProduktywnosci() {
 
               {/* Scarcity - Below CTA */}
               <p className="text-sm sm:text-base font-semibold text-locked-white">
-                <span className="text-neural-violet">
+                <span className="text-twilight-indigo">
                   Grupa ograniczona do 50 osób
                 </span>{" "}
                 • Zostało{" "}
-                <span className="text-neural-violet font-bold text-lg sm:text-xl">
+                <span className="text-twilight-indigo font-bold text-lg sm:text-xl">
                   16 miejsc
                 </span>
               </p>
@@ -122,7 +122,7 @@ export default function HakowanieProduktywnosci() {
 
             {/* Secondary Link - Subtle */}
             <div className="text-center">
-              <button className="text-sm text-locked-silver hover:text-neural-violet transition-colors underline">
+              <button className="text-sm text-locked-silver hover:text-twilight-indigo transition-colors underline">
                 Wiem, o co chodzi. Zamawiam od razu →
               </button>
             </div>
@@ -306,15 +306,15 @@ export default function HakowanieProduktywnosci() {
 
             {/* Empathy Statement */}
             <div className="relative max-w-3xl mx-auto">
-              <div className="absolute -inset-1 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-2xl blur opacity-20"></div>
-              <div className="relative text-center p-8 sm:p-10 bg-white rounded-2xl border-2 border-ascension-pink/20">
-                <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue/20 to-neural-violet/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ShieldCheck className="h-8 w-8 text-neural-violet" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-neural-blue via-twilight-indigo to-neural-blue rounded-2xl blur opacity-20"></div>
+              <div className="relative text-center p-8 sm:p-10 bg-white rounded-2xl border-2 border-zenith-gold/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-neural-blue/20 to-twilight-indigo/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <ShieldCheck className="h-8 w-8 text-twilight-indigo" />
                 </div>
                 <p className="text-lg sm:text-xl text-text-primary font-medium mb-4">
                   <strong>Doskonale Cię rozumiem. To nie Twoja wina.</strong>
                 </p>
-                <p className="text-2xl sm:text-3xl font-bold text-neural-violet mb-2">
+                <p className="text-2xl sm:text-3xl font-bold text-twilight-indigo mb-2">
                   Jesteś ofiarą manipulacji.
                 </p>
                 <p className="text-base sm:text-lg text-text-secondary">
@@ -335,7 +335,7 @@ export default function HakowanieProduktywnosci() {
                 To nie jest teoria spiskowa. Wiesz doskonale, że są dwa dobra, o
                 które walczą największe korporacje tego świata
               </h2>
-              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-neural-violet">
+              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-twilight-indigo">
                 <span>⌚️ czas</span>
                 <span>👀 uwaga</span>
               </div>
@@ -373,7 +373,7 @@ export default function HakowanieProduktywnosci() {
                   <h4 className="font-bold text-lg mb-4 text-text-primary">
                     Moja filozofia:
                   </h4>
-                  <blockquote className="text-lg italic text-neural-violet font-medium mb-4">
+                  <blockquote className="text-lg italic text-twilight-indigo font-medium mb-4">
                     "Często mówię, że: Skupienie będzie superumiejętnością w
                     nadchodzących latach"
                   </blockquote>
@@ -386,7 +386,7 @@ export default function HakowanieProduktywnosci() {
               </Card>
             </div>
 
-            <div className="text-center p-8 bg-gradient-to-r from-neural-violet/10 to-quantum-blue/10 rounded-xl">
+            <div className="text-center p-8 bg-gradient-to-r from-twilight-indigo/10 to-neural-blue/10 rounded-xl">
               <p className="text-2xl font-bold text-text-primary">
                 Ale mam na to hak. 🎯
               </p>
@@ -401,7 +401,7 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-text-primary">
               Produktywność da się wypracować. Każdy może ją osiągnąć.{" "}
-              <span className="text-neural-violet">Ty Też</span>
+              <span className="text-twilight-indigo">Ty Też</span>
             </h2>
 
             <div className="glass-card p-8 mb-8">
@@ -430,10 +430,10 @@ export default function HakowanieProduktywnosci() {
               </CardContent>
             </Card>
 
-            <div className="bg-gradient-to-r from-quantum-blue/20 to-neural-violet/20 p-8 rounded-xl">
+            <div className="bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-4 text-text-primary">
                 Właśnie o to w tym chodzi – żeby znaleźć{" "}
-                <span className="text-neural-violet">SWOJĄ</span> produktywność
+                <span className="text-twilight-indigo">SWOJĄ</span> produktywność
               </h3>
               <p className="text-lg text-text-secondary">
                 Nie kopię rutyn miliarderów. Nie podrabianie czyjegoś systemu.
@@ -451,9 +451,9 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-quantum-blue/20 to-neural-violet/20 px-5 py-2 rounded-full mb-6">
-                <Sparkles className="h-5 w-5 text-neural-violet" />
-                <span className="text-sm font-bold text-neural-violet uppercase">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 px-5 py-2 rounded-full mb-6">
+                <Sparkles className="h-5 w-5 text-twilight-indigo" />
+                <span className="text-sm font-bold text-twilight-indigo uppercase">
                   Twoja przyszłość
                 </span>
               </div>
@@ -496,18 +496,18 @@ export default function HakowanieProduktywnosci() {
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className={`group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-quantum-blue/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br ${benefit.gradient}`}
+                  className={`group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-neural-blue/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 bg-gradient-to-br ${benefit.gradient}`}
                 >
                   <div className="flex flex-col items-center text-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-quantum-blue/20 to-neural-violet/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <benefit.icon className="h-7 w-7 text-neural-violet" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-neural-blue/20 to-twilight-indigo/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <benefit.icon className="h-7 w-7 text-twilight-indigo" />
                     </div>
                     <p className="text-text-primary font-medium leading-relaxed text-sm sm:text-base">
                       {benefit.text}
                     </p>
                     {/* Sparkle effect on hover */}
                     <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Sparkles className="h-4 w-4 text-neural-violet animate-pulse" />
+                      <Sparkles className="h-4 w-4 text-twilight-indigo animate-pulse" />
                     </div>
                   </div>
                 </div>
@@ -655,7 +655,7 @@ export default function HakowanieProduktywnosci() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
                 Poznaj Hakowanie Produktywności
               </h2>
-              <p className="text-lg text-neural-violet font-medium mb-4">
+              <p className="text-lg text-twilight-indigo font-medium mb-4">
                 Właśnie to odróżnia Hakowanie Produktywności od innych kursów
               </p>
               <p className="text-text-secondary mb-8">
@@ -675,7 +675,7 @@ export default function HakowanieProduktywnosci() {
                   Zobacz, jak wygląda platforma i jak działa system kursu
                 </p>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-neural-violet/20 hover:border-neural-violet/40 transition-all duration-300">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-twilight-indigo/20 hover:border-twilight-indigo/40 transition-all duration-300">
                 <img
                   src="/src/assets/portal-hakprod.png"
                   alt="Platforma kursu Hakowanie Produktywności - widok modułu z video"
@@ -776,8 +776,8 @@ export default function HakowanieProduktywnosci() {
                   className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100"
                 >
                   {/* Progress Badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-neural-violet/10 to-quantum-blue/10 px-3 py-1.5 rounded-full border border-neural-violet/20">
-                    <span className="text-xs font-bold text-neural-violet">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-twilight-indigo/10 to-neural-blue/10 px-3 py-1.5 rounded-full border border-twilight-indigo/20">
+                    <span className="text-xs font-bold text-twilight-indigo">
                       {index + 1}/6
                     </span>
                   </div>
@@ -804,7 +804,7 @@ export default function HakowanieProduktywnosci() {
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeDasharray={`${((index + 1) / 6) * 283} 283`}
-                          className="text-neural-violet"
+                          className="text-twilight-indigo"
                         />
                       </svg>
                     </div>
@@ -842,7 +842,7 @@ export default function HakowanieProduktywnosci() {
                   </p>
 
                   {/* Install Button */}
-                  <button className="w-full bg-gradient-to-r from-neural-violet to-ascension-pink text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-gradient-to-r from-twilight-indigo to-zenith-gold text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">ODBLOKOWUJ</span>
                   </button>
@@ -863,7 +863,7 @@ export default function HakowanieProduktywnosci() {
 
             <div className="text-center mb-12">
               <p className="text-xl text-text-secondary mb-6">
-                <strong className="text-neural-violet">
+                <strong className="text-twilight-indigo">
                   Serce Hakowania Produktywności to społeczność Hakerów
                 </strong>{" "}
                 - ludzi, którzy postanowili wziąć swoje życie w swoje ręce.
@@ -912,8 +912,8 @@ export default function HakowanieProduktywnosci() {
 
       {/* 2.9. Pricing Section - Theme Locked */}
       <section className="py-20 bg-gradient-locked-pricing section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-quantum-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -1020,7 +1020,7 @@ export default function HakowanieProduktywnosci() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-quantum-blue to-neural-violet p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/10">
+                    <div className="bg-gradient-to-br from-neural-blue to-twilight-indigo p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/10">
                       <p className="text-sm text-white/90 uppercase tracking-wide mb-2 text-center">
                         Twoja inwestycja
                       </p>
@@ -1038,7 +1038,7 @@ export default function HakowanieProduktywnosci() {
                 {/* ROI Calculator Hint */}
                 <div className="mt-6 text-center">
                   <div className="inline-flex items-center gap-2 bg-locked-gray/20 px-4 py-2 rounded-full border border-locked-gray/30">
-                    <Sparkles className="h-4 w-4 text-neural-violet" />
+                    <Sparkles className="h-4 w-4 text-twilight-indigo" />
                     <span className="text-sm text-locked-silver">
                       Zwrot z inwestycji:{" "}
                       <strong className="text-locked-white">
@@ -1097,10 +1097,10 @@ export default function HakowanieProduktywnosci() {
             <Button
               variant="special"
               size="lg"
-              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-ascension-pink/25"
+              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-zenith-gold/25"
             >
               Chcę przestać zwlekać! Zamawiam
-              <ArrowRight className="ml-2 h-6 w-6 text-neural-violet" />
+              <ArrowRight className="ml-2 h-6 w-6 text-twilight-indigo" />
             </Button>
 
             <div className="mb-8">
@@ -1118,7 +1118,7 @@ export default function HakowanieProduktywnosci() {
             <CountdownTimer />
 
             <div className="mt-8">
-              <p className="text-lg font-bold text-neural-violet mb-4">
+              <p className="text-lg font-bold text-twilight-indigo mb-4">
                 Podejmij akcję już teraz...
               </p>
               <p className="text-locked-silver">
@@ -1218,7 +1218,7 @@ export default function HakowanieProduktywnosci() {
 
                   {/* Quote with Better Typography */}
                   <blockquote className="relative mb-6">
-                    <div className="absolute -top-2 -left-2 text-6xl text-neural-violet/20 font-serif leading-none">
+                    <div className="absolute -top-2 -left-2 text-6xl text-twilight-indigo/20 font-serif leading-none">
                       "
                     </div>
                     <p className="text-base text-text-secondary leading-relaxed relative z-10 italic">
@@ -1246,7 +1246,7 @@ export default function HakowanieProduktywnosci() {
                   {/* Author Info with Avatar */}
                   <div className="flex items-center gap-3">
                     {/* Avatar Circle */}
-                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white font-bold text-sm">
                         {testimonial.avatar}
                       </span>
@@ -1263,15 +1263,15 @@ export default function HakowanieProduktywnosci() {
                     </div>
 
                     {/* Category Tag */}
-                    <div className="bg-quantum-blue/10 px-3 py-1 rounded-full">
-                      <span className="text-xs font-medium text-neural-violet">
+                    <div className="bg-neural-blue/10 px-3 py-1 rounded-full">
+                      <span className="text-xs font-medium text-twilight-indigo">
                         {testimonial.role}
                       </span>
                     </div>
                   </div>
 
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-quantum-blue/5 to-neural-violet/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-neural-blue/5 to-twilight-indigo/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               ))}
             </div>
@@ -1288,7 +1288,7 @@ export default function HakowanieProduktywnosci() {
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-8">
                   <div className="flex items-center gap-2 text-text-secondary">
-                    <Users className="h-5 w-5 text-neural-violet" />
+                    <Users className="h-5 w-5 text-twilight-indigo" />
                     <span className="font-bold text-text-primary">500+</span>
                     uczestników
                   </div>
@@ -1364,11 +1364,11 @@ export default function HakowanieProduktywnosci() {
               {HAKOWANIE_OBJECTIONS.map((item, index) => (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-quantum-blue/30 hover:shadow-xl transition-all duration-300"
+                  className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-neural-blue/30 hover:shadow-xl transition-all duration-300"
                 >
                   {/* Icon Header */}
                   <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                       <item.icon className="h-6 w-6 text-white" />
                     </div>
                   </div>

@@ -1,7 +1,7 @@
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { Link, useLocation } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeroProps {
   title: string;
@@ -36,7 +36,7 @@ export default function Hero({
     if (backgroundImage) {
       return "";
     }
-    
+
     // Theme-adaptive: #FCFAFF in light mode, #0A0A0A in dark mode
     return "bg-hero-light";
   };
@@ -50,13 +50,15 @@ export default function Hero({
       aria-labelledby="hero-title"
       role="banner"
     >
-      {/* Animated background elements for homepage */}
+      {/* Transformation background elements for homepage */}
       {location.pathname === "/" && (
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
+        <>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-[#2563eb] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#7C73E6] rounded-full blur-3xl"></div>
+          </div>
+        </>
       )}
 
       {/* Dark mode gradient blur elements matching reference CSS */}
@@ -92,7 +94,7 @@ export default function Hero({
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent
+              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent
               ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
               ${isUwazneZyciePage ? "text-right" : location.pathname === "/" ? "text-center" : "text-left"}
               `}

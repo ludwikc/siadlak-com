@@ -58,10 +58,10 @@ export default function Community() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Community districts as program-style cards */}
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-neural-violet" />
+                <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-twilight-indigo" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal">
                   🌱 ODKRYWCY
@@ -86,7 +86,7 @@ export default function Community() {
                       "Szansę na **podglądanie mistrzów w akcji** - osób, które już przeszły drogę, którą Ty zaczynasz",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -102,7 +102,7 @@ export default function Community() {
                 </div>
                 <Link
                   to="#join-community"
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-twilight-indigo hover:bg-twilight-indigo/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
                   Dołącz jako Odkrywca
                 </Link>
@@ -110,10 +110,10 @@ export default function Community() {
             </div>
 
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-neural-violet" />
+                <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-twilight-indigo" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal">
                   🌍 EXPLORERS
@@ -136,7 +136,7 @@ export default function Community() {
                       "Occasional English-language events and resources",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -152,7 +152,7 @@ export default function Community() {
                 </div>
                 <Link
                   to="#join-community"
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-twilight-indigo hover:bg-twilight-indigo/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
                   Join as Explorer
                 </Link>
@@ -161,14 +161,14 @@ export default function Community() {
 
             {/* Highlighted Lifehackerzy card with glow effect */}
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl animate-pulse-subtle">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/20 to-ascension-pink/30 opacity-80 group-hover:opacity-100 transition-opacity"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-neural-violet to-ascension-pink rounded-xl blur-md opacity-50 group-hover:opacity-75 transition-opacity animate-glow"></div>
-              <div className="relative p-6 md:p-8 flex flex-col h-full border-2 border-neural-violet/50 rounded-xl bg-white/80 z-10">
-                <div className="w-12 h-12 bg-neural-violet/20 rounded-full flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-neural-violet" />
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/20 to-zenith-gold/30 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-twilight-indigo to-zenith-gold rounded-xl blur-md opacity-50 group-hover:opacity-75 transition-opacity animate-glow"></div>
+              <div className="relative p-6 md:p-8 flex flex-col h-full border-2 border-twilight-indigo/50 rounded-xl bg-white/80 z-10">
+                <div className="w-12 h-12 bg-twilight-indigo/20 rounded-full flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-twilight-indigo" />
                 </div>
-                <div className="absolute top-3 right-3 bg-neural-violet/20 px-2 py-1 rounded-full">
-                  <span className="text-xs font-bold text-neural-violet">
+                <div className="absolute top-3 right-3 bg-twilight-indigo/20 px-2 py-1 rounded-full">
+                  <span className="text-xs font-bold text-twilight-indigo">
                     Absolutnie Najlepszy Wybór
                   </span>
                 </div>
@@ -197,7 +197,7 @@ export default function Community() {
                       "Regularne **Q&A z Ludwikiem**",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -213,7 +213,7 @@ export default function Community() {
                 </div>
                 <Link
                   to="/program"
-                  className="block w-full py-3 px-4 bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90 text-white text-center rounded-md transition-colors mt-auto shadow-md shadow-neural-violet/30"
+                  className="block w-full py-3 px-4 bg-gradient-to-r from-twilight-indigo to-zenith-gold hover:from-twilight-indigo/90 hover:to-zenith-gold/90 text-white text-center rounded-md transition-colors mt-auto shadow-md shadow-twilight-indigo/30"
                 >
                   Sprawdź nasze kursy
                 </Link>
@@ -221,10 +221,10 @@ export default function Community() {
             </div>
 
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 rounded-full flex items-center justify-center mb-4">
-                  <Diamond className="h-6 w-6 text-neural-violet" />
+                <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-4">
+                  <Diamond className="h-6 w-6 text-twilight-indigo" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal">
                   💎 NFT (Nasze Fenomenalne Towarzystwo)
@@ -250,7 +250,7 @@ export default function Community() {
                       "**Mentoringowe wsparcie** w kluczowych momentach Twojej drogi",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -266,7 +266,7 @@ export default function Community() {
                 </div>
                 <Link
                   to="/contact"
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-twilight-indigo hover:bg-twilight-indigo/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
                   Dostęp tylko na zaproszenie 🔒
                 </Link>
@@ -274,10 +274,10 @@ export default function Community() {
             </div>
 
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 rounded-full flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-neural-violet" />
+                <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-twilight-indigo" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal">
                   PATRONI FUNDACJI HACKERZY.PL
@@ -301,7 +301,7 @@ export default function Community() {
                       "Możliwość **współtworzenia inicjatyw** Fundacji",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -319,7 +319,7 @@ export default function Community() {
                   href="https://patronite.pl/hackerzy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-twilight-indigo hover:bg-twilight-indigo/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
                   Zostań Patronem Fundacji
                 </a>
@@ -327,10 +327,10 @@ export default function Community() {
             </div>
 
             <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 opacity-70 group-hover:opacity-90 transition-opacity"></div>
               <div className="relative p-6 md:p-8 flex flex-col h-full">
-                <div className="w-12 h-12 bg-neural-violet/10 rounded-full flex items-center justify-center mb-4">
-                  <Compass className="h-6 w-6 text-neural-violet" />
+                <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-4">
+                  <Compass className="h-6 w-6 text-twilight-indigo" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 text-deep-charcoal">
                   🧭 MĘSKI KOMPAS
@@ -354,7 +354,7 @@ export default function Community() {
                       "Społeczność braci, którzy **rozumieją Twoje wyzwania**",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-2 text-neural-violet flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-5 w-5 mr-2 text-twilight-indigo flex-shrink-0 mt-0.5" />
                         <span
                           className="text-subtle-slate"
                           dangerouslySetInnerHTML={{
@@ -370,7 +370,7 @@ export default function Community() {
                 </div>
                 <Link
                   to="/contact"
-                  className="block w-full py-3 px-4 bg-neural-violet hover:bg-neural-violet/80 text-white text-center rounded-md transition-colors mt-auto"
+                  className="block w-full py-3 px-4 bg-twilight-indigo hover:bg-twilight-indigo/80 text-white text-center rounded-md transition-colors mt-auto"
                 >
                   Dowiedz się więcej (wkrótce)
                 </Link>
@@ -395,7 +395,7 @@ export default function Community() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative">
             {/* Connecting line between journey points */}
-            <div className="hidden lg:block absolute h-1 bg-gradient-to-r from-neural-violet to-ascension-pink top-1/2 left-[15%] right-[15%] -translate-y-1/2 z-0"></div>
+            <div className="hidden lg:block absolute h-1 bg-gradient-to-r from-twilight-indigo to-zenith-gold top-1/2 left-[15%] right-[15%] -translate-y-1/2 z-0"></div>
 
             {/* Journey Points */}
             {[
@@ -421,7 +421,7 @@ export default function Community() {
               },
             ].map((point, index) => (
               <div key={index} className="z-10 flex flex-col items-center">
-                <div className="w-14 h-14 bg-neural-violet text-white rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <div className="w-14 h-14 bg-twilight-indigo text-white rounded-full flex items-center justify-center mb-4 shadow-lg">
                   {point.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-deep-charcoal mb-2 text-center">
@@ -458,7 +458,7 @@ export default function Community() {
                 ]}
               />
 
-              <div className="bg-neural-violet/10 p-6 rounded-lg mt-8">
+              <div className="bg-twilight-indigo/10 p-6 rounded-lg mt-8">
                 <p className="text-lg text-deep-charcoal font-medium">
                   Czy wiesz, że <strong>94% uczestników</strong> pyta "Dlaczego
                   nikt mi nie powiedział, aby dołączyć wcześniej 😭?"?

@@ -104,8 +104,8 @@ const Sitemap = () => {
             {siteStructure.map((section, sectionIndex) => (
               <div key={sectionIndex} className="mb-12">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-neural-violet/10 rounded-full flex items-center justify-center mr-4">
-                    <div className="text-neural-violet">
+                  <div className="w-10 h-10 bg-twilight-indigo/10 rounded-full flex items-center justify-center mr-4">
+                    <div className="text-twilight-indigo">
                       {section.icon}
                     </div>
                   </div>
@@ -127,7 +127,7 @@ const Sitemap = () => {
                               {section.category === 'Strony w przygotowaniu' ? 'Wkrótce' : 'Dynamiczne'}
                             </span>
                           ) : (
-                            <ExternalLink className="h-4 w-4 text-neural-violet flex-shrink-0" />
+                            <ExternalLink className="h-4 w-4 text-twilight-indigo flex-shrink-0" />
                           )}
                         </div>
                         
@@ -144,7 +144,7 @@ const Sitemap = () => {
                             <Link 
                               to={page.path} 
                               onClick={() => window.scrollTo(0, 0)}
-                              className="inline-flex items-center text-neural-violet hover:text-neural-violet/80 transition-colors text-sm font-medium"
+                              className="inline-flex items-center text-twilight-indigo hover:text-twilight-indigo/80 transition-colors text-sm font-medium"
                             >
                               Przejdź do strony
                               <ExternalLink className="h-3 w-3 ml-1" />
@@ -172,7 +172,7 @@ const Sitemap = () => {
               Skontaktuj się ze mną bezpośrednio - chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <button className="inline-flex items-center px-6 py-3 bg-neural-violet hover:bg-neural-violet/90 text-white rounded-lg font-medium transition-colors">
+              <button className="inline-flex items-center px-6 py-3 bg-twilight-indigo hover:bg-twilight-indigo/90 text-white rounded-lg font-medium transition-colors">
                 Skontaktuj się ze mną
                 <Mail className="h-4 w-4 ml-2" />
               </button>

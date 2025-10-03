@@ -88,7 +88,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold font-heading bg-gradient-to-r from-quantum-blue to-neural-violet bg-clip-text text-transparent">
+          <span className="text-2xl font-bold font-heading bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent">
             Ludwik&nbsp;C. Siadlak
           </span>
         </Link>
@@ -107,7 +107,7 @@ export default function Header() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className="bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet hover:to-quantum-blue text-luminous-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 shadow-md hover:shadow-lg"
+              className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue text-luminous-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-1 shadow-md hover:shadow-lg"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -128,7 +128,7 @@ export default function Header() {
 
           <Link
             to="/contact"
-            className="text-deep-charcoal hover:text-neural-violet transition-colors"
+            className="text-deep-charcoal hover:text-neural-blue transition-colors"
           >
             Kontakt
           </Link>
@@ -160,12 +160,12 @@ export default function Header() {
             onMouseEnter={handleMouseEnter}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-200 bg-gradient-to-r from-quantum-blue/5 to-white">
+            <div className="flex items-center justify-between p-6 sm:p-8 border-b border-slate-200 bg-gradient-to-r from-neural-blue/5 to-white">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
                   Wszystkie możliwości
                 </h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mt-2"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full mt-2"></div>
               </div>
               <button
                 onClick={() => setIsDropdownOpen(false)}
@@ -181,7 +181,7 @@ export default function Header() {
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Column 1: Twoja Ścieżka Rozwoju */}
                 <div className="lg:col-span-1">
-                  <div className="mb-6 p-4 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border border-quantum-blue/20">
+                  <div className="mb-6 p-4 bg-gradient-to-br from-neural-blue/5 to-twilight-indigo/5 rounded-xl border border-neural-blue/20">
                     <h3 className="text-lg font-bold text-deep-charcoal mb-2 flex items-center gap-2">
                       <span className="text-xl">🎯</span>
                       <span>Twoja ścieżka rozwoju</span>
@@ -194,18 +194,18 @@ export default function Header() {
                   <div className="space-y-6">
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-quantum-blue/20 to-quantum-blue/10 text-quantum-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neural-blue/20 to-neural-blue/10 text-neural-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
                           1
                         </div>
-                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-quantum-blue/30 to-transparent"></div>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-neural-blue/30 to-transparent"></div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                           Wybierz program dla siebie
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Zrób to{" "}
-                          <strong className="text-quantum-blue">teraz</strong> -
+                          <strong className="text-neural-blue">teraz</strong> -
                           wiesz czego potrzebujesz. Podejmij decyzję.
                         </p>
                       </div>
@@ -213,18 +213,18 @@ export default function Header() {
 
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-quantum-blue/30 to-quantum-blue/15 text-quantum-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neural-blue/30 to-neural-blue/15 text-neural-blue flex items-center justify-center text-base font-bold group-hover:scale-110 transition-transform">
                           2
                         </div>
-                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-quantum-blue/40 to-transparent"></div>
+                        <div className="w-0.5 h-12 mt-2 bg-gradient-to-b from-neural-blue/40 to-transparent"></div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                           Dołącz do Lifehackerów
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Dostęp LIFETIME otrzymasz{" "}
-                          <strong className="text-quantum-blue">
+                          <strong className="text-neural-blue">
                             jeszcze dzisiaj
                           </strong>
                           .
@@ -235,19 +235,19 @@ export default function Header() {
                     <div className="flex items-start group">
                       <div className="flex flex-col items-center mr-4">
                         <div className="relative">
-                          <div className="absolute inset-0 bg-gradient-to-br from-neural-violet to-ascension-pink rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-neural-violet to-ascension-pink text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
+                          <div className="absolute inset-0 bg-gradient-to-br from-twilight-indigo to-zenith-gold rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-twilight-indigo to-zenith-gold text-white flex items-center justify-center text-base font-bold shadow-lg group-hover:scale-110 transition-transform">
                             3
                           </div>
                         </div>
                       </div>
                       <div>
-                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-neural-violet group-hover:to-ascension-pink group-hover:bg-clip-text group-hover:text-transparent transition-all">
+                        <h4 className="text-base font-semibold text-deep-charcoal mb-1 group-hover:bg-gradient-to-r group-hover:from-twilight-indigo group-hover:to-zenith-gold group-hover:bg-clip-text group-hover:text-transparent transition-all">
                           Pracuj ze mną 1:1
                         </h4>
                         <p className="text-sm text-deep-charcoal/70 leading-relaxed">
                           Towarzyszę Lifehackerom codziennie.{" "}
-                          <strong className="text-neural-violet">
+                          <strong className="text-twilight-indigo">
                             Bez wyjątków.
                           </strong>{" "}
                           Dołącz do nas i działamy.
@@ -263,20 +263,20 @@ export default function Header() {
                     {/* Featured Cards */}
                     <Link
                       to="/program"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl shadow-2xl shadow-neural-violet/30 transition-all duration-200 group border-2 border-neural-violet/50 relative overflow-hidden min-h-[120px] -translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-blue/5 to-twilight-indigo/5 rounded-xl shadow-2xl shadow-neural-blue/30 transition-all duration-200 group border-2 border-neural-blue/50 relative overflow-hidden min-h-[120px] -translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      <div className="absolute top-3 left-3 bg-gradient-to-r from-neural-violet to-ascension-pink text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-neural-blue to-twilight-indigo text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
                         <span>⭐</span>
                         <span>Tu chcesz zacząć</span>
                       </div>
                       <div className="flex items-stretch justify-between pt-8 h-full">
                         <div className="flex items-center flex-1">
-                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                             <Book size={28} className="text-white" />
                           </div>
                           <div>
-                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-violet transition-colors">
+                            <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                               Programy rozwojowe
                             </h4>
                             <p className="text-sm text-deep-charcoal/70">
@@ -296,24 +296,24 @@ export default function Header() {
 
                     <Link
                       to="/webinar"
-                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-violet/5 to-quantum-blue/5 rounded-xl hover:shadow-2xl hover:shadow-ascension-pink/30 transition-all duration-200 group border-2 border-neural-violet/30 hover:border-ascension-pink/50 relative overflow-hidden hover:-translate-y-1"
+                      className="md:col-span-2 block p-5 bg-gradient-to-br from-neural-blue/5 to-growth-gold/5 rounded-xl hover:shadow-2xl hover:shadow-growth-gold/30 transition-all duration-200 group border-2 border-neural-blue/30 hover:border-growth-gold/50 relative overflow-hidden hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="absolute top-3 right-3 w-fit">
                         <div className="relative">
-                          <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink to-neural-violet rounded-lg blur-sm opacity-60"></div>
-                          <div className="relative bg-gradient-to-r from-ascension-pink to-neural-violet text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md animate-pulse flex items-center gap-1">
+                          <div className="absolute inset-0 bg-gradient-to-r from-growth-gold to-neural-blue rounded-lg blur-sm opacity-60"></div>
+                          <div className="relative bg-gradient-to-r from-growth-gold to-neural-blue text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1">
                             <span>🔥</span>
                             <span>Liczba miejsc ograniczona</span>
                           </div>
                         </div>
                       </div>
                       <div className="flex items-center mt-2">
-                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <div className="w-14 h-14 flex items-center justify-center mr-4 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                           <Video size={28} className="text-white" />
                         </div>
                         <div>
-                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-ascension-pink transition-colors">
+                          <h4 className="text-xl font-bold text-deep-charcoal mb-1 group-hover:text-growth-gold transition-colors">
                             Wydarzenia na żywo
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -328,15 +328,15 @@ export default function Header() {
                       href="https://uwaznezycie.pl"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                          <Users size={22} className="text-quantum-blue" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-neural-blue/10 to-neural-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <Users size={22} className="text-neural-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                             Medytacje na żywo
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -348,15 +348,15 @@ export default function Header() {
 
                     <Link
                       to="/podcast"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                          <Headphones size={22} className="text-quantum-blue" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-neural-blue/10 to-neural-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <Headphones size={22} className="text-neural-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                             Podcast
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -368,15 +368,15 @@ export default function Header() {
 
                     <Link
                       to="/newsletter"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-1"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                          <Mail size={22} className="text-quantum-blue" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-neural-blue/10 to-neural-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <Mail size={22} className="text-neural-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                             Newsletter
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -390,14 +390,14 @@ export default function Header() {
                       href="https://youtube.com/@ludwikcsiadlak"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-quantum-blue/50 hover:-translate-y-1"
+                      className="block p-4 bg-white rounded-xl hover:shadow-lg transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-1"
                     >
                       <div className="flex items-center">
-                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-quantum-blue/10 to-quantum-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                          <Video size={22} className="text-quantum-blue" />
+                        <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-neural-blue/10 to-neural-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <Video size={22} className="text-neural-blue" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-quantum-blue transition-colors">
+                          <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
                             YouTube
                           </h4>
                           <p className="text-sm text-deep-charcoal/70">
@@ -409,11 +409,11 @@ export default function Header() {
                   </div>
 
                   {/* Members Zone */}
-                  <div className="mt-8 p-6 bg-gradient-to-br from-quantum-blue/5 to-neural-violet/5 rounded-xl border-2 border-quantum-blue/30 hover:border-ascension-pink/30 shadow-sm transition-all duration-300">
+                  <div className="mt-8 p-6 bg-gradient-to-br from-neural-blue/5 to-twilight-indigo/5 rounded-xl border-2 border-neural-blue/30 hover:border-twilight-indigo/30 shadow-sm transition-all duration-300">
                     <div className="flex items-center mb-4">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-neural-violet to-ascension-pink rounded-lg blur-sm opacity-40"></div>
-                        <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-neural-violet to-ascension-pink rounded-lg mr-3 border-2 border-neural-violet/50 shadow-sm">
+                        <div className="absolute inset-0 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-lg blur-sm opacity-40"></div>
+                        <div className="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-lg mr-3 border-2 border-neural-blue/50 shadow-sm">
                           <Lock size={18} className="text-white" />
                         </div>
                       </div>
@@ -431,26 +431,26 @@ export default function Header() {
                         href="https://portal.siadlak.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-violet/50 hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-0.5"
                       >
                         <Home
                           size={18}
-                          className="text-quantum-blue group-hover:text-neural-violet mr-3 transition-colors"
+                          className="text-neural-blue group-hover:text-twilight-indigo mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-blue transition-colors">
                           Portal Lifehackerów
                         </span>
                       </a>
 
                       <a
                         href="/discord"
-                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-violet/50 hover:-translate-y-0.5"
+                        className="flex items-center p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 group border border-slate-200 hover:border-neural-blue/50 hover:-translate-y-0.5"
                       >
                         <Calendar
                           size={18}
-                          className="text-quantum-blue group-hover:text-neural-violet mr-3 transition-colors"
+                          className="text-neural-blue group-hover:text-twilight-indigo mr-3 transition-colors"
                         />
-                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <span className="text-sm font-semibold text-deep-charcoal group-hover:text-neural-blue transition-colors">
                           12:34 Daily Coaching
                         </span>
                       </a>
@@ -461,7 +461,7 @@ export default function Header() {
                   <div className="mt-6 pt-4 border-t border-slate-200 text-center">
                     <Link
                       to="/work"
-                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-quantum-blue transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
+                      className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-neural-blue transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       Zobacz wszystkie możliwości
@@ -483,7 +483,7 @@ export default function Header() {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link
               to="/about"
-              className="text-deep-charcoal hover:text-neural-violet transition-colors py-2"
+              className="text-deep-charcoal hover:text-neural-blue transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               O mnie
@@ -497,14 +497,14 @@ export default function Header() {
               <div className="ml-4 space-y-3">
                 <Link
                   to="/program"
-                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Programy
                 </Link>
                 <Link
                   to="/podcast"
-                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Podcasty
@@ -513,7 +513,7 @@ export default function Header() {
                   href="https://lifehackerzy.pl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-deep-charcoal/70 hover:text-neural-violet transition-colors"
+                  className="flex items-center gap-1 text-deep-charcoal/70 hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Społeczność
@@ -521,14 +521,14 @@ export default function Header() {
                 </a>
                 <Link
                   to="/newsletter"
-                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Newsletter
                 </Link>
                 <Link
                   to="/webinar"
-                  className="block text-deep-charcoal/70 hover:text-neural-violet transition-colors"
+                  className="block text-deep-charcoal/70 hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Webinar
@@ -538,7 +538,7 @@ export default function Header() {
 
             <Link
               to="/contact"
-              className="text-deep-charcoal hover:text-neural-violet transition-colors py-2"
+              className="text-deep-charcoal hover:text-neural-blue transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Kontakt

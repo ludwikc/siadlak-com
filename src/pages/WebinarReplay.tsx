@@ -85,7 +85,7 @@ const WebinarReplay = () => {
               <span className="text-sm font-medium">[REPLAY]</span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-neural-violet bg-gradient-to-r from-neural-violet to-ascension-pink bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-twilight-indigo bg-gradient-to-r from-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
               Jak przejąć kontrolę nad swoją karierą i życiem w erze sztucznej
               inteligencji
             </h1>
@@ -96,7 +96,7 @@ const WebinarReplay = () => {
 
             <div className="max-w-xs mx-auto mb-8 bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200">
               <p className="font-medium mb-2">Nagranie wygasa za:</p>
-              <div className="font-mono text-2xl font-bold text-neural-violet">
+              <div className="font-mono text-2xl font-bold text-twilight-indigo">
                 {formatTime(timeLeft)}
               </div>
             </div>
@@ -122,10 +122,10 @@ const WebinarReplay = () => {
                   {timelineLinks.map((link, index) => (
                     <button
                       key={index}
-                      className="w-full text-left p-3 hover:bg-neural-violet/5 rounded-lg flex items-center justify-between transition-colors"
+                      className="w-full text-left p-3 hover:bg-twilight-indigo/5 rounded-lg flex items-center justify-between transition-colors"
                     >
                       <span className="font-medium">{link.label}</span>
-                      <span className="text-neural-violet font-mono">
+                      <span className="text-twilight-indigo font-mono">
                         {link.time}
                       </span>
                     </button>
@@ -138,12 +138,12 @@ const WebinarReplay = () => {
                 className={`rounded-2xl p-8 border shadow-lg ${
                   offerExpired
                     ? "bg-gray-100 border-gray-300"
-                    : "bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10 border-neural-violet/20"
+                    : "bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 border-twilight-indigo/20"
                 }`}
               >
                 <div className="flex items-center justify-between mb-6">
                   <h3
-                    className={`text-xl font-bold ${offerExpired ? "text-gray-500" : "text-neural-violet"}`}
+                    className={`text-xl font-bold ${offerExpired ? "text-gray-500" : "text-twilight-indigo"}`}
                   >
                     {offerExpired
                       ? "⏱️ Było, minęło..."
@@ -154,7 +154,7 @@ const WebinarReplay = () => {
                     className={`px-3 py-1 rounded-full text-sm ${
                       offerExpired
                         ? "bg-gray-200 text-gray-500"
-                        : "bg-neural-violet/20 text-neural-violet"
+                        : "bg-twilight-indigo/20 text-twilight-indigo"
                     }`}
                   >
                     {offerExpired ? "Oferta wygasła" : "Oferta specjalna"}
@@ -174,7 +174,7 @@ const WebinarReplay = () => {
                   className={`w-full ${
                     offerExpired
                       ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-neural-violet hover:bg-neural-violet/90 text-white"
+                      : "bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   }`}
                   onClick={handleLifeOSSystemUpgrade}
                   disabled={offerExpired}
@@ -205,7 +205,7 @@ const WebinarReplay = () => {
                 </p>
 
                 <Button
-                  className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   onClick={handleUnlockBonus}
                 >
                   Odblokuj dodatkowe materiały
@@ -259,7 +259,7 @@ const WebinarReplay = () => {
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-neural-violet text-neural-violet"
+                    className="border-twilight-indigo text-twilight-indigo"
                     onClick={() => handleShare("Email")}
                   >
                     Email
@@ -314,7 +314,7 @@ const WebinarReplay = () => {
               </div>
 
               {/* Call to Action */}
-              <div className="bg-gradient-to-r from-neural-violet/20 to-ascension-pink/20 backdrop-blur-lg rounded-2xl p-6 border border-neural-violet/30 shadow-lg">
+              <div className="bg-gradient-to-r from-twilight-indigo/20 to-zenith-gold/20 backdrop-blur-lg rounded-2xl p-6 border border-twilight-indigo/30 shadow-lg">
                 <h3 className="text-xl font-bold mb-4">
                   Gotowy na transformację?
                 </h3>
@@ -326,7 +326,7 @@ const WebinarReplay = () => {
                 </p>
 
                 <Button
-                  className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   onClick={handleLifeOSSystemUpgrade}
                 >
                   Dowiedz się więcej <ArrowRight className="ml-2 h-4 w-4" />

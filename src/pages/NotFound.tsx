@@ -10,8 +10,8 @@ const NotFound = () => {
     <Layout>
       <div className="min-h-[70vh] flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <div className="bg-neural-violet/10 inline-block rounded-full p-6 mb-6">
-            <span className="text-neural-violet text-4xl">
+          <div className="bg-twilight-indigo/10 inline-block rounded-full p-6 mb-6">
+            <span className="text-twilight-indigo text-4xl">
               404
             </span>
           </div>

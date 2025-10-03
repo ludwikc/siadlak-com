@@ -83,7 +83,7 @@ const Testimonials = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-neural-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -112,10 +112,10 @@ const Testimonials = () => {
               .map((testimonial, index) => (
                 <div
                   key={index}
-                  className="glass-card p-8 rounded-xl border-2 border-ascension-pink relative"
+                  className="glass-card p-8 rounded-xl border-2 border-zenith-gold relative"
                 >
                   <div className="absolute top-4 right-4">
-                    <Quote className="h-8 w-8 text-neural-violet/20" />
+                    <Quote className="h-8 w-8 text-twilight-indigo/20" />
                   </div>
 
                   <p className="text-subtle-slate mb-6 italic">
@@ -131,13 +131,13 @@ const Testimonials = () => {
                       <p className="text-sm text-subtle-slate">
                         {testimonial.title}, {testimonial.company}
                       </p>
-                      <p className="text-sm text-neural-violet">
+                      <p className="text-sm text-twilight-indigo">
                         {testimonial.program} Program
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-neural-violet/5 p-4 rounded-lg">
+                  <div className="bg-twilight-indigo/5 p-4 rounded-lg">
                     <p className="text-sm text-deep-charcoal">
                       <strong>Results:</strong> {testimonial.results}
                     </p>
@@ -161,7 +161,7 @@ const Testimonials = () => {
               .map((testimonial, index) => (
                 <div key={index} className="glass-card p-6 rounded-xl relative">
                   <div className="absolute top-4 right-4">
-                    <Quote className="h-6 w-6 text-neural-violet/20" />
+                    <Quote className="h-6 w-6 text-twilight-indigo/20" />
                   </div>
 
                   <p className="text-subtle-slate mb-4 italic">
@@ -177,13 +177,13 @@ const Testimonials = () => {
                       <p className="text-xs text-subtle-slate">
                         {testimonial.title}, {testimonial.company}
                       </p>
-                      <p className="text-xs text-neural-violet">
+                      <p className="text-xs text-twilight-indigo">
                         {testimonial.program} Program
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-neural-violet/5 p-3 rounded-lg">
+                  <div className="bg-twilight-indigo/5 p-3 rounded-lg">
                     <p className="text-xs text-deep-charcoal">
                       <strong>Results:</strong> {testimonial.results}
                     </p>
@@ -209,7 +209,7 @@ const Testimonials = () => {
             <Link to="/contact">
               <Button
                 variant="outline"
-                className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
+                className="bg-white text-twilight-indigo hover:bg-white/90 border-twilight-indigo"
               >
                 Book a Discovery Call
                 <ArrowRight className="h-4 w-4" />

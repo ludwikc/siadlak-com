@@ -1,16 +1,18 @@
-import Layout from '@/components/layout/Layout';
-import { GlassCard } from '@/components/ui/glass-card';
-import { CheckCircle, Users, Target, Heart } from '@/lib/icons';
-import { useState, useEffect } from 'react';
+import Layout from "@/components/layout/Layout";
+import { GlassCard } from "@/components/ui/glass-card";
+import { CheckCircle, Users, Target, Heart } from "@/lib/icons";
+import { useState, useEffect } from "react";
 
 export default function Discovery() {
-  const [status, setStatus] = useState<'initial' | 'loading' | 'success'>('initial');
+  const [status, setStatus] = useState<"initial" | "loading" | "success">(
+    "initial",
+  );
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    if (status === 'loading') {
+    if (status === "loading") {
       const interval = setInterval(() => {
-        setProgress(prev => {
+        setProgress((prev) => {
           if (prev >= 100) {
             clearInterval(interval);
             return 100;
@@ -26,39 +28,38 @@ export default function Discovery() {
   }, [status]);
 
   const handleCheckAvailability = () => {
-    setStatus('loading');
-    
+    setStatus("loading");
+
     // Simulate checking availability
     setTimeout(() => {
-      setStatus('success');
+      setStatus("success");
     }, 2500);
   };
 
   const handleScheduleSession = () => {
     // Create a popup window for the Google Calendar booking
-    const calendarUrl = 'https://calendar.app.google/Xj5U39t9HaVNqS1HA';
+    const calendarUrl = "https://calendar.app.google/Xj5U39t9HaVNqS1HA";
     const popup = window.open(
       calendarUrl,
-      'calendar-booking',
-      'width=600,height=700,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no'
+      "calendar-booking",
+      "width=600,height=700,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no",
     );
-    
+
     if (popup) {
       popup.focus();
     } else {
       // Fallback: redirect to the calendar page
-      window.open(calendarUrl, '_blank');
+      window.open(calendarUrl, "_blank");
     }
   };
 
   return (
     <Layout>
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-blue to-twilight-indigo text-white overflow-hidden">
+        {/* Premium static background elements */}
+        <div className="absolute inset-0 opacity-[0.04]">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tl from-neural-blue to-twilight-indigo rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -81,36 +82,38 @@ export default function Discovery() {
       <section className="relative py-20 md:py-24 bg-gradient-to-b from-luminous-white to-background overflow-hidden">
         {/* Subtle background elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-40 right-20 w-32 h-32 bg-neural-violet rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 left-20 w-40 h-40 bg-neural-violet rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-twilight-indigo rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 left-20 w-40 h-40 bg-twilight-indigo rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-
             {/* Main Content */}
             <div className="text-center mb-16">
-              <div className="inline-block mb-4 px-5 py-2 bg-neural-violet/10 rounded-full border border-neural-violet/20">
-                <span className="text-sm font-semibold text-neural-violet uppercase tracking-wide">
+              <div className="inline-block mb-4 px-5 py-2 bg-twilight-indigo/10 rounded-full border border-twilight-indigo/20">
+                <span className="text-sm font-semibold text-twilight-indigo uppercase tracking-wide">
                   Autentyczna rozmowa
                 </span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 30 minut autentycznej rozmowy o Twoich wyzwaniach
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg mb-8"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-twilight-indigo via-twilight-indigo to-twilight-indigo mx-auto rounded-full shadow-lg mb-8"></div>
 
               <p className="text-xl mb-12 text-deep-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-                Sesja Discovery to nasze pierwsze spotkanie - moment, w którym poznajemy się nawzajem i sprawdzamy, czy moja metoda pracy pasuje do tego, czego szukasz. To obustronny proces odkrywania kompatybilności.
+                Sesja Discovery to nasze pierwsze spotkanie - moment, w którym
+                poznajemy się nawzajem i sprawdzamy, czy moja metoda pracy
+                pasuje do tego, czego szukasz. To obustronny proces odkrywania
+                kompatybilności.
               </p>
 
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                     Indywidualna rozmowa
                   </h3>
                   <p className="text-deep-charcoal/80 leading-relaxed">
@@ -118,23 +121,24 @@ export default function Discovery() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                     Obustronny proces
                   </h3>
                   <p className="text-deep-charcoal/80 leading-relaxed">
-                    Sprawdzamy, czy do siebie pasujemy: rezultaty dostarczam pracując w specyficzny sposób, a Ty już trochę siebie znasz.
+                    Sprawdzamy, czy do siebie pasujemy: rezultaty dostarczam
+                    pracując w specyficzny sposób, a Ty już trochę siebie znasz.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="bg-white rounded-2xl p-8 border-2 border-neural-blue/20 hover:border-neural-blue/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                     <Heart className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-quantum-blue transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-deep-charcoal group-hover:text-neural-blue transition-colors">
                     Autentyczne podejście
                   </h3>
                   <p className="text-deep-charcoal/80 leading-relaxed">
@@ -147,49 +151,53 @@ export default function Discovery() {
                 Wybierz termin, który Ci odpowiada
               </h3>
             </div>
-            
+
             {/* Availability Check Card */}
             <div className="max-w-4xl mx-auto">
-              <GlassCard padding="xl" className="text-center relative overflow-hidden border-2 border-neural-violet/20">
+              <GlassCard
+                padding="xl"
+                className="text-center relative overflow-hidden border-2 border-twilight-indigo/20"
+              >
                 {/* Subtle gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-neural-violet/5 via-transparent to-neural-violet/5"></div>
-                
+                <div className="absolute inset-0 bg-gradient-to-br from-twilight-indigo/5 via-transparent to-twilight-indigo/5"></div>
+
                 {/* Animated border glow */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neural-violet/20 via-neural-violet/20 to-quantum-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
-                
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-twilight-indigo/20 via-twilight-indigo/20 to-neural-blue/20 opacity-60 hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+
                 <div className="relative z-10">
-                  {status === 'initial' && (
+                  {status === "initial" && (
                     <div className="py-4">
-                      <div className="w-20 h-20 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <div className="w-20 h-20 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <CheckCircle className="h-10 w-10 text-white animate-pulse" />
                       </div>
                       <h3 className="text-2xl font-bold mb-6 text-deep-charcoal">
                         Sprawdź dostępność Sesji Discovery
                       </h3>
                       <p className="text-subtle-slate mb-8 max-w-md mx-auto">
-                        Kliknij poniżej, aby sprawdzić czy mam obecnie wolne miejsca w programie mentoringowym
+                        Kliknij poniżej, aby sprawdzić czy mam obecnie wolne
+                        miejsca w programie mentoringowym
                       </p>
-                      <button 
+                      <button
                         onClick={handleCheckAvailability}
-                        className="bg-gradient-to-r from-neural-violet to-quantum-blue hover:from-neural-violet/90 hover:to-neural-violet/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                        className="bg-gradient-to-r from-twilight-indigo to-neural-blue hover:from-twilight-indigo/90 hover:to-twilight-indigo/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
                       >
                         Sprawdź dostępność
                       </button>
                     </div>
                   )}
-                
-                  {status === 'loading' && (
+
+                  {status === "loading" && (
                     <div className="py-8 relative z-10">
-                      <div className="animate-spin w-8 h-8 border-3 border-neural-violet border-t-transparent rounded-full mx-auto mb-6"></div>
+                      <div className="animate-spin w-8 h-8 border-3 border-twilight-indigo border-t-transparent rounded-full mx-auto mb-6"></div>
                       <h3 className="text-xl font-semibold mb-6 text-deep-charcoal">
                         Trwa sprawdzanie dostępności...
                       </h3>
-                      
+
                       {/* Progress Bar */}
                       <div className="w-full max-w-md mx-auto">
                         <div className="bg-gray-200 rounded-full h-2 overflow-hidden">
-                          <div 
-                            className="bg-gradient-to-r from-neural-violet to-quantum-blue h-full transition-all duration-300 ease-out"
+                          <div
+                            className="bg-gradient-to-r from-twilight-indigo to-neural-blue h-full transition-all duration-300 ease-out"
                             style={{ width: `${progress}%` }}
                           ></div>
                         </div>
@@ -199,8 +207,8 @@ export default function Discovery() {
                       </div>
                     </div>
                   )}
-                  
-                  {status === 'success' && (
+
+                  {status === "success" && (
                     <div className="py-4 relative z-10">
                       <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg animate-bounce">
                         <CheckCircle className="h-10 w-10 text-white" />
@@ -211,9 +219,9 @@ export default function Discovery() {
                       <p className="text-lg mb-8 text-subtle-slate max-w-md mx-auto">
                         Możesz umówić Sesję Discovery już teraz
                       </p>
-                      <button 
+                      <button
                         onClick={handleScheduleSession}
-                        className="bg-gradient-to-r from-neural-violet to-quantum-blue hover:from-neural-violet/90 hover:to-neural-violet/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
+                        className="bg-gradient-to-r from-twilight-indigo to-neural-blue hover:from-twilight-indigo/90 hover:to-twilight-indigo/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl shadow-lg"
                       >
                         Umów Sesję Discovery
                       </button>
@@ -222,24 +230,26 @@ export default function Discovery() {
                 </div>
               </GlassCard>
             </div>
-            
+
             {/* How it works in practice */}
             <div className="max-w-5xl mx-auto mt-16">
               <div className="text-center mb-12">
-                <div className="inline-block mb-4 px-5 py-2 bg-quantum-blue/10 rounded-full border border-quantum-blue/20">
-                  <span className="text-sm font-semibold text-quantum-blue uppercase tracking-wide">
+                <div className="inline-block mb-4 px-5 py-2 bg-neural-blue/10 rounded-full border border-neural-blue/20">
+                  <span className="text-sm font-semibold text-neural-blue uppercase tracking-wide">
                     Transparentny proces
                   </span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
                   Jak to wygląda w praktyce?
                 </h2>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue via-neural-violet to-neural-violet mx-auto rounded-full shadow-lg"></div>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-neural-blue via-twilight-indigo to-twilight-indigo mx-auto rounded-full shadow-lg"></div>
               </div>
 
-              <div className="bg-white rounded-2xl p-10 md:p-12 border-2 border-neural-violet/20 shadow-xl mb-12">
+              <div className="bg-white rounded-2xl p-10 md:p-12 border-2 border-twilight-indigo/20 shadow-xl mb-12">
                 <p className="text-xl text-deep-charcoal/80 mb-10 leading-relaxed text-center">
-                  Podczas naszej rozmowy wspólnie odkryjemy, z czym przychodzisz i jak mogę Ci pomóc. Autentycznie wysłucham Twojej sytuacji i szczerze powiem, czy widzę szansę na skuteczną współpracę.
+                  Podczas naszej rozmowy wspólnie odkryjemy, z czym przychodzisz
+                  i jak mogę Ci pomóc. Autentycznie wysłucham Twojej sytuacji i
+                  szczerze powiem, czy widzę szansę na skuteczną współpracę.
                 </p>
 
                 <h3 className="text-2xl font-bold mb-8 text-deep-charcoal text-center">
@@ -252,42 +262,57 @@ export default function Discovery() {
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                     <p className="text-deep-charcoal leading-relaxed">
-                      Intuicja podpowiada Ci, że <em className="font-semibold">to jest to, czego tak długo szukałeś</em> i rozpoczynamy plan wdrożenia Life OS Upgrade.
+                      Intuicja podpowiada Ci, że{" "}
+                      <em className="font-semibold">
+                        to jest to, czego tak długo szukałeś
+                      </em>{" "}
+                      i rozpoczynamy plan wdrożenia Life OS Upgrade.
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border-2 border-quantum-blue/20">
-                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border-2 border-neural-blue/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center mb-4 shadow-lg">
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                     <p className="text-deep-charcoal leading-relaxed">
-                      Skieruję Cię do odpowiedniego <a href="/program" className="text-neural-violet hover:underline font-semibold">Programu Fundamentalnego</a>
+                      Skieruję Cię do odpowiedniego{" "}
+                      <a
+                        href="/program"
+                        className="text-twilight-indigo hover:underline font-semibold"
+                      >
+                        Programu Fundamentalnego
+                      </a>
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-xl p-6 border-2 border-neural-violet/20">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-violet to-quantum-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-xl p-6 border-2 border-twilight-indigo/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
                       <CheckCircle className="h-6 w-6 text-white" />
                     </div>
                     <p className="text-deep-charcoal leading-relaxed">
-                      Po prostu spędzimy pół godziny na sympatycznej rozmowie, podczas której dowiesz się więcej o swoich opcjach
+                      Po prostu spędzimy pół godziny na sympatycznej rozmowie,
+                      podczas której dowiesz się więcej o swoich opcjach
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-quantum-blue/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-quantum-blue/30">
+                <div className="bg-gradient-to-br from-neural-blue/10 to-twilight-indigo/10 rounded-2xl p-8 border-2 border-neural-blue/30">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
                       <Heart className="h-6 w-6 text-white" />
                     </div>
                     <p className="text-deep-charcoal leading-relaxed text-lg">
-                      <strong className="text-xl">To nie jest sprzedażowa prezentacja</strong> - to rzeczywiste odkrywanie, czy jesteśmy dla siebie odpowiedni. Czasem najlepsza pomoc to szczera informacja o tym, że drogi się rozchodzą.
+                      <strong className="text-xl">
+                        To nie jest sprzedażowa prezentacja
+                      </strong>{" "}
+                      - to rzeczywiste odkrywanie, czy jesteśmy dla siebie
+                      odpowiedni. Czasem najlepsza pomoc to szczera informacja o
+                      tym, że drogi się rozchodzą.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </section>

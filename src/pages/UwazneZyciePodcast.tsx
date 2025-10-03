@@ -56,7 +56,7 @@ const UwazneZyciePodcast = () => {
       <section id="live-sessions" className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-luminous-white rounded-lg border border-border p-6">
-            <h2 className="text-2xl font-bold text-neural-violet mb-4 flex items-center">
+            <h2 className="text-2xl font-bold text-twilight-indigo mb-4 flex items-center">
               <Calendar className="mr-2 h-6 w-6" />
               Sesje live
             </h2>
@@ -78,12 +78,12 @@ const UwazneZyciePodcast = () => {
                 <input
                   type="email"
                   placeholder="Twój adres email"
-                  className="flex-grow py-2 px-4 rounded-lg sm:rounded-r-none border border-border focus:outline-none focus:ring-2 focus:ring-neural-violet"
+                  className="flex-grow py-2 px-4 rounded-lg sm:rounded-r-none border border-border focus:outline-none focus:ring-2 focus:ring-twilight-indigo"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-neural-violet hover:bg-neural-violet/80 text-white px-4 py-2 rounded-lg sm:rounded-l-none transition-colors"
+                  className="bg-twilight-indigo hover:bg-twilight-indigo/80 text-white px-4 py-2 rounded-lg sm:rounded-l-none transition-colors"
                 >
                   Zapisz się
                 </button>
@@ -99,7 +99,7 @@ const UwazneZyciePodcast = () => {
                 href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Uwa%C5%BCne%20%C5%BBycie%20%E2%80%93%20medytacje%20prowadzone%20%28live%29&location=https%3A%2F%2Fdiscord.com%2Fevents%2F428530875085619200%2F1384400577311670313&details=S%C5%82yszymy%20si%C4%99%20na%20Discordzie%2C%20na%20kanale%20%23warszataty%3A%20%0Ahttps%3A%2F%2Fdiscord.com%2Fchannels%2F428530875085619200%2F988452597549641758%0A%0A%E2%86%92%20https%3A%2F%2Fuwaznezycie.pl%20&dates=20250930T062800%2F20250930T065000&recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DTU&ctz=Europe%2FWarsaw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-neural-violet hover:text-ascension-pink transition-colors"
+                className="inline-flex items-center text-twilight-indigo hover:text-zenith-gold transition-colors"
               >
                 Dodaj do swojego Google Calendar
               </a>
@@ -107,7 +107,7 @@ const UwazneZyciePodcast = () => {
                 href="/assets/UwazneZycie.ics"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-neural-violet hover:text-ascension-pink transition-colors"
+                className="inline-flex items-center text-twilight-indigo hover:text-zenith-gold transition-colors"
               >
                 Dodaj do iCloud/Outlook
               </a>

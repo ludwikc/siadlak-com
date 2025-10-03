@@ -10,12 +10,11 @@ const Contact = () => {
     <Layout>
       <SEO {...getSEOConfig("/contact")} />
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-deep-space via-quantum-blue to-deep-space text-white overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-ascension-pink rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-silver-mist rounded-full blur-3xl animate-pulse delay-500"></div>
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-deep-space via-neural-blue to-deep-space text-white overflow-hidden">
+        {/* Premium static background elements */}
+        <div className="absolute inset-0 opacity-[0.04]">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-zenith-gold/50 to-neural-blue rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tl from-neural-blue to-twilight-indigo rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -39,15 +38,15 @@ const Contact = () => {
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-12">
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <Clock className="w-5 h-5 text-ascension-pink" />
+                <Clock className="w-5 h-5 text-zenith-gold" />
                 <span className="text-sm font-medium">Odpowiedź w 24h</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <Heart className="w-5 h-5 text-ascension-pink" />
+                <Heart className="w-5 h-5 text-zenith-gold" />
                 <span className="text-sm font-medium">100% osobiście</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <Shield className="w-5 h-5 text-ascension-pink" />
+                <Shield className="w-5 h-5 text-zenith-gold" />
                 <span className="text-sm font-medium">Zero botów</span>
               </div>
             </div>
@@ -70,9 +69,9 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               {/* Email Card */}
-              <div className="group glass-card p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-ascension-pink/20">
+              <div className="group glass-card p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-zenith-gold/20">
                 <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-ascension-pink to-ascension-pink/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-gradient-to-br from-zenith-gold to-zenith-gold/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <Mail className="w-10 h-10 text-white" />
                   </div>
                   <div>
@@ -80,14 +79,15 @@ const Contact = () => {
                       Email
                     </h3>
                     <p className="text-subtle-slate text-sm mb-4">
-                      Najlepsza opcja dla dłuższych wiadomości i szczegółowych pytań
+                      Najlepsza opcja dla dłuższych wiadomości i szczegółowych
+                      pytań
                     </p>
                   </div>
                   <Button
                     onClick={() =>
                       window.open("mailto:connect@siadlak.email", "_self")
                     }
-                    className="w-full bg-ascension-pink hover:bg-ascension-pink/90 text-white font-semibold py-6 rounded-xl shadow-md hover:shadow-lg transition-all"
+                    className="w-full bg-zenith-gold hover:bg-zenith-gold/90 text-white font-semibold py-6 rounded-xl shadow-md hover:shadow-lg transition-all"
                   >
                     Napisz email
                   </Button>
@@ -113,7 +113,10 @@ const Contact = () => {
                   </div>
                   <Button
                     onClick={() =>
-                      window.open("https://www.linkedin.com/in/ludwikc", "_blank")
+                      window.open(
+                        "https://www.linkedin.com/in/ludwikc",
+                        "_blank",
+                      )
                     }
                     className="w-full bg-[#0077B5] hover:bg-[#005885] text-white font-semibold py-6 rounded-xl shadow-md hover:shadow-lg transition-all"
                   >
@@ -157,16 +160,17 @@ const Contact = () => {
             {/* Trust Section */}
             <div className="glass-card p-8 md:p-12 rounded-2xl text-center bg-gradient-to-br from-white to-silver-mist/10">
               <div className="max-w-2xl mx-auto">
-                <div className="w-16 h-16 bg-ascension-pink/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-ascension-pink" />
+                <div className="w-16 h-16 bg-zenith-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-8 h-8 text-zenith-gold" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-4">
                   Każda wiadomość jest ważna
                 </h3>
                 <p className="text-lg text-subtle-slate leading-relaxed">
-                  Nie używam automatycznych odpowiedzi ani szablonów. Każda wiadomość
-                  otrzymuje osobistą, przemyślaną odpowiedź. Jeśli pytasz o transformację
-                  swojego życia, zasługujesz na autentyczną rozmowę, nie kopiuj-wklej.
+                  Nie używam automatycznych odpowiedzi ani szablonów. Każda
+                  wiadomość otrzymuje osobistą, przemyślaną odpowiedź. Jeśli
+                  pytasz o transformację swojego życia, zasługujesz na
+                  autentyczną rozmowę, nie kopiuj-wklej.
                 </p>
               </div>
             </div>

@@ -35,12 +35,11 @@ export default function NewsletterPage() {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 sm:py-28 bg-gradient-to-br from-neural-violet via-quantum-blue to-deep-space text-white overflow-hidden">
-          {/* Animated background elements */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 w-40 h-40 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-neural-violet rounded-full blur-3xl animate-pulse delay-500"></div>
+        <section className="relative py-20 sm:py-28 bg-gradient-to-br from-twilight-indigo via-neural-blue to-deep-space text-white overflow-hidden">
+          {/* Premium static background elements */}
+          <div className="absolute inset-0 opacity-[0.04]">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tl from-neural-blue to-twilight-indigo rounded-full blur-3xl"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -74,7 +73,9 @@ export default function NewsletterPage() {
                 <div className="w-px bg-white/20"></div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-white">23/100</p>
-                  <p className="text-sm text-white/80">Miejsca założycielskie</p>
+                  <p className="text-sm text-white/80">
+                    Miejsca założycielskie
+                  </p>
                 </div>
                 <div className="w-px bg-white/20"></div>
                 <div className="text-center">
@@ -94,52 +95,52 @@ export default function NewsletterPage() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-deep-charcoal mb-2">
                   GŁÓWNA OBIETNICA
                 </h2>
-                <div className="h-1 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full"></div>
+                <div className="h-1 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full"></div>
               </div>
               <div className="space-y-6 sm:space-y-8">
-                <p className="text-xl sm:text-2xl font-bold text-neural-violet leading-relaxed">
+                <p className="text-xl sm:text-2xl font-bold text-twilight-indigo leading-relaxed">
                   Przestań konsumować trendy AI. Zacznij budować mądrość.
                 </p>
-                <div className="bg-neural-violet/5 rounded-xl p-4 sm:p-6 border-l-4 border-neural-violet">
+                <div className="bg-twilight-indigo/5 rounded-xl p-4 sm:p-6 border-l-4 border-twilight-indigo">
                   <p className="text-base sm:text-lg text-deep-charcoal font-medium">
                     ⏰ Każda niedziela, punktualnie o 19:00:
                   </p>
                 </div>
                 <ul className="text-left space-y-4 max-w-2xl mx-auto">
                   <li className="flex items-start gap-3 group">
-                    <CheckCircle className="h-6 w-6 text-neural-violet mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <CheckCircle className="h-6 w-6 text-twilight-indigo mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
                       Jedna prowokacyjna myśl, która zmienia sposób patrzenia
                     </span>
                   </li>
                   <li className="flex items-start gap-3 group">
-                    <CheckCircle className="h-6 w-6 text-neural-violet mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <CheckCircle className="h-6 w-6 text-twilight-indigo mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
                       Zaproszenie do dialogu z najbardziej refleksyjnymi
                       umysłami w Polsce
                     </span>
                   </li>
                   <li className="flex items-start gap-3 group">
-                    <CheckCircle className="h-6 w-6 text-neural-violet mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <CheckCircle className="h-6 w-6 text-twilight-indigo mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
                       Dostęp do społeczności, gdzie rozmowy naprawdę coś znaczą
                     </span>
                   </li>
                 </ul>
 
-                <div className="relative bg-gradient-to-br from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 sm:p-10 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all shadow-2xl hover:shadow-3xl">
+                <div className="relative bg-gradient-to-br from-twilight-indigo/10 to-twilight-indigo/10 rounded-2xl p-8 sm:p-10 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 transition-all shadow-2xl hover:shadow-3xl">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-quantum-blue to-neural-violet text-white px-6 sm:px-8 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg animate-pulse">
+                    <span className="bg-gradient-to-r from-neural-blue to-twilight-indigo text-white px-6 sm:px-8 py-2 rounded-full text-sm sm:text-base font-bold shadow-lg animate-pulse">
                       🔥 OFERTA ZAŁOŻYCIELSKA
                     </span>
                   </div>
 
                   <div className="mt-6 mb-8">
                     <div className="text-center space-y-4">
-                      <p className="text-xl sm:text-2xl font-bold text-neural-violet">
+                      <p className="text-xl sm:text-2xl font-bold text-twilight-indigo">
                         Pierwsze 100 osób: dostęp za 97 PLN miesięcznie
                       </p>
-                      <p className="text-2xl sm:text-3xl font-bold text-neural-violet">
+                      <p className="text-2xl sm:text-3xl font-bold text-twilight-indigo">
                         DOŻYWOTNIO.
                       </p>
                       <div className="inline-block bg-white/80 rounded-lg px-4 py-2 mt-4">
@@ -150,18 +151,18 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 sm:p-6 mb-8 border-2 border-neural-violet/30 shadow-lg">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-xl p-5 sm:p-6 mb-8 border-2 border-twilight-indigo/30 shadow-lg">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm font-bold text-deep-charcoal uppercase tracking-wide">
                         Pozostało miejsc
                       </span>
-                      <span className="text-3xl font-bold text-neural-violet">
+                      <span className="text-3xl font-bold text-twilight-indigo">
                         23/100
                       </span>
                     </div>
                     <div className="w-full bg-deep-charcoal/20 rounded-full h-4 overflow-hidden mb-3">
                       <div
-                        className="bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet h-4 rounded-full animate-pulse shadow-inner"
+                        className="bg-gradient-to-r from-twilight-indigo via-twilight-indigo to-twilight-indigo h-4 rounded-full animate-pulse shadow-inner"
                         style={{ width: "77%" }}
                       ></div>
                     </div>
@@ -171,7 +172,7 @@ export default function NewsletterPage() {
                   </div>
 
                   <div className="relative group mb-6">
-                    <div className="absolute -inset-1.5 bg-gradient-to-r from-neural-violet via-neural-violet to-neural-violet rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                    <div className="absolute -inset-1.5 bg-gradient-to-r from-twilight-indigo via-twilight-indigo to-twilight-indigo rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
                     <Button
                       onClick={() =>
                         window.open(
@@ -179,7 +180,7 @@ export default function NewsletterPage() {
                           "_blank",
                         )
                       }
-                      className="relative w-full bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet/90 hover:to-neural-violet/90 text-white font-bold py-6 sm:py-7 text-lg sm:text-xl shadow-xl transform hover:scale-[1.02] transition-all"
+                      className="relative w-full bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo/90 hover:to-twilight-indigo/90 text-white font-bold py-6 sm:py-7 text-lg sm:text-xl shadow-xl transform hover:scale-[1.02] transition-all"
                     >
                       ZAREZERWUJ MIEJSCE ZAŁOŻYCIELSKIE →
                     </Button>
@@ -187,7 +188,8 @@ export default function NewsletterPage() {
 
                   <div className="text-center">
                     <p className="text-xs text-deep-charcoal/60">
-                      💳 Bezpieczna płatność • 🔒 Dane chronione • ⚡ Natychmiastowy dostęp
+                      💳 Bezpieczna płatność • 🔒 Dane chronione • ⚡
+                      Natychmiastowy dostęp
                     </p>
                   </div>
                 </div>
@@ -212,7 +214,7 @@ export default function NewsletterPage() {
                   Znasz to uczucie?
                 </p>
 
-                <div className="bg-white rounded-xl p-6 sm:p-8 border-l-4 border-neural-violet shadow-md hover:shadow-lg transition-shadow">
+                <div className="bg-white rounded-xl p-6 sm:p-8 border-l-4 border-twilight-indigo shadow-md hover:shadow-lg transition-shadow">
                   <p className="italic text-sm sm:text-base leading-relaxed">
                     6:47 rano. Budzik. Telefon. LinkedIn.
                     <br />
@@ -232,11 +234,11 @@ export default function NewsletterPage() {
                   </strong>
                 </p>
 
-                <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 space-y-4">
-                  <p className="text-xl sm:text-2xl font-bold text-neural-violet text-center">
+                <div className="bg-gradient-to-r from-twilight-indigo/10 to-twilight-indigo/10 rounded-xl p-6 sm:p-8 border-2 border-twilight-indigo/30 space-y-4">
+                  <p className="text-xl sm:text-2xl font-bold text-twilight-indigo text-center">
                     Problem nie leży w narzędziach.
                   </p>
-                  <p className="text-xl sm:text-2xl font-bold text-neural-violet text-center">
+                  <p className="text-xl sm:text-2xl font-bold text-twilight-indigo text-center">
                     Problem leży w utracie zdolności do głębokiego myślenia.
                   </p>
                 </div>
@@ -276,8 +278,8 @@ export default function NewsletterPage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-neural-violet/10 to-deep-charcoal/10 rounded-xl p-6 sm:p-8 border-l-4 border-neural-violet">
-                  <p className="text-xl sm:text-2xl font-bold text-neural-violet text-center">
+                <div className="bg-gradient-to-r from-twilight-indigo/10 to-deep-charcoal/10 rounded-xl p-6 sm:p-8 border-l-4 border-twilight-indigo">
+                  <p className="text-xl sm:text-2xl font-bold text-twilight-indigo text-center">
                     💔 I czujesz się samotny w tłumie.
                   </p>
                 </div>
@@ -298,7 +300,7 @@ export default function NewsletterPage() {
               </div>
 
               <div className="text-center space-y-6 sm:space-y-8">
-                <p className="text-2xl sm:text-3xl font-bold text-neural-violet">
+                <p className="text-2xl sm:text-3xl font-bold text-twilight-indigo">
                   Przedstawiam: (🧠 + 🤖)^💜
                 </p>
                 <p className="text-lg sm:text-xl text-deep-charcoal/80">
@@ -316,17 +318,17 @@ export default function NewsletterPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-deep-charcoal mb-2">
                     JAK TO DZIAŁA:
                   </h3>
-                  <div className="h-0.5 w-24 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto"></div>
+                  <div className="h-0.5 w-24 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full mx-auto"></div>
                 </div>
 
                 <div className="grid gap-6">
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-twilight-indigo/5 to-twilight-indigo/5 rounded-xl p-6 sm:p-8 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         📧
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                           NIEDZIELA, 19:00: Rzucam prowokacyjną myśl
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed mb-4">
@@ -335,13 +337,13 @@ export default function NewsletterPage() {
                             Perspektywa, która zderza się z twoją.
                           </strong>
                         </p>
-                        <div className="bg-white/50 rounded-lg p-4 border border-neural-violet/20">
+                        <div className="bg-white/50 rounded-lg p-4 border border-twilight-indigo/20">
                           <p className="font-semibold mb-3 text-sm sm:text-base">
                             💡 Przykłady tematów z ostatnich tygodni:
                           </p>
                           <ul className="text-xs sm:text-sm space-y-2 text-deep-charcoal/80">
                             <li className="flex items-start gap-2">
-                              <span className="text-neural-violet flex-shrink-0">
+                              <span className="text-twilight-indigo flex-shrink-0">
                                 →
                               </span>
                               <span>
@@ -350,7 +352,7 @@ export default function NewsletterPage() {
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <span className="text-neural-violet flex-shrink-0">
+                              <span className="text-twilight-indigo flex-shrink-0">
                                 →
                               </span>
                               <span>
@@ -359,7 +361,7 @@ export default function NewsletterPage() {
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <span className="text-neural-violet flex-shrink-0">
+                              <span className="text-twilight-indigo flex-shrink-0">
                                 →
                               </span>
                               <span>
@@ -373,13 +375,13 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-twilight-indigo/5 to-twilight-indigo/5 rounded-xl p-6 sm:p-8 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         💬
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                           TY ODPOWIADASZ: Twoja perspektywa ma znaczenie
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
@@ -395,13 +397,13 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-twilight-indigo/5 to-twilight-indigo/5 rounded-xl p-6 sm:p-8 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         🔥
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                           SOBOTA: Zderzenie perspektyw
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
@@ -415,13 +417,13 @@ export default function NewsletterPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-neural-violet/5 to-neural-violet/5 rounded-xl p-6 sm:p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 transition-all hover:shadow-lg group">
+                  <div className="bg-gradient-to-br from-twilight-indigo/5 to-twilight-indigo/5 rounded-xl p-6 sm:p-8 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 transition-all hover:shadow-lg group">
                     <div className="flex items-start gap-4 sm:gap-6">
                       <div className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform flex-shrink-0">
                         💎
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-neural-violet transition-colors">
+                        <h4 className="font-bold text-lg sm:text-xl mb-3 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">
                           A POTEM... COŚ WIĘCEJ
                         </h4>
                         <p className="text-sm sm:text-base text-deep-charcoal leading-relaxed">
@@ -448,14 +450,15 @@ export default function NewsletterPage() {
                   DOWODY - PRAWDZIWE ŚWIADECTWA
                 </h2>
                 <p className="text-lg text-deep-charcoal/70">
-                  Nie musisz wierzyć mi na słowo. Posłuchaj członków społeczności.
+                  Nie musisz wierzyć mi na słowo. Posłuchaj członków
+                  społeczności.
                 </p>
               </div>
 
               <div className="grid gap-8">
-                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="group bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                       TM
                     </div>
                     <div>
@@ -465,13 +468,15 @@ export default function NewsletterPage() {
                       <p className="text-sm text-deep-charcoal/70">
                         Założyciel startupu technologicznego
                       </p>
-                      <p className="text-xs text-neural-violet font-semibold mt-1">
+                      <p className="text-xs text-twilight-indigo font-semibold mt-1">
                         Członek od 4 miesięcy
                       </p>
                     </div>
                   </div>
                   <blockquote className="text-deep-charcoal leading-relaxed">
-                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
+                    <span className="text-4xl text-twilight-indigo/30 float-left mr-2 leading-none">
+                      "
+                    </span>
                     Przed newsletterem Ludwika: produktywność oznaczała 60
                     godzin tygodniowo, wypalenie, zero czasu na myślenie. Po 8
                     tygodniach: Przestałem gonić za trendami AI. Zacząłem
@@ -484,14 +489,16 @@ export default function NewsletterPage() {
                   </blockquote>
                   <div className="mt-6 flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-neural-violet text-xl">★</span>
+                      <span key={i} className="text-twilight-indigo text-xl">
+                        ★
+                      </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="group bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                       AK
                     </div>
                     <div>
@@ -501,13 +508,15 @@ export default function NewsletterPage() {
                       <p className="text-sm text-deep-charcoal/70">
                         Trenerka przywództwa
                       </p>
-                      <p className="text-xs text-neural-violet font-semibold mt-1">
+                      <p className="text-xs text-twilight-indigo font-semibold mt-1">
                         Członkini od 6 miesięcy
                       </p>
                     </div>
                   </div>
                   <blockquote className="text-deep-charcoal leading-relaxed">
-                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
+                    <span className="text-4xl text-twilight-indigo/30 float-left mr-2 leading-none">
+                      "
+                    </span>
                     Jedna myśl z newslettera Ludwika zmieniła więcej niż 100
                     'porad produktywności' z LinkedIn. Przestałam optymalizować
                     czas. Zacząłem optymalizować jakość myślenia. A społeczność
@@ -516,14 +525,16 @@ export default function NewsletterPage() {
                   </blockquote>
                   <div className="mt-6 flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-neural-violet text-xl">★</span>
+                      <span key={i} className="text-twilight-indigo text-xl">
+                        ★
+                      </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="group bg-white rounded-2xl p-8 border-2 border-neural-violet/20 hover:border-neural-violet/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                <div className="group bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
                       KL
                     </div>
                     <div>
@@ -533,13 +544,15 @@ export default function NewsletterPage() {
                       <p className="text-sm text-deep-charcoal/70">
                         Konsultantka AI
                       </p>
-                      <p className="text-xs text-neural-violet font-semibold mt-1">
+                      <p className="text-xs text-twilight-indigo font-semibold mt-1">
                         Członkini od 3 miesięcy
                       </p>
                     </div>
                   </div>
                   <blockquote className="text-deep-charcoal leading-relaxed">
-                    <span className="text-4xl text-neural-violet/30 float-left mr-2 leading-none">"</span>
+                    <span className="text-4xl text-twilight-indigo/30 float-left mr-2 leading-none">
+                      "
+                    </span>
                     Ludwik nie ma racji w 40% przypadków. I właśnie dlatego
                     rozmowy z nim są najcenniejsze. Kwestionuje moje założenia,
                     nie potakuje im. A społeczność? Pełna ludzi, którzy wolą
@@ -547,7 +560,9 @@ export default function NewsletterPage() {
                   </blockquote>
                   <div className="mt-6 flex gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-neural-violet text-xl">★</span>
+                      <span key={i} className="text-twilight-indigo text-xl">
+                        ★
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -580,7 +595,7 @@ export default function NewsletterPage() {
                       KRĄG OTWARTY
                     </h3>
                     <p className="text-deep-charcoal/70 mb-4">Dla każdego</p>
-                    <p className="text-3xl font-bold text-neural-violet">
+                    <p className="text-3xl font-bold text-twilight-indigo">
                       BEZPŁATNIE
                     </p>
                   </div>
@@ -627,15 +642,15 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Premium Tier */}
-                <div className="relative bg-gradient-to-br from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 border-2 border-neural-violet/50 shadow-2xl transform scale-105 lg:scale-110">
+                <div className="relative bg-gradient-to-br from-twilight-indigo/10 to-twilight-indigo/10 rounded-2xl p-8 border-2 border-twilight-indigo/50 shadow-2xl transform scale-105 lg:scale-110">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-quantum-blue to-neural-violet text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    <span className="bg-gradient-to-r from-neural-blue to-twilight-indigo text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                       ⭐ NAJPOPULARNIEJSZY
                     </span>
                   </div>
 
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">💎</span>
                     </div>
                     <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
@@ -643,14 +658,14 @@ export default function NewsletterPage() {
                     </h3>
                     <p className="text-deep-charcoal/70 mb-4">Dla myślących</p>
                     <div className="space-y-2">
-                      <p className="text-4xl font-bold text-neural-violet">
+                      <p className="text-4xl font-bold text-twilight-indigo">
                         97 PLN<span className="text-lg">/mies.</span>
                       </p>
                       <p className="text-base text-deep-charcoal/60 line-through">
                         197 PLN/mies.
                       </p>
-                      <div className="inline-block bg-neural-violet/20 rounded-lg px-4 py-2">
-                        <p className="text-sm text-neural-violet font-bold">
+                      <div className="inline-block bg-twilight-indigo/20 rounded-lg px-4 py-2">
+                        <p className="text-sm text-twilight-indigo font-bold">
                           DOŻYWOTNIO dla pierwszych 100
                         </p>
                       </div>
@@ -691,7 +706,7 @@ export default function NewsletterPage() {
                   </ul>
 
                   <Button
-                    className="w-full bg-gradient-to-r from-quantum-blue to-neural-violet hover:from-neural-violet/90 hover:to-neural-violet/90 text-white py-6 text-base font-bold shadow-xl transform hover:scale-[1.02] transition-all"
+                    className="w-full bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo/90 hover:to-twilight-indigo/90 text-white py-6 text-base font-bold shadow-xl transform hover:scale-[1.02] transition-all"
                     onClick={() =>
                       window.open(
                         "https://app.easycart.pl/checkout/siadlak/newsletter",
@@ -704,9 +719,9 @@ export default function NewsletterPage() {
                 </div>
 
                 {/* Elite Tier */}
-                <div className="bg-white rounded-2xl p-8 border-2 border-neural-violet/30 hover:border-neural-violet/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="bg-white rounded-2xl p-8 border-2 border-twilight-indigo/30 hover:border-twilight-indigo/50 shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-neural-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-twilight-indigo/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">🏆</span>
                     </div>
                     <h3 className="text-2xl font-bold text-deep-charcoal mb-2">
@@ -715,8 +730,8 @@ export default function NewsletterPage() {
                     <p className="text-deep-charcoal/70 mb-4">
                       Dla gotowych na transformację
                     </p>
-                    <div className="inline-block bg-neural-violet/20 rounded-lg px-4 py-3">
-                      <p className="text-base font-bold text-neural-violet">
+                    <div className="inline-block bg-twilight-indigo/20 rounded-lg px-4 py-3">
+                      <p className="text-base font-bold text-twilight-indigo">
                         TYLKO NA ZAPROSZENIE
                       </p>
                     </div>
@@ -735,7 +750,7 @@ export default function NewsletterPage() {
 
                   <Button
                     variant="outline"
-                    className="w-full py-6 text-base font-semibold border-2 border-neural-violet/30"
+                    className="w-full py-6 text-base font-semibold border-2 border-twilight-indigo/30"
                     disabled
                   >
                     WIĘCEJ PO DOŁĄCZENIU
@@ -754,7 +769,7 @@ export default function NewsletterPage() {
                 PRZYKŁAD PRAWDZIWEJ TREŚCI
               </h3>
 
-              <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-2xl p-8 border border-neural-violet/20">
+              <div className="bg-gradient-to-r from-twilight-indigo/10 to-twilight-indigo/10 rounded-2xl p-8 border border-twilight-indigo/20">
                 <div className="flex flex-col lg:flex-row gap-8 items-center">
                   <div className="lg:w-1/2">
                     <div className="relative group cursor-pointer">
@@ -763,14 +778,14 @@ export default function NewsletterPage() {
                         alt="Przykład newslettera - Fake it till you make it"
                         className="w-full rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-neural-violet/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                      <div className="absolute inset-0 bg-twilight-indigo/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                         <ExternalLink className="h-8 w-8 text-white" />
                       </div>
                     </div>
                   </div>
 
                   <div className="lg:w-1/2 space-y-6">
-                    <blockquote className="text-xl font-semibold text-neural-violet">
+                    <blockquote className="text-xl font-semibold text-twilight-indigo">
                       "Udawaj, aż ci się uda - robisz to dobrze czy źle?"
                     </blockquote>
                     <p className="text-base text-deep-charcoal">
@@ -785,7 +800,7 @@ export default function NewsletterPage() {
                       href="https://connect.siadlak.email/preview/484845/emails/163624365229868308"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 bg-neural-violet hover:bg-neural-violet/90 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold text-base shadow-lg shadow-neural-violet/25"
+                      className="inline-flex items-center gap-3 bg-twilight-indigo hover:bg-twilight-indigo/90 text-white px-6 py-3 rounded-lg transition-all duration-300 font-semibold text-base shadow-lg shadow-twilight-indigo/25"
                     >
                       Czytaj newsletter i wszystkie wymiany
                       <ExternalLink className="h-5 w-5" />
@@ -798,7 +813,7 @@ export default function NewsletterPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-r from-neural-violet/20 to-neural-violet/20">
+        <section className="py-20 bg-gradient-to-r from-twilight-indigo/20 to-twilight-indigo/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
@@ -806,8 +821,8 @@ export default function NewsletterPage() {
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-neural-violet/20 space-y-4">
-                  <h3 className="text-lg font-bold text-neural-violet">
+                <div className="bg-background/80 backdrop-blur-sm rounded-2xl p-6 border border-twilight-indigo/20 space-y-4">
+                  <h3 className="text-lg font-bold text-twilight-indigo">
                     Wybór 1: Dołącz do pierwszych 100
                   </h3>
                   <ul className="text-sm space-y-2 text-left">
@@ -836,7 +851,7 @@ export default function NewsletterPage() {
                     />
                     <Button
                       type="submit"
-                      className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white font-semibold"
+                      className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white font-semibold"
                       disabled={isLoading}
                     >
                       {isLoading

@@ -9,7 +9,8 @@
   font-size: 4.2em;
   margin-bottom: 15px;
   line-height: 1.3;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* === Brand Color Variables and Gradients === */
@@ -25,28 +26,65 @@
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-  /* Design System Variables - Proper HSL values */
-  --background-primary: 210 10% 96%;
-  --background-secondary: 210 10% 90%;
-  --background-tertiary: 210 10% 93%;
-  --text-primary: 210 10% 20%;
-  --text-secondary: 221 8% 34%;
-  --border-primary: 210 10% 84%;
+  /* Design System Variables - Premium Tinted Neutrals */
+  --background-primary: 220 20% 97%;
+  --background-secondary: 220 18% 94%;
+  --background-tertiary: 220 16% 95%;
+  --text-primary: 220 30% 18%;
+  --text-secondary: 220 25% 45%;
+  --border-primary: 220 15% 88%;
   --border-subtle: rgba(0, 0, 0, 0.1);
 
+  /* Premium Dark Surfaces */
+  --surface-dark-base: 220 30% 8%;
+  --surface-dark-elevated: 220 28% 12%;
+  --surface-dark-floating: 220 25% 16%;
+  --text-on-dark-primary: 220 20% 95%;
+  --text-on-dark-secondary: 220 18% 75%;
+  --text-on-dark-tertiary: 220 15% 58%;
+
+  /* Premium Gradient Overlays */
+  --gradient-body-primary: 267 40% 96%;
+  --gradient-body-overlay: 220 30% 96%;
+
   /* Brand Colors - HSL values */
-  --color-primary: 267 100% 50%;
-  --color-primary-light: 267 100% 65%;
-  --color-primary-dark: 249 56% 49%;
-  --color-accent: 291 62% 64%;
-  --color-indigo: 233 31% 32%;
+  /* DEPRECATED: Tech/SaaS colors - migrate to transformation colors below */
+  --color-primary: 267 100% 50%; /* neural-violet - DEPRECATED */
+  --color-primary-light: 267 100% 65%; /* DEPRECATED */
+  --color-primary-dark: 249 56% 49%; /* quantum-blue - DEPRECATED */
+  --color-accent: 291 62% 64%; /* ascension-pink - DEPRECATED */
+  --color-indigo: 233 31% 32%; /* DEPRECATED */
   --color-premium: 45 74% 52%;
 
+  /* Neural Lighthouse Brand Colors - AI-enhanced mindset transformation */
+  /* Primary: Neural Blue - Intelligence, guidance, lighthouse beam (60% usage) */
+  --neural-blue: 217 91% 60%; /* #2563eb - trust, intelligence, digital clarity */
+  --neural-blue-light: 217 91% 70%;
+  --neural-blue-dark: 217 91% 50%;
+
+  /* Secondary: Twilight Indigo - Premium transformation depth (25% usage) */
+  --twilight-indigo: 244 45% 58%; /* #7C73E6 - wisdom, AI transformation, premium */
+  --twilight-indigo-light: 244 45% 68%;
+  --twilight-indigo-dark: 244 45% 48%;
+
+  /* Accent: Pulse Cyan - Tech edge, moment of insight (5% usage - surgical only) */
+  --pulse-cyan: 191 85% 56%; /* #1AC8DB - innovation, tech edge, digital insight */
+
+  /* Premium: Zenith Gold - Achievement, breakthrough (10% usage) */
+  --zenith-gold: 38 92% 50%; /* #f59e0b - achievement, premium tier, transformation complete */
+
+  /* Legacy aliases for backward compatibility - MIGRATE TO NEW NAMES */
+  --transformation-blue: 217 91% 60%; /* Use --neural-blue instead */
+  --transformation-blue-light: 217 91% 70%; /* Use --neural-blue-light instead */
+  --transformation-blue-dark: 217 91% 50%; /* Use --neural-blue-dark instead */
+  --success-green: 244 45% 58%; /* REPLACED with --twilight-indigo */
+  --growth-gold: 38 92% 50%; /* Use --zenith-gold instead */
+
   /* UI States - WCAG AA compliant with white text */
-  --color-success: 160 84% 39%;
+  --color-success: 244 45% 58%; /* Updated to twilight-indigo */
   --color-warning: 25 95% 53%;
   --color-error: 0 84% 60%;
-  --color-info: 249 56% 49%;
+  --color-info: 217 91% 60%; /* Updated to neural-blue */
 
   /* TrainTheTrainer Design System */
   --background: 0 0% 100%;
@@ -72,7 +110,7 @@
 
   --premium: 220 70% 20%;
   --premium-foreground: 0 0% 98%;
-  
+
   --gold: 45 95% 60%;
   --gold-foreground: 215 25% 15%;
 
@@ -84,10 +122,19 @@
   --ring: 220 60% 25%;
 
   /* Premium gradients */
-  --gradient-premium: linear-gradient(135deg, hsl(220 60% 25%), hsl(220 70% 35%));
+  --gradient-premium: linear-gradient(
+    135deg,
+    hsl(220 60% 25%),
+    hsl(220 70% 35%)
+  );
   --gradient-gold: linear-gradient(135deg, hsl(45 95% 60%), hsl(45 90% 70%));
-  --gradient-hero: linear-gradient(135deg, hsl(220 60% 25%) 0%, hsl(220 70% 35%) 50%, hsl(45 90% 55%) 100%);
-  
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(220 60% 25%) 0%,
+    hsl(220 70% 35%) 50%,
+    hsl(45 90% 55%) 100%
+  );
+
   /* Shadows */
   --shadow-premium: 0 20px 40px -10px hsl(220 60% 25% / 0.2);
   --shadow-card: 0 4px 20px hsl(220 60% 25% / 0.1);
@@ -132,27 +179,29 @@
   --transition-slow: 0.5s ease;
 }
 
-
-/* === Gradient Backgrounds === */
+/* === Premium Gradient Backgrounds === */
 body {
   font-family: var(--font-family-primary);
   color: var(--text-color);
   background:
-    radial-gradient(circle at top left, rgba(124, 0, 255, 0.2), transparent 20%)
+    radial-gradient(
+        circle at top left,
+        hsl(var(--gradient-body-primary) / 0.08),
+        transparent 20%
+      )
       fixed,
     radial-gradient(
         circle at bottom right,
-        rgba(74, 54, 194, 0.2),
+        hsl(var(--gradient-body-overlay) / 0.05),
         transparent 30%
       )
       fixed,
-    var(--bg-color) fixed;
+    hsl(var(--background-primary)) fixed;
   min-height: 100vh;
   transition:
     background 0.3s,
     color 0.3s;
 }
-
 
 /* === Base Typography and Spacing === */
 @layer base {
@@ -478,13 +527,14 @@ body {
 }
 
 .handwritten-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 100%;
   height: 6px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'%3E%3Cpath d='M1,4 Q25,3 50,4.5 T99,4' stroke='%23dc2626' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'%3E%3Cpath d='M1,4 Q25,3 50,4.5 T99,4' stroke='%23dc2626' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+    repeat-x;
   background-size: 100px 8px;
   transform: scaleX(0);
   transform-origin: left;
@@ -506,10 +556,12 @@ body {
 /* Hero Section */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, 
-    hsl(var(--background)) 0%, 
-    hsl(var(--secondary)/30%) 50%, 
-    hsl(var(--muted)) 100%);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--background)) 0%,
+    hsl(var(--secondary) / 30%) 50%,
+    hsl(var(--muted)) 100%
+  );
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -614,9 +666,11 @@ body {
 .hero-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top right, 
-    hsl(var(--premium) / 0.1) 0%, 
-    transparent 100%);
+  background: linear-gradient(
+    to top right,
+    hsl(var(--premium) / 0.1) 0%,
+    transparent 100%
+  );
 }
 
 .hero-testimonial {

@@ -28,7 +28,7 @@ export default function Work() {
                 Zbudowałeś karierę, firmę, reputację. Coś jednak nie działa.
               </h2>
               
-              <div className="bg-white/50 rounded-xl p-8 border border-neural-violet/20 mb-8">
+              <div className="bg-white/50 rounded-xl p-8 border border-twilight-indigo/20 mb-8">
                 <p className="text-lg text-subtle-slate mb-6 leading-relaxed">
                   Jeśli tu jesteś, to prawdopodobnie dlatego, że logika, która zaprowadziła Cię na szczyt, 
                   przestała rozwiązywać Twoje wewnętrzne problemy. Rozpoznajesz ten stan:
@@ -37,7 +37,7 @@ export default function Work() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <div className="w-3 h-3 bg-neural-violet rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="w-3 h-3 bg-twilight-indigo rounded-full mt-2 mr-4 flex-shrink-0"></div>
                       <div>
                         <h3 className="font-semibold text-deep-charcoal mb-2">Wewnętrzny konflikt:</h3>
                         <p className="text-subtle-slate">
@@ -48,7 +48,7 @@ export default function Work() {
                     </div>
                     
                     <div className="flex items-start">
-                      <div className="w-3 h-3 bg-neural-violet rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="w-3 h-3 bg-twilight-indigo rounded-full mt-2 mr-4 flex-shrink-0"></div>
                       <div>
                         <h3 className="font-semibold text-deep-charcoal mb-2">Pętla analityczna:</h3>
                         <p className="text-subtle-slate">
@@ -61,7 +61,7 @@ export default function Work() {
                   
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <div className="w-3 h-3 bg-neural-violet rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="w-3 h-3 bg-twilight-indigo rounded-full mt-2 mr-4 flex-shrink-0"></div>
                       <div>
                         <h3 className="font-semibold text-deep-charcoal mb-2">Cynizm i wypalenie:</h3>
                         <p className="text-subtle-slate">
@@ -72,7 +72,7 @@ export default function Work() {
                     </div>
                     
                     <div className="flex items-start">
-                      <div className="w-3 h-3 bg-neural-violet rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="w-3 h-3 bg-twilight-indigo rounded-full mt-2 mr-4 flex-shrink-0"></div>
                       <div>
                         <h3 className="font-semibold text-deep-charcoal mb-2">Poczucie fragmentacji:</h3>
                         <p className="text-subtle-slate">
@@ -85,7 +85,7 @@ export default function Work() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-neural-violet/10 to-neural-violet/10 rounded-xl p-6 border border-neural-violet/20">
+              <div className="bg-gradient-to-r from-twilight-indigo/10 to-twilight-indigo/10 rounded-xl p-6 border border-twilight-indigo/20">
                 <p className="text-lg text-deep-charcoal font-medium text-center">
                   To nie jest kryzys, który można rozwiązać kolejną książką o produktywności czy urlopem. 
                   To sygnał, że Twój dotychczasowy system operacyjny wymaga fundamentalnej aktualizacji.
@@ -100,7 +100,7 @@ export default function Work() {
                 To inżynieria Twojej wewnętrznej tożsamości.
               </h2>
               
-              <div className="bg-white/50 rounded-xl p-8 border border-neural-violet/20 mb-8">
+              <div className="bg-white/50 rounded-xl p-8 border border-twilight-indigo/20 mb-8">
                 <p className="text-lg text-subtle-slate mb-6 leading-relaxed">
                   Nie oferuję gotowych rozwiązań ani motywacyjnych frazesów. Pracuję z Twoim unikalnym systemem – 
                   inteligencją, mechanizmami obronnymi i wewnętrznymi konfliktami. Moja metoda to <strong>adaptacyjne podejście transformacyjne</strong>, 
@@ -113,9 +113,9 @@ export default function Work() {
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-white/70 rounded-lg p-6 border border-neural-violet/30">
+                  <div className="bg-white/70 rounded-lg p-6 border border-twilight-indigo/30">
                     <h4 className="text-xl font-bold text-deep-charcoal mb-4 flex items-center">
-                      <Target className="mr-3 text-neural-violet" size={24} />
+                      <Target className="mr-3 text-twilight-indigo" size={24} />
                       Protokół A: Konfrontacja dla Analityków
                     </h4>
                     <p className="text-subtle-slate leading-relaxed">
@@ -125,9 +125,9 @@ export default function Work() {
                     </p>
                   </div>
                   
-                  <div className="bg-white/70 rounded-lg p-6 border border-neural-violet/30">
+                  <div className="bg-white/70 rounded-lg p-6 border border-twilight-indigo/30">
                     <h4 className="text-xl font-bold text-deep-charcoal mb-4 flex items-center">
-                      <Users className="mr-3 text-neural-violet" size={24} />
+                      <Users className="mr-3 text-twilight-indigo" size={24} />
                       Protokół B: Integracja dla Wizjonerów
                     </h4>
                     <p className="text-subtle-slate leading-relaxed">
@@ -138,7 +138,7 @@ export default function Work() {
                   </div>
                 </div>
                 
-                <div className="mt-8 p-6 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 rounded-lg border border-ascension-pink/30">
+                <div className="mt-8 p-6 bg-gradient-to-r from-zenith-gold/10 to-twilight-indigo/10 rounded-lg border border-zenith-gold/30">
                   <p className="text-lg text-deep-charcoal font-medium text-center">
                     W obu przypadkach celem jest to samo: nie eliminacja problematycznych części, ale ich <strong>integracja</strong>. 
                     Bo Twoja siła nie leży w wyborze między byciem skutecznym liderem a autentycznym człowiekiem. Leży w ich połączeniu.
@@ -158,9 +158,9 @@ export default function Work() {
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white/50 rounded-xl p-6 border border-neural-violet/20">
+                <div className="bg-white/50 rounded-xl p-6 border border-twilight-indigo/20">
                   <div className="flex items-start mb-4">
-                    <CheckCircle className="text-neural-violet mr-3 mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-twilight-indigo mr-3 mt-1 flex-shrink-0" size={24} />
                     <h3 className="text-xl font-semibold text-deep-charcoal">
                       Zintegrowana Tożsamość Lidera
                     </h3>
@@ -171,9 +171,9 @@ export default function Work() {
                   </p>
                 </div>
                 
-                <div className="bg-white/50 rounded-xl p-6 border border-neural-violet/20">
+                <div className="bg-white/50 rounded-xl p-6 border border-twilight-indigo/20">
                   <div className="flex items-start mb-4">
-                    <CheckCircle className="text-neural-violet mr-3 mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-twilight-indigo mr-3 mt-1 flex-shrink-0" size={24} />
                     <h3 className="text-xl font-semibold text-deep-charcoal">
                       Autentyczne Przywództwo
                     </h3>
@@ -184,9 +184,9 @@ export default function Work() {
                   </p>
                 </div>
                 
-                <div className="bg-white/50 rounded-xl p-6 border border-neural-violet/20">
+                <div className="bg-white/50 rounded-xl p-6 border border-twilight-indigo/20">
                   <div className="flex items-start mb-4">
-                    <CheckCircle className="text-neural-violet mr-3 mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-twilight-indigo mr-3 mt-1 flex-shrink-0" size={24} />
                     <h3 className="text-xl font-semibold text-deep-charcoal">
                       Klarowność i Spokój Wewnętrzny
                     </h3>
@@ -197,9 +197,9 @@ export default function Work() {
                   </p>
                 </div>
                 
-                <div className="bg-white/50 rounded-xl p-6 border border-neural-violet/20">
+                <div className="bg-white/50 rounded-xl p-6 border border-twilight-indigo/20">
                   <div className="flex items-start mb-4">
-                    <CheckCircle className="text-neural-violet mr-3 mt-1 flex-shrink-0" size={24} />
+                    <CheckCircle className="text-twilight-indigo mr-3 mt-1 flex-shrink-0" size={24} />
                     <h3 className="text-xl font-semibold text-deep-charcoal">
                       Trwała Odporność na Wypalenie
                     </h3>
@@ -213,7 +213,7 @@ export default function Work() {
             </section>
             
             {/* Final CTA */}
-            <section className="bg-gradient-to-r from-neural-violet/10 via-ascension-pink/10 to-neural-violet/10 rounded-xl p-8 text-center border border-neural-violet/20">
+            <section className="bg-gradient-to-r from-twilight-indigo/10 via-zenith-gold/10 to-twilight-indigo/10 rounded-xl p-8 text-center border border-twilight-indigo/20">
               <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
                 Nie jesteś skazany na ten wewnętrzny konflikt.
               </h2>
@@ -221,9 +221,9 @@ export default function Work() {
                 Jeśli jesteś gotów na pracę, która jest równie wymagająca, co przynosząca fundamentalną zmianę – zrób pierwszy krok.
               </p>
               
-              <div className="bg-white/70 rounded-lg p-6 mb-8 border border-neural-violet/30">
+              <div className="bg-white/70 rounded-lg p-6 mb-8 border border-twilight-indigo/30">
                 <h3 className="text-2xl font-semibold text-deep-charcoal mb-4 flex items-center justify-center">
-                  <Zap className="mr-3 text-neural-violet" size={28} />
+                  <Zap className="mr-3 text-twilight-indigo" size={28} />
                   Wezwanie do Działania
                 </h3>
                 <p className="text-lg text-deep-charcoal font-medium">

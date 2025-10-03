@@ -52,7 +52,7 @@ const WebinarExpired = () => {
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <MailIcon className="h-10 w-10 text-neural-violet mb-4 mx-auto" />
+                <MailIcon className="h-10 w-10 text-twilight-indigo mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
                   Zapisz się na powiadomienie o kolejnym webinarze
                 </h3>
@@ -61,15 +61,15 @@ const WebinarExpired = () => {
                   przegapisz kolejnej okazji!
                 </p>
                 <Button
-                  className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   onClick={handleNewsletterSignup}
                 >
                   ZAPISZ SIĘ NA POWIADOMIENIE
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-br from-neural-violet/10 to-ascension-pink/10 p-6 rounded-xl border border-neural-violet/20">
-                <ArrowRight className="h-10 w-10 text-neural-violet mb-4 mx-auto" />
+              <div className="bg-gradient-to-br from-twilight-indigo/10 to-zenith-gold/10 p-6 rounded-xl border border-twilight-indigo/20">
+                <ArrowRight className="h-10 w-10 text-twilight-indigo mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
                   Sprawdź program LifeOS: System Upgrade
                 </h3>
@@ -78,7 +78,7 @@ const WebinarExpired = () => {
                   specjalisty do suwerennego lidera.
                 </p>
                 <Button
-                  className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white"
+                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   onClick={() => navigate("/program/lifeos-system-upgrade")}
                 >
                   DOWIEDZ SIĘ WIĘCEJ O PROGRAMIE
@@ -99,7 +99,7 @@ const WebinarExpired = () => {
 
               <Button
                 size="lg"
-                className="bg-neural-violet hover:bg-neural-violet/90 text-white"
+                className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                 onClick={handleDownloadGuide}
               >
                 <Download className="mr-2 h-5 w-5" /> Pobierz Bezpłatny

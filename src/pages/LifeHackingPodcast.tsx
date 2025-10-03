@@ -79,7 +79,7 @@ const LifeHackingPodcast = () => {
   return (
     <Layout>
       {/* Hero Section from /program style */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-deep-space to-neural-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -112,7 +112,7 @@ const LifeHackingPodcast = () => {
             </p>
 
             <div className="mt-8 p-4 bg-luminous-white rounded-lg border border-border">
-              <h3 className="font-semibold text-neural-violet mb-2">
+              <h3 className="font-semibold text-twilight-indigo mb-2">
                 Informacje o podcaście:
               </h3>
               <p className="text-deep-charcoal">
@@ -152,7 +152,7 @@ const LifeHackingPodcast = () => {
             />
 
             <div className="mt-10 text-center">
-              <button className="inline-flex items-center px-6 py-3 bg-ascension-pink hover:bg-neural-violet text-white rounded-lg transition-colors">
+              <button className="inline-flex items-center px-6 py-3 bg-zenith-gold hover:bg-twilight-indigo text-white rounded-lg transition-colors">
                 Załaduj więcej odcinków <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
@@ -174,12 +174,12 @@ const LifeHackingPodcast = () => {
             <input
               type="email"
               placeholder="Twój adres email"
-              className="flex-grow py-2 px-4 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-neural-violet"
+              className="flex-grow py-2 px-4 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-twilight-indigo"
               required
             />
             <button
               type="submit"
-              className="bg-neural-violet hover:bg-neural-violet/80 text-white px-4 py-2 rounded-r-lg transition-colors"
+              className="bg-twilight-indigo hover:bg-twilight-indigo/80 text-white px-4 py-2 rounded-r-lg transition-colors"
             >
               Zapisz się
             </button>

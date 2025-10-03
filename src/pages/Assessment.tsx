@@ -97,7 +97,7 @@ const Assessment = () => {
                 <ul className="space-y-3">
                   {webinarPromises.map((promise, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Zap className="h-6 w-6 text-neural-violet flex-shrink-0 mt-0.5" />
+                      <Zap className="h-6 w-6 text-twilight-indigo flex-shrink-0 mt-0.5" />
                       <span>{promise}</span>
                     </li>
                   ))}
@@ -173,7 +173,7 @@ const Assessment = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-neural-violet hover:bg-neural-violet/90 text-white mt-2"
+                      className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white mt-2"
                     >
                       Rozpocznij test <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -190,7 +190,7 @@ const Assessment = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-neural-violet/10 to-ascension-pink/10">
+      <section className="py-16 bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
             Transformacja zaczyna się od samopoznania
@@ -206,7 +206,7 @@ const Assessment = () => {
                 .getElementById("assessment")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-neural-violet hover:bg-neural-violet/90 text-white px-6 py-2"
+            className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white px-6 py-2"
           >
             Rozpocznij test teraz <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

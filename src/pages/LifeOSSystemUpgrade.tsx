@@ -16,7 +16,7 @@ export default function LifeOSSystemUpgrade() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -56,22 +56,22 @@ export default function LifeOSSystemUpgrade() {
                 "Ale w środku? Poczucie fragmentacji. Wrażenie, że żonglujesz różnymi tożsamościami – lidera, partnera, wizjonera – i boisz się, że zaraz upuścisz jedną z piłek."
               ].map((item, index) => (
                 <GlassCard key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-4 text-neural-violet flex-shrink-0 mt-1" />
+                  <CheckCircle className="h-6 w-6 mr-4 text-twilight-indigo flex-shrink-0 mt-1" />
                   <p className="text-lg text-deep-charcoal/90">{item}</p>
                 </GlassCard>
               ))}
             </div>
 
-            <div className="text-center bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 p-8 rounded-2xl mb-8">
+            <div className="text-center bg-gradient-to-r from-zenith-gold/10 to-twilight-indigo/10 p-8 rounded-2xl mb-8">
               <p className="text-xl font-bold text-deep-charcoal mb-4">
                 Próbowałeś już standardowych rozwiązań. Dostałeś listy "actionable steps", motywacyjne cytaty i kolejne frameworki. Ale problem nie leży w braku narzędzi.
               </p>
-              <p className="text-2xl font-bold text-ascension-pink">
+              <p className="text-2xl font-bold text-zenith-gold">
                 Twój problem to wewnętrzny konflikt systemowy.
               </p>
             </div>
 
-            <div className="text-center bg-gradient-to-r from-neural-violet/10 to-quantum-blue/10 p-8 rounded-2xl">
+            <div className="text-center bg-gradient-to-r from-twilight-indigo/10 to-neural-blue/10 p-8 rounded-2xl">
               <p className="text-xl font-bold text-deep-charcoal">
                 Nie potrzebujesz kolejnej aplikacji mentalnej. Potrzebujesz upgrade'u całego systemu operacyjnego, na którym działasz.
               </p>
@@ -81,7 +81,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Why Traditional Solutions Failed */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
+      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
@@ -121,7 +121,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Life OS System Upgrade */}
-      <section className="relative py-20 bg-gradient-to-b from-deep-space via-neural-violet to-quantum-blue overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-b from-deep-space via-twilight-indigo to-neural-blue overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -135,7 +135,7 @@ export default function LifeOSSystemUpgrade() {
             </p>
             
             <p className="text-xl text-center mb-16 text-silver-mist/80">
-              Life OS to nie jest coaching. To nie jest terapia. To <span className="text-ascension-pink font-bold">głęboka praca na poziomie Twojej tożsamości</span>, zaprojektowana dla liderów, którzy myślą systemowo i są gotowi na prawdziwą transformację.
+              Life OS to nie jest coaching. To nie jest terapia. To <span className="text-zenith-gold font-bold">głęboka praca na poziomie Twojej tożsamości</span>, zaprojektowana dla liderów, którzy myślą systemowo i są gotowi na prawdziwą transformację.
             </p>
 
             <div className="max-w-4xl mx-auto space-y-8">
@@ -143,8 +143,8 @@ export default function LifeOSSystemUpgrade() {
               <div className="group relative">
                 <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="bg-ascension-pink/20 p-4 rounded-2xl">
-                      <Brain className="w-8 h-8 text-ascension-pink" />
+                    <div className="bg-zenith-gold/20 p-4 rounded-2xl">
+                      <Brain className="w-8 h-8 text-zenith-gold" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">FAZA 1: DIAGNOSTYKA SYSTEMU</h3>
@@ -161,8 +161,8 @@ export default function LifeOSSystemUpgrade() {
               <div className="group relative">
                 <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="bg-neural-violet/20 p-4 rounded-2xl">
-                      <Zap className="w-8 h-8 text-neural-violet" />
+                    <div className="bg-twilight-indigo/20 p-4 rounded-2xl">
+                      <Zap className="w-8 h-8 text-twilight-indigo" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">FAZA 2: DEKONSTRUKCJA I WYZWANIE</h3>
@@ -179,8 +179,8 @@ export default function LifeOSSystemUpgrade() {
               <div className="group relative">
                 <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="bg-neural-violet/20 p-4 rounded-2xl">
-                      <GitMerge className="w-8 h-8 text-neural-violet" />
+                    <div className="bg-twilight-indigo/20 p-4 rounded-2xl">
+                      <GitMerge className="w-8 h-8 text-twilight-indigo" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">FAZA 3: INTEGRACJA RDZENIA</h3>
@@ -197,7 +197,7 @@ export default function LifeOSSystemUpgrade() {
               <div className="group relative">
                 <GlassCard padding="lg" className="bg-white/10 backdrop-blur-sm border border-white/20">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="bg-quantum-blue/20 p-4 rounded-2xl">
+                    <div className="bg-neural-blue/20 p-4 rounded-2xl">
                       <Crown className="w-8 h-8 text-white" />
                     </div>
                     <div>
@@ -266,8 +266,8 @@ export default function LifeOSSystemUpgrade() {
               ].map((item, index) => (
                 <GlassCard key={index} padding="lg" className="flex flex-col">
                   <div className="flex items-center mb-4">
-                    <div className="bg-neural-violet/10 p-3 rounded-lg mr-4">
-                      {React.cloneElement(item.icon, { className: "w-8 h-8 text-neural-violet" })}
+                    <div className="bg-twilight-indigo/10 p-3 rounded-lg mr-4">
+                      {React.cloneElement(item.icon, { className: "w-8 h-8 text-twilight-indigo" })}
                     </div>
                     <h3 className="text-xl font-bold text-deep-charcoal">{item.title}</h3>
                   </div>
@@ -280,7 +280,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Why This Method Works */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
+      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
@@ -289,28 +289,28 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="space-y-8">
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Podejście Adaptacyjne, nie Szablonowe</h3>
+                <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">Podejście Adaptacyjne, nie Szablonowe</h3>
                 <p className="text-deep-charcoal/90 text-lg">
                   Proces jest w 100% dostosowany do Ciebie. Dla jednych będzie jak ostra, konfrontacyjna "terapia szokowa", dla innych jak delikatne, sokratejskie prowadzenie. Diagnozuję, czego naprawdę potrzebujesz do przełomu.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Praca na Poziomie Tożsamości, nie Zachowań</h3>
+                <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">Praca na Poziomie Tożsamości, nie Zachowań</h3>
                 <p className="text-deep-charcoal/90 text-lg">
                   Nie zmieniamy tylko tego, co robisz. Zmieniamy to, kim jesteś jako lider i człowiek. Integrujemy Twoje role, talenty i "cienie" w jedną, potężną całość.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Integracja, a nie Eliminacja</h3>
+                <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">Integracja, a nie Eliminacja</h3>
                 <p className="text-deep-charcoal/90 text-lg">
                   Nie walczymy z Twoim analitycznym umysłem czy perfekcjonizmem. Uczymy je współpracować z Twoją intuicją, kreatywnością i wrażliwością, tworząc pełniejszy i bardziej skuteczny model działania.
                 </p>
               </GlassCard>
 
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-4 text-neural-violet">Kontener Bezpieczeństwa</h3>
+                <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">Kontener Bezpieczeństwa</h3>
                 <p className="text-deep-charcoal/90 text-lg">
                   To intensywny proces. Dlatego tworzę dla Ciebie bezpieczną przestrzeń, w której możesz się rozpaść, by zbudować się na nowo, silniejszym. Zapewniam wsparcie i jestem dostępny również między sesjami.
                 </p>
@@ -330,27 +330,27 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <GlassCard padding="lg">
-                <h3 className="text-2xl font-bold mb-6 text-neural-violet">Program:</h3>
+                <h3 className="text-2xl font-bold mb-6 text-twilight-indigo">Program:</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 mr-3 text-twilight-indigo flex-shrink-0 mt-1" />
                     <p className="text-deep-charcoal/90">8 tygodni, 8 intensywnych, transformujących sesji (od 50 min do 2,5h)</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 mr-3 text-twilight-indigo flex-shrink-0 mt-1" />
                     <p className="text-deep-charcoal/90">Dostęp do mnie pomiędzy sesjami w razie potrzeby</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-6 h-6 mr-3 text-neural-violet flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 mr-3 text-twilight-indigo flex-shrink-0 mt-1" />
                     <p className="text-deep-charcoal/90">Dożywotni dostęp do społeczności absolwentów programu</p>
                   </div>
                 </div>
               </GlassCard>
 
-              <GlassCard padding="lg" className="bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
-                <h3 className="text-2xl font-bold mb-6 text-neural-violet">Inwestycja:</h3>
+              <GlassCard padding="lg" className="bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
+                <h3 className="text-2xl font-bold mb-6 text-twilight-indigo">Inwestycja:</h3>
                 <div className="text-center mb-6">
-                  <p className="text-4xl font-bold text-ascension-pink mb-2">16.000 PLN</p>
+                  <p className="text-4xl font-bold text-zenith-gold mb-2">16.000 PLN</p>
                   <p className="text-lg text-deep-charcoal/80">za pełen, 8-tygodniowy proces transformacyjny</p>
                 </div>
                 
@@ -371,7 +371,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Qualification */}
-      <section className="py-20 bg-gradient-to-br from-neural-violet/5 to-ascension-pink/5">
+      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
@@ -418,7 +418,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Discovery Session CTA */}
-      <section id="discovery-section" className="py-20 bg-gradient-to-br from-deep-space via-neural-violet to-quantum-blue">
+      <section id="discovery-section" className="py-20 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
@@ -427,7 +427,7 @@ export default function LifeOSSystemUpgrade() {
             
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-8">
               <p className="text-xl text-silver-mist mb-6">
-                Zanim zdecydujemy o współpracy, musimy przeprowadzić <span className="text-ascension-pink font-bold">30-minutową Sesję Discovery.</span>
+                Zanim zdecydujemy o współpracy, musimy przeprowadzić <span className="text-zenith-gold font-bold">30-minutową Sesję Discovery.</span>
               </p>
               
               <p className="text-lg text-silver-mist/90 mb-6">
@@ -437,21 +437,21 @@ export default function LifeOSSystemUpgrade() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 mr-3 text-zenith-gold flex-shrink-0 mt-1" />
                     <p className="text-silver-mist/90">Zdiagnozujemy Twój obecny system i kluczowe blokady</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 mr-3 text-zenith-gold flex-shrink-0 mt-1" />
                     <p className="text-silver-mist/90">Sprawdzimy, czy moja metodologia jest odpowiedzią na Twoje wyzwania</p>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 mr-3 text-zenith-gold flex-shrink-0 mt-1" />
                     <p className="text-silver-mist/90">Określimy, czy jesteś gotowy na ten rodzaj głębokiej pracy</p>
                   </div>
                   <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 mr-3 text-ascension-pink flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-5 h-5 mr-3 text-zenith-gold flex-shrink-0 mt-1" />
                     <p className="text-silver-mist/90">Oboje podejmiemy decyzję, czy chcemy razem pracować</p>
                   </div>
                 </div>
@@ -472,7 +472,7 @@ export default function LifeOSSystemUpgrade() {
             <p className="text-silver-mist/80 italic text-sm mb-4">
               Liczba miejsc w programie jest ściśle ograniczona do 5 osób jednocześnie, aby zapewnić maksymalną jakość i moje zaangażowanie.
             </p>
-            <p className="text-ascension-pink font-bold">Obecnie dostępne: 2</p>
+            <p className="text-zenith-gold font-bold">Obecnie dostępne: 2</p>
 
             <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 mt-8">
               <p className="text-silver-mist/90">

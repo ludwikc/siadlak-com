@@ -45,12 +45,13 @@ export default function TrainTheTrainer() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet text-white overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-56 h-56 bg-gold rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
+      <section className="relative py-20 md:py-32 bg-transformation-light overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
+        {/* Premium static background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-96 h-96 bg-neural-blue rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-growth-gold rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -65,31 +66,25 @@ export default function TrainTheTrainer() {
                 </Badge>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                <span className="bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
-                  Jesteś
-                </span>{" "}
-                Ekspertem.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-deep-charcoal">
+                You've Mastered Your Craft.
                 <br />
-                Pora zostać
-                <br />
-                <span className="bg-gradient-to-r from-white to-gold bg-clip-text text-transparent">
-                  Przewodnikiem.
+                <span className="bg-gradient-to-r from-neural-blue to-growth-gold bg-clip-text text-transparent">
+                  Now Master Your Impact.
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl mb-6 text-white/90 leading-relaxed">
-                Prawdziwa wartość twojej wiedzy (nawet, jeśli to najsuchszy
-                temat – jak konfiguracja SQL, czy architektura Azure) objawia
-                się dopiero wtedy, gdy zmienia myślenie i umiejętności innych
-                ludzi.
+              <p className="text-xl md:text-2xl mb-6 text-deep-charcoal/80 leading-relaxed">
+                Your expertise changes systems.{" "}
+                <strong className="text-neural-blue">
+                  Your teaching changes lives.
+                </strong>
               </p>
 
-              <p className="text-lg mb-8 text-white/80 leading-relaxed">
-                Naucz się świadomie kształtować umysły swoich słuchaczy i
-                zostawiać po sobie trwały ślad. Zdobywaj kompetencje, które
-                pozwolą ci nie tylko uczyć, ale i inspirować do prawdziwej
-                zmiany.
+              <p className="text-lg mb-8 text-deep-charcoal/70 leading-relaxed">
+                Learn to lead transformation, not just deliver training. 8 weeks
+                to become the mentor who shapes minds, inspires change, and
+                leaves a lasting legacy in every room you enter.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -99,9 +94,9 @@ export default function TrainTheTrainer() {
                   rel="noopener noreferrer"
                 >
                   <div className="relative inline-block group">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-ascension-pink via-neural-violet to-ascension-pink rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-twilight-indigo to-neural-blue rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
                     <a href="/discovery">
-                      <button className="relative bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-neural-violet hover:to-ascension-pink text-white px-10 py-5 rounded-xl text-lg font-bold shadow-2xl border border-white/20 flex items-center gap-3 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(218,30,174,0.6)]">
+                      <button className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue text-white px-10 py-5 rounded-xl text-lg font-bold shadow-2xl border border-white/20 flex items-center gap-3 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_40px_rgba(124,115,230,0.6)]">
                         Umów Sesję Discovery
                         <ArrowRight size={20} />
                       </button>
@@ -112,12 +107,12 @@ export default function TrainTheTrainer() {
 
               <div className="flex flex-wrap gap-6 text-sm">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
-                  <span className="text-white/80">Tylko 8 miejsc</span>
+                  <div className="w-2 h-2 bg-growth-gold rounded-full"></div>
+                  <span className="text-deep-charcoal/70">Tylko 8 miejsc</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-neural-violet rounded-full animate-pulse"></div>
-                  <span className="text-white/80">
+                  <div className="w-2 h-2 bg-neural-blue rounded-full"></div>
+                  <span className="text-deep-charcoal/70">
                     8 tygodni intensywnej pracy
                   </span>
                 </div>
@@ -133,11 +128,11 @@ export default function TrainTheTrainer() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
-              <div className="mt-6 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-gold font-semibold mb-2">
+              <div className="mt-6 bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-neural-blue/20 shadow-lg">
+                <div className="text-growth-gold font-semibold mb-2">
                   US Department of Defense
                 </div>
-                <div className="text-white/90 italic">
+                <div className="text-deep-charcoal/90 italic">
                   "Exceptional training methodology that transformed our
                   technical capabilities"
                 </div>
@@ -145,16 +140,16 @@ export default function TrainTheTrainer() {
 
               {/* Trust Indicators */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm">
-                <div className="flex items-center gap-2 text-white/70">
-                  <span className="text-gold text-lg">🏆</span>
+                <div className="flex items-center gap-2 text-deep-charcoal/70">
+                  <span className="text-growth-gold text-lg">🏆</span>
                   <span>19 lat doświadczenia</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <span className="text-gold text-lg">🌍</span>
+                <div className="flex items-center gap-2 text-deep-charcoal/70">
+                  <span className="text-growth-gold text-lg">🌍</span>
                   <span>50+ krajów</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/70">
-                  <span className="text-gold text-lg">⭐</span>
+                <div className="flex items-center gap-2 text-deep-charcoal/70">
+                  <span className="text-growth-gold text-lg">⭐</span>
                   <span>10,000+ absolwentów</span>
                 </div>
               </div>
@@ -164,24 +159,20 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Qualification Criteria Section */}
-      <section className="relative py-20 bg-gradient-to-b from-white via-deep-space/5 to-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-40 h-40 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-56 h-56 bg-deep-space rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
+      <section className="relative py-20 bg-muted/30 overflow-hidden">
+        {/* Clean section - let content breathe */}
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-deep-space/10 text-deep-space border-2 border-deep-space/30 font-semibold">
+              <Badge className="mb-6 px-6 py-3 bg-neural-blue/10 text-neural-blue border-2 border-neural-blue/30 font-semibold">
                 Kryteria Kwalifikacyjne
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Kwalifikujesz się,{" "}
-                <span className="text-quantum-blue">jeśli...</span>
+                <span className="text-neural-blue">jeśli...</span>
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto mb-4"></div>
+              <div className="w-24 h-1.5 bg-neural-blue rounded-full mx-auto mb-4"></div>
               <p className="text-lg text-deep-charcoal/70 max-w-2xl mx-auto">
                 Ten program jest dla ekspertów gotowych na transformację w
                 globalnych trenerów premium
@@ -213,13 +204,13 @@ export default function TrainTheTrainer() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-2xl p-8 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
+                  className="group relative bg-white rounded-2xl p-8 border-2 border-neural-blue/20 hover:border-neural-blue/50 shadow-lg hover:shadow-2xl hover:shadow-neural-blue/20 transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className="flex items-start gap-6">
                     <div className="relative flex-shrink-0">
                       <div className="absolute inset-0 bg-white rounded-xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="relative w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <item.icon className="w-7 h-7 text-quantum-blue drop-shadow-lg" />
+                      <div className="relative w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl ring-2 ring-neural-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <item.icon className="w-7 h-7 text-neural-blue drop-shadow-lg" />
                       </div>
                     </div>
                     <p className="text-lg text-deep-charcoal leading-relaxed flex-1 pt-2">
@@ -232,11 +223,11 @@ export default function TrainTheTrainer() {
 
             {/* Premium CTA */}
             <div className="mt-12 text-center">
-              <div className="inline-block bg-gradient-to-r from-deep-space/10 via-quantum-blue/10 to-deep-space/10 rounded-2xl p-8 border-2 border-quantum-blue/30">
+              <div className="inline-block bg-neural-blue/5 rounded-2xl p-8 border-2 border-neural-blue/30">
                 <p className="text-lg text-deep-charcoal/80 mb-4">
                   Spełniasz te kryteria?
                 </p>
-                <p className="text-2xl font-bold text-quantum-blue mb-6">
+                <p className="text-2xl font-bold text-neural-blue mb-6">
                   Rozpocznij proces aplikacyjny
                 </p>
                 <a
@@ -245,8 +236,8 @@ export default function TrainTheTrainer() {
                   rel="noopener noreferrer"
                 >
                   <div className="relative inline-block group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-quantum-blue via-neural-violet to-quantum-blue rounded-xl blur-md opacity-50 group-hover:opacity-100 transition duration-300"></div>
-                    <button className="relative bg-gradient-to-r from-quantum-blue to-neural-violet text-white px-10 py-4 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-neural-blue via-twilight-indigo to-neural-blue rounded-xl blur-md opacity-50 group-hover:opacity-100 transition duration-300"></div>
+                    <button className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo text-white px-10 py-4 rounded-xl text-lg font-bold shadow-xl flex items-center gap-3 transition-all hover:scale-105">
                       Umów Sesję Discovery
                       <ArrowRight size={20} />
                     </button>
@@ -259,97 +250,97 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Mentoring Program Section */}
-      <section className="relative py-20 bg-gradient-to-br from-background to-deep-space/5 overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-56 h-56 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+      <section className="relative py-20 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
+        {/* Grid pattern for structure */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+        {/* Subtle gradient orbs */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neural-blue/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-growth-gold/6 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <Badge className="mb-6 px-6 py-3 bg-gradient-to-r from-neural-violet to-quantum-blue text-white border-0 rounded-full text-sm font-semibold">
+              <Badge className="mb-6 px-6 py-3 bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 rounded-full text-sm font-semibold">
                 Program Mentoringowy
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Train The Trainer: Elite{" "}
-                <span className="text-quantum-blue">Academy</span>
+                <span className="text-neural-blue">Academy</span>
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto mb-8"></div>
-              <p className="text-xl md:text-2xl text-neural-violet font-semibold mb-6 max-w-4xl mx-auto">
-                8-tygodniowa transformacja z inżyniera w międzynarodowego
-                trenera technologii.
+              <div className="w-24 h-1.5 bg-neural-blue rounded-full mx-auto mb-8"></div>
+              <p className="text-xl md:text-2xl text-neural-blue font-semibold mb-6 max-w-4xl mx-auto">
+                From Engineer to Thought Leader: Your 8-Week Journey
               </p>
               <p className="text-lg text-deep-charcoal/70 max-w-4xl mx-auto">
-                To program, którego sam potrzebowałem 19 lat temu. To esencja
-                wszystkiego, czego nauczyłem się prowadząc szkolenia dla US
-                Army, US Navy, NATO, Norweskiej Policji, GM, GE, ING Banku i
-                dziesiątek innych prestiżowych organizacji.
+                This is the program I needed 19 years ago. The distilled wisdom
+                from training US Army, US Navy, NATO, Norwegian Police, GM, GE,
+                ING Bank, and dozens of Fortune 500 organizations—now
+                crystallized into 8 transformative weeks.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {[
                 {
-                  title: "Mindset Elity",
+                  title: "Elite Mindset Shift",
                   icon: Star,
-                  gradient: "from-deep-space to-quantum-blue",
+                  gradient: "from-neural-blue to-twilight-indigo",
                   description:
-                    "Odetniesz się od mentalności 'technicznego najemnika'. Nauczysz się myśleć jak consultant premium, a nie techniczny najemnik.",
+                    "Break free from 'technical mercenary' thinking. Learn to see yourself as a transformation guide, not just a subject matter expert.",
                   value: "$3,000",
                   weeks: "1-2",
                 },
                 {
-                  title: "Architektura Emocji",
+                  title: "Emotional Architecture",
                   icon: Users,
-                  gradient: "from-neural-violet to-quantum-blue",
+                  gradient: "from-neural-blue to-twilight-indigo",
                   description:
-                    "Nauczysz się projektować szkolenia tak, aby budować zaangażowanie w pierwsze do ostatni minuty. Zastapisz nudne wykłady historiami, metaforami i ćwiczeniami.",
+                    "Design training that captivates from first to last minute. Replace dry lectures with stories, metaphors, and exercises that spark transformation.",
                   value: "$2,500",
                   weeks: "3-4",
                 },
                 {
-                  title: "Warsztat Mistrza",
+                  title: "Master's Workshop",
                   icon: Book,
-                  gradient: "from-quantum-blue to-neural-violet",
+                  gradient: "from-twilight-indigo to-neural-blue",
                   description:
-                    "Dowiesz się, jak radzić sobie z trudnymi uczestnikami, jak prowadzić grupę przez techniczne labirynty i jak zawsze wyjść z twarzą z najtrudniejszej sytuacji.",
+                    "Handle difficult participants with grace. Guide groups through complex concepts. Turn challenging moments into breakthrough insights that audiences remember forever.",
                   value: "$2,000",
                   weeks: "5-6",
                 },
                 {
-                  title: "System Pozyskiwania Klientów",
+                  title: "Client Acquisition System",
                   icon: Compass,
-                  gradient: "from-quantum-blue to-neural-violet",
+                  gradient: "from-neural-blue to-growth-gold",
                   description:
-                    "Pokażę Ci sprawdzone metody na dotarcie do klientów korporacyjnych i rządowych. Jak wykonać usługę? Jak budować ofertę nie do odrzucenia?",
+                    "Proven methods to reach corporate and government clients. Build offers they can't refuse. Position yourself as the obvious choice for transformation.",
                   value: "$2,500",
                   weeks: "7",
                 },
                 {
-                  title: "Bezcenna Sieć Kontaktów",
+                  title: "Lifetime Alumni Network",
                   icon: GitMerge,
-                  gradient: "from-neural-violet to-deep-space",
+                  gradient: "from-growth-gold to-neural-blue",
                   description:
-                    "Dołączysz do zamkniętej grupy absolwentów - przyszłych i obecnych trenerów premium, z którymi będziesz dzielić się zleceniami i wspierać w rozwoju.",
+                    "Join a closed community of transformation guides—share opportunities, support each other's growth, and build lasting relationships with fellow thought leaders.",
                   value: "$5,000",
                   weeks: "8+",
                 },
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-3xl p-10 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
+                  className="group relative bg-white rounded-3xl p-10 border-2 border-neural-blue/20 hover:border-neural-blue/50 shadow-lg hover:shadow-2xl hover:shadow-neural-blue/20 transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Value Indicator */}
-                  <div className="absolute top-6 right-6 bg-quantum-blue/10 text-quantum-blue px-4 py-2 rounded-full text-xs font-bold border border-quantum-blue/30">
+                  <div className="absolute top-6 right-6 bg-neural-blue/10 text-neural-blue px-4 py-2 rounded-full text-xs font-bold border border-neural-blue/30">
                     Wartość: {feature.value}
                   </div>
 
                   {/* Premium Icon with Glow */}
                   <div className="relative w-20 h-20 mb-8">
                     <div className="absolute inset-0 bg-white rounded-3xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                    <div className="relative w-full h-full bg-white rounded-3xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <feature.icon className="w-10 h-10 text-quantum-blue drop-shadow-lg" />
+                    <div className="relative w-full h-full bg-white rounded-3xl flex items-center justify-center shadow-2xl ring-2 ring-neural-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <feature.icon className="w-10 h-10 text-neural-blue drop-shadow-lg" />
                     </div>
                   </div>
 
@@ -361,8 +352,8 @@ export default function TrainTheTrainer() {
                   </p>
 
                   {/* Completion Timeline */}
-                  <div className="flex items-center gap-2 text-sm text-deep-charcoal/60 pt-4 border-t border-quantum-blue/10">
-                    <AlertCircle className="w-4 h-4 text-quantum-blue" />
+                  <div className="flex items-center gap-2 text-sm text-deep-charcoal/60 pt-4 border-t border-neural-blue/10">
+                    <AlertCircle className="w-4 h-4 text-neural-blue" />
                     <span>Tydzień {feature.weeks}</span>
                   </div>
                 </div>
@@ -370,7 +361,7 @@ export default function TrainTheTrainer() {
             </div>
 
             <div className="text-center">
-              <Badge className="text-base px-6 py-3 bg-quantum-blue/20 text-quantum-blue border border-quantum-blue/30 rounded-full">
+              <Badge className="text-base px-6 py-3 bg-neural-blue/20 text-neural-blue border border-neural-blue/30 rounded-full">
                 ⚠️ Ograniczone do 8 miejsc - hard cap. Żadnych wyjątków.
               </Badge>
             </div>
@@ -379,25 +370,20 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="relative py-20 bg-gradient-to-b from-white via-deep-space/5 to-white overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-48 h-48 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-56 h-56 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-64 h-64 bg-deep-space rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
+      <section className="relative py-20 bg-muted/30 overflow-hidden">
+        {/* Clean section - let content breathe */}
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-quantum-blue/10 text-quantum-blue border-2 border-quantum-blue/30 font-semibold">
+              <Badge className="mb-6 px-6 py-3 bg-neural-blue/10 text-neural-blue border-2 border-neural-blue/30 font-semibold">
                 Dla Kogo?
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Program dedykowany dla{" "}
-                <span className="text-quantum-blue">ekspertów IT</span>
+                <span className="text-neural-blue">ekspertów IT</span>
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto mb-4"></div>
+              <div className="w-24 h-1.5 bg-neural-blue rounded-full mx-auto mb-4"></div>
               <p className="text-lg text-deep-charcoal/70 max-w-3xl mx-auto">
                 Jeśli jesteś doświadczonym profesjonalistą IT i chcesz dzielić
                 się swoją wiedzą na globalnej scenie
@@ -411,39 +397,39 @@ export default function TrainTheTrainer() {
                   icon: Book,
                   description:
                     "Specjalizacja w konkretnej technologii, doświadczenie w enterprise projects",
-                  gradient: "from-neural-violet to-quantum-blue",
+                  gradient: "from-twilight-indigo to-neural-blue",
                 },
                 {
                   title: "Architekt IT",
                   icon: Crown,
                   description:
                     "Projektowanie systemów, znajomość best practices i design patterns",
-                  gradient: "from-deep-space to-quantum-blue",
+                  gradient: "from-deep-space to-neural-blue",
                 },
                 {
                   title: "IT Manager",
                   icon: Users,
                   description:
                     "Zarządzanie zespołami, budżetami i projektami w środowisku tech",
-                  gradient: "from-quantum-blue to-neural-violet",
+                  gradient: "from-neural-blue to-twilight-indigo",
                 },
                 {
                   title: "DevOps / SRE",
                   icon: Shield,
                   description:
                     "Administracja infrastruktury, CI/CD, cloud architecture i monitoring",
-                  gradient: "from-quantum-blue to-neural-violet",
+                  gradient: "from-neural-blue to-twilight-indigo",
                 },
               ].map((persona, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-2xl p-6 border-2 border-quantum-blue/20 hover:border-quantum-blue/50 shadow-lg hover:shadow-2xl hover:shadow-quantum-blue/20 transition-all duration-300 hover:-translate-y-2"
+                  className="group relative bg-white rounded-2xl p-6 border-2 border-neural-blue/20 hover:border-neural-blue/50 shadow-lg hover:shadow-2xl hover:shadow-neural-blue/20 transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Icon with gradient */}
                   <div className="relative w-16 h-16 mx-auto mb-4">
                     <div className="absolute inset-0 bg-white rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                    <div className="relative w-full h-full bg-white rounded-2xl flex items-center justify-center shadow-2xl ring-2 ring-quantum-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <persona.icon className="w-8 h-8 text-quantum-blue drop-shadow-lg" />
+                    <div className="relative w-full h-full bg-white rounded-2xl flex items-center justify-center shadow-2xl ring-2 ring-neural-blue/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <persona.icon className="w-8 h-8 text-neural-blue drop-shadow-lg" />
                     </div>
                   </div>
 
@@ -458,10 +444,10 @@ export default function TrainTheTrainer() {
             </div>
 
             {/* English requirement */}
-            <div className="bg-quantum-blue/5 rounded-2xl p-6 border-2 border-quantum-blue/30">
+            <div className="bg-neural-blue/5 rounded-2xl p-6 border-2 border-neural-blue/30">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-neural-blue rounded-full flex items-center justify-center shadow-lg">
                     <AlertCircle className="w-6 h-6 text-white" />
                   </div>
                 </div>
@@ -483,25 +469,24 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Mentor Section */}
-      <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-deep-space overflow-hidden">
-        {/* Premium background orbs */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute top-20 left-20 w-80 h-80 bg-quantum-blue rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-neural-violet rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-72 h-72 bg-quantum-blue rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
+      <section className="relative py-20 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
+        {/* Grid pattern for structure */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+        {/* Subtle gradient orbs */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neural-blue/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-twilight-indigo/6 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 font-bold">
+              <Badge className="mb-6 px-6 py-3 bg-neural-blue/10 backdrop-blur-sm text-neural-blue border-2 border-neural-blue/30 font-bold">
                 Twój Mentor
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-deep-charcoal">
                 Ludwik C. Siadlak
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-quantum-blue to-neural-violet rounded-full mx-auto mb-6"></div>
-              <p className="text-2xl text-white italic font-semibold">
+              <div className="w-24 h-1.5 bg-neural-blue rounded-full mx-auto mb-6"></div>
+              <p className="text-2xl text-neural-blue italic font-semibold">
                 "From Code to Classroom. From Technician to Travelling Trainer."
               </p>
             </div>
@@ -511,16 +496,16 @@ export default function TrainTheTrainer() {
               <div className="relative order-2 lg:order-1">
                 <div className="relative">
                   {/* Glow effect behind image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-3xl blur-2xl opacity-30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-3xl blur-2xl opacity-30"></div>
                   <img
                     src="/lovable-uploads/dff62bdb-7bca-402f-ba02-85591cef2f5c.png"
                     alt="Ludwik C. Siadlak - International IT Trainer"
-                    className="relative w-full rounded-3xl shadow-2xl border-2 border-quantum-blue/30"
+                    className="relative w-full rounded-3xl shadow-2xl border-2 border-neural-blue/30"
                   />
                 </div>
 
                 {/* Floating credential badge */}
-                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl p-6 shadow-2xl border-2 border-white/20">
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-2xl p-6 shadow-2xl border-2 border-white/20">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-white mb-1">19</div>
                     <div className="text-xs text-white/90 font-semibold uppercase tracking-wide">
@@ -565,7 +550,7 @@ export default function TrainTheTrainer() {
                     ].map((achievement, index) => (
                       <div key={index} className="flex items-start gap-4 group">
                         <div className="relative flex-shrink-0">
-                          <div className="w-10 h-10 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <div className="w-10 h-10 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                             <achievement.icon className="w-5 h-5 text-white" />
                           </div>
                         </div>
@@ -576,7 +561,7 @@ export default function TrainTheTrainer() {
                     ))}
                   </div>
 
-                  <div className="bg-gradient-to-r from-quantum-blue/10 to-neural-violet/10 rounded-2xl p-6 border border-quantum-blue/30">
+                  <div className="bg-gradient-to-r from-neural-blue/10 to-twilight-indigo/10 rounded-2xl p-6 border border-neural-blue/30">
                     <p className="text-white italic leading-relaxed">
                       "Ten program to esencja wszystkiego, czego nauczyłem się
                       prowadząc setki szkoleń na całym świecie. Przekazuję Ci
@@ -597,7 +582,7 @@ export default function TrainTheTrainer() {
                 { value: "50+", label: "Organizacji Fortune 500" },
               ].map((stat, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="text-4xl font-bold text-white mb-2">
                       {stat.value}
@@ -617,20 +602,20 @@ export default function TrainTheTrainer() {
       <section className="relative py-20 bg-gradient-to-b from-white via-deep-space/5 to-white overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 z-0 opacity-5">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-quantum-blue rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-80 h-80 bg-neural-violet rounded-full blur-3xl"></div>
+          <div className="absolute top-10 right-10 w-96 h-96 bg-neural-blue rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-80 h-80 bg-twilight-indigo rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-quantum-blue/10 text-quantum-blue border-2 border-quantum-blue/30 font-semibold">
+              <Badge className="mb-6 px-6 py-3 bg-neural-blue/10 text-neural-blue border-2 border-neural-blue/30 font-semibold">
                 Inwestycja Premium
               </Badge>
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal">
                 Ile kosztuje transformacja{" "}
-                <span className="text-quantum-blue">
+                <span className="text-neural-blue">
                   od technika do trenera?
                 </span>
               </h2>
@@ -642,8 +627,8 @@ export default function TrainTheTrainer() {
             </div>
 
             {/* Value Stack */}
-            <div className="bg-white rounded-3xl shadow-2xl border-2 border-quantum-blue/20 overflow-hidden mb-8">
-              <div className="bg-gradient-to-r from-deep-space via-quantum-blue to-neural-violet p-8">
+            <div className="bg-white rounded-3xl shadow-2xl border-2 border-neural-blue/20 overflow-hidden mb-8">
+              <div className="bg-gradient-to-r from-deep-space via-neural-blue to-twilight-indigo p-8">
                 <h3 className="text-3xl font-bold text-white text-center mb-2">
                   Train The Trainer - Pełny Program
                 </h3>
@@ -695,7 +680,7 @@ export default function TrainTheTrainer() {
                       className="flex items-center justify-between py-3 border-b border-deep-charcoal/10 last:border-0"
                     >
                       <div className="flex items-start gap-3 flex-1">
-                        <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-quantum-blue" />
+                        <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5 text-neural-blue" />
                         <span className="text-deep-charcoal/80">
                           {item.item}
                         </span>
@@ -708,7 +693,7 @@ export default function TrainTheTrainer() {
                 </div>
 
                 {/* Total value */}
-                <div className="border-t-2 border-quantum-blue/30 pt-6 mb-8">
+                <div className="border-t-2 border-neural-blue/30 pt-6 mb-8">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-lg text-deep-charcoal/70">
                       Łączna wartość programu:
@@ -722,7 +707,7 @@ export default function TrainTheTrainer() {
                       Twoja inwestycja:
                     </span>
                     <div className="text-right">
-                      <div className="text-5xl font-bold text-quantum-blue">
+                      <div className="text-5xl font-bold text-neural-blue">
                         $18,500
                       </div>
                       <div className="text-sm text-deep-charcoal/60 mt-1">
@@ -733,31 +718,31 @@ export default function TrainTheTrainer() {
                 </div>
 
                 {/* Payment options */}
-                <div className="bg-quantum-blue/5 rounded-2xl p-6 mb-8 border border-quantum-blue/20">
+                <div className="bg-neural-blue/5 rounded-2xl p-6 mb-8 border border-neural-blue/20">
                   <h4 className="font-bold text-deep-charcoal mb-4 text-center">
                     Opcje płatności
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-white rounded-xl p-6 border-2 border-quantum-blue shadow-lg">
+                    <div className="bg-white rounded-xl p-6 border-2 border-neural-blue shadow-lg">
                       <div className="text-center mb-3">
-                        <Crown className="w-8 h-8 mx-auto mb-2 text-quantum-blue" />
+                        <Crown className="w-8 h-8 mx-auto mb-2 text-neural-blue" />
                         <p className="font-bold text-deep-charcoal">
                           Pełna płatność
                         </p>
                       </div>
-                      <p className="text-3xl font-bold text-quantum-blue text-center mb-2">
+                      <p className="text-3xl font-bold text-neural-blue text-center mb-2">
                         $18,500
                       </p>
                       <p className="text-xs text-center text-deep-charcoal/60">
                         Jednorazowa płatność
                       </p>
-                      <div className="mt-4 pt-4 border-t border-quantum-blue/20">
+                      <div className="mt-4 pt-4 border-t border-neural-blue/20">
                         <div className="flex items-center gap-2 text-sm text-deep-charcoal/70 mb-2">
-                          <CheckCircle className="w-4 h-4 text-quantum-blue" />
+                          <CheckCircle className="w-4 h-4 text-neural-blue" />
                           <span>Bonus: dodatkowa sesja mentorska ($500)</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-deep-charcoal/70">
-                          <CheckCircle className="w-4 h-4 text-quantum-blue" />
+                          <CheckCircle className="w-4 h-4 text-neural-blue" />
                           <span>
                             Priorytetowy dostęp do przyszłych programów
                           </span>
@@ -765,7 +750,7 @@ export default function TrainTheTrainer() {
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-xl p-6 border border-quantum-blue/20">
+                    <div className="bg-white rounded-xl p-6 border border-neural-blue/20">
                       <div className="text-center mb-3">
                         <Shield className="w-8 h-8 mx-auto mb-2 text-deep-charcoal/60" />
                         <p className="font-bold text-deep-charcoal">
@@ -794,10 +779,10 @@ export default function TrainTheTrainer() {
                 </div>
 
                 {/* Guarantee */}
-                <div className="bg-gradient-to-r from-quantum-blue/10 via-neural-violet/10 to-quantum-blue/10 rounded-2xl p-6 border-2 border-quantum-blue/30">
+                <div className="bg-gradient-to-r from-neural-blue/10 via-twilight-indigo/10 to-neural-blue/10 rounded-2xl p-6 border-2 border-neural-blue/30">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center shadow-lg">
+                      <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center shadow-lg">
                         <Shield className="w-8 h-8 text-white" />
                       </div>
                     </div>
@@ -824,7 +809,7 @@ export default function TrainTheTrainer() {
 
             {/* Scarcity reminder */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-quantum-blue text-white px-8 py-4 rounded-full border-2 border-quantum-blue shadow-2xl">
+              <div className="inline-flex items-center gap-3 bg-neural-blue text-white px-8 py-4 rounded-full border-2 border-neural-blue shadow-2xl">
                 <AlertCircle className="w-5 h-5" />
                 <span className="font-bold">
                   Tylko 2 miejsca pozostały na Q1 2025
@@ -839,11 +824,11 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Application Process Section */}
-      <section className="relative py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-deep-space via-neural-blue to-twilight-indigo overflow-hidden">
         {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 opacity-50"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-zenith-gold/10 to-twilight-indigo/10 opacity-50"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zenith-gold/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -894,9 +879,9 @@ export default function TrainTheTrainer() {
               ].map((step, index) => (
                 <div
                   key={index}
-                  className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-quantum-blue/50 transition-all duration-300 hover:-translate-y-1"
+                  className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-neural-blue/50 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br from-quantum-blue to-neural-violet rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg border-4 border-deep-space">
+                  <div className="absolute -top-4 left-6 w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg border-4 border-deep-space">
                     {step.step}
                   </div>
 
@@ -965,9 +950,9 @@ export default function TrainTheTrainer() {
             {/* Main CTA */}
             <div className="text-center">
               <div className="relative inline-block mb-8">
-                <div className="absolute -inset-6 bg-gradient-to-r from-ascension-pink via-neural-violet to-ascension-pink rounded-3xl blur-3xl opacity-80"></div>
+                <div className="absolute -inset-6 bg-gradient-to-r from-zenith-gold via-twilight-indigo to-zenith-gold rounded-3xl blur-3xl opacity-80"></div>
                 <a href="/discovery">
-                  <button className="relative bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-neural-violet hover:to-ascension-pink text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(218,30,174,0.8)] flex items-center gap-4">
+                  <button className="relative bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-twilight-indigo hover:to-zenith-gold text-white px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_60px_rgba(218,30,174,0.8)] flex items-center gap-4">
                     Umów Sesję Discovery (30 min)
                     <ArrowRight className="w-8 h-8" />
                   </button>

@@ -452,7 +452,7 @@ Narzędzia świadomości                      </span>
         </main>
 
         {/* Footer */}
-        <footer className="bg-gradient-to-br from-neural-violet to-quantum-blue text-white py-10" role="contentinfo">
+        <footer className="bg-gradient-to-br from-twilight-indigo to-neural-blue text-white py-10" role="contentinfo">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-lg mb-4 text-white">
               &copy; 2025 Ludwik C. Siadlak & Fundacja HACKERZY.PL. Wszelkie prawa zastrzeżone.
@@ -462,7 +462,7 @@ Narzędzia świadomości                      </span>
                 <li>
                   <a 
                     href="https://docs.siadlak.com/legal/regulaminy/b/A1991136-C165-40B4-9C1E-21CBAEC4C8D7/Polityka-Prywatno%C5%9Bci-Serwis%C3%B3w-Grupy-"
-                    className="text-white/80 hover:text-white underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neural-violet rounded px-2 py-1"
+                    className="text-white/80 hover:text-white underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-twilight-indigo rounded px-2 py-1"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -472,7 +472,7 @@ Narzędzia świadomości                      </span>
                 <li>
                   <a 
                     href="https://docs.siadlak.com/legal/regulaminy"
-                    className="text-white/80 hover:text-white underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neural-violet rounded px-2 py-1"
+                    className="text-white/80 hover:text-white underline transition-colors focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-twilight-indigo rounded px-2 py-1"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

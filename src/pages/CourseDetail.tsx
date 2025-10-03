@@ -388,7 +388,7 @@ const CourseDetail = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-quantum-blue text-white">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-deep-space to-neural-blue text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {course.featured && (
@@ -446,7 +446,7 @@ const CourseDetail = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Clock className="h-8 w-8 mb-3 text-neural-violet" />
+                  <Clock className="h-8 w-8 mb-3 text-twilight-indigo" />
                   <h3 className="font-bold text-deep-charcoal mb-1">
                     Duration
                   </h3>
@@ -456,7 +456,7 @@ const CourseDetail = () => {
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Users className="h-8 w-8 mb-3 text-neural-violet" />
+                  <Users className="h-8 w-8 mb-3 text-twilight-indigo" />
                   <h3 className="font-bold text-deep-charcoal mb-1">
                     Format
                   </h3>
@@ -466,7 +466,7 @@ const CourseDetail = () => {
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <BarChart className="h-8 w-8 mb-3 text-neural-violet" />
+                  <BarChart className="h-8 w-8 mb-3 text-twilight-indigo" />
                   <h3 className="font-bold text-deep-charcoal mb-1">
                     Level
                   </h3>
@@ -476,7 +476,7 @@ const CourseDetail = () => {
                 </div>
 
                 <div className="flex flex-col items-center text-center p-4 glass-card rounded-lg">
-                  <Calendar className="h-8 w-8 mb-3 text-neural-violet" />
+                  <Calendar className="h-8 w-8 mb-3 text-twilight-indigo" />
                   <h3 className="font-bold text-deep-charcoal mb-1">
                     Start Date
                   </h3>
@@ -487,8 +487,8 @@ const CourseDetail = () => {
               </div>
 
               <div className="flex justify-center">
-                <div className="px-6 py-3 bg-neural-violet/10 rounded-lg">
-                  <span className="text-neural-violet font-bold text-xl">
+                <div className="px-6 py-3 bg-twilight-indigo/10 rounded-lg">
+                  <span className="text-twilight-indigo font-bold text-xl">
                     Investment: {course.price}
                   </span>
                 </div>
@@ -504,7 +504,7 @@ const CourseDetail = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
-                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 mr-3 text-twilight-indigo flex-shrink-0" />
                     <span className="text-subtle-slate">
                       {feature}
                     </span>
@@ -523,7 +523,7 @@ const CourseDetail = () => {
                 {course.curriculum.map((week: any, index: number) => (
                   <div key={index} className="p-4 glass-card rounded-lg">
                     <div className="flex items-center mb-2">
-                      <div className="w-8 h-8 rounded-full bg-neural-violet text-white flex items-center justify-center mr-3">
+                      <div className="w-8 h-8 rounded-full bg-twilight-indigo text-white flex items-center justify-center mr-3">
                         {week.week}
                       </div>
                       <h3 className="text-lg font-bold text-deep-charcoal">
@@ -547,7 +547,7 @@ const CourseDetail = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {course.outcomes.map((outcome: string, index: number) => (
                   <div key={index} className="flex items-start p-4 glass-card rounded-lg">
-                    <CheckCircle className="h-6 w-6 mr-3 text-neural-violet flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 mr-3 text-twilight-indigo flex-shrink-0" />
                     <span className="text-subtle-slate">
                       {outcome}
                     </span>
@@ -649,7 +649,7 @@ const CourseDetail = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-neural-violet to-ascension-pink">
+      <section className="py-16 bg-gradient-to-br from-twilight-indigo to-zenith-gold">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -665,7 +665,7 @@ const CourseDetail = () => {
               <Link to="/contact">
                 <Button
                   variant="outline"
-                  className="bg-white text-neural-violet hover:bg-white/90 border-neural-violet"
+                  className="bg-white text-twilight-indigo hover:bg-white/90 border-twilight-indigo"
                 >
                   Apply Now
                   <ArrowRight className="h-4 w-4" />

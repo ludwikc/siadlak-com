@@ -173,18 +173,37 @@ export default function Program() {
 
   return (
     <Layout>
-      <HeroSection
-        title="LifeOS AppStore"
-        subtitle={
-          <>
-            Aplikacje mentalnej transformacji. <br/>Zainstaluj nowe oprogramowanie.<br/>{" "}
-            <span className="italic text-ascension-pink">W głowie.</span>
-          </>
-        }
-      />
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30 py-20">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+
+        {/* Static gradient orbs for subtle depth */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neural-blue rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-twilight-indigo rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-deep-charcoal leading-tight">
+              LifeOS AppStore
+            </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 mb-4 leading-relaxed">
+              Aplikacje mentalnej transformacji.
+            </p>
+            <p className="text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
+              Zainstaluj nowe oprogramowanie.{" "}
+              <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-semibold">
+                W głowie.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* App Store Statistics */}
-      <section className="py-12" style={{ backgroundColor: "#EEEAF4" }}>
+      <section className="py-12 bg-neural-blue/5">
         <div className="container mx-auto px-4">
           <AppStoreStats />
         </div>
@@ -198,7 +217,7 @@ export default function Program() {
               <div className="inline-block mb-6">
                 <Badge
                   variant="outline"
-                  className="text-neural-violet border-neural-violet px-6 py-2 text-sm font-semibold hover:border-neural-violet/70 transition-colors"
+                  className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold hover:border-neural-blue/70 transition-colors"
                 >
                   Programy Fundamentalne
                 </Badge>
@@ -206,7 +225,7 @@ export default function Program() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal leading-tight">
                 Instaluj Aplikacje Mentalne
               </h2>
-              <p className="text-xl sm:text-2xl text-neural-violet font-semibold mb-4">
+              <p className="text-xl sm:text-2xl text-neural-blue font-semibold mb-4">
                 Twoje pierwsze kroki w transformacji mentalnej
               </p>
               <p className="text-lg sm:text-xl text-subtle-slate mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -231,11 +250,11 @@ export default function Program() {
       </section>
 
       {/* Section 2: Featured New App - Męski Kompas */}
-      <section className="py-16 bg-gradient-to-r from-neural-violet/5 to-ascension-pink/5">
+      <section className="py-16 bg-gradient-to-r from-neural-blue/5 to-growth-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-ascension-pink to-neural-violet text-white border-0 text-sm px-4 py-2 animate-pulse">
+              <Badge className="bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-sm px-4 py-2">
                 🔥 NOWY PROGRAM - DOŁĄCZ TERAZ!
               </Badge>
             </div>
@@ -256,7 +275,7 @@ export default function Program() {
             <div className="text-center mb-8">
               <Badge
                 variant="outline"
-                className="mb-4 text-neural-violet border-neural-violet"
+                className="mb-4 text-neural-blue border-neural-blue"
               >
                 FAQ: EFEKT?
               </Badge>
@@ -272,8 +291,8 @@ export default function Program() {
               {isFaqOverlayVisible && (
                 <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-2xl">
                   <div className="space-y-6">
-                    <div className="w-16 h-16 bg-neural-violet/20 rounded-full flex items-center justify-center mx-auto">
-                      <MessageSquare className="h-8 w-8 text-neural-violet" />
+                    <div className="w-16 h-16 bg-neural-blue/20 rounded-full flex items-center justify-center mx-auto">
+                      <MessageSquare className="h-8 w-8 text-neural-blue" />
                     </div>
 
                     <div className="space-y-3">
@@ -287,7 +306,7 @@ export default function Program() {
 
                     <CTAButton
                       onClick={handleShowEffect}
-                      className="bg-gradient-to-r from-neural-violet to-ascension-pink hover:from-neural-violet/90 hover:to-ascension-pink/90"
+                      className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue"
                       size="lg"
                     >
                       Pokaż Efekt
@@ -297,13 +316,13 @@ export default function Program() {
               )}
 
               {/* GIF Content */}
-              <div className="bg-gradient-to-br from-deep-space/50 to-quantum-blue/50 p-8 rounded-2xl border border-neural-violet/20">
+              <div className="bg-gradient-to-br from-background to-muted/30 p-8 rounded-2xl border border-neural-blue/20">
                 <img
                   src={effectGif}
                   alt="Mental transformation effect demonstration"
                   className="w-full rounded-lg shadow-2xl"
                 />
-                <p className="text-xs text-white/50 mt-4 text-center">
+                <p className="text-xs text-muted-foreground mt-4 text-center">
                   Źródło: Matrix (1999), Warner Bros.
                 </p>
               </div>
@@ -428,16 +447,16 @@ export default function Program() {
       </section>
 
       {/* Section 4: Premium App - LifeOS: System Upgrade - FULL WIDTH "FINAL BOSS" */}
-      <section className="py-20 bg-gradient-to-br from-deep-space via-quantum-blue to-neural-violet relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-deep-space via-neural-blue to-twilight-indigo relative overflow-hidden">
         {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ascension-pink/10 to-neural-violet/10 opacity-50"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-ascension-pink/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neural-violet/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-zenith-gold/10 to-twilight-indigo/10 opacity-50"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zenith-gold/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 bg-gradient-to-r from-ascension-pink to-neural-violet text-white border-0 px-6 py-2 text-lg font-medium">
+              <Badge className="mb-6 bg-gradient-to-r from-zenith-gold to-twilight-indigo text-white border-0 px-6 py-2 text-lg font-medium">
                 💎 LIFE OS UPGRADE
               </Badge>
 
@@ -453,12 +472,12 @@ export default function Program() {
 
             {/* FULL WIDTH PREMIUM CARD */}
             <div className="w-full">
-              <div className="glass-card rounded-2xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-2xl hover:shadow-neural-violet/20 bg-gradient-to-br from-deep-space/50 to-quantum-blue/50 relative border-2 border-ascension-pink/30">
+              <div className="glass-card rounded-2xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-2xl hover:shadow-twilight-indigo/20 bg-gradient-to-br from-deep-space/50 to-neural-blue/50 relative border-2 border-zenith-gold/30">
                 {/* Privacy Overlay */}
                 {isOverlayVisible && (
                   <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in rounded-2xl">
                     <div className="mb-8">
-                      <Shield className="h-20 w-20 text-ascension-pink mx-auto mb-6" />
+                      <Shield className="h-20 w-20 text-zenith-gold mx-auto mb-6" />
                       <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                         Ten program jest dla zaawansowanych
                       </h3>
@@ -471,7 +490,7 @@ export default function Program() {
                     <div className="space-y-4 w-full max-w-md">
                       <CTAButton
                         onClick={handleUnlockAccess}
-                        className="w-full bg-gradient-to-r from-ascension-pink to-neural-violet hover:from-ascension-pink/90 hover:to-neural-violet/90"
+                        className="w-full bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-zenith-gold/90 hover:to-twilight-indigo/90"
                         size="lg"
                       >
                         Sprawdź dostępność
@@ -491,13 +510,13 @@ export default function Program() {
                 )}
 
                 {/* MOBILE-OPTIMIZED PREMIUM CARD */}
-                <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-deep-space to-quantum-blue border border-ascension-pink/20 rounded-2xl overflow-hidden">
+                <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-deep-space to-neural-blue border border-zenith-gold/20 rounded-2xl overflow-hidden">
                   <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start lg:items-center">
                     {/* Left Column - Content */}
                     <div className="order-2 lg:order-1">
                       {/* Header - Mobile optimized */}
                       <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 mb-6 min-w-0">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-ascension-pink to-neural-violet rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-zenith-gold to-twilight-indigo rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-lg sm:text-2xl lg:text-3xl font-bold">
                             OS
                           </span>
@@ -551,7 +570,7 @@ export default function Program() {
                             key={index}
                             className="flex items-start gap-2 sm:gap-3 lg:gap-4 text-white/90 text-sm sm:text-base lg:text-lg min-w-0"
                           >
-                            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-ascension-pink rounded-full flex-shrink-0 mt-1.5 sm:mt-1"></div>
+                            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-zenith-gold rounded-full flex-shrink-0 mt-1.5 sm:mt-1"></div>
                             <span className="flex-1 min-w-0 break-words leading-relaxed">
                               {feature}
                             </span>
@@ -564,7 +583,7 @@ export default function Program() {
                     <div className="text-center lg:text-right order-1 lg:order-2">
                       {/* Price - Mobile friendly */}
                       <div className="mb-6 lg:mb-8">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-ascension-pink mb-2 sm:mb-3 break-words leading-tight">
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-zenith-gold mb-2 sm:mb-3 break-words leading-tight">
                           16 000 PLN
                         </div>
                         <div className="text-white/60 text-sm sm:text-base md:text-lg lg:text-xl break-words">
@@ -576,11 +595,11 @@ export default function Program() {
                       </div>
 
                       {/* Exclusivity Badge - Mobile optimized */}
-                      <div className="bg-gradient-to-r from-ascension-pink/20 to-neural-violet/20 border-2 border-ascension-pink/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
-                        <div className="text-ascension-pink text-xl sm:text-2xl mb-2">
+                      <div className="bg-gradient-to-r from-zenith-gold/20 to-twilight-indigo/20 border-2 border-zenith-gold/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
+                        <div className="text-zenith-gold text-xl sm:text-2xl mb-2">
                           👑
                         </div>
-                        <p className="text-ascension-pink font-bold text-sm sm:text-base lg:text-lg break-words">
+                        <p className="text-zenith-gold font-bold text-sm sm:text-base lg:text-lg break-words">
                           Prowadzę max 5 osób jednocześnie
                         </p>
                         <p className="text-white/70 text-xs sm:text-sm mt-2 break-words">
@@ -590,7 +609,7 @@ export default function Program() {
 
                       {/* CTA Button - Mobile responsive */}
                       <CTAButton
-                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-ascension-pink/50 to-neural-violet/50 hover:from-ascension-pink/50 hover:to-neural-violet/50 cursor-not-allowed opacity-60"
+                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-zenith-gold/50 to-twilight-indigo/50 hover:from-zenith-gold/50 hover:to-twilight-indigo/50 cursor-not-allowed opacity-60"
                         size="lg"
                         showArrow={false}
                       >
@@ -610,8 +629,11 @@ export default function Program() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 bg-gradient-to-br from-neural-blue/5 to-muted/10 overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
               Gotowy na upgrade systemu?
@@ -625,11 +647,14 @@ export default function Program() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAButton
                 size="lg"
-                className="text-lg px-8 py-4"
+                className="text-lg px-8 py-4 bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue"
                 onClick={() => {
-                  const appsSection = document.getElementById('apps-section');
+                  const appsSection = document.getElementById("apps-section");
                   if (appsSection) {
-                    appsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    appsSection.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
                   }
                 }}
               >

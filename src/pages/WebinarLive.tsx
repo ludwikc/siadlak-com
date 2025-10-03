@@ -27,7 +27,7 @@ const WebinarLive = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-deep-space to-neural-violet/50 pt-12 pb-20">
+      <div className="min-h-screen bg-gradient-to-br from-deep-space to-twilight-indigo/50 pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-500/20 backdrop-blur-sm border border-red-500/30 text-red-500 mb-4">
@@ -71,7 +71,7 @@ const WebinarLive = () => {
                   >
                     <div className="space-y-4">
                       <div className="flex gap-3">
-                        <div className="bg-neural-violet h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0">
+                        <div className="bg-twilight-indigo h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0">
                           LCS
                         </div>
                         <div>
@@ -165,7 +165,7 @@ const WebinarLive = () => {
                         placeholder="Wpisz swoje pytanie tutaj..."
                         rows={3}
                       ></textarea>
-                      <Button className="bg-neural-violet hover:bg-neural-violet/90">
+                      <Button className="bg-twilight-indigo hover:bg-twilight-indigo/90">
                         Wyślij pytanie
                       </Button>
                     </div>
@@ -175,7 +175,7 @@ const WebinarLive = () => {
 
               {/* CTA During Webinar */}
               {showOffer && (
-                <div className="bg-gradient-to-r from-neural-violet/30 to-ascension-pink/30 backdrop-blur-lg rounded-xl p-6 border border-neural-violet/30 animate-fade-in">
+                <div className="bg-gradient-to-r from-twilight-indigo/30 to-zenith-gold/30 backdrop-blur-lg rounded-xl p-6 border border-twilight-indigo/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
                     Program LifeOS: System Upgrade - Odkryj pełną transformację
                   </h3>
@@ -186,7 +186,7 @@ const WebinarLive = () => {
                   </p>
                   <Button
                     size="lg"
-                    className="bg-neural-violet hover:bg-neural-violet/90 text-white"
+                    className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                     onClick={() => window.open("/program/lifeos-system-upgrade", "_blank")}
                   >
                     TAK, CHCĘ DOWIEDZIEĆ SIĘ WIĘCEJ O PROGRAMIE LIFEOS
@@ -201,7 +201,7 @@ const WebinarLive = () => {
               <div className="text-center">
                 <Button
                   variant="outline"
-                  className="border-neural-violet text-neural-violet"
+                  className="border-twilight-indigo text-twilight-indigo"
                   onClick={handleCTAClick}
                 >
                   Pokaż ofertę specjalną
