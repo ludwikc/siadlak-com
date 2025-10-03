@@ -469,20 +469,20 @@ export default function TrainTheTrainer() {
       </section>
 
       {/* Mentor Section */}
-      <section className="relative py-20 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-br from-deep-space via-deep-space to-deep-charcoal overflow-hidden">
         {/* Grid pattern for structure */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808020_1px,transparent_1px),linear-gradient(to_bottom,#80808020_1px,transparent_1px)] bg-[size:24px_24px] opacity-40"></div>
         {/* Subtle gradient orbs */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neural-blue/8 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-twilight-indigo/6 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neural-blue/15 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-twilight-indigo/12 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 px-6 py-3 bg-neural-blue/10 backdrop-blur-sm text-neural-blue border-2 border-neural-blue/30 font-bold">
+              <Badge className="mb-6 px-6 py-3 bg-neural-blue/20 backdrop-blur-sm text-white border-2 border-neural-blue/40 font-bold">
                 Twój Mentor
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-deep-charcoal">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                 Ludwik C. Siadlak
               </h2>
               <div className="w-24 h-1.5 bg-neural-blue rounded-full mx-auto mb-6"></div>
@@ -520,7 +520,7 @@ export default function TrainTheTrainer() {
 
               {/* Right Column - Content */}
               <div className="order-1 lg:order-2 relative">
-                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                <div className="relative bg-gradient-to-br from-deep-space to-deep-space/95 rounded-3xl p-8 border-2 border-neural-blue/30 shadow-2xl">
                   <h3 className="text-2xl font-bold text-white mb-6">
                     Track Record
                   </h3>
@@ -554,14 +554,14 @@ export default function TrainTheTrainer() {
                             <achievement.icon className="w-5 h-5 text-white" />
                           </div>
                         </div>
-                        <p className="text-white leading-relaxed pt-1.5">
+                        <p className="text-white/95 leading-relaxed pt-1.5">
                           {achievement.text}
                         </p>
                       </div>
                     ))}
                   </div>
 
-                  <div className="bg-gradient-to-r from-neural-blue/10 to-twilight-indigo/10 rounded-2xl p-6 border border-neural-blue/30">
+                  <div className="bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 rounded-2xl p-6 border-2 border-neural-blue/50">
                     <p className="text-white italic leading-relaxed">
                       "Ten program to esencja wszystkiego, czego nauczyłem się
                       prowadząc setki szkoleń na całym świecie. Przekazuję Ci
@@ -583,11 +583,11 @@ export default function TrainTheTrainer() {
               ].map((stat, index) => (
                 <div key={index} className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                  <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="relative bg-gradient-to-br from-deep-space to-deep-space/90 rounded-2xl p-6 border-2 border-neural-blue/30 text-center group-hover:-translate-y-1 transition-transform duration-300 shadow-xl">
                     <div className="text-4xl font-bold text-white mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-white leading-tight">
+                    <div className="text-xs text-white/90 leading-tight">
                       {stat.label}
                     </div>
                   </div>
