@@ -32,8 +32,8 @@ export default function WebinarMeskiKompas() {
             </h2>
 
             <div className="mb-10">
-              <div className="inline-block bg-card/15 rounded-xl px-5 py-4 ring-1 ring-border/40 backdrop-blur-sm text-lg md:text-xl text-primary-foreground/95 leading-relaxed">
-                <p>90 minut które pokażą ci dlaczego więcej analizy = więcej paraliżu.<br/>
+              <div className="inline-block rounded-xl px-6 py-5 ring-1 bg-card/95 ring-border/60 text-lg md:text-xl text-card-foreground leading-relaxed shadow">
+                <p className="text-inherit">90 minut które pokażą ci dlaczego więcej analizy = więcej paraliżu.<br/>
                 I co z tym zrobić bez kolejnego kursu rozwoju osobistego.</p>
               </div>
             </div>
