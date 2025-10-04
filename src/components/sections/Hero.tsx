@@ -46,18 +46,15 @@ export default function Hero({
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${getBackgroundClasses()} flex items-center overflow-hidden`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${location.pathname === "/" ? "bg-gradient-to-br from-deep-space via-deep-space to-deep-charcoal" : getBackgroundClasses()} flex items-center overflow-hidden`}
       aria-labelledby="hero-title"
       role="banner"
     >
       {/* Transformation background elements for homepage */}
       {location.pathname === "/" && (
         <>
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-[#2563eb] rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#7C73E6] rounded-full blur-3xl"></div>
-          </div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
         </>
       )}
 
@@ -104,7 +101,7 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 animate-fade-in ${backgroundImage ? "text-white" : "text-deep-charcoal/90"}
+              mb-10 animate-fade-in ${backgroundImage ? "text-white" : location.pathname === "/" ? "text-white/90" : "text-deep-charcoal/90"}
               ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
               `}
               style={{ animationDelay: "0.2s" }}
