@@ -12,6 +12,7 @@ export interface SEOProps {
   modifiedDate?: string;
   locale?: string;
   noindex?: boolean;
+  favicon?: string;
 }
 
 const defaultSEO = {
@@ -36,7 +37,8 @@ export default function SEO({
   publishedDate,
   modifiedDate,
   locale = defaultSEO.locale,
-  noindex = false
+  noindex = false,
+  favicon
 }: SEOProps) {
   const fullTitle = title ? `${title} | ${defaultSEO.title}` : defaultSEO.title;
   const imageUrl = image.startsWith('http') ? image : `${url}${image}`;
@@ -75,6 +77,9 @@ export default function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Favicon */}
+      {favicon && <link rel="icon" href={favicon} type="image/png" />}
       
       {/* Robots */}
       {noindex && <meta name="robots" content="noindex,nofollow" />}

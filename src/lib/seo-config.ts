@@ -90,7 +90,8 @@ export const seoRouteConfig: RouteConfig[] = [
       description: 'Program rozwoju dla mężczyzn. Odkryj swoją maskuliną energię i zbuduj silne fundamenty życia.',
       keywords: 'rozwój mężczyzn, maskulinność, liderstwo, siła, pewność siebie',
       url: '/program/meski-kompas',
-      type: 'course'
+      type: 'course',
+      favicon: '/compass-favicon.png'
     }
   },
   {
@@ -275,7 +276,8 @@ export const seoRouteConfig: RouteConfig[] = [
       title: 'Warsztat: Upgrade Systemu dla Analityków 30+',
       description: '90-minutowy warsztat dla facetów, którzy mają chaos w priorytetach. Bez teorii - konkretny plan na poniedziałek. Ludwik Siadlak + Mateusz Lizak.',
       keywords: 'warsztat, męski kompas, rozwój osobisty, analitycy, programiści, produktywność',
-      url: '/webinar/meski-kompas'
+      url: '/webinar/meski-kompas',
+      favicon: '/compass-favicon.png'
     }
   },
   {

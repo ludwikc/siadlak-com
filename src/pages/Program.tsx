@@ -1,6 +1,5 @@
 import Layout from "@/components/layout/Layout";
 import AppStoreStats from "@/components/sections/AppStoreStats";
-import HeroSection from "@/components/sections/HeroSection";
 import AppCard from "@/components/ui/app-card";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
