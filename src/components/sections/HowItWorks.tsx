@@ -51,19 +51,10 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
                   key={index}
                   className="group bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                 >
-                  {/* Step number badge */}
-                  <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                    {index + 1}
-                  </div>
-
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
                   >
-                    {step.icon || (
-                      <div className="text-white text-2xl font-bold">
-                        {index + 1}
-                      </div>
-                    )}
+                    {step.icon}
                   </div>
 
                   <h3 className="text-2xl font-bold mb-4 text-deep-charcoal group-hover:text-twilight-indigo transition-colors">

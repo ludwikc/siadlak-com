@@ -6,22 +6,22 @@
 
 // Most frequently used icons (in order of usage frequency)
 export {
-  ArrowRight,        // Used in 15+ files - primary CTA icon
-  CheckCircle,       // Used in 10+ files - validation/success
-  Check,             // Used in app cards - simple checkmark
-  Calendar,          // Used in 8+ files - scheduling/dates
-  Clock,             // Used in 6+ files - time/duration
-  Users,             // Used in 6+ files - community/team
-  Star,              // Used in 5+ files - ratings/premium
-  Mail,              // Used in 4+ files - contact/newsletter
-  ArrowDown,         // Used in animations and flows
-  Zap,               // Used for energy/premium features
-  Shield,            // Used for trust/security
-  Brain,             // Used for mental/cognitive features
-  Target,            // Used for goals/precision
-  Crown,             // Used for premium/elite features
-  CheckCircle2,      // Alternative checkmark style
-} from 'lucide-react';
+  ArrowRight, // Used in 15+ files - primary CTA icon
+  CheckCircle, // Used in 10+ files - validation/success
+  Check, // Used in app cards - simple checkmark
+  Calendar, // Used in 8+ files - scheduling/dates
+  Clock, // Used in 6+ files - time/duration
+  Users, // Used in 6+ files - community/team
+  Star, // Used in 5+ files - ratings/premium
+  Mail, // Used in 4+ files - contact/newsletter
+  ArrowDown, // Used in animations and flows
+  Zap, // Used for energy/premium features
+  Shield, // Used for trust/security
+  Brain, // Used for mental/cognitive features
+  Target, // Used for goals/precision
+  Crown, // Used for premium/elite features
+  CheckCircle2, // Alternative checkmark style
+} from "lucide-react";
 
 // Interface/Navigation icons
 export {
@@ -32,7 +32,7 @@ export {
   Home,
   ExternalLink,
   Download,
-} from 'lucide-react';
+} from "lucide-react";
 
 // Media/Content icons
 export {
@@ -45,7 +45,7 @@ export {
   FileText,
   Quote,
   Mic2,
-} from 'lucide-react';
+} from "lucide-react";
 
 // Feature/Category icons
 export {
@@ -64,12 +64,9 @@ export {
   HelpCircle,
   BarChart,
   Ribbon,
-} from 'lucide-react';
+  Package,
+  Rocket,
+} from "lucide-react";
 
 // Special icons (used only once or twice)
-export {
-  User,
-  MailIcon,
-  CheckCheck,
-  Lock,
-} from 'lucide-react';
+export { User, MailIcon, CheckCheck, Lock } from "lucide-react";

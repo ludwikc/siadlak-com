@@ -6,6 +6,7 @@ import Newsletter from "../components/sections/Newsletter";
 import CTASection from "../components/sections/CTASection";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
+import { Package, Rocket } from "../lib/icons";
 
 const Index = () => {
   // How It Works steps
@@ -14,6 +15,7 @@ const Index = () => {
       title: "Zainstaluj aplikacje",
       description:
         "Konkretne umiejętności jak produktywność, odporność psychiczna czy męskość. Wybierz aplikację, której właśnie potrzebujesz - tak jak nową aplikację do telefonu. Szybki upgrade konkretnego obszaru.",
+      icon: <Package className="w-8 h-8 text-white" />,
       link: "/program",
       linkText: "Zobacz dostępne aplikacje ≫",
     },
@@ -21,6 +23,7 @@ const Index = () => {
       title: "Life OS Upgrade",
       description:
         "Fundamentalna rekonstrukcja całego systemu operacyjnego. Jak przejście z Windows 98 na macOS. 8 tygodni intensywnej pracy, maksymalnie 5 osób jednocześnie. To nie coaching - to przeprogramowanie.",
+      icon: <Rocket className="w-8 h-8 text-white" />,
       link: "/program/lifeos-system-upgrade",
       linkText: "Sprawdź dostępność ≫",
     },
