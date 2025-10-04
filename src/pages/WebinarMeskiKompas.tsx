@@ -31,9 +31,11 @@ export default function WebinarMeskiKompas() {
               TEN WARSZTAT JEST DLA CIEBIE
             </h2>
 
-            <div className="text-lg md:text-xl text-primary-foreground/95 mb-10 leading-relaxed">
-              <p>90 minut które pokażą ci dlaczego więcej analizy = więcej paraliżu.<br/>
-              I co z tym zrobić bez kolejnego kursu rozwoju osobistego.</p>
+            <div className="mb-10">
+              <div className="inline-block bg-card/15 rounded-xl px-5 py-4 ring-1 ring-border/40 backdrop-blur-sm text-lg md:text-xl text-primary-foreground/95 leading-relaxed">
+                <p>90 minut które pokażą ci dlaczego więcej analizy = więcej paraliżu.<br/>
+                I co z tym zrobić bez kolejnego kursu rozwoju osobistego.</p>
+              </div>
             </div>
 
             <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
