@@ -55,6 +55,13 @@ const BeforeAfterSlider = () => {
   return (
     <div className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            Gdzie myslisz ze jestes vs gdzie NAPRAWDĘ jestes
+          </h2>
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
         <div className="max-w-5xl mx-auto">
           <div
             ref={containerRef}
