@@ -1,9 +1,5 @@
-import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { CTAButton } from '@/components/ui/cta-button';
-import { GlassCard } from '@/components/ui/glass-card';
-import { CheckCircle, X, Shield, Zap, AlertCircle, Users, Target, Brain, Clock, GitMerge, Crown } from '@/lib/icons';
-import { Link } from 'react-router-dom';
 
 export default function LifeOSSystemUpgrade() {
   const scrollToDiscovery = () => {
