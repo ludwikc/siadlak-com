@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
@@ -13,10 +13,17 @@ import {
   Clock,
   GitMerge,
   Crown,
+  ChevronDown,
 } from "@/lib/icons";
 import { Link } from "react-router-dom";
+import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 
 export default function LifeOSSystemUpgrade() {
+  const [spotsAvailable, setSpotsAvailable] = useState(0);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const [showExitModal, setShowExitModal] = useState(false);
+  const [hasShownExitModal, setHasShownExitModal] = useState(false);
+
   const scrollToDiscovery = () => {
     const discoverySection = document.getElementById("discovery-section");
     if (discoverySection) {
@@ -24,8 +31,136 @@ export default function LifeOSSystemUpgrade() {
     }
   };
 
+  // Animated counter for available spots
+  useEffect(() => {
+    let count = 0;
+    const targetCount = 2;
+    const interval = setInterval(() => {
+      if (count < targetCount) {
+        count++;
+        setSpotsAvailable(count);
+      } else {
+        clearInterval(interval);
+      }
+    }, 500);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Sticky CTA bar on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector("section");
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setShowStickyBar(window.scrollY > heroBottom);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Exit-intent detection
+  useEffect(() => {
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0 && !hasShownExitModal && window.scrollY > 500) {
+        setShowExitModal(true);
+        setHasShownExitModal(true);
+      }
+    };
+    document.addEventListener("mouseleave", handleMouseLeave);
+    return () => document.removeEventListener("mouseleave", handleMouseLeave);
+  }, [hasShownExitModal]);
+
+  // Testimonials data
+  const testimonials = [
+    {
+      quote:
+        "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą. Teraz czuję się jak po przesiadce z małego fiata do porsche.",
+      name: "CEO, 8-cyfrowe przychody",
+      title: "Life OS Absolwent",
+    },
+    {
+      quote:
+        "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej - wręcz przeciwnie.",
+      name: "Założycielka tech startup",
+      title: "€2M ARR",
+    },
+    {
+      quote:
+        "Pierwszy raz od 15 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła.",
+      name: "Przedsiębiorca",
+      title: "Life OS Absolwent",
+    },
+  ];
+
+  // FAQ data
+  const faqs = [
+    {
+      question: "Jak to się różni od terapii?",
+      answer:
+        "Terapeuta pomoże Ci zrozumieć, skąd się bierze Twój paraliż decyzyjny. Ja pomogę Ci podjąć tę trudną decyzję w poniedziałek o 9 rano - kiedy na szali jest 2M PLN i przyszłość firmy. Terapia = rozumienie przeszłości. Life OS = transformacja teraźniejszości i przyszłości.",
+    },
+    {
+      question: "Czy to coaching?",
+      answer:
+        'Technicznie tak, ale wolę słowo "transformacja." Coach daje Ci narzędzia. Ja zmieniam system, na którym działasz. To jak różnica między "zainstaluj tę aplikację" vs. "upgrade całego OS z Windows 98 do najnowszego MacOS."',
+    },
+    {
+      question: "Co jeśli mi nie pasuje Twój styl?",
+      answer:
+        'Nie będziemy pasować. I to jest ok. Ta praca wymaga pełnego zaufania i gotowości na konfrontację (lub delikatne prowadzenie - w zależności od ścieżki). Jeśli na Sesji Discovery poczujesz, że nie pasujemy - po prostu powiemy sobie "dzięki, nie tym razem." Bez urazy. Bez presji.',
+    },
+    {
+      question: "Czy gwarantujesz rezultaty?",
+      answer:
+        "Nie. Nie dlatego, że nie wierzę w program - wierzę. Ale nie mogę zagwarantować Twojego zaangażowania. Jeśli włożysz 100% - przejdziesz transformację. Jeśli włożysz 50% - dostaniesz 50% rezultatów. Ja gwarantuję pełne zaangażowanie z mojej strony, precyzyjną diagnostykę, bezpieczną przestrzeń i metodologię która zadziałała na dziesiątkach osób. Ty gwarantujesz, że będziesz się stawiał i będziesz uczciwy sam ze sobą.",
+    },
+    {
+      question: "Co jeśli nie mam 8 tygodni?",
+      answer:
+        "To nie jest dla Ciebie. Jeszcze. Transformacja tożsamości nie działa w 'intensywnym 2-dniowym bootcampie.' Potrzebujesz czasu, by nowe wzorce się zakorzeniły. By stary system faktycznie został zastąpiony nowym. Poczekaj, aż będziesz gotowy.",
+    },
+    {
+      question: "Ile osób bierzesz jednocześnie?",
+      answer:
+        "Maximum 5. Nie dlatego, że sztuczna rzadkość. Ale żeby zapewnić quality. Ta praca wymaga mojej pełnej obecności. Nie mogę dać jej 15 ludziom jednocześnie.",
+    },
+  ];
+
   return (
     <Layout>
+      {/* Exit Intent Modal */}
+      {showExitModal && (
+        <ExitIntentModal
+          onClose={() => setShowExitModal(false)}
+          onCTA={scrollToDiscovery}
+        />
+      )}
+
+      {/* Sticky CTA Bar */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-twilight-indigo to-neural-blue shadow-xl transition-transform duration-300 ${
+          showStickyBar ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="text-white">
+            <span className="font-bold text-lg">Life OS: System Upgrade</span>
+            <span className="ml-4 text-sm text-silver-mist">
+              {spotsAvailable}/5 miejsc dostępnych
+            </span>
+          </div>
+          <CTAButton
+            variant="premium"
+            size="md"
+            onClick={scrollToDiscovery}
+            showArrow
+          >
+            Zarezerwuj Sesję
+          </CTAButton>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
@@ -53,9 +188,22 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Problem Recognition */}
-      <section className="py-20 bg-luminous-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-transformation-light overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
+
+        {/* Static gradient orb */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-neural-blue/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge text-sm uppercase tracking-wide">
+                Prawdziwy problem
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Rozpoznajesz ten stan?
             </h2>
@@ -101,7 +249,7 @@ export default function LifeOSSystemUpgrade() {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 mb-16">
               <p className="text-xl text-deep-charcoal/90 leading-relaxed">
                 Jesteś jak komputer z Windows 98, próbujący obsłużyć dzisiejsze
                 oprogramowanie. System jest przestarzały, skonfliktowany,
@@ -114,14 +262,27 @@ export default function LifeOSSystemUpgrade() {
                 Potrzebujesz upgrade'u całego Systemu Operacyjnego.
               </p>
             </div>
+
+            {/* Metaphorical Before/After Slider */}
+            <MetaphoricalTransformationSlider />
           </div>
         </div>
       </section>
 
       {/* Why Traditional Solutions Failed */}
-      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-luminous-white overflow-hidden">
+        {/* Static gradient orbs */}
+        <div className="absolute bottom-40 left-20 w-80 h-80 bg-twilight-indigo/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge-premium text-sm uppercase tracking-wide">
+                Dlaczego inne nie działają
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Dlaczego to, co próbowałeś, nie zadziałało?
             </h2>
@@ -251,6 +412,13 @@ export default function LifeOSSystemUpgrade() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="inline-block px-6 py-2 bg-zenith-gold/20 rounded-full border-2 border-zenith-gold/40 text-zenith-gold font-semibold text-sm uppercase tracking-wide">
+                Metodologia
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
               Life OS: System Upgrade
             </h2>
@@ -336,10 +504,10 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="max-w-4xl mx-auto space-y-8">
               {/* Phase 1: Diagnostyka */}
-              <div className="group relative">
+              <div className="group relative transition-all duration-300 hover:-translate-y-2">
                 <GlassCard
                   padding="lg"
-                  className="bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-zenith-gold/50 hover:shadow-2xl hover:shadow-zenith-gold/20 transition-all duration-300"
                 >
                   <div className="flex items-center gap-6 mb-6">
                     <div className="bg-zenith-gold/20 p-4 rounded-2xl">
@@ -393,10 +561,10 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 2: Dekonstrukcja */}
-              <div className="group relative">
+              <div className="group relative transition-all duration-300 hover:-translate-y-2">
                 <GlassCard
                   padding="lg"
-                  className="bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-zenith-gold/50 hover:shadow-2xl hover:shadow-zenith-gold/20 transition-all duration-300"
                 >
                   <div className="flex items-center gap-6 mb-6">
                     <div className="bg-twilight-indigo/20 p-4 rounded-2xl">
@@ -465,10 +633,10 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 3: Integracja */}
-              <div className="group relative">
+              <div className="group relative transition-all duration-300 hover:-translate-y-2">
                 <GlassCard
                   padding="lg"
-                  className="bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-zenith-gold/50 hover:shadow-2xl hover:shadow-zenith-gold/20 transition-all duration-300"
                 >
                   <div className="flex items-center gap-6 mb-6">
                     <div className="bg-twilight-indigo/20 p-4 rounded-2xl">
@@ -527,10 +695,10 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 4: Nowy Standard */}
-              <div className="group relative">
+              <div className="group relative transition-all duration-300 hover:-translate-y-2">
                 <GlassCard
                   padding="lg"
-                  className="bg-white/10 backdrop-blur-sm border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-zenith-gold/50 hover:shadow-2xl hover:shadow-zenith-gold/20 transition-all duration-300"
                 >
                   <div className="flex items-center gap-6 mb-6">
                     <div className="bg-neural-blue/20 p-4 rounded-2xl">
@@ -601,6 +769,11 @@ export default function LifeOSSystemUpgrade() {
               </div>
             </div>
 
+            {/* Phase Timeline Visualization */}
+            <div className="mt-20 mb-16">
+              <PhaseTimeline />
+            </div>
+
             <div className="text-center mt-16">
               <CTAButton
                 variant="premium"
@@ -617,9 +790,22 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Real Effects */}
-      <section className="py-20 bg-luminous-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-transformation-light overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
+
+        {/* Static gradient orb */}
+        <div className="absolute top-40 left-20 w-96 h-96 bg-neural-blue/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge-success text-sm uppercase tracking-wide">
+                Rezultaty
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Czego możesz się spodziewać? (Realne efekty)
             </h2>
@@ -707,14 +893,32 @@ export default function LifeOSSystemUpgrade() {
                 </p>
               </GlassCard>
             </div>
+
+            {/* Testimonial Carousel */}
+            <div className="mt-20">
+              <TestimonialCarousel
+                testimonials={testimonials}
+                title="Co mówią absolwenci programu"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Why Me */}
-      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-luminous-white overflow-hidden">
+        {/* Static gradient orbs */}
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-zenith-gold/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge-premium text-sm uppercase tracking-wide">
+                Dlaczego Ludwik
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Dlaczego akurat ja? (Co mam, czego inni nie mają)
             </h2>
@@ -817,9 +1021,22 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Investment & Commitment */}
-      <section className="py-20 bg-luminous-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-transformation-light overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
+
+        {/* Static gradient orb */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-zenith-gold/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge-premium text-sm uppercase tracking-wide">
+                Inwestycja
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Inwestycja i struktura
             </h2>
@@ -991,9 +1208,19 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Qualification */}
-      <section className="py-20 bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 bg-luminous-white overflow-hidden">
+        {/* Static gradient orbs */}
+        <div className="absolute top-40 right-20 w-96 h-96 bg-twilight-indigo/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge text-sm uppercase tracking-wide">
+                Kwalifikacja
+              </span>
+            </div>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
               Czy ten program jest dla Ciebie?
             </h2>
@@ -1185,6 +1412,40 @@ export default function LifeOSSystemUpgrade() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="relative py-20 bg-transformation-light overflow-hidden">
+        {/* Grid pattern background */}
+        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
+
+        {/* Static gradient orb */}
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-neural-blue/10 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-8">
+              <span className="transformation-badge text-sm uppercase tracking-wide">
+                Najczęstsze pytania
+              </span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
+              FAQ (Prawdziwe pytania, brutalne odpowiedzi)
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Discovery Session CTA */}
       <section
         id="discovery-section"
@@ -1286,9 +1547,14 @@ export default function LifeOSSystemUpgrade() {
                 jednocześnie, aby zapewnić maksymalną jakość i moje
                 zaangażowanie.
               </p>
-              <p className="text-zenith-gold font-bold text-xl">
-                Obecnie dostępne: 2
-              </p>
+              <div className="inline-flex items-center justify-center gap-3 bg-zenith-gold/20 px-6 py-3 rounded-full border-2 border-zenith-gold/40">
+                <span className="text-silver-mist font-semibold">
+                  Obecnie dostępne:
+                </span>
+                <span className="text-3xl font-bold text-zenith-gold">
+                  {spotsAvailable}/5
+                </span>
+              </div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
@@ -1414,3 +1680,404 @@ export default function LifeOSSystemUpgrade() {
     </Layout>
   );
 }
+
+// FAQ Accordion Item Component
+const FAQItem = ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <GlassCard
+      padding="lg"
+      className="cursor-pointer hover:shadow-lg transition-all duration-300"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex items-start justify-between">
+        <h3 className="text-xl font-bold text-deep-charcoal pr-8">
+          {question}
+        </h3>
+        <ChevronDown
+          className={`w-6 h-6 text-twilight-indigo flex-shrink-0 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </div>
+      {isOpen && (
+        <div className="mt-4 pt-4 border-t border-twilight-indigo/20 animate-fade-in">
+          <p className="text-deep-charcoal/90 leading-relaxed">{answer}</p>
+        </div>
+      )}
+    </GlassCard>
+  );
+};
+
+// Phase Timeline Component
+const PhaseTimeline = () => {
+  const [activePhase, setActivePhase] = useState(0);
+
+  const phases = [
+    {
+      number: 1,
+      title: "DIAGNOSTYKA",
+      subtitle: "Tydzień 1-2",
+      color: "zenith-gold",
+      icon: Brain,
+    },
+    {
+      number: 2,
+      title: "DEKONSTRUKCJA",
+      subtitle: "Tydzień 3-4",
+      color: "twilight-indigo",
+      icon: Zap,
+    },
+    {
+      number: 3,
+      title: "INTEGRACJA",
+      subtitle: "Tydzień 5-6",
+      color: "twilight-indigo",
+      icon: GitMerge,
+    },
+    {
+      number: 4,
+      title: "NOWY STANDARD",
+      subtitle: "Tydzień 7-8",
+      color: "neural-blue",
+      icon: Crown,
+    },
+  ];
+
+  return (
+    <div className="relative">
+      {/* Timeline Line */}
+      <div className="absolute left-0 right-0 top-16 h-1 bg-white/20">
+        <div
+          className="h-full bg-gradient-to-r from-zenith-gold via-twilight-indigo to-neural-blue transition-all duration-1000"
+          style={{ width: `${((activePhase + 1) / phases.length) * 100}%` }}
+        />
+      </div>
+
+      {/* Phase Nodes */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative">
+        {phases.map((phase, index) => {
+          const Icon = phase.icon;
+          const isActive = index === activePhase;
+          const isPast = index < activePhase;
+
+          return (
+            <div
+              key={index}
+              className="flex flex-col items-center cursor-pointer group"
+              onClick={() => setActivePhase(index)}
+              onMouseEnter={() => setActivePhase(index)}
+            >
+              {/* Node Circle */}
+              <div
+                className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-300 ${
+                  isActive
+                    ? "bg-zenith-gold scale-125 shadow-2xl ring-4 ring-white/30"
+                    : isPast
+                      ? "bg-twilight-indigo/70"
+                      : "bg-white/10"
+                }`}
+              >
+                <Icon
+                  className={`w-8 h-8 transition-all duration-300 ${
+                    isActive || isPast ? "text-white" : "text-white/50"
+                  }`}
+                />
+              </div>
+
+              {/* Phase Info */}
+              <div className="text-center">
+                <div
+                  className={`text-xs font-semibold mb-1 transition-all duration-300 ${
+                    isActive ? "text-zenith-gold" : "text-silver-mist/70"
+                  }`}
+                >
+                  {phase.subtitle}
+                </div>
+                <div
+                  className={`text-sm font-bold transition-all duration-300 ${
+                    isActive ? "text-white text-base" : "text-silver-mist"
+                  }`}
+                >
+                  {phase.number}. {phase.title}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Progress Indicator */}
+      <div className="text-center mt-8">
+        <div className="inline-flex gap-2">
+          {phases.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActivePhase(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === activePhase
+                  ? "bg-zenith-gold w-8"
+                  : index < activePhase
+                    ? "bg-white/50"
+                    : "bg-white/20"
+              }`}
+              aria-label={`Go to phase ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Metaphorical Transformation Slider Component
+const MetaphoricalTransformationSlider = () => {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  const handleMove = (clientX: number) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    setSliderPosition(Math.max(0, Math.min(100, percentage)));
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!isDragging) return;
+    handleMove(e.clientX);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isDragging) return;
+    handleMove(e.touches[0].clientX);
+  };
+
+  const handleStart = () => setIsDragging(true);
+  const handleEnd = () => setIsDragging(false);
+
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleEnd);
+      document.addEventListener("touchmove", handleTouchMove);
+      document.addEventListener("touchend", handleEnd);
+    }
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleEnd);
+      document.removeEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchend", handleEnd);
+    };
+  }, [isDragging]);
+
+  return (
+    <div className="max-w-5xl mx-auto">
+      <div className="text-center mb-8">
+        <h3 className="text-3xl font-bold text-deep-charcoal mb-4">
+          Wewnętrzna Transformacja
+        </h3>
+        <p className="text-lg text-deep-charcoal/70">
+          Przesuń suwak, aby zobaczyć różnicę
+        </p>
+      </div>
+
+      <div
+        ref={containerRef}
+        className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize select-none ring-2 ring-twilight-indigo/40"
+        onMouseDown={handleStart}
+        onTouchStart={handleStart}
+      >
+        {/* Before State (Fragmented System) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center p-8">
+          <div className="text-center space-y-6">
+            <div className="text-6xl mb-4">💔</div>
+            <h4 className="text-3xl font-bold text-white mb-4">
+              System Skonfliktowany
+            </h4>
+            <div className="space-y-3 text-left max-w-md mx-auto">
+              <div className="flex items-start gap-3 text-red-300">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span>Paraliż decyzyjny</span>
+              </div>
+              <div className="flex items-start gap-3 text-red-300">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span>Wewnętrzna wojna</span>
+              </div>
+              <div className="flex items-start gap-3 text-red-300">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span>Chroniczne zmęczenie</span>
+              </div>
+              <div className="flex items-start gap-3 text-red-300">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span>Pustka mimo sukcesu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* After State (Integrated System) */}
+        <div
+          className="absolute inset-0 transition-all duration-150 ease-out bg-gradient-to-br from-neural-blue to-twilight-indigo flex items-center justify-center p-8"
+          style={{
+            clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
+          }}
+        >
+          <div className="text-center space-y-6">
+            <div className="text-6xl mb-4">✨</div>
+            <h4 className="text-3xl font-bold text-white mb-4">
+              System Zintegrowany
+            </h4>
+            <div className="space-y-3 text-left max-w-md mx-auto">
+              <div className="flex items-start gap-3 text-zenith-gold">
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span className="text-white">Jasność i pewność</span>
+              </div>
+              <div className="flex items-start gap-3 text-zenith-gold">
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span className="text-white">Wewnętrzna spójność</span>
+              </div>
+              <div className="flex items-start gap-3 text-zenith-gold">
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span className="text-white">Naturalny przepływ energii</span>
+              </div>
+              <div className="flex items-start gap-3 text-zenith-gold">
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
+                <span className="text-white">Sukces z sensem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Slider Line & Handle */}
+        <div
+          className="absolute top-0 bottom-0 w-1 bg-zenith-gold transition-all duration-150 ease-out"
+          style={{ left: `${sliderPosition}%` }}
+        >
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-zenith-gold shadow-2xl ring-4 ring-white/80 hover:scale-110 transition-transform duration-200">
+              <div className="flex gap-1">
+                <div className="w-0.5 h-6 bg-white"></div>
+                <div className="w-0.5 h-6 bg-white"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between mt-4 text-sm font-semibold">
+        <span className="text-red-600">Przed: Windows 98</span>
+        <span className="text-twilight-indigo">Po: Life OS</span>
+      </div>
+    </div>
+  );
+};
+
+// Exit Intent Modal Component
+const ExitIntentModal = ({
+  onClose,
+  onCTA,
+}: {
+  onClose: () => void;
+  onCTA: () => void;
+}) => {
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center animate-fade-in">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Modal Content */}
+      <div className="relative max-w-2xl mx-4 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue rounded-2xl shadow-2xl p-8 md:p-12 animate-scale-in">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-silver-mist hover:text-white transition-colors"
+          aria-label="Close modal"
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        {/* Content */}
+        <div className="text-center">
+          <div className="text-6xl mb-6">⚠️</div>
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Poczekaj - jeszcze jedno
+          </h3>
+          <p className="text-xl text-silver-mist mb-6">
+            Rozumiem wahanie. To normalne przy tak głębokiej transformacji.
+          </p>
+          <p className="text-lg text-silver-mist/90 mb-8">
+            Ale zanim wyjdziesz:{" "}
+            <strong className="text-zenith-gold">
+              czy to jest analiza, czy ucieczka?
+            </strong>
+          </p>
+
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl mb-8 text-left">
+            <p className="text-white font-bold mb-3">
+              3 pytania, które warto sobie zadać:
+            </p>
+            <ul className="space-y-3 text-silver-mist">
+              <li>
+                1. Czy odkładanie tej decyzji zmieni cokolwiek w Twojej
+                sytuacji?
+              </li>
+              <li>
+                2. Ile razy już "poczekałeś na lepszy moment" z ważnymi
+                decyzjami?
+              </li>
+              <li>
+                3. Czy za rok będziesz zadowolony, że dziś nic nie zrobiłeś?
+              </li>
+            </ul>
+          </div>
+
+          <p className="text-lg text-silver-mist mb-8">
+            Sesja Discovery to{" "}
+            <span className="text-zenith-gold font-bold">
+              zero zobowiązania
+            </span>
+            . To po prostu rozmowa. Sprawdzamy, czy pasujemy.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <CTAButton
+              variant="premium"
+              size="lg"
+              onClick={() => {
+                onCTA();
+                onClose();
+              }}
+              showArrow
+            >
+              Ok, zarezerwuję Sesję
+            </CTAButton>
+            <button
+              onClick={onClose}
+              className="px-6 py-3 text-silver-mist hover:text-white border border-white/30 rounded-lg transition-colors"
+            >
+              Może innym razem
+            </button>
+          </div>
+
+          <p className="text-sm text-silver-mist/70 mt-6 italic">
+            "Najlepszy moment to teraz. Drugi najlepszy - jutro. Najgorszy -
+            nigdy."
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
