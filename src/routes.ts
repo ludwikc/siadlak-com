@@ -19,6 +19,7 @@ export const routes = [
   '/program/silna-glowa',
   '/program/meski-kompas',
   '/train-the-trainer',
+  '/program/ttt',
   '/oto',
   '/podcast',
   '/new-podcast',

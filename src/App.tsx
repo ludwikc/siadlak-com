@@ -36,6 +36,7 @@ import Sitemap from './pages/Sitemap';
 import SilnaGlowa from './pages/SilnaGlowa';
 import MeskiKompas from './pages/MeskiKompas';
 import TrainTheTrainer from './pages/TrainTheTrainer';
+import TrainTheTrainerElite from './pages/TrainTheTrainerElite';
 import OTO from './pages/OTO';
 import Help from './pages/Help';
 import HelpSubpage from './pages/HelpSubpage';
@@ -83,6 +84,7 @@ function App() {
             <Route path="/program/meski-kompas" element={<MeskiKompas />} />
             <Route path="/program/7-technik" element={<SiedemTechnik />} />
             <Route path="/train-the-trainer" element={<TrainTheTrainer />} />
+            <Route path="/program/ttt" element={<TrainTheTrainerElite />} />
             <Route path="/program/:courseSlug" element={<CourseDetail />} />
             
             <Route path="/oto" element={<OTO />} />
