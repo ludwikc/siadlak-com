@@ -4,6 +4,7 @@ import HowItWorks from "../components/sections/HowItWorks";
 import TrustElements from "../components/sections/TrustElements";
 import Newsletter from "../components/sections/Newsletter";
 import CTASection from "../components/sections/CTASection";
+import BeforeAfterSlider from "../components/sections/BeforeAfterSlider";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
 import { Package, Rocket } from "../lib/icons";
@@ -112,6 +113,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <BeforeAfterSlider />
 
       <HowItWorks title="Dwie opcje aktualizacji" steps={steps} />
 
