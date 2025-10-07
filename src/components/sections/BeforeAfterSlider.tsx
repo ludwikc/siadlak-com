@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import workspaceBefore from "@/assets/workspace-before.png";
-import workspaceAfter from "@/assets/workspace-after.png";
+import workspaceBefore from "@/assets/workspace-after.png";
+import workspaceAfter from "@/assets/workspace-before.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const BeforeAfterSlider = () => {
