@@ -209,81 +209,95 @@ export default function Program() {
       </section>
 
       {/* Section 1: Basic Apps (50%/50%) */}
-      <section id="apps-section" className="py-16 sm:py-20 apps-section">
+      <section id="apps-section" className="py-20 apps-section bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block mb-6">
+            <div className="text-center space-y-8">
+              {/* Badge */}
+              <div>
                 <Badge
                   variant="outline"
-                  className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold hover:border-neural-blue/70 transition-colors"
+                  className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold"
                 >
                   Programy Fundamentalne
                 </Badge>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal leading-tight">
+
+              {/* Main Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold text-deep-charcoal leading-tight max-w-4xl mx-auto">
                 Przestań instalować kolejne aplikacje. Zacznij naprawiać to, co działa w Twojej głowie.
               </h2>
-              <p className="text-lg sm:text-xl text-subtle-slate mb-4 max-w-3xl mx-auto leading-relaxed">
-                Słuchaj, powiem Ci coś, czego nikt inny nie powie:
-              </p>
-              <p className="text-xl sm:text-2xl font-bold text-neural-blue mb-6 max-w-3xl mx-auto">
-                Nie potrzebujesz kolejnego kursu produktywności.
-              </p>
-              <p className="text-lg sm:text-xl text-subtle-slate mb-8 max-w-3xl mx-auto leading-relaxed">
-                Potrzebujesz przeprogramować fundamenty – sposób, w jaki myślisz o czasie, energii, priorytetach i swojej tożsamości.
-              </p>
-              
-              <div className="max-w-3xl mx-auto mb-8 space-y-4">
-                <h3 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
+
+              {/* Intro Text */}
+              <div className="space-y-4 max-w-3xl mx-auto">
+                <p className="text-lg text-deep-charcoal/70">
+                  Słuchaj, powiem Ci coś, czego nikt inny nie powie:
+                </p>
+                <p className="text-xl font-bold text-neural-blue">
+                  Nie potrzebujesz kolejnego kursu produktywności.
+                </p>
+                <p className="text-lg text-deep-charcoal/80">
+                  Potrzebujesz przeprogramować fundamenty – sposób, w jaki myślisz o czasie, energii, priorytetach i swojej tożsamości.
+                </p>
+              </div>
+
+              {/* Mental Software Update Card */}
+              <div className="glass-card border border-neural-blue/20 p-8 max-w-4xl mx-auto space-y-6">
+                <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
                   Moje Programy = Twój Mental Software Update
                 </h3>
-                <p className="text-lg text-subtle-slate leading-relaxed">
+                <p className="text-lg text-deep-charcoal/80">
                   Każda aplikacja to <strong className="text-neural-blue">intensywny, 4-6 tygodniowy program</strong> zaprojektowany, żeby zaktualizować JEDEN fundamentalny program działający w tle:
                 </p>
-                <ul className="text-left text-lg text-subtle-slate space-y-2 max-w-2xl mx-auto">
+                <ul className="text-left text-lg text-deep-charcoal/80 space-y-3 max-w-2xl mx-auto">
                   <li className="flex items-start">
-                    <span className="text-neural-blue mr-2">•</span>
-                    <span><strong>Jak myślisz o produktywności</strong> (nie jak używasz Notion)</span>
+                    <span className="text-neural-blue mr-3 font-bold">•</span>
+                    <span><strong className="text-deep-charcoal">Jak myślisz o produktywności</strong> (nie jak używasz Notion)</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-neural-blue mr-2">•</span>
-                    <span><strong>Jak radzisz sobie z chaosem</strong> (nie jak planujesz dni)</span>
+                    <span className="text-neural-blue mr-3 font-bold">•</span>
+                    <span><strong className="text-deep-charcoal">Jak radzisz sobie z chaosem</strong> (nie jak planujesz dni)</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-neural-blue mr-2">•</span>
-                    <span><strong>Kim jesteś jako mężczyzna</strong> (nie jak zarządzasz zespołem)</span>
+                    <span className="text-neural-blue mr-3 font-bold">•</span>
+                    <span><strong className="text-deep-charcoal">Kim jesteś jako mężczyzna</strong> (nie jak zarządzasz zespołem)</span>
                   </li>
                 </ul>
-                <p className="text-lg text-subtle-slate leading-relaxed">
+                <p className="text-lg text-deep-charcoal/80">
                   To nie są taktyki. To są <strong className="text-neural-blue">fundamenty</strong>, które muszą działać, zanim cokolwiek innego zadziała.
                 </p>
               </div>
 
-              <div className="bg-neural-blue/5 rounded-xl p-6 sm:p-8 max-w-3xl mx-auto mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-deep-charcoal mb-4">
+              {/* Why It Works Card */}
+              <div className="glass-card border border-neural-blue/20 p-8 max-w-3xl mx-auto space-y-6 bg-secondary/30">
+                <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
                   Dlaczego to działa (a kolejny kurs Udemy nie)
                 </h3>
-                <p className="text-lg text-subtle-slate mb-4">
-                  Bo nie uczę Cię <strong>JAK</strong> używać narzędzi.
+                <div className="space-y-4 text-lg text-deep-charcoal/80">
+                  <p>
+                    Bo nie uczę Cię <strong>JAK</strong> używać narzędzi.
+                  </p>
+                  <p>
+                    Przeprogramowuję <strong className="text-neural-blue">SPOSÓB</strong>, w jaki myślisz o tym, czemu te narzędzia mają służyć.
+                  </p>
+                  <p className="text-xl font-semibold text-deep-charcoal">
+                    Różnica? Każde narzędzie po tym zaczyna działać. Bo problem nigdy nie był w narzędziu.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA Text */}
+              <div className="space-y-4 max-w-3xl mx-auto">
+                <p className="text-xl font-semibold text-deep-charcoal">
+                  Wybierz aplikację. Zainstaluj ją. Obserwuj, jak reszta zaczyna działać.
                 </p>
-                <p className="text-lg text-subtle-slate mb-4">
-                  Przeprogramowuję <strong className="text-neural-blue">SPOSÓB</strong>, w jaki myślisz o tym, czemu te narzędzia mają służyć.
-                </p>
-                <p className="text-lg text-subtle-slate">
-                  Różnica? Każde narzędzie po tym zaczyna działać. Bo problem nigdy nie był w narzędziu.
+                <p className="text-lg text-deep-charcoal/70">
+                  A potem, jak będziesz gotów na pełen system upgrade → <Link to="/program/lifeos-system-upgrade" className="text-neural-blue hover:underline font-semibold">Life OS</Link> czeka.
                 </p>
               </div>
 
-              <p className="text-xl font-semibold text-deep-charcoal mb-6">
-                Wybierz aplikację. Zainstaluj ją. Obserwuj, jak reszta zaczyna działać.
-              </p>
-              
-              <p className="text-lg text-subtle-slate mb-8">
-                A potem, jak będziesz gotów na pełen system upgrade → <Link to="/program/lifeos-system-upgrade" className="text-neural-blue hover:underline font-semibold">Life OS</Link> czeka.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8 mt-12">
+              {/* Apps Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
                 {apps.slice(0, 2).map((app) => (
                   <div key={app.title} className="group">
                     <AppCard {...app} />
