@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { GlassCard } from "@/components/ui/glass-card";
-import { CheckCircle, AlertCircle } from "@/lib/icons";
+import { CheckCircle } from "@/lib/icons";
 import { useState, useEffect } from "react";
 
 export default function Discovery() {

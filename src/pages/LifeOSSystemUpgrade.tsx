@@ -4,17 +4,14 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
 import {
   CheckCircle,
-  Shield,
   Zap,
   AlertCircle,
-  Users,
-  Target,
   Brain,
-  Clock,
   GitMerge,
   Crown,
   ChevronDown,
 } from "@/lib/icons";
+import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 
@@ -152,7 +149,7 @@ export default function LifeOSSystemUpgrade() {
           </div>
           <CTAButton
             variant="premium"
-            size="md"
+            size="lg"
             onClick={scrollToDiscovery}
             showArrow
           >

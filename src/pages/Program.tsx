@@ -222,18 +222,65 @@ export default function Program() {
                 </Badge>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-deep-charcoal leading-tight">
-                Instaluj Aplikacje Mentalne
+                Przestań instalować kolejne aplikacje. Zacznij naprawiać to, co działa w Twojej głowie.
               </h2>
-              <p className="text-xl sm:text-2xl text-neural-blue font-semibold mb-4">
-                Twoje pierwsze kroki w transformacji mentalnej
-              </p>
               <p className="text-lg sm:text-xl text-subtle-slate mb-4 max-w-3xl mx-auto leading-relaxed">
-                Konkretne umiejętności: produktywność, odporność psychiczna czy
-                męskość.
+                Słuchaj, powiem Ci coś, czego nikt inny nie powie:
               </p>
-              <p className="text-base sm:text-lg text-subtle-slate/80 max-w-2xl mx-auto">
-                Wybierz aplikację, której właśnie potrzebujesz - tak jak nową
-                aplikację do telefonu.
+              <p className="text-xl sm:text-2xl font-bold text-neural-blue mb-6 max-w-3xl mx-auto">
+                Nie potrzebujesz kolejnego kursu produktywności.
+              </p>
+              <p className="text-lg sm:text-xl text-subtle-slate mb-8 max-w-3xl mx-auto leading-relaxed">
+                Potrzebujesz przeprogramować fundamenty – sposób, w jaki myślisz o czasie, energii, priorytetach i swojej tożsamości.
+              </p>
+              
+              <div className="max-w-3xl mx-auto mb-8 space-y-4">
+                <h3 className="text-2xl sm:text-3xl font-bold text-deep-charcoal">
+                  Moje Programy = Twój Mental Software Update
+                </h3>
+                <p className="text-lg text-subtle-slate leading-relaxed">
+                  Każda aplikacja to <strong className="text-neural-blue">intensywny, 4-6 tygodniowy program</strong> zaprojektowany, żeby zaktualizować JEDEN fundamentalny program działający w tle:
+                </p>
+                <ul className="text-left text-lg text-subtle-slate space-y-2 max-w-2xl mx-auto">
+                  <li className="flex items-start">
+                    <span className="text-neural-blue mr-2">•</span>
+                    <span><strong>Jak myślisz o produktywności</strong> (nie jak używasz Notion)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-neural-blue mr-2">•</span>
+                    <span><strong>Jak radzisz sobie z chaosem</strong> (nie jak planujesz dni)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-neural-blue mr-2">•</span>
+                    <span><strong>Kim jesteś jako mężczyzna</strong> (nie jak zarządzasz zespołem)</span>
+                  </li>
+                </ul>
+                <p className="text-lg text-subtle-slate leading-relaxed">
+                  To nie są taktyki. To są <strong className="text-neural-blue">fundamenty</strong>, które muszą działać, zanim cokolwiek innego zadziała.
+                </p>
+              </div>
+
+              <div className="bg-neural-blue/5 rounded-xl p-6 sm:p-8 max-w-3xl mx-auto mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-deep-charcoal mb-4">
+                  Dlaczego to działa (a kolejny kurs Udemy nie)
+                </h3>
+                <p className="text-lg text-subtle-slate mb-4">
+                  Bo nie uczę Cię <strong>JAK</strong> używać narzędzi.
+                </p>
+                <p className="text-lg text-subtle-slate mb-4">
+                  Przeprogramowuję <strong className="text-neural-blue">SPOSÓB</strong>, w jaki myślisz o tym, czemu te narzędzia mają służyć.
+                </p>
+                <p className="text-lg text-subtle-slate">
+                  Różnica? Każde narzędzie po tym zaczyna działać. Bo problem nigdy nie był w narzędziu.
+                </p>
+              </div>
+
+              <p className="text-xl font-semibold text-deep-charcoal mb-6">
+                Wybierz aplikację. Zainstaluj ją. Obserwuj, jak reszta zaczyna działać.
+              </p>
+              
+              <p className="text-lg text-subtle-slate mb-8">
+                A potem, jak będziesz gotów na pełen system upgrade → <Link to="/program/lifeos-system-upgrade" className="text-neural-blue hover:underline font-semibold">Life OS</Link> czeka.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8 mt-12">
