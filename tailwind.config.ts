@@ -134,6 +134,17 @@ const config: Config = {
         heading: ["var(--font-family-heading)", "Montserrat", "sans-serif"],
         sans: ["var(--font-family-primary)", "Inter", "sans-serif"],
       },
+      fontSize: {
+        "content-body": ["1.125rem", { lineHeight: "1.7" }],
+        "content-h1": ["3.5rem", { lineHeight: "1.15" }],
+        "content-h2": ["2rem", { lineHeight: "1.3" }],
+        "content-h3": ["1.5rem", { lineHeight: "1.4" }],
+      },
+      maxWidth: {
+        prose: "65ch",
+        "prose-wide": "75ch",
+        "prose-narrow": "55ch",
+      },
       fontWeight: {
         light: "var(--font-weight-light)",
         normal: "var(--font-weight-normal)",
@@ -321,7 +332,8 @@ const config: Config = {
             "linear-gradient(to bottom right, hsl(267 83% 26%) 0%, hsl(215 85% 13%) 50%, hsl(0 0% 4%) 100%) !important",
         },
         ".bg-gradient-locked-cta": {
-          background: "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
+          background:
+            "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
         },
         ".bg-gradient-locked-pricing": {
           background:
@@ -329,28 +341,33 @@ const config: Config = {
         },
         // Theme-adaptive gradient utilities (these were the original ones)
         ".bg-gradient-brand-primary": {
-          background: "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%))",
+          background:
+            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%))",
         },
         ".bg-gradient-brand-dark": {
-          background: "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%))",
+          background:
+            "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%))",
         },
         ".bg-gradient-brand-hero": {
           background:
             "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%))",
         },
         ".bg-gradient-text-brand": {
-          background: "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%))",
+          background:
+            "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
         },
         ".bg-gradient-text-brand-dark": {
-          background: "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
+          background:
+            "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
           ".dark &": {
-            background: "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
+            background:
+              "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
             backgroundClip: "text",
             "-webkit-background-clip": "text",
           },
@@ -373,7 +390,8 @@ const config: Config = {
           color: "hsl(240 11% 80%) !important",
         },
         ".text-locked-gradient": {
-          background: "linear-gradient(to right, hsl(308 80% 38%), hsl(308 79% 49%)) !important",
+          background:
+            "linear-gradient(to right, hsl(308 80% 38%), hsl(308 79% 49%)) !important",
           backgroundClip: "text !important",
           "-webkit-background-clip": "text !important",
           color: "transparent !important",
@@ -434,7 +452,8 @@ const config: Config = {
         },
         // Button utilities for locked sections
         ".btn-locked-primary": {
-          background: "linear-gradient(to right, hsl(0 0% 100%), hsl(210 40% 98%)) !important",
+          background:
+            "linear-gradient(to right, hsl(0 0% 100%), hsl(210 40% 98%)) !important",
           color: "hsl(267 83% 26%) !important",
           border: "none !important",
           boxShadow: "0 4px 12px hsl(267 83% 26% / 0.15) !important",

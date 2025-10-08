@@ -21,6 +21,7 @@ export {
   Target, // Used for goals/precision
   Crown, // Used for premium/elite features
   CheckCircle2, // Alternative checkmark style
+  Flame, // Used for urgency/scarcity indicators
 } from "lucide-react";
 
 // Interface/Navigation icons
