@@ -7,7 +7,16 @@ import CTASection from "../components/sections/CTASection";
 import BeforeAfterSlider from "../components/sections/BeforeAfterSlider";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
-import { Package, Rocket } from "../lib/icons";
+import {
+  Package,
+  Rocket,
+  CheckCircle,
+  Zap,
+  Lightbulb,
+  Brain,
+} from "../lib/icons";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   // How It Works steps
@@ -82,34 +91,41 @@ const Index = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-neural-blue/20">
-              <div className="text-center space-y-6">
-                <div className="inline-block px-6 py-2 bg-neural-blue/10 rounded-full border border-neural-blue/30 mb-4">
-                  <p className="text-2xl md:text-3xl font-bold text-neural-blue">
-                    Human First 🧠 Tech Second 🤖
+            <Card className="relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-neural-blue/20 shadow-xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-neural-blue/10 rounded-full blur-3xl"></div>
+              <CardContent className="p-8 md:p-12 relative">
+                <div className="text-center space-y-6">
+                  <div className="relative inline-block">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full blur opacity-40 animate-pulse"></div>
+                    <Badge className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-xl md:text-2xl px-6 py-3 shadow-xl">
+                      <Brain className="inline h-6 w-6 mr-2" />
+                      Human First 🧠 Tech Second 🤖
+                    </Badge>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal leading-tight">
+                    Upgrade Your Life Operating System
+                  </h2>
+                  <p className="text-xl md:text-2xl text-deep-charcoal/80 leading-relaxed">
+                    Technology amplifies who you are.{" "}
+                    <strong className="text-neural-blue">
+                      The real upgrade happens in your mind.
+                    </strong>
+                  </p>
+                  <p className="text-lg md:text-xl text-deep-charcoal/70 leading-relaxed max-w-3xl mx-auto">
+                    Transform from outdated mental patterns to a system that
+                    actually unlocks your potential. Stop running on{" "}
+                    <span className="line-through text-red-500">
+                      Windows 98
+                    </span>{" "}
+                    thinking—upgrade to{" "}
+                    <span className="font-bold text-neural-blue">
+                      clarity, purpose, and impact
+                    </span>
+                    .
                   </p>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal leading-tight">
-                  Upgrade Your Life Operating System
-                </h2>
-                <p className="text-xl md:text-2xl text-deep-charcoal/80 leading-relaxed">
-                  Technology amplifies who you are.{" "}
-                  <strong className="text-neural-blue">
-                    The real upgrade happens in your mind.
-                  </strong>
-                </p>
-                <p className="text-lg md:text-xl text-deep-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-                  Transform from outdated mental patterns to a system that
-                  actually unlocks your potential. Stop running on{" "}
-                  <span className="line-through text-red-500">Windows 98</span>{" "}
-                  thinking—upgrade to{" "}
-                  <span className="font-bold text-neural-blue">
-                    clarity, purpose, and impact
-                  </span>
-                  .
-                </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
@@ -141,100 +157,62 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-neural-blue/20 hover:border-neural-blue/50 hover:-translate-y-2">
-                <div className="w-20 h-20 bg-neural-blue rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-neural-blue">
-                  Lider lub Ekspert
-                </h3>
-                <p className="text-deep-charcoal/80 leading-relaxed text-base">
-                  Osiągnąłeś sukces dzięki dotychczasowym metodom, ale czujesz,
-                  że stare podejście przestaje wystarczać w nowej, bardziej
-                  złożonej rzeczywistości.
-                </p>
-              </div>
+              <Card className="relative overflow-hidden bg-white text-center group hover:shadow-2xl transition-all duration-300 border-2 border-neural-blue/20 hover:border-neural-blue/50 hover:-translate-y-2">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-neural-blue/10 rounded-full blur-3xl"></div>
+                <CardContent className="p-8 relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-neural-blue">
+                    Lider lub Ekspert
+                  </h3>
+                  <p className="text-deep-charcoal/80 leading-relaxed text-base">
+                    Osiągnąłeś sukces dzięki dotychczasowym metodom, ale
+                    czujesz, że stare podejście przestaje wystarczać w nowej,
+                    bardziej złożonej rzeczywistości.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 hover:-translate-y-2">
-                <div className="w-20 h-20 bg-twilight-indigo rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">
-                  Przedsiębiorca
-                </h3>
-                <p className="text-deep-charcoal/80 leading-relaxed text-base">
-                  Rozumiesz, że rozwój firmy jest nierozerwalnie związany z
-                  rozwojem Twojego własnego umysłu i sposobu myślenia.
-                </p>
-              </div>
+              <Card className="relative overflow-hidden bg-white text-center group hover:shadow-2xl transition-all duration-300 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 hover:-translate-y-2">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-twilight-indigo/10 rounded-full blur-3xl"></div>
+                <CardContent className="p-8 relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-twilight-indigo to-neural-blue rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-twilight-indigo">
+                    Przedsiębiorca
+                  </h3>
+                  <p className="text-deep-charcoal/80 leading-relaxed text-base">
+                    Rozumiesz, że rozwój firmy jest nierozerwalnie związany z
+                    rozwojem Twojego własnego umysłu i sposobu myślenia.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <div className="bg-white rounded-2xl p-8 text-center group hover:shadow-2xl transition-all duration-300 border-2 border-growth-gold/20 hover:border-growth-gold/50 hover:-translate-y-2">
-                <div className="w-20 h-20 bg-growth-gold rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-growth-gold">
-                  Profesjonalista
-                </h3>
-                <p className="text-deep-charcoal/80 leading-relaxed text-base">
-                  Dbasz o dietę, kondycję fizyczną i najlepsze narzędzia, a
-                  teraz czujesz, że czas zająć się najważniejszym zasobem – tym,
-                  co masz w głowie.
-                </p>
-              </div>
+              <Card className="relative overflow-hidden bg-white text-center group hover:shadow-2xl transition-all duration-300 border-2 border-growth-gold/20 hover:border-growth-gold/50 hover:-translate-y-2">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-growth-gold/10 rounded-full blur-3xl"></div>
+                <CardContent className="p-8 relative">
+                  <div className="w-16 h-16 bg-gradient-to-br from-growth-gold to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                    <Lightbulb className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-growth-gold">
+                    Profesjonalista
+                  </h3>
+                  <p className="text-deep-charcoal/80 leading-relaxed text-base">
+                    Dbasz o dietę, kondycję fizyczną i najlepsze narzędzia, a
+                    teraz czujesz, że czas zająć się najważniejszym zasobem –
+                    tym, co masz w głowie.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
-            <div className="relative bg-neural-blue/5 rounded-2xl p-10 md:p-16 text-center border-2 border-neural-blue/20 shadow-xl">
-              <div className="relative">
-                <div className="w-16 h-16 bg-neural-blue rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
+            <Card className="relative overflow-hidden bg-neural-blue/5 text-center border-2 border-neural-blue/20 shadow-xl">
+              <div className="absolute top-0 left-0 w-32 h-32 bg-neural-blue/10 rounded-full blur-3xl"></div>
+              <CardContent className="p-10 md:p-16 relative">
+                <div className="w-14 h-14 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <CheckCircle className="w-7 h-7 text-white" />
                 </div>
                 <p className="text-2xl md:text-3xl font-bold text-deep-charcoal leading-relaxed mb-4">
                   Jeśli jesteś gotów, by zadbać o swój umysł z taką samą uwagą,
@@ -243,8 +221,8 @@ const Index = () => {
                 <p className="text-xl text-neural-blue font-semibold">
                   – jesteś we właściwym miejscu.
                 </p>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

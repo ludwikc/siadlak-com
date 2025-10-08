@@ -67,6 +67,11 @@ export {
   Ribbon,
   Package,
   Rocket,
+  Lightbulb,
+  AlertTriangle,
+  Sparkles,
+  Trophy,
+  TrendingDown,
 } from "lucide-react";
 
 // Special icons (used only once or twice)
