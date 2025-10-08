@@ -38,7 +38,7 @@ const Index = () => {
 
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="whitespace-pre-line text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="whitespace-pre-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
                 {`Life Hacking to nie droga na skróty.
 `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
