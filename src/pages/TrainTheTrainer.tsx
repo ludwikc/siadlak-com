@@ -839,7 +839,7 @@ export default function TrainTheTrainer() {
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Twoja transformacja zaczyna się{" "}
-                <span className="text-silver-mist">od Sesji Discovery</span>
+                <span className="text-white/90">od Sesji Discovery</span>
               </h2>
 
               <p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -907,7 +907,7 @@ export default function TrainTheTrainer() {
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-8 shadow-2xl border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">
                 Sprawdź, czy się kwalifikujesz{" "}
-                <span className="text-silver-mist">(self-check)</span>
+                <span className="text-white/90">(self-check)</span>
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

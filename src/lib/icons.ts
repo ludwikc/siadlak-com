@@ -75,4 +75,4 @@ export {
 } from "lucide-react";
 
 // Special icons (used only once or twice)
-export { User, MailIcon, CheckCheck, Lock } from "lucide-react";
+export { User, MailIcon, CheckCheck, Lock, X } from "lucide-react";

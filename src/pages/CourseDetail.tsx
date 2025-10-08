@@ -402,11 +402,11 @@ const CourseDetail = () => {
               {course.title}
             </h1>
 
-            <p className="text-xl md:text-2xl font-medium mb-6 text-silver-mist">
+            <p className="text-xl md:text-2xl font-medium mb-6 text-white/90">
               {course.subtitle}
             </p>
 
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90 max-w-3xl">
+            <p className="text-lg md:text-xl mb-8 text-white/90/90 max-w-3xl">
               {course.description}
             </p>
 

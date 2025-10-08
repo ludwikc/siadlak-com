@@ -153,7 +153,7 @@ export default function LifeOSSystemUpgrade() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="text-white">
             <span className="font-bold text-lg">Life OS: System Upgrade</span>
-            <span className="ml-4 text-sm text-silver-mist">
+            <span className="ml-4 text-sm text-white/90">
               {spotsAvailable}/5 miejsc dostępnych
             </span>
           </div>
@@ -205,7 +205,7 @@ export default function LifeOSSystemUpgrade() {
                   System Upgrade
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-white/90 leading-tight">
                 8 tygodni transformacji dla liderów, którzy osiągnęli
                 wszystko... i właśnie dlatego czują się pusto.
               </h2>
@@ -615,11 +615,11 @@ export default function LifeOSSystemUpgrade() {
               Life OS: System Upgrade
             </h2>
 
-            <p className="text-2xl text-center mb-4 text-silver-mist font-bold">
+            <p className="text-2xl text-center mb-4 text-white/90 font-bold">
               Nie coaching. Nie terapia. Transformacja na poziomie tożsamości.
             </p>
 
-            <div className="text-xl text-center mb-12 text-silver-mist/90 space-y-4">
+            <div className="text-xl text-center mb-12 text-white/90/90 space-y-4">
               <p>To 8 tygodni głębokiej pracy dla liderów, którzy:</p>
               <ul className="space-y-3 text-left max-w-3xl mx-auto">
                 <li className="flex items-start">
@@ -653,11 +653,11 @@ export default function LifeOSSystemUpgrade() {
               <p className="text-2xl text-zenith-gold font-bold mb-4 text-center">
                 Co to znaczy w praktyce?
               </p>
-              <p className="text-lg text-silver-mist/90 mb-6">
+              <p className="text-lg text-white/90/90 mb-6">
                 To nie są przyjemne sesje, gdzie klepię Cię po plecach i mówię,
                 jak jesteś świetny.
               </p>
-              <p className="text-lg text-silver-mist/90 mb-4">
+              <p className="text-lg text-white/90/90 mb-4">
                 W zależności od tego, czego potrzebujesz:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -665,7 +665,7 @@ export default function LifeOSSystemUpgrade() {
                   <h4 className="text-xl font-bold text-zenith-gold mb-3">
                     Albo dostaniesz "terapię szokową":
                   </h4>
-                  <ul className="space-y-2 text-silver-mist/90">
+                  <ul className="space-y-2 text-white/90/90">
                     <li>
                       • Bezpośrednią konfrontację z historiami, które sobie
                       opowiadasz
@@ -681,7 +681,7 @@ export default function LifeOSSystemUpgrade() {
                   <h4 className="text-xl font-bold text-zenith-gold mb-3">
                     Albo dostaniesz "przewodnictwo przez transcendencję":
                   </h4>
-                  <ul className="space-y-2 text-silver-mist/90">
+                  <ul className="space-y-2 text-white/90/90">
                     <li>• Delikatne prowadzenie przez mapy i terytoria</li>
                     <li>• Pozwolenie na ekspansję i rozwój</li>
                     <li>• Wsparcie w odkrywaniu głębszych warstw siebie</li>
@@ -708,12 +708,12 @@ export default function LifeOSSystemUpgrade() {
                         <h3 className="text-2xl font-bold text-white mb-2">
                           FAZA 1: DIAGNOSTYKA SYSTEMU
                         </h3>
-                        <p className="text-silver-mist text-lg font-medium">
+                        <p className="text-white/90 text-lg font-medium">
                           Tydzień 1-2
                         </p>
                       </div>
                     </div>
-                    <div className="text-silver-mist/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
                       <p>Tutaj zaczyna się prawdziwa praca.</p>
                       <p className="font-bold text-white">
                         Niektórzy ludzie potrzebują, żeby ktoś przeciął ich
@@ -771,12 +771,12 @@ export default function LifeOSSystemUpgrade() {
                         <h3 className="text-2xl font-bold text-white mb-2">
                           FAZA 2: DEKONSTRUKCJA I WYZWANIE
                         </h3>
-                        <p className="text-silver-mist text-lg font-medium">
+                        <p className="text-white/90 text-lg font-medium">
                           Tydzień 3-4
                         </p>
                       </div>
                     </div>
-                    <div className="text-silver-mist/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
                       <p className="font-bold text-white">
                         Tutaj zaczyna się prawdziwa praca.
                       </p>
@@ -844,12 +844,12 @@ export default function LifeOSSystemUpgrade() {
                         <h3 className="text-2xl font-bold text-white mb-2">
                           FAZA 3: INTEGRACJA RDZENIA
                         </h3>
-                        <p className="text-silver-mist text-lg font-medium">
+                        <p className="text-white/90 text-lg font-medium">
                           Tydzień 5-6
                         </p>
                       </div>
                     </div>
-                    <div className="text-silver-mist/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
                       <p>
                         Teraz uczymy Twoje konfliktowe części współpracować.
                       </p>
@@ -908,10 +908,10 @@ export default function LifeOSSystemUpgrade() {
                       <h3 className="text-2xl font-bold text-white">
                         FAZA 4: NOWY STANDARD DZIAŁANIA
                       </h3>
-                      <p className="text-silver-mist">Tydzień 7-8</p>
+                      <p className="text-white/90">Tydzień 7-8</p>
                     </div>
                   </div>
-                  <div className="text-silver-mist/90 text-lg leading-relaxed space-y-4">
+                  <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
                     <p>Nowy system operacyjny staje się Twoją drugą naturą.</p>
 
                     <div className="bg-gradient-to-r from-zenith-gold/20 to-twilight-indigo/20 p-6 rounded-xl">
@@ -1663,7 +1663,7 @@ export default function LifeOSSystemUpgrade() {
             </h2>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-8">
-              <p className="text-xl text-silver-mist mb-6 text-center">
+              <p className="text-xl text-white/90 mb-6 text-center">
                 Zanim zdecydujemy o współpracy, musimy przeprowadzić{" "}
                 <span className="text-zenith-gold font-bold">
                   ~30-minutową Sesję Discovery.
@@ -1674,11 +1674,11 @@ export default function LifeOSSystemUpgrade() {
                 To nie jest rozmowa sprzedażowa.
               </p>
 
-              <p className="text-xl text-silver-mist mb-8 text-center">
+              <p className="text-xl text-white/90 mb-8 text-center">
                 To wzajemna ocena, czy mamy ze sobą pracować.
               </p>
 
-              <p className="text-lg text-silver-mist/90 mb-2 text-center">
+              <p className="text-lg text-white/90/90 mb-2 text-center">
                 Ja oceniam Ciebie. Ty oceniasz mnie.
               </p>
             </div>
@@ -1694,7 +1694,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       1. Głęboka diagnostyka Twojego systemu
                     </p>
-                    <p className="text-silver-mist/90">
+                    <p className="text-white/90/90">
                       Nie będziemy mówić o celach i strategiach. Zejdziemy
                       głębiej: gdzie jest konflikt tożsamości? Jaka narracja Cię
                       blokuje? Która ścieżka transformacji jest Twoja?
@@ -1705,7 +1705,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       2. Sprawdzenie chemii
                     </p>
-                    <p className="text-silver-mist/90">
+                    <p className="text-white/90/90">
                       Ta praca wymaga zaufania. Jeśli nie czujesz, że możesz mi
                       zaufać w najtrudniejszych momentach - nie podejmujemy
                       współpracy. I to ok.
@@ -1716,7 +1716,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       3. Decyzja obu stron
                     </p>
-                    <p className="text-silver-mist/90">
+                    <p className="text-white/90/90">
                       Na końcu sesji oba decydujemy, czy chcemy współpracować.
                       Nie ma presji. Jest uczciwość.
                     </p>
@@ -1725,7 +1725,7 @@ export default function LifeOSSystemUpgrade() {
 
                 <div className="bg-zenith-gold/20 p-6 rounded-xl mt-8">
                   <p className="text-white font-bold mb-2">Uwaga:</p>
-                  <p className="text-silver-mist/90">
+                  <p className="text-white/90/90">
                     Sesja Discovery to nie "darmowa próbka." To rzeczywista
                     praca. Może być intensywna. Wyjdziesz z niej z clarity -
                     niezależnie od tego, czy się zdecydujemy na współpracę.
@@ -1746,13 +1746,13 @@ export default function LifeOSSystemUpgrade() {
                 </CTAButton>
               </Link>
 
-              <p className="text-silver-mist/80 italic text-sm mb-2">
+              <p className="text-white/90/80 italic text-sm mb-2">
                 Liczba miejsc w programie jest ściśle ograniczona do 5 osób
                 jednocześnie, aby zapewnić maksymalną jakość i moje
                 zaangażowanie.
               </p>
               <div className="inline-flex items-center justify-center gap-3 bg-zenith-gold/20 px-6 py-3 rounded-full border-2 border-zenith-gold/40">
-                <span className="text-silver-mist font-semibold">
+                <span className="text-white/90 font-semibold">
                   Obecnie dostępne:
                 </span>
                 <span className="text-3xl font-bold text-zenith-gold">
@@ -1762,7 +1762,7 @@ export default function LifeOSSystemUpgrade() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10">
-              <p className="text-lg text-silver-mist/90 mb-4">
+              <p className="text-lg text-white/90/90 mb-4">
                 <span className="font-bold text-zenith-gold">P.S.</span> Jeśli
                 dotarłeś aż tutaj i wciąż się wahasz, analizując wszystkie "za"
                 i "przeciw" – to jest właśnie jeden ze wzorców, z którym
@@ -2000,14 +2000,14 @@ const PhaseTimeline = () => {
               <div className="text-center">
                 <div
                   className={`text-xs font-semibold mb-1 transition-all duration-300 ${
-                    isActive ? "text-zenith-gold" : "text-silver-mist/70"
+                    isActive ? "text-zenith-gold" : "text-white/90/70"
                   }`}
                 >
                   {phase.subtitle}
                 </div>
                 <div
                   className={`text-sm font-bold transition-all duration-300 ${
-                    isActive ? "text-white text-base" : "text-silver-mist"
+                    isActive ? "text-white text-base" : "text-white/90"
                   }`}
                 >
                   {phase.number}. {phase.title}
@@ -2206,7 +2206,7 @@ const ExitIntentModal = ({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-silver-mist hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-white/90 hover:text-white transition-colors"
           aria-label="Close modal"
         >
           <X className="w-6 h-6" />
@@ -2218,10 +2218,10 @@ const ExitIntentModal = ({
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Poczekaj - jeszcze jedno
           </h3>
-          <p className="text-xl text-silver-mist mb-6">
+          <p className="text-xl text-white/90 mb-6">
             Rozumiem wahanie. To normalne przy tak głębokiej transformacji.
           </p>
-          <p className="text-lg text-silver-mist/90 mb-8">
+          <p className="text-lg text-white/90/90 mb-8">
             Ale zanim wyjdziesz:{" "}
             <strong className="text-zenith-gold">
               czy to jest analiza, czy ucieczka?
@@ -2232,7 +2232,7 @@ const ExitIntentModal = ({
             <p className="text-white font-bold mb-3">
               3 pytania, które warto sobie zadać:
             </p>
-            <ul className="space-y-3 text-silver-mist">
+            <ul className="space-y-3 text-white/90">
               <li>
                 1. Czy odkładanie tej decyzji zmieni cokolwiek w Twojej
                 sytuacji?
@@ -2247,7 +2247,7 @@ const ExitIntentModal = ({
             </ul>
           </div>
 
-          <p className="text-lg text-silver-mist mb-8">
+          <p className="text-lg text-white/90 mb-8">
             Sesja Discovery to{" "}
             <span className="text-zenith-gold font-bold">
               zero zobowiązania
@@ -2270,13 +2270,13 @@ const ExitIntentModal = ({
             </CTAButton>
             <button
               onClick={onClose}
-              className="px-6 py-3 text-silver-mist hover:text-white border border-white/30 rounded-lg transition-colors"
+              className="px-6 py-3 text-white/90 hover:text-white border border-white/30 rounded-lg transition-colors"
             >
               Może innym razem
             </button>
           </div>
 
-          <p className="text-sm text-silver-mist/70 mt-6 italic">
+          <p className="text-sm text-white/90/70 mt-6 italic">
             "Najlepszy moment to teraz. Drugi najlepszy - jutro. Najgorszy -
             nigdy."
           </p>

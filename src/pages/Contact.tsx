@@ -28,7 +28,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Porozmawiajmy
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 text-white/90/90 leading-relaxed max-w-2xl mx-auto">
               Cenię bezpośrednią komunikację i osobiście odpowiadam na
               wiadomości. Jeśli szukasz transformacji zamiast tylko kolejnego
               kursu, lub masz pytania o odzyskanie kontroli nad cyfrowym życiem

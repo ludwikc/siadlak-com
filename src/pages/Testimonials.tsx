@@ -89,7 +89,7 @@ const Testimonials = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Historie Transformacji
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-silver-mist/90">
+            <p className="text-lg md:text-xl mb-8 text-white/90/90">
               Ci profesjonaliści odzyskali kontrolę nad swoim cyfrowym życiem i
               przekształcili swoją relację z technologią. Ich historie pokazują,
               co jest możliwe, gdy przestajesz służyć technologii i zaczynasz
