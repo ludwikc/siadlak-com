@@ -215,13 +215,13 @@ export default function Program() {
 
             {/* Main Heading */}
             <div className="text-center mb-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-deep-charcoal leading-tight">
+              <h1 className="break-words hyphens-auto text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-deep-charcoal leading-tight">
                 LifeOS{" "}
                 <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
                   AppStore
                 </span>
               </h1>
-              <p className="whitespace-pre-line text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
+              <p className="whitespace-pre-line break-words hyphens-auto text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
                 {`Aplikacje mentalnej transformacji.
 Zainstaluj nowe oprogramowanie. `}
                 <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-bold">

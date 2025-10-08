@@ -38,7 +38,7 @@ const Index = () => {
 
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="whitespace-pre-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
                 {`Life Hacking to nie droga na skróty.
 `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
@@ -51,7 +51,7 @@ I przeprogramowanie fundamentów.`}
 
             {/* TIER 2: Identity Statement */}
             <div className="text-center mb-16 md:mb-20">
-              <p className="whitespace-pre-line text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto px-4">
+              <p className="whitespace-pre-line break-words hyphens-auto text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto px-4">
                 {`Jestem Ludwik C. Siadlak – Life Hacker.
 Nie szukam skrótów. Przepisuję zasady.`}
               </p>
@@ -425,7 +425,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
                       <Sparkles className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-3xl font-bold text-twilight-indigo mb-2">
+                      <h3 className="break-words hyphens-auto text-3xl font-bold text-twilight-indigo mb-2">
                         ŚCIEŻKA POSZUKIWACZA
                       </h3>
                       <p className="text-xl font-semibold text-deep-charcoal">

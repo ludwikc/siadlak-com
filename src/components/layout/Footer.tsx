@@ -30,9 +30,8 @@ export default function Footer() {
                 </h3>
               </Link>
               <p className="text-white/90 text-sm leading-relaxed">
-                Prowadzę profesjonalistów na styku technologii i ludzkiego
-                potencjału.
-                <br /> <br /> Buduję społeczności, w których liczy się Człowiek.
+                <span className="font-bold">Life Hacker. </span><br /><br />Katalizuję wojowników. <br />Prowadzę poszukiwaczy. 
+                <br /> <br /> Na co czekasz?
               </p>
             </div>
             <div className="flex space-x-3">
@@ -154,14 +153,6 @@ export default function Footer() {
                   Instaluj: Odporność Psychiczna
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/train-the-trainer"
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
-                >
-                  TrainTheTrainer.pl
-                </Link>
-              </li>
               <li className="pt-2 mt-2 border-t border-white/10">
                 <Link
                   to="/program"
@@ -169,6 +160,52 @@ export default function Footer() {
                 >
                   Zobacz wszystkie programy
                   <ExternalLink size={12} className="rotate-[-45deg]" />
+                </Link>
+              </li>
+            </ul>
+
+            {/* Projekty */}
+            <h4 className="text-lg font-bold mb-2 text-white mt-8">Projekty</h4>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-twilight-indigo rounded-full mb-4"></div>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="https://fundacja.hackerzy.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                >
+                  Fundacja HACKERZY.PL
+                  <ExternalLink size={14} className="flex-shrink-0" />
+                </a>
+              </li><li>
+                <a
+                  href="https://deepwork.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                >
+                  DeepWork.pl
+                  <ExternalLink size={14} className="flex-shrink-0" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://uwaznezycie.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                >
+                  UwazneZycie.pl
+                  <ExternalLink size={14} className="flex-shrink-0" />
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/program/ttt"
+                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                >
+                  TrainTheTrainer.pl
                 </Link>
               </li>
             </ul>

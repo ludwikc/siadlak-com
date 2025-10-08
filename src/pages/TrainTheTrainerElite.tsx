@@ -72,7 +72,7 @@ export default function TrainTheTrainerElite() {
             </div>
 
             {/* Main Headline - Benefit-Focused */}
-            <h1 className="whitespace-pre-line text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
+            <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
               {`Od Technika w Piwnicy do `}
               <span className="text-locked-gradient">
                 Trenera na Scenie Fortune 500

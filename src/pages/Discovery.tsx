@@ -74,7 +74,7 @@ export default function Discovery() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="whitespace-pre-line text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
+            <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
               <span className="text-locked-gradient">Sesja Discovery</span>
               {` – 30 minut, które rozstrzygną, czy jesteśmy dla siebie`}
             </h1>

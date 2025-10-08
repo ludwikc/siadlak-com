@@ -23,12 +23,12 @@ export default function WebinarMeskiKompas() {
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="whitespace-pre-line text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary-foreground leading-tight">
+            <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary-foreground leading-tight">
               {`JEŚLI JESTEŚ FACETEM KTÓRY "POWINIEN OGARNĄĆ SAM"
 ALE W GŁOWIE MASZ PARALIŻ`}
             </h1>
 
-            <h2 className="whitespace-pre-line text-2xl md:text-4xl font-bold mb-6 text-accent">
+            <h2 className="whitespace-pre-line break-words hyphens-auto text-2xl md:text-4xl font-bold mb-6 text-accent">
               TEN WARSZTAT JEST DLA CIEBIE
             </h2>
 
