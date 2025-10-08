@@ -38,21 +38,22 @@ const Index = () => {
 
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
-                Life Hacking to nie droga na skróty.{" "}<br/>
+              <h1 className="whitespace-pre-line text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+                {`Life Hacking to nie droga na skróty.
+`}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   To włamanie do własnego umysłu.
-                </span>{" "}<br/>
-                I&nbsp;przeprogramowanie fundamentów.
+                </span>
+                {`
+I przeprogramowanie fundamentów.`}
               </h1>
             </div>
 
             {/* TIER 2: Identity Statement */}
             <div className="text-center mb-16 md:mb-20">
-              <p className="text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto px-4">
-                Jestem Ludwik C. Siadlak – Life Hacker.
-                <br />
-                Nie szukam skrótów. Przepisuję zasady.
+              <p className="whitespace-pre-line text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto px-4">
+                {`Jestem Ludwik C. Siadlak – Life Hacker.
+Nie szukam skrótów. Przepisuję zasady.`}
               </p>
             </div>
 
@@ -63,16 +64,16 @@ const Index = () => {
               <div className="md:col-span-2 text-center md:text-left">
                 <div className="space-y-4 text-xl text-white/90 leading-relaxed mb-12">
                   <p>
-                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności - i wciąż kręcisz sie w kółko.
+                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności — i&nbsp;wciąż kręcisz się w&nbsp;kółko.
                   </p>
                   <p>
-                    Bo problem nie jest w narzędziach.{" "}
+                    Bo problem nie jest w&nbsp;narzędziach.{" "}
                     <span className="text-zenith-gold">
-                      Jest w systemie operacyjnym, na którym działasz.
+                      Jest w&nbsp;systemie operacyjnym, na&nbsp;którym działasz.
                     </span>
                   </p>
                   <p>
-                    Hackuję fundamenty Twojego myślenia – o czasie, energii, tożsamości i&nbsp;narracjach.
+                    Hackuję fundamenty Twojego myślenia — o&nbsp;czasie, energii, tożsamości i&nbsp;narracjach.
                   </p>
                 </div>
 

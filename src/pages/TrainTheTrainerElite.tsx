@@ -72,12 +72,12 @@ export default function TrainTheTrainerElite() {
             </div>
 
             {/* Main Headline - Benefit-Focused */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
-              Od Technika w Piwnicy do{" "}
+            <h1 className="whitespace-pre-line text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
+              {`Od Technika w Piwnicy do `}
               <span className="text-locked-gradient">
                 Trenera na Scenie Fortune 500
               </span>
-              : 8 Tygodni, 40-60 Tysięcy Złotych Dziennie
+              {`: 8 Tygodni, 40-60 Tysięcy Złotych Dziennie`}
             </h1>
 
             {/* Subheadline - Problem/Solution */}

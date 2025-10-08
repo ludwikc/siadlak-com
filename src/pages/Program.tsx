@@ -221,11 +221,9 @@ export default function Program() {
                   AppStore
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 mb-4 leading-relaxed">
-                Aplikacje mentalnej transformacji.
-              </p>
-              <p className="text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
-                Zainstaluj nowe oprogramowanie.{" "}
+              <p className="whitespace-pre-line text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
+                {`Aplikacje mentalnej transformacji.
+Zainstaluj nowe oprogramowanie. `}
                 <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-bold">
                   W głowie.
                 </span>
