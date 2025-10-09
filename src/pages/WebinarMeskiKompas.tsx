@@ -23,62 +23,71 @@ export default function WebinarMeskiKompas() {
 
       {/* HERO SECTION */}
       <section
-        className="relative py-20 md:py-32 overflow-hidden"
-        style={{ backgroundColor: "hsl(210, 45%, 12%)" }}
+        className="relative py-24 md:py-40 overflow-hidden"
+        style={{ 
+          background: "linear-gradient(135deg, hsl(210, 50%, 8%) 0%, hsl(210, 45%, 12%) 50%, hsl(210, 40%, 10%) 100%)"
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,204,0,0.08),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,204,0,0.05),transparent_50%)]"></div>
+        {/* Animated gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/60 animate-fade-in"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,204,0,0.12),transparent_40%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,204,0,0.08),transparent_50%)]"></div>
+        
+        {/* Luxury glow effects */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            {/* Urgency badge */}
-            <div className="flex justify-center mb-8">
+            {/* Urgency badge with premium styling */}
+            <div className="flex justify-center mb-10 animate-fade-in">
               <div
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 animate-pulse"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover-scale"
                 style={{
-                  backgroundColor: "hsl(45, 85%, 50%)",
-                  borderColor: "hsl(45, 85%, 60%)",
-                  boxShadow: "0 0 30px rgba(255, 204, 0, 0.3)",
+                  background: "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 50%) 100%)",
+                  borderColor: "hsl(45, 100%, 65%)",
+                  boxShadow: "0 0 40px rgba(255, 204, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
                 }}
               >
-                <span className="text-2xl">⚠️</span>
-                <span className="font-bold text-black text-sm md:text-base">
+                <span className="text-2xl animate-pulse">⚠️</span>
+                <span className="font-bold text-black text-sm md:text-base tracking-wide">
                   DARMOWY WARSZTAT LIVE • OGRANICZONA LICZBA MIEJSC
                 </span>
               </div>
             </div>
 
-            <div className="text-center">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl md:text-5xl lg:text-7xl font-bold mb-6 text-primary-foreground leading-[1.1] tracking-tight">
+            <div className="text-center animate-fade-in">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl md:text-5xl lg:text-7xl font-bold mb-8 text-white leading-[1.15] tracking-tight drop-shadow-lg">
                 KONIEC Z DRYFOWANIEM:
                 <br />
                 <span
-                  className="inline-block mt-2"
-                  style={{ color: "hsl(45, 85%, 55%)" }}
+                  className="inline-block mt-3 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent"
+                  style={{ 
+                    textShadow: "0 0 40px rgba(255, 204, 0, 0.3)"
+                  }}
                 >
                   JAK ANALITYCZNY UMYSŁ
                 </span>
                 <br />
-                <span className="text-2xl md:text-4xl lg:text-5xl">
+                <span className="text-2xl md:text-4xl lg:text-5xl text-white/95 mt-2 inline-block">
                   SABOTUJE TWOJĄ MĘSKOŚĆ
                 </span>
                 <br />
-                <span className="text-2xl md:text-4xl lg:text-5xl mt-2 inline-block">
+                <span className="text-2xl md:text-4xl lg:text-5xl mt-3 inline-block text-white/95">
                   I JAK ZAMIENIĆ GO W NAJWIĘKSZĄ SIŁĘ
                 </span>
               </h1>
 
-              <div className="mb-10 flex justify-center">
+              <div className="mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-2xl px-8 py-6 border max-w-3xl backdrop-blur-sm"
+                  className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover-scale transition-all duration-300"
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.4)",
-                    borderColor: "rgba(255, 204, 0, 0.5)",
+                    background: "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
+                    borderColor: "rgba(255, 204, 0, 0.6)",
                     boxShadow:
-                      "0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 204, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                      "0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 204, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.15), inset 0 -2px 10px rgba(255, 204, 0, 0.1)",
                   }}
                 >
-                  <p className="text-lg md:text-2xl font-bold text-white leading-relaxed">
+                  <p className="text-xl md:text-3xl font-bold text-white leading-relaxed">
                     90-minutowy warsztat dla analitycznych mężczyzn 30+,
                     <br className="hidden md:block" />
                     którzy mają dość zastanawiania się, zamiast działania.
@@ -86,14 +95,15 @@ export default function WebinarMeskiKompas() {
                 </div>
               </div>
 
-              <div className="mb-8">
+              <div className="mb-10 animate-fade-in">
                 <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                   <Button
                     size="lg"
-                    className="text-base md:text-xl font-bold px-8 md:px-12 py-6 md:py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-0"
+                    className="text-lg md:text-2xl font-bold px-10 md:px-16 py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
                     style={{
-                      backgroundColor: "hsl(45, 85%, 50%)",
+                      background: "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 48%) 100%)",
                       color: "hsl(210, 20%, 8%)",
+                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
                     <span className="inline md:hidden">REZERWUJ MIEJSCE →</span>
@@ -104,48 +114,63 @@ export default function WebinarMeskiKompas() {
                 </a>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-6">
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 animate-fade-in">
                 <div
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  style={{ 
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  }}
                 >
-                  <span className="text-xl">📅</span>
+                  <span className="text-2xl">📅</span>
                   <span className="text-white font-semibold text-sm md:text-base">
                     16 października 2025
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  style={{ 
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  }}
                 >
-                  <span className="text-xl">🕐</span>
+                  <span className="text-2xl">🕐</span>
                   <span className="text-white font-semibold text-sm md:text-base">
                     19:00 CET
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  style={{ 
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  }}
                 >
-                  <span className="text-xl">⏱️</span>
+                  <span className="text-2xl">⏱️</span>
                   <span className="text-white font-semibold text-sm md:text-base">
                     90 minut
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg"
-                  style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  style={{ 
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  }}
                 >
-                  <span className="text-xl">💻</span>
+                  <span className="text-2xl">💻</span>
                   <span className="text-white font-semibold text-sm md:text-base">
                     Online (Zoom)
                   </span>
                 </div>
               </div>
 
-              <p className="text-white/60 text-sm md:text-base italic">
-                Darmowy warsztat pokazowy • Bez żadnych zobowiązań • Link
-                dostaniesz mailem
+              <p className="text-white/70 text-base md:text-lg italic font-light animate-fade-in">
+                Darmowy warsztat pokazowy • Bez żadnych zobowiązań • Link dostaniesz mailem
               </p>
             </div>
           </div>
