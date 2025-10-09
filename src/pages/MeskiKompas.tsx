@@ -421,35 +421,87 @@ export default function MeskiKompas() {
               kupisz i czy z tego skorzystasz:
             </p>
 
-            {/* Value Equation Formula */}
+            {/* Value Equation Formula - LaTeX-like style */}
             <div
-              className="mb-12 p-8 rounded-2xl text-center"
-              style={{ backgroundColor: "hsl(45, 85%, 50%)" }}
+              className="mb-12 p-8 md:p-12 rounded-2xl"
+              style={{
+                backgroundColor: "hsl(45, 85%, 50%)",
+                boxShadow: "0 10px 40px rgba(0, 0, 0, 0.2)",
+              }}
             >
-              <p
-                className="text-2xl md:text-3xl font-bold mb-4"
-                style={{ color: "hsl(210, 40%, 15%)" }}
-              >
-                WARTOŚĆ =
-              </p>
-              <p
-                className="text-xl md:text-2xl font-bold mb-2"
-                style={{ color: "hsl(210, 40%, 15%)" }}
-              >
-                (Wymarzony Rezultat × Prawdopodobieństwo Sukcesu)
-              </p>
-              <p
-                className="text-3xl font-bold mb-2"
-                style={{ color: "hsl(210, 40%, 15%)" }}
-              >
-                /
-              </p>
-              <p
-                className="text-xl md:text-2xl font-bold"
-                style={{ color: "hsl(210, 40%, 15%)" }}
-              >
-                (Opóźnienie Czasowe × Wysiłek i Poświęcenie)
-              </p>
+              <div className="flex flex-col items-center justify-center">
+                <div
+                  className="text-3xl md:text-4xl font-bold mb-6"
+                  style={{ color: "hsl(210, 40%, 15%)" }}
+                >
+                  WARTOŚĆ =
+                </div>
+
+                <div
+                  className="flex flex-col items-center"
+                  style={{ fontFamily: "Georgia, serif" }}
+                >
+                  {/* Numerator */}
+                  <div className="text-center mb-3">
+                    <div
+                      className="inline-flex items-center gap-2 px-6 py-4 rounded-xl"
+                      style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      <span
+                        className="text-base md:text-xl font-semibold"
+                        style={{ color: "hsl(210, 40%, 20%)" }}
+                      >
+                        (Wymarzony Rezultat
+                      </span>
+                      <span
+                        className="text-2xl md:text-3xl font-bold"
+                        style={{ color: "hsl(210, 40%, 15%)" }}
+                      >
+                        ×
+                      </span>
+                      <span
+                        className="text-base md:text-xl font-semibold"
+                        style={{ color: "hsl(210, 40%, 20%)" }}
+                      >
+                        Prawdopodobieństwo Sukcesu)
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Division line */}
+                  <div
+                    className="w-full max-w-3xl h-1 mb-3"
+                    style={{ backgroundColor: "hsl(210, 40%, 15%)" }}
+                  ></div>
+
+                  {/* Denominator */}
+                  <div className="text-center">
+                    <div
+                      className="inline-flex items-center gap-2 px-6 py-4 rounded-xl"
+                      style={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}
+                    >
+                      <span
+                        className="text-base md:text-xl font-semibold"
+                        style={{ color: "hsl(210, 40%, 20%)" }}
+                      >
+                        (Opóźnienie Czasowe
+                      </span>
+                      <span
+                        className="text-2xl md:text-3xl font-bold"
+                        style={{ color: "hsl(210, 40%, 15%)" }}
+                      >
+                        ×
+                      </span>
+                      <span
+                        className="text-base md:text-xl font-semibold"
+                        style={{ color: "hsl(210, 40%, 20%)" }}
+                      >
+                        Wysiłek i Poświęcenie)
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <p className="text-xl mb-8 text-white font-semibold text-center">
@@ -573,7 +625,7 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MAKSYMALNY REZULTAT (Wiesz Dokładnie, Co Dostajesz)
+                  MAKSYMALNY REZULTAT<br />(Wiesz Dokładnie, Co Dostajesz)
                 </h3>
               </div>
 
@@ -687,7 +739,7 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MAKSYMALNE PRAWDOPODOBIEŃSTWO SUKCESU (Wiesz, Że To Zadziała)
+                  MAKSYMALNE PRAWDOPODOBIEŃSTWO SUKCESU<br />(Wiesz, Że To Zadziała)
                 </h3>
               </div>
 
@@ -714,7 +766,7 @@ export default function MeskiKompas() {
                     title: "Dwóch prowadzących = dwie perspektywy",
                     points: [
                       "Ludwik C. Siadlak: Emocje, inspiracja, głębia - zapala iskrę",
-                      "Mateusz Lizak: Konkret, warsztat, ziemia - dostarcza narzędzi",
+                      "Mateusz Lizak: Konkret, warsztat, grunt - dostarcza narzędzi",
                       "Wielka wizja + realne działanie w jednym programie",
                     ],
                   },
@@ -791,7 +843,7 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MINIMALNE OPÓŹNIENIE CZASOWE (Zobaczysz Efekty od Pierwszego
+                  MINIMALNE OPÓŹNIENIE CZASOWE<br />(Zobaczysz Efekty od Pierwszego
                   Tygodnia)
                 </h3>
               </div>
@@ -911,7 +963,7 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MINIMALNY WYSIŁEK I POŚWIĘCENIE (Nie Musisz Przebudowywać
+                  MINIMALNY WYSIŁEK I POŚWIĘCENIE<br />(Nie Musisz Przebudowywać
                   Całego Życia)
                 </h3>
               </div>
