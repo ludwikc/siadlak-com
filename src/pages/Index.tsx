@@ -24,7 +24,7 @@ const Index = () => {
       <SEO {...getSEOConfig("home")} />
 
       {/* SECTION 1: HERO - THE HOOK */}
-      <section className="relative py-32 md:py-40 bg-gradient-to-br from-deep-space via-deep-charcoal to-deep-space overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-0 bg-gradient-to-br from-deep-space via-deep-charcoal to-deep-space overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neural-blue rounded-full blur-3xl animate-pulse"></div>
           <div
@@ -94,12 +94,12 @@ Nie szukam skrótów. Przepisuję zasady.`}
                 </div>
               </div>
 
-              {/* Profile Image - Takes 3 columns on desktop (60%), frameless and matches text height */}
-              <div className="md:col-span-3 relative flex items-start">
+              {/* Profile Image - Takes 3 columns on desktop (60%), frameless and sticks to bottom */}
+              <div className="md:col-span-3 relative flex items-end">
                 <img
                   src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                   alt="Ludwik C. Siadlak - Lifehacker"
-                  className="w-full h-auto max-h-[600px] md:max-h-[700px] object-contain object-top drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+                  className="w-full h-auto max-h-[600px] md:max-h-[700px] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
                   style={{
                     filter: 'saturate(1.1) brightness(1.05)',
                     maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 100%)',

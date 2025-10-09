@@ -302,118 +302,104 @@ Zainstaluj nowe oprogramowanie. `}
 
               {/* Main Heading */}
               <h2 className="text-4xl md:text-5xl font-bold text-deep-charcoal leading-tight max-w-4xl mx-auto">
-                Przestań instalować kolejne aplikacje. Zacznij naprawiać to, co
-                działa w Twojej głowie.
+                Aplikacje Mentalne to nie <em>kursy</em>. To przeprogramowanie fundamentów.
               </h2>
 
-              {/* Intro Text with Icon Card */}
-              <Card className="max-w-3xl mx-auto border-2 border-neural-blue/40 bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0">
-                      <Brain className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="flex-1 space-y-4 text-left">
-                      <p className="text-lg text-deep-charcoal/80">
-                        Słuchaj, powiem Ci coś, czego nikt inny nie powie:
-                      </p>
-                      <p className="text-2xl font-bold text-neural-blue">
-                        Nie potrzebujesz kolejnego kursu produktywności.
-                      </p>
-                      <p className="text-lg text-deep-charcoal">
-                        Potrzebujesz przeprogramować fundamenty – sposób, w jaki
-                        myślisz o czasie, energii, priorytetach i swojej
-                        tożsamości.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* OS Metaphor */}
+              <div className="max-w-3xl mx-auto space-y-6 text-lg text-deep-charcoal/90 text-left">
+                <p>
+                  Twój umysł jest jak System Operacyjny. Masz zainstalowane wszystkie aplikacje: kalendarz, todo listy, notatki, projekty. Ale coś nie działa. System operacyjny się wykłada. Programy w tle zjadają energię. Priorytety się wyklinowują. Notyfikacje rozpraszają.
+                </p>
+                <p className="text-xl font-bold text-neural-blue">
+                  Aplikacje Mentalne to te programy w tle, które muszą działać sprawnie, zanim cokolwiek innego zacznie działać.
+                </p>
+              </div>
 
-              {/* Mental Software Update Card */}
+              {/* What Are Mental Apps */}
               <Card className="max-w-4xl mx-auto border-2 border-neural-blue/50 hover:border-neural-blue/70 transition-all duration-300 hover:shadow-2xl bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5 group relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-neural-blue/10 rounded-full blur-3xl"></div>
                 <CardContent className="p-8 relative">
-                  {/* Header with Icon */}
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                      <Download className="h-6 w-6 text-white" />
+                      <Brain className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal text-left">
-                        Moje Programy = Twój Mental Software Update
+                        Czym są Aplikacje Mentalne?
                       </h3>
                     </div>
                   </div>
 
                   <p className="text-lg text-deep-charcoal/80 mb-6 text-left">
-                    Każda aplikacja to{" "}
-                    <strong className="text-neural-blue">
-                      intensywny, 4-6 tygodniowy program
-                    </strong>{" "}
-                    zaprojektowany, żeby zaktualizować JEDEN fundamentalny
-                    program działający w tle:
+                    To <strong className="text-neural-blue">kompaktowe, intensywne programy transformacyjne</strong> zaprojektowane, żeby przeprogramować jeden fundamentalny obszar Twojego myślenia:
                   </p>
 
-                  {/* Feature Cards */}
                   <div className="space-y-3 mb-6">
                     <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
                       <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
                       <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Jak myślisz o produktywności</strong> (nie jak
-                        używasz Notion)
+                        <strong>Produktywność</strong> – jak naprawdę myślisz o czasie i energii
                       </span>
                     </div>
                     <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
                       <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
                       <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Jak radzisz sobie z chaosem</strong> (nie jak
-                        planujesz dni)
+                        <strong>Odporność psychiczna</strong> – jak radzisz sobie z presją i chaosem
                       </span>
                     </div>
                     <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
                       <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
                       <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Kim jesteś jako mężczyzna</strong> (nie jak
-                        zarządzasz zespołem)
+                        <strong>Męskość</strong> – jak definiujesz swoją rolę i tożsamość
                       </span>
                     </div>
                   </div>
 
                   <div className="bg-gradient-to-r from-neural-blue/10 to-zenith-gold/10 rounded-xl p-5 border border-neural-blue/30">
                     <p className="text-lg text-deep-charcoal text-left">
-                      To nie są taktyki. To są{" "}
-                      <strong className="text-neural-blue">fundamenty</strong>,
-                      które muszą działać, zanim cokolwiek innego zadziała.
+                      Każda aplikacja to <strong className="text-neural-blue">4-6 tygodni głębokiej pracy</strong> nad jednym obszarem. To nie są powierzchowne taktyki. Nie "quick fixy". <strong>Fundamenty</strong>, które pozostają z Tobą na zawsze.
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Why It Works Card */}
-              <Card className="max-w-3xl mx-auto border-2 border-yellow-400/50 bg-gradient-to-br from-yellow-50 to-amber-50">
+              {/* Not For Everyone */}
+              <Card className="max-w-3xl mx-auto border-2 border-red-400/50 bg-gradient-to-br from-red-50 to-orange-50">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-amber-500 rounded-xl flex items-center justify-center shrink-0">
-                      <Lightbulb className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shrink-0">
+                      <AlertTriangle className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1 space-y-4 text-left">
                       <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
-                        Dlaczego to działa (a kolejny kurs Udemy nie)
+                        To nie jest dla każdego
                       </h3>
                       <div className="space-y-4 text-lg text-deep-charcoal/90">
-                        <p>
-                          Bo nie uczę Cię <strong>JAK</strong> używać narzędzi.
+                        <p className="font-semibold">Jeśli szukasz:</p>
+                        <ul className="space-y-2 list-disc list-inside ml-4">
+                          <li>Kolejnych życiowych tricków i "hurra motywacji"</li>
+                          <li>Szybkich rozwiązań bez głębokiej pracy</li>
+                          <li>Magicznych aplikacji, które zrobią pracę za Ciebie</li>
+                        </ul>
+                        <p className="text-xl font-bold text-red-600">
+                          To nie jest miejsce dla Ciebie.
                         </p>
-                        <p>
-                          Przeprogramowuję{" "}
-                          <strong className="text-neural-blue">SPOSÓB</strong>,
-                          w jaki myślisz o tym, czemu te narzędzia mają służyć.
-                        </p>
-                        <div className="bg-white/60 rounded-xl p-5 border border-yellow-400/30">
+
+                        <div className="pt-4 border-t border-red-200">
+                          <p className="font-semibold">Ale jeśli:</p>
+                          <ul className="space-y-2 list-disc list-inside ml-4 mt-2">
+                            <li>Testowałeś już wszystkie narzędzia i wiesz, że problem jest głębiej</li>
+                            <li>Jesteś gotów przeprogramować sposób, w jaki myślisz o fundamentach</li>
+                            <li>Rozumiesz, że prawdziwa transformacja zaczyna się w głowie, nie w aplikacji</li>
+                          </ul>
+                        </div>
+
+                        <div className="bg-white/60 rounded-xl p-5 border border-orange-400/30 mt-4">
                           <p className="text-xl font-bold text-deep-charcoal">
-                            Różnica? Każde narzędzie po tym zaczyna działać. Bo
-                            problem nigdy nie był w narzędziu.
+                            Wybierz aplikację, której teraz potrzebujesz – tak jak nową aplikację do telefonu.
+                          </p>
+                          <p className="text-lg text-deep-charcoal/80 mt-2">
+                            Tylko że ta zostanie z Tobą na zawsze.
                           </p>
                         </div>
                       </div>
@@ -422,23 +408,27 @@ Zainstaluj nowe oprogramowanie. `}
                 </CardContent>
               </Card>
 
-              {/* CTA Text */}
-              <div className="space-y-4 max-w-3xl mx-auto">
-                <p className="text-xl font-semibold text-deep-charcoal">
-                  Wybierz aplikację. Zainstaluj ją. Obserwuj, jak reszta zaczyna
-                  działać.
-                </p>
-                <p className="text-lg text-deep-charcoal/70">
-                  A potem, jak będziesz gotów na pełen system upgrade →{" "}
-                  <Link
-                    to="/program/lifeos-system-upgrade"
-                    className="text-neural-blue hover:underline font-semibold"
-                  >
-                    Life OS
-                  </Link>{" "}
-                  czeka.
-                </p>
-              </div>
+              {/* What's Next */}
+              <Card className="max-w-3xl mx-auto border-2 border-neural-blue/40 bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0">
+                      <TrendingUp className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1 space-y-4 text-left">
+                      <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
+                        Co dalej?
+                      </h3>
+                      <p className="text-lg text-deep-charcoal/90">
+                        Po zainstalowaniu fundamentalnych aplikacji mentalnych, jeśli jesteś gotów na pełny system upgrade – <Link to="/program/lifeos-system-upgrade" className="text-neural-blue hover:underline font-bold">Life OS</Link> czeka.
+                      </p>
+                      <p className="text-xl font-bold text-neural-blue">
+                        Ale najpierw – zainstaluj programy, które muszą działać.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Apps Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
@@ -476,7 +466,7 @@ Zainstaluj nowe oprogramowanie. `}
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-neural-blue via-zenith-gold to-twilight-indigo rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative flex justify-center">
-                <div className="w-full max-w-md">
+                <div className="w-full">
                   <div className="relative">
                     {/* NEW Badge on Card */}
                     <div className="absolute -top-3 -right-3 z-10">
@@ -567,7 +557,7 @@ Zainstaluj nowe oprogramowanie. `}
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8">
               <Badge className="mb-6 text-white border-0 px-6 py-2 text-base sm:text-lg font-bold shadow-lg bg-lifehacker-purple">
-                💎 BONUS BEZCENNY
+                💎 BEZCENNY DODATEK
               </Badge>
             </div>
 
