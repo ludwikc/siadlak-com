@@ -87,11 +87,14 @@ export default function MeskiKompas() {
               <CTAButton
                 variant="primary"
                 size="xl"
-                className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600"
+                className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
                 aria-label="Zarezerwuj jedno z 4 pozostałych miejsc"
                 showArrow
               >
-                Zarezerwuj jedno z 4 pozostałych miejsc
+                <span className="inline sm:hidden">Zarezerwuj miejsce</span>
+                <span className="hidden sm:inline">
+                  Zarezerwuj jedno z 4 pozostałych miejsc
+                </span>
               </CTAButton>
             </Link>
           </div>
@@ -3111,11 +3114,17 @@ export default function MeskiKompas() {
                 <CTAButton
                   variant="primary"
                   size="xl"
-                  className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-8 py-6 !bg-yellow-500 hover:!bg-yellow-600 text-lg"
+                  className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
                   aria-label="Zapisuję się i zaczynam nawigować - zostały 4 miejsca"
                   showArrow
                 >
-                  ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ - ZOSTAŁY 4 MIEJSCA
+                  <span className="inline sm:hidden">BIORĘ MIEJSCE</span>
+                  <span className="hidden sm:inline lg:hidden">
+                    ZAPISUJĘ SIĘ - 4 MIEJSCA
+                  </span>
+                  <span className="hidden lg:inline">
+                    ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ - ZOSTAŁY 4 MIEJSCA
+                  </span>
                 </CTAButton>
               </Link>
             </div>
@@ -3177,11 +3186,14 @@ export default function MeskiKompas() {
                 <CTAButton
                   variant="primary"
                   size="xl"
-                  className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-8 py-6 !bg-yellow-500 hover:!bg-yellow-600 text-lg"
+                  className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
                   aria-label="Tak, chcę miejsce w Męskim Kompasie"
                   showArrow
                 >
-                  TAK, CHCĘ MIEJSCE W MĘSKIM KOMPASIE
+                  <span className="inline sm:hidden">TAK, CHCĘ MIEJSCE</span>
+                  <span className="hidden sm:inline">
+                    TAK, CHCĘ MIEJSCE W MĘSKIM KOMPASIE
+                  </span>
                 </CTAButton>
               </Link>
             </div>
