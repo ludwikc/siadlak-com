@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { GlassCard } from "@/components/ui/glass-card";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,25 +18,17 @@ import {
   Trophy,
   Shield,
   TrendingUp,
-  Award,
   Target,
   Zap,
   Building2,
   Quote,
   AlertTriangle,
   ArrowDown,
-  MessageSquare,
-  Video,
-  BookOpen,
-  LifeBuoy,
   TrendingDown,
   Clock,
   Calculator,
   Lightbulb,
   Heart,
-  ArrowRight,
-  Mic,
-  FileText,
   DollarSign,
 } from "lucide-react";
 

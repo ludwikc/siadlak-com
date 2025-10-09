@@ -18,7 +18,6 @@ import {
   Target,
   Trophy,
   AlertTriangle,
-  Calendar,
 } from "@/lib/icons";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -2042,7 +2041,9 @@ const PhaseTimeline = () => {
 };
 
 // Metaphorical Transformation Slider Component
-const MetaphoricalTransformationSlider = () => {
+// @ts-ignore - Component defined but not currently used
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _MetaphoricalTransformationSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = React.useRef<HTMLDivElement>(null);

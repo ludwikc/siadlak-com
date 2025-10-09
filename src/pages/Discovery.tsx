@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { GlassCard } from "@/components/ui/glass-card";
-import { CheckCircle, AlertCircle, Flame, Users, Star } from "@/lib/icons";
+import { CheckCircle, Flame, Users, Star } from "@/lib/icons";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {

@@ -70,15 +70,15 @@ export default function WebinarMeskiKompas() {
 
               <div className="mb-10 flex justify-center">
                 <div
-                  className="inline-block rounded-2xl px-8 py-6 border-2 max-w-3xl"
+                  className="inline-block rounded-2xl px-8 py-6 border max-w-3xl backdrop-blur-sm"
                   style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.95)",
-                    borderColor: "hsl(45, 85%, 50%)",
+                    backgroundColor: "rgba(0, 0, 0, 0.4)",
+                    borderColor: "rgba(255, 204, 0, 0.5)",
                     boxShadow:
-                      "0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 204, 0, 0.2)",
+                      "0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 204, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
                   }}
                 >
-                  <p className="text-lg md:text-2xl font-bold text-foreground leading-relaxed">
+                  <p className="text-lg md:text-2xl font-bold text-white leading-relaxed">
                     90-minutowy warsztat dla analitycznych mężczyzn 30+,
                     <br className="hidden md:block" />
                     którzy mają dość zastanawiania się, zamiast działania.
