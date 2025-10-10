@@ -36,6 +36,7 @@ const routes = [
   '/podcast/life-hacking',
   '/program/uwazne-zycie',
   '/webinar',
+  '/webinar/meski-kompas',
   '/webinar/expired',
   '/webinar/replay',
   '/help',
