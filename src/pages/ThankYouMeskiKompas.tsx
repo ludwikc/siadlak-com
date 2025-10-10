@@ -39,7 +39,7 @@ export default function ThankYouMeskiKompas() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary/60 rounded-2xl mb-4">
                 <Calendar className="h-10 w-10 text-primary-foreground" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground break-words">
                 MIEJSCE ZAREZERWOWANE
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-primary">
