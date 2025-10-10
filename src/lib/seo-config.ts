@@ -297,6 +297,16 @@ export const seoRouteConfig: RouteConfig[] = [
       keywords: 'dziękujemy, potwierdzenie, rozwój osobisty',
       url: '/thank-you'
     }
+  },
+  {
+    path: '/thank-you/meski-kompas',
+    seo: {
+      title: 'Miejsce Zarezerwowane - Męski Kompas',
+      description: 'Potwierdzenie rejestracji na warsztat "Koniec z dryfowaniem" - 16 października 2025 o 19:00. Szczegóły warsztatu, agenda i instrukcje przygotowawcze.',
+      keywords: 'męski kompas, warsztat, potwierdzenie, webinar, rozwój osobisty, mężczyźni 30+, analitycy',
+      url: '/thank-you/meski-kompas',
+      favicon: '/compass-favicon.png'
+    }
   }
 ];
 

@@ -31,7 +31,8 @@ export const routes = [
   '/webinar/meski-kompas',
   '/wyzwanie',
   '/help',
-  '/thank-you'
+  '/thank-you',
+  '/thank-you/meski-kompas'
 ];
 
 // Dynamic routes that should be excluded from static generation

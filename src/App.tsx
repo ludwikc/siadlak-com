@@ -30,6 +30,7 @@ import WebinarReplay from './pages/WebinarReplay';
 import Testimonials from './pages/Testimonials';
 import Assessment from './pages/Assessment';
 import ThankYou from './pages/ThankYou';
+import ThankYouMeskiKompas from './pages/ThankYouMeskiKompas';
 import LifeOSSystemUpgrade from './pages/LifeOSSystemUpgrade';
 import Work from './pages/Work';
 import Sitemap from './pages/Sitemap';
@@ -65,6 +66,7 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/assessment" element={<Assessment />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/thank-you/meski-kompas" element={<ThankYouMeskiKompas />} />
             <Route path="/legal" element={<ExternalRedirect url="https://docs.siadlak.com/legal/regulaminy" />} />
             <Route path="/legal/privacy" element={<ExternalRedirect url="https://docs.siadlak.com/legal/privacy" />} />
             <Route path="/legal/terms" element={<ExternalRedirect url="https://docs.siadlak.com/legal/regulaminy" />} />
