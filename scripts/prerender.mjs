@@ -9,6 +9,25 @@ import { spawn } from 'child_process';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(__dirname, '..');
 
+// Import redirect config
+let redirects = {};
+try {
+  const redirectConfigPath = join(projectRoot, 'src/config/redirects.ts');
+  const redirectContent = readFileSync(redirectConfigPath, 'utf-8');
+  // Extract the redirects object from the TypeScript file
+  const redirectsMatch = redirectContent.match(/export const redirects[^{]*=\s*{([^}]*)}/s);
+  if (redirectsMatch) {
+    const redirectsStr = '{' + redirectsMatch[1] + '}';
+    // Parse the object (simple eval for config file)
+    redirects = eval('(' + redirectsStr + ')');
+  }
+} catch (error) {
+  console.warn('⚠️  Could not load redirects config, skipping redirect routes');
+}
+
+// Get redirect source paths
+const redirectRoutes = Object.keys(redirects);
+
 // Routes to prerender
 const routes = [
   '/',
@@ -40,7 +59,9 @@ const routes = [
   '/webinar/expired',
   '/webinar/replay',
   '/help',
-  '/thank-you'
+  '/thank-you',
+  // Add redirect routes from config
+  ...redirectRoutes
 ];
 
 async function startPreviewServer() {

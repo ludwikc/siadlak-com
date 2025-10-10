@@ -6,7 +6,7 @@ const Webinar = () => {
 
   useEffect(() => {
     // Temporary redirect to WebinarMeskiKompas
-    navigate('/webinar-meski-kompas', { replace: true });
+    navigate('/webinar/meski-kompas', { replace: true });
   }, [navigate]);
 
   return null;

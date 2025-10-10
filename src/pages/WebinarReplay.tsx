@@ -106,10 +106,20 @@ const WebinarReplay = () => {
             {/* Main Content - 2 columns wide */}
             <div className="lg:col-span-2 space-y-8">
               {/* Replay Video */}
-              <div className="bg-black aspect-video rounded-lg flex items-center justify-center">
-                <p className="text-white text-lg">
-                  Okno odtwarzania nagrania webinaru
-                </p>
+              <div className="rounded-lg overflow-hidden shadow-2xl">
+                <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                  <div style={{ height: '100%', left: 0, position: 'absolute', top: 0, width: '100%' }}>
+                    <iframe
+                      height="100%"
+                      width="100%"
+                      src="https://webinar.mywave.video/U46SI3aV5Pti8zbg?embed"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen"
+                      scrolling="no"
+                      title="Webinar replay"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
 
               {/* Timeline Navigation */}

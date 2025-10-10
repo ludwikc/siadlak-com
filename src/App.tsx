@@ -23,7 +23,6 @@ import Podcasts from './pages/Podcasts';
 import NewPodcast from './pages/NewPodcast';
 import LifeHackingPodcast from './pages/LifeHackingPodcast';
 import UwazneZyciePodcast from './pages/UwazneZyciePodcast';
-import Webinar from './pages/Webinar';
 import WebinarExpired from './pages/WebinarExpired';
 import WebinarLive from './pages/WebinarLive';
 import WebinarReplay from './pages/WebinarReplay';
@@ -47,6 +46,8 @@ import SiedemTechnik from './pages/SiedemTechnik';
 import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
 import Wyzwanie from './pages/Wyzwanie';
 import { Toaster } from "@/components/ui/sonner";
+import Redirect from './components/Redirect';
+import { redirects } from './config/redirects';
 
 const queryClient = new QueryClient();
 
@@ -78,10 +79,14 @@ function App() {
             <Route path="/privacy" element={<NotFound />} />
             <Route path="/terms" element={<NotFound />} />
             
+            {/* Redirect routes from config */}
+            {Object.entries(redirects).map(([from, to]) => (
+              <Route key={from} path={from} element={<Redirect to={to} />} />
+            ))}
+
             <Route path="/program" element={<Program />} />
             <Route path="/program/hakowanie-produktywnosci" element={<HakowanieProduktywnosci />} />
             <Route path="/program/lifeos-system-upgrade" element={<LifeOSSystemUpgrade />} />
-            <Route path="/program/mental-elevator" element={<Navigate to="/program/lifeos-system-upgrade" replace />} />
             <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
             <Route path="/program/meski-kompas" element={<MeskiKompas />} />
             <Route path="/program/7-technik" element={<SiedemTechnik />} />
@@ -96,7 +101,6 @@ function App() {
             <Route path="/podcast/life-hacking" element={<LifeHackingPodcast />} />
             <Route path="/program/uwazne-zycie" element={<UwazneZyciePodcast />} />
             
-            <Route path="/webinar" element={<Webinar />} />
             <Route path="/webinar/live" element={<WebinarLive />} />
             <Route path="/webinar/expired" element={<WebinarExpired />} />
             <Route path="/webinar/replay" element={<WebinarReplay />} />
