@@ -42,7 +42,7 @@ export default function ThankYouMeskiKompas() {
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground break-words">
                 MIEJSCE ZAREZERWOWANE
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-primary">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary break-words">
                 Widzimy się 16 października o 19:00
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -54,9 +54,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* Workshop Details */}
             <div className="bg-muted/30 rounded-2xl p-6 space-y-4">
-              <h3 className="text-xl font-bold text-foreground flex items-center">
-                <span className="text-2xl mr-3">📋</span>
-                SZCZEGÓŁY TWOJEGO WARSZTATU:
+              <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center break-words">
+                <span className="text-xl sm:text-2xl mr-2 sm:mr-3 shrink-0">📋</span>
+                <span className="break-words">SZCZEGÓŁY TWOJEGO WARSZTATU:</span>
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted-foreground">
                 <div className="flex items-start space-x-3">
@@ -94,9 +94,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* What Happens Now */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground flex items-center">
-                <span className="text-3xl mr-3">✅</span>
-                CO DZIEJE SIĘ TERAZ:
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground flex items-center break-words">
+                <span className="text-2xl sm:text-3xl mr-2 sm:mr-3 shrink-0">✅</span>
+                <span className="break-words">CO DZIEJE SIĘ TERAZ:</span>
               </h3>
 
               {/* Step 1 */}
@@ -181,9 +181,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* Reminders Timeline */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground flex items-center">
-                <span className="text-3xl mr-3">📧</span>
-                KIEDY DOSTANIESZ PRZYPOMNIENIA:
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground flex items-center break-words">
+                <span className="text-2xl sm:text-3xl mr-2 sm:mr-3 shrink-0">📧</span>
+                <span className="break-words">KIEDY DOSTANIESZ PRZYPOMNIENIA:</span>
               </h3>
 
               <div className="space-y-3">
@@ -223,9 +223,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* Workshop Agenda */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground flex items-center">
-                <span className="text-3xl mr-3">🎯</span>
-                CO DOKŁADNIE ZROBIMY W TE 90 MINUT:
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground flex items-center break-words">
+                <span className="text-2xl sm:text-3xl mr-2 sm:mr-3 shrink-0">🎯</span>
+                <span className="break-words">CO DOKŁADNIE ZROBIMY W TE 90 MINUT:</span>
               </h3>
 
               <div className="space-y-3">
@@ -257,9 +257,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* Important Notice */}
             <div className="bg-destructive/5 border-2 border-destructive/30 rounded-xl p-6 space-y-4">
-              <h3 className="text-xl font-bold text-foreground flex items-center">
-                <span className="text-2xl mr-3">⚠️</span>
-                WAŻNE - PRZECZYTAJ:
+              <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center break-words">
+                <span className="text-xl sm:text-2xl mr-2 sm:mr-3 shrink-0">⚠️</span>
+                <span className="break-words">WAŻNE - PRZECZYTAJ:</span>
               </h3>
               <p className="text-lg font-semibold text-foreground">
                 To NIE jest typowy webinar motywacyjny.
@@ -294,9 +294,9 @@ export default function ThankYouMeskiKompas() {
 
             {/* Maximize Value Tips */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground flex items-center">
-                <span className="text-3xl mr-3">💡</span>
-                JAK ZMAKSYMALIZOWAĆ WARTOŚĆ Z WARSZTATU:
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground flex items-center break-words">
+                <span className="text-2xl sm:text-3xl mr-2 sm:mr-3 shrink-0">💡</span>
+                <span className="break-words">JAK ZMAKSYMALIZOWAĆ WARTOŚĆ Z WARSZTATU:</span>
               </h3>
 
               <ol className="space-y-3">
@@ -322,9 +322,9 @@ export default function ThankYouMeskiKompas() {
             {/* Contact & Privacy */}
             <div className="space-y-6">
               <div className="bg-muted/30 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-foreground flex items-center mb-3">
-                  <span className="text-xl mr-2">❓</span>
-                  MASZ PYTANIA PRZED WARSZTATEM?
+                <h3 className="text-base sm:text-lg font-bold text-foreground flex items-center mb-3 break-words">
+                  <span className="text-lg sm:text-xl mr-2 shrink-0">❓</span>
+                  <span className="break-words">MASZ PYTANIA PRZED WARSZTATEM?</span>
                 </h3>
                 <p className="text-muted-foreground mb-4">
                   Odpowiedz na ten email lub napisz do mnie na <a href="mailto:ludwikc@siadlak.email" className="text-primary hover:underline font-medium">ludwikc@siadlak.email</a> lub <a href="mailto:mateusz@hackerzy.pl" className="text-primary hover:underline font-medium">mateusz@hackerzy.pl</a>
@@ -333,9 +333,9 @@ export default function ThankYouMeskiKompas() {
               </div>
 
               <div className="bg-muted/20 rounded-xl p-6">
-                <h3 className="text-lg font-bold text-foreground flex items-center mb-3">
-                  <span className="text-xl mr-2">🔒</span>
-                  TWOJE DANE SĄ BEZPIECZNE
+                <h3 className="text-base sm:text-lg font-bold text-foreground flex items-center mb-3 break-words">
+                  <span className="text-lg sm:text-xl mr-2 shrink-0">🔒</span>
+                  <span className="break-words">TWOJE DANE SĄ BEZPIECZNE</span>
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   Nie sprzedajemy, nie wynajmujemy, nie przekazujemy. Używamy tylko do komunikacji dot. warsztatu i kursu Męski Kompas. Możesz wypisać się w każdej chwili.
@@ -347,7 +347,7 @@ export default function ThankYouMeskiKompas() {
 
             {/* Final CTA */}
             <div className="text-center space-y-6 py-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground break-words">
                 DO ZOBACZENIA 16 PAŹDZIERNIKA O 19:00
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
