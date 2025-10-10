@@ -96,7 +96,7 @@ export default function AppCard({
           {/* Large App Icon with shadow */}
           <div
             className={`
-            w-16 h-16 sm:w-20 sm:h-20
+            w-20 h-20 sm:w-24 sm:h-24
             bg-gradient-to-br ${gradient}
             rounded-2xl sm:rounded-[22px]
             flex items-center justify-center
@@ -107,14 +107,14 @@ export default function AppCard({
             group-hover:scale-105
           `}
           >
-            <CategoryIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-sm" />
+            <CategoryIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-sm" />
           </div>
 
           {/* Title + Subtitle */}
           <div className="flex-1 min-w-0">
             <h3
               className={`
-              text-lg sm:text-xl font-bold leading-tight mb-1
+              text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-2
               ${premium ? "text-white" : "text-deep-charcoal"}
             `}
             >
@@ -122,7 +122,7 @@ export default function AppCard({
             </h3>
             <p
               className={`
-              text-sm sm:text-base font-medium
+              text-base sm:text-lg font-medium
               ${premium ? "text-white/80" : "text-subtle-slate"}
             `}
             >

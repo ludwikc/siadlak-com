@@ -11,6 +11,10 @@ import XIcon from "../ui/x-icon";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="relative bg-gradient-to-br from-deep-space via-neural-blue to-deep-space text-white pt-20 pb-8 overflow-hidden">
       {/* Premium static background orbs */}
@@ -24,13 +28,17 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Link to="/" className="inline-block mb-4">
+              <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
                 <h3 className="text-2xl font-bold text-white">
                   Ludwik&nbsp;C. Siadlak
                 </h3>
               </Link>
               <p className="text-white/90 text-sm leading-relaxed">
-                <span className="font-bold">Life Hacker. </span><br /><br />Katalizuję wojowników. <br />Prowadzę poszukiwaczy. 
+                <span className="font-bold">Life Hacker. </span>
+                <br />
+                <br />
+                Katalizuję wojowników. <br />
+                Prowadzę poszukiwaczy.
                 <br /> <br /> Na co czekasz?
               </p>
             </div>
@@ -74,6 +82,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   O mnie
@@ -82,7 +91,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/discovery"
-                  className="text-twilight-indigo hover:text-twilight-indigo/80 transition-colors inline-flex items-center gap-2 font-semibold"
+                  onClick={scrollToTop}
+                  className="text-zenith-gold hover:text-zenith-gold/80 transition-colors inline-flex items-center gap-2 font-semibold"
                 >
                   Sesja Discovery
                   <Calendar size={16} className="flex-shrink-0" />
@@ -91,6 +101,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/newsletter"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Newsletter
@@ -99,6 +110,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/testimonials"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Opinie Klientów (120+)
@@ -107,6 +119,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/webinar"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Najbliższy Webinar
@@ -115,6 +128,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Kontakt
@@ -131,6 +145,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/lifeos-system-upgrade"
+                  onClick={scrollToTop}
                   className="text-white hover:text-twilight-indigo transition-colors inline-flex items-center gap-2 font-semibold group"
                 >
                   <span className="inline-block w-2 h-2 bg-gradient-to-br from-gold to-twilight-indigo rounded-full group-hover:scale-125 transition-transform"></span>
@@ -140,6 +155,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/hakowanie-produktywnosci"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Instaluj: Produktywność
@@ -148,6 +164,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/silna-glowa"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
                 >
                   Instaluj: Odporność Psychiczna
@@ -156,6 +173,7 @@ export default function Footer() {
               <li className="pt-2 mt-2 border-t border-white/10">
                 <Link
                   to="/program"
+                  onClick={scrollToTop}
                   className="text-white/60 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5 text-sm"
                 >
                   Zobacz wszystkie programy
@@ -178,7 +196,8 @@ export default function Footer() {
                   Fundacja HACKERZY.PL
                   <ExternalLink size={14} className="flex-shrink-0" />
                 </a>
-              </li><li>
+              </li>
+              <li>
                 <a
                   href="https://deepwork.pl"
                   target="_blank"
@@ -203,6 +222,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/ttt"
+                  onClick={scrollToTop}
                   className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
                 >
                   TrainTheTrainer.pl
@@ -220,18 +240,21 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               to="/legal"
+              onClick={scrollToTop}
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
               Informacje Prawne
             </Link>
             <Link
               to="/legal/privacy"
+              onClick={scrollToTop}
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
               Polityka Prywatności
             </Link>
             <Link
               to="/legal/terms"
+              onClick={scrollToTop}
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
               Regulamin

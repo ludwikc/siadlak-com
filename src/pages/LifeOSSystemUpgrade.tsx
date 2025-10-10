@@ -618,7 +618,7 @@ export default function LifeOSSystemUpgrade() {
               Nie coaching. Nie terapia. Transformacja na poziomie tożsamości.
             </p>
 
-            <div className="text-xl text-center mb-12 text-white/90/90 space-y-4">
+            <div className="text-xl text-center mb-12 text-white/90 space-y-4">
               <p>To 8 tygodni głębokiej pracy dla liderów, którzy:</p>
               <ul className="space-y-3 text-left max-w-3xl mx-auto">
                 <li className="flex items-start">
@@ -652,11 +652,11 @@ export default function LifeOSSystemUpgrade() {
               <p className="text-2xl text-zenith-gold font-bold mb-4 text-center">
                 Co to znaczy w praktyce?
               </p>
-              <p className="text-lg text-white/90/90 mb-6">
+              <p className="text-lg text-white/90 mb-6">
                 To nie są przyjemne sesje, gdzie klepię Cię po plecach i mówię,
                 jak jesteś świetny.
               </p>
-              <p className="text-lg text-white/90/90 mb-4">
+              <p className="text-lg text-white/90 mb-4">
                 W zależności od tego, czego potrzebujesz:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -664,7 +664,7 @@ export default function LifeOSSystemUpgrade() {
                   <h4 className="text-xl font-bold text-zenith-gold mb-3">
                     Albo dostaniesz "terapię szokową":
                   </h4>
-                  <ul className="space-y-2 text-white/90/90">
+                  <ul className="space-y-2 text-white/90">
                     <li>
                       • Bezpośrednią konfrontację z historiami, które sobie
                       opowiadasz
@@ -680,7 +680,7 @@ export default function LifeOSSystemUpgrade() {
                   <h4 className="text-xl font-bold text-zenith-gold mb-3">
                     Albo dostaniesz "przewodnictwo przez transcendencję":
                   </h4>
-                  <ul className="space-y-2 text-white/90/90">
+                  <ul className="space-y-2 text-white/90">
                     <li>• Delikatne prowadzenie przez mapy i terytoria</li>
                     <li>• Pozwolenie na ekspansję i rozwój</li>
                     <li>• Wsparcie w odkrywaniu głębszych warstw siebie</li>
@@ -712,7 +712,7 @@ export default function LifeOSSystemUpgrade() {
                         </p>
                       </div>
                     </div>
-                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
                       <p>Tutaj zaczyna się prawdziwa praca.</p>
                       <p className="font-bold text-white">
                         Niektórzy ludzie potrzebują, żeby ktoś przeciął ich
@@ -775,7 +775,7 @@ export default function LifeOSSystemUpgrade() {
                         </p>
                       </div>
                     </div>
-                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
                       <p className="font-bold text-white">
                         Tutaj zaczyna się prawdziwa praca.
                       </p>
@@ -848,7 +848,7 @@ export default function LifeOSSystemUpgrade() {
                         </p>
                       </div>
                     </div>
-                    <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
+                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
                       <p>
                         Teraz uczymy Twoje konfliktowe części współpracować.
                       </p>
@@ -910,7 +910,7 @@ export default function LifeOSSystemUpgrade() {
                       <p className="text-white/90">Tydzień 7-8</p>
                     </div>
                   </div>
-                  <div className="text-white/90/90 text-lg leading-relaxed space-y-4">
+                  <div className="text-white/90 text-lg leading-relaxed space-y-4">
                     <p>Nowy system operacyjny staje się Twoją drugą naturą.</p>
 
                     <div className="bg-gradient-to-r from-zenith-gold/20 to-twilight-indigo/20 p-6 rounded-xl">
@@ -1677,7 +1677,7 @@ export default function LifeOSSystemUpgrade() {
                 To wzajemna ocena, czy mamy ze sobą pracować.
               </p>
 
-              <p className="text-lg text-white/90/90 mb-2 text-center">
+              <p className="text-lg text-white/90 mb-2 text-center">
                 Ja oceniam Ciebie. Ty oceniasz mnie.
               </p>
             </div>
@@ -1693,7 +1693,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       1. Głęboka diagnostyka Twojego systemu
                     </p>
-                    <p className="text-white/90/90">
+                    <p className="text-white/90">
                       Nie będziemy mówić o celach i strategiach. Zejdziemy
                       głębiej: gdzie jest konflikt tożsamości? Jaka narracja Cię
                       blokuje? Która ścieżka transformacji jest Twoja?
@@ -1704,7 +1704,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       2. Sprawdzenie chemii
                     </p>
-                    <p className="text-white/90/90">
+                    <p className="text-white/90">
                       Ta praca wymaga zaufania. Jeśli nie czujesz, że możesz mi
                       zaufać w najtrudniejszych momentach - nie podejmujemy
                       współpracy. I to ok.
@@ -1715,7 +1715,7 @@ export default function LifeOSSystemUpgrade() {
                     <p className="text-xl font-bold text-white mb-3">
                       3. Decyzja obu stron
                     </p>
-                    <p className="text-white/90/90">
+                    <p className="text-white/90">
                       Na końcu sesji oba decydujemy, czy chcemy współpracować.
                       Nie ma presji. Jest uczciwość.
                     </p>
@@ -1724,7 +1724,7 @@ export default function LifeOSSystemUpgrade() {
 
                 <div className="bg-zenith-gold/20 p-6 rounded-xl mt-8">
                   <p className="text-white font-bold mb-2">Uwaga:</p>
-                  <p className="text-white/90/90">
+                  <p className="text-white/90">
                     Sesja Discovery to nie "darmowa próbka." To rzeczywista
                     praca. Może być intensywna. Wyjdziesz z niej z clarity -
                     niezależnie od tego, czy się zdecydujemy na współpracę.

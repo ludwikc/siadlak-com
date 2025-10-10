@@ -30,6 +30,8 @@ import { Link } from "react-router-dom";
 import effectGif from "@/assets/I-know-kung-fu.gif";
 import redPillGif from "@/assets/red-pill.gif";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
+import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
+import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg";
 
 const apps = [
   {
@@ -180,268 +182,79 @@ export default function Program() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-neural-blue/5 via-background to-zenith-gold/5 py-20">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neural-blue rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-twilight-indigo rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-1/2 right-1/3 w-64 h-64 bg-zenith-gold rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+      <section className="relative py-16 bg-gradient-to-br from-neural-blue/5 via-background to-zenith-gold/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
-            <div className="text-center mb-8">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full blur opacity-30"></div>
-                <Badge className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-sm px-6 py-2 shadow-lg">
-                  <Brain className="inline h-4 w-4 mr-2" />
-                  Mental Software Update
-                </Badge>
-              </div>
-            </div>
+            <Badge className="mb-6 bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-sm px-6 py-2 shadow-lg">
+              <Brain className="inline h-4 w-4 mr-2" />
+              Mental Software Update
+            </Badge>
 
             {/* Main Heading */}
-            <div className="text-center mb-8">
-              <h1 className="break-words hyphens-auto text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-deep-charcoal leading-tight">
-                LifeOS{" "}
-                <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
-                  AppStore
-                </span>
-              </h1>
-              <p className="whitespace-pre-line break-words hyphens-auto text-xl md:text-2xl lg:text-3xl text-deep-charcoal/80 leading-relaxed">
-                {`Aplikacje mentalnej transformacji.
-Zainstaluj nowe oprogramowanie. `}
-                <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-bold">
-                  W głowie.
-                </span>
-              </p>
-            </div>
-
-            {/* Feature Pills */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Card className="border border-neural-blue/30 bg-white/80 backdrop-blur-sm hover:border-neural-blue/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Download className="h-4 w-4 text-neural-blue" />
-                  <span className="text-sm font-semibold text-deep-charcoal">
-                    4-6 tygodni
-                  </span>
-                </CardContent>
-              </Card>
-              <Card className="border border-neural-blue/30 bg-white/80 backdrop-blur-sm hover:border-neural-blue/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Zap className="h-4 w-4 text-neural-blue" />
-                  <span className="text-sm font-semibold text-deep-charcoal">
-                    Intensywna transformacja
-                  </span>
-                </CardContent>
-              </Card>
-              <Card className="border border-neural-blue/30 bg-white/80 backdrop-blur-sm hover:border-neural-blue/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Users className="h-4 w-4 text-neural-blue" />
-                  <span className="text-sm font-semibold text-deep-charcoal">
-                    Społeczność absolwentów
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-deep-charcoal leading-tight">
+              LifeOS{" "}
+              <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
+                AppStore
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-deep-charcoal/80 mb-8 leading-relaxed">
+              Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie{" "}
+              <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-bold">
+                w głowie.
+              </span>
+            </p>
 
             {/* CTA Button */}
-            <div className="text-center">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur opacity-30 animate-pulse"></div>
-                <CTAButton
-                  onClick={scrollToApps}
-                  className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white shadow-xl text-lg px-8 py-6 border-0"
-                >
-                  Przeglądaj Aplikacje
-                  <ArrowDown className="ml-2 h-5 w-5 inline animate-bounce" />
-                </CTAButton>
-              </div>
+            <CTAButton
+              onClick={scrollToApps}
+              className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white shadow-xl text-lg px-8 py-6 border-0"
+            >
+              Przeglądaj Aplikacje
+              <ArrowDown className="ml-2 h-5 w-5 inline" />
+            </CTAButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 1: App Cards - Immediate Priority */}
+      <section
+        id="apps-section"
+        className="py-12 apps-section bg-luminous-white"
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Badge */}
+            <div className="text-center mb-6">
+              <Badge
+                variant="outline"
+                className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold"
+              >
+                Programy Fundamentalne
+              </Badge>
+            </div>
+
+            {/* Apps Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {apps.slice(0, 2).map((app) => (
+                <div key={app.title} className="group">
+                  <AppCard {...app} />
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* App Store Statistics */}
-      <section className="py-12 bg-neural-blue/5">
+      {/* App Store Statistics - Social Proof After Products */}
+      <section className="py-8 bg-neural-blue/5">
         <div className="container mx-auto px-4">
           <AppStoreStats />
         </div>
       </section>
 
-      {/* Section 1: Basic Apps (50%/50%) */}
-      <section
-        id="apps-section"
-        className="py-20 apps-section bg-luminous-white"
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-8">
-              {/* Badge */}
-              <div>
-                <Badge
-                  variant="outline"
-                  className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold"
-                >
-                  Programy Fundamentalne
-                </Badge>
-              </div>
-
-              {/* Main Heading */}
-              <h2 className="text-4xl md:text-5xl font-bold text-deep-charcoal leading-tight max-w-4xl mx-auto">
-                Aplikacje Mentalne to nie <em>kursy</em>. To przeprogramowanie fundamentów.
-              </h2>
-
-              {/* OS Metaphor */}
-              <div className="max-w-3xl mx-auto space-y-6 text-lg text-deep-charcoal/90 text-left">
-                <p>
-                  Twój umysł jest jak System Operacyjny. Masz zainstalowane wszystkie aplikacje: kalendarz, todo listy, notatki, projekty. Ale coś nie działa. System operacyjny się wykłada. Programy w tle zjadają energię. Priorytety się wyklinowują. Notyfikacje rozpraszają.
-                </p>
-                <p className="text-xl font-bold text-neural-blue">
-                  Aplikacje Mentalne to te programy w tle, które muszą działać sprawnie, zanim cokolwiek innego zacznie działać.
-                </p>
-              </div>
-
-              {/* What Are Mental Apps */}
-              <Card className="max-w-4xl mx-auto border-2 border-neural-blue/50 hover:border-neural-blue/70 transition-all duration-300 hover:shadow-2xl bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5 group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-neural-blue/10 rounded-full blur-3xl"></div>
-                <CardContent className="p-8 relative">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                      <Brain className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal text-left">
-                        Czym są Aplikacje Mentalne?
-                      </h3>
-                    </div>
-                  </div>
-
-                  <p className="text-lg text-deep-charcoal/80 mb-6 text-left">
-                    To <strong className="text-neural-blue">kompaktowe, intensywne programy transformacyjne</strong> zaprojektowane, żeby przeprogramować jeden fundamentalny obszar Twojego myślenia:
-                  </p>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
-                      <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                      <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Produktywność</strong> – jak naprawdę myślisz o czasie i energii
-                      </span>
-                    </div>
-                    <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
-                      <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                      <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Odporność psychiczna</strong> – jak radzisz sobie z presją i chaosem
-                      </span>
-                    </div>
-                    <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10 hover:border-neural-blue/30 transition-colors">
-                      <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                      <span className="text-left text-lg text-deep-charcoal">
-                        <strong>Męskość</strong> – jak definiujesz swoją rolę i tożsamość
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-neural-blue/10 to-zenith-gold/10 rounded-xl p-5 border border-neural-blue/30">
-                    <p className="text-lg text-deep-charcoal text-left">
-                      Każda aplikacja to <strong className="text-neural-blue">4-6 tygodni głębokiej pracy</strong> nad jednym obszarem. To nie są powierzchowne taktyki. Nie "quick fixy". <strong>Fundamenty</strong>, które pozostają z Tobą na zawsze.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Not For Everyone */}
-              <Card className="max-w-3xl mx-auto border-2 border-red-400/50 bg-gradient-to-br from-red-50 to-orange-50">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shrink-0">
-                      <AlertTriangle className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="flex-1 space-y-4 text-left">
-                      <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
-                        To nie jest dla każdego
-                      </h3>
-                      <div className="space-y-4 text-lg text-deep-charcoal/90">
-                        <p className="font-semibold">Jeśli szukasz:</p>
-                        <ul className="space-y-2 list-disc list-inside ml-4">
-                          <li>Kolejnych życiowych tricków i "hurra motywacji"</li>
-                          <li>Szybkich rozwiązań bez głębokiej pracy</li>
-                          <li>Magicznych aplikacji, które zrobią pracę za Ciebie</li>
-                        </ul>
-                        <p className="text-xl font-bold text-red-600">
-                          To nie jest miejsce dla Ciebie.
-                        </p>
-
-                        <div className="pt-4 border-t border-red-200">
-                          <p className="font-semibold">Ale jeśli:</p>
-                          <ul className="space-y-2 list-disc list-inside ml-4 mt-2">
-                            <li>Testowałeś już wszystkie narzędzia i wiesz, że problem jest głębiej</li>
-                            <li>Jesteś gotów przeprogramować sposób, w jaki myślisz o fundamentach</li>
-                            <li>Rozumiesz, że prawdziwa transformacja zaczyna się w głowie, nie w aplikacji</li>
-                          </ul>
-                        </div>
-
-                        <div className="bg-white/60 rounded-xl p-5 border border-orange-400/30 mt-4">
-                          <p className="text-xl font-bold text-deep-charcoal">
-                            Wybierz aplikację, której teraz potrzebujesz – tak jak nową aplikację do telefonu.
-                          </p>
-                          <p className="text-lg text-deep-charcoal/80 mt-2">
-                            Tylko że ta zostanie z Tobą na zawsze.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* What's Next */}
-              <Card className="max-w-3xl mx-auto border-2 border-neural-blue/40 bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0">
-                      <TrendingUp className="h-6 w-6 text-white" />
-                    </div>
-                    <div className="flex-1 space-y-4 text-left">
-                      <h3 className="text-3xl md:text-4xl font-bold text-deep-charcoal">
-                        Co dalej?
-                      </h3>
-                      <p className="text-lg text-deep-charcoal/90">
-                        Po zainstalowaniu fundamentalnych aplikacji mentalnych, jeśli jesteś gotów na pełny system upgrade – <Link to="/program/lifeos-system-upgrade" className="text-neural-blue hover:underline font-bold">Life OS</Link> czeka.
-                      </p>
-                      <p className="text-xl font-bold text-neural-blue">
-                        Ale najpierw – zainstaluj programy, które muszą działać.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Apps Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
-                {apps.slice(0, 2).map((app) => (
-                  <div key={app.title} className="group">
-                    <AppCard {...app} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2: Featured New App - Męski Kompas */}
-      <section className="py-20 bg-gradient-to-br from-neural-blue/10 via-twilight-indigo/5 to-zenith-gold/10 relative overflow-hidden">
+      {/* Featured New App - Męski Kompas */}
+      <section className="py-12 bg-gradient-to-br from-neural-blue/10 via-twilight-indigo/5 to-zenith-gold/10 relative overflow-hidden">
         {/* Background Effect Orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zenith-gold/20 rounded-full blur-3xl"></div>
@@ -481,6 +294,130 @@ Zainstaluj nowe oprogramowanie. `}
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Are Mental Apps - Context After Products */}
+      <section className="py-12 bg-luminous-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            {/* Main Heading */}
+            <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal leading-tight">
+              Aplikacje Mentalne to nie <em>kursy</em>. To przeprogramowanie
+              fundamentów.
+            </h2>
+
+            {/* What Are Mental Apps - Condensed */}
+            <Card className="border-2 border-neural-blue/50 hover:border-neural-blue/70 transition-all duration-300 bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0">
+                    <Brain className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal text-left">
+                    Czym są Aplikacje Mentalne?
+                  </h3>
+                </div>
+
+                <p className="text-lg text-deep-charcoal/80 mb-6 text-left">
+                  <strong className="text-neural-blue">
+                    Kompaktowe, intensywne programy transformacyjne
+                  </strong>{" "}
+                  zaprojektowane, żeby przeprogramować jeden fundamentalny
+                  obszar Twojego myślenia.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
+                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
+                    <span className="text-left text-base text-deep-charcoal">
+                      <strong>Produktywność</strong> – jak naprawdę myślisz o
+                      czasie i energii
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
+                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
+                    <span className="text-left text-base text-deep-charcoal">
+                      <strong>Odporność psychiczna</strong> – jak radzisz sobie
+                      z presją i chaosem
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
+                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
+                    <span className="text-left text-base text-deep-charcoal">
+                      <strong>Męskość</strong> – jak definiujesz swoją rolę i
+                      tożsamość
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-neural-blue/10 to-zenith-gold/10 rounded-xl p-5 border border-neural-blue/30">
+                  <p className="text-base text-deep-charcoal text-left">
+                    Każda aplikacja to{" "}
+                    <strong className="text-neural-blue">
+                      4-6 tygodni głębokiej pracy
+                    </strong>
+                    . To nie są powierzchowne taktyki.{" "}
+                    <strong>Fundamenty</strong>, które pozostają z Tobą na
+                    zawsze.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Authority Proof - Keynote Speaking */}
+            <div className="max-w-5xl mx-auto">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-neural-blue/20 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+                <img
+                  src={keynoteImage}
+                  alt="Ludwik Siadlak presenting 'Hacker Umysłów' keynote at CAMPUS conference"
+                  className="w-full h-auto"
+                />
+                {/* Subtle overlay badge */}
+                <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Badge className="bg-neural-blue/90 backdrop-blur-sm text-white border-0 px-4 py-2 shadow-lg text-sm font-semibold">
+                    Keynote Speaker
+                  </Badge>
+                </div>
+              </div>
+            </div>
+
+            {/* Not For Everyone - Condensed */}
+            <Card className="border-2 border-red-400/50 bg-gradient-to-br from-red-50 to-orange-50">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shrink-0">
+                    <AlertTriangle className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal text-left">
+                    To nie jest dla każdego
+                  </h3>
+                </div>
+
+                <div className="text-left space-y-4 text-base text-deep-charcoal/90">
+                  <p>
+                    <strong>Nie dla:</strong> osób szukających kolejnych
+                    tricków, "hurra motywacji" i szybkich rozwiązań bez
+                    głębokiej pracy.
+                  </p>
+
+                  <p>
+                    <strong className="text-neural-blue">Dla:</strong> osób,
+                    które testowały już wszystkie narzędzia, wiedzą że problem
+                    jest głębiej i są gotowe przeprogramować sposób myślenia o
+                    fundamentach.
+                  </p>
+
+                  <div className="bg-white/60 rounded-xl p-4 border border-orange-400/30 mt-4">
+                    <p className="font-bold text-deep-charcoal">
+                      Wybierz aplikację, której teraz potrzebujesz. Zostanie z
+                      Tobą na zawsze.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -558,10 +495,17 @@ Zainstaluj nowe oprogramowanie. `}
               </Badge>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-              Dożywotni dostęp do społeczności{" "}
-              <span className="text-lifehacker-purple">LIFEHACKERZY</span>
-            </h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6">
+              <img
+                src={lifehackerzyLogo}
+                alt="Lifehackerzy"
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+              />
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight text-center sm:text-left">
+                Dożywotni dostęp do społeczności{" "}
+                <span className="text-lifehacker-purple">LIFEHACKERZY</span>
+              </h2>
+            </div>
 
             <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ekskluzywna społeczność dostępna wyłącznie dla klientów moich
@@ -586,48 +530,81 @@ Zainstaluj nowe oprogramowanie. `}
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12">
-              {communityBenefits.map((benefit, index) => (
+            {/* Hero Benefits - Top 4 Most Important */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+              {communityBenefits.slice(0, 4).map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 group border border-lifehacker-purple-border-light hover:shadow-xl"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/15 transition-all duration-300 hover:-translate-y-2 group border-2 border-lifehacker-purple-border hover:border-lifehacker-purple hover:shadow-2xl"
                 >
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-lifehacker-purple to-lifehacker-purple rounded-full flex items-center justify-center mx-auto mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
-                    <benefit.icon className="h-7 w-7 sm:h-8 sm:w-8 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-lifehacker-purple to-lifehacker-purple-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                    <benefit.icon className="h-10 w-10 text-white" />
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-lifehacker-purple group-hover:scale-105 transition-transform">
+                  <h3 className="text-xl font-bold mb-3 text-lifehacker-purple">
                     {benefit.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-white/80 leading-relaxed">
+                  <p className="text-base text-white/90 leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
               ))}
+            </div>
 
-              {/* Highlighted CTA Card */}
-              <div
-                onClick={scrollToApps}
-                className="col-span-full rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer hover:scale-105 border-2 border-lifehacker-purple-light bg-gradient-to-br from-lifehacker-purple to-lifehacker-purple"
-              >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                  <img
-                    src={lifehackerzyLogo}
-                    alt="Lifehackerzy logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 text-white">
-                  To wszystko i więcej
-                </h3>
-
-                <p className="text-white/90">
-                  Dostęp otrzymasz natychmiast i na zawsze
-                </p>
+            {/* Community Call Social Proof Image */}
+            <div className="max-w-5xl mx-auto mb-12">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-lifehacker-purple/30 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
+                <img
+                  src={communityCallImage}
+                  alt="Lifehackerzy community video call - daily coaching sessions"
+                  className="w-full h-auto"
+                />
               </div>
+            </div>
+
+            {/* Secondary Benefits - Collapsible */}
+            <details className="max-w-4xl mx-auto mb-12 group">
+              <summary className="cursor-pointer text-lg font-bold text-lifehacker-purple hover:text-lifehacker-purple-light transition-colors text-center py-4 list-none flex items-center justify-center gap-2">
+                <span>Zobacz wszystkie benefity (8 więcej)</span>
+                <span className="transform group-open:rotate-180 transition-transform">
+                  ▼
+                </span>
+              </summary>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 animate-fade-in">
+                {communityBenefits.slice(4).map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 group border border-lifehacker-purple-border-light hover:shadow-xl"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-lifehacker-purple to-lifehacker-purple rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+                      <benefit.icon className="h-8 w-8 text-white" />
+                    </div>
+
+                    <h3 className="text-lg font-bold mb-2 text-lifehacker-purple">
+                      {benefit.title}
+                    </h3>
+
+                    <p className="text-sm text-white/80 leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </details>
+
+            {/* Prominent CTA */}
+            <div className="text-center mt-8">
+              <CTAButton
+                onClick={scrollToApps}
+                size="xl"
+                className="bg-gradient-to-r from-lifehacker-purple to-lifehacker-purple-light hover:from-lifehacker-purple-light hover:to-lifehacker-purple text-white font-bold px-12 py-6 text-xl border-0 shadow-2xl hover:shadow-3xl"
+              >
+                Dołącz do Lifehackerów
+              </CTAButton>
+              <p className="text-white/70 mt-4 text-sm">
+                Dostęp lifetime w cenie każdej aplikacji
+              </p>
             </div>
 
             {/* Jim Rohn Quote */}
