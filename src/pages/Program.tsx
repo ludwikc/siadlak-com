@@ -19,9 +19,7 @@ import {
   Users,
   Video,
   AlertTriangle,
-  Download,
   Sparkles,
-  TrendingUp,
   Zap,
   ArrowDown,
 } from "@/lib/icons";
