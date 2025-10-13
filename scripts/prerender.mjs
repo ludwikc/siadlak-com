@@ -59,7 +59,8 @@ const routes = [
   '/webinar/expired',
   '/webinar/replay',
   '/help',
-  '/thank-you',
+  '/thank-you', 
+  '/thank-you/meski-kompas',
   // Add redirect routes from config
   ...redirectRoutes
 ];

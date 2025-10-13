@@ -57,7 +57,7 @@ export default function MeskiKompas() {
               className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-tight max-w-2xl mx-auto"
               style={{ color: "hsl(210, 20%, 95%)" }}
             >
-              System Nawigacji Dla Mężczyzn, Którzy Chcą Skończyć Analizowaniem
+              System Nawigacji Dla Mężczyzn, Którzy Chcą Skończyć z Analizowaniem
               i Chcą Zacząć Działać
             </h2>
             <p

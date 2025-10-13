@@ -110,7 +110,7 @@ export default function ThankYouMeskiKompas() {
                   </h4>
                 </div>
                 <p className="text-muted-foreground pl-11">
-                  Właśnie wysłałem Ci email z tematem: <strong className="text-foreground">"[Męski Kompas 🧭] Potwierdzenie warsztatu - 16.10"</strong>
+                  Właśnie wysłałem Ci email z tematem: <strong className="text-foreground">"🧭 Potwierdzenie zapisu „Koniec z dryfowaniem”"</strong>
                 </p>
                 <div className="pl-11 space-y-2 text-sm text-muted-foreground">
                   <p>Email zawiera:</p>
