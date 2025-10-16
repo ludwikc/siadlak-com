@@ -1,0 +1,37 @@
+# Apache configuration for SPA routing with prerendered pages
+# Enable mod_rewrite
+RewriteEngine On
+
+# If the request is for a file that exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If the request is for a directory with an index.html, serve that
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ $1/index.html [L]
+
+# Webinar/Program Redirects
+RewriteRule ^meski-kompas$ /program/meski-kompas [R=301,L]
+RewriteRule ^mk$ /program/meski-kompas [R=301,L]
+RewriteRule ^meskikompas$ /program/meski-kompas [R=301,L]
+RewriteRule ^hp$ /program/hakowanie-produktywnosci [R=301,L]
+RewriteRule ^lh$ /podcast/life-hacking [R=301,L]
+RewriteRule ^ttt$ /program/ttt [R=301,L]
+
+
+# Otherwise, redirect all requests to root index.html (for client-side routing)
+RewriteRule ^ /index.html [L]
+
+# Optional: Set cache headers for static assets
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+</IfModule>
