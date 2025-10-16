@@ -10,6 +10,8 @@ export type RedirectConfig = Record<string, string>;
 export const redirects: RedirectConfig = {
   // Shortcut redirects for marketing/social media
   "/mk": "/program/meski-kompas",
+  "/meskikompas": "/program/meski-kompas",
+  "/meski-kompas": "/program/meski-kompas",
   "/hp": "/program/hakowanie-produktywnosci",
   "/lh": "/podcast/life-hacking",
   "/ttt": "/program/ttt",
