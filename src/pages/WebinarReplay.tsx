@@ -8,13 +8,15 @@ import { toast } from '@/hooks/use-toast';
 
 // Timeline links for the webinar navigation
 const timelineLinks = [
-  { time: "00:00", label: "Wprowadzenie i omówienie agendy" },
-  { time: "12:34", label: "Trzy filary metodologii Black Panther" },
-  { time: "27:15", label: "Technika wzmacniania suwerenności zawodowej" },
-  { time: "43:21", label: "Praktyczne przykłady transformacji klientów" },
-  { time: "54:30", label: "Jak wdrożyć te koncepcje w swoim życiu" },
-  { time: "01:05:45", label: "Przewodnik po następnych krokach" },
-  { time: "01:12:33", label: "Sesja Q&A z uczestnikami" },
+  { time: "00:00", label: "Powitanie i dlaczego to spotkanie jest dla Ciebie" },
+  { time: "03:30", label: "Kim jest Mateusz Lizak i dlaczego warto go wysłuchać" },
+  { time: "14:30", label: "Historia dryfowania: od obietnicy ojcu do Deep Work" },
+  { time: "29:00", label: "Punkt zwrotny: wzięcie odpowiedzialności za siebie" },
+  { time: "36:00", label: "5 Filarów Współczesnej Męskości" },
+  { time: "42:00", label: "Ćwiczenie 3-3-3: Twoje pierwsze kroki" },
+  { time: "54:00", label: "Jak pracować z każdym z filarów" },
+  { time: "01:18:00", label: "Prezentacja programu Męski Kompas" },
+  { time: "01:26:00", label: "Oferta specjalna i Q&A" },
 ];
 
 const WebinarReplay = () => {
@@ -56,18 +58,6 @@ const WebinarReplay = () => {
     });
   };
 
-  const handleLifeOSSystemUpgrade = () => {
-    navigate("/program/lifeos-system-upgrade");
-  };
-
-  const handleUnlockBonus = () => {
-    toast({
-      title: "Materiały odblokowane",
-      description:
-        "Dodatkowe materiały zostały odblokowane i są dostępne do pobrania.",
-    });
-  };
-
   const handleShare = (platform: string) => {
     toast({
       title: "Udostępnianie",
@@ -86,12 +76,11 @@ const WebinarReplay = () => {
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-twilight-indigo bg-gradient-to-r from-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
-              Jak przejąć kontrolę nad swoją karierą i życiem w erze sztucznej
-              inteligencji
+              Koniec z Dryfowaniem: Jak Analityczny Umysł Sabotuje Twoją Męskość
             </h1>
 
             <p className="text-lg mb-4 text-deep-charcoal/80">
-              Nagranie dostępne tylko do 27 maja 2025
+              Nagranie dostępne tylko do [15.10.2025 + 7 dni]
             </p>
 
             <div className="max-w-xs mx-auto mb-8 bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200">
@@ -167,7 +156,7 @@ const WebinarReplay = () => {
                         : "bg-twilight-indigo/20 text-twilight-indigo"
                     }`}
                   >
-                    {offerExpired ? "Oferta wygasła" : "Oferta specjalna"}
+                    {offerExpired ? "Oferta wygasła" : "Oferta pilotażowa"}
                   </div>
                 </div>
 
@@ -175,9 +164,52 @@ const WebinarReplay = () => {
                   className={`text-lg mb-6 ${offerExpired ? "text-gray-500" : ""}`}
                 >
                   {offerExpired
-                    ? "Ta specjalna oferta wygasła. Sprawdź stronę LifeOS: System Upgrade, aby poznać aktualne możliwości."
-                    : "Podczas webinaru na żywo, przedstawiłem ekskluzywną ofertę dla uczestników. Zdecydowałem się przedłużyć ją dla osób oglądających nagranie, ale tylko do końca odliczania powyżej."}
+                    ? "Ta specjalna oferta wygasła. Sprawdź stronę Męski Kompas, aby poznać aktualne możliwości."
+                    : "Podczas webinaru na żywo przedstawiliśmy ekskluzywną ofertę pilotażową programu Męski Kompas - 5-tygodniową transformację przez wszystkie filary męskości."}
                 </p>
+
+                {!offerExpired && (
+                  <div className="mb-6 space-y-4">
+                    <p className="font-semibold text-twilight-indigo">
+                      Co otrzymujesz w programie:
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span>5 tygodni pracy z Ludwikiem i Mateuszem w grupie max 10 mężczyzn</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span>Workbooki do każdego filaru męskości</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span>Dostęp do zamkniętej grupy i sesji coachingowych</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span><strong>BONUS:</strong> Lifetime dostęp do społeczności Lifehackerzy</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span><strong>BONUS:</strong> Kurs "7 Technik Produktywności" (wartość 497 zł)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2">✓</span>
+                        <span>Nagrania wszystkich sesji na zawsze</span>
+                      </li>
+                    </ul>
+                    
+                    <div className="bg-white/50 rounded-lg p-4 border border-twilight-indigo/30">
+                      <p className="text-2xl font-bold text-twilight-indigo mb-2">
+                        Cena pilotażu: 497 zł
+                      </p>
+                      <p className="text-sm text-deep-charcoal/70">
+                        (zamiast planowanych 1997 zł)
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 <Button
                   size="lg"
@@ -186,44 +218,56 @@ const WebinarReplay = () => {
                       ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
                       : "bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
                   }`}
-                  onClick={handleLifeOSSystemUpgrade}
+                  onClick={() => navigate("/program/meski-kompas")}
                   disabled={offerExpired}
                 >
                   {offerExpired
                     ? "Oferta wygasła - Było, minęło..."
-                    : "ODKRYJ PROGRAM LIFEOS: SYSTEM UPGRADE I SPECJALNĄ OFERTĘ"}
+                    : "DOŁĄCZ DO MĘSKIEGO KOMPASU →"}
                 </Button>
 
                 {!offerExpired && (
-                  <p className="text-sm text-center mt-2">
-                    Oferta wygasa razem z dostępem do nagrania
+                  <p className="text-sm text-center mt-4 text-deep-charcoal/70">
+                    Gwarancja satysfakcji: jeśli po pierwszym tygodniu uznasz, że to nie dla Ciebie - zwrot 100% środków, bez pytań.
                   </p>
                 )}
               </div>
 
-              {/* Bonus Section */}
+              {/* Free Resources Section */}
               <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
-                  Ekskluzywne materiały, o których nie wspomniałem podczas
-                  webinaru:
+                  Materiały dodatkowe:
                 </h3>
 
-                <p className="mb-6">
-                  Przygotowałem dodatkowy zestaw narzędzi "Suwerenny strateg IT"
-                  - dostępny TYLKO dla osób, które obejrzały cały webinar i
-                  klikną poniższy przycisk:
+                <p className="mb-6 text-deep-charcoal/80">
+                  Bezpłatne zasoby wspomniane podczas webinaru. Narzędzia i przestrzenie, które pomogły zarówno Mateuszowi, jak i setkom Lifehackerów w codziennej pracy nad sobą:
                 </p>
 
-                <Button
-                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
-                  onClick={handleUnlockBonus}
-                >
-                  Odblokuj dodatkowe materiały
-                </Button>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-twilight-indigo pl-4">
+                    <h4 className="font-semibold text-twilight-indigo mb-2">🖥️ DeepWork.pl</h4>
+                    <p className="text-sm text-deep-charcoal/70 mb-2">Bezpłatny cowork online</p>
+                    <p className="text-sm">
+                      Codziennie na Discordzie Lifehackerów. To właśnie tam Mateusz siedział w dniu swojej obrony, otrzymując wsparcie społeczności. Jak mówił Jakub - "zmiana poranna i zmiana wieczorna wspierają się nawzajem". Wejdź, włącz kamerę, zacznij pracować nad tym, co odkładasz.
+                    </p>
+                  </div>
 
-                <p className="text-xs text-center mt-2">
-                  Dostępne po obejrzeniu minimum 80% nagrania
-                </p>
+                  <div className="border-l-4 border-zenith-gold pl-4">
+                    <h4 className="font-semibold text-zenith-gold mb-2">🧘 UważneŻycie.pl</h4>
+                    <p className="text-sm text-deep-charcoal/70 mb-2">Bezpłatne medytacje prowadzone przez Ludwika</p>
+                    <p className="text-sm">
+                      Każdy wtorek o 6:30 rano. Mniej niż 20 minut medytacji, które pomagają uporządkować myśli i zacząć dzień z wewnętrznym spokojem. Bo jak mówiliśmy - spokój to najważniejszy element wszystkich filarów.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-deep-charcoal pl-4">
+                    <h4 className="font-semibold text-deep-charcoal mb-2">👥 Lifehackerzy.pl</h4>
+                    <p className="text-sm text-deep-charcoal/70 mb-2">Społeczność Klientów Ludwika</p>
+                    <p className="text-sm">
+                      Miejsce, w którym codziennie o 12:34 odbywają się Daily Coachingi. To tam Mateusz dostał narzędzia, które zmieniły jego życie. To tam możesz dostać feedback od ludzi, którzy myślą podobnie do Ciebie i rozumieją Twoje wyzwania.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Social Sharing */}
@@ -234,7 +278,7 @@ const WebinarReplay = () => {
 
                 <p className="mb-6">
                   Możesz udostępnić to nagranie osobom, które mogłyby skorzystać
-                  z metodologii Black Panther. Nagranie będzie aktywne tylko
+                  z metodologii 5 Filarów Męskości. Nagranie będzie aktywne tylko
                   przez 7 dni od daty webinaru.
                 </p>
 
@@ -273,6 +317,64 @@ const WebinarReplay = () => {
                     onClick={() => handleShare("Email")}
                   >
                     Email
+                  </Button>
+                </div>
+              </div>
+
+              {/* FAQ Section */}
+              <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
+                <h3 className="text-lg font-semibold mb-6">
+                  Najczęściej zadawane pytania:
+                </h3>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-twilight-indigo mb-2">
+                      Czy to tylko dla mężczyzn?
+                    </h4>
+                    <p className="text-sm text-deep-charcoal/80">
+                      Program Męski Kompas jest zaprojektowany specyficznie dla mężczyzn. Webinar jednak może być wartościowy dla każdego, kto zmaga się z paraliżem analitycznym.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-twilight-indigo mb-2">
+                      Czy muszę być Lifehackerem?
+                    </h4>
+                    <p className="text-sm text-deep-charcoal/80">
+                      Nie - program Męski Kompas jest otwarty dla wszystkich. Otrzymujesz w bonusie lifetime dostęp do społeczności Lifehackerzy.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-twilight-indigo mb-2">
+                      Co jeśli nie mam czasu na 5 tygodni?
+                    </h4>
+                    <p className="text-sm text-deep-charcoal/80">
+                      To właśnie znak, że potrzebujesz tego programu. Spotkania są tak zaprojektowane, by dawać Ci energię, nie zabierać jej.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-twilight-indigo mb-2">
+                      Czy będą kolejne edycje?
+                    </h4>
+                    <p className="text-sm text-deep-charcoal/80">
+                      Tak, ale cena pilotażowa 497 zł jest zarezerwowana TYLKO dla pierwszej, testowej grupy. Kolejne edycje będą minimum dwukrotnie droższe.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-sm text-center text-deep-charcoal/70 mb-4">
+                    Jeśli masz pytania dotyczące programu, napisz do nas
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => navigate("/contact")}
+                  >
+                    Skontaktuj się z nami
                   </Button>
                 </div>
               </div>
@@ -331,13 +433,12 @@ const WebinarReplay = () => {
 
                 <p className="mb-6">
                   Jeśli to, co usłyszałeś na webinarze, rezonuje z Tobą, rozważ
-                  przejście do następnego kroku i dołączenie do programu Mental
-                  Elevator.
+                  przejście do następnego kroku i dołączenie do programu Męski Kompas.
                 </p>
 
                 <Button
                   className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
-                  onClick={handleLifeOSSystemUpgrade}
+                  onClick={() => navigate("/program/meski-kompas")}
                 >
                   Dowiedz się więcej <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -346,12 +447,10 @@ const WebinarReplay = () => {
               {/* Testimonial */}
               <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <p className="italic mb-4">
-                  "Po implementacji tylko trzech technik z metodologii Black
-                  Panther, moja efektywność wzrosła o 40%, a co ważniejsze -
-                  odzyskałem kontrolę nad swoim czasem i energią."
+                  "Program Męski Kompas pomógł mi wreszcie przestać dryfować. Po raz pierwszy od lat czuję, że mam kierunek i potrafię go utrzymać."
                 </p>
                 <p className="font-medium text-right">
-                  – Marcin K., DevOps Engineer
+                  – Paweł M., Analityk Danych
                 </p>
               </div>
             </div>
