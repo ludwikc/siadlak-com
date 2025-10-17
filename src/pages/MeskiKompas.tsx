@@ -26,9 +26,20 @@ export default function MeskiKompas() {
 
   return (
     <Layout>
+      {/* Floating Top Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 shadow-lg">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 text-center">
+            <span className="text-lg md:text-xl font-bold animate-pulse">
+              🔥 Zostały tylko 2 miejsca w pilotażowej edycji ze zniżką -75%!
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-32 overflow-hidden"
+        className="relative py-20 md:py-32 overflow-hidden mt-12"
         style={{ backgroundColor: "hsl(210, 45%, 12%)" }}
       >
         <div
@@ -57,8 +68,8 @@ export default function MeskiKompas() {
               className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 leading-tight max-w-2xl mx-auto"
               style={{ color: "hsl(210, 20%, 95%)" }}
             >
-              System Nawigacji Dla Mężczyzn, Którzy Chcą Skończyć z Analizowaniem
-              i Chcą Zacząć Działać
+              System Nawigacji Dla Mężczyzn, Którzy Chcą Skończyć z
+              Analizowaniem i Chcą Zacząć Działać
             </h2>
             <p
               className="text-lg md:text-xl font-medium mb-4 leading-relaxed max-w-2xl mx-auto"
@@ -625,7 +636,9 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MAKSYMALNY REZULTAT<br />(Wiesz Dokładnie, Co Dostajesz)
+                  MAKSYMALNY REZULTAT
+                  <br />
+                  (Wiesz Dokładnie, Co Dostajesz)
                 </h3>
               </div>
 
@@ -739,7 +752,9 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MAKSYMALNE PRAWDOPODOBIEŃSTWO SUKCESU<br />(Wiesz, Że To Zadziała)
+                  MAKSYMALNE PRAWDOPODOBIEŃSTWO SUKCESU
+                  <br />
+                  (Wiesz, Że To Zadziała)
                 </h3>
               </div>
 
@@ -843,8 +858,9 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MINIMALNE OPÓŹNIENIE CZASOWE<br />(Zobaczysz Efekty od Pierwszego
-                  Tygodnia)
+                  MINIMALNE OPÓŹNIENIE CZASOWE
+                  <br />
+                  (Zobaczysz Efekty od Pierwszego Tygodnia)
                 </h3>
               </div>
 
@@ -963,8 +979,9 @@ export default function MeskiKompas() {
                   className="text-3xl md:text-4xl font-bold"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  MINIMALNY WYSIŁEK I POŚWIĘCENIE<br />(Nie Musisz Przebudowywać
-                  Całego Życia)
+                  MINIMALNY WYSIŁEK I POŚWIĘCENIE
+                  <br />
+                  (Nie Musisz Przebudowywać Całego Życia)
                 </h3>
               </div>
 

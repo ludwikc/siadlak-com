@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export default function WebinarMeskiKompas() {
-  const ctaUrl = "https://buy.siadlak.com/checkout/spotkanie-online";
+  const ctaUrl = "/webinar/replay";
 
   return (
     <Layout hideHeader={true}>
@@ -24,15 +24,16 @@ export default function WebinarMeskiKompas() {
       {/* HERO SECTION */}
       <section
         className="relative py-24 md:py-40 overflow-hidden"
-        style={{ 
-          background: "linear-gradient(135deg, hsl(210, 50%, 8%) 0%, hsl(210, 45%, 12%) 50%, hsl(210, 40%, 10%) 100%)"
+        style={{
+          background:
+            "linear-gradient(135deg, hsl(210, 50%, 8%) 0%, hsl(210, 45%, 12%) 50%, hsl(210, 40%, 10%) 100%)",
         }}
       >
         {/* Animated gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/60 animate-fade-in"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(255,204,0,0.12),transparent_40%)] animate-pulse"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,204,0,0.08),transparent_50%)]"></div>
-        
+
         {/* Luxury glow effects */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
@@ -43,9 +44,11 @@ export default function WebinarMeskiKompas() {
               <div
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover-scale"
                 style={{
-                  background: "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 50%) 100%)",
+                  background:
+                    "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 50%) 100%)",
                   borderColor: "hsl(45, 100%, 65%)",
-                  boxShadow: "0 0 40px rgba(255, 204, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                  boxShadow:
+                    "0 0 40px rgba(255, 204, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
                 }}
               >
                 <span className="text-2xl animate-pulse">⚠️</span>
@@ -61,8 +64,8 @@ export default function WebinarMeskiKompas() {
                 <br />
                 <span
                   className="inline-block mt-3 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent"
-                  style={{ 
-                    textShadow: "0 0 40px rgba(255, 204, 0, 0.3)"
+                  style={{
+                    textShadow: "0 0 40px rgba(255, 204, 0, 0.3)",
                   }}
                 >
                   JAK ANALITYCZNY UMYSŁ
@@ -81,7 +84,8 @@ export default function WebinarMeskiKompas() {
                 <div
                   className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover-scale transition-all duration-300"
                   style={{
-                    background: "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
+                    background:
+                      "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
                     borderColor: "rgba(255, 204, 0, 0.6)",
                     boxShadow:
                       "0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 204, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.15), inset 0 -2px 10px rgba(255, 204, 0, 0.1)",
@@ -96,20 +100,19 @@ export default function WebinarMeskiKompas() {
               </div>
 
               <div className="mb-10 animate-fade-in">
-                <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+                <a href={ctaUrl}>
                   <Button
                     size="lg"
                     className="text-lg md:text-2xl font-bold px-10 md:px-16 py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
                     style={{
-                      background: "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 48%) 100%)",
+                      background:
+                        "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 48%) 100%)",
                       color: "hsl(210, 20%, 8%)",
-                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
+                      boxShadow:
+                        "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    <span className="inline md:hidden">REZERWUJ MIEJSCE →</span>
-                    <span className="hidden md:inline">
-                      REZERWUJ MIEJSCE - 16 PAŹDZIERNIKA, 19:00 →
-                    </span>
+                    TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →
                   </Button>
                 </a>
               </div>
@@ -117,10 +120,12 @@ export default function WebinarMeskiKompas() {
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 animate-fade-in">
                 <div
                   className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
-                  style={{ 
-                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
                   }}
                 >
                   <span className="text-2xl">📅</span>
@@ -130,10 +135,12 @@ export default function WebinarMeskiKompas() {
                 </div>
                 <div
                   className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
-                  style={{ 
-                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
                   }}
                 >
                   <span className="text-2xl">🕐</span>
@@ -143,10 +150,12 @@ export default function WebinarMeskiKompas() {
                 </div>
                 <div
                   className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
-                  style={{ 
-                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
                   }}
                 >
                   <span className="text-2xl">⏱️</span>
@@ -156,10 +165,12 @@ export default function WebinarMeskiKompas() {
                 </div>
                 <div
                   className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
-                  style={{ 
-                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow:
+                      "0 4px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
                   }}
                 >
                   <span className="text-2xl">💻</span>
@@ -170,7 +181,8 @@ export default function WebinarMeskiKompas() {
               </div>
 
               <p className="text-white/70 text-base md:text-lg italic font-light animate-fade-in">
-                Darmowy warsztat pokazowy • Bez żadnych zobowiązań • Link dostaniesz mailem
+                Darmowy warsztat pokazowy • Bez żadnych zobowiązań • Link
+                dostaniesz mailem
               </p>
             </div>
           </div>
@@ -258,12 +270,12 @@ export default function WebinarMeskiKompas() {
                 <br />
                 Potrzebujesz 2 prostych narzędzi nawigacyjnych.
               </p>
-              <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+              <a href={ctaUrl}>
                 <Button
                   size="lg"
                   className="text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
-                  TAK, CHCĘ TE NARZĘDZIA
+                  OBEJRZYJ REPLAY WYDARZENIA
                 </Button>
               </a>
             </Card>
@@ -478,12 +490,12 @@ export default function WebinarMeskiKompas() {
             </p>
 
             <div className="text-center mt-8">
-              <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+              <a href={ctaUrl}>
                 <Button
                   size="lg"
                   className="text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
-                  CHCĘ WYPEŁNIĆ TE NARZĘDZIA LIVE
+                  OBEJRZYJ REPLAY WYDARZENIA
                 </Button>
               </a>
             </div>
@@ -916,12 +928,12 @@ export default function WebinarMeskiKompas() {
               </p>
             </Card>
 
-            <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+            <a href={ctaUrl}>
               <Button
                 size="lg"
                 className="text-xl px-12 py-8 mb-8 bg-accent hover:bg-accent/90 text-accent-foreground"
               >
-                REZERWUJ SWOJE MIEJSCE - 16 PAŹDZIERNIKA, 19:00
+                TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY
               </Button>
             </a>
 
