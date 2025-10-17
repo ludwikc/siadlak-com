@@ -233,6 +233,126 @@ const WebinarReplay = () => {
                 )}
               </div>
 
+              {/* Live Participants Testimonials */}
+              <div className="bg-gradient-to-br from-twilight-indigo/5 to-zenith-gold/5 backdrop-blur-lg rounded-2xl p-8 border border-twilight-indigo/20 shadow-lg">
+                <h3 className="text-2xl font-bold mb-2 text-twilight-indigo">
+                  💬 Tak zareagowali mężczyźni podczas transmisji na żywo:
+                </h3>
+                <p className="text-deep-charcoal/70 mb-6">
+                  Poniżej prawdziwe komentarze z czatu webinaru - bez edycji, bez filtrów.
+                </p>
+
+                <div className="space-y-8">
+                  {/* Group 1: Recognition */}
+                  <div>
+                    <h4 className="font-semibold text-lg mb-4 text-twilight-indigo">
+                      "To brzmi jak moja historia..."
+                    </h4>
+                    <div className="space-y-4">
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-twilight-indigo">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Kurczę jakbym słyszał o swoim poprzednim związku - lata walki, za wszelką cenę inwestycja w związek i totalne załamanie, kiedy odeszła, totalny dołek i porażka - znam to"
+                        </p>
+                        <p className="text-sm font-medium text-twilight-indigo">— Konrad</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-twilight-indigo">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Znam to uczucie bardzo dobrze z autopsji"
+                        </p>
+                        <p className="text-sm font-medium text-twilight-indigo">— Daniel</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-twilight-indigo">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Hi5 z tym mózgiem analitycznym, nie jest łatwo 🙈"
+                        </p>
+                        <p className="text-sm font-medium text-twilight-indigo">— Anna</p>
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  {/* Group 2: Community Value */}
+                  <div>
+                    <h4 className="font-semibold text-lg mb-4 text-zenith-gold">
+                      Wartość społeczności, o której mówiliśmy
+                    </h4>
+                    <div className="space-y-4">
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-zenith-gold">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Nie da się ukryć że otoczenie prawdziwych osób wspierających daje przestrzeń, pozwala zrozumieć i daje siłę by iść dalej, zmieniać"
+                        </p>
+                        <p className="text-sm font-medium text-zenith-gold">— Artur</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-zenith-gold">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Ludwik to czarodziej 😉 to nie jest zwykły kurs"
+                        </p>
+                        <p className="text-sm font-medium text-zenith-gold">— Artur</p>
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  {/* Group 3: Decisions */}
+                  <div>
+                    <h4 className="font-semibold text-lg mb-4 text-deep-charcoal">
+                      A potem zaczęły się decyzje...
+                    </h4>
+                    <div className="space-y-4">
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-deep-charcoal">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "O spoko! Dobra cena. Ja myślałem że między 2500 a 5000"
+                        </p>
+                        <p className="text-sm font-medium text-deep-charcoal">— Konrad</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-deep-charcoal">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Kupione! Wiem że to będzie dobra współpraca z Wami. Poznałem Was w najgorszym dla mnie kryzysie"
+                        </p>
+                        <p className="text-sm font-medium text-deep-charcoal">— Konrad</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-deep-charcoal">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Ja płaciłem więcej niż na początku i dalej się bardzo bardzo opłaca. Polecam każdemu 😎"
+                        </p>
+                        <p className="text-sm font-medium text-deep-charcoal">— Jakub <span className="text-xs opacity-70">(członek społeczności Lifehackerzy)</span></p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-deep-charcoal">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Wchodzę w to 👍🏻"
+                        </p>
+                        <p className="text-sm font-medium text-deep-charcoal">— Kamil</p>
+                      </blockquote>
+
+                      <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-deep-charcoal">
+                        <p className="text-deep-charcoal/90 italic mb-2">
+                          "Już nie mogę się doczekać!"
+                        </p>
+                        <p className="text-sm font-medium text-deep-charcoal">— Patryk</p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Call to Action */}
+                <div className="mt-8 pt-6 border-t border-twilight-indigo/20">
+                  <p className="text-center font-semibold text-lg mb-4">
+                    Miejsca zostały już zarezerwowane przez uczestników na żywo
+                  </p>
+                  <Button
+                    size="lg"
+                    className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                    onClick={() => navigate("/program/meski-kompas")}
+                  >
+                    DOŁĄCZ ZANIM OFERTA WYGAŚNIE →
+                  </Button>
+                </div>
+              </div>
+
               {/* Free Resources Section */}
               <div className="bg-white backdrop-blur-lg rounded-2xl p-6 border border-gray-200 shadow-lg">
                 <h3 className="text-lg font-semibold mb-4">
