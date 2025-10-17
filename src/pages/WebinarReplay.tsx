@@ -134,26 +134,28 @@ const WebinarReplay = () => {
 
               {/* Limited-Time Offer */}
               <div
-                className={`rounded-2xl p-8 border shadow-lg ${
+                className={`rounded-2xl p-8 border shadow-xl ${
                   offerExpired
-                    ? "bg-gray-100 border-gray-300"
-                    : "bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 border-twilight-indigo/20"
+                    ? "bg-muted/50 border-muted"
+                    : "bg-gradient-to-br from-white via-twilight-indigo/5 to-ascension-pink/5 border-twilight-indigo/30 backdrop-blur-sm"
                 }`}
               >
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-4">
                   <h3
-                    className={`text-xl font-bold ${offerExpired ? "text-gray-500" : "text-twilight-indigo"}`}
+                    className={`text-2xl font-bold ${
+                      offerExpired ? "text-muted-foreground" : "text-twilight-indigo"
+                    }`}
                   >
                     {offerExpired
                       ? "⏱️ Było, minęło..."
-                      : "🔥 Specjalna oferta dla oglądających replay:"}
+                      : "🔥 Specjalna oferta dla oglądających replay"}
                   </h3>
 
                   <div
-                    className={`px-3 py-1 rounded-full text-sm ${
+                    className={`px-4 py-1.5 rounded-full text-sm font-semibold ${
                       offerExpired
-                        ? "bg-gray-200 text-gray-500"
-                        : "bg-twilight-indigo/20 text-twilight-indigo"
+                        ? "bg-muted text-muted-foreground"
+                        : "bg-gradient-to-r from-twilight-indigo to-ascension-pink text-white"
                     }`}
                   >
                     {offerExpired ? "Oferta wygasła" : "Oferta pilotażowa"}
@@ -161,7 +163,7 @@ const WebinarReplay = () => {
                 </div>
 
                 <p
-                  className={`text-lg mb-6 ${offerExpired ? "text-gray-500" : ""}`}
+                  className={`text-base mb-6 leading-relaxed ${offerExpired ? "text-muted-foreground" : "text-foreground/80"}`}
                 >
                   {offerExpired
                     ? "Ta specjalna oferta wygasła. Sprawdź stronę Męski Kompas, aby poznać aktualne możliwości."
@@ -169,54 +171,80 @@ const WebinarReplay = () => {
                 </p>
 
                 {!offerExpired && (
-                  <div className="mb-6 space-y-4">
-                    <p className="font-semibold text-twilight-indigo">
-                      Co otrzymujesz w programie:
-                    </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span>5 tygodni pracy z Ludwikiem i Mateuszem w grupie max 10 mężczyzn</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span>Workbooki do każdego filaru męskości</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span>Dostęp do zamkniętej grupy i sesji coachingowych</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span><strong>BONUS:</strong> Lifetime dostęp do społeczności Lifehackerzy</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span><strong>BONUS:</strong> Kurs "7 Technik Produktywności" (wartość 497 zł)</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">✓</span>
-                        <span>Nagrania wszystkich sesji na zawsze</span>
-                      </li>
-                    </ul>
-                    
-                    <div className="bg-white/50 rounded-lg p-4 border border-twilight-indigo/30">
-                      <p className="text-2xl font-bold text-twilight-indigo mb-2">
-                        Cena pilotażu: 497 zł
+                  <div className="mb-6 space-y-6">
+                    {/* Pricing Box - Most Prominent */}
+                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-twilight-indigo/10 via-ascension-pink/10 to-twilight-indigo/10 border-2 border-twilight-indigo/30 p-6">
+                      <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+                      <div className="relative z-10">
+                        <div className="flex items-baseline justify-between mb-2">
+                          <div>
+                            <p className="text-sm font-medium text-twilight-indigo/70 mb-1">Cena pilotażu</p>
+                            <p className="text-4xl font-bold text-twilight-indigo">
+                              497 zł
+                            </p>
+                          </div>
+                          <div className="text-right">
+                            <p className="text-sm text-muted-foreground line-through mb-1">
+                              Regularna cena
+                            </p>
+                            <p className="text-2xl font-semibold text-muted-foreground line-through">
+                              1997 zł
+                            </p>
+                          </div>
+                        </div>
+                        <div className="mt-3 pt-3 border-t border-twilight-indigo/20">
+                          <p className="text-sm font-semibold text-ascension-pink">
+                            🎯 Oszczędzasz 1500 zł (75% taniej!)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Benefits List */}
+                    <div className="space-y-4">
+                      <p className="text-lg font-bold text-twilight-indigo">
+                        Co otrzymujesz w programie:
                       </p>
-                      <p className="text-sm text-deep-charcoal/70">
-                        (zamiast planowanych 1997 zł)
-                      </p>
+                      <ul className="space-y-3">
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-twilight-indigo text-lg">✓</span>
+                          <span className="text-foreground/90 leading-relaxed">5 tygodni pracy z Ludwikiem i Mateuszem w grupie max 10 mężczyzn</span>
+                        </li>
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-twilight-indigo text-lg">✓</span>
+                          <span className="text-foreground/90 leading-relaxed">Workbooki do każdego filaru męskości</span>
+                        </li>
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-twilight-indigo text-lg">✓</span>
+                          <span className="text-foreground/90 leading-relaxed">Dostęp do zamkniętej grupy i sesji coachingowych</span>
+                        </li>
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-ascension-pink text-lg">★</span>
+                          <span className="text-foreground/90 leading-relaxed">
+                            <strong className="text-ascension-pink">BONUS:</strong> Lifetime dostęp do społeczności Lifehackerzy
+                          </span>
+                        </li>
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-ascension-pink text-lg">★</span>
+                          <span className="text-foreground/90 leading-relaxed">
+                            <strong className="text-ascension-pink">BONUS:</strong> Kurs "7 Technik Produktywności" (wartość 497 zł)
+                          </span>
+                        </li>
+                        <li className="flex items-start group">
+                          <span className="mr-3 mt-0.5 text-twilight-indigo text-lg">✓</span>
+                          <span className="text-foreground/90 leading-relaxed">Nagrania wszystkich sesji na zawsze</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 )}
 
                 <Button
                   size="lg"
-                  className={`w-full ${
+                  className={`w-full text-lg font-bold py-6 ${
                     offerExpired
-                      ? "bg-gray-300 hover:bg-gray-300 text-gray-500 cursor-not-allowed"
-                      : "bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                      ? "bg-muted hover:bg-muted text-muted-foreground cursor-not-allowed"
+                      : "bg-gradient-to-r from-twilight-indigo to-ascension-pink hover:from-twilight-indigo/90 hover:to-ascension-pink/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   }`}
                   onClick={() => navigate("/program/meski-kompas")}
                   disabled={offerExpired}
@@ -227,9 +255,11 @@ const WebinarReplay = () => {
                 </Button>
 
                 {!offerExpired && (
-                  <p className="text-sm text-center mt-4 text-deep-charcoal/70">
-                    Gwarancja satysfakcji: jeśli po pierwszym tygodniu uznasz, że to nie dla Ciebie - zwrot 100% środków, bez pytań.
-                  </p>
+                  <div className="mt-4 p-4 bg-twilight-indigo/5 rounded-lg border border-twilight-indigo/10">
+                    <p className="text-sm text-center text-foreground/70 leading-relaxed">
+                      <span className="font-semibold text-twilight-indigo">✓ Gwarancja satysfakcji:</span> Jeśli po pierwszym tygodniu uznasz, że to nie dla Ciebie - zwrot 100% środków, bez pytań.
+                    </p>
+                  </div>
                 )}
               </div>
 
