@@ -31,7 +31,7 @@ export default function MeskiKompas() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-3 text-center">
             <span className="text-lg md:text-xl font-bold animate-pulse">
-              🔥 Zostały tylko 2 miejsca w pilotażowej edycji ze zniżką -75%!
+              🔥 Wszystkie miejsca wyprzedane, dołącz do listy oczekujących na kolejną edycję!
             </span>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function MeskiKompas() {
               className="text-sm md:text-base font-medium mb-6"
               style={{ color: "hsl(45, 85%, 65%)" }}
             >
-              Startujemy w październiku | Tylko 10 miejsc | Inwestycja: 497 zł
+              Edycja 1: październik 2025 | Tylko 10 miejsc | Wszystkie miejsca wyprzedane
               (edycja pilotażowa)
             </div>
             <Link to="https://buy.siadlak.com/checkout/meski-kompas">
@@ -99,12 +99,12 @@ export default function MeskiKompas() {
                 variant="primary"
                 size="xl"
                 className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                aria-label="Zarezerwuj jedno z 4 pozostałych miejsc"
+                aria-label="Dołącz do listy oczekujących na kolejną edycję"
                 showArrow
               >
-                <span className="inline sm:hidden">Zarezerwuj miejsce</span>
+                <span className="inline sm:hidden">Dołącz do listy oczekujących</span>
                 <span className="hidden sm:inline">
-                  Zarezerwuj jedno z 4 pozostałych miejsc
+                  Dołącz do listy oczekujących na kolejną edycję
                 </span>
               </CTAButton>
             </Link>
@@ -2147,7 +2147,7 @@ export default function MeskiKompas() {
                   Męski Kompas (1997 zł) + 7 Technik Produktywności (497 zł)
                 </p>
                 <p className="text-3xl font-bold text-white">
-                  Twoja cena: tylko 497 zł (pilot)
+                  Twoja cena: tylko 997 zł 
                 </p>
                 <p className="text-lg text-white/70 mt-2">
                   To prawdziwa oferta 2 w 1 - płacisz za jeden, dostajesz dwa
@@ -2701,7 +2701,7 @@ export default function MeskiKompas() {
                         fontWeight: "bold",
                       }}
                     >
-                      497 zł
+                     997 zł
                     </td>
                     <td
                       className="p-4 text-center border border-gray-300"
@@ -2803,7 +2803,7 @@ export default function MeskiKompas() {
                 },
                 {
                   feature: "Cena",
-                  meskiKompas: "497 zł",
+                  meskiKompas: "997 zł",
                   others: [
                     "Typowy kurs: 500-2000 zł",
                     "Coaching: 5000-20000 zł",
@@ -2915,7 +2915,7 @@ export default function MeskiKompas() {
                 className="text-2xl font-bold"
                 style={{ color: "hsl(210, 20%, 8%)" }}
               >
-                Ten program kosztuje 497 zł.
+                Ten program kosztuje 997 zł.
               </p>
 
               <p className="leading-relaxed">
@@ -3024,7 +3024,7 @@ export default function MeskiKompas() {
                   className="text-2xl md:text-3xl font-bold mb-2"
                   style={{ color: "hsl(210, 20%, 8%)" }}
                 >
-                  Jeśli mógłbyś kupić 5 lat swojego życia z powrotem za 497 zł,
+                  Jeśli mógłbyś kupić 5 lat swojego życia z powrotem za 997 zł,
                   zrobiłbyś to?
                 </p>
               </div>
@@ -3037,7 +3037,7 @@ export default function MeskiKompas() {
                 className="text-xl font-bold text-center"
                 style={{ color: "hsl(210, 20%, 8%)" }}
               >
-                497 zł za system, który daje Ci te lata z powrotem.
+                997 zł za system, który daje Ci te lata z powrotem.
               </p>
 
               <div
@@ -3119,7 +3119,7 @@ export default function MeskiKompas() {
                 style={{ color: "hsl(45, 85%, 50%)" }}
               >
                 Twoja inwestycja:{" "}
-                <span className="line-through opacity-60">1997 zł</span> 497 zł
+                <span className="line-through opacity-60">1,997 zł</span> 997 zł
               </p>
               <p className="text-lg" style={{ color: "hsl(210, 10%, 45%)" }}>
                 (edycja pilotażowa)
@@ -3130,7 +3130,7 @@ export default function MeskiKompas() {
               className="text-2xl font-bold mb-6 text-center"
               style={{ color: "hsl(0, 60%, 50%)" }}
             >
-              Zostały 4 miejsca.
+              Zapisy zakończone. Dołącz do listy oczekujących na kolejną edycję.
             </p>
 
             <div
@@ -3184,15 +3184,15 @@ export default function MeskiKompas() {
                   variant="primary"
                   size="xl"
                   className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                  aria-label="Zapisuję się i zaczynam nawigować - zostały 4 miejsca"
+                  aria-label="Dołącz do listy oczekujących na kolejną edycję"
                   showArrow
                 >
-                  <span className="inline sm:hidden">BIORĘ MIEJSCE</span>
+                  <span className="inline sm:hidden">BRAK MIEJSC</span>
                   <span className="hidden sm:inline lg:hidden">
-                    ZAPISUJĘ SIĘ - 4 MIEJSCA
+                    Dołącz do listy oczekujących na kolejną edycję
                   </span>
                   <span className="hidden lg:inline">
-                    ZAPISUJĘ SIĘ I ZACZYNAM NAWIGOWAĆ - ZOSTAŁY 4 MIEJSCA
+                    Dołącz do listy oczekujących na kolejną edycję
                   </span>
                 </CTAButton>
               </Link>
@@ -3288,7 +3288,7 @@ export default function MeskiKompas() {
                     className="font-bold text-base sm:text-lg"
                     style={{ color: "hsl(210, 20%, 8%)" }}
                   >
-                    Zostały tylko 4 miejsca
+                    Dołącz do listy oczekujących na kolejną edycję
                   </p>
                   <p
                     className="text-sm hidden sm:block"
@@ -3306,7 +3306,7 @@ export default function MeskiKompas() {
                     color: "white",
                   }}
                 >
-                  Rezerwuję Miejsce →
+                  Rezerwuję Miejsce na liście oczekujacych →
                 </button>
               </Link>
             </div>
