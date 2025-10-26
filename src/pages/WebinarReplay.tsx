@@ -657,17 +657,18 @@ const WebinarReplay = () => {
             <div className="bg-gradient-to-r from-twilight-indigo to-ascension-pink rounded-2xl shadow-2xl p-4 border border-white/20">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-white text-center sm:text-left">
-                  <p className="font-bold text-lg">Oferta pilotażowa: 497 zł</p>
-                  <p className="text-sm text-white/90">
+                  <p className="font-bold text-base sm:text-lg">Oferta pilotażowa: 497 zł</p>
+                  <p className="text-xs sm:text-sm text-white/90">
                     Tylko 10 miejsc w pierwszej edycji
                   </p>
                 </div>
                 <Button
                   size="lg"
-                  className="bg-white text-twilight-indigo hover:bg-white/90 font-bold shadow-lg whitespace-nowrap"
+                  className="w-full sm:w-auto bg-white text-twilight-indigo hover:bg-white/90 font-bold shadow-lg px-6 py-3"
                   onClick={() => navigate("/program/meski-kompas")}
                 >
-                  DOŁĄCZ TERAZ →
+                  <span className="inline sm:hidden">DOŁĄCZ →</span>
+                  <span className="hidden sm:inline">DOŁĄCZ TERAZ →</span>
                 </Button>
               </div>
             </div>

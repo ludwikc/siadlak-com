@@ -100,10 +100,10 @@ export default function WebinarMeskiKompas() {
               </div>
 
               <div className="mb-10 animate-fade-in">
-                <a href={ctaUrl}>
+                <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
                   <Button
                     size="lg"
-                    className="text-lg md:text-2xl font-bold px-10 md:px-16 py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
+                    className="w-full sm:w-auto text-base sm:text-lg md:text-2xl font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 48%) 100%)",
@@ -112,7 +112,8 @@ export default function WebinarMeskiKompas() {
                         "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →
+                    <span className="inline sm:hidden">OBEJRZYJ REPLAY →</span>
+                    <span className="hidden sm:inline">TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →</span>
                   </Button>
                 </a>
               </div>
@@ -270,10 +271,10 @@ export default function WebinarMeskiKompas() {
                 <br />
                 Potrzebujesz 2 prostych narzędzi nawigacyjnych.
               </p>
-              <a href={ctaUrl}>
+              <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
+                  className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
                   OBEJRZYJ REPLAY WYDARZENIA
                 </Button>
@@ -490,10 +491,10 @@ export default function WebinarMeskiKompas() {
             </p>
 
             <div className="text-center mt-8">
-              <a href={ctaUrl}>
+              <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
+                  className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
                 >
                   OBEJRZYJ REPLAY WYDARZENIA
                 </Button>
@@ -928,12 +929,13 @@ export default function WebinarMeskiKompas() {
               </p>
             </Card>
 
-            <a href={ctaUrl}>
+            <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
               <Button
                 size="lg"
-                className="text-xl px-12 py-8 mb-8 bg-accent hover:bg-accent/90 text-accent-foreground"
+                className="w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 mb-8 bg-accent hover:bg-accent/90 text-accent-foreground"
               >
-                TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY
+                <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
+                <span className="hidden sm:inline">TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY</span>
               </Button>
             </a>
 

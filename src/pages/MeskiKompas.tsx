@@ -3300,13 +3300,14 @@ export default function MeskiKompas() {
               </div>
               <Link to="https://buy.siadlak.com/checkout/meski-kompas">
                 <button
-                  className="whitespace-nowrap px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
+                  className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
                   style={{
                     backgroundColor: "hsl(210, 20%, 8%)",
                     color: "white",
                   }}
                 >
-                  Rezerwuję Miejsce na liście oczekujacych →
+                  <span className="inline sm:hidden">Rezerwuję Miejsce →</span>
+                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych →</span>
                 </button>
               </Link>
             </div>
