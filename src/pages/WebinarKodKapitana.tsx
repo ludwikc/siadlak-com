@@ -125,16 +125,16 @@ export default function WebinarKodKapitana() {
 
             <Card className="bg-destructive/5 border-destructive/30 p-8 md:p-12 mb-8">
               <p className="text-xl md:text-2xl font-bold text-foreground mb-6 leading-relaxed">
-                Prawda jest brutalna: Większość ludzi to pasażerowie na gapę we własnych głowach.
+                Prawda jest prosta: dopóki nie posiadasz Kodu Kapitana, Twój wewnętrzny system operacyjny wykonuje skrypty, których nigdy świadomie nie zatwierdziłeś.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Myślisz, że podejmujesz decyzje? <strong className="text-foreground">Mylisz się.</strong> Twoje nawyki, lęki i cudze oczekiwania trzymają stery, podczas gdy Ty jedynie obserwujesz, jak Twoja łódź obija się o skały.
+                Możesz budować najbardziej zaawansowane automatyzacje w biznesie, ale jeśli Twoja uwaga działa na <strong className="text-foreground">starym oprogramowaniu</strong> – lęku, reaktywności i cudzych oczekiwaniach – to wciąż jesteś tylko pasażerem we własnej głowie. Obserwujesz, jak wadliwe pętle decyzyjne przepalają Twoją energię i czas, a Twoja łódź dryfuje tam, gdzie pcha ją algorytm otoczenia.
               </p>
               <p className="text-xl font-bold text-destructive mb-6">
-                To się nazywa Bunt Maszyn.
+                To nie jest pech. To Błąd Architektury Świadomości.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Jeśli czujesz, że Twój potencjał przecieka Ci przez palce, a każdy dzień to tylko kolejna runda gaszenia pożarów – to nie jest „pech". <strong className="text-foreground">To brak Kodu Kapitana.</strong>
+                Jeśli czujesz, że Twój potencjał przecieka, a Ty jedynie gasisz pożary wywołane przez błędy w Twoim własnym systemie – pora na wprowadzenie <strong className="text-foreground">nowych ustawień</strong>. Tylko Ty masz dostęp Administratora do swojej głowy. Czas wgrać Kod Kapitana.
               </p>
             </Card>
           </div>
