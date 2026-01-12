@@ -1,11 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CTAButton } from "@/components/ui/cta-button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { Anchor, Compass, Ship, Star, Target, Shield } from "lucide-react";
+import { Anchor, Compass, Ship, Star, Target, Shield, MessageSquare } from "lucide-react";
+import { useState } from "react";
+import effectGif from "@/assets/I-know-kung-fu.gif";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://lifehackerzy.pl/kod-kapitana";
+  const [isEffectOverlayVisible, setIsEffectOverlayVisible] = useState(true);
+
+  const handleShowEffect = () => {
+    setIsEffectOverlayVisible(false);
+  };
 
   return (
     <Layout hideHeader={true}>
@@ -137,6 +145,56 @@ export default function WebinarKodKapitana() {
                 Jeśli czujesz, że Twój potencjał przecieka, a Ty jedynie gasisz pożary wywołane przez błędy w Twoim własnym systemie – pora na wprowadzenie <strong className="text-foreground">nowych ustawień</strong>. Tylko Ty masz dostęp Administratora do swojej głowy. Czas wgrać Kod Kapitana.
               </p>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CHCESZ ZOBACZYĆ EFEKT? */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Effect Display with Overlay */}
+            <div className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden">
+              {/* Privacy Overlay */}
+              {isEffectOverlayVisible && (
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-2xl">
+                  <div className="space-y-6">
+                    <div className="w-16 h-16 bg-sky-500/20 rounded-full flex items-center justify-center mx-auto">
+                      <MessageSquare className="h-8 w-8 text-sky-400" />
+                    </div>
+
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-white">
+                        Chcesz zobaczyć efekt?
+                      </h3>
+                      <p className="text-white/80 text-lg">
+                        Zobacz jak wygląda proces mentalnej transformacji
+                      </p>
+                    </div>
+
+                    <CTAButton
+                      onClick={handleShowEffect}
+                      className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-blue-600 hover:to-sky-500"
+                      size="lg"
+                    >
+                      Pokaż Efekt
+                    </CTAButton>
+                  </div>
+                </div>
+              )}
+
+              {/* GIF Content */}
+              <div className="bg-gradient-to-br from-background to-muted/30 p-8 rounded-2xl border border-sky-500/20">
+                <img
+                  src={effectGif}
+                  alt="Mental transformation effect demonstration"
+                  className="w-full rounded-lg shadow-2xl"
+                />
+                <p className="text-xs text-muted-foreground mt-4 text-center">
+                  Źródło: Matrix (1999), Warner Bros.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
