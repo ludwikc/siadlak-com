@@ -54,6 +54,7 @@ import HelpSubpage from './pages/HelpSubpage';
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 import SiedemTechnik from './pages/SiedemTechnik';
 import WebinarMeskiKompas from './pages/WebinarMeskiKompas';
+import WebinarKodKapitana from './pages/WebinarKodKapitana';
 import Wyzwanie from './pages/Wyzwanie';
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from './components/Redirect';
@@ -116,6 +117,7 @@ function App() {
             <Route path="/webinar/expired" element={<WebinarExpired />} />
             <Route path="/webinar/replay" element={<WebinarReplay />} />
             <Route path="/webinar/meski-kompas" element={<WebinarMeskiKompas />} />
+            <Route path="/webinar/kod-kapitana" element={<WebinarKodKapitana />} />
             
             <Route path="/wyzwanie" element={<Wyzwanie />} />
             
