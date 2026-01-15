@@ -434,17 +434,39 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* AGENDA */}
-      <section className="py-20 md:py-0 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)' }}>
-        {/* Desktop/Tablet: Show full image as the section */}
-        <div className="hidden md:block">
+      <section className="py-20 md:py-0 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)' }} aria-label="Agenda dla Wybranych">
+        {/* Desktop/Tablet: Show full image as the section - decorative, hidden from screen readers */}
+        <div className="hidden md:block" aria-hidden="true">
           <img 
             src={agendaTimelineBg} 
-            alt="Agenda dla Wybranych - Timeline" 
+            alt="" 
             className="w-full h-auto"
+            role="presentation"
           />
         </div>
         
-        {/* Mobile: Show the original content */}
+        {/* Screen reader accessible content for desktop (visually hidden but readable) */}
+        <div className="sr-only md:not-sr-only md:sr-only">
+          <h2>AGENDA DLA WYBRANYCH</h2>
+          <div>
+            <h3>KIERUNEK I START (25%)</h3>
+            <p>Inicjowanie działań, określanie celów i przygotowanie do podróży. Wprowadzenie w temat i ustalenie priorytetów.</p>
+          </div>
+          <div>
+            <h3>OTWARCIE MOŻLIWOŚCI (50%)</h3>
+            <p>Identyfikacja szans, dostęp do zasobów i odblokowanie potencjału. Poznanie narzędzi i metod pracy.</p>
+          </div>
+          <div>
+            <h3>NAWIGACJA I ROZWÓJ (75%)</h3>
+            <p>Kierowanie procesem, dostosowanie do zmian i ciągłe doskonalenie. Monitorowanie postępów i korekta kursu.</p>
+          </div>
+          <div>
+            <h3>OSIĄGNIĘCIE CELU (100%)</h3>
+            <p>Finalizacja projektu, wdrożenie rozwiązań i czerpanie korzyści. Podsumowanie wyników i świętowanie sukcesu.</p>
+          </div>
+        </div>
+        
+        {/* Mobile: Show the original content (visible and accessible) */}
         <div className="md:hidden container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-16 text-[#1e5a8a]">
