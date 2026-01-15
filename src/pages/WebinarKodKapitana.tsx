@@ -102,7 +102,7 @@ export default function WebinarKodKapitana() {
                 <a href={ctaUrl} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto sm:inline-block">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-lg md:text-2xl font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
+                    className="w-full sm:w-auto text-sm sm:text-lg md:text-2xl font-bold px-4 sm:px-10 md:px-16 py-4 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] whitespace-normal text-center leading-tight"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -111,7 +111,8 @@ export default function WebinarKodKapitana() {
                         "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    PRZEJMUJĘ STERY – ZAPISZ MNIE NA 27 STYCZNIA →
+                    <span className="hidden sm:inline">PRZEJMUJĘ STERY – ZAPISZ MNIE NA 27 STYCZNIA →</span>
+                    <span className="sm:hidden">ZAPISZ MNIE NA 27 STYCZNIA →</span>
                   </Button>
                 </a>
               </div>
@@ -703,7 +704,7 @@ export default function WebinarKodKapitana() {
             <a href={ctaUrl} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto sm:inline-block mb-12">
               <Button
                 size="lg"
-                className="w-full sm:w-auto text-base sm:text-lg md:text-2xl font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
+                className="w-full sm:w-auto text-sm sm:text-lg md:text-2xl font-bold px-4 sm:px-10 md:px-16 py-4 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] whitespace-normal text-center leading-tight"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -712,7 +713,8 @@ export default function WebinarKodKapitana() {
                     "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                 }}
               >
-                PRZEJMUJĘ STERY – ZAPISZ MNIE NA 27 STYCZNIA →
+                <span className="hidden sm:inline">PRZEJMUJĘ STERY – ZAPISZ MNIE NA 27 STYCZNIA →</span>
+                <span className="sm:hidden">ZAPISZ MNIE NA 27 STYCZNIA →</span>
               </Button>
             </a>
 
