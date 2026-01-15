@@ -677,9 +677,24 @@ export default function WebinarKodKapitana() {
                     </div>
                   </div>
                   
-                  <p className="text-xl font-bold text-foreground">
+                  <p className="text-xl font-bold text-foreground mb-8">
                     Ale jeśli jesteś gotowy przestać być ofiarą okoliczności i chcesz zostać <span className="text-sky-600 dark:text-sky-400">Panem Własnej Rzeczywistości</span> – zapraszam na pokład.
                   </p>
+                  
+                  <a href={ctaUrl} target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto sm:inline-block">
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(34,197,94,0.5)]"
+                      style={{
+                        background: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)",
+                        color: "white",
+                        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                      }}
+                    >
+                      <span className="hidden sm:inline">WCHODZĘ NA POKŁAD – ZAPISZ MNIE →</span>
+                      <span className="sm:hidden">WCHODZĘ NA POKŁAD →</span>
+                    </Button>
+                  </a>
                 </div>
               </div>
             </Card>
