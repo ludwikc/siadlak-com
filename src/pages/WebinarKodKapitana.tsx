@@ -642,21 +642,45 @@ export default function WebinarKodKapitana() {
             </h2>
 
             <Card className="bg-amber-50 dark:bg-amber-950/30 border-amber-300 dark:border-amber-700 p-8 md:p-12">
-              <p className="text-lg text-foreground leading-relaxed mb-6">
-                <strong>Ten warsztat nie jest dla każdego.</strong> Jeśli szukasz wymówek, dlaczego „się nie da" – zamknij tę stronę.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Jeśli boisz się spojrzeć prawdzie w oczy i przyznać, że do tej pory pozwalałeś innym sterować Twoim życiem – to spotkanie Cię zaboli.
-              </p>
-              
-              {/* Large green checkmark */}
-              <div className="flex justify-center my-8">
-                <Check className="w-24 h-24 text-emerald-500 stroke-[3]" />
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Large green checkmark on the left */}
+                <div className="flex-shrink-0 mx-auto md:mx-0">
+                  <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+                    <Check className="w-28 h-28 md:w-36 md:h-36 text-emerald-500 stroke-[2.5] drop-shadow-lg" />
+                  </div>
+                </div>
+                
+                {/* Content on the right */}
+                <div className="flex-1">
+                  <p className="text-lg text-foreground leading-relaxed mb-4">
+                    <strong>Ten warsztat nie jest dla każdego.</strong> Jeśli szukasz wymówek, dlaczego „się nie da" – zamknij tę stronę.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Jeśli boisz się spojrzeć prawdzie w oczy i przyznać, że do tej pory pozwalałeś innym sterować Twoim życiem – to spotkanie Cię zaboli.
+                  </p>
+                  
+                  {/* 80% Progress bar */}
+                  <div className="mb-6">
+                    <div className="flex justify-between text-sm text-muted-foreground mb-2">
+                      <span>Twoja gotowość</span>
+                      <span className="font-semibold text-emerald-600">80%</span>
+                    </div>
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden shadow-inner">
+                      <div 
+                        className="h-full rounded-full transition-all duration-1000 ease-out"
+                        style={{ 
+                          width: '80%',
+                          background: 'linear-gradient(90deg, #3b82f6 0%, #22c55e 100%)'
+                        }}
+                      />
+                    </div>
+                  </div>
+                  
+                  <p className="text-xl font-bold text-foreground">
+                    Ale jeśli jesteś gotowy przestać być ofiarą okoliczności i chcesz zostać <span className="text-sky-600 dark:text-sky-400">Panem Własnej Rzeczywistości</span> – zapraszam na pokład.
+                  </p>
+                </div>
               </div>
-              
-              <p className="text-xl font-bold text-foreground text-center">
-                Ale jeśli jesteś gotowy przestać być ofiarą okoliczności i chcesz zostać <span className="text-sky-600 dark:text-sky-400">Panem Własnej Rzeczywistości</span> – zapraszam na pokład.
-              </p>
             </Card>
           </div>
         </div>
