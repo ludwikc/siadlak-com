@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { CTAButton } from "@/components/ui/cta-button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { Anchor, Compass, Ship, Star, MessageSquare } from "lucide-react";
+import { Anchor, Compass, Ship, Star, MessageSquare, Check } from "lucide-react";
 import { useState } from "react";
 import effectGif from "@/assets/I-know-kung-fu.gif";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
@@ -648,7 +648,13 @@ export default function WebinarKodKapitana() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Jeśli boisz się spojrzeć prawdzie w oczy i przyznać, że do tej pory pozwalałeś innym sterować Twoim życiem – to spotkanie Cię zaboli.
               </p>
-              <p className="text-xl font-bold text-foreground">
+              
+              {/* Large green checkmark */}
+              <div className="flex justify-center my-8">
+                <Check className="w-24 h-24 text-emerald-500 stroke-[3]" />
+              </div>
+              
+              <p className="text-xl font-bold text-foreground text-center">
                 Ale jeśli jesteś gotowy przestać być ofiarą okoliczności i chcesz zostać <span className="text-sky-600 dark:text-sky-400">Panem Własnej Rzeczywistości</span> – zapraszam na pokład.
               </p>
             </Card>
