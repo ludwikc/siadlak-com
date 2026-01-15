@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { CTAButton } from "@/components/ui/cta-button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { Anchor, Compass, Ship, Star, Target, Shield, MessageSquare } from "lucide-react";
+import { Anchor, Compass, Ship, Star, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import effectGif from "@/assets/I-know-kung-fu.gif";
 
@@ -278,62 +278,136 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* CO ZYSKUJESZ */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-20 bg-green-50/50 dark:bg-green-950/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               CO ZYSKUJESZ?
             </h2>
-            <p className="text-xl text-center text-muted-foreground mb-16">
+            <p className="text-xl text-center text-muted-foreground mb-8">
               (TWÓJ NOWY STATUS)
             </p>
 
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <p className="text-lg text-muted-foreground">Po 60 minutach ze mną:</p>
             </div>
 
-            <div className="space-y-6">
-              <Card className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800 p-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                    <Target className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Odzyskasz 100% odpowiedzialności.</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      A odpowiedzialność to jedyna droga do wolności.
-                    </p>
-                  </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Icon 1: Odpowiedzialność - Head with gear */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-28 h-28 mb-6 relative">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    {/* Head silhouette */}
+                    <path
+                      d="M50 15 C30 15 20 30 20 50 C20 65 28 75 35 80 L35 90 L65 90 L65 80 C72 75 80 65 80 50 C80 30 70 15 50 15"
+                      fill="#dcfce7"
+                      stroke="#1e3a5f"
+                      strokeWidth="2.5"
+                      strokeLinejoin="round"
+                    />
+                    {/* Gear inside head */}
+                    <circle cx="50" cy="45" r="12" fill="#bfdbfe" stroke="#1e3a5f" strokeWidth="2" />
+                    <circle cx="50" cy="45" r="5" fill="#1e3a5f" />
+                    {/* Gear teeth */}
+                    {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                      <rect
+                        key={i}
+                        x="47"
+                        y="30"
+                        width="6"
+                        height="6"
+                        fill="#bfdbfe"
+                        stroke="#1e3a5f"
+                        strokeWidth="1.5"
+                        transform={`rotate(${angle} 50 45)`}
+                      />
+                    ))}
+                    {/* Arrow pointing forward */}
+                    <path
+                      d="M70 45 L85 45 L80 38 M85 45 L80 52"
+                      fill="none"
+                      stroke="#1e3a5f"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
-              </Card>
+                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
+                  Odzyskasz 100% odpowiedzialności.
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  A odpowiedzialność to jedyna droga do wolności.
+                </p>
+              </div>
 
-              <Card className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800 p-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                    <Compass className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Przestaniesz dryfować.</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Każdy ruch Twoim sterem będzie świadomy i celowy.
-                    </p>
-                  </div>
+              {/* Icon 2: Kompas */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-28 h-28 mb-6 relative">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    {/* Outer circle */}
+                    <circle cx="50" cy="50" r="40" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="2.5" />
+                    {/* Inner circle */}
+                    <circle cx="50" cy="50" r="30" fill="#bfdbfe" stroke="#1e3a5f" strokeWidth="2" />
+                    {/* Compass directions */}
+                    <polygon points="50,20 45,45 50,50 55,45" fill="#1e3a5f" />
+                    <polygon points="50,80 45,55 50,50 55,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
+                    <polygon points="20,50 45,45 50,50 45,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
+                    <polygon points="80,50 55,45 50,50 55,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
+                    {/* Center dot */}
+                    <circle cx="50" cy="50" r="4" fill="#1e3a5f" />
+                    {/* Direction markers */}
+                    <text x="50" y="16" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">N</text>
+                    <text x="50" y="92" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">S</text>
+                    <text x="8" y="53" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">W</text>
+                    <text x="92" y="53" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">E</text>
+                  </svg>
                 </div>
-              </Card>
+                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
+                  Przestaniesz dryfować.
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Każdy ruch Twoim sterem będzie świadomy i celowy.
+                </p>
+              </div>
 
-              <Card className="bg-green-50 dark:bg-green-950/30 border-green-200 dark:border-green-800 p-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-full bg-green-100 dark:bg-green-900">
-                    <Shield className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">Zbudujesz pancerz psychiczny.</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Pogoda (świat zewnętrzny) przestanie mieć wpływ na Twoje samopoczucie. <strong className="text-foreground">Ty jesteś Kapitanem. Ty decydujesz o kursie.</strong>
-                    </p>
-                  </div>
+              {/* Icon 3: Tarcza - Shield */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-28 h-28 mb-6 relative">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    {/* Shield shape */}
+                    <path
+                      d="M50 10 L85 25 L85 50 C85 75 50 95 50 95 C50 95 15 75 15 50 L15 25 Z"
+                      fill="#dcfce7"
+                      stroke="#1e3a5f"
+                      strokeWidth="2.5"
+                      strokeLinejoin="round"
+                    />
+                    {/* Inner shield decoration */}
+                    <path
+                      d="M50 22 L75 33 L75 50 C75 68 50 83 50 83 C50 83 25 68 25 50 L25 33 Z"
+                      fill="#bfdbfe"
+                      stroke="#1e3a5f"
+                      strokeWidth="1.5"
+                    />
+                    {/* Checkmark inside */}
+                    <path
+                      d="M35 50 L45 60 L65 40"
+                      fill="none"
+                      stroke="#1e3a5f"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
-              </Card>
+                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
+                  Zbudujesz pancerz psychiczny.
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Pogoda (świat zewnętrzny) przestanie mieć wpływ na Twoje samopoczucie. <strong className="text-slate-800 dark:text-slate-200">Ty jesteś Kapitanem.</strong>
+                </p>
+              </div>
             </div>
           </div>
         </div>
