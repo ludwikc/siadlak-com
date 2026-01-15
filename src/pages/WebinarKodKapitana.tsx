@@ -6,6 +6,7 @@ import SEO from "@/components/SEO";
 import { Anchor, Compass, Ship, Star, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import effectGif from "@/assets/I-know-kung-fu.gif";
+import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://lifehackerzy.pl/kod-kapitana";
@@ -433,41 +434,27 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* AGENDA */}
-      <section className="py-20" style={{ background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)' }}>
-        <div className="container mx-auto px-4">
+      <section className="py-20 md:py-0 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)' }}>
+        {/* Desktop/Tablet: Show full image as the section */}
+        <div className="hidden md:block">
+          <img 
+            src={agendaTimelineBg} 
+            alt="Agenda dla Wybranych - Timeline" 
+            className="w-full h-auto"
+          />
+        </div>
+        
+        {/* Mobile: Show the original content */}
+        <div className="md:hidden container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#1e5a8a]">
+            <h2 className="text-3xl font-bold text-center mb-16 text-[#1e5a8a]">
               AGENDA DLA WYBRANYCH
             </h2>
 
-            {/* Timeline Container */}
+            {/* Timeline Container for mobile */}
             <div className="relative">
-              {/* Horizontal Timeline with Arrows - hidden on mobile */}
-              <div className="hidden md:flex absolute top-[140px] left-0 right-0 items-center justify-center" style={{ width: '85%', margin: '0 auto', left: '7.5%' }}>
-                {/* Line segment 1 */}
-                <div className="flex-1 h-2 bg-[#3b8bc9] rounded-l-full"></div>
-                {/* Arrow 1 */}
-                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
-                {/* Gap */}
-                <div className="w-4"></div>
-                {/* Line segment 2 */}
-                <div className="flex-1 h-2 bg-[#3b8bc9]"></div>
-                {/* Arrow 2 */}
-                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
-                {/* Gap */}
-                <div className="w-4"></div>
-                {/* Line segment 3 */}
-                <div className="flex-1 h-2 bg-[#3b8bc9]"></div>
-                {/* Arrow 3 */}
-                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
-                {/* Gap */}
-                <div className="w-4"></div>
-                {/* Line segment 4 */}
-                <div className="flex-1 h-2 bg-[#3b8bc9] rounded-r-full"></div>
-              </div>
-
-              {/* Steps container */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6">
+              {/* Steps container - stacked on mobile */}
+              <div className="grid grid-cols-1 gap-12">
                 {/* Step 1 - KIERUNEK I START */}
                 <div className="flex flex-col items-center text-center">
                   {/* Icon Circle */}
@@ -493,10 +480,8 @@ export default function WebinarKodKapitana() {
                       <circle cx="31" cy="69" r="5" fill="white" />
                     </svg>
                   </div>
-                  {/* Vertical connector - hidden on mobile */}
-                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
                     KIERUNEK I START
                   </h3>
                   <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
@@ -528,10 +513,8 @@ export default function WebinarKodKapitana() {
                       <line x1="70" y1="45" x2="76" y2="45" stroke="white" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                   </div>
-                  {/* Vertical connector */}
-                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
                     OTWARCIE MOŻLIWOŚCI
                   </h3>
                   <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
@@ -567,10 +550,8 @@ export default function WebinarKodKapitana() {
                       <line x1="74" y1="50" x2="78" y2="50" stroke="white" strokeWidth="2" />
                     </svg>
                   </div>
-                  {/* Vertical connector */}
-                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
                     NAWIGACJA I ROZWÓJ
                   </h3>
                   <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
@@ -609,10 +590,8 @@ export default function WebinarKodKapitana() {
                       <rect x="72" y="55" width="4" height="5" fill="white" rx="1" />
                     </svg>
                   </div>
-                  {/* Vertical connector */}
-                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
                     OSIĄGNIĘCIE CELU
                   </h3>
                   <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
