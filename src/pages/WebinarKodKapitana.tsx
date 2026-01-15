@@ -7,6 +7,7 @@ import { Anchor, Compass, Ship, Star, MessageSquare, Check } from "lucide-react"
 import { useState } from "react";
 import effectGif from "@/assets/I-know-kung-fu.gif";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
+import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://lifehackerzy.pl/kod-kapitana";
@@ -96,6 +97,15 @@ export default function WebinarKodKapitana() {
                     <span className="font-bold text-sky-300">Zacznij być Architektem swojej rzeczywistości.</span>
                   </p>
                 </div>
+              </div>
+
+              {/* Hero Image */}
+              <div className="mb-10 animate-fade-in">
+                <img 
+                  src={kodKapitanaHero} 
+                  alt="Kapitan przy sterze statku podczas burzy" 
+                  className="w-full max-w-2xl mx-auto rounded-xl shadow-2xl"
+                />
               </div>
 
               <div className="mb-10 animate-fade-in">
