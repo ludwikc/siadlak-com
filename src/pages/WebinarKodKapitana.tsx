@@ -433,139 +433,197 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* AGENDA */}
-      <section className="py-20" style={{ backgroundColor: '#dbeafe' }}>
+      <section className="py-20" style={{ background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)' }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-slate-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-[#1e5a8a]">
               AGENDA DLA WYBRANYCH
             </h2>
 
-            {/* Horizontal Timeline */}
+            {/* Timeline Container */}
             <div className="relative">
-              {/* Timeline line - hidden on mobile, visible on md+ */}
-              <div className="hidden md:block absolute top-16 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 rounded-full" style={{ marginLeft: '12.5%', marginRight: '12.5%', width: '75%' }}></div>
+              {/* Horizontal Timeline with Arrows - hidden on mobile */}
+              <div className="hidden md:flex absolute top-[140px] left-0 right-0 items-center justify-center" style={{ width: '85%', margin: '0 auto', left: '7.5%' }}>
+                {/* Line segment 1 */}
+                <div className="flex-1 h-2 bg-[#3b8bc9] rounded-l-full"></div>
+                {/* Arrow 1 */}
+                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
+                {/* Gap */}
+                <div className="w-4"></div>
+                {/* Line segment 2 */}
+                <div className="flex-1 h-2 bg-[#3b8bc9]"></div>
+                {/* Arrow 2 */}
+                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
+                {/* Gap */}
+                <div className="w-4"></div>
+                {/* Line segment 3 */}
+                <div className="flex-1 h-2 bg-[#3b8bc9]"></div>
+                {/* Arrow 3 */}
+                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-[#3b8bc9] -ml-1"></div>
+                {/* Gap */}
+                <div className="w-4"></div>
+                {/* Line segment 4 */}
+                <div className="flex-1 h-2 bg-[#3b8bc9] rounded-r-full"></div>
+              </div>
 
               {/* Steps container */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
-                {/* Step 1 */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6">
+                {/* Step 1 - KIERUNEK I START */}
                 <div className="flex flex-col items-center text-center">
-                  {/* Icon */}
-                  <div className="w-32 h-32 mb-6 relative z-10">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="#3b82f6" />
+                  {/* Icon Circle */}
+                  <div className="w-28 h-28 mb-2 relative z-10">
+                    <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="50" cy="50" r="46" fill="#2980b9" stroke="#1e5a8a" strokeWidth="3" />
                       {/* Ship's wheel */}
-                      <circle cx="50" cy="50" r="20" fill="none" stroke="white" strokeWidth="3" />
+                      <circle cx="50" cy="50" r="22" fill="none" stroke="white" strokeWidth="2.5" />
                       <circle cx="50" cy="50" r="8" fill="none" stroke="white" strokeWidth="2" />
                       {/* Wheel spokes */}
-                      <line x1="50" y1="25" x2="50" y2="75" stroke="white" strokeWidth="3" />
-                      <line x1="25" y1="50" x2="75" y2="50" stroke="white" strokeWidth="3" />
-                      <line x1="32" y1="32" x2="68" y2="68" stroke="white" strokeWidth="3" />
-                      <line x1="68" y1="32" x2="32" y2="68" stroke="white" strokeWidth="3" />
+                      <line x1="50" y1="24" x2="50" y2="76" stroke="white" strokeWidth="2.5" />
+                      <line x1="24" y1="50" x2="76" y2="50" stroke="white" strokeWidth="2.5" />
+                      <line x1="31" y1="31" x2="69" y2="69" stroke="white" strokeWidth="2.5" />
+                      <line x1="69" y1="31" x2="31" y2="69" stroke="white" strokeWidth="2.5" />
                       {/* Wheel handles */}
-                      <circle cx="50" cy="25" r="4" fill="white" />
-                      <circle cx="50" cy="75" r="4" fill="white" />
-                      <circle cx="25" cy="50" r="4" fill="white" />
-                      <circle cx="75" cy="50" r="4" fill="white" />
+                      <circle cx="50" cy="24" r="5" fill="white" />
+                      <circle cx="50" cy="76" r="5" fill="white" />
+                      <circle cx="24" cy="50" r="5" fill="white" />
+                      <circle cx="76" cy="50" r="5" fill="white" />
+                      <circle cx="31" cy="31" r="5" fill="white" />
+                      <circle cx="69" cy="69" r="5" fill="white" />
+                      <circle cx="69" cy="31" r="5" fill="white" />
+                      <circle cx="31" cy="69" r="5" fill="white" />
                     </svg>
                   </div>
+                  {/* Vertical connector - hidden on mobile */}
+                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">
-                    ETAP 1: Przebudzenie Kapitana
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                    KIERUNEK I START
                   </h3>
-                  <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                    Wyjście z transu automatycznych reakcji.
+                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
+                    Inicjowanie działań, określanie celów i przygotowanie do podróży. Wprowadzenie w temat i ustalenie priorytetów.
                   </p>
-                  {/* Progress bar */}
-                  <div className="w-24 h-2 rounded-full bg-slate-200 overflow-hidden">
-                    <div className="h-full w-1/4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
+                  {/* Progress bar with percentage */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[#2980b9] font-bold text-sm">25%</span>
+                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
+                      <div className="h-full w-1/4 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Step 2 */}
+                {/* Step 2 - OTWARCIE MOŻLIWOŚCI */}
                 <div className="flex flex-col items-center text-center">
-                  {/* Icon */}
-                  <div className="w-32 h-32 mb-6 relative z-10">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="#3b82f6" />
-                      {/* Keyhole with light */}
-                      <path d="M50 30 C40 30 35 40 35 48 C35 54 38 58 42 62 L42 70 L58 70 L58 62 C62 58 65 54 65 48 C65 40 60 30 50 30" fill="white" />
-                      <circle cx="50" cy="45" r="6" fill="#3b82f6" />
-                      <rect x="47" y="50" width="6" height="15" fill="#3b82f6" />
+                  {/* Icon Circle */}
+                  <div className="w-28 h-28 mb-2 relative z-10">
+                    <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="50" cy="50" r="46" fill="#2980b9" stroke="#1e5a8a" strokeWidth="3" />
+                      {/* Keyhole */}
+                      <circle cx="50" cy="42" r="12" fill="none" stroke="white" strokeWidth="2.5" />
+                      <path d="M44 50 L44 68 L56 68 L56 50" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
                       {/* Light rays */}
-                      <line x1="50" y1="18" x2="50" y2="24" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                      <line x1="30" y1="35" x2="34" y2="39" stroke="white" strokeWidth="2" strokeLinecap="round" />
-                      <line x1="70" y1="35" x2="66" y2="39" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="50" y1="20" x2="50" y2="26" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="30" y1="30" x2="34" y2="34" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="70" y1="30" x2="66" y2="34" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="24" y1="45" x2="30" y2="45" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                      <line x1="70" y1="45" x2="76" y2="45" stroke="white" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                   </div>
+                  {/* Vertical connector */}
+                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">
-                    ETAP 2: Audyt Zasobów
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                    OTWARCIE MOŻLIWOŚCI
                   </h3>
-                  <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                    Twoje Żagle vs Twoje Przecieki.
+                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
+                    Identyfikacja szans, dostęp do zasobów i odblokowanie potencjału. Poznanie narzędzi i metod pracy.
                   </p>
-                  {/* Progress bar */}
-                  <div className="w-24 h-2 rounded-full bg-slate-200 overflow-hidden">
-                    <div className="h-full w-2/4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
+                  {/* Progress bar with percentage */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[#2980b9] font-bold text-sm">50%</span>
+                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
+                      <div className="h-full w-1/2 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Step 3 */}
+                {/* Step 3 - NAWIGACJA I ROZWÓJ */}
                 <div className="flex flex-col items-center text-center">
-                  {/* Icon */}
-                  <div className="w-32 h-32 mb-6 relative z-10">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="#3b82f6" />
-                      {/* Compass */}
-                      <circle cx="50" cy="50" r="25" fill="none" stroke="white" strokeWidth="2" />
-                      <polygon points="50,28 45,50 50,55 55,50" fill="white" />
-                      <polygon points="50,72 45,50 50,45 55,50" fill="none" stroke="white" strokeWidth="1.5" />
-                      <circle cx="50" cy="50" r="4" fill="white" />
-                      {/* Direction markers */}
-                      <text x="50" y="22" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">N</text>
-                      <text x="50" y="84" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">S</text>
-                      <text x="22" y="53" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">W</text>
-                      <text x="78" y="53" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">E</text>
+                  {/* Icon Circle */}
+                  <div className="w-28 h-28 mb-2 relative z-10">
+                    <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="50" cy="50" r="46" fill="#2980b9" stroke="#1e5a8a" strokeWidth="3" />
+                      {/* Compass outer ring */}
+                      <circle cx="50" cy="50" r="28" fill="none" stroke="white" strokeWidth="2" />
+                      {/* Compass inner circle */}
+                      <circle cx="50" cy="50" r="5" fill="white" />
+                      {/* Compass needle - north (red/filled) */}
+                      <polygon points="50,22 46,50 54,50" fill="white" />
+                      {/* Compass needle - south (outline) */}
+                      <polygon points="50,78 46,50 54,50" fill="none" stroke="white" strokeWidth="1.5" />
+                      {/* Direction ticks */}
+                      <line x1="50" y1="22" x2="50" y2="26" stroke="white" strokeWidth="2" />
+                      <line x1="50" y1="74" x2="50" y2="78" stroke="white" strokeWidth="2" />
+                      <line x1="22" y1="50" x2="26" y2="50" stroke="white" strokeWidth="2" />
+                      <line x1="74" y1="50" x2="78" y2="50" stroke="white" strokeWidth="2" />
                     </svg>
                   </div>
+                  {/* Vertical connector */}
+                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">
-                    ETAP 3: Taniec z Burzą
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                    NAWIGACJA I ROZWÓJ
                   </h3>
-                  <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                    Opór jako siła napędowa wzrostu.
+                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
+                    Kierowanie procesem, dostosowanie do zmian i ciągłe doskonalenie. Monitorowanie postępów i korekta kursu.
                   </p>
-                  {/* Progress bar */}
-                  <div className="w-24 h-2 rounded-full bg-slate-200 overflow-hidden">
-                    <div className="h-full w-3/4 bg-gradient-to-r from-cyan-400 to-green-400 rounded-full"></div>
+                  {/* Progress bar with percentage */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[#2980b9] font-bold text-sm">75%</span>
+                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
+                      <div className="h-full w-3/4 bg-gradient-to-r from-[#2980b9] to-[#27ae60] rounded-full"></div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Step 4 */}
+                {/* Step 4 - OSIĄGNIĘCIE CELU */}
                 <div className="flex flex-col items-center text-center">
-                  {/* Icon */}
-                  <div className="w-32 h-32 mb-6 relative z-10">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <circle cx="50" cy="50" r="45" fill="#3b82f6" />
-                      {/* Brain */}
-                      <path d="M35 55 C30 55 28 48 32 44 C28 40 30 32 38 32 C38 26 48 24 52 30 C58 26 68 30 66 38 C74 40 74 50 68 54 C72 60 66 68 58 66 C54 72 44 72 42 66 C34 68 28 62 35 55" fill="none" stroke="white" strokeWidth="2.5" strokeLinejoin="round" />
-                      {/* Brain center line */}
-                      <path d="M50 32 C50 45 50 58 50 66" fill="none" stroke="white" strokeWidth="1.5" />
-                      {/* Brain folds */}
-                      <path d="M40 42 C45 45 45 50 40 54" fill="none" stroke="white" strokeWidth="1.5" />
-                      <path d="M60 42 C55 45 55 50 60 54" fill="none" stroke="white" strokeWidth="1.5" />
+                  {/* Icon Circle */}
+                  <div className="w-28 h-28 mb-2 relative z-10">
+                    <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-lg">
+                      <circle cx="50" cy="50" r="46" fill="#2980b9" stroke="#1e5a8a" strokeWidth="3" />
+                      {/* Main gear */}
+                      <circle cx="40" cy="45" r="15" fill="none" stroke="white" strokeWidth="2.5" />
+                      <circle cx="40" cy="45" r="6" fill="none" stroke="white" strokeWidth="2" />
+                      {/* Gear teeth for main gear */}
+                      <rect x="37" y="27" width="6" height="6" fill="white" rx="1" />
+                      <rect x="37" y="57" width="6" height="6" fill="white" rx="1" />
+                      <rect x="22" y="42" width="6" height="6" fill="white" rx="1" />
+                      <rect x="52" y="42" width="6" height="6" fill="white" rx="1" />
+                      {/* Secondary gear */}
+                      <circle cx="62" cy="58" r="12" fill="none" stroke="white" strokeWidth="2.5" />
+                      <circle cx="62" cy="58" r="5" fill="none" stroke="white" strokeWidth="2" />
+                      {/* Gear teeth for secondary gear */}
+                      <rect x="59" y="44" width="5" height="4" fill="white" rx="1" />
+                      <rect x="59" y="68" width="5" height="4" fill="white" rx="1" />
+                      <rect x="48" y="55" width="4" height="5" fill="white" rx="1" />
+                      <rect x="72" y="55" width="4" height="5" fill="white" rx="1" />
                     </svg>
                   </div>
+                  {/* Vertical connector */}
+                  <div className="hidden md:block w-0.5 h-12 bg-[#3b8bc9]"></div>
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">
-                    ETAP 4: Manifest Suwerenności
+                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4 md:mt-2">
+                    OSIĄGNIĘCIE CELU
                   </h3>
-                  <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                    Twój plan rejsu na najbliższy rok.
+                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
+                    Finalizacja projektu, wdrożenie rozwiązań i czerpanie korzyści. Podsumowanie wyników i świętowanie sukcesu.
                   </p>
-                  {/* Progress bar */}
-                  <div className="w-24 h-2 rounded-full bg-slate-200 overflow-hidden">
-                    <div className="h-full w-full bg-gradient-to-r from-cyan-400 to-green-500 rounded-full"></div>
+                  {/* Progress bar with percentage */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[#27ae60] font-bold text-sm">100%</span>
+                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
+                      <div className="h-full w-full bg-gradient-to-r from-[#3498db] to-[#27ae60] rounded-full"></div>
+                    </div>
                   </div>
                 </div>
               </div>
