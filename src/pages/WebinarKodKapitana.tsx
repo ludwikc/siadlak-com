@@ -2,7 +2,7 @@ import SEO from "@/components/SEO";
 import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card } from "@/components/ui/card";
-import { Anchor, Compass, Target, Ship, MapPin } from "lucide-react";
+import { Anchor, Compass, Target, Ship, MapPin, Zap, Brain, AlertTriangle, Navigation, Map } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
 
 export default function WebinarKodKapitana() {
@@ -264,6 +264,144 @@ export default function WebinarKodKapitana() {
                   <span className="md:hidden">PRZEJMUJĘ STERY →</span>
                 </CTAButton>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DLA KOGO JEST TEN POKŁAD? */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
+              Dla kogo jest ten pokład?
+            </h2>
+
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+              Ten warsztat nie jest dla turystów. Jest dla osób, które budują coś znaczącego i czują, że ich własna psychika stała się <strong className="text-foreground">„wąskim gardłem"</strong> ich rozwoju.
+            </p>
+
+            <p className="text-xl md:text-2xl font-bold text-center text-sky-600 dark:text-sky-400 mb-8">
+              To spotkanie jest dla Ciebie, jeśli:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6 bg-background/50 border-sky-500/20 hover:border-sky-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Zap className="h-6 w-6 text-sky-400" />
+                  </div>
+                  <p className="text-muted-foreground">
+                    Budujesz ambitne projekty, ale czujesz, że Twój <strong className="text-foreground">„wewnętrzny system" nie nadąża</strong> za tempem Twoich ambicji.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-sky-500/20 hover:border-sky-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Ship className="h-6 w-6 text-sky-400" />
+                  </div>
+                  <p className="text-muted-foreground">
+                    Masz świetną łódź (biznes/karierę), ale większość czasu spędzasz na dnie, <strong className="text-foreground">wylewając wodę</strong>, zamiast stać przy sterze i patrzeć na horyzont.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-sky-500/20 hover:border-sky-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <AlertTriangle className="h-6 w-6 text-sky-400" />
+                  </div>
+                  <p className="text-muted-foreground">
+                    Czujesz <strong className="text-foreground">„zmęczenie materiału"</strong> – nie z braku pracy, ale z powodu ciągłej reaktywności na „pogodę" (rynki, opinie, kryzysy).
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-sky-500/20 hover:border-sky-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Brain className="h-6 w-6 text-sky-400" />
+                  </div>
+                  <p className="text-muted-foreground">
+                    Znasz technologię zewnętrzną (automatyzacje), ale nigdy nie zaktualizowałeś <strong className="text-foreground">technologii wewnętrznej</strong> (Twojej uwagi).
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TWOJE ROI – CO WYNIOSZESZ Z WARSZTATU? */}
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
+              Twoje ROI – Co wyniesziesz z warsztatu?
+            </h2>
+
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+              Nie interesuje mnie przekazywanie Ci „ciekawostek". Interesuje mnie <strong className="text-foreground">zmiana Twojej zdolności operacyjnej</strong>. Po 60 minutach wyjdziesz z konkretnym zestawem narzędzi:
+            </p>
+
+            <div className="space-y-6">
+              <Card className="p-6 bg-background/50 border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <MapPin className="h-7 w-7 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">AUDYT WYCIEKÓW</h3>
+                    <p className="text-muted-foreground">
+                      Dowiesz się, gdzie dokładnie ucieka Twoja energia życiowa. <strong className="text-foreground">Przestaniesz zasilać żaglami dziurawy kadłub.</strong>
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Anchor className="h-7 w-7 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">PROTOKÓŁ NADPISANIA (Override)</h3>
+                    <p className="text-muted-foreground">
+                      Nauczysz się techniki „Zrzucenia Kotwicy". To zdolność do <strong className="text-foreground">natychmiastowego przerwania reaktywnego skryptu</strong> (lęku/złości) i powrotu do pozycji siły w 3 sekundy.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Navigation className="h-7 w-7 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">NAWIGACJA PO DANYCH</h3>
+                    <p className="text-muted-foreground">
+                      Przestaniesz bać się trudnych emocji. Pokażę Ci, jak skalibrować swój „Wewnętrzny Kompas", by <strong className="text-foreground">strach czy opór stały się precyzyjną informacją nawigacyjną</strong>, a nie blokadą.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 bg-background/50 border-emerald-500/20 hover:border-emerald-500/40 transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Map className="h-7 w-7 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground mb-2">MAPA SUWERENNOŚCI</h3>
+                    <p className="text-muted-foreground">
+                      Wyznaczysz swoją „Północną Gwiazdę". To różnica między pogonią za kolejnym celem a <strong className="text-foreground">płynięciem w stronę realnej wolności.</strong>
+                    </p>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
