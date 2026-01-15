@@ -446,7 +446,7 @@ export default function WebinarKodKapitana() {
         </div>
         
         {/* Screen reader accessible content for desktop (visually hidden but readable) */}
-        <div className="sr-only md:not-sr-only md:sr-only">
+        <div className="sr-only">
           <h2>AGENDA DLA WYBRANYCH</h2>
           <div>
             <h3>KIERUNEK I START (25%)</h3>
