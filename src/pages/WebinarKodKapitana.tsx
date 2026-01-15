@@ -278,134 +278,153 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* CO ZYSKUJESZ */}
-      <section className="py-20 bg-green-50/50 dark:bg-green-950/10">
+      <section className="py-20" style={{ backgroundColor: '#e8f5e9' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-slate-800">
               CO ZYSKUJESZ?
             </h2>
-            <p className="text-xl text-center text-muted-foreground mb-8">
-              (TWÓJ NOWY STATUS)
+            <p className="text-center text-slate-500 mb-14">
+              Po 60 minutach ze mną
             </p>
 
-            <div className="text-center mb-16">
-              <p className="text-lg text-muted-foreground">Po 60 minutach ze mną:</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Icon 1: Odpowiedzialność - Head with gear */}
+            {/* Top row - 3 icons */}
+            <div className="grid md:grid-cols-3 gap-8 mb-10">
+              {/* Icon 1: Shield - Resilience */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-28 h-28 mb-6 relative">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Head silhouette */}
-                    <path
-                      d="M50 15 C30 15 20 30 20 50 C20 65 28 75 35 80 L35 90 L65 90 L65 80 C72 75 80 65 80 50 C80 30 70 15 50 15"
-                      fill="#dcfce7"
-                      stroke="#1e3a5f"
-                      strokeWidth="2.5"
-                      strokeLinejoin="round"
-                    />
-                    {/* Gear inside head */}
-                    <circle cx="50" cy="45" r="12" fill="#bfdbfe" stroke="#1e3a5f" strokeWidth="2" />
-                    <circle cx="50" cy="45" r="5" fill="#1e3a5f" />
-                    {/* Gear teeth */}
-                    {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                      <rect
-                        key={i}
-                        x="47"
-                        y="30"
-                        width="6"
-                        height="6"
-                        fill="#bfdbfe"
-                        stroke="#1e3a5f"
-                        strokeWidth="1.5"
-                        transform={`rotate(${angle} 50 45)`}
-                      />
-                    ))}
-                    {/* Arrow pointing forward */}
-                    <path
-                      d="M70 45 L85 45 L80 38 M85 45 L80 52"
-                      fill="none"
-                      stroke="#1e3a5f"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
-                  Odzyskasz 100% odpowiedzialności.
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  A odpowiedzialność to jedyna droga do wolności.
-                </p>
-              </div>
-
-              {/* Icon 2: Kompas */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-28 h-28 mb-6 relative">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
-                    {/* Outer circle */}
-                    <circle cx="50" cy="50" r="40" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="2.5" />
-                    {/* Inner circle */}
-                    <circle cx="50" cy="50" r="30" fill="#bfdbfe" stroke="#1e3a5f" strokeWidth="2" />
-                    {/* Compass directions */}
-                    <polygon points="50,20 45,45 50,50 55,45" fill="#1e3a5f" />
-                    <polygon points="50,80 45,55 50,50 55,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
-                    <polygon points="20,50 45,45 50,50 45,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
-                    <polygon points="80,50 55,45 50,50 55,55" fill="#dcfce7" stroke="#1e3a5f" strokeWidth="1" />
-                    {/* Center dot */}
-                    <circle cx="50" cy="50" r="4" fill="#1e3a5f" />
-                    {/* Direction markers */}
-                    <text x="50" y="16" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">N</text>
-                    <text x="50" y="92" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">S</text>
-                    <text x="8" y="53" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">W</text>
-                    <text x="92" y="53" textAnchor="middle" fill="#1e3a5f" fontSize="8" fontWeight="bold">E</text>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
-                  Przestaniesz dryfować.
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Każdy ruch Twoim sterem będzie świadomy i celowy.
-                </p>
-              </div>
-
-              {/* Icon 3: Tarcza - Shield */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-28 h-28 mb-6 relative">
-                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                <div className="w-20 h-20 mb-4">
+                  <svg viewBox="0 0 80 80" className="w-full h-full">
                     {/* Shield shape */}
                     <path
-                      d="M50 10 L85 25 L85 50 C85 75 50 95 50 95 C50 95 15 75 15 50 L15 25 Z"
-                      fill="#dcfce7"
-                      stroke="#1e3a5f"
-                      strokeWidth="2.5"
+                      d="M40 8 L70 20 L70 40 C70 58 40 72 40 72 C40 72 10 58 10 40 L10 20 Z"
+                      fill="#e0f2fe"
+                      stroke="#0891b2"
+                      strokeWidth="2"
                       strokeLinejoin="round"
                     />
-                    {/* Inner shield decoration */}
+                    {/* Checkmark */}
                     <path
-                      d="M50 22 L75 33 L75 50 C75 68 50 83 50 83 C50 83 25 68 25 50 L25 33 Z"
-                      fill="#bfdbfe"
-                      stroke="#1e3a5f"
-                      strokeWidth="1.5"
-                    />
-                    {/* Checkmark inside */}
-                    <path
-                      d="M35 50 L45 60 L65 40"
+                      d="M26 40 L35 49 L54 30"
                       fill="none"
-                      stroke="#1e3a5f"
-                      strokeWidth="4"
+                      stroke="#0891b2"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-3">
-                  Zbudujesz pancerz psychiczny.
+                <h3 className="text-base font-bold text-slate-800 mb-2 uppercase tracking-wide">
+                  Odporność
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Pogoda (świat zewnętrzny) przestanie mieć wpływ na Twoje samopoczucie. <strong className="text-slate-800 dark:text-slate-200">Ty jesteś Kapitanem.</strong>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
+                  Zbudujesz pancerz psychiczny na trudne sytuacje.
+                </p>
+              </div>
+
+              {/* Icon 2: Compass - Clarity */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 mb-4">
+                  <svg viewBox="0 0 80 80" className="w-full h-full">
+                    {/* Outer circle */}
+                    <circle cx="40" cy="40" r="32" fill="none" stroke="#0891b2" strokeWidth="2" />
+                    {/* Inner circle with fill */}
+                    <circle cx="40" cy="40" r="24" fill="#e0f2fe" stroke="#0891b2" strokeWidth="1.5" />
+                    {/* Compass needle - North (dark) */}
+                    <polygon points="40,18 36,40 40,44 44,40" fill="#0891b2" />
+                    {/* Compass needle - South (light) */}
+                    <polygon points="40,62 36,40 40,36 44,40" fill="#a5f3fc" stroke="#0891b2" strokeWidth="1" />
+                    {/* Center dot */}
+                    <circle cx="40" cy="40" r="3" fill="#0891b2" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-slate-800 mb-2 uppercase tracking-wide">
+                  Klarowność
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
+                  Przestaniesz dryfować, każda decyzja będzie świadoma.
+                </p>
+              </div>
+
+              {/* Icon 3: Brain - Mindset */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 mb-4">
+                  <svg viewBox="0 0 80 80" className="w-full h-full">
+                    {/* Brain outline */}
+                    <path 
+                      d="M28 48 C22 48 20 42 24 38 C20 34 22 26 30 26 C30 20 40 18 44 24 C50 20 60 24 58 32 C66 34 66 44 60 48 C64 54 58 60 50 58 C46 64 36 64 34 58 C26 60 20 54 28 48" 
+                      fill="#d1fae5" 
+                      stroke="#10b981" 
+                      strokeWidth="2" 
+                      strokeLinejoin="round"
+                    />
+                    {/* Brain center line */}
+                    <path d="M40 26 C40 38 40 50 40 58" fill="none" stroke="#10b981" strokeWidth="1.5" />
+                    {/* Brain folds left */}
+                    <path d="M32 36 C36 38 36 44 32 48" fill="none" stroke="#10b981" strokeWidth="1.5" />
+                    {/* Brain folds right */}
+                    <path d="M48 36 C44 38 44 44 48 48" fill="none" stroke="#10b981" strokeWidth="1.5" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-slate-800 mb-2 uppercase tracking-wide">
+                  Mindset
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
+                  Odzyskasz 100% odpowiedzialności za swoje życie.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom row - 2 icons centered */}
+            <div className="flex justify-center gap-8 md:gap-16">
+              {/* Icon 4: Circular arrows - Process */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 mb-4">
+                  <svg viewBox="0 0 80 80" className="w-full h-full">
+                    {/* Circular arrows */}
+                    <circle cx="40" cy="40" r="24" fill="none" stroke="#0891b2" strokeWidth="2" strokeDasharray="20 8" />
+                    {/* Arrow heads */}
+                    <path d="M58 28 L64 32 L60 38" fill="none" stroke="#0891b2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M22 52 L16 48 L20 42" fill="none" stroke="#0891b2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    {/* Center checkmark circle */}
+                    <circle cx="40" cy="40" r="12" fill="#e0f2fe" stroke="#0891b2" strokeWidth="1.5" />
+                    <path d="M34 40 L38 44 L46 36" fill="none" stroke="#0891b2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-slate-800 mb-2 uppercase tracking-wide">
+                  Produktywność
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
+                  Zoptymalizujesz procesy decyzyjne i działanie.
+                </p>
+              </div>
+
+              {/* Icon 5: Head with brain - Self-awareness */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 mb-4">
+                  <svg viewBox="0 0 80 80" className="w-full h-full">
+                    {/* Head silhouette */}
+                    <path
+                      d="M50 70 L30 70 L30 58 C22 54 16 44 16 34 C16 20 28 10 42 10 C56 10 68 20 68 34 C68 38 66 42 64 46 L64 50 L56 50 L50 58 Z"
+                      fill="none"
+                      stroke="#0891b2"
+                      strokeWidth="2"
+                      strokeLinejoin="round"
+                    />
+                    {/* Brain inside */}
+                    <path 
+                      d="M35 38 C32 38 30 34 33 31 C30 28 32 24 38 24 C38 20 44 18 48 22 C52 20 58 22 56 28 C60 30 60 36 56 38 C58 42 54 46 48 44 C46 48 40 48 38 44 C34 46 30 42 35 38" 
+                      fill="#d1fae5" 
+                      stroke="#10b981" 
+                      strokeWidth="1.5" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold text-slate-800 mb-2 uppercase tracking-wide">
+                  Samoświadomość
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
+                  Zrozumiesz mechanizmy rządzące Twoim umysłem.
                 </p>
               </div>
             </div>
