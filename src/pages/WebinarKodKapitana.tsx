@@ -145,16 +145,28 @@ export default function WebinarKodKapitana() {
 
             <Card className="bg-destructive/5 border-destructive/30 p-8 md:p-12 mb-8">
               <p className="text-xl md:text-2xl font-bold text-foreground mb-6 leading-relaxed">
-                Prawda jest prosta: dopóki nie posiadasz Kodu Kapitana, Twój wewnętrzny system operacyjny wykonuje skrypty, których nigdy świadomie nie zatwierdziłeś.
+                Kto faktycznie decyduje o Twoim życiu?
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Możesz budować najbardziej zaawansowane automatyzacje w biznesie, ale jeśli Twoja uwaga działa na <strong className="text-foreground">starym oprogramowaniu</strong> – lęku, reaktywności i cudzych oczekiwaniach – to wciąż jesteś tylko pasażerem we własnej głowie. Obserwujesz, jak wadliwe pętle decyzyjne przepalają Twoją energię i czas, a Twoja łódź dryfuje tam, gdzie pcha ją algorytm otoczenia.
+                Ty sam? Czy może raczej rzeczy „po prostu się dzieją", a Ty próbujesz nadążyć?
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Prawda jest niewygodna: Nie masz kontroli nad pogodą, rynkiem ani nad tym, co robią inne łodzie na morzu. Nie masz. Ale jeśli nie masz kontroli nad własnym sterem i emocjami, to nie jesteś Kapitanem – jesteś tylko <strong className="text-foreground">pasażerem na własny koszt</strong>.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Wyobraź sobie Kapitana, który jest ciągle rozproszony, co chwilę zmienia kurs i nie dowozi własnych postanowień (nawet nie pytam, jak tam Twoje postanowienia noworoczne, bo obaj wiemy, jak działają „puste deklaracje" bez systemu).
               </p>
               <p className="text-xl font-bold text-destructive mb-6">
-                To nie jest pech. To Błąd Architektury Świadomości.
+                Czy to jest Kapitan, któremu byś zaufał? A co ważniejsze: czy Ty dzisiaj UFASZ SOBIE?
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Większość ludzi spędza życie pod pokładem łodzi pełnej dziur, próbując wylewać wodę (czyli wiecznie rozwiązywać te same napiętrzające się problemy i gasić „biznesowe pożary"). W tym samym czasie ich ster jest zablokowany w jednej pozycji przez skrypty z przeszłości i lęk przed błędem.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Lecą na pełnym automacie, a potem dziwią się, że ich łódź rozbiła się o skały, o których „wszyscy wiedzieli".
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Jeśli czujesz, że Twój potencjał przecieka, a Ty jedynie gasisz pożary wywołane przez błędy w Twoim własnym systemie – pora na wprowadzenie <strong className="text-foreground">nowych ustawień</strong>. Tylko Ty masz dostęp Administratora do swojej głowy. Czas wgrać Kod Kapitana.
+                <strong className="text-foreground">Kod Kapitana</strong> to instrukcja, jak przestać wylewać wodę, wyjść na pokład i realnie przejąć stery. To protokół odzyskiwania suwerenności tam, gdzie do tej pory rządził nawyk.
               </p>
             </Card>
           </div>
