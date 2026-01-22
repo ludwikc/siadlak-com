@@ -255,7 +255,7 @@ export default function Discovery() {
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <span>
-                Zarabiasz poniżej €100K rocznie (po prostu jeszcze nie dotarłeś
+                Zarabiasz poniżej 100K PLN rocznie (po prostu jeszcze nie dotarłeś
                 do punktu bólu, który obsługuję)
               </span>
             </li>
@@ -274,7 +274,7 @@ export default function Discovery() {
             <li className="flex items-start">
               <span className="mr-3">•</span>
               <span>
-                Osiągnąłeś zewnętrzny sukces (€100K-10M+ rocznie), ale czujesz
+                Osiągnąłeś zewnętrzny sukces (100K-10M+ rocznie), ale czujesz
                 wewnętrzną pustkę
               </span>
             </li>
