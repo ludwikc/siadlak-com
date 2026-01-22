@@ -277,7 +277,10 @@ export default function Header() {
                       >
                         <div className="flex items-center">
                           <div className="w-12 h-12 flex items-center justify-center mr-3 bg-gradient-to-br from-neural-blue/10 to-neural-blue/5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                            <Headphones size={22} className="text-neural-blue" />
+                            <Headphones
+                              size={22}
+                              className="text-neural-blue"
+                            />
                           </div>
                           <div>
                             <h4 className="text-base font-bold text-deep-charcoal mb-1 group-hover:text-neural-blue transition-colors">
