@@ -110,7 +110,7 @@ const WebinarReplay = () => {
   };
 
   return (
-    <Layout>
+    <Layout hideFooter={true}>
       <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10 max-w-4xl mx-auto">
@@ -125,7 +125,8 @@ const WebinarReplay = () => {
 
             <div className="max-w-md mx-auto mb-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 backdrop-blur-sm rounded-xl p-5 border border-red-500/30">
               <p className="font-semibold mb-2 text-red-600">
-                ⏰ To nagranie jest dostępne tylko przez 48 godzin od zakończenia spotkania
+                ⏰ To nagranie jest dostępne tylko przez 48 godzin od
+                zakończenia spotkania
               </p>
               <div className="text-2xl md:text-3xl font-bold text-twilight-indigo">
                 {formatTime(timeLeft)}
@@ -657,7 +658,9 @@ const WebinarReplay = () => {
             <div className="bg-gradient-to-r from-twilight-indigo to-ascension-pink rounded-2xl shadow-2xl p-4 border border-white/20">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-white text-center sm:text-left">
-                  <p className="font-bold text-base sm:text-lg">Oferta pilotażowa: 497 zł</p>
+                  <p className="font-bold text-base sm:text-lg">
+                    Oferta pilotażowa: 497 zł
+                  </p>
                   <p className="text-xs sm:text-sm text-white/90">
                     Tylko 10 miejsc w pierwszej edycji
                   </p>

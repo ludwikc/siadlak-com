@@ -1,10 +1,10 @@
-
-import { useState } from 'react';
-import Layout from '../components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { HelpCircle, Download, ExternalLink } from 'lucide-react';
+import { useState } from "react";
+import Layout from "../components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { HelpCircle, Download, ExternalLink } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
+import { Facebook, Linkedin, Youtube } from "lucide-react";
 
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);
@@ -26,7 +26,7 @@ const WebinarLive = () => {
   };
 
   return (
-    <Layout>
+    <Layout hideFooter={true}>
       <div className="min-h-screen bg-gradient-to-br from-deep-space to-twilight-indigo/50 pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -36,15 +36,15 @@ const WebinarLive = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white">
-              KRYZYS MĘSKOŚCI
+              KOD KAPITANA
             </h1>
 
             <p className="text-lg mb-6 text-gray-300">
-              Jak odzyskać kierunek, gdy analityczny umysł generuje więcej pytań niż odpowiedzi?
+              Uważność, która po prostu działa.
             </p>
-            
+
             <p className="text-md mb-6 text-gray-400">
-              z Ludwikiem C. Siadlakiem
+              prowadzi: <strong>Ludwik C. Siadlak</strong> (MCT, MCSA, MCSE, MCP, ECC)
             </p>
           </div>
 
@@ -52,125 +52,79 @@ const WebinarLive = () => {
             {/* Main Content Area - 3 columns wide */}
             <div className="md:col-span-3 space-y-6">
               {/* Webinar Video Window */}
-              <div className="bg-black aspect-video rounded-lg flex items-center justify-center">
-                <p className="text-white text-lg">Okno transmisji webinaru</p>
+              <div
+                className="rounded-lg overflow-hidden"
+                style={{ padding: "56.25% 0 0 0", position: "relative" }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    left: 0,
+                    position: "absolute",
+                    top: 0,
+                    width: "100%",
+                  }}
+                >
+                  <iframe
+                    height="100%"
+                    width="100%"
+                    src="https://webinar.mywave.video/snaxhXbnHls4orbg?embed"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen"
+                    scrolling="no"
+                  ></iframe>
+                </div>
               </div>
 
-              {/* Interactive Elements */}
+              {/* Platform Links */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <Tabs defaultValue="chat">
-                  <TabsList className="grid grid-cols-3 mb-4">
-                    <TabsTrigger value="chat">Chat</TabsTrigger>
-                    <TabsTrigger value="polls">Ankiety</TabsTrigger>
-                    <TabsTrigger value="questions">Pytania</TabsTrigger>
-                  </TabsList>
-
-                  <TabsContent
-                    value="chat"
-                    className="h-64 overflow-y-auto p-4 bg-white/5 rounded-lg"
+                <h2 className="text-xl font-bold text-white mb-4 text-center">
+                  Oglądaj na swojej ulubionej platformie:
+                </h2>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Button
+                    asChild
+                    className="bg-red-600 hover:bg-red-700 text-white border-0"
                   >
-                    <div className="space-y-4">
-                      <div className="flex gap-3">
-                        <div className="bg-twilight-indigo h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0">
-                          LCS
-                        </div>
-                        <div>
-                          <p className="font-medium text-white">
-                            Ludwik C. Siadlak
-                          </p>
-                          <p className="text-gray-300">
-                            Witam wszystkich na dzisiejszym webinarze! Zaczynamy
-                            za chwilę.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex gap-3">
-                        <div className="bg-gray-500 h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0">
-                          AK
-                        </div>
-                        <div>
-                          <p className="font-medium text-white">
-                            Anna Kowalska
-                          </p>
-                          <p className="text-gray-300">
-                            Bardzo się cieszę, że mogę uczestniczyć! Pozdrawiam
-                            z Krakowa.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex gap-3">
-                        <div className="bg-gray-500 h-8 w-8 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0">
-                          JN
-                        </div>
-                        <div>
-                          <p className="font-medium text-white">Jan Nowak</p>
-                          <p className="text-gray-300">
-                            Czekam z niecierpliwością na omówienie metodologii
-                            Black Panther!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent
-                    value="polls"
-                    className="h-64 overflow-y-auto p-4 bg-white/5 rounded-lg"
+                    <a
+                      href="https://www.youtube.com/watch?v=jHphriFDJKM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Youtube className="w-5 h-5" />
+                      YouTube
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    className="bg-blue-600 hover:bg-blue-700 text-white border-0"
                   >
-                    <div className="text-center text-white p-4">
-                      <p className="mb-4">Aktywna ankieta:</p>
-                      <p className="font-medium mb-6">
-                        Które wyzwanie jest dla Ciebie największe?
-                      </p>
-
-                      <div className="space-y-3">
-                        <Button
-                          variant="outline"
-                          className="w-full border-white/30 text-white hover:bg-white/10"
-                        >
-                          Brak czasu na rozwój
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="w-full border-white/30 text-white hover:bg-white/10"
-                        >
-                          Trudności w komunikacji wartości
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="w-full border-white/30 text-white hover:bg-white/10"
-                        >
-                          Wypalenie zawodowe
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="w-full border-white/30 text-white hover:bg-white/10"
-                        >
-                          Trudności w delegowaniu zadań
-                        </Button>
-                      </div>
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent
-                    value="questions"
-                    className="h-64 overflow-y-auto p-4 bg-white/5 rounded-lg"
+                    <a
+                      href="https://www.facebook.com/events/1722489938708332"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Facebook className="w-5 h-5" />
+                      Facebook
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    className="bg-[#0077b5] hover:bg-[#006399] text-white border-0"
                   >
-                    <div className="space-y-6 text-white">
-                      <p className="mb-2">Zadaj pytanie prowadzącemu:</p>
-                      <textarea
-                        className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white"
-                        placeholder="Wpisz swoje pytanie tutaj..."
-                        rows={3}
-                      ></textarea>
-                      <Button className="bg-twilight-indigo hover:bg-twilight-indigo/90">
-                        Wyślij pytanie
-                      </Button>
-                    </div>
-                  </TabsContent>
-                </Tabs>
+                    <a
+                      href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7420418135205494785"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                      LinkedIn
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               {/* CTA During Webinar */}
@@ -187,7 +141,9 @@ const WebinarLive = () => {
                   <Button
                     size="lg"
                     className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
-                    onClick={() => window.open("/program/lifeos-system-upgrade", "_blank")}
+                    onClick={() =>
+                      window.open("/program/lifeos-system-upgrade", "_blank")
+                    }
                   >
                     TAK, CHCĘ DOWIEDZIEĆ SIĘ WIĘCEJ O PROGRAMIE LIFEOS
                   </Button>
@@ -209,69 +165,16 @@ const WebinarLive = () => {
               </div>
             </div>
 
-            {/* Sidebar - 1 column wide */}
-            <div className="space-y-6">
-              {/* Resources Panel */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-white mb-4">
-                  Materiały pomocnicze:
-                </h3>
-
-                <div className="space-y-3">
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start border-white/30 text-white"
-                    onClick={() => handleResourceClick("Arkusz pracy webinaru")}
-                  >
-                    <Download className="mr-2 h-4 w-4" /> Arkusz pracy webinaru
-                  </Button>
-
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start border-white/30 text-white"
-                    onClick={() => handleResourceClick("Prezentacja")}
-                  >
-                    <Download className="mr-2 h-4 w-4" /> Prezentacja (po
-                    webinarze)
-                  </Button>
-
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start border-white/30 text-white"
-                    onClick={() => handleResourceClick("Lista narzędzi")}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" /> Polecane narzędzia
-                  </Button>
-                </div>
-              </div>
-
-              {/* Notes Panel */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-bold text-white mb-4">
-                  Twoje notatki:
-                </h3>
-
-                <textarea
-                  className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white"
-                  placeholder="Zapisuj tutaj swoje kluczowe insighty..."
-                  rows={8}
-                ></textarea>
-              </div>
-
-              {/* Help Button */}
-              <Button
-                variant="outline"
-                className="w-full justify-center border-white/30 text-white"
-                onClick={() => {
-                  toast({
-                    title: "Pomoc techniczna",
-                    description:
-                      "Zespół pomocy technicznej został powiadomiony o Twoim problemie.",
-                  });
-                }}
-              >
-                <HelpCircle className="mr-2 h-4 w-4" /> Pomoc techniczna
-              </Button>
+            {/* Sidebar - Discord Widget */}
+            <div>
+              <iframe
+                src="https://discord.com/widget?id=428530875085619200&theme=dark"
+                width="350"
+                height="700"
+                allowTransparency={true}
+                frameBorder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+              ></iframe>
             </div>
           </div>
         </div>

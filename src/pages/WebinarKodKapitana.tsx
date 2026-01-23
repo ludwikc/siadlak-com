@@ -25,7 +25,7 @@ export default function WebinarKodKapitana() {
   };
 
   return (
-    <Layout hideHeader={true}>
+    <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Kod Kapitana: Uważność, która naprawdę działa"
         description="Jak zapanować nad natłokiem myśli i zostać kapitanem własnego życia? Praktyczny warsztat live online 27 stycznia 2025 o 20:05."
@@ -33,7 +33,7 @@ export default function WebinarKodKapitana() {
 
       {/* HERO SECTION */}
       <section
-        className="relative py-24 md:py-40 overflow-hidden"
+        className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
         style={{
           background:
             "linear-gradient(135deg, hsl(200, 60%, 8%) 0%, hsl(210, 50%, 12%) 50%, hsl(220, 45%, 10%) 100%)",
@@ -51,9 +51,9 @@ export default function WebinarKodKapitana() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Event badge */}
-            <div className="flex justify-center mb-10 animate-fade-in">
+            <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
               <div
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl"
+                className="inline-flex items-center gap-2 sm:gap-3 px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 rounded-full border-2 shadow-2xl max-w-full"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -62,15 +62,15 @@ export default function WebinarKodKapitana() {
                     "0 0 40px rgba(59, 130, 246, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
                 }}
               >
-                <Anchor className="w-6 h-6 text-white animate-pulse" />
-                <span className="font-bold text-white text-sm md:text-base tracking-wide">
+                <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-white animate-pulse flex-shrink-0" />
+                <span className="font-bold text-white text-xs sm:text-sm md:text-base tracking-wide">
                   SPOTKANIE NA ŻYWO • 27 STYCZNIA • 20:05
                 </span>
               </div>
             </div>
 
             <div className="text-center animate-fade-in">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.15] tracking-tight drop-shadow-lg">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.2] tracking-tight drop-shadow-lg">
                 KOD KAPITANA:
                 <br />
                 <span
@@ -85,7 +85,7 @@ export default function WebinarKodKapitana() {
 
               <div className="mb-10 md:mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-3xl px-6 py-6 md:px-10 md:py-8 border-2 max-w-4xl backdrop-blur-md transition-all duration-300"
+                  className="inline-block rounded-3xl px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8 border-2 max-w-4xl backdrop-blur-md transition-all duration-300"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
@@ -94,10 +94,10 @@ export default function WebinarKodKapitana() {
                       "0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.15)",
                   }}
                 >
-                  <p className="text-xl md:text-2xl font-medium text-white/90 leading-relaxed">
-                    Jak zapanować nad natłokiem myśli i zostać{" "}
+                  <p className="text-lg sm:text-xl md:text-2xl font-medium text-white leading-relaxed">
+                    Jak zapanować nad natłokiem myśli i{" "}
                     <span className="font-bold text-sky-300">
-                      i zostać kapitanem własnego życia?
+                      zostać kapitanem własnego życia?
                     </span>
                   </p>
                 </div>
@@ -105,21 +105,21 @@ export default function WebinarKodKapitana() {
 
               {/* Social Proof - moved before image */}
               <div className="mb-10 animate-fade-in">
-                <Card className="inline-block bg-white/10 backdrop-blur-sm border-white/20 shadow-xl">
+                <Card className="inline-block bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-white/40 dark:border-slate-700 shadow-xl">
                   <div className="px-6 py-4 md:px-8 md:py-5">
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-                      <div className="flex items-center gap-2 text-white/90">
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/20">
-                          <Check className="w-4 h-4 text-emerald-400" />
+                      <div className="flex items-center gap-2 text-slate-900 dark:text-white">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500">
+                          <Check className="w-4 h-4 text-white" />
                         </div>
                         <span className="font-semibold text-sm md:text-base">
                           103 osoby już rozpoczęły rejs
                         </span>
                       </div>
-                      <div className="hidden sm:block w-px h-6 bg-white/20"></div>
-                      <div className="flex items-center gap-2 text-white/90">
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-yellow-500/20">
-                          <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                      <div className="hidden sm:block w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
+                      <div className="flex items-center gap-2 text-slate-900 dark:text-white">
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500">
+                          <Star className="w-4 h-4 text-white fill-white" />
                         </div>
                         <span className="font-semibold text-sm md:text-base">
                           Ocena 4.9/5
@@ -134,7 +134,8 @@ export default function WebinarKodKapitana() {
               <div className="mb-10 animate-fade-in">
                 <img
                   src={kodKapitanaHero}
-                  alt="Kapitan przy sterze statku podczas burzy"
+                  alt="Kapitan przy sterze statku podczas burzy - metafora uważnego życia"
+                  loading="lazy"
                   className="w-full max-w-2xl mx-auto rounded-xl shadow-2xl"
                 />
               </div>
@@ -169,7 +170,7 @@ export default function WebinarKodKapitana() {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 hover:scale-105 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] whitespace-normal text-center leading-tight"
+                    className="w-full sm:w-auto text-sm sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-16 py-6 sm:py-7 md:py-10 transition-all duration-300 active:scale-95 sm:hover:scale-105 border-0 shadow-2xl sm:hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] text-center leading-snug min-h-[44px] touch-manipulation"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -181,12 +182,16 @@ export default function WebinarKodKapitana() {
                     <span className="hidden sm:inline">
                       ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS
                     </span>
-                    <span className="sm:hidden">ZAREZERWUJ MIEJSCE</span>
+                    <span className="sm:hidden leading-tight block">
+                      ZAREZERWUJ MOJE MIEJSCE
+                      <br />
+                      ROZPOCZNIJ REJS
+                    </span>
                   </Button>
                 </a>
               </div>
 
-              <p className="text-white/60 text-sm md:text-base animate-fade-in">
+              <p className="text-white text-sm md:text-base animate-fade-in">
                 Bezpłatny warsztat na żywo • 90 minut
               </p>
             </div>
@@ -363,33 +368,33 @@ export default function WebinarKodKapitana() {
                 </p>
               </Card>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-emerald-700 dark:text-emerald-400 mb-4">
+              <Card className="bg-emerald-600 dark:bg-emerald-700 border-emerald-700 dark:border-emerald-600 p-6 md:p-8 shadow-lg">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                   CO JEŚLI MOGŁOBY BYĆ INACZEJ?
                 </h3>
-                <ul className="space-y-3 text-base md:text-lg text-muted-foreground">
+                <ul className="space-y-3 text-base md:text-lg text-white">
                   <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-1" />
+                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                     <span>
-                      <strong className="text-foreground">
+                      <strong className="text-white font-bold">
                         System, który działa na autopilocie
                       </strong>{" "}
                       – zamiast codziennej walki z chaosem
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-1" />
+                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                     <span>
-                      <strong className="text-foreground">
+                      <strong className="text-white font-bold">
                         Jasne priorytety każdego dnia
                       </strong>{" "}
                       – zamiast zastanawiania się „od czego zacząć?"
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-1" />
+                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
                     <span>
-                      <strong className="text-foreground">
+                      <strong className="text-white font-bold">
                         Poczucie kontroli i spokoju
                       </strong>{" "}
                       – zamiast ciągłego biegu w próżni
@@ -1226,72 +1231,6 @@ export default function WebinarKodKapitana() {
         </div>
       </section>
 
-      {/* NA KONIEC - LEKCJA PEŁNEGO REJSU */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
-              Na koniec – lekcja pełnego rejsu
-            </h2>
-            <p className="text-xl text-center text-muted-foreground mb-12">
-              (opcjonalnie)
-            </p>
-
-            <Card className="bg-gradient-to-br from-blue-50 to-sky-50 dark:from-blue-950/30 dark:to-sky-950/30 border-blue-200 dark:border-blue-800 p-8 md:p-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Webinar jest{" "}
-                <strong className="text-foreground">samowystarczalny</strong>.
-                <br />
-                Dla chętnych pokażę flagowy program:
-              </p>
-
-              <div className="bg-white dark:bg-slate-900 rounded-xl p-8 border-2 border-sky-300 dark:border-sky-700 mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  „Uważne Życie" – 8-tygodniowy kurs online
-                </h3>
-
-                <div className="space-y-4 text-muted-foreground">
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-600 dark:text-sky-400 font-bold">
-                      🗺️
-                    </span>
-                    <p>8 modułów – od autopilota do świadomości</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-600 dark:text-sky-400 font-bold">
-                      ⚓
-                    </span>
-                    <p>Kapitan → Deautomatyzacja → Obserwacja → Akceptacja</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-600 dark:text-sky-400 font-bold">
-                      🎯
-                    </span>
-                    <p>praktyczne wyzwania</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-sky-600 dark:text-sky-400 font-bold">
-                      🚢
-                    </span>
-                    <p>rozwinięcie webinaru w spójną ścieżkę</p>
-                  </div>
-                </div>
-              </div>
-
-              <Card className="bg-gradient-to-r from-sky-100 to-blue-100 dark:from-sky-900/50 dark:to-blue-900/50 border-sky-400 dark:border-sky-600 p-6">
-                <p className="text-xl font-bold text-center text-foreground">
-                  To nie teoria. To{" "}
-                  <span className="text-sky-600 dark:text-sky-400">
-                    praktyczna transformacja
-                  </span>
-                  .
-                </p>
-              </Card>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* REJESTRACJA */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
@@ -1401,56 +1340,56 @@ export default function WebinarKodKapitana() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Czy potrzebuję specjalnego sprzętu?
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Nie. Wystarczy internet.
                 </p>
               </Card>
 
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Nie mogę być na żywo.
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Nagranie dostępne 48h.
                 </p>
               </Card>
 
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Dla początkujących?
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Tak. Startujemy od podstaw – w nowym ujęciu.
                 </p>
               </Card>
 
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Materiały?
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Tak, PDF + bonus.
                 </p>
               </Card>
 
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Czy to naprawdę bezpłatne?
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Tak. Pełnowartościowe 90 minut.
                 </p>
               </Card>
 
-              <Card className="bg-white dark:bg-slate-900 border-sky-200 dark:border-sky-800 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-foreground mb-2">
+              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
                   Czy będzie interakcja?
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
                   Tak, bez przymusu kamery/mikrofonu.
                 </p>
               </Card>

@@ -15,7 +15,7 @@ export default function WebinarMeskiKompas() {
   const ctaUrl = "/webinar/replay";
 
   return (
-    <Layout hideHeader={true}>
+    <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Warsztat: Męski Kompas - Koniec z Dryfowaniem"
         description="90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. 16 października."
@@ -100,7 +100,10 @@ export default function WebinarMeskiKompas() {
               </div>
 
               <div className="mb-10 animate-fade-in">
-                <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
+                <a
+                  href={ctaUrl}
+                  className="block w-full sm:w-auto sm:inline-block"
+                >
                   <Button
                     size="lg"
                     className="w-full sm:w-auto text-base sm:text-lg md:text-2xl font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 hover:scale-110 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
@@ -113,7 +116,9 @@ export default function WebinarMeskiKompas() {
                     }}
                   >
                     <span className="inline sm:hidden">OBEJRZYJ REPLAY →</span>
-                    <span className="hidden sm:inline">TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →</span>
+                    <span className="hidden sm:inline">
+                      TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →
+                    </span>
                   </Button>
                 </a>
               </div>
@@ -271,7 +276,10 @@ export default function WebinarMeskiKompas() {
                 <br />
                 Potrzebujesz 2 prostych narzędzi nawigacyjnych.
               </p>
-              <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
+              <a
+                href={ctaUrl}
+                className="block w-full sm:w-auto sm:inline-block"
+              >
                 <Button
                   size="lg"
                   className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
@@ -491,7 +499,10 @@ export default function WebinarMeskiKompas() {
             </p>
 
             <div className="text-center mt-8">
-              <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
+              <a
+                href={ctaUrl}
+                className="block w-full sm:w-auto sm:inline-block"
+              >
                 <Button
                   size="lg"
                   className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
@@ -935,7 +946,9 @@ export default function WebinarMeskiKompas() {
                 className="w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 mb-8 bg-accent hover:bg-accent/90 text-accent-foreground"
               >
                 <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
-                <span className="hidden sm:inline">TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY</span>
+                <span className="hidden sm:inline">
+                  TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY
+                </span>
               </Button>
             </a>
 

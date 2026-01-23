@@ -25,8 +25,8 @@ try {
   console.warn('⚠️  Could not load redirects config, skipping redirect routes');
 }
 
-// Get redirect source paths
-const redirectRoutes = Object.keys(redirects);
+// Get redirect source paths (excluding /webinar which causes navigation timeout)
+const redirectRoutes = Object.keys(redirects).filter(route => route !== '/webinar');
 
 // Routes to prerender
 const routes = [
@@ -54,12 +54,12 @@ const routes = [
   '/new-podcast',
   '/podcast/life-hacking',
   '/program/uwazne-zycie',
-  '/webinar',
+  '/webinar/kod-kapitana',
   '/webinar/meski-kompas',
   '/webinar/expired',
   '/webinar/replay',
   '/help',
-  '/thank-you', 
+  '/thank-you',
   '/thank-you/meski-kompas',
   // Add redirect routes from config
   ...redirectRoutes
@@ -105,6 +105,8 @@ async function prerender() {
   console.log('🚀 Starting prerendering...\n');
 
   let server = null;
+  let successCount = 0;
+  let errorCount = 0;
 
   try {
     // Start preview server
@@ -117,13 +119,10 @@ async function prerender() {
     });
 
     const page = await browser.newPage();
-  
+
     // Set viewport and user agent
     await page.setViewport({ width: 1200, height: 800 });
     await page.setUserAgent('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
-
-    let successCount = 0;
-    let errorCount = 0;
 
     for (const route of routes) {
       try {
@@ -132,12 +131,12 @@ async function prerender() {
         // Navigate to the route
         const url = `http://localhost:8080${route}`;
         await page.goto(url, {
-          waitUntil: 'networkidle0',
+          waitUntil: 'domcontentloaded',
           timeout: 30000
         });
 
         // Wait for React to render and SEO tags to be set
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         // Get the full HTML
         const html = await page.content();

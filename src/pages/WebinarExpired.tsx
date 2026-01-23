@@ -1,10 +1,8 @@
-
-
-import { useNavigate } from 'react-router-dom';
-import Layout from '../components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, MailIcon, Download } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+import { useNavigate } from "react-router-dom";
+import Layout from "../components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Clock, MailIcon, Download } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const WebinarExpired = () => {
   const navigate = useNavigate();
@@ -21,7 +19,7 @@ const WebinarExpired = () => {
   };
 
   return (
-    <Layout>
+    <Layout hideFooter={true}>
       <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-16 pb-20">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 backdrop-blur-sm border border-gray-500/30 text-gray-500 mb-6">

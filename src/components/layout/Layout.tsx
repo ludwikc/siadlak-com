@@ -12,7 +12,7 @@ interface LayoutProps {
 
 function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
   const location = useLocation();
-  
+
   // Auto-detect landing pages if props not explicitly set
   const shouldHideHeader = hideHeader ?? isLandingPage(location.pathname);
   const shouldHideFooter = hideFooter ?? isLandingPage(location.pathname);
@@ -23,9 +23,11 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
   }, [location.pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       {!shouldHideHeader && <Header />}
-      <main className={`flex-grow animate-page-transition ${shouldHideHeader ? '' : 'pt-20'}`}>
+      <main
+        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-20"}`}
+      >
         <div className="page-content animate-fade-in">{children}</div>
       </main>
       {!shouldHideFooter && <Footer />}
@@ -33,6 +35,16 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
   );
 }
 
-export default function Layout({ children, hideHeader, hideFooter }: LayoutProps) {
-  return <LayoutContent children={children} hideHeader={hideHeader} hideFooter={hideFooter} />;
+export default function Layout({
+  children,
+  hideHeader,
+  hideFooter,
+}: LayoutProps) {
+  return (
+    <LayoutContent
+      children={children}
+      hideHeader={hideHeader}
+      hideFooter={hideFooter}
+    />
+  );
 }
