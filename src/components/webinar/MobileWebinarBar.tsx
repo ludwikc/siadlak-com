@@ -89,8 +89,14 @@ const MobileWebinarBar = () => {
           {/* Title */}
           <div className="text-center mb-3">
             <span 
-              className="text-xs font-bold uppercase tracking-wider"
-              style={{ color: "hsl(165, 60%, 55%)" }}
+              className="text-base sm:text-lg font-black uppercase tracking-wider drop-shadow-lg"
+              style={{ 
+                background: "linear-gradient(135deg, hsl(199, 89%, 58%) 0%, hsl(190, 95%, 65%) 50%, hsl(199, 89%, 58%) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                textShadow: "0 0 30px rgba(56, 189, 248, 0.5)",
+              }}
             >
               🚢 Kod Kapitana
             </span>
