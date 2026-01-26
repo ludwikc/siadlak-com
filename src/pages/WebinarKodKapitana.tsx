@@ -344,7 +344,7 @@ export default function WebinarKodKapitana() {
               </Card>
               
               {/* Handwritten annotation */}
-              <div className="flex items-center justify-center gap-2 mt-4 md:mt-6 animate-fade-in">
+              <div className="flex items-center justify-center mt-4 md:mt-6 animate-fade-in">
                 <span 
                   className="text-xl sm:text-2xl md:text-3xl transform -rotate-2"
                   style={{
@@ -356,28 +356,6 @@ export default function WebinarKodKapitana() {
                 >
                   Odsłuchaj koniecznie!
                 </span>
-                <svg 
-                  viewBox="0 0 50 50" 
-                  className="w-10 h-10 sm:w-12 sm:h-12"
-                  style={{ color: "hsl(0, 72%, 51%)" }}
-                >
-                  {/* Curved arrow pointing up-left toward the play button */}
-                  <path 
-                    d="M40 45 Q 35 25, 15 15" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round"
-                  />
-                  <path 
-                    d="M10 20 L15 15 L22 18" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
               </div>
             </div>
           </div>
