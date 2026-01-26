@@ -182,7 +182,7 @@ export default function WebinarKodKapitana() {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-xl md:text-2xl font-bold px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[64px] touch-manipulation whitespace-normal h-auto"
+                    className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-14 py-5 sm:py-7 md:py-9 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[56px] touch-manipulation whitespace-normal h-auto"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
@@ -191,7 +191,8 @@ export default function WebinarKodKapitana() {
                         "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
                     }}
                   >
-                    🚢 ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS
+                    <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS</span>
+                    <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
                   </Button>
                 </a>
               </div>
@@ -237,14 +238,15 @@ export default function WebinarKodKapitana() {
               >
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-lg md:text-xl font-bold px-8 md:px-12 py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl"
+                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl whitespace-normal h-auto"
                   style={{
                     background:
                       "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
                     color: "white",
                   }}
                 >
-                  🚢 ZAREZERWUJ MOJE MIEJSCE - ROZPOCZNIJ REJS
+                  <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE - ROZPOCZNIJ REJS</span>
+                  <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
                 </Button>
               </a>
 
@@ -1526,14 +1528,15 @@ export default function WebinarKodKapitana() {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-base sm:text-lg md:text-xl font-bold px-10 sm:px-14 md:px-20 py-6 sm:py-8 md:py-10 transition-all duration-300 hover:scale-105 border-0 shadow-2xl"
+                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-2xl whitespace-normal h-auto"
                     style={{
                       background: "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
                       color: "white",
                       boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                     }}
                   >
-                    🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR
+                    <span className="hidden sm:inline">🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR</span>
+                    <span className="sm:hidden">🚢 ZAPISUJĘ SIĘ</span>
                   </Button>
                 </a>
                 
