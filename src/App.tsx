@@ -65,6 +65,7 @@ import Wyzwanie from "./pages/Wyzwanie";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
+import MobileWebinarBar from "./components/webinar/MobileWebinarBar";
 
 const queryClient = new QueryClient();
 
@@ -169,6 +170,7 @@ function App() {
 
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <MobileWebinarBar />
             <Toaster />
           </Router>
         </ThemeProvider>
