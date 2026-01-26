@@ -89,7 +89,7 @@ const MobileWebinarBar = () => {
           {/* Title */}
           <div className="text-center mb-3">
             <span 
-              className="text-xl sm:text-2xl font-black uppercase tracking-wider drop-shadow-lg"
+              className="text-2xl sm:text-3xl font-black uppercase tracking-wider drop-shadow-lg"
               style={{ 
                 background: "linear-gradient(135deg, hsl(199, 89%, 58%) 0%, hsl(190, 95%, 65%) 50%, hsl(199, 89%, 58%) 100%)",
                 WebkitBackgroundClip: "text",
