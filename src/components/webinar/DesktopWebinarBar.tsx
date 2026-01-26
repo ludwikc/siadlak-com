@@ -214,10 +214,13 @@ const DesktopWebinarBar = () => {
                 </Link>
               </div>
 
-              {/* Bonus text - red, centered below countdown and button */}
+              {/* Bonus text - yellow highlighted */}
               <p 
-                className="mt-3 text-sm font-semibold text-center"
-                style={{ color: "hsl(0, 72%, 55%)" }}
+                className="mt-3 text-sm font-semibold text-center px-3 py-1 rounded"
+                style={{ 
+                  backgroundColor: "hsl(50, 100%, 50%)", 
+                  color: "hsl(0, 0%, 10%)" 
+                }}
               >
                 Jeszcze zdążysz odebrać BONUS dla pierwszych 500 zapisanych osób!
               </p>
