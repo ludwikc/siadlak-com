@@ -20,15 +20,17 @@ const MobileWebinarBar = () => {
   // Hide on the webinar page itself
   const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
 
+  // Reset visibility on every route change (unless CTA was clicked permanently)
   useEffect(() => {
-    // Only permanently hide if user clicked CTA (stored in localStorage)
     const ctaClicked = localStorage.getItem("webinarBarCTAClicked");
-    if (!ctaClicked && !isWebinarPage) {
-      setIsVisible(true);
-    } else {
+    
+    if (ctaClicked || isWebinarPage) {
       setIsVisible(false);
+    } else {
+      // Show bar on every route change
+      setIsVisible(true);
     }
-  }, [isWebinarPage]);
+  }, [location.pathname, isWebinarPage]);
 
   useEffect(() => {
     const calculateTimeLeft = (): TimeLeft | null => {
