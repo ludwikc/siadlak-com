@@ -131,82 +131,98 @@ const DesktopWebinarBar = () => {
           <X size={24} className="text-white/80" />
         </button>
 
-        {/* Content - horizontal layout for desktop, vertically centered */}
-        <div className="flex items-center justify-center px-8 relative z-10 gap-10">
-          {/* Title */}
-          <div className="text-center">
-            <span 
-              className="text-3xl lg:text-4xl font-black uppercase tracking-wider drop-shadow-lg block"
-              style={{ 
-                background: "linear-gradient(135deg, hsl(199, 89%, 58%) 0%, hsl(190, 95%, 65%) 50%, hsl(199, 89%, 58%) 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                textShadow: "0 0 30px rgba(56, 189, 248, 0.5)",
-              }}
-            >
-              Kod Kapitana
-            </span>
-            <p className="text-slate-300 text-base mt-1">
-              Spotkanie online już za:
-            </p>
-          </div>
+        {/* Content wrapper - allows for bonus text below */}
+        <div className="flex flex-col items-center justify-center px-8 relative z-10">
+          {/* Main content row */}
+          <div className="flex items-center justify-center gap-10">
+            {/* Title */}
+            <div className="text-center">
+              <span 
+                className="text-3xl lg:text-4xl font-black uppercase tracking-wider drop-shadow-lg block"
+                style={{ 
+                  background: "linear-gradient(135deg, hsl(199, 89%, 58%) 0%, hsl(190, 95%, 65%) 50%, hsl(199, 89%, 58%) 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  textShadow: "0 0 30px rgba(56, 189, 248, 0.5)",
+                }}
+              >
+                Kod Kapitana
+              </span>
+              <p className="text-slate-300 text-base mt-1">
+                Spotkanie online już za:
+              </p>
+            </div>
 
-          {/* Countdown */}
-          <div className="flex items-center justify-center gap-2">
-            <div 
-              className="flex flex-col items-center rounded-lg px-4 py-2"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-3xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.days)}
-              </span>
-              <span className="text-xs text-cyan-400/70 uppercase">dni</span>
-            </div>
-            <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-4 py-2"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-3xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.hours)}
-              </span>
-              <span className="text-xs text-cyan-400/70 uppercase">godz</span>
-            </div>
-            <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-4 py-2"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-3xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.minutes)}
-              </span>
-              <span className="text-xs text-cyan-400/70 uppercase">min</span>
-            </div>
-            <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-4 py-2"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-3xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.seconds)}
-              </span>
-              <span className="text-xs text-cyan-400/70 uppercase">sek</span>
+            {/* Countdown and CTA with bonus text below */}
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-10">
+                {/* Countdown */}
+                <div className="flex items-center justify-center gap-2">
+                  <div 
+                    className="flex flex-col items-center rounded-lg px-4 py-2"
+                    style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
+                  >
+                    <span className="text-3xl font-bold text-white font-mono">
+                      {formatNumber(timeLeft.days)}
+                    </span>
+                    <span className="text-xs text-cyan-400/70 uppercase">dni</span>
+                  </div>
+                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
+                  <div 
+                    className="flex flex-col items-center rounded-lg px-4 py-2"
+                    style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
+                  >
+                    <span className="text-3xl font-bold text-white font-mono">
+                      {formatNumber(timeLeft.hours)}
+                    </span>
+                    <span className="text-xs text-cyan-400/70 uppercase">godz</span>
+                  </div>
+                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
+                  <div 
+                    className="flex flex-col items-center rounded-lg px-4 py-2"
+                    style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
+                  >
+                    <span className="text-3xl font-bold text-white font-mono">
+                      {formatNumber(timeLeft.minutes)}
+                    </span>
+                    <span className="text-xs text-cyan-400/70 uppercase">min</span>
+                  </div>
+                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
+                  <div 
+                    className="flex flex-col items-center rounded-lg px-4 py-2"
+                    style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
+                  >
+                    <span className="text-3xl font-bold text-white font-mono">
+                      {formatNumber(timeLeft.seconds)}
+                    </span>
+                    <span className="text-xs text-cyan-400/70 uppercase">sek</span>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link
+                  to="/webinar/kod-kapitana"
+                  onClick={handleCTAClick}
+                  className="text-white font-bold py-4 px-10 rounded-xl text-center transition-all hover:scale-[1.02] active:scale-[0.98] text-lg"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
+                    boxShadow: "0 0 30px rgba(56, 189, 248, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3)",
+                  }}
+                >
+                  🚢 Zarezerwuj miejsce
+                </Link>
+              </div>
+
+              {/* Bonus text - red, centered below countdown and button */}
+              <p 
+                className="mt-3 text-sm font-semibold text-center"
+                style={{ color: "hsl(0, 72%, 55%)" }}
+              >
+                Jeszcze zdążysz odebrać BONUS dla pierwszych 500 zapisanych osób!
+              </p>
             </div>
           </div>
-
-          {/* CTA Button */}
-          <Link
-            to="/webinar/kod-kapitana"
-            onClick={handleCTAClick}
-            className="text-white font-bold py-4 px-10 rounded-xl text-center transition-all hover:scale-[1.02] active:scale-[0.98] text-lg"
-            style={{
-              background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
-              boxShadow: "0 0 30px rgba(56, 189, 248, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3)",
-            }}
-          >
-            🚢 Zarezerwuj miejsce
-          </Link>
         </div>
       </div>
     </div>
