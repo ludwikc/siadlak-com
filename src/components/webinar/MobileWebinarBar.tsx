@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 
 // Target date: 02.02.2026 at 20:02
@@ -13,16 +13,24 @@ interface TimeLeft {
 }
 
 const MobileWebinarBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+  const location = useLocation();
+
+  // Hide on the webinar page itself
+  const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
 
   useEffect(() => {
     // Check if user dismissed the bar in this session
     const dismissed = sessionStorage.getItem("webinarBarDismissed");
-    if (dismissed) {
+    if (!dismissed && !isWebinarPage) {
+      setIsVisible(true);
+    } else {
       setIsVisible(false);
     }
+  }, [isWebinarPage]);
 
+  useEffect(() => {
     const calculateTimeLeft = (): TimeLeft | null => {
       const now = new Date().getTime();
       const target = TARGET_DATE.getTime();
@@ -49,13 +57,20 @@ const MobileWebinarBar = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleDismiss = () => {
-    setIsVisible(false);
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     sessionStorage.setItem("webinarBarDismissed", "true");
+    setIsVisible(false);
   };
 
-  // Don't show on desktop or if dismissed or if event passed
-  if (!isVisible || !timeLeft) {
+  const handleCTAClick = () => {
+    sessionStorage.setItem("webinarBarDismissed", "true");
+    setIsVisible(false);
+  };
+
+  // Don't show on desktop, if dismissed, if event passed, or on webinar page
+  if (!isVisible || !timeLeft || isWebinarPage) {
     return null;
   }
 
@@ -75,13 +90,15 @@ const MobileWebinarBar = () => {
         {/* Ambient glow effects */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(56,189,248,0.1),transparent_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.08),transparent_50%)]"></div>
+        
         {/* Close button */}
         <button
+          type="button"
           onClick={handleDismiss}
-          className="absolute top-3 right-3 p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
+          className="absolute top-3 right-3 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-20 cursor-pointer"
           aria-label="Zamknij"
         >
-          <X size={18} className="text-white/70" />
+          <X size={20} className="text-white/80" />
         </button>
 
         {/* Content */}
@@ -151,6 +168,7 @@ const MobileWebinarBar = () => {
           {/* CTA Button - matching Kod Kapitana style */}
           <Link
             to="/webinar/kod-kapitana"
+            onClick={handleCTAClick}
             className="w-full max-w-xs text-white font-bold py-3 px-6 rounded-xl text-center transition-all active:scale-[0.98]"
             style={{
               background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
