@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
+import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://buy.siadlak.com/checkout/kod-kapitana";
@@ -320,7 +321,7 @@ export default function WebinarKodKapitana() {
             </Card>
 
             {/* VIDEO PLAYER */}
-            <div className="mt-12">
+            <div className="mt-12 relative">
               <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/20 dark:to-blue-950/20 border-sky-200 dark:border-sky-800 p-4 md:p-6 shadow-lg">
                 <div
                   style={{ position: "relative", paddingTop: "56.25%" }}
@@ -341,6 +342,43 @@ export default function WebinarKodKapitana() {
                   ></iframe>
                 </div>
               </Card>
+              
+              {/* Handwritten annotation */}
+              <div className="flex items-center justify-center gap-2 mt-4 md:mt-6 animate-fade-in">
+                <span 
+                  className="text-xl sm:text-2xl md:text-3xl transform -rotate-2"
+                  style={{
+                    fontFamily: "Caveat, cursive",
+                    color: "hsl(0, 72%, 51%)",
+                    textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+                    fontWeight: 400,
+                  }}
+                >
+                  Odsłuchaj koniecznie!
+                </span>
+                <svg 
+                  viewBox="0 0 50 50" 
+                  className="w-10 h-10 sm:w-12 sm:h-12"
+                  style={{ color: "hsl(0, 72%, 51%)" }}
+                >
+                  {/* Curved arrow pointing up-left toward the play button */}
+                  <path 
+                    d="M40 45 Q 35 25, 15 15" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round"
+                  />
+                  <path 
+                    d="M10 20 L15 15 L22 18" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
