@@ -1,28 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CTAButton } from "@/components/ui/cta-button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import {
   Anchor,
-  Compass,
-  Ship,
   Star,
   MessageSquare,
   Check,
 } from "lucide-react";
-import { useState } from "react";
-import effectGif from "@/assets/I-know-kung-fu.gif";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://buy.siadlak.com/checkout/kod-kapitana";
-  const [isEffectOverlayVisible, setIsEffectOverlayVisible] = useState(true);
-
-  const handleShowEffect = () => {
-    setIsEffectOverlayVisible(false);
-  };
 
   return (
     <Layout hideHeader={true} hideFooter={true}>
@@ -170,7 +160,7 @@ export default function WebinarKodKapitana() {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-16 py-6 sm:py-7 md:py-10 transition-all duration-300 active:scale-95 sm:hover:scale-105 border-0 shadow-2xl sm:hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] text-center leading-snug min-h-[44px] touch-manipulation"
+                    className="w-full sm:w-auto text-base sm:text-xl md:text-2xl font-bold px-8 sm:px-12 md:px-16 py-6 sm:py-8 md:py-10 transition-all duration-300 active:scale-95 sm:hover:scale-105 border-0 shadow-2xl sm:hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] text-center leading-tight min-h-[64px] touch-manipulation whitespace-normal h-auto"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -179,14 +169,7 @@ export default function WebinarKodKapitana() {
                         "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    <span className="hidden sm:inline">
-                      ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS
-                    </span>
-                    <span className="sm:hidden leading-tight block">
-                      ZAREZERWUJ MOJE MIEJSCE
-                      <br />
-                      ROZPOCZNIJ REJS
-                    </span>
+                    🚢 ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS
                   </Button>
                 </a>
               </div>

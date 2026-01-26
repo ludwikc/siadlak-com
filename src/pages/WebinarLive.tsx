@@ -1,20 +1,11 @@
 import { useState } from "react";
 import Layout from "../components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { HelpCircle, Download, ExternalLink } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { toast } from "@/hooks/use-toast";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);
-
-  const handleResourceClick = (resource: string) => {
-    toast({
-      title: "Zasób",
-      description: `Pobieranie: ${resource}`,
-    });
-  };
 
   const handleCTAClick = () => {
     // In a real implementation, this would navigate to the offer page or open a modal
