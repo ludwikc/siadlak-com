@@ -112,7 +112,7 @@ const DesktopWebinarBar = () => {
       <div 
         className="relative backdrop-blur-xl border-t shadow-2xl"
         style={{ 
-          minHeight: "25vh",
+          minHeight: "32vh",
           background: "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
           borderColor: "rgba(56, 189, 248, 0.15)",
         }}
