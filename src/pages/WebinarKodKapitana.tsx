@@ -1,31 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CTAButton } from "@/components/ui/cta-button";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import {
   Anchor,
-  Compass,
-  Ship,
   Star,
   MessageSquare,
   Check,
 } from "lucide-react";
-import { useState } from "react";
-import effectGif from "@/assets/I-know-kung-fu.gif";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
-import calendarGcal from "@/assets/calendar-gcal.png";
-import calendarApple from "@/assets/calendar-apple.png";
-import calendarOutlook from "@/assets/calendar-outlook.png";
+import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://buy.siadlak.com/checkout/kod-kapitana";
-  const [isEffectOverlayVisible, setIsEffectOverlayVisible] = useState(true);
-
-  const handleShowEffect = () => {
-    setIsEffectOverlayVisible(false);
-  };
 
   return (
     <Layout hideHeader={true} hideFooter={true}>
@@ -34,53 +22,51 @@ export default function WebinarKodKapitana() {
         description="Jak zapanować nad natłokiem myśli i zostać kapitanem własnego życia? Praktyczny warsztat live online 27 stycznia 2025 o 20:05."
       />
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION - Deep Ocean Premium Theme */}
       <section
         className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
         style={{
           background:
-            "linear-gradient(135deg, hsl(200, 60%, 8%) 0%, hsl(210, 50%, 12%) 50%, hsl(220, 45%, 10%) 100%)",
+            "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
         }}
       >
-        {/* Animated gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/60 animate-fade-in"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.15),transparent_40%)] animate-pulse"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(14,165,233,0.1),transparent_50%)]"></div>
-
-        {/* Nautical glow effects */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-sky-500/15 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-blue-600/15 to-transparent rounded-full blur-3xl"></div>
+        {/* Subtle depth layers */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+        
+        {/* Refined ambient glow - less aggressive, more elegant */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(56,189,248,0.08),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(59,130,246,0.06),transparent_50%)]"></div>
+        
+        {/* Subtle gold accent glow */}
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[radial-gradient(circle,rgba(251,191,36,0.04),transparent_70%)] blur-2xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            {/* Event badge */}
+            {/* Event badge - more refined */}
             <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
               <div
-                className="inline-flex items-center gap-2 sm:gap-3 px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 rounded-full border-2 shadow-2xl max-w-full"
+                className="inline-flex items-center gap-2 sm:gap-3 px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 rounded-full border max-w-full backdrop-blur-sm"
                 style={{
                   background:
-                    "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
-                  borderColor: "hsl(200, 90%, 60%)",
+                    "linear-gradient(135deg, rgba(56,189,248,0.15) 0%, rgba(59,130,246,0.2) 100%)",
+                  borderColor: "rgba(125,211,252,0.3)",
                   boxShadow:
-                    "0 0 40px rgba(59, 130, 246, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                    "0 0 30px rgba(56, 189, 248, 0.15), 0 8px 24px rgba(0, 0, 0, 0.3)",
                 }}
               >
-                <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-white animate-pulse flex-shrink-0" />
-                <span className="font-bold text-white text-xs sm:text-sm md:text-base tracking-wide">
-                  SPOTKANIE NA ŻYWO • 27 STYCZNIA • 20:05
+                <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-sky-300 flex-shrink-0" />
+                <span className="font-semibold text-sky-100 text-xs sm:text-sm md:text-base tracking-wider uppercase">
+                  Spotkanie na żywo • 27 stycznia • 20:05
                 </span>
               </div>
             </div>
 
             <div className="text-center animate-fade-in">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.2] tracking-tight drop-shadow-lg">
-                KOD KAPITANA:
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-[1.15] tracking-tight">
+                <span className="text-slate-100">KOD KAPITANA:</span>
                 <br />
                 <span
-                  className="inline-block mt-2 md:mt-3 bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"
-                  style={{
-                    textShadow: "0 0 40px rgba(59, 130, 246, 0.3)",
-                  }}
+                  className="inline-block mt-2 md:mt-3 bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent"
                 >
                   Uważność, która naprawdę działa
                 </span>
@@ -88,80 +74,104 @@ export default function WebinarKodKapitana() {
 
               <div className="mb-10 md:mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-3xl px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8 border-2 max-w-4xl backdrop-blur-md transition-all duration-300"
+                  className="inline-block rounded-2xl px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8 border max-w-4xl backdrop-blur-md transition-all duration-300"
                   style={{
                     background:
-                      "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
-                    borderColor: "rgba(59, 130, 246, 0.6)",
+                      "linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.5) 100%)",
+                    borderColor: "rgba(125, 211, 252, 0.2)",
                     boxShadow:
-                      "0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.15)",
+                      "0 16px 48px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
                   }}
                 >
-                  <p className="text-lg sm:text-xl md:text-2xl font-medium text-white leading-relaxed">
+                  <p className="text-lg sm:text-xl md:text-2xl font-normal text-slate-200 leading-relaxed">
                     Jak zapanować nad natłokiem myśli i{" "}
-                    <span className="font-bold text-sky-300">
+                    <span className="font-semibold text-sky-300">
                       zostać kapitanem własnego życia?
                     </span>
                   </p>
                 </div>
               </div>
 
-              {/* Social Proof - moved before image */}
+              {/* Social Proof - subtle, refined */}
               <div className="mb-10 animate-fade-in">
-                <Card className="inline-block bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-white/40 dark:border-slate-700 shadow-xl">
-                  <div className="px-6 py-4 md:px-8 md:py-5">
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-                      <div className="flex items-center gap-2 text-slate-900 dark:text-white">
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500">
-                          <Check className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="font-semibold text-sm md:text-base">
-                          103 osoby już rozpoczęły rejs
-                        </span>
-                      </div>
-                      <div className="hidden sm:block w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
-                      <div className="flex items-center gap-2 text-slate-900 dark:text-white">
-                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500">
-                          <Star className="w-4 h-4 text-white fill-white" />
-                        </div>
-                        <span className="font-semibold text-sm md:text-base">
-                          Ocena 4.9/5
-                        </span>
-                      </div>
+                <div 
+                  className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-6 py-4 rounded-xl backdrop-blur-sm"
+                  style={{
+                    background: "rgba(15, 23, 42, 0.5)",
+                    border: "1px solid rgba(148, 163, 184, 0.15)",
+                  }}
+                >
+                  <div className="flex items-center gap-2.5 text-slate-300">
+                    <div 
+                      className="flex items-center justify-center w-7 h-7 rounded-full border"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(200, 80%, 30%) 0%, hsl(180, 70%, 45%) 50%, hsl(145, 65%, 50%) 100%)",
+                        borderColor: "rgba(16, 185, 129, 0.4)",
+                        boxShadow: "0 0 12px rgba(16, 185, 129, 0.4)",
+                      }}
+                    >
+                      <Check className="w-3.5 h-3.5 text-white" />
                     </div>
+                    <span className="font-medium text-sm">
+                      103 osoby już rozpoczęły rejs
+                    </span>
                   </div>
-                </Card>
+                  <div className="hidden sm:block w-px h-5 bg-slate-600"></div>
+                  <div className="flex items-center gap-2.5 text-slate-300">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/30">
+                      <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    </div>
+                    <span className="font-medium text-sm">
+                      Ocena 4.9/5
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              {/* Hero Image */}
+              {/* Hero Image - with refined frame */}
               <div className="mb-10 animate-fade-in">
-                <img
-                  src={kodKapitanaHero}
-                  alt="Kapitan przy sterze statku podczas burzy - metafora uważnego życia"
-                  loading="lazy"
-                  className="w-full max-w-2xl mx-auto rounded-xl shadow-2xl"
-                />
+                <div className="relative max-w-2xl mx-auto">
+                  <div 
+                    className="absolute -inset-1 rounded-2xl opacity-50"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(56,189,248,0.2), rgba(251,191,36,0.1))",
+                      filter: "blur(20px)",
+                    }}
+                  />
+                  <img
+                    src={kodKapitanaHero}
+                    alt="Kapitan przy sterze statku podczas burzy - metafora uważnego życia"
+                    loading="lazy"
+                    className="relative w-full rounded-xl shadow-2xl"
+                    style={{
+                      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+                    }}
+                  />
+                </div>
               </div>
 
-              {/* Bonus - more prominent */}
+              {/* Bonus - elegant gold accent */}
               <div className="mb-8 animate-fade-in">
-                <Card className="inline-block bg-gradient-to-r from-amber-600 to-orange-600 border-amber-400 shadow-lg">
-                  <div className="px-6 py-3 md:px-8 md:py-4">
-                    <div className="flex items-center gap-3 text-white">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20">
-                        <span className="text-xl">🎁</span>
-                      </div>
-                      <div className="text-left">
-                        <p className="font-bold text-sm md:text-base text-white">
-                          Bonus dla pierwszych 500 osób
-                        </p>
-                        <p className="text-xs md:text-sm text-white">
-                          PDF „Mapa Kapitana" do druku
-                        </p>
-                      </div>
-                    </div>
+                <div 
+                  className="inline-flex items-center gap-4 px-6 py-4 rounded-xl backdrop-blur-sm"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.15) 100%)",
+                    border: "1px solid rgba(251,191,36,0.25)",
+                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/30">
+                    <span className="text-lg">🎁</span>
                   </div>
-                </Card>
+                  <div className="text-left">
+                    <p className="font-semibold text-sm md:text-base text-amber-200">
+                      Bonus dla pierwszych 500 osób
+                    </p>
+                    <p className="text-xs md:text-sm text-amber-300/70">
+                      PDF „Mapa Kapitana" do druku
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="mb-6 animate-fade-in">
@@ -169,32 +179,26 @@ export default function WebinarKodKapitana() {
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full sm:w-auto sm:inline-block"
+                  className="block w-full sm:w-auto sm:inline-block group"
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-16 py-6 sm:py-7 md:py-10 transition-all duration-300 active:scale-95 sm:hover:scale-105 border-0 shadow-2xl sm:hover:shadow-[0_0_60px_rgba(59,130,246,0.6),0_20px_40px_rgba(0,0,0,0.4)] text-center leading-snug min-h-[44px] touch-manipulation"
+                    className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-14 py-5 sm:py-7 md:py-9 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[56px] touch-manipulation whitespace-normal h-auto"
                     style={{
                       background:
-                        "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
+                        "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
                       color: "white",
                       boxShadow:
-                        "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
+                        "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
                     }}
                   >
-                    <span className="hidden sm:inline">
-                      ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS
-                    </span>
-                    <span className="sm:hidden leading-tight block">
-                      ZAREZERWUJ MOJE MIEJSCE
-                      <br />
-                      ROZPOCZNIJ REJS
-                    </span>
+                    <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS</span>
+                    <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
                   </Button>
                 </a>
               </div>
 
-              <p className="text-white text-sm md:text-base animate-fade-in">
+              <p className="text-slate-400 text-sm md:text-base animate-fade-in">
                 Bezpłatny warsztat na żywo • 90 minut
               </p>
             </div>
@@ -235,14 +239,15 @@ export default function WebinarKodKapitana() {
               >
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-lg md:text-xl font-bold px-8 md:px-12 py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl"
+                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl whitespace-normal h-auto"
                   style={{
                     background:
                       "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
                     color: "white",
                   }}
                 >
-                  🚢 ZAREZERWUJ MOJE MIEJSCE - ROZPOCZNIJ REJS
+                  <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE - ROZPOCZNIJ REJS</span>
+                  <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
                 </Button>
               </a>
 
@@ -316,7 +321,7 @@ export default function WebinarKodKapitana() {
             </Card>
 
             {/* VIDEO PLAYER */}
-            <div className="mt-12">
+            <div className="mt-12 relative">
               <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/20 dark:to-blue-950/20 border-sky-200 dark:border-sky-800 p-4 md:p-6 shadow-lg">
                 <div
                   style={{ position: "relative", paddingTop: "56.25%" }}
@@ -337,6 +342,21 @@ export default function WebinarKodKapitana() {
                   ></iframe>
                 </div>
               </Card>
+              
+              {/* Handwritten annotation */}
+              <div className="flex items-center justify-center mt-4 md:mt-6 animate-fade-in">
+                <span 
+                  className="text-xl sm:text-2xl md:text-3xl transform -rotate-2"
+                  style={{
+                    fontFamily: "Caveat, cursive",
+                    color: "hsl(0, 72%, 51%)",
+                    textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+                    fontWeight: 400,
+                  }}
+                >
+                  Odsłuchaj koniecznie!
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -371,7 +391,13 @@ export default function WebinarKodKapitana() {
                 </p>
               </Card>
 
-              <Card className="bg-emerald-600 dark:bg-emerald-700 border-emerald-700 dark:border-emerald-600 p-6 md:p-8 shadow-lg">
+              <Card 
+                className="border-0 p-6 md:p-8 shadow-lg text-white"
+                style={{
+                  background: "linear-gradient(135deg, hsl(200, 70%, 25%) 0%, hsl(180, 60%, 35%) 50%, hsl(145, 55%, 40%) 100%)",
+                  boxShadow: "0 8px 32px rgba(16, 185, 129, 0.25), 0 0 60px rgba(6, 182, 212, 0.15)",
+                }}
+              >
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                   CO JEŚLI MOGŁOBY BYĆ INACZEJ?
                 </h3>
@@ -410,50 +436,74 @@ export default function WebinarKodKapitana() {
         </div>
       </section>
 
-      {/* CO WYNIESIESZ Z TEGO WARSZTATU */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 via-muted/50 to-muted/30">
-        <div className="container mx-auto px-4">
+      {/* CO WYNIESIESZ Z TEGO WARSZTATU - Premium Benefit Cards */}
+      <section 
+        className="py-16 md:py-24 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(180deg, hsl(210, 40%, 96%) 0%, hsl(210, 35%, 98%) 50%, hsl(210, 40%, 96%) 100%)",
+        }}
+      >
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.05),transparent_50%)]"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
-              CO WYNIESIESZ Z TEGO WARSZTATU?
-            </h2>
-            <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16">
-              Cztery konkretne narzędzia, które zaczniesz stosować od razu
-            </p>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+                CO WYNIESIESZ Z TEGO WARSZTATU?
+              </h2>
+              <p className="text-lg md:text-xl text-slate-600">
+                Cztery konkretne narzędzia, które zaczniesz stosować od razu
+              </p>
+            </div>
 
             <div className="space-y-6">
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start gap-6">
+              {/* Benefit Card 1 */}
+              <div 
+                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
+                  border: "1px solid rgba(56, 189, 248, 0.15)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+                }}
+              >
+                <div className="flex items-start gap-5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center text-white font-bold text-3xl md:text-4xl shadow-lg">
+                    <div 
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
+                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+                      }}
+                    >
                       1
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
                       METAFORA KAPITANA I ŻAGLÓWKI
                     </h3>
-                    <p className="text-base md:text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
+                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
                       Twój osobisty system nawigacji życiowej
                     </p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
                       To nie ładna bajka – to{" "}
-                      <strong className="text-foreground">
+                      <strong className="text-slate-900">
                         praktyczny model zarządzania codziennością
                       </strong>
                       . Kapitan (Ty), ster (decyzje), żagle (umiejętności), fale
                       (życie).
                     </p>
-                    <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Jak rozpoznać, kiedy życie „steruje Tobą", a kiedy Ty
                           sterujesz życiem
                         </span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Jak wyznaczać kurs na dzień, tydzień, miesiąc – i
                           trzymać się go, nawet gdy przychodzą sztormy
@@ -462,38 +512,52 @@ export default function WebinarKodKapitana() {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </div>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start gap-6">
+              {/* Benefit Card 2 */}
+              <div 
+                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
+                  border: "1px solid rgba(56, 189, 248, 0.15)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+                }}
+              >
+                <div className="flex items-start gap-5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center text-white font-bold text-3xl md:text-4xl shadow-lg">
+                    <div 
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
+                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+                      }}
+                    >
                       2
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
                       DIAMENTOWY UMYSŁ (ADHD / NATŁOK MYŚLI)
                     </h3>
-                    <p className="text-base md:text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
+                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
                       Przekształć „chaos" w supersilę
                     </p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
                       Dlaczego „chaotyczny" umysł to{" "}
-                      <strong className="text-foreground">supermoc</strong>, a
+                      <strong className="text-slate-900">supermoc</strong>, a
                       nie przeszkoda. Przestaniesz walczyć z własnymi myślami i
                       zaczniesz je obserwować.
                     </p>
-                    <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Technika „Diamond Mind" – jak ogarnąć natłok myśli bez
                           walki
                         </span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Dlaczego próba „uspokojenia umysłu" działa przeciwko
                           Tobie
@@ -502,38 +566,52 @@ export default function WebinarKodKapitana() {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </div>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start gap-6">
+              {/* Benefit Card 3 */}
+              <div 
+                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
+                  border: "1px solid rgba(56, 189, 248, 0.15)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+                }}
+              >
+                <div className="flex items-start gap-5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center text-white font-bold text-3xl md:text-4xl shadow-lg">
+                    <div 
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
+                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+                      }}
+                    >
                       3
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
                       OD AUTOMATU DO ŚWIADOMEGO DZIAŁANIA
                     </h3>
-                    <p className="text-base md:text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
+                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
                       Sekunda, która zmienia wszystko
                     </p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
                       Jak złapać{" "}
-                      <strong className="text-foreground">mikro-pauzę</strong>,
+                      <strong className="text-slate-900">mikro-pauzę</strong>,
                       w której odzyskujesz kontrolę. To klucz do wyjścia z pętli
                       stresu, reaktywności i niemocy.
                     </p>
-                    <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Prosta technika „Stop–Oddech–Wybór" – zadziała nawet w
                           najbardziej stresującym momencie
                         </span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Jak rozpoznać moment, w którym „automatycznie
                           reagujesz" zamiast świadomie działać
@@ -542,37 +620,51 @@ export default function WebinarKodKapitana() {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </div>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start gap-6">
+              {/* Benefit Card 4 */}
+              <div 
+                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
+                  border: "1px solid rgba(56, 189, 248, 0.15)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+                }}
+              >
+                <div className="flex items-start gap-5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center text-white font-bold text-3xl md:text-4xl shadow-lg">
+                    <div 
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
+                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+                      }}
+                    >
                       4
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
                       KONIEC WEWNĘTRZNYCH WOJEN
                     </h3>
-                    <p className="text-base md:text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
+                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
                       Co działa zamiast walki z samym sobą
                     </p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
                       Dlaczego walka z lękiem, oporem i prokrastynacją{" "}
-                      <strong className="text-foreground">je wzmacnia</strong>.
+                      <strong className="text-slate-900">je wzmacnia</strong>.
                       Poznasz lepszy sposób – paradoksalny, ale skuteczny.
                     </p>
-                    <ul className="space-y-2 text-sm md:text-base text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Dlaczego „zmuszanie się" jest najgorszą strategią
                           długoterminowo
                         </span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <li className="flex items-start gap-2.5">
+                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>
                           Jak przestać walczyć z prokrastynacją i zamiast tego
                           „przełamać jej kod"
@@ -581,7 +673,7 @@ export default function WebinarKodKapitana() {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -695,9 +787,21 @@ export default function WebinarKodKapitana() {
                 </ul>
               </Card>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300">
+              <Card 
+                className="border p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300"
+                style={{
+                  background: "linear-gradient(135deg, hsl(180, 40%, 96%) 0%, hsl(165, 45%, 92%) 100%)",
+                  borderColor: "hsl(170, 50%, 70%)",
+                }}
+              >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <div 
+                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{
+                      background: "linear-gradient(135deg, hsl(200, 70%, 30%) 0%, hsl(180, 60%, 40%) 50%, hsl(145, 55%, 45%) 100%)",
+                      boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+                    }}
+                  >
                     <span className="text-white font-bold">2</span>
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-foreground pt-1">
@@ -706,15 +810,15 @@ export default function WebinarKodKapitana() {
                 </div>
                 <ul className="space-y-2.5 text-sm md:text-base text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Większa odporność emocjonalna</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Poczucie sprawczości i klarowność</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Decyzje w zgodzie ze sobą</span>
                   </li>
                 </ul>
@@ -897,8 +1001,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       25%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-1/4 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.2)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-1/4 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(190, 75%, 45%) 100%)",
+                          boxShadow: "0 0 8px rgba(6, 182, 212, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -996,8 +1112,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       50%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-1/2 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.25)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-1/2 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(180, 70%, 45%) 50%, hsl(165, 60%, 45%) 100%)",
+                          boxShadow: "0 0 10px rgba(6, 182, 212, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1086,8 +1214,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       75%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-3/4 bg-gradient-to-r from-[#2980b9] to-[#27ae60] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 14px rgba(16, 185, 129, 0.3)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-3/4 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 40%) 0%, hsl(180, 70%, 45%) 40%, hsl(155, 60%, 48%) 100%)",
+                          boxShadow: "0 0 12px rgba(16, 185, 129, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1220,11 +1360,23 @@ export default function WebinarKodKapitana() {
                   </p>
                   {/* Progress bar with percentage */}
                   <div className="flex items-center gap-3">
-                    <span className="text-[#27ae60] font-bold text-sm">
+                    <span style={{ color: "hsl(155, 60%, 42%)" }} className="font-bold text-sm">
                       100%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-full bg-gradient-to-r from-[#3498db] to-[#27ae60] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 16px rgba(16, 185, 129, 0.4)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-full rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 35%) 0%, hsl(185, 70%, 42%) 30%, hsl(165, 65%, 48%) 60%, hsl(145, 60%, 52%) 100%)",
+                          boxShadow: "0 0 14px rgba(16, 185, 129, 0.6)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1234,155 +1386,180 @@ export default function WebinarKodKapitana() {
         </div>
       </section>
 
-      {/* REJESTRACJA */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4">
+      {/* REJESTRACJA - Premium Design */}
+      <section 
+        className="py-20 md:py-28 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
+        }}
+      >
+        {/* Ambient glow effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(6,182,212,0.12),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.1),transparent_50%)]"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-12 text-foreground"
-              id="rejestracja"
-            >
-              Rejestracja
-            </h2>
+            {/* Header with gradient text */}
+            <div className="text-center mb-12 md:mb-16">
+              <h2
+                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4"
+                id="rejestracja"
+              >
+                <span 
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: "linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(180, 70%, 70%) 50%, hsl(155, 60%, 60%) 100%)",
+                  }}
+                >
+                  Dołącz do warsztatu
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-slate-300/80">
+                Zarezerwuj swoje miejsce – bezpłatnie
+              </p>
+            </div>
 
-            <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/30 dark:to-blue-950/30 border-sky-200 dark:border-sky-800 p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {/* Main registration card with glass effect */}
+            <div 
+              className="rounded-3xl p-8 md:p-12 backdrop-blur-md border relative overflow-hidden"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
+                borderColor: "rgba(6, 182, 212, 0.25)",
+                boxShadow: "0 25px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(6, 182, 212, 0.1), inset 0 1px 0 rgba(255,255,255,0.1)",
+              }}
+            >
+              {/* Decorative gradient corner */}
+              <div 
+                className="absolute top-0 right-0 w-64 h-64 opacity-30 pointer-events-none"
+                style={{
+                  background: "radial-gradient(circle at top right, rgba(16, 185, 129, 0.3), transparent 70%)",
+                }}
+              ></div>
+
+              <div className="grid md:grid-cols-2 gap-10 mb-12 relative z-10">
+                {/* Details column */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-6">
-                    📅 Szczegóły
-                  </h3>
-                  <div className="space-y-4 text-muted-foreground">
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Data:</span>
-                      <span>27 stycznia 2025</span>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(180, 60%, 40%) 100%)",
+                        boxShadow: "0 4px 12px rgba(6, 182, 212, 0.3)",
+                      }}
+                    >
+                      <span className="text-xl">📅</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Godzina:</span>
-                      <span>20:05 (60+ minut)</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Format:</span>
-                      <span>Live Online</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Dostęp:</span>
-                      <span>Bezpłatny</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Nagranie:</span>
-                      <span>48h po webinarze</span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      Szczegóły
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { label: "Data", value: "27 stycznia 2025" },
+                      { label: "Godzina", value: "20:05 (60+ minut)" },
+                      { label: "Format", value: "Live Online" },
+                      { label: "Dostęp", value: "Bezpłatny", highlight: true },
+                      { label: "Nagranie", value: "48h po webinarze" },
+                    ].map((item, index) => (
+                      <div 
+                        key={index}
+                        className="flex items-center gap-4 p-3 rounded-xl transition-all duration-200 hover:bg-white/5"
+                        style={{
+                          borderLeft: item.highlight ? "3px solid hsl(165, 60%, 50%)" : "3px solid transparent",
+                        }}
+                      >
+                        <span className="font-semibold text-slate-300 min-w-[80px]">{item.label}:</span>
+                        <span 
+                          className={`${item.highlight ? "font-bold" : ""}`}
+                          style={{ color: item.highlight ? "hsl(165, 60%, 55%)" : "rgba(255,255,255,0.9)" }}
+                        >
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
+                {/* Benefits column */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-6">
-                    🎁 Otrzymasz:
-                  </h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
-                      <span>dostęp na żywo,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
-                      <span>PDF z kluczowymi punktami,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
-                      <span>„Mapę Kapitana" (pierwsze 500 osób),</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
-                      <span>ćwiczenie wprowadzające,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
-                      <span>nagranie przez 48h.</span>
-                    </li>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(165, 60%, 35%) 0%, hsl(145, 55%, 40%) 100%)",
+                        boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+                      }}
+                    >
+                      <span className="text-xl">🎁</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      Otrzymasz
+                    </h3>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {[
+                      "Dostęp na żywo do warsztatu",
+                      "PDF z kluczowymi punktami",
+                      "Mapę Kapitana (pierwsze 500 osób)",
+                      "Ćwiczenie wprowadzające",
+                      "Nagranie dostępne przez 48h",
+                    ].map((item, index) => (
+                      <li 
+                        key={index}
+                        className="flex items-start gap-3 p-3 rounded-xl transition-all duration-200 hover:bg-white/5 group"
+                      >
+                        <div 
+                          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-transform duration-200 group-hover:scale-110"
+                          style={{
+                            background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(165, 60%, 45%) 100%)",
+                            boxShadow: "0 2px 8px rgba(16, 185, 129, 0.4)",
+                          }}
+                        >
+                          <Check className="w-3.5 h-3.5 text-white" />
+                        </div>
+                        <span className="text-white/90">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="text-center">
+              {/* CTA Button with enhanced glow */}
+              <div className="text-center relative z-10">
+                {/* Button glow */}
+                <div 
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-20 blur-2xl opacity-60 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(90deg, hsl(200, 70%, 45%), hsl(165, 60%, 50%), hsl(145, 55%, 50%))",
+                  }}
+                ></div>
+                
                 <a
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full sm:w-auto sm:inline-block"
+                  className="block w-full sm:w-auto sm:inline-block relative"
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]"
+                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-2xl whitespace-normal h-auto"
                     style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
+                      background: "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
                       color: "white",
-                      boxShadow:
-                        "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                      boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                     }}
                   >
-                    🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR
+                    <span className="hidden sm:inline">🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR</span>
+                    <span className="sm:hidden">🚢 ZAPISUJĘ SIĘ</span>
                   </Button>
                 </a>
+                
+                <p className="mt-6 text-sm text-slate-400">
+                  Dołączyło już <span className="font-semibold text-cyan-400">103+ osób</span> • Zostało kilka miejsc
+                </p>
               </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* ZAPISZ W KALENDARZU */}
-      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
-              📅 Zapisz w kalendarzu
-            </h2>
-            <p className="text-lg text-center text-muted-foreground mb-10">
-              Dodaj wydarzenie do swojego kalendarza, żeby nie przegapić
-              warsztatu
-            </p>
-
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              {/* GOOGLE CALENDAR */}
-              <a
-                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&dates=20260202T190000Z/20260202T203000Z&details=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-              >
-                <img
-                  src={calendarGcal}
-                  alt="Add to Google Calendar"
-                  className="h-12 md:h-16"
-                />
-              </a>
-
-              {/* APPLE CALENDAR (ICS) */}
-              <a
-                href="/webinar.ics"
-                className="transition-transform duration-300 hover:scale-110"
-              >
-                <img
-                  src={calendarApple}
-                  alt="Add to Apple Calendar"
-                  className="h-12 md:h-16"
-                />
-              </a>
-
-              {/* OUTLOOK (WEB) */}
-              <a
-                href="https://outlook.live.com/calendar/0/deeplink/compose?subject=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&startdt=2026-02-02T20:00&enddt=2026-02-02T21:30&body=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:scale-110"
-              >
-                <img
-                  src={calendarOutlook}
-                  alt="Add to Outlook Calendar"
-                  className="h-12 md:h-16"
-                />
-              </a>
             </div>
           </div>
         </div>
