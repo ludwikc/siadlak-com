@@ -21,9 +21,9 @@ const MobileWebinarBar = () => {
   const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
 
   useEffect(() => {
-    // Check if user dismissed the bar in this session
-    const dismissed = sessionStorage.getItem("webinarBarDismissed");
-    if (!dismissed && !isWebinarPage) {
+    // Only permanently hide if user clicked CTA (stored in localStorage)
+    const ctaClicked = localStorage.getItem("webinarBarCTAClicked");
+    if (!ctaClicked && !isWebinarPage) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -60,12 +60,13 @@ const MobileWebinarBar = () => {
   const handleDismiss = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    sessionStorage.setItem("webinarBarDismissed", "true");
+    // Just hide for current view - will reappear on refresh
     setIsVisible(false);
   };
 
   const handleCTAClick = () => {
-    sessionStorage.setItem("webinarBarDismissed", "true");
+    // Permanently hide - won't show again even after refresh
+    localStorage.setItem("webinarBarCTAClicked", "true");
     setIsVisible(false);
   };
 
