@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Siadlak.com//KOD KAPITANA//PL
+BEGIN:VEVENT
+UID:kod-kapitana-20260202@siadlak.com
+DTSTAMP:20260101T120000Z
+DTSTART:20260202T190000Z
+DTEND:20260202T203000Z
+SUMMARY:KOD KAPITANA: Uważność, która po prostu działa
+DESCRIPTION:To jest Twoja przepustka na Mostek Kapitański. Dołącz do naszego spotkania w poniedziałek 2 lutego 2026 o 20:05 na https://siadlak.com/webinar/live
+LOCATION:https://siadlak.com/webinar/live
+END:VEVENT
+END:VCALENDAR

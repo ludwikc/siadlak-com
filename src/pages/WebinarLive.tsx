@@ -5,6 +5,9 @@ import { HelpCircle, Download, ExternalLink } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
+import calendarGcal from "@/assets/calendar-gcal.png";
+import calendarApple from "@/assets/calendar-apple.png";
+import calendarOutlook from "@/assets/calendar-outlook.png";
 
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);
@@ -27,7 +30,10 @@ const WebinarLive = () => {
 
   return (
     <Layout hideFooter={true}>
-      <div className="min-h-screen bg-gradient-to-br from-deep-space to-twilight-indigo/50 pt-12 pb-20">
+      <div
+        className="min-h-screen pt-12 pb-20"
+        style={{ backgroundColor: "#1E1F22" }}
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-500/20 backdrop-blur-sm border border-red-500/30 text-red-500 mb-4">
@@ -44,7 +50,8 @@ const WebinarLive = () => {
             </p>
 
             <p className="text-md mb-6 text-gray-400">
-              prowadzi: <strong>Ludwik C. Siadlak</strong> (MCT, MCSA, MCSE, MCP, ECC)
+              prowadzi: <strong>Ludwik C. Siadlak</strong> (MCT, MCSA, MCSE,
+              MCP, ECC)
             </p>
           </div>
 
@@ -76,11 +83,83 @@ const WebinarLive = () => {
                 </div>
               </div>
 
-              {/* Platform Links */}
+              {/* GÓRNY BOKS - Data + Zapisz w kalendarzu */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <h2 className="text-xl font-bold text-white mb-4 text-center">
-                  Oglądaj na swojej ulubionej platformie:
+                <h2 className="text-2xl font-bold text-white mb-6 text-center">
+                  Poniedziałek, 2 lutego 2026, <br />
+                  godzina 20:05 (Berlin/Warszawa)
                 </h2>
+
+                <div className="pt-6">
+                  <p className="text-sm text-center text-gray-300 mb-6">
+                    Dodaj wydarzenie do swojego kalendarza, żeby nie przegapić
+                    warsztatu
+                  </p>
+
+                  <div className="flex flex-wrap justify-center items-center gap-4">
+                    {/* GOOGLE CALENDAR */}
+                    <a
+                      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&dates=20260202T190000Z/20260202T203000Z&details=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform duration-200 hover:scale-105"
+                    >
+                      <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
+                        <img
+                          src={calendarGcal}
+                          alt="Google Calendar"
+                          className="h-8 w-8"
+                        />
+                        <span className="text-white font-medium text-sm">
+                          Google
+                        </span>
+                      </div>
+                    </a>
+
+                    {/* APPLE CALENDAR (ICS) */}
+                    <a
+                      href="/webinar.ics"
+                      className="transition-transform duration-200 hover:scale-105"
+                    >
+                      <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
+                        <img
+                          src={calendarApple}
+                          alt="Apple Calendar"
+                          className="h-8 w-8"
+                        />
+                        <span className="text-white font-medium text-sm">
+                          Apple
+                        </span>
+                      </div>
+                    </a>
+
+                    {/* OUTLOOK (WEB) */}
+                    <a
+                      href="https://outlook.live.com/calendar/0/deeplink/compose?subject=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&startdt=2026-02-02T20:00&enddt=2026-02-02T21:30&body=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform duration-200 hover:scale-105"
+                    >
+                      <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
+                        <img
+                          src={calendarOutlook}
+                          alt="Outlook Calendar"
+                          className="h-8 w-8"
+                        />
+                        <span className="text-white font-medium text-sm">
+                          Outlook
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* DOLNY BOKS - Oglądaj na platformach */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <h3 className="text-lg text-white mb-4 text-center">
+                  Możesz też oglądać na swojej ulubionej platformie:
+                </h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button
                     asChild
@@ -127,8 +206,8 @@ const WebinarLive = () => {
                 </div>
               </div>
 
-              {/* CTA During Webinar */}
-              {showOffer && (
+              {/* CTA During Webinar - HIDDEN */}
+              {false && showOffer && (
                 <div className="bg-gradient-to-r from-twilight-indigo/30 to-zenith-gold/30 backdrop-blur-lg rounded-xl p-6 border border-twilight-indigo/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
                     Program LifeOS: System Upgrade - Odkryj pełną transformację
@@ -154,15 +233,17 @@ const WebinarLive = () => {
                 </div>
               )}
 
-              <div className="text-center">
-                <Button
-                  variant="outline"
-                  className="border-twilight-indigo text-twilight-indigo"
-                  onClick={handleCTAClick}
-                >
-                  Pokaż ofertę specjalną
-                </Button>
-              </div>
+              {false && (
+                <div className="text-center">
+                  <Button
+                    variant="outline"
+                    className="border-twilight-indigo text-twilight-indigo"
+                    onClick={handleCTAClick}
+                  >
+                    Pokaż ofertę specjalną
+                  </Button>
+                </div>
+              )}
             </div>
 
             {/* Sidebar - Discord Widget */}

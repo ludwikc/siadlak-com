@@ -15,6 +15,9 @@ import { useState } from "react";
 import effectGif from "@/assets/I-know-kung-fu.gif";
 import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
+import calendarGcal from "@/assets/calendar-gcal.png";
+import calendarApple from "@/assets/calendar-apple.png";
+import calendarOutlook from "@/assets/calendar-outlook.png";
 
 export default function WebinarKodKapitana() {
   const ctaUrl = "https://buy.siadlak.com/checkout/kod-kapitana";
@@ -1324,6 +1327,63 @@ export default function WebinarKodKapitana() {
                 </a>
               </div>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* ZAPISZ W KALENDARZU */}
+      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
+              📅 Zapisz w kalendarzu
+            </h2>
+            <p className="text-lg text-center text-muted-foreground mb-10">
+              Dodaj wydarzenie do swojego kalendarza, żeby nie przegapić
+              warsztatu
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              {/* GOOGLE CALENDAR */}
+              <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&dates=20260202T190000Z/20260202T203000Z&details=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={calendarGcal}
+                  alt="Add to Google Calendar"
+                  className="h-12 md:h-16"
+                />
+              </a>
+
+              {/* APPLE CALENDAR (ICS) */}
+              <a
+                href="/webinar.ics"
+                className="transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={calendarApple}
+                  alt="Add to Apple Calendar"
+                  className="h-12 md:h-16"
+                />
+              </a>
+
+              {/* OUTLOOK (WEB) */}
+              <a
+                href="https://outlook.live.com/calendar/0/deeplink/compose?subject=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&startdt=2026-02-02T20:00&enddt=2026-02-02T21:30&body=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={calendarOutlook}
+                  alt="Add to Outlook Calendar"
+                  className="h-12 md:h-16"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </section>
