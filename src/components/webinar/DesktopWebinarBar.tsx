@@ -110,7 +110,7 @@ const DesktopWebinarBar = () => {
     <div className="hidden md:block fixed bottom-0 left-0 right-0 z-50 animate-fade-in">
       {/* Deep Ocean backdrop - takes ~1/4 of screen */}
       <div 
-        className="relative backdrop-blur-xl border-t shadow-2xl"
+        className="relative backdrop-blur-xl border-t shadow-2xl flex items-center justify-center"
         style={{ 
           minHeight: "32vh",
           background: "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
@@ -121,7 +121,7 @@ const DesktopWebinarBar = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(56,189,248,0.1),transparent_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.08),transparent_50%)]"></div>
         
-        {/* Close button */}
+        {/* Close button - positioned absolutely, not affected by centering */}
         <button
           type="button"
           onClick={handleDismiss}
@@ -131,8 +131,8 @@ const DesktopWebinarBar = () => {
           <X size={24} className="text-white/80" />
         </button>
 
-        {/* Content - horizontal layout for desktop */}
-        <div className="flex items-center justify-center h-full px-8 py-6 relative z-10 gap-10">
+        {/* Content - horizontal layout for desktop, vertically centered */}
+        <div className="flex items-center justify-center px-8 relative z-10 gap-10">
           {/* Title */}
           <div className="text-center">
             <span 
