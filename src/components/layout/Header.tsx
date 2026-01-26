@@ -458,10 +458,13 @@ export default function Header() {
                 </Link>
                 <Link
                   to="/webinar"
-                  className="block text-deep-charcoal/70 hover:text-neural-blue transition-colors"
+                  className="flex items-center gap-2 font-semibold text-growth-gold hover:text-neural-blue transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Webinar
+                  <span className="uppercase tracking-wide">Webinar</span>
+                  <span className="inline-flex items-center px-2 py-0.5 text-xs font-bold bg-gradient-to-r from-growth-gold to-neural-blue text-white rounded-full animate-pulse">
+                    Jeszcze zdążysz!
+                  </span>
                 </Link>
               </div>
             </div>
