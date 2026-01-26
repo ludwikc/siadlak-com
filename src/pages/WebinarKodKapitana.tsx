@@ -1368,99 +1368,180 @@ export default function WebinarKodKapitana() {
         </div>
       </section>
 
-      {/* REJESTRACJA */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4">
+      {/* REJESTRACJA - Premium Design */}
+      <section 
+        className="py-20 md:py-28 relative overflow-hidden"
+        style={{
+          background: "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
+        }}
+      >
+        {/* Ambient glow effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(6,182,212,0.12),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.1),transparent_50%)]"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2
-              className="text-3xl md:text-5xl font-bold text-center mb-12 text-foreground"
-              id="rejestracja"
-            >
-              Rejestracja
-            </h2>
+            {/* Header with gradient text */}
+            <div className="text-center mb-12 md:mb-16">
+              <h2
+                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4"
+                id="rejestracja"
+              >
+                <span 
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: "linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(180, 70%, 70%) 50%, hsl(155, 60%, 60%) 100%)",
+                  }}
+                >
+                  Dołącz do warsztatu
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-slate-300/80">
+                Zarezerwuj swoje miejsce – bezpłatnie
+              </p>
+            </div>
 
-            <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/30 dark:to-blue-950/30 border-sky-200 dark:border-sky-800 p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {/* Main registration card with glass effect */}
+            <div 
+              className="rounded-3xl p-8 md:p-12 backdrop-blur-md border relative overflow-hidden"
+              style={{
+                background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
+                borderColor: "rgba(6, 182, 212, 0.25)",
+                boxShadow: "0 25px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(6, 182, 212, 0.1), inset 0 1px 0 rgba(255,255,255,0.1)",
+              }}
+            >
+              {/* Decorative gradient corner */}
+              <div 
+                className="absolute top-0 right-0 w-64 h-64 opacity-30 pointer-events-none"
+                style={{
+                  background: "radial-gradient(circle at top right, rgba(16, 185, 129, 0.3), transparent 70%)",
+                }}
+              ></div>
+
+              <div className="grid md:grid-cols-2 gap-10 mb-12 relative z-10">
+                {/* Details column */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-6">
-                    📅 Szczegóły
-                  </h3>
-                  <div className="space-y-4 text-muted-foreground">
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Data:</span>
-                      <span>27 stycznia 2025</span>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(180, 60%, 40%) 100%)",
+                        boxShadow: "0 4px 12px rgba(6, 182, 212, 0.3)",
+                      }}
+                    >
+                      <span className="text-xl">📅</span>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Godzina:</span>
-                      <span>20:05 (60+ minut)</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Format:</span>
-                      <span>Live Online</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Dostęp:</span>
-                      <span>Bezpłatny</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="font-bold">Nagranie:</span>
-                      <span>48h po webinarze</span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      Szczegóły
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { label: "Data", value: "27 stycznia 2025" },
+                      { label: "Godzina", value: "20:05 (60+ minut)" },
+                      { label: "Format", value: "Live Online" },
+                      { label: "Dostęp", value: "Bezpłatny", highlight: true },
+                      { label: "Nagranie", value: "48h po webinarze" },
+                    ].map((item, index) => (
+                      <div 
+                        key={index}
+                        className="flex items-center gap-4 p-3 rounded-xl transition-all duration-200 hover:bg-white/5"
+                        style={{
+                          borderLeft: item.highlight ? "3px solid hsl(165, 60%, 50%)" : "3px solid transparent",
+                        }}
+                      >
+                        <span className="font-semibold text-slate-300 min-w-[80px]">{item.label}:</span>
+                        <span 
+                          className={`${item.highlight ? "font-bold" : ""}`}
+                          style={{ color: item.highlight ? "hsl(165, 60%, 55%)" : "rgba(255,255,255,0.9)" }}
+                        >
+                          {item.value}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
+                {/* Benefits column */}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-6">
-                    🎁 Otrzymasz:
-                  </h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
-                      <span>dostęp na żywo,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
-                      <span>PDF z kluczowymi punktami,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
-                      <span>„Mapę Kapitana" (pierwsze 500 osób),</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
-                      <span>ćwiczenie wprowadzające,</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
-                      <span>nagranie przez 48h.</span>
-                    </li>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(165, 60%, 35%) 0%, hsl(145, 55%, 40%) 100%)",
+                        boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+                      }}
+                    >
+                      <span className="text-xl">🎁</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      Otrzymasz
+                    </h3>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {[
+                      "Dostęp na żywo do warsztatu",
+                      "PDF z kluczowymi punktami",
+                      "Mapę Kapitana (pierwsze 500 osób)",
+                      "Ćwiczenie wprowadzające",
+                      "Nagranie dostępne przez 48h",
+                    ].map((item, index) => (
+                      <li 
+                        key={index}
+                        className="flex items-start gap-3 p-3 rounded-xl transition-all duration-200 hover:bg-white/5 group"
+                      >
+                        <div 
+                          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-transform duration-200 group-hover:scale-110"
+                          style={{
+                            background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(165, 60%, 45%) 100%)",
+                            boxShadow: "0 2px 8px rgba(16, 185, 129, 0.4)",
+                          }}
+                        >
+                          <Check className="w-3.5 h-3.5 text-white" />
+                        </div>
+                        <span className="text-white/90">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="text-center">
+              {/* CTA Button with enhanced glow */}
+              <div className="text-center relative z-10">
+                {/* Button glow */}
+                <div 
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-20 blur-2xl opacity-60 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(90deg, hsl(200, 70%, 45%), hsl(165, 60%, 50%), hsl(145, 55%, 50%))",
+                  }}
+                ></div>
+                
                 <a
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full sm:w-auto sm:inline-block"
+                  className="block w-full sm:w-auto sm:inline-block relative"
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]"
+                    className="w-full sm:w-auto text-base sm:text-lg md:text-xl font-bold px-10 sm:px-14 md:px-20 py-6 sm:py-8 md:py-10 transition-all duration-300 hover:scale-105 border-0 shadow-2xl"
                     style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
+                      background: "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
                       color: "white",
-                      boxShadow:
-                        "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                      boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                     }}
                   >
                     🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR
                   </Button>
                 </a>
+                
+                <p className="mt-6 text-sm text-slate-400">
+                  Dołączyło już <span className="font-semibold text-cyan-400">103+ osób</span> • Zostało kilka miejsc
+                </p>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
