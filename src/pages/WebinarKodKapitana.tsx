@@ -101,8 +101,15 @@ export default function WebinarKodKapitana() {
                   }}
                 >
                   <div className="flex items-center gap-2.5 text-slate-300">
-                    <div className="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-400/30">
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <div 
+                      className="flex items-center justify-center w-7 h-7 rounded-full border"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(200, 80%, 30%) 0%, hsl(180, 70%, 45%) 50%, hsl(145, 65%, 50%) 100%)",
+                        borderColor: "rgba(16, 185, 129, 0.4)",
+                        boxShadow: "0 0 12px rgba(16, 185, 129, 0.4)",
+                      }}
+                    >
+                      <Check className="w-3.5 h-3.5 text-white" />
                     </div>
                     <span className="font-medium text-sm">
                       103 osoby już rozpoczęły rejs
@@ -366,7 +373,13 @@ export default function WebinarKodKapitana() {
                 </p>
               </Card>
 
-              <Card className="bg-emerald-600 dark:bg-emerald-700 border-emerald-700 dark:border-emerald-600 p-6 md:p-8 shadow-lg">
+              <Card 
+                className="border-0 p-6 md:p-8 shadow-lg text-white"
+                style={{
+                  background: "linear-gradient(135deg, hsl(200, 70%, 25%) 0%, hsl(180, 60%, 35%) 50%, hsl(145, 55%, 40%) 100%)",
+                  boxShadow: "0 8px 32px rgba(16, 185, 129, 0.25), 0 0 60px rgba(6, 182, 212, 0.15)",
+                }}
+              >
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                   CO JEŚLI MOGŁOBY BYĆ INACZEJ?
                 </h3>
@@ -756,9 +769,21 @@ export default function WebinarKodKapitana() {
                 </ul>
               </Card>
 
-              <Card className="bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800 p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300">
+              <Card 
+                className="border p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300"
+                style={{
+                  background: "linear-gradient(135deg, hsl(180, 40%, 96%) 0%, hsl(165, 45%, 92%) 100%)",
+                  borderColor: "hsl(170, 50%, 70%)",
+                }}
+              >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <div 
+                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{
+                      background: "linear-gradient(135deg, hsl(200, 70%, 30%) 0%, hsl(180, 60%, 40%) 50%, hsl(145, 55%, 45%) 100%)",
+                      boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
+                    }}
+                  >
                     <span className="text-white font-bold">2</span>
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-foreground pt-1">
@@ -767,15 +792,15 @@ export default function WebinarKodKapitana() {
                 </div>
                 <ul className="space-y-2.5 text-sm md:text-base text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Większa odporność emocjonalna</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Poczucie sprawczości i klarowność</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
                     <span>Decyzje w zgodzie ze sobą</span>
                   </li>
                 </ul>
@@ -958,8 +983,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       25%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-1/4 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.2)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-1/4 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(190, 75%, 45%) 100%)",
+                          boxShadow: "0 0 8px rgba(6, 182, 212, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1057,8 +1094,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       50%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-1/2 bg-gradient-to-r from-[#2980b9] to-[#3498db] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.25)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-1/2 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(180, 70%, 45%) 50%, hsl(165, 60%, 45%) 100%)",
+                          boxShadow: "0 0 10px rgba(6, 182, 212, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1147,8 +1196,20 @@ export default function WebinarKodKapitana() {
                     <span className="text-[#2980b9] font-bold text-sm">
                       75%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-3/4 bg-gradient-to-r from-[#2980b9] to-[#27ae60] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 14px rgba(16, 185, 129, 0.3)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-3/4 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 40%) 0%, hsl(180, 70%, 45%) 40%, hsl(155, 60%, 48%) 100%)",
+                          boxShadow: "0 0 12px rgba(16, 185, 129, 0.5)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1281,11 +1342,23 @@ export default function WebinarKodKapitana() {
                   </p>
                   {/* Progress bar with percentage */}
                   <div className="flex items-center gap-3">
-                    <span className="text-[#27ae60] font-bold text-sm">
+                    <span style={{ color: "hsl(155, 60%, 42%)" }} className="font-bold text-sm">
                       100%
                     </span>
-                    <div className="w-24 h-3 rounded-full bg-white/70 overflow-hidden shadow-inner">
-                      <div className="h-full w-full bg-gradient-to-r from-[#3498db] to-[#27ae60] rounded-full"></div>
+                    <div 
+                      className="w-24 h-3 rounded-full overflow-hidden"
+                      style={{
+                        background: "rgba(255,255,255,0.85)",
+                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 16px rgba(16, 185, 129, 0.4)",
+                      }}
+                    >
+                      <div 
+                        className="h-full w-full rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, hsl(205, 70%, 35%) 0%, hsl(185, 70%, 42%) 30%, hsl(165, 65%, 48%) 60%, hsl(145, 60%, 52%) 100%)",
+                          boxShadow: "0 0 14px rgba(16, 185, 129, 0.6)",
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -1342,23 +1415,23 @@ export default function WebinarKodKapitana() {
                   </h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
                       <span>dostęp na żywo,</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
                       <span>PDF z kluczowymi punktami,</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
                       <span>„Mapę Kapitana" (pierwsze 500 osób),</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
                       <span>ćwiczenie wprowadzające,</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <Check className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: "hsl(165, 60%, 40%)" }} />
                       <span>nagranie przez 48h.</span>
                     </li>
                   </ul>
