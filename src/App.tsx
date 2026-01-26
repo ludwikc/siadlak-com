@@ -66,6 +66,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
 import MobileWebinarBar from "./components/webinar/MobileWebinarBar";
+import DesktopWebinarBar from "./components/webinar/DesktopWebinarBar";
 
 const queryClient = new QueryClient();
 
@@ -171,6 +172,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <MobileWebinarBar />
+            <DesktopWebinarBar />
             <Toaster />
           </Router>
         </ThemeProvider>
