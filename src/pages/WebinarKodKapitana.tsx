@@ -226,7 +226,7 @@ export default function WebinarKodKapitana() {
 
               <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 mb-12">
                 <p className="text-lg md:text-xl font-bold text-foreground leading-relaxed">
-                  To nie jest webinar o tym, jak się wyciszyć. To trening, jak
+                  To nie jest spotkanie o tym, jak się wyciszyć. To trening, jak
                   być świadomym nawet w chaosie. I to właśnie zmienia wszystko.
                 </p>
               </Card>
@@ -281,7 +281,7 @@ export default function WebinarKodKapitana() {
                 </p>
 
                 <p>
-                  Na tym webinarze nie będziemy gasić świeczek i liczyć
+                  Na tym spotkaniu nie będziemy gasić świeczek i liczyć
                   oddechów. Będziemy pracować nad tym, jak przejąć kontrolę nad
                   własnym sterem. Jak odróżnić swoje myśli od siebie samego. Jak
                   przestać być pasażerem, a zacząć być kierowcą własnego życia.
@@ -297,7 +297,7 @@ export default function WebinarKodKapitana() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
-              ⚡ Co wyciągniesz z webinaru?
+              ⚡ Co wyciągniesz z tego spotkania?
             </h2>
 
             <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-8 md:p-10 shadow-lg">
@@ -840,7 +840,7 @@ export default function WebinarKodKapitana() {
                     "
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    — Kasia, uczestniczka poprzedniego webinaru
+                    — Kasia, uczestniczka poprzedniego spotkania
                   </p>
                 </div>
               </div>
@@ -1460,7 +1460,7 @@ export default function WebinarKodKapitana() {
                       { label: "Godzina", value: "20:05 (60+ minut)" },
                       { label: "Format", value: "Live Online" },
                       { label: "Dostęp", value: "Bezpłatny", highlight: true },
-                      { label: "Nagranie", value: "48h po webinarze" },
+                      { label: "Nagranie", value: "48h po spotkaniu" },
                     ].map((item, index) => (
                       <div 
                         key={index}
@@ -1551,7 +1551,7 @@ export default function WebinarKodKapitana() {
                       boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                     }}
                   >
-                    <span className="hidden sm:inline">🚢 ZAPISUJĘ SIĘ NA BEZPŁATNY WEBINAR</span>
+                    <span className="hidden sm:inline">🚢 ZAPISUJĘ SIĘ NA TO SPOTKANIE</span>
                     <span className="sm:hidden">🚢 ZAPISUJĘ SIĘ</span>
                   </Button>
                 </a>
