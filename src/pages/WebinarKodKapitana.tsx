@@ -19,7 +19,7 @@ export default function WebinarKodKapitana() {
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Kod Kapitana: Uważność, która naprawdę działa"
-        description="Jak zapanować nad natłokiem myśli i zostać kapitanem własnego życia? Praktyczny warsztat live online 27 stycznia 2025 o 20:05."
+        description="Jak zapanować nad natłokiem myśli i zostać kapitanem własnego życia? Praktyczny warsztat live online 2 lutego 2025 o 20:05."
       />
 
       {/* HERO SECTION - Deep Ocean Premium Theme */}
@@ -56,7 +56,7 @@ export default function WebinarKodKapitana() {
               >
                 <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-sky-300 flex-shrink-0" />
                 <span className="font-semibold text-sky-100 text-xs sm:text-sm md:text-base tracking-wider uppercase">
-                  Spotkanie na żywo • 27 stycznia • 20:05
+                  Spotkanie na żywo • 2 lutego • 20:05
                 </span>
               </div>
             </div>
@@ -1456,7 +1456,7 @@ export default function WebinarKodKapitana() {
                   
                   <div className="space-y-4">
                     {[
-                      { label: "Data", value: "27 stycznia 2025" },
+                      { label: "Data", value: "2 lutego 2025" },
                       { label: "Godzina", value: "20:05 (60+ minut)" },
                       { label: "Format", value: "Live Online" },
                       { label: "Dostęp", value: "Bezpłatny", highlight: true },
