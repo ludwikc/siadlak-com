@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "../components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 import calendarGcal from "@/assets/calendar-gcal.png";
 import calendarApple from "@/assets/calendar-apple.png";
 import calendarOutlook from "@/assets/calendar-outlook.png";

@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import {
   ArrowRight,
-  Users,
   Star,
   Anchor,
   ShipWheel,
@@ -18,7 +17,6 @@ import {
   Trophy,
   Shield,
   Eye,
-  Lightbulb,
   Heart,
   Navigation,
   Battery,
