@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 const UwazneZycie = () => {
-  const ctaUrl = "https://buy.siadlak.com/checkout/uwazne-zycie";
+  const ctaUrl = "https://buy.siadlak.com/checkout/uwaznezycie";
 
   return (
     <Layout>
