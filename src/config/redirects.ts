@@ -15,6 +15,8 @@ export const redirects: RedirectConfig = {
   "/hp": "/program/hakowanie-produktywnosci",
   "/lh": "/podcast/life-hacking",
   "/ttt": "/program/ttt",
+  "/uwaznosc": "/program/uwazne-zycie",
+  "/u": "/program/uwazne-zycie",
 
   // Legacy/renamed routes
   "/program/mental-elevator": "/program/lifeos-system-upgrade",
