@@ -14,12 +14,9 @@ import {
   CheckCircle2,
   Check,
   Sparkles,
-  Compass,
   Trophy,
   Shield,
   Eye,
-  Heart,
-  Navigation,
   Battery,
 } from "lucide-react";
 
@@ -400,10 +397,11 @@ const UwazneZycie = () => {
         </div>
       </section>
 
-      {/* CO WYNIESIESZ Z PROGRAMU - Premium Benefit Cards */}
+      {/* CO WYNIESIESZ Z PROGRAMU - Full Curriculum */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
+            {/* Header */}
             <div className="text-center mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/20 to-cyan-500/20 px-5 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5 text-sky-600 dark:text-sky-400" />
@@ -411,96 +409,242 @@ const UwazneZycie = () => {
                   Program transformacji
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-                PRZEDSTAWIAM CI: "UWAŻNE ŻYCIE"
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+                PRZEDSTAWIAM CI: „UWAŻNE ŻYCIE"
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                6 modułów, które zmienią Twoje podejście do życia
+              <p className="text-xl md:text-2xl font-semibold text-sky-600 dark:text-sky-400 mb-4">
+                System, który zamieni Cię z&nbsp;reaktywnego pasażera w&nbsp;proaktywnego kapitana.
               </p>
+              <div className="max-w-3xl mx-auto space-y-4 text-lg text-muted-foreground">
+                <p>
+                  To nie jest kolejny „kurs o&nbsp;medytacji". To <strong className="text-foreground">6-tygodniowy trening mentalny w&nbsp;formie intensywnego bootcampu</strong>, który przeprojektuje Twój związek z&nbsp;własnym umysłem.
+                </p>
+                <p>
+                  Oparte na neuronauce, psychologii i&nbsp;tysiącach godzin praktyki – bez mistycyzmu, bez ezoteryki. Czysta, praktyczna <strong className="text-foreground">inżynieria wewnętrzna</strong>.
+                </p>
+                <p className="text-xl font-semibold text-foreground pt-4">
+                  Oto, co dokładnie zawiera program – Twoja <span className="text-sky-600 dark:text-sky-400">mapa przejęcia władzy</span>:
+                </p>
+              </div>
             </div>
 
-            <div className="space-y-6">
-              {[
-                {
-                  number: 1,
-                  icon: Compass,
-                  gradient: "from-blue-500 to-blue-600",
-                  title: "ARCHITEKTURA UWAGI – ODZYSKAJ STER",
-                  description:
-                    "Przestań być ofiarą okoliczności. Uważna uwaga to Twój supermoc – nauczysz się jej używać jako podstawowego narzędzia nawigacji.",
-                },
-                {
-                  number: 2,
-                  icon: Brain,
-                  gradient: "from-purple-500 to-purple-600",
-                  title: "DEAUTOMATYZACJA – WYŁĄCZ AUTOMAT, WŁĄCZ ŚWIADOMOŚĆ",
-                  description:
-                    'Moment "Aha!". Nauczysz się wyłapywać ten ułamek sekundy, zanim automatyczna reakcja przejmie kontrolę.',
-                },
-                {
-                  number: 3,
-                  icon: Eye,
-                  gradient: "from-cyan-500 to-teal-600",
-                  title: "DYSTANS STRATEGICZNY – UWOLNIJ SIĘ OD TYRANII MYŚLI",
-                  description:
-                    "Twoje myśli to nie rozkazy, tylko chmury na niebie. Przestaniesz wierzyć w\u00A0każdą dramatyczną historię, którą opowie Ci głowa.",
-                },
-                {
-                  number: 4,
-                  icon: Heart,
-                  gradient: "from-red-500 to-pink-600",
-                  title: "NAWIGACJA EMOCJONALNA – NAWIGUJ WŚRÓD BURZY",
-                  description:
-                    "Twoje ciało to najdokładniejszy system wczesnego ostrzegania. Nauczysz się odczytywać jego sygnały z\u00A0precyzją chirurga.",
-                },
-                {
-                  number: 5,
-                  icon: Navigation,
-                  gradient: "from-green-500 to-emerald-600",
-                  title: "KOMPAS WARTOŚCI – PŁYŃ TAM, GDZIE CHCESZ DOTRZEĆ",
-                  description:
-                    'Odkryjesz, co naprawdę nadaje sens Twojej podróży. Przestaniesz żyć w\u00A0ciągłej "pogoni za" i\u00A0zaczniesz żyć w\u00A0"podróży do".',
-                },
-                {
-                  number: 6,
-                  icon: Battery,
-                  gradient: "from-orange-500 to-amber-600",
-                  title: "OPTYMALIZACJA ZASOBÓW – ZARZĄDZAJ ENERGIĄ, NIE CZASEM",
-                  description:
-                    "Jak ładować baterie i\u00A0jak rozkładać siły, by nie wypalić się na półmetku. Najpotężniejsza praktyka: bycie własnym sojusznikiem.",
-                },
-              ].map((module) => (
-                <div
-                  key={module.number}
-                  className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                    border: "1px solid rgba(56, 189, 248, 0.15)",
-                    boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
-                  }}
-                >
-                  <div className="flex items-start gap-5 md:gap-6">
-                    <div className="flex-shrink-0">
-                      <div
-                        className={`w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl bg-gradient-to-br ${module.gradient}`}
-                        style={{
-                          boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
-                        }}
-                      >
-                        {module.number}
-                      </div>
+            {/* Modules with full lessons */}
+            <div className="space-y-8">
+              {/* Module 1 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(59, 130, 246, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-blue-500 to-blue-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      1
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                        {module.title}
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        ARCHITEKTURA UWAGI – ODZYSKAJ STER
                       </h3>
-                      <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                        {module.description}
-                      </p>
                     </div>
                   </div>
                 </div>
-              ))}
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 1.1: Przebudzenie Kapitana.", desc: "Przestań być ofiarą okoliczności. Uważna uwaga to Twój supermoc – tu nauczysz się jej używać jako podstawowego narzędzia nawigacji." },
+                    { title: "Lekcja 1.2: Oczy Kapitana.", desc: "Jak patrzeć na świat (i\u00A0na siebie) bez krytycyzmu, z\u00A0życzliwością i\u00A0ciekawością. To nie czułostkowość – to taktyczna przewaga." },
+                    { title: "Lekcja 1.3: Spokojna Woda.", desc: "Koniec z\u00A0multitaskingiem, który niszczy Twoją efektywność. Metoda na jednoogniskową uwagę, która potraja produktywność." },
+                    { title: "Lekcja 1.4: Wyzwanie: Zrzucenie Kotwicy.", desc: "Twoja pierwsza misja bojowa. Osadź uwagę w\u00A0jednym, konkretnym obszarze dnia i\u00A0przejmij nad nim 100% kontroli." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Module 2 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(147, 51, 234, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-purple-500 to-purple-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        DEAUTOMATYZACJA – WYŁĄCZ AUTOMAT, WŁĄCZ ŚWIADOMOŚĆ
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 2.1: Bunt Maszyn.", desc: "Demaskujemy Twoje automatyczne wzorce – dlaczego wpadłeś w\u00A0te pułapki i\u00A0ile Cię to kosztuje (czas, energię, relacje)." },
+                    { title: "Lekcja 2.2: Przerwanie Pętli.", desc: 'Moment "Aha!". Nauczysz się wyłapywać ten ułamek sekundy, zanim automatyczna reakcja przejmie kontrolę.' },
+                    { title: "Lekcja 2.3: Świadoma Nawigacja.", desc: "Zamiast reagować – odpowiadasz. Wprowadzasz strategiczną pauzę, która daje Ci wolność wyboru." },
+                    { title: "Lekcja 2.4: Wyzwanie: Odzyskaj Stery.", desc: "Celowo zmieniasz jeden kluczowy, nawykowy ruch, który do tej pory sabotował Twoje postępy." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-purple-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Module 3 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(6, 182, 212, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-cyan-500 to-teal-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        DYSTANS STRATEGICZNY – UWOLNIJ SIĘ OD TYRANII MYŚLI
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 3.1: Czysty Horyzont.", desc: "Nauczysz się dystansować od własnych emocji i\u00A0myśli. To jak wyjście na wieżę widokową – widzisz burzę, ale nią nie jesteś." },
+                    { title: "Lekcja 3.2: Poza Narracją.", desc: "Twoje myśli to nie rozkazy, tylko chmury na niebie. Przestaniesz wierzyć w\u00A0każdą dramatyczną historię, którą opowie Ci głowa." },
+                    { title: "Lekcja 3.3: Pułapka Tożsamości.", desc: '"Jestem nieśmiały", "Jestem nerwusem" – rozbroimy te tożsamościowe bomby, które blokują Twój rozwój.' },
+                    { title: "Lekcja 3.4: Wyzwanie: Tryb Obserwatora.", desc: "Cały dzień spędzisz na czystym zauważaniu bez oceniania. To reset, po którym nic nie będzie już takie samo." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-cyan-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Module 4 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(239, 68, 68, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-red-500 to-pink-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        NAWIGACJA EMOCJONALNA – NAWIGUJ WŚRÓD BURZY
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 4.1: Sygnały z\u00A0Głębi.", desc: "Twoje ciało to najdokładniejszy system wczesnego ostrzegania. Nauczysz się odczytywać jego sygnały z\u00A0precyzją chirurga." },
+                    { title: "Lekcja 4.2: Taniec z\u00A0Burzą.", desc: "Walka z\u00A0niepokojem tylko go wzmacnia. Poznasz kontr-intuicyjną strategię pełnej akceptacji, która rozbraja lęk." },
+                    { title: "Lekcja 4.3: Gotowość na Fale.", desc: "Zbudujesz odporność psychiczną nie przez unikanie dyskomfortu, ale przez pełne w\u00A0nim zanurzenie." },
+                    { title: "Lekcja 4.4: Wyzwanie: Zaufaj Igle.", desc: "W\u00A0realnej, trudnej sytuacji użyjesz sygnałów z\u00A0ciała, by podjąć mądrzejszą decyzję." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Module 5 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(34, 197, 94, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-green-500 to-emerald-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      5
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        KOMPAS WARTOŚCI – PŁYŃ TAM, GDZIE CHCESZ DOTRZEĆ
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 5.1: Północna Gwiazda.", desc: 'Odkryjesz, co naprawdę nadaje sens Twojej podróży (to nie są cele typu "więcej pieniędzy").' },
+                    { title: "Lekcja 5.2: Pułapka Horyzontu.", desc: 'Przestaniesz żyć w\u00A0ciągłej "pogoni za" i\u00A0zaczniesz żyć w\u00A0"podróży do". Różnica jest kolosalna.' },
+                    { title: "Lekcja 5.3: Trzymanie Kursu.", desc: "Prosty system codziennych raportów, który zapewni, że Twoje działania są w\u00A0100% spójne z\u00A0Twoimi fundamentami." },
+                    { title: "Lekcja 5.4: Wyzwanie: Wybór Kierunku.", desc: "Wykonasz jeden, świadomy, strategiczny manewr, który przybliży Cię do Twojej Północnej Gwiazdy." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Module 6 */}
+              <div
+                className="rounded-2xl overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%)",
+                  border: "1px solid rgba(249, 115, 22, 0.2)",
+                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                <div className="p-6 md:p-8 bg-gradient-to-r from-orange-500 to-amber-600">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold text-2xl">
+                      6
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        OPTYMALIZACJA ZASOBÓW – ZARZĄDZAJ ENERGIĄ, NIE CZASEM
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-4">
+                  {[
+                    { title: "Lekcja 6.1: Pełne Żagle.", desc: "Zarządzanie energią, a\u00A0nie czasem. Jak ładować baterie i\u00A0jak rozkładać siły, by nie wypalić się na półmetku." },
+                    { title: "Lekcja 6.2: Łatanie Pokładu.", desc: 'Systematyczny audyt Twoich słabości i\u00A0"przecieków" energetycznych. Zamiast wypierać – naprawiasz.' },
+                    { title: "Lekcja 6.3: Życzliwy Port.", desc: "Najpotężniejsza praktyka: bycie własnym sojusznikiem w\u00A0chwilach porażki, a\u00A0nie katem." },
+                    { title: "Lekcja 6.4: Wyzwanie: Audyt Łodzi.", desc: "Ostatnia, kompleksowa misja. Sprawdzisz stan wszystkich zasobów i\u00A0stworzysz plan utrzymania zdobytej władzy." },
+                  ].map((lesson, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                      <p className="text-slate-700"><strong>{lesson.title}</strong> {lesson.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="mt-12 text-center">
