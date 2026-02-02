@@ -446,8 +446,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        ARCHITEKTURA UWAGI – ODZYSKAJ STER
+                        ARCHITEKTURA UWAGI
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Odzyskaj Ster</p>
                     </div>
                   </div>
                 </div>
@@ -482,8 +483,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        DEAUTOMATYZACJA – WYŁĄCZ AUTOMAT, WŁĄCZ ŚWIADOMOŚĆ
+                        DEAUTOMATYZACJA
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Wyłącz Automat, Włącz Świadomość</p>
                     </div>
                   </div>
                 </div>
@@ -518,8 +520,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        DYSTANS STRATEGICZNY – UWOLNIJ SIĘ OD TYRANII MYŚLI
+                        DYSTANS STRATEGICZNY
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Uwolnij Się od Tyranii Myśli</p>
                     </div>
                   </div>
                 </div>
@@ -554,8 +557,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        NAWIGACJA EMOCJONALNA – NAWIGUJ WŚRÓD BURZY
+                        NAWIGACJA EMOCJONALNA
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Nawiguj Wśród Burzy</p>
                     </div>
                   </div>
                 </div>
@@ -590,8 +594,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        KOMPAS WARTOŚCI – PŁYŃ TAM, GDZIE CHCESZ DOTRZEĆ
+                        KOMPAS WARTOŚCI
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Płyń Tam, Gdzie Chcesz Dotrzeć</p>
                     </div>
                   </div>
                 </div>
@@ -626,8 +631,9 @@ const UwazneZycie = () => {
                     </div>
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white">
-                        OPTYMALIZACJA ZASOBÓW – ZARZĄDZAJ ENERGIĄ, NIE CZASEM
+                        OPTYMALIZACJA ZASOBÓW
                       </h3>
+                      <p className="text-white/80 italic text-sm md:text-base mt-1">Zarządzaj Energią, Nie Czasem</p>
                     </div>
                   </div>
                 </div>
