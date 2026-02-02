@@ -708,7 +708,7 @@ const UwazneZycie = () => {
                     backgroundImage: "linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(180, 70%, 70%) 50%, hsl(155, 60%, 60%) 100%)",
                   }}
                 >
-                  Twoja Inwestycja i&nbsp;Gwarancja
+                  Twoja Inwestycja i&nbsp;Moja Gwarancja
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-slate-300/80">
