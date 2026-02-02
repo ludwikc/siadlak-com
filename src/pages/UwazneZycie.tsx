@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
+import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png";
 import {
   ArrowRight,
   Star,
@@ -139,25 +140,30 @@ const UwazneZycie = () => {
                 </div>
               </div>
 
-              {/* Bonus */}
+              {/* Bonus - Lifehackerzy */}
               <div className="mb-8 animate-fade-in">
                 <div
-                  className="inline-flex items-center gap-4 px-6 py-4 rounded-xl backdrop-blur-sm"
+                  className="inline-flex flex-col sm:flex-row items-center gap-4 px-6 py-5 rounded-xl backdrop-blur-sm max-w-2xl"
                   style={{
-                    background: "linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.15) 100%)",
-                    border: "1px solid rgba(251,191,36,0.25)",
+                    background: "linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(124,58,237,0.2) 100%)",
+                    border: "1px solid rgba(167,139,250,0.3)",
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
                   }}
                 >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/30">
-                    <span className="text-lg">🎁</span>
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-sm md:text-base text-amber-200">
-                      Zamknięta grupa Mastermind w cenie
+                  <img 
+                    src={lifehackerzyLogo} 
+                    alt="Lifehackerzy" 
+                    className="h-12 sm:h-14 w-auto flex-shrink-0"
+                  />
+                  <div className="text-center sm:text-left">
+                    <p className="font-semibold text-sm md:text-base text-violet-200">
+                      Dostęp LIFETIME do społeczności LIFEHACKERZY w cenie programu.
                     </p>
-                    <p className="text-xs md:text-sm text-amber-300/70">
-                      Wsparcie i wymiana doświadczeń
+                    <p className="text-xs md:text-sm text-violet-300/80 mt-1">
+                      Wsparcie i wymiana doświadczeń.
+                    </p>
+                    <p className="text-xs md:text-sm text-violet-300/90 mt-1 italic">
+                      Nie bez powodu nazywanej <span className="font-medium text-violet-200">najbardziej wspierającą społecznością w polskim internecie</span>
                     </p>
                   </div>
                 </div>
