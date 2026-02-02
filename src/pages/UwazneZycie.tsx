@@ -290,14 +290,16 @@ const UwazneZycie = () => {
         </div>
       </section>
 
-      {/* CHECKLIST SECTION */}
+      {/* CHECKLIST SECTION - Pain Points */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
         style={{
-          background: "linear-gradient(180deg, hsl(210, 40%, 96%) 0%, hsl(210, 35%, 98%) 50%, hsl(210, 40%, 96%) 100%)",
+          background: "linear-gradient(180deg, hsl(0, 15%, 97%) 0%, hsl(0, 10%, 95%) 50%, hsl(0, 15%, 97%) 100%)",
         }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.05),transparent_50%)]"></div>
+        {/* Subtle warm/red ambient glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(239,68,68,0.06),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(185,28,28,0.04),transparent_50%)]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -339,19 +341,27 @@ const UwazneZycie = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+                  className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px] group"
                   style={{
-                    background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                    border: "1px solid rgba(56, 189, 248, 0.15)",
-                    boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+                    background: "linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(254,242,242,0.9) 100%)",
+                    border: "1px solid rgba(239, 68, 68, 0.2)",
+                    boxShadow: "0 4px 24px rgba(185, 28, 28, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04)",
                   }}
                 >
-                  <div className="flex items-start gap-4">
+                  {/* Subtle red accent line on left */}
+                  <div 
+                    className="absolute left-0 top-4 bottom-4 w-1 rounded-full opacity-60 group-hover:opacity-100 transition-opacity"
+                    style={{
+                      background: "linear-gradient(180deg, hsl(0, 72%, 51%) 0%, hsl(0, 84%, 60%) 100%)",
+                    }}
+                  ></div>
+                  
+                  <div className="flex items-start gap-4 pl-3">
                     <div
                       className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center flex-shrink-0"
                       style={{
-                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
-                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+                        background: "linear-gradient(135deg, hsl(0, 72%, 51%) 0%, hsl(0, 65%, 45%) 100%)",
+                        boxShadow: "0 4px 12px rgba(220, 38, 38, 0.3)",
                       }}
                     >
                       <item.icon className="h-6 w-6 md:h-7 md:w-7 text-white" />
