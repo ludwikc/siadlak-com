@@ -33,7 +33,7 @@
   --text-primary: 220 30% 18%;
   --text-secondary: 220 25% 45%;
   --border-primary: 220 15% 88%;
-  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-subtle: 0 0% 0% / 0.1;
 
   /* Premium Dark Surfaces */
   --surface-dark-base: 220 30% 8%;
