@@ -19,7 +19,7 @@ import {
   Users,
   Video,
   AlertTriangle,
-  Sparkles,
+  
   Zap,
   ArrowDown,
 } from "@/lib/icons";
@@ -56,7 +56,7 @@ const apps = [
     subtitle: "Zostań Kapitanem własnego życia",
     description:
       "Przestań być pasażerem na autopilocie. Przejmij kontrolę nad swoim umysłem i zbuduj mentalną odporność, która pozwoli Ci świadomie nawigować przez życie.",
-    category: "Mindfulness" as const,
+    category: "Odporność psychiczna" as const,
     rating: 4.9,
     downloads: "500+ kapitanów",
     status: "DOSTĘPNA" as const,
