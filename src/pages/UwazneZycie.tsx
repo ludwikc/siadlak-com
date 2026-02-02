@@ -30,7 +30,7 @@ const UwazneZycie = () => {
     <Layout>
       <SEO
         title="Uważne Życie: Zostań Kapitanem Własnego Życia"
-        description="6-tygodniowy program mentalny, który zamieni cię z reaktywnego pasażera w proaktywnego kapitana. Przejmij kontrolę nad swoim umysłem."
+        description="6-tygodniowy program mentalny, który zamieni Cię z reaktywnego pasażera w proaktywnego kapitana. Przejmij kontrolę nad swoim umysłem."
       />
 
       {/* HERO SECTION - Deep Ocean Premium Theme */}
@@ -99,7 +99,7 @@ const UwazneZycie = () => {
                     <span className="font-semibold text-sky-300">
                       kontrolę, spokój i jasność umysłu
                     </span>
-                    , której inni będą ci zazdrościć.
+                    , której inni będą Ci zazdrościć.
                   </p>
                 </div>
               </div>
@@ -214,18 +214,18 @@ const UwazneZycie = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-                Czy kiedykolwiek miałeś wrażenie, że twoje życie toczy się{" "}
+                Czy kiedykolwiek miałeś wrażenie, że Twoje życie toczy się{" "}
                 <span className="text-sky-600 dark:text-sky-400">
-                  obok ciebie?
+                  obok Ciebie?
                 </span>
               </h2>
             </div>
 
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Że reagujesz, zamiast wybierać. Że twoje dni to lista zadań
+                Że reagujesz, zamiast wybierać. Że Twoje dni to lista zadań
                 odhaczanych przez zmęczony, wiecznie przebodźcowany umysł. Że
-                twoje myśli to niekończąca się, krytykująca narracja, której nie
+                Twoje myśli to niekończąca się, krytykująca narracja, której nie
                 potrafisz wyłączyć.
               </p>
 
@@ -237,12 +237,12 @@ const UwazneZycie = () => {
 
               <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 my-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-                  A co, jeśli problemem NIE JEST twój "rozbiegany umysł"?
+                  A co, jeśli problemem NIE JEST Twój "rozbiegany umysł"?
                 </h3>
                 <p className="text-xl text-foreground">
                   Co, jeśli problemem jest to, że{" "}
                   <strong className="text-sky-600 dark:text-sky-400">
-                    nikt nigdy nie nauczył cię, jak go NAPRAWDĘ używać?
+                    nikt nigdy nie nauczył Cię, jak go NAPRAWDĘ używać?
                   </strong>{" "}
                   Jak przejąć kontrolę nad tym potężnym narzędziem, zamiast być
                   jego biernym pasażerem (albo więźniem)?
@@ -250,7 +250,7 @@ const UwazneZycie = () => {
               </Card>
 
               <p className="text-xl font-semibold text-foreground">
-                Przedstawiam ci system, który nie ma nic wspólnego z siadaniem po
+                Przedstawiam Ci system, który nie ma nic wspólnego z siadaniem po
                 turecku i powtarzaniem "om". To{" "}
                 <strong className="text-sky-600 dark:text-sky-400">
                   mentalny system operacyjny dla ludzi, którzy chcą WYGRYWAĆ w
@@ -313,7 +313,7 @@ const UwazneZycie = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
-                  text: '"Zawsze się spieszę, ale nigdzie nie dochodzę." Czujesz chroniczny pośpiech, ale twoje najważniejsze cele stoją w miejscu.',
+                  text: '"Zawsze się spieszę, ale nigdzie nie dochodzę." Czujesz chroniczny pośpiech, ale Twoje najważniejsze cele stoją w miejscu.',
                   icon: ShipWheel,
                 },
                 {
@@ -333,7 +333,7 @@ const UwazneZycie = () => {
                   icon: Battery,
                 },
                 {
-                  text: '"Wiem, co jest dla mnie ważne, ale…" Zawsze jest jakieś "ale". Brakuje ci wewnętrznej dyscypliny, by działać w zgodzie ze swoimi wartościami.',
+                  text: '"Wiem, co jest dla mnie ważne, ale…" Zawsze jest jakieś "ale". Brakuje Ci wewnętrznej dyscypliny, by działać w zgodzie ze swoimi wartościami.',
                   icon: Target,
                 },
               ].map((item, index) => (
@@ -377,7 +377,7 @@ const UwazneZycie = () => {
                     Jeśli kiwnąłeś głową chociaż raz, to wiedz jedno:
                   </p>
                   <p className="text-2xl md:text-3xl font-bold text-sky-100 mb-2">
-                    To nie twoja wina.
+                    To nie Twoja wina.
                   </p>
                   <p className="text-xl md:text-2xl text-white/90">
                     Po prostu działałeś na wadliwym oprogramowaniu.
@@ -419,7 +419,7 @@ const UwazneZycie = () => {
                   gradient: "from-blue-500 to-blue-600",
                   title: "ARCHITEKTURA UWAGI – ODZYSKAJ STER",
                   description:
-                    "Przestań być ofiarą okoliczności. Uważna uwaga to twój supermoc – nauczysz się jej używać jako podstawowego narzędzia nawigacji.",
+                    "Przestań być ofiarą okoliczności. Uważna uwaga to Twój supermoc – nauczysz się jej używać jako podstawowego narzędzia nawigacji.",
                 },
                 {
                   number: 2,
@@ -435,7 +435,7 @@ const UwazneZycie = () => {
                   gradient: "from-cyan-500 to-teal-600",
                   title: "DYSTANS STRATEGICZNY – UWOLNIJ SIĘ OD TYRANII MYŚLI",
                   description:
-                    "Twoje myśli to nie rozkazy, tylko chmury na niebie. Przestaniesz wierzyć w każdą dramatyczną historię, którą opowie ci głowa.",
+                    "Twoje myśli to nie rozkazy, tylko chmury na niebie. Przestaniesz wierzyć w każdą dramatyczną historię, którą opowie Ci głowa.",
                 },
                 {
                   number: 4,
@@ -451,7 +451,7 @@ const UwazneZycie = () => {
                   gradient: "from-green-500 to-emerald-600",
                   title: "KOMPAS WARTOŚCI – PŁYŃ TAM, GDZIE CHCESZ DOTRZEĆ",
                   description:
-                    'Odkryjesz, co naprawdę nadaje sens twojej podróży. Przestaniesz żyć w ciągłej "pogoni za" i zaczniesz żyć w "podróży do".',
+                    'Odkryjesz, co naprawdę nadaje sens Twojej podróży. Przestaniesz żyć w ciągłej "pogoni za" i zaczniesz żyć w "podróży do".',
                 },
                 {
                   number: 6,
@@ -571,7 +571,7 @@ const UwazneZycie = () => {
 
               <div className="text-center mb-8 relative z-10">
                 <p className="text-slate-300 text-lg mb-4">
-                  Cenię swój czas i twój. Ten program to esencja lat badań, testów i praktyki.
+                  Cenię swój czas i Twój. Ten program to esencja lat badań, testów i praktyki.
                 </p>
                 <p className="text-2xl md:text-3xl text-white mb-2">
                   Inwestycja w program "Uważne Życie":
@@ -681,7 +681,7 @@ const UwazneZycie = () => {
                     }}
                   >
                     <p className="text-xl font-bold text-emerald-300">
-                      Jeśli w ciągu 30 dni od rozpoczęcia nie poczujesz, że odzyskałeś minimum 10% więcej kontroli nad swoim wewnętrznym dialogiem i reakcjami – napisz do mojego zespołu, a oddamy ci każdą złotówkę. Bez pytań.
+                      Jeśli w ciągu 30 dni od rozpoczęcia nie poczujesz, że odzyskałeś minimum 10% więcej kontroli nad swoim wewnętrznym dialogiem i reakcjami – napisz do mojego zespołu, a oddamy Ci każdą złotówkę. Bez pytań.
                     </p>
                   </div>
                   <p className="text-lg text-white font-semibold">
