@@ -52,6 +52,25 @@ const apps = [
     link: "/program/hakowanie-produktywnosci",
   },
   {
+    title: "Uważne Życie",
+    subtitle: "Zostań Kapitanem własnego życia",
+    description:
+      "Przestań być pasażerem na autopilocie. Przejmij kontrolę nad swoim umysłem i zbuduj mentalną odporność, która pozwoli Ci świadomie nawigować przez życie.",
+    category: "Mindfulness" as const,
+    rating: 4.9,
+    downloads: "500+ kapitanów",
+    status: "DOSTĘPNA" as const,
+    duration: "6 tygodni",
+    target: "Dla reaktywnych pasażerów",
+    features: [
+      "6 modułów głębokiej transformacji mentalnej",
+      "Praktyczne techniki zarządzania uwagą",
+      "Protokoły deautomatyzacji reakcji",
+      "Dostęp do zamkniętej grupy Mastermind",
+    ],
+    link: "/program/uwazne-zycie",
+  },
+  {
     title: "Silna Głowa",
     subtitle: "Odporność psychiczna w wymagającym świecie",
     description:
@@ -233,8 +252,8 @@ export default function Program() {
             </div>
 
             {/* Apps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {apps.slice(0, 2).map((app) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {apps.slice(0, 3).map((app) => (
                 <div key={app.title} className="group">
                   <AppCard {...app} />
                 </div>
@@ -248,51 +267,6 @@ export default function Program() {
       <section className="py-8 bg-neural-blue/5">
         <div className="container mx-auto px-4">
           <AppStoreStats />
-        </div>
-      </section>
-
-      {/* Featured New App - Męski Kompas */}
-      <section className="py-12 bg-gradient-to-br from-neural-blue/10 via-twilight-indigo/5 to-zenith-gold/10 relative overflow-hidden">
-        {/* Background Effect Orbs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zenith-gold/20 rounded-full blur-3xl"></div>
-
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto">
-            {/* Animated Badge */}
-            <div className="text-center mb-8">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-full blur opacity-40 animate-pulse"></div>
-                <Badge className="relative bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-base px-6 py-3 shadow-lg">
-                  <Sparkles className="inline h-4 w-4 mr-2" />
-                  NOWY PROGRAM - DOŁĄCZ TERAZ!
-                </Badge>
-              </div>
-            </div>
-
-            {/* Featured Card with Spotlight */}
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-neural-blue via-zenith-gold to-twilight-indigo rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-              <div className="relative flex justify-center">
-                <div className="w-full">
-                  <div className="relative">
-                    {/* NEW Badge on Card */}
-                    <div className="absolute -top-3 -right-3 z-10">
-                      <div className="relative">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-zenith-gold to-orange-500 rounded-full blur opacity-60 animate-pulse"></div>
-                        <div className="relative bg-gradient-to-r from-zenith-gold to-orange-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-xl">
-                          NEW
-                        </div>
-                      </div>
-                    </div>
-                    <div className="transform hover:scale-105 transition-transform duration-300">
-                      <AppCard {...apps[2]} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
