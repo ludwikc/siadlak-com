@@ -70,7 +70,7 @@ const config: Config = {
 
         // Border Colors
         "border-primary": "hsl(var(--border-primary))",
-        "border-subtle": "hsl(var(--border-subtle))",
+        "border-subtle": "hsla(var(--border-subtle))",
 
         // Tailwind Custom Colors (DEPRECATED - Tech/SaaS aesthetic)
         "deep-space": "#0A0A0A", // DEPRECATED
