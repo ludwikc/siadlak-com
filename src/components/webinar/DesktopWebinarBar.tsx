@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
 
-// Target date: 02.02.2026 at 20:02
-const TARGET_DATE = new Date("2026-02-02T20:02:00");
+// Target date: 02.02.2026 at 20:05 - after this time the bar will not appear
+const TARGET_DATE = new Date("2026-02-02T20:05:00");
 
 interface TimeLeft {
   days: number;
