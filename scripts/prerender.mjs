@@ -49,7 +49,7 @@ const routes = [
   '/program/silna-glowa',
   '/program/meski-kompas',
   '/train-the-trainer',
-  '/oto',
+  // '/oto', // Disabled - has dynamic dialog that conflicts with prerendering
   '/podcast',
   '/new-podcast',
   '/podcast/life-hacking',

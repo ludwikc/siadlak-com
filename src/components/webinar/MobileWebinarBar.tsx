@@ -17,20 +17,21 @@ const MobileWebinarBar = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const location = useLocation();
 
-  // Hide on the webinar page itself
+  // Hide on the webinar page itself and OTO page
   const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
+  const isOTOPage = location.pathname === "/oto";
 
   // Reset visibility on every route change (unless CTA was clicked permanently)
   useEffect(() => {
     const ctaClicked = localStorage.getItem("webinarBarCTAClicked");
-    
-    if (ctaClicked || isWebinarPage) {
+
+    if (ctaClicked || isWebinarPage || isOTOPage) {
       setIsVisible(false);
     } else {
       // Show bar on every route change
       setIsVisible(true);
     }
-  }, [location.pathname, isWebinarPage]);
+  }, [location.pathname, isWebinarPage, isOTOPage]);
 
   useEffect(() => {
     const calculateTimeLeft = (): TimeLeft | null => {
@@ -72,8 +73,8 @@ const MobileWebinarBar = () => {
     setIsVisible(false);
   };
 
-  // Don't show on desktop, if dismissed, if event passed, or on webinar page
-  if (!isVisible || !timeLeft || isWebinarPage) {
+  // Don't show on desktop, if dismissed, if event passed, on webinar page, or on OTO page
+  if (!isVisible || !timeLeft || isWebinarPage || isOTOPage) {
     return null;
   }
 

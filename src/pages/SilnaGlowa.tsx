@@ -53,19 +53,26 @@ const SilnaGlowa = () => {
               </div>
             </div>
 
+            {/* Opening Question */}
+            <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
+              Czy zdarza ci się rano otworzyć oczy i pomyśleć:{" "}
+              <span className="text-locked-white font-bold">
+                "Powinienem być dalej niż jestem"?
+              </span>
+            </p>
+
             {/* Main Headline - Problem/Benefit */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
-              Zamień swój umysł w{" "}
+              Zamień swój umysł ze zwykłej tratwy w{" "}
               <span className="text-locked-gradient">
                 niezatapialny pancernik
               </span>
-              , któremu niestraszne życiowe sztormy
             </h1>
 
             {/* Subheadline - Specific Promise */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium mb-8 sm:mb-10 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
-              Naucz się radzić sobie z trudnościami i realizuj swoje cele –
-              pomimo przeciwności losu
+              Taki, który nie boi się sztormu, bo wie, że sztorm to tylko wiatr i woda.
+              Naucz się żeglować tak, by każde uderzenie fali zbliżało cię do celu, a nie odpychało.
             </p>
 
             {/* Social Proof - Above CTA */}
@@ -73,7 +80,7 @@ const SilnaGlowa = () => {
               <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
                 <Users className="h-4 w-4 sm:h-5 sm:w-5 text-twilight-indigo" />
                 <span className="text-sm sm:text-base font-semibold text-locked-white">
-                  520+ absolwentów
+                  118+ osób przejęło stery
                 </span>
               </div>
               <div className="flex items-center gap-1">
@@ -147,17 +154,15 @@ const SilnaGlowa = () => {
           <div className="max-w-5xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-red-100 px-4 py-2 rounded-full mb-6">
-                <AlertTriangle className="h-5 w-5 text-red-600" />
-                <span className="text-sm font-bold text-red-600 uppercase">
-                  Twarda prawda
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
-                Od początku bądźmy ze sobą szczerzy:
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-text-primary">
+                Dobra, od początku bądźmy szczerzy.
               </h2>
-              <p className="text-xl sm:text-2xl font-semibold text-color-error">
-                żyjemy w piekielnie trudnym świecie
+              <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto">
+                Żyjemy w świecie, który potrafi być{" "}
+                <span className="font-bold text-color-error">
+                  piekielnie wymagający dla naszej głowy
+                </span>
+                .
               </p>
             </div>
 
@@ -165,32 +170,32 @@ const SilnaGlowa = () => {
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-12">
               {[
                 {
-                  text: "otaczają nas media społecznościowe, których właściciele wydają grube pieniądze, by nas od tych platform uzależnić",
+                  text: "Media społecznościowe są projektowane przez najlepszych inżynierów na świecie, byś spędzał w nich czas, a nie poza nimi.",
                   icon: XCircle,
                   intensity: 10,
                 },
                 {
-                  text: "obserwujemy sukcesy innych w mediach społecznościowych, gdzie w rzeczywistości to jest tylko ułamek prawdy",
+                  text: "Sukcesy innych oglądasz jak wyciągnięte z kontekstu zwiastuny filmowe – efekt końcowy, bez tysięcy godzin montażu.",
                   icon: Users,
                   intensity: 8,
                 },
                 {
-                  text: "każdego dnia przyswajamy więcej danych, niż kilka wieków temu nasi przodkowie przyswajali przez całe życie",
+                  text: "Lawina informacji – każdego dnia przetwarzasz więcej danych niż twój prapradziadek przez całe życie.",
                   icon: AlertTriangle,
                   intensity: 12,
                 },
                 {
-                  text: "korporacje wydają miliardy na specjalistów i reklamy, żeby tylko zdobyć naszą uwagę",
+                  text: "Wojna o uwagę – korporacje wydają miliardy, byś kliknął, oglądnął, kupił. Twoja uwaga jest najcenniejszą walutą.",
                   icon: Target,
                   intensity: 11,
                 },
                 {
-                  text: 'presja wyścigu szczurów, osiągnięć i "hustlowania" jest nie do zniesienia',
+                  text: 'Presja "hustle" i wyścigu, który nie ma mety, tylko kolejne okrążenia zmęczenia.',
                   icon: Clock,
                   intensity: 15,
                 },
                 {
-                  text: "dodatkowo nosimy w sobie traumy międzypokoleniowe i własne",
+                  text: "Bagaż, który nosisz – rodzinne schematy, własne potknięcia, lęki, które czasem czują się jak twoja druga skóra.",
                   icon: Heart,
                   intensity: 18,
                 },
@@ -223,30 +228,19 @@ const SilnaGlowa = () => {
 
             <div className="glass-card p-8 rounded-lg">
               <h3 className="text-2xl font-bold mb-6 text-text-primary">
-                Dodaj do tego uwarunkowania rodzinne i presję otoczenia
+                A do tego dochodzi otoczenie, które często – zupełnie nieświadomie – chce cię utrzymać w znanej sobie przystani.
               </h3>
-              <p className="text-text-secondary mb-6">
-                Bardzo często nasi rodzice, krewni i znajomi przenoszą na nas
-                swoje braki i kompleksy. I to nawet nie z własnej winy! Oni po
-                prostu nie wiedzą, że można inaczej. Nawet czasem nie chcą
-                wiedzieć.
-              </p>
 
-              <div className="bg-color-error/10 p-6 rounded-lg">
+              <div className="bg-color-error/10 p-6 rounded-lg mb-6">
                 <h4 className="font-bold mb-4 text-text-primary">
-                  Zrób sobie test
+                  Zastanów się przez chwilę. Czy zdarzyło ci się usłyszeć od bliskich coś w rodzaju:
                 </h4>
-                <p className="mb-4 text-text-secondary">
-                  Czy zdarzyło Ci się od nich słyszeć coś w rodzaju:
-                </p>
                 <ul className="space-y-2 mb-6">
                   {[
-                    '"I tak Ci się nie uda, jak zwykle"',
-                    '"Po co to robisz? Tylko się napracujesz i nic z tego nie będzie"',
-                    '"Nie nadajesz się do tego"',
-                    '"Weź się do roboty, bo co z Ciebie będzie?"',
-                    '"Wymyślasz"',
-                    '"Daj sobie spokój, wracaj do domu"',
+                    '"Po co ci to? I tak się nie uda, jak zawsze."',
+                    '"Weź się za normalną robotę, a nie jakieś fanaberie."',
+                    '"Nie nadajesz się do tego."',
+                    '"Zmieniłeś się..." (wypowiedziane z wyrzutem).',
                   ].map((quote, index) => (
                     <li key={index} className="text-color-error font-medium">
                       {quote}
@@ -255,44 +249,22 @@ const SilnaGlowa = () => {
                 </ul>
 
                 <p className="text-text-secondary mb-4">
-                  Doradzają nam według własnego uznania, według swojej
-                  najlepszej wiedzy, dodając na koniec: "Chcę dla Ciebie jak
-                  najlepiej".
+                  Mówią "chcę dla ciebie dobrze", ale często chcą, żebyś był… <span className="font-bold">przewidywalny</span>.
+                  Bo twoja zmiana to zagrożenie dla ich komfortu.
                 </p>
 
-                <p className="font-bold text-text-primary">
-                  Ale prawda jest taka, że najczęściej chcą jak najlepiej dla
-                  siebie.
+                <p className="text-text-secondary mb-4">
+                  Nie dlatego, że są źli. Dlatego, że twój rozwój stawia im lustro, w które nie chcą patrzeć.
                 </p>
               </div>
 
               <div className="mt-8">
                 <h4 className="text-xl font-bold mb-4 text-text-primary">
-                  Wiesz, kiedy ludzie najczęściej mówią: "Zmieniłeś się"?
-                </h4>
-                <p className="text-lg font-medium text-twilight-indigo mb-4">
-                  Alex Hormozi powiedział: "Ludzie nie chcą widzieć najlepszej
-                  wersji Ciebie, tylko wersję, która najlepiej im służy".
-                </p>
-                <p className="text-text-secondary">
-                  Mało tego! Potrafią się obrazić, bo nie robisz tego, czego od
-                  Ciebie oczekują. Wzbudzić poczucie winy, nagiąć do swojej
-                  woli.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <h4 className="text-xl font-bold mb-4 text-text-primary">
-                  Potem idziesz do pracy i tu znowu jest loteria
+                  Potem idziesz do pracy. Tu też loteria:
                 </h4>
                 <p className="text-text-secondary mb-4">
-                  Albo trafisz w dobre miejsce, które szanuje człowieka, dba o
-                  rozwój, a błąd to okazja do poprawy, a nie przestępstwo.
-                </p>
-                <p className="text-text-secondary">
-                  Albo trafisz do mordoru, gdzie mobbing jest na porządku
-                  dziennym, a jak Ci się nie podoba, to szef ma 10 osób na Twoje
-                  miejsce.
+                  Albo trafisz na załogę, która wie, że burza to nie powód do buntu, tylko do wytężonej pracy;
+                  albo na statek, gdzie kapitan krzyczy, a za błąd wrzuca za burtę.
                 </p>
               </div>
             </div>
@@ -318,11 +290,14 @@ const SilnaGlowa = () => {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
-                Wyobraź sobie, że jesteś łodzią
+                Wyobraź sobie, że jesteś żaglówką
               </h2>
               <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
-                Osoby z Twojego otoczenia i środowisko wytyczyły Ci kurs na
-                niespokojne wody. <strong>To nie jest Twoja wina.</strong>
+                Otoczenie, rodzinne schematy, stare lęki – to wszystko wyznaczyło ci początkowy kurs{" "}
+                <strong>prosto na wzburzone wody</strong>. To nie twoja wina.
+              </p>
+              <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto mt-4">
+                Nie twoją winą jest, że żagle się rwą, a ster drży. Nie twoją winą jest, że ocean bywa nieprzewidywalny.
               </p>
             </div>
 
@@ -397,23 +372,18 @@ const SilnaGlowa = () => {
               <div className="relative bg-white rounded-2xl p-8 sm:p-10 border-2 border-gray-200">
                 <div className="space-y-4 text-center">
                   <p className="text-lg sm:text-xl text-text-primary leading-relaxed">
-                    Owszem, są łodzie które pływają po spokojnych morzach.
-                    <br />
-                    Ba! Są takie, które nie pływają - ciągną je{" "}
-                    <span className="line-through text-gray-400">
-                      holowniki
-                    </span>{" "}
-                    <span className="font-semibold">(np. bogaci rodzice)</span>.
+                    Są jachty, które całe życie stoją w suchym doku.
+                    Są takie, które ciągną holowniki.
                   </p>
                   <div className="pt-4 border-t-2 border-gray-200">
                     <p className="text-xl sm:text-2xl font-bold text-twilight-indigo mb-2">
-                      Ty nie jesteś jedną z nich i nie będziesz
+                      Ty nie jesteś jedną z nich.
                     </p>
                     <p className="text-base sm:text-lg text-text-secondary">
-                      W ogóle nie powinieneś się na nich oglądać.
+                      I dobrze.
                       <br />
                       <strong className="text-text-primary">
-                        Oni nie przepłyną za Ciebie Twojego kursu.
+                        Bo one nie poczują nigdy dumy z samodzielnego dopłynięcia do celu.
                       </strong>
                     </p>
                   </div>
@@ -429,26 +399,25 @@ const SilnaGlowa = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              A jak znosisz przeciwności losu?
+              A jak TY znosisz te przeciwności?
             </h2>
 
             <p className="text-lg text-center mb-8 text-text-secondary">
-              Zakładam, że to nie jest "bułka z masłem" i że:
+              Zakładam, że nie jesteś robotem. Być może:
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-12">
               {[
-                "przeżywasz",
-                "rozpamiętujesz",
-                "wyrzucasz sobie",
-                "obwiniasz siebie",
-                "marzysz o życiu, w którym dana sytuacja nie miała miejsca",
-                "patrzysz na innych, którzy nie mają takich problemów",
-                'masz dość słuchania: "Będzie dobrze", "Poradzisz sobie" itd.',
+                "Przeżywasz je po raz setny, jak nakręconą płytę.",
+                "Rozpamiętujesz, co mogłeś zrobić inaczej. Tak jakbyś jechał autem po torze i cały wieczór myślał o tym jednym kiepskim zakręcie, zapominając o siedmiu świetnych przejazdach.",
+                "Obwiniasz siebie (lub innych).",
+                "Marzysz o życiu równym jak tafla jeziora.",
+                "Patrzysz na tych, którzy – z zewnątrz – płyną jak po maśle.",
+                'Masz dość pustych pocieszań w stylu "będzie dobrze", "dasz radę".',
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 bg-color-error/10 rounded-lg"
+                  className="text-left p-4 bg-color-error/10 rounded-lg"
                 >
                   <p className="text-text-secondary">{item}</p>
                 </div>
@@ -458,15 +427,15 @@ const SilnaGlowa = () => {
             <Card className="glass-card p-8 mb-8">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold mb-6 text-text-primary">
-                  Najpierw wiedz, że to, co się z Tobą dzieje jest normalne
+                  Najpierw – wiedz, że to, co czujesz, jest NORMALNE.
                 </h3>
                 <p className="text-text-secondary mb-6">
-                  Wszyscy to przechodzimy, tylko jedni znoszą to lepiej, inni
-                  gorzej.
+                  Wszyscy przez to przechodzimy. Różnica polega na tym, co z tym robimy dalej.
                 </p>
                 <p className="text-lg font-medium mb-6 text-text-primary">
-                  Są ludzie, którzy porażki przyjmują na klatę, widzą to jako
-                  szansę i myślą: "Jak mogę to przekuć na swoją korzyść?".
+                  Są ludzie, na których fala uderza, a oni, otrzepując się, myślą:{" "}
+                  <span className="italic text-twilight-indigo">"To jest tylko myśl. Nie muszę się do niej przywiązywać."</span>{" "}
+                  A potem: <span className="italic text-twilight-indigo">"OK, co teraz mogę z tym ZROBIĆ?"</span>
                 </p>
               </CardContent>
             </Card>
@@ -474,25 +443,20 @@ const SilnaGlowa = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
-                  situation: "Uciekł mi pociąg?",
-                  response: "Wrócę do domu, pomogę rodzicom przy pracy.",
+                  situation: "Uciekł ci pociąg?",
+                  response: "Super, wreszcie przeczytam tę książkę na dworcu.",
                 },
                 {
-                  situation: "zwolnili mnie z pracy?",
-                  response: "Znajdę lepszą, i tak miałem się zwolnić.",
+                  situation: "Zwolnili cię z pracy?",
+                  response: "Dobry znak. I tak nosiłem się z zamiarem zmiany. Czas na plan B.",
                 },
                 {
-                  situation: "odmówili mi kredytu?",
-                  response: "Nie zadłużę się na lata, jakoś uzbieram.",
+                  situation: "Zachorowałeś?",
+                  response: "Ciało domaga się resetu. Zróbmy to.",
                 },
                 {
-                  situation: "zachorowałem?",
-                  response:
-                    "W końcu sobie poleżę i dam ciału to, na co zasługuje.",
-                },
-                {
-                  situation: "nie mam zleceń?",
-                  response: "Wykorzystam czas wolny i popracuję nad firmą.",
+                  situation: "Brakuje klientów?",
+                  response: "Idealny moment, żeby w końcu zaktualizować ofertę.",
                 },
               ].map((example, index) => (
                 <Card key={index} className="glass-card p-6">
@@ -501,11 +465,17 @@ const SilnaGlowa = () => {
                       {example.situation}
                     </p>
                     <p className="text-twilight-indigo font-medium">
-                      {example.response}
+                      "{example.response}"
                     </p>
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-lg font-bold text-text-primary">
+                To nie jest naiwny optymizm. To jest <span className="text-twilight-indigo">wybór perspektywy</span>. I można się tego nauczyć.
+              </p>
             </div>
           </div>
         </div>
@@ -516,7 +486,7 @@ const SilnaGlowa = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              Kim jestem i jakie rezultaty ode mnie otrzymasz?
+              Kim jestem i dlaczego wiem, jak pomóc ci przepłynąć?
             </h2>
 
             <Card className="glass-card p-8">
@@ -527,29 +497,52 @@ const SilnaGlowa = () => {
                       Nazywam się{" "}
                       <span className="font-bold text-twilight-indigo">
                         Ludwik C. Siadlak
-                      </span>{" "}
-                      i od ponad 18 lat żyję z aktualizowania oprogramowania w
-                      głowach moich Klientów.
+                      </span>
+                      . Od ponad 18 lat moją pracą jest{" "}
+                      <strong>aktualizowanie "oprogramowania" w głowach moich klientów</strong>{" "}
+                      – w firmach z listy Fortune 500, dla NATO, armii USA i organizacji w ponad 50 krajach.
                     </p>
 
                     <p className="text-text-secondary">
-                      Mówię im także o ich barierach, lękach, przekonaniach i
-                      schematach, które często nie są ich własne. I mówię, jak z
-                      nimi zerwać, by osiągnąć swój pełny potencjał i żyć w
-                      zgodzie ze sobą.
+                      Pokazuję im bariery, lęki i przekonania, które często… wcale nie są ich własne.
+                      To tylko nieaktualne programy, które odziedziczyli lub zainstalowali pod presją.
+                      A potem pokazuję, jak je przepisać – na takie, które służą ich celom, a nie ograniczają.
                     </p>
 
                     <p className="text-text-secondary">
-                      Latami uczyłem się różnych technik autohipnozy, medytacji,
-                      afirmacji, prowadzenia dialogu wewnętrznego i radzenia
-                      sobie z trudnościami. Wszystko najpierw sprawdziłem na
-                      sobie, a gdy zobaczyłem, że działa, sprawdziłem na
-                      podopiecznych.
+                      Latami testowałem na sobie wszystko, o czym mówię: od medytacji Diamentowej Drogi, przez autohipnozę,
+                      po budowanie odporności psychicznej. Przeszedłem przez rozwód, kryzys tożsamości, jednoosobowe rodzicielstwo
+                      – i każda z tych sytuacji dała mi narzędzia, które dziś przekazuję innym.
                     </p>
+
+                    <p className="text-text-secondary">
+                      Nie mówię teorii. Mówię z poziomu{" "}
+                      <strong className="text-text-primary">kapitana, który sam przeszedł przez niejedną burzę.</strong>
+                    </p>
+
+                    <div className="bg-neural-blue/10 p-6 rounded-lg border-l-4 border-twilight-indigo">
+                      <p className="text-text-secondary mb-4">
+                        Jedna z rzeczy, której nauczyłem się w praktyce:{" "}
+                        <span className="font-bold text-twilight-indigo italic">
+                          "forma jest pustką, a pustka jest formą"
+                        </span>
+                        .
+                      </p>
+                      <p className="text-text-secondary mb-4">
+                        Brzmi filozoficznie? Owszem. Ale w praktyce oznacza to, że nawet to, co wygląda na katastrofę,
+                        jest tylko myślą – i nie musisz się do niej przywiązywać.
+                      </p>
+                      <p className="text-text-secondary">
+                        Tak jak mój klient Maciek, który podczas pierwszej medytacji zobaczył wybuch bomby atomowej
+                        w swoim idealnym świecie… i usłyszał: <em>"To jest tylko myśl."</em> I nagle okazało się,
+                        że ta myśl nie ma nad nim żadnej władzy.
+                      </p>
+                    </div>
 
                     <p className="text-lg font-medium text-twilight-indigo">
-                      Dzisiaj pokażę Ci, jak żeglować po oceanie życia, by
-                      przetrwać każdy sztorm.
+                      Dzisiaj chcę być twoim <strong>nawigatorem</strong>. Pokażę ci, jak czytać mapy, ustawiać żagle
+                      i sterować tak, by każdy sztorm – mały czy duży –{" "}
+                      <strong>uczynił cię lepszym żeglarzem, a nie ofiarą.</strong>
                     </p>
                   </div>
                 </div>
@@ -614,10 +607,10 @@ const SilnaGlowa = () => {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
-                Z moją pomocą stworzysz swój własny plan wytrwałości
+                Z moją pomocą zbudujesz swój własny, niezatapialny system
               </h2>
               <p className="text-lg sm:text-xl text-text-secondary">
-                Krok po kroku przejdziesz transformację od chaosu do spokoju
+                Oto, co dostajesz – i dlaczego każdy element jest zaprojektowany tak, żebyś widział efekty szybko:
               </p>
             </div>
 
@@ -626,57 +619,48 @@ const SilnaGlowa = () => {
               {[
                 {
                   step: 1,
-                  title: "Nawigacja",
+                  title: "Przejmiesz stery",
                   benefit:
-                    "Nauczysz się nawigowania po oceanie życia i odporności na zmienną pogodę.",
+                    "Nauczysz się nawigować przez życie, używając metafor, które dają siłę i klarowność. Już po pierwszym module zobaczysz swoją sytuację zupełnie innymi oczami.",
                   icon: Compass,
                   gradient: "from-blue-500 to-blue-600",
-                  timeframe: "Tydzień 1-2",
+                  timeframe: "Moduł 1",
                 },
                 {
                   step: 2,
-                  title: "Sterowanie",
+                  title: "Opancerzysz kadłub",
                   benefit:
-                    "Przejmiesz stery nad swoim umysłem, by prowadzić go na spokojne wody życia.",
+                    "Opanujesz ocean własnych myśli tak, że burza będzie tylko pogodą, a nie katastrofą. Nauczysz się widzieć myśli jak chmury – przychodzą i odchodzą, a ty zostaniesz.",
                   icon: ShipWheel,
                   gradient: "from-purple-500 to-purple-600",
-                  timeframe: "Tydzień 3-4",
+                  timeframe: "Moduł 2",
                 },
                 {
                   step: 3,
-                  title: "Spokój",
+                  title: "Napełnisz żagle wiatrem",
                   benefit:
-                    "Opanujesz ocean myśli i uciszysz go, tak że burza to będzie wyjątek.",
+                    "Odkryjesz głęboką motywację, płynącą z twoich prawdziwych wartości, a nie z zewnętrznej presji. Bo jak się okazuje, prawdziwa siła nie bierze się z kawy i \"must have\".",
                   icon: Waves,
                   gradient: "from-cyan-500 to-teal-600",
-                  timeframe: "Tydzień 5-6",
+                  timeframe: "Moduł 3-4",
                 },
                 {
                   step: 4,
-                  title: "Motywacja",
+                  title: "Nauczysz się sztormowych manewrów",
                   benefit:
-                    "Wiatr motywacji wypełni Twoje żagle, dzięki czemu będziesz przeć cała naprzód, w zgodzie ze swoimi wartościami.",
+                    "Będziesz miał strategie na trudności, które nie polegają na walce z falą, ale na mądrym wykorzystaniu jej energii. Jak powiedział Bruce Lee: Be water, my friend.",
                   icon: Zap,
                   gradient: "from-orange-500 to-orange-600",
-                  timeframe: "Tydzień 7-8",
+                  timeframe: "Moduł 5",
                 },
                 {
                   step: 5,
-                  title: "Odporność",
+                  title: "Stworzysz swój kompas",
                   benefit:
-                    "Posiądziesz strategie radzenia sobie w trudnych sytuacjach, żeby wyjść z nich jeszcze silniejszym.",
+                    "Zbudujesz personalny plan odporności, który zawsze wskaże ci kierunek, gdy zgubisz widok lądu. Nie plan na półkę. Plan, z którym wyjdziesz następnego dnia.",
                   icon: Shield,
                   gradient: "from-green-500 to-green-600",
-                  timeframe: "Tydzień 9-10",
-                },
-                {
-                  step: 6,
-                  title: "Kompas",
-                  benefit:
-                    "Stworzysz własny kompas, który zawsze będzie wskazywał właściwy kierunek.",
-                  icon: Target,
-                  gradient: "from-neural-blue to-twilight-indigo",
-                  timeframe: "Tydzień 11-12",
+                  timeframe: "Moduł 6",
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
@@ -750,10 +734,10 @@ const SilnaGlowa = () => {
                   <Trophy className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
-                  W 12 tygodni od teraz
+                  Po ukończeniu kursu
                 </h3>
                 <p className="text-lg sm:text-xl text-text-secondary mb-6">
-                  Będziesz miał silną głowę, gotową na każde wyzwanie życiowe
+                  Będziesz miał Silną Głowę, gotową na każde wyzwanie życiowe
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   {["Spokój", "Pewność", "Odporność", "Kierunek"].map(
@@ -834,63 +818,49 @@ const SilnaGlowa = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
-              Pomyśl, że już niedługo Twoje problemy przestaną Cię przytłaczać
+              Pomyśl, jak zmieni się twoje życie, gdy przestaniesz walczyć z oceanem, a zaczniesz po nim żeglować
             </h2>
 
             <Card className="glass-card p-8 mb-8">
               <CardContent className="p-0">
                 <h3 className="text-2xl font-bold mb-6 text-text-primary">
-                  Jak będzie wtedy wyglądało Twoje życie?
+                  Puść wodze fantazji na chwilę. Jak inni ludzie zauważą tę zmianę?
                 </h3>
-                <p className="text-lg mb-6 text-text-secondary">
-                  Teraz możesz puścić wodze fantazji.
-                </p>
-                <p className="text-lg mb-8 text-text-secondary">
-                  Przypomnij sobie swoje najśmielsze sny. O czym marzysz?
-                </p>
 
-                <div className="space-y-4">
+                <div className="space-y-4 mb-8">
                   {[
-                    "→ Pozbędziesz się długów?",
-                    "→ Rzucisz mobbingującą pracę i znajdziesz lepszą?",
-                    "→ Przestaniesz brać do siebie ciężkie słowa swoich bliskich?",
-                    "→ Osiągniesz wymarzony sukces w pracy lub w biznesie?",
-                    "→ Odpoczniesz finansowo?",
-                    "→ Zapewnisz byt sobie i swojej rodzinie?",
+                    "Twój partner zobaczy, że nie reagujesz już złością – i zacznie cię szanować na nowym poziomie.",
+                    "Twoje dzieci zobaczą ojca/matkę, która nie rozkleja się pod presją – i poczują się bezpiecznie.",
+                    "Twój szef zauważy, że przejmujesz inicjatywę zamiast narzekać.",
+                    "Uwolnisz się od długów lub toksycznej pracy, bo wreszcie będziesz miał głowę do podejmowania decyzji.",
+                    "Obudzisz się z poczuciem spokoju, a nie niepokoju. A to jest bezcenne.",
                   ].map((dream, index) => (
-                    <p
+                    <div
                       key={index}
-                      className="text-lg font-medium text-twilight-indigo"
+                      className="flex items-start gap-3"
                     >
-                      {dream}
-                    </p>
+                      <div className="flex-shrink-0 w-1.5 h-1.5 bg-twilight-indigo rounded-full mt-2"></div>
+                      <p className="text-base text-text-secondary">
+                        {dream}
+                      </p>
+                    </div>
                   ))}
                 </div>
 
-                <p className="text-lg mt-8 font-bold text-text-primary">
-                  Wszystko to stanie się możliwe, kiedy pokonasz swoje bariery
-                  mentalne.
+                <p className="text-lg font-bold text-text-primary mb-6">
+                  To wszystko staje się możliwe, gdy przeprogramujesz swój "software" i zbudujesz Silną Głowę.
                 </p>
 
                 <div className="mt-8 bg-neural-blue/10 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
-                    Wracając do metafory łodzi – wyobraź sobie, że płyniesz, i
-                    nie boisz się niczego.
+                    Wracając do naszej żaglówki: wyobraź sobie, że płyniesz. Czujesz wiatr, czujesz fale.{" "}
+                    <strong className="text-text-primary">I nie boisz się.</strong>
                   </p>
                   <p className="text-text-secondary mb-4">
-                    I wiesz, że nawet jak przyjdzie sztorm, zacznie padać deszcz
-                    albo wielka fala znienacka uderzy w burtę, to przyjmiesz to
-                    z godnością i będziesz płynąć dalej.
+                    Bo wiesz, że nawet gdy nadejdzie sztorm, ty wiesz, jak skorygować kurs. Masz plan.
                   </p>
-                  <p className="font-bold text-text-primary">
-                    Bo wiesz, co robić.
-                  </p>
-                  <p className="text-text-secondary mt-4">
-                    Wiesz, jak sterować, jak ustawić żagle, jaki obrać kurs i
-                    jakie rozkazy wydać załodze.
-                  </p>
-                  <p className="text-lg font-bold text-twilight-indigo mt-4">
-                    Masz zbudowaną strategię odporności psychicznej.
+                  <p className="text-xl font-bold text-twilight-indigo">
+                    Jesteś Kapitanem.
                   </p>
                 </div>
               </CardContent>
@@ -928,7 +898,7 @@ const SilnaGlowa = () => {
                   gradient: "from-blue-500 to-blue-600",
                   title: "Żeglując po morzach życia, to Ty jesteś żaglówką",
                   description:
-                    "Jeśli czujesz się zagubiony w życiowych burzach, pokażę Ci potężną metaforę żaglówki, która pomoże Ci zrozumieć siebie i swoje otoczenie.",
+                    "Czujesz się zagubiony? Otrzymasz potężną metaforę nawigacyjną, która uporządkuje chaos. Zobaczysz, jak twoje wartości są sterem, słabości – dziurami w kadłubie, a otoczenie – wiatrem i prądami. Zrozumiesz, kto i co tak naprawdę kieruje twoim życiem. Ten moduł zmienia percepcję – a zmiana percepcji to zmiana wszystkiego.",
                 },
                 {
                   number: 2,
@@ -937,7 +907,7 @@ const SilnaGlowa = () => {
                   title:
                     "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
                   description:
-                    "Czy zdarza Ci się, że negatywne myśli przejmują nad Tobą kontrolę? Już za chwilę poznasz techniki, które pomogą Ci wyrwać się z błędnego koła pesymizmu.",
+                    "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z \"wyszukiwania zagrożeń\" na \"wyszukiwanie możliwości\". Opanujesz \"kotwicę spokoju\" – bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
                 },
                 {
                   number: 3,
@@ -945,7 +915,7 @@ const SilnaGlowa = () => {
                   gradient: "from-green-500 to-green-600",
                   title: "Ujarzmianie myśli: Moc percepcji",
                   description:
-                    "Czy zauważyłeś, że Twoje myśli czasem sabotują Twój sukces? W tym module odkryjesz, jak przekształcić zagrożenia w wyzwania.",
+                    "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania – tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I – co ważniejsze – zmieniać ich kształt. Przekujesz wewnętrzne \"zagrożenie\" w \"wyzwanie\", a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
                 },
                 {
                   number: 4,
@@ -954,25 +924,25 @@ const SilnaGlowa = () => {
                   title:
                     "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
                   description:
-                    "Czujesz, że brakuje Ci motywacji do działania? Wspólnie odkryjemy Twoje prawdziwe wartości i nauczysz się żyć w zgodzie z nimi na co dzień.",
+                    "Prawdziwa siła nie bierze się z kawy i \"must have\". Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz – i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
                 },
                 {
                   number: 5,
                   icon: Waves,
                   gradient: "from-teal-500 to-cyan-600",
                   title:
-                    "Nawigacja przez burze: Skuteczne strategie radzenia sobie",
+                    "Nawigacja przez burze: Skuteczne strategie radzenia sobie z przeciwnościami",
                   description:
-                    "Czy czasem czujesz się bezradny w obliczu życiowych wyzwań? Poznasz naprawdę skuteczne strategie radzenia sobie ze stresem i przeciwnościami.",
+                    "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i… mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest – i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
                 },
                 {
                   number: 6,
                   icon: Shield,
                   gradient: "from-indigo-500 to-purple-600",
                   title:
-                    "Tworzenie własnego kompasu: Plan budowania odporności",
+                    "Tworzenie własnego kompasu: Plan budowania odporności psychicznej",
                   description:
-                    "Chcesz być odporny na życiowe zawirowania? Stworzysz swój personalny plan budowania odporności psychicznej.",
+                    "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument – \"Instrukcję Obsługi Sztormu\". Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
                 },
               ].map((module) => (
                 <div
@@ -1064,9 +1034,43 @@ const SilnaGlowa = () => {
       <section className="py-16 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-text-primary">
-              Ile za ten rejs ku spokojowi ducha?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
+              Inwestycja w swój najważniejszy "soft": spokój i siłę
             </h2>
+
+            <div className="max-w-3xl mx-auto mb-8 space-y-4 text-left bg-card-bg p-6 rounded-xl">
+              <p className="text-base text-text-secondary">
+                Gdybym miał zsumować:
+              </p>
+              <ul className="space-y-2 text-base text-text-secondary">
+                <li className="flex items-start gap-2">
+                  <span className="text-twilight-indigo">•</span>
+                  <span>18+ lat mówienia do ludzi i <strong>aktualizowania ich oprogramowania</strong> – od Fortune 500 po NATO,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-twilight-indigo">•</span>
+                  <span>30+ lat testowania każdej metody najpierw na sobie,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-twilight-indigo">•</span>
+                  <span>Psychologię i informatykę z Oxfordu, które pozwoliły mi łączyć głęboką wiedzę o umyśle z praktycznymi narzędziami,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-twilight-indigo">•</span>
+                  <span>Oraz pracę z setkami klientów 1:1 w ponad 50 krajach…</span>
+                </li>
+              </ul>
+              <p className="text-base text-text-secondary pt-4">
+                … wartość tej wiedzy byłaby bardzo wysoka.
+              </p>
+              <p className="text-lg font-bold text-text-primary">
+                Mój 1-dniowy mentoring kosztuje dziś 12 000 zł netto. I ludzie za to płacą, bo wiedzą,
+                że one day ze mną zmienia więcej niż rok samotnych prób.
+              </p>
+              <p className="text-base text-text-secondary">
+                Ale kurs <strong className="text-twilight-indigo">"Silna Głowa"</strong> możesz mieć za ułamek tej kwoty:
+              </p>
+            </div>
 
             <Card className="glass-card p-8 max-w-2xl mx-auto border-2 border-neural-blue/20">
               <CardContent className="p-0">
@@ -1142,6 +1146,19 @@ const SilnaGlowa = () => {
                     </div>
                   </div>
 
+                  {/* Daily Cost Breakdown */}
+                  <div className="text-center py-4">
+                    <p className="text-sm text-text-secondary mb-2">
+                      Przelicz to na dzienną stawkę:
+                    </p>
+                    <p className="text-lg font-bold text-twilight-indigo">
+                      To mniej niż 2,13 zł dziennie przez rok
+                    </p>
+                    <p className="text-sm text-text-secondary italic">
+                      Mniej niż kawa z automatu. Za spokój w głowie i stery we własnych rękach.
+                    </p>
+                  </div>
+
                   {/* CTA Button */}
                   <Button
                     variant="special"
@@ -1160,20 +1177,19 @@ const SilnaGlowa = () => {
                       </div>
                       <div>
                         <h4 className="font-bold mb-2 text-text-primary">
-                          Dopłyniesz, gdzie chcesz, albo odstawię Cię na brzeg
+                          Dopłyniesz, gdzie chcesz, albo odstawię cię na brzeg – masz moją gwarancję
                         </h4>
                         <p className="text-sm text-text-secondary mb-3">
-                          Wierzę w to, co robię. Widziałem ludzi, którym
-                          pomogłem. Wiem, że mogę pomóc także Tobie. I wiem, że
-                          się boisz. To też rozwiąże kurs Silna Głowa.
+                          Wierzę w to, co robię. Widziałem transformacje. Wiem, że to działa.
                         </p>
                         <p className="text-sm text-text-secondary">
-                          Ale jeśli dołączysz do kursu, przerobisz go i
-                          stwierdzisz, że Ci się nie podoba,{" "}
+                          Ale jeśli dołączysz, przerobisz kurs i w ciągu 30 dni stwierdzisz, że nic ci nie dał –{" "}
                           <strong className="text-text-primary">
-                            zwrócę Ci środki w ciągu 30 dni bez żadnego
-                            problemu.
+                            zwrócę ci 100% pieniędzy. Bez pytań, bez problemów, bez wyciągania z ciebie powodów.
                           </strong>
+                        </p>
+                        <p className="text-sm text-text-secondary mt-3 font-medium">
+                          Całe ryzyko jest po mojej stronie. Jedyne ryzyko po twojej – to nie spróbować i za rok znowu czuć to samo.
                         </p>
                       </div>
                     </div>
@@ -1382,12 +1398,17 @@ const SilnaGlowa = () => {
                 {
                   question: "Kiedy dostanę kurs?",
                   answer:
-                    "Dostęp otrzymasz natychmiast po zakupie. Wszystkie materiały są już gotowe i czekają na Ciebie.",
+                    "Dostęp do platformy i pierwszych modułów otrzymasz natychmiast po zakupie. Kolejne moduły będą odblokowywane co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu – nie musisz czekać na \"ukończenie całości\".",
                 },
                 {
                   question: "Jak długo będę mieć dostęp do kursu?",
                   answer:
-                    "Na zawsze. Świat się zmienia i chcąc zostać on top of the game musimy dostosowywać się do nowych wyzwań. Kiedy będę nagrywał dodatkowe materiały - zawsze będziesz otrzymywać do nich dostęp. Od razu, bez czekania.",
+                    "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) – automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz – korzystasz zawsze.",
+                },
+                {
+                  question: "Jakieś bonusy? 🎁",
+                  answer:
+                    "Tak! Wszyscy uczestnicy przedsprzedaży otrzymają:\n1. Dostęp do zamkniętej grupy Mastermind – miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy – w rozmowie z ludźmi, którzy są na tej samej drodze.\n2. Zaproszenie na live Q&A ze mną – gdzie odpowiem na twoje pytania dotyczące budowania odporności. Bez filtra, bez skryptów – jak na moich warsztatach, gdzie jeden temat potrafi zmienić całą perspektywę.\n\nTe bonusy są dostępne wyłącznie dla uczestników przedsprzedaży i nie będą oferowane później.",
                 },
               ].map((faq, index) => (
                 <Card key={index} className="glass-card p-6">
@@ -1395,7 +1416,7 @@ const SilnaGlowa = () => {
                     <h3 className="text-xl font-bold mb-3 text-text-primary">
                       {faq.question}
                     </h3>
-                    <p className="text-text-secondary">{faq.answer}</p>
+                    <div className="text-text-secondary whitespace-pre-line">{faq.answer}</div>
                   </CardContent>
                 </Card>
               ))}
