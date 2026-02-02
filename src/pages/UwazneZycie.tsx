@@ -310,27 +310,33 @@ const UwazneZycie = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
-                  text: '"Zawsze się spieszę, ale nigdzie nie dochodzę." Czujesz chroniczny pośpiech, ale Twoje najważniejsze cele stoją w\u00A0miejscu.',
+                  quote: '"Zawsze się spieszę, ale nigdzie nie dochodzę."',
+                  desc: 'Czujesz chroniczny pośpiech, ale Twoje najważniejsze cele stoją w\u00A0miejscu.',
                   icon: ShipWheel,
                 },
                 {
-                  text: '"Moja głowa to radio, które nie da się wyłączyć." Natłok myśli, zamartwianie się przyszłością, rozpamiętywanie przeszłości.',
+                  quote: '"Moja głowa to radio, które nie da się wyłączyć."',
+                  desc: 'Natłok myśli, zamartwianie się przyszłością, rozpamiętywanie przeszłości.',
                   icon: Brain,
                 },
                 {
-                  text: '"Reaguję, zamiast odpowiadać." Wysyłasz ostry mail, mówisz coś, czego żałujesz, sięgasz po niezdrową przekąskę – wszystko automatycznie.',
+                  quote: '"Reaguję, zamiast odpowiadać."',
+                  desc: 'Wysyłasz ostry mail, mówisz coś, czego żałujesz, sięgasz po niezdrową przekąskę – wszystko automatycznie.',
                   icon: Zap,
                 },
                 {
-                  text: '"Gubię się w\u00A0swoich myślach." Utożsamiasz się z\u00A0każdą krytyczną myślą ("Jestem nie dość dobry") jakby to była prawda objawiona.',
+                  quote: '"Gubię się w\u00A0swoich myślach."',
+                  desc: 'Utożsamiasz się z\u00A0każdą krytyczną myślą ("Jestem nie dość dobry") jakby to była prawda objawiona.',
                   icon: Eye,
                 },
                 {
-                  text: '"Wypalam się." Twoja energia wycieka jak z\u00A0dziurawego wiadra przez drobne stresy, rozproszenia i\u00A0wewnętrzny opór.',
+                  quote: '"Wypalam się."',
+                  desc: 'Twoja energia wycieka jak z\u00A0dziurawego wiadra przez drobne stresy, rozproszenia i\u00A0wewnętrzny opór.',
                   icon: Battery,
                 },
                 {
-                  text: '"Wiem, co jest dla mnie ważne, ale…" Zawsze jest jakieś "ale". Brakuje Ci wewnętrznej dyscypliny, by działać w\u00A0zgodzie ze swoimi wartościami.',
+                  quote: '"Wiem, co jest dla mnie ważne, ale…"',
+                  desc: 'Zawsze jest jakieś "ale". Brakuje Ci wewnętrznej dyscypliny, by działać w\u00A0zgodzie ze swoimi wartościami.',
                   icon: Target,
                 },
               ].map((item, index) => (
@@ -362,7 +368,7 @@ const UwazneZycie = () => {
                       <item.icon className="h-6 w-6 md:h-7 md:w-7 text-white" />
                     </div>
                     <p className="text-base text-slate-700 pt-2 leading-relaxed">
-                      {item.text}
+                      <strong className="text-slate-900">{item.quote}</strong> {item.desc}
                     </p>
                   </div>
                 </div>
