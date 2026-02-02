@@ -51,6 +51,7 @@ import Work from "./pages/Work";
 import Sitemap from "./pages/Sitemap";
 import SilnaGlowa from "./pages/SilnaGlowa";
 import MeskiKompas from "./pages/MeskiKompas";
+import UwazneZycie from "./pages/UwazneZycie";
 import TrainTheTrainer from "./pages/TrainTheTrainer";
 import TrainTheTrainerElite from "./pages/TrainTheTrainerElite";
 import OTO from "./pages/OTO";
@@ -134,6 +135,7 @@ function App() {
               />
               <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
               <Route path="/program/meski-kompas" element={<MeskiKompas />} />
+              <Route path="/program/uwazne-zycie" element={<UwazneZycie />} />
               <Route path="/program/7-technik" element={<SiedemTechnik />} />
               <Route path="/train-the-trainer" element={<TrainTheTrainer />} />
               <Route path="/program/ttt" element={<TrainTheTrainerElite />} />
@@ -148,7 +150,7 @@ function App() {
                 element={<LifeHackingPodcast />}
               />
               <Route
-                path="/program/uwazne-zycie"
+                path="/podcast/uwazne-zycie"
                 element={<UwazneZyciePodcast />}
               />
 
