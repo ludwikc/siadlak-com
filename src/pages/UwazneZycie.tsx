@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png";
+import "@fontsource/caveat/400.css";
 import {
   ArrowRight,
   Star,
@@ -30,7 +31,7 @@ const UwazneZycie = () => {
   const ctaUrl = "https://buy.siadlak.com/checkout/uwaznezycie";
 
   return (
-    <Layout>
+    <Layout hideFooter>
       <SEO
         title="Uważne Życie: Zostań Kapitanem Własnego Życia"
         description="6-tygodniowy program mentalny, który zamieni Cię z reaktywnego pasażera w proaktywnego kapitana. Przejmij kontrolę nad swoim umysłem."
@@ -102,7 +103,7 @@ const UwazneZycie = () => {
                     <span className="font-semibold text-sky-300">
                       kontrolę, spokój i&nbsp;jasność umysłu
                     </span>
-                    , której inni będą Ci zazdrościć.
+                    , raz na zawsze przejmując stery swojego życia.
                   </p>
                 </div>
               </div>
@@ -133,8 +134,10 @@ const UwazneZycie = () => {
                   </div>
                   <div className="hidden sm:block w-px h-5 bg-slate-600"></div>
                   <div className="flex items-center gap-2.5 text-slate-300">
-                    <div className="flex items-center justify-center w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/30">
-                      <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    <div className="flex items-center gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      ))}
                     </div>
                     <span className="font-medium text-sm">
                       Ocena 4.9/5
@@ -174,10 +177,12 @@ const UwazneZycie = () => {
 
               <div className="mb-6 animate-fade-in">
                 <a
-                  href={ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#podsumowanie"
                   className="block w-full sm:w-auto sm:inline-block group"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('podsumowanie')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
                   <Button
                     size="lg"
@@ -190,18 +195,14 @@ const UwazneZycie = () => {
                         "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
                     }}
                   >
-                    <span className="hidden sm:inline">🚢 ZOSTAJĘ KAPITANEM – DOŁĄCZAM ZA 777 ZŁ</span>
-                    <span className="sm:hidden">🚢 DOŁĄCZAM ZA 777 ZŁ</span>
+                    <span className="hidden sm:inline">🚢 ZOSTAJĘ KAPITANEM</span>
+                    <span className="sm:hidden">🚢 DOŁĄCZAM DO PROGRAMU</span>
                   </Button>
                 </a>
               </div>
 
               <div className="space-y-2 animate-fade-in">
-                <p className="text-slate-300 text-base md:text-lg">
-                  <span className="text-slate-400 line-through">1,997 zł</span>
-                  {" → "}
-                  <span className="text-sky-300 font-bold text-xl md:text-2xl">777 zł</span>
-                </p>
+            
                 <p className="text-slate-400 text-sm md:text-base">
                   Dostęp na zawsze • 30-dni gwarancji zwrotu • Bez ukrytych kosztów
                 </p>
@@ -286,6 +287,55 @@ const UwazneZycie = () => {
                   <span className="sm:hidden">🚢 DOŁĄCZAM TERAZ</span>
                 </Button>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIAL VIDEO SECTION */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+                Testimonial, który wyjaśnia wszystko
+              </h2>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              {/* Handwritten annotation */}
+              <div
+                className="absolute -top-8 -right-4 md:-right-12 z-10 pointer-events-none"
+                style={{
+                  fontFamily: "Caveat, cursive",
+                  fontSize: "clamp(1.25rem, 3vw, 2rem)",
+                  color: "#dc2626",
+                  transform: "rotate(2deg)",
+                  textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                }}
+              >
+                Odsłuchaj koniecznie! →
+              </div>
+
+              <Card className="overflow-hidden shadow-2xl border-2 border-slate-200">
+                <CardContent className="p-0">
+                  <div className="relative pt-[56.25%]">
+                     <iframe
+                    src="https://iframe.mediadelivery.net/embed/158903/e4ac51dc-dd0c-4b0f-882d-d0ee6be6edff?autoplay=false&loop=true&muted=false&preload=true&responsive=true"
+                    loading="lazy"
+                    style={{
+                      border: 0,
+                      position: "absolute",
+                      top: 0,
+                      height: "100%",
+                      width: "100%",
+                    }}
+                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                    allowFullScreen={true}
+                  ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -1409,6 +1459,231 @@ const UwazneZycie = () => {
               <p className="text-xl text-violet-100 font-semibold">
                 Do zobaczenia na pokładzie.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPREHENSIVE SUMMARY SECTION */}
+      <section id="podsumowanie" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/20 to-emerald-500/20 px-5 py-2 rounded-full mb-6">
+                <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400" />
+                <span className="text-sm font-bold text-sky-600 dark:text-sky-400 uppercase">
+                  Pełne Podsumowanie
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+                Co Dokładnie Otrzymujesz
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Kompletny przegląd programu i&nbsp;wszystkich bonusów
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {/* Program Content */}
+              <Card className="p-8 border-2 border-sky-200 dark:border-sky-800">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Brain className="h-7 w-7 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">Program "Uważne Życie"</h3>
+                    <p className="text-sm text-muted-foreground">6 tygodni transformacji mentalnej</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">6 Modułów Szkoleniowych</p>
+                      <p className="text-sm text-muted-foreground">Ponad 30 lekcji wideo + tekstowe</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 1: Architektura Uwagi</p>
+                      <p className="text-sm text-muted-foreground">Odzyskaj ster nad swoją uwagą</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 2: Deautomatyzacja</p>
+                      <p className="text-sm text-muted-foreground">Wyłącz automat, włącz świadomość</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 3: Dystans Strategiczny</p>
+                      <p className="text-sm text-muted-foreground">Uwolnij się od tyranii myśli</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 4: Nawigacja Emocjonalna</p>
+                      <p className="text-sm text-muted-foreground">Nawiguj wśród burzy emocji</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 5: Kompas Wartości</p>
+                      <p className="text-sm text-muted-foreground">Płyń tam, gdzie chcesz dotrzeć</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Moduł 6: Optymalizacja Zasobów</p>
+                      <p className="text-sm text-muted-foreground">Zarządzaj energią, nie czasem</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">6 Tygodniowych Wyzwań</p>
+                      <p className="text-sm text-muted-foreground">Misje bojowe wtłaczające wiedzę w&nbsp;DNA</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Arkusze Pracy i&nbsp;Checklisty</p>
+                      <p className="text-sm text-muted-foreground">Gotowe narzędzia do wydruku</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Zamknięta Grupa Wsparcia</p>
+                      <p className="text-sm text-muted-foreground">500+ kapitanów na tej samej ścieżce</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Lifehackerzy Bonus */}
+              <Card className="p-8 border-2 border-violet-200 dark:border-violet-800 bg-gradient-to-br from-violet-50/50 to-purple-50/50 dark:from-violet-950/50 dark:to-purple-950/50">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="h-7 w-7 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">Dostęp do Lifehackerów</h3>
+                    <p className="text-sm text-muted-foreground">Społeczność + platforma</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Społeczność Discord</p>
+                      <p className="text-sm text-muted-foreground">Dostęp do kanałów dla uczestników programu</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Platforma Lifehackerzy</p>
+                      <p className="text-sm text-muted-foreground">Centralne miejsce na wszystkie materiały</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Comiesięczne Sesje Live</p>
+                      <p className="text-sm text-muted-foreground">Q&A z&nbsp;Ludwikiem i&nbsp;społecznością</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Biblioteka Zasobów</p>
+                      <p className="text-sm text-muted-foreground">Szablony, checklisty, dodatkowe materiały</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Dostęp do Pozostałych Programów</p>
+                      <p className="text-sm text-muted-foreground">Nagrania z&nbsp;poprzednich edycji innych kursów</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Networking</p>
+                      <p className="text-sm text-muted-foreground">Poznaj ludzi z&nbsp;podobnymi celami</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">System Accountability</p>
+                      <p className="text-sm text-muted-foreground">Wzajemne wsparcie i&nbsp;raportowanie postępów</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Wszystkie Aktualizacje</p>
+                      <p className="text-sm text-muted-foreground">Nowe materiały i&nbsp;ulepszenia na zawsze</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            {/* Value Summary */}
+            <div className="text-center">
+              <Card className="inline-block p-8 md:p-10 bg-white dark:bg-slate-900 border-2 border-emerald-500 dark:border-emerald-600 shadow-xl">
+                <div className="space-y-5">
+                  <p className="text-lg md:text-xl font-semibold text-slate-700 dark:text-slate-300">
+                    Łączna wartość: <span className="text-slate-900 dark:text-white font-bold">ponad 3000 zł</span>
+                  </p>
+                  <div className="h-0.5 bg-gradient-to-r from-transparent via-emerald-500 to-transparent"></div>
+                  <p className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white">
+                    Twoja inwestycja: <span className="text-emerald-600 dark:text-emerald-400">777 zł</span>
+                  </p>
+                  <div className="pt-2 space-y-2">
+                    <p className="text-base md:text-lg font-medium text-slate-700 dark:text-slate-300">
+                      ✓ Jednorazowa płatność
+                    </p>
+                    <p className="text-base md:text-lg font-medium text-slate-700 dark:text-slate-300">
+                      ✓ Dostęp na zawsze
+                    </p>
+                    <p className="text-base md:text-lg font-medium text-slate-700 dark:text-slate-300">
+                      ✓ 30-dni gwarancji zwrotu
+                    </p>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
