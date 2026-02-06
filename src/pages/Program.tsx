@@ -1,6 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import AppStoreStats from "@/components/sections/AppStoreStats";
-import AppCard from "@/components/ui/app-card";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +19,7 @@ import {
   AlertTriangle,
   
   Zap,
-  ArrowDown,
+  
 } from "@/lib/icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -31,85 +29,6 @@ import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
 import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
 import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg";
 
-const apps = [
-  {
-    title: "Hakowanie Produktywności",
-    subtitle: "System produktywności zgodny z wartościami",
-    description:
-      "Przestań być kontrolowanym przez technologię. Odzyskaj sprawczość i zbuduj system, który faktycznie wspiera Twoje cele.",
-    category: "Produktywność" as const,
-    rating: 5.0,
-    downloads: "115 instalacji",
-    status: "DOSTĘPNA" as const,
-    duration: "6 tygodni",
-    target: "Dla świadomych optymalizatorów",
-    features: [
-      "Kompleksowa diagnoza blokad produktywności",
-      "Zintegrowany system zarządzania zadaniami",
-      "Protokoły głębokiej pracy",
-      "Praktyczne wdrożenie narzędzi",
-    ],
-    link: "/program/hakowanie-produktywnosci",
-  },
-  {
-    title: "Uważne Życie",
-    subtitle: "Zostań Kapitanem własnego życia",
-    description:
-      "Przestań być pasażerem na autopilocie. Przejmij kontrolę nad swoim umysłem i zbuduj mentalną odporność, która pozwoli Ci świadomie nawigować przez życie.",
-    category: "Odporność psychiczna" as const,
-    rating: 4.9,
-    downloads: "500+ kapitanów",
-    status: "DOSTĘPNA" as const,
-    duration: "6 tygodni",
-    target: "Dla reaktywnych pasażerów",
-    features: [
-      "6 modułów głębokiej transformacji mentalnej",
-      "Praktyczne techniki zarządzania uwagą",
-      "Protokoły deautomatyzacji reakcji",
-      "Dostęp do zamkniętej grupy Mastermind",
-    ],
-    link: "/program/uwazne-zycie",
-  },
-  {
-    title: "Silna Głowa",
-    subtitle: "Odporność psychiczna w wymagającym świecie",
-    description:
-      "Zbuduj psychiczną odporność, która pozwoli Ci zachować spokój i klarowność myślenia nawet w najbardziej wymagających okolicznościach.",
-    category: "Odporność psychiczna" as const,
-    rating: 5.0,
-    downloads: "64 instalacji",
-    status: "NIEDOSTĘPNA" as const,
-    duration: "6 tygodni",
-    target: "Dla poszukujących balansu",
-    features: [
-      "Praktyczne techniki redukcji stresu",
-      "Protokoły zarządzania energią mentalną",
-      "Strategie podejmowania decyzji pod presją",
-      "Metody budowania długoterminowej odporności",
-    ],
-    link: "/program/silna-glowa",
-  },
-  {
-    title: "Męski Kompas",
-    subtitle: "Mapa transformacji dla świadomych mężczyzn",
-    description:
-      "Program dla mężczyzn gotowych przejąć pełną odpowiedzialność za swoje życie. Odkryj i wzmocnij swoją autentyczną męskość.",
-    category: "Męskość" as const,
-    rating: 5.0,
-    downloads: "6 instalacji",
-    status: "DOSTĘPNA" as const,
-    duration: "5 tygodni",
-    target: "Dla gotowych na transformację",
-    features: [
-      "Kompleksowa analiza sytuacji życiowej",
-      "Praktyczne narzędzia przywództwa osobistego",
-      "Strategie budowania autentycznych relacji",
-      "Protokoły rozwoju fizycznego i mentalnego",
-    ],
-    link: "/program/meski-kompas",
-    featured: true,
-  },
-];
 
 const communityBenefits = [
   {
@@ -199,146 +118,310 @@ export default function Program() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-neural-blue/5 via-background to-zenith-gold/5">
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-neural-blue/5 via-background to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Badge */}
             <Badge className="mb-6 bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-sm px-6 py-2 shadow-lg">
               <Brain className="inline h-4 w-4 mr-2" />
               Mental Software Update
             </Badge>
 
-            {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-deep-charcoal leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-deep-charcoal leading-tight">
+              Twój umysł to System Operacyjny.{" "}
+              <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
+                Czas zainstalować aplikacje, które naprawdę działają.
+              </span>
+            </h1>
+
+            <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-deep-charcoal/80 leading-relaxed text-left">
+              <p>
+                Wyobraź sobie, że twój umysł to najpotężniejszy system operacyjny na świecie.
+                Tyle że przez lata instalowałeś w&nbsp;nim przypadkowe programy, wirusy myśli
+                i&nbsp;nieaktualne sterowniki.
+              </p>
+              <p>
+                Działa, ale nie tak, jak mógłby.
+                Zacina się przy obciążeniu. Wymusza restart, gdy najbardziej potrzebujesz skupienia.
+                I&nbsp;ciągle te powiadomienia: <em>„nie dasz rady"</em>, <em>„to zbyt trudne"</em>,
+                <em> „odłóż to na jutro"</em>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LifeOS AppStore Header */}
+      <section className="py-12 bg-luminous-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-deep-charcoal leading-tight">
               LifeOS{" "}
               <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
                 AppStore
               </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-deep-charcoal/80 mb-8 leading-relaxed">
-              Aplikacje mentalnej transformacji. Zainstaluj nowe oprogramowanie{" "}
-              <span className="italic bg-gradient-to-r from-neural-blue to-twilight-indigo bg-clip-text text-transparent font-bold">
-                w głowie.
-              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-deep-charcoal/70 mb-4">
+              Aplikacje mentalnej transformacji
             </p>
-
-            {/* CTA Button */}
-            <CTAButton
-              onClick={scrollToApps}
-              className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white shadow-xl text-lg px-8 py-6 border-0"
-            >
-              Przeglądaj Aplikacje
-              <ArrowDown className="ml-2 h-5 w-5 inline" />
-            </CTAButton>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 1: App Cards - Immediate Priority */}
-      <section
-        id="apps-section"
-        className="py-12 apps-section bg-luminous-white"
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-6">
-              <Badge
-                variant="outline"
-                className="text-neural-blue border-neural-blue px-6 py-2 text-sm font-semibold"
-              >
-                Programy Fundamentalne
-              </Badge>
+            <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl text-deep-charcoal/80 leading-relaxed">
+              <p>
+                To nie są kolejne kursy. To fundamentalne oprogramowanie do przeprogramowania tego,
+                jak myślisz, działasz i&nbsp;czujesz.
+              </p>
+              <p>
+                Każda aplikacja to 4–6 tygodni głębokiej instalacji. Nie uczę cię „jak być produktywnym" –
+                instaluję w&nbsp;tobie system produktywności, który działa nawet wtedy, gdy nie masz motywacji.
+                Nie mówię o&nbsp;„byciu silnym" – przeprogramowuję twój kod odporności psychicznej,
+                neuron po neuronie.
+              </p>
             </div>
+          </div>
 
-            {/* Apps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {apps.slice(0, 3).map((app) => (
-                <div key={app.title} className="group">
-                  <AppCard {...app} />
+          {/* App #1: Produktywność */}
+          <div className="max-w-4xl mx-auto space-y-16">
+            <div className="bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5 rounded-2xl p-8 md:p-10 border border-neural-blue/15">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">🧠</span>
+                <Badge variant="outline" className="text-neural-blue border-neural-blue/30 text-xs font-semibold">
+                  APLIKACJA #1: PRODUKTYWNOŚĆ
+                </Badge>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+                Hakowanie Produktywności
+              </h3>
+              <p className="text-sm text-deep-charcoal/60 mb-6">
+                Wersja: 2.0 · Zgodność: Wszystkie modele życia · Rozmiar: 6&nbsp;tygodni
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                <strong>Dla kogo:</strong> Dla osób, które testowały każdy system GTD,
+                a&nbsp;ich kalendarz i&nbsp;tak wygląda jak pole bitwy.
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                Nie instalujesz kolejnego narzędzia. Instalujesz spójny system operacyjny
+                dla twoich działań, który:
+              </p>
+
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Automatycznie blokuje rozpraszacze na poziomie neurobiologicznym</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Przekształca „muszę" w&nbsp;„chcę" bez używania siły woli</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Działa jak osobisty asystent AI w&nbsp;twojej głowie – tylko że to ty jesteś tym AI</span>
+                </li>
+              </ul>
+
+              <div className="bg-white/60 rounded-xl p-5 border border-neural-blue/10">
+                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+                  Co się zmienia po instalacji:
+                </p>
+                <div className="space-y-1 text-base text-deep-charcoal/80">
+                  <p>Zamiast zarządzać zadaniami – zarządzasz energią.</p>
+                  <p>Zamiast walczyć z&nbsp;prokrastynacją – wykorzystujesz jej mechanizmy do napędzania działania.</p>
+                  <p>Zamiast „być zajętym" – tworzysz przestrzeń na to, co naprawdę ważne.</p>
                 </div>
-              ))}
+              </div>
+
+              <div className="mt-6">
+                <Link to="/program/hakowanie-produktywnosci">
+                  <CTAButton className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white border-0">
+                    Zainstaluj aplikację →
+                  </CTAButton>
+                </Link>
+              </div>
+            </div>
+
+            {/* App #2: Odporność Psychiczna */}
+            <div className="bg-gradient-to-br from-twilight-indigo/5 to-neural-blue/5 rounded-2xl p-8 md:p-10 border border-twilight-indigo/15">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">🛡️</span>
+                <Badge variant="outline" className="text-twilight-indigo border-twilight-indigo/30 text-xs font-semibold">
+                  APLIKACJA #2: ODPORNOŚĆ PSYCHICZNA
+                </Badge>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+                Silna Głowa
+              </h3>
+              <p className="text-sm text-deep-charcoal/60 mb-6">
+                Wersja: 3.1 · Zgodność: Wymagające środowiska · Rozmiar: 6&nbsp;tygodni
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                <strong>Dla kogo:</strong> Dla tych, którzy w&nbsp;stresie zamiast gasić pożar –
+                dolewają do niego benzyny myśli.
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                To nie jest „kurs o&nbsp;stresie". To firewall dla twojego umysłu, który:
+              </p>
+
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <span>Blokuje mentalne ataki DDoS (przeciążenie decyzjami, presja, chaos)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <span>Automatycznie wykrywa wzorce katastrofizacji i&nbsp;przeprogramowuje je w&nbsp;locie</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <span>Tworzy redundantne połączenia neuralne, żebyś nawet przy awarii jednego obwodu działał dalej</span>
+                </li>
+              </ul>
+
+              <div className="bg-white/60 rounded-xl p-5 border border-twilight-indigo/10">
+                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+                  Co się zmienia po instalacji:
+                </p>
+                <div className="space-y-1 text-base text-deep-charcoal/80">
+                  <p>Presja zewnętrzna przestaje paraliżować – zaczyna skupiać.</p>
+                  <p>Krytyka przestaje ranić – zaczyna informować.</p>
+                  <p>Niepewność przestaje przerażać – zaczyna inspirować.</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Link to="/program/silna-glowa">
+                  <CTAButton className="bg-gradient-to-r from-twilight-indigo to-neural-blue hover:from-twilight-indigo/90 hover:to-neural-blue/90 text-white border-0">
+                    Zainstaluj aplikację →
+                  </CTAButton>
+                </Link>
+              </div>
+            </div>
+
+            {/* App #3: Uważność */}
+            <div className="bg-gradient-to-br from-neural-blue/5 to-twilight-indigo/5 rounded-2xl p-8 md:p-10 border border-neural-blue/15">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">🧘</span>
+                <Badge variant="outline" className="text-neural-blue border-neural-blue/30 text-xs font-semibold">
+                  APLIKACJA #3: UWAŻNOŚĆ
+                </Badge>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+                Uważne Życie
+              </h3>
+              <p className="text-sm text-deep-charcoal/60 mb-6">
+                Wersja: 4.0 · Zgodność: Wszystkie stany świadomości · Rozmiar: 6&nbsp;tygodni
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                <strong>Dla kogo:</strong> Dla pasażerów własnego życia, którzy odkryli,
+                że autopilot prowadzi donikąd.
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                To nie jest „medytacja". To przejmowanie kontroli nad kokpitem, które:
+              </p>
+
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+                <li className="flex items-start gap-3">
+                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Zastępuje automatyczne reakcje świadomymi odpowiedziami</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Instaluje tryb „kapitan" zamiast trybu „pasażer"</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <span>Tworzy bezpośrednie połączenie między twoimi wartościami a&nbsp;twoimi działaniami</span>
+                </li>
+              </ul>
+
+              <div className="bg-white/60 rounded-xl p-5 border border-neural-blue/10">
+                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+                  Co się zmienia po instalacji:
+                </p>
+                <div className="space-y-1 text-base text-deep-charcoal/80">
+                  <p>Życie przestaje ci się „przydarzać" – zaczynasz je świadomie nawigować.</p>
+                  <p>Emocje przestają tobą miotać – zaczynają informować cię o&nbsp;tym, co ważne.</p>
+                  <p>Każda chwila przestaje uciekać – zaczyna być twoim świadomym wyborem.</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Link to="/program/uwazne-zycie">
+                  <CTAButton className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white border-0">
+                    Zainstaluj aplikację →
+                  </CTAButton>
+                </Link>
+              </div>
+            </div>
+
+            {/* App #4: Męskość */}
+            <div className="bg-gradient-to-br from-zenith-gold/5 to-twilight-indigo/5 rounded-2xl p-8 md:p-10 border border-zenith-gold/20">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-3xl">👑</span>
+                <Badge variant="outline" className="text-zenith-gold border-zenith-gold/30 text-xs font-semibold">
+                  APLIKACJA #4: MĘSKOŚĆ
+                </Badge>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+                Męski Kompas
+              </h3>
+              <p className="text-sm text-deep-charcoal/60 mb-6">
+                Wersja: Rewolucja · Zgodność: Tylko dla gotowych na zmianę systemu · Rozmiar: 6&nbsp;tygodni
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                <strong>Dla kogo:</strong> Dla mężczyzn, którzy czują, że grali według cudzych
+                reguł w&nbsp;grę, której nie chcą wygrywać.
+              </p>
+
+              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+                To nie jest „kurs o&nbsp;byciu mężczyzną". To pełna reinstalacja systemu tożsamości, która:
+              </p>
+
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <span>Kasuje stare programy „jak powinieneś" i&nbsp;instaluje „jak chcesz"</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <span>Zamienia toksyczną siłę w&nbsp;autentyczną moc</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <span>Tworzy spójność między tym, kim jesteś w&nbsp;pracy, w&nbsp;domu i&nbsp;w&nbsp;swoim wnętrzu</span>
+                </li>
+              </ul>
+
+              <div className="bg-white/60 rounded-xl p-5 border border-zenith-gold/10">
+                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+                  Co się zmienia po instalacji:
+                </p>
+                <div className="space-y-1 text-base text-deep-charcoal/80">
+                  <p>Siła przestaje być maską – staje się autentyczną obecnością.</p>
+                  <p>Wrażliwość przestaje być słabością – staje się supermocą.</p>
+                  <p>Relacje przestają być polem walki – stają się przestrzenią współtworzenia.</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <Link to="/program/meski-kompas">
+                  <CTAButton className="bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-zenith-gold/90 hover:to-twilight-indigo/90 text-white border-0">
+                    Zainstaluj aplikację →
+                  </CTAButton>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* App Store Statistics - Social Proof After Products */}
-      <section className="py-8 bg-neural-blue/5">
-        <div className="container mx-auto px-4">
-          <AppStoreStats />
-        </div>
-      </section>
-
-      {/* What Are Mental Apps - Context After Products */}
+      {/* Authority Proof - Keynote Speaking */}
       <section className="py-12 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            {/* Main Heading */}
-            <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal leading-tight">
-              Aplikacje Mentalne to nie <em>kursy</em>. To przeprogramowanie
-              fundamentów.
-            </h2>
-
-            {/* What Are Mental Apps - Condensed */}
-            <Card className="border-2 border-neural-blue/50 hover:border-neural-blue/70 transition-all duration-300 bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-xl flex items-center justify-center shrink-0">
-                    <Brain className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal text-left">
-                    Czym są Aplikacje Mentalne?
-                  </h3>
-                </div>
-
-                <p className="text-lg text-deep-charcoal/80 mb-6 text-left">
-                  <strong className="text-neural-blue">
-                    Kompaktowe, intensywne programy transformacyjne
-                  </strong>{" "}
-                  zaprojektowane, żeby przeprogramować jeden fundamentalny
-                  obszar Twojego myślenia.
-                </p>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
-                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                    <span className="text-left text-base text-deep-charcoal">
-                      <strong>Produktywność</strong> – jak naprawdę myślisz o
-                      czasie i energii
-                    </span>
-                  </div>
-                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
-                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                    <span className="text-left text-base text-deep-charcoal">
-                      <strong>Odporność psychiczna</strong> – jak radzisz sobie
-                      z presją i chaosem
-                    </span>
-                  </div>
-                  <div className="flex gap-3 items-start p-4 bg-white/60 rounded-lg border border-neural-blue/10">
-                    <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-0.5" />
-                    <span className="text-left text-base text-deep-charcoal">
-                      <strong>Męskość</strong> – jak definiujesz swoją rolę i
-                      tożsamość
-                    </span>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-r from-neural-blue/10 to-zenith-gold/10 rounded-xl p-5 border border-neural-blue/30">
-                  <p className="text-base text-deep-charcoal text-left">
-                    Każda aplikacja to{" "}
-                    <strong className="text-neural-blue">
-                      4-6 tygodni głębokiej pracy
-                    </strong>
-                    . To nie są powierzchowne taktyki.{" "}
-                    <strong>Fundamenty</strong>, które pozostają z Tobą na
-                    zawsze.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Authority Proof - Keynote Speaking */}
             <div className="max-w-5xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden border-2 border-neural-blue/20 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
                 <img
