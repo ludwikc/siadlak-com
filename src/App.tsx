@@ -63,6 +63,7 @@ import SiedemTechnik from "./pages/SiedemTechnik";
 import WebinarMeskiKompas from "./pages/WebinarMeskiKompas";
 import WebinarKodKapitana from "./pages/WebinarKodKapitana";
 import Wyzwanie from "./pages/Wyzwanie";
+import MCT from "./pages/MCT";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
@@ -167,6 +168,7 @@ function App() {
               />
 
               <Route path="/wyzwanie" element={<Wyzwanie />} />
+              <Route path="/mct" element={<MCT />} />
 
               <Route path="/help" element={<Help />} />
               <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
