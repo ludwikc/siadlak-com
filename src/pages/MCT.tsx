@@ -173,45 +173,59 @@ export default function MCT() {
             style={{ background: `radial-gradient(circle, ${t.accent}, transparent 70%)` }}
           />
 
-          <div className="relative z-10 mx-auto max-w-5xl px-6 pt-24 pb-16 md:pt-32 md:pb-20">
-            {/* status badge */}
-            <div
-              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-8"
-              style={{
-                fontFamily: t.mono,
-                background: `${t.green}12`,
-                border: `1px solid ${t.green}30`,
-                color: t.green,
-              }}
-            >
-              <span className="inline-block w-2 h-2 rounded-full" style={{ background: t.green }} />
-              Available for Q2/Q3 2026
-            </div>
+          <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 pb-0 md:pt-32 md:pb-0">
+            <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
+              {/* Left column — text */}
+              <div className="flex-1 pb-16 md:pb-20">
+                {/* status badge */}
+                <div
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-8"
+                  style={{
+                    fontFamily: t.mono,
+                    background: `${t.green}12`,
+                    border: `1px solid ${t.green}30`,
+                    color: t.green,
+                  }}
+                >
+                  <span className="inline-block w-2 h-2 rounded-full" style={{ background: t.green }} />
+                  Available for Q2/Q3 2026
+                </div>
 
-            <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.15] tracking-tight mb-8"
-              style={{ color: t.text }}
-            >
-              The trainer behind 10,000+ Microsoft certifications across Fortune&nbsp;500 and&nbsp;NATO.
-            </h1>
+                <h1
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.15] tracking-tight mb-8"
+                  style={{ color: t.text }}
+                >
+                  The trainer behind 10,000+ Microsoft certifications across Fortune&nbsp;500 and&nbsp;NATO.
+                </h1>
 
-            <p
-              className="max-w-3xl text-lg md:text-xl leading-relaxed mb-14"
-              style={{ color: t.muted }}
-            >
-              I've spent 20&nbsp;years training two kinds of rooms: boardrooms at Unilever,
-              HP, and General Motors — and classified briefing rooms for NATO, US&nbsp;Army
-              Europe, Norwegian Police and the US&nbsp;Marines. If your team is deploying
-              Fabric or Copilot in&nbsp;2026, I'll make sure they ship production, not just
-              pass a&nbsp;cert.
-            </p>
+                <p
+                  className="max-w-3xl text-lg md:text-xl leading-relaxed mb-14"
+                  style={{ color: t.muted }}
+                >
+                  I've spent 20&nbsp;years training two kinds of rooms: boardrooms at Unilever,
+                  HP, and General Motors — and classified briefing rooms for NATO, US&nbsp;Army
+                  Europe, Norwegian Police and the US&nbsp;Marines. If your team is deploying
+                  Fabric or Copilot in&nbsp;2026, I'll make sure they ship production, not just
+                  pass a&nbsp;cert.
+                </p>
 
-            {/* stats row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <StatCard value="20+" label="Years MCT" />
-              <StatCard value="10K+" label="Engineers Trained" />
-              <StatCard value="8+" label="Countries" />
-              <StatCard value="30+" label="Microsoft Courses" />
+                {/* stats row */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <StatCard value="20+" label="Years MCT" />
+                  <StatCard value="10K+" label="Engineers Trained" />
+                  <StatCard value="8+" label="Countries" />
+                  <StatCard value="30+" label="Microsoft Courses" />
+                </div>
+              </div>
+
+              {/* Right column — photo */}
+              <div className="hidden md:flex w-[320px] lg:w-[380px] shrink-0 items-end justify-end">
+                <img
+                  src="/lovable-uploads/SIADLAK-coffee-transparent.png"
+                  alt="Ludwik C. Siadlak"
+                  className="w-full h-auto max-h-[600px] object-contain object-bottom drop-shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </section>
