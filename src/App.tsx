@@ -29,6 +29,7 @@ import Index from "./pages/Index";
 import Index2025 from "./pages/Index2025";
 import Index2601 from "./pages/Index2601";
 import HomeTest from "./pages/HomeTest";
+import HomeTest2 from "./pages/HomeTest2";
 import About from "./pages/About";
 import Discovery from "./pages/Discovery";
 import Contact from "./pages/Contact";
@@ -86,6 +87,7 @@ function App() {
               <Route path="/index2025" element={<Index2025 />} />
               <Route path="/index2601" element={<Index2601 />} />
               <Route path="/home-test" element={<HomeTest />} />
+              <Route path="/home-test2" element={<HomeTest2 />} />
               <Route path="/about" element={<About />} />
               <Route path="/discovery" element={<Discovery />} />
               <Route path="/contact" element={<Contact />} />
