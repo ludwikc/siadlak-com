@@ -3,6 +3,7 @@ import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/jetbrains-mono/700.css";
 import { Helmet } from "react-helmet-async";
 import { Mail, Phone } from "lucide-react";
+import MCTSocialProof from "@/components/mct/MCTSocialProof";
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */
 const t = {
@@ -468,6 +469,9 @@ export default function MCT() {
             </div>
           </div>
         </section>
+
+        {/* ── SOCIAL PROOF ──────────────────────────────────── */}
+        <MCTSocialProof />
 
         {/* ── CTA ──────────────────────────────────────────────── */}
         <section
