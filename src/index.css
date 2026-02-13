@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,144 +16,153 @@
 /* === Brand Color Variables and Gradients === */
 :root {
   /* Light Mode */
-  --bg-color: #f5f5fa;
-  --text-color: #222226;
+  --bg-color: #F9FAFB;
+  --text-color: #111827;
   --card-bg: #ffffff;
-  --card-text: #333338;
-  --accent-color: #0072ef;
+  --card-text: #111827;
+  --accent-color: #007AFF;
   --accent-text: #ffffff;
-  --highlight-color: #e74c3c;
-  --border-color: rgba(0, 0, 0, 0.1);
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --highlight-color: #6D28D9;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 
-  /* Design System Variables - Premium Tinted Neutrals */
-  --background-primary: 220 20% 97%;
-  --background-secondary: 220 18% 94%;
-  --background-tertiary: 220 16% 95%;
-  --text-primary: 220 30% 18%;
-  --text-secondary: 220 25% 45%;
-  --border-primary: 220 15% 88%;
-  --border-subtle: 0 0% 0% / 0.1;
+  /* Design System Variables - Diamond Hybrid */
+  --background-primary: 210 20% 98%;
+  --background-secondary: 210 17% 95%;
+  --background-tertiary: 210 15% 96%;
+  --text-primary: 222 47% 11%;
+  --text-secondary: 215 16% 34%;
+  --border-primary: 215 13% 91%;
+  --border-subtle: 0 0% 0% / 0.08;
 
-  /* Premium Dark Surfaces */
-  --surface-dark-base: 220 30% 8%;
-  --surface-dark-elevated: 220 28% 12%;
-  --surface-dark-floating: 220 25% 16%;
-  --text-on-dark-primary: 220 20% 95%;
-  --text-on-dark-secondary: 220 18% 75%;
-  --text-on-dark-tertiary: 220 15% 58%;
+  /* Void Black Surfaces */
+  --surface-dark-base: 0 0% 3%;
+  --surface-dark-elevated: 0 0% 6%;
+  --surface-dark-floating: 0 0% 10%;
+  --text-on-dark-primary: 210 17% 96%;
+  --text-on-dark-secondary: 215 14% 65%;
+  --text-on-dark-tertiary: 215 14% 50%;
 
   /* Premium Gradient Overlays */
-  --gradient-body-primary: 267 40% 96%;
-  --gradient-body-overlay: 220 30% 96%;
+  --gradient-body-primary: 263 70% 96%;
+  --gradient-body-overlay: 211 100% 96%;
 
-  /* Brand Colors - HSL values */
-  /* DEPRECATED: Tech/SaaS colors - migrate to transformation colors below */
-  --color-primary: 267 100% 50%; /* neural-violet - DEPRECATED */
-  --color-primary-light: 267 100% 65%; /* DEPRECATED */
-  --color-primary-dark: 249 56% 49%; /* quantum-blue - DEPRECATED */
-  --color-accent: 291 62% 64%; /* ascension-pink - DEPRECATED */
-  --color-indigo: 233 31% 32%; /* DEPRECATED */
-  --color-premium: 45 74% 52%;
+  /* === CORE PALETTE — Diamond Hybrid === */
 
-  /* Neural Lighthouse Brand Colors - AI-enhanced mindset transformation */
-  /* Primary: Neural Blue - Intelligence, guidance, lighthouse beam (60% usage) */
-  --neural-blue: 217 91% 60%; /* #2563eb - trust, intelligence, digital clarity */
-  --neural-blue-light: 217 91% 70%;
-  --neural-blue-dark: 217 91% 50%;
+  /* Electric Blue — Clarity, Technology, Focus (60% usage) */
+  --electric-blue: 211 100% 50%;
+  --electric-blue-light: 211 100% 62%;
+  --electric-blue-dark: 211 100% 42%;
 
-  /* Secondary: Twilight Indigo - Premium transformation depth (25% usage) */
-  --twilight-indigo: 244 45% 58%; /* #7C73E6 - wisdom, AI transformation, premium */
-  --twilight-indigo-light: 244 45% 68%;
-  --twilight-indigo-dark: 244 45% 48%;
+  /* Depth Purple — Transformation, Depth (25% usage) */
+  --depth-purple: 263 70% 50%;
+  --depth-purple-light: 263 70% 62%;
+  --depth-purple-dark: 263 70% 42%;
 
-  /* Accent: Pulse Cyan - Tech edge, moment of insight (5% usage - surgical only) */
-  --pulse-cyan: 191 85% 56%; /* #1AC8DB - innovation, tech edge, digital insight */
+  /* Void Black — Emotional, Premium (surfaces) */
+  --void-black: 0 0% 3%;
 
-  /* Premium: Zenith Gold - Achievement, breakthrough (10% usage) */
-  --zenith-gold: 38 92% 50%; /* #f59e0b - achievement, premium tier, transformation complete */
+  /* Diamond Light — Truth, Logic (backgrounds) */
+  --diamond-light: 210 20% 98%;
 
-  /* Legacy aliases for backward compatibility - MIGRATE TO NEW NAMES */
-  --transformation-blue: 217 91% 60%; /* Use --neural-blue instead */
-  --transformation-blue-light: 217 91% 70%; /* Use --neural-blue-light instead */
-  --transformation-blue-dark: 217 91% 50%; /* Use --neural-blue-dark instead */
-  --success-green: 244 45% 58%; /* REPLACED with --twilight-indigo */
-  --growth-gold: 38 92% 50%; /* Use --zenith-gold instead */
+  /* Utility text */
+  --text-on-dark: 210 17% 96%;
+  --text-on-light: 222 47% 11%;
+  --text-dim: 215 14% 65%;
 
-  /* UI States - WCAG AA compliant with white text */
-  --color-success: 244 45% 58%; /* Updated to twilight-indigo */
+  /* Legacy aliases — mapped to new palette */
+  --neural-blue: 211 100% 50%;
+  --neural-blue-light: 211 100% 62%;
+  --neural-blue-dark: 211 100% 42%;
+  --twilight-indigo: 263 70% 50%;
+  --twilight-indigo-light: 263 70% 62%;
+  --twilight-indigo-dark: 263 70% 42%;
+  --pulse-cyan: 191 85% 56%;
+  --zenith-gold: 38 92% 50%;
+
+  /* DEPRECATED legacy */
+  --color-primary: 211 100% 50%;
+  --color-primary-light: 211 100% 62%;
+  --color-primary-dark: 263 70% 50%;
+  --color-accent: 263 70% 50%;
+  --color-indigo: 263 70% 42%;
+  --color-premium: 38 92% 50%;
+
+  --transformation-blue: 211 100% 50%;
+  --transformation-blue-light: 211 100% 62%;
+  --transformation-blue-dark: 211 100% 42%;
+  --success-green: 263 70% 50%;
+  --growth-gold: 38 92% 50%;
+
+  /* UI States */
+  --color-success: 142 71% 45%;
   --color-warning: 25 95% 53%;
   --color-error: 0 84% 60%;
-  --color-info: 217 91% 60%; /* Updated to neural-blue */
+  --color-info: 211 100% 50%;
 
-  /* TrainTheTrainer Design System */
-  --background: 0 0% 100%;
-  --foreground: 215 25% 15%;
+  /* Shadcn/UI semantic tokens — Diamond Hybrid */
+  --background: 210 20% 98%;
+  --foreground: 222 47% 11%;
 
   --card: 0 0% 100%;
-  --card-foreground: 215 25% 15%;
+  --card-foreground: 222 47% 11%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 215 25% 15%;
+  --popover-foreground: 222 47% 11%;
 
-  --primary: 220 60% 25%;
-  --primary-foreground: 0 0% 98%;
+  --primary: 211 100% 50%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 215 20% 95%;
-  --secondary-foreground: 215 25% 15%;
+  --secondary: 210 17% 95%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 215 15% 96%;
-  --muted-foreground: 215 10% 55%;
+  --muted: 210 15% 96%;
+  --muted-foreground: 215 14% 45%;
 
-  --accent: 45 90% 55%;
-  --accent-foreground: 215 25% 15%;
+  --accent: 263 70% 50%;
+  --accent-foreground: 0 0% 100%;
 
-  --premium: 220 70% 20%;
-  --premium-foreground: 0 0% 98%;
+  --premium: 0 0% 3%;
+  --premium-foreground: 210 17% 96%;
 
-  --gold: 45 95% 60%;
-  --gold-foreground: 215 25% 15%;
+  --gold: 38 92% 50%;
+  --gold-foreground: 222 47% 11%;
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
 
-  --border: 215 15% 92%;
-  --input: 215 15% 94%;
-  --ring: 220 60% 25%;
+  --border: 215 13% 91%;
+  --input: 215 13% 93%;
+  --ring: 211 100% 50%;
 
-  /* Premium gradients */
-  --gradient-premium: linear-gradient(
-    135deg,
-    hsl(220 60% 25%),
-    hsl(220 70% 35%)
-  );
-  --gradient-gold: linear-gradient(135deg, hsl(45 95% 60%), hsl(45 90% 70%));
-  --gradient-hero: linear-gradient(
-    135deg,
-    hsl(220 60% 25%) 0%,
-    hsl(220 70% 35%) 50%,
-    hsl(45 90% 55%) 100%
-  );
+  /* Brand gradient */
+  --gradient-premium: linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%));
+  --gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 65%));
+  --gradient-hero: linear-gradient(135deg, hsl(211 100% 50%) 0%, hsl(263 70% 50%) 100%);
+
+  /* Glow gradient (background ambient) */
+  --glow-gradient: radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%),
+                   radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%);
 
   /* Shadows */
-  --shadow-premium: 0 20px 40px -10px hsl(220 60% 25% / 0.2);
-  --shadow-card: 0 4px 20px hsl(220 60% 25% / 0.1);
-  --shadow-glow: 0 0 30px hsl(45 95% 60% / 0.3);
+  --shadow-premium: 0 20px 40px -10px hsla(211, 100%, 50%, 0.15);
+  --shadow-card: 0 4px 20px hsla(0, 0%, 0%, 0.06);
+  --shadow-glow: 0 0 30px hsla(263, 70%, 50%, 0.2);
 
   --radius: 0.5rem;
 
   --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-primary: 222 47% 11%;
   --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 240 4.8% 95.9%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
-  --sidebar-border: 220 13% 91%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --sidebar-accent: 210 15% 96%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-border: 215 13% 91%;
+  --sidebar-ring: 211 100% 50%;
 
   /* Typography */
   --font-family-primary: "Inter", sans-serif;
-  --font-family-heading: "Montserrat", sans-serif;
+  --font-family-heading: "Space Grotesk", sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -168,10 +177,10 @@
   --border-radius-pill: 999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.10);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -179,46 +188,35 @@
   --transition-slow: 0.5s ease;
 
   /* Content-Heavy Typography Scale */
-  --content-body-size-mobile: 1rem; /* 16px */
-  --content-body-size-desktop: 1.125rem; /* 18px */
+  --content-body-size-mobile: 1rem;
+  --content-body-size-desktop: 1.125rem;
   --content-body-line-height: 1.7;
 
-  --content-h1-size-mobile: 2rem; /* 32px */
-  --content-h1-size-desktop: 3.5rem; /* 56px */
-  --content-h1-line-height: 1.15;
+  --content-h1-size-mobile: 2rem;
+  --content-h1-size-desktop: 3.5rem;
+  --content-h1-line-height: 1.1;
 
-  --content-h2-size-mobile: 1.5rem; /* 24px */
-  --content-h2-size-desktop: 2rem; /* 32px */
+  --content-h2-size-mobile: 1.5rem;
+  --content-h2-size-desktop: 2rem;
   --content-h2-line-height: 1.3;
 
-  --content-h3-size-mobile: 1.25rem; /* 20px */
-  --content-h3-size-desktop: 1.5rem; /* 24px */
+  --content-h3-size-mobile: 1.25rem;
+  --content-h3-size-desktop: 1.5rem;
   --content-h3-line-height: 1.4;
 
-  /* Readable widths (character-based) */
+  /* Readable widths */
   --prose-width: 65ch;
   --prose-width-wide: 75ch;
   --prose-width-narrow: 55ch;
 }
 
-/* === Premium Gradient Backgrounds === */
+/* === Diamond Hybrid Body === */
 body {
   font-family: var(--font-family-primary);
-  color: var(--text-color);
-  background:
-    radial-gradient(
-        circle at top left,
-        hsl(var(--gradient-body-primary) / 0.08),
-        transparent 20%
-      )
-      fixed,
-    radial-gradient(
-        circle at bottom right,
-        hsl(var(--gradient-body-overlay) / 0.05),
-        transparent 30%
-      )
-      fixed,
-    hsl(var(--background-primary)) fixed;
+  color: hsl(var(--text-on-light));
+  background-color: hsl(var(--diamond-light));
+  background-image: var(--glow-gradient);
+  background-attachment: fixed;
   min-height: 100vh;
   transition:
     background 0.3s,
@@ -242,6 +240,7 @@ body {
   h5,
   h6 {
     font-family: var(--font-family-heading);
+    letter-spacing: -0.02em;
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
   }
