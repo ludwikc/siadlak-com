@@ -29,10 +29,12 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 1: HERO — The Diamond Hook
       ═══════════════════════════════════════════════════════════ */}
-      <section className="relative pt-32 md:pt-40 pb-0 overflow-hidden" style={{ background: 'linear-gradient(135deg, hsl(270 40% 45%) 0%, hsl(240 80% 50%) 40%, hsl(230 90% 40%) 60%, hsl(240 50% 15%) 85%, hsl(0 0% 3%) 100%)' }}>
-        <div className="absolute inset-0 opacity-15">
-          <div className="absolute top-0 left-0 w-[60%] h-[60%] bg-[hsl(260_60%_55%)] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-[hsl(230_90%_35%)] rounded-full blur-3xl" />
+      <section className="relative pt-32 md:pt-40 pb-0 bg-gradient-to-br from-deep-space via-neural-blue to-deep-space overflow-hidden">
+        {/* Diamond-like prismatic light refractions */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-twilight-indigo/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-neural-violet/[0.07] rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 left-1/2 w-[250px] h-[250px] bg-zenith-gold/[0.04] rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
