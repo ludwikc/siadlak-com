@@ -19,42 +19,53 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Brand Colors (DEPRECATED - Tech/SaaS aesthetic)
-        "color-primary": "hsl(var(--color-primary))", // DEPRECATED
-        "color-primary-light": "hsl(var(--color-primary-light))", // DEPRECATED
-        "color-primary-dark": "hsl(var(--color-primary-dark))", // DEPRECATED
-        "color-accent": "hsl(var(--color-accent))", // DEPRECATED
-        "color-indigo": "hsl(var(--color-indigo))", // DEPRECATED
-        "color-premium": "hsl(var(--color-premium))",
+        // === Diamond Hybrid Core Palette ===
+        // Electric Blue — Clarity, Technology (60%)
+        "electric-blue": "hsl(var(--electric-blue))",
+        "electric-blue-light": "hsl(var(--electric-blue-light))",
+        "electric-blue-dark": "hsl(var(--electric-blue-dark))",
 
-        // Neural Lighthouse Brand Colors (AI-enhanced mindset transformation)
-        // Primary: Neural Blue (60% usage - intelligence, guidance)
+        // Depth Purple — Transformation (25%)
+        "depth-purple": "hsl(var(--depth-purple))",
+        "depth-purple-light": "hsl(var(--depth-purple-light))",
+        "depth-purple-dark": "hsl(var(--depth-purple-dark))",
+
+        // Void Black — Premium dark
+        "void-black": "hsl(var(--void-black))",
+
+        // Diamond Light — Clean backgrounds
+        "diamond-light": "hsl(var(--diamond-light))",
+
+        // Text utilities
+        "text-on-dark": "hsl(var(--text-on-dark))",
+        "text-on-light": "hsl(var(--text-on-light))",
+        "text-dim": "hsl(var(--text-dim))",
+
+        // Legacy aliases (mapped to new palette)
         "neural-blue": "hsl(var(--neural-blue))",
         "neural-blue-light": "hsl(var(--neural-blue-light))",
         "neural-blue-dark": "hsl(var(--neural-blue-dark))",
-
-        // Secondary: Twilight Indigo (25% usage - premium transformation depth)
         "twilight-indigo": "hsl(var(--twilight-indigo))",
         "twilight-indigo-light": "hsl(var(--twilight-indigo-light))",
         "twilight-indigo-dark": "hsl(var(--twilight-indigo-dark))",
-
-        // Accent: Pulse Cyan (5% usage - surgical tech edge only)
         "pulse-cyan": "hsl(var(--pulse-cyan))",
-
-        // Premium: Zenith Gold (10% usage - achievement, breakthrough)
         "zenith-gold": "hsl(var(--zenith-gold))",
-
-        // Legacy aliases for backward compatibility - MIGRATE TO NEW NAMES
+        "color-primary": "hsl(var(--color-primary))",
+        "color-primary-light": "hsl(var(--color-primary-light))",
+        "color-primary-dark": "hsl(var(--color-primary-dark))",
+        "color-accent": "hsl(var(--color-accent))",
+        "color-indigo": "hsl(var(--color-indigo))",
+        "color-premium": "hsl(var(--color-premium))",
         transformation: {
-          blue: "hsl(var(--neural-blue))", // Use neural-blue instead
+          blue: "hsl(var(--neural-blue))",
           "blue-light": "hsl(var(--neural-blue-light))",
           "blue-dark": "hsl(var(--neural-blue-dark))",
         },
-        "transformation-blue": "hsl(var(--neural-blue))", // Use neural-blue instead
-        "success-green": "hsl(var(--twilight-indigo))", // REPLACED with twilight-indigo
-        "growth-gold": "hsl(var(--zenith-gold))", // Use zenith-gold instead
+        "transformation-blue": "hsl(var(--neural-blue))",
+        "success-green": "hsl(var(--color-success))",
+        "growth-gold": "hsl(var(--zenith-gold))",
 
-        // UI State Colors - WCAG AA compliant
+        // UI State Colors
         "color-success": "hsl(var(--color-success))",
         "color-warning": "hsl(var(--color-warning))",
         "color-error": "hsl(var(--color-error))",
@@ -73,26 +84,26 @@ const config: Config = {
         "border-primary": "hsl(var(--border-primary))",
         "border-subtle": "hsla(var(--border-subtle))",
 
-        // Tailwind Custom Colors (DEPRECATED - Tech/SaaS aesthetic)
-        "deep-space": "#0A0A0A", // DEPRECATED
-        "neural-violet": "#3B0F77", // DEPRECATED
-        "quantum-blue": "#061A40", // DEPRECATED
-        "ascension-pink": "#B0128C", // DEPRECATED
-        "luminal-magenta": "#DA1EAE", // DEPRECATED
+        // Legacy named colors (mapped to Diamond Hybrid)
+        "deep-space": "#080808",
+        "neural-violet": "#6D28D9",
+        "quantum-blue": "#007AFF",
+        "ascension-pink": "#6D28D9",
+        "luminal-magenta": "#007AFF",
         gold: "hsl(var(--gold))",
-        "silver-mist": "#E1E1E6",
-        "subtle-slate": "#79788C",
-        "luminous-white": "#F9F9FB",
-        "deep-charcoal": "#2B2B33",
-        "gentle-lavender": "#C9C9D6", // Improved contrast - was #A9A8BD
+        "silver-mist": "#E5E7EB",
+        "subtle-slate": "#6B7280",
+        "luminous-white": "#F9FAFB",
+        "deep-charcoal": "#111827",
+        "gentle-lavender": "#9CA3AF",
 
         // Lifehackerzy Community Colors
         lifehacker: {
-          purple: "hsl(270, 90%, 60%)",
-          "purple-dark": "hsl(270, 70%, 8%)",
-          "purple-light": "hsl(270, 90%, 70%)",
-          "purple-border": "hsl(270, 90%, 60% / 0.3)",
-          "purple-border-light": "hsl(270, 90%, 60% / 0.2)",
+          purple: "hsl(263, 70%, 50%)",
+          "purple-dark": "hsl(263, 70%, 8%)",
+          "purple-light": "hsl(263, 70%, 62%)",
+          "purple-border": "hsl(263, 70%, 50% / 0.3)",
+          "purple-border-light": "hsl(263, 70%, 50% / 0.2)",
         },
 
         // Shadcn/UI Colors
@@ -132,7 +143,7 @@ const config: Config = {
       },
       fontFamily: {
         primary: ["var(--font-family-primary)", "Inter", "sans-serif"],
-        heading: ["var(--font-family-heading)", "Montserrat", "sans-serif"],
+        heading: ["var(--font-family-heading)", "Space Grotesk", "sans-serif"],
         sans: ["var(--font-family-primary)", "Inter", "sans-serif"],
       },
       fontSize: {
@@ -315,63 +326,57 @@ const config: Config = {
             border: "1px solid hsl(0 0% 100% / 0.1)",
           },
         },
-        // Theme-locked gradient utilities - these never change regardless of theme
+        // Theme-locked gradient utilities - Diamond Hybrid
         ".bg-gradient-locked-primary": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%)) !important",
         },
         ".bg-gradient-locked-dark": {
           background:
-            "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%)) !important",
+            "linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 8%)) !important",
         },
         ".bg-gradient-locked-hero": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%)) !important",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%)) !important",
         },
         ".bg-gradient-locked-hero-complex": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%) 0%, hsl(215 85% 13%) 50%, hsl(0 0% 4%) 100%) !important",
+            "linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(263 70% 50% / 0.3) 50%, hsl(211 100% 50% / 0.2) 100%) !important",
         },
         ".bg-gradient-locked-cta": {
           background:
-            "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%)) !important",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%)) !important",
         },
         ".bg-gradient-locked-pricing": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%)) !important",
+            "linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 6%)) !important",
         },
-        // Theme-adaptive gradient utilities (these were the original ones)
+        // Theme-adaptive gradient utilities
         ".bg-gradient-brand-primary": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(308 80% 38%))",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
         },
         ".bg-gradient-brand-dark": {
           background:
-            "linear-gradient(to bottom right, hsl(0 0% 4%), hsl(215 85% 13%))",
+            "linear-gradient(135deg, hsl(0 0% 3%), hsl(0 0% 8%))",
         },
         ".bg-gradient-brand-hero": {
           background:
-            "linear-gradient(to bottom right, hsl(267 83% 26%), hsl(215 85% 13%), hsl(0 0% 4%))",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
         },
         ".bg-gradient-text-brand": {
           background:
-            "linear-gradient(to right, hsl(267 83% 26%), hsl(308 80% 38%))",
+            "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
         },
         ".bg-gradient-text-brand-dark": {
           background:
-            "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
+            "linear-gradient(135deg, hsl(210 17% 96%), hsl(263 70% 62%))",
           backgroundClip: "text",
           "-webkit-background-clip": "text",
           color: "transparent",
-          ".dark &": {
-            background:
-              "linear-gradient(to right, hsl(240 13% 89%), hsl(308 79% 49%))",
-            backgroundClip: "text",
-            "-webkit-background-clip": "text",
-          },
         },
         // COMPREHENSIVE LOCKED UTILITIES FOR DARK GRADIENT SECTIONS
         // Text utilities for locked sections
