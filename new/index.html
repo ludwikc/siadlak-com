@@ -35,10 +35,20 @@
         <!-- Atmosfera tła -->
         <div class="absolute inset-0 bg-void-glow pointer-events-none"></div>
 
-        <!-- Main Container (Full Height Flex) -->
-        <div class="relative w-full max-w-7xl mx-auto px-6 flex-grow flex flex-col lg:flex-row">
-            
-            <!-- Left Column: Content (Vertically Centered) -->
+        <!-- Hero Image (positioned relative to section for full-height coverage) -->
+        <div class="hidden lg:block absolute bottom-0 right-0 pointer-events-none z-10">
+            <!-- Glow behind image -->
+            <div class="absolute bottom-20 -left-20 w-[600px] h-[600px] bg-gradient-to-tr from-electric/10 via-depth/10 to-transparent blur-[100px] rounded-full"></div>
+            <!-- Power Pose Image -->
+            <img src="assets/SIADLAK-coffee-transparent.png"
+                 alt="Ludwik C. Siadlak"
+                 class="h-screen w-auto drop-shadow-2xl">
+        </div>
+
+        <!-- Main Container -->
+        <div class="relative w-full max-w-7xl mx-auto px-6 flex-grow flex flex-col">
+
+            <!-- Content (Vertically Centered) -->
             <div class="w-full lg:w-1/2 flex flex-col justify-center py-12 lg:py-20 z-20">
                 <span class="inline-block py-1 px-3 border border-electric/30 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase text-electric mb-8 bg-electric/5 w-fit">
                     Perspektywa
@@ -84,17 +94,6 @@
                         Ludwik C. Siadlak
                     </div>
                 </div>
-            </div>
-
-            <!-- Right Column: Image (Glued to Bottom) -->
-            <div class="hidden lg:block w-full lg:w-1/2 relative pointer-events-none">
-                <!-- Glow behind image -->
-                <div class="absolute bottom-0 right-10 w-[600px] h-[600px] bg-gradient-to-tr from-electric/10 via-depth/10 to-transparent blur-[100px] rounded-full pointer-events-none"></div>
-
-                <!-- Power Pose Image -->
-                <img src="assets/SIADLAK-coffee-transparent.png"
-                     alt="Ludwik C. Siadlak"
-                     class="absolute bottom-0 right-0 h-[90vh] w-auto object-contain object-bottom drop-shadow-2xl translate-x-24 z-10">
             </div>
 
         </div>
