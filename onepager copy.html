@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludwik C. Siadlak | Diamentowy Umysł</title>
+    <meta name="description" content="Life OS: System Upgrade. Nie szlifuj ludzi. Odsłaniaj diament.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#080808',      /* Tło Dark */
+                        surface: '#121212',   /* Karty Dark */
+                        diamond: '#F9FAFB',   /* Tło Light */
+                        electric: '#007AFF',  /* Akcent Tech */
+                        depth: '#6D28D9',     /* Akcent Transformacji */
+                        'on-dark': '#E5E7EB',
+                        'on-light': '#111827',
+                        'dim': '#9CA3AF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(135deg, #007AFF 0%, #6D28D9 100%)',
+                        'void-glow': 'radial-gradient(circle at 70% 20%, rgba(109, 40, 217, 0.20) 0%, transparent 60%), radial-gradient(circle at 10% 80%, rgba(0, 122, 255, 0.15) 0%, transparent 60%)',
+                        'the-cut': 'linear-gradient(90deg, #080808 0%, #007AFF 45%, #6D28D9 55%, #F9FAFB 100%)',
+                    },
+                    boxShadow: {
+                        'neon': '0 0 25px rgba(0, 122, 255, 0.3)',
+                        'clarity': '0 20px 40px -5px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .diamond-list li::before {
+            content: "◆";
+            color: #007AFF;
+            margin-right: 12px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased m-0 p-0 bg-void text-on-dark selection:bg-electric selection:text-white">
+
+    <section class="relative pt-24 pb-20 md:pt-32 md:pb-24 overflow-hidden">
+        <div class="absolute inset-0 bg-void-glow pointer-events-none"></div>
+        
+        <div class="relative max-w-4xl mx-auto px-6 z-10 text-center md:text-left">
+            <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-8 text-white">
+                Diament jest najtwardszą substancją na Ziemi.<br>
+                <span class="text-dim font-light block mt-2">I jest kompletnie przezroczysty.</span>
+            </h1>
+            
+            <div class="space-y-6 text-lg md:text-xl text-dim font-light leading-relaxed max-w-3xl">
+                <p>Połóż go na czerwonym suknie – wygląda jak rubin. Na zielonym – jak szmaragd.<br>
+                Zmień sukno – zmieni się „kolor” diamentu.</p>
+                
+                <p>Ale diament sam w sobie? <strong class="text-white font-medium">Nie ma koloru. Jest czysty.</strong></p>
+                
+                <p>Twój umysł działa dokładnie tak samo.</p>
+                
+                <div class="pl-4 border-l-2 border-electric/30 my-8 space-y-2 text-base md:text-lg italic">
+                    <p>Otaczasz się presją – nabiera koloru napięcia. Myślisz: „jestem zestresowany”.</p>
+                    <p>Wchodzisz w sprint za kolejnym celem – nabiera koloru głodu. Myślisz: „nigdy nie mam dość”.</p>
+                    <p>Wracasz do domu po 14 godzinach – nabiera koloru pustki. Myślisz: „coś jest ze mną nie tak”.</p>
+                </div>
+
+                <p class="text-white text-xl md:text-2xl font-display font-medium">
+                    Ale to nie Ty się zmieniłeś. To <span class="text-transparent bg-clip-text bg-brand-gradient">sukno się zmieniło.</span>
+                </p>
+                
+                <p>Diament jest ten sam. Był, jest i będzie.</p>
+            </div>
+
+            <div class="mt-16">
+                <p class="text-sm uppercase tracking-widest text-dim mb-2">Nazywam się Ludwik C. Siadlak.</p>
+                <p class="text-lg mb-8">Nie szlifuję ludzi. Nie zmieniam ich.<br>Pokazuję im, że diament, którego szukają… już tam jest.</p>
+                
+                <a href="#kontakt" class="inline-block px-8 py-4 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded transition-all duration-300 hover:shadow-neon hover:-translate-y-1">
+                    Umów bezpłatną rozmowę
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-surface border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <span class="text-electric text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Problem</span>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-8">To nie Ty jesteś zepsuty</h2>
+            
+            <div class="space-y-6 text-dim text-lg leading-relaxed">
+                <p>Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że wystarczyło zmienić sukno. Wiem, bo sam to robiłem. I widzę to u każdego, kto do mnie przychodzi.</p>
+                
+                <ul class="space-y-3 my-6">
+                    <li class="flex items-start"><span class="text-depth mr-3">✕</span> Szlifowałeś go kursami: GTD, Todoist, Asana, Notion.</li>
+                    <li class="flex items-start"><span class="text-depth mr-3">✕</span> Polerowałeś terapeutami i coachami.</li>
+                    <li class="flex items-start"><span class="text-depth mr-3">✕</span> Czyściłeś Headspace'em i Calmem.</li>
+                    <li class="flex items-start"><span class="text-depth mr-3">✕</span> Kupowałeś nowe oprawki – nowe systemy, metody, narzędzia.</li>
+                </ul>
+                
+                <p>I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment: wracasz do punktu wyjścia, z kolejną warstwą niespełnionych obietnic.</p>
+                
+                <p class="font-medium text-white">Nie dlatego, że te narzędzia są złe. Nie dlatego, że terapia nie działa. Nie dlatego, że jesteś zbyt skomplikowany.</p>
+                
+                <p>Dlatego, że pracowałeś na interfejsie. Na kolorze sukna. A nie na tym, co leży pod spodem. Każde nowe narzędzie to kolejna oprawka. Dla diamentu, który nie potrzebuje oprawki.</p>
+                
+                <div class="bg-void border border-electric/20 p-6 rounded mt-8">
+                    <p class="text-white text-xl font-display text-center">
+                        On potrzebuje kogoś, kto powie:<br>
+                        <span class="text-electric">„Zdejmij sukno i spójrz”.</span>
+                    </p>
+                </div>
+                
+                <p class="text-sm mt-4 text-center">To jest moment, którego nie da się osiągnąć kursem. Bo problem nie leży w tym, czego <em>nie wiesz</em>. Leży w tym, czego <em>nie widzisz</em> – bo patrzysz w niewłaściwą stronę.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="absolute inset-0 bg-void-glow opacity-50 pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <span class="text-depth text-xs font-bold uppercase tracking-[0.2em] mb-4 block">Autorytet</span>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-8">Nie liczby, tylko przełom</h2>
+            
+            <div class="text-dim space-y-6 leading-relaxed">
+                <p>Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft. 10 000 profesjonalistów. 50 krajów. Fortune 500. NATO. Jednostki specjalne. Psychologia i informatyka – Oxford.</p>
+                
+                <p>Mógłbym. Ale to nie to przekonuje ludzi, z którymi pracuję. Przekonuje ich to, co czują po pierwszych 15 minutach rozmowy. I fakt, że wiem, jak to jest leżeć na wszystkich kolorach sukna naraz.</p>
+                
+                <div class="border-l-4 border-depth pl-6 py-2 my-8">
+                    <p class="text-white italic">W 2014 roku stałem na balkonie i poważnie rozważałem skok. Miałem wszystko, na co ludzie patrzą z podziwem. Najpiękniejszy diament w najdroższej oprawce, na jedwabnym suknie. I kompletną pustkę w środku.</p>
+                </div>
+                
+                <p>Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek ludzi: <strong>żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.</strong> Jestem tym, kto patrzy.</p>
+                
+                <p>Nie diamentem. Nie kolorem sukna. Obserwatorem, który może <em>wybrać</em> – na czym ten diament położyć.</p>
+                
+                <p>Od 19 lat tę mapę doskonalę. Z każdym człowiekiem, z którym pracuję. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-surface border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-electric text-xs font-bold uppercase tracking-[0.2em] block">Mechanizm</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mt-4">Diamentowy Umysł</h2>
+                <p class="text-dim mt-4">Nie metafora – metoda.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-dim">
+                    <p>Większość metod pracuje na powierzchni: nawyki, czas, emocje. To szlifowanie diamentu, który nie potrzebuje szlifu.</p>
+                    <p>Ja pracuję głębiej. Na poziomie, na którym Ty – świadomie lub nie – decydujesz, na jakim suknie leżysz.</p>
+                    <p>Nie daję Ci odpowiedzi. Nie mówię Ci, co masz robić. Nie prowadzę Cię przez 12 kroków.</p>
+                    <p class="text-white font-medium">Zadaję Ci pytania. I buduję z Tobą metaforę, która jest <em>Twoja</em>.</p>
+                </div>
+                
+                <div class="bg-void p-8 border border-white/10 rounded-lg">
+                    <p class="text-sm text-dim uppercase tracking-wider mb-4">Studium przypadku</p>
+                    <p class="italic text-white text-lg mb-6">
+                        „Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko. Nie do końca wiem, co się wydarzyło... I chcę więcej.”
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-1 bg-electric mr-4"></div>
+                        <div>
+                            <p class="font-bold text-white">Łukasz</p>
+                            <p class="text-xs text-dim">Informatyk z ADHD</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm text-dim">
+                        Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on zobaczył swój diament.
+                    </p>
+                </div>
+            </div>
+            
+            <p class="text-center mt-12 text-lg text-white font-medium">
+                To praca na poziomie systemu operacyjnego. Prowadzona z troską. Ale bez anestezji.
+            </p>
+        </div>
+    </section>
+
+
+    <div class="h-2 w-full bg-the-cut relative z-20"></div>
+
+
+    <section class="bg-diamond text-on-light py-20 lg:py-24">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+            
+            <div>
+                <span class="inline-block mb-4 text-xs font-bold tracking-[0.2em] uppercase text-void">Oferta #1</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-void leading-tight">
+                    Life OS: <span class="text-electric">System Upgrade</span>
+                </h2>
+                
+                <p class="text-gray-600 text-lg mb-6">
+                    8 tygodni. Maksymalnie 5 osób. Pełne zobaczenie diamentu pod suknem.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze. Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy widzisz, co jest pod nimi. Czyste. Twarde. Przezroczyste. Twoje.
+                </p>
+                <p class="text-gray-600 mb-8">
+                    To praca 1:1. Ze mną. Nie z nagraniem. Nie z kursem. Z człowiekiem, który siada naprzeciwko Ciebie i zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je usłyszeć.
+                </p>
+
+                <h3 class="font-bold text-xl mb-4">Co dostajesz:</h3>
+                <ul class="space-y-3 mb-8 text-gray-700 diamond-list">
+                    <li>Pełna diagnostyka + mapa transformacji (5 000 PLN)</li>
+                    <li>8 tygodni sesji 1:1. Intensywna praca filozoficzna (16 000 PLN)</li>
+                    <li>Bezpośredni dostęp między sesjami (8 000 PLN)</li>
+                    <li>Dostęp VIP do społeczności Lifehackerzy (3 000 PLN)</li>
+                    <li>Framework „Diamentowy Umysł” (5 000 PLN)</li>
+                    <li><span class="font-bold text-depth">BONUS:</span> Sesja follow-up 30 dni po programie (2 000 PLN)</li>
+                </ul>
+                
+                <p class="text-sm text-gray-500 italic">To nie jest dla każdego. To dla garści ludzi, którzy są gotowi zobaczyć, co leży pod kolorem.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-xl border border-gray-200 shadow-clarity sticky top-10">
+                <div class="mb-2 text-xs font-bold uppercase tracking-widest text-depth">Łączna wartość</div>
+                <div class="text-5xl md:text-6xl font-display font-bold text-electric tracking-tighter mb-8">
+                    39 000 <span class="text-2xl text-gray-400 font-sans font-normal ml-1">PLN</span>
+                </div>
+                
+                <a href="#kontakt" class="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mb-6">
+                    Sprawdź dostępność
+                </a>
+                
+                <div class="text-center text-xs text-gray-400">
+                    Wymagana krótka rozmowa kwalifikacyjna.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-center font-display text-3xl font-bold mb-12 text-void">Głosy tych, którzy zdjęli sukno</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-50 rounded border border-gray-100">
+                    <div class="text-electric text-4xl font-serif mb-4">”</div>
+                    <p class="text-sm text-gray-600 mb-4">Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat.</p>
+                    <p class="font-bold text-xs uppercase tracking-wide">Łukasz</p>
+                    <p class="text-xs text-gray-400">IT, ADHD, sceptyk</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded border border-gray-100">
+                    <div class="text-electric text-4xl font-serif mb-4">”</div>
+                    <p class="text-sm text-gray-600 mb-4">Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.</p>
+                    <p class="font-bold text-xs uppercase tracking-wide">Artur</p>
+                    <p class="text-xs text-gray-400">Ojciec, przedsiębiorca</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded border border-gray-100">
+                    <div class="text-electric text-4xl font-serif mb-4">”</div>
+                    <p class="text-sm text-gray-600 mb-4">Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany.</p>
+                    <p class="font-bold text-xs uppercase tracking-wide">Anna</p>
+                    <p class="text-xs text-gray-400">CEO</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded border border-gray-100">
+                    <div class="text-electric text-4xl font-serif mb-4">”</div>
+                    <p class="text-sm text-gray-600 mb-4">Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam.</p>
+                    <p class="font-bold text-xs uppercase tracking-wide">Łucja</p>
+                    <p class="text-xs text-gray-400">Founder RevSpace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-diamond py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-center font-display text-3xl font-bold mb-12 text-void">Kwalifikacja – czy to dla Ciebie?</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded shadow-sm border-t-4 border-gray-300">
+                    <p class="font-bold mb-6 text-gray-400 uppercase tracking-widest text-sm">To NIE dla Ciebie, jeśli:</p>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="flex items-start"><span class="mr-3 text-gray-400">✕</span> Szukasz kolejnego systemu produktywności</li>
+                        <li class="flex items-start"><span class="mr-3 text-gray-400">✕</span> Potrzebujesz kogoś, kto powie Ci, że wszystko jest okej</li>
+                        <li class="flex items-start"><span class="mr-3 text-gray-400">✕</span> Chcesz gotową receptę z pudełka</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded shadow-sm border-t-4 border-electric">
+                    <p class="font-bold mb-6 text-electric uppercase tracking-widest text-sm">To JEST dla Ciebie, jeśli:</p>
+                    <ul class="space-y-4 text-gray-800 text-sm font-medium">
+                        <li class="flex items-start"><span class="mr-3 text-electric">✔</span> Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować</li>
+                        <li class="flex items-start"><span class="mr-3 text-electric">✔</span> Testowałeś narzędzia i wiesz, że problem leży głębiej</li>
+                        <li class="flex items-start"><span class="mr-3 text-electric">✔</span> Jesteś gotów na rozmowę bez klepania po plecach i bez atakowania</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20 border-y border-gray-200">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="text-electric text-4xl mb-4 block">★</span>
+            <h3 class="font-display text-2xl font-bold mb-4 text-void">Gwarancja Satysfakcji</h3>
+            <p class="text-gray-600 mb-6">
+                Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory – powiemy sobie „do widzenia”. Nie zapłacisz ani złotówki więcej.
+            </p>
+            <p class="font-medium text-void">
+                Mogę to zaoferować, bo wiem, co dostarczam. Momenty, w których mówisz: <em>„Nie wiem, co się wydarzyło.”</em>
+            </p>
+        </div>
+    </section>
+
+    <section id="kontakt" class="bg-diamond py-20">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-bold text-void mb-6">Tylko 5 miejsc jednocześnie.</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Nie da się tego zrobić na webinarze.
+            </p>
+            
+            <div class="inline-block bg-white px-6 py-3 rounded-full shadow-sm text-sm font-bold text-electric mb-10 border border-electric/20">
+                Aktualnie: [X] miejsc dostępnych
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-clarity border border-gray-100 max-w-lg mx-auto">
+                <p class="text-gray-800 font-medium mb-6">Jeśli to, co przeczytałeś, wywołało w Tobie poruszenie – to dobry znak. Nie potrzebujesz więcej tekstu. Potrzebujesz rozmowy.</p>
+                <a href="#" class="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    Umów bezpłatną rozmowę
+                </a>
+                <p class="text-xs text-gray-400 mt-4">30 minut. Bez sprzedaży. Bez obietnic.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h3 class="text-xl font-bold text-gray-400 uppercase tracking-widest mb-4">Jeszcze nie teraz?</h3>
+            <p class="text-gray-500">
+                Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-depth text-xs font-bold uppercase tracking-[0.2em]">Oferta #2</span>
+                <h2 class="font-display text-3xl font-bold text-void mt-2">Aplikacje Mentalne</h2>
+                <p class="text-gray-500 mt-4">Programy, które instalujesz w swoim systemie. Dostęp do społeczności Lifehackerzy.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 border border-gray-200 rounded hover:border-electric transition-colors group">
+                    <h4 class="font-bold text-lg mb-2 group-hover:text-electric">Hakowanie Produktywności</h4>
+                    <p class="text-sm text-gray-600">Zamiast zarządzać zadaniami – zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru „za dużo”.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded hover:border-electric transition-colors group">
+                    <h4 class="font-bold text-lg mb-2 group-hover:text-electric">Silna Głowa</h4>
+                    <p class="text-sm text-gray-600">Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded hover:border-electric transition-colors group">
+                    <h4 class="font-bold text-lg mb-2 group-hover:text-electric">Uważne Życie</h4>
+                    <p class="text-sm text-gray-600">Medytacja dla ludzi z ADHD i analitycznym umysłem. Przejmujesz kontrolę nad kokpitem.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded hover:border-electric transition-colors group">
+                    <h4 class="font-bold text-lg mb-2 group-hover:text-electric">Męski Kompas</h4>
+                    <p class="text-sm text-gray-600">Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-gray-300 text-gray-600 px-8 py-3 rounded font-bold uppercase text-xs tracking-widest hover:border-void hover:text-void transition-all">
+                    Zobacz wszystkie aplikacje
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-void text-on-dark py-16 border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-2xl font-bold text-white mb-2">Diamentowy umysł.</h2>
+            <p class="text-dim uppercase tracking-widest text-sm mb-8">Otwarta przyłbica.</p>
+            
+            <div class="w-16 h-1 bg-brand-gradient mx-auto mb-8"></div>
+            
+            <p class="font-display text-xl text-white">Ludwik C. Siadlak</p>
+            <p class="text-xs text-dim mt-12">&copy; 2026 Ludwik C. Siadlak. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

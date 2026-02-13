@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCS Brand Book | Diamond Hybrid Final</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* --- CORE PALETTE (TWOJE KOLORY) --- */
+            
+            /* THE VOID (Tło sekcji emocjonalnych) */
+            --void-black: #080808; 
+            
+            /* THE CLARITY (Technologia, Fokus) */
+            --electric-blue: #007AFF; 
+            
+            /* THE DEPTH (Transformacja, Głębia) */
+            --depth-purple: #6D28D9; 
+            
+            /* THE TRUTH (Tło sekcji logicznych) */
+            --diamond-light: #F9FAFB; 
+            
+            /* --- UTILITIES --- */
+            --text-on-dark: #F3F4F6;
+            --text-on-light: #111827;
+            --text-dim: #9CA3AF;
+            
+            /* Gradient Marki: "Od Technologii do Głębi" */
+            --brand-gradient: linear-gradient(135deg, var(--electric-blue), var(--depth-purple));
+            --glow-gradient: radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.25) 0%, transparent 50%),
+                             radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.15) 0%, transparent 50%);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: var(--void-black);
+            color: var(--text-on-dark);
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- UI COMPONENTS --- */
+        
+        /* Swatches Display */
+        .brand-palette {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 150px;
+            width: 100%;
+        }
+        .swatch {
+            display: flex;
+            align-items: end;
+            padding: 20px;
+            font-size: 0.8rem;
+            font-family: monospace;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            background: var(--brand-gradient);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 6px 25px rgba(0, 122, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--electric-blue);
+            color: var(--electric-blue);
+        }
+        .btn-outline:hover {
+            background: rgba(0, 122, 255, 0.1);
+            color: white;
+        }
+
+        /* --- LAYOUT SECTIONS --- */
+
+        /* 1. HERO / STORY (DARK) */
+        .section-dark {
+            background-color: var(--void-black);
+            background-image: var(--glow-gradient);
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+
+        /* 2. THE CUT (TRANSITION) */
+        .the-cut {
+            height: 4px;
+            background: linear-gradient(90deg, var(--void-black) 0%, var(--electric-blue) 40%, var(--depth-purple) 60%, var(--diamond-light) 100%);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* 3. THE OFFER (LIGHT) */
+        .section-light {
+            background-color: var(--diamond-light);
+            color: var(--text-on-light);
+            padding: 100px 20px;
+        }
+
+        .light-card {
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin-top: 40px;
+        }
+
+        .light-title {
+            color: var(--void-black);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--electric-blue);
+            letter-spacing: -0.05em;
+            margin: 20px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #4B5563;
+        }
+        .feature-item::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--depth-purple);
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="brand-palette">
+        <div class="swatch" style="background: var(--void-black); color: #fff;">Void Black<br>#080808</div>
+        <div class="swatch" style="background: var(--electric-blue); color: #fff;">Electric Clarity<br>#007AFF</div>
+        <div class="swatch" style="background: var(--depth-purple); color: #fff;">Depth Purple<br>#6D28D9</div>
+        <div class="swatch" style="background: var(--diamond-light); color: #000;">Diamond Light<br>#F9FAFB</div>
+    </div>
+
+    <section class="section-dark">
+        <div class="container">
+            <span class="eyebrow">Perspektywa</span>
+            <h1 class="hero-title">
+                To nie Ty jesteś zepsuty.<br>
+                To <span style="color: var(--electric-blue);">sukno</span> się zmieniło.
+            </h1>
+            <p class="hero-text">
+                Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że wystarczyło zmienić tło.
+                Wiem, bo sam stałem na balkonie, mając wszystko i nie czując nic.
+            </p>
+            
+            <div style="display: flex; gap: 20px;">
+                <a href="#" class="btn btn-primary">Zobacz mechanizm</a>
+                <a href="#" class="btn btn-outline">Moja historia</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="the-cut"></div>
+
+    <section class="section-light">
+        <div class="container" style="display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <span class="eyebrow">Oferta</span>
+                <h2 class="light-title">Life OS: System Upgrade</h2>
+                <p style="color: #4B5563; margin-bottom: 30px;">
+                    Tu nie ma metafor. Tu są fakty.
+                    8 tygodni pracy 1:1. Pełna diagnostyka. Dostęp do mojego prywatnego numeru.
+                    To jest inżynieria Twojego umysłu, pozbawiona zbędnych nakładek.
+                </p>
+                <p style="font-weight: 600; color: var(--void-black);">
+                    "Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko."
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-dim);">— Łukasz, IT Professional</p>
+            </div>
+
+            <div class="light-card" style="flex: 1; min-width: 300px; margin-top: 0;">
+                <div style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--depth-purple); font-weight: 700;">Pełen Proces</div>
+                <div class="price">39 000 PLN</div>
+                
+                <div class="feature-item">8 tygodni sesji 1:1</div>
+                <div class="feature-item">Diagnostyka Life OS</div>
+                <div class="feature-item">Dostęp VIP 24/7</div>
+                <div class="feature-item">Gwarancja zwrotu po 2 tyg.</div>
+                
+                <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; box-sizing: border-box; margin-top: 30px; display: block;">
+                    Aplikuj o miejsce
+                </a>
+                <p style="text-align: center; font-size: 0.8rem; color: #9CA3AF; margin-top: 15px;">
+                    Dostępne: 3/5 miejsc
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
