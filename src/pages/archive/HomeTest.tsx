@@ -1,5 +1,5 @@
-import Layout from "../components/layout/Layout";
-import SEO from "../components/SEO";
+import Layout from "../../components/layout/Layout";
+import SEO from "../../components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -15,7 +15,7 @@ import {
   Zap,
   Crown,
   Shield,
-} from "../lib/icons";
+} from "../../lib/icons";
 import { Link } from "react-router-dom";
 
 const HomeTest = () => {

@@ -1,6 +1,6 @@
-import Layout from "../components/layout/Layout";
-import SEO from "../components/SEO";
-import { getSEOConfig } from "../lib/seo-config";
+import Layout from "../../components/layout/Layout";
+import SEO from "../../components/SEO";
+import { getSEOConfig } from "../../lib/seo-config";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
@@ -15,7 +15,7 @@ import {
   X,
   Zap,
   Crown,
-} from "../lib/icons";
+} from "../../lib/icons";
 import { Link } from "react-router-dom";
 
 const Index = () => {
