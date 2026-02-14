@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
@@ -10,126 +11,58 @@ import compassHero from "@/assets/compass-hero-bg.png";
 
 const TheCut = () => <div className="the-cut" />;
 
-const SectionLabel = ({
-  children,
-  variant: _variant = "light",
-}: {
-  children: string;
-  variant?: "light" | "dark";
-}) => (
-  <p
-    className="text-xs font-bold uppercase tracking-[0.2em] mb-6"
-    style={{
-      background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    }}
-  >
-    {children}
-  </p>
-);
-
-const Quote = ({
-  text,
-  author,
-  role,
-  variant = "light",
-}: {
-  text: string;
-  author: string;
-  role?: string;
-  variant?: "light" | "dark";
-}) => {
-  const isDark = variant === "dark";
+const Eyebrow = ({ children, color = "electric" }: { children: string; color?: "electric" | "depth" | "dim" }) => {
+  const colorClass = color === "electric" ? "text-electric" : color === "depth" ? "text-depth" : "text-on-light-dim";
   return (
-    <blockquote
-      className={`border-l-2 pl-6 py-2 ${isDark ? "border-white/20" : "border-text-on-light/10"}`}
-    >
-      <p
-        className={`text-lg italic leading-relaxed mb-4 ${isDark ? "text-text-on-dark/80" : "text-text-on-light/80"}`}
-      >
-        {text}
-      </p>
-      <footer className="not-italic">
-        <p
-          className={`font-semibold text-sm uppercase tracking-wider ${isDark ? "text-text-on-dark" : "text-text-on-light"}`}
-        >
-          {author}
-        </p>
-        {role && (
-          <p
-            className={`text-xs mt-1 ${isDark ? "text-text-dim" : "text-text-on-light/50"}`}
-          >
-            {role}
-          </p>
-        )}
-      </footer>
-    </blockquote>
+    <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-6 ${colorClass}`}>
+      {children}
+    </p>
   );
 };
 
-const SmallQuote = ({
-  text,
+const TestimonialCard = ({
+  quote,
   author,
+  label,
+  flag,
   variant = "light",
+  size = "sm",
 }: {
-  text: string;
+  quote: string;
   author: string;
+  label?: string;
+  flag?: string;
   variant?: "light" | "dark";
+  size?: "sm" | "base";
 }) => {
-  const isDark = variant === "dark";
+  const isLight = variant === "light";
   return (
-    <div className="text-center">
-      <blockquote
-        className={`text-sm italic leading-relaxed mb-2 ${isDark ? "text-text-dim" : "text-text-on-light/60"}`}
-      >
-        {text}
-      </blockquote>
-      <footer
-        className={`text-xs font-medium ${isDark ? "text-text-on-dark/40" : "text-text-on-light/40"}`}
-      >
-        — {author}
+    <div className={`p-6 md:p-8 rounded-xl ${isLight ? "bg-diamond-light" : "bg-surface"}`}>
+      <p className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-text-dim"} leading-relaxed mb-4`}>
+        {flag && <span className="mr-1">{flag}</span>}
+        „{quote}"
+      </p>
+      <footer className={`pt-3 border-t ${isLight ? "border-gray-200/50" : "border-white/10"}`}>
+        <p className={`text-xs font-bold uppercase tracking-wide ${isLight ? "text-text-on-light" : "text-text-on-dark"}`}>
+          {author}
+        </p>
+        {label && <p className={`text-xs mt-1 ${isLight ? "text-on-light-dim" : "text-text-dim"}`}>{label}</p>}
       </footer>
     </div>
   );
 };
 
-const CTAButton = ({
-  children,
-  to,
-  className = "",
-}: {
-  children: React.ReactNode;
-  to: string;
-  className?: string;
-}) => (
-  <Link
-    to={to}
-    className={`inline-block px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm hover:opacity-90 transition-opacity ${className}`}
-    style={{
-      background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-      boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-    }}
-  >
-    {children}
-  </Link>
-);
-
-const OutlineButton = ({
-  children,
-  to,
-  className = "",
-}: {
-  children: React.ReactNode;
-  to: string;
-  className?: string;
-}) => (
-  <Link
-    to={to}
-    className={`inline-block px-10 py-4 rounded font-semibold uppercase tracking-wide text-sm text-electric border border-electric hover:bg-electric/10 transition-colors ${className}`}
-  >
-    {children}
-  </Link>
+const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: string }) => (
+  <section className="py-16 md:py-20 bg-void">
+    <div className="container mx-auto px-4 max-w-3xl text-center">
+      <blockquote className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">
+        {quote}
+      </blockquote>
+      <footer className="text-sm text-text-dim font-bold uppercase tracking-widest not-italic">
+        — {author}
+      </footer>
+    </div>
+  </section>
 );
 
 const Index = () => {
@@ -137,280 +70,305 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("home")} />
 
-      {/* ═══════════ HERO: PERSPEKTYWA — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
-        {/* Glow gradient background */}
+      {/* ╔═══════════════════════════════════════════╗
+          ║       FAZA 1: THE VOID (ciemna)          ║
+          ╚═══════════════════════════════════════════╝ */}
+
+      {/* ═══ HERO ═══ */}
+      <section className="min-h-screen pt-20 bg-void relative overflow-hidden">
+        {/* void-glow overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
           }}
         />
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto">
-            {/* Left column */}
-            <div className="lg:col-span-5">
-              <SectionLabel variant="dark">PERSPEKTYWA</SectionLabel>
+        <div className="container mx-auto px-4 relative z-10 flex items-center min-h-[calc(100vh-5rem)]">
+          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: text */}
+            <div>
+              <Eyebrow>PERSPEKTYWA</Eyebrow>
 
-              <h1 className="font-heading text-4xl md:text-5xl font-bold leading-[1.1] text-white mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Diament jest najtwardszą substancją na Ziemi.
-                <br />
-                <span className="font-normal text-text-on-dark/60">
+                <span className="text-text-dim block mt-2">
                   I jest kompletnie przezroczysty.
                 </span>
               </h1>
 
-              <div className="space-y-6 text-lg leading-relaxed text-text-dim mb-10">
+              <div className="space-y-6 text-lg md:text-xl text-text-dim leading-relaxed max-w-2xl">
                 <p>
                   Połóż go na czerwonym suknie – wygląda jak rubin. Na zielonym –
                   jak szmaragd.
                   <br />
                   Zmień sukno – zmieni się „kolor" diamentu.
                 </p>
-                <p>
-                  Ale diament sam w sobie?{" "}
-                  <strong className="text-white">
-                    Nie ma koloru. Jest czysty.
-                  </strong>
+
+                <blockquote className="border-l-2 border-electric pl-6 py-2 text-white">
+                  Ale diament sam w sobie? Nie ma koloru. Jest czysty.
                   <br />
                   Twój umysł działa dokładnie tak samo.
+                </blockquote>
+
+                <div className="space-y-4">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-depth">●</span>
+                    <p>
+                      Otaczasz się presją – nabiera koloru napięcia. Myślisz:
+                      „jestem zestresowany".
+                    </p>
+                  </div>
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-depth">●</span>
+                    <p>
+                      Wchodzisz w sprint za kolejnym celem – nabiera koloru głodu.
+                      Myślisz: „nigdy nie mam dość".
+                    </p>
+                  </div>
+                </div>
+
+                <p>Ale to nie Ty się zmieniłeś.</p>
+                <p className="text-white text-2xl font-bold">
+                  To{" "}
+                  <span className="text-transparent bg-clip-text bg-brand-gradient">
+                    sukno
+                  </span>{" "}
+                  się zmieniło.
                 </p>
               </div>
 
-              <div className="space-y-4 mb-10">
-                <div className="flex items-baseline gap-4">
-                  <span className="text-electric">●</span>
-                  <p className="text-text-dim">
-                    Otaczasz się presją – nabiera koloru napięcia. Myślisz:
-                    „jestem zestresowany".
-                  </p>
-                </div>
-                <div className="flex items-baseline gap-4">
-                  <span className="text-electric">●</span>
-                  <p className="text-text-dim">
-                    Wchodzisz w sprint za kolejnym celem – nabiera koloru głodu.
-                    Myślisz: „nigdy nie mam dość".
-                  </p>
-                </div>
+              {/* CTA */}
+              <div className="mt-12">
+                <Link
+                  to="/discovery"
+                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors"
+                >
+                  SPRAWDŹ DOSTĘPNOŚĆ →
+                </Link>
               </div>
 
-              <p className="text-lg text-text-dim mb-2">
-                Ale to nie Ty się zmieniłeś.
-              </p>
-              <p className="text-2xl font-bold text-white">
-                To{" "}
-                <span className="text-electric">sukno</span>{" "}
-                się zmieniło.
-              </p>
-
-              <div className="mt-12 flex flex-wrap gap-4">
-                <CTAButton to="/discovery">Zobacz mechanizm</CTAButton>
-                <OutlineButton to="/about">Moja historia</OutlineButton>
+              {/* Signature */}
+              <div className="mt-10 flex items-center gap-4">
+                <div className="w-8 h-[1px] bg-text-dim" />
+                <p className="text-xs text-text-dim uppercase tracking-widest">
+                  Ludwik C. Siadlak
+                </p>
               </div>
             </div>
 
-            {/* Right column — photo */}
-            <div className="lg:col-span-7 relative flex items-end">
+            {/* Right: photo (desktop only) */}
+            <div className="hidden lg:block relative">
+              {/* Decorative blob */}
+              <div
+                className="absolute -right-20 top-1/4 w-[600px] h-[600px] rounded-full pointer-events-none"
+                style={{
+                  background: "linear-gradient(to top right, rgba(0,122,255,0.1), rgba(109,40,217,0.1))",
+                  filter: "blur(100px)",
+                }}
+              />
               <img
                 src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                 alt="Ludwik C. Siadlak"
-                className="w-full h-auto max-h-[600px] object-contain object-bottom drop-shadow-2xl"
+                className="relative z-10 h-[85%] w-auto object-contain mx-auto"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials strip #1 — DARK */}
-      <section className="bg-void-glow py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SmallQuote
-              variant="dark"
-              text="Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting even for person who is quite familiar with this software."
-              author="Paweł Cerkaski"
-            />
-            <SmallQuote
-              variant="dark"
-              text="Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years."
-              author="Betty M. Greenberg"
-            />
-            <SmallQuote
-              variant="dark"
-              text="Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Z pełnym przeświadczeniem właściwa osoba na właściwym miejscu. Nie dajcie mu odejść."
-              author="Adam Anioła"
-            />
-          </div>
-        </div>
-      </section>
-
-      <TheCut />
-
-      {/* ═══════════ DIAGNOZA — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <SectionLabel>DIAGNOZA</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-8">
-              To nie Ty jesteś zepsuty
-            </h2>
-
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mb-12">
-              <p>
-                Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że
-                wystarczyło zmienić sukno. Wiem, bo sam to robiłem. I widzę to u
-                każdego, kto do mnie przychodzi.
-              </p>
-            </div>
-
-            <div className="space-y-4 mb-12">
+      {/* ═══ TESTIMONIAL MARQUEE ═══ */}
+      <section className="py-5 bg-surface overflow-hidden">
+        <div className="marquee-track flex gap-12 animate-marquee" style={{ width: "max-content" }}>
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
               {[
-                "Szlifowałeś go kursami: GTD, Todoist, Asana.",
-                "Polerowałeś terapeutami i coachami.",
-                "Czyściłeś Headspace'em i Calmem.",
-                "Kupowałeś nowe systemy i metody.",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <span className="text-destructive font-bold shrink-0 mt-0.5">
-                    ✕
-                  </span>
-                  <p className="text-text-on-light/80">{item}</p>
+                { q: "Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting.", a: "Paweł Cerkaski" },
+                { q: "Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years.", a: "Betty M. Greenberg" },
+                { q: "Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Właściwa osoba na właściwym miejscu.", a: "Adam Anioła" },
+                { q: "Easy to understand, clear explanations and a nice teaching personality.", a: "Yasith Navoda" },
+                { q: "Good pace and really good at explaining.", a: "Hilde Mykland Pihl" },
+              ].map((t, i) => (
+                <div key={i} className="flex items-start gap-6">
+                  <div className="max-w-md whitespace-normal">
+                    <p className="text-sm text-text-dim leading-relaxed">„{t.q}"</p>
+                    <p className="text-xs text-text-dim font-medium mt-1">— {t.a}</p>
+                  </div>
+                  <span className="text-white/10 self-center">◆</span>
                 </div>
               ))}
             </div>
+          ))}
+        </div>
+      </section>
 
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80">
-              <p>
-                I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment:
-                wracasz do punktu wyjścia, z kolejną warstwą niespełnionych
-                obietnic.
-              </p>
-              <p>
-                Diament nie potrzebuje kolejnej oprawki.
-                <br />
-                On potrzebuje kogoś, kto powie:
-                <br />
-                <strong className="text-text-on-light">
-                  „Zdejmij sukno i spójrz".
-                </strong>
-              </p>
-            </div>
+      {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
+      <section className="py-24 bg-surface">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Eyebrow>DIAGNOZA</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+            To nie Ty jesteś zepsuty
+          </h2>
+
+          <div className="space-y-6 text-lg text-text-dim leading-relaxed mb-12">
+            <p>
+              Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że
+              wystarczyło zmienić sukno. Wiem, bo sam to robiłem. I widzę to u
+              każdego, kto do mnie przychodzi.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 mb-12">
+            {[
+              "Szlifowałeś go kursami: GTD, Todoist, Asana.",
+              "Polerowałeś terapeutami i coachami.",
+              "Czyściłeś Headspace'em i Calmem.",
+              "Kupowałeś nowe systemy i metody.",
+            ].map((item, i) => (
+              <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
+                <span className="text-red-500 font-bold shrink-0">✕</span>
+                <p className="text-text-dim">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-6 text-lg text-text-dim leading-relaxed mb-12">
+            <p>
+              I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment:
+              wracasz do punktu wyjścia, z kolejną warstwą niespełnionych
+              obietnic.
+            </p>
+          </div>
+
+          {/* Highlight box */}
+          <div className="p-8 bg-void rounded-lg text-center">
+            <p className="text-white text-xl md:text-2xl font-heading">
+              Diament nie potrzebuje kolejnej oprawki.
+              <br />
+              On potrzebuje kogoś, kto powie:
+              <br />
+              <span className="text-electric font-bold text-3xl block mt-2">
+                „Zdejmij sukno i spójrz".
+              </span>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Quote: Łukasz — LIGHT */}
-      <section className="bg-diamond-light py-12">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <Quote
-            text="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
-            author="ŁUKASZ"
-            role="IT, ADHD, sceptyk"
-          />
-        </div>
-      </section>
+      {/* ═══ TESTIMONIAL HERO QUOTE #1 ═══ */}
+      <TestimonialHeroQuote
+        quote="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
+        author="ŁUKASZ — IT, ADHD, SCEPTYK"
+      />
 
-      <TheCut />
-
-      {/* ═══════════ AUTORYTET — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+      {/* ═══ AUTHORITY SECTION ═══ */}
+      <section className="py-24 relative overflow-hidden">
+        {/* void-glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
+            backgroundColor: "#080808",
             backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
           }}
         />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <SectionLabel variant="dark">AUTORYTET</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-12">
-              Nie liczby. Przełom.
-            </h2>
+        {/* Decorative blob */}
+        <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-depth/10 blur-[100px] rounded-full pointer-events-none" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div className="border-r-0 lg:border-r border-white/10 lg:pr-12">
-                <div className="space-y-6 text-lg leading-relaxed text-text-dim">
-                  <p>
-                    Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
-                    10 000 profesjonalistów. Fortune 500. NATO. Jednostki
-                    specjalne. Psychologia i informatyka – Oxford.
-                  </p>
-                  <p>
-                    Mógłbym. Ale to nie to przekonuje ludzi. Przekonuje ich to, że
-                    wiem, jak to jest leżeć na wszystkich kolorach sukna naraz.
-                  </p>
-                </div>
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+          <Eyebrow color="depth">AUTORYTET</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-12">
+            Nie liczby. Przełom.
+          </h2>
 
-                <blockquote className="mt-8 text-xl italic leading-relaxed text-text-on-dark/70 border-l-4 border-white/10 pl-6">
-                  "W 2014 roku stałem na balkonie i poważnie rozważałem skok.
-                  Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
-                  na jedwabnym suknie. I kompletną pustkę w środku."
-                </blockquote>
-              </div>
-
-              <div className="space-y-6 text-lg leading-relaxed text-text-dim">
-                <p>
-                  Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek
-                  ludzi:{" "}
-                  <strong className="text-white">
-                    żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.
-                  </strong>
-                </p>
-                <p className="text-white text-center text-xl font-medium">
-                  Jestem tym, kto patrzy.
-                </p>
-                <p>
-                  Od 19 lat tę mapę doskonalę. Nie dlatego, że znam Twoje
-                  odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam
-                  je znalazł.
-                </p>
-              </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: paragraphs */}
+            <div className="text-text-dim space-y-6">
+              <p>
+                Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
+                10 000 profesjonalistów. Fortune 500. NATO. Jednostki
+                specjalne. Psychologia i informatyka – Oxford.
+              </p>
+              <p>
+                Mógłbym. Ale to nie to przekonuje ludzi. Przekonuje ich to, że
+                wiem, jak to jest leżeć na wszystkich kolorach sukna naraz.
+              </p>
             </div>
+
+            {/* Right: blockquote card */}
+            <div className="bg-surface p-8 border-l-4 border-depth">
+              <blockquote className="text-white italic text-lg leading-relaxed">
+                "W 2014 roku stałem na balkonie i poważnie rozważałem skok.
+                Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
+                na jedwabnym suknie. I kompletną pustkę w środku."
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Below grid */}
+          <div className="mt-12 text-text-dim text-lg space-y-6">
+            <p>
+              Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek
+              ludzi:{" "}
+              <strong className="text-white">
+                żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.
+              </strong>
+            </p>
+            <p className="text-white text-center text-xl font-medium">
+              Jestem tym, kto patrzy.
+            </p>
+            <p>
+              Od 19 lat tę mapę doskonalę. Nie dlatego, że znam Twoje
+              odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam
+              je znalazł.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* International testimonials strip — DARK */}
-      <section className="bg-void-glow py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SmallQuote
+      {/* ═══ TESTIMONIALS GRID 3 COL ═══ */}
+      <section className="py-16 bg-surface">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            <TestimonialCard
               variant="dark"
-              text="🇬🇧 Great instructor! Would easily recommend Ludwik to anyone wanting to learn Transact-SQL, or any other Microsoft product for that matter, as he's energetic, knowledgeable, competent and great at teaching. 10/10."
+              flag="🇬🇧"
+              quote="Great instructor! Would easily recommend Ludwik to anyone wanting to learn Transact-SQL, or any other Microsoft product for that matter, as he's energetic, knowledgeable, competent and great at teaching. 10/10."
               author="Uczestnik szkolenia w Londynie"
             />
-            <SmallQuote
+            <TestimonialCard
               variant="dark"
-              text="🇳🇴 Ludwik was very professional, polite, to the point and also funny. Easy to talk to and could answer any question regarding any subject of SQL Server. I would highly recommend him."
+              flag="🇳🇴"
+              quote="Ludwik was very professional, polite, to the point and also funny. Easy to talk to and could answer any question regarding any subject of SQL Server. I would highly recommend him."
               author="Johnny, Norwegia"
             />
-            <SmallQuote
+            <TestimonialCard
               variant="dark"
-              text="🇵🇱 Brak uwag. Bardzo dobry kontakt, sposób przekazywania informacji, kultura osobista."
+              flag="🇵🇱"
+              quote="Brak uwag. Bardzo dobry kontakt, sposób przekazywania informacji, kultura osobista."
               author="Uczestnik szkolenia w Warszawie"
             />
           </div>
         </div>
       </section>
 
-      <TheCut />
+      {/* ═══ MECHANISM SECTION ═══ */}
+      <section className="py-24 bg-surface">
+        <div className="container mx-auto px-4 max-w-6xl text-center">
+          <Eyebrow>MECHANIZM</Eyebrow>
+          <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
+            Diamentowy Umysł
+          </h2>
+          <p className="text-text-dim uppercase tracking-widest text-sm mb-16">
+            NIE METAFORA – METODA
+          </p>
+        </div>
 
-      {/* ═══════════ MECHANIZM — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <SectionLabel>MECHANIZM</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-2">
-              Diamentowy Umysł
-            </h2>
-            <p className="text-sm uppercase tracking-wider text-text-on-light/50 mb-12">
-              NIE METAFORA – METODA
-            </p>
-
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mb-16">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left: explanation */}
+            <div className="text-text-dim text-lg space-y-6">
               <p>
                 Większość metod pracuje na powierzchni: nawyki, czas, emocje. To
                 szlifowanie diamentu, który nie potrzebuje szlifu. Ja pracuję
@@ -423,230 +381,218 @@ const Index = () => {
                 Zadaję Ci pytania. I buduję z Tobą metaforę, która jest{" "}
                 <em>Twoja</em>.
               </p>
-              <p>Metafora działa tam, gdzie logika się zatrzymuje.</p>
+              <div className="border-l-2 border-electric pl-4 text-white font-medium">
+                Metafora działa tam, gdzie logika się zatrzymuje.
+              </div>
             </div>
 
-            <div className="bg-white rounded-sm p-8 mb-12 border border-text-on-light/10">
-              <p className="text-sm uppercase tracking-wider text-depth mb-4 font-bold">
+            {/* Right: Case Study card */}
+            <div className="bg-void p-10 rounded-xl">
+              <p className="text-electric text-sm uppercase tracking-widest font-bold mb-4">
                 CASE STUDY: ŁUKASZ
               </p>
-              <blockquote className="text-xl italic leading-relaxed text-text-on-light/80 mb-4">
+              <blockquote className="italic text-white text-xl leading-relaxed mb-6">
                 „Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko. Nie do
                 końca wiem, co się wydarzyło... I chcę więcej."
               </blockquote>
-              <p className="text-text-on-light/60">
-                Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on
-                zobaczył swój diament.
-              </p>
+              <div className="border-t border-white/10 pt-4">
+                <p className="text-text-dim">
+                  Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on
+                  zobaczył swój diament.
+                </p>
+              </div>
             </div>
-
-            <Quote
-              text="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."
-              author="ARTUR"
-              role="Ojciec, programista, przedsiębiorca"
-            />
           </div>
         </div>
       </section>
 
+      {/* ═══ TESTIMONIAL HERO QUOTE #2 ═══ */}
+      <TestimonialHeroQuote
+        quote="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."
+        author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
+      />
+
+      {/* ╔═══════════════════════════════════════════╗
+          ║     THE CUT — jedyny divider              ║
+          ╚═══════════════════════════════════════════╝ */}
       <TheCut />
 
-      {/* ═══════════ OFERTA #1: LIFE OS — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              {/* Left: copy */}
-              <div>
-                <SectionLabel>OFERTA</SectionLabel>
-                <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-2">
-                  Life OS:
-                  <br />
-                  System Upgrade
-                </h2>
+      {/* ╔═══════════════════════════════════════════╗
+          ║       FAZA 2: THE CLARITY (jasna)         ║
+          ╚═══════════════════════════════════════════╝ */}
 
-                <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mt-8 mb-12">
-                  <p>
-                    Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze.
-                    Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy
-                    widzisz, co jest pod nimi.
-                  </p>
-                  <p>
-                    To praca 1:1. Ze mną. Nie z nagraniem. Z człowiekiem, który
-                    zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
-                    usłyszeć.
-                  </p>
-                </div>
+      {/* ═══ OFFER SECTION ═══ */}
+      <section className="bg-diamond-light py-24 md:py-32" id="oferta">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            {/* Left column (7 cols) */}
+            <div className="lg:col-span-7">
+              <p className="text-on-light-dim text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                OFERTA #1
+              </p>
+              <h2 className="text-4xl md:text-6xl font-bold text-text-on-light font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+                Life OS:
+                <br />
+                <span className="text-electric">System Upgrade</span>
+              </h2>
 
-                <blockquote className="text-xl font-semibold text-text-on-light mb-2">
-                  "Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko."
-                </blockquote>
-                <p className="text-sm text-text-dim">— Łukasz, IT Professional</p>
+              <div className="space-y-6 text-lg text-on-light-dim leading-relaxed mb-10">
+                <p>
+                  Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze.
+                  Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy
+                  widzisz, co jest pod nimi.
+                </p>
+                <p>
+                  To praca 1:1. Ze mną. Nie z nagraniem. Z człowiekiem, który
+                  zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
+                  usłyszeć.
+                </p>
               </div>
 
-              {/* Right: pricing card */}
-              <div className="bg-white rounded-sm p-8 md:p-10 border border-text-on-light/10">
-                <p className="text-xs uppercase tracking-[0.1em] text-depth font-bold mb-4">
+              <ul className="diamond-bullet space-y-3 text-on-light-dim mb-10 list-none">
+                <li>8 tygodni sesji 1:1</li>
+                <li>Diagnostyka Life OS</li>
+                <li>Dostęp VIP 24/7</li>
+                <li><span className="font-bold text-depth">Gwarancja zwrotu po 2 tyg.</span></li>
+              </ul>
+
+              <p className="text-sm text-on-light-dim border-t border-gray-200 pt-6">
+                Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
+                grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
+                natura tej pracy.
+              </p>
+            </div>
+
+            {/* Right column (5 cols) — sticky pricing card */}
+            <div className="lg:col-span-5 lg:sticky lg:top-24">
+              <div className="bg-paper p-10 rounded-2xl shadow-sm relative">
+                {/* Tag */}
+                <div className="absolute top-0 right-0 bg-void text-white text-xs font-bold px-4 py-2 uppercase tracking-widest rounded-bl-xl">
+                  PREMIUM
+                </div>
+
+                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-4">
                   Pełen Proces
                 </p>
-                <p className="font-heading text-5xl md:text-6xl font-bold text-electric tracking-tighter mb-8">
-                  39 000 <span className="text-xl text-text-on-light/60">PLN</span>
+                <p className="text-5xl md:text-6xl font-heading font-bold text-electric tracking-tighter mb-8">
+                  39 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
 
-                <div className="space-y-4 mb-8">
-                  {[
-                    "8 tygodni sesji 1:1",
-                    "Diagnostyka Life OS",
-                    "Dostęp VIP 24/7",
-                    "Gwarancja zwrotu po 2 tyg.",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4 text-text-on-light/70">
-                      <span className="w-2 h-2 rounded-full bg-depth shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+                <Link
+                  to="/discovery"
+                  className="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
+                >
+                  APLIKUJ O MIEJSCE
+                </Link>
 
-                <CTAButton to="/discovery" className="w-full text-center block">
-                  Aplikuj o miejsce
-                </CTAButton>
-
-                <p className="text-center text-xs text-text-dim mt-4">
-                  Dostępne: 3/5 miejsc
+                <p className="text-xs text-on-light-dim text-center">
+                  Dostępne: 3/5 miejsc • Faktura VAT • Raty 0%
                 </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Testimonials: Anna + Bergen — LIGHT */}
-      <section className="bg-diamond-light py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-            <Quote
-              text="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
+          {/* Testimonials dual */}
+          <div className="grid md:grid-cols-2 gap-8 mt-20">
+            <TestimonialCard
+              variant="light"
+              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
               author="ANNA"
-              role="CEO Agencji Marketingowej"
+              label="CEO Agencji Marketingowej"
             />
-            <SmallQuote
-              text="🇳🇴 I am impressed of all the clear examples that he made during the course! He made very useful drawings on the whiteboard. By changing between presentation-slides, SQL-code examples and the whiteboard, it was easy to keep a full concentration throughout the whole course! He is the absolute best instructor I have ever had!!"
-              author="Uczestnik szkolenia w Bergen, Norwegia"
+            <TestimonialCard
+              variant="light"
+              quote="I am impressed of all the clear examples that he made during the course! He is the absolute best instructor I have ever had!!"
+              author="Uczestnik szkolenia w Bergen"
+              label="Norwegia 🇳🇴"
             />
           </div>
         </div>
       </section>
 
-      <TheCut />
-
-      {/* ═══════════ GŁOSY — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-16 text-center">
-              Głosy tych, którzy zdjęli sukno
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <Quote
-                variant="dark"
-                text="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
-                author="ŁUKASZ"
-                role="IT, ADHD, sceptyk"
-              />
-              <Quote
-                variant="dark"
-                text="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."
-                author="ARTUR"
-                role="Ojciec, przedsiębiorca"
-              />
-              <Quote
-                variant="dark"
-                text="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
-                author="ANNA"
-                role="CEO"
-              />
-              <Quote
-                variant="dark"
-                text="Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
-                author="ŁUCJA"
-                role="Founder RevSpace"
-              />
-            </div>
+      {/* ═══ PROOF SECTION ═══ */}
+      <section className="bg-paper py-24">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h3 className="font-heading text-3xl font-bold text-text-on-light mb-16 text-center">
+            Głosy tych, którzy zdjęli sukno
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <TestimonialCard
+              variant="light"
+              quote="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
+              author="ŁUKASZ"
+              label="IT, ADHD, sceptyk"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Dlatego, że zadaje inne pytania."
+              author="ARTUR"
+              label="Ojciec, przedsiębiorca"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
+              author="ANNA"
+              label="CEO"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
+              author="ŁUCJA"
+              label="Founder RevSpace"
+            />
           </div>
         </div>
       </section>
 
-      <TheCut />
-
-      {/* ═══════════ TO NIE DLA CIEBIE — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      {/* ═══ QUALIFICATION + GUARANTEE ═══ */}
+      <section className="bg-diamond-light py-24">
+        <div className="container mx-auto px-4 max-w-5xl">
+          {/* Qualification Grid */}
+          <div className="grid md:grid-cols-2 gap-12 mb-24">
             <div>
-              <p className="font-semibold text-sm uppercase tracking-wider text-text-on-light/60 mb-6">
+              <p className="font-bold text-xs uppercase tracking-widest border-b border-gray-200 pb-4 mb-6 text-on-light-dim">
                 TO NIE DLA CIEBIE, JEŚLI:
               </p>
-              <ul className="space-y-4 text-text-on-light/80">
+              <ul className="space-y-4 text-on-light-dim">
                 {[
                   "Szukasz kolejnego systemu produktywności",
                   "Potrzebujesz kogoś, kto powie Ci, że wszystko jest okej",
                   "Chcesz gotową receptę z pudełka",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-destructive shrink-0 mt-0.5">✕</span>
+                    <span className="text-red-400 font-bold shrink-0">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
             <div>
-              <p className="font-semibold text-sm uppercase tracking-wider text-text-on-light/60 mb-6">
+              <p className="font-bold text-xs uppercase tracking-widest border-b border-gray-200 pb-4 mb-6 text-electric">
                 TO JEST DLA CIEBIE, JEŚLI:
               </p>
-              <ul className="space-y-4 text-text-on-light/80">
+              <ul className="space-y-4 text-text-on-light font-medium">
                 {[
                   "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
                   "Testowałeś narzędzia i wiesz, że problem leży głębiej",
                   "Jesteś gotów na rozmowę bez klepania po plecach",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-electric shrink-0 mt-0.5">✔</span>
+                    <span className="text-electric font-bold shrink-0">✔</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-        </div>
-      </section>
 
-      <TheCut />
-
-      {/* ═══════════ GWARANCJA — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-2xl text-electric/50 mb-6">★</p>
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-white mb-8">
+          {/* Guarantee Box */}
+          <div className="bg-white p-10 rounded-xl text-center shadow-sm max-w-3xl mx-auto mb-12">
+            <p className="text-electric text-2xl mb-4">★</p>
+            <h3 className="font-heading text-2xl font-bold text-text-on-light mb-6">
               Gwarancja Satysfakcji
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-text-dim">
+            </h3>
+            <div className="text-on-light-dim leading-relaxed space-y-4">
               <p>
                 Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa
                 jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej
@@ -656,241 +602,254 @@ const Index = () => {
               <p>
                 Mogę to zaoferować, bo dostarczam momenty, w których mówisz:
                 <br />
-                <em className="text-white">
+                <em className="text-text-on-light font-medium">
                   „Nie wiem, co się wydarzyło."
                 </em>
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Helge quote — DARK */}
-      <section className="bg-void-glow py-12">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <Quote
-            variant="dark"
-            text="His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more practical examples of tool usage a bit slower."
-            author="Helge Vestoyl, Norwegia 🇳🇴"
-          />
-          <p className="text-sm text-text-dim mt-4 pl-6">
-            Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
-            ciszy dzieją się rzeczy. —{" "}
-            <span className="font-medium text-text-on-dark/70">Ludwik</span>
-          </p>
-        </div>
-      </section>
-
-      <TheCut />
-
-      {/* ═══════════ TYLKO 5 MIEJSC — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-8">
-              Tylko 5 miejsc jednocześnie.
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mb-10">
-              <p>
-                Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
-                grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
-                natura tej pracy.
-              </p>
-              <p className="text-sm uppercase tracking-wider text-text-on-light/40">
-                STATUS: Ostatnie wolne miejsca
+          {/* Helge honest review */}
+          <div className="max-w-3xl mx-auto bg-diamond-light rounded-lg p-8">
+            <p className="text-sm text-on-light-dim italic leading-relaxed mb-6">
+              „His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more practical examples of tool usage a bit slower."
+            </p>
+            <p className="text-xs text-on-light-dim font-bold uppercase tracking-wide mb-4">
+              — Helge Vestoyl, Norwegia 🇳🇴
+            </p>
+            <div className="border-t border-gray-200 mt-6 pt-6">
+              <p className="text-sm text-on-light-dim">
+                Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
+                ciszy dzieją się rzeczy. — <span className="font-medium text-text-on-light">Ludwik</span>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Łucja full-width quote — LIGHT */}
-      <section className="bg-diamond-light py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-2xl md:text-4xl italic leading-relaxed text-text-on-light mb-8">
+      {/* ═══ SCARCITY CTA ═══ */}
+      <section className="bg-white py-24" id="kontakt">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="font-heading text-4xl font-bold text-text-on-light mb-8">
+            Tylko 5 miejsc jednocześnie.
+          </h2>
+          <p className="text-on-light-dim max-w-2xl mx-auto mb-8">
+            Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
+            grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
+            natura tej pracy.
+          </p>
+
+          {/* Status badge */}
+          <div className="inline-block bg-diamond-light px-6 py-3 rounded-full text-xs font-bold text-electric mb-12">
+            STATUS: Ostatnie wolne miejsca
+          </div>
+
+          {/* Łucja quote */}
+          <div className="py-16 max-w-2xl mx-auto">
+            <blockquote className="text-xl md:text-2xl lg:text-3xl text-text-on-light italic leading-relaxed mb-6">
               Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
               'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam.
             </blockquote>
-            <footer className="text-sm uppercase tracking-widest text-text-on-light/50">
-              — ŁUCJA — FOUNDER REFSPACE
+            <footer className="text-sm uppercase tracking-widest text-on-light-dim">
+              — ŁUCJA — FOUNDER REVSPACE
             </footer>
           </div>
-        </div>
-      </section>
 
-      <TheCut />
-
-      {/* ═══════════ FINAL CTA — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl leading-relaxed text-text-dim mb-10">
-              Jeśli to, co przeczytałeś, wywołało w Tobie poruszenie – to dobry
-              znak. Nie potrzebujesz więcej tekstu. Potrzebujesz rozmowy.
-            </p>
-
-            <CTAButton to="/discovery" className="mb-6">
+          {/* CTA Card */}
+          <div className="bg-diamond-light p-10 rounded-2xl shadow-sm max-w-lg mx-auto">
+            <Link
+              to="/discovery"
+              className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
+            >
               ZAREZERWUJ BEZPŁATNĄ ROZMOWĘ
-            </CTAButton>
-
-            <p className="text-xs uppercase tracking-wider text-text-dim">
+            </Link>
+            <p className="text-xs text-on-light-dim uppercase tracking-wider">
               30 MINUT • BEZ SPRZEDAŻY • BEZ OBIETNIC
             </p>
           </div>
         </div>
       </section>
 
-      <TheCut />
-
-      {/* ═══════════ JESZCZE NIE TERAZ? — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-text-on-light mb-4">
-              JESZCZE NIE TERAZ?
-            </h2>
-            <p className="text-lg text-text-on-light/70 leading-relaxed">
-              Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję.
-              <br />
-              Wyczuć, czy ten język do Ciebie trafia.
-            </p>
-          </div>
+      {/* ═══ DOWNSELL SEPARATOR ═══ */}
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">
+            JESZCZE NIE TERAZ?
+          </h3>
+          <p className="text-on-light-dim text-sm">
+            Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję.
+            Wyczuć, czy ten język do Ciebie trafia.
+          </p>
         </div>
       </section>
 
-      <TheCut />
-
-      {/* ═══════════ MODUŁY SYSTEMOWE — DARK ═══════════ */}
-      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <SectionLabel variant="dark">MODUŁY SYSTEMOWE</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
+      {/* ═══ OFFER 2: APLIKACJE MENTALNE ═══ */}
+      <section className="bg-white py-24">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-16">
+            <Eyebrow color="depth">OFERTA #2</Eyebrow>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-on-light mb-4">
               Aplikacje Mentalne
             </h2>
-            <p className="text-lg text-text-dim mb-16">
+            <p className="text-on-light-dim max-w-2xl mx-auto">
               Programy, które instalujesz w swoim systemie, aby rozwiązać
               konkretny problem bez reinstalacji całego OS.
             </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Uważne Życie",
-                  desc: "Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami. Przejmujesz kontrolę nad kokpitem. To nie jest siedzenie w ciszy. To jest aktywny trening uwagi.",
-                  img: "/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png",
-                  link: "/program/uwazne-zycie",
-                },
-                {
-                  title: "Hakowanie Produktywności",
-                  desc: 'Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.',
-                  img: portalHakprod,
-                  link: "/program/hakowanie-produktywnosci",
-                },
-                {
-                  title: "Silna Głowa",
-                  desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
-                  img: portalSilnaglowa,
-                  link: "/program/silna-glowa",
-                },
-                {
-                  title: "Męski Kompas",
-                  desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
-                  img: compassHero,
-                  link: "/program/meski-kompas",
-                },
-              ].map((card) => (
-                <div
-                  key={card.title}
-                  className="border border-white/10 rounded-sm overflow-hidden bg-white/5"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={card.img}
-                      alt={card.title}
-                      className="w-full h-full object-cover opacity-80"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-heading text-xl font-bold text-white mb-2">
-                      {card.title}
-                    </h3>
-                    <p className="text-text-dim mb-4">{card.desc}</p>
-                    <Link
-                      to={card.link}
-                      className="text-sm font-semibold uppercase tracking-wider text-electric hover:opacity-70 transition-opacity"
-                    >
-                      POZNAJ PROGRAM →
-                    </Link>
-                  </div>
+          {/* Featured card: Uważne Życie */}
+          <Link to="/program/uwazne-zycie" className="group block col-span-3 bg-white rounded-2xl shadow-sm overflow-hidden mb-8">
+            <div className="grid lg:grid-cols-2">
+              <div className="relative">
+                <img
+                  src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                  alt="Uważne Życie"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+              <div className="p-8 md:p-10 flex flex-col justify-center">
+                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
+                <h3 className="font-heading font-bold text-3xl text-text-on-light mb-4">
+                  Uważne Życie
+                </h3>
+                <p className="text-on-light-dim mb-6">
+                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami. Przejmujesz kontrolę nad kokpitem.
+                </p>
+                <p className="text-sm font-bold uppercase tracking-widest text-text-on-light group-hover:text-electric transition-colors">
+                  POZNAJ PROGRAM →
+                </p>
+              </div>
+            </div>
+          </Link>
+
+          {/* Vertical cards (3x) */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "Hakowanie Produktywności",
+                desc: "Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.",
+                img: portalHakprod,
+                link: "/program/hakowanie-produktywnosci",
+              },
+              {
+                title: "Silna Głowa",
+                desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
+                img: portalSilnaglowa,
+                link: "/program/silna-glowa",
+              },
+              {
+                title: "Męski Kompas",
+                desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
+                img: compassHero,
+                link: "/program/meski-kompas",
+              },
+            ].map((card) => (
+              <Link key={card.title} to={card.link} className="group bg-white rounded-xl shadow-sm overflow-hidden">
+                <div className="relative pt-[125%]">
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
-              ))}
-            </div>
+                <div className="p-6">
+                  <h3 className="font-heading font-bold text-xl text-text-on-light group-hover:text-electric transition-colors mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
+                    POZNAJ PROGRAM →
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-            {/* More testimonials */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <SmallQuote
-                variant="dark"
-                text="🇳🇴 Easy to understand, clear explanations and a nice teaching personality."
-                author="Yasith Navoda"
-              />
-              <SmallQuote
-                variant="dark"
-                text="🇳🇴 Good pace and really good at explaining."
-                author="Hilde Mykland Pihl"
-              />
-              <SmallQuote
-                variant="dark"
-                text="🇵🇱 Trener super. Ma bardzo dobre czytelne przykłady. Świetny gość. Dobre obiady."
-                author="Uczestnik szkolenia w Warszawie"
-              />
-              <SmallQuote
-                variant="dark"
-                text="🇳🇴 Very energic and knowledgeable teacher. Fun guy as well. He truly do know what he is talking about."
-                author="Uczestnik szkolenia w Oslo"
-              />
-            </div>
+          {/* Testimonials strip 4col */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <TestimonialCard
+              variant="light"
+              size="sm"
+              flag="🇳🇴"
+              quote="Easy to understand, clear explanations and a nice teaching personality."
+              author="Yasith Navoda"
+            />
+            <TestimonialCard
+              variant="light"
+              size="sm"
+              flag="🇳🇴"
+              quote="Good pace and really good at explaining."
+              author="Hilde Mykland Pihl"
+            />
+            <TestimonialCard
+              variant="light"
+              size="sm"
+              flag="🇵🇱"
+              quote="Trener super. Ma bardzo dobre czytelne przykłady. Świetny gość."
+              author="Uczestnik, Warszawa"
+            />
+            <TestimonialCard
+              variant="light"
+              size="sm"
+              flag="🇳🇴"
+              quote="Very energic and knowledgeable teacher. Fun guy as well."
+              author="Uczestnik, Oslo"
+            />
+          </div>
 
-            <div className="mt-12 text-center">
-              <OutlineButton to="/program">
-                PRZEGLĄDAJ WSZYSTKIE MODUŁY
-              </OutlineButton>
-            </div>
+          {/* Footer link */}
+          <div className="text-center">
+            <Link
+              to="/program"
+              className="inline-block border border-gray-200 text-on-light-dim font-bold uppercase text-xs tracking-[0.2em] rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors"
+            >
+              PRZEGLĄDAJ WSZYSTKIE MODUŁY
+            </Link>
           </div>
         </div>
       </section>
 
-      <TheCut />
+      {/* ═══ CLOSING FOOTER ═══ */}
+      <section className="bg-void py-20 relative overflow-hidden">
+        {/* void-glow overlay */}
+        <div
+          className="absolute inset-0 opacity-30 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+          <h2 className="font-heading text-2xl font-bold text-white mb-2">
+            Diamentowy umysł.
+          </h2>
+          <p className="text-text-dim uppercase tracking-widest text-xs mb-8">
+            OTWARTA PRZYŁBICA.
+          </p>
 
-      {/* ═══════════ FOOTER SECTION — LIGHT ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-4">
-              Diamentowy umysł.
-            </h2>
-            <p className="text-sm uppercase tracking-widest text-text-on-light/40 mb-8">
-              OTWARTA PRZYŁBICA.
-            </p>
-            <p className="text-lg text-text-on-light/70">
-              Ludwik C. Siadlak
-            </p>
+          {/* Divider */}
+          <div className="w-12 h-1 bg-brand-gradient mx-auto rounded-full mb-8" />
+
+          <p className="font-heading text-xl text-white tracking-wide mb-8">
+            Ludwik C. Siadlak
+          </p>
+
+          <div className="flex justify-center gap-8">
+            <Link to="/about" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+              O mnie
+            </Link>
+            <Link to="/program" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+              Programy
+            </Link>
+            <Link to="/contact" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+              Kontakt
+            </Link>
           </div>
+
+          <p className="text-xs text-on-light-dim mt-12">
+            © {new Date().getFullYear()} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
+          </p>
         </div>
       </section>
     </Layout>
