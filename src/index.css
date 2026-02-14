@@ -547,3 +547,34 @@ body {
 .glow-text {
   text-shadow: 0 0 20px hsl(var(--primary-foreground) / 0.5);
 }
+
+/* === Homepage: Phase backgrounds === */
+.bg-void { background-color: #080808; }
+.bg-surface { background-color: rgba(255,255,255,0.03); }
+.bg-paper { background-color: #FFFFFF; }
+
+/* === Marquee === */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* === Diamond bullet list === */
+.diamond-bullet li::before {
+  content: "◆";
+  color: #007AFF;
+  margin-right: 0.75rem;
+  font-size: 0.6em;
+  vertical-align: middle;
+}
+
+/* === Brand gradient background utility === */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #007AFF, #6D28D9);
+}
