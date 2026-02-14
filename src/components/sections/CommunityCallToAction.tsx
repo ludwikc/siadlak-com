@@ -25,17 +25,17 @@ export default function CommunityCallToAction({
   }
 
   return (
-    <div className={`bg-secondary/30 p-6 rounded-xl ${className}`}>
+    <div className={`bg-void-glow p-6 rounded-sm ${className}`}>
       <div className="flex flex-col items-center text-center space-y-4">
-        <div className="w-12 h-12 bg-twilight-indigo/10 rounded-full flex items-center justify-center mb-2">
-          <Users className="h-6 w-6 text-twilight-indigo" />
+        <div className="w-12 h-12 bg-electric/10 rounded-full flex items-center justify-center mb-2">
+          <Users className="h-6 w-6 text-electric" />
         </div>
 
-        <h3 className="text-xl font-semibold text-deep-charcoal">
+        <h3 className="text-xl font-semibold text-text-on-dark">
           Dołącz do Społeczności Lifehackerów
         </h3>
 
-        <p className="text-subtle-slate max-w-md mx-auto">
+        <p className="text-text-dim max-w-md mx-auto">
           Otoczenie wpływa na nas bardziej niż zdajemy sobie sprawę. Dołącz do
           społeczności ludzi, którzy wspólnie dążą do rozwoju i pomagają sobie
           nawzajem osiągać cele.
