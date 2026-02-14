@@ -7,57 +7,129 @@ import portalSilnaglowa from "@/assets/portal-silnaglowa.png";
 import compassHero from "@/assets/compass-hero-bg.png";
 
 /* ─── tiny reusable pieces ─── */
-const SectionLabel = ({ children }: { children: string }) => (
-  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-text-on-light/40 mb-6">
+
+const TheCut = () => <div className="the-cut" />;
+
+const SectionLabel = ({
+  children,
+  variant: _variant = "light",
+}: {
+  children: string;
+  variant?: "light" | "dark";
+}) => (
+  <p
+    className="text-xs font-bold uppercase tracking-[0.2em] mb-6"
+    style={{
+      background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
     {children}
   </p>
-);
-
-const TheDivider = () => (
-  <div className="w-full max-w-5xl mx-auto">
-    <div className="h-[1px] bg-gray-200/50" />
-  </div>
 );
 
 const Quote = ({
   text,
   author,
   role,
+  variant = "light",
 }: {
   text: string;
   author: string;
   role?: string;
-}) => (
-  <blockquote className="border-l-2 border-text-on-light/10 pl-6 py-2">
-    <p className="text-lg italic leading-relaxed text-text-on-light/80 mb-4">
-      {text}
-    </p>
-    <footer className="not-italic">
-      <p className="font-semibold text-sm uppercase tracking-wider text-text-on-light">
-        {author}
+  variant?: "light" | "dark";
+}) => {
+  const isDark = variant === "dark";
+  return (
+    <blockquote
+      className={`border-l-2 pl-6 py-2 ${isDark ? "border-white/20" : "border-text-on-light/10"}`}
+    >
+      <p
+        className={`text-lg italic leading-relaxed mb-4 ${isDark ? "text-text-on-dark/80" : "text-text-on-light/80"}`}
+      >
+        {text}
       </p>
-      {role && (
-        <p className="text-xs text-text-on-light/50 mt-1">{role}</p>
-      )}
-    </footer>
-  </blockquote>
-);
+      <footer className="not-italic">
+        <p
+          className={`font-semibold text-sm uppercase tracking-wider ${isDark ? "text-text-on-dark" : "text-text-on-light"}`}
+        >
+          {author}
+        </p>
+        {role && (
+          <p
+            className={`text-xs mt-1 ${isDark ? "text-text-dim" : "text-text-on-light/50"}`}
+          >
+            {role}
+          </p>
+        )}
+      </footer>
+    </blockquote>
+  );
+};
 
 const SmallQuote = ({
   text,
   author,
+  variant = "light",
 }: {
   text: string;
   author: string;
+  variant?: "light" | "dark";
+}) => {
+  const isDark = variant === "dark";
+  return (
+    <div className="text-center">
+      <blockquote
+        className={`text-sm italic leading-relaxed mb-2 ${isDark ? "text-text-dim" : "text-text-on-light/60"}`}
+      >
+        {text}
+      </blockquote>
+      <footer
+        className={`text-xs font-medium ${isDark ? "text-text-on-dark/40" : "text-text-on-light/40"}`}
+      >
+        — {author}
+      </footer>
+    </div>
+  );
+};
+
+const CTAButton = ({
+  children,
+  to,
+  className = "",
+}: {
+  children: React.ReactNode;
+  to: string;
+  className?: string;
 }) => (
-  <div className="text-center">
-    <blockquote className="text-sm italic text-text-on-light/60 leading-relaxed mb-2">
-      {text}
-    </blockquote>
-    <footer className="text-xs font-medium text-text-on-light/40">
-      — {author}
-    </footer>
-  </div>
+  <Link
+    to={to}
+    className={`inline-block px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm hover:opacity-90 transition-opacity ${className}`}
+    style={{
+      background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
+      boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
+    }}
+  >
+    {children}
+  </Link>
+);
+
+const OutlineButton = ({
+  children,
+  to,
+  className = "",
+}: {
+  children: React.ReactNode;
+  to: string;
+  className?: string;
+}) => (
+  <Link
+    to={to}
+    className={`inline-block px-10 py-4 rounded font-semibold uppercase tracking-wide text-sm text-electric border border-electric hover:bg-electric/10 transition-colors ${className}`}
+  >
+    {children}
+  </Link>
 );
 
 const Index = () => {
@@ -65,23 +137,32 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("home")} />
 
-      {/* ═══════════ HERO: PERSPEKTYWA ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ HERO: PERSPEKTYWA — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        {/* Glow gradient background */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto">
             {/* Left column */}
             <div className="lg:col-span-5">
-              <SectionLabel>PERSPEKTYWA</SectionLabel>
+              <SectionLabel variant="dark">PERSPEKTYWA</SectionLabel>
 
-              <h1 className="font-heading text-4xl md:text-5xl font-bold leading-[1.1] text-text-on-light mb-8">
+              <h1 className="font-heading text-4xl md:text-5xl font-bold leading-[1.1] text-white mb-8">
                 Diament jest najtwardszą substancją na Ziemi.
                 <br />
-                <span className="font-normal text-text-on-light/60">
+                <span className="font-normal text-text-on-dark/60">
                   I jest kompletnie przezroczysty.
                 </span>
               </h1>
 
-              <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mb-10">
+              <div className="space-y-6 text-lg leading-relaxed text-text-dim mb-10">
                 <p>
                   Połóż go na czerwonym suknie – wygląda jak rubin. Na zielonym –
                   jak szmaragd.
@@ -90,7 +171,7 @@ const Index = () => {
                 </p>
                 <p>
                   Ale diament sam w sobie?{" "}
-                  <strong className="text-text-on-light">
+                  <strong className="text-white">
                     Nie ma koloru. Jest czysty.
                   </strong>
                   <br />
@@ -100,35 +181,33 @@ const Index = () => {
 
               <div className="space-y-4 mb-10">
                 <div className="flex items-baseline gap-4">
-                  <span className="text-text-on-light/30">●</span>
-                  <p className="text-text-on-light/70">
+                  <span className="text-electric">●</span>
+                  <p className="text-text-dim">
                     Otaczasz się presją – nabiera koloru napięcia. Myślisz:
                     „jestem zestresowany".
                   </p>
                 </div>
                 <div className="flex items-baseline gap-4">
-                  <span className="text-text-on-light/30">●</span>
-                  <p className="text-text-on-light/70">
+                  <span className="text-electric">●</span>
+                  <p className="text-text-dim">
                     Wchodzisz w sprint za kolejnym celem – nabiera koloru głodu.
                     Myślisz: „nigdy nie mam dość".
                   </p>
                 </div>
               </div>
 
-              <p className="text-lg text-text-on-light/70 mb-2">
+              <p className="text-lg text-text-dim mb-2">
                 Ale to nie Ty się zmieniłeś.
               </p>
-              <p className="text-2xl font-bold text-text-on-light">
-                To sukno się zmieniło.
+              <p className="text-2xl font-bold text-white">
+                To{" "}
+                <span className="text-electric">sukno</span>{" "}
+                się zmieniło.
               </p>
 
-              <div className="mt-12">
-                <Link
-                  to="/discovery"
-                  className="inline-block font-semibold text-sm uppercase tracking-[0.2em] text-text-on-light border-b border-text-on-light/30 pb-1 hover:opacity-70 transition-opacity"
-                >
-                  LUDWIK C. SIADLAK
-                </Link>
+              <div className="mt-12 flex flex-wrap gap-4">
+                <CTAButton to="/discovery">Zobacz mechanizm</CTAButton>
+                <OutlineButton to="/about">Moja historia</OutlineButton>
               </div>
             </div>
 
@@ -137,26 +216,29 @@ const Index = () => {
               <img
                 src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                 alt="Ludwik C. Siadlak"
-                className="w-full h-auto max-h-[600px] object-contain object-bottom"
+                className="w-full h-auto max-h-[600px] object-contain object-bottom drop-shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════════ TESTIMONIALS STRIP #1 ═══════════ */}
-      <section className="bg-diamond-light py-12">
+      {/* Testimonials strip #1 — DARK */}
+      <section className="bg-void-glow py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <SmallQuote
+              variant="dark"
               text="Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting even for person who is quite familiar with this software."
               author="Paweł Cerkaski"
             />
             <SmallQuote
+              variant="dark"
               text="Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years."
               author="Betty M. Greenberg"
             />
             <SmallQuote
+              variant="dark"
               text="Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Z pełnym przeświadczeniem właściwa osoba na właściwym miejscu. Nie dajcie mu odejść."
               author="Adam Anioła"
             />
@@ -164,9 +246,9 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ DIAGNOZA ═══════════ */}
+      {/* ═══════════ DIAGNOZA — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -191,7 +273,7 @@ const Index = () => {
                 "Kupowałeś nowe systemy i metody.",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4">
-                  <span className="text-red-500 font-bold shrink-0 mt-0.5">
+                  <span className="text-destructive font-bold shrink-0 mt-0.5">
                     ✕
                   </span>
                   <p className="text-text-on-light/80">{item}</p>
@@ -219,7 +301,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quote: Łukasz */}
+      {/* Quote: Łukasz — LIGHT */}
       <section className="bg-diamond-light py-12">
         <div className="container mx-auto px-4 max-w-3xl">
           <Quote
@@ -230,20 +312,27 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ AUTORYTET ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ AUTORYTET — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <SectionLabel>AUTORYTET</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-12">
+            <SectionLabel variant="dark">AUTORYTET</SectionLabel>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-12">
               Nie liczby. Przełom.
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div className="border-r-0 lg:border-r border-gray-200/50 lg:pr-12">
-                <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80">
+              <div className="border-r-0 lg:border-r border-white/10 lg:pr-12">
+                <div className="space-y-6 text-lg leading-relaxed text-text-dim">
                   <p>
                     Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
                     10 000 profesjonalistów. Fortune 500. NATO. Jednostki
@@ -255,22 +344,22 @@ const Index = () => {
                   </p>
                 </div>
 
-                <blockquote className="mt-8 text-xl italic leading-relaxed text-text-on-light/70 border-l-4 border-text-on-light/10 pl-6">
+                <blockquote className="mt-8 text-xl italic leading-relaxed text-text-on-dark/70 border-l-4 border-white/10 pl-6">
                   "W 2014 roku stałem na balkonie i poważnie rozważałem skok.
                   Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
                   na jedwabnym suknie. I kompletną pustkę w środku."
                 </blockquote>
               </div>
 
-              <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80">
+              <div className="space-y-6 text-lg leading-relaxed text-text-dim">
                 <p>
                   Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek
                   ludzi:{" "}
-                  <strong className="text-text-on-light">
+                  <strong className="text-white">
                     żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.
                   </strong>
                 </p>
-                <p className="text-text-on-light text-center text-xl font-medium">
+                <p className="text-white text-center text-xl font-medium">
                   Jestem tym, kto patrzy.
                 </p>
                 <p>
@@ -284,19 +373,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* International testimonials strip */}
-      <section className="bg-diamond-light py-12">
+      {/* International testimonials strip — DARK */}
+      <section className="bg-void-glow py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <SmallQuote
+              variant="dark"
               text="🇬🇧 Great instructor! Would easily recommend Ludwik to anyone wanting to learn Transact-SQL, or any other Microsoft product for that matter, as he's energetic, knowledgeable, competent and great at teaching. 10/10."
               author="Uczestnik szkolenia w Londynie"
             />
             <SmallQuote
+              variant="dark"
               text="🇳🇴 Ludwik was very professional, polite, to the point and also funny. Easy to talk to and could answer any question regarding any subject of SQL Server. I would highly recommend him."
               author="Johnny, Norwegia"
             />
             <SmallQuote
+              variant="dark"
               text="🇵🇱 Brak uwag. Bardzo dobry kontakt, sposób przekazywania informacji, kultura osobista."
               author="Uczestnik szkolenia w Warszawie"
             />
@@ -304,9 +396,9 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ MECHANIZM ═══════════ */}
+      {/* ═══════════ MECHANIZM — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -334,8 +426,8 @@ const Index = () => {
               <p>Metafora działa tam, gdzie logika się zatrzymuje.</p>
             </div>
 
-            <div className="bg-gray-50 rounded p-8 mb-12">
-              <p className="text-sm uppercase tracking-wider text-text-on-light/50 mb-4">
+            <div className="bg-white rounded-sm p-8 mb-12 border border-text-on-light/10">
+              <p className="text-sm uppercase tracking-wider text-depth mb-4 font-bold">
                 CASE STUDY: ŁUKASZ
               </p>
               <blockquote className="text-xl italic leading-relaxed text-text-on-light/80 mb-4">
@@ -357,92 +449,78 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ OFERTA #1: LIFE OS ═══════════ */}
+      {/* ═══════════ OFERTA #1: LIFE OS — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <SectionLabel>OFERTA #1</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-2">
-              Life OS:
-              <br />
-              System Upgrade
-            </h2>
-
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mt-8 mb-12">
-              <p>
-                Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze.
-                Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy
-                widzisz, co jest pod nimi.
-              </p>
-              <p>
-                To praca 1:1. Ze mną. Nie z nagraniem. Z człowiekiem, który
-                zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
-                usłyszeć.
-              </p>
-            </div>
-
-            <h3 className="font-heading text-xl font-bold text-text-on-light mb-6">
-              CO OBEJMUJE PROCES:
-            </h3>
-            <ul className="space-y-4 text-text-on-light/80 mb-12">
-              {[
-                "Pełna diagnostyka + mapa transformacji (wartość 5 000 PLN)",
-                "8 tygodni sesji 1:1. Intensywna praca filozoficzna (wartość 16 000 PLN)",
-                "Bezpośredni dostęp między sesjami (wartość 8 000 PLN)",
-                "Dostęp VIP do społeczności Lifehackerzy (wartość 3 000 PLN)",
-                'Framework „Diamentowy Umysł" (wartość 5 000 PLN)',
-                "BONUS: Sesja follow-up 30 dni po programie (wartość 2 000 PLN)",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="text-text-on-light/30 mt-1">—</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="border-t border-gray-200/50 pt-8 mb-12">
-              <p className="text-text-on-light/60 mb-6">
-                To nie jest dla każdego. To dla garści ludzi, którzy są gotowi
-                zaakceptować, że to, co znajdą pod spodem, zmieni wszystko.
-              </p>
-            </div>
-
-            {/* Price block */}
-            <div className="flex flex-col md:flex-row items-baseline gap-6 mb-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              {/* Left: copy */}
               <div>
-                <p className="text-xs uppercase tracking-wider text-text-on-light/40 mb-1">
-                  PEŁEN PROCES
+                <SectionLabel>OFERTA</SectionLabel>
+                <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-2">
+                  Life OS:
+                  <br />
+                  System Upgrade
+                </h2>
+
+                <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80 mt-8 mb-12">
+                  <p>
+                    Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze.
+                    Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy
+                    widzisz, co jest pod nimi.
+                  </p>
+                  <p>
+                    To praca 1:1. Ze mną. Nie z nagraniem. Z człowiekiem, który
+                    zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
+                    usłyszeć.
+                  </p>
+                </div>
+
+                <blockquote className="text-xl font-semibold text-text-on-light mb-2">
+                  "Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko."
+                </blockquote>
+                <p className="text-sm text-text-dim">— Łukasz, IT Professional</p>
+              </div>
+
+              {/* Right: pricing card */}
+              <div className="bg-white rounded-sm p-8 md:p-10 border border-text-on-light/10">
+                <p className="text-xs uppercase tracking-[0.1em] text-depth font-bold mb-4">
+                  Pełen Proces
                 </p>
-                <p className="text-xs uppercase tracking-wider text-text-on-light/40">
-                  INWESTYCJA
+                <p className="font-heading text-5xl md:text-6xl font-bold text-electric tracking-tighter mb-8">
+                  39 000 <span className="text-xl text-text-on-light/60">PLN</span>
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    "8 tygodni sesji 1:1",
+                    "Diagnostyka Life OS",
+                    "Dostęp VIP 24/7",
+                    "Gwarancja zwrotu po 2 tyg.",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 text-text-on-light/70">
+                      <span className="w-2 h-2 rounded-full bg-depth shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <CTAButton to="/discovery" className="w-full text-center block">
+                  Aplikuj o miejsce
+                </CTAButton>
+
+                <p className="text-center text-xs text-text-dim mt-4">
+                  Dostępne: 3/5 miejsc
                 </p>
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="font-heading text-5xl md:text-7xl font-bold text-text-on-light tracking-tighter">
-                  39 000
-                </span>
-                <span className="text-xl text-text-on-light/60">PLN</span>
-              </div>
-            </div>
-
-            <Link
-              to="/discovery"
-              className="inline-block px-10 py-4 rounded-sm font-semibold text-white uppercase tracking-wide text-sm bg-text-on-light hover:opacity-90 transition-opacity"
-            >
-              ZAREZERWUJ ROZMOWĘ KWALIFIKACYJNĄ
-            </Link>
-
-            <div className="mt-8 space-y-2 text-sm text-text-on-light/50">
-              <p>Maksymalnie 5 osób w procesie jednocześnie.</p>
-              <p>Wymagana krótka rozmowa kwalifikacyjna.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials: Anna + Bergen */}
+      {/* Testimonials: Anna + Bergen — LIGHT */}
       <section className="bg-diamond-light py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -459,33 +537,44 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ GŁOSY ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ GŁOSY — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-16 text-center">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-16 text-center">
               Głosy tych, którzy zdjęli sukno
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <Quote
+                variant="dark"
                 text="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
                 author="ŁUKASZ"
                 role="IT, ADHD, sceptyk"
               />
               <Quote
+                variant="dark"
                 text="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."
                 author="ARTUR"
                 role="Ojciec, przedsiębiorca"
               />
               <Quote
+                variant="dark"
                 text="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
                 author="ANNA"
                 role="CEO"
               />
               <Quote
+                variant="dark"
                 text="Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
                 author="ŁUCJA"
                 role="Founder RevSpace"
@@ -495,9 +584,9 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ TO NIE DLA CIEBIE / TO JEST DLA CIEBIE ═══════════ */}
+      {/* ═══════════ TO NIE DLA CIEBIE — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -512,7 +601,7 @@ const Index = () => {
                   "Chcesz gotową receptę z pudełka",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-red-500 shrink-0 mt-0.5">✕</span>
+                    <span className="text-destructive shrink-0 mt-0.5">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -530,9 +619,7 @@ const Index = () => {
                   "Jesteś gotów na rozmowę bez klepania po plecach",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-text-on-light shrink-0 mt-0.5">
-                      ✔
-                    </span>
+                    <span className="text-electric shrink-0 mt-0.5">✔</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -542,17 +629,24 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ GWARANCJA ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ GWARANCJA — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-2xl text-text-on-light/30 mb-6">★</p>
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-text-on-light mb-8">
+            <p className="text-2xl text-electric/50 mb-6">★</p>
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-white mb-8">
               Gwarancja Satysfakcji
             </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-text-on-light/80">
+            <div className="space-y-6 text-lg leading-relaxed text-text-dim">
               <p>
                 Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa
                 jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej
@@ -562,7 +656,7 @@ const Index = () => {
               <p>
                 Mogę to zaoferować, bo dostarczam momenty, w których mówisz:
                 <br />
-                <em className="text-text-on-light">
+                <em className="text-white">
                   „Nie wiem, co się wydarzyło."
                 </em>
               </p>
@@ -571,24 +665,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Helge quote */}
-      <section className="bg-diamond-light py-12">
+      {/* Helge quote — DARK */}
+      <section className="bg-void-glow py-12">
         <div className="container mx-auto px-4 max-w-3xl">
           <Quote
+            variant="dark"
             text="His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more practical examples of tool usage a bit slower."
             author="Helge Vestoyl, Norwegia 🇳🇴"
           />
-          <p className="text-sm text-text-on-light/50 mt-4 pl-6">
+          <p className="text-sm text-text-dim mt-4 pl-6">
             Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
             ciszy dzieją się rzeczy. —{" "}
-            <span className="font-medium text-text-on-light/70">Ludwik</span>
+            <span className="font-medium text-text-on-dark/70">Ludwik</span>
           </p>
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ TYLKO 5 MIEJSC ═══════════ */}
+      {/* ═══════════ TYLKO 5 MIEJSC — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -609,7 +704,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Łucja full-width quote */}
+      {/* Łucja full-width quote — LIGHT */}
       <section className="bg-diamond-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -624,34 +719,38 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ FINAL CTA ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ FINAL CTA — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl leading-relaxed text-text-on-light/80 mb-10">
+            <p className="text-xl leading-relaxed text-text-dim mb-10">
               Jeśli to, co przeczytałeś, wywołało w Tobie poruszenie – to dobry
               znak. Nie potrzebujesz więcej tekstu. Potrzebujesz rozmowy.
             </p>
 
-            <Link
-              to="/discovery"
-              className="inline-block px-10 py-4 rounded-sm font-semibold text-white uppercase tracking-wide text-sm bg-text-on-light hover:opacity-90 transition-opacity mb-6"
-            >
+            <CTAButton to="/discovery" className="mb-6">
               ZAREZERWUJ BEZPŁATNĄ ROZMOWĘ
-            </Link>
+            </CTAButton>
 
-            <p className="text-xs uppercase tracking-wider text-text-on-light/40">
+            <p className="text-xs uppercase tracking-wider text-text-dim">
               30 MINUT • BEZ SPRZEDAŻY • BEZ OBIETNIC
             </p>
           </div>
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ JESZCZE NIE TERAZ? ═══════════ */}
+      {/* ═══════════ JESZCZE NIE TERAZ? — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -667,165 +766,118 @@ const Index = () => {
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ MODUŁY SYSTEMOWE ═══════════ */}
-      <section className="bg-diamond-light py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      {/* ═══════════ MODUŁY SYSTEMOWE — DARK ═══════════ */}
+      <section className="bg-void-glow py-20 md:py-32 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%)",
+          }}
+        />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <SectionLabel>MODUŁY SYSTEMOWE</SectionLabel>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-text-on-light mb-4">
+            <SectionLabel variant="dark">MODUŁY SYSTEMOWE</SectionLabel>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-4">
               Aplikacje Mentalne
             </h2>
-            <p className="text-lg text-text-on-light/60 mb-16">
+            <p className="text-lg text-text-dim mb-16">
               Programy, które instalujesz w swoim systemie, aby rozwiązać
               konkretny problem bez reinstalacji całego OS.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Uważne Życie */}
-              <div className="border border-gray-200 rounded-sm overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                  <img
-                    src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                    alt="Uważne Życie"
-                    className="w-full h-full object-cover"
-                  />
+              {[
+                {
+                  title: "Uważne Życie",
+                  desc: "Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami. Przejmujesz kontrolę nad kokpitem. To nie jest siedzenie w ciszy. To jest aktywny trening uwagi.",
+                  img: "/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png",
+                  link: "/program/uwazne-zycie",
+                },
+                {
+                  title: "Hakowanie Produktywności",
+                  desc: 'Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.',
+                  img: portalHakprod,
+                  link: "/program/hakowanie-produktywnosci",
+                },
+                {
+                  title: "Silna Głowa",
+                  desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
+                  img: portalSilnaglowa,
+                  link: "/program/silna-glowa",
+                },
+                {
+                  title: "Męski Kompas",
+                  desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
+                  img: compassHero,
+                  link: "/program/meski-kompas",
+                },
+              ].map((card) => (
+                <div
+                  key={card.title}
+                  className="border border-white/10 rounded-sm overflow-hidden bg-white/5"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={card.img}
+                      alt={card.title}
+                      className="w-full h-full object-cover opacity-80"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-heading text-xl font-bold text-white mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-text-dim mb-4">{card.desc}</p>
+                    <Link
+                      to={card.link}
+                      className="text-sm font-semibold uppercase tracking-wider text-electric hover:opacity-70 transition-opacity"
+                    >
+                      POZNAJ PROGRAM →
+                    </Link>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-text-on-light mb-2">
-                    Uważne Życie
-                  </h3>
-                  <p className="text-text-on-light/70 mb-4">
-                    Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie
-                    walczysz z myślami. Przejmujesz kontrolę nad kokpitem. To
-                    nie jest siedzenie w ciszy. To jest aktywny trening uwagi.
-                  </p>
-                  <Link
-                    to="/program/uwazne-zycie"
-                    className="text-sm font-semibold uppercase tracking-wider text-text-on-light hover:opacity-70 transition-opacity"
-                  >
-                    POZNAJ PROGRAM →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Hakowanie Produktywności */}
-              <div className="border border-gray-200 rounded-sm overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                  <img
-                    src={portalHakprod}
-                    alt="Hakowanie Produktywności"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-text-on-light mb-2">
-                    Hakowanie Produktywności
-                  </h3>
-                  <p className="text-text-on-light/70 mb-4">
-                    Zamiast zarządzać zadaniami – zarządzasz energią. Zrozum,
-                    czemu Twój diament nabiera koloru „za dużo" i co z tym
-                    zrobić.
-                  </p>
-                  <Link
-                    to="/program/hakowanie-produktywnosci"
-                    className="text-sm font-semibold uppercase tracking-wider text-text-on-light hover:opacity-70 transition-opacity"
-                  >
-                    POZNAJ PROGRAM →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Silna Głowa */}
-              <div className="border border-gray-200 rounded-sm overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                  <img
-                    src={portalSilnaglowa}
-                    alt="Silna Głowa"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-text-on-light mb-2">
-                    Silna Głowa
-                  </h3>
-                  <p className="text-text-on-light/70 mb-4">
-                    Firewall dla Twojego umysłu. Presja przestaje paraliżować –
-                    zaczyna skupiać. Krytyka przestaje ranić – zaczyna
-                    informować.
-                  </p>
-                  <Link
-                    to="/program/silna-glowa"
-                    className="text-sm font-semibold uppercase tracking-wider text-text-on-light hover:opacity-70 transition-opacity"
-                  >
-                    POZNAJ PROGRAM →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Męski Kompas */}
-              <div className="border border-gray-200 rounded-sm overflow-hidden">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                  <img
-                    src={compassHero}
-                    alt="Męski Kompas"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-heading text-xl font-bold text-text-on-light mb-2">
-                    Męski Kompas
-                  </h3>
-                  <p className="text-text-on-light/70 mb-4">
-                    Reinstalacja systemu tożsamości. Siła przestaje być maską –
-                    staje się przezroczystą obecnością. Jak diament.
-                  </p>
-                  <Link
-                    to="/program/meski-kompas"
-                    className="text-sm font-semibold uppercase tracking-wider text-text-on-light hover:opacity-70 transition-opacity"
-                  >
-                    POZNAJ PROGRAM →
-                  </Link>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* More testimonials */}
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <SmallQuote
+                variant="dark"
                 text="🇳🇴 Easy to understand, clear explanations and a nice teaching personality."
                 author="Yasith Navoda"
               />
               <SmallQuote
+                variant="dark"
                 text="🇳🇴 Good pace and really good at explaining."
                 author="Hilde Mykland Pihl"
               />
               <SmallQuote
+                variant="dark"
                 text="🇵🇱 Trener super. Ma bardzo dobre czytelne przykłady. Świetny gość. Dobre obiady."
                 author="Uczestnik szkolenia w Warszawie"
               />
               <SmallQuote
+                variant="dark"
                 text="🇳🇴 Very energic and knowledgeable teacher. Fun guy as well. He truly do know what he is talking about."
                 author="Uczestnik szkolenia w Oslo"
               />
             </div>
 
             <div className="mt-12 text-center">
-              <Link
-                to="/program"
-                className="inline-block px-10 py-4 rounded-sm font-semibold uppercase tracking-wide text-sm text-text-on-light border border-gray-200 hover:bg-gray-50 transition-colors"
-              >
+              <OutlineButton to="/program">
                 PRZEGLĄDAJ WSZYSTKIE MODUŁY
-              </Link>
+              </OutlineButton>
             </div>
           </div>
         </div>
       </section>
 
-      <TheDivider />
+      <TheCut />
 
-      {/* ═══════════ FOOTER SECTION ═══════════ */}
+      {/* ═══════════ FOOTER SECTION — LIGHT ═══════════ */}
       <section className="bg-diamond-light py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
