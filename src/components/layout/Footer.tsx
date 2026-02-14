@@ -219,15 +219,6 @@ export default function Footer() {
                   <ExternalLink size={14} className="flex-shrink-0" />
                 </a>
               </li>
-              <li>
-                <Link
-                  to="/program/ttt"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
-                >
-                  TrainTheTrainer.pl
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

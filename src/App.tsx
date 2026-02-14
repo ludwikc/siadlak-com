@@ -38,26 +38,21 @@ import Newsletter from "./pages/Newsletter";
 import NotFound from "./pages/NotFound";
 import Program from "./pages/Program";
 import CourseDetail from "./pages/CourseDetail";
-import Community from "./pages/Community";
-import Podcasts from "./pages/Podcasts";
-import NewPodcast from "./pages/NewPodcast";
 import LifeHackingPodcast from "./pages/LifeHackingPodcast";
 import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
 import WebinarExpired from "./pages/WebinarExpired";
 import WebinarLive from "./pages/WebinarLive";
 import WebinarReplay from "./pages/WebinarReplay";
 import Testimonials from "./pages/Testimonials";
-import Assessment from "./pages/Assessment";
+
 import ThankYou from "./pages/ThankYou";
 import ThankYouMeskiKompas from "./pages/ThankYouMeskiKompas";
 import LifeOSSystemUpgrade from "./pages/LifeOSSystemUpgrade";
-import Work from "./pages/Work";
+
 import Sitemap from "./pages/Sitemap";
 import SilnaGlowa from "./pages/SilnaGlowa";
 import MeskiKompas from "./pages/MeskiKompas";
 import UwazneZycie from "./pages/UwazneZycie";
-import TrainTheTrainer from "./pages/TrainTheTrainer";
-import TrainTheTrainerElite from "./pages/TrainTheTrainerElite";
 import OTO from "./pages/OTO";
 import Help from "./pages/Help";
 import HelpSubpage from "./pages/HelpSubpage";
@@ -94,10 +89,10 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/discovery" element={<Discovery />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/work" element={<Work />} />
+              
               <Route path="/newsletter" element={<Newsletter />} />
               <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/assessment" element={<Assessment />} />
+              
               <Route path="/thank-you" element={<ThankYou />} />
               <Route
                 path="/thank-you/meski-kompas"
@@ -122,7 +117,7 @@ function App() {
                 }
               />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/community" element={<Community />} />
+              
 
               {/* Placeholder routes for footer links */}
               <Route path="/resources" element={<NotFound />} />
@@ -147,14 +142,10 @@ function App() {
               <Route path="/program/meski-kompas" element={<MeskiKompas />} />
               <Route path="/program/uwazne-zycie" element={<UwazneZycie />} />
               <Route path="/program/7-technik" element={<SiedemTechnik />} />
-              <Route path="/train-the-trainer" element={<TrainTheTrainer />} />
-              <Route path="/program/ttt" element={<TrainTheTrainerElite />} />
               <Route path="/program/:courseSlug" element={<CourseDetail />} />
 
               <Route path="/oto" element={<OTO />} />
 
-              <Route path="/podcast" element={<Podcasts />} />
-              <Route path="/new-podcast" element={<NewPodcast />} />
               <Route
                 path="/podcast/life-hacking"
                 element={<LifeHackingPodcast />}

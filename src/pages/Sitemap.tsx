@@ -12,11 +12,9 @@ const Sitemap = () => {
         { name: 'Strona główna', path: '/', description: 'Główna strona siadlak.com' },
         { name: 'O mnie', path: '/about', description: 'Poznaj moją historię i podejście' },
         { name: 'Kontakt', path: '/contact', description: 'Umów rozmowę lub zadaj pytanie' },
-        { name: 'Programy szkoleniowe', path: '/work', description: 'Zobacz możliwości współpracy' },
+        
         { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na cotygodniowe przemyślenia' },
         { name: 'Opinie Klientów', path: '/testimonials', description: 'Co mówią moi klienci' },
-        { name: 'Assessment', path: '/assessment', description: 'Oceń swój poziom produktywności' },
-        { name: 'Społeczność', path: '/community', description: 'Dołącz do społeczności Lifehackerów' },
         { name: 'Discovery Call', path: '/discovery', description: 'Umów rozmowę odkrywczą' },
         { name: 'Strona podziękowania', path: '/thank-you', description: 'Strona potwierdzenia' },
         { name: 'Regulaminy', path: '/legal', description: 'Warunki użytkowania i polityka prywatności' },
@@ -37,8 +35,6 @@ const Sitemap = () => {
       category: 'Podcasty',
       icon: <Mic2 className="h-5 w-5" />,
       pages: [
-        { name: 'Przegląd podcastów', path: '/podcast', description: 'Wszystkie dostępne podcasty' },
-        { name: 'New Podcast', path: '/new-podcast', description: 'Nowy format podcastu' },
         { name: 'Life Hacking Podcast', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
         { name: 'Uważne Życie', path: '/program/uwazne-zycie', description: 'Podcast o świadomym życiu (pod programami)' },
       ]
