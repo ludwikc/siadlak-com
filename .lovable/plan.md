@@ -1,91 +1,81 @@
 
 
-# Diamond Hybrid Design System -- Clean Rewrite
+# New Page: /webinar/depresja
 
-## Current Problem
-The stylesheet has grown organically into 1000+ lines of CSS and 760+ lines of Tailwind config with:
-- 30+ duplicate CSS variables mapping to the same 4 core colors
-- Legacy "transformation-*" utility classes nobody asked for
-- Redundant gradient utilities (locked, brand, hero -- all identical)
-- Old color names (`--color-primary`, `--transformation-blue`, `--success-green`) that are just aliases of Electric Blue or Depth Purple
-- No "The Cut" divider concept
-- Glow gradient exists but is buried in noise
+## Overview
+A deeply personal, emotionally resonant landing page for a free online meeting on International Depression Awareness Day (February 23, 2026). The tone is raw, vulnerable, and human -- the opposite of a sales webinar. The design must reflect that: warm, quiet, safe, with no flashy gradients or aggressive CTAs.
 
-## Brand Book: Diamond Hybrid System
+## Design Direction
 
-**4 Core Colors only:**
-- **Void Black** `#080808` -- dark surfaces, problem/emotion sections
-- **Electric Blue** `#007AFF` -- clarity, technology, focus (60% usage)
-- **Depth Purple** `#6D28D9` -- transformation, depth (25% usage)
-- **Diamond Light** `#F9FAFB` -- truth, logic, light sections (15%)
+**Theme: "Safe Harbor"** -- subdued, warm, human. Not the usual dark/premium webinar aesthetic.
 
-**Key Design Elements:**
-- Dark sections pulse with Electric Blue + Depth Purple glow (like car dashboard at night)
-- "The Cut" -- a sharp gradient divider separating dark (problem) from light (solution)
-- One gradient button (Blue to Purple) that works on both dark and light backgrounds
-- Body uses Diamond Light with subtle glow gradient overlay
+- Background: soft warm white (`#FAF8F5`) with very subtle warm grey sections
+- Text: deep charcoal (`#1a1a2e`) for readability, muted grey for secondary text
+- Accent: a single soft teal/blue-green (`#2B7A78`) -- calm, clinical trust, not aggressive
+- Emergency strip at bottom: warm amber background with crisis hotline numbers -- always visible
+- No flashy gradients, no glow effects, no countdown timers
+- Hero uses Ludwik's profile image with a soft, human presentation
+- CTA button: solid teal, understated, with arrow -- not screaming "BUY NOW"
 
-## Changes
+## Technical Implementation
 
-### 1. `src/index.css` -- Rewrite `:root` variables
+### 1. Create `src/pages/WebinarDepresja.tsx`
 
-**Remove** all redundant aliases:
-- `--color-primary`, `--color-primary-light`, `--color-primary-dark`, `--color-accent`, `--color-indigo`, `--color-premium`
-- `--transformation-blue`, `--transformation-blue-light`, `--transformation-blue-dark`
-- `--success-green`, `--growth-gold`
-- `--neural-blue` / `--twilight-indigo` legacy aliases (keep only in Tailwind config)
-- `--gradient-body-primary`, `--gradient-body-overlay`
+Single-file page component (following WebinarKodKapitana pattern):
 
-**Keep** (clean and organized):
-- 4 core palette variables (electric-blue, depth-purple, void-black, diamond-light)
-- Void Black surface scale (base/elevated/floating)
-- Text utilities (on-dark, on-light, dim)
-- Shadcn/UI semantic tokens (mapped to core 4)
-- Brand gradients (premium, hero, glow)
-- Shadows, typography, spacing, borders (unchanged)
-- UI states (success, warning, error, info)
+**Sections:**
+1. **Hero** -- "Nie musisz tego znosic sam." Large, quiet typography. Date badge: "23 lutego 2026". Subtitle about the free meeting. Profile image with warm border.
+2. **Symptoms** -- "Czy ostatnio lapiesz sie na tym, ze..." -- 6 pain points, each as a quiet card with subtle left border accent
+3. **Personal Story** -- "Wiem, co czujesz. Bo to czulem." -- Blockquote with the metro station story. Personal narrative in prose.
+4. **What You'll Get** -- 5 bullet points with check icons
+5. **Logistics + CTA** -- Date/time/format badges + single CTA button linking to `https://buy.siadlak.com/checkout/depresja2026`
+6. **Crisis Footer** -- Fixed or prominent strip with emergency phone numbers (116 123, 800 70 2222)
 
-**Add:**
-- `.the-cut` -- a utility class for the sharp dark-to-light divider
-- Cleaner glow-gradient with visible Blue/Purple pulse on Void Black
+**Layout:** `hideHeader={true}`, `hideFooter={true}` (landing page pattern)
 
-**Remove from components layer:**
-- `.btn-special` (hardcoded purple hex -- use gradient instead)
-- Remove duplicate `.section` definition
+### 2. Add route to `src/App.tsx`
 
-### 2. `tailwind.config.ts` -- Consolidate colors
+```
+import WebinarDepresja from "./pages/WebinarDepresja";
+// ...
+<Route path="/webinar/depresja" element={<WebinarDepresja />} />
+```
 
-**Keep** legacy Tailwind color names (50+ files reference them) but point them directly at the 4 core colors:
-- `deep-space` -> Void Black hex
-- `neural-blue` / `quantum-blue` -> Electric Blue
-- `twilight-indigo` / `neural-violet` / `ascension-pink` -> Depth Purple
-- `luminous-white` -> Diamond Light
-- `deep-charcoal` -> foreground dark
-- `silver-mist`, `subtle-slate`, `gentle-lavender` -> grayscale scale
-- `zenith-gold` -> keep as accent (gold stays)
-- `pulse-cyan` -> remove (unused or map to Electric Blue light)
+### 3. SEO
 
-**Remove** from Tailwind config:
-- `color-primary`, `color-primary-light`, `color-primary-dark`, `color-accent`, `color-indigo`, `color-premium` (not used in templates)
-- `transformation` object and `transformation-blue` flat key
-- `success-green`, `growth-gold` duplicates
+Using the existing `<SEO>` component with appropriate title and description for this sensitive topic.
 
-**Remove** plugin utilities:
-- All `.transformation-card*`, `.transformation-section*`, `.transformation-badge*`, `.btn-transformation*` classes (only used in 1 file -- LifeOSSystemUpgrade.tsx which can use Tailwind classes directly)
-- Duplicate gradient utilities -- keep only: `bg-gradient-locked-primary`, `bg-gradient-locked-dark`, `bg-gradient-locked-hero-complex`, `bg-gradient-text-brand`
-- Remove: `bg-gradient-locked-hero` (identical to primary), `bg-gradient-locked-cta` (identical), `bg-gradient-brand-*` (identical non-locked versions)
+## Section Details
 
-**Add:**
-- `.the-cut` utility in plugin
-- `.bg-void-glow` utility -- Void Black with pulsing Blue/Purple radial gradients
+### Hero
+- Warm white background, no dark gradient
+- Large heading: "Nie musisz tego znosic sam."
+- Subdued date badge (not urgency -- just information)
+- Profile image of Ludwik (from existing uploads)
+- Single line: "Bezplatne spotkanie online z czlowiekiem, ktory stal na krawedzi peronu -- i wrocil."
 
-### 3. Footer -- No changes (as requested)
+### Symptoms Section
+- 6 cards, each with a soft left border in teal
+- Bold lead phrase + normal description text
+- Quiet, empathetic tone -- no exclamation marks, no urgency
 
-## Technical Notes
+### Personal Story
+- Blockquote styled with left border and italic text
+- Narrative paragraphs with generous line spacing
+- "Siadlak" introduction with credentials mentioned casually
 
-- The legacy Tailwind color aliases stay to avoid breaking 50+ component files
-- CSS variables are reduced from ~95 to ~45
-- Tailwind plugin utilities reduced from ~50 to ~20
-- The LifeOSSystemUpgrade.tsx page uses `transformation-badge*` classes -- these will need inline Tailwind replacements (can be done in a follow-up)
-- "The Cut" will be a reusable `<div className="the-cut" />` element -- a 4px-tall gradient strip from Electric Blue through Depth Purple
+### Benefits (What You'll Get)
+- Simple list with soft check icons
+- Each item as clean text, no cards needed
+
+### Logistics + CTA
+- Date/time/format in a clean row of badges
+- "To nie jest webinar sprzedazowy" disclaimer
+- Single CTA: "Dolaczam do spotkania" linking to checkout URL
+- Note about Q&A not being recorded
+
+### Crisis Strip
+- Warm amber/orange background at page bottom
+- Emergency numbers prominently displayed
+- Always visible, not hidden
 
