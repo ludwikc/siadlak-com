@@ -26,11 +26,11 @@ const ExternalRedirect = ({ url }: { url: string }) => {
   return null;
 };
 import Index from "./pages/Index";
-import Index2025 from "./pages/Index2025";
-import Index2601 from "./pages/Index2601";
-import HomeTest from "./pages/HomeTest";
-import HomeTest2 from "./pages/HomeTest2";
-import HomeTest3 from "./pages/HomeTest3";
+import Index2025 from "./pages/archive/Index2025";
+import Index2601 from "./pages/archive/Index2601";
+import HomeTest from "./pages/archive/HomeTest";
+import HomeTest2 from "./pages/archive/HomeTest2";
+import HomeTest3 from "./pages/archive/HomeTest3";
 import About from "./pages/About";
 import Discovery from "./pages/Discovery";
 import Contact from "./pages/Contact";
@@ -119,10 +119,19 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               
 
-              {/* Placeholder routes for footer links */}
-              <Route path="/resources" element={<NotFound />} />
-              <Route path="/privacy" element={<NotFound />} />
-              <Route path="/terms" element={<NotFound />} />
+              {/* Privacy and Terms redirects */}
+              <Route
+                path="/privacy"
+                element={
+                  <ExternalRedirect url="https://docs.siadlak.com/legal/privacy" />
+                }
+              />
+              <Route
+                path="/terms"
+                element={
+                  <ExternalRedirect url="https://docs.siadlak.com/legal/regulaminy" />
+                }
+              />
 
               {/* Redirect routes from config */}
               {Object.entries(redirects).map(([from, to]) => (
