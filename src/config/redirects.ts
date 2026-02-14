@@ -14,7 +14,7 @@ export const redirects: RedirectConfig = {
   "/meski-kompas": "/program/meski-kompas",
   "/hp": "/program/hakowanie-produktywnosci",
   "/lh": "/podcast/life-hacking",
-  "/ttt": "/program/ttt",
+  
   "/uwaznosc": "/program/uwazne-zycie",
   "/u": "/program/uwazne-zycie",
 

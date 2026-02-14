@@ -339,11 +339,11 @@ export default function Header() {
                   {/* Footer Action */}
                   <div className="mt-6 pt-4 border-t border-slate-200 text-center">
                     <Link
-                      to="/work"
+                      to="/program"
                       className="inline-flex items-center text-sm font-medium text-deep-charcoal/70 hover:text-neural-blue transition-all group px-4 py-2 rounded-lg hover:bg-slate-50"
                       onClick={() => setIsDropdownOpen(false)}
                     >
-                      Zobacz wszystkie możliwości
+                      Zobacz programy
                       <span className="ml-2 transform group-hover:translate-x-1 transition-transform text-base">
                         →
                       </span>

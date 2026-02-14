@@ -14,7 +14,7 @@ export default function CommunityCallToAction({
   if (minimal) {
     return (
       <div className={`flex flex-col items-center space-y-4 ${className}`}>
-        <Link to="/community" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
           <Button variant="secondary">
             <Users size={18} />
             <span>Dołącz do Społeczności Lifehackerów</span>
@@ -41,7 +41,7 @@ export default function CommunityCallToAction({
           nawzajem osiągać cele.
         </p>
 
-        <Link to="/community" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/newsletter" onClick={() => window.scrollTo(0, 0)}>
           <Button variant="secondary">
             <Users size={18} />
             <span>Odkryj nasze cyfrowe miasto</span>
