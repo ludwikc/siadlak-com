@@ -66,7 +66,7 @@ const WebinarLive = () => {
                   <iframe
                     height="100%"
                     width="100%"
-                    src="https://webinar.mywave.video/snaxhXbnHls4orbg?embed"
+                    src="https://www.youtube.com/watch?v=X7gsG0T6Kno"
                     frameBorder="0"
                     allow="autoplay; fullscreen"
                     scrolling="no"
@@ -77,8 +77,8 @@ const WebinarLive = () => {
               {/* GÓRNY BOKS - Data + Zapisz w kalendarzu */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">
-                  Poniedziałek, 2 lutego 2026, <br />
-                  godzina 20:05 (Berlin/Warszawa)
+                  Poniedziałek, 23 lutego 2026, <br />
+                  godzina 19:05 (Berlin/Warszawa)
                 </h2>
 
                 <div className="pt-6">
@@ -90,7 +90,7 @@ const WebinarLive = () => {
                   <div className="flex flex-wrap justify-center items-center gap-4">
                     {/* GOOGLE CALENDAR */}
                     <a
-                      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&dates=20260202T190000Z/20260202T203000Z&details=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Dzie%C5%84+Walki+z+Depresj%C4%85+%28spotkanie+online%29&details=Sta%C5%82em+na+peronie+i+chcia%C5%82em+zrobi%C4%87+jeden+krok+%E2%80%94+opowiem+jak+z+tego+wr%C3%B3ci%C5%82em.+Do%C5%82%C4%85cz+do+naszego+spotkania+w+poniedzia%C5%82ek+23+lutego+2026+o+19%3A05+na+https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&dates=20260223T180500Z%2F20260223T190000Z"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-transform duration-200 hover:scale-105"
@@ -126,7 +126,7 @@ const WebinarLive = () => {
 
                     {/* OUTLOOK (WEB) */}
                     <a
-                      href="https://outlook.live.com/calendar/0/deeplink/compose?subject=KOD+KAPITANA%3A+Uważność%2C+która+po+prostu+działa&startdt=2026-02-02T20:00&enddt=2026-02-02T21:30&body=To+jest+Twoja+przepustka+na+Mostek+Kapitański.+Dołącz+do+naszego+spotkania+w+poniedziałek+2+lutego+2026+o+20%3A05.&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive"
+                      href="https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=Dzie%C5%84+Walki+z+Depresj%C4%85+%28spotkanie+online%29&body=Sta%C5%82em+na+peronie+i+chcia%C5%82em+zrobi%C4%87+jeden+krok+%E2%80%94+opowiem+jak+z+tego+wr%C3%B3ci%C5%82em.+Do%C5%82%C4%85cz+do+naszego+spotkania+w+poniedzia%C5%82ek+23+lutego+2026+o+19%3A05+na+https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&startdt=20260223T180500Z&enddt=20260223T190000Z"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-transform duration-200 hover:scale-105"
