@@ -33,6 +33,7 @@ const config: Config = {
         "text-on-dark": "hsl(var(--text-on-dark))",
         "text-on-light": "hsl(var(--text-on-light))",
         "text-dim": "hsl(var(--text-dim))",
+        "text-on-light-dim": "#4B5563",
 
         // Accent
         "zenith-gold": "hsl(var(--zenith-gold))",
