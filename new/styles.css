@@ -9,6 +9,18 @@ body { font-feature-settings: "cv11", "ss01"; }
     font-size: 0.8em;
     top: 0.2em;
 }
+/* Marquee auto-scroll for testimonial strips */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-track {
+    animation: marquee 35s linear infinite;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
 /* Hide scrollbar for clean aesthetic */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #080808; }
