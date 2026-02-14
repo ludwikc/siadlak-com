@@ -2,53 +2,16 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface ContentGridSectionProps {
-  /** Optional section title */
   title?: string | ReactNode;
-  /** Optional subtitle/description */
   subtitle?: string | ReactNode;
-  /** Grid items (cards, features, etc.) */
   children: ReactNode;
-  /** Number of columns on desktop */
   columns?: 2 | 3 | 4;
-  /** Gap size between grid items */
   gap?: "sm" | "md" | "lg";
-  /** Optional className for customization */
   className?: string;
-  /** Background variant */
-  backgroundVariant?: "light" | "muted";
-  /** Optional id for anchor links */
+  backgroundVariant?: "light" | "muted" | "dark";
   id?: string;
 }
 
-/**
- * SECTION TYPE C: GRID (Cards, stats, features)
- *
- * Use for:
- * - Feature grids
- * - Statistics/metrics displays
- * - Card-based content
- * - Comparison sections
- *
- * Features:
- * - Responsive grid (1 col mobile → 2-4 cols desktop)
- * - Max-width 1200px container
- * - Optional centered title/subtitle
- * - Flexible gap sizes
- * - Breathable padding (120px desktop, 80px mobile)
- *
- * @example
- * ```tsx
- * <ContentGridSection
- *   title="Kim NIE jesteśmy dla siebie"
- *   columns={2}
- *   gap="lg"
- *   backgroundVariant="muted"
- * >
- *   <div className="content-card">Card 1</div>
- *   <div className="content-card">Card 2</div>
- * </ContentGridSection>
- * ```
- */
 export function ContentGridSection({
   title,
   subtitle,
@@ -59,10 +22,16 @@ export function ContentGridSection({
   backgroundVariant = "light",
   id,
 }: ContentGridSectionProps) {
+  const isDark = backgroundVariant === "muted" || backgroundVariant === "dark";
+
   const bgClasses = {
-    light: "bg-luminous-white",
-    muted: "bg-secondary/30",
+    light: "bg-diamond-light",
+    muted: "bg-void-glow",
+    dark: "bg-void-glow",
   };
+
+  const titleColor = isDark ? "text-text-on-dark" : "text-text-on-light";
+  const subtitleColor = isDark ? "text-text-dim" : "text-text-on-light/80";
 
   const columnClasses = {
     2: "md:grid-cols-2",
@@ -82,21 +51,19 @@ export function ContentGridSection({
       className={cn("section-content", bgClasses[backgroundVariant], className)}
     >
       <div className="container mx-auto px-6 md:px-12 max-w-[1200px]">
-        {/* Optional Header */}
         {(title || subtitle) && (
           <div className="text-center mb-12 md:mb-16 max-w-[800px] mx-auto">
             {title && (
-              <h2 className="content-h2 mb-6 text-deep-charcoal">{title}</h2>
+              <h2 className={cn("font-heading text-2xl md:text-4xl font-bold mb-6", titleColor)}>{title}</h2>
             )}
             {subtitle && (
-              <p className="text-lg md:text-xl text-deep-charcoal/80 leading-relaxed mx-auto">
+              <p className={cn("text-lg md:text-xl leading-relaxed mx-auto", subtitleColor)}>
                 {subtitle}
               </p>
             )}
           </div>
         )}
 
-        {/* Grid */}
         <div
           className={cn(
             "grid grid-cols-1",
