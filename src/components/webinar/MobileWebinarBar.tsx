@@ -171,7 +171,7 @@ const MobileWebinarBar = () => {
 
           {/* CTA Button - matching Kod Kapitana style */}
           <Link
-            to="/webinar/kod-kapitana"
+            to="/webinar/depresja"
             onClick={handleCTAClick}
             className="w-full max-w-xs text-white font-bold py-3 px-6 rounded-xl text-center transition-all active:scale-[0.98]"
             style={{

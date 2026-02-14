@@ -233,7 +233,7 @@ const DesktopWebinarBar = () => {
 
                 {/* CTA Button */}
                 <Link
-                  to="/webinar/kod-kapitana"
+                  to="/webinar/depresja"
                   onClick={handleCTAClick}
                   className="text-white font-bold py-4 px-10 rounded-xl text-center transition-all hover:scale-[1.02] active:scale-[0.98] text-lg"
                   style={{
