@@ -66,6 +66,7 @@ import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 import SiedemTechnik from "./pages/SiedemTechnik";
 import WebinarMeskiKompas from "./pages/WebinarMeskiKompas";
 import WebinarKodKapitana from "./pages/WebinarKodKapitana";
+import WebinarDepresja from "./pages/WebinarDepresja";
 import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
 import { Toaster } from "@/components/ui/sonner";
@@ -173,6 +174,10 @@ function App() {
               <Route
                 path="/webinar/kod-kapitana"
                 element={<WebinarKodKapitana />}
+              />
+              <Route
+                path="/webinar/depresja"
+                element={<WebinarDepresja />}
               />
 
               <Route path="/wyzwanie" element={<Wyzwanie />} />
