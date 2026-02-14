@@ -35,6 +35,15 @@ const config: Config = {
         "text-dim": "hsl(var(--text-dim))",
         "text-on-light-dim": "#4B5563",
 
+        // Design system aliases (per guidelines)
+        electric: "#007AFF",
+        depth: "#6D28D9",
+        void: "#080808",
+        surface: "rgba(255,255,255,0.03)",
+        diamond: "#F9FAFB",
+        paper: "#FFFFFF",
+        dim: "#9CA3AF",
+
         // Accent
         "zenith-gold": "hsl(var(--zenith-gold))",
         gold: "hsl(var(--zenith-gold))",

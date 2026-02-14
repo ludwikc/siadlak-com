@@ -35,15 +35,6 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/work',
-    seo: {
-      title: 'Współpraca',
-      description: 'Dowiedz się o możliwościach współpracy, programach partnerskich i sposobach wspólnego rozwoju.',
-      keywords: 'współpraca, partnerstwo, rozwój biznesu, coaching',
-      url: '/work'
-    }
-  },
-  {
     path: '/program',
     seo: {
       title: 'Programy Rozwoju',
@@ -95,26 +86,6 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/train-the-trainer',
-    seo: {
-      title: 'Train the Trainer',
-      description: 'Profesjonalny program szkoleniowy dla trenerów i coachów. Rozwijaj swoje umiejętności szkoleniowe.',
-      keywords: 'szkolenie trenerów, coaching skills, umiejętności szkoleniowe, edukacja',
-      url: '/train-the-trainer',
-      type: 'course'
-    }
-  },
-  {
-    path: '/podcast',
-    seo: {
-      title: 'Podcasty',
-      description: 'Słuchaj inspirujących rozmów o rozwoju osobistym, produktywności i życiu. Podcast Life Hacking i Uważne Życie.',
-      keywords: 'podcast, rozwój osobisty, inspiracja, rozmowy, life hacking',
-      url: '/podcast',
-      type: 'website'
-    }
-  },
-  {
     path: '/podcast/life-hacking',
     seo: {
       title: 'Life Hacking Podcast',
@@ -125,13 +96,33 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/uwazne-zycie',
+    path: '/podcast/uwazne-zycie',
     seo: {
       title: 'Uważne Życie Podcast',
       description: 'Podcast o mindfulness, świadomym życiu i znajdowaniu równowagi w codzienności.',
       keywords: 'mindfulness, uważność, równowaga, świadomość, medytacja',
-      url: '/program/uwazne-zycie',
+      url: '/podcast/uwazne-zycie',
       type: 'podcast'
+    }
+  },
+  {
+    path: '/program/uwazne-zycie',
+    seo: {
+      title: 'Uważne Życie - Program',
+      description: 'Program rozwoju osobistego oparty na mindfulness i uważności. Znajdź równowagę i spokój w codziennym życiu.',
+      keywords: 'mindfulness, uważność, program rozwoju, medytacja, równowaga',
+      url: '/program/uwazne-zycie',
+      type: 'course'
+    }
+  },
+  {
+    path: '/program/7-technik',
+    seo: {
+      title: '7 Technik Mentalnych',
+      description: 'Poznaj 7 sprawdzonych technik mentalnych, które pomogą Ci osiągnąć sukces i równowagę.',
+      keywords: '7 technik, rozwój mentalny, techniki mentalne, sukces, transformacja',
+      url: '/program/7-technik',
+      type: 'course'
     }
   },
   {
@@ -153,30 +144,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/community',
-    seo: {
-      title: 'Społeczność',
-      description: 'Dołącz do społeczności ludzi rozwijających się. Wspólnie osiągamy więcej.',
-      keywords: 'społeczność, wsparcie, rozwój, networking, motywacja',
-      url: '/community'
-    }
-  },
-  {
     path: '/newsletter',
     seo: {
       title: 'Newsletter',
       description: 'Zapisz się do naszego newslettera i otrzymuj regularne dawki inspiracji oraz praktyczne porady rozwojowe.',
       keywords: 'newsletter, inspiracja, porady, rozwój, motywacja',
       url: '/newsletter'
-    }
-  },
-  {
-    path: '/assessment',
-    seo: {
-      title: 'Ocena Potencjału',
-      description: 'Sprawdź swój aktualny poziom rozwoju i otrzymaj spersonalizowane rekomendacje dalszych kroków.',
-      keywords: 'ocena, test, potencjał, analiza, rozwój osobisty',
-      url: '/assessment'
     }
   },
   {
@@ -243,13 +216,33 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/new-podcast',
+    path: '/webinar/kod-kapitana',
     seo: {
-      title: 'Nowy Podcast',
-      description: 'Poznaj nasz najnowszy podcast o rozwoju osobistym, produktywności i transformacji życia.',
-      keywords: 'nowy podcast, rozwój osobisty, produktywność, inspiracja',
-      url: '/new-podcast',
-      type: 'podcast'
+      title: 'Kod Kapitana - Webinar',
+      description: 'Dołącz do webinaru Kod Kapitana i odkryj tajniki uważności, która działa w praktyce.',
+      keywords: 'kod kapitana, webinar, uważność, mindfulness, rozwój',
+      url: '/webinar/kod-kapitana',
+      type: 'event'
+    }
+  },
+  {
+    path: '/webinar/depresja',
+    seo: {
+      title: 'Dzień Walki z Depresją - Webinar',
+      description: 'Stałem na peronie i chciałem zrobić jeden krok — opowiem jak z tego wróciłem. Dołącz 23 lutego 2026.',
+      keywords: 'depresja, webinar, zdrowie psychiczne, wsparcie, odporność mentalna',
+      url: '/webinar/depresja',
+      type: 'event'
+    }
+  },
+  {
+    path: '/webinar/live',
+    seo: {
+      title: 'Webinar Live',
+      description: 'Dołącz do webinaru na żywo i odkryj nowe możliwości rozwoju osobistego.',
+      keywords: 'webinar live, na żywo, rozwój osobisty, online',
+      url: '/webinar/live',
+      type: 'event'
     }
   },
   {
@@ -306,6 +299,16 @@ export const seoRouteConfig: RouteConfig[] = [
       keywords: 'męski kompas, warsztat, potwierdzenie, webinar, rozwój osobisty, mężczyźni 30+, analitycy',
       url: '/thank-you/meski-kompas',
       favicon: '/compass-favicon.png'
+    }
+  },
+  {
+    path: '/mct',
+    seo: {
+      title: 'Mental Code Terminal',
+      description: 'Interaktywne narzędzie diagnostyczne sprawdzające twoją obecną konfigurację mentalną.',
+      keywords: 'mental code terminal, diagnostyka mentalna, rozwój osobisty, analiza',
+      url: '/mct',
+      type: 'tool'
     }
   }
 ];

@@ -37,16 +37,16 @@ const TestimonialCard = ({
 }) => {
   const isLight = variant === "light";
   return (
-    <div className={`p-6 md:p-8 rounded-xl ${isLight ? "bg-diamond-light" : "bg-surface"}`}>
-      <p className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-text-dim"} leading-relaxed mb-4`}>
+    <div className={`p-6 md:p-8 rounded-xl ${isLight ? "bg-diamond" : "bg-surface"}`}>
+      <p className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-dim"} leading-relaxed mb-4`}>
         {flag && <span className="mr-1">{flag}</span>}
         „{quote}"
       </p>
       <footer className={`pt-3 border-t ${isLight ? "border-gray-200/50" : "border-white/10"}`}>
-        <p className={`text-xs font-bold uppercase tracking-wide ${isLight ? "text-text-on-light" : "text-text-on-dark"}`}>
+        <p className={`text-xs font-bold uppercase tracking-wide ${isLight ? "text-on-light" : "text-white"}`}>
           {author}
         </p>
-        {label && <p className={`text-xs mt-1 ${isLight ? "text-on-light-dim" : "text-text-dim"}`}>{label}</p>}
+        {label && <p className={`text-xs mt-1 ${isLight ? "text-on-light-dim" : "text-dim"}`}>{label}</p>}
       </footer>
     </div>
   );
@@ -58,7 +58,7 @@ const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: str
       <blockquote className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">
         {quote}
       </blockquote>
-      <footer className="text-sm text-text-dim font-bold uppercase tracking-widest not-italic">
+      <footer className="text-sm text-dim font-bold uppercase tracking-widest not-italic">
         — {author}
       </footer>
     </div>
@@ -93,12 +93,12 @@ const Index = () => {
 
               <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Diament jest najtwardszą substancją na Ziemi.
-                <span className="text-text-dim block mt-2">
+                <span className="text-dim block mt-2">
                   I jest kompletnie przezroczysty.
                 </span>
               </h1>
 
-              <div className="space-y-6 text-lg md:text-xl text-text-dim leading-relaxed max-w-2xl">
+              <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
                 <p>
                   Połóż go na czerwonym suknie – wygląda jak rubin. Na zielonym –
                   jak szmaragd.
@@ -151,8 +151,8 @@ const Index = () => {
 
               {/* Signature */}
               <div className="mt-10 flex items-center gap-4">
-                <div className="w-8 h-[1px] bg-text-dim" />
-                <p className="text-xs text-text-dim uppercase tracking-widest">
+                <div className="w-8 h-[1px] bg-dim" />
+                <p className="text-xs text-dim uppercase tracking-widest">
                   Ludwik C. Siadlak
                 </p>
               </div>
@@ -192,8 +192,8 @@ const Index = () => {
               ].map((t, i) => (
                 <div key={i} className="flex items-start gap-6">
                   <div className="max-w-md whitespace-normal">
-                    <p className="text-sm text-text-dim leading-relaxed">„{t.q}"</p>
-                    <p className="text-xs text-text-dim font-medium mt-1">— {t.a}</p>
+                    <p className="text-sm text-dim leading-relaxed">„{t.q}"</p>
+                    <p className="text-xs text-dim font-medium mt-1">— {t.a}</p>
                   </div>
                   <span className="text-white/10 self-center">◆</span>
                 </div>
@@ -211,7 +211,7 @@ const Index = () => {
             To nie Ty jesteś zepsuty
           </h2>
 
-          <div className="space-y-6 text-lg text-text-dim leading-relaxed mb-12">
+          <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>
               Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że
               wystarczyło zmienić sukno. Wiem, bo sam to robiłem. I widzę to u
@@ -228,12 +228,12 @@ const Index = () => {
             ].map((item, i) => (
               <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
                 <span className="text-red-500 font-bold shrink-0">✕</span>
-                <p className="text-text-dim">{item}</p>
+                <p className="text-dim">{item}</p>
               </div>
             ))}
           </div>
 
-          <div className="space-y-6 text-lg text-text-dim leading-relaxed mb-12">
+          <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>
               I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment:
               wracasz do punktu wyjścia, z kolejną warstwą niespełnionych
@@ -284,7 +284,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: paragraphs */}
-            <div className="text-text-dim space-y-6">
+            <div className="text-dim space-y-6">
               <p>
                 Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
                 10 000 profesjonalistów. Fortune 500. NATO. Jednostki
@@ -307,7 +307,7 @@ const Index = () => {
           </div>
 
           {/* Below grid */}
-          <div className="mt-12 text-text-dim text-lg space-y-6">
+          <div className="mt-12 text-dim text-lg space-y-6">
             <p>
               Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek
               ludzi:{" "}
@@ -360,7 +360,7 @@ const Index = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
             Diamentowy Umysł
           </h2>
-          <p className="text-text-dim uppercase tracking-widest text-sm mb-16">
+          <p className="text-dim uppercase tracking-widest text-sm mb-16">
             NIE METAFORA – METODA
           </p>
         </div>
@@ -368,7 +368,7 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Left: explanation */}
-            <div className="text-text-dim text-lg space-y-6">
+            <div className="text-dim text-lg space-y-6">
               <p>
                 Większość metod pracuje na powierzchni: nawyki, czas, emocje. To
                 szlifowanie diamentu, który nie potrzebuje szlifu. Ja pracuję
@@ -396,7 +396,7 @@ const Index = () => {
                 końca wiem, co się wydarzyło... I chcę więcej."
               </blockquote>
               <div className="border-t border-white/10 pt-4">
-                <p className="text-text-dim">
+                <p className="text-dim">
                   Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on
                   zobaczył swój diament.
                 </p>
@@ -422,7 +422,7 @@ const Index = () => {
           ╚═══════════════════════════════════════════╝ */}
 
       {/* ═══ OFFER SECTION ═══ */}
-      <section className="bg-diamond-light py-24 md:py-32" id="oferta">
+      <section className="bg-diamond py-24 md:py-32" id="oferta">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             {/* Left column (7 cols) */}
@@ -430,7 +430,7 @@ const Index = () => {
               <p className="text-on-light-dim text-xs font-bold tracking-[0.2em] uppercase mb-6">
                 OFERTA #1
               </p>
-              <h2 className="text-4xl md:text-6xl font-bold text-text-on-light font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+              <h2 className="text-4xl md:text-6xl font-bold text-on-light font-heading leading-[1.1] tracking-[-0.02em] mb-8">
                 Life OS:
                 <br />
                 <span className="text-electric">System Upgrade</span>
@@ -513,7 +513,7 @@ const Index = () => {
       {/* ═══ PROOF SECTION ═══ */}
       <section className="bg-paper py-24">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h3 className="font-heading text-3xl font-bold text-text-on-light mb-16 text-center">
+          <h3 className="font-heading text-3xl font-bold text-on-light mb-16 text-center">
             Głosy tych, którzy zdjęli sukno
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -546,7 +546,7 @@ const Index = () => {
       </section>
 
       {/* ═══ QUALIFICATION + GUARANTEE ═══ */}
-      <section className="bg-diamond-light py-24">
+      <section className="bg-diamond py-24">
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Qualification Grid */}
           <div className="grid md:grid-cols-2 gap-12 mb-24">
@@ -571,7 +571,7 @@ const Index = () => {
               <p className="font-bold text-xs uppercase tracking-widest border-b border-gray-200 pb-4 mb-6 text-electric">
                 TO JEST DLA CIEBIE, JEŚLI:
               </p>
-              <ul className="space-y-4 text-text-on-light font-medium">
+              <ul className="space-y-4 text-on-light font-medium">
                 {[
                   "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
                   "Testowałeś narzędzia i wiesz, że problem leży głębiej",
@@ -589,7 +589,7 @@ const Index = () => {
           {/* Guarantee Box */}
           <div className="bg-white p-10 rounded-xl text-center shadow-sm max-w-3xl mx-auto mb-12">
             <p className="text-electric text-2xl mb-4">★</p>
-            <h3 className="font-heading text-2xl font-bold text-text-on-light mb-6">
+            <h3 className="font-heading text-2xl font-bold text-on-light mb-6">
               Gwarancja Satysfakcji
             </h3>
             <div className="text-on-light-dim leading-relaxed space-y-4">
@@ -602,7 +602,7 @@ const Index = () => {
               <p>
                 Mogę to zaoferować, bo dostarczam momenty, w których mówisz:
                 <br />
-                <em className="text-text-on-light font-medium">
+                <em className="text-on-light font-medium">
                   „Nie wiem, co się wydarzyło."
                 </em>
               </p>
@@ -610,7 +610,7 @@ const Index = () => {
           </div>
 
           {/* Helge honest review */}
-          <div className="max-w-3xl mx-auto bg-diamond-light rounded-lg p-8">
+          <div className="max-w-3xl mx-auto bg-diamond rounded-lg p-8">
             <p className="text-sm text-on-light-dim italic leading-relaxed mb-6">
               „His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more practical examples of tool usage a bit slower."
             </p>
@@ -620,7 +620,7 @@ const Index = () => {
             <div className="border-t border-gray-200 mt-6 pt-6">
               <p className="text-sm text-on-light-dim">
                 Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
-                ciszy dzieją się rzeczy. — <span className="font-medium text-text-on-light">Ludwik</span>
+                ciszy dzieją się rzeczy. — <span className="font-medium text-on-light">Ludwik</span>
               </p>
             </div>
           </div>
@@ -630,7 +630,7 @@ const Index = () => {
       {/* ═══ SCARCITY CTA ═══ */}
       <section className="bg-white py-24" id="kontakt">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="font-heading text-4xl font-bold text-text-on-light mb-8">
+          <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
             Tylko 5 miejsc jednocześnie.
           </h2>
           <p className="text-on-light-dim max-w-2xl mx-auto mb-8">
@@ -640,13 +640,13 @@ const Index = () => {
           </p>
 
           {/* Status badge */}
-          <div className="inline-block bg-diamond-light px-6 py-3 rounded-full text-xs font-bold text-electric mb-12">
+          <div className="inline-block bg-diamond px-6 py-3 rounded-full text-xs font-bold text-electric mb-12">
             STATUS: Ostatnie wolne miejsca
           </div>
 
           {/* Łucja quote */}
           <div className="py-16 max-w-2xl mx-auto">
-            <blockquote className="text-xl md:text-2xl lg:text-3xl text-text-on-light italic leading-relaxed mb-6">
+            <blockquote className="text-xl md:text-2xl lg:text-3xl text-on-light italic leading-relaxed mb-6">
               Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
               'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam.
             </blockquote>
@@ -656,7 +656,7 @@ const Index = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="bg-diamond-light p-10 rounded-2xl shadow-sm max-w-lg mx-auto">
+          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg mx-auto">
             <Link
               to="/discovery"
               className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
@@ -688,7 +688,7 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-on-light mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">
               Aplikacje Mentalne
             </h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
@@ -710,13 +710,13 @@ const Index = () => {
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
-                <h3 className="font-heading font-bold text-3xl text-text-on-light mb-4">
+                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">
                   Uważne Życie
                 </h3>
                 <p className="text-on-light-dim mb-6">
                   Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami. Przejmujesz kontrolę nad kokpitem.
                 </p>
-                <p className="text-sm font-bold uppercase tracking-widest text-text-on-light group-hover:text-electric transition-colors">
+                <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
                   POZNAJ PROGRAM →
                 </p>
               </div>
@@ -754,7 +754,7 @@ const Index = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading font-bold text-xl text-text-on-light group-hover:text-electric transition-colors mb-2">
+                  <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-2">
                     {card.title}
                   </h3>
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
@@ -824,7 +824,7 @@ const Index = () => {
           <h2 className="font-heading text-2xl font-bold text-white mb-2">
             Diamentowy umysł.
           </h2>
-          <p className="text-text-dim uppercase tracking-widest text-xs mb-8">
+          <p className="text-dim uppercase tracking-widest text-xs mb-8">
             OTWARTA PRZYŁBICA.
           </p>
 
@@ -836,13 +836,13 @@ const Index = () => {
           </p>
 
           <div className="flex justify-center gap-8">
-            <Link to="/about" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link to="/about" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
               O mnie
             </Link>
-            <Link to="/program" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link to="/program" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
               Programy
             </Link>
-            <Link to="/contact" className="text-xs text-text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link to="/contact" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
               Kontakt
             </Link>
           </div>
