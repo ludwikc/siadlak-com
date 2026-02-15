@@ -33,12 +33,11 @@ const WebinarLive = () => {
             </div>
 
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white">
-              KOD KAPITANA
+              Nie musisz znosić tego sam.
             </h1>
 
             <p className="text-lg mb-6 text-gray-300">
-              Uważność, która po prostu działa.
-            </p>
+Międzynarodowy Dzień Walki z Depresją 2026            </p>
 
             <p className="text-md mb-6 text-gray-400">
               prowadzi: <strong>Ludwik C. Siadlak</strong> (MCT, MCSA, MCSE,
@@ -66,7 +65,7 @@ const WebinarLive = () => {
                   <iframe
                     height="100%"
                     width="100%"
-                    src="https://www.youtube.com/watch?v=X7gsG0T6Kno"
+                    src="https://www.youtube.com/live/X7gsG0T6Kno?si=TxFv3PuHoF8c7dIg"
                     frameBorder="0"
                     allow="autoplay; fullscreen"
                     scrolling="no"
@@ -157,7 +156,7 @@ const WebinarLive = () => {
                     className="bg-red-600 hover:bg-red-700 text-white border-0"
                   >
                     <a
-                      href="https://www.youtube.com/watch?v=jHphriFDJKM"
+                      href="https://www.youtube.com/live/X7gsG0T6Kno?si=TxFv3PuHoF8c7dIg"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -171,7 +170,7 @@ const WebinarLive = () => {
                     className="bg-blue-600 hover:bg-blue-700 text-white border-0"
                   >
                     <a
-                      href="https://www.facebook.com/events/1722489938708332"
+                      href="https://fb.me/e/5Y4SfVdyZ"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -185,7 +184,7 @@ const WebinarLive = () => {
                     className="bg-[#0077b5] hover:bg-[#006399] text-white border-0"
                   >
                     <a
-                      href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7420418135205494785"
+                      href="https://fb.me/e/5FLNV3UAi"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
