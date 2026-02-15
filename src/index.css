@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -199,6 +201,105 @@ body {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+  }
+  :root {
+    --electric-blue: 211 100% 50%;
+    --electric-blue-light: 211 100% 62%;
+    --electric-blue-dark: 211 100% 42%;
+    --depth-purple: 263 70% 50%;
+    --depth-purple-light: 263 70% 62%;
+    --depth-purple-dark: 263 70% 42%;
+    --void-black: 0 0% 3%;
+    --diamond-light: 210 20% 98%;
+    --zenith-gold: 38 92% 50%;
+    --surface-dark-base: 0 0% 3%;
+    --surface-dark-elevated: 0 0% 6%;
+    --surface-dark-floating: 0 0% 10%;
+    --text-on-dark: 210 17% 96%;
+    --text-on-dark-secondary: 215 14% 65%;
+    --text-on-dark-tertiary: 215 14% 50%;
+    --text-on-light: 222 47% 11%;
+    --text-dim: 215 14% 65%;
+    --color-success: 142 71% 45%;
+    --color-warning: 25 95% 53%;
+    --color-error: 0 84% 60%;
+    --color-info: 211 100% 50%;
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 14% 45%;
+    --accent: 263 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 13% 91%;
+    --input: 215 13% 93%;
+    --ring: 211 100% 50%;
+    --gradient-premium: linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(211 100% 50%) 0%, hsl(263 70% 50%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 65%));
+    --glow-gradient: radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%),
+                   radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%);
+    --shadow-premium: 0 20px 40px -10px hsla(211, 100%, 50%, 0.15);
+    --shadow-card: 0 4px 20px hsla(0, 0%, 0%, 0.06);
+    --shadow-glow: 0 0 30px hsla(263, 70%, 50%, 0.2);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.10);
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 15% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 215 13% 91%;
+    --sidebar-ring: 211 100% 50%;
+    --font-family-primary: "Inter", sans-serif;
+    --font-family-heading: "Space Grotesk", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --border-radius-pill: 999px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --content-body-size-mobile: 1rem;
+    --content-body-size-desktop: 1.125rem;
+    --content-body-line-height: 1.7;
+    --content-h1-size-mobile: 2rem;
+    --content-h1-size-desktop: 3.5rem;
+    --content-h1-line-height: 1.1;
+    --content-h2-size-mobile: 1.5rem;
+    --content-h2-size-desktop: 2rem;
+    --content-h2-line-height: 1.3;
+    --content-h3-size-mobile: 1.25rem;
+    --content-h3-size-desktop: 1.5rem;
+    --content-h3-line-height: 1.4;
+    --prose-width: 65ch;
+    --prose-width-wide: 75ch;
+    --prose-width-narrow: 55ch;
+    --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+  .dark {
+    --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 
