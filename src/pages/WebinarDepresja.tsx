@@ -56,6 +56,8 @@ export default function WebinarDepresja() {
       if (isVideoOutOfView) {
         // Enable Picture-in-Picture
         iframeRef.current.style.position = 'fixed';
+        iframeRef.current.style.top = 'auto';
+        iframeRef.current.style.left = 'auto';
         iframeRef.current.style.bottom = '20px';
         iframeRef.current.style.right = '20px';
         iframeRef.current.style.width = '300px';
@@ -65,6 +67,8 @@ export default function WebinarDepresja() {
       } else {
         // Reset to normal position
         iframeRef.current.style.position = 'absolute';
+        iframeRef.current.style.top = '0';
+        iframeRef.current.style.left = '0';
         iframeRef.current.style.bottom = '';
         iframeRef.current.style.right = '';
         iframeRef.current.style.width = '100%';
@@ -75,6 +79,7 @@ export default function WebinarDepresja() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
