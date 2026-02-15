@@ -8,6 +8,7 @@ import portalSilnaglowa from "@/assets/portal-silnaglowa.png";
 import compassHero from "@/assets/compass-hero-bg.png";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
 import onPurple1 from "@/assets/Ludwik C. Siadlak-on-purple1.webp";
+import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -641,8 +642,17 @@ const Index = () => {
       </section>
 
       {/* ═══ SCARCITY CTA ═══ */}
-      <section className="bg-white py-24" id="kontakt">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
+      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "#D7D6CF" }} id="kontakt">
+        {/* Background photo – pinned right */}
+        <div className="absolute right-0 top-0 h-full pointer-events-none hidden lg:block">
+          <img
+            src={sessionPhoto5}
+            alt=""
+            className="h-full w-auto object-cover object-right"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#D7D6CF]" />
+        </div>
+        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
           <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
             Tylko 5 miejsc jednocześnie.
           </h2>
