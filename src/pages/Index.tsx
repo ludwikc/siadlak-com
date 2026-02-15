@@ -652,11 +652,11 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#D7D6CF]" />
         </div>
-        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+        <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
           <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
             Tylko 5 miejsc jednocześnie.
           </h2>
-          <p className="text-on-light-dim max-w-2xl mx-auto mb-8">
+          <p className="text-on-light-dim max-w-2xl mb-8">
             Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
             grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
             natura tej pracy.
@@ -668,7 +668,7 @@ const Index = () => {
           </div>
 
           {/* Łucja quote */}
-          <div className="py-16 max-w-2xl mx-auto">
+          <div className="py-16 max-w-2xl">
             <blockquote className="text-xl md:text-2xl lg:text-3xl text-on-light italic leading-relaxed mb-6">
               Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
               'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam.
@@ -679,7 +679,7 @@ const Index = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg mx-auto">
+          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg">
             <Link
               to="/discovery"
               className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
