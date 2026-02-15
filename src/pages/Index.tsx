@@ -204,7 +204,8 @@ const Index = () => {
       </section>
 
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
-      <section className="py-24 bg-surface">
+      <section className="py-24 bg-void"
+        style={{ backgroundColor: "#080808" }}>
         <div className="container mx-auto px-4 max-w-4xl">
           <Eyebrow>DIAGNOZA</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
@@ -354,7 +355,8 @@ const Index = () => {
       </section>
 
       {/* ═══ MECHANISM SECTION ═══ */}
-      <section className="py-24 bg-surface">
+      <section className="py-24 bg-void"
+        style={{ backgroundColor: "#080808" }}>
         <div className="container mx-auto px-4 max-w-6xl text-center">
           <Eyebrow>MECHANIZM</Eyebrow>
           <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
