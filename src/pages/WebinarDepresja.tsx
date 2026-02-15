@@ -54,14 +54,19 @@ export default function WebinarDepresja() {
       const isVideoOutOfView = rect.bottom < 0;
 
       if (isVideoOutOfView) {
+        const isMobile = window.innerWidth < 768;
+        const pipWidth = isMobile ? 150 : 300;
+        const pipHeight = isMobile ? 267 : 533; // 9:16 aspect ratio
+        const pipBottom = isMobile ? 80 : 20;
+
         // Enable Picture-in-Picture
         iframeRef.current.style.position = 'fixed';
         iframeRef.current.style.top = 'auto';
         iframeRef.current.style.left = 'auto';
-        iframeRef.current.style.bottom = '20px';
+        iframeRef.current.style.bottom = `${pipBottom}px`;
         iframeRef.current.style.right = '20px';
-        iframeRef.current.style.width = '300px';
-        iframeRef.current.style.height = '533px'; // 9:16 aspect ratio
+        iframeRef.current.style.width = `${pipWidth}px`;
+        iframeRef.current.style.height = `${pipHeight}px`;
         iframeRef.current.style.zIndex = '9999';
         iframeRef.current.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)';
       } else {
