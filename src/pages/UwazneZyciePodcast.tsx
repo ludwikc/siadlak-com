@@ -7,7 +7,6 @@ import NextSessionCountdown from '../components/podcast/NextSessionCountdown';
 import { Calendar } from 'lucide-react';
 
 const UwazneZyciePodcast = () => {
-
   return (
     <Layout>
       <Hero
@@ -23,19 +22,19 @@ const UwazneZyciePodcast = () => {
       <section className="py-12 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-lg text-deep-charcoal mb-6">
+            <p className="text-lg text-foreground mb-6">
               W świecie, gdzie produktywność jest często stawiana ponad
               dobrostanem, "Uważne Życie" oferuje przestrzeń na odzyskanie
               równowagi bez poczucia winy.
             </p>
-            <p className="text-lg text-deep-charcoal mb-6">
+            <p className="text-lg text-foreground mb-6">
               Każdy odcinek zawiera praktyczne ćwiczenia uważności, które możesz
               wykonać podczas porannej kawy, w drodze do pracy, czy wieczorem po
               intensywnym dniu. To nie teoretyczne dywagacje, ale konkretne
               techniki dla ludzi, którzy cenią skuteczność nawet w pracy nad
               sobą.
             </p>
-            <p className="text-lg text-deep-charcoal">
+            <p className="text-lg text-foreground">
               Regularna praktyka uważności poprawi Twoją zdolność podejmowania
               decyzji, odporność na stres i jakość koncentracji – kluczowe
               umiejętności dla ambitnych profesjonalistów na każdym poziomie
@@ -55,12 +54,12 @@ const UwazneZyciePodcast = () => {
 
       <section id="live-sessions" className="py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-luminous-white rounded-lg border border-border p-6">
-            <h2 className="text-2xl font-bold text-twilight-indigo mb-4 flex items-center">
+          <div className="max-w-3xl mx-auto bg-diamond rounded-lg border border-border p-6">
+            <h2 className="text-2xl font-bold text-depth mb-4 flex items-center">
               <Calendar className="mr-2 h-6 w-6" />
               Sesje live
             </h2>
-            <p className="text-deep-charcoal mb-6">
+            <p className="text-foreground mb-6">
               Dołącz do cotygodniowej sesji medytacji na żywo - to wyjątkowa
               okazja, by praktykować uważność w grupie podobnie myślących
               profesjonalistów. Sesje odbywają się każdy wtorek o 6:30 rano –
@@ -71,24 +70,24 @@ const UwazneZyciePodcast = () => {
             <NextSessionCountdown />
 
             <form className="mb-4">
-              <h4 className="font-semibold text-deep-charcoal mb-3">
+              <h4 className="font-semibold text-foreground mb-3">
                 Zapisz się na powiadomienia o sesjach:
               </h4>
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
                   placeholder="Twój adres email"
-                  className="flex-grow py-2 px-4 rounded-lg sm:rounded-r-none border border-border focus:outline-none focus:ring-2 focus:ring-twilight-indigo"
+                  className="flex-grow py-2 px-4 rounded-lg sm:rounded-r-none border border-border focus:outline-none focus:ring-2 focus:ring-depth"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-twilight-indigo hover:bg-twilight-indigo/80 text-white px-4 py-2 rounded-lg sm:rounded-l-none transition-colors"
+                  className="bg-depth hover:bg-depth/80 text-white px-4 py-2 rounded-lg sm:rounded-l-none transition-colors"
                 >
                   Zapisz się
                 </button>
               </div>
-              <p className="text-sm text-subtle-slate mt-2">
+              <p className="text-sm text-dim mt-2">
                 Otrzymasz przypomnienie na 30 minut przed każdą sesją oraz
                 dostęp do nagrań.
               </p>
@@ -99,7 +98,7 @@ const UwazneZyciePodcast = () => {
                 href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Uwa%C5%BCne%20%C5%BBycie%20%E2%80%93%20medytacje%20prowadzone%20%28live%29&location=https%3A%2F%2Fdiscord.com%2Fevents%2F428530875085619200%2F1384400577311670313&details=S%C5%82yszymy%20si%C4%99%20na%20Discordzie%2C%20na%20kanale%20%23warszataty%3A%20%0Ahttps%3A%2F%2Fdiscord.com%2Fchannels%2F428530875085619200%2F988452597549641758%0A%0A%E2%86%92%20https%3A%2F%2Fuwaznezycie.pl%20&dates=20250930T062800%2F20250930T065000&recur=RRULE%3AFREQ%3DWEEKLY%3BBYDAY%3DTU&ctz=Europe%2FWarsaw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-twilight-indigo hover:text-zenith-gold transition-colors"
+                className="inline-flex items-center text-depth hover:text-electric transition-colors"
               >
                 Dodaj do swojego Google Calendar
               </a>
@@ -107,7 +106,7 @@ const UwazneZyciePodcast = () => {
                 href="/assets/UwazneZycie.ics"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-twilight-indigo hover:text-zenith-gold transition-colors"
+                className="inline-flex items-center text-depth hover:text-electric transition-colors"
               >
                 Dodaj do iCloud/Outlook
               </a>

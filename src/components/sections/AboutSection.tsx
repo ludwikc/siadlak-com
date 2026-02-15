@@ -17,19 +17,19 @@ export default function AboutSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-zenith-gold to-twilight-indigo rounded-full blur-2xl opacity-30"></div>
+            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-electric to-depth rounded-full blur-2xl opacity-30"></div>
           </div>
 
           {/* Content Column */}
           <div className="md:w-1/2">
-            <h2 className="text-deep-charcoal mb-6">
+            <h2 className="text-foreground mb-6">
               About{" "}
-              <span className="text-zenith-gold">
+              <span className="text-electric">
                 Ludwik
               </span>
             </h2>
 
-            <p className="text-subtle-slate mb-4">
+            <p className="text-dim mb-4">
               Ludwik Siadlak is a premier coach and mentor working at the
               intersection of technology and human potential. With over 15 years
               of experience in tech leadership, he helps professionals amplify
@@ -37,7 +37,7 @@ export default function AboutSection() {
               evolving digital landscape.
             </p>
 
-            <p className="text-subtle-slate mb-8">
+            <p className="text-dim mb-8">
               His unique approach combines cutting-edge technical expertise with
               deep understanding of human psychology and performance
               optimization, helping clients develop systems that enhance their

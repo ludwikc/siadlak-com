@@ -72,7 +72,7 @@ const SpecialOfferCountdown = () => {
         OFERTA SPECJALNA WYGASA ZA:
       </div>
       <div
-        className={`font-mono text-2xl font-bold ${isExpired ? "text-gray-400" : "text-twilight-indigo"}`}
+        className={`font-mono text-2xl font-bold ${isExpired ? "text-gray-400" : "text-depth"}`}
       >
         {isExpired ? "00:00.00" : formatTime(timeLeft)}
       </div>

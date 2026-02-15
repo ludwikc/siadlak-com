@@ -32,8 +32,8 @@ const CountdownTimer = () => {
   return (
     <div className="glass-card bg-white/10 p-6 rounded-xl mb-8">
       <div className="flex items-center justify-center mb-4">
-        <Timer className="h-6 w-6 text-zenith-gold mr-2" />
-        <p className="text-lg font-bold text-zenith-gold">
+        <Timer className="h-6 w-6 text-electric mr-2" />
+        <p className="text-lg font-bold text-electric">
           Ta oferta jest ważna tylko do [DATA]
         </p>
       </div>

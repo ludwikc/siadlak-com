@@ -36,8 +36,7 @@
   /* Diamond Light — Clean, logical backgrounds (15%) */
   --diamond-light: 210 20% 98%;
 
-  /* Zenith Gold — Accent (premium badges, highlights) */
-  --zenith-gold: 38 92% 50%;
+  /* (zenith-gold removed — use electric-blue or depth-purple) */
 
   /* === VOID BLACK SURFACE SCALE === */
   --surface-dark-base: 0 0% 3%;
@@ -89,7 +88,7 @@
   /* === BRAND GRADIENTS === */
   --gradient-premium: linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%));
   --gradient-hero: linear-gradient(135deg, hsl(211 100% 50%) 0%, hsl(263 70% 50%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 65%));
+  /* (gradient-gold removed — use gradient-premium) */
 
   /* Glow gradient — the "car dashboard at night" ambient pulse */
   --glow-gradient: radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.25) 0%, transparent 50%),
@@ -211,7 +210,7 @@ body {
     --depth-purple-dark: 263 70% 42%;
     --void-black: 0 0% 3%;
     --diamond-light: 210 20% 98%;
-    --zenith-gold: 38 92% 50%;
+    /* (zenith-gold removed) */
     --surface-dark-base: 0 0% 3%;
     --surface-dark-elevated: 0 0% 6%;
     --surface-dark-floating: 0 0% 10%;
@@ -245,7 +244,7 @@ body {
     --ring: 211 100% 50%;
     --gradient-premium: linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%));
     --gradient-hero: linear-gradient(135deg, hsl(211 100% 50%) 0%, hsl(263 70% 50%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 65%));
+    /* (gradient-gold removed) */
     --glow-gradient: radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.12) 0%, transparent 50%),
                    radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.08) 0%, transparent 50%);
     --shadow-premium: 0 20px 40px -10px hsla(211, 100%, 50%, 0.15);
@@ -599,7 +598,7 @@ body {
 .hero-status { display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-top: 1rem; }
 .status-indicator { display: flex; align-items: center; gap: 0.5rem; }
 .status-dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; }
-.status-dot--gold { background-color: hsl(var(--zenith-gold)); }
+.status-dot--gold { background-color: hsl(var(--electric-blue)); }
 
 /* Hero Image */
 .hero-image-container { position: relative; }
