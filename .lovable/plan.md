@@ -1,57 +1,21 @@
 
 
-## Simplify Header to Ultra-Minimal Navigation
+## Fixes: Remove Gap Above Content + Make Header Text Light
 
-Replace the entire current Header component (480+ lines with popup/overlay menu, dropdowns, mobile hamburger, scroll effects) with an ultra-simple fixed navbar matching the provided HTML example.
+### Problem 1: Bright gap at top of pages
+The header height is `h-16` (64px), but Layout applies `pt-20` (80px) of top padding. The extra 16px shows the page's light background peeking through above the first section. Fix: change `pt-20` to `pt-16` to match the header exactly.
 
-### What will change
+### Problem 2: Header text not visible on dark bar
+The header links ("LCS / Upgrade" and "Aplikuj") have no explicit text color, so they inherit from the page — which may be dark text on a dark bar. Fix: add `text-white` to both links.
 
-**Remove:**
-- Full-screen navigation popup/overlay with all its cards, links, and animations
-- Desktop dropdown menu ("Mozliwosci" button with hover/click logic)
-- Mobile hamburger menu (Menu/X toggle, slide-in panel)
-- Scroll-based style changes (isScrolled state, shadow transitions)
-- All related state management (isMenuOpen, isDropdownOpen, refs, timeouts, event listeners)
-- All unused imports (Menu, X, ChevronDown, Book, Headphones, Users, Mail, Video, Lock, Home, Calendar, ExternalLink, useState, useEffect, useRef)
+---
 
-**Keep:**
-- Fixed top navigation bar
-- Link to homepage via logo
+### Technical Details
 
-**New design (matching provided HTML):**
-- Fixed bar: `bg-void/80 backdrop-blur-md border-b border-white/5`
-- Height: `h-16`, max-width `max-w-7xl`
-- Left: Brand text "LCS / Upgrade" with "/" in `text-electric`
-- Right: Single "Aplikuj" link pointing to `/discovery`
-- Typography: `text-xs font-bold uppercase tracking-widest` for the link, `text-sm font-display font-bold tracking-widest uppercase` for the brand
+**File: `src/components/layout/Layout.tsx` (line 29)**
+- Change `pt-20` to `pt-16` so main content starts right after the 64px header with no gap.
 
-### Technical details
-
-**File:** `src/components/layout/Header.tsx`
-
-The entire file will be replaced with approximately 25 lines:
-
-```tsx
-import { Link } from "react-router-dom";
-
-export default function Header() {
-  return (
-    <nav className="fixed top-0 w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="font-display font-bold tracking-widest uppercase text-sm">
-          LCS <span className="text-electric">/</span> Upgrade
-        </Link>
-        <Link
-          to="/discovery"
-          className="text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors"
-        >
-          Aplikuj
-        </Link>
-      </div>
-    </nav>
-  );
-}
-```
-
-No other files need changes -- the Header is already imported and used in `Layout.tsx` as-is.
+**File: `src/components/layout/Header.tsx`**
+- Add `text-white` to the brand `<Link>` (line 7)
+- Add `text-white` to the "Aplikuj" `<Link>` (line 11)
 
