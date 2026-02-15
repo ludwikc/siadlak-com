@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { ArrowRight, Check, Phone } from "lucide-react";
@@ -42,6 +43,41 @@ function TheCut() {
 }
 
 export default function WebinarDepresja() {
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!videoContainerRef.current || !iframeRef.current) return;
+
+      const rect = videoContainerRef.current.getBoundingClientRect();
+      const isVideoOutOfView = rect.bottom < 0;
+
+      if (isVideoOutOfView) {
+        // Enable Picture-in-Picture
+        iframeRef.current.style.position = 'fixed';
+        iframeRef.current.style.bottom = '20px';
+        iframeRef.current.style.right = '20px';
+        iframeRef.current.style.width = '300px';
+        iframeRef.current.style.height = '533px'; // 9:16 aspect ratio
+        iframeRef.current.style.zIndex = '9999';
+        iframeRef.current.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)';
+      } else {
+        // Reset to normal position
+        iframeRef.current.style.position = 'absolute';
+        iframeRef.current.style.bottom = '';
+        iframeRef.current.style.right = '';
+        iframeRef.current.style.width = '100%';
+        iframeRef.current.style.height = '100%';
+        iframeRef.current.style.zIndex = '';
+        iframeRef.current.style.boxShadow = '';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Layout hideHeader hideFooter>
       <SEO
@@ -54,27 +90,58 @@ export default function WebinarDepresja() {
       <div className="min-h-screen">
         {/* Hero — void-glow */}
         <section className="bg-void-glow py-24 md:py-36 px-4">
-          <div className="container mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-sm px-4 py-1.5 text-sm font-medium tracking-wide uppercase text-electric-blue border border-electric-blue/30 mb-8">
-              Międzynarodowy Dzień Walki z Depresją · 23 lutego 2026
-            </span>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Column */}
+              <div className="text-center lg:text-left">
+                <span className="inline-block rounded-sm px-4 py-1.5 text-sm font-medium tracking-wide uppercase text-electric-blue border border-electric-blue/30 mb-8">
+                  Międzynarodowy Dzień Walki z Depresją · 23 lutego 2026
+                </span>
 
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-text-on-dark mb-6">
-              Nie musisz tego znosić sam.
-            </h1>
+                <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-text-on-dark mb-6">
+                  Nie musisz tego znosić sam.
+                </h1>
 
-            <div className="flex justify-center mb-8">
-              <img
-                src="/lovable-uploads/ludwik-siadlak-profile.png"
-                alt="Ludwik C. Siadlak"
-                className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-electric-blue/30"
-              />
+                <p className="text-lg md:text-xl leading-relaxed text-text-dim">
+                  Bezpłatne spotkanie online z człowiekiem, który stał na krawędzi
+                  peronu — i wrócił.
+                </p>
+              </div>
+
+              {/* Right Column */}
+              <div className="flex flex-col gap-6">
+                <div ref={videoContainerRef} style={{ position: 'relative', paddingTop: '177.78%' }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="https://player.mediadelivery.net/embed/300498/7b4033d6-dd58-4da6-8380-16f327f084c8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+                    loading="lazy"
+                    style={{
+                      border: 0,
+                      position: 'absolute',
+                      top: 0,
+                      height: '100%',
+                      width: '100%',
+                      borderRadius: '8px',
+                      transition: 'all 0.3s ease',
+                    }}
+                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
+                    allowFullScreen={true}
+                  ></iframe>
+                </div>
+
+                <a
+                  href="https://buy.siadlak.com/checkout/depresja2026"
+                  className="inline-flex items-center justify-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:opacity-90"
+                  style={{
+                    background: 'linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))',
+                    boxShadow: '0 4px 15px hsla(263, 70%, 50%, 0.4)',
+                  }}
+                >
+                  Dołączam do spotkania
+                  <ArrowRight size={18} />
+                </a>
+              </div>
             </div>
-
-            <p className="text-lg md:text-xl leading-relaxed text-text-dim max-w-2xl mx-auto">
-              Bezpłatne spotkanie online z człowiekiem, który stał na krawędzi
-              peronu — i wrócił.
-            </p>
           </div>
         </section>
 
