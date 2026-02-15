@@ -277,11 +277,11 @@ const Index = () => {
           }}
         />
         {/* Background photo – pinned left */}
-        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none hidden lg:block">
+        <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
           <img
             src={sessionPhoto6}
             alt=""
-            className="w-full h-full object-cover object-center opacity-30"
+            className="h-full w-auto object-cover object-left opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#080808]" />
         </div>
@@ -826,11 +826,11 @@ const Index = () => {
       {/* ═══ CLOSING FOOTER ═══ */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: "#2F0F43" }}>
         {/* Background photo – pinned left */}
-        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none hidden lg:block">
+        <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
           <img
             src={onPurple1}
             alt=""
-            className="w-full h-full object-cover object-top"
+            className="h-full w-auto object-cover object-left"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2F0F43]" />
         </div>
