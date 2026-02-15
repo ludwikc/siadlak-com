@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
-import { Card, CardContent } from "@/components/ui/card";
+
 import {
   BookOpen,
   Brain,
@@ -117,23 +117,23 @@ export default function Program() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-neural-blue/5 via-background to-zenith-gold/5">
+      {/* 1. Hero Section — bg-void-glow (DARK) */}
+      <section className="relative py-20 md:py-28 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-neural-blue to-twilight-indigo text-white border-0 text-sm px-6 py-2 shadow-lg">
+            <Badge className="mb-6 border border-white/10 bg-white/5 text-electric border-0 text-sm px-6 py-2">
               <Brain className="inline h-4 w-4 mr-2" />
               Mental Software Update
             </Badge>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-deep-charcoal leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-[1.1] tracking-[-0.02em]">
               Twój umysł to System Operacyjny.{" "}
-              <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
+              <span className="text-white">
                 Czas zainstalować aplikacje, które naprawdę działają.
               </span>
             </h1>
 
-            <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-deep-charcoal/80 leading-relaxed text-left">
+            <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-dim leading-relaxed text-left">
               <p>
                 Wyobraź sobie, że twój umysł to najpotężniejszy system operacyjny na świecie.
                 Tyle że przez lata instalowałeś w&nbsp;nim przypadkowe programy, wirusy myśli
@@ -150,20 +150,20 @@ export default function Program() {
         </div>
       </section>
 
-      {/* LifeOS AppStore Header */}
-      <section className="py-12 bg-luminous-white">
+      {/* 2. LifeOS AppStore Header — bg-surface (DARK) */}
+      <section className="py-12 bg-[rgba(255,255,255,0.03)]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-deep-charcoal leading-tight">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-[1.1] tracking-[-0.02em]">
               LifeOS{" "}
-              <span className="bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent">
+              <span className="text-electric">
                 AppStore
               </span>
             </h2>
-            <p className="text-xl md:text-2xl text-deep-charcoal/70 mb-4">
+            <p className="text-xl md:text-2xl text-dim mb-4">
               Aplikacje mentalnej transformacji
             </p>
-            <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl text-deep-charcoal/80 leading-relaxed">
+            <div className="max-w-3xl mx-auto space-y-4 text-lg md:text-xl text-dim leading-relaxed">
               <p>
                 To nie są kolejne kursy. To fundamentalne oprogramowanie do przeprogramowania tego,
                 jak myślisz, działasz i&nbsp;czujesz.
@@ -177,52 +177,53 @@ export default function Program() {
             </div>
           </div>
 
-          {/* App #1: Produktywność */}
+      {/* 3. App Cards #1-#4 — bg-void-glow (DARK) */}
           <div className="max-w-4xl mx-auto space-y-16">
-            <div className="bg-gradient-to-br from-neural-blue/5 to-zenith-gold/5 rounded-2xl p-8 md:p-10 border border-neural-blue/15">
+            {/* App #1: Produktywność */}
+            <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-3xl">🧠</span>
-                <Badge variant="outline" className="text-neural-blue border-neural-blue/30 text-xs font-semibold">
+                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #1: PRODUKTYWNOŚĆ
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
                 Hakowanie Produktywności
               </h3>
-              <p className="text-sm text-deep-charcoal/60 mb-6">
+              <p className="text-sm text-dim mb-6">
                 Wersja: 2.0 · Zgodność: Wszystkie modele życia · Rozmiar: 6&nbsp;tygodni
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
-                <strong>Dla kogo:</strong> Dla osób, które testowały każdy system GTD,
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
+                <strong className="text-white/90">Dla kogo:</strong> Dla osób, które testowały każdy system GTD,
                 a&nbsp;ich kalendarz i&nbsp;tak wygląda jak pole bitwy.
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 Nie instalujesz kolejnego narzędzia. Instalujesz spójny system operacyjny
                 dla twoich działań, który:
               </p>
 
-              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Automatycznie blokuje rozpraszacze na poziomie neurobiologicznym</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Przekształca „muszę" w&nbsp;„chcę" bez używania siły woli</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Działa jak osobisty asystent AI w&nbsp;twojej głowie – tylko że to ty jesteś tym AI</span>
                 </li>
               </ul>
 
-              <div className="bg-white/60 rounded-xl p-5 border border-neural-blue/10">
-                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+              <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10">
+                <p className="text-base md:text-lg text-white/90 font-medium mb-2">
                   Co się zmienia po instalacji:
                 </p>
-                <div className="space-y-1 text-base text-deep-charcoal/80">
+                <div className="space-y-1 text-base text-dim">
                   <p>Zamiast zarządzać zadaniami – zarządzasz energią.</p>
                   <p>Zamiast walczyć z&nbsp;prokrastynacją – wykorzystujesz jej mechanizmy do napędzania działania.</p>
                   <p>Zamiast „być zajętym" – tworzysz przestrzeń na to, co naprawdę ważne.</p>
@@ -231,7 +232,7 @@ export default function Program() {
 
               <div className="mt-6">
                 <Link to="/program/hakowanie-produktywnosci">
-                  <CTAButton className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white border-0">
+                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -239,49 +240,49 @@ export default function Program() {
             </div>
 
             {/* App #2: Odporność Psychiczna */}
-            <div className="bg-gradient-to-br from-twilight-indigo/5 to-neural-blue/5 rounded-2xl p-8 md:p-10 border border-twilight-indigo/15">
+            <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-3xl">🛡️</span>
-                <Badge variant="outline" className="text-twilight-indigo border-twilight-indigo/30 text-xs font-semibold">
+                <Badge variant="outline" className="text-depth border-depth/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #2: ODPORNOŚĆ PSYCHICZNA
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
                 Silna Głowa
               </h3>
-              <p className="text-sm text-deep-charcoal/60 mb-6">
+              <p className="text-sm text-dim mb-6">
                 Wersja: 3.1 · Zgodność: Wymagające środowiska · Rozmiar: 6&nbsp;tygodni
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
-                <strong>Dla kogo:</strong> Dla tych, którzy w&nbsp;stresie zamiast gasić pożar –
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
+                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy w&nbsp;stresie zamiast gasić pożar –
                 dolewają do niego benzyny myśli.
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 To nie jest „kurs o&nbsp;stresie". To firewall dla twojego umysłu, który:
               </p>
 
-              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Blokuje mentalne ataki DDoS (przeciążenie decyzjami, presja, chaos)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Automatycznie wykrywa wzorce katastrofizacji i&nbsp;przeprogramowuje je w&nbsp;locie</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-twilight-indigo shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Tworzy redundantne połączenia neuralne, żebyś nawet przy awarii jednego obwodu działał dalej</span>
                 </li>
               </ul>
 
-              <div className="bg-white/60 rounded-xl p-5 border border-twilight-indigo/10">
-                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+              <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10">
+                <p className="text-base md:text-lg text-white/90 font-medium mb-2">
                   Co się zmienia po instalacji:
                 </p>
-                <div className="space-y-1 text-base text-deep-charcoal/80">
+                <div className="space-y-1 text-base text-dim">
                   <p>Presja zewnętrzna przestaje paraliżować – zaczyna skupiać.</p>
                   <p>Krytyka przestaje ranić – zaczyna informować.</p>
                   <p>Niepewność przestaje przerażać – zaczyna inspirować.</p>
@@ -290,7 +291,7 @@ export default function Program() {
 
               <div className="mt-6">
                 <Link to="/program/silna-glowa">
-                  <CTAButton className="bg-gradient-to-r from-twilight-indigo to-neural-blue hover:from-twilight-indigo/90 hover:to-neural-blue/90 text-white border-0">
+                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -298,49 +299,49 @@ export default function Program() {
             </div>
 
             {/* App #3: Uważność */}
-            <div className="bg-gradient-to-br from-neural-blue/5 to-twilight-indigo/5 rounded-2xl p-8 md:p-10 border border-neural-blue/15">
+            <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-3xl">🧘</span>
-                <Badge variant="outline" className="text-neural-blue border-neural-blue/30 text-xs font-semibold">
+                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #3: UWAŻNOŚĆ
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
                 Uważne Życie
               </h3>
-              <p className="text-sm text-deep-charcoal/60 mb-6">
+              <p className="text-sm text-dim mb-6">
                 Wersja: 4.0 · Zgodność: Wszystkie stany świadomości · Rozmiar: 6&nbsp;tygodni
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
-                <strong>Dla kogo:</strong> Dla pasażerów własnego życia, którzy odkryli,
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
+                <strong className="text-white/90">Dla kogo:</strong> Dla pasażerów własnego życia, którzy odkryli,
                 że autopilot prowadzi donikąd.
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 To nie jest „medytacja". To przejmowanie kontroli nad kokpitem, które:
               </p>
 
-              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Brain className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Zastępuje automatyczne reakcje świadomymi odpowiedziami</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Brain className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Instaluje tryb „kapitan" zamiast trybu „pasażer"</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Brain className="w-5 h-5 text-neural-blue shrink-0 mt-1" />
+                  <Brain className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Tworzy bezpośrednie połączenie między twoimi wartościami a&nbsp;twoimi działaniami</span>
                 </li>
               </ul>
 
-              <div className="bg-white/60 rounded-xl p-5 border border-neural-blue/10">
-                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+              <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10">
+                <p className="text-base md:text-lg text-white/90 font-medium mb-2">
                   Co się zmienia po instalacji:
                 </p>
-                <div className="space-y-1 text-base text-deep-charcoal/80">
+                <div className="space-y-1 text-base text-dim">
                   <p>Życie przestaje ci się „przydarzać" – zaczynasz je świadomie nawigować.</p>
                   <p>Emocje przestają tobą miotać – zaczynają informować cię o&nbsp;tym, co ważne.</p>
                   <p>Każda chwila przestaje uciekać – zaczyna być twoim świadomym wyborem.</p>
@@ -349,7 +350,7 @@ export default function Program() {
 
               <div className="mt-6">
                 <Link to="/program/uwazne-zycie">
-                  <CTAButton className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-neural-blue/90 hover:to-twilight-indigo/90 text-white border-0">
+                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -357,49 +358,49 @@ export default function Program() {
             </div>
 
             {/* App #4: Męskość */}
-            <div className="bg-gradient-to-br from-zenith-gold/5 to-twilight-indigo/5 rounded-2xl p-8 md:p-10 border border-zenith-gold/20">
+            <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-3xl">👑</span>
-                <Badge variant="outline" className="text-zenith-gold border-zenith-gold/30 text-xs font-semibold">
+                <Badge variant="outline" className="text-depth border-depth/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #4: MĘSKOŚĆ
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal mb-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
                 Męski Kompas
               </h3>
-              <p className="text-sm text-deep-charcoal/60 mb-6">
+              <p className="text-sm text-dim mb-6">
                 Wersja: Rewolucja · Zgodność: Tylko dla gotowych na zmianę systemu · Rozmiar: 6&nbsp;tygodni
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
-                <strong>Dla kogo:</strong> Dla mężczyzn, którzy czują, że grali według cudzych
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
+                <strong className="text-white/90">Dla kogo:</strong> Dla mężczyzn, którzy czują, że grali według cudzych
                 reguł w&nbsp;grę, której nie chcą wygrywać.
               </p>
 
-              <p className="text-base md:text-lg text-deep-charcoal/80 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 To nie jest „kurs o&nbsp;byciu mężczyzną". To pełna reinstalacja systemu tożsamości, która:
               </p>
 
-              <ul className="space-y-2 mb-6 text-base md:text-lg text-deep-charcoal/80">
+              <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Kasuje stare programy „jak powinieneś" i&nbsp;instaluje „jak chcesz"</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Zamienia toksyczną siłę w&nbsp;autentyczną moc</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-zenith-gold shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
                   <span>Tworzy spójność między tym, kim jesteś w&nbsp;pracy, w&nbsp;domu i&nbsp;w&nbsp;swoim wnętrzu</span>
                 </li>
               </ul>
 
-              <div className="bg-white/60 rounded-xl p-5 border border-zenith-gold/10">
-                <p className="text-base md:text-lg text-deep-charcoal/90 font-medium mb-2">
+              <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10">
+                <p className="text-base md:text-lg text-white/90 font-medium mb-2">
                   Co się zmienia po instalacji:
                 </p>
-                <div className="space-y-1 text-base text-deep-charcoal/80">
+                <div className="space-y-1 text-base text-dim">
                   <p>Siła przestaje być maską – staje się autentyczną obecnością.</p>
                   <p>Wrażliwość przestaje być słabością – staje się supermocą.</p>
                   <p>Relacje przestają być polem walki – stają się przestrzenią współtworzenia.</p>
@@ -408,7 +409,7 @@ export default function Program() {
 
               <div className="mt-6">
                 <Link to="/program/meski-kompas">
-                  <CTAButton className="bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-zenith-gold/90 hover:to-twilight-indigo/90 text-white border-0">
+                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -418,90 +419,87 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Authority Proof - Keynote Speaking */}
-      <section className="py-12 bg-luminous-white">
+      {/* 4. Authority / Keynote — bg-surface (DARK) */}
+      <section className="py-12 bg-[rgba(255,255,255,0.03)]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="max-w-5xl mx-auto">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-neural-blue/20 shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+              <div className="relative rounded-sm overflow-hidden border border-white/10">
                 <img
                   src={keynoteImage}
                   alt="Ludwik Siadlak presenting 'Hacker Umysłów' keynote at CAMPUS conference"
                   className="w-full h-auto"
                 />
-                {/* Subtle overlay badge */}
-                <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Badge className="bg-neural-blue/90 backdrop-blur-sm text-white border-0 px-4 py-2 shadow-lg text-sm font-semibold">
-                    Keynote Speaker
-                  </Badge>
-                </div>
               </div>
             </div>
 
             {/* Not For Everyone - Condensed */}
-            <Card className="border-2 border-red-400/50 bg-gradient-to-br from-red-50 to-orange-50">
-              <CardContent className="p-6 md:p-8">
+            <div className="rounded-sm border border-white/10 bg-white/[0.03]">
+              <div className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shrink-0">
-                    <AlertTriangle className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 bg-white/[0.06] rounded-sm flex items-center justify-center shrink-0 border border-white/10">
+                    <AlertTriangle className="h-6 w-6 text-electric" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-deep-charcoal text-left">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white text-left">
                     To nie jest dla każdego
                   </h3>
                 </div>
 
-                <div className="text-left space-y-4 text-base text-deep-charcoal/90">
+                <div className="text-left space-y-4 text-base text-dim">
                   <p>
-                    <strong>Nie dla:</strong> osób szukających kolejnych
+                    <strong className="text-white/90">Nie dla:</strong> osób szukających kolejnych
                     tricków, "hurra motywacji" i szybkich rozwiązań bez
                     głębokiej pracy.
                   </p>
 
                   <p>
-                    <strong className="text-neural-blue">Dla:</strong> osób,
+                    <strong className="text-electric">Dla:</strong> osób,
                     które testowały już wszystkie narzędzia, wiedzą że problem
                     jest głębiej i są gotowe przeprogramować sposób myślenia o
                     fundamentach.
                   </p>
 
-                  <div className="bg-white/60 rounded-xl p-4 border border-orange-400/30 mt-4">
-                    <p className="font-bold text-deep-charcoal">
+                  <div className="bg-white/[0.03] rounded-sm p-4 border border-white/10 mt-4">
+                    <p className="font-bold text-white">
                       Wybierz aplikację, której teraz potrzebujesz. Zostanie z
                       Tobą na zawsze.
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ: Efekt? Section */}
-      <section className="py-16">
+      {/* THE CUT — dark → light */}
+      <div className="the-cut" />
+
+      {/* 5. FAQ: Efekt? — bg-diamond (LIGHT) */}
+      <section className="py-16 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <Badge
                 variant="outline"
-                className="mb-4 text-neural-blue border-neural-blue"
+                className="mb-4 text-electric border-electric"
               >
                 FAQ: EFEKT?
               </Badge>
 
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-deep-charcoal">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-on-light leading-[1.1] tracking-[-0.02em]">
                 Pokaż mi jak wygląda proces instalacji
               </h2>
             </div>
 
             {/* Effect Display with Overlay */}
-            <div className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden">
+            <div className="relative w-full max-w-2xl mx-auto rounded-sm overflow-hidden">
               {/* Privacy Overlay */}
               {isFaqOverlayVisible && (
-                <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-2xl">
+                <div className="absolute inset-0 bg-black/80 z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 animate-fade-in rounded-sm">
                   <div className="space-y-6">
-                    <div className="w-16 h-16 bg-neural-blue/20 rounded-full flex items-center justify-center mx-auto">
-                      <MessageSquare className="h-8 w-8 text-neural-blue" />
+                    <div className="w-16 h-16 bg-electric/20 rounded-full flex items-center justify-center mx-auto">
+                      <MessageSquare className="h-8 w-8 text-electric" />
                     </div>
 
                     <div className="space-y-3">
@@ -515,7 +513,7 @@ export default function Program() {
 
                     <CTAButton
                       onClick={handleShowEffect}
-                      className="bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue"
+                      className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
                       size="lg"
                     >
                       Pokaż Efekt
@@ -525,13 +523,13 @@ export default function Program() {
               )}
 
               {/* GIF Content */}
-              <div className="bg-gradient-to-br from-background to-muted/30 p-8 rounded-2xl border border-neural-blue/20">
+              <div className="bg-diamond p-8 rounded-sm border border-black/10">
                 <img
                   src={effectGif}
                   alt="Mental transformation effect demonstration"
-                  className="w-full rounded-lg shadow-2xl"
+                  className="w-full rounded-sm"
                 />
-                <p className="text-xs text-muted-foreground mt-4 text-center">
+                <p className="text-xs text-on-light-dim mt-4 text-center">
                   Źródło: Matrix (1999), Warner Bros.
                 </p>
               </div>
@@ -540,7 +538,10 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Section 3: Lifehackerzy Community Benefits */}
+      {/* THE CUT — light → dark */}
+      <div className="the-cut" />
+
+      {/* 6. Lifehackerzy Community — UNCHANGED */}
       <section className="py-16 sm:py-20 bg-lifehacker-purple-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
@@ -695,25 +696,23 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Section 4: Premium App - LifeOS: System Upgrade - FULL WIDTH "FINAL BOSS" */}
-      <section className="py-20 bg-gradient-to-br from-deep-space via-neural-blue to-twilight-indigo relative overflow-hidden">
-        {/* Premium Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-zenith-gold/10 to-twilight-indigo/10 opacity-50"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zenith-gold/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
+      {/* THE CUT — dark → light */}
+      <div className="the-cut" />
 
+      {/* 7. LifeOS: System Upgrade — bg-diamond (LIGHT) */}
+      <section className="py-20 bg-diamond relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <Badge className="mb-6 bg-gradient-to-r from-zenith-gold to-twilight-indigo text-white border-0 px-6 py-2 text-lg font-medium">
+              <Badge className="mb-6 rounded-sm border border-depth/20 bg-depth/5 text-depth border-0 px-6 py-2 text-lg font-medium">
                 💎 LIFE OS UPGRADE
               </Badge>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-on-light leading-[1.1] tracking-[-0.02em]">
                 Life OS: System Upgrade
               </h2>
 
-              <p className="text-xl md:text-2xl font-medium mb-8 text-white/90 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl font-medium mb-8 text-on-light-dim max-w-4xl mx-auto">
                 Fundamentalna rekonstrukcja całego systemu operacyjnego. Nie
                 aplikacja - cały nowy system.
               </p>
@@ -721,12 +720,12 @@ export default function Program() {
 
             {/* FULL WIDTH PREMIUM CARD */}
             <div className="w-full">
-              <div className="glass-card rounded-2xl overflow-hidden hover-scale transition-all duration-300 hover:shadow-2xl hover:shadow-twilight-indigo/20 bg-gradient-to-br from-deep-space/50 to-neural-blue/50 relative border-2 border-zenith-gold/30">
+              <div className="rounded-sm border border-black/10 bg-paper overflow-hidden relative">
                 {/* Privacy Overlay */}
                 {isOverlayVisible && (
-                  <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in rounded-2xl">
+                  <div className="absolute inset-0 bg-black/80 z-20 flex flex-col items-center justify-center text-center p-4 sm:p-8 transition-all duration-500 animate-fade-in rounded-sm">
                     <div className="mb-8">
-                      <Shield className="h-20 w-20 text-zenith-gold mx-auto mb-6" />
+                      <Shield className="h-20 w-20 text-depth mx-auto mb-6" />
                       <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                         Ten program jest dla zaawansowanych
                       </h3>
@@ -739,7 +738,7 @@ export default function Program() {
                     <div className="space-y-4 w-full max-w-md">
                       <CTAButton
                         onClick={handleUnlockAccess}
-                        className="w-full bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-zenith-gold/90 hover:to-twilight-indigo/90"
+                        className="w-full bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
                         size="lg"
                       >
                         Sprawdź dostępność
@@ -759,22 +758,22 @@ export default function Program() {
                 )}
 
                 {/* MOBILE-OPTIMIZED PREMIUM CARD */}
-                <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-deep-space to-neural-blue border border-zenith-gold/20 rounded-2xl overflow-hidden">
+                <div className="p-4 sm:p-6 md:p-8 lg:p-12 bg-paper border border-black/10 rounded-sm overflow-hidden">
                   <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-start lg:items-center">
                     {/* Left Column - Content */}
                     <div className="order-2 lg:order-1">
                       {/* Header - Mobile optimized */}
                       <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 mb-6 min-w-0">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-zenith-gold to-twilight-indigo rounded-xl lg:rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-[linear-gradient(135deg,#007AFF,#6D28D9)] rounded-sm flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-lg sm:text-2xl lg:text-3xl font-bold">
                             OS
                           </span>
                         </div>
                         <div className="min-w-0 flex-1">
-                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2 break-words leading-tight">
+                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-on-light mb-1 sm:mb-2 break-words leading-tight">
                             System Upgrade
                           </h3>
-                          <p className="text-white/70 text-sm sm:text-base lg:text-lg break-words">
+                          <p className="text-on-light-dim text-sm sm:text-base lg:text-lg break-words">
                             Indywidualny Program Mentoringowy
                           </p>
                         </div>
@@ -786,19 +785,19 @@ export default function Program() {
                           {[...Array(5)].map((_, i) => (
                             <span
                               key={i}
-                              className="text-yellow-400 text-lg sm:text-xl lg:text-2xl"
+                              className="text-depth text-lg sm:text-xl lg:text-2xl"
                             >
                               ★
                             </span>
                           ))}
                         </div>
-                        <span className="text-white/70 text-sm sm:text-base lg:text-lg">
+                        <span className="text-on-light-dim text-sm sm:text-base lg:text-lg">
                           5.0 • Ekskluzywny
                         </span>
                       </div>
 
                       {/* Description - Mobile optimized */}
-                      <p className="text-white/80 mb-6 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed break-words">
+                      <p className="text-on-light-dim mb-6 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed break-words">
                         Jak przejście z Windows 98 na macOS. 8 tygodni
                         intensywnej pracy, maksymalnie 5 osób jednocześnie. To
                         nie coaching - to przeprogramowanie całego systemu
@@ -817,9 +816,9 @@ export default function Program() {
                         ].map((feature, index) => (
                           <div
                             key={index}
-                            className="flex items-start gap-2 sm:gap-3 lg:gap-4 text-white/90 text-sm sm:text-base lg:text-lg min-w-0"
+                            className="flex items-start gap-2 sm:gap-3 lg:gap-4 text-on-light-dim text-sm sm:text-base lg:text-lg min-w-0"
                           >
-                            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-zenith-gold rounded-full flex-shrink-0 mt-1.5 sm:mt-1"></div>
+                            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-depth rounded-full flex-shrink-0 mt-1.5 sm:mt-1"></div>
                             <span className="flex-1 min-w-0 break-words leading-relaxed">
                               {feature}
                             </span>
@@ -832,40 +831,40 @@ export default function Program() {
                     <div className="text-center lg:text-right order-1 lg:order-2">
                       {/* Price - Mobile friendly */}
                       <div className="mb-6 lg:mb-8">
-                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-zenith-gold mb-2 sm:mb-3 break-words leading-tight">
+                        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-depth mb-2 sm:mb-3 break-words leading-tight">
                           16 000 PLN
                         </div>
-                        <div className="text-white/60 text-sm sm:text-base md:text-lg lg:text-xl break-words">
+                        <div className="text-on-light-dim text-sm sm:text-base md:text-lg lg:text-xl break-words">
                           8 tygodni intensywnej transformacji
                         </div>
-                        <div className="text-white/40 text-xs sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-2 break-words">
+                        <div className="text-on-light-dim/60 text-xs sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-2 break-words">
                           Masz firmę? 13 008,13 PLN netto
                         </div>
                       </div>
 
                       {/* Exclusivity Badge - Mobile optimized */}
-                      <div className="bg-gradient-to-r from-zenith-gold/20 to-twilight-indigo/20 border-2 border-zenith-gold/40 rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8">
-                        <div className="text-zenith-gold text-xl sm:text-2xl mb-2">
+                      <div className="rounded-sm border border-depth/20 bg-depth/5 p-4 sm:p-6 mb-6 lg:mb-8">
+                        <div className="text-depth text-xl sm:text-2xl mb-2">
                           👑
                         </div>
-                        <p className="text-zenith-gold font-bold text-sm sm:text-base lg:text-lg break-words">
+                        <p className="text-depth font-bold text-sm sm:text-base lg:text-lg break-words">
                           Prowadzę max 5 osób jednocześnie
                         </p>
-                        <p className="text-white/70 text-xs sm:text-sm mt-2 break-words">
+                        <p className="text-on-light-dim text-xs sm:text-sm mt-2 break-words">
                           Najbardziej ekskluzywny program w portfolio
                         </p>
                       </div>
 
                       {/* CTA Button - Mobile responsive */}
                       <CTAButton
-                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-zenith-gold/50 to-twilight-indigo/50 hover:from-zenith-gold/50 hover:to-twilight-indigo/50 cursor-not-allowed opacity-60"
+                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-[linear-gradient(135deg,#007AFF,#6D28D9)] cursor-not-allowed opacity-60"
                         size="lg"
                         showArrow={false}
                       >
                         Obecnie niedostępne
                       </CTAButton>
 
-                      <p className="text-white/50 text-xs sm:text-sm mt-3 sm:mt-4 break-words">
+                      <p className="text-on-light-dim text-xs sm:text-sm mt-3 sm:mt-4 break-words">
                         Następny nabór: Q4 2025
                       </p>
                     </div>
@@ -877,18 +876,15 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative py-16 bg-gradient-to-br from-neural-blue/5 to-muted/10 overflow-hidden">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
-
+      {/* 8. Final CTA — bg-paper (LIGHT) */}
+      <section className="relative py-16 bg-paper overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-deep-charcoal">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-on-light leading-[1.1] tracking-[-0.02em]">
               Gotowy na upgrade systemu?
             </h3>
 
-            <p className="text-lg mb-8 text-subtle-slate">
+            <p className="text-lg mb-8 text-on-light-dim">
               Nie potrzebujesz więcej informacji. Potrzebujesz upgrade'u
               systemu. Wybierz aplikację i zacznij transformację już dziś.
             </p>
@@ -896,7 +892,7 @@ export default function Program() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAButton
                 size="lg"
-                className="text-lg px-8 py-4 bg-gradient-to-r from-neural-blue to-twilight-indigo hover:from-twilight-indigo hover:to-neural-blue"
+                className="text-lg px-8 py-4 bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
                 onClick={() => {
                   const appsSection = document.getElementById("apps-section");
                   if (appsSection) {
@@ -914,30 +910,27 @@ export default function Program() {
         </div>
       </section>
 
-      {/* Red Pill GIF Section */}
-      <section className="py-8 pb-20">
+      {/* 9. Red Pill GIF — bg-diamond (LIGHT) */}
+      <section className="py-8 pb-20 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <img
               src={redPillGif}
               alt="Red pill choice matrix scene"
-              className="w-full rounded-lg shadow-2xl"
+              className="w-full rounded-sm"
             />
-            <p className="text-xs text-muted-foreground mt-4 mb-12">
+            <p className="text-xs text-on-light-dim mt-4 mb-12">
               Źródło: Matrix (1999), Warner Bros.
             </p>
 
-            <div className="relative inline-block">
-              <div className="absolute -inset-2 bg-gradient-to-r from-red-500 to-red-700 rounded-xl blur-sm opacity-60 transition-opacity duration-300 hover:opacity-80"></div>
-              <Link to="/discovery" className="relative z-10">
-                <CTAButton
-                  size="xl"
-                  className="text-xl px-12 py-6 font-bold bg-red-600 hover:bg-red-700 text-white border-0 relative transition-all duration-300"
-                >
-                  Zarezerwuj sesję Discovery
-                </CTAButton>
-              </Link>
-            </div>
+            <Link to="/discovery">
+              <CTAButton
+                size="xl"
+                className="text-xl px-12 py-6 font-bold bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0"
+              >
+                Zarezerwuj sesję Discovery
+              </CTAButton>
+            </Link>
           </div>
         </div>
       </section>
