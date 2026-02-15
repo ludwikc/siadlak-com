@@ -50,7 +50,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <Mail className="h-4 w-4 mr-2" />
                 <span>Wiadomość wysłana</span>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-muted-foreground">
                 {currentDate}, {currentTime}
               </div>
             </div>
@@ -116,7 +116,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <Zap className="h-4 w-4 mr-2" />
                 <span>Newsletter</span>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-muted-foreground">
                 {currentDate}, {currentTime}
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <Calendar className="h-4 w-4 mr-2" />
                 <span>Discovery Call</span>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-muted-foreground">
                 {currentDate}, {currentTime}
               </div>
             </div>
@@ -197,18 +197,18 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-on-light-dim">
+            <p className="text-md text-muted-foreground">
               Doceniam Twoją odwagę. Większość ludzi nigdy nie podejmuje tego
               pierwszego kroku. Wysłałem szczegóły spotkania na Twój adres
               email. Sprawdź swoją skrzynkę i dodaj spotkanie do kalendarza.
             </p>
 
-            <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-              <h3 className="font-medium mb-2 text-depth">
+            <div className="bg-muted/50 p-4 rounded-lg border border-border/50">
+              <h3 className="font-medium mb-2 text-primary">
                 🔍 Zaskakujący fakt:
               </h3>
-              <p className="text-sm">
-                <span className="font-medium">83% moich klientów</span>{" "}
+              <p className="text-sm text-muted-foreground">
+                <span className="font-medium text-foreground">83% moich klientów</span>{" "}
                 przyznaje, że chciało anulować tę rozmowę tuż przed jej
                 rozpoczęciem. A dziś są wdzięczni, że tego nie zrobili.
               </p>
@@ -219,22 +219,22 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 Wykonaj te 3 kroki przed naszą rozmową:
               </h3>
               <div className="flex items-start space-x-3">
-                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-primary text-primary-foreground h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">1</span>
                 </div>
-                <p className="text-sm">Dodaj spotkanie do kalendarza</p>
+                <p className="text-sm text-muted-foreground">Dodaj spotkanie do kalendarza</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-primary text-primary-foreground h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">2</span>
                 </div>
-                <p className="text-sm">Znajdź spokojne miejsce na rozmowę</p>
+                <p className="text-sm text-muted-foreground">Znajdź spokojne miejsce na rozmowę</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-primary text-primary-foreground h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">3</span>
                 </div>
-                <p className="text-sm">
+                <p className="text-sm text-muted-foreground">
                   Przygotuj 1-2 pytania lub wątpliwości, które chcesz omówić
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <Clock className="h-4 w-4 mr-2" />
                 <span>Webinar</span>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-muted-foreground">
                 {currentDate}, {currentTime}
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-on-light-dim">
+            <p className="text-md text-muted-foreground">
               Twoje miejsce zostało potwierdzone! Wysłałem szczegóły na Twój
               adres email. Sprawdź swoją skrzynkę i dodaj wydarzenie do
               kalendarza, aby nie przegapić webinaru.
@@ -294,13 +294,13 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <div
               className={`p-4 rounded-lg border ${
                 isOfferExpired
-                  ? "bg-gray-100 border-gray-300"
+                  ? "bg-muted border-border"
                   : "bg-gradient-to-r from-depth/10 to-electric/10 border-depth/20"
               }`}
             >
               <div className="flex justify-between items-center mb-2">
                 <h3
-                  className={`font-medium ${isOfferExpired ? "text-gray-500" : "text-depth"}`}
+                  className={`font-medium ${isOfferExpired ? "text-muted-foreground" : "text-depth"}`}
                 >
                   {isOfferExpired
                     ? "⏱️ Było, minęło..."
@@ -309,7 +309,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full ${
                     isOfferExpired
-                      ? "bg-gray-200 text-gray-500"
+                      ? "bg-muted-foreground/20 text-muted-foreground"
                       : "bg-depth/20 text-depth"
                   }`}
                 >
@@ -317,30 +317,30 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 </span>
               </div>
               <p
-                className={`text-sm mb-3 ${isOfferExpired ? "text-gray-500" : ""}`}
+                className={`text-sm mb-3 ${isOfferExpired ? "text-muted-foreground" : "text-muted-foreground"}`}
               >
-                <span className="font-medium">68% uczestników</span> webinarów
+                <span className="font-medium text-foreground">68% uczestników</span> webinarów
                 nigdy nie wdraża tego, czego się nauczy. Dlatego stworzyłem ten
                 skrót dla ludzi, którzy działają natychmiast...
               </p>
               <div
-                className={`text-sm ${isOfferExpired ? "text-gray-500" : ""}`}
+                className={`text-sm ${isOfferExpired ? "text-muted-foreground" : ""}`}
               >
                 <p className="font-medium">
                   7 technik transformacji programisty w lidera
                 </p>
                 <div className="flex items-center justify-between mt-1">
                   <div className="flex items-center">
-                    <span className="line-through text-gray-500 mr-2">
+                    <span className="line-through text-muted-foreground mr-2">
                       499 PLN
                     </span>
                     <span
-                      className={`font-bold ${isOfferExpired ? "text-gray-500" : "text-depth"}`}
+                      className={`font-bold ${isOfferExpired ? "text-muted-foreground" : "text-depth"}`}
                     >
                       77 PLN
                     </span>
                   </div>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-muted-foreground">
                     {isOfferExpired
                       ? "Oferta wygasła"
                       : "Oferta ważna przez ograniczony czas"}
@@ -404,7 +404,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <CheckCheck className="h-4 w-4 mr-2" />
                 <span>Potwierdzenie</span>
               </div>
-              <div className="text-xs text-gray-500">
+              <div className="text-xs text-muted-foreground">
                 {currentDate}, {currentTime}
               </div>
             </div>
@@ -418,7 +418,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </h1>
             </div>
 
-            <p className="text-md text-on-light-dim">
+            <p className="text-md text-muted-foreground">
               Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie
               wkrótce.
             </p>
