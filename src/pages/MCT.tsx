@@ -4,6 +4,7 @@ import "@fontsource/jetbrains-mono/700.css";
 import { Helmet } from "react-helmet-async";
 import { Mail, Phone } from "lucide-react";
 import MCTSocialProof from "@/components/mct/MCTSocialProof";
+import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp";
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */
 const t = {
@@ -272,36 +273,78 @@ export default function MCT() {
 
         {/* ── CORE STACK ───────────────────────────────────────── */}
         <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-5xl px-6">
+          <div className="mx-auto max-w-6xl px-6">
             <SectionHeader>// what I train</SectionHeader>
 
-            <div className="grid gap-8 md:gap-10">
-              {stacks.map((s) => (
-                <div
-                  key={s.title}
-                  className="rounded-xl p-6 md:p-8"
-                  style={{ background: t.surface, border: `1px solid ${t.border}` }}
-                >
-                  <h3
-                    className="text-xl md:text-2xl font-bold mb-4"
-                    style={{ color: t.text }}
+            <div className="flex flex-col lg:flex-row gap-10">
+              {/* Left column — portrait (1/3) */}
+              <div className="lg:w-[35%] flex-shrink-0">
+                <div className="sticky top-8">
+                  <div
+                    className="relative rounded-2xl overflow-hidden"
+                    style={{ border: `1px solid ${t.border}` }}
                   >
-                    <span className="mr-3">{s.icon}</span>
-                    {s.title}
-                  </h3>
-                  <p
-                    className="leading-relaxed mb-6"
-                    style={{ color: t.muted }}
-                  >
-                    {s.body}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {s.tags.map((tag) => (
-                      <Tag key={tag}>{tag}</Tag>
-                    ))}
+                    {/* Accent glow behind image */}
+                    <div
+                      className="absolute -inset-2 blur-3xl opacity-20 rounded-3xl"
+                      style={{ background: `linear-gradient(135deg, ${t.accent}, transparent 70%)` }}
+                    />
+                    <img
+                      src={consultantPhoto}
+                      alt="Ludwik C. Siadlak — Microsoft Certified Trainer"
+                      className="relative w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    />
+                    {/* Bottom gradient overlay with text */}
+                    <div
+                      className="absolute inset-x-0 bottom-0 p-6"
+                      style={{ background: `linear-gradient(to top, ${t.bg}ee, transparent)` }}
+                    >
+                      <p
+                        className="text-xs tracking-widest uppercase font-medium"
+                        style={{ fontFamily: t.mono, color: t.accent }}
+                      >
+                        20+ years in tech
+                      </p>
+                      <p
+                        className="text-lg font-bold mt-1"
+                        style={{ color: t.text }}
+                      >
+                        Floor-to-ceiling expertise.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Right column — training cards (2/3) */}
+              <div className="lg:w-[65%] grid gap-8 md:gap-10">
+                {stacks.map((s) => (
+                  <div
+                    key={s.title}
+                    className="rounded-xl p-6 md:p-8"
+                    style={{ background: t.surface, border: `1px solid ${t.border}` }}
+                  >
+                    <h3
+                      className="text-xl md:text-2xl font-bold mb-4"
+                      style={{ color: t.text }}
+                    >
+                      <span className="mr-3">{s.icon}</span>
+                      {s.title}
+                    </h3>
+                    <p
+                      className="leading-relaxed mb-6"
+                      style={{ color: t.muted }}
+                    >
+                      {s.body}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {s.tags.map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
