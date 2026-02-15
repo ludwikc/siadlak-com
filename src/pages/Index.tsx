@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import portalHakprod from "@/assets/portal-hakprod.png";
 import portalSilnaglowa from "@/assets/portal-silnaglowa.png";
 import compassHero from "@/assets/compass-hero-bg.png";
+import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -274,6 +275,15 @@ const Index = () => {
               "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
           }}
         />
+        {/* Background photo – pinned left */}
+        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none hidden lg:block">
+          <img
+            src={sessionPhoto6}
+            alt=""
+            className="w-full h-full object-cover object-center opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#080808]" />
+        </div>
         {/* Decorative blob */}
         <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-depth/10 blur-[100px] rounded-full pointer-events-none" />
 
