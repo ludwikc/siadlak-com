@@ -10,14 +10,14 @@ interface ValuePropositionProps {
 const ValueProposition = ({ title, items }: ValuePropositionProps) => {
   return (
     <div className="my-10 p-6 rounded-lg bg-secondary/30">
-      <h3 className="text-xl font-semibold text-deep-charcoal mb-4">
+      <h3 className="text-xl font-semibold text-foreground mb-4">
         {title}
       </h3>
       <ul className="space-y-3">
         {items.map((item, index) => (
           <li key={index} className="flex items-start">
-            <CheckCircle className="h-5 w-5 mr-2 text-zenith-gold flex-shrink-0 mt-0.5" />
-            <span className="text-deep-charcoal/90">
+            <CheckCircle className="h-5 w-5 mr-2 text-electric flex-shrink-0 mt-0.5" />
+            <span className="text-foreground/90">
               {item}
             </span>
           </li>

@@ -26,11 +26,11 @@ export default function CoursePreview({
     <section className="section">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-deep-charcoal mb-4">
+          <h2 className="text-foreground mb-4">
             {title}
           </h2>
           {subtitle && (
-            <p className="text-subtle-slate text-lg">
+            <p className="text-dim text-lg">
               {subtitle}
             </p>
           )}
@@ -42,7 +42,7 @@ export default function CoursePreview({
               key={index}
               className={`glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 ${
                 course.featured
-                  ? "ring-2 ring-zenith-gold"
+                  ? "ring-2 ring-electric"
                   : ""
               }`}
             >
@@ -62,24 +62,24 @@ export default function CoursePreview({
                 )}
 
                 {course.featured && (
-                  <div className="absolute top-4 right-4 bg-zenith-gold text-white text-sm py-1 px-3 rounded-full">
+                  <div className="absolute top-4 right-4 bg-electric text-white text-sm py-1 px-3 rounded-full">
                     Featured
                   </div>
                 )}
               </div>
 
               <div className="p-6">
-                <h3 className="text-deep-charcoal text-xl mb-3">
+                <h3 className="text-foreground text-xl mb-3">
                   {course.title}
                 </h3>
 
-                <p className="text-subtle-slate mb-6">
+                <p className="text-dim mb-6">
                   {course.description}
                 </p>
 
                 <Link
                   to={course.link}
-                  className="inline-flex items-center text-twilight-indigo font-medium group"
+                  className="inline-flex items-center text-depth font-medium group"
                 >
                   Learn more
                   <ArrowRight

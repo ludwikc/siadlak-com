@@ -51,9 +51,9 @@ export function CTAButton({
   );
 
   const variantClasses = {
-    primary: 'bg-twilight-indigo hover:bg-zenith-gold text-white',
-    secondary: 'bg-transparent border-2 border-twilight-indigo text-twilight-indigo hover:bg-twilight-indigo hover:text-white',
-    premium: 'bg-gradient-to-r from-zenith-gold to-twilight-indigo hover:from-twilight-indigo hover:to-zenith-gold text-white'
+    primary: 'bg-depth hover:bg-electric text-white',
+    secondary: 'bg-transparent border-2 border-depth text-depth hover:bg-depth hover:text-white',
+    premium: 'bg-gradient-to-r from-electric to-depth hover:from-depth hover:to-electric text-white'
   };
 
   const buttonContent = (

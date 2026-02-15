@@ -15,7 +15,7 @@ interface HeroSectionProps {
 
 /**
  * Reusable hero section component with consistent styling across all pages.
- * Uses the Mental Elevator gradient background and responsive typography.
+ * Uses the Diamond Hybrid void-glow background and responsive typography.
  * Optimized for conversion with clear visual hierarchy.
  */
 export default function HeroSection({ 
@@ -26,7 +26,7 @@ export default function HeroSection({
   titleBold = true
 }: HeroSectionProps) {
   return (
-    <section className={`relative py-20 md:py-32 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue overflow-hidden ${className}`}>
+    <section className={`relative py-20 md:py-32 bg-void-glow overflow-hidden ${className}`}>
       <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -34,7 +34,7 @@ export default function HeroSection({
             {title}
           </h1>
           {subtitle && (
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-silver-mist leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-diamond leading-tight">
               {subtitle}
             </h2>
           )}

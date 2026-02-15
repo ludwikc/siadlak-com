@@ -1,4 +1,5 @@
 
+
 import { Link } from 'react-router-dom';
 
 import { ArrowRight } from 'lucide-react';
@@ -29,21 +30,21 @@ const PodcastCard = ({
           />
         </div>
         <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-deep-charcoal text-xl mb-2 font-semibold">
+          <h3 className="text-foreground text-xl mb-2 font-semibold">
             {title}
           </h3>
 
           {schedule && (
-            <p className="text-sm text-subtle-slate mb-3">
+            <p className="text-sm text-dim mb-3">
               {schedule}
             </p>
           )}
 
-          <p className="text-subtle-slate mb-6 flex-grow">
+          <p className="text-dim mb-6 flex-grow">
             {description}
           </p>
 
-          <div className="inline-flex items-center text-twilight-indigo font-medium group">
+          <div className="inline-flex items-center text-depth font-medium group">
             Słuchaj teraz{" "}
             <ArrowRight
               size={18}

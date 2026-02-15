@@ -16,29 +16,6 @@ interface ContentHeroSectionProps {
 
 /**
  * SECTION TYPE A: HERO (Full-width, centered)
- *
- * Use for:
- * - Opening sections and major statements
- * - Page introductions
- * - Hero sections with single key message
- *
- * Features:
- * - Max-width 900px for headlines
- * - Max-width 700px for body copy
- * - Centered alignment
- * - Breathable padding (120px desktop, 80px mobile)
- * - Responsive typography with clamp()
- *
- * @example
- * ```tsx
- * <ContentHeroSection
- *   title="SESJA DISCOVERY"
- *   subtitle={<p>To nie jest sprzedażowa rozmowa...</p>}
- *   backgroundVariant="gradient"
- * >
- *   <Button>CTA Button</Button>
- * </ContentHeroSection>
- * ```
  */
 export function ContentHeroSection({
   title,
@@ -48,22 +25,21 @@ export function ContentHeroSection({
   backgroundVariant = "light",
 }: ContentHeroSectionProps) {
   const bgClasses = {
-    light: "bg-luminous-white",
-    gradient:
-      "bg-gradient-to-br from-deep-space via-neural-blue to-twilight-indigo text-white",
+    light: "bg-diamond",
+    gradient: "bg-void-glow text-white",
     muted: "bg-secondary/30",
   };
 
   const textColorClasses = {
-    light: "text-deep-charcoal",
+    light: "text-foreground",
     gradient: "text-white",
-    muted: "text-deep-charcoal",
+    muted: "text-foreground",
   };
 
   const subtitleColorClasses = {
-    light: "text-deep-charcoal/80",
+    light: "text-foreground/80",
     gradient: "text-white/90",
-    muted: "text-deep-charcoal/80",
+    muted: "text-foreground/80",
   };
 
   return (
