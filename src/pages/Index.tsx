@@ -3,12 +3,12 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
 import { Link } from "react-router-dom";
-import portalHakprod from "@/assets/portal-hakprod.png";
-import portalSilnaglowa from "@/assets/portal-silnaglowa.png";
-import compassHero from "@/assets/compass-hero-bg.png";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
 import onPurple1 from "@/assets/Ludwik C. Siadlak-on-purple1.webp";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
+import sessionPhoto10 from "@/assets/Ludwik C. Siadlak-sessionphotos10.webp";
+import sessionPhoto2 from "@/assets/Ludwik C. Siadlak-sessionphotos2.webp";
+import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -725,7 +725,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2">
               <div className="relative">
                 <img
-                  src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                  src={programUwaznosc}
                   alt="Uważne Życie"
                   className="w-full h-full object-cover"
                 />
@@ -752,19 +752,19 @@ const Index = () => {
               {
                 title: "Hakowanie Produktywności",
                 desc: "Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.",
-                img: portalHakprod,
+                img: sessionPhoto10,
                 link: "/program/hakowanie-produktywnosci",
               },
               {
                 title: "Silna Głowa",
                 desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
-                img: portalSilnaglowa,
+                img: sessionPhoto2,
                 link: "/program/silna-glowa",
               },
               {
                 title: "Męski Kompas",
                 desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
-                img: compassHero,
+                img: sessionPhoto2,
                 link: "/program/meski-kompas",
               },
             ].map((card) => (
