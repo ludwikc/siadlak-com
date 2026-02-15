@@ -281,7 +281,7 @@ const config: Config = {
         ".the-cut": {
           height: "4px",
           width: "100%",
-          background: "linear-gradient(90deg, hsl(211 100% 50%), hsl(263 70% 50%))",
+          background: "linear-gradient(90deg, #080808 0%, #007AFF 40%, #6D28D9 60%, #F9FAFB 100%)",
           border: "none",
           margin: "0",
           padding: "0",
@@ -291,7 +291,7 @@ const config: Config = {
         ".bg-void-glow": {
           backgroundColor: "#080808",
           backgroundImage:
-            "radial-gradient(circle at 80% 20%, hsla(263, 70%, 50%, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, hsla(211, 100%, 50%, 0.10) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.15) 0%, transparent 50%)",
         },
 
         // === GRADIENT UTILITIES (consolidated) ===
