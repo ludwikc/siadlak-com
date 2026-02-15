@@ -1,7 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Mail } from "@/lib/icons";
-import { Linkedin, Instagram, Clock, Heart, Shield } from "lucide-react";
+import { Linkedin, Instagram, Heart } from "lucide-react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 
