@@ -679,7 +679,7 @@ const Index = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg">
+          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg text-center">
             <Link
               to="/discovery"
               className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
