@@ -48,20 +48,20 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4 flex items-center gap-2">
               <Mail className="h-4 w-4" /> Wiadomość wysłana
             </span>
-            <p className="text-sm text-muted-foreground mb-10">
+            <p className="text-sm text-white/60 mb-10">
               {currentDate}, {currentTime}
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
               Wiadomość dotarła
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/60 mb-8">
               Ale to nie jest automatyczna odpowiedź
             </p>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="text-base text-white/60 leading-relaxed mb-10">
               Twoja wiadomość trafiła do{" "}
-              <span className="font-semibold text-foreground">prawdziwego człowieka</span>, nie do
+              <span className="font-semibold text-white">prawdziwego człowieka</span>, nie do
               bota. Odezwę się do Ciebie w ciągu najbliższych 24 godzin (zwykle szybciej).
             </p>
 
@@ -77,7 +77,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               <Button
                 variant="ghost"
                 onClick={() => navigate("/")}
-                className="text-muted-foreground hover:text-foreground"
+                className="text-white/60 hover:text-white"
               >
                 Wróć do strony głównej
               </Button>
@@ -91,20 +91,20 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4 flex items-center gap-2">
               <Zap className="h-4 w-4" /> Potwierdzenie
             </span>
-            <p className="text-sm text-muted-foreground mb-10">
+            <p className="text-sm text-white/60 mb-10">
               {currentDate}, {currentTime}
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
               Zapisano!
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/60 mb-8">
               A to dopiero początek...
             </p>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="text-base text-white/60 leading-relaxed mb-10">
               Właśnie dołączasz do{" "}
-              <span className="font-semibold text-foreground">elitarnego grona</span> osób, które
+              <span className="font-semibold text-white">elitarnego grona</span> osób, które
               zdecydowały się wziąć sprawy we własne ręce. Pierwszy email otrzymasz w ciągu 24 godzin.
             </p>
 
@@ -120,7 +120,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               <Button
                 variant="ghost"
                 onClick={() => navigate("/")}
-                className="text-muted-foreground hover:text-foreground"
+                className="text-white/60 hover:text-white"
               >
                 Wróć do strony głównej
               </Button>
@@ -134,33 +134,33 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4 flex items-center gap-2">
               <Calendar className="h-4 w-4" /> Discovery Call
             </span>
-            <p className="text-sm text-muted-foreground mb-10">
+            <p className="text-sm text-white/60 mb-10">
               {currentDate}, {currentTime}
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
               Gratulacje!
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/60 mb-8">
               Twoje życie właśnie weszło na inny tor
             </p>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="text-base text-white/60 leading-relaxed mb-10">
               Doceniam Twoją odwagę. Większość ludzi nigdy nie podejmuje tego
               pierwszego kroku. Wysłałem szczegóły spotkania na Twój adres
               email.
             </p>
 
             <div className="space-y-4 mb-10">
-              <h3 className="font-medium text-lg text-foreground">
+              <h3 className="font-medium text-lg text-white">
                 Wykonaj te 3 kroki przed naszą rozmową:
               </h3>
               {["Dodaj spotkanie do kalendarza", "Znajdź spokojne miejsce na rozmowę", "Przygotuj 1-2 pytania, które chcesz omówić"].map((step, i) => (
                 <div key={i} className="flex items-start space-x-3">
-                  <div className="bg-primary text-primary-foreground h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="bg-electric text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-sm font-medium">{i + 1}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{step}</p>
+                  <p className="text-sm text-white/60">{step}</p>
                 </div>
               ))}
             </div>
@@ -175,7 +175,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </Button>
 
             <div className="flex justify-center mt-6">
-              <Button variant="ghost" onClick={() => navigate("/")} className="text-muted-foreground hover:text-foreground">
+              <Button variant="ghost" onClick={() => navigate("/")} className="text-white/60 hover:text-white">
                 Wróć do strony głównej
               </Button>
             </div>
@@ -188,44 +188,44 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4 flex items-center gap-2">
               <Clock className="h-4 w-4" /> Webinar
             </span>
-            <p className="text-sm text-muted-foreground mb-10">
+            <p className="text-sm text-white/60 mb-10">
               {currentDate}, {currentTime}
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
               Zarezerwowano miejsce
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-white/60 mb-8">
               A teraz mam pytanie...
             </p>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="text-base text-white/60 leading-relaxed mb-10">
               Twoje miejsce zostało potwierdzone! Wysłałem szczegóły na Twój
               adres email. Sprawdź swoją skrzynkę i dodaj wydarzenie do kalendarza.
             </p>
 
             <SpecialOfferCountdown />
 
-            <div className={`p-4 rounded border mt-6 ${isOfferExpired ? "bg-muted border-border" : "bg-depth/10 border-depth/20"}`}>
+            <div className={`p-4 rounded border mt-6 ${isOfferExpired ? "bg-white/5 border-white/10" : "bg-depth/10 border-depth/20"}`}>
               <div className="flex justify-between items-center mb-2">
-                <h3 className={`font-medium ${isOfferExpired ? "text-muted-foreground" : "text-depth"}`}>
+                <h3 className={`font-medium ${isOfferExpired ? "text-white/40" : "text-electric"}`}>
                   {isOfferExpired ? "⏱️ Było, minęło..." : "⏱️ Czy chcesz przyspieszyć?"}
                 </h3>
-                <span className={`text-xs px-2 py-0.5 rounded-full ${isOfferExpired ? "bg-muted-foreground/20 text-muted-foreground" : "bg-depth/20 text-depth"}`}>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${isOfferExpired ? "bg-white/10 text-white/40" : "bg-depth/20 text-depth"}`}>
                   {isOfferExpired ? "Oferta wygasła" : "Oferta specjalna"}
                 </span>
               </div>
-              <p className="text-sm mb-3 text-muted-foreground">
-                <span className="font-medium text-foreground">68% uczestników</span> webinarów
+              <p className="text-sm mb-3 text-white/60">
+                <span className="font-medium text-white">68% uczestników</span> webinarów
                 nigdy nie wdraża tego, czego się nauczy. Dlatego stworzyłem ten
                 skrót dla ludzi, którzy działają natychmiast...
               </p>
-              <div className="text-sm text-muted-foreground">
-                <p className="font-medium text-foreground">7 technik transformacji programisty w lidera</p>
+              <div className="text-sm text-white/60">
+                <p className="font-medium text-white">7 technik transformacji programisty w lidera</p>
                 <div className="flex items-center justify-between mt-1">
                   <div className="flex items-center">
                     <span className="line-through mr-2">499 PLN</span>
-                    <span className={`font-bold ${isOfferExpired ? "text-muted-foreground" : "text-depth"}`}>77 PLN</span>
+                    <span className={`font-bold ${isOfferExpired ? "text-white/40" : "text-electric"}`}>77 PLN</span>
                   </div>
                   <span className="text-xs">{isOfferExpired ? "Oferta wygasła" : "Oferta ważna przez ograniczony czas"}</span>
                 </div>
@@ -236,7 +236,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               <Button
                 className={`w-full font-semibold py-4 px-6 rounded shadow-lg transition-all duration-300 group ${
                   isOfferExpired
-                    ? "bg-muted text-muted-foreground cursor-not-allowed"
+                    ? "bg-white/10 text-white/40 cursor-not-allowed"
                     : "bg-brand-gradient text-white hover:shadow-xl hover:-translate-y-0.5"
                 }`}
                 onClick={() => !isOfferExpired && navigate("/checkout/special-offer")}
@@ -251,7 +251,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
               <Button
                 variant="outline"
-                className="w-full py-4 px-6 rounded border-border hover:bg-accent/50 group"
+                className="w-full py-4 px-6 rounded border-white/20 text-white hover:bg-white/10 group"
                 onClick={() => window.open("https://calendar.google.com", "_blank")}
               >
                 <Calendar className="mr-2 h-5 w-5" />
@@ -260,7 +260,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
               <Button
                 variant="ghost"
-                className="text-muted-foreground hover:text-foreground"
+                className="text-white/60 hover:text-white"
                 onClick={() => navigate("/")}
               >
                 Nie teraz, wróć do strony głównej
@@ -275,15 +275,15 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4 flex items-center gap-2">
               <CheckCheck className="h-4 w-4" /> Potwierdzenie
             </span>
-            <p className="text-sm text-muted-foreground mb-10">
+            <p className="text-sm text-white/60 mb-10">
               {currentDate}, {currentTime}
             </p>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight mb-3">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
               Dziękujemy za kontakt!
             </h1>
 
-            <p className="text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="text-base text-white/60 leading-relaxed mb-10">
               Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie wkrótce.
             </p>
 
@@ -301,7 +301,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-void-glow py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-void-glow text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-lg">
           {renderContent()}
         </div>
