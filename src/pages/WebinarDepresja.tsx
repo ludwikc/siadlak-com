@@ -91,9 +91,9 @@ export default function WebinarDepresja() {
         {/* Hero — void-glow */}
         <section className="bg-void-glow py-24 md:py-36 px-4">
           <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left Column */}
-              <div className="text-center lg:text-left">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+              {/* Left Column - 2/3 */}
+              <div className="lg:col-span-2 text-center lg:text-left">
                 <span className="inline-block rounded-sm px-4 py-1.5 text-sm font-medium tracking-wide uppercase text-electric-blue border border-electric-blue/30 mb-8">
                   Międzynarodowy Dzień Walki z Depresją · 23 lutego 2026
                 </span>
@@ -102,31 +102,24 @@ export default function WebinarDepresja() {
                   Nie musisz tego znosić sam.
                 </h1>
 
-                <p className="text-lg md:text-xl leading-relaxed text-text-dim">
+                <p className="text-lg md:text-xl leading-relaxed text-text-dim mb-10">
                   Bezpłatne spotkanie online z człowiekiem, który stał na krawędzi
                   peronu — i wrócił.
                 </p>
-              </div>
 
-              {/* Right Column */}
-              <div className="flex flex-col gap-6">
-                <div ref={videoContainerRef} style={{ position: 'relative', paddingTop: '177.78%' }}>
-                  <iframe
-                    ref={iframeRef}
-                    src="https://player.mediadelivery.net/embed/300498/7b4033d6-dd58-4da6-8380-16f327f084c8?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
-                    loading="lazy"
-                    style={{
-                      border: 0,
-                      position: 'absolute',
-                      top: 0,
-                      height: '100%',
-                      width: '100%',
-                      borderRadius: '8px',
-                      transition: 'all 0.3s ease',
-                    }}
-                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;"
-                    allowFullScreen={true}
-                  ></iframe>
+                {/* Meeting Details */}
+                <div className="bg-white/5 border border-electric-blue/30 rounded-lg p-6 mb-8 max-w-md mx-auto lg:mx-0">
+                  <div className="text-center lg:text-left">
+                    <p className="text-sm uppercase tracking-wide text-electric-blue mb-2">
+                      Międzynarodowy Dzień Walki z Depresją
+                    </p>
+                    <p className="text-3xl md:text-4xl font-bold text-text-on-dark mb-2">
+                      23 lutego 2026
+                    </p>
+                    <p className="text-2xl md:text-3xl font-semibold text-text-on-dark">
+                      godz. 19:05
+                    </p>
+                  </div>
                 </div>
 
                 <a
@@ -140,6 +133,28 @@ export default function WebinarDepresja() {
                   Dołączam do spotkania
                   <ArrowRight size={18} />
                 </a>
+              </div>
+
+              {/* Right Column - 1/3 */}
+              <div className="lg:col-span-1">
+                <div ref={videoContainerRef} style={{ position: 'relative', paddingTop: '177.78%' }}>
+                  <iframe
+                    ref={iframeRef}
+                    src="https://www.loom.com/embed/450db1d9f1c34aeebeca568e354c5972"
+                    loading="lazy"
+                    style={{
+                      border: 0,
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      height: '100%',
+                      width: '100%',
+                      borderRadius: '8px',
+                      transition: 'all 0.3s ease',
+                    }}
+                    allowFullScreen={true}
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
