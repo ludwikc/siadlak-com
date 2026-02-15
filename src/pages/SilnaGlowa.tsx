@@ -35,15 +35,15 @@ const SilnaGlowa = () => {
     <Layout>
       {/* Hero Section - Theme Locked */}
       <section className="py-12 md:py-20 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Urgency Badge - Top */}
             <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 backdrop-blur-sm border border-neural-blue/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
-                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-twilight-indigo" />
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/20 to-depth/20 backdrop-blur-sm border border-electric/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
+                <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
                 <span className="text-xs sm:text-sm font-bold text-locked-white">
                   PRZEDSPRZEDAŻ
                 </span>
@@ -78,7 +78,7 @@ const SilnaGlowa = () => {
             {/* Social Proof - Above CTA */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
               <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
-                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-twilight-indigo" />
+                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
                 <span className="text-sm sm:text-base font-semibold text-locked-white">
                   118+ osób przejęło stery
                 </span>
@@ -99,7 +99,7 @@ const SilnaGlowa = () => {
             {/* Primary CTA - Prominent */}
             <div className="flex flex-col items-center gap-4 mb-8">
               <div className="relative group inline-block w-full sm:w-auto">
-                <div className="absolute -inset-1 bg-gradient-to-r from-neural-blue via-twilight-indigo to-neural-blue rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <Button
                   variant="special"
                   size="lg"
@@ -113,11 +113,11 @@ const SilnaGlowa = () => {
               {/* Value Proposition */}
               <div className="text-center space-y-2">
                 <p className="text-base sm:text-lg font-semibold text-locked-white">
-                  <span className="text-twilight-indigo line-through">
+                  <span className="text-electric line-through">
                     12,000 zł
                   </span>{" "}
                   →{" "}
-                  <span className="text-twilight-indigo text-xl sm:text-2xl font-bold">
+                  <span className="text-electric text-xl sm:text-2xl font-bold">
                     777 zł
                   </span>
                 </p>
@@ -129,9 +129,9 @@ const SilnaGlowa = () => {
 
             {/* Video Teaser - Below CTA */}
             <div className="max-w-3xl mx-auto">
-              <div className="aspect-video bg-locked-white/10 rounded-2xl flex items-center justify-center border border-locked-white/20 hover:border-zenith-gold/50 transition-colors cursor-pointer group">
+              <div className="aspect-video bg-locked-white/10 rounded-2xl flex items-center justify-center border border-locked-white/20 hover:border-electric/50 transition-colors cursor-pointer group">
                 <div className="text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-electric to-depth rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
                     <div className="w-0 h-0 border-l-[12px] sm:border-l-[16px] border-l-white border-y-[9px] sm:border-y-[12px] border-y-transparent ml-1"></div>
                   </div>
                   <p className="text-sm sm:text-base text-locked-silver">

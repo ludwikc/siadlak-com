@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
@@ -24,10 +23,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
   const [isOfferExpired, setIsOfferExpired] = useState(false);
 
   useEffect(() => {
-    // Scroll to top on component mount
     window.scrollTo(0, 0);
-
-    // Check if offer is expired
     const storedEndTime = localStorage.getItem("specialOfferEndTime");
     if (storedEndTime) {
       const endTimeMs = parseInt(storedEndTime, 10);
@@ -35,7 +31,6 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
       if (currentTime >= endTimeMs) {
         setIsOfferExpired(true);
       } else {
-        // Set a timeout to update the expired state when the timer ends
         const timeLeft = endTimeMs - currentTime;
         const timeout = setTimeout(() => {
           setIsOfferExpired(true);
@@ -51,7 +46,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
         return (
           <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-twilight-indigo/10 px-3 py-1 rounded-full text-sm text-twilight-indigo flex items-center">
+              <div className="bg-depth/10 px-3 py-1 rounded-full text-sm text-depth flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>Wiadomość wysłana</span>
               </div>
@@ -117,7 +112,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
         return (
           <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-twilight-indigo/10 px-3 py-1 rounded-full text-sm text-twilight-indigo flex items-center">
+              <div className="bg-depth/10 px-3 py-1 rounded-full text-sm text-depth flex items-center">
                 <Zap className="h-4 w-4 mr-2" />
                 <span>Newsletter</span>
               </div>
@@ -181,7 +176,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
         return (
           <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-twilight-indigo/10 px-3 py-1 rounded-full text-sm text-twilight-indigo flex items-center">
+              <div className="bg-depth/10 px-3 py-1 rounded-full text-sm text-depth flex items-center">
                 <Calendar className="h-4 w-4 mr-2" />
                 <span>Discovery Call</span>
               </div>
@@ -202,14 +197,14 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-deep-charcoal/80">
+            <p className="text-md text-on-light-dim">
               Doceniam Twoją odwagę. Większość ludzi nigdy nie podejmuje tego
               pierwszego kroku. Wysłałem szczegóły spotkania na Twój adres
               email. Sprawdź swoją skrzynkę i dodaj spotkanie do kalendarza.
             </p>
 
             <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
-              <h3 className="font-medium mb-2 text-twilight-indigo">
+              <h3 className="font-medium mb-2 text-depth">
                 🔍 Zaskakujący fakt:
               </h3>
               <p className="text-sm">
@@ -224,19 +219,19 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 Wykonaj te 3 kroki przed naszą rozmową:
               </h3>
               <div className="flex items-start space-x-3">
-                <div className="bg-twilight-indigo text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">1</span>
                 </div>
                 <p className="text-sm">Dodaj spotkanie do kalendarza</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="bg-twilight-indigo text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">2</span>
                 </div>
                 <p className="text-sm">Znajdź spokojne miejsce na rozmowę</p>
               </div>
               <div className="flex items-start space-x-3">
-                <div className="bg-twilight-indigo text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <div className="bg-depth text-white h-6 w-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm font-medium">3</span>
                 </div>
                 <p className="text-sm">
@@ -267,7 +262,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
         return (
           <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-twilight-indigo/10 px-3 py-1 rounded-full text-sm text-twilight-indigo flex items-center">
+              <div className="bg-depth/10 px-3 py-1 rounded-full text-sm text-depth flex items-center">
                 <Clock className="h-4 w-4 mr-2" />
                 <span>Webinar</span>
               </div>
@@ -288,7 +283,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </p>
             </div>
 
-            <p className="text-md text-deep-charcoal/80">
+            <p className="text-md text-on-light-dim">
               Twoje miejsce zostało potwierdzone! Wysłałem szczegóły na Twój
               adres email. Sprawdź swoją skrzynkę i dodaj wydarzenie do
               kalendarza, aby nie przegapić webinaru.
@@ -300,12 +295,12 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               className={`p-4 rounded-lg border ${
                 isOfferExpired
                   ? "bg-gray-100 border-gray-300"
-                  : "bg-gradient-to-r from-twilight-indigo/10 to-zenith-gold/10 border-twilight-indigo/20"
+                  : "bg-gradient-to-r from-depth/10 to-electric/10 border-depth/20"
               }`}
             >
               <div className="flex justify-between items-center mb-2">
                 <h3
-                  className={`font-medium ${isOfferExpired ? "text-gray-500" : "text-twilight-indigo"}`}
+                  className={`font-medium ${isOfferExpired ? "text-gray-500" : "text-depth"}`}
                 >
                   {isOfferExpired
                     ? "⏱️ Było, minęło..."
@@ -315,7 +310,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                   className={`text-xs px-2 py-0.5 rounded-full ${
                     isOfferExpired
                       ? "bg-gray-200 text-gray-500"
-                      : "bg-twilight-indigo/20 text-twilight-indigo"
+                      : "bg-depth/20 text-depth"
                   }`}
                 >
                   {isOfferExpired ? "Oferta wygasła" : "Oferta specjalna"}
@@ -340,7 +335,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                       499 PLN
                     </span>
                     <span
-                      className={`font-bold ${isOfferExpired ? "text-gray-500" : "text-twilight-indigo"}`}
+                      className={`font-bold ${isOfferExpired ? "text-gray-500" : "text-depth"}`}
                     >
                       77 PLN
                     </span>
@@ -405,7 +400,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
         return (
           <div className="w-full space-y-8 bg-card/80 backdrop-blur-lg p-10 rounded-3xl border border-border/50 shadow-2xl animate-fade-in">
             <div className="flex items-center justify-between mb-4">
-              <div className="bg-twilight-indigo/10 px-3 py-1 rounded-full text-sm text-twilight-indigo flex items-center">
+              <div className="bg-depth/10 px-3 py-1 rounded-full text-sm text-depth flex items-center">
                 <CheckCheck className="h-4 w-4 mr-2" />
                 <span>Potwierdzenie</span>
               </div>
@@ -423,7 +418,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               </h1>
             </div>
 
-            <p className="text-md text-deep-charcoal/80">
+            <p className="text-md text-on-light-dim">
               Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie
               wkrótce.
             </p>
@@ -442,10 +437,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-luminous-white to-secondary/30 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-diamond to-secondary/30 py-12 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 overflow-hidden z-0">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-twilight-indigo/20 to-zenith-gold/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-twilight-indigo/10 to-zenith-gold/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-depth/20 to-electric/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-depth/10 to-electric/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 w-full max-w-lg">
