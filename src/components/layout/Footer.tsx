@@ -16,11 +16,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-deep-space via-neural-blue to-deep-space text-white pt-20 pb-8 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-void via-electric to-void text-white pt-20 pb-8 overflow-hidden">
       {/* Premium static background orbs */}
       <div className="absolute inset-0 z-0 opacity-[0.04]">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-gold/50 to-twilight-indigo rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-tl from-twilight-indigo to-neural-blue rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-electric/50 to-depth rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-tl from-depth to-electric rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -45,28 +45,28 @@ export default function Footer() {
             <div className="flex space-x-3">
               <a
                 href="https://instagram.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-twilight-indigo rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="Instagram"
               >
                 <Instagram size={18} className="text-white" />
               </a>
               <a
                 href="https://twitter.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-twilight-indigo rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="X (formerly Twitter)"
               >
                 <XIcon size={18} className="text-white" />
               </a>
               <a
                 href="https://linkedin.com/in/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-twilight-indigo rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} className="text-white" />
               </a>
               <a
                 href="https://youtube.com/ludwikcsiadlak"
-                className="w-10 h-10 bg-gradient-to-br from-gold to-twilight-indigo rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
+                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
                 aria-label="YouTube"
               >
                 <Youtube size={18} className="text-white" />
@@ -77,13 +77,13 @@ export default function Footer() {
           {/* Odkryj */}
           <div>
             <h4 className="text-lg font-bold mb-2 text-white">Odkryj</h4>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-twilight-indigo rounded-full mb-4"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-electric to-depth rounded-full mb-4"></div>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/about"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   O mnie
                 </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <Link
                   to="/discovery"
                   onClick={scrollToTop}
-                  className="text-zenith-gold hover:text-zenith-gold/80 transition-colors inline-flex items-center gap-2 font-semibold"
+                  className="text-electric hover:text-electric/80 transition-colors inline-flex items-center gap-2 font-semibold"
                 >
                   Sesja Discovery
                   <Calendar size={16} className="flex-shrink-0" />
@@ -102,7 +102,7 @@ export default function Footer() {
                 <Link
                   to="/newsletter"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Newsletter
                 </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <Link
                   to="/testimonials"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Opinie Klientów (120+)
                 </Link>
@@ -120,7 +120,7 @@ export default function Footer() {
                 <Link
                   to="/webinar"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Najbliższy Webinar
                 </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
                 <Link
                   to="/contact"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Kontakt
                 </Link>
@@ -140,15 +140,15 @@ export default function Footer() {
           {/* Programy */}
           <div>
             <h4 className="text-lg font-bold mb-2 text-white">Programy</h4>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-twilight-indigo rounded-full mb-4"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-electric to-depth rounded-full mb-4"></div>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/program/lifeos-system-upgrade"
                   onClick={scrollToTop}
-                  className="text-white hover:text-twilight-indigo transition-colors inline-flex items-center gap-2 font-semibold group"
+                  className="text-white hover:text-depth transition-colors inline-flex items-center gap-2 font-semibold group"
                 >
-                  <span className="inline-block w-2 h-2 bg-gradient-to-br from-gold to-twilight-indigo rounded-full group-hover:scale-125 transition-transform"></span>
+                  <span className="inline-block w-2 h-2 bg-gradient-to-br from-electric to-depth rounded-full group-hover:scale-125 transition-transform"></span>
                   LifeOS: System Upgrade
                 </Link>
               </li>
@@ -156,7 +156,7 @@ export default function Footer() {
                 <Link
                   to="/program/hakowanie-produktywnosci"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Instaluj: Produktywność
                 </Link>
@@ -165,7 +165,7 @@ export default function Footer() {
                 <Link
                   to="/program/silna-glowa"
                   onClick={scrollToTop}
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-block"
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
                   Instaluj: Odporność Psychiczna
                 </Link>
@@ -174,7 +174,7 @@ export default function Footer() {
                 <Link
                   to="/program"
                   onClick={scrollToTop}
-                  className="text-white/60 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5 text-sm"
+                  className="text-white/60 hover:text-depth transition-colors inline-flex items-center gap-1.5 text-sm"
                 >
                   Zobacz wszystkie programy
                   <ExternalLink size={12} className="rotate-[-45deg]" />
@@ -184,14 +184,14 @@ export default function Footer() {
 
             {/* Projekty */}
             <h4 className="text-lg font-bold mb-2 text-white mt-8">Projekty</h4>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-gold to-twilight-indigo rounded-full mb-4"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-electric to-depth rounded-full mb-4"></div>
             <ul className="space-y-3">
               <li>
                 <a
                   href="https://fundacja.hackerzy.pl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
                 >
                   Fundacja HACKERZY.PL
                   <ExternalLink size={14} className="flex-shrink-0" />
@@ -202,7 +202,7 @@ export default function Footer() {
                   href="https://deepwork.pl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
                 >
                   DeepWork.pl
                   <ExternalLink size={14} className="flex-shrink-0" />
@@ -213,7 +213,7 @@ export default function Footer() {
                   href="https://uwaznezycie.pl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-twilight-indigo transition-colors inline-flex items-center gap-1.5"
+                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
                 >
                   UwazneZycie.pl
                   <ExternalLink size={14} className="flex-shrink-0" />
