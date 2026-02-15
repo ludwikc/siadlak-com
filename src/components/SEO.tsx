@@ -16,13 +16,13 @@ export interface SEOProps {
 }
 
 const defaultSEO = {
-  title: 'Siadlak.com - Rozwój Osobisty i Coaching',
+  title: 'SIADLAK.COM - Diamentowy Umysł | Ludwik C. Siadlak',
   description: 'Odkryj swój potencjał z programami rozwoju osobistego, coachingiem i narzędziami produktywności. Dołącz do społeczności ludzi dążących do lepszego życia.',
   keywords: 'rozwój osobisty, coaching, produktywność, motywacja, sukces, życie, szczęście',
   image: '/og-image.jpg',
   url: 'https://siadlak.com',
   type: 'website' as const,
-  author: 'Siadlak',
+  author: 'Ludwik C. Siadlak',
   locale: 'pl_PL'
 };
 
@@ -91,7 +91,7 @@ export default function SEO({
       <meta property="og:image" content={imageUrl} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:locale" content={locale} />
-      <meta property="og:site_name" content="Siadlak.com" />
+      <meta property="og:site_name" content="SIADLAK.COM" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

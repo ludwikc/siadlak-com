@@ -9,7 +9,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/',
     seo: {
-      title: 'Strona Główna',
+      title: 'Ludwik C. Siadlak',
       description: 'Odkryj swój potencjał z programami rozwoju osobistego, coachingiem i narzędziami produktywności. Dołącz do społeczności ludzi dążących do lepszego życia.',
       keywords: 'rozwój osobisty, coaching, produktywność, motywacja, sukces, transformacja życia',
       url: '/',
@@ -19,7 +19,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/about',
     seo: {
-      title: 'O nas',
+      title: 'Ludwik C. Siadlak - O mnie',
       description: 'Poznaj misję Siadlak.com i dowiedz się, jak pomagamy ludziom osiągać swoje cele i rozwijać potencjał.',
       keywords: 'o nas, misja, wizja, coaching, rozwój osobisty',
       url: '/about'
@@ -37,7 +37,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program',
     seo: {
-      title: 'Programy Rozwoju',
+      title: 'Programy Rozwojowe / Aplikacje Mentalne',
       description: 'Odkryj nasze programy rozwoju osobistego i profesjonalnego. Kursy, szkolenia i coaching dla Twojego sukcesu.',
       keywords: 'programy rozwoju, kursy, szkolenia, coaching, edukacja',
       url: '/program',
@@ -57,7 +57,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/lifeos-system-upgrade',
     seo: {
-      title: 'LifeOS: System Upgrade',
+      title: 'Praca 1:1 ',
       description: '8-tygodniowy program fundamentalnej transformacji dla liderów. Przejdź z reaktywnego działania do zintegrowanego przywództwa.',
       keywords: 'transformacja, przywództwo, rozwój osobisty, coaching, system operacyjny życia',
       url: '/program/lifeos-system-upgrade',
@@ -67,7 +67,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/silna-glowa',
     seo: {
-      title: 'Silna Głowa',
+      title: 'Silna Głowa = program odporności psychicznej',
       description: 'Program wzmacniania odporności psychicznej i budowania mentalnej siły. Naucz się radzić ze stresem i wyzwaniami.',
       keywords: 'odporność psychiczna, siła mentalna, stres, wyzwania, psychologia',
       url: '/program/silna-glowa',
@@ -108,7 +108,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/uwazne-zycie',
     seo: {
-      title: 'Uważne Życie - Program',
+      title: 'Uważne Życie - Program Uważności i Mindfulness',
       description: 'Program rozwoju osobistego oparty na mindfulness i uważności. Znajdź równowagę i spokój w codziennym życiu.',
       keywords: 'mindfulness, uważność, program rozwoju, medytacja, równowaga',
       url: '/program/uwazne-zycie',
@@ -118,8 +118,8 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/7-technik',
     seo: {
-      title: '7 Technik Mentalnych',
-      description: 'Poznaj 7 sprawdzonych technik mentalnych, które pomogą Ci osiągnąć sukces i równowagę.',
+      title: '7 Technik Produktwności, które działają',
+      description: 'Poznaj 7 sprawdzonych technik produktywności, które pomogą Ci osiągnąć sukces i równowagę.',
       keywords: '7 technik, rozwój mentalny, techniki mentalne, sukces, transformacja',
       url: '/program/7-technik',
       type: 'course'
@@ -128,16 +128,17 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar',
     seo: {
-      title: 'Webinar',
+      title: 'Dołącz do spotkania online',
       description: 'Dołącz do bezpłatnego webinaru o rozwoju osobistym i odkryj nowe możliwości transformacji życia.',
       keywords: 'webinar, bezpłatne szkolenie, rozwój osobisty, online',
-      url: '/webinar'
+      url: '/webinar',
+      type: 'event'
     }
   },
   {
     path: '/testimonials',
     seo: {
-      title: 'Opinie Klientów',
+      title: '100+ Opinii Klientów Ludwika',
       description: 'Przeczytaj opinie i historie sukcesu naszych klientów. Zobacz, jak nasze programy zmieniły ich życie.',
       keywords: 'opinie, referencje, historie sukcesu, rezultaty, coaching',
       url: '/testimonials'
@@ -146,7 +147,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/newsletter',
     seo: {
-      title: 'Newsletter',
+      title: 'Lista Mailingowa - dołącz bezpłatnie',
       description: 'Zapisz się do naszego newslettera i otrzymuj regularne dawki inspiracji oraz praktyczne porady rozwojowe.',
       keywords: 'newsletter, inspiracja, porady, rozwój, motywacja',
       url: '/newsletter'
@@ -155,9 +156,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/discovery',
     seo: {
-      title: 'Rozmowa Odkrywcza',
+      title: 'Sesja Discovery - Odkryj swój potencjał',
       description: 'Umów się na bezpłatną rozmowę odkrywczą i otrzymaj spersonalizowany plan rozwoju.',
-      keywords: 'rozmowa odkrywcza, konsultacja, plan rozwoju, coaching',
+      keywords: 'sesja discovery, konsultacja, plan rozwoju, coaching',
       url: '/discovery'
     }
   },
@@ -209,7 +210,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/oto',
     seo: {
-      title: 'Oferta Specjalna',
+      title: 'Oferta Specjalna (wgasa za 7 minut)',
       description: 'Wyjątkowa oferta rozwojowa dostępna przez ograniczony czas. Skorzystaj z okazji i rozwijaj się.',
       keywords: 'oferta specjalna, promocja, rozwój osobisty, szkolenie',
       url: '/oto'
@@ -251,7 +252,8 @@ export const seoRouteConfig: RouteConfig[] = [
       title: 'Webinar Zakończony',
       description: 'Ten webinar już się zakończył, ale możesz obejrzeć nagranie lub zapisać się na kolejne wydarzenia.',
       keywords: 'webinar zakończony, nagranie, kolejne wydarzenia',
-      url: '/webinar/expired'
+      url: '/webinar/expired',
+      type: 'event'
     }
   },
   {
@@ -260,7 +262,8 @@ export const seoRouteConfig: RouteConfig[] = [
       title: 'Nagranie Webinaru',
       description: 'Obejrzyj nagranie z naszego webinaru o rozwoju osobistym i poznaj kluczowe strategie sukcesu.',
       keywords: 'nagranie webinaru, rozwój osobisty, strategie sukcesu',
-      url: '/webinar/replay'
+      url: '/webinar/replay',
+      type: 'event'
     }
   },
   {
@@ -270,6 +273,7 @@ export const seoRouteConfig: RouteConfig[] = [
       description: '90-minutowy warsztat dla facetów, którzy mają chaos w priorytetach. Bez teorii - konkretny plan na poniedziałek. Ludwik Siadlak + Mateusz Lizak.',
       keywords: 'warsztat, męski kompas, rozwój osobisty, analitycy, programiści, produktywność',
       url: '/webinar/meski-kompas',
+      type: 'event',
       favicon: '/compass-favicon.png'
     }
   },
@@ -317,7 +321,7 @@ export function getSEOConfig(path: string): SEOProps {
   const config = seoRouteConfig.find(route => route.path === path);
   return config?.seo || {
     title: 'Strona',
-    description: 'Rozwój osobisty i coaching na Siadlak.com',
+    description: 'Rozwój osobisty i coaching na SIADLAK.COM',
     url: path
   };
 }
