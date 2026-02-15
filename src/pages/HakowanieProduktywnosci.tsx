@@ -776,8 +776,8 @@ export default function HakowanieProduktywnosci() {
                   className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100"
                 >
                   {/* Progress Badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-twilight-indigo/10 to-neural-blue/10 px-3 py-1.5 rounded-full border border-twilight-indigo/20">
-                    <span className="text-xs font-bold text-twilight-indigo">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-depth/10 to-electric/10 px-3 py-1.5 rounded-full border border-depth/20">
+                    <span className="text-xs font-bold text-depth">
                       {index + 1}/6
                     </span>
                   </div>
@@ -804,7 +804,7 @@ export default function HakowanieProduktywnosci() {
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeDasharray={`${((index + 1) / 6) * 283} 283`}
-                          className="text-twilight-indigo"
+                          className="text-depth"
                         />
                       </svg>
                     </div>
@@ -842,7 +842,7 @@ export default function HakowanieProduktywnosci() {
                   </p>
 
                   {/* Install Button */}
-                  <button className="w-full bg-gradient-to-r from-twilight-indigo to-zenith-gold text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">ODBLOKOWUJ</span>
                   </button>
@@ -863,7 +863,7 @@ export default function HakowanieProduktywnosci() {
 
             <div className="text-center mb-12">
               <p className="text-xl text-text-secondary mb-6">
-                <strong className="text-twilight-indigo">
+                <strong className="text-depth">
                   Serce Hakowania Produktywności to społeczność Hakerów
                 </strong>{" "}
                 - ludzi, którzy postanowili wziąć swoje życie w swoje ręce.
@@ -912,8 +912,8 @@ export default function HakowanieProduktywnosci() {
 
       {/* 2.9. Pricing Section - Theme Locked */}
       <section className="py-20 bg-gradient-locked-pricing section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -1020,7 +1020,7 @@ export default function HakowanieProduktywnosci() {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-neural-blue to-twilight-indigo p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/10">
+                    <div className="bg-gradient-to-br from-electric to-depth p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/10">
                       <p className="text-sm text-white/90 uppercase tracking-wide mb-2 text-center">
                         Twoja inwestycja
                       </p>
@@ -1038,7 +1038,7 @@ export default function HakowanieProduktywnosci() {
                 {/* ROI Calculator Hint */}
                 <div className="mt-6 text-center">
                   <div className="inline-flex items-center gap-2 bg-locked-gray/20 px-4 py-2 rounded-full border border-locked-gray/30">
-                    <Sparkles className="h-4 w-4 text-twilight-indigo" />
+                    <Sparkles className="h-4 w-4 text-electric" />
                     <span className="text-sm text-locked-silver">
                       Zwrot z inwestycji:{" "}
                       <strong className="text-locked-white">
@@ -1097,10 +1097,10 @@ export default function HakowanieProduktywnosci() {
             <Button
               variant="special"
               size="lg"
-              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl hover:shadow-zenith-gold/25"
+              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl"
             >
               Chcę przestać zwlekać! Zamawiam
-              <ArrowRight className="ml-2 h-6 w-6 text-twilight-indigo" />
+              <ArrowRight className="ml-2 h-6 w-6 text-depth" />
             </Button>
 
             <div className="mb-8">
@@ -1118,7 +1118,7 @@ export default function HakowanieProduktywnosci() {
             <CountdownTimer />
 
             <div className="mt-8">
-              <p className="text-lg font-bold text-twilight-indigo mb-4">
+              <p className="text-lg font-bold text-electric mb-4">
                 Podejmij akcję już teraz...
               </p>
               <p className="text-locked-silver">
@@ -1218,7 +1218,7 @@ export default function HakowanieProduktywnosci() {
 
                   {/* Quote with Better Typography */}
                   <blockquote className="relative mb-6">
-                    <div className="absolute -top-2 -left-2 text-6xl text-twilight-indigo/20 font-serif leading-none">
+                    <div className="absolute -top-2 -left-2 text-6xl text-depth/20 font-serif leading-none">
                       "
                     </div>
                     <p className="text-base text-text-secondary leading-relaxed relative z-10 italic">
@@ -1246,7 +1246,7 @@ export default function HakowanieProduktywnosci() {
                   {/* Author Info with Avatar */}
                   <div className="flex items-center gap-3">
                     {/* Avatar Circle */}
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white font-bold text-sm">
                         {testimonial.avatar}
                       </span>
@@ -1263,15 +1263,15 @@ export default function HakowanieProduktywnosci() {
                     </div>
 
                     {/* Category Tag */}
-                    <div className="bg-neural-blue/10 px-3 py-1 rounded-full">
-                      <span className="text-xs font-medium text-twilight-indigo">
+                    <div className="bg-electric/10 px-3 py-1 rounded-full">
+                      <span className="text-xs font-medium text-depth">
                         {testimonial.role}
                       </span>
                     </div>
                   </div>
 
                   {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-neural-blue/5 to-twilight-indigo/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-electric/5 to-depth/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               ))}
             </div>
@@ -1288,7 +1288,7 @@ export default function HakowanieProduktywnosci() {
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-8">
                   <div className="flex items-center gap-2 text-text-secondary">
-                    <Users className="h-5 w-5 text-twilight-indigo" />
+                    <Users className="h-5 w-5 text-depth" />
                     <span className="font-bold text-text-primary">500+</span>
                     uczestników
                   </div>
@@ -1364,11 +1364,11 @@ export default function HakowanieProduktywnosci() {
               {HAKOWANIE_OBJECTIONS.map((item, index) => (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-neural-blue/30 hover:shadow-xl transition-all duration-300"
+                  className="group bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-electric/30 hover:shadow-xl transition-all duration-300"
                 >
                   {/* Icon Header */}
                   <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                       <item.icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
