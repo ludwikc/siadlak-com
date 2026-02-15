@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
 import onPurple1 from "@/assets/Ludwik C. Siadlak-on-purple1.webp";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
-import sessionPhoto10 from "@/assets/Ludwik C. Siadlak-sessionphotos10.webp";
-import sessionPhoto2 from "@/assets/Ludwik C. Siadlak-sessionphotos2.webp";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
+import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
+import programOdpornosc from "@/assets/LCS-program-Odpornosc.png";
+import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -752,19 +753,19 @@ const Index = () => {
               {
                 title: "Hakowanie Produktywności",
                 desc: "Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.",
-                img: sessionPhoto10,
+                img: programProduktywnosc,
                 link: "/program/hakowanie-produktywnosci",
               },
               {
                 title: "Silna Głowa",
                 desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
-                img: sessionPhoto2,
+                img: programOdpornosc,
                 link: "/program/silna-glowa",
               },
               {
                 title: "Męski Kompas",
                 desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
-                img: sessionPhoto2,
+                img: programMeskiKompas,
                 link: "/program/meski-kompas",
               },
             ].map((card) => (
