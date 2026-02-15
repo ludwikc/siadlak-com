@@ -113,7 +113,6 @@ const config: Config = {
   				'sans-serif'
   			],
   			sans: [
-  				'Inter',
   				'ui-sans-serif',
   				'system-ui',
   				'sans-serif',
@@ -131,7 +130,6 @@ const config: Config = {
   				'serif'
   			],
   			mono: [
-  				'Roboto Mono',
   				'ui-monospace',
   				'SFMono-Regular',
   				'Menlo',
