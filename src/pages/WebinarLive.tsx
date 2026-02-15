@@ -63,12 +63,14 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                   }}
                 >
                   <iframe
-                    height="100%"
                     width="100%"
-                    src="https://www.youtube.com/live/X7gsG0T6Kno?si=TxFv3PuHoF8c7dIg"
+                    height="100%"
+                    src="https://www.youtube.com/embed/X7gsG0T6Kno?si=iHLbDI3u4RuLUgKv"
+                    title="YouTube video player"
                     frameBorder="0"
-                    allow="autoplay; fullscreen"
-                    scrolling="no"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   ></iframe>
                 </div>
               </div>
