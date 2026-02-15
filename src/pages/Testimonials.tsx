@@ -1058,7 +1058,7 @@ const Testimonials = () => {
       }
 
       // Flush compact buffer if needed
-      if (compactBuffer.length > 0 && item.type !== 'compact') {
+      if (compactBuffer.length > 0 && (item as Testimonial).type !== 'compact') {
         rendered.push(
           <div key={`compact-grid-${i}`} className="testimonials-grid">
             {compactBuffer.map((card, idx) => (
@@ -1081,7 +1081,7 @@ const Testimonials = () => {
       }
 
       // Flush micro buffer if needed
-      if (microBuffer.length > 0 && item.type !== 'micro') {
+      if (microBuffer.length > 0 && (item as Testimonial).type !== 'micro') {
         rendered.push(
           <div key={`micro-grid-${i}`} className="testimonials-micro-grid">
             {microBuffer.map((card, idx) => (
