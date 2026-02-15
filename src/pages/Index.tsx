@@ -651,7 +651,7 @@ const Index = () => {
             alt=""
             className="h-full w-auto object-cover object-right"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#D7D6CF]" />
+          
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
           <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
