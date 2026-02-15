@@ -26,7 +26,7 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {!shouldHideHeader && <Header />}
       <main
-        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-20"}`}
+        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-16"}`}
       >
         <div className="page-content animate-fade-in">{children}</div>
       </main>
