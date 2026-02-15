@@ -7,6 +7,7 @@ import portalHakprod from "@/assets/portal-hakprod.png";
 import portalSilnaglowa from "@/assets/portal-silnaglowa.png";
 import compassHero from "@/assets/compass-hero-bg.png";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
+import onPurple1 from "@/assets/Ludwik C. Siadlak-on-purple1.webp";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -823,15 +824,16 @@ const Index = () => {
       </section>
 
       {/* ═══ CLOSING FOOTER ═══ */}
-      <section className="bg-void py-20 relative overflow-hidden">
-        {/* void-glow overlay */}
-        <div
-          className="absolute inset-0 opacity-30 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
-          }}
-        />
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: "#2F0F43" }}>
+        {/* Background photo – pinned left */}
+        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none hidden lg:block">
+          <img
+            src={onPurple1}
+            alt=""
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2F0F43]" />
+        </div>
         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
           <h2 className="font-heading text-2xl font-bold text-white mb-2">
             Diamentowy umysł.
