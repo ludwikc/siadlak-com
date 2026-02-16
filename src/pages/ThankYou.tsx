@@ -109,6 +109,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
             </p>
 
             <Button
+              type="button"
               className="w-full bg-brand-gradient text-white font-semibold py-4 px-6 rounded shadow-[0_4px_20px_rgba(109,40,217,0.4)] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 group"
               onClick={() => navigate("/program")}
             >
