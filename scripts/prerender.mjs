@@ -25,8 +25,9 @@ try {
   console.warn('⚠️  Could not load redirects config, skipping redirect routes');
 }
 
-// Get redirect source paths (excluding /webinar which causes navigation timeout)
-const redirectRoutes = Object.keys(redirects).filter(route => route !== '/webinar');
+// Skip redirect routes entirely - they don't need prerendering as they immediately redirect
+// This prevents "detached frame" errors in Puppeteer
+const redirectRoutes = [];
 
 // Routes to prerender
 const routes = [
