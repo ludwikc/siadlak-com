@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: undefined,
       }
-    }
+    },
+    charset: 'utf8'
   },
 }));

@@ -71,6 +71,9 @@ export default function SEO({
 
   return (
     <Helmet>
+      {/* Charset */}
+      <meta charSet="UTF-8" />
+
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
