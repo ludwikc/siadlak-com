@@ -151,7 +151,7 @@ export default function Program() {
       </section>
 
       {/* 2. LifeOS AppStore Header — bg-surface (DARK) */}
-      <section className="py-12 bg-[rgba(255,255,255,0.03)]">
+      <section className="py-12 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-[1.1] tracking-[-0.02em]">
@@ -182,7 +182,7 @@ export default function Program() {
             {/* App #1: Produktywność */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">🧠</span>
+                <span className="text-3xl" aria-hidden="true">🧠</span>
                 <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #1: PRODUKTYWNOŚĆ
                 </Badge>
@@ -231,8 +231,8 @@ export default function Program() {
               </div>
 
               <div className="mt-6">
-                <Link to="/program/hakowanie-produktywnosci">
-                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
+                <Link to="/program/hakowanie-produktywnosci" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+                  <CTAButton className="bg-gradient-locked-primary hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -242,8 +242,8 @@ export default function Program() {
             {/* App #2: Odporność Psychiczna */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">🛡️</span>
-                <Badge variant="outline" className="text-depth border-depth/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">🛡️</span>
+                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #2: ODPORNOŚĆ PSYCHICZNA
                 </Badge>
               </div>
@@ -265,15 +265,15 @@ export default function Program() {
 
               <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Blokuje mentalne ataki DDoS (przeciążenie decyzjami, presja, chaos)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Automatycznie wykrywa wzorce katastrofizacji i&nbsp;przeprogramowuje je w&nbsp;locie</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Shield className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Tworzy redundantne połączenia neuralne, żebyś nawet przy awarii jednego obwodu działał dalej</span>
                 </li>
               </ul>
@@ -290,8 +290,8 @@ export default function Program() {
               </div>
 
               <div className="mt-6">
-                <Link to="/program/silna-glowa">
-                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
+                <Link to="/program/silna-glowa" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+                  <CTAButton className="bg-gradient-locked-primary hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -301,7 +301,7 @@ export default function Program() {
             {/* App #3: Uważność */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">🧘</span>
+                <span className="text-3xl" aria-hidden="true">🧘</span>
                 <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #3: UWAŻNOŚĆ
                 </Badge>
@@ -349,8 +349,8 @@ export default function Program() {
               </div>
 
               <div className="mt-6">
-                <Link to="/program/uwazne-zycie">
-                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
+                <Link to="/program/uwazne-zycie" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+                  <CTAButton className="bg-gradient-locked-primary hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -360,8 +360,8 @@ export default function Program() {
             {/* App #4: Męskość */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">👑</span>
-                <Badge variant="outline" className="text-depth border-depth/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">👑</span>
+                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
                   APLIKACJA #4: MĘSKOŚĆ
                 </Badge>
               </div>
@@ -383,15 +383,15 @@ export default function Program() {
 
               <ul className="space-y-2 mb-6 text-base md:text-lg text-dim">
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Kasuje stare programy „jak powinieneś" i&nbsp;instaluje „jak chcesz"</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Zamienia toksyczną siłę w&nbsp;autentyczną moc</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-depth shrink-0 mt-1" />
+                  <Zap className="w-5 h-5 text-electric shrink-0 mt-1" />
                   <span>Tworzy spójność między tym, kim jesteś w&nbsp;pracy, w&nbsp;domu i&nbsp;w&nbsp;swoim wnętrzu</span>
                 </li>
               </ul>
@@ -408,8 +408,8 @@ export default function Program() {
               </div>
 
               <div className="mt-6">
-                <Link to="/program/meski-kompas">
-                  <CTAButton className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0 rounded">
+                <Link to="/program/meski-kompas" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+                  <CTAButton className="bg-gradient-locked-primary hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
                 </Link>
@@ -420,7 +420,7 @@ export default function Program() {
       </section>
 
       {/* 4. Authority / Keynote — bg-surface (DARK) */}
-      <section className="py-12 bg-[rgba(255,255,255,0.03)]">
+      <section className="py-12 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="max-w-5xl mx-auto">
@@ -513,7 +513,7 @@ export default function Program() {
 
                     <CTAButton
                       onClick={handleShowEffect}
-                      className="bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
+                      className="bg-gradient-locked-primary hover:opacity-90"
                       size="lg"
                     >
                       Pokaż Efekt
@@ -738,13 +738,13 @@ export default function Program() {
                     <div className="space-y-4 w-full max-w-md">
                       <CTAButton
                         onClick={handleUnlockAccess}
-                        className="w-full bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
+                        className="w-full bg-gradient-locked-primary hover:opacity-90"
                         size="lg"
                       >
                         Sprawdź dostępność
                       </CTAButton>
 
-                      <Link to="/discovery" className="block">
+                      <Link to="/discovery" className="block focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
                         <CTAButton
                           variant="secondary"
                           className="w-full"
@@ -764,7 +764,7 @@ export default function Program() {
                     <div className="order-2 lg:order-1">
                       {/* Header - Mobile optimized */}
                       <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 mb-6 min-w-0">
-                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-[linear-gradient(135deg,#007AFF,#6D28D9)] rounded-sm flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-locked-primary rounded-sm flex items-center justify-center flex-shrink-0">
                           <span className="text-white text-lg sm:text-2xl lg:text-3xl font-bold">
                             OS
                           </span>
@@ -844,7 +844,7 @@ export default function Program() {
 
                       {/* Exclusivity Badge - Mobile optimized */}
                       <div className="rounded-sm border border-depth/20 bg-depth/5 p-4 sm:p-6 mb-6 lg:mb-8">
-                        <div className="text-depth text-xl sm:text-2xl mb-2">
+                        <div className="text-depth text-xl sm:text-2xl mb-2" aria-hidden="true">
                           👑
                         </div>
                         <p className="text-depth font-bold text-sm sm:text-base lg:text-lg break-words">
@@ -857,7 +857,7 @@ export default function Program() {
 
                       {/* CTA Button - Mobile responsive */}
                       <CTAButton
-                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-[linear-gradient(135deg,#007AFF,#6D28D9)] cursor-not-allowed opacity-60"
+                        className="w-full lg:w-auto px-6 sm:px-8 lg:px-12 py-3 sm:py-4 text-base sm:text-lg lg:text-xl bg-gradient-locked-primary cursor-not-allowed opacity-60"
                         size="lg"
                         showArrow={false}
                       >
@@ -892,7 +892,7 @@ export default function Program() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAButton
                 size="lg"
-                className="text-lg px-8 py-4 bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90"
+                className="text-lg px-8 py-4 bg-gradient-locked-primary hover:opacity-90"
                 onClick={() => {
                   const appsSection = document.getElementById("apps-section");
                   if (appsSection) {
@@ -923,10 +923,10 @@ export default function Program() {
               Źródło: Matrix (1999), Warner Bros.
             </p>
 
-            <Link to="/discovery">
+            <Link to="/discovery" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
               <CTAButton
                 size="xl"
-                className="text-xl px-12 py-6 font-bold bg-[linear-gradient(135deg,#007AFF,#6D28D9)] hover:opacity-90 text-white border-0"
+                className="text-xl px-12 py-6 font-bold bg-gradient-locked-primary hover:opacity-90 text-white border-0"
               >
                 Zarezerwuj sesję Discovery
               </CTAButton>
