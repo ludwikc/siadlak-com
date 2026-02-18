@@ -31,37 +31,15 @@ export default function Hero({
   const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Theme-aware background
-  const getBackgroundClasses = () => {
-    if (backgroundImage) {
-      return "";
-    }
-
-    // Theme-adaptive: #FCFAFF in light mode, #0A0A0A in dark mode
-    return "bg-hero-light";
-  };
-
-  // Special case for /podcast/uwazne-zycie - align content to the right
+  const isHomePage = location.pathname === "/";
   const isUwazneZyciePage = location.pathname === "/program/uwazne-zycie";
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${location.pathname === "/" ? "bg-gradient-to-br from-deep-space via-deep-space to-deep-charcoal" : getBackgroundClasses()} flex items-center overflow-hidden`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${isHomePage ? "bg-void-glow" : "bg-void-glow"} flex items-center overflow-hidden`}
       aria-labelledby="hero-title"
       role="banner"
     >
-      {/* Transformation background elements for homepage */}
-      {location.pathname === "/" && (
-        <>
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
-        </>
-      )}
-
-      {/* Dark mode gradient blur elements matching reference CSS */}
-      <div className="hidden gradient-blur-top-right z-0"></div>
-      <div className="hidden gradient-blur-bottom-left z-0"></div>
-
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
         <div className="absolute inset-0 z-0">
@@ -85,15 +63,15 @@ export default function Hero({
             className={`
             ${isMobile ? "w-full text-center order-1 mb-8" : isUwazneZyciePage ? "w-1/2 pr-20 text-right" : "w-2/3 pr-8"} 
             ${fullHeight && !isUwazneZyciePage ? "flex flex-col justify-center" : ""}
-            ${location.pathname === "/" ? "text-center" : isUwazneZyciePage ? "text-right" : "text-left"}
+            ${isHomePage ? "text-center" : isUwazneZyciePage ? "text-right" : "text-left"}
           `}
           >
             <h1
               id="hero-title"
               className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in bg-gradient-to-r from-neural-blue via-twilight-indigo to-zenith-gold bg-clip-text text-transparent
-              ${location.pathname === "/" ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
-              ${isUwazneZyciePage ? "text-right" : location.pathname === "/" ? "text-center" : "text-left"}
+              mb-6 font-heading font-bold !leading-tight animate-fade-in text-white
+              ${isHomePage ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
+              ${isUwazneZyciePage ? "text-right" : isHomePage ? "text-center" : "text-left"}
               `}
             >
               {title}
@@ -101,8 +79,8 @@ export default function Hero({
 
             <p
               className={`
-              mb-10 animate-fade-in ${backgroundImage ? "text-white" : location.pathname === "/" ? "text-white/90" : "text-deep-charcoal/90"}
-              ${location.pathname === "/" ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
+              mb-10 animate-fade-in text-dim
+              ${isHomePage ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
               `}
               style={{ animationDelay: "0.2s" }}
             >
@@ -112,7 +90,7 @@ export default function Hero({
             <div
               className={`
               flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in
-              ${location.pathname === "/" ? "justify-center" : isUwazneZyciePage ? "justify-end" : "justify-start"}
+              ${isHomePage ? "justify-center" : isUwazneZyciePage ? "justify-end" : "justify-start"}
             `}
               style={{ animationDelay: "0.4s" }}
             >
@@ -120,7 +98,7 @@ export default function Hero({
                 to={ctaLink}
                 onClick={() => window.scrollTo(0, 0)}
                 aria-label={`${ctaText} - primary action`}
-                className={`${isMobile ? "w-full" : ""}`}
+                className={`${isMobile ? "w-full" : ""} focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded`}
               >
                 <Button
                   variant="special"
@@ -139,7 +117,7 @@ export default function Hero({
                   to={secondaryCtaLink}
                   onClick={() => window.scrollTo(0, 0)}
                   aria-label={`${secondaryCtaText} - secondary action`}
-                  className={`${isMobile ? "w-full" : ""}`}
+                  className={`${isMobile ? "w-full" : ""} focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded`}
                 >
                   <Button
                     variant="secondary"

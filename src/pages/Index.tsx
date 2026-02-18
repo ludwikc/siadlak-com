@@ -41,12 +41,12 @@ const TestimonialCard = ({
 }) => {
   const isLight = variant === "light";
   return (
-    <div className={`p-6 md:p-8 rounded-xl ${isLight ? "bg-diamond" : "bg-surface"}`}>
+    <div className={`p-6 md:p-8 rounded-md ${isLight ? "bg-diamond" : "bg-surface"}`}>
       <p className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-dim"} leading-relaxed mb-4`}>
         {flag && <span className="mr-1">{flag}</span>}
         „{quote}"
       </p>
-      <footer className={`pt-3 border-t ${isLight ? "border-gray-200/50" : "border-white/10"}`}>
+      <footer className={`pt-3 border-t ${isLight ? "border-border/50" : "border-white/10"}`}>
         <p className={`text-xs font-bold uppercase tracking-wide ${isLight ? "text-on-light" : "text-white"}`}>
           {author}
         </p>
@@ -147,7 +147,7 @@ const Index = () => {
               <div className="mt-12">
                 <Link
                   to="/discovery"
-                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors"
+                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
                   SPRAWDŹ DOSTĘPNOŚĆ →
                 </Link>
@@ -208,8 +208,7 @@ const Index = () => {
       </section>
 
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
-      <section className="py-24 bg-void"
-        style={{ backgroundColor: "#080808" }}>
+      <section className="py-24 bg-void">
         <div className="container mx-auto px-4 max-w-4xl">
           <Eyebrow>DIAGNOZA</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
@@ -232,7 +231,7 @@ const Index = () => {
               "Kupowałeś nowe systemy i metody.",
             ].map((item, i) => (
               <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
-                <span className="text-red-500 font-bold shrink-0">✕</span>
+                <span className="text-destructive font-bold shrink-0">✕</span>
                 <p className="text-dim">{item}</p>
               </div>
             ))}
@@ -291,7 +290,7 @@ const Index = () => {
         <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-depth/10 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
-          <Eyebrow color="depth">AUTORYTET</Eyebrow>
+          <Eyebrow color="electric">AUTORYTET</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-12">
             Nie liczby. Przełom.
           </h2>
@@ -368,8 +367,7 @@ const Index = () => {
       </section>
 
       {/* ═══ MECHANISM SECTION ═══ */}
-      <section className="py-24 bg-void"
-        style={{ backgroundColor: "#080808" }}>
+      <section className="py-24 bg-void">
         <div className="container mx-auto px-4 max-w-6xl text-center">
           <Eyebrow>MECHANIZM</Eyebrow>
           <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
@@ -402,7 +400,7 @@ const Index = () => {
             </div>
 
             {/* Right: Case Study card */}
-            <div className="bg-void p-10 rounded-xl">
+            <div className="bg-void p-10 rounded-md">
               <p className="text-electric text-sm uppercase tracking-widest font-bold mb-4">
                 CASE STUDY: ŁUKASZ
               </p>
@@ -471,7 +469,7 @@ const Index = () => {
                 <li><span className="font-bold text-depth">Gwarancja zwrotu po 2 tyg.</span></li>
               </ul>
 
-              <p className="text-sm text-on-light-dim border-t border-gray-200 pt-6">
+              <p className="text-sm text-on-light-dim border-t border-border/50 pt-6">
                 Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
                 grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
                 natura tej pracy.
@@ -480,7 +478,7 @@ const Index = () => {
 
             {/* Right column (5 cols) — sticky pricing card */}
             <div className="lg:col-span-5 lg:sticky lg:top-24">
-              <div className="bg-paper p-10 rounded-2xl shadow-sm relative">
+              <div className="bg-paper p-10 rounded-md shadow-sm relative">
                 {/* Tag */}
                 <div className="absolute top-0 right-0 bg-void text-white text-xs font-bold px-4 py-2 uppercase tracking-widest rounded-bl-xl">
                   PREMIUM
@@ -495,7 +493,7 @@ const Index = () => {
 
                 <Link
                   to="/discovery"
-                  className="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
+                  className="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4 focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
                   APLIKUJ O MIEJSCE
                 </Link>
@@ -566,9 +564,9 @@ const Index = () => {
           {/* Qualification Grid */}
           <div className="grid md:grid-cols-2 gap-12 mb-24">
             <div>
-              <p className="font-bold text-xs uppercase tracking-widest border-b border-gray-200 pb-4 mb-6 text-on-light-dim">
-                TO NIE DLA CIEBIE, JEŚLI:
-              </p>
+              <p className="font-bold text-xs uppercase tracking-widest border-b border-border/50 pb-4 mb-6 text-on-light-dim">
+                 TO NIE DLA CIEBIE, JEŚLI:
+               </p>
               <ul className="space-y-4 text-on-light-dim">
                 {[
                   "Szukasz kolejnego systemu produktywności",
@@ -576,14 +574,14 @@ const Index = () => {
                   "Chcesz gotową receptę z pudełka",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-red-400 font-bold shrink-0">✕</span>
+                    <span className="text-destructive font-bold shrink-0">✕</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="font-bold text-xs uppercase tracking-widest border-b border-gray-200 pb-4 mb-6 text-electric">
+              <p className="font-bold text-xs uppercase tracking-widest border-b border-border/50 pb-4 mb-6 text-electric">
                 TO JEST DLA CIEBIE, JEŚLI:
               </p>
               <ul className="space-y-4 text-on-light font-medium">
@@ -602,7 +600,7 @@ const Index = () => {
           </div>
 
           {/* Guarantee Box */}
-          <div className="bg-white p-10 rounded-xl text-center shadow-sm max-w-3xl mx-auto mb-12">
+          <div className="bg-white p-10 rounded-md text-center shadow-sm max-w-3xl mx-auto mb-12">
             <p className="text-electric text-2xl mb-4">★</p>
             <h3 className="font-heading text-2xl font-bold text-on-light mb-6">
               Gwarancja Satysfakcji
@@ -632,7 +630,7 @@ const Index = () => {
             <p className="text-xs text-on-light-dim font-bold uppercase tracking-wide mb-4">
               — Helge Vestoyl, Norwegia 🇳🇴
             </p>
-            <div className="border-t border-gray-200 mt-6 pt-6">
+            <div className="border-t border-border/50 mt-6 pt-6">
               <p className="text-sm text-on-light-dim">
                 Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
                 ciszy dzieją się rzeczy. — <span className="font-medium text-on-light">Ludwik</span>
@@ -643,7 +641,7 @@ const Index = () => {
       </section>
 
       {/* ═══ SCARCITY CTA ═══ */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: "#D7D6CF" }} id="kontakt">
+      <section className="py-24 relative overflow-hidden bg-diamond" id="kontakt">
         {/* Background photo – pinned right */}
         <div className="absolute right-0 top-0 h-full pointer-events-none hidden lg:block">
           <img
@@ -651,7 +649,7 @@ const Index = () => {
             alt=""
             className="h-full w-auto object-cover object-right"
           />
-          <div className="absolute inset-y-0 left-0 w-[15%]" style={{ background: 'linear-gradient(to right, #D7D6CF, transparent)' }} />
+          <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-diamond to-transparent" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
           <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
@@ -680,10 +678,10 @@ const Index = () => {
           </div>
 
           {/* CTA Card */}
-          <div className="bg-diamond p-10 rounded-2xl shadow-sm max-w-lg text-center">
+          <div className="bg-white p-10 rounded-md shadow-sm max-w-lg text-center">
             <Link
               to="/discovery"
-              className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4"
+              className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4 focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
               ZAREZERWUJ BEZPŁATNĄ ROZMOWĘ
             </Link>
@@ -695,7 +693,7 @@ const Index = () => {
       </section>
 
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white text-center">
+      <section className="py-16 bg-diamond text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">
             JESZCZE NIE TERAZ?
@@ -722,7 +720,7 @@ const Index = () => {
           </div>
 
           {/* Featured card: Uważne Życie */}
-          <Link to="/program/uwazne-zycie" className="group block col-span-3 bg-white rounded-2xl shadow-sm overflow-hidden mb-8">
+          <Link to="/program/uwazne-zycie" className="group block col-span-3 bg-white rounded-md shadow-sm overflow-hidden mb-8">
             <div className="grid lg:grid-cols-2">
               <div className="relative">
                 <img
@@ -769,7 +767,7 @@ const Index = () => {
                 link: "/program/meski-kompas",
               },
             ].map((card) => (
-              <Link key={card.title} to={card.link} className="group bg-white rounded-xl shadow-sm overflow-hidden">
+              <Link key={card.title} to={card.link} className="group bg-white rounded-md shadow-sm overflow-hidden">
                 <div className="relative pt-[125%]">
                   <img
                     src={card.img}
@@ -826,7 +824,7 @@ const Index = () => {
           <div className="text-center">
             <Link
               to="/program"
-              className="inline-block border border-gray-200 text-on-light-dim font-bold uppercase text-xs tracking-[0.2em] rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors"
+              className="inline-block border border-border text-on-light-dim font-bold uppercase text-xs tracking-[0.2em] rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
               PRZEGLĄDAJ WSZYSTKIE MODUŁY
             </Link>
@@ -835,7 +833,7 @@ const Index = () => {
       </section>
 
       {/* ═══ CLOSING FOOTER ═══ */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: "#2F0F43" }}>
+      <section className="py-20 relative overflow-hidden bg-void-glow">
         {/* Background photo – pinned left */}
         <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
           <img
@@ -843,7 +841,7 @@ const Index = () => {
             alt=""
             className="h-full w-auto object-cover object-left"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2F0F43]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
           <h2 className="font-heading text-2xl font-bold text-white mb-2">
@@ -872,7 +870,7 @@ const Index = () => {
             </Link>
           </div>
 
-          <p className="text-xs text-on-light-dim mt-12">
+          <p className="text-xs text-dim mt-12">
             © {new Date().getFullYear()} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
           </p>
         </div>
