@@ -136,7 +136,7 @@ const Index = () => {
                 <p>Ale to nie Ty się zmieniłeś.</p>
                 <p className="text-white text-2xl font-bold">
                   To{" "}
-                  <span className="text-transparent bg-clip-text bg-brand-gradient">
+                  <span className="text-electric font-bold">
                     sukno
                   </span>{" "}
                   się zmieniło.
