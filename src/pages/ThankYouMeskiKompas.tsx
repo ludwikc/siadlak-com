@@ -146,8 +146,8 @@ export default function ThankYouMeskiKompas() {
                   <p><strong className="text-foreground">Godzina:</strong> 19:00 CET</p>
                   <p><strong className="text-foreground">Czas:</strong> 90 minut</p>
                 </div>
-                <div className="pl-11 bg-green-500/10 border border-green-500/20 rounded-lg p-3">
-                  <p className="text-sm text-green-900 dark:text-green-200">
+                <div className="pl-11 bg-electric/5 border border-electric/20 rounded-lg p-3">
+                  <p className="text-sm text-foreground">
                     <strong>Dlaczego to ważne?</strong> 87% osób które dodają wydarzenie do kalendarza faktycznie się pojawia. Reszta zapomina.
                   </p>
                 </div>

@@ -54,7 +54,7 @@ export default function Header() {
             className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-2"
           >
             Webinar
-            <Badge className="bg-color-success/90 text-white border-0 text-[10px] px-1.5 py-0 leading-tight uppercase tracking-wider animate-pulse">
+            <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0 leading-tight uppercase tracking-wider animate-pulse">
               wkrótce
             </Badge>
           </Link>
@@ -134,7 +134,7 @@ export default function Header() {
               className="flex items-center gap-2 text-white text-sm font-bold uppercase tracking-widest py-2"
             >
               Webinar
-              <Badge className="bg-color-success/90 text-white border-0 text-[10px] px-1.5 py-0 uppercase tracking-wider animate-pulse">
+              <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0 uppercase tracking-wider animate-pulse">
                 wkrótce
               </Badge>
             </Link>

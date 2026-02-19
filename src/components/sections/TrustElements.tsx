@@ -29,28 +29,28 @@ export default function TrustElements({
   credentialsSummary,
 }: TrustElementsProps) {
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-b from-luminous-white to-background">
+    <section className="py-20 md:py-24 bg-diamond">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4 px-5 py-2 bg-twilight-indigo/10 rounded-full border border-twilight-indigo/20">
-            <span className="text-sm font-semibold text-twilight-indigo uppercase tracking-wide">
+          <div className="inline-block mb-4 px-5 py-2 bg-electric/10 rounded-full border border-electric/20">
+            <span className="text-sm font-semibold text-electric uppercase tracking-wide">
               Zaufali nam profesjonaliści
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-deep-charcoal">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-on-light">
             {title}
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-twilight-indigo via-twilight-indigo to-twilight-indigo mx-auto rounded-full shadow-lg"></div>
+          <div className="w-24 h-1.5 bg-brand-gradient mx-auto rounded-full"></div>
         </div>
 
         {communityStats && (
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-twilight-indigo/20 inline-block">
+            <div className="bg-white rounded-md p-6 border border-electric/20 inline-block">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center">
                   <Users className="text-white" size={24} />
                 </div>
-                <p className="text-xl font-bold text-deep-charcoal">
+                <p className="text-xl font-bold text-on-light">
                   {communityStats}
                 </p>
               </div>
@@ -60,28 +60,22 @@ export default function TrustElements({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {testimonials.map((testimonial, index) => {
-            const gradients = [
-              "from-neural-blue to-twilight-indigo",
-              "from-neural-blue to-twilight-indigo",
-            ];
-            const gradient = gradients[index % gradients.length];
-
             return (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-8 border-2 border-twilight-indigo/20 hover:border-twilight-indigo/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group bg-white rounded-md p-8 border border-electric/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-full flex items-center justify-center text-white text-xl font-bold flex-shrink-0 shadow-lg`}
+                    className="w-16 h-16 bg-brand-gradient rounded-full flex items-center justify-center text-white text-xl font-bold flex-shrink-0"
                   >
                     {getInitials(testimonial.name)}
                   </div>
                   <div>
-                    <p className="font-bold text-lg text-deep-charcoal">
+                    <p className="font-bold text-lg text-on-light">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-deep-charcoal/70">
+                    <p className="text-sm text-dim">
                       {testimonial.title}
                     </p>
                   </div>
@@ -92,14 +86,14 @@ export default function TrustElements({
                     <Star
                       key={i}
                       size={20}
-                      className="text-twilight-indigo"
+                      className="text-electric"
                       fill="currentColor"
                     />
                   ))}
                 </div>
 
-                <p className="text-deep-charcoal leading-relaxed">
-                  <span className="text-4xl text-twilight-indigo/30 float-left mr-2 leading-none">
+                <p className="text-on-light leading-relaxed">
+                  <span className="text-4xl text-electric/30 float-left mr-2 leading-none">
                     "
                   </span>
                   {testimonial.quote}
@@ -111,12 +105,12 @@ export default function TrustElements({
 
         {credentialsSummary && (
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-twilight-indigo/10 to-twilight-indigo/10 rounded-2xl p-8 border-2 border-twilight-indigo/20">
+            <div className="bg-electric/5 rounded-md p-8 border border-electric/20">
               <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center">
                   <Award className="text-white" size={24} />
                 </div>
-                <p className="text-xl font-bold text-deep-charcoal">
+                <p className="text-xl font-bold text-on-light">
                   {credentialsSummary}
                 </p>
               </div>

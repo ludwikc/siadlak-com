@@ -1579,7 +1579,7 @@ export default function LifeOSSystemUpgrade() {
         <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
 
         {/* Static gradient orb */}
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-neural-blue/10 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-electric/10 rounded-full blur-3xl opacity-30"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -1590,7 +1590,7 @@ export default function LifeOSSystemUpgrade() {
               </Badge>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
               FAQ (Prawdziwe pytania, brutalne odpowiedzi)
             </h2>
 
@@ -1610,7 +1610,7 @@ export default function LifeOSSystemUpgrade() {
       {/* Discovery Session CTA */}
       <section
         id="discovery-section"
-        className="py-20 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue"
+        className="py-20 bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -1621,12 +1621,12 @@ export default function LifeOSSystemUpgrade() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-8">
               <p className="text-xl text-white/90 mb-6 text-center">
                 Zanim zdecydujemy o współpracy, musimy przeprowadzić{" "}
-                <span className="text-zenith-gold font-bold">
+                <span className="text-electric font-bold">
                   ~30-minutową Sesję Discovery.
                 </span>
               </p>
 
-              <p className="text-2xl text-zenith-gold font-bold mb-6 text-center">
+              <p className="text-2xl text-electric font-bold mb-6 text-center">
                 To nie jest rozmowa sprzedażowa.
               </p>
 
@@ -1641,7 +1641,7 @@ export default function LifeOSSystemUpgrade() {
 
             <Card className="bg-white/5 backdrop-blur-sm border-2 border-white/20 mb-8">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-zenith-gold mb-6 text-center">
+                <h3 className="text-2xl font-bold text-electric mb-6 text-center">
                   Co się wydarzy w ~30 minut:
                 </h3>
 
@@ -2059,26 +2059,26 @@ const _MetaphoricalTransformationSlider = () => {
         onTouchStart={handleStart}
       >
         {/* Before State (Fragmented System) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-gray-900 flex items-center justify-center p-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-gray-900 flex items-center justify-center p-8">
           <div className="text-center space-y-6">
             <div className="text-6xl mb-4">💔</div>
             <h4 className="text-3xl font-bold text-white mb-4">
               System Skonfliktowany
             </h4>
             <div className="space-y-3 text-left max-w-md mx-auto">
-              <div className="flex items-start gap-3 text-red-300">
+              <div className="flex items-start gap-3 text-dim">
                 <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span>Paraliż decyzyjny</span>
               </div>
-              <div className="flex items-start gap-3 text-red-300">
+              <div className="flex items-start gap-3 text-dim">
                 <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span>Wewnętrzna wojna</span>
               </div>
-              <div className="flex items-start gap-3 text-red-300">
+              <div className="flex items-start gap-3 text-dim">
                 <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span>Chroniczne zmęczenie</span>
               </div>
-              <div className="flex items-start gap-3 text-red-300">
+              <div className="flex items-start gap-3 text-dim">
                 <AlertCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span>Pustka mimo sukcesu</span>
               </div>
@@ -2111,7 +2111,7 @@ const _MetaphoricalTransformationSlider = () => {
                 <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span className="text-white">Naturalny przepływ energii</span>
               </div>
-              <div className="flex items-start gap-3 text-zenith-gold">
+              <div className="flex items-start gap-3 text-electric">
                 <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span className="text-white">Sukces z sensem</span>
               </div>
@@ -2121,11 +2121,11 @@ const _MetaphoricalTransformationSlider = () => {
 
         {/* Slider Line & Handle */}
         <div
-          className="absolute top-0 bottom-0 w-1 bg-zenith-gold transition-all duration-150 ease-out"
+          className="absolute top-0 bottom-0 w-1 bg-electric transition-all duration-150 ease-out"
           style={{ left: `${sliderPosition}%` }}
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-zenith-gold shadow-2xl ring-4 ring-white/80 hover:scale-110 transition-transform duration-200">
+            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-electric shadow-2xl ring-4 ring-white/80 hover:scale-110 transition-transform duration-200">
               <div className="flex gap-1">
                 <div className="w-0.5 h-6 bg-white"></div>
                 <div className="w-0.5 h-6 bg-white"></div>
@@ -2136,8 +2136,8 @@ const _MetaphoricalTransformationSlider = () => {
       </div>
 
       <div className="flex justify-between mt-4 text-sm font-semibold">
-        <span className="text-red-600">Przed: Windows 98</span>
-        <span className="text-twilight-indigo">Po: Life OS</span>
+        <span className="text-dim">Przed: Windows 98</span>
+        <span className="text-electric">Po: Life OS</span>
       </div>
     </div>
   );
@@ -2160,7 +2160,7 @@ const ExitIntentModal = ({
       />
 
       {/* Modal Content */}
-      <div className="relative max-w-2xl mx-4 bg-gradient-to-br from-deep-space via-twilight-indigo to-neural-blue rounded-2xl shadow-2xl p-8 md:p-12 animate-scale-in">
+      <div className="relative max-w-2xl mx-4 bg-void rounded-2xl shadow-2xl p-8 md:p-12 animate-scale-in" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -2181,7 +2181,7 @@ const ExitIntentModal = ({
           </p>
           <p className="text-lg text-white/90/90 mb-8">
             Ale zanim wyjdziesz:{" "}
-            <strong className="text-zenith-gold">
+            <strong className="text-electric">
               czy to jest analiza, czy ucieczka?
             </strong>
           </p>
@@ -2207,7 +2207,7 @@ const ExitIntentModal = ({
 
           <p className="text-lg text-white/90 mb-8">
             Sesja Discovery to{" "}
-            <span className="text-zenith-gold font-bold">
+            <span className="text-electric font-bold">
               zero zobowiązania
             </span>
             . To po prostu rozmowa. Sprawdzamy, czy pasujemy.

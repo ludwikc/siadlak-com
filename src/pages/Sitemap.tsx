@@ -94,18 +94,18 @@ const Sitemap = () => {
       </section>
 
       {/* Sitemap Content */}
-      <section className="py-16 md:py-24 bg-luminous-white">
+      <section className="py-16 md:py-24 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {siteStructure.map((section, sectionIndex) => (
               <div key={sectionIndex} className="mb-12">
                 <div className="flex items-center mb-6">
-                  <div className="w-10 h-10 bg-twilight-indigo/10 rounded-full flex items-center justify-center mr-4">
-                    <div className="text-twilight-indigo">
+                  <div className="w-10 h-10 bg-electric/10 rounded-full flex items-center justify-center mr-4">
+                    <div className="text-electric">
                       {section.icon}
                     </div>
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-deep-charcoal">
+                  <h2 className="text-2xl md:text-3xl font-bold text-on-light">
                     {section.category}
                   </h2>
                 </div>
@@ -115,7 +115,7 @@ const Sitemap = () => {
                     <GlassCard key={pageIndex} className="p-6 h-full">
                       <div className="flex flex-col h-full">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-lg font-semibold text-deep-charcoal">
+                          <h3 className="text-lg font-semibold text-on-light">
                             {page.name}
                           </h3>
                           {page.path.includes(':') || section.category === 'Strony w przygotowaniu' ? (
@@ -123,24 +123,24 @@ const Sitemap = () => {
                               {section.category === 'Strony w przygotowaniu' ? 'Wkrótce' : 'Dynamiczne'}
                             </span>
                           ) : (
-                            <ExternalLink className="h-4 w-4 text-twilight-indigo flex-shrink-0" />
+                            <ExternalLink className="h-4 w-4 text-electric flex-shrink-0" />
                           )}
                         </div>
                         
-                        <p className="text-gray-600 text-sm mb-4 flex-grow">
+                        <p className="text-dim text-sm mb-4 flex-grow">
                           {page.description}
                         </p>
                         
                         <div className="mt-auto">
                           {page.path.includes(':') || section.category === 'Strony w przygotowaniu' ? (
-                            <code className="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">
+                            <code className="text-xs bg-muted px-2 py-1 rounded text-dim">
                               {page.path}
                             </code>
                           ) : (
                             <Link 
                               to={page.path} 
                               onClick={() => window.scrollTo(0, 0)}
-                              className="inline-flex items-center text-twilight-indigo hover:text-twilight-indigo/80 transition-colors text-sm font-medium"
+                              className="inline-flex items-center text-electric hover:text-electric/80 transition-colors text-sm font-medium"
                             >
                               Przejdź do strony
                               <ExternalLink className="h-3 w-3 ml-1" />
@@ -161,14 +161,14 @@ const Sitemap = () => {
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-deep-charcoal">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-on-light">
               Nie możesz znaleźć tego, czego szukasz?
             </h2>
             <p className="text-lg mb-8 text-gray-600">
               Skontaktuj się ze mną bezpośrednio - chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
             </p>
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <button className="inline-flex items-center px-6 py-3 bg-twilight-indigo hover:bg-twilight-indigo/90 text-white rounded-lg font-medium transition-colors">
+              <button className="inline-flex items-center px-6 py-3 bg-depth hover:bg-depth/90 text-white rounded font-medium transition-colors">
                 Skontaktuj się ze mną
                 <Mail className="h-4 w-4 ml-2" />
               </button>

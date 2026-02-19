@@ -22,8 +22,8 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
           </div>
         )}
         <div className="flex-grow">
-          <h3 className="text-lg font-medium text-deep-charcoal flex items-center">
-            <Headphones className="mr-2 h-5 w-5 text-zenith-gold" />
+          <h3 className="text-lg font-medium text-on-light flex items-center">
+            <Headphones className="mr-2 h-5 w-5 text-electric" />
             {title}
           </h3>
         </div>

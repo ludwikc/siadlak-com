@@ -53,7 +53,7 @@ const About = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-yellow-400"
+                    className="h-4 w-4 sm:h-5 sm:w-5 text-electric fill-electric"
                   />
                 ))}
                 <span className="ml-2 text-sm sm:text-base font-semibold text-text-on-dark">

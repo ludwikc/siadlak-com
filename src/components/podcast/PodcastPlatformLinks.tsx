@@ -15,7 +15,7 @@ interface PodcastPlatformLinksProps {
 const PodcastPlatformLinks = ({ platforms }: PodcastPlatformLinksProps) => {
   return (
     <div className="my-8">
-      <h3 className="text-lg font-medium text-deep-charcoal mb-4">
+      <h3 className="text-lg font-medium text-on-light mb-4">
         Dostępne na twoich ulubionych platformach:
       </h3>
       <div className="flex flex-wrap gap-3">
@@ -25,7 +25,7 @@ const PodcastPlatformLinks = ({ platforms }: PodcastPlatformLinksProps) => {
             href={platform.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 rounded-md bg-secondary/50 hover:bg-secondary text-deep-charcoal transition-colors"
+            className="inline-flex items-center px-4 py-2 rounded-md bg-secondary/50 hover:bg-secondary text-on-light transition-colors"
           >
             <img
               src={platform.icon}
