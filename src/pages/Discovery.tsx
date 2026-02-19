@@ -91,7 +91,7 @@ export default function Discovery() {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-yellow-400"
+                    className="h-4 w-4 sm:h-5 sm:w-5 text-electric fill-electric"
                   />
                 ))}
                 <span className="ml-2 text-sm sm:text-base font-semibold text-text-on-dark">
@@ -364,7 +364,7 @@ export default function Discovery() {
 
             {status === "success" && (
               <div className="py-4 relative z-10">
-                <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+                <div className="w-20 h-20 bg-electric rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                   <CheckCircle className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-text-on-dark">

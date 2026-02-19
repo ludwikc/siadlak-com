@@ -24,7 +24,7 @@ export function ExpiredOverlay() {
         <div className="pt-4">
           <a 
             href="/" 
-            className="inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 rounded-lg transition-all duration-300 text-white font-medium"
+            className="inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white/30 border border-white/30 rounded transition-all duration-300 text-white font-medium"
           >
             Powrót na stronę główną
           </a>

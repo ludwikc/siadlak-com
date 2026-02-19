@@ -18,7 +18,7 @@ const ValueCalculator = () => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {bonuses.map((bonus, index) => (
-          <Card key={index} className="glass-card border-l-4 border-l-electric">
+          <Card key={index} className="bg-card border border-border border-l-4 border-l-electric">
             <CardContent className="p-4">
               <div className="flex items-start">
                 <CheckCircle2 className="h-5 w-5 text-electric mr-3 flex-shrink-0 mt-1" />
@@ -33,7 +33,7 @@ const ValueCalculator = () => {
       </div>
       
       <div className="mt-8 text-center">
-        <div className="glass-card p-6 bg-gradient-to-r from-electric/20 to-depth/20">
+        <div className="p-6 bg-gradient-to-r from-electric/20 to-depth/20 rounded-md border border-electric/20">
           <p className="text-2xl font-bold text-foreground mb-2">
             Łączna wartość bonusów:
           </p>

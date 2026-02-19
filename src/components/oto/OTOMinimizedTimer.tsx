@@ -29,7 +29,7 @@ export function OTOMinimizedTimer({
     return () => clearInterval(interval);
   }, [onExpired]);
 
-  const isUrgent = timeLeft <= 2 * 60 * 1000; // Last 2 minutes
+  const isUrgent = timeLeft <= 2 * 60 * 1000;
 
   if (timeLeft <= 0) return null;
 
@@ -37,8 +37,8 @@ export function OTOMinimizedTimer({
     <div className="fixed bottom-4 left-4 z-[9999] animate-fade-in">
       <div
         className={cn(
-          "bg-card/95 backdrop-blur-sm border-2 rounded-xl shadow-2xl p-4 min-w-[280px]",
-          isUrgent ? "border-destructive animate-pulse" : "border-primary/30",
+          "bg-card/95 border-2 rounded-md p-4 min-w-[280px]",
+          isUrgent ? "border-destructive" : "border-primary/30",
         )}
       >
         {onDismiss && (

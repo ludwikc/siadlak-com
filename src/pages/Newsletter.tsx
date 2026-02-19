@@ -197,7 +197,7 @@ export default function NewsletterPage() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-text-on-dark mb-2">
                   PROBLEM
                 </h2>
-                <div className="h-1 bg-red-500 rounded-full"></div>
+                <div className="h-1 bg-destructive rounded-full"></div>
               </div>
 
               <div className="space-y-6 sm:space-y-8 text-base sm:text-lg text-text-dim">
@@ -236,11 +236,11 @@ export default function NewsletterPage() {
                 <p className="text-center text-lg sm:text-xl font-semibold text-text-on-dark">
                   Zamieniamy mądrość na przeciążenie informacyjne.
                 </p>
-                <p className="text-center text-lg sm:text-xl font-bold text-red-400">
+                <p className="text-center text-lg sm:text-xl font-bold text-destructive">
                   A najgorsze? Nie masz z kim o tym porozmawiać.
                 </p>
 
-                <div className="rounded-sm p-6 sm:p-8 border border-red-500/30 bg-red-500/5">
+                <div className="rounded-sm p-6 sm:p-8 border border-destructive/30 bg-destructive/5">
                   <p className="font-bold mb-5 text-lg flex items-center gap-2 text-text-on-dark">
                     <span className="text-2xl">😔</span>
                     <span>Twoi znajomi:</span>
@@ -252,7 +252,7 @@ export default function NewsletterPage() {
                       "Są zbyt zajęci budowaniem sieci kontaktów, by naprawdę rozmawiać",
                     ].map((text) => (
                       <li key={text} className="flex items-start gap-3">
-                        <X className="h-6 w-6 text-red-400 mt-0.5 flex-shrink-0" />
+                        <X className="h-6 w-6 text-destructive mt-0.5 flex-shrink-0" />
                         <span className="text-sm sm:text-base leading-relaxed">{text}</span>
                       </li>
                     ))}
@@ -279,7 +279,7 @@ export default function NewsletterPage() {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-text-on-light mb-2">
                   ROZWIĄZANIE
                 </h2>
-                <div className="h-1 bg-green-500 rounded-full"></div>
+                <div className="h-1 bg-electric rounded-full"></div>
               </div>
 
               <div className="text-center space-y-6 sm:space-y-8">
@@ -413,7 +413,7 @@ export default function NewsletterPage() {
                   <ul className="space-y-4 mb-8 min-h-[240px]">
                     {["Cotygodniowy newsletter (niedziela 19:00)", "Możliwość dialogu przez email", "Comiesięczna kompilacja wymian", "Dostęp do 3 ostatnich wydań"].map((text) => (
                       <li key={text} className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-6 w-6 text-electric mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-text-on-light leading-relaxed">{text}</span>
                       </li>
                     ))}
@@ -454,7 +454,7 @@ export default function NewsletterPage() {
                   <ul className="space-y-4 mb-8 min-h-[240px]">
                     {["Wszystko z Kręgu Otwartego", "Pełny dostęp do społeczności Lifehackerzy.pl", "Moje osobiste odpowiedzi na każdą wymianę", "Comiesięczne sesje Q&A na żywo", "Pełne archiwum od 2024"].map((text) => (
                       <li key={text} className="flex items-start gap-3">
-                        <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-6 w-6 text-electric mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-text-on-light leading-relaxed font-medium">{text}</span>
                       </li>
                     ))}
@@ -568,7 +568,7 @@ export default function NewsletterPage() {
                   <ul className="text-sm space-y-2 text-left">
                     {["97 PLN miesięcznie dożywotnio", "Natychmiastowy dostęp do społeczności", "Oszczędzasz 12 000 PLN przez 10 lat"].map((text) => (
                       <li key={text} className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-electric mt-0.5 flex-shrink-0" />
                         <span>{text}</span>
                       </li>
                     ))}
@@ -603,15 +603,15 @@ export default function NewsletterPage() {
                   </h3>
                   <ul className="text-sm space-y-2 text-left">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-electric mt-0.5 flex-shrink-0" />
                       <span>Newsletter bezpłatnie</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-electric mt-0.5 flex-shrink-0" />
                       <span>Możliwość dialogu przez email</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                      <X className="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" />
                       <span>Bez dostępu do społeczności</span>
                     </li>
                   </ul>

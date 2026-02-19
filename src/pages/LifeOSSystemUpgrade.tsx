@@ -145,7 +145,7 @@ export default function LifeOSSystemUpgrade() {
 
       {/* Sticky CTA Bar */}
       <div
-        className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient shadow-xl transition-transform duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient transition-transform duration-300 ${
           showStickyBar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -938,7 +938,7 @@ export default function LifeOSSystemUpgrade() {
               <CTAButton
                 variant="premium"
                 size="xl"
-                className="shadow-2xl hover:shadow-3xl"
+                className=""
                 showArrow
                 onClick={scrollToDiscovery}
               >
@@ -1618,7 +1618,7 @@ export default function LifeOSSystemUpgrade() {
               Następny krok: Sesja Discovery
             </h2>
 
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-8">
+            <div className="bg-white/10 p-8 rounded-md border border-white/20 mb-8">
               <p className="text-xl text-white/90 mb-6 text-center">
                 Zanim zdecydujemy o współpracy, musimy przeprowadzić{" "}
                 <span className="text-electric font-bold">
@@ -1695,7 +1695,7 @@ export default function LifeOSSystemUpgrade() {
                 <CTAButton
                   variant="premium"
                   size="xl"
-                  className="shadow-2xl hover:shadow-3xl mb-6"
+                  className="mb-6"
                   showArrow
                 >
                   Zarezerwuj Sesję Discovery
@@ -1812,7 +1812,7 @@ export default function LifeOSSystemUpgrade() {
               <CTAButton
                 variant="premium"
                 size="xl"
-                className="shadow-2xl hover:shadow-3xl"
+                className=""
                 showArrow
                 onClick={scrollToDiscovery}
               >
@@ -1939,7 +1939,7 @@ const PhaseTimeline = () => {
               <div
                 className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-all duration-300 ${
                   isActive
-                    ? "bg-electric scale-125 shadow-2xl ring-4 ring-white/30"
+                    ? "bg-electric scale-125 ring-4 ring-white/30"
                     : isPast
                       ? "bg-depth/70"
                       : "bg-white/10"
@@ -2054,7 +2054,7 @@ const _MetaphoricalTransformationSlider = () => {
 
       <div
         ref={containerRef}
-        className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize select-none ring-2 ring-depth/40"
+        className="relative w-full aspect-[16/9] rounded-md overflow-hidden cursor-ew-resize select-none ring-2 ring-depth/40"
         onMouseDown={handleStart}
         onTouchStart={handleStart}
       >
@@ -2125,7 +2125,7 @@ const _MetaphoricalTransformationSlider = () => {
           style={{ left: `${sliderPosition}%` }}
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-electric shadow-2xl ring-4 ring-white/80 hover:scale-110 transition-transform duration-200">
+            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-electric ring-4 ring-white/80 transition-transform duration-200">
               <div className="flex gap-1">
                 <div className="w-0.5 h-6 bg-white"></div>
                 <div className="w-0.5 h-6 bg-white"></div>
@@ -2160,7 +2160,7 @@ const ExitIntentModal = ({
       />
 
       {/* Modal Content */}
-      <div className="relative max-w-2xl mx-4 bg-void rounded-2xl shadow-2xl p-8 md:p-12 animate-scale-in" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+      <div className="relative max-w-2xl mx-4 bg-void rounded-md p-8 md:p-12 animate-scale-in" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
         {/* Close Button */}
         <button
           onClick={onClose}

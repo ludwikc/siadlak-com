@@ -17,7 +17,6 @@ interface HowItWorksProps {
 export default function HowItWorks({ title, steps }: HowItWorksProps) {
   return (
     <section className="py-20 md:py-24 bg-gradient-to-b from-background to-diamond relative overflow-hidden">
-      {/* Subtle background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-32 h-32 bg-depth rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-depth rounded-full blur-3xl"></div>
@@ -33,11 +32,10 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
             {title}
           </h2>
-          <div className="w-24 h-1.5 bg-brand-gradient mx-auto rounded-full shadow-lg"></div>
+          <div className="w-24 h-1.5 bg-brand-gradient mx-auto rounded-full"></div>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          {/* Top two tiles in a row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {steps.slice(0, 2).map((step, index) => {
               const gradients = [
@@ -49,10 +47,10 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl p-8 border-2 border-depth/20 hover:border-depth/50 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  className="group bg-white rounded-md p-8 border-2 border-depth/20 hover:border-depth/50 transition-all duration-300 cursor-pointer"
                 >
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}
+                    className={`w-16 h-16 bg-gradient-to-br ${gradient} rounded-md flex items-center justify-center mb-6 transition-transform`}
                   >
                     {step.icon}
                   </div>
@@ -69,10 +67,10 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
                   {step.link && (
                     <Link
                       to={step.link}
-                      className="inline-flex items-center text-depth hover:text-depth transition-colors font-semibold group-hover:translate-x-1 transition-transform"
+                      className="inline-flex items-center text-depth hover:text-depth transition-colors font-semibold"
                     >
                       {step.linkText}
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   )}
                 </div>
@@ -80,15 +78,13 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
             })}
           </div>
 
-          {/* Bottom community tile - centered and special */}
           {steps[2] && (
             <div className="flex justify-center">
-              <div className="relative bg-gradient-to-br from-depth/10 via-depth/10 to-electric/10 rounded-2xl p-10 border-2 border-depth/30 shadow-2xl max-w-3xl w-full text-center group hover:-translate-y-2 transition-all duration-300">
-                {/* Gradient glow effect */}
-                <div className="absolute -inset-1 bg-brand-gradient rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="relative bg-gradient-to-br from-depth/10 via-depth/10 to-electric/10 rounded-md p-10 border-2 border-depth/30 max-w-3xl w-full text-center group transition-all duration-300">
+                <div className="absolute -inset-1 bg-brand-gradient rounded-md blur opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
                 <div className="relative">
-                  <div className="w-20 h-20 bg-gradient-to-br from-depth via-depth to-electric rounded-full flex items-center justify-center mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform">
+                  <div className="w-20 h-20 bg-gradient-to-br from-depth via-depth to-electric rounded-full flex items-center justify-center mb-6 mx-auto">
                     <span className="text-4xl text-white">∞</span>
                   </div>
 
