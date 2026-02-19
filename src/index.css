@@ -595,6 +595,13 @@ body {
 .testimonials-header {
   text-align: center;
   padding: 80px 20px;
+  background-color: #080808;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.15) 0%, transparent 50%);
+}
+
+.testimonials-header .header-inner {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -604,22 +611,23 @@ body {
   font-size: 3rem;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #FFFFFF;
 }
 
 .testimonials-header .subheadline {
   font-size: 1.3rem;
-  color: #555;
+  color: #9CA3AF;
   margin-bottom: 30px;
   line-height: 1.5;
 }
 
 .testimonials-stats {
   font-size: 1.1rem;
-  color: #888;
+  color: #9CA3AF;
 }
 
 .testimonials-stats strong {
-  color: #1a1a1a;
+  color: #F9FAFB;
 }
 
 /* Card Container */
