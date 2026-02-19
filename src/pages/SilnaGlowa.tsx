@@ -34,9 +34,8 @@ const SilnaGlowa = () => {
   return (
     <Layout>
       {/* Hero Section - Theme Locked */}
-      <section className="py-12 md:py-20 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
+      <section className="py-12 md:py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -87,7 +86,7 @@ const SilnaGlowa = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-yellow-400"
+                    className="h-4 w-4 sm:h-5 sm:w-5 text-electric fill-electric"
                   />
                 ))}
                 <span className="ml-2 text-sm sm:text-base font-semibold text-locked-white">
@@ -159,7 +158,7 @@ const SilnaGlowa = () => {
               </h2>
               <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto">
                 Żyjemy w świecie, który potrafi być{" "}
-                <span className="font-bold text-color-error">
+                <span className="font-bold text-foreground">
                   piekielnie wymagający dla naszej głowy
                 </span>
                 .
@@ -202,21 +201,11 @@ const SilnaGlowa = () => {
               ].map((problem, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white rounded-xl p-5 sm:p-6 border-2 border-red-100 hover:border-red-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  style={{
-                    background: `linear-gradient(135deg, rgba(239, 68, 68, ${0.03 + problem.intensity * 0.01}) 0%, rgba(220, 38, 38, ${0.05 + problem.intensity * 0.01}) 100%)`,
-                  }}
+                  className="group relative bg-white rounded-md p-5 sm:p-6 border border-muted transition-all duration-300"
                 >
-                  {/* Pain intensity indicator */}
-                  <div className="absolute top-3 right-3 w-16 h-1.5 bg-red-100 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-red-400 to-red-600 rounded-full"
-                      style={{ width: `${problem.intensity * 10}%` }}
-                    ></div>
-                  </div>
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center group-hover:bg-red-200 transition-colors group-hover:scale-110 duration-300">
-                      <problem.icon className="h-6 w-6 text-red-600 group-hover:animate-pulse" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-muted rounded-md flex items-center justify-center">
+                      <problem.icon className="h-6 w-6 text-dim" />
                     </div>
                     <p className="text-text-secondary group-hover:text-text-primary transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
                       {problem.text}
@@ -231,7 +220,7 @@ const SilnaGlowa = () => {
                 A do tego dochodzi otoczenie, które często – zupełnie nieświadomie – chce cię utrzymać w znanej sobie przystani.
               </h3>
 
-              <div className="bg-color-error/10 p-6 rounded-lg mb-6">
+              <div className="bg-muted p-6 rounded-lg mb-6">
                 <h4 className="font-bold mb-4 text-text-primary">
                   Zastanów się przez chwilę. Czy zdarzyło ci się usłyszeć od bliskich coś w rodzaju:
                 </h4>
@@ -242,7 +231,7 @@ const SilnaGlowa = () => {
                     '"Nie nadajesz się do tego."',
                     '"Zmieniłeś się..." (wypowiedziane z wyrzutem).',
                   ].map((quote, index) => (
-                    <li key={index} className="text-color-error font-medium">
+                    <li key={index} className="text-foreground font-medium">
                       {quote}
                     </li>
                   ))}
@@ -276,16 +265,16 @@ const SilnaGlowa = () => {
       <section className="py-16 md:py-20 bg-background-secondary relative overflow-hidden">
         {/* Animated wave background */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-500/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-electric/20 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Section Header with Icon */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-100 px-5 py-2 rounded-full mb-6">
-                <Anchor className="h-5 w-5 text-blue-600" />
-                <span className="text-sm font-bold text-blue-600 uppercase">
+              <div className="inline-flex items-center gap-2 bg-electric/10 px-5 py-2 rounded-full mb-6">
+                <Anchor className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
                   Metafora życia
                 </span>
               </div>
@@ -304,13 +293,13 @@ const SilnaGlowa = () => {
             {/* Visual Boat Journey */}
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12">
               {/* Stage 1: Broken Boat */}
-              <div className="group relative bg-white rounded-2xl p-6 sm:p-8 border-2 border-red-200 hover:shadow-lg transition-all">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-100 px-4 py-1 rounded-full border-2 border-red-200">
-                  <span className="text-xs font-bold text-red-600">TERAZ</span>
+              <div className="group relative bg-white rounded-md p-6 sm:p-8 border border-muted transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-muted px-4 py-1 rounded-full border border-muted">
+                  <span className="text-xs font-bold text-dim">TERAZ</span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-4 pt-2">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                    <Anchor className="h-8 w-8 text-red-600" />
+                  <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+                    <Anchor className="h-8 w-8 text-dim" />
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm text-text-secondary">
@@ -321,20 +310,20 @@ const SilnaGlowa = () => {
                       kadłub przecieka
                     </p>
                   </div>
-                  <Waves className="h-6 w-6 text-red-400 animate-pulse" />
+                  <Waves className="h-6 w-6 text-dim" />
                 </div>
               </div>
 
               {/* Stage 2: Stormy Waters */}
-              <div className="group relative bg-white rounded-2xl p-6 sm:p-8 border-2 border-orange-200 hover:shadow-lg transition-all">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-100 px-4 py-1 rounded-full border-2 border-orange-200">
-                  <span className="text-xs font-bold text-orange-600">
+              <div className="group relative bg-white rounded-md p-6 sm:p-8 border border-muted transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-muted px-4 py-1 rounded-full border border-muted">
+                  <span className="text-xs font-bold text-dim">
                     OCEAN
                   </span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-4 pt-2">
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Waves className="h-8 w-8 text-orange-600" />
+                  <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+                    <Waves className="h-8 w-8 text-dim" />
                   </div>
                   <p className="text-base text-text-primary font-medium">
                     Ocean jest wzburzony
@@ -346,20 +335,20 @@ const SilnaGlowa = () => {
               </div>
 
               {/* Stage 3: Strong Ship */}
-              <div className="group relative bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 border-2 border-green-300 hover:shadow-xl transition-all hover:-translate-y-1">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500 px-4 py-1 rounded-full border-2 border-green-400">
+              <div className="group relative bg-electric/5 rounded-md p-6 sm:p-8 border border-electric/30 transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gradient px-4 py-1 rounded-full">
                   <span className="text-xs font-bold text-white">
                     ROZWIĄZANIE
                   </span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-4 pt-2">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-brand-gradient rounded-full flex items-center justify-center">
                     <ShipWheel className="h-8 w-8 text-white" />
                   </div>
                   <p className="text-base text-text-primary font-bold">
                     Niezatapialny pancernik
                   </p>
-                  <p className="text-sm text-green-600 font-semibold">
+                  <p className="text-sm text-electric font-semibold">
                     ↓ Zobacz poniżej
                   </p>
                 </div>
@@ -368,15 +357,14 @@ const SilnaGlowa = () => {
 
             {/* Key Message Card */}
             <div className="relative max-w-3xl mx-auto">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-20"></div>
-              <div className="relative bg-white rounded-2xl p-8 sm:p-10 border-2 border-gray-200">
+              <div className="relative bg-white rounded-md p-8 sm:p-10 border border-muted">
                 <div className="space-y-4 text-center">
                   <p className="text-lg sm:text-xl text-text-primary leading-relaxed">
                     Są jachty, które całe życie stoją w suchym doku.
                     Są takie, które ciągną holowniki.
                   </p>
-                  <div className="pt-4 border-t-2 border-gray-200">
-                    <p className="text-xl sm:text-2xl font-bold text-twilight-indigo mb-2">
+                  <div className="pt-4 border-t border-muted">
+                    <p className="text-xl sm:text-2xl font-bold text-depth mb-2">
                       Ty nie jesteś jedną z nich.
                     </p>
                     <p className="text-base sm:text-lg text-text-secondary">
@@ -417,7 +405,7 @@ const SilnaGlowa = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="text-left p-4 bg-color-error/10 rounded-lg"
+                  className="text-left p-4 bg-muted rounded-lg"
                 >
                   <p className="text-text-secondary">{item}</p>
                 </div>
@@ -434,8 +422,8 @@ const SilnaGlowa = () => {
                 </p>
                 <p className="text-lg font-medium mb-6 text-text-primary">
                   Są ludzie, na których fala uderza, a oni, otrzepując się, myślą:{" "}
-                  <span className="italic text-twilight-indigo">"To jest tylko myśl. Nie muszę się do niej przywiązywać."</span>{" "}
-                  A potem: <span className="italic text-twilight-indigo">"OK, co teraz mogę z tym ZROBIĆ?"</span>
+                   <span className="italic text-depth">"To jest tylko myśl. Nie muszę się do niej przywiązywać."</span>{" "}
+                   A potem: <span className="italic text-depth">"OK, co teraz mogę z tym ZROBIĆ?"</span>
                 </p>
               </CardContent>
             </Card>
@@ -461,10 +449,10 @@ const SilnaGlowa = () => {
               ].map((example, index) => (
                 <Card key={index} className="glass-card p-6">
                   <CardContent className="p-0">
-                    <p className="font-bold text-color-error mb-2">
+                    <p className="font-bold text-foreground mb-2">
                       {example.situation}
                     </p>
-                    <p className="text-twilight-indigo font-medium">
+                    <p className="text-electric font-medium">
                       "{example.response}"
                     </p>
                   </CardContent>
@@ -474,7 +462,7 @@ const SilnaGlowa = () => {
 
             <div className="mt-8 text-center">
               <p className="text-lg font-bold text-text-primary">
-                To nie jest naiwny optymizm. To jest <span className="text-twilight-indigo">wybór perspektywy</span>. I można się tego nauczyć.
+                To nie jest naiwny optymizm. To jest <span className="text-electric">wybór perspektywy</span>. I można się tego nauczyć.
               </p>
             </div>
           </div>
@@ -495,7 +483,7 @@ const SilnaGlowa = () => {
                   <div className="flex-1 space-y-6">
                     <p className="text-lg text-text-primary">
                       Nazywam się{" "}
-                      <span className="font-bold text-twilight-indigo">
+                       <span className="font-bold text-electric">
                         Ludwik C. Siadlak
                       </span>
                       . Od ponad 18 lat moją pracą jest{" "}
@@ -520,10 +508,10 @@ const SilnaGlowa = () => {
                       <strong className="text-text-primary">kapitana, który sam przeszedł przez niejedną burzę.</strong>
                     </p>
 
-                    <div className="bg-neural-blue/10 p-6 rounded-lg border-l-4 border-twilight-indigo">
+                    <div className="bg-electric/5 p-6 rounded-lg border-l-4 border-depth">
                       <p className="text-text-secondary mb-4">
                         Jedna z rzeczy, której nauczyłem się w praktyce:{" "}
-                        <span className="font-bold text-twilight-indigo italic">
+                        <span className="font-bold text-depth italic">
                           "forma jest pustką, a pustka jest formą"
                         </span>
                         .
@@ -539,7 +527,7 @@ const SilnaGlowa = () => {
                       </p>
                     </div>
 
-                    <p className="text-lg font-medium text-twilight-indigo">
+                    <p className="text-lg font-medium text-electric">
                       Dzisiaj chcę być twoim <strong>nawigatorem</strong>. Pokażę ci, jak czytać mapy, ustawiać żagle
                       i sterować tak, by każdy sztorm – mały czy duży –{" "}
                       <strong>uczynił cię lepszym żeglarzem, a nie ofiarą.</strong>
@@ -553,7 +541,7 @@ const SilnaGlowa = () => {
               <h3 className="text-2xl font-bold text-text-primary">
                 Moja praca już przynosi efekty
               </h3>
-              <p className="text-twilight-indigo font-medium text-center">
+              <p className="text-electric font-medium text-center">
                 Przedsprzedaż trwa tylko do 10 stycznia!
               </p>
 
@@ -573,7 +561,7 @@ const SilnaGlowa = () => {
                   Też tak masz?
                 </p>
 
-                <div className="bg-neural-blue/10 p-6 rounded-lg">
+                <div className="bg-electric/5 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
                     Brian Tracy w "Psychologii sprzedaży" pisał, że osoby z
                     biednych domów i z bogatych mają szansę na bogactwo.
@@ -581,7 +569,7 @@ const SilnaGlowa = () => {
                   <p className="text-text-secondary mb-4">
                     I taką samą szansę, by popaść w biedę.
                   </p>
-                  <p className="text-xl font-bold text-twilight-indigo">
+                  <p className="text-xl font-bold text-electric">
                     Różnica jest w głowie.
                   </p>
                   <p className="text-lg mt-4 text-text-primary">
@@ -600,9 +588,9 @@ const SilnaGlowa = () => {
           <div className="max-w-5xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-color-success/20 to-twilight-indigo/20 px-5 py-2 rounded-full mb-6">
-                <Sparkles className="h-5 w-5 text-color-success" />
-                <span className="text-sm font-bold text-color-success uppercase">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <Sparkles className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
                   Twoja transformacja
                 </span>
               </div>
@@ -623,7 +611,7 @@ const SilnaGlowa = () => {
                   benefit:
                     "Nauczysz się nawigować przez życie, używając metafor, które dają siłę i klarowność. Już po pierwszym module zobaczysz swoją sytuację zupełnie innymi oczami.",
                   icon: Compass,
-                  gradient: "from-blue-500 to-blue-600",
+                  gradient: "from-electric to-depth",
                   timeframe: "Moduł 1",
                 },
                 {
@@ -632,7 +620,7 @@ const SilnaGlowa = () => {
                   benefit:
                     "Opanujesz ocean własnych myśli tak, że burza będzie tylko pogodą, a nie katastrofą. Nauczysz się widzieć myśli jak chmury – przychodzą i odchodzą, a ty zostaniesz.",
                   icon: ShipWheel,
-                  gradient: "from-purple-500 to-purple-600",
+                  gradient: "from-electric to-depth",
                   timeframe: "Moduł 2",
                 },
                 {
@@ -641,7 +629,7 @@ const SilnaGlowa = () => {
                   benefit:
                     "Odkryjesz głęboką motywację, płynącą z twoich prawdziwych wartości, a nie z zewnętrznej presji. Bo jak się okazuje, prawdziwa siła nie bierze się z kawy i \"must have\".",
                   icon: Waves,
-                  gradient: "from-cyan-500 to-teal-600",
+                  gradient: "from-electric to-depth",
                   timeframe: "Moduł 3-4",
                 },
                 {
@@ -650,7 +638,7 @@ const SilnaGlowa = () => {
                   benefit:
                     "Będziesz miał strategie na trudności, które nie polegają na walce z falą, ale na mądrym wykorzystaniu jej energii. Jak powiedział Bruce Lee: Be water, my friend.",
                   icon: Zap,
-                  gradient: "from-orange-500 to-orange-600",
+                  gradient: "from-electric to-depth",
                   timeframe: "Moduł 5",
                 },
                 {
@@ -659,26 +647,26 @@ const SilnaGlowa = () => {
                   benefit:
                     "Zbudujesz personalny plan odporności, który zawsze wskaże ci kierunek, gdy zgubisz widok lądu. Nie plan na półkę. Plan, z którym wyjdziesz następnego dnia.",
                   icon: Shield,
-                  gradient: "from-green-500 to-green-600",
+                  gradient: "from-electric to-depth",
                   timeframe: "Moduł 6",
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
                   {/* Connecting Line */}
                   {index < 5 && (
-                    <div className="absolute left-8 sm:left-10 top-20 sm:top-24 w-0.5 h-6 bg-gradient-to-b from-gray-300 to-transparent"></div>
+                    <div className="absolute left-8 sm:left-10 top-20 sm:top-24 w-0.5 h-6 bg-gradient-to-b from-muted to-transparent"></div>
                   )}
 
                   <div className="relative flex items-start gap-4 sm:gap-6">
                     {/* Icon Circle with Progress */}
                     <div className="relative flex-shrink-0">
                       <div
-                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center shadow-lg border-4 border-white group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center border-4 border-white`}
                       >
                         <item.icon className="h-7 w-7 sm:h-9 sm:w-9 text-white drop-shadow-md" />
                       </div>
                       {/* Step Number Badge */}
-                      <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-100">
+                      <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center border border-muted">
                         <span className="text-xs sm:text-sm font-bold text-text-primary">
                           {item.step}
                         </span>
@@ -687,14 +675,14 @@ const SilnaGlowa = () => {
 
                     {/* Content Card */}
                     <div className="flex-1">
-                      <Card className="group-hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-gray-200 bg-white overflow-hidden">
+                      <Card className="transition-all duration-300 border border-muted bg-white overflow-hidden">
                         <CardContent className="p-5 sm:p-6">
                           {/* Title Row */}
                           <div className="flex items-center justify-between mb-3">
                             <h3 className="text-xl sm:text-2xl font-bold text-text-primary">
                               {item.title}
                             </h3>
-                            <span className="text-xs sm:text-sm font-medium text-text-secondary bg-gray-100 px-3 py-1 rounded-full">
+                            <span className="text-xs sm:text-sm font-medium text-text-secondary bg-muted px-3 py-1 rounded-full">
                               {item.timeframe}
                             </span>
                           </div>
@@ -705,19 +693,11 @@ const SilnaGlowa = () => {
                           </p>
 
                           {/* Progress Bar */}
-                          <div className="relative h-2 bg-gray-100 rounded-full overflow-hidden">
+                          <div className="relative h-2 bg-muted rounded-full overflow-hidden">
                             <div
-                              className={`h-full bg-gradient-to-r ${item.gradient} rounded-full transition-all duration-500 group-hover:w-full`}
+                              className={`h-full bg-gradient-to-r ${item.gradient} rounded-full`}
                               style={{ width: `${(item.step / 6) * 100}%` }}
                             ></div>
-                          </div>
-
-                          {/* Completion Indicator */}
-                          <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <CheckCircle2 className="h-4 w-4 text-color-success" />
-                            <span className="text-sm font-medium text-color-success">
-                              Odblokowujesz ten etap w trakcie kursu
-                            </span>
                           </div>
                         </CardContent>
                       </Card>
@@ -728,9 +708,9 @@ const SilnaGlowa = () => {
             </div>
 
             {/* Summary Card */}
-            <div className="mt-12 bg-gradient-to-br from-neural-blue/10 to-twilight-indigo/10 rounded-2xl p-8 border-2 border-neural-blue/20">
+            <div className="mt-12 bg-gradient-to-br from-electric/10 to-depth/10 rounded-md p-8 border border-electric/20">
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-neural-blue to-twilight-indigo rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-gradient rounded-full mb-4">
                   <Trophy className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
@@ -746,7 +726,7 @@ const SilnaGlowa = () => {
                         key={index}
                         className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm"
                       >
-                        <CheckCircle2 className="h-5 w-5 text-color-success" />
+                        <CheckCircle2 className="h-5 w-5 text-electric" />
                         <span className="font-medium text-text-primary">
                           {trait}
                         </span>
@@ -767,7 +747,7 @@ const SilnaGlowa = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="glass-card p-6">
                 <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-color-success mb-6">
+                  <h3 className="text-xl font-bold text-electric mb-6">
                     Ten program jest dla Ciebie, jeśli:
                   </h3>
                   <ul className="space-y-3">
@@ -790,7 +770,7 @@ const SilnaGlowa = () => {
 
               <Card className="glass-card p-6">
                 <CardContent className="p-0">
-                  <h3 className="text-xl font-bold text-color-error mb-6">
+                  <h3 className="text-xl font-bold text-dim mb-6">
                     Ten program nie jest dla Ciebie, jeśli:
                   </h3>
                   <ul className="space-y-3">
@@ -839,7 +819,7 @@ const SilnaGlowa = () => {
                       key={index}
                       className="flex items-start gap-3"
                     >
-                      <div className="flex-shrink-0 w-1.5 h-1.5 bg-twilight-indigo rounded-full mt-2"></div>
+                      <div className="flex-shrink-0 w-1.5 h-1.5 bg-electric rounded-full mt-2"></div>
                       <p className="text-base text-text-secondary">
                         {dream}
                       </p>
@@ -851,7 +831,7 @@ const SilnaGlowa = () => {
                   To wszystko staje się możliwe, gdy przeprogramujesz swój "software" i zbudujesz Silną Głowę.
                 </p>
 
-                <div className="mt-8 bg-neural-blue/10 p-6 rounded-lg">
+                <div className="mt-8 bg-electric/5 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
                     Wracając do naszej żaglówki: wyobraź sobie, że płyniesz. Czujesz wiatr, czujesz fale.{" "}
                     <strong className="text-text-primary">I nie boisz się.</strong>
@@ -859,7 +839,7 @@ const SilnaGlowa = () => {
                   <p className="text-text-secondary mb-4">
                     Bo wiesz, że nawet gdy nadejdzie sztorm, ty wiesz, jak skorygować kurs. Masz plan.
                   </p>
-                  <p className="text-xl font-bold text-twilight-indigo">
+                  <p className="text-xl font-bold text-electric">
                     Jesteś Kapitanem.
                   </p>
                 </div>
@@ -875,9 +855,9 @@ const SilnaGlowa = () => {
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-neural-blue/20 to-twilight-indigo/20 px-5 py-2 rounded-full mb-6">
-                <ShipWheel className="h-5 w-5 text-twilight-indigo" />
-                <span className="text-sm font-bold text-twilight-indigo uppercase">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <ShipWheel className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
                   Program kursu
                 </span>
               </div>
@@ -895,7 +875,7 @@ const SilnaGlowa = () => {
                 {
                   number: 1,
                   icon: Anchor,
-                  gradient: "from-blue-500 to-blue-600",
+                  gradient: "from-electric to-depth",
                   title: "Żeglując po morzach życia, to Ty jesteś żaglówką",
                   description:
                     "Czujesz się zagubiony? Otrzymasz potężną metaforę nawigacyjną, która uporządkuje chaos. Zobaczysz, jak twoje wartości są sterem, słabości – dziurami w kadłubie, a otoczenie – wiatrem i prądami. Zrozumiesz, kto i co tak naprawdę kieruje twoim życiem. Ten moduł zmienia percepcję – a zmiana percepcji to zmiana wszystkiego.",
@@ -903,7 +883,7 @@ const SilnaGlowa = () => {
                 {
                   number: 2,
                   icon: Brain,
-                  gradient: "from-purple-500 to-purple-600",
+                  gradient: "from-electric to-depth",
                   title:
                     "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
                   description:
@@ -912,7 +892,7 @@ const SilnaGlowa = () => {
                 {
                   number: 3,
                   icon: Target,
-                  gradient: "from-green-500 to-green-600",
+                  gradient: "from-electric to-depth",
                   title: "Ujarzmianie myśli: Moc percepcji",
                   description:
                     "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania – tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I – co ważniejsze – zmieniać ich kształt. Przekujesz wewnętrzne \"zagrożenie\" w \"wyzwanie\", a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
@@ -920,7 +900,7 @@ const SilnaGlowa = () => {
                 {
                   number: 4,
                   icon: Zap,
-                  gradient: "from-orange-500 to-orange-600",
+                  gradient: "from-electric to-depth",
                   title:
                     "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
                   description:
@@ -929,7 +909,7 @@ const SilnaGlowa = () => {
                 {
                   number: 5,
                   icon: Waves,
-                  gradient: "from-teal-500 to-cyan-600",
+                  gradient: "from-electric to-depth",
                   title:
                     "Nawigacja przez burze: Skuteczne strategie radzenia sobie z przeciwnościami",
                   description:
@@ -938,7 +918,7 @@ const SilnaGlowa = () => {
                 {
                   number: 6,
                   icon: Shield,
-                  gradient: "from-indigo-500 to-purple-600",
+                  gradient: "from-electric to-depth",
                   title:
                     "Tworzenie własnego kompasu: Plan budowania odporności psychicznej",
                   description:
@@ -947,11 +927,11 @@ const SilnaGlowa = () => {
               ].map((module) => (
                 <div
                   key={module.number}
-                  className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100"
+                  className="group relative bg-white rounded-md p-6 sm:p-8 transition-all duration-300 border border-muted"
                 >
                   {/* Progress Badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-neural-blue/10 to-twilight-indigo/10 px-3 py-1.5 rounded-full border border-neural-blue/20">
-                    <span className="text-xs font-bold text-twilight-indigo">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-electric/10 to-depth/10 px-3 py-1.5 rounded-full border border-electric/20">
+                    <span className="text-xs font-bold text-electric">
                       {module.number}/6
                     </span>
                   </div>
@@ -961,26 +941,10 @@ const SilnaGlowa = () => {
                     {/* Large Module Icon */}
                     <div className="relative">
                       <div
-                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${module.gradient} rounded-2xl sm:rounded-[22px] flex items-center justify-center shadow-lg border border-white/20 group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${module.gradient} rounded-md flex items-center justify-center border border-white/20`}
                       >
                         <module.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white drop-shadow-md" />
                       </div>
-                      {/* Animated progress arc */}
-                      <svg
-                        className="absolute -inset-1 w-[72px] h-[72px] sm:w-[88px] sm:h-[88px] -rotate-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        viewBox="0 0 100 100"
-                      >
-                        <circle
-                          cx="50"
-                          cy="50"
-                          r="45"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeDasharray={`${(module.number / 6) * 283} 283`}
-                          className="text-twilight-indigo"
-                        />
-                      </svg>
                     </div>
 
                     {/* Title */}
@@ -997,7 +961,7 @@ const SilnaGlowa = () => {
                   </p>
 
                   {/* Unlock Button */}
-                  <button className="w-full bg-gradient-to-r from-neural-blue to-twilight-indigo text-white font-bold py-3 sm:py-3.5 px-6 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:opacity-90 transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">
                       ODBLOKOWUJ MODUŁ
@@ -1019,7 +983,7 @@ const SilnaGlowa = () => {
                     załogi w oceanie Internetu
                   </h4>
                   <p className="text-text-secondary mb-4">Każdego dnia.</p>
-                  <p className="text-lg font-medium text-twilight-indigo">
+                  <p className="text-lg font-medium text-electric">
                     To jedna z niewielu społeczności totalnie pozbawionych
                     hejtu.
                   </p>
@@ -1044,19 +1008,19 @@ const SilnaGlowa = () => {
               </p>
               <ul className="space-y-2 text-base text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span className="text-twilight-indigo">•</span>
+                  <span className="text-depth">•</span>
                   <span>18+ lat mówienia do ludzi i <strong>aktualizowania ich oprogramowania</strong> – od Fortune 500 po NATO,</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-twilight-indigo">•</span>
+                  <span className="text-depth">•</span>
                   <span>30+ lat testowania każdej metody najpierw na sobie,</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-twilight-indigo">•</span>
+                  <span className="text-depth">•</span>
                   <span>Psychologię i informatykę z Oxfordu, które pozwoliły mi łączyć głęboką wiedzę o umyśle z praktycznymi narzędziami,</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-twilight-indigo">•</span>
+                  <span className="text-depth">•</span>
                   <span>Oraz pracę z setkami klientów 1:1 w ponad 50 krajach…</span>
                 </li>
               </ul>
@@ -1068,17 +1032,17 @@ const SilnaGlowa = () => {
                 że one day ze mną zmienia więcej niż rok samotnych prób.
               </p>
               <p className="text-base text-text-secondary">
-                Ale kurs <strong className="text-twilight-indigo">"Silna Głowa"</strong> możesz mieć za ułamek tej kwoty:
+                Ale kurs <strong className="text-electric">"Silna Głowa"</strong> możesz mieć za ułamek tej kwoty:
               </p>
             </div>
 
-            <Card className="glass-card p-8 max-w-2xl mx-auto border-2 border-neural-blue/20">
+            <Card className="glass-card p-8 max-w-2xl mx-auto border border-electric/20">
               <CardContent className="p-0">
                 <div className="space-y-6">
                   {/* Value Comparison */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                     {/* Regular Price */}
-                    <div className="bg-gray-50 p-6 rounded-xl text-center border-2 border-gray-200">
+                    <div className="bg-muted p-6 rounded-md text-center border border-muted">
                       <p className="text-sm text-text-secondary uppercase tracking-wide mb-2">
                         Wartość mentoringu 1:1
                       </p>
@@ -1093,11 +1057,11 @@ const SilnaGlowa = () => {
                     {/* Your Price */}
                     <div className="relative">
                       {/* Savings Badge */}
-                      <div className="absolute -top-3 -right-3 bg-gradient-to-br from-green-500 to-green-600 text-white px-3 py-1.5 rounded-full shadow-lg transform rotate-12 z-10">
+                      <div className="absolute -top-3 -right-3 bg-brand-gradient text-white px-3 py-1.5 rounded-full transform rotate-12 z-10">
                         <div className="text-xs font-bold">-94%</div>
                       </div>
 
-                      <div className="bg-gradient-to-br from-neural-blue to-twilight-indigo p-6 rounded-xl text-center shadow-xl border-4 border-white/20">
+                      <div className="bg-brand-gradient p-6 rounded-md text-center border-4 border-white/20">
                         <p className="text-sm text-white/90 uppercase tracking-wide mb-2">
                           Twoja inwestycja
                         </p>
@@ -1113,7 +1077,7 @@ const SilnaGlowa = () => {
                   </div>
 
                   {/* Value Stack */}
-                  <div className="bg-gradient-to-r from-zenith-gold/5 to-twilight-indigo/5 p-6 rounded-xl border border-neural-blue/20">
+                  <div className="bg-gradient-to-r from-electric/5 to-depth/5 p-6 rounded-md border border-electric/20">
                     <h4 className="font-bold text-center mb-4 text-text-primary">
                       W pakiecie otrzymujesz:
                     </h4>
@@ -1133,7 +1097,7 @@ const SilnaGlowa = () => {
                           className="flex items-center justify-between"
                         >
                           <div className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-electric flex-shrink-0" />
                             <span className="text-sm text-text-secondary">
                               {item.item}
                             </span>
@@ -1151,7 +1115,7 @@ const SilnaGlowa = () => {
                     <p className="text-sm text-text-secondary mb-2">
                       Przelicz to na dzienną stawkę:
                     </p>
-                    <p className="text-lg font-bold text-twilight-indigo">
+                    <p className="text-lg font-bold text-electric">
                       To mniej niż 2,13 zł dziennie przez rok
                     </p>
                     <p className="text-sm text-text-secondary italic">
@@ -1170,9 +1134,9 @@ const SilnaGlowa = () => {
                   </Button>
 
                   {/* Guarantee Section */}
-                  <div className="mt-8 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border-2 border-green-200">
+                  <div className="mt-8 bg-electric/5 p-6 rounded-md border border-electric/20">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                      <div className="flex-shrink-0 w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center">
                         <Shield className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -1196,8 +1160,8 @@ const SilnaGlowa = () => {
                   </div>
 
                   {/* Trust Badge */}
-                  <div className="flex items-center justify-center gap-2 text-sm text-text-secondary bg-white p-3 rounded-lg border border-gray-200">
-                    <Shield className="w-5 h-5 text-green-600" />
+                  <div className="flex items-center justify-center gap-2 text-sm text-text-secondary bg-white p-3 rounded-lg border border-muted">
+                    <Shield className="w-5 h-5 text-electric" />
                     <span className="font-medium text-text-primary">
                       30-dniowa gwarancja zwrotu pieniędzy
                     </span>
@@ -1215,9 +1179,9 @@ const SilnaGlowa = () => {
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 px-5 py-2 rounded-full mb-6">
-                <HelpCircle className="h-5 w-5 text-orange-600" />
-                <span className="text-sm font-bold text-orange-600 uppercase">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <HelpCircle className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
                   Rozwiązujemy wątpliwości
                 </span>
               </div>
@@ -1227,11 +1191,11 @@ const SilnaGlowa = () => {
               <p className="text-lg text-text-secondary mb-8">
                 Wcale mnie to nie dziwi. Życie nauczyło Cię unikać ryzyka.
               </p>
-              <div className="bg-card-bg p-6 rounded-xl border-2 border-neural-blue/20 max-w-2xl mx-auto">
+              <div className="bg-card-bg p-6 rounded-md border border-electric/20 max-w-2xl mx-auto">
                 <p className="text-lg font-medium text-center italic text-text-primary mb-2">
                   "Ja go nie widzę, to ono też mnie nie widzi".
                 </p>
-                <p className="text-xl font-bold text-twilight-indigo text-center">
+                <p className="text-xl font-bold text-electric text-center">
                   Ale życie Cię widzi.
                 </p>
               </div>
@@ -1240,62 +1204,21 @@ const SilnaGlowa = () => {
             {/* Objections Accordion */}
             <Accordion type="single" collapsible className="space-y-4">
               {SILNA_GLOWA_OBJECTIONS.map((objection) => {
-                const colorMap = {
-                  red: {
-                    gradient: "from-red-500 to-red-600",
-                    bg: "bg-red-50",
-                    border: "border-red-500",
-                    borderLight: "border-red-200",
-                    text: "text-red-600",
-                    textBold: "text-red-700",
-                    hover: "hover:border-red-300",
-                  },
-                  orange: {
-                    gradient: "from-orange-500 to-orange-600",
-                    bg: "bg-orange-50",
-                    border: "border-orange-500",
-                    borderLight: "border-orange-200",
-                    text: "text-orange-600",
-                    textBold: "text-orange-700",
-                    hover: "hover:border-orange-300",
-                  },
-                  green: {
-                    gradient: "from-green-500 to-green-600",
-                    bg: "bg-green-50",
-                    border: "border-green-500",
-                    borderLight: "border-green-200",
-                    text: "text-green-600",
-                    textBold: "text-green-700",
-                    hover: "hover:border-green-300",
-                  },
-                  blue: {
-                    gradient: "from-blue-500 to-blue-600",
-                    bg: "bg-blue-50",
-                    border: "border-blue-500",
-                    borderLight: "border-blue-200",
-                    text: "text-blue-600",
-                    textBold: "text-blue-700",
-                    hover: "hover:border-blue-300",
-                  },
-                };
-                const colors =
-                  colorMap[objection.color as keyof typeof colorMap];
-
                 return (
                   <AccordionItem
                     key={objection.value}
                     value={objection.value}
-                    className={`bg-white rounded-xl border-2 border-gray-200 overflow-hidden ${colors.hover} transition-colors`}
+                    className="bg-white rounded-md border border-muted overflow-hidden hover:border-electric/30 transition-colors"
                   >
                     <AccordionTrigger className="px-6 hover:no-underline group">
                       <div className="flex items-center gap-4 text-left">
                         <div
-                          className={`w-12 h-12 bg-gradient-to-br ${colors.gradient} rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
+                          className="w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center flex-shrink-0"
                         >
                           <objection.icon className="h-6 w-6 text-white" />
                         </div>
                         <div>
-                          <h3 className={`text-xl font-bold ${colors.text}`}>
+                          <h3 className="text-xl font-bold text-foreground">
                             "{objection.title}"
                           </h3>
                           <p className="text-sm text-text-secondary">
@@ -1306,9 +1229,9 @@ const SilnaGlowa = () => {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6">
                       <div
-                        className={`${colors.bg} p-6 rounded-lg border-l-4 ${colors.border} space-y-4`}
+                        className="bg-electric/5 p-6 rounded-lg border-l-4 border-electric space-y-4"
                       >
-                        <p className={`text-lg font-bold ${colors.textBold}`}>
+                        <p className="text-lg font-bold text-foreground">
                           {objection.content.intro}
                         </p>
                         {objection.content.paragraphs.map((paragraph, idx) => (
@@ -1318,17 +1241,17 @@ const SilnaGlowa = () => {
                         ))}
                         {objection.content.highlight && (
                           <div
-                            className={`bg-white p-4 rounded-lg border-2 ${colors.borderLight}`}
+                            className="bg-white p-4 rounded-lg border border-muted"
                           >
                             <p
-                              className={`text-lg font-bold ${colors.text} mb-2`}
+                              className="text-lg font-bold text-electric mb-2"
                             >
                               {objection.content.highlight}
                             </p>
                           </div>
                         )}
                         {objection.content.conclusion && (
-                          <p className="text-lg font-bold text-twilight-indigo italic">
+                          <p className="text-lg font-bold text-depth italic">
                             {objection.content.conclusion}
                           </p>
                         )}
@@ -1354,9 +1277,8 @@ const SilnaGlowa = () => {
         </div>
       </section>
       {/* Final CTA - Theme Locked */}
-      <section className="py-16 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-twilight-indigo/20 rounded-full blur-3xl"></div>
+      <section className="py-16 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
