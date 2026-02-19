@@ -34,9 +34,8 @@ export default function HakowanieProduktywnosci() {
   return (
     <Layout>
       {/* 2.2. Hero Section - Theme Locked */}
-      <section className="py-12 md:py-20 bg-gradient-locked-hero-complex section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
+      <section className="py-12 md:py-20 bg-void relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -847,9 +846,8 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.9. Pricing Section - Theme Locked */}
-      <section className="py-20 bg-gradient-locked-hero-complex section-locked text-locked-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
+      <section className="py-20 bg-void relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
