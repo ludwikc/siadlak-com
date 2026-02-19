@@ -32,7 +32,7 @@ export default function ThankYouMeskiKompas() {
           </div>
 
           {/* Main Card */}
-          <div className="bg-card/80 backdrop-blur-lg rounded-3xl border border-border/50 shadow-2xl p-8 md:p-12 space-y-8 animate-scale-in">
+          <div className="bg-card border border-border rounded-md p-8 md:p-12 space-y-8 animate-scale-in">
             
             {/* Hero Section */}
             <div className="text-center space-y-4">

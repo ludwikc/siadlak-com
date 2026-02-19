@@ -12,7 +12,7 @@ export default function SiedemTechnik() {
       <section className="relative py-20 md:py-32 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block mb-6 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+            <div className="inline-block mb-6 px-5 py-2 bg-white/10 rounded-full border border-white/20">
               <span className="text-sm font-medium text-white">
                 77 minut, które zmienią Twój dzień
               </span>
@@ -26,15 +26,15 @@ export default function SiedemTechnik() {
               77 minut, które ustawią Ci (każdy!) dzień
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-12">
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-sm border border-white/20">
                 <CheckCircle className="w-5 h-5 text-electric" />
                 <span className="text-sm font-medium">Dostęp natychmiast</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-sm border border-white/20">
                 <CheckCircle className="w-5 h-5 text-electric" />
                 <span className="text-sm font-medium">Bez aplikacji</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-sm border border-white/20">
                 <CheckCircle className="w-5 h-5 text-electric" />
                 <span className="text-sm font-medium">Dostęp lifetime</span>
               </div>
@@ -75,8 +75,8 @@ export default function SiedemTechnik() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-3xl mx-auto">
-              <div className="bg-white rounded-sm p-8 border-2 border-green-500/20">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-white rounded-sm p-8 border-2 border-electric/20">
+                <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center mb-4">
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-on-light-dim leading-relaxed">
@@ -207,7 +207,7 @@ export default function SiedemTechnik() {
       <section className="relative py-20 md:py-24 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-sm p-10 md:p-16 border border-white/20">
+            <div className="bg-white/10 rounded-sm p-10 md:p-16 border border-white/20">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
                 Inwestycja w Twoją produktywność
               </h2>
@@ -229,8 +229,8 @@ export default function SiedemTechnik() {
                 href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7K8LDgmse4Mm3C7S7M9Yx&lang=pl"
                 className="relative inline-block group"
               >
-                <div className="absolute -inset-1.5 bg-gradient-to-r from-depth via-depth to-depth rounded-xl blur-md opacity-60 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-                <button className="relative bg-white hover:bg-white/90 text-depth px-8 py-6 rounded-xl text-lg font-bold flex items-center gap-3 transition-all">
+                <div className="absolute -inset-1.5 bg-gradient-to-r from-depth via-depth to-depth rounded blur-md opacity-60 group-hover:opacity-100 transition duration-300"></div>
+                <button className="relative bg-white hover:bg-white/90 text-depth px-8 py-6 rounded text-lg font-bold flex items-center gap-3 transition-all">
                   Kup teraz za 497 PLN
                   <ArrowRight size={20} />
                 </button>
@@ -238,15 +238,15 @@ export default function SiedemTechnik() {
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
                 <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-green-400 rounded-full"></div>
-                  <span>Bezpieczne płatności</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-green-400 rounded-full"></div>
-                  <span>Dostęp NATYCHMIAST</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 bg-green-400 rounded-full"></div>
+                   <div className="h-2 w-2 bg-electric rounded-full"></div>
+                   <span>Bezpieczne płatności</span>
+                 </div>
+                 <div className="flex items-center gap-2">
+                   <div className="h-2 w-2 bg-electric rounded-full"></div>
+                   <span>Dostęp NATYCHMIAST</span>
+                 </div>
+                 <div className="flex items-center gap-2">
+                   <div className="h-2 w-2 bg-electric rounded-full"></div>
                   <span>Dostęp LIFETIME</span>
                 </div>
               </div>

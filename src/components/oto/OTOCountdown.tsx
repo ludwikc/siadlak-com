@@ -25,12 +25,12 @@ export function OTOCountdown({ onExpired, className }: OTOCountdownProps) {
     return () => clearInterval(interval);
   }, [onExpired]);
   
-  const isUrgent = timeLeft <= 2 * 60 * 1000; // Last 2 minutes
+  const isUrgent = timeLeft <= 2 * 60 * 1000;
   
   return (
     <div className={cn(
-      "glass-card p-6 text-center border-2",
-      isUrgent ? "border-destructive animate-pulse" : "border-primary/30",
+      "bg-card p-6 text-center border-2 rounded-md",
+      isUrgent ? "border-destructive" : "border-primary/30",
       className
     )}>
       <div className="flex items-center justify-center gap-3 mb-3">

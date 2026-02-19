@@ -48,7 +48,7 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-3xl mx-auto">
               {/* LinkedIn Card */}
-              <div className="group glass-card p-8 rounded-sm hover:opacity-90 transition-all duration-300 border-2 border-transparent hover:border-[#0077B5]/20">
+              <div className="group bg-card p-8 rounded-sm border border-border hover:border-[#0077B5]/20 transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-[#0077B5] to-[#005885] rounded-sm flex items-center justify-center">
                     <Linkedin className="w-10 h-10 text-white" />
@@ -68,7 +68,7 @@ const Contact = () => {
                         "_blank",
                       )
                     }
-                    className="w-full bg-[#0077B5] hover:bg-[#005885] text-white font-semibold py-6 rounded-xl shadow-md hover:shadow-lg transition-all"
+                    className="w-full bg-[#0077B5] hover:bg-[#005885] text-white font-semibold py-6 rounded transition-all"
                   >
                     Wyślij wiadomość
                   </Button>
@@ -79,7 +79,7 @@ const Contact = () => {
               </div>
 
               {/* Instagram Card */}
-              <div className="group glass-card p-8 rounded-sm hover:opacity-90 transition-all duration-300 border-2 border-transparent hover:border-depth/20">
+              <div className="group bg-card p-8 rounded-sm border border-border hover:border-depth/20 transition-all duration-300">
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="w-20 h-20 bg-brand-gradient rounded-sm flex items-center justify-center">
                     <Instagram className="w-10 h-10 text-white" />
@@ -108,7 +108,7 @@ const Contact = () => {
             </div>
 
             {/* Trust Section */}
-            <div className="glass-card p-8 md:p-12 rounded-sm text-center">
+            <div className="bg-card p-8 md:p-12 rounded-sm border border-border text-center">
               <div className="max-w-2xl mx-auto">
                 <div className="w-16 h-16 bg-electric/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Heart className="w-8 h-8 text-electric" />

@@ -17,7 +17,6 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-br from-void via-electric to-void text-white pt-20 pb-8 overflow-hidden">
-      {/* Premium static background orbs */}
       <div className="absolute inset-0 z-0 opacity-[0.04]">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-electric/50 to-depth rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-tl from-depth to-electric rounded-full blur-3xl"></div>
@@ -27,7 +26,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Brand Column */}
           <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="bg-white/10 rounded-md p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
                 <h3 className="text-2xl font-bold text-white">
                   Ludwik&nbsp;C. Siadlak
@@ -43,34 +42,21 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex space-x-3">
-              <a
-                href="https://instagram.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} className="text-white" />
-              </a>
-              <a
-                href="https://twitter.com/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
-                aria-label="X (formerly Twitter)"
-              >
-                <XIcon size={18} className="text-white" />
-              </a>
-              <a
-                href="https://linkedin.com/in/ludwikc"
-                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} className="text-white" />
-              </a>
-              <a
-                href="https://youtube.com/ludwikcsiadlak"
-                className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg"
-                aria-label="YouTube"
-              >
-                <Youtube size={18} className="text-white" />
-              </a>
+              {[
+                { href: "https://instagram.com/ludwikc", icon: Instagram, label: "Instagram" },
+                { href: "https://twitter.com/ludwikc", icon: XIcon, label: "X (formerly Twitter)" },
+                { href: "https://linkedin.com/in/ludwikc", icon: Linkedin, label: "LinkedIn" },
+                { href: "https://youtube.com/ludwikcsiadlak", icon: Youtube, label: "YouTube" },
+              ].map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center transition-all duration-300"
+                  aria-label={label}
+                >
+                  <Icon size={18} className="text-white" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -182,48 +168,30 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* Projekty */}
             <h4 className="text-lg font-bold mb-2 text-white mt-8">Projekty</h4>
             <div className="w-12 h-0.5 bg-gradient-to-r from-electric to-depth rounded-full mb-4"></div>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="https://fundacja.hackerzy.pl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
-                >
-                  Fundacja HACKERZY.PL
-                  <ExternalLink size={14} className="flex-shrink-0" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://deepwork.pl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
-                >
-                  DeepWork.pl
-                  <ExternalLink size={14} className="flex-shrink-0" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://uwaznezycie.pl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
-                >
-                  UwazneZycie.pl
-                  <ExternalLink size={14} className="flex-shrink-0" />
-                </a>
-              </li>
+              {[
+                { href: "https://fundacja.hackerzy.pl", label: "Fundacja HACKERZY.PL" },
+                { href: "https://deepwork.pl", label: "DeepWork.pl" },
+                { href: "https://uwaznezycie.pl", label: "UwazneZycie.pl" },
+              ].map(({ href, label }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
+                  >
+                    {label}
+                    <ExternalLink size={14} className="flex-shrink-0" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="border-t border-white/20 pt-8 mt-16 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
             &copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.

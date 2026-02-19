@@ -35,7 +35,7 @@ export default function PersonaSection({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
           {personas.map((persona, index) => (
-            <div key={index} className="glass-card p-6 rounded-xl hover-scale hover:shadow-xl hover:shadow-depth/10 transition-all duration-300">
+            <div key={index} className="bg-card p-6 rounded-md border border-border transition-all duration-300">
               <div className="w-12 h-12 bg-depth/10 rounded-full flex items-center justify-center mb-4 text-depth">
                 {persona.icon || <Users size={24} />}
               </div>
