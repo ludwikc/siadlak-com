@@ -168,32 +168,17 @@ export default function LifeOSSystemUpgrade() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-void-glow overflow-hidden">
-        {/* Animated gradient orbs */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-electric rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-1/2 right-1/3 w-64 h-64 bg-depth rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+      <section className="relative py-20 md:py-32 bg-void overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             {/* Premium Badge */}
             <div className="text-center mb-8">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-electric via-depth to-electric rounded-full blur opacity-50 animate-pulse"></div>
-                <Badge className="relative bg-brand-gradient text-white border-0 text-base px-6 py-3 shadow-xl">
-                  <Crown className="inline h-5 w-5 mr-2" />
-                  Premium System Upgrade
-                </Badge>
-              </div>
+              <Badge className="bg-brand-gradient text-white border-0 text-base px-6 py-3">
+                <Crown className="inline h-5 w-5 mr-2" />
+                Premium System Upgrade
+              </Badge>
             </div>
 
             {/* Main Heading */}
@@ -240,43 +225,29 @@ export default function LifeOSSystemUpgrade() {
 
             {/* CTA Button with Glow */}
             <div className="text-center">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur-xl opacity-50 animate-pulse"></div>
-                <CTAButton
-                  variant="premium"
-                  size="xl"
-                  className="relative shadow-2xl hover:shadow-3xl"
-                  aria-label="Zarezerwuj Sesję Discovery - przejdź do sekcji rejestracji"
-                  showArrow
-                  onClick={scrollToDiscovery}
-                >
-                  Zarezerwuj Sesję Discovery
-                </CTAButton>
-              </div>
+              <CTAButton
+                variant="premium"
+                size="xl"
+                aria-label="Zarezerwuj Sesję Discovery - przejdź do sekcji rejestracji"
+                showArrow
+                onClick={scrollToDiscovery}
+              >
+                Zarezerwuj Sesję Discovery
+              </CTAButton>
             </div>
           </div>
         </div>
       </section>
 
       {/* Problem Recognition */}
-      <section className="relative py-20 bg-transformation-light overflow-hidden">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
-
-        {/* Static gradient orb */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-electric/10 rounded-full blur-3xl opacity-30"></div>
-
+      <section className="relative py-20 bg-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            {/* Badge */}
             <div className="text-center mb-8">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-red-500 to-orange-500 rounded-full blur opacity-30"></div>
-                <Badge className="relative bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 text-sm px-6 py-2 shadow-lg uppercase tracking-wide">
-                  <AlertTriangle className="inline h-4 w-4 mr-2" />
-                  Prawdziwy problem
-                </Badge>
-              </div>
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
+                <AlertTriangle className="inline h-4 w-4 mr-2" />
+                Prawdziwy problem
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
@@ -304,16 +275,16 @@ export default function LifeOSSystemUpgrade() {
             </Card>
 
             {/* Pustka Alert Card */}
-            <Card className="mb-12 border-2 border-red-400/50 bg-gradient-to-br from-red-50 to-orange-50">
+            <Card className="mb-12 border-2 border-muted bg-muted/30">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
                     <AlertTriangle className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <p className="text-2xl font-bold text-on-light">
                       Ale w środku?{" "}
-                      <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                      <span className="text-depth font-bold">
                         Pustka.
                       </span>
                     </p>
@@ -345,12 +316,12 @@ export default function LifeOSSystemUpgrade() {
                 ].map((item, index) => (
                   <Card
                     key={index}
-                    className="border-2 border-gray-300/50 bg-gradient-to-br from-gray-50 to-gray-100/50 hover:border-gray-400/70 transition-colors"
+                    className="border border-muted bg-white"
                   >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center shrink-0">
-                          <AlertCircle className="h-5 w-5 text-white" />
+                        <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                          <AlertCircle className="h-5 w-5 text-dim" />
                         </div>
                         <div className="flex-1">
                           <p className="text-lg text-on-light-dim">
@@ -368,7 +339,7 @@ export default function LifeOSSystemUpgrade() {
             </div>
 
             {/* Problem Root Cause Card */}
-            <Card className="mb-12 border-2 border-red-400/50 bg-gradient-to-r from-red-500/10 to-orange-500/10">
+            <Card className="mb-12 border border-muted bg-muted/30">
               <CardContent className="p-8 text-center">
                 <p className="text-2xl font-bold text-on-light mb-4">
                   Żadne z tych rozwiązań nie trafia w sedno.
@@ -376,23 +347,19 @@ export default function LifeOSSystemUpgrade() {
                 <p className="text-xl text-on-light-dim mb-6">
                   Bo Twój problem nie leży w strategii, celach ani przeszłości.
                 </p>
-                <div className="relative inline-block">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-electric to-orange-500 rounded-xl blur opacity-30"></div>
-                  <div className="relative bg-gradient-to-r from-electric/20 to-orange-500/20 px-8 py-4 rounded-xl border-2 border-electric/50">
-                    <p className="text-2xl font-bold text-on-light">
-                      Twój problem jest na poziomie tożsamości.
-                    </p>
-                  </div>
+                <div className="bg-gradient-to-r from-electric/10 to-depth/10 px-8 py-4 rounded-md border border-electric/30">
+                  <p className="text-2xl font-bold text-on-light">
+                    Twój problem jest na poziomie tożsamości.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
             {/* System Upgrade Metaphor Card */}
-            <Card className="mb-16 border-2 border-electric/50 bg-gradient-to-br from-electric/5 to-depth/5 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-electric/10 rounded-full blur-3xl"></div>
+            <Card className="mb-16 border border-electric/30 bg-gradient-to-br from-electric/5 to-depth/5 group relative overflow-hidden">
               <CardContent className="p-8 relative">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
                     <Download className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1 space-y-4 text-left">
@@ -444,20 +411,20 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="space-y-6 mb-12">
               {/* Standard Coaching Card */}
-              <Card className="border-2 border-red-300/50 bg-gradient-to-br from-red-50 to-red-100/50 hover:border-red-400/70 transition-all duration-300">
+              <Card className="border border-muted bg-white">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-white" />
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                      <X className="h-5 w-5 text-dim" />
                     </div>
-                    <h3 className="text-2xl font-bold text-red-700 flex-1">
+                    <h3 className="text-2xl font-bold text-on-light flex-1">
                       Standard Coaching / Mentoring
                     </h3>
                   </div>
                    <p className="text-on-light-dim mb-4 pl-14">
                     Daje Ci nowe strategie. Więcej narzędzi. Kolejne frameworki.
                   </p>
-                  <div className="bg-white/60 rounded-lg p-4 pl-14 mb-4">
+                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
                     <p className="text-on-light font-bold mb-2">
                       Problem:
                     </p>
@@ -474,13 +441,13 @@ export default function LifeOSSystemUpgrade() {
               </Card>
 
               {/* Therapy Card */}
-              <Card className="border-2 border-orange-300/50 bg-gradient-to-br from-orange-50 to-orange-100/50 hover:border-orange-400/70 transition-all duration-300">
+              <Card className="border border-muted bg-white">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-white" />
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                      <X className="h-5 w-5 text-dim" />
                     </div>
-                    <h3 className="text-2xl font-bold text-orange-800 flex-1">
+                    <h3 className="text-2xl font-bold text-on-light flex-1">
                       Terapia
                     </h3>
                   </div>
@@ -488,7 +455,7 @@ export default function LifeOSSystemUpgrade() {
                     Pomaga zrozumieć przeszłość. Analizować trauma. Rozumieć,
                     skąd się to bierze.
                   </p>
-                  <div className="bg-white/60 rounded-lg p-4 pl-14 mb-4">
+                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
                     <p className="text-on-light font-bold mb-2">
                       Problem:
                     </p>
@@ -505,20 +472,20 @@ export default function LifeOSSystemUpgrade() {
               </Card>
 
               {/* Online Courses Card */}
-              <Card className="border-2 border-yellow-300/50 bg-gradient-to-br from-yellow-50 to-yellow-100/50 hover:border-yellow-400/70 transition-all duration-300">
+              <Card className="border border-muted bg-white">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-white" />
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                      <X className="h-5 w-5 text-dim" />
                     </div>
-                    <h3 className="text-2xl font-bold text-yellow-800 flex-1">
+                    <h3 className="text-2xl font-bold text-on-light flex-1">
                       Kursy Online / Książki
                     </h3>
                   </div>
                   <p className="text-on-light-dim mb-4 pl-14">
                     Dostarczają wiedzę. Ramowe modele. Inspirację.
                   </p>
-                  <div className="bg-white/60 rounded-lg p-4 pl-14 mb-4">
+                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
                     <p className="text-on-light font-bold mb-2">
                       Problem:
                     </p>
@@ -536,20 +503,20 @@ export default function LifeOSSystemUpgrade() {
               </Card>
 
               {/* Spirituality Card */}
-              <Card className="border-2 border-purple-300/50 bg-gradient-to-br from-purple-50 to-purple-100/50 hover:border-purple-400/70 transition-all duration-300">
+              <Card className="border border-muted bg-white">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-white" />
+                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
+                      <X className="h-5 w-5 text-dim" />
                     </div>
-                    <h3 className="text-2xl font-bold text-purple-800 flex-1">
+                    <h3 className="text-2xl font-bold text-on-light flex-1">
                       Duchowość / Medytacja
                     </h3>
                   </div>
                   <p className="text-on-light-dim mb-4 pl-14">
                     Daje spokój. Perspektywę. Kontakt z czymś większym.
                   </p>
-                  <div className="bg-white/60 rounded-lg p-4 pl-14">
+                  <div className="bg-muted/50 rounded-lg p-4 pl-14">
                     <p className="text-on-light font-bold mb-2">
                       Problem:
                     </p>
@@ -564,7 +531,7 @@ export default function LifeOSSystemUpgrade() {
               </Card>
             </div>
 
-            <div className="text-center bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-2xl">
+            <div className="text-center bg-gradient-to-r from-electric/5 to-depth/5 p-8 rounded-md">
               <h3 className="text-2xl font-bold text-on-light mb-4">
                 Prawdziwy problem: Konflikt systemowy
               </h3>
@@ -648,7 +615,7 @@ export default function LifeOSSystemUpgrade() {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 mb-16">
+            <div className="bg-white/5 p-8 rounded-md border border-white/10 mb-16">
               <p className="text-2xl text-electric font-bold mb-4 text-center">
                 Co to znaczy w praktyce?
               </p>
@@ -660,7 +627,7 @@ export default function LifeOSSystemUpgrade() {
                 W zależności od tego, czego potrzebujesz:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-red-900/20 p-6 rounded-xl">
+                <div className="bg-white/5 p-6 rounded-md">
                     <h4 className="text-xl font-bold text-electric mb-3">
                     Albo dostaniesz "terapię szokową":
                   </h4>
@@ -676,7 +643,7 @@ export default function LifeOSSystemUpgrade() {
                     <li>• Kontrolowane cierpienie, które tworzy przełom</li>
                   </ul>
                 </div>
-                <div className="bg-blue-900/20 p-6 rounded-xl">
+                <div className="bg-white/5 p-6 rounded-md">
                   <h4 className="text-xl font-bold text-electric mb-3">
                     Albo dostaniesz "przewodnictwo przez transcendencję":
                   </h4>
@@ -695,12 +662,11 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="max-w-4xl mx-auto space-y-8">
               {/* Phase 1: Diagnostyka */}
-              <div className="group relative transition-all duration-300 hover:-translate-y-2">
-                <Card className="relative overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-electric/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-electric/10 rounded-full blur-3xl"></div>
+              <div className="group relative">
+                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
                   <CardContent className="p-8 relative">
                     <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
                         <Brain className="w-8 h-8 text-white" />
                       </div>
                       <div>
@@ -758,12 +724,11 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 2: Dekonstrukcja */}
-              <div className="group relative transition-all duration-300 hover:-translate-y-2">
-                <Card className="relative overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-electric/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-depth/10 rounded-full blur-3xl"></div>
+              <div className="group relative">
+                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
                   <CardContent className="p-8 relative">
                     <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-depth to-electric rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="w-14 h-14 bg-gradient-to-br from-depth to-electric rounded-xl flex items-center justify-center shrink-0">
                         <Zap className="w-8 h-8 text-white" />
                       </div>
                       <div>
@@ -780,7 +745,7 @@ export default function LifeOSSystemUpgrade() {
                         Tutaj zaczyna się prawdziwa praca.
                       </p>
 
-                      <div className="bg-red-900/30 p-6 rounded-xl">
+                      <div className="bg-white/5 p-6 rounded-md">
                         <p className="font-bold text-electric mb-3">
                           Jeśli jesteś na Ścieżce Katalizatora:
                         </p>
@@ -801,7 +766,7 @@ export default function LifeOSSystemUpgrade() {
                         </ul>
                       </div>
 
-                      <div className="bg-blue-900/30 p-6 rounded-xl">
+                      <div className="bg-white/5 p-6 rounded-md">
                         <p className="font-bold text-electric mb-3">
                           Jeśli jesteś na Ścieżce Przewodnika:
                         </p>
@@ -831,12 +796,11 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 3: Integracja */}
-              <div className="group relative transition-all duration-300 hover:-translate-y-2">
-                <Card className="relative overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-electric/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl"></div>
+              <div className="group relative">
+                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
                   <CardContent className="p-8 relative">
                     <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-depth rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="w-14 h-14 bg-gradient-to-br from-depth to-electric rounded-xl flex items-center justify-center shrink-0">
                         <GitMerge className="w-8 h-8 text-white" />
                       </div>
                       <div>
@@ -857,7 +821,7 @@ export default function LifeOSSystemUpgrade() {
                         tylko zespół
                       </p>
 
-                      <div className="bg-purple-900/30 p-6 rounded-xl">
+                      <div className="bg-white/5 p-6 rounded-md">
                         <p className="font-bold text-white mb-3">
                           Wykorzystujemy framework Równoległych Rzeczywistości:
                         </p>
@@ -896,11 +860,10 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               {/* Phase 4: Nowy Standard */}
-              <Card className="relative overflow-hidden bg-white/10 backdrop-blur-sm border-2 border-white/20 hover:border-electric/50 transition-all duration-300 group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-electric/10 rounded-full blur-3xl"></div>
+              <Card className="relative overflow-hidden bg-white/5 border border-white/10 group">
                 <CardContent className="p-8 relative">
                   <div className="flex items-center gap-6 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
                       <Crown className="w-8 h-8 text-white" />
                     </div>
                     <div>
@@ -947,12 +910,12 @@ export default function LifeOSSystemUpgrade() {
                         Poniedziałek, 9 rano. Decyzja o 2M PLN.
                       </p>
                       <p className="mb-2">
-                        <span className="font-bold text-red-400">Przed:</span>{" "}
+                        <span className="font-bold text-dim">Przed:</span>{" "}
                         Paraliż. Analiza. Więcej analiz. Lęk. Prokrastynacja.
                         Decyzja z desperacji.
                       </p>
                       <p className="mb-4">
-                        <span className="font-bold text-green-400">Po:</span>{" "}
+                        <span className="font-bold text-electric">Po:</span>{" "}
                         Jasność. Połączenie intuicji i danych. Decyzja w 30
                         minut. Spokój niezależnie od wyniku.
                       </p>
@@ -987,20 +950,14 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Real Effects */}
-      <section className="relative py-20 bg-transformation-light overflow-hidden">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
-
-        {/* Static gradient orb */}
-        <div className="absolute top-40 left-20 w-96 h-96 bg-electric/10 rounded-full blur-3xl opacity-30"></div>
-
+      <section className="relative py-20 bg-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="text-center mb-8">
-              <span className="transformation-badge-success text-sm uppercase tracking-wide">
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
                 Rezultaty
-              </span>
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
@@ -1106,9 +1063,9 @@ export default function LifeOSSystemUpgrade() {
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="text-center mb-8">
-              <span className="transformation-badge-premium text-sm uppercase tracking-wide">
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
                 Dlaczego Ludwik
-              </span>
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
@@ -1234,9 +1191,9 @@ export default function LifeOSSystemUpgrade() {
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="text-center mb-8">
-              <span className="transformation-badge-premium text-sm uppercase tracking-wide">
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
                 Inwestycja
-              </span>
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
@@ -1380,7 +1337,7 @@ export default function LifeOSSystemUpgrade() {
                   </ul>
                 </div>
 
-                <div className="text-center bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-2xl">
+                <div className="text-center bg-gradient-to-r from-electric/5 to-depth/5 p-8 rounded-md">
                   <p className="text-2xl font-bold text-on-light mb-6">
                     Pytanie nie brzmi "czy to drogie".
                   </p>
@@ -1421,9 +1378,9 @@ export default function LifeOSSystemUpgrade() {
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="text-center mb-8">
-              <span className="transformation-badge text-sm uppercase tracking-wide">
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
                 Kwalifikacja
-              </span>
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
@@ -1431,14 +1388,14 @@ export default function LifeOSSystemUpgrade() {
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="bg-green-50 border-2 border-green-200">
+              <Card className="bg-electric/5 border border-electric/30">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-green-700">
+                  <h3 className="text-2xl font-bold mb-6 text-electric">
                     ✅ TAK, jeśli:
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Osiągnąłeś sukces, ale czujesz pustkę
@@ -1450,7 +1407,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Jesteś gotowy na brutalną szczerość
@@ -1462,7 +1419,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Myślisz systemowo i filozoficznie
@@ -1474,7 +1431,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Masz poczucie fragmentacji
@@ -1486,7 +1443,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Szukasz transformacji, nie technik
@@ -1498,7 +1455,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Jesteś gotowy na proces (8 tygodni to minimum)
@@ -1510,7 +1467,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Zarabiasz min. 150K PLN rocznie ("na rękę")
@@ -1525,14 +1482,14 @@ export default function LifeOSSystemUpgrade() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-red-50 border-2 border-red-200">
+              <Card className="bg-muted/30 border border-muted">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-red-700">
+                  <h3 className="text-2xl font-bold mb-6 text-on-light">
                     ❌ NIE, jeśli:
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Szukasz motywacyjnego kopa
@@ -1544,7 +1501,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Potrzebujesz szybkich rozwiązań
@@ -1556,7 +1513,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Nie jesteś gotowy zakwestionować siebie
@@ -1569,7 +1526,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Przeżywasz ostry kryzys
@@ -1583,7 +1540,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Oczekujesz gotowych rozwiązań
@@ -1596,7 +1553,7 @@ export default function LifeOSSystemUpgrade() {
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <AlertCircle className="w-6 h-6 mr-3 text-red-600 flex-shrink-0 mt-1" />
+                      <AlertCircle className="w-6 h-6 mr-3 text-dim flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-on-light font-bold mb-1">
                           Nie stać Cię na tę inwestycję bez stresu
@@ -1628,9 +1585,9 @@ export default function LifeOSSystemUpgrade() {
           <div className="max-w-4xl mx-auto">
             {/* Badge */}
             <div className="text-center mb-8">
-              <span className="transformation-badge text-sm uppercase tracking-wide">
+              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
                 Najczęstsze pytania
-              </span>
+              </Badge>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-charcoal text-center">
