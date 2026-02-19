@@ -34,7 +34,7 @@ export default function HakowanieProduktywnosci() {
   return (
     <Layout>
       {/* 2.2. Hero Section - Theme Locked */}
-      <section className="py-12 md:py-20 bg-gradient-locked-hero section-locked text-locked-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-locked-hero-complex section-locked text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
 
@@ -56,7 +56,7 @@ export default function HakowanieProduktywnosci() {
             {/* Main Headline - Benefit-Focused */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
               Zbuduj{" "}
-              <span className="text-locked-gradient">żelazną dyscyplinę</span> i
+              <span className="bg-gradient-text-brand-dark">żelazną dyscyplinę</span> i
               przestań odkładać ważne sprawy na później
             </h1>
 
@@ -131,15 +131,15 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.3. Problem Agitation Section - Theme Adaptive */}
-      <section className="py-16 md:py-20 bg-background-primary">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
                 Czy Ty też zmagasz się z tymi wyzwaniami?
               </h3>
-              <p className="text-lg sm:text-xl text-text-secondary">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Sprawdź, ile z tych problemów Cię dotyczy
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function HakowanieProduktywnosci() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500/20 to-red-600/20 flex items-center justify-center">
                     <Focus className="h-6 w-6 text-red-500" />
                   </div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-text-primary">
+                  <h4 className="text-xl sm:text-2xl font-bold text-foreground">
                     Problemy z koncentracją
                   </h4>
                 </div>
@@ -186,7 +186,7 @@ export default function HakowanieProduktywnosci() {
                         <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center group-hover:bg-red-200 transition-colors group-hover:scale-110 duration-300">
                           <problem.icon className="h-6 w-6 text-red-600 group-hover:animate-pulse" />
                         </div>
-                        <p className="text-text-secondary group-hover:text-text-primary transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
+                        <p className="text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
                           {problem.text}
                         </p>
                       </div>
@@ -201,7 +201,7 @@ export default function HakowanieProduktywnosci() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500/20 to-orange-600/20 flex items-center justify-center">
                     <Zap className="h-6 w-6 text-orange-500" />
                   </div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-text-primary">
+                  <h4 className="text-xl sm:text-2xl font-bold text-foreground">
                     Problemy z działaniem
                   </h4>
                 </div>
@@ -245,7 +245,7 @@ export default function HakowanieProduktywnosci() {
                         <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-200 transition-colors group-hover:scale-110 duration-300">
                           <problem.icon className="h-6 w-6 text-orange-600 group-hover:animate-pulse" />
                         </div>
-                        <p className="text-text-secondary group-hover:text-text-primary transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
+                        <p className="text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
                           {problem.text}
                         </p>
                       </div>
@@ -260,7 +260,7 @@ export default function HakowanieProduktywnosci() {
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-600/20 to-red-700/20 flex items-center justify-center">
                     <Battery className="h-6 w-6 text-red-600" />
                   </div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-text-primary">
+                  <h4 className="text-xl sm:text-2xl font-bold text-foreground">
                     Problemy z energią
                   </h4>
                 </div>
@@ -294,7 +294,7 @@ export default function HakowanieProduktywnosci() {
                         <div className="flex-shrink-0 w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center group-hover:bg-red-300 transition-colors group-hover:scale-110 duration-300">
                           <problem.icon className="h-6 w-6 text-red-700 group-hover:animate-pulse" />
                         </div>
-                        <p className="text-text-secondary group-hover:text-text-primary transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
+                        <p className="text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
                           {problem.text}
                         </p>
                       </div>
@@ -309,15 +309,15 @@ export default function HakowanieProduktywnosci() {
               <div className="absolute -inset-1 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur opacity-20"></div>
               <div className="relative text-center p-8 sm:p-10 bg-white rounded-2xl border-2 border-electric/20">
                 <div className="w-16 h-16 bg-gradient-to-br from-electric/20 to-depth/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ShieldCheck className="h-8 w-8 text-depth" />
+                  <ShieldCheck className="h-8 w-8 text-electric" />
                 </div>
-                <p className="text-lg sm:text-xl text-text-primary font-medium mb-4">
+                <p className="text-lg sm:text-xl text-foreground font-medium mb-4">
                   <strong>Doskonale Cię rozumiem. To nie Twoja wina.</strong>
                 </p>
-                <p className="text-2xl sm:text-3xl font-bold text-depth mb-2">
+                <p className="text-2xl sm:text-3xl font-bold text-electric mb-2">
                   Jesteś ofiarą manipulacji.
                 </p>
-                <p className="text-base sm:text-lg text-text-secondary">
+                <p className="text-base sm:text-lg text-muted-foreground">
                   I zaraz Ci pokażę, kto za tym stoi →
                 </p>
               </div>
@@ -327,27 +327,27 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.4. Enemy/Context Section - Theme Adaptive */}
-      <section className="py-16 bg-background-secondary">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 To nie jest teoria spiskowa. Wiesz doskonale, że są dwa dobra, o
                 które walczą największe korporacje tego świata
               </h2>
-              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-depth">
-                <span>⌚️ czas</span>
-                <span>👀 uwaga</span>
+              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-electric">
+                <span aria-hidden="true">⌚️</span> czas
+                <span aria-hidden="true">👀</span> uwaga
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Card className="glass-card">
                 <CardContent className="p-6">
-                  <h4 className="font-bold text-lg mb-4 text-text-primary">
+                   <h4 className="font-bold text-lg mb-4 text-foreground">
                     Fakty, które musisz znać:
                   </h4>
-                  <ul className="space-y-3 text-text-secondary">
+                  <ul className="space-y-3 text-muted-foreground">
                     <li>
                       • Dzisiaj w ciągu jednej doby dostajemy więcej informacji
                       niż człowiek średniowiecza przez całe życie
@@ -370,14 +370,14 @@ export default function HakowanieProduktywnosci() {
 
               <Card className="glass-card">
                 <CardContent className="p-6">
-                  <h4 className="font-bold text-lg mb-4 text-text-primary">
+                   <h4 className="font-bold text-lg mb-4 text-foreground">
                     Moja filozofia:
                   </h4>
-                  <blockquote className="text-lg italic text-depth font-medium mb-4">
+                  <blockquote className="text-lg italic text-electric font-medium mb-4">
                     "Często mówię, że: Skupienie będzie superumiejętnością w
                     nadchodzących latach"
                   </blockquote>
-                  <p className="text-text-secondary">
+                  <p className="text-muted-foreground">
                     W świecie, gdzie wszystko walczy o twoją uwagę, umiejętność
                     skupienia się na tym, co ważne, stanie się twoją największą
                     przewagą konkurencyjną.
@@ -387,7 +387,7 @@ export default function HakowanieProduktywnosci() {
             </div>
 
             <div className="text-center p-8 bg-gradient-to-r from-depth/10 to-electric/10 rounded-xl">
-              <p className="text-2xl font-bold text-text-primary">
+              <p className="text-2xl font-bold text-foreground">
                 Ale mam na to hak. 🎯
               </p>
             </div>
@@ -396,19 +396,19 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.5. Solution Introduction - Theme Adaptive */}
-      <section className="py-16 bg-card-bg">
+      <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
               Produktywność da się wypracować. Każdy może ją osiągnąć.{" "}
-              <span className="text-depth">Ty Też</span>
+              <span className="text-electric">Ty Też</span>
             </h2>
 
             <div className="glass-card p-8 mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-text-primary">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
                 Produktywność jest jak mięsień.
               </h3>
-              <p className="text-lg text-text-secondary mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 Im częściej go ćwiczysz, tym silniejszy się staje. Ale tak jak w
                 treningu siłowym, musisz wiedzieć, <strong>jak</strong> ćwiczyć,
                 żeby nie zrobić sobie krzywdy.
@@ -417,10 +417,10 @@ export default function HakowanieProduktywnosci() {
 
             <Card className="glass-card border-l-4 border-l-color-warning mb-8">
               <CardContent className="p-6">
-                <h4 className="font-bold text-lg mb-4 text-text-primary">
+                <h4 className="font-bold text-lg mb-4 text-foreground">
                   Problem z większością kursów produktywności:
                 </h4>
-                <p className="text-text-secondary">
+                <p className="text-muted-foreground">
                   Gdy system nie działa, mówią: "Nie starasz się wystarczająco",
                   "Nie masz dyscypliny", "Musisz więcej chcieć".{" "}
                   <strong className="text-color-error">
@@ -431,11 +431,11 @@ export default function HakowanieProduktywnosci() {
             </Card>
 
             <div className="bg-gradient-to-r from-electric/20 to-depth/20 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-4 text-text-primary">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">
                 Właśnie o to w tym chodzi – żeby znaleźć{" "}
-                <span className="text-depth">SWOJĄ</span> produktywność
+                <span className="text-electric">SWOJĄ</span> produktywność
               </h3>
-              <p className="text-lg text-text-secondary">
+              <p className="text-lg text-muted-foreground">
                 Nie kopię rutyn miliarderów. Nie podrabianie czyjegoś systemu.
                 Twój unikalny sposób na maksymalizację wydajności przy
                 zachowaniu zdrowia psychicznego.
@@ -446,21 +446,21 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.6. Benefits/Future Vision - Theme Adaptive */}
-      <section className="py-16 md:py-20 bg-background-tertiary">
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/20 to-depth/20 px-5 py-2 rounded-full mb-6">
-                <Sparkles className="h-5 w-5 text-depth" />
-                <span className="text-sm font-bold text-depth uppercase">
+                <Sparkles className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
                   Twoja przyszłość
                 </span>
               </div>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
                 Jak wyglądałoby Twoje życie, gdybyś:
               </h3>
-              <p className="text-lg sm:text-xl text-text-secondary">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Wyobraź sobie te scenariusze jako swoją rzeczywistość
               </p>
             </div>
@@ -500,14 +500,14 @@ export default function HakowanieProduktywnosci() {
                 >
                   <div className="flex flex-col items-center text-center gap-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-electric/20 to-depth/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <benefit.icon className="h-7 w-7 text-depth" />
+                      <benefit.icon className="h-7 w-7 text-electric" />
                     </div>
-                    <p className="text-text-primary font-medium leading-relaxed text-sm sm:text-base">
+                    <p className="text-foreground font-medium leading-relaxed text-sm sm:text-base">
                       {benefit.text}
                     </p>
                     {/* Sparkle effect on hover */}
                     <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Sparkles className="h-4 w-4 text-depth animate-pulse" />
+                      <Sparkles className="h-4 w-4 text-electric animate-pulse" />
                     </div>
                   </div>
                 </div>
@@ -522,10 +522,10 @@ export default function HakowanieProduktywnosci() {
                   Konkretne rezultaty
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-text-primary">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
                 Mam dla Ciebie program, który:
               </h3>
-              <p className="text-lg text-text-secondary mb-12">
+              <p className="text-lg text-muted-foreground mb-12">
                 Każda umiejętność z konkretnym timeframe'em realizacji
               </p>
 
@@ -600,7 +600,7 @@ export default function HakowanieProduktywnosci() {
                               {item.timeframe}
                             </span>
                           </div>
-                          <p className="text-text-secondary group-hover:text-text-primary transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 leading-relaxed text-sm sm:text-base">
                             {item.benefit}
                           </p>
                         </div>
@@ -625,7 +625,7 @@ export default function HakowanieProduktywnosci() {
             </div>
 
             <div className="bg-gradient-to-r from-color-success/10 to-color-info/10 p-8 rounded-xl">
-              <h4 className="text-xl font-bold mb-6 text-text-primary">
+              <h4 className="text-xl font-bold mb-6 text-foreground">
                 Dodatkowo zyskasz:
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -638,7 +638,7 @@ export default function HakowanieProduktywnosci() {
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start">
                     <ThumbsUp className="h-5 w-5 text-color-info mr-3 flex-shrink-0 mt-1" />
-                    <p className="text-text-secondary">{benefit}</p>
+                    <p className="text-muted-foreground">{benefit}</p>
                   </div>
                 ))}
               </div>
@@ -648,17 +648,17 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.7. Program Modules - Theme Adaptive */}
-      <section className="py-16 bg-card-bg">
+      <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 Poznaj Hakowanie Produktywności
               </h2>
-              <p className="text-lg text-depth font-medium mb-4">
+              <p className="text-lg text-electric font-medium mb-4">
                 Właśnie to odróżnia Hakowanie Produktywności od innych kursów
               </p>
-              <p className="text-text-secondary mb-8">
+              <p className="text-muted-foreground mb-8">
                 Nie dostaniesz ogólnych porad typu "wstawaj o 5 rano".
                 Dostaniesz spersonalizowany system dostosowany do Twojego trybu
                 życia, osobowości i celów.
@@ -668,10 +668,10 @@ export default function HakowanieProduktywnosci() {
             {/* Course Portal Preview */}
             <div className="mb-12">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-3 text-text-primary">
+                <h3 className="text-2xl font-bold mb-3 text-foreground">
                   Zagląd do środka kursu
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-muted-foreground">
                   Zobacz, jak wygląda platforma i jak działa system kursu
                 </p>
               </div>
@@ -687,10 +687,10 @@ export default function HakowanieProduktywnosci() {
 
             <Card className="glass-card mb-12 border-l-4 border-l-color-warning">
               <CardContent className="p-6">
-                <h3 className="font-bold text-lg mb-4 text-text-primary">
+                <h3 className="font-bold text-lg mb-4 text-foreground">
                   Czy wiesz, że wiele rutyn bogatych ludzi to zwykła ściema?
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-muted-foreground">
                   Tim Cook może wstawać o 4:30, bo ma armię asystentów i nie
                   musi samemu robić zakupów.
                   <strong>
@@ -701,10 +701,10 @@ export default function HakowanieProduktywnosci() {
               </CardContent>
             </Card>
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-text-primary">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-foreground">
               Co zawiera program Hakowanie Produktywności?
             </h3>
-            <p className="text-center text-text-secondary mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               6 modułów gotowych do "zainstalowania" w Twoim umyśle
             </p>
 
@@ -777,7 +777,7 @@ export default function HakowanieProduktywnosci() {
                 >
                   {/* Progress Badge */}
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-depth/10 to-electric/10 px-3 py-1.5 rounded-full border border-depth/20">
-                    <span className="text-xs font-bold text-depth">
+                    <span className="text-xs font-bold text-electric">
                       {index + 1}/6
                     </span>
                   </div>
@@ -811,10 +811,10 @@ export default function HakowanieProduktywnosci() {
 
                     {/* Title + Subtitle */}
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-xl sm:text-2xl font-bold text-text-primary mb-1 leading-tight">
+                      <h4 className="text-xl sm:text-2xl font-bold text-foreground mb-1 leading-tight">
                         {module.title}
                       </h4>
-                      <p className="text-sm sm:text-base text-text-secondary font-medium">
+                      <p className="text-sm sm:text-base text-muted-foreground font-medium">
                         {module.subtitle}
                       </p>
                     </div>
@@ -837,7 +837,7 @@ export default function HakowanieProduktywnosci() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-5">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-5">
                     {module.description}
                   </p>
 
@@ -854,16 +854,16 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.8. Community & Bonuses - Theme Adaptive */}
-      <section className="py-16 bg-background-primary">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
               Sam kurs to dopiero początek!
             </h2>
 
             <div className="text-center mb-12">
-              <p className="text-xl text-text-secondary mb-6">
-                <strong className="text-depth">
+              <p className="text-xl text-muted-foreground mb-6">
+                <strong className="text-electric">
                   Serce Hakowania Produktywności to społeczność Hakerów
                 </strong>{" "}
                 - ludzi, którzy postanowili wziąć swoje życie w swoje ręce.
@@ -872,10 +872,10 @@ export default function HakowanieProduktywnosci() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <Card className="glass-card">
                   <CardContent className="p-6">
-                    <h4 className="font-bold text-lg mb-4 text-text-primary">
+                    <h4 className="font-bold text-lg mb-4 text-foreground">
                       W społeczności znajdziesz:
                     </h4>
-                    <ul className="space-y-2 text-text-secondary text-left">
+                    <ul className="space-y-2 text-muted-foreground text-left">
                       <li>• Codzienne spotkania o 12:34 (tak, o tej porze!)</li>
                       <li>• Ekspertów z wielu dziedzin gotowych pomóc</li>
                       <li>• Ludzi, którzy przeszli podobną drogę</li>
@@ -886,13 +886,13 @@ export default function HakowanieProduktywnosci() {
                 </Card>
 
                 <div className="space-y-4">
-                  <div className="bg-background-secondary p-4 rounded-lg text-center">
-                    <p className="text-sm text-text-secondary">
+                  <div className="bg-muted p-4 rounded-lg text-center">
+                    <p className="text-sm text-muted-foreground">
                       [zdjęcia ze środka]
                     </p>
                   </div>
-                  <div className="bg-background-secondary p-4 rounded-lg text-center">
-                    <p className="text-sm text-text-secondary">
+                  <div className="bg-muted p-4 rounded-lg text-center">
+                    <p className="text-sm text-muted-foreground">
                       [zdjęcie społeczności, jeśli masz]
                     </p>
                   </div>
@@ -900,7 +900,7 @@ export default function HakowanieProduktywnosci() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-center mb-8 text-text-primary">
+            <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
               W społeczności jest największa wartość, ale to nadal nie jest
               wszystko
             </h3>
@@ -911,7 +911,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.9. Pricing Section - Theme Locked */}
-      <section className="py-20 bg-gradient-locked-pricing section-locked text-locked-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-locked-hero-complex section-locked text-locked-white relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-electric/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-depth/20 rounded-full blur-3xl"></div>
 
@@ -1097,7 +1097,7 @@ export default function HakowanieProduktywnosci() {
             <Button
               variant="special"
               size="lg"
-              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl"
+              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
               Chcę przestać zwlekać! Zamawiam
               <ArrowRight className="ml-2 h-6 w-6 text-depth" />
@@ -1131,7 +1131,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.10. Testimonials - Enhanced with Social Proof */}
-      <section className="py-16 md:py-20 bg-background-secondary">
+      <section className="py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1142,10 +1142,10 @@ export default function HakowanieProduktywnosci() {
                   Sprawdzone przez setki osób
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
                 Czy warto? Sprawdź opinie
               </h2>
-              <p className="text-lg sm:text-xl text-text-secondary">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Zobacz, jak kurs zmienił życie innych uczestników
               </p>
             </div>
@@ -1221,7 +1221,7 @@ export default function HakowanieProduktywnosci() {
                     <div className="absolute -top-2 -left-2 text-6xl text-depth/20 font-serif leading-none">
                       "
                     </div>
-                    <p className="text-base text-text-secondary leading-relaxed relative z-10 italic">
+                    <p className="text-base text-muted-foreground leading-relaxed relative z-10 italic">
                       {testimonial.quote}
                     </p>
                   </blockquote>
@@ -1254,17 +1254,17 @@ export default function HakowanieProduktywnosci() {
 
                     {/* Name and Title */}
                     <div className="flex-1">
-                      <div className="font-bold text-text-primary">
+                      <div className="font-bold text-foreground">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-text-secondary">
+                      <div className="text-sm text-muted-foreground">
                         {testimonial.title}
                       </div>
                     </div>
 
                     {/* Category Tag */}
                     <div className="bg-electric/10 px-3 py-1 rounded-full">
-                      <span className="text-xs font-medium text-depth">
+                      <span className="text-xs font-medium text-electric">
                         {testimonial.role}
                       </span>
                     </div>
@@ -1278,28 +1278,28 @@ export default function HakowanieProduktywnosci() {
 
             {/* Trust Badges */}
             <div className="text-center mb-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-text-primary">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 text-foreground">
                 Zaufali mi nie tylko ludzie, ale i wielkie firmy
               </h3>
               <div className="bg-white p-8 rounded-xl shadow-sm border-2 border-gray-100">
-                <p className="text-text-secondary text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4">
                   Pracowałem z międzynarodowymi instytucjami i setkami
                   uczestników
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-8">
-                  <div className="flex items-center gap-2 text-text-secondary">
-                    <Users className="h-5 w-5 text-depth" />
-                    <span className="font-bold text-text-primary">500+</span>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Users className="h-5 w-5 text-electric" />
+                    <span className="font-bold text-foreground">500+</span>
                     uczestników
                   </div>
-                  <div className="flex items-center gap-2 text-text-secondary">
+                  <div className="flex items-center gap-2 text-muted-foreground">
                     <Star className="h-5 w-5 text-yellow-500" />
-                    <span className="font-bold text-text-primary">4.9/5</span>
+                    <span className="font-bold text-foreground">4.9/5</span>
                     średnia ocena
                   </div>
-                  <div className="flex items-center gap-2 text-text-secondary">
+                  <div className="flex items-center gap-2 text-muted-foreground">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
-                    <span className="font-bold text-text-primary">95%</span>
+                    <span className="font-bold text-foreground">95%</span>
                     poleca kurs
                   </div>
                 </div>
@@ -1311,7 +1311,7 @@ export default function HakowanieProduktywnosci() {
               <Button
                 variant="default"
                 size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 group"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
               >
                 Ufam Ci, Ludwik. Chcę ruszyć z miejsca. Zamawiam
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1327,10 +1327,10 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="glass-card p-8 border-4 border-color-success">
               <ShieldCheck className="h-16 w-16 text-color-success mx-auto mb-6" />
-              <h2 className="text-3xl font-bold mb-6 text-text-primary">
+              <h2 className="text-3xl font-bold mb-6 text-foreground">
                 Gwarancja
               </h2>
-              <p className="text-lg text-text-secondary">
+              <p className="text-lg text-muted-foreground">
                 Jeśli cokolwiek Ci się nie spodoba - masz{" "}
                 <strong>30 dni na zwrot, bez zadawania pytań.</strong>
               </p>
@@ -1340,7 +1340,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.12. Objections & FAQ - Enhanced with Myth vs Reality */}
-      <section className="py-16 md:py-20 bg-card-bg">
+      <section className="py-16 md:py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1351,10 +1351,10 @@ export default function HakowanieProduktywnosci() {
                   Rozwiewamy wątpliwości
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
                 Co Cię powstrzymuje?
               </h2>
-              <p className="text-lg sm:text-xl text-text-secondary">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Mity vs Rzeczywistość - sprawdź prawdę
               </p>
             </div>
@@ -1423,10 +1423,10 @@ export default function HakowanieProduktywnosci() {
             {/* FAQ Section */}
             <div className="mb-12">
               <div className="text-center mb-8">
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-foreground">
                   Najczęściej zadawane pytania
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-muted-foreground">
                   Wszystko, co musisz wiedzieć przed rozpoczęciem
                 </p>
               </div>
@@ -1438,7 +1438,7 @@ export default function HakowanieProduktywnosci() {
               <Button
                 variant="default"
                 size="lg"
-                className="text-base sm:text-lg px-8 py-6 group"
+                className="text-base sm:text-lg px-8 py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
               >
                 Rozwiałeś moje wątpliwości. Chcę ruszyć z miejsca. Zamawiam
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

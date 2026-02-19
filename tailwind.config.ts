@@ -42,6 +42,9 @@ const config: Config = {
   			paper: '#FFFFFF',
   			dim: '#9CA3AF',
 			'color-success': 'hsl(var(--color-success))',
+			'color-warning': 'hsl(var(--color-warning))',
+			'color-error': 'hsl(var(--color-error))',
+			'color-info': 'hsl(var(--color-info))',
   			lifehacker: {
   				purple: 'hsl(263, 70%, 50%)',
   				'purple-dark': 'hsl(263, 70%, 8%)',
