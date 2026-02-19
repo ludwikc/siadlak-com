@@ -600,17 +600,17 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* 2.7. Program Modules - Theme Adaptive */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Poznaj Hakowanie Produktywności
               </h2>
               <p className="text-lg text-electric font-medium mb-4">
                 Właśnie to odróżnia Hakowanie Produktywności od innych kursów
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-dim mb-8">
                 Nie dostaniesz ogólnych porad typu "wstawaj o 5 rano".
                 Dostaniesz spersonalizowany system dostosowany do Twojego trybu
                 życia, osobowości i celów.
@@ -620,10 +620,10 @@ export default function HakowanieProduktywnosci() {
             {/* Course Portal Preview */}
             <div className="mb-12">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">
+                <h3 className="text-2xl font-bold mb-3 text-white">
                   Zagląd do środka kursu
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-dim">
                   Zobacz, jak wygląda platforma i jak działa system kursu
                 </p>
               </div>
@@ -639,10 +639,10 @@ export default function HakowanieProduktywnosci() {
 
             <Card className="glass-card mb-12 border-l-4 border-l-depth">
               <CardContent className="p-6">
-                <h3 className="font-bold text-lg mb-4 text-foreground">
+                <h3 className="font-bold text-lg mb-4 text-white">
                   Czy wiesz, że wiele rutyn bogatych ludzi to zwykła ściema?
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-dim">
                   Tim Cook może wstawać o 4:30, bo ma armię asystentów i nie
                   musi samemu robić zakupów.
                   <strong>
@@ -653,10 +653,10 @@ export default function HakowanieProduktywnosci() {
               </CardContent>
             </Card>
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-foreground">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-white">
               Co zawiera program Hakowanie Produktywności?
             </h3>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-dim mb-12 max-w-2xl mx-auto">
               6 modułów gotowych do "zainstalowania" w Twoim umyśle
             </p>
 
