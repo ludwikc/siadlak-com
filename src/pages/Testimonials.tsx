@@ -1147,17 +1147,19 @@ const Testimonials = () => {
       <SEO {...getSEOConfig('/testimonials')} />
 
       <header className="testimonials-header">
-        <h1>100+ opinii od uczestników z 12 krajów</h1>
-        <p className="subheadline">
-          Żołnierze US Army, Navy i Marines, inżynierowie z Fortune 500, menedżerowie z NATO,
-          przedsiębiorcy z Polski i Norwegii. Nie mówię Ci, że jestem dobry. Niech
-          pokażą Ci to doświadczenia moich Klientów.
-        </p>
-        <p className="testimonials-stats">
-          <strong>10 000+</strong> uczestników · <strong>19</strong> lat ·{' '}
-          <strong>12+</strong> krajów ·{' '}
-          <strong>US Department of Defense · EY · PWC · NATO · Microsoft</strong>
-        </p>
+        <div className="header-inner">
+          <h1>100+ opinii od uczestników z 12 krajów</h1>
+          <p className="subheadline">
+            Żołnierze US Army, Navy i Marines, inżynierowie z Fortune 500, menedżerowie z NATO,
+            przedsiębiorcy z Polski i Norwegii. Nie mówię Ci, że jestem dobry. Niech
+            pokażą Ci to doświadczenia moich Klientów.
+          </p>
+          <p className="testimonials-stats">
+            <strong>10 000+</strong> uczestników · <strong>19</strong> lat ·{' '}
+            <strong>12+</strong> krajów ·{' '}
+            <strong>US Department of Defense · EY · PWC · NATO · Microsoft</strong>
+          </p>
+        </div>
       </header>
 
       <div className="testimonials-container">{renderTestimonials()}</div>
