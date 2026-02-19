@@ -79,9 +79,9 @@ const Contact = () => {
               </div>
 
               {/* Instagram Card */}
-              <div className="group glass-card p-8 rounded-sm hover:opacity-90 transition-all duration-300 border-2 border-transparent hover:border-pink-500/20">
+              <div className="group glass-card p-8 rounded-sm hover:opacity-90 transition-all duration-300 border-2 border-transparent hover:border-depth/20">
                 <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-pink-500 via-purple-500 to-purple-600 rounded-sm flex items-center justify-center">
+                  <div className="w-20 h-20 bg-brand-gradient rounded-sm flex items-center justify-center">
                     <Instagram className="w-10 h-10 text-white" />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ const Contact = () => {
                     onClick={() =>
                       window.open("https://instagram.com/ludwikc", "_blank")
                     }
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-6 rounded-xl shadow-md hover:shadow-lg transition-all"
+                    className="w-full bg-brand-gradient hover:opacity-90 text-white font-semibold py-6 rounded transition-all"
                   >
                     Napisz na DM
                   </Button>

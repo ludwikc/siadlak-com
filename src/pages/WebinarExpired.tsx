@@ -20,7 +20,7 @@ const WebinarExpired = () => {
 
   return (
     <Layout hideFooter={true}>
-      <div className="min-h-screen bg-gradient-to-br from-luminous-white to-secondary pt-16 pb-20">
+      <div className="min-h-screen bg-diamond pt-16 pb-20">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 backdrop-blur-sm border border-gray-500/30 text-gray-500 mb-6">
             <Clock className="h-4 w-4 mr-2" />
@@ -49,8 +49,8 @@ const WebinarExpired = () => {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <MailIcon className="h-10 w-10 text-twilight-indigo mb-4 mx-auto" />
+              <div className="bg-muted p-6 rounded-md border border-muted">
+                <MailIcon className="h-10 w-10 text-electric mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
                   Zapisz się na powiadomienie o kolejnym webinarze
                 </h3>
@@ -59,15 +59,15 @@ const WebinarExpired = () => {
                   przegapisz kolejnej okazji!
                 </p>
                 <Button
-                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                  className="w-full bg-depth hover:bg-depth/90 text-white"
                   onClick={handleNewsletterSignup}
                 >
                   ZAPISZ SIĘ NA POWIADOMIENIE
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-br from-twilight-indigo/10 to-zenith-gold/10 p-6 rounded-xl border border-twilight-indigo/20">
-                <ArrowRight className="h-10 w-10 text-twilight-indigo mb-4 mx-auto" />
+              <div className="bg-electric/5 p-6 rounded-md border border-electric/20">
+                <ArrowRight className="h-10 w-10 text-electric mb-4 mx-auto" />
                 <h3 className="text-lg font-semibold mb-4">
                   Sprawdź program LifeOS: System Upgrade
                 </h3>
@@ -76,7 +76,7 @@ const WebinarExpired = () => {
                   specjalisty do suwerennego lidera.
                 </p>
                 <Button
-                  className="w-full bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                  className="w-full bg-depth hover:bg-depth/90 text-white"
                   onClick={() => navigate("/program/lifeos-system-upgrade")}
                 >
                   DOWIEDZ SIĘ WIĘCEJ O PROGRAMIE
@@ -97,7 +97,7 @@ const WebinarExpired = () => {
 
               <Button
                 size="lg"
-                className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                className="bg-depth hover:bg-depth/90 text-white"
                 onClick={handleDownloadGuide}
               >
                 <Download className="mr-2 h-5 w-5" /> Pobierz Bezpłatny

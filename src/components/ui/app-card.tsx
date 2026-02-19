@@ -30,24 +30,24 @@ interface AppCardProps {
 const categoryConfig = {
   Produktywność: {
     icon: Zap,
-    gradient: "from-twilight-indigo to-zenith-gold",
+    gradient: "from-electric to-depth",
   },
   "Odporność psychiczna": {
     icon: Brain,
-    gradient: "from-neural-blue to-twilight-indigo",
+    gradient: "from-electric to-depth",
   },
   Męskość: {
     icon: Compass,
-    gradient: "from-zenith-gold to-twilight-indigo",
+    gradient: "from-electric to-depth",
   },
 };
 
 const statusConfig = {
-  NOWA: "bg-green-500 text-white shadow-sm",
+  NOWA: "bg-electric text-white shadow-sm",
   POLECANE:
-    "bg-gradient-to-r from-twilight-indigo to-zenith-gold text-white border-0 shadow-sm",
-  NIEDOSTĘPNA: "bg-gray-400 text-white shadow-sm",
-  DOSTĘPNA: "bg-twilight-indigo text-white shadow-sm",
+    "bg-brand-gradient text-white border-0 shadow-sm",
+  NIEDOSTĘPNA: "bg-muted text-muted-foreground shadow-sm",
+  DOSTĘPNA: "bg-depth text-white shadow-sm",
 };
 
 export default function AppCard({
@@ -75,12 +75,11 @@ export default function AppCard({
   return (
     <div
       className={`
-      relative bg-white rounded-3xl overflow-hidden
+      relative bg-white rounded-md overflow-hidden
       transition-all duration-300 ease-out
-      hover:-translate-y-2 hover:shadow-2xl
-      shadow-lg
-      ${featured ? "ring-2 ring-zenith-gold/40" : ""}
-      ${premium ? "bg-gradient-to-br from-deep-charcoal/95 to-twilight-indigo/90" : ""}
+      border border-muted
+      ${featured ? "ring-2 ring-electric/40" : ""}
+      ${premium ? "bg-void text-white" : ""}
     `}
     >
       {/* Status Badge - Top Right with refined styling */}
@@ -91,31 +90,26 @@ export default function AppCard({
       </Badge>
 
       <div className="p-6 sm:p-8">
-        {/* App Icon + Title Section - iOS App Store style */}
+        {/* App Icon + Title Section */}
         <div className="flex items-start gap-4 mb-5">
-          {/* Large App Icon with shadow */}
           <div
             className={`
             w-20 h-20 sm:w-24 sm:h-24
             bg-gradient-to-br ${gradient}
-            rounded-2xl sm:rounded-[22px]
+            rounded-md
             flex items-center justify-center
             flex-shrink-0
-            shadow-lg
             border border-white/20
-            transition-transform duration-300
-            group-hover:scale-105
           `}
           >
-            <CategoryIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white drop-shadow-sm" />
+            <CategoryIcon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
           </div>
 
-          {/* Title + Subtitle */}
           <div className="flex-1 min-w-0">
             <h3
               className={`
               text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-2
-              ${premium ? "text-white" : "text-deep-charcoal"}
+              ${premium ? "text-white" : "text-on-light"}
             `}
             >
               {title}
@@ -123,7 +117,7 @@ export default function AppCard({
             <p
               className={`
               text-base sm:text-lg font-medium
-              ${premium ? "text-white/80" : "text-subtle-slate"}
+              ${premium ? "text-white/80" : "text-dim"}
             `}
             >
               {subtitle}
@@ -131,11 +125,11 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* Rating + Downloads - iOS style inline */}
+        {/* Rating + Downloads */}
         <div className="flex items-center gap-3 mb-4 flex-wrap">
           <div className="flex items-center gap-1">
             <span
-              className={`text-base font-semibold ${premium ? "text-white" : "text-deep-charcoal"}`}
+              className={`text-base font-semibold ${premium ? "text-white" : "text-on-light"}`}
             >
               {rating.toFixed(1)}
             </span>
@@ -143,30 +137,30 @@ export default function AppCard({
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`h-3.5 w-3.5 ${i < Math.floor(rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300 fill-gray-300"}`}
+                  className={`h-3.5 w-3.5 ${i < Math.floor(rating) ? "text-electric fill-electric" : "text-muted fill-muted"}`}
                 />
               ))}
             </div>
           </div>
 
           <span
-            className={`text-sm ${premium ? "text-white/60" : "text-subtle-slate"}`}
+            className={`text-sm ${premium ? "text-white/60" : "text-dim"}`}
           >
             ({ratingsCount.toLocaleString()})
           </span>
 
           <span
-            className={`text-sm font-medium ${premium ? "text-white/70" : "text-subtle-slate"}`}
+            className={`text-sm font-medium ${premium ? "text-white/70" : "text-dim"}`}
           >
             • {downloads}
           </span>
         </div>
 
-        {/* Meta badges - Category + Stats */}
+        {/* Meta badges */}
         <div className="flex items-center gap-2 flex-wrap mb-5">
           <Badge
             variant="outline"
-            className={`text-xs font-semibold ${premium ? "border-white/30 text-white/90 bg-white/10" : "border-twilight-indigo/30 text-twilight-indigo bg-twilight-indigo/5"}`}
+            className={`text-xs font-semibold ${premium ? "border-white/30 text-white/90 bg-white/10" : "border-electric/30 text-electric bg-electric/5"}`}
           >
             {category}
           </Badge>
@@ -174,7 +168,7 @@ export default function AppCard({
           {duration && (
             <Badge
               variant="outline"
-              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-gray-300 text-subtle-slate"}`}
+              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-muted text-dim"}`}
             >
               <Clock className="h-3 w-3" />
               {duration}
@@ -184,7 +178,7 @@ export default function AppCard({
           {target && (
             <Badge
               variant="outline"
-              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-gray-300 text-subtle-slate"}`}
+              className={`text-xs font-medium flex items-center gap-1 ${premium ? "border-white/20 text-white/70" : "border-muted text-dim"}`}
             >
               <Users className="h-3 w-3" />
               {target}
@@ -196,13 +190,13 @@ export default function AppCard({
         <p
           className={`
           text-sm sm:text-base leading-relaxed mb-5
-          ${premium ? "text-white/85" : "text-subtle-slate"}
+          ${premium ? "text-white/85" : "text-dim"}
         `}
         >
           {description}
         </p>
 
-        {/* Key Features - Checkmark style */}
+        {/* Key Features */}
         <div className="mb-6">
           <div className="space-y-2.5">
             {features.slice(0, 3).map((feature, index) => (
@@ -210,17 +204,17 @@ export default function AppCard({
                 <div
                   className={`
                   w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5
-                  ${premium ? "bg-zenith-gold/20" : "bg-twilight-indigo/10"}
+                  ${premium ? "bg-electric/20" : "bg-electric/10"}
                 `}
                 >
                   <Check
-                    className={`h-3 w-3 ${premium ? "text-zenith-gold" : "text-twilight-indigo"}`}
+                    className={`h-3 w-3 ${premium ? "text-electric" : "text-electric"}`}
                   />
                 </div>
                 <span
                   className={`
                   text-sm leading-relaxed
-                  ${premium ? "text-white/90" : "text-subtle-slate"}
+                  ${premium ? "text-white/90" : "text-dim"}
                 `}
                 >
                   {feature}
@@ -230,17 +224,17 @@ export default function AppCard({
           </div>
         </div>
 
-        {/* iOS-style Install Button */}
+        {/* Install Button */}
         <Link to={link} className="block group">
           <button
             className={`
-            w-full py-3.5 px-6 rounded-xl font-bold text-base
+            w-full py-3.5 px-6 rounded font-bold text-base
             transition-all duration-200
             flex items-center justify-center gap-2
             ${
               premium
-                ? "bg-gradient-to-r from-zenith-gold to-twilight-indigo text-white shadow-lg shadow-zenith-gold/30 hover:shadow-xl hover:shadow-zenith-gold/40 hover:scale-[1.02]"
-                : "bg-twilight-indigo text-white shadow-md shadow-twilight-indigo/20 hover:bg-twilight-indigo/90 hover:shadow-lg hover:scale-[1.02]"
+                ? "bg-brand-gradient text-white hover:opacity-90"
+                : "bg-depth text-white hover:opacity-90"
             }
           `}
           >
@@ -253,7 +247,7 @@ export default function AppCard({
         <p
           className={`
           text-center text-xs mt-3
-          ${premium ? "text-white/50" : "text-subtle-slate/70"}
+          ${premium ? "text-white/50" : "text-dim/70"}
         `}
         >
           Dołącz do {downloads} uczestników

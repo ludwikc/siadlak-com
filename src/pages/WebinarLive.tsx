@@ -200,7 +200,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
 
               {/* CTA During Webinar - HIDDEN */}
               {false && showOffer && (
-                <div className="bg-gradient-to-r from-twilight-indigo/30 to-zenith-gold/30 backdrop-blur-lg rounded-xl p-6 border border-twilight-indigo/30 animate-fade-in">
+                <div className="bg-gradient-to-r from-depth/30 to-electric/30 backdrop-blur-lg rounded-md p-6 border border-depth/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
                     Program LifeOS: System Upgrade - Odkryj pełną transformację
                   </h3>
@@ -211,7 +211,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                   </p>
                   <Button
                     size="lg"
-                    className="bg-twilight-indigo hover:bg-twilight-indigo/90 text-white"
+                    className="bg-depth hover:bg-depth/90 text-white"
                     onClick={() =>
                       window.open("/program/lifeos-system-upgrade", "_blank")
                     }
@@ -229,7 +229,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                 <div className="text-center">
                   <Button
                     variant="outline"
-                    className="border-twilight-indigo text-twilight-indigo"
+                    className="border-depth text-depth"
                     onClick={handleCTAClick}
                   >
                     Pokaż ofertę specjalną
