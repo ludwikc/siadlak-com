@@ -17,6 +17,7 @@ export const redirects: RedirectConfig = {
   
   "/uwaznosc": "/program/uwazne-zycie",
   "/u": "/program/uwazne-zycie",
+  "/depresja": "/webinar/depresja",
 
   // Legacy/renamed routes
   "/program/mental-elevator": "/program/lifeos-system-upgrade",
