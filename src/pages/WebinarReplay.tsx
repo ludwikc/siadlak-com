@@ -305,7 +305,7 @@ const WebinarReplay = () => {
                     ? "bg-muted hover:bg-muted text-muted-foreground cursor-not-allowed"
                     : "bg-brand-gradient hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 }`}
-                onClick={() => navigate("/program/meski-kompas")}
+                onClick={() => navigate("/program/meskosc")}
                 disabled={offerExpired}
               >
                 {offerExpired
