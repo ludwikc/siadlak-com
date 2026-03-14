@@ -212,7 +212,7 @@ const About = () => {
       <div className="the-cut" />
 
       {/* 6. METODA */}
-      <section className="section-content bg-surface">
+      <section className="section-content bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-[800px] mx-auto">
             <h2 className="font-heading text-2xl md:text-4xl font-bold text-on-dark mb-8">
