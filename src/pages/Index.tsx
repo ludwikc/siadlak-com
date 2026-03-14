@@ -253,63 +253,42 @@ const Index = () => {
       />
 
       {/* ═══ AUTHORITY SECTION ═══ */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#080808' }}>
-        {/* void-glow overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
-          }}
-        />
+      <section className="py-24 relative overflow-hidden bg-void">
         {/* Background photo – pinned left */}
         <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
           <img src={sessionPhoto6} alt="" className="h-full w-auto object-cover object-left opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#080808]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
-        {/* Decorative blob */}
-        <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-[#080808] blur-[100px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <Eyebrow color="electric">AUTORYTET</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-12">
-            Nie liczby. Przełom.
+            Mam świetne CV. Ale to nie ono przekonuje ludzi.
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left: paragraphs */}
-            <div className="text-dim space-y-6">
-              <p>
-                Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft. 10 000 profesjonalistów. Fortune 500. NATO.
-                Jednostki specjalne. Psychologia i informatyka — Oxford.
-              </p>
-              <p>Mógłbym. Ale to nie to przekonuje ludzi.</p>
-              <p>
-                Przekonuje ich to, że wiem, jak to jest leżeć na wszystkich kolorach sukna naraz — i myśleć, że to Ty
-                masz niewłaściwy kolor.
-              </p>
-            </div>
+          <div className="text-dim text-lg space-y-6 max-w-3xl">
+            <p>
+              19 lat jako trener Microsoft. 10 000 profesjonalistów. Fortune 500. NATO. Jednostki specjalne. 
+              Psychologia na SWPS, a IT — na{" "}
+              <a href="https://ox.ac.uk" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">
+                Oksfordzie
+              </a>.
+            </p>
+            <p>Imponujące, prawda? Mnie też imponowało — przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
 
-            {/* Right: blockquote card */}
-            <div className="bg-surface p-8 border-l-4 border-depth">
-              <blockquote className="text-white italic text-lg leading-relaxed">
-                „W 2014 roku stałem na peronie metra Dworzek Gdański i chciałem zrobić krok. Miałem wszystko.
-                Najpiękniejszy diament w najdroższej oprawce, na jedwabnym suknie. I kompletną pustkę w środku."
-              </blockquote>
-            </div>
-          </div>
+            <blockquote className="border-l-2 border-electric pl-6 py-2 my-8">
+              <p className="text-white italic text-xl leading-relaxed">
+                „Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce. I kompletną pustkę w środku."
+              </p>
+            </blockquote>
 
-          {/* Below grid */}
-          <div className="mt-12 text-dim text-lg space-y-6">
             <p>
               Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek ludzi:{" "}
-              <strong className="text-white">żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.</strong>
+              <strong className="text-white">certyfikaty mówią, co umiesz. Ale nie mówią, kim jesteś.</strong>
             </p>
-            <p className="text-white text-center text-xl font-medium">Jestem tym, kto patrzy.</p>
+            <p>I tego nie nauczysz się na żadnym szkoleniu. Tego uczysz się stojąc na peronie i decydując, że jednak zostaniesz.</p>
             <p>
-              Od 19 lat doskonalę tę umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie
-              od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je
-              znalazł.
+              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)
             </p>
           </div>
         </div>
