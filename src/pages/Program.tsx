@@ -10,27 +10,27 @@ import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.
 const decisionTree = [
   {
     problem: "Chaos w głowie i brak czasu",
-    program: "→ Produktywność",
+    program: "Produktywność",
     link: "/program/produktywnosc",
   },
   {
     problem: "Stres, presja, poczucie, że zaraz się złamiesz",
-    program: "→ Odporność Psychiczna",
+    program: "Odporność Psychiczna",
     link: "/program/odpornosc",
   },
   {
     problem: "Autopilot — dni lecą, a Ty nie pamiętasz, gdzie poszły",
-    program: "→ Uważność ",
+    program: "Uważność ",
     link: "/program/uwaznosc",
   },
   {
     problem: "\u201EKim jestem, kiedy zdejm\u0119 wszystkie maski?\u201D",
-    program: "→ Męskość",
+    program: "Męskość",
     link: "/program/meskosc",
   },
   {
     problem: "Wszystko powyżej naraz — i czujesz, że problem jest głębiej",
-    program: "→ Full System Upgrade",
+    program: "LifeOS: System Upgrade",
     link: "/discovery",
   },
 ];
