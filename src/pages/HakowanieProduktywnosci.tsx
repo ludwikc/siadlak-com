@@ -301,10 +301,10 @@ export default function HakowanieProduktywnosci() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 Dwa zasoby, o które walczą największe korporacje świata
               </h2>
-              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-electric">
-                <span>Twój czas</span>
+               <div className="flex justify-center items-center gap-8 text-4xl font-bold text-electric">
+                <span>Twój czas ⏱️</span>
                 <span className="text-muted-foreground text-2xl">i</span>
-                <span>Twoja uwaga</span>
+                <span>Twoja uwaga 👀</span>
               </div>
             </div>
 
