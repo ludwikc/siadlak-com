@@ -32,7 +32,7 @@ export default function Hero({
   const isMobile = useIsMobile();
 
   const isHomePage = location.pathname === "/";
-  const isUwazneZyciePage = location.pathname === "/program/uwazne-zycie";
+  const isUwazneZyciePage = location.pathname === "/program/uwaznosc";
 
   return (
     <section

@@ -45,12 +45,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/hakowanie-produktywnosci',
+    path: '/program/produktywnosc',
     seo: {
       title: 'Hakowanie Produktywności',
       description: 'Naucz się technik i strategii zwiększania produktywności. Praktyczny kurs dla efektywnego zarządzania czasem i zadaniami.',
       keywords: 'produktywność, zarządzanie czasem, efektywność, organizacja pracy, GTD',
-      url: '/program/hakowanie-produktywnosci',
+      url: '/program/produktywnosc',
       type: 'course'
     }
   },
@@ -65,22 +65,22 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/silna-glowa',
+    path: '/program/odpornosc',
     seo: {
       title: 'Silna Głowa = program odporności psychicznej',
       description: 'Program wzmacniania odporności psychicznej i budowania mentalnej siły. Naucz się radzić ze stresem i wyzwaniami.',
       keywords: 'odporność psychiczna, siła mentalna, stres, wyzwania, psychologia',
-      url: '/program/silna-glowa',
+      url: '/program/odpornosc',
       type: 'course'
     }
   },
   {
-    path: '/program/meski-kompas',
+    path: '/program/meskosc',
     seo: {
       title: 'Męski Kompas',
       description: 'Program rozwoju dla mężczyzn. Odkryj swoją maskuliną energię i zbuduj silne fundamenty życia.',
       keywords: 'rozwój mężczyzn, maskulinność, liderstwo, siła, pewność siebie',
-      url: '/program/meski-kompas',
+      url: '/program/meskosc',
       type: 'course',
       favicon: '/compass-favicon.png'
     }
@@ -106,12 +106,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/uwazne-zycie',
+    path: '/program/uwaznosc',
     seo: {
       title: 'Uważne Życie - Program Uważności i Mindfulness',
       description: 'Program rozwoju osobistego oparty na mindfulness i uważności. Znajdź równowagę i spokój w codziennym życiu.',
       keywords: 'mindfulness, uważność, program rozwoju, medytacja, równowaga',
-      url: '/program/uwazne-zycie',
+      url: '/program/uwaznosc',
       type: 'course'
     }
   },

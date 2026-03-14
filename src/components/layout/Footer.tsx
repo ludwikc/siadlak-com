@@ -140,7 +140,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/program/hakowanie-produktywnosci"
+                  to="/program/produktywnosc"
                   onClick={scrollToTop}
                   className="text-white/80 hover:text-depth transition-colors inline-block"
                 >
@@ -149,7 +149,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/program/silna-glowa"
+                  to="/program/odpornosc"
                   onClick={scrollToTop}
                   className="text-white/80 hover:text-depth transition-colors inline-block"
                 >

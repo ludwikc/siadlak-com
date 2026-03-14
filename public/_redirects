@@ -1,8 +1,14 @@
 # SPA fallback - redirect all routes to index.html for client-side routing
 # This works for Netlify, Surge.sh, and other static hosts that support _redirects
 
+# Legacy program URL redirects (permanent 301)
+/program/hakowanie-produktywnosci    /program/produktywnosc    301
+/program/silna-glowa    /program/odpornosc    301
+/program/uwazne-zycie    /program/uwaznosc    301
+/program/meski-kompas    /program/meskosc    301
+
 # Custom redirects
-/uwaznosc    /program/uwazne-zycie    301
-/u    /program/uwazne-zycie    301
+/uwaznosc    /program/uwaznosc    301
+/u    /program/uwaznosc    301
 
 /*    /index.html   200

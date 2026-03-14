@@ -305,7 +305,7 @@ const WebinarReplay = () => {
                     ? "bg-muted hover:bg-muted text-muted-foreground cursor-not-allowed"
                     : "bg-brand-gradient hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 }`}
-                onClick={() => navigate("/program/meski-kompas")}
+                onClick={() => navigate("/program/meskosc")}
                 disabled={offerExpired}
               >
                 {offerExpired
@@ -403,7 +403,7 @@ const WebinarReplay = () => {
                 <Button
                   size="lg"
                   className="w-full bg-depth hover:bg-depth/90 text-white"
-                  onClick={() => navigate("/program/meski-kompas")}
+                   onClick={() => navigate("/program/meskosc")}
                 >
                   DOŁĄCZ ZANIM OFERTA WYGAŚNIE →
                 </Button>
@@ -561,7 +561,7 @@ const WebinarReplay = () => {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-white text-depth hover:bg-white/90 font-bold shadow-lg px-6 py-3"
-                  onClick={() => navigate("/program/meski-kompas")}
+                  onClick={() => navigate("/program/meskosc")}
                 >
                   <span className="inline sm:hidden">DOŁĄCZ →</span>
                   <span className="hidden sm:inline">DOŁĄCZ TERAZ →</span>

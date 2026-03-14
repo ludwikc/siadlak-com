@@ -26,9 +26,9 @@ const Sitemap = () => {
       icon: <Book className="h-5 w-5" />,
       pages: [
         { name: 'Przegląd programów rozwojowych', path: '/program', description: 'Wszystkie dostępne kursy i programy' },
-        { name: 'Hakowanie Produktywności', path: '/program/hakowanie-produktywnosci', description: 'Kompleksowy program produktywności' },
+        { name: 'Hakowanie Produktywności', path: '/program/produktywnosc', description: 'Kompleksowy program produktywności' },
         { name: 'LifeOS: System Upgrade', path: '/program/lifeos-system-upgrade', description: 'Program fundamentalnej transformacji' },
-        { name: 'Silna Głowa', path: '/program/silna-glowa', description: 'Program wzmocnienia mentalnego' },
+        { name: 'Silna Głowa', path: '/program/odpornosc', description: 'Program wzmocnienia mentalnego' },
         ]
     },
     {
@@ -36,7 +36,7 @@ const Sitemap = () => {
       icon: <Mic2 className="h-5 w-5" />,
       pages: [
         { name: 'Life Hacking Podcast', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
-        { name: 'Uważne Życie', path: '/program/uwazne-zycie', description: 'Podcast o świadomym życiu (pod programami)' },
+        { name: 'Uważne Życie', path: '/program/uwaznosc', description: 'Podcast o świadomym życiu (pod programami)' },
       ]
     },
     {
