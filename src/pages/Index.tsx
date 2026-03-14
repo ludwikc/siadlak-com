@@ -236,7 +236,7 @@ const Index = () => {
               <br />
               On potrzebuje kogoś, kto powie:
               <br />
-              <span className="text-electric font-bold text-3xl block mt-2">„Zdejmij sukno i spójrz."</span>
+              <span className="text-electric font-bold text-3xl block mt-2">„Zmień tło &ndash; i spójrz."</span>
             </p>
           </div>
         </div>
