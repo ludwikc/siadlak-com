@@ -762,7 +762,7 @@ const Index = () => {
             {[
               {
                 title: "Produktywność",
-                subtitle: "(Hakowanie Produktywności)",
+                subtitle: "",
                 desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
