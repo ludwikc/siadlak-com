@@ -1045,7 +1045,7 @@ export default function HakowanieProduktywnosci() {
                 size="lg"
                 className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
               >
-                Chcę przestać zwlekać. Zamawiam
+                Instaluję Program Produktywność
                 <ArrowRight className="ml-2 h-6 w-6 text-depth" />
               </Button>
             </a>
