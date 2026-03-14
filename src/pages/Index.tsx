@@ -323,7 +323,7 @@ const Index = () => {
             {/* Right: blockquote card */}
             <div className="bg-surface p-8 border-l-4 border-depth">
               <blockquote className="text-white italic text-lg leading-relaxed">
-                „W 2014 roku stałem na balkonie i poważnie rozważałem skok.
+                „W 2014 roku stałem na peronie metra Dworzek Gdański i chciałem zrobić krok.
                 Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
                 na jedwabnym suknie. I kompletną pustkę w środku."
               </blockquote>
