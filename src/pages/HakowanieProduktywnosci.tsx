@@ -54,14 +54,13 @@ export default function HakowanieProduktywnosci() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
-              Twój mózg nie jest zepsuty.{" "}
-              <span className="bg-gradient-text-brand-dark">Jest jak telefon z 47 apkami w tle</span>{" "}
-              — potrzebujesz zamknąć te, które Ci nie służą
+              Twój mózg jest jak telefon z 47 apkami w tle{" "}
+              <span className="bg-gradient-text-brand-dark">— potrzebujesz zamknąć te, które Ci nie służą</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
-              Program, który nie doda Ci kolejnego systemu produktywności. Pomoże Ci znaleźć Twój własny.
+              To nie jest kolejny kurs produktywności. To jest aplikacja mentalna — raz zainstalowana, zostaje z Tobą na zawsze.
             </p>
 
             {/* Social Proof */}
@@ -109,7 +108,7 @@ export default function HakowanieProduktywnosci() {
               {/* Scarcity */}
               <p className="text-sm sm:text-base font-semibold text-locked-white">
                 <span className="text-electric">
-                  Grupa ograniczona do 50 osób
+                  Aktualna grupa ograniczona do 50 osób
                 </span>{" "}
                 • Zostało{" "}
                 <span className="text-electric font-bold text-lg sm:text-xl">
@@ -126,7 +125,7 @@ export default function HakowanieProduktywnosci() {
                 rel="noopener noreferrer"
                 className="text-sm text-locked-silver hover:text-depth transition-colors underline"
               >
-                Wiem, czego potrzebuję. Zamawiam →
+                Instaluję Program Produktywność →
               </a>
             </div>
           </div>
@@ -301,10 +300,10 @@ export default function HakowanieProduktywnosci() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 Dwa zasoby, o które walczą największe korporacje świata
               </h2>
-              <div className="flex justify-center items-center gap-8 text-4xl font-bold text-electric">
-                <span>Twój czas</span>
+               <div className="flex justify-center items-center gap-8 text-4xl font-bold text-electric">
+                <span>Twój czas ⏱️</span>
                 <span className="text-muted-foreground text-2xl">i</span>
-                <span>Twoja uwaga</span>
+                <span>Twoja uwaga 👀</span>
               </div>
             </div>
 
@@ -354,8 +353,8 @@ export default function HakowanieProduktywnosci() {
             </div>
 
             <div className="text-center p-8 bg-gradient-to-r from-depth/10 to-electric/10 rounded-xl">
-              <p className="text-2xl font-bold text-foreground">
-                Ale mam na to sposób.
+               <p className="text-2xl font-bold text-foreground">
+                Ale mam na to sposób 🫡.
               </p>
             </div>
           </div>
@@ -408,8 +407,48 @@ export default function HakowanieProduktywnosci() {
                 Twój unikalny sposób na maksymalizację wydajności — przy
                 zachowaniu zdrowia psychicznego.
               </p>
-              <p className="text-lg text-electric font-bold">
-                I to jest dokładnie to, co robimy w Programie Produktywność.
+               <p className="text-lg text-electric font-bold">
+                I to jest dokładnie to, co "instalujesz" w Programie Produktywność.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ZANIM POWIESZ "KOLEJNY KURS" */}
+      <section className="py-16 md:py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Zanim powiesz "kolejny kurs" — przeczytaj to
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Wiem, co myślisz. "1 497 zł za kurs online? Mam Netflixa za 50 złotych i YouTube'a za darmo."
+              </p>
+              <p>
+                Masz rację — gdyby to był "kolejny kurs online", byłoby za drogo.
+              </p>
+              <p>
+                Ale Program <strong className="text-foreground">Produktywność</strong> nie jest kursem do "przerobienia". Jest aplikacją mentalną do <em>zainstalowania</em>.
+              </p>
+              <p className="text-foreground font-medium">
+                Jaka jest różnica?
+              </p>
+              <p>
+                Kurs przerabiasz, notujesz, a po trzech miesiącach pamiętasz z niego tyle, co z ostatniego odcinka serialu, który oglądałeś w tle. Aplikacja mentalna — raz zainstalowana — <strong className="text-foreground">zostaje z Tobą na zawsze</strong>. Staje się częścią tego, jak myślisz, jak działasz, jak podejmujesz decyzje. Nie musisz do niej "wracać". Ona działa w tle — jak system operacyjny.
+              </p>
+              <p>
+                Po zainstalowaniu Programu <strong className="text-foreground">Produktywność</strong> już nigdy nie będziesz potrzebować kolejnych technik, metod, trików ani "5 sposobów na poranny focus". Koniec z gromadzeniem kursów. Koniec z szukaniem złotego środka.
+              </p>
+              <p className="text-foreground font-medium">
+                A co w zamian?
+              </p>
+              <p>
+                W zamian Twoje życie otworzy się na zupełnie nowe "problemy" — takie jak "mam za dużo wolnego czasu i nie wiem, jakie nowe hobby zacząć" albo "muszę się zdecydować, który z trzech projektów wybrać, bo na wszystkie mam energię". Wiem — straszne problemy. Ale ktoś musi je mieć.
               </p>
             </div>
           </div>
@@ -417,7 +456,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* WIZJA PRZYSZŁOŚCI */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
@@ -491,7 +530,7 @@ export default function HakowanieProduktywnosci() {
                 </span>
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                Mam dla Ciebie program, który:
+                Co instalujesz — moduł po module:
               </h3>
               <p className="text-lg text-muted-foreground mb-12">
                 Każda umiejętność z konkretnym terminem realizacji:
@@ -611,8 +650,8 @@ export default function HakowanieProduktywnosci() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Co zawiera Program Produktywność?
               </h2>
-              <p className="text-lg text-electric font-medium mb-4">
-                6 modułów gotowych do "zainstalowania" w Twoim życiu
+               <p className="text-lg text-electric font-medium mb-4">
+                6 modułów gotowych do zainstalowania w Twoim umyśle
               </p>
               <p className="text-dim mb-8">
                 Nie musisz zmieniać wszystkiego naraz — instalujesz moduł po module, w swoim tempie.
@@ -682,7 +721,7 @@ export default function HakowanieProduktywnosci() {
                   lessons: 10,
                 },
                 {
-                  title: "Narzędzia (z AI)",
+                  title: "Narzędzia",
                   subtitle: "Moduł 5",
                   icon: Zap,
                   gradient: "from-electric to-depth",
@@ -928,7 +967,7 @@ export default function HakowanieProduktywnosci() {
                         <div className="text-xs font-bold uppercase">
                           Oszczędzasz
                         </div>
-                        <div className="text-lg font-extrabold">96%</div>
+                        <div className="text-lg font-extrabold">95%</div>
                       </div>
                     </div>
 
@@ -936,12 +975,12 @@ export default function HakowanieProduktywnosci() {
                       <p className="text-sm text-white/90 uppercase tracking-wide mb-2 text-center">
                         Twoja inwestycja
                       </p>
-                      <p className="text-5xl sm:text-6xl font-extrabold text-white mb-2 text-center">
-                        1 197 zł
+                       <p className="text-5xl sm:text-6xl font-extrabold text-white mb-2 text-center">
+                        1 497 zł
                       </p>
                       <div className="flex items-center justify-center gap-2 text-white/90 text-sm">
                         <CheckCircle2 className="h-4 w-4" />
-                        <span>Dostęp na zawsze</span>
+                        <span>Instalujesz raz, masz na zawsze</span>
                       </div>
                     </div>
                   </div>
@@ -971,24 +1010,28 @@ export default function HakowanieProduktywnosci() {
 
             {/* PERSPEKTYWA CENOWA */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-locked-white">
-                Ile to jest 1 197 zł?
+              <h3 className="text-2xl font-bold mb-8 text-locked-white">
+                Ile to jest 1 497 zł?
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-locked-silver mb-8">
-                <div>3 obiady w restauracji</div>
-                <div>1 para dobrych butów (które za pół roku i tak przestaną być modne)</div>
-                <div>2 tankowania auta</div>
-                <div>1 weekend w hotelu</div>
-              </div>
-            </div>
 
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-4 text-locked-white">
-                A ile kosztuje Cię brak produktywności?
-              </h3>
-              <p className="text-locked-silver mb-6 max-w-2xl mx-auto">
-                Nie pytam, żeby straszyć. Pytam, żebyś policzył. Średnio 2-4 godziny dziennie tracone na prokrastynację × 365 dni × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł rocznie. Inwestycja 1 197 zł zwróci się szybciej niż myślisz.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-locked-silver mb-12">
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Rozrywka</h4>
+                  <p className="text-sm leading-relaxed">50 wizyt w kinie (30 zł/bilet) — to 50 wieczorów w ciemnej sali. Wypoczniesz sobie. Tylko że po 50 filmach masz w głowie mix fabuł, ale zero zmiany w CV.</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Edukacja</h4>
+                  <p className="text-sm leading-relaxed">90 minut dobrego korepetytora to w 2026 roku ok. 100-130 zł. Za 1 497 zł masz mniej więcej 15 godzin indywidualnych lekcji. Pytanie: czy 15 godzin z korepetytorem da Ci tyle, co kompleksowy program, który zmienia sposób, w jaki pracujesz <em>każdego dnia</em>?</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Awans i podwyżka</h4>
+                  <p className="text-sm leading-relaxed">Minimalna podwyżka po zmianie pracy to często 500-1 000 zł na rękę miesięcznie. Jeśli Program <strong className="text-locked-white">Produktywność</strong> pomoże Ci zdobyć nową pracę albo podwyżkę — zwraca się w 2-3 miesiące. Reszta to już Twój zysk.</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Sport</h4>
+                  <p className="text-sm leading-relaxed">Rower crossowy to wydatek minimum 3 000-4 000 zł. Program <strong className="text-locked-white">Produktywność</strong> kosztuje mniej niż pół <em>nowego</em> roweru, którym możesz dojeżdżać do <em>starej</em> pracy.</p>
+                </div>
+              </div>
             </div>
 
             <a
@@ -1001,7 +1044,7 @@ export default function HakowanieProduktywnosci() {
                 size="lg"
                 className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
               >
-                Chcę przestać zwlekać. Zamawiam
+                Instaluję Program Produktywność
                 <ArrowRight className="ml-2 h-6 w-6 text-depth" />
               </Button>
             </a>
@@ -1161,7 +1204,7 @@ export default function HakowanieProduktywnosci() {
                 <div className="flex flex-wrap items-center justify-center gap-8">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Users className="h-5 w-5 text-electric" />
-                    <span className="font-bold text-foreground">1 240+</span>
+                    <span className="font-bold text-foreground">100+</span>
                     uczestników
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -1190,7 +1233,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  Dołączam
+                  Instaluję Program Produktywność
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
@@ -1311,7 +1354,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base sm:text-lg px-8 py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  Rozwiałeś moje wątpliwości. Zamawiam
+                  Instaluję Program Produktywność
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
@@ -1335,7 +1378,7 @@ export default function HakowanieProduktywnosci() {
                 </p>
                 <p>To brzmi prosto. I jest proste. Ale proste nie znaczy łatwe.</p>
                 <p>
-                  Jeśli czujesz, że to jest to — dołącz. Jeśli jeszcze się wahasz — spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej — dziękuję, że jesteś. Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
+                  Jeśli czujesz, że to jest to — zainstaluj. Jeśli jeszcze się wahasz — spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej — <strong className="text-foreground">dziękuję, że jesteś.</strong> Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
                 </p>
                 <p className="text-foreground font-medium">-- Ludwik</p>
               </div>
@@ -1353,7 +1396,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base sm:text-lg px-8 py-4 sm:py-6 group"
                 >
-                  Dołączam do Programu Produktywność
+                  Instaluję Program Produktywność
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
@@ -1375,7 +1418,7 @@ export default function HakowanieProduktywnosci() {
                 <strong className="text-foreground">P.P.S.</strong> Jeśli masz pytania, na które nie znalazłeś odpowiedzi na tej stronie — napisz do mnie. Odpowiadam osobiście.
               </p>
               <p>
-                <strong className="text-foreground">P.P.P.S.</strong> A jeśli czytasz ten trzeci dopisek, to znaczy, że chcesz to zrobić, ale jeszcze czegoś Ci brakuje. Może tego: masz 30 dni na zwrot. Jedyne ryzyko to ryzyko, że zadziała.
+                <strong className="text-foreground">P.P.P.S.</strong> A jeśli czytasz ten trzeci dopisek, to znaczy, że chcesz to zrobić, ale jeszcze czegoś Ci brakuje. Może tego: masz 30 dni na zwrot. Jedyne ryzyko to ryzyko, że... zadziała. A wtedy Twoje życie otworzy się na "nowe problemy" ;) Tylko te "nowe problemy" będziesz już rozwiązywać z lekkością, bo <em>prokrastynacja</em> raz na zawsze przestanie być Twoim problemem. 🫡
               </p>
             </div>
           </div>

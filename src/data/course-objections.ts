@@ -35,7 +35,7 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
     myth: "Mam już kursy produktywności i nie zadziałały.",
     reality:
-      'Właśnie dlatego ten jest inny. Większość kursów daje Ci jeden system i mówi "stosuj". A potem, gdy nie działa, mówi "nie starasz się wystarczająco". To jest jak sprzedawanie butów w jednym rozmiarze i obwinianie ludzi, że mają złe stopy. Program Produktywność jest szyty na miarę — razem budujesz swój system, dopasowany do Twojego życia.',
+      'Właśnie dlatego ten jest inny. Większość kursów daje Ci jeden system i mówi "stosuj". A potem, gdy nie działa, mówi "nie starasz się wystarczająco". To jest jak sprzedawanie butów w jednym rozmiarze i obwinianie ludzi, że mają złe stopy. Program Produktywność nie jest kursem do przerobienia — to aplikacja mentalna, którą instalujesz raz, a która zostaje z Tobą na zawsze. Razem budujesz swój system, dopasowany do Twojego życia. I już nigdy nie będziesz potrzebować kolejnego "kursu produktywności".',
     icon: Target,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
@@ -59,7 +59,7 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
     myth: "Czy to mi się zwróci?",
     reality:
-      "Jeśli zaoszczędzisz 1 godzinę dziennie — to 365 godzin rocznie × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł. Inwestycja 1 197 zł zwróci się w pierwszy miesiąc. A to jest konserwatywna kalkulacja.",
+      "Jeśli zaoszczędzisz 1 godzinę dziennie — to 365 godzin rocznie × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł. Inwestycja 1 497 zł zwraca się w 2-3 miesiące. A to jest konserwatywna kalkulacja — i pomijam fakt, że to instalacja na całe życie, nie na rok.",
     icon: DollarSign,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
