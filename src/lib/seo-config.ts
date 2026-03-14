@@ -65,12 +65,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/silna-glowa',
+    path: '/program/odpornosc',
     seo: {
       title: 'Silna Głowa = program odporności psychicznej',
       description: 'Program wzmacniania odporności psychicznej i budowania mentalnej siły. Naucz się radzić ze stresem i wyzwaniami.',
       keywords: 'odporność psychiczna, siła mentalna, stres, wyzwania, psychologia',
-      url: '/program/silna-glowa',
+      url: '/program/odpornosc',
       type: 'course'
     }
   },
