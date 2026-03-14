@@ -17,11 +17,7 @@ const TheCut = () => <div className="the-cut" />;
 
 const Eyebrow = ({ children, color = "electric" }: { children: string; color?: "electric" | "depth" | "dim" }) => {
   const colorClass = color === "electric" ? "text-electric" : color === "depth" ? "text-depth" : "text-on-light-dim";
-  return (
-    <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-6 ${colorClass}`}>
-      {children}
-    </p>
-  );
+  return <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-6 ${colorClass}`}>{children}</p>;
 };
 
 const TestimonialCard = ({
@@ -42,9 +38,10 @@ const TestimonialCard = ({
   const isLight = variant === "light";
   return (
     <div className={`p-6 md:p-8 rounded-md ${isLight ? "bg-diamond" : "bg-surface"}`}>
-      <p className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-dim"} leading-relaxed mb-4`}>
-        {flag && <span className="mr-1">{flag}</span>}
-        „{quote}"
+      <p
+        className={`${size === "sm" ? "text-sm" : "text-base"} ${isLight ? "text-on-light-dim" : "text-dim"} leading-relaxed mb-4`}
+      >
+        {flag && <span className="mr-1">{flag}</span>}„{quote}"
       </p>
       <footer className={`pt-3 border-t ${isLight ? "border-border/50" : "border-white/10"}`}>
         <p className={`text-xs font-bold uppercase tracking-wide ${isLight ? "text-on-light" : "text-white"}`}>
@@ -59,12 +56,8 @@ const TestimonialCard = ({
 const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: string }) => (
   <section className="py-16 md:py-20 bg-void">
     <div className="container mx-auto px-4 max-w-3xl text-center">
-      <blockquote className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">
-        {quote}
-      </blockquote>
-      <footer className="text-sm text-dim font-bold uppercase tracking-widest not-italic">
-        — {author}
-      </footer>
+      <blockquote className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">{quote}</blockquote>
+      <footer className="text-sm text-dim font-bold uppercase tracking-widest not-italic">— {author}</footer>
     </div>
   </section>
 );
@@ -94,15 +87,14 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Znasz ten moment, kiedy masz wszystko — a czujesz, że czegoś brakuje?
+                Znasz ten moment, kiedy masz wszystko — a&nbsp;czujesz, że&nbsp;czegoś brakuje?
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
+                <p>Masz kompetencje. Masz wyniki. I&nbsp;masz przeczucie, że&nbsp;to wciąż nie to.</p>
                 <p>
-                  Masz kompetencje. Masz wyniki. I masz przeczucie, że to wciąż nie to.
-                </p>
-                <p>
-                  Nie potrzebujesz kolejnego narzędzia. Potrzebujesz kogoś, kto pomoże Ci zobaczyć to, co masz w sobie od zawsze.
+                  Nie potrzebujesz kolejnego narzędzia. Potrzebujesz kogoś, kto pomoże Ci zobaczyć to, co masz w sobie
+                  od zawsze.
                 </p>
               </div>
 
@@ -143,9 +135,18 @@ const Index = () => {
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
               {[
-                { q: "Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting.", a: "Paweł Cerkaski" },
-                { q: "Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years.", a: "Betty M. Greenberg" },
-                { q: "Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Właściwa osoba na właściwym miejscu.", a: "Adam Anioła" },
+                {
+                  q: "Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting.",
+                  a: "Paweł Cerkaski",
+                },
+                {
+                  q: "Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years.",
+                  a: "Betty M. Greenberg",
+                },
+                {
+                  q: "Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Właściwa osoba na właściwym miejscu.",
+                  a: "Adam Anioła",
+                },
                 { q: "Easy to understand, clear explanations and a nice teaching personality.", a: "Yasith Navoda" },
                 { q: "Good pace and really good at explaining.", a: "Hilde Mykland Pihl" },
               ].map((t, i) => (
@@ -169,12 +170,12 @@ const Index = () => {
 
           <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed">
             <p className="text-white text-2xl md:text-3xl font-heading font-bold leading-[1.2]">
-              Diament jest najtwardszą substancją na Ziemi. I jest kompletnie przezroczysty.
+              Diament jest najtwardszą substancją na Ziemi. I&nbsp;jest kompletnie przezroczysty.
             </p>
 
             <p>
-              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd.
-              Zmień sukno — zmieni się „kolor" diamentu.
+              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd. Zmień sukno — zmieni się
+              „kolor" diamentu.
             </p>
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 text-white italic">
@@ -183,18 +184,12 @@ const Index = () => {
               Twój umysł działa dokładnie tak samo.
             </blockquote>
 
-            <p>
-              Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".
-            </p>
-            <p>
-              Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".
-            </p>
+            <p>Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
+            <p>Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
 
             <p>Ale to nie Ty się zmieniłeś.</p>
             <p className="text-white text-2xl font-bold">
-              To{" "}
-              <span className="text-electric font-bold">tło</span>{" "}
-              się zmieniło.
+              To <span className="text-electric font-bold">tło</span> się zmieniło.
             </p>
           </div>
         </div>
@@ -209,13 +204,8 @@ const Index = () => {
           </h2>
 
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
-            <p>
-              Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że
-              wystarczyło zmienić sukno.
-            </p>
-            <p>
-              Wiem, bo sam to robiłem. I widzę to u każdego, kto do mnie przychodzi.
-            </p>
+            <p>Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że&nbsp;wystarczyło zmienić sukno.</p>
+            <p>Wiem, bo sam to robiłem. I&nbsp;widzę to u każdego, kto do mnie przychodzi.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 mb-12">
@@ -234,9 +224,8 @@ const Index = () => {
 
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>
-              I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment:
-              wracasz do punktu wyjścia, z kolejną warstwą niespełnionych
-              obietnic.
+              I każde działało. Tydzień. Miesiąc. A potem ten znajomy moment: wracasz do punktu wyjścia, z kolejną
+              warstwą niespełnionych obietnic.
             </p>
           </div>
 
@@ -247,9 +236,7 @@ const Index = () => {
               <br />
               On potrzebuje kogoś, kto powie:
               <br />
-              <span className="text-electric font-bold text-3xl block mt-2">
-                „Zdejmij sukno i spójrz."
-              </span>
+              <span className="text-electric font-bold text-3xl block mt-2">„Zdejmij sukno i spójrz."</span>
             </p>
           </div>
         </div>
@@ -257,7 +244,11 @@ const Index = () => {
 
       {/* ═══ TESTIMONIAL HERO QUOTE #1 ═══ */}
       <TestimonialHeroQuote
-        quote={<>„Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."</>}
+        quote={
+          <>
+            „Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
+          </>
+        }
         author="ŁUKASZ — IT, ADHD, SCEPTYK"
       />
 
@@ -274,11 +265,7 @@ const Index = () => {
         />
         {/* Background photo – pinned left */}
         <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img
-            src={sessionPhoto6}
-            alt=""
-            className="h-full w-auto object-cover object-left opacity-30"
-          />
+          <img src={sessionPhoto6} alt="" className="h-full w-auto object-cover object-left opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#080808]" />
         </div>
         {/* Decorative blob */}
@@ -294,25 +281,21 @@ const Index = () => {
             {/* Left: paragraphs */}
             <div className="text-dim space-y-6">
               <p>
-                Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
-                10 000 profesjonalistów. Fortune 500. NATO. Jednostki
-                specjalne. Psychologia i informatyka — Oxford.
+                Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft. 10 000 profesjonalistów. Fortune 500. NATO.
+                Jednostki specjalne. Psychologia i informatyka — Oxford.
               </p>
+              <p>Mógłbym. Ale to nie to przekonuje ludzi.</p>
               <p>
-                Mógłbym. Ale to nie to przekonuje ludzi.
-              </p>
-              <p>
-                Przekonuje ich to, że
-                wiem, jak to jest leżeć na wszystkich kolorach sukna naraz — i myśleć, że to Ty masz niewłaściwy kolor.
+                Przekonuje ich to, że wiem, jak to jest leżeć na wszystkich kolorach sukna naraz — i myśleć, że to Ty
+                masz niewłaściwy kolor.
               </p>
             </div>
 
             {/* Right: blockquote card */}
             <div className="bg-surface p-8 border-l-4 border-depth">
               <blockquote className="text-white italic text-lg leading-relaxed">
-                „W 2014 roku stałem na peronie metra Dworzek Gdański i chciałem zrobić krok.
-                Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
-                na jedwabnym suknie. I kompletną pustkę w środku."
+                „W 2014 roku stałem na peronie metra Dworzek Gdański i chciałem zrobić krok. Miałem wszystko.
+                Najpiękniejszy diament w najdroższej oprawce, na jedwabnym suknie. I kompletną pustkę w środku."
               </blockquote>
             </div>
           </div>
@@ -320,19 +303,14 @@ const Index = () => {
           {/* Below grid */}
           <div className="mt-12 text-dim text-lg space-y-6">
             <p>
-              Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek
-              ludzi:{" "}
-              <strong className="text-white">
-                żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.
-              </strong>
+              Tamtego dnia zrozumiałem coś, co potem zmieniło życie setek ludzi:{" "}
+              <strong className="text-white">żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.</strong>
             </p>
-            <p className="text-white text-center text-xl font-medium">
-              Jestem tym, kto patrzy.
-            </p>
+            <p className="text-white text-center text-xl font-medium">Jestem tym, kto patrzy.</p>
             <p>
-              Od 19 lat doskonalę tę umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje
-              odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam
-              je znalazł.
+              Od 19 lat doskonalę tę umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie
+              od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je
+              znalazł.
             </p>
           </div>
         </div>
@@ -371,9 +349,7 @@ const Index = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
             Diamentowy Umysł
           </h2>
-          <p className="text-dim uppercase tracking-widest text-sm mb-16">
-            NIE METAFORA — METODA
-          </p>
+          <p className="text-dim uppercase tracking-widest text-sm mb-16">NIE METAFORA — METODA</p>
         </div>
 
         <div className="container mx-auto px-4 max-w-6xl">
@@ -381,35 +357,29 @@ const Index = () => {
             {/* Left: explanation */}
             <div className="text-dim text-lg space-y-6">
               <p>
-                Większość metod pracuje na powierzchni: nawyki, czas, emocje. To
-                szlifowanie diamentu, który nie potrzebuje szlifu. Ja pracuję
-                głębiej. Na poziomie jądra systemu.
+                Większość metod pracuje na powierzchni: nawyki, czas, emocje. To szlifowanie diamentu, który nie
+                potrzebuje szlifu. Ja pracuję głębiej. Na poziomie jądra systemu.
               </p>
+              <p>Nie daję Ci odpowiedzi. Nie prowadzę Cię przez 12 kroków. (Nie mam nawet 12 kroków. Mam pytania.)</p>
               <p>
-                Nie daję Ci odpowiedzi. Nie prowadzę Cię przez 12 kroków. (Nie mam nawet 12 kroków. Mam pytania.)
-              </p>
-              <p>
-                Zadaję Ci pytania. I buduję z Tobą metaforę, która jest{" "}
-                <em>Twoja</em>.
+                Zadaję Ci pytania. I buduję z Tobą metaforę, która jest <em>Twoja</em>.
               </p>
               <div className="border-l-2 border-electric pl-4 text-white font-medium">
-                Metafora działa tam, gdzie logika się zatrzymuje. Logika mówi „powinieneś". Metafora mówi „aha — widzę". I w tym „aha" wszystko się zmienia.
+                Metafora działa tam, gdzie logika się zatrzymuje. Logika mówi „powinieneś". Metafora mówi „aha — widzę".
+                I w tym „aha" wszystko się zmienia.
               </div>
             </div>
 
             {/* Right: Case Study card */}
             <div className="bg-void p-10 rounded-md">
-              <p className="text-electric text-sm uppercase tracking-widest font-bold mb-4">
-                CASE STUDY: ŁUKASZ
-              </p>
+              <p className="text-electric text-sm uppercase tracking-widest font-bold mb-4">CASE STUDY: ŁUKASZ</p>
               <blockquote className="italic text-white text-xl leading-relaxed mb-6">
-                „Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko. Nie do
-                końca wiem, co się wydarzyło... I chcę więcej."
+                „Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko. Nie do końca wiem, co się wydarzyło... I chcę
+                więcej."
               </blockquote>
               <div className="border-t border-white/10 pt-4">
                 <p className="text-dim">
-                  Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on
-                  zobaczył swój diament.
+                  Nie uczył się medytacji. Rozmawialiśmy o samochodach. A on zobaczył swój diament.
                 </p>
               </div>
             </div>
@@ -419,7 +389,9 @@ const Index = () => {
 
       {/* ═══ TESTIMONIAL HERO QUOTE #2 ═══ */}
       <TestimonialHeroQuote
-        quote={"„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.\""}
+        quote={
+          '„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."'
+        }
         author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
@@ -438,9 +410,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             {/* Left column (7 cols) */}
             <div className="lg:col-span-7">
-              <p className="text-on-light-dim text-xs font-bold tracking-[0.2em] uppercase mb-6">
-                OFERTA #1
-              </p>
+              <p className="text-on-light-dim text-xs font-bold tracking-[0.2em] uppercase mb-6">OFERTA #1</p>
               <h2 className="text-4xl md:text-6xl font-bold text-on-light font-heading leading-[1.1] tracking-[-0.02em] mb-8">
                 Life OS:
                 <br />
@@ -449,14 +419,12 @@ const Index = () => {
 
               <div className="space-y-6 text-lg text-on-light-dim leading-relaxed mb-10">
                 <p>
-                  Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze.
-                  Zdejmujesz <em>wszystkie</em> warstwy. I po raz pierwszy
-                  widzisz, co jest pod nimi.
+                  Nie poprawiamy jednego koloru. Nie zmieniamy sukna na ładniejsze. Zdejmujesz <em>wszystkie</em>{" "}
+                  warstwy. I po raz pierwszy widzisz, co jest pod nimi.
                 </p>
                 <p>
-                  To praca 1:1. Ze mną. Nie z nagraniem, nie z chatbotem, nie z PDFem „7 kroków do lepszego życia". Z człowiekiem, który
-                  zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
-                  usłyszeć.
+                  To praca 1:1. Ze mną. Nie z nagraniem, nie z chatbotem, nie z PDFem „7 kroków do lepszego życia". Z
+                  człowiekiem, który zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je usłyszeć.
                 </p>
               </div>
 
@@ -464,13 +432,14 @@ const Index = () => {
                 <li>8 tygodni sesji 1:1</li>
                 <li>Diagnostyka Life OS</li>
                 <li>Dostęp VIP 24/7</li>
-                <li><span className="font-bold text-depth">Gwarancja zwrotu po 2 tyg.</span></li>
+                <li>
+                  <span className="font-bold text-depth">Gwarancja zwrotu po 2 tyg.</span>
+                </li>
               </ul>
 
               <p className="text-sm text-on-light-dim border-t border-border/50 pt-6">
-                Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
-                grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
-                natura tej pracy.
+                Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Nie da się tego zrobić
+                na webinarze. Taka jest natura tej pracy.
               </p>
             </div>
 
@@ -482,9 +451,7 @@ const Index = () => {
                   PREMIUM
                 </div>
 
-                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-4">
-                  Pełen Proces
-                </p>
+                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-4">Pełen Proces</p>
                 <p className="text-5xl md:text-6xl font-heading font-bold text-electric tracking-tighter mb-8">
                   16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
@@ -496,9 +463,7 @@ const Index = () => {
                   APLIKUJ O MIEJSCE
                 </Link>
 
-                <p className="text-xs text-on-light-dim text-center">
-                  Dostępne: 3/5 miejsc · Faktura VAT
-                </p>
+                <p className="text-xs text-on-light-dim text-center">Dostępne: 3/5 miejsc · Faktura VAT</p>
               </div>
             </div>
           </div>
@@ -563,8 +528,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 mb-24">
             <div>
               <p className="font-bold text-xs uppercase tracking-widest border-b border-border/50 pb-4 mb-6 text-on-light-dim">
-                 TO NIE DLA CIEBIE, JEŚLI:
-               </p>
+                TO NIE DLA CIEBIE, JEŚLI:
+              </p>
               <ul className="space-y-4 text-on-light-dim">
                 {[
                   "Szukasz kolejnego systemu produktywności (mam na to osobny program — patrz niżej)",
@@ -600,22 +565,16 @@ const Index = () => {
           {/* Guarantee Box */}
           <div className="bg-white p-10 rounded-md text-center shadow-sm max-w-3xl mx-auto mb-12">
             <p className="text-electric text-2xl mb-4">★</p>
-            <h3 className="font-heading text-2xl font-bold text-on-light mb-6">
-              Gwarancja Satysfakcji
-            </h3>
+            <h3 className="font-heading text-2xl font-bold text-on-light mb-6">Gwarancja Satysfakcji</h3>
             <div className="text-on-light-dim leading-relaxed space-y-4">
               <p>
-                Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa
-                jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej
-                pory — powiemy sobie „do widzenia". Nie zapłacisz ani złotówki
-                więcej.
+                Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa jest fundamentalnie inna niż cokolwiek, co
+                próbowałeś do tej pory — powiemy sobie „do widzenia". Nie zapłacisz ani złotówki więcej.
               </p>
               <p>
                 Mogę to zaoferować, bo dostarczam momenty, w których mówisz:
                 <br />
-                <em className="text-on-light font-medium">
-                  „Nie wiem, co się wydarzyło."
-                </em>
+                <em className="text-on-light font-medium">„Nie wiem, co się wydarzyło."</em>
               </p>
             </div>
           </div>
@@ -623,15 +582,16 @@ const Index = () => {
           {/* Helge honest review */}
           <div className="max-w-3xl mx-auto bg-diamond rounded-lg p-8">
             <p className="text-sm text-on-light-dim italic leading-relaxed mb-6">
-              „His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more practical examples of tool usage a bit slower."
+              „His knowledge and ability to teach is outstanding, but he talks a bit too much and could be showing more
+              practical examples of tool usage a bit slower."
             </p>
             <p className="text-xs text-on-light-dim font-bold uppercase tracking-wide mb-4">
               — Helge Vestoyl, Norwegia 🇳🇴
             </p>
             <div className="border-t border-border/50 mt-6 pt-6">
               <p className="text-sm text-on-light-dim">
-                Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej
-                ciszy dzieją się rzeczy. — <span className="font-medium text-on-light">Ludwik</span>
+                Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej ciszy dzieją się rzeczy. —{" "}
+                <span className="font-medium text-on-light">Ludwik</span>
               </p>
             </div>
           </div>
@@ -642,21 +602,14 @@ const Index = () => {
       <section className="py-24 relative overflow-hidden bg-diamond" id="kontakt">
         {/* Background photo – pinned right */}
         <div className="absolute right-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img
-            src={sessionPhoto5}
-            alt=""
-            className="h-full w-auto object-cover object-right"
-          />
+          <img src={sessionPhoto5} alt="" className="h-full w-auto object-cover object-right" />
           <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-diamond to-transparent" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
-          <h2 className="font-heading text-4xl font-bold text-on-light mb-8">
-            Tylko 5 miejsc jednocześnie.
-          </h2>
+          <h2 className="font-heading text-4xl font-bold text-on-light mb-8">Tylko 5 miejsc jednocześnie.</h2>
           <p className="text-on-light-dim max-w-2xl mb-8">
-            Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w
-            grupie 50 osób. Nie da się tego zrobić na webinarze. Taka jest
-            natura tej pracy.
+            Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Nie da się tego zrobić na
+            webinarze. Taka jest natura tej pracy.
           </p>
 
           {/* Status badge */}
@@ -667,12 +620,10 @@ const Index = () => {
           {/* Łucja quote */}
           <div className="py-16 max-w-2xl">
             <blockquote className="text-xl md:text-2xl lg:text-3xl text-on-light italic leading-relaxed mb-6">
-              „Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
-              'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
+              „Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.'
+              I uwierzyłam."
             </blockquote>
-            <footer className="text-sm uppercase tracking-widest text-on-light-dim">
-              — ŁUCJA — FOUNDER REFSPACE
-            </footer>
+            <footer className="text-sm uppercase tracking-widest text-on-light-dim">— ŁUCJA — FOUNDER REFSPACE</footer>
           </div>
 
           {/* CTA Card */}
@@ -693,12 +644,10 @@ const Index = () => {
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
       <section className="py-16 bg-diamond text-center">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">
-            JESZCZE NIE TERAZ?
-          </h3>
+          <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm">
-            Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję.
-            Wyczuć, czy ten język do Ciebie trafia. Dlatego stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
+            Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
+            stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
           </p>
         </div>
       </section>
@@ -708,33 +657,28 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">
-              Aplikacje Mentalne
-            </h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
-              Programy, które instalujesz w swoim umyśle, aby rozwiązać
-              konkretny problem — bez reinstalacji całego OS.
+              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem — bez reinstalacji całego OS.
             </p>
           </div>
 
           {/* Featured card: Uważne Życie */}
-          <Link to="/program/uwaznosc" className="group block col-span-3 bg-white rounded-md shadow-sm overflow-hidden mb-8">
+          <Link
+            to="/program/uwaznosc"
+            className="group block col-span-3 bg-white rounded-md shadow-sm overflow-hidden mb-8"
+          >
             <div className="grid lg:grid-cols-2">
               <div className="relative">
-                <img
-                  src={programUwaznosc}
-                  alt="Uważność"
-                  className="w-full h-full object-cover"
-                />
+                <img src={programUwaznosc} alt="Uważność" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
-                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">
-                  Uważne Życie
-                </h3>
+                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">Uważne Życie</h3>
                 <p className="text-on-light-dim mb-6">
-                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad kokpitem.
+                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad
+                  kokpitem.
                 </p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
                   INSTALUJ PROGRAM →
@@ -770,11 +714,7 @@ const Index = () => {
             ].map((card) => (
               <Link key={card.title} to={card.link} className="group bg-white rounded-md shadow-sm overflow-hidden">
                 <div className="relative pt-[125%]">
-                  <img
-                    src={card.img}
-                    alt={card.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
+                  <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-1">
@@ -838,11 +778,10 @@ const Index = () => {
       <TheCut />
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">
-            Wolisz najpierw poczytać?
-          </h3>
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <p className="text-dim leading-relaxed mb-10">
-            Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Bez algorytmów, bez lajków, bez komentarzy. Tylko Ty, ja i Twoja skrzynka mailowa.
+            Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Bez algorytmów, bez lajków, bez
+            komentarzy. Tylko Ty, ja i Twoja skrzynka mailowa.
           </p>
           <Link
             to="/newsletter"
@@ -857,36 +796,35 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden bg-void-glow">
         {/* Background photo – pinned left */}
         <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img
-            src={onPurple1}
-            alt=""
-            className="h-full w-auto object-cover object-left"
-          />
+          <img src={onPurple1} alt="" className="h-full w-auto object-cover object-left" />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-          <h2 className="font-heading text-2xl font-bold text-white mb-2">
-            Diamentowy umysł.
-          </h2>
-          <p className="text-dim uppercase tracking-widest text-xs mb-8">
-            OTWARTA PRZYŁBICA.
-          </p>
+          <h2 className="font-heading text-2xl font-bold text-white mb-2">Diamentowy umysł.</h2>
+          <p className="text-dim uppercase tracking-widest text-xs mb-8">OTWARTA PRZYŁBICA.</p>
 
           {/* Divider */}
           <div className="w-12 h-1 bg-brand-gradient mx-auto rounded-full mb-8" />
 
-          <p className="font-heading text-xl text-white tracking-wide mb-8">
-            Ludwik C. Siadlak
-          </p>
+          <p className="font-heading text-xl text-white tracking-wide mb-8">Ludwik C. Siadlak</p>
 
           <div className="flex justify-center gap-8">
-            <Link to="/about" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link
+              to="/about"
+              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
+            >
               O mnie
             </Link>
-            <Link to="/program" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link
+              to="/program"
+              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
+            >
               Programy
             </Link>
-            <Link to="/contact" className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors">
+            <Link
+              to="/contact"
+              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
+            >
               Kontakt
             </Link>
           </div>
