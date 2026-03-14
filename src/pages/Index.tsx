@@ -793,7 +793,7 @@ const Index = () => {
                   <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-1">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>
+                  {card.subtitle && <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>}
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
                   <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
                     INSTALUJ PROGRAM →
