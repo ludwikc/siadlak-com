@@ -1011,24 +1011,28 @@ export default function HakowanieProduktywnosci() {
 
             {/* PERSPEKTYWA CENOWA */}
             <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-locked-white">
-                Ile to jest 1 197 zł?
+              <h3 className="text-2xl font-bold mb-8 text-locked-white">
+                Ile to jest 1 497 zł?
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-locked-silver mb-8">
-                <div>3 obiady w restauracji</div>
-                <div>1 para dobrych butów (które za pół roku i tak przestaną być modne)</div>
-                <div>2 tankowania auta</div>
-                <div>1 weekend w hotelu</div>
-              </div>
-            </div>
 
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-4 text-locked-white">
-                A ile kosztuje Cię brak produktywności?
-              </h3>
-              <p className="text-locked-silver mb-6 max-w-2xl mx-auto">
-                Nie pytam, żeby straszyć. Pytam, żebyś policzył. Średnio 2-4 godziny dziennie tracone na prokrastynację × 365 dni × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł rocznie. Inwestycja 1 197 zł zwróci się szybciej niż myślisz.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-locked-silver mb-12">
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Rozrywka</h4>
+                  <p className="text-sm leading-relaxed">50 wizyt w kinie (30 zł/bilet) — to 50 wieczorów w ciemnej sali. Wypoczniesz sobie. Tylko że po 50 filmach masz w głowie mix fabuł, ale zero zmiany w CV.</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Edukacja</h4>
+                  <p className="text-sm leading-relaxed">90 minut dobrego korepetytora to w 2026 roku ok. 100-130 zł. Za 1 497 zł masz mniej więcej 15 godzin indywidualnych lekcji. Pytanie: czy 15 godzin z korepetytorem da Ci tyle, co kompleksowy program, który zmienia sposób, w jaki pracujesz <em>każdego dnia</em>?</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Awans i podwyżka</h4>
+                  <p className="text-sm leading-relaxed">Minimalna podwyżka po zmianie pracy to często 500-1 000 zł na rękę miesięcznie. Jeśli Program <strong className="text-locked-white">Produktywność</strong> pomoże Ci zdobyć nową pracę albo podwyżkę — zwraca się w 2-3 miesiące. Reszta to już Twój zysk.</p>
+                </div>
+                <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
+                  <h4 className="text-sm font-bold text-electric uppercase mb-2">Sport</h4>
+                  <p className="text-sm leading-relaxed">Rower crossowy to wydatek minimum 3 000-4 000 zł. Program <strong className="text-locked-white">Produktywność</strong> kosztuje mniej niż pół <em>nowego</em> roweru, którym możesz dojeżdżać do <em>starej</em> pracy.</p>
+                </div>
+              </div>
             </div>
 
             <a
