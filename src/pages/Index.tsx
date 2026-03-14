@@ -253,12 +253,11 @@ const Index = () => {
       />
 
       {/* ═══ AUTHORITY SECTION ═══ */}
-      <section className="py-24 relative overflow-hidden">
-        {/* void-glow */}
+      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#080808' }}>
+        {/* void-glow overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundColor: "#080808",
             backgroundImage:
               "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
           }}
