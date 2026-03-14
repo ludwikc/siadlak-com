@@ -403,7 +403,7 @@ const WebinarReplay = () => {
                 <Button
                   size="lg"
                   className="w-full bg-depth hover:bg-depth/90 text-white"
-                  onClick={() => navigate("/program/meski-kompas")}
+                   onClick={() => navigate("/program/meskosc")}
                 >
                   DOŁĄCZ ZANIM OFERTA WYGAŚNIE →
                 </Button>
