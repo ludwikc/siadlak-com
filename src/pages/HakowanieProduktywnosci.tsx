@@ -976,12 +976,12 @@ export default function HakowanieProduktywnosci() {
                       <p className="text-sm text-white/90 uppercase tracking-wide mb-2 text-center">
                         Twoja inwestycja
                       </p>
-                      <p className="text-5xl sm:text-6xl font-extrabold text-white mb-2 text-center">
-                        1 197 zł
+                       <p className="text-5xl sm:text-6xl font-extrabold text-white mb-2 text-center">
+                        1 497 zł
                       </p>
                       <div className="flex items-center justify-center gap-2 text-white/90 text-sm">
                         <CheckCircle2 className="h-4 w-4" />
-                        <span>Dostęp na zawsze</span>
+                        <span>Instalujesz raz, masz na zawsze</span>
                       </div>
                     </div>
                   </div>
