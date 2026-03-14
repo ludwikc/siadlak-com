@@ -26,9 +26,9 @@ const Sitemap = () => {
       icon: <Book className="h-5 w-5" />,
       pages: [
         { name: 'Przegląd programów rozwojowych', path: '/program', description: 'Wszystkie dostępne kursy i programy' },
-        { name: 'Hakowanie Produktywności', path: '/program/hakowanie-produktywnosci', description: 'Kompleksowy program produktywności' },
+        { name: 'Hakowanie Produktywności', path: '/program/produktywnosc', description: 'Kompleksowy program produktywności' },
         { name: 'LifeOS: System Upgrade', path: '/program/lifeos-system-upgrade', description: 'Program fundamentalnej transformacji' },
-        { name: 'Silna Głowa', path: '/program/silna-glowa', description: 'Program wzmocnienia mentalnego' },
+        { name: 'Silna Głowa', path: '/program/odpornosc', description: 'Program wzmocnienia mentalnego' },
         ]
     },
     {
