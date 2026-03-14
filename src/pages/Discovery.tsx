@@ -1,182 +1,56 @@
 import Layout from "@/components/layout/Layout";
 import { CheckCircle, Flame, Users, Star } from "@/lib/icons";
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import {
   ContentTextSection,
   ContentGridSection,
 } from "@/components/sections/content";
+import DiscoveryHero from "@/components/discovery/DiscoveryHero";
+import DiscoveryAvailabilityCheck from "@/components/discovery/DiscoveryAvailabilityCheck";
+import DiscoveryLifeOSOffer from "@/components/discovery/DiscoveryLifeOSOffer";
 
 export default function Discovery() {
-  const [status, setStatus] = useState<"initial" | "loading" | "success">(
-    "initial",
-  );
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    if (status === "loading") {
-      const interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            clearInterval(interval);
-            return 100;
-          }
-          return prev + 4;
-        });
-      }, 100);
-
-      return () => clearInterval(interval);
-    } else {
-      setProgress(0);
-    }
-  }, [status]);
-
-  const handleCheckAvailability = () => {
-    setStatus("loading");
-    setTimeout(() => {
-      setStatus("success");
-    }, 2500);
-  };
-
-  const handleScheduleSession = () => {
-    const calendarUrl = "https://calendar.app.google/Xj5U39t9HaVNqS1HA";
-    const popup = window.open(
-      calendarUrl,
-      "calendar-booking",
-      "width=600,height=700,scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no",
-    );
-
-    if (popup) {
-      popup.focus();
-    } else {
-      window.open(calendarUrl, "_blank");
-    }
-  };
-
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-void-glow relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Badge */}
-            <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-4 sm:px-6 py-2 sm:py-3">
-                <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
-                <span className="text-xs sm:text-sm font-bold text-text-on-dark">
-                  TYLKO 5 MIEJSC JEDNOCZEŚNIE
-                </span>
-              </div>
-            </div>
-
-            <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-4 sm:mb-6 leading-tight text-text-on-dark text-center">
-              <span className="text-electric">Sesja Discovery</span>
-              {` – 30 minut, które rozstrzygną, czy jesteśmy dla siebie`}
-            </h1>
-
-            <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-text-dim leading-relaxed text-center max-w-4xl mx-auto">
-              To nie jest sprzedażowa rozmowa. To coś bardziej brutalnego. Dowiem się,
-              czy mogę Ci pomóc. I czy w ogóle chcę.
-            </p>
-
-            {/* Social Proof */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
-              <div className="flex items-center gap-2 border border-white/10 rounded-sm px-3 sm:px-4 py-2">
-                <Users className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
-                <span className="text-sm sm:text-base font-semibold text-text-on-dark">
-                  Maksymalnie 5 aktywnych klientów
-                </span>
-              </div>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 sm:h-5 sm:w-5 text-electric fill-electric"
-                  />
-                ))}
-                <span className="ml-2 text-sm sm:text-base font-semibold text-text-on-dark">
-                  Transformacyjny program
-                </span>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <div className="flex flex-col items-center gap-4 mb-6">
-              <button
-                className="inline-flex items-center justify-center px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm"
-                style={{
-                  background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                  boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-                }}
-                onClick={() => {
-                  const ctaSection = document.querySelector('#cta-section');
-                  ctaSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Sprawdź dostępność →
-              </button>
-
-              <p className="text-sm sm:text-base font-semibold text-text-on-dark">
-                <span className="text-electric">
-                  Głęboka, intensywna praca transformacyjna
-                </span>{" "}
-                • Nie pracuję z każdym
-              </p>
-            </div>
-
-            <div className="text-center">
-              <a
-                href="#kim-nie-jestesmy"
-                className="text-sm text-text-dim hover:text-electric transition-colors underline"
-              >
-                Dowiedz się więcej, dla kogo to nie jest →
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero */}
+      <DiscoveryHero />
 
       <div className="the-cut" />
 
-      {/* Intro Section */}
-      <ContentTextSection alignment="center" maxWidth="900px" backgroundVariant="light">
-        <p>Bo oto prawda: nie pracuję z każdym. Nie mogę i nie chcę.</p>
-
-        <p>
-          Mam maksymalnie 5 miejsc jednocześnie. To nie jest skalowalny biznes.
-          To jest głęboka, intensywna praca transformacyjna, która wymaga ode
-          mnie wszystkiego. I jeśli nie jesteś gotów na to, co oferuję,
-          marnujemy sobie nawzajem czas.
-        </p>
-      </ContentTextSection>
-
-      <div className="the-cut" />
-
-      {/* Co się dzieje Section */}
+      {/* Co się dzieje podczas sesji */}
       <ContentTextSection
-        title="Co się dzieje podczas sesji?"
+        title="Co się dzieje podczas tych 30 minut?"
         backgroundVariant="muted"
         maxWidth="900px"
       >
-        <p>Zadam Ci kilka pytań. Nie będą miłe.</p>
-
         <p>
-          Nie po to, żeby być dupkiem. Po to, żeby zobaczyć,{" "}
-          <strong>
-            ile podatku płacisz każdego dnia za historie, w których żyjesz
-          </strong>
-          .
+          Zadam Ci kilka pytań. Nie takich, jakie zadają na rozmowie
+          kwalifikacyjnej — raczej takich, na które sam nie wpadłbyś, że
+          potrzebujesz na nie odpowiedzieć.
         </p>
 
-        <p className="font-bold">Będę szukał:</p>
+        <p className="font-bold">Będę szukał trzech rzeczy:</p>
 
         <div className="space-y-6 mt-8">
           {[
-            { num: "1. Za co walczysz?", desc: "Jaki jest Twój niewidzialny wróg? Jaką sprawiedliwość próbujesz przywrócić? Gdzie ugrzązłeś w narracji ofiary lub sprawiedliwości, która Cię więzi?" },
-            { num: "2. Czego próbujesz uniknąć?", desc: "Bo większość ludzi nie szuka transformacji. Szukają kolejnego systemu, który pozwoli im uniknąć tego, czego naprawdę potrzebują: spojrzenia w lustro." },
-            { num: "3. Ile jesteś gotów zapłacić?", desc: "Nie mówię o pieniądzach. Mówię o energii. O gotowości na dyskomfort. Na kontrolowany chaos. Na konfrontację z tym, kim jesteś, a nie z tym, kim myślisz, że powinieneś być." },
+            {
+              num: "1. Za co walczysz?",
+              desc: "Każdy z nas nosi jakąś walkę — czasem z lat, czasem z pokoleń. Nie chodzi o to, żeby ją wygrać. Chodzi o to, żeby zobaczyć, ile podatku płacisz każdego dnia za historię, w której żyjesz. Bo niektóre walki dawno się skończyły — a my wciąż stoimy w okopach.",
+            },
+            {
+              num: "2. Czego próbujesz uniknąć?",
+              desc: "Większość ludzi, którzy do mnie przychodzą, nie szuka transformacji. Szukają kolejnego systemu, który pozwoli im uniknąć tego, czego naprawdę potrzebują: spojrzenia na diament bez sukna. Bez dekoracji. Bez oprawki. I to jest w porządku — ale trzeba to najpierw zobaczyć.",
+            },
+            {
+              num: "3. Ile jesteś gotów zainwestować?",
+              desc: "Nie mówię o pieniądzach (o nich porozmawiamy osobno, w pełni transparentnie). Mówię o energii. O gotowości na dyskomfort. O odwadze, żeby zobaczyć, kim jesteś — a nie kim myślisz, że powinieneś być.",
+            },
           ].map((item) => (
-            <div key={item.num} className="rounded-sm p-8 border border-white/10">
+            <div
+              key={item.num}
+              className="rounded-sm p-8 border border-white/10"
+            >
               <h3 className="font-heading text-lg font-semibold mb-3 text-electric">
                 {item.num}
               </h3>
@@ -188,29 +62,96 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* Kim NIE jesteśmy Section */}
+      {/* Rozpoznajesz ten stan? */}
+      <ContentTextSection
+        title="Rozpoznajesz ten stan?"
+        backgroundVariant="light"
+        maxWidth="900px"
+      >
+        <p>
+          Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie
+          wygląda dobrze z zewnątrz.
+        </p>
+
+        <p>
+          A w środku? Konflikt, który zżera gigawaty energii:
+        </p>
+
+        <div className="space-y-4 mt-6 mb-6">
+          {[
+            ["Część Ciebie chce budować dalej", "Część Ciebie chce wreszcie odpocząć"],
+            ["Część Ciebie potrzebuje kontroli", "Część Ciebie wie, że kontrola to iluzja"],
+            ["Część Ciebie goni kolejny cel", 'Część Ciebie pyta "po co?"'],
+          ].map(([left, right]) => (
+            <div
+              key={left}
+              className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-lg"
+            >
+              <span className="font-semibold">{left}</span>
+              <span className="text-electric">→</span>
+              <span className="font-semibold">{right}</span>
+            </div>
+          ))}
+        </div>
+
+        <p>
+          Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując
+          je pogodzić — i zużywasz na to więcej energii niż na samą pracę.
+        </p>
+
+        <p className="font-bold mt-8">Próbowałeś to rozwiązać:</p>
+
+        <div className="space-y-3 mt-4">
+          {[
+            ['Mówisz o tym znajomym', '"Musisz więcej odpoczywać"'],
+            ['Próbujesz z coachingiem', '"Ustaw nowe cele SMART"'],
+            ['Idziesz na terapię', '"Opowiedz mi o swoich rodzicach"'],
+            ['Kupujesz kurs', '"Oto 7 kroków do lepszego Ciebie"'],
+          ].map(([action, response]) => (
+            <div key={action} className="flex items-start gap-3 text-lg">
+              <span>{action}</span>
+              <span className="text-electric">→</span>
+              <span className="italic">{response}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8">
+          Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w
+          strategii, celach ani przeszłości.{" "}
+          <strong className="text-electric">
+            Problem leży na poziomie tożsamości.
+          </strong>{" "}
+          Na suknie, które nałożyłeś na diament lata temu — i które od tamtego
+          czasu zdążyło wrosnąć.
+        </p>
+      </ContentTextSection>
+
+      <div className="the-cut" />
+
+      {/* Kim NIE jesteśmy dla siebie */}
       <ContentGridSection
         title="Kim NIE jesteśmy dla siebie"
         columns={2}
         gap="lg"
         className="scroll-mt-20"
-        id="kim-nie-jestesmy"
-        backgroundVariant="light"
+        id="nie"
+        backgroundVariant="muted"
       >
-        <div className="p-8 rounded-sm border border-text-on-light/10">
-          <h3 className="text-xl font-bold mb-6 text-text-on-light">
+        <div className="p-8 rounded-sm border border-white/10">
+          <h3 className="text-xl font-bold mb-6 text-text-on-dark">
             ❌ To NIE jest dla Ciebie, jeśli:
           </h3>
-          <ul className="space-y-4 text-lg text-text-on-light/80">
+          <ul className="space-y-4 text-lg text-text-dim">
             {[
-              "Szukasz kolejnego systemu produktywności, który \"w końcu zadziała\"",
-              "Chcesz, żebym powiedział Ci, że wszystko jest w porządku i wystarczy zmienić aplikację",
-              "Potrzebujesz walidacji, nie transformacji",
-              "Nie jesteś gotów zapłacić energetycznego podatku za zmianę",
-              "Zarabiasz poniżej 100K PLN rocznie (po prostu jeszcze nie dotarłeś do punktu bólu, który obsługuję)",
+              <>Szukasz kolejnego systemu produktywności, który &quot;w końcu zadziała&quot; (mam na to <Link to="/program/produktywnosc" className="text-electric underline hover:no-underline">osobny program</Link>)</>,
+              "Chcesz, żebym powiedział Ci, że wszystko jest okej i wystarczy zmienić aplikację",
+              "Potrzebujesz walidacji, nie zmiany perspektywy",
+              "Nie jesteś gotów na to, żeby się zaskoczyć — bo zaskoczenie bywa niewygodne",
               "Szukasz szybkich rozwiązań zamiast głębokiej pracy",
-            ].map((text) => (
-              <li key={text} className="flex items-start">
+              "Jesteś na etapie, w którym potrzebujesz najpierw stabilizacji — finansowej, zdrowotnej, emocjonalnej. To nie jest słabość, to jest priorytet. Możesz wrócić, kiedy będziesz gotów",
+            ].map((text, i) => (
+              <li key={i} className="flex items-start">
                 <span className="mr-3">•</span>
                 <span>{text}</span>
               </li>
@@ -222,12 +163,12 @@ export default function Discovery() {
           <h3 className="text-xl font-bold mb-6 text-electric">
             ✅ To może być dla Ciebie, jeśli:
           </h3>
-          <ul className="space-y-4 text-lg text-text-on-light/80">
+          <ul className="space-y-4 text-lg text-text-dim">
             {[
-              "Osiągnąłeś zewnętrzny sukces (100K-10M+ rocznie), ale czujesz wewnętrzną pustkę",
-              "Jesteś uwięziony w narracjach, które kiedyś Ci służyły, a teraz Cię więzą",
-              "Testowałeś już wszystkie systemy i żaden nie działa, bo problem nie jest w systemach",
-              "Potrzebujesz kogoś, kto będzie wystarczająco brutalny, żeby powiedzieć Ci prawdę",
+              "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
+              "Jesteś uwięziony w narracjach, które kiedyś Ci służyły, a teraz Cię więzą — i zaczynasz to widzieć",
+              "Testowałeś już systemy, metody, kursy — i wiesz, że problem leży głębiej niż to, co jest na powierzchni",
+              "Potrzebujesz kogoś, kto powie Ci prawdę z szacunkiem — a nie klepania po plecach ani brutalnych konfrontacji",
               "Albo kogoś, kto da Ci pozwolenie na przestanie walki i przyjęcie tego, co już masz",
               "Jesteś gotów na 8 tygodni intensywnej pracy, która zmieni sposób, w jaki widzisz siebie i świat",
             ].map((text) => (
@@ -242,24 +183,40 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* Co może się wydarzyć Section */}
+      {/* Co może się wydarzyć po rozmowie */}
       <ContentGridSection
         title="Co może się wydarzyć po tej rozmowie?"
+        subtitle="Transparentnie — jest kilka możliwych scenariuszy. I każdy z nich jest dobry."
         columns={2}
         gap="md"
-        backgroundVariant="muted"
+        backgroundVariant="light"
       >
         {[
-          { title: "Scenariusz 1: Zaczynamy pracę", desc: "Obaj czujemy, że to ma sens. Widzę, gdzie jesteś. Wiem, jak Ci pomóc. Jesteś gotów. Mówimy o Life OS i rozpoczynamy 8-tygodniową transformację." },
-          { title: "Scenariusz 2: Nie teraz", desc: "Może jesteś blisko, ale jeszcze nie teraz. Być może musisz najpierw przepracować coś innego. Powiem Ci to szczerze i skieruję tam, gdzie powinieneś być teraz." },
-          { title: "Scenariusz 3: To nie dla Ciebie", desc: "I to też jest okej. Czasem najlepszą pomocą jest szczera informacja, że nasze drogi się rozchodzą. Zaoszczędzę Ci czasu, pieniędzy i energii." },
-          { title: "Scenariusz 4: Zaskoczenie", desc: "Czasem podczas tych 30 minut dzieje się coś nieoczekiwanego. Jedno pytanie, jedna perspektywa, jedno przesunięcie narracji – i już widzisz coś, czego wcześniej nie widziałeś. Bez sprzedaży. Bez oferty. Po prostu zmiana." },
+          {
+            title: "Scenariusz 1: Zaczynamy pracę",
+            desc: "Obaj czujemy, że to ma sens. Widzę, gdzie jesteś. Wiem, jakie pytania zadać. Ty jesteś gotów. Rozmawiamy o Life OS: System Upgrade i zaczynamy 8-tygodniową pracę.",
+          },
+          {
+            title: "Scenariusz 2: Nie teraz",
+            desc: "Może jesteś blisko, ale nie teraz. Może najpierw musisz przepracować coś innego — albo po prostu potrzebujesz czasu, żeby to, co usłyszałeś, mogło się ułożyć. Powiem Ci to wprost i skieruję tam, gdzie powinieneś być na tym etapie.",
+          },
+          {
+            title: "Scenariusz 3: To nie dla Ciebie",
+            desc: 'I to jest absolutnie w porządku. Czasem najlepsza pomoc to szczera informacja, że nasze drogi się rozchodzą. Zaoszczędzę Ci czasu, pieniędzy i energii — a Ty nie stracisz pół roku na coś, co od początku nie pasowało.',
+          },
+          {
+            title: "Scenariusz 4: Zaskoczenie",
+            desc: 'To jest mój ulubiony. Czasem podczas tych 30 minut dzieje się coś nieoczekiwanego. Jedno pytanie, jedna zmiana perspektywy, jedno przesunięcie narracji — i nagle widzisz coś, czego wcześniej nie widziałeś. Bez sprzedaży. Bez oferty. Po prostu — zmiana. Wiem, że brzmi to jak filmowa scena, ale zdarza się częściej, niż byś myślał.',
+          },
         ].map((item) => (
-          <div key={item.title} className="rounded-sm p-8 border border-white/10">
+          <div
+            key={item.title}
+            className="rounded-sm p-8 border border-text-on-light/10"
+          >
             <h3 className="text-lg font-bold mb-3 text-electric">
               {item.title}
             </h3>
-            <p className="text-lg text-text-dim leading-relaxed">
+            <p className="text-lg text-text-on-light/80 leading-relaxed">
               {item.desc}
             </p>
           </div>
@@ -268,19 +225,31 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* Transparentnie Section */}
+      {/* Transparentnie: jak to działa */}
       <ContentTextSection
-        title="Transparentnie: Jak to działa"
+        title="Transparentnie: jak to działa"
         maxWidth="900px"
-        backgroundVariant="light"
+        backgroundVariant="muted"
       >
         <div className="space-y-6">
           {[
-            { num: "1. Wypełniasz formularz", desc: "Zadaję kilka pytań przed rozmową, żeby nie marnować Twojego czasu, jeśli od razu widzę, że to nie ma sensu." },
-            { num: "2. 30 minut 1:1", desc: "Zoom, kamera włączona. To nie jest casual chat. To jest głęboka, czasem niewygodna rozmowa o tym, gdzie naprawdę jesteś." },
-            { num: "3. Decyzja", desc: "Po rozmowie wiem, czy mogę Ci pomóc. I mówię Ci to wprost. Jeśli tak, rozmawiamy o współpracy. Jeśli nie, mówię Ci dlaczego i gdzie powinieneś szukać dalej." },
+            {
+              num: "1. Wypełniasz formularz",
+              desc: 'Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) — ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej — i napiszę Ci o tym szczerze.',
+            },
+            {
+              num: "2. 30 minut 1:1 na Zoom",
+              desc: "Kamera włączona. To nie jest szybki chat — to uczciwa rozmowa o tym, gdzie naprawdę jesteś. Nie o tym, gdzie byś chciał być. Nie o tym, co mówisz na LinkedInie. O tym, co widzisz, kiedy zdejmiesz sukno.",
+            },
+            {
+              num: "3. Jasna odpowiedź",
+              desc: 'Po rozmowie wiem, czy mogę Ci pomóc — i mówię Ci to wprost. Jeśli tak, rozmawiamy o współpracy. Jeśli nie, powiem dlaczego i gdzie szukać dalej. Żadnej "szarej strefy", żadnego "zastanowię się i wrócę".',
+            },
           ].map((item) => (
-            <div key={item.num} className="rounded-sm p-8 border border-text-on-light/10">
+            <div
+              key={item.num}
+              className="rounded-sm p-8 border border-white/10"
+            >
               <h3 className="text-lg font-bold mb-3 text-electric">
                 {item.num}
               </h3>
@@ -292,105 +261,201 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* CTA Section with Availability Check */}
-      <ContentTextSection backgroundVariant="muted" maxWidth="900px" id="cta-section">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl md:text-4xl font-bold mb-8 text-text-on-dark">Ostatnia rzecz</h2>
+      {/* Life OS: System Upgrade — co instalujesz */}
+      <DiscoveryLifeOSOffer />
 
-          <p className="mb-8">
-            Nie przychodzę do Ciebie jako guru, który ma wszystkie odpowiedzi.
+      <div className="the-cut" />
+
+      {/* Dlaczego 16 000 zł? */}
+      <ContentTextSection
+        title="Dlaczego 16 000 zł?"
+        maxWidth="900px"
+        backgroundVariant="muted"
+      >
+        <p>
+          Bo to nie jest kurs. Nie jest coaching w grupie. Nie jest &quot;program
+          online z dostępem do społeczności&quot;.
+        </p>
+
+        <p>
+          To jest 8 tygodni mojego pełnego zaangażowania. Maksymalnie 5 osób
+          jednocześnie — bo inaczej nie da się zrobić tej pracy dobrze. Nie da
+          się zadać właściwego pytania, jeśli nie pamiętasz odpowiedzi na
+          poprzednie. I nie da się prowadzić kogoś przez zobaczenie własnego
+          diamentu, jednocześnie prowadząc grupę 50 osób na webinarze.
+        </p>
+
+        <p className="font-bold mt-4">
+          Porównaj to z tym, co prawdopodobnie już próbowałeś:
+        </p>
+
+        <div className="space-y-6 mt-6">
+          {[
+            {
+              title: "Standardowy coaching",
+              price: "2-5 tys. PLN/miesiąc",
+              desc: "Daje Ci nowe strategie, więcej narzędzi, kolejne frameworki. Instalujesz nowe aplikacje na starym, skonfliktowanym systemie. Efekt jest chwilowy, a potem wracasz do starych wzorców.",
+            },
+            {
+              title: "Terapia",
+              price: "200-400 zł/sesja × rok = 10 000-20 000 zł",
+              desc: "Pomaga zrozumieć przeszłość. Rozumiesz już skąd. Ale nadal nie wiesz, jak podjąć odważną decyzję w poniedziałek o 9 rano. Insight bez zmiany perspektywy to ciekawa historyjka.",
+            },
+            {
+              title: "Kursy online i książki",
+              price: "2-5 tys. PLN",
+              desc: "Dostarczają wiedzę. Ale prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki nie wejdziesz do wody.",
+            },
+            {
+              title: "Kolejny rok szukania na własną rękę",
+              price: "",
+              desc: "Kosztuje nie tylko pieniądze. Kosztuje czas. A czas, jak już wiesz, jest jednym z tych dwóch zasobów, o które walczą wszyscy.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-sm p-6 border border-white/10"
+            >
+              <h3 className="font-heading text-base font-bold text-electric mb-1">
+                {item.title}
+                {item.price && (
+                  <span className="font-normal text-text-dim">
+                    {" "}
+                    ({item.price})
+                  </span>
+                )}
+              </h3>
+              <p>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8">
+          Life OS łączy to, co najlepsze z każdego podejścia — głębię terapii,
+          precyzję coachingu, mądrość filozofii — w 8-tygodniowy proces celujący
+          w konkretny przełom. Nie w otwarty proces bez końca.
+        </p>
+
+        <p className="font-bold text-electric mt-4">
+          Nie mówię, że to tania inwestycja. Mówię, że to może być ostatnia
+          inwestycja tego typu, jakiej potrzebujesz.
+        </p>
+      </ContentTextSection>
+
+      <div className="the-cut" />
+
+      {/* Czego możesz się spodziewać? */}
+      <ContentTextSection
+        title="Czego możesz się spodziewać?"
+        maxWidth="900px"
+        backgroundVariant="light"
+      >
+        <p>
+          Nie obiecuję cudów. Obiecuję pracę, po której zobaczysz wymierne
+          zmiany:
+        </p>
+
+        <div className="space-y-8 mt-8">
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Koniec z wewnętrzną wojną.
+            </h3>
+            <p>
+              Przestajesz zużywać 80% energii na konflikt między częściami
+              siebie. Nagle masz zasób mocy, o którym zapomniałeś.
+            </p>
+            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
+              &quot;Nie zdawałem sobie sprawy, ile energii szło na walkę z samym
+              sobą.&quot;
+              <span className="block text-sm mt-1 not-italic text-electric">
+                — Klient Life OS
+              </span>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Decyzyjność bez paraliżu.
+            </h3>
+            <p>
+              Intuicja + dane = szybkie, pewne decyzje. Bez trzech tygodni
+              bezsennych nocy nad każdym wyborem.
+            </p>
+            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
+              &quot;Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie
+              snu. Teraz wiem w 20 minut.&quot;
+              <span className="block text-sm mt-1 not-italic text-electric">
+                — Klientka Life OS
+              </span>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Prawdziwy spokój — nie tylko przerwa w pracy.
+            </h3>
+            <p>
+              Weekend staje się regeneracją, nie poczuciem winy.
+            </p>
+            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
+              &quot;Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie
+              myślałem o firmie. I firma nie spłonęła.&quot;
+              <span className="block text-sm mt-1 not-italic text-electric">
+                — Klient Life OS
+              </span>
+            </blockquote>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Ambicja bez lęku.
+            </h3>
+            <p>
+              Przestajesz potrzebować sukcesu jako potwierdzenia wartości. Ale
+              nadal go budujesz — tyle że z radości, nie ze strachu. To nie jest
+              rezygnacja z ambicji. To uwolnienie jej z lęku.
+            </p>
+          </div>
+        </div>
+      </ContentTextSection>
+
+      <div className="the-cut" />
+
+      {/* Ostatnia rzecz + CTA */}
+      <ContentTextSection
+        backgroundVariant="muted"
+        maxWidth="900px"
+        id="formularz"
+      >
+        <div className="text-center">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold mb-8 text-text-on-dark">
+            Ostatnia rzecz
+          </h2>
+
+          <p className="mb-6">
+            Nie przychodzę do Ciebie jako ktoś, kto ma wszystkie odpowiedzi.
+            Przychodzę jako ktoś, kto przeszedł swoją własną drogę — od systemów
+            produktywności w wieku 16 lat, przez sukces, który smakował jak
+            pustka, aż po odkrycie, że diament był tam cały czas.
           </p>
 
-          <p className="mb-8">
-            Przychodzę jako ktoś, kto przeszedł przez obie ścieżki – wojownika i
-            poszukiwacza. Kto zbudował systemy produktywności w wieku 16 lat,
-            żeby przetrwać. Kto osiągnął sukces i odkrył pustkę. Kto stanął na
-            balkonie i myślał o skoku. I kto znalazł wyjście.
+          <p className="mb-6">
+            Przychodzę jako ktoś, kto od 19 lat pomaga innym zadać sobie
+            właściwe pytanie. Nie to pytanie, na które chcesz odpowiedzieć. To
+            pytanie, po którym cisza mówi więcej niż następna godzina rozmowy.
           </p>
 
           <p className="font-bold text-electric mb-12">
-            Nie obiecuję, że będzie łatwo. Obiecuję, że będzie prawdziwe.
+            Nie obiecuję, że będzie łatwo. Obiecuję, że będzie prawdziwe. I że
+            po tych 30 minutach — niezależnie od scenariusza — będziesz wiedział
+            więcej niż przed nimi.
           </p>
         </div>
 
-        {/* Availability Check Card */}
-        <div className="p-12 rounded-sm border border-white/10 text-center relative overflow-hidden">
-          <div className="relative z-10">
-            {status === "initial" && (
-              <div className="py-4">
-                <div className="w-20 h-20 bg-depth rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-6 text-text-on-dark">
-                  Sprawdź dostępność Sesji Discovery
-                </h3>
-                <p className="text-lg text-text-dim mb-8 max-w-md mx-auto">
-                  Kliknij poniżej, aby sprawdzić czy mam obecnie wolne miejsca w
-                  programie mentoringowym
-                </p>
-                <button
-                  onClick={handleCheckAvailability}
-                  className="px-10 py-4 rounded font-bold text-lg text-white"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                    boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-                  }}
-                >
-                  Sprawdź dostępność
-                </button>
-              </div>
-            )}
-
-            {status === "loading" && (
-              <div className="py-8 relative z-10">
-                <div className="animate-spin w-8 h-8 border-3 border-electric border-t-transparent rounded-full mx-auto mb-6"></div>
-                <h3 className="text-xl font-semibold mb-6 text-text-on-dark">
-                  Trwa sprawdzanie dostępności...
-                </h3>
-
-                <div className="w-full max-w-md mx-auto">
-                  <div className="bg-white/10 rounded-full h-2 overflow-hidden">
-                    <div
-                      className="bg-electric h-full transition-all duration-300 ease-out"
-                      style={{ width: `${progress}%` }}
-                    ></div>
-                  </div>
-                  <p className="text-lg text-text-dim mt-2">
-                    {Math.round(progress)}% zakończone
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {status === "success" && (
-              <div className="py-4 relative z-10">
-                <div className="w-20 h-20 bg-electric rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
-                  <CheckCircle className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-text-on-dark">
-                  Tak, mam obecnie miejsce w programie mentoringowym
-                </h3>
-                <p className="text-lg mb-8 text-text-dim max-w-md mx-auto">
-                  Możesz umówić Sesję Discovery już teraz
-                </p>
-                <button
-                  onClick={handleScheduleSession}
-                  className="px-10 py-4 rounded font-bold text-lg text-white"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                    boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-                  }}
-                >
-                  Umów Sesję Discovery
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
+        <DiscoveryAvailabilityCheck />
 
         <p className="text-lg text-center text-text-dim italic mt-8">
-          (Liczba miejsc ograniczona – maksymalnie 5 aktywnych klientów
-          jednocześnie)
+          (Maksymalnie 5 aktywnych klientów jednocześnie)
         </p>
       </ContentTextSection>
 
@@ -400,18 +465,34 @@ export default function Discovery() {
       <ContentTextSection maxWidth="800px" backgroundVariant="light">
         <div className="rounded-sm p-8 border border-text-on-light/10">
           <p className="mb-6">
-            <strong className="text-electric">P.S.</strong> Jeśli czytasz to
-            i myślisz "to brzmi strasznie" albo "to za intensywne" – to nie jest
-            dla Ciebie. I to jest w porządku.
+            <strong className="text-electric">P.S.</strong> Jeśli dotarłeś do
+            tego miejsca i wciąż analizujesz wszystkie &quot;za&quot; i
+            &quot;przeciw&quot; — to jest dokładnie jeden ze wzorców, z którym
+            będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie 100%
+            pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny
+            sposób, żeby zbadać tę niepewność — bez pełnego zobowiązania.
+          </p>
+
+          <p className="mb-6">
+            <strong className="text-electric">P.P.S.</strong> Jeśli nie jesteś
+            gotów na pracę 1:1, ale chcesz zobaczyć, jak pracuję — zacznij od{" "}
+            <Link
+              to="/program/produktywnosc"
+              className="text-electric underline hover:no-underline"
+            >
+              Programu Produktywność
+            </Link>
+            . To aplikacja mentalna, którą instalujesz samodzielnie, w swoim
+            tempie. I wiele osób stamtąd trafia tutaj — kiedy są gotowe na coś
+            głębszego.
           </p>
 
           <p>
-            Ale jeśli czytasz to i myślisz "kurwa, w końcu ktoś, kto nie próbuje
-            mnie przytulić tylko powie mi prawdę" –{" "}
-            <strong className="text-electric">
-              to jest właśnie to miejsce
-            </strong>
-            .
+            <strong className="text-electric">P.P.P.S.</strong> A jeśli czytasz
+            trzeci dopisek... to pewnie nie potrzebujesz programu, żeby wiedzieć,
+            że coś trzeba zmienić. Potrzebujesz rozmowy, która pomoże Ci zobaczyć{" "}
+            <em>co</em>. Na to właśnie jest ta sesja. 30 minut. Bez zobowiązań. I
+            jedno pytanie, które może zmienić wszystko.
           </p>
         </div>
 
