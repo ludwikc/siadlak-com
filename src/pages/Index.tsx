@@ -93,59 +93,16 @@ const Index = () => {
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
-              <p className="text-xl md:text-2xl text-dim leading-relaxed mb-6 max-w-xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Znasz ten moment, kiedy masz wszystko — a czujesz, że czegoś brakuje?
-              </p>
-
-              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Diament jest najtwardszą substancją na Ziemi.
-                <span className="text-dim block mt-2">
-                  I jest kompletnie przezroczysty.
-                </span>
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
                 <p>
-                  Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym —
-                  jak szmaragd.
-                  <br />
-                  Zmień sukno — zmieni się „kolor" diamentu.
+                  Masz kompetencje. Masz wyniki. I masz przeczucie, że to wciąż nie to.
                 </p>
-
-                <blockquote className="border-l-2 border-electric pl-6 py-2 text-white">
-                  Ale diament sam w sobie? Nie ma koloru. Jest czysty.
-                  <br />
-                  Twój umysł działa dokładnie tak samo.
-                </blockquote>
-
-                <div className="space-y-4">
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-depth">●</span>
-                    <p>
-                      Otaczasz się presją — nabiera koloru napięcia. Myślisz:
-                      „jestem zestresowany".
-                    </p>
-                  </div>
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-depth">●</span>
-                    <p>
-                      Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu.
-                      Myślisz: „nigdy nie mam dość".
-                    </p>
-                  </div>
-                </div>
-
-                <p>Ale to nie Ty się zmieniłeś.</p>
-                <p className="text-white text-2xl font-bold">
-                  To{" "}
-                  <span className="text-electric font-bold">
-                    sukno
-                  </span>{" "}
-                  się zmieniło.
-                </p>
-
                 <p>
-                  Pytanie brzmi: kiedy ostatnio ktoś pomógł Ci je zdjąć?
+                  Nie potrzebujesz kolejnego narzędzia. Potrzebujesz kogoś, kto pomoże Ci zobaczyć to, co masz w sobie od zawsze.
                 </p>
               </div>
 
@@ -155,16 +112,8 @@ const Index = () => {
                   to="/discovery"
                   className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  SPRAWDŹ DOSTĘPNOŚĆ →
+                  PRACUJ ZE MNĄ 1:1 →
                 </Link>
-              </div>
-
-              {/* Signature */}
-              <div className="mt-10 flex items-center gap-4">
-                <div className="w-8 h-[1px] bg-dim" />
-                <p className="text-xs text-dim uppercase tracking-widest">
-                  Ludwik C. Siadlak
-                </p>
               </div>
             </div>
 
@@ -210,6 +159,44 @@ const Index = () => {
               ))}
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ═══ PERSPEKTYWA — METAFORA DIAMENTU ═══ */}
+      <section className="py-24 md:py-32 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <Eyebrow>PERSPEKTYWA</Eyebrow>
+
+          <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed">
+            <p className="text-white text-2xl md:text-3xl font-heading font-bold leading-[1.2]">
+              Diament jest najtwardszą substancją na Ziemi. I jest kompletnie przezroczysty.
+            </p>
+
+            <p>
+              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd.
+              Zmień sukno — zmieni się „kolor" diamentu.
+            </p>
+
+            <blockquote className="border-l-2 border-electric pl-6 py-2 text-white italic">
+              Ale diament sam w sobie? Nie ma koloru. Jest czysty.
+              <br />
+              Twój umysł działa dokładnie tak samo.
+            </blockquote>
+
+            <p>
+              Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".
+            </p>
+            <p>
+              Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".
+            </p>
+
+            <p>Ale to nie Ty się zmieniłeś.</p>
+            <p className="text-white text-2xl font-bold">
+              To{" "}
+              <span className="text-electric font-bold">tło</span>{" "}
+              się zmieniło.
+            </p>
+          </div>
         </div>
       </section>
 
