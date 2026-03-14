@@ -1,14 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
-import {
-  ArrowRight,
-  Brain,
-  Clock,
-  Mic2,
-  MapPin,
-  Video,
-} from "@/lib/icons";
+import { ArrowRight, Brain, Clock, Mic2, MapPin, Video } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
 import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
@@ -17,27 +10,27 @@ import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.
 const decisionTree = [
   {
     problem: "Chaos w głowie i brak czasu",
-    program: "Produktywność",
+    program: "&rarr; Produktywność",
     link: "/program/produktywnosc",
   },
   {
     problem: "Stres, presja, poczucie, że zaraz się złamiesz",
-    program: "Silna Głowa",
+    program: "S&rarr; Odporność Psychiczna",
     link: "/program/odpornosc",
   },
   {
     problem: "Autopilot — dni lecą, a Ty nie pamiętasz, gdzie poszły",
-    program: "Uważne Życie",
+    program: "&rarr; Uważność ",
     link: "/program/uwaznosc",
   },
   {
     problem: "\u201EKim jestem, kiedy zdejm\u0119 wszystkie maski?\u201D",
-    program: "Męski Kompas",
+    program: "&rarr; Męskość",
     link: "/program/meskosc",
   },
   {
     problem: "Wszystko powyżej naraz — i czujesz, że problem jest głębiej",
-    program: "Life OS: System Upgrade",
+    program: "&rarr; Full System Upgrade",
     link: "/discovery",
   },
 ];
@@ -59,17 +52,17 @@ export default function Program() {
 
             <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-dim leading-relaxed text-left">
               <p>
-                Przez lata zbierałeś narzędzia, metody, techniki. Niektóre pomogły.
-                Większość — dodała kolejną warstwę na to, co już było skomplikowane.
+                Przez lata zbierałeś narzędzia, metody, techniki. Niektóre pomogły. Większość — dodała kolejną warstwę
+                na to, co już było skomplikowane.
               </p>
               <p>
-                Te programy działają inaczej. Nie dodają — zdejmują. Zdejmują sukno,
-                pod którym Twój diament był cały czas.
+                Te programy działają inaczej. Nie dodają — zdejmują. Zdejmują sukno, pod którym Twój diament był cały
+                czas.
               </p>
               <p>
-                Każdy z&nbsp;nich to 4–6 tygodni pracy z&nbsp;konkretnym problemem. Nie musisz
-                do nich „wracać", bo nie są kursami do „przerobienia". Są zmianami
-                w&nbsp;sposobie, w&nbsp;jaki myślisz. A&nbsp;te — raz zainstalowane — zostają.
+                Każdy z&nbsp;nich to 4–6 tygodni pracy z&nbsp;konkretnym problemem. Nie musisz do nich „wracać", bo nie
+                są kursami do „przerobienia". Są zmianami w&nbsp;sposobie, w&nbsp;jaki myślisz. A&nbsp;te — raz
+                zainstalowane — zostają.
               </p>
             </div>
           </div>
@@ -80,11 +73,10 @@ export default function Program() {
       <section className="py-16 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 text-center">
-              Nie wiesz, od czego zacząć?
-            </h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 text-center">Nie wiesz, od czego zacząć?</h3>
             <p className="text-lg text-dim mb-10 text-center">
-              Odpowiedz sobie na jedno pytanie: <strong className="text-white/90">co najbardziej przeszkadza Ci dzisiaj?</strong>
+              Odpowiedz sobie na jedno pytanie:{" "}
+              <strong className="text-white/90">co najbardziej przeszkadza Ci dzisiaj?</strong>
             </p>
 
             <div className="space-y-4">
@@ -100,9 +92,7 @@ export default function Program() {
                     </p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-electric font-bold text-sm md:text-base">
-                      {item.program}
-                    </span>
+                    <span className="text-electric font-bold text-sm md:text-base">{item.program}</span>
                     <ArrowRight className="w-4 h-4 text-electric opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </Link>
@@ -122,18 +112,20 @@ export default function Program() {
       <section className="py-16 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
-
             {/* APP #1: Produktywność */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl" aria-hidden="true">🧠</span>
-                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">
+                  🧠
+                </span>
+                <Badge
+                  variant="outline"
+                  className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]"
+                >
                   APLIKACJA #1
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                Produktywność
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Produktywność</h3>
               <p className="text-sm text-dim mb-6">
                 4–6 tygodni · Instalacja na zawsze ·{" "}
                 <Link to="/testimonials" className="text-electric hover:underline">
@@ -142,23 +134,23 @@ export default function Program() {
               </p>
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
-                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy testowali każdy system,
-                kalendarz i&nbsp;aplikację — a&nbsp;ich lista zadań i&nbsp;tak wygląda jak pole bitwy z&nbsp;samym sobą.
+                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy testowali każdy system, kalendarz
+                i&nbsp;aplikację — a&nbsp;ich lista zadań i&nbsp;tak wygląda jak pole bitwy z&nbsp;samym sobą.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                To nie jest kolejne narzędzie. To jest zmiana tego, jak podchodzisz do pracy,
-                czasu i&nbsp;energii. Raz zainstalowana — zostaje z&nbsp;Tobą na zawsze. Nie musisz do niej
-                wracać. Nie musisz „odświeżać motywacji". Ona działa w&nbsp;tle — jak system operacyjny.
+                To nie jest kolejne narzędzie. To jest zmiana tego, jak podchodzisz do pracy, czasu i&nbsp;energii. Raz
+                zainstalowana — zostaje z&nbsp;Tobą na zawsze. Nie musisz do niej wracać. Nie musisz „odświeżać
+                motywacji". Ona działa w&nbsp;tle — jak system operacyjny.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
-                <p className="text-base md:text-lg text-white/90 font-medium mb-3">
-                  Co się zmienia po instalacji:
-                </p>
+                <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
                   <p>Zamiast zarządzać zadaniami — zarządzasz energią.</p>
-                  <p>Zamiast walczyć z&nbsp;prokrastynacją — rozumiesz, skąd się bierze, i&nbsp;przestaje być problemem.</p>
+                  <p>
+                    Zamiast walczyć z&nbsp;prokrastynacją — rozumiesz, skąd się bierze, i&nbsp;przestaje być problemem.
+                  </p>
                   <p>Zamiast „być zajętym" — tworzysz przestrzeń na to, co naprawdę ważne.</p>
                 </div>
               </div>
@@ -167,7 +159,10 @@ export default function Program() {
                 Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.
               </p>
 
-              <Link to="/program/produktywnosc" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+              <Link
+                to="/program/produktywnosc"
+                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
+              >
                 <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
                   INSTALUJ PROGRAM →
                 </CTAButton>
@@ -177,33 +172,32 @@ export default function Program() {
             {/* APP #2: Silna Głowa */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl" aria-hidden="true">🛡️</span>
-                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">
+                  🛡️
+                </span>
+                <Badge
+                  variant="outline"
+                  className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]"
+                >
                   APLIKACJA #2
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                Silna Głowa
-              </h3>
-              <p className="text-sm text-dim mb-6">
-                6 tygodni · Instalacja na zawsze
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Silna Głowa</h3>
+              <p className="text-sm text-dim mb-6">6 tygodni · Instalacja na zawsze</p>
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
-                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy wiedzą, że ich głowa jest
-                ich największym sojusznikiem — i&nbsp;jednocześnie ich największym przeciwnikiem.
+                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy wiedzą, że ich głowa jest ich
+                największym sojusznikiem — i&nbsp;jednocześnie ich największym przeciwnikiem.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                Firewall dla Twojego umysłu. Nie uczę „jak radzić sobie ze stresem"
-                (masz już 15 artykułów o&nbsp;oddychaniu). Instaluję sposób myślenia, w&nbsp;którym
-                presja przestaje być wrogiem — i&nbsp;staje się paliwem.
+                Firewall dla Twojego umysłu. Nie uczę „jak radzić sobie ze stresem" (masz już 15 artykułów
+                o&nbsp;oddychaniu). Instaluję sposób myślenia, w&nbsp;którym presja przestaje być wrogiem — i&nbsp;staje
+                się paliwem.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
-                <p className="text-base md:text-lg text-white/90 font-medium mb-3">
-                  Co się zmienia po instalacji:
-                </p>
+                <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
                   <p>Presja zewnętrzna przestaje paraliżować — zaczyna skupiać.</p>
                   <p>Krytyka przestaje ranić — zaczyna informować.</p>
@@ -211,7 +205,10 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link to="/program/odpornosc" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+              <Link
+                to="/program/odpornosc"
+                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
+              >
                 <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
                   INSTALUJ PROGRAM →
                 </CTAButton>
@@ -221,37 +218,35 @@ export default function Program() {
             {/* APP #3: Uważne Życie */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl" aria-hidden="true">🧘</span>
-                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">
+                  🧘
+                </span>
+                <Badge
+                  variant="outline"
+                  className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]"
+                >
                   APLIKACJA #3
                 </Badge>
                 <Badge className="bg-depth text-white border-0 text-xs font-bold uppercase tracking-[0.2em]">
                   PROGRAM FLAGOWY
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                Uważne Życie
-              </h3>
-              <p className="text-sm text-dim mb-6">
-                4–6 tygodni · Instalacja na zawsze
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Uważne Życie</h3>
+              <p className="text-sm text-dim mb-6">4–6 tygodni · Instalacja na zawsze</p>
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
-                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy odkryli, że autopilot
-                prowadzi donikąd — i&nbsp;chcą przejąć stery.
+                <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy odkryli, że autopilot prowadzi
+                donikąd — i&nbsp;chcą przejąć stery.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                Medytacja dla ludzi z&nbsp;ADHD i&nbsp;analitycznym umysłem. Nie walczysz z&nbsp;myślami —
-                przejmujesz kontrolę nad kokpitem. To nie jest „zamknij oczy i&nbsp;oddychaj".
-                To jest praktyka, która działa nawet gdy siedzisz w&nbsp;korku, na spotkaniu
-                z&nbsp;zarządem albo w&nbsp;kolejce po kawę.
+                Medytacja dla ludzi z&nbsp;ADHD i&nbsp;analitycznym umysłem. Nie walczysz z&nbsp;myślami — przejmujesz
+                kontrolę nad kokpitem. To nie jest „zamknij oczy i&nbsp;oddychaj". To jest praktyka, która działa nawet
+                gdy siedzisz w&nbsp;korku, na spotkaniu z&nbsp;zarządem albo w&nbsp;kolejce po kawę.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
-                <p className="text-base md:text-lg text-white/90 font-medium mb-3">
-                  Co się zmienia po instalacji:
-                </p>
+                <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
                   <p>Życie przestaje Ci się „przydarzać" — zaczynasz je świadomie nawigować.</p>
                   <p>Emocje przestają Tobą miotać — zaczynają Cię informować o&nbsp;tym, co ważne.</p>
@@ -259,7 +254,10 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link to="/program/uwaznosc" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+              <Link
+                to="/program/uwaznosc"
+                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
+              >
                 <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
                   INSTALUJ PROGRAM →
                 </CTAButton>
@@ -269,33 +267,31 @@ export default function Program() {
             {/* APP #4: Męski Kompas */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl" aria-hidden="true">👑</span>
-                <Badge variant="outline" className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="text-3xl" aria-hidden="true">
+                  👑
+                </span>
+                <Badge
+                  variant="outline"
+                  className="text-electric border-electric/30 text-xs font-bold uppercase tracking-[0.2em]"
+                >
                   APLIKACJA #4
                 </Badge>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                Męski Kompas
-              </h3>
-              <p className="text-sm text-dim mb-6">
-                5 tygodni · Instalacja na zawsze
-              </p>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Męski Kompas</h3>
+              <p className="text-sm text-dim mb-6">5 tygodni · Instalacja na zawsze</p>
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
-                <strong className="text-white/90">Dla kogo:</strong> Dla mężczyzn, którzy czują, że grali
-                według cudzych reguł w&nbsp;grę, której nie chcieli wygrywać.
+                <strong className="text-white/90">Dla kogo:</strong> Dla mężczyzn, którzy czują, że grali według cudzych
+                reguł w&nbsp;grę, której nie chcieli wygrywać.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                Reinstalacja systemu tożsamości. Nie mówię Ci, „jak być mężczyzną" —
-                bo definicję męskości, którą nosiłeś, napisał ktoś inny. Ten program
-                pomaga Ci napisać własną. Od zera. Na Twoich warunkach.
+                Reinstalacja systemu tożsamości. Nie mówię Ci, „jak być mężczyzną" — bo definicję męskości, którą
+                nosiłeś, napisał ktoś inny. Ten program pomaga Ci napisać własną. Od zera. Na Twoich warunkach.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
-                <p className="text-base md:text-lg text-white/90 font-medium mb-3">
-                  Co się zmienia po instalacji:
-                </p>
+                <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
                   <p>Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.</p>
                   <p>Wrażliwość przestaje być słabością — staje się supermocą.</p>
@@ -303,7 +299,10 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link to="/program/meskosc" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+              <Link
+                to="/program/meskosc"
+                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
+              >
                 <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
                   INSTALUJ PROGRAM →
                 </CTAButton>
@@ -331,22 +330,19 @@ export default function Program() {
 
             {/* Not for / For */}
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                To nie jest dla każdego
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">To nie jest dla każdego</h3>
 
               <div className="space-y-6 text-base md:text-lg text-dim leading-relaxed">
                 <p>
-                  <strong className="text-white/90">Nie dla:</strong> osób szukających motywacyjnego kopa,
-                  szybkich trików i&nbsp;magicznych formuł. Jeśli potrzebujesz, żeby ktoś Ci powiedział
-                  „dasz radę" przez 6 tygodni — to nie tu. (Ale masz do tego pełne prawo —
-                  po prostu to nie jest moja robota.)
+                  <strong className="text-white/90">Nie dla:</strong> osób szukających motywacyjnego kopa, szybkich
+                  trików i&nbsp;magicznych formuł. Jeśli potrzebujesz, żeby ktoś Ci powiedział „dasz radę" przez 6
+                  tygodni — to nie tu. (Ale masz do tego pełne prawo — po prostu to nie jest moja robota.)
                 </p>
 
                 <p>
-                  <strong className="text-electric">Dla:</strong> osób, które testowały już narzędzia
-                  i&nbsp;wiedzą, że problem leży głębiej. Które są gotowe zmienić sposób myślenia,
-                  a&nbsp;nie tylko technikę zarządzania czasem.
+                  <strong className="text-electric">Dla:</strong> osób, które testowały już narzędzia i&nbsp;wiedzą, że
+                  problem leży głębiej. Które są gotowe zmienić sposób myślenia, a&nbsp;nie tylko technikę zarządzania
+                  czasem.
                 </p>
 
                 <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mt-4">
@@ -372,33 +368,26 @@ export default function Program() {
             </Badge>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6">
-              <img
-                src={lifehackerzyLogo}
-                alt="Lifehackerzy"
-                className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
-              />
+              <img src={lifehackerzyLogo} alt="Lifehackerzy" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight text-center sm:text-left">
-                Społeczność{" "}
-                <span className="text-lifehacker-purple">Lifehackerzy</span>
+                Społeczność <span className="text-lifehacker-purple">Lifehackerzy</span>
               </h2>
             </div>
 
             <div className="max-w-3xl mx-auto text-left space-y-4 text-base sm:text-lg text-white/80 leading-relaxed mb-10">
               <p>
-                Instalując dowolną aplikację, dostajesz dożywotni dostęp do społeczności
-                ludzi, którzy przeszli tę samą drogę.
+                Instalując dowolną aplikację, dostajesz dożywotni dostęp do społeczności ludzi, którzy przeszli tę samą
+                drogę.
               </p>
               <p>
-                To jedyny sposób, żeby dołączyć do Lifehackerów. Nie ma osobnego wejścia.
-                Nie ma subskrypcji. Jest decyzja o&nbsp;zmianie — i&nbsp;ludzie, którzy ją podjęli razem z&nbsp;Tobą.
+                To jedyny sposób, żeby dołączyć do Lifehackerów. Nie ma osobnego wejścia. Nie ma subskrypcji. Jest
+                decyzja o&nbsp;zmianie — i&nbsp;ludzie, którzy ją podjęli razem z&nbsp;Tobą.
               </p>
             </div>
 
             {/* 5 key benefits */}
             <div className="max-w-3xl mx-auto text-left mb-10">
-              <h4 className="text-lg font-bold text-white mb-4">
-                Co znajdziesz w&nbsp;środku:
-              </h4>
+              <h4 className="text-lg font-bold text-white mb-4">Co znajdziesz w&nbsp;środku:</h4>
               <div className="space-y-4">
                 {[
                   {
@@ -459,8 +448,8 @@ export default function Program() {
                 </p>
                 <p className="text-base text-white/60 mb-4">— Jim Rohn</p>
                 <p className="text-base text-white/80">
-                  Otocz się ludźmi, którzy — tak jak Ty — chcą od życia czegoś więcej.
-                  I&nbsp;którzy wiedzą, że „więcej" nie znaczy „szybciej".
+                  Otocz się ludźmi, którzy — tak jak Ty — chcą od życia czegoś więcej. I&nbsp;którzy wiedzą, że „więcej"
+                  nie znaczy „szybciej".
                 </p>
               </div>
             </div>
@@ -491,13 +480,12 @@ export default function Program() {
 
             <div className="max-w-3xl mx-auto space-y-6 text-base md:text-lg text-on-light-dim leading-relaxed mb-12">
               <p>
-                Jeśli przeglądasz tę stronę i&nbsp;czujesz, że żadna pojedyncza aplikacja nie trafia
-                w&nbsp;sedno — bo problem leży głębiej, na poziomie tego, kim jesteś, a&nbsp;nie tego,
-                co robisz — to jest Twoje miejsce.
+                Jeśli przeglądasz tę stronę i&nbsp;czujesz, że żadna pojedyncza aplikacja nie trafia w&nbsp;sedno — bo
+                problem leży głębiej, na poziomie tego, kim jesteś, a&nbsp;nie tego, co robisz — to jest Twoje miejsce.
               </p>
               <p>
-                8 tygodni intensywnej pracy 1:1 ze mną. Maksymalnie 5 osób jednocześnie.
-                Diagnostyka, dekonstrukcja, integracja i&nbsp;nowy standard działania.
+                8 tygodni intensywnej pracy 1:1 ze mną. Maksymalnie 5 osób jednocześnie. Diagnostyka, dekonstrukcja,
+                integracja i&nbsp;nowy standard działania.
               </p>
             </div>
 
@@ -523,28 +511,22 @@ export default function Program() {
             {/* Price + CTA */}
             <div className="max-w-3xl mx-auto text-center">
               <div className="rounded-sm border border-black/10 bg-paper p-8 md:p-12">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-depth mb-3">
-                  16 000 PLN
-                </div>
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-depth mb-3">16 000 PLN</div>
                 <p className="text-on-light-dim text-base md:text-lg mb-2">
                   Faktura VAT · Możliwość rozłożenia na 2 raty
                 </p>
-                <p className="text-sm text-on-light-dim/70 mb-8">
-                  Dostępne: max 5 aktywnych klientów jednocześnie
-                </p>
+                <p className="text-sm text-on-light-dim/70 mb-8">Dostępne: max 5 aktywnych klientów jednocześnie</p>
 
-                <Link to="/discovery" className="inline-block focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
-                  <CTAButton
-                    size="lg"
-                    className="bg-brand-gradient hover:opacity-90 text-white border-0 text-lg px-10"
-                  >
+                <Link
+                  to="/discovery"
+                  className="inline-block focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
+                >
+                  <CTAButton size="lg" className="bg-brand-gradient hover:opacity-90 text-white border-0 text-lg px-10">
                     Sprawdź dostępność — Sesja Discovery →
                   </CTAButton>
                 </Link>
 
-                <p className="text-sm text-on-light-dim mt-4">
-                  30 minut · Bez zobowiązań · Żebyśmy obaj wiedzieli
-                </p>
+                <p className="text-sm text-on-light-dim mt-4">30 minut · Bez zobowiązań · Żebyśmy obaj wiedzieli</p>
               </div>
             </div>
           </div>
@@ -560,30 +542,24 @@ export default function Program() {
             </h3>
 
             <div className="space-y-6 text-base md:text-lg text-on-light-dim leading-relaxed">
+              <p>Wiesz, co jest najdziwniejsze w&nbsp;tych programach?</p>
               <p>
-                Wiesz, co jest najdziwniejsze w&nbsp;tych programach?
+                Że po ich zainstalowaniu ludzie nie mówią „nauczyłem się czegoś nowego". Mówią:{" "}
+                <strong className="text-on-light">„w&nbsp;końcu widzę to, co miałem w&nbsp;sobie od zawsze."</strong>
               </p>
+              <p>Bo tak działa diament. Nie trzeba go tworzyć. Trzeba odsłonić.</p>
               <p>
-                Że po ich zainstalowaniu ludzie nie mówią „nauczyłem się czegoś nowego".
-                Mówią: <strong className="text-on-light">„w&nbsp;końcu widzę to, co miałem w&nbsp;sobie od zawsze."</strong>
-              </p>
-              <p>
-                Bo tak działa diament. Nie trzeba go tworzyć. Trzeba odsłonić.
-              </p>
-              <p>
-                Wybierz aplikację, od której chcesz zacząć. Albo — jeśli czujesz,
-                że to jest głębsze —{" "}
+                Wybierz aplikację, od której chcesz zacząć. Albo — jeśli czujesz, że to jest głębsze —{" "}
                 <Link to="/discovery" className="text-electric hover:underline font-medium">
                   umów się na rozmowę
-                </Link>.
+                </Link>
+                .
               </p>
               <p>
-                Tak czy inaczej — <strong className="text-on-light">dziękuję, że jesteś.</strong> Samo to,
-                że doczytałeś do tego miejsca, mówi mi coś ważnego o&nbsp;Tobie.
+                Tak czy inaczej — <strong className="text-on-light">dziękuję, że jesteś.</strong> Samo to, że doczytałeś
+                do tego miejsca, mówi mi coś ważnego o&nbsp;Tobie.
               </p>
-              <p className="text-on-light font-medium mt-8">
-                — Ludwik
-              </p>
+              <p className="text-on-light font-medium mt-8">— Ludwik</p>
             </div>
           </div>
         </div>
