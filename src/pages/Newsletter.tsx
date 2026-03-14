@@ -40,7 +40,7 @@ export default function NewsletterPage() {
               </h1>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                Umysł + AI do pot&#281;gi serca.
+                Umysł + AI do pot&#281;gi Serca.
               </h2>
 
               <p className="text-lg sm:text-xl text-dim max-w-2xl mx-auto leading-relaxed">
