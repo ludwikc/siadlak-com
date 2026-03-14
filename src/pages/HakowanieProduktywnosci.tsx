@@ -722,7 +722,7 @@ export default function HakowanieProduktywnosci() {
                   lessons: 10,
                 },
                 {
-                  title: "Narzędzia (z AI)",
+                  title: "Narzędzia",
                   subtitle: "Moduł 5",
                   icon: Zap,
                   gradient: "from-electric to-depth",
