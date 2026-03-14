@@ -94,7 +94,7 @@ export default function MeskiKompas() {
               Edycja 1: październik 2025 | Tylko 10 miejsc | Wszystkie miejsca wyprzedane
               (edycja pilotażowa)
             </div>
-            <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+            <Link to="https://buy.siadlak.com/checkout/program-meskosc">
               <CTAButton
                 variant="primary"
                 size="xl"
@@ -3179,7 +3179,7 @@ export default function MeskiKompas() {
 
             {/* Primary CTA */}
             <div className="text-center mb-8">
-              <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
                 <CTAButton
                   variant="primary"
                   size="xl"
@@ -3251,7 +3251,7 @@ export default function MeskiKompas() {
 
             {/* Secondary CTA */}
             <div className="text-center mt-8">
-              <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
                 <CTAButton
                   variant="primary"
                   size="xl"
@@ -3298,7 +3298,7 @@ export default function MeskiKompas() {
                   </p>
                 </div>
               </div>
-              <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
                 <button
                   className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
                   style={{

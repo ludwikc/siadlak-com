@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 const UwazneZycie = () => {
-  const ctaUrl = "https://buy.siadlak.com/checkout/uwaznezycie";
+  const ctaUrl = "https://buy.siadlak.com/checkout/program-uwaznosc";
 
   return (
     <Layout hideFooter>

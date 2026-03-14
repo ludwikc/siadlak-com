@@ -31,6 +31,8 @@ import {
 } from "lucide-react";
 
 const SilnaGlowa = () => {
+  const ctaUrl = "https://buy.siadlak.com/checkout/program-odpornosc";
+
   return (
     <Layout>
       {/* Hero Section - Theme Locked */}
@@ -99,14 +101,21 @@ const SilnaGlowa = () => {
             <div className="flex flex-col items-center gap-4 mb-8">
               <div className="relative group inline-block w-full sm:w-auto">
                 <div className="absolute -inset-1 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <Button
-                  variant="special"
-                  size="lg"
-                  className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block"
                 >
-                  Dołączam do kursu Silna Głowa
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                  <Button
+                    variant="special"
+                    size="lg"
+                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                  >
+                    Dołączam do kursu Silna Głowa
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
               </div>
 
               {/* Value Proposition */}
@@ -1264,14 +1273,20 @@ const SilnaGlowa = () => {
 
             {/* CTA */}
             <div className="text-center mt-12">
-              <Button
-                variant="special"
-                size="lg"
-                className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Wskakuję na pokład. Zamawiam dostęp
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
+                >
+                  Wskakuję na pokład. Zamawiam dostęp
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1291,14 +1306,20 @@ const SilnaGlowa = () => {
             </p>
 
             <div className="space-y-4">
-              <Button
-                variant="special"
-                size="lg"
-                className="btn-locked-primary text-lg px-8 py-4"
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Nie mam już wątpliwości, dołączam do kursu
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-lg px-8 py-4"
+                >
+                  Nie mam już wątpliwości, dołączam do kursu
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
               <p className="text-locked-gradient">
                 Przedsprzedaż trwa tylko do 10 stycznia!
               </p>
