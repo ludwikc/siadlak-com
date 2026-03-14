@@ -1419,7 +1419,7 @@ export default function HakowanieProduktywnosci() {
                 <strong className="text-foreground">P.P.S.</strong> Jeśli masz pytania, na które nie znalazłeś odpowiedzi na tej stronie — napisz do mnie. Odpowiadam osobiście.
               </p>
               <p>
-                <strong className="text-foreground">P.P.P.S.</strong> A jeśli czytasz ten trzeci dopisek, to znaczy, że chcesz to zrobić, ale jeszcze czegoś Ci brakuje. Może tego: masz 30 dni na zwrot. Jedyne ryzyko to ryzyko, że zadziała.
+                <strong className="text-foreground">P.P.P.S.</strong> A jeśli czytasz ten trzeci dopisek, to znaczy, że chcesz to zrobić, ale jeszcze czegoś Ci brakuje. Może tego: masz 30 dni na zwrot. Jedyne ryzyko to ryzyko, że... zadziała. A wtedy Twoje życie otworzy się na "nowe problemy" ;) Tylko te "nowe problemy" będziesz już rozwiązywać z lekkością, bo <em>prokrastynacja</em> raz na zawsze przestanie być Twoim problemem. 🫡
               </p>
             </div>
           </div>
