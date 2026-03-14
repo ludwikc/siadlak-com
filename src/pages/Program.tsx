@@ -4,16 +4,10 @@ import { CTAButton } from "@/components/ui/cta-button";
 import {
   ArrowRight,
   Brain,
-  Check,
   Clock,
-  Diamond,
   Mic2,
   MapPin,
-  Users,
   Video,
-  Zap,
-  Shield,
-  AlertTriangle,
 } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
