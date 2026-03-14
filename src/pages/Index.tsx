@@ -743,10 +743,9 @@ const Index = () => {
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
-                <h3 className="font-heading font-bold text-3xl text-on-light mb-1">
-                  Uważność
+                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">
+                  Uważne Życie
                 </h3>
-                <p className="text-sm text-on-light-dim mb-4">(Uważne Życie)</p>
                 <p className="text-on-light-dim mb-6">
                   Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad kokpitem.
                 </p>
