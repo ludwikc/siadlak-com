@@ -3298,7 +3298,7 @@ export default function MeskiKompas() {
                   </p>
                 </div>
               </div>
-              <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
                 <button
                   className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
                   style={{
