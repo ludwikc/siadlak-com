@@ -108,7 +108,7 @@ export default function HakowanieProduktywnosci() {
               {/* Scarcity */}
               <p className="text-sm sm:text-base font-semibold text-locked-white">
                 <span className="text-electric">
-                  Grupa ograniczona do 50 osób
+                  Aktualna grupa ograniczona do 50 osób
                 </span>{" "}
                 • Zostało{" "}
                 <span className="text-electric font-bold text-lg sm:text-xl">
