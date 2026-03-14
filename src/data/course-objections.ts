@@ -35,7 +35,7 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
     myth: "Mam już kursy produktywności i nie zadziałały.",
     reality:
-      'Właśnie dlatego ten jest inny. Większość kursów daje Ci jeden system i mówi "stosuj". A potem, gdy nie działa, mówi "nie starasz się wystarczająco". To jest jak sprzedawanie butów w jednym rozmiarze i obwinianie ludzi, że mają złe stopy. Program Produktywność jest szyty na miarę — razem budujesz swój system, dopasowany do Twojego życia.',
+      'Właśnie dlatego ten jest inny. Większość kursów daje Ci jeden system i mówi "stosuj". A potem, gdy nie działa, mówi "nie starasz się wystarczająco". To jest jak sprzedawanie butów w jednym rozmiarze i obwinianie ludzi, że mają złe stopy. Program Produktywność nie jest kursem do przerobienia — to aplikacja mentalna, którą instalujesz raz, a która zostaje z Tobą na zawsze. Razem budujesz swój system, dopasowany do Twojego życia. I już nigdy nie będziesz potrzebować kolejnego "kursu produktywności".',
     icon: Target,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
