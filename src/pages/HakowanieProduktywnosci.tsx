@@ -1205,7 +1205,7 @@ export default function HakowanieProduktywnosci() {
                 <div className="flex flex-wrap items-center justify-center gap-8">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Users className="h-5 w-5 text-electric" />
-                    <span className="font-bold text-foreground">1 240+</span>
+                    <span className="font-bold text-foreground">100+</span>
                     uczestników
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
