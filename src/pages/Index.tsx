@@ -428,7 +428,7 @@ const Index = () => {
 
       {/* ═══ TESTIMONIAL HERO QUOTE #2 ═══ */}
       <TestimonialHeroQuote
-        quote="„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.""
+        quote={"„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.\""}
         author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
