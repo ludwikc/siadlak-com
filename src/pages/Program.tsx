@@ -512,7 +512,7 @@ export default function Program() {
               <div className="space-y-3">
                 {[
                   "8 sesji mentoringowych 1:1",
-                  "Diagnostyka Life OS (pełny skan „systemu operacyjnego")",
+                  "Diagnostyka Life OS (pe\u0142ny skan \u201Esystemu operacyjnego\u201D)",
                   "Dostęp VIP 24/7 przez cały program",
                   "Nagrania wszystkich sesji",
                   "Dożywotni dostęp do społeczności absolwentów",
