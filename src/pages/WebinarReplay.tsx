@@ -561,7 +561,7 @@ const WebinarReplay = () => {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-white text-depth hover:bg-white/90 font-bold shadow-lg px-6 py-3"
-                  onClick={() => navigate("/program/meski-kompas")}
+                  onClick={() => navigate("/program/meskosc")}
                 >
                   <span className="inline sm:hidden">DOŁĄCZ →</span>
                   <span className="hidden sm:inline">DOŁĄCZ TERAZ →</span>

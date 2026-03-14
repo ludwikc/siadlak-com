@@ -752,19 +752,19 @@ const Index = () => {
                 title: "Hakowanie Produktywności",
                 desc: "Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.",
                 img: programProduktywnosc,
-                link: "/program/hakowanie-produktywnosci",
+                link: "/program/produktywnosc",
               },
               {
                 title: "Silna Głowa",
                 desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
                 img: programOdpornosc,
-                link: "/program/silna-glowa",
+                link: "/program/odpornosc",
               },
               {
                 title: "Męski Kompas",
                 desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
                 img: programMeskiKompas,
-                link: "/program/meski-kompas",
+                link: "/program/meskosc",
               },
             ].map((card) => (
               <Link key={card.title} to={card.link} className="group bg-white rounded-md shadow-sm overflow-hidden">

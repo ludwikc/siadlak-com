@@ -36,7 +36,7 @@ const Sitemap = () => {
       icon: <Mic2 className="h-5 w-5" />,
       pages: [
         { name: 'Life Hacking Podcast', path: '/podcast/life-hacking', description: 'Podcast o hakach życiowych' },
-        { name: 'Uważne Życie', path: '/program/uwazne-zycie', description: 'Podcast o świadomym życiu (pod programami)' },
+        { name: 'Uważne Życie', path: '/program/uwaznosc', description: 'Podcast o świadomym życiu (pod programami)' },
       ]
     },
     {
