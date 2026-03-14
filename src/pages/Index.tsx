@@ -200,11 +200,11 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <Eyebrow>DIAGNOZA</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
-            To nie Ty jesteś zepsuty
+            Diament nie potrzebuje kolejnej oprawki
           </h2>
 
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
-            <p>Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że&nbsp;wystarczyło zmienić sukno.</p>
+            <p>Przez lata próbowałeś go zmienić. Nie wiedziałeś, że wystarczyło zmienić tło, na którym leży.</p>
             <p>Wiem, bo sam to robiłem. I&nbsp;widzę to u każdego, kto do mnie przychodzi.</p>
           </div>
 
