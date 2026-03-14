@@ -651,8 +651,8 @@ export default function HakowanieProduktywnosci() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Co zawiera Program Produktywność?
               </h2>
-              <p className="text-lg text-electric font-medium mb-4">
-                6 modułów gotowych do "zainstalowania" w Twoim życiu
+               <p className="text-lg text-electric font-medium mb-4">
+                6 modułów gotowych do zainstalowania w Twoim umyśle
               </p>
               <p className="text-dim mb-8">
                 Nie musisz zmieniać wszystkiego naraz — instalujesz moduł po module, w swoim tempie.
