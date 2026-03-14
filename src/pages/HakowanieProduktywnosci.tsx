@@ -354,8 +354,8 @@ export default function HakowanieProduktywnosci() {
             </div>
 
             <div className="text-center p-8 bg-gradient-to-r from-depth/10 to-electric/10 rounded-xl">
-              <p className="text-2xl font-bold text-foreground">
-                Ale mam na to sposób.
+               <p className="text-2xl font-bold text-foreground">
+                Ale mam na to sposób 🫡.
               </p>
             </div>
           </div>
