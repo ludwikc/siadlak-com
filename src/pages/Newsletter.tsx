@@ -227,64 +227,61 @@ export default function NewsletterPage() {
         </section>
 
 
-        {/* ===== 5. DLA KOGO (DARK) ===== */}
+        {/* ===== 5-6. DLA KOGO + SOCIAL PROOF (DARK) ===== */}
         <section className="py-16 sm:py-20 bg-void-glow">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                Dla kogo to jest?
-              </h2>
+            <div className="max-w-3xl mx-auto space-y-16">
+              <div className="space-y-8">
+                <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
+                  Dla kogo to jest?
+                </h2>
 
-              <div className="space-y-6 text-base sm:text-lg text-dim leading-relaxed">
-                <p>
-                  <strong className="text-on-dark">Nie dla Ciebie, je&#347;li</strong> szukasz kolejnej listy &#8222;10
-                  narz&#281;dzi AI, kt&oacute;re musisz zna&#263;&#8221;. Mam do Ciebie zbyt du&#380;o szacunku,
-                  &#380;eby wysy&#322;a&#263; Ci co&#347;, co jutro b&#281;dzie nieaktualne.
-                </p>
+                <div className="space-y-6 text-base sm:text-lg text-dim leading-relaxed">
+                  <p>
+                    <strong className="text-on-dark">Nie dla Ciebie, je&#347;li</strong> szukasz kolejnej listy &#8222;10
+                    narz&#281;dzi AI, kt&oacute;re musisz zna&#263;&#8221;. Mam do Ciebie zbyt du&#380;o szacunku,
+                    &#380;eby wysy&#322;a&#263; Ci co&#347;, co jutro b&#281;dzie nieaktualne.
+                  </p>
 
-                <p>
-                  <strong className="text-on-dark">Dla Ciebie, je&#347;li</strong> masz do&#347;&#263; konsumowania
-                  trend&oacute;w i chcesz co&#347; z nimi <em>zrobi&#263;</em>. Je&#347;li czujesz, &#380;e im
-                  wi&#281;cej narz&#281;dzi, tym bardziej brakuje Ci czego&#347;, co trudno nazwa&#263;. Je&#347;li
-                  chcesz my&#347;le&#263; g&#322;&#281;biej — i mie&#263; z kim.
-                </p>
+                  <p>
+                    <strong className="text-on-dark">Dla Ciebie, je&#347;li</strong> masz do&#347;&#263; konsumowania
+                    trend&oacute;w i chcesz co&#347; z nimi <em>zrobi&#263;</em>. Je&#347;li czujesz, &#380;e im
+                    wi&#281;cej narz&#281;dzi, tym bardziej brakuje Ci czego&#347;, co trudno nazwa&#263;. Je&#347;li
+                    chcesz my&#347;le&#263; g&#322;&#281;biej — i mie&#263; z kim.
+                  </p>
 
-                <p>
-                  Wi&#281;kszo&#347;&#263; ludzi, kt&oacute;rzy tu trafiaj&#261;, to programi&#347;ci, liderzy,
-                  przedsi&#281;biorcy, tw&oacute;rcy — ludzie, kt&oacute;rzy maj&#261; wiedz&#281;, ale szukaj&#261;
-                  m&#261;dro&#347;ci. Kt&oacute;rzy wiedz&#261; <em>jak</em>, ale coraz cz&#281;&#347;ciej pytaj&#261;{" "}
-                  <em>po co</em>.
-                </p>
+                  <p>
+                    Wi&#281;kszo&#347;&#263; ludzi, kt&oacute;rzy tu trafiaj&#261;, to programi&#347;ci, liderzy,
+                    przedsi&#281;biorcy, tw&oacute;rcy — ludzie, kt&oacute;rzy maj&#261; wiedz&#281;, ale szukaj&#261;
+                    m&#261;dro&#347;ci. Kt&oacute;rzy wiedz&#261; <em>jak</em>, ale coraz cz&#281;&#347;ciej pytaj&#261;{" "}
+                    <em>po co</em>.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ===== 6. SOCIAL PROOF (DARK continuation) ===== */}
-        <section className="pb-16 sm:pb-20 bg-void-glow">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                Co m&oacute;wi&#261; czytelnicy?
-              </h2>
+              <div className="space-y-8">
+                <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
+                  Co m&oacute;wi&#261; czytelnicy?
+                </h2>
 
-              <div className="space-y-6">
-                <blockquote className="border-l-2 border-electric pl-6 space-y-3">
-                  <p className="text-base sm:text-lg text-dim italic leading-relaxed">
-                    &#8222;Ludwik nie ma racji w 40% przypadk&oacute;w. I w&#322;a&#347;nie dlatego rozmowy z nim
-                    s&#261; najcenniejsze. Kwestionuje moje za&#322;o&#380;enia, nie potakuje im.&#8221;
-                  </p>
-                  <footer className="text-sm text-dim not-italic">— Katarzyna L., konsultantka AI</footer>
-                </blockquote>
+                <div className="space-y-6">
+                  <blockquote className="border-l-2 border-electric pl-6 space-y-3">
+                    <p className="text-base sm:text-lg text-dim italic leading-relaxed">
+                      &#8222;Ludwik nie ma racji w 40% przypadk&oacute;w. I w&#322;a&#347;nie dlatego rozmowy z nim
+                      s&#261; najcenniejsze. Kwestionuje moje za&#322;o&#380;enia, nie potakuje im.&#8221;
+                    </p>
+                    <footer className="text-sm text-dim not-italic">— Katarzyna L., konsultantka AI</footer>
+                  </blockquote>
 
-                <blockquote className="border-l-2 border-electric pl-6 space-y-3">
-                  <p className="text-base sm:text-lg text-dim italic leading-relaxed">
-                    &#8222;Jedna my&#347;l z newslettera zmieni&#322;a wi&#281;cej ni&#380; 100 &#8218;porad
-                    produktywno&#347;ci&#8217; z LinkedIn. Przesta&#322;am optymalizowa&#263; czas. Zacz&#281;&#322;am
-                    optymalizowa&#263; jako&#347;&#263; my&#347;lenia.&#8221;
-                  </p>
-                  <footer className="text-sm text-dim not-italic">— Anna K., trenerka przyw&oacute;dztwa</footer>
-                </blockquote>
+                  <blockquote className="border-l-2 border-electric pl-6 space-y-3">
+                    <p className="text-base sm:text-lg text-dim italic leading-relaxed">
+                      &#8222;Jedna my&#347;l z newslettera zmieni&#322;a wi&#281;cej ni&#380; 100 &#8218;porad
+                      produktywno&#347;ci&#8217; z LinkedIn. Przesta&#322;am optymalizowa&#263; czas. Zacz&#281;&#322;am
+                      optymalizowa&#263; jako&#347;&#263; my&#347;lenia.&#8221;
+                    </p>
+                    <footer className="text-sm text-dim not-italic">— Anna K., trenerka przyw&oacute;dztwa</footer>
+                  </blockquote>
+                </div>
               </div>
             </div>
           </div>
