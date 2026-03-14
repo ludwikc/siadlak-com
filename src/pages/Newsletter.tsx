@@ -226,7 +226,6 @@ export default function NewsletterPage() {
           </div>
         </section>
 
-        <div className="the-cut" />
 
         {/* ===== 5. DLA KOGO (DARK) ===== */}
         <section className="py-16 sm:py-20 bg-void-glow">
