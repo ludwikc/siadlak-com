@@ -93,8 +93,6 @@ const Index = () => {
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
-              <Eyebrow>PERSPEKTYWA</Eyebrow>
-
               <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Diament jest najtwardszą substancją na Ziemi.
                 <span className="text-dim block mt-2">
@@ -104,10 +102,10 @@ const Index = () => {
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
                 <p>
-                  Połóż go na czerwonym suknie – wygląda jak rubin. Na zielonym –
+                  Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym —
                   jak szmaragd.
                   <br />
-                  Zmień sukno – zmieni się „kolor" diamentu.
+                  Zmień sukno — zmieni się „kolor" diamentu.
                 </p>
 
                 <blockquote className="border-l-2 border-electric pl-6 py-2 text-white">
@@ -120,14 +118,14 @@ const Index = () => {
                   <div className="flex items-baseline gap-4">
                     <span className="text-depth">●</span>
                     <p>
-                      Otaczasz się presją – nabiera koloru napięcia. Myślisz:
+                      Otaczasz się presją — nabiera koloru napięcia. Myślisz:
                       „jestem zestresowany".
                     </p>
                   </div>
                   <div className="flex items-baseline gap-4">
                     <span className="text-depth">●</span>
                     <p>
-                      Wchodzisz w sprint za kolejnym celem – nabiera koloru głodu.
+                      Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu.
                       Myślisz: „nigdy nie mam dość".
                     </p>
                   </div>
@@ -140,6 +138,10 @@ const Index = () => {
                     sukno
                   </span>{" "}
                   się zmieniło.
+                </p>
+
+                <p>
+                  Pytanie brzmi: kiedy ostatnio ktoś pomógł Ci je zdjąć?
                 </p>
               </div>
 
@@ -218,17 +220,19 @@ const Index = () => {
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>
               Przez lata próbowałeś zmienić diament. Nie wiedziałeś, że
-              wystarczyło zmienić sukno. Wiem, bo sam to robiłem. I widzę to u
-              każdego, kto do mnie przychodzi.
+              wystarczyło zmienić sukno.
+            </p>
+            <p>
+              Wiem, bo sam to robiłem. I widzę to u każdego, kto do mnie przychodzi.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 mb-12">
             {[
-              "Szlifowałeś go kursami: GTD, Todoist, Asana.",
-              "Polerowałeś terapeutami i coachami.",
-              "Czyściłeś Headspace'em i Calmem.",
-              "Kupowałeś nowe systemy i metody.",
+              'Szlifowałeś go kursami: GTD, Todoist, Asana, "7 nawyków skutecznego wszystkiego".',
+              "Polerowałeś terapeutami i coachami (kolejny, i jeszcze jeden, i może ten wreszcie...).",
+              "Czyściłeś Headspace'em i Calmem — bo ktoś Ci powiedział, że problem jest w Twojej głowie.",
+              'Kupowałeś nowe systemy i metody — bo stare "nie działały".',
             ].map((item, i) => (
               <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
                 <span className="text-destructive font-bold shrink-0">✕</span>
@@ -253,7 +257,7 @@ const Index = () => {
               On potrzebuje kogoś, kto powie:
               <br />
               <span className="text-electric font-bold text-3xl block mt-2">
-                „Zdejmij sukno i spójrz".
+                „Zdejmij sukno i spójrz."
               </span>
             </p>
           </div>
@@ -262,7 +266,7 @@ const Index = () => {
 
       {/* ═══ TESTIMONIAL HERO QUOTE #1 ═══ */}
       <TestimonialHeroQuote
-        quote="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
+        quote={<>„Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."</>}
         author="ŁUKASZ — IT, ADHD, SCEPTYK"
       />
 
@@ -301,18 +305,21 @@ const Index = () => {
               <p>
                 Mógłbym Ci teraz wrzucić CV: 19 lat jako trener Microsoft.
                 10 000 profesjonalistów. Fortune 500. NATO. Jednostki
-                specjalne. Psychologia i informatyka – Oxford.
+                specjalne. Psychologia i informatyka — Oxford.
               </p>
               <p>
-                Mógłbym. Ale to nie to przekonuje ludzi. Przekonuje ich to, że
-                wiem, jak to jest leżeć na wszystkich kolorach sukna naraz.
+                Mógłbym. Ale to nie to przekonuje ludzi.
+              </p>
+              <p>
+                Przekonuje ich to, że
+                wiem, jak to jest leżeć na wszystkich kolorach sukna naraz — i myśleć, że to Ty masz niewłaściwy kolor.
               </p>
             </div>
 
             {/* Right: blockquote card */}
             <div className="bg-surface p-8 border-l-4 border-depth">
               <blockquote className="text-white italic text-lg leading-relaxed">
-                "W 2014 roku stałem na balkonie i poważnie rozważałem skok.
+                „W 2014 roku stałem na balkonie i poważnie rozważałem skok.
                 Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
                 na jedwabnym suknie. I kompletną pustkę w środku."
               </blockquote>
@@ -374,7 +381,7 @@ const Index = () => {
             Diamentowy Umysł
           </h2>
           <p className="text-dim uppercase tracking-widest text-sm mb-16">
-            NIE METAFORA – METODA
+            NIE METAFORA — METODA
           </p>
         </div>
 
@@ -388,14 +395,14 @@ const Index = () => {
                 głębiej. Na poziomie jądra systemu.
               </p>
               <p>
-                Nie daję Ci odpowiedzi. Nie prowadzę Cię przez 12 kroków.
+                Nie daję Ci odpowiedzi. Nie prowadzę Cię przez 12 kroków. (Nie mam nawet 12 kroków. Mam pytania.)
               </p>
               <p>
                 Zadaję Ci pytania. I buduję z Tobą metaforę, która jest{" "}
                 <em>Twoja</em>.
               </p>
               <div className="border-l-2 border-electric pl-4 text-white font-medium">
-                Metafora działa tam, gdzie logika się zatrzymuje.
+                Metafora działa tam, gdzie logika się zatrzymuje. Logika mówi „powinieneś". Metafora mówi „aha — widzę". I w tym „aha" wszystko się zmienia.
               </div>
             </div>
 
@@ -421,7 +428,7 @@ const Index = () => {
 
       {/* ═══ TESTIMONIAL HERO QUOTE #2 ═══ */}
       <TestimonialHeroQuote
-        quote="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."
+        quote="„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.""
         author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
@@ -456,7 +463,7 @@ const Index = () => {
                   widzisz, co jest pod nimi.
                 </p>
                 <p>
-                  To praca 1:1. Ze mną. Nie z nagraniem. Z człowiekiem, który
+                  To praca 1:1. Ze mną. Nie z nagraniem, nie z chatbotem, nie z PDFem „7 kroków do lepszego życia". Z człowiekiem, który
                   zadaje pytanie, o którym nie wiedziałeś, że potrzebujesz je
                   usłyszeć.
                 </p>
@@ -488,7 +495,7 @@ const Index = () => {
                   Pełen Proces
                 </p>
                 <p className="text-5xl md:text-6xl font-heading font-bold text-electric tracking-tighter mb-8">
-                  39 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
+                  16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
 
                 <Link
@@ -499,7 +506,7 @@ const Index = () => {
                 </Link>
 
                 <p className="text-xs text-on-light-dim text-center">
-                  Dostępne: 3/5 miejsc • Faktura VAT • Raty 0%
+                  Dostępne: 3/5 miejsc · Faktura VAT
                 </p>
               </div>
             </div>
@@ -509,7 +516,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-20">
             <TestimonialCard
               variant="light"
-              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
+              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
               author="ANNA"
               label="CEO Agencji Marketingowej"
             />
@@ -544,15 +551,15 @@ const Index = () => {
             />
             <TestimonialCard
               variant="light"
-              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do agenta zmiany."
+              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
               author="ANNA"
               label="CEO"
             />
             <TestimonialCard
               variant="light"
-              quote="Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
+              quote="Niby byłam na wakacjach, ale mentalnie byłam w biurze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
               author="ŁUCJA"
-              label="Founder RevSpace"
+              label="Founder RefSpace"
             />
           </div>
         </div>
@@ -569,7 +576,7 @@ const Index = () => {
                </p>
               <ul className="space-y-4 text-on-light-dim">
                 {[
-                  "Szukasz kolejnego systemu produktywności",
+                  "Szukasz kolejnego systemu produktywności (mam na to osobny program — patrz niżej)",
                   "Potrzebujesz kogoś, kto powie Ci, że wszystko jest okej",
                   "Chcesz gotową receptę z pudełka",
                 ].map((item, i) => (
@@ -609,7 +616,7 @@ const Index = () => {
               <p>
                 Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa
                 jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej
-                pory – powiemy sobie „do widzenia". Nie zapłacisz ani złotówki
+                pory — powiemy sobie „do widzenia". Nie zapłacisz ani złotówki
                 więcej.
               </p>
               <p>
@@ -669,11 +676,11 @@ const Index = () => {
           {/* Łucja quote */}
           <div className="py-16 max-w-2xl">
             <blockquote className="text-xl md:text-2xl lg:text-3xl text-on-light italic leading-relaxed mb-6">
-              Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
-              'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam.
+              „Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział:
+              'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
             </blockquote>
             <footer className="text-sm uppercase tracking-widest text-on-light-dim">
-              — ŁUCJA — FOUNDER REVSPACE
+              — ŁUCJA — FOUNDER REFSPACE
             </footer>
           </div>
 
@@ -686,7 +693,7 @@ const Index = () => {
               ZAREZERWUJ BEZPŁATNĄ ROZMOWĘ
             </Link>
             <p className="text-xs text-on-light-dim uppercase tracking-wider">
-              30 MINUT • BEZ SPRZEDAŻY • BEZ OBIETNIC
+              30 MINUT · BEZ SPRZEDAŻY · BEZ OBIETNIC
             </p>
           </div>
         </div>
@@ -700,7 +707,7 @@ const Index = () => {
           </h3>
           <p className="text-on-light-dim text-sm">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję.
-            Wyczuć, czy ten język do Ciebie trafia.
+            Wyczuć, czy ten język do Ciebie trafia. Dlatego stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
           </p>
         </div>
       </section>
@@ -714,8 +721,8 @@ const Index = () => {
               Aplikacje Mentalne
             </h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
-              Programy, które instalujesz w swoim systemie, aby rozwiązać
-              konkretny problem bez reinstalacji całego OS.
+              Programy, które instalujesz w swoim umyśle, aby rozwiązać
+              konkretny problem — bez reinstalacji całego OS.
             </p>
           </div>
 
@@ -725,21 +732,22 @@ const Index = () => {
               <div className="relative">
                 <img
                   src={programUwaznosc}
-                  alt="Uważne Życie"
+                  alt="Uważność"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
-                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">
-                  Uważne Życie
+                <h3 className="font-heading font-bold text-3xl text-on-light mb-1">
+                  Uważność
                 </h3>
+                <p className="text-sm text-on-light-dim mb-4">(Uważne Życie)</p>
                 <p className="text-on-light-dim mb-6">
-                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami. Przejmujesz kontrolę nad kokpitem.
+                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad kokpitem.
                 </p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
-                  POZNAJ PROGRAM →
+                  INSTALUJ PROGRAM →
                 </p>
               </div>
             </div>
@@ -749,20 +757,23 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               {
-                title: "Hakowanie Produktywności",
-                desc: "Zamiast zarządzać zadaniami \u2013 zarządzasz energią. Zrozum, czemu Twój diament nabiera koloru \u201Eza dużo\u201D i co z tym zrobić.",
+                title: "Produktywność",
+                subtitle: "(Hakowanie Produktywności)",
+                desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
               },
               {
-                title: "Silna Głowa",
-                desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować – zaczyna skupiać. Krytyka przestaje ranić – zaczyna informować.",
+                title: "Odporność Psychiczna",
+                subtitle: "(Silna Głowa)",
+                desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.",
                 img: programOdpornosc,
                 link: "/program/odpornosc",
               },
               {
-                title: "Męski Kompas",
-                desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską – staje się przezroczystą obecnością. Jak diament.",
+                title: "Męskość",
+                subtitle: "(Męski Kompas)",
+                desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
                 img: programMeskiKompas,
                 link: "/program/meskosc",
               },
@@ -776,12 +787,13 @@ const Index = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-2">
+                  <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-1">
                     {card.title}
                   </h3>
+                  <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
                   <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
-                    POZNAJ PROGRAM →
+                    INSTALUJ PROGRAM →
                   </p>
                 </div>
               </Link>
@@ -826,7 +838,7 @@ const Index = () => {
               to="/program"
               className="inline-block border border-border text-on-light-dim font-bold uppercase text-xs tracking-[0.2em] rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
-              PRZEGLĄDAJ WSZYSTKIE MODUŁY
+              PRZEGLĄDAJ WSZYSTKIE PROGRAMY
             </Link>
           </div>
         </div>
