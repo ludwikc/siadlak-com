@@ -1033,14 +1033,20 @@ export default function HakowanieProduktywnosci() {
               </div>
             </div>
 
-            <Button
-              variant="special"
-              size="lg"
-              className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+            <a
+              href="https://buy.siadlak.com/checkout/program-produktywnosc"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Chcę przestać zwlekać! Zamawiam
-              <ArrowRight className="ml-2 h-6 w-6 text-depth" />
-            </Button>
+              <Button
+                variant="special"
+                size="lg"
+                className="btn-locked-primary text-xl px-12 py-6 mb-8 shadow-2xl focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+              >
+                Chcę przestać zwlekać! Zamawiam
+                <ArrowRight className="ml-2 h-6 w-6 text-depth" />
+              </Button>
+            </a>
 
             <div className="mb-8">
               <h4 className="text-lg font-bold mb-4 text-locked-white">
