@@ -847,6 +847,25 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══ NEWSLETTER CTA ═══ */}
+      <TheCut />
+      <section className="py-20 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">
+            Wolisz najpierw poczytać?
+          </h3>
+          <p className="text-dim leading-relaxed mb-10">
+            Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Bez algorytmów, bez lajków, bez komentarzy. Tylko Ty, ja i Twoja skrzynka mailowa.
+          </p>
+          <Link
+            to="/newsletter"
+            className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+          >
+            DOŁĄCZ DO NEWSLETTERA →
+          </Link>
+        </div>
+      </section>
+
       {/* ═══ CLOSING FOOTER ═══ */}
       <section className="py-20 relative overflow-hidden bg-void-glow">
         {/* Background photo – pinned left */}
