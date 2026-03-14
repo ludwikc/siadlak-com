@@ -39,73 +39,59 @@ export default function HakowanieProduktywnosci() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Premium Badge */}
-            <div className="text-center mb-8">
-              <Badge className="bg-brand-gradient text-white border-0 text-base px-6 py-3">
-                <Flame className="inline h-5 w-5 mr-2" />
-                Ostatnie miejsca · Grupa zamyka się za 3 dni
-              </Badge>
-            </div>
-
+          <div className="max-w-5xl mx-auto text-center">
             {/* Main Heading */}
-            <div className="text-center mb-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-                Program{" "}
-                <span className="text-electric">
-                  Produktywność
-                </span>
-              </h1>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-white/90 leading-tight">
-                Twój mózg jest jak telefon z 47 apkami w tle — potrzebujesz zamknąć te, które Ci nie służą.
-              </h2>
-            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              Program:{" "}
+              <span className="text-electric">Produktywność</span>
+            </h1>
+
+            {/* Subtitle */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-white/90 leading-tight max-w-4xl mx-auto">
+              To nie jest kolejny kurs produktywności. To jest aplikacja mentalna — raz zainstalowana, zostaje z Tobą na zawsze.
+            </h2>
+
+            {/* Metaphor line */}
+            <p className="text-lg md:text-xl text-dim leading-relaxed mb-12 max-w-3xl mx-auto">
+              Twój mózg jest jak telefon z 47 apkami w tle — potrzebujesz <em>wreszcie</em> zamknąć te, które Ci nie służą.
+            </p>
 
             {/* Feature Pills */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
                 <CardContent className="px-6 py-3 flex items-center gap-2">
                   <Users className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    100+ uczestników
-                  </span>
+                  <span className="text-sm font-semibold text-white">100+ uczestników</span>
                 </CardContent>
               </Card>
               <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
                 <CardContent className="px-6 py-3 flex items-center gap-2">
                   <Star className="h-4 w-4 text-electric fill-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    4.9/5.0
-                  </span>
+                  <span className="text-sm font-semibold text-white">Ocena 4.9/5.0</span>
                 </CardContent>
               </Card>
               <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
                 <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    Aplikacja Mentalna
-                  </span>
+                  <Users className="h-4 w-4 text-electric" />
+                  <span className="text-sm font-semibold text-white">Zostało 16 miejsc</span>
+                </CardContent>
+              </Card>
+              <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
+                <CardContent className="px-6 py-3 flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-electric" />
+                  <span className="text-sm font-semibold text-white">Zamknięcie za 3 dni</span>
                 </CardContent>
               </Card>
             </div>
 
             {/* CTA */}
-            <div className="text-center">
-              <a
-                href="https://buy.siadlak.com/checkout/program-produktywnosc"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="special"
-                  size="lg"
-                  className="text-lg px-12 py-5"
-                >
-                  Instaluję Program Produktywność
-                  <ArrowRight size={20} className="ml-2" />
-                </Button>
-              </a>
-            </div>
+            <Button
+              variant="special"
+              size="lg"
+              className="text-lg px-12 py-5"
+            >
+              Bezpłatne 4-dniowe wyzwanie · Sprawdź, jak działasz pod presją →
+            </Button>
           </div>
         </div>
       </section>
