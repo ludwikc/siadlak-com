@@ -720,7 +720,7 @@ const Index = () => {
           </div>
 
           {/* Featured card: Uważne Życie */}
-          <Link to="/program/uwazne-zycie" className="group block col-span-3 bg-white rounded-md shadow-sm overflow-hidden mb-8">
+          <Link to="/program/uwaznosc" className="group block col-span-3 bg-white rounded-md shadow-sm overflow-hidden mb-8">
             <div className="grid lg:grid-cols-2">
               <div className="relative">
                 <img
