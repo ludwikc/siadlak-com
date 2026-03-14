@@ -140,16 +140,16 @@ function App() {
 
               <Route path="/program" element={<Program />} />
               <Route
-                path="/program/hakowanie-produktywnosci"
+                path="/program/produktywnosc"
                 element={<HakowanieProduktywnosci />}
               />
               <Route
                 path="/program/lifeos-system-upgrade"
                 element={<LifeOSSystemUpgrade />}
               />
-              <Route path="/program/silna-glowa" element={<SilnaGlowa />} />
-              <Route path="/program/meski-kompas" element={<MeskiKompas />} />
-              <Route path="/program/uwazne-zycie" element={<UwazneZycie />} />
+              <Route path="/program/odpornosc" element={<SilnaGlowa />} />
+              <Route path="/program/meskosc" element={<MeskiKompas />} />
+              <Route path="/program/uwaznosc" element={<UwazneZycie />} />
               <Route path="/program/7-technik" element={<SiedemTechnik />} />
               <Route path="/program/:courseSlug" element={<CourseDetail />} />
 

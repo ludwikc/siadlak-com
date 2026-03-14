@@ -11,11 +11,17 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_FILENAME}/index.html -f
 RewriteRule ^(.*)$ $1/index.html [L]
 
-# Webinar/Program Redirects
-RewriteRule ^meski-kompas$ /program/meski-kompas [R=301,L]
-RewriteRule ^mk$ /program/meski-kompas [R=301,L]
-RewriteRule ^meskikompas$ /program/meski-kompas [R=301,L]
-RewriteRule ^hp$ /program/hakowanie-produktywnosci [R=301,L]
+# Legacy program URL redirects (permanent 301)
+RewriteRule ^program/hakowanie-produktywnosci$ /program/produktywnosc [R=301,L]
+RewriteRule ^program/silna-glowa$ /program/odpornosc [R=301,L]
+RewriteRule ^program/uwazne-zycie$ /program/uwaznosc [R=301,L]
+RewriteRule ^program/meski-kompas$ /program/meskosc [R=301,L]
+
+# Shortcut redirects
+RewriteRule ^meski-kompas$ /program/meskosc [R=301,L]
+RewriteRule ^mk$ /program/meskosc [R=301,L]
+RewriteRule ^meskikompas$ /program/meskosc [R=301,L]
+RewriteRule ^hp$ /program/produktywnosc [R=301,L]
 RewriteRule ^lh$ /podcast/life-hacking [R=301,L]
 RewriteRule ^ttt$ /program/ttt [R=301,L]
 

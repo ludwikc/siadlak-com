@@ -349,7 +349,7 @@ export default function Program() {
               </div>
 
               <div className="mt-6">
-                <Link to="/program/uwazne-zycie" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
+                <Link to="/program/uwaznosc" className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block">
                   <CTAButton className="bg-gradient-locked-primary hover:opacity-90 text-white border-0 rounded">
                     Zainstaluj aplikację →
                   </CTAButton>
