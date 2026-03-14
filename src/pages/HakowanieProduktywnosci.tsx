@@ -967,7 +967,7 @@ export default function HakowanieProduktywnosci() {
                         <div className="text-xs font-bold uppercase">
                           Oszczędzasz
                         </div>
-                        <div className="text-lg font-extrabold">96%</div>
+                        <div className="text-lg font-extrabold">95%</div>
                       </div>
                     </div>
 
