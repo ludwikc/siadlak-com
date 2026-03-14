@@ -16,8 +16,8 @@ const FAQAccordion = () => {
       answer: "Tak — szczegóły znajdziesz na stronie zamówienia."
     },
     {
-      question: "Kiedy dostanę dostęp do kursu?",
-      answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut."
+      question: "Kiedy dostanę dostęp do programu?",
+      answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut. Możesz zacząć \"instalację\" tego samego dnia."
     },
     {
       question: "Jak długo mam dostęp do materiałów?",

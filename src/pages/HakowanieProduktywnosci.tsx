@@ -1355,7 +1355,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base sm:text-lg px-8 py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  Rozwiałeś moje wątpliwości. Zamawiam
+                  Instaluję Program Produktywność
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
