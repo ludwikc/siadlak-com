@@ -130,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIAL MARQUEE ═══ */}
-      <section className="py-5 bg-surface overflow-hidden">
+      <section className="py-5 overflow-hidden" style={{ backgroundColor: '#080808' }}>
         <div className="marquee-track flex gap-12 animate-marquee" style={{ width: "max-content" }}>
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
