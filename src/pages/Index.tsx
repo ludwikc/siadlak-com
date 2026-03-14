@@ -162,6 +162,44 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══ PERSPEKTYWA — METAFORA DIAMENTU ═══ */}
+      <section className="py-24 md:py-32 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <Eyebrow>PERSPEKTYWA</Eyebrow>
+
+          <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed">
+            <p className="text-white text-2xl md:text-3xl font-heading font-bold leading-[1.2]">
+              Diament jest najtwardszą substancją na Ziemi. I jest kompletnie przezroczysty.
+            </p>
+
+            <p>
+              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd.
+              Zmień sukno — zmieni się „kolor" diamentu.
+            </p>
+
+            <blockquote className="border-l-2 border-electric pl-6 py-2 text-white italic">
+              Ale diament sam w sobie? Nie ma koloru. Jest czysty.
+              <br />
+              Twój umysł działa dokładnie tak samo.
+            </blockquote>
+
+            <p>
+              Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".
+            </p>
+            <p>
+              Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".
+            </p>
+
+            <p>Ale to nie Ty się zmieniłeś.</p>
+            <p className="text-white text-2xl font-bold">
+              To{" "}
+              <span className="text-electric font-bold">tło</span>{" "}
+              się zmieniło.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
       <section className="py-24 bg-void">
         <div className="container mx-auto px-4 max-w-4xl">
