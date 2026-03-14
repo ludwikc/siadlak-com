@@ -343,7 +343,7 @@ const Index = () => {
               Jestem tym, kto patrzy.
             </p>
             <p>
-              Od 19 lat tę mapę doskonalę. Nie dlatego, że znam Twoje
+              Od 19 lat doskonalę tę umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje
               odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam
               je znalazł.
             </p>
