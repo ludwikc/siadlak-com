@@ -130,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIAL MARQUEE ═══ */}
-      <section className="py-5 bg-surface overflow-hidden">
+      <section className="py-5 overflow-hidden" style={{ backgroundColor: '#080808' }}>
         <div className="marquee-track flex gap-12 animate-marquee" style={{ width: "max-content" }}>
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
@@ -253,12 +253,11 @@ const Index = () => {
       />
 
       {/* ═══ AUTHORITY SECTION ═══ */}
-      <section className="py-24 relative overflow-hidden">
-        {/* void-glow */}
+      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#080808' }}>
+        {/* void-glow overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundColor: "#080808",
             backgroundImage:
               "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
           }}
@@ -317,7 +316,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIALS GRID 3 COL ═══ */}
-      <section className="py-16 bg-surface">
+      <section className="py-16 bg-gradient-to-b from-void to-void-glow">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
             <TestimonialCard
