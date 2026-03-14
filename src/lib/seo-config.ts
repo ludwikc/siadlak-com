@@ -106,12 +106,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/uwazne-zycie',
+    path: '/program/uwaznosc',
     seo: {
       title: 'Uważne Życie - Program Uważności i Mindfulness',
       description: 'Program rozwoju osobistego oparty na mindfulness i uważności. Znajdź równowagę i spokój w codziennym życiu.',
       keywords: 'mindfulness, uważność, program rozwoju, medytacja, równowaga',
-      url: '/program/uwazne-zycie',
+      url: '/program/uwaznosc',
       type: 'course'
     }
   },
