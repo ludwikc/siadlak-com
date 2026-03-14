@@ -121,9 +121,14 @@ export default function HakowanieProduktywnosci() {
 
             {/* Secondary Link - Subtle */}
             <div className="text-center">
-              <button className="text-sm text-locked-silver hover:text-depth transition-colors underline">
+              <a 
+                href="https://buy.siadlak.com/checkout/program-produktywnosc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-locked-silver hover:text-depth transition-colors underline"
+              >
                 Wiem, o co chodzi. Zamawiam od razu →
-              </button>
+              </a>
             </div>
           </div>
         </div>
