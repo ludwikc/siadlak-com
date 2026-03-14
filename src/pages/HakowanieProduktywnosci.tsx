@@ -408,8 +408,8 @@ export default function HakowanieProduktywnosci() {
                 Twój unikalny sposób na maksymalizację wydajności — przy
                 zachowaniu zdrowia psychicznego.
               </p>
-              <p className="text-lg text-electric font-bold">
-                I to jest dokładnie to, co robimy w Programie Produktywność.
+               <p className="text-lg text-electric font-bold">
+                I to jest dokładnie to, co "instalujesz" w Programie Produktywność.
               </p>
             </div>
           </div>
