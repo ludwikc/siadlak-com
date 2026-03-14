@@ -1,6 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import { CheckCircle, Flame, Users, Star } from "@/lib/icons";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ContentTextSection,
