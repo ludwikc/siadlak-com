@@ -1306,14 +1306,20 @@ const SilnaGlowa = () => {
             </p>
 
             <div className="space-y-4">
-              <Button
-                variant="special"
-                size="lg"
-                className="btn-locked-primary text-lg px-8 py-4"
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Nie mam już wątpliwości, dołączam do kursu
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-lg px-8 py-4"
+                >
+                  Nie mam już wątpliwości, dołączam do kursu
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
               <p className="text-locked-gradient">
                 Przedsprzedaż trwa tylko do 10 stycznia!
               </p>

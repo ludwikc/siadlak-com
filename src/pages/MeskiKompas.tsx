@@ -94,7 +94,7 @@ export default function MeskiKompas() {
               Edycja 1: październik 2025 | Tylko 10 miejsc | Wszystkie miejsca wyprzedane
               (edycja pilotażowa)
             </div>
-            <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+            <Link to="https://buy.siadlak.com/checkout/program-meskosc">
               <CTAButton
                 variant="primary"
                 size="xl"
