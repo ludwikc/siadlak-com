@@ -775,8 +775,8 @@ const Index = () => {
                 link: "/program/odpornosc",
               },
               {
-                title: "Męskość",
-                subtitle: "(Męski Kompas)",
+                title: "Męski Kompas",
+                subtitle: "",
                 desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
                 img: programMeskiKompas,
                 link: "/program/meskosc",
