@@ -768,8 +768,8 @@ const Index = () => {
                 link: "/program/produktywnosc",
               },
               {
-                title: "Odporność Psychiczna",
-                subtitle: "(Silna Głowa)",
+                title: "Silna Głowa",
+                subtitle: "",
                 desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.",
                 img: programOdpornosc,
                 link: "/program/odpornosc",
