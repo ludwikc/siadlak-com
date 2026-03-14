@@ -31,6 +31,8 @@ import {
 } from "lucide-react";
 
 const SilnaGlowa = () => {
+  const ctaUrl = "https://buy.siadlak.com/checkout/program-odpornosc";
+
   return (
     <Layout>
       {/* Hero Section - Theme Locked */}
