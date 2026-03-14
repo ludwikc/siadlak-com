@@ -268,7 +268,7 @@ export default function Program() {
             <div className="rounded-sm border border-white/10 bg-white/[0.03] p-8 md:p-10">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-3xl" aria-hidden="true">
-                  👑
+                  🧭
                 </span>
                 <Badge
                   variant="outline"
