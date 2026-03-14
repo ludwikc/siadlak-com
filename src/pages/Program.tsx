@@ -37,7 +37,7 @@ const decisionTree = [
     link: "/program/uwaznosc",
   },
   {
-    problem: "„Kim jestem, kiedy zdejmę wszystkie maski?"",
+    problem: "\u201EKim jestem, kiedy zdejm\u0119 wszystkie maski?\u201D",
     program: "Męski Kompas",
     link: "/program/meskosc",
   },
