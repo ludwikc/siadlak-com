@@ -93,6 +93,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
+              <p className="text-xl md:text-2xl text-dim leading-relaxed mb-6 max-w-xl">
+                Znasz ten moment, kiedy masz wszystko — a czujesz, że czegoś brakuje?
+              </p>
+
               <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Diament jest najtwardszą substancją na Ziemi.
                 <span className="text-dim block mt-2">
