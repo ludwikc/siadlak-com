@@ -316,7 +316,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIALS GRID 3 COL ═══ */}
-      <section className="py-16 bg-gradient-to-b from-void to-void-glow">
+      <section className="py-16 bg-void-glow">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-3 gap-8">
             <TestimonialCard
