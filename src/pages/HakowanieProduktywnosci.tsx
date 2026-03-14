@@ -126,7 +126,7 @@ export default function HakowanieProduktywnosci() {
                 rel="noopener noreferrer"
                 className="text-sm text-locked-silver hover:text-depth transition-colors underline"
               >
-                Wiem, czego potrzebuję. Zamawiam →
+                Instaluję Program Produktywność →
               </a>
             </div>
           </div>
