@@ -9,23 +9,23 @@ const FAQAccordion = () => {
   const faqs = [
     {
       question: "Czy dostanę fakturę?",
-      answer: "Tak, oczywiście! Wystawiamy faktury VAT dla wszystkich uczestników. Możesz rozliczyć kurs jako koszt uzyskania przychodu lub szkolenie pracownika."
+      answer: "Tak, faktura VAT wystawiana jest automatycznie."
     },
     {
       question: "Czy można płacić w ratach?",
-      answer: "Tak, oferujemy możliwość płatności ratalnych. Szczegóły znajdziesz po kliknięciu w przycisk zamówienia. Dostępne są raty 3x, 6x i 12x."
+      answer: "Tak — szczegóły znajdziesz na stronie zamówienia."
     },
     {
       question: "Kiedy dostanę dostęp do kursu?",
-      answer: "Dostęp do platformy otrzymasz automatycznie po zaksięgowaniu płatności - zwykle w ciągu kilku minut. Na maila dostaniesz dane logowania i instrukcje pierwszych kroków."
+      answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut."
     },
     {
       question: "Jak długo mam dostęp do materiałów?",
-      answer: "Dostęp do kursu i społeczności masz dożywotni! Możesz wracać do materiałów kiedy chcesz, a społeczność Hakerów będzie wspierać Cię przez lata."
+      answer: "Na zawsze. Bez limitu czasowego, bez subskrypcji."
     },
     {
       question: "Co jeśli nie będę miał czasu na społeczność?",
-      answer: "Społeczność to dodatek, nie obowiązek! Możesz korzystać z kursu samodzielnie. Ale doświadczenie pokazuje, że uczestnicy społeczności osiągają lepsze rezultaty."
+      answer: "Społeczność jest tam dla Ciebie, nie Ty dla społeczności. Wchodzisz, gdy chcesz i potrzebujesz."
     }
   ];
 
@@ -35,7 +35,6 @@ const FAQAccordion = () => {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold text-center mb-8 text-text-primary">FAQ</h3>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <Card key={index} className="glass-card">

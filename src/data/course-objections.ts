@@ -33,25 +33,25 @@ export interface ObjectionItem {
 
 export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
-    myth: "Mam już kursy produktywności i nie zadziałały",
+    myth: "Mam już kursy produktywności i nie zadziałały.",
     reality:
-      "To dlatego, że były ogólne. Hakowanie Produktywności jest spersonalizowane pod Ciebie. Nie ma jednego uniwersalnego systemu - jest Twój system, który faktycznie będzie działał w Twoim życiu.",
+      'Właśnie dlatego ten jest inny. Większość kursów daje Ci jeden system i mówi "stosuj". A potem, gdy nie działa, mówi "nie starasz się wystarczająco". To jest jak sprzedawanie butów w jednym rozmiarze i obwinianie ludzi, że mają złe stopy. Program Produktywność jest szyty na miarę — razem budujesz swój system, dopasowany do Twojego życia.',
     icon: Target,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
   },
   {
-    myth: "Nie będę mieć czasu, żeby przerabiać kurs",
+    myth: "Nie będę mieć czasu, żeby przerabiać kurs.",
     reality:
-      "Jeśli nie masz czasu na naukę produktywności, to tym bardziej jej potrzebujesz! Program jest zaprojektowany dla zapracowanych ludzi - 15-20 minut dziennie wystarczy.",
+      "To jest mój ulubiony argument. Jeśli nie masz czasu na naukę produktywności, to jest najlepszy dowód na to, że jej potrzebujesz. Program jest zaprojektowany dla ludzi, którzy naprawdę nie mają czasu — 15-20 minut dziennie wystarczy.",
     icon: Clock,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
   },
   {
-    myth: "Nie umiem utrzymać dyscypliny",
+    myth: "Nie umiem utrzymać dyscypliny.",
     reality:
-      "Właśnie dlatego potrzebujesz tego kursu! Nie liczymy na Twoją dyscyplinę - budujemy systemy, które działają nawet gdy nie masz ochoty.",
+      "Doskonale. Bo ten program nie polega na dyscyplinie. Polega na systemach, które działają nawet wtedy, gdy nie masz ochoty. Dyscyplina to plan B. Dobry system to plan A.",
     icon: Brain,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
@@ -59,23 +59,23 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
     myth: "Czy to mi się zwróci?",
     reality:
-      "Jeśli zaoszczędzisz 1 godzinę dziennie przez rok, to 365 godzin × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł rocznie. Inwestycja 1197 zł zwróci się w pierwszy miesiąc.",
+      "Jeśli zaoszczędzisz 1 godzinę dziennie — to 365 godzin rocznie × Twoja stawka godzinowa. Nawet przy 50 zł/h to 18 250 zł. Inwestycja 1 197 zł zwróci się w pierwszy miesiąc. A to jest konserwatywna kalkulacja.",
     icon: DollarSign,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
   },
   {
-    myth: "Nie ufam guru z Internetu",
+    myth: "Nie ufam guru z internetu.",
     reality:
-      "Słusznie! Nie jestem guru, jestem praktykiem. Lata doświadczenia, setki klientów, współpraca z największymi firmami. Sprawdź moje referencje.",
+      "I słusznie. Ja też nie. Nie jestem guru — jestem praktykiem. Lata doświadczenia, setki klientów, współpraca z międzynarodowymi firmami. I 30-dniowa gwarancja zwrotu, bo nie boję się, że będziesz chciał oddać.",
     icon: ShieldCheck,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
   },
   {
-    myth: "Wiedza jest za darmo w Internecie",
+    myth: "Wiedza jest za darmo w internecie.",
     reality:
-      "Tak, ale nie masz czasu przebrnąć przez tysiące godzin materiałów, żeby znaleźć te 5% wartościowych treści. Ja już to zrobiłem za Ciebie.",
+      "Tak. I samochód możesz zbudować z części ze szrotu. Pytanie, ile czasu chcesz na to poświęcić — i czy efekt będzie jeździł. Ja przeszedłem przez tysiące godzin materiałów, żeby wybrać te 5%, które naprawdę działają. Ty dostajesz gotowy, przetestowany pakiet.",
     icon: Lightbulb,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
