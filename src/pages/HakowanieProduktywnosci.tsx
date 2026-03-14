@@ -1380,14 +1380,20 @@ export default function HakowanieProduktywnosci() {
 
             {/* CTA */}
             <div className="text-center">
-              <Button
-                variant="default"
-                size="lg"
-                className="text-base sm:text-lg px-8 py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+              <a
+                href="https://buy.siadlak.com/checkout/program-produktywnosc"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Rozwiałeś moje wątpliwości. Chcę ruszyć z miejsca. Zamawiam
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="text-base sm:text-lg px-8 py-6 group focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+                >
+                  Rozwiałeś moje wątpliwości. Chcę ruszyć z miejsca. Zamawiam
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
