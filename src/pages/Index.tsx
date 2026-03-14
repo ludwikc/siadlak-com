@@ -87,7 +87,7 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Znasz ten moment, kiedy masz wszystko — a&nbsp;czujesz, że&nbsp;czegoś brakuje?
+                Znasz ten moment, kiedy masz wszystko ;ndash; a&nbsp;czujesz, że&nbsp;czegoś brakuje?
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
