@@ -75,12 +75,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/meski-kompas',
+    path: '/program/meskosc',
     seo: {
       title: 'Męski Kompas',
       description: 'Program rozwoju dla mężczyzn. Odkryj swoją maskuliną energię i zbuduj silne fundamenty życia.',
       keywords: 'rozwój mężczyzn, maskulinność, liderstwo, siła, pewność siebie',
-      url: '/program/meski-kompas',
+      url: '/program/meskosc',
       type: 'course',
       favicon: '/compass-favicon.png'
     }
