@@ -3251,7 +3251,7 @@ export default function MeskiKompas() {
 
             {/* Secondary CTA */}
             <div className="text-center mt-8">
-              <Link to="https://buy.siadlak.com/checkout/meski-kompas">
+              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
                 <CTAButton
                   variant="primary"
                   size="xl"
