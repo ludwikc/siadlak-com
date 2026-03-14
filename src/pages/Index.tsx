@@ -93,6 +93,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
+              <p className="text-xl md:text-2xl text-dim leading-relaxed mb-6 max-w-xl">
+                Znasz ten moment, kiedy masz wszystko — a czujesz, że czegoś brakuje?
+              </p>
+
               <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
                 Diament jest najtwardszą substancją na Ziemi.
                 <span className="text-dim block mt-2">
@@ -319,7 +323,7 @@ const Index = () => {
             {/* Right: blockquote card */}
             <div className="bg-surface p-8 border-l-4 border-depth">
               <blockquote className="text-white italic text-lg leading-relaxed">
-                „W 2014 roku stałem na balkonie i poważnie rozważałem skok.
+                „W 2014 roku stałem na peronie metra Dworzek Gdański i chciałem zrobić krok.
                 Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce,
                 na jedwabnym suknie. I kompletną pustkę w środku."
               </blockquote>
@@ -339,7 +343,7 @@ const Index = () => {
               Jestem tym, kto patrzy.
             </p>
             <p>
-              Od 19 lat tę mapę doskonalę. Nie dlatego, że znam Twoje
+              Od 19 lat doskonalę tę umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje
               odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam
               je znalazł.
             </p>
@@ -739,10 +743,9 @@ const Index = () => {
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
-                <h3 className="font-heading font-bold text-3xl text-on-light mb-1">
-                  Uważność
+                <h3 className="font-heading font-bold text-3xl text-on-light mb-4">
+                  Uważne Życie
                 </h3>
-                <p className="text-sm text-on-light-dim mb-4">(Uważne Życie)</p>
                 <p className="text-on-light-dim mb-6">
                   Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad kokpitem.
                 </p>
@@ -758,21 +761,21 @@ const Index = () => {
             {[
               {
                 title: "Produktywność",
-                subtitle: "(Hakowanie Produktywności)",
+                subtitle: "",
                 desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
               },
               {
-                title: "Odporność Psychiczna",
-                subtitle: "(Silna Głowa)",
+                title: "Silna Głowa",
+                subtitle: "",
                 desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.",
                 img: programOdpornosc,
                 link: "/program/odpornosc",
               },
               {
-                title: "Męskość",
-                subtitle: "(Męski Kompas)",
+                title: "Męski Kompas",
+                subtitle: "",
                 desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
                 img: programMeskiKompas,
                 link: "/program/meskosc",
@@ -790,7 +793,7 @@ const Index = () => {
                   <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-1">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>
+                  {card.subtitle && <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>}
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
                   <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
                     INSTALUJ PROGRAM →
@@ -841,6 +844,25 @@ const Index = () => {
               PRZEGLĄDAJ WSZYSTKIE PROGRAMY
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ NEWSLETTER CTA ═══ */}
+      <TheCut />
+      <section className="py-20 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
+          <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">
+            Wolisz najpierw poczytać?
+          </h3>
+          <p className="text-dim leading-relaxed mb-10">
+            Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Bez algorytmów, bez lajków, bez komentarzy. Tylko Ty, ja i Twoja skrzynka mailowa.
+          </p>
+          <Link
+            to="/newsletter"
+            className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+          >
+            DOŁĄCZ DO NEWSLETTERA →
+          </Link>
         </div>
       </section>
 
