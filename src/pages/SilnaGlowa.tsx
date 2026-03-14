@@ -1273,14 +1273,20 @@ const SilnaGlowa = () => {
 
             {/* CTA */}
             <div className="text-center mt-12">
-              <Button
-                variant="special"
-                size="lg"
-                className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Wskakuję na pokład. Zamawiam dostęp
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
+                >
+                  Wskakuję na pokład. Zamawiam dostęp
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
