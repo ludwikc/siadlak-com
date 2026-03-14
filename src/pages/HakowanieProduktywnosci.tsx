@@ -416,8 +416,48 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* WIZJA PRZYSZŁOŚCI */}
+      {/* ZANIM POWIESZ "KOLEJNY KURS" */}
       <section className="py-16 md:py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Zanim powiesz "kolejny kurs" — przeczytaj to
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Wiem, co myślisz. "1 497 zł za kurs online? Mam Netflixa za 50 złotych i YouTube'a za darmo."
+              </p>
+              <p>
+                Masz rację — gdyby to był "kolejny kurs online", byłoby za drogo.
+              </p>
+              <p>
+                Ale Program <strong className="text-foreground">Produktywność</strong> nie jest kursem do "przerobienia". Jest aplikacją mentalną do <em>zainstalowania</em>.
+              </p>
+              <p className="text-foreground font-medium">
+                Jaka jest różnica?
+              </p>
+              <p>
+                Kurs przerabiasz, notujesz, a po trzech miesiącach pamiętasz z niego tyle, co z ostatniego odcinka serialu, który oglądałeś w tle. Aplikacja mentalna — raz zainstalowana — <strong className="text-foreground">zostaje z Tobą na zawsze</strong>. Staje się częścią tego, jak myślisz, jak działasz, jak podejmujesz decyzje. Nie musisz do niej "wracać". Ona działa w tle — jak system operacyjny.
+              </p>
+              <p>
+                Po zainstalowaniu Programu <strong className="text-foreground">Produktywność</strong> już nigdy nie będziesz potrzebować kolejnych technik, metod, trików ani "5 sposobów na poranny focus". Koniec z gromadzeniem kursów. Koniec z szukaniem złotego środka.
+              </p>
+              <p className="text-foreground font-medium">
+                A co w zamian?
+              </p>
+              <p>
+                W zamian Twoje życie otworzy się na zupełnie nowe "problemy" — takie jak "mam za dużo wolnego czasu i nie wiem, jakie nowe hobby zacząć" albo "muszę się zdecydować, który z trzech projektów wybrać, bo na wszystkie mam energię". Wiem — straszne problemy. Ale ktoś musi je mieć.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WIZJA PRZYSZŁOŚCI */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
