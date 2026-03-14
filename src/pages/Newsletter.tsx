@@ -291,8 +291,6 @@ export default function NewsletterPage() {
           </div>
         </section>
 
-        <div className="the-cut" />
-
         {/* ===== 7. CTA ZAPIS (LIGHT) ===== */}
         <section id="formularz" className="py-16 sm:py-20 bg-diamond">
           <div className="container mx-auto px-4">
