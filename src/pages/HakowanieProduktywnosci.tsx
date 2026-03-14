@@ -54,14 +54,13 @@ export default function HakowanieProduktywnosci() {
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
-              Twój mózg nie jest zepsuty.{" "}
-              <span className="bg-gradient-text-brand-dark">Jest jak telefon z 47 apkami w tle</span>{" "}
-              — potrzebujesz zamknąć te, które Ci nie służą
+              Twój mózg jest jak telefon z 47 apkami w tle{" "}
+              <span className="bg-gradient-text-brand-dark">— potrzebujesz zamknąć te, które Ci nie służą</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
-              Program, który nie doda Ci kolejnego systemu produktywności. Pomoże Ci znaleźć Twój własny.
+              To nie jest kolejny kurs produktywności. To jest aplikacja mentalna — raz zainstalowana, zostaje z Tobą na zawsze.
             </p>
 
             {/* Social Proof */}
