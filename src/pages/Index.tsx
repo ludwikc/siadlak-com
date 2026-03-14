@@ -268,7 +268,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#080808]" />
         </div>
         {/* Decorative blob */}
-        <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-depth/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute -right-64 top-1/4 w-[500px] h-[500px] bg-[#080808] blur-[100px] rounded-full pointer-events-none" />
 
         <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <Eyebrow color="electric">AUTORYTET</Eyebrow>
