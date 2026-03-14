@@ -1379,7 +1379,7 @@ export default function HakowanieProduktywnosci() {
                 </p>
                 <p>To brzmi prosto. I jest proste. Ale proste nie znaczy łatwe.</p>
                 <p>
-                  Jeśli czujesz, że to jest to — dołącz. Jeśli jeszcze się wahasz — spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej — dziękuję, że jesteś. Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
+                  Jeśli czujesz, że to jest to — zainstaluj. Jeśli jeszcze się wahasz — spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej — <strong className="text-foreground">dziękuję, że jesteś.</strong> Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
                 </p>
                 <p className="text-foreground font-medium">-- Ludwik</p>
               </div>
