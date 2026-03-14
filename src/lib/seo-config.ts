@@ -45,12 +45,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/hakowanie-produktywnosci',
+    path: '/program/produktywnosc',
     seo: {
       title: 'Hakowanie Produktywności',
       description: 'Naucz się technik i strategii zwiększania produktywności. Praktyczny kurs dla efektywnego zarządzania czasem i zadaniami.',
       keywords: 'produktywność, zarządzanie czasem, efektywność, organizacja pracy, GTD',
-      url: '/program/hakowanie-produktywnosci',
+      url: '/program/produktywnosc',
       type: 'course'
     }
   },
