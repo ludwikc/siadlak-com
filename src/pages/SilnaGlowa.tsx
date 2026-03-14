@@ -101,14 +101,21 @@ const SilnaGlowa = () => {
             <div className="flex flex-col items-center gap-4 mb-8">
               <div className="relative group inline-block w-full sm:w-auto">
                 <div className="absolute -inset-1 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <Button
-                  variant="special"
-                  size="lg"
-                  className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block"
                 >
-                  Dołączam do kursu Silna Głowa
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                  <Button
+                    variant="special"
+                    size="lg"
+                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                  >
+                    Dołączam do kursu Silna Głowa
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
               </div>
 
               {/* Value Proposition */}
