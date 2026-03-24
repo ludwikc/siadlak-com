@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import {
   CheckCircle,
-  AlertCircle,
   ChevronDown,
 } from "@/lib/icons";
-import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 
