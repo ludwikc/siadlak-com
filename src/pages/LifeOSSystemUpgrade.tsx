@@ -9,20 +9,13 @@ import {
   AlertCircle,
   Brain,
   GitMerge,
-  Crown,
   ChevronDown,
-  Sparkles,
-  Download,
   Users,
   Clock,
-  Target,
-  Trophy,
-  AlertTriangle,
 } from "@/lib/icons";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
-import BeforeAfterSlider from "@/components/sections/BeforeAfterSlider";
 
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
