@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
 const UTM = "?utm_source=instagram&utm_medium=bio&utm_campaign=links";
+const MAILERLITE_ACTION =
+  "https://dashboard.mailerlite.com/jsonp/484845/forms/182859963211712477/subscribe";
 
 const LINKS = [
   {
@@ -53,24 +55,9 @@ const LINKS = [
 ];
 
 export default function LinksPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Proszę wprowadź adres email");
-      return;
-    }
-    setIsLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://app.easycart.pl/checkout/siadlak/newsletter",
-        "_blank",
-      );
-      setIsLoading(false);
-    }, 1000);
-  };
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
