@@ -13,55 +13,6 @@ import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
   const [showStickyBar, setShowStickyBar] = useState(false);
-  const [showExitModal, setShowExitModal] = useState(false);
-  const [hasShownExitModal, setHasShownExitModal] = useState(false);
-
-  const scrollToDiscovery = () => {
-    const discoverySection = document.getElementById("discovery-section");
-    if (discoverySection) {
-      discoverySection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // Animated counter for available spots
-  useEffect(() => {
-    let count = 0;
-    const targetCount = 2;
-    const interval = setInterval(() => {
-      if (count < targetCount) {
-        count++;
-        setSpotsAvailable(count);
-      } else {
-        clearInterval(interval);
-      }
-    }, 500);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Sticky CTA bar on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.querySelector("section");
-      if (heroSection) {
-        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-        setShowStickyBar(window.scrollY > heroBottom);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Exit-intent detection
-  useEffect(() => {
-    const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !hasShownExitModal && window.scrollY > 500) {
-        setShowExitModal(true);
-        setHasShownExitModal(true);
-      }
-    };
-    document.addEventListener("mouseleave", handleMouseLeave);
-    return () => document.removeEventListener("mouseleave", handleMouseLeave);
-  }, [hasShownExitModal]);
 
   const testimonials = [
     {
