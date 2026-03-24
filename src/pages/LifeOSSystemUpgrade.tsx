@@ -9,9 +9,8 @@ import {
   AlertCircle,
   Brain,
   GitMerge,
+  Crown,
   ChevronDown,
-  Users,
-  Clock,
 } from "@/lib/icons";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
