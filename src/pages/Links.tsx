@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
 const UTM = "?utm_source=instagram&utm_medium=bio&utm_campaign=links";
+const MAILERLITE_ACTION =
+  "https://dashboard.mailerlite.com/jsonp/484845/forms/182859963211712477/subscribe";
 
 const LINKS = [
   {
