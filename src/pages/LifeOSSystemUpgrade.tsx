@@ -11,18 +11,10 @@ import {
   GitMerge,
   Crown,
   ChevronDown,
-  Sparkles,
-  Download,
-  Users,
-  Clock,
-  Target,
-  Trophy,
-  AlertTriangle,
 } from "@/lib/icons";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
-import BeforeAfterSlider from "@/components/sections/BeforeAfterSlider";
 
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
@@ -77,59 +69,68 @@ export default function LifeOSSystemUpgrade() {
     return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, [hasShownExitModal]);
 
-  // Testimonials data
   const testimonials = [
     {
       quote:
-        "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą. Teraz czuję się jak po przesiadce z małego fiata do porsche.",
-      name: "CEO, 8-cyfrowe przychody",
+        "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą.",
+      name: "Tomek, 38 lat",
+      title: "CTO startupu, ojciec dwójki",
+    },
+    {
+      quote:
+        "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej — wręcz przeciwnie.",
+      name: "Klientka Life OS",
+      title: "Life OS Absolwentka",
+    },
+    {
+      quote:
+        "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła.",
+      name: "Klient Life OS",
       title: "Life OS Absolwent",
     },
     {
       quote:
-        "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej - wręcz przeciwnie.",
-      name: "Założycielka tech startup",
-      title: "€2M ARR",
-    },
-    {
-      quote:
-        "Pierwszy raz od 15 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła.",
-      name: "Przedsiębiorca",
-      title: "Life OS Absolwent",
+        "Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam.",
+      name: "Anna",
+      title: "CEO Agencji Marketingowej",
     },
   ];
 
-  // FAQ data
   const faqs = [
     {
       question: "Jak to się różni od terapii?",
       answer:
-        "Terapeuta pomoże Ci zrozumieć, skąd się bierze Twój paraliż decyzyjny. Ja pomogę Ci podjąć tę trudną decyzję w poniedziałek o 9 rano - kiedy na szali jest 2M PLN i przyszłość firmy. Terapia = rozumienie przeszłości. Life OS = transformacja teraźniejszości i przyszłości.",
+        "Terapia pomaga zrozumieć przeszłość. Life OS pomaga zmienić sposób, w jaki podejmujesz decyzje w teraźniejszości. To nie jest albo-albo — wielu moich klientów kontynuuje terapię równolegle. Ale jeśli Twój problem brzmi \"wiem, skąd się to bierze, ale nie wiem, co z tym zrobić\" — to jest miejsce, w którym zaczynam ja.",
     },
     {
       question: "Czy to coaching?",
       answer:
-        'Technicznie tak, ale wolę słowo "transformacja." Coach daje Ci narzędzia. Ja zmieniam system, na którym działasz. To jak różnica między "zainstaluj tę aplikację" vs. "upgrade całego OS z Windows 98 do najnowszego MacOS."',
+        "I tak, i nie. Coaching zwykle daje Ci narzędzia i strategie. Ja daję Ci pytania — i czekam, aż sam znajdziesz odpowiedzi, które już w sobie masz. Brzmi mistycznie? Moi klienci powiedzieliby, że to najbardziej praktyczna praca, jaką kiedykolwiek wykonali. Bo zmiana perspektywy zmienia wszystko — łącznie z tym, jak prowadzisz firmę w poniedziałek rano.",
     },
     {
-      question: "Co jeśli mi nie pasuje Twój styl?",
+      question: "Co jeśli nie pasuje mi Twój styl?",
       answer:
-        'Nie będziemy pasować. I to jest ok. Ta praca wymaga pełnego zaufania i gotowości na konfrontację (lub delikatne prowadzenie - w zależności od ścieżki). Jeśli na Sesji Discovery poczujesz, że nie pasujemy - po prostu powiemy sobie "dzięki, nie tym razem." Bez urazy. Bez presji.',
+        "Dlatego jest Sesja Discovery. 30 minut, żebyśmy obaj wiedzieli. Jeśli nie czujesz, że możesz mi zaufać — nie podejmujemy współpracy. I to jest absolutnie w porządku. Lepiej to wiedzieć po 30 minutach niż po 3 tygodniach.",
     },
     {
       question: "Czy gwarantujesz rezultaty?",
       answer:
-        "Nie. Nie dlatego, że nie wierzę w program - wierzę. Ale nie mogę zagwarantować Twojego zaangażowania. Jeśli włożysz 100% - przejdziesz transformację. Jeśli włożysz 50% - dostaniesz 50% rezultatów. Ja gwarantuję pełne zaangażowanie z mojej strony, precyzyjną diagnostykę, bezpieczną przestrzeń i metodologię która zadziałała na dziesiątkach osób. Ty gwarantujesz, że będziesz się stawiał i będziesz uczciwy sam ze sobą.",
+        "Nie. I uciekaj od każdego, kto gwarantuje. Co gwarantuję: jeśli po 2 tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory — oddaję pieniądze. Bez pytań, bez tłumaczenia się.",
     },
     {
       question: "Co jeśli nie mam 8 tygodni?",
       answer:
-        "To nie jest dla Ciebie. Jeszcze. Transformacja tożsamości nie działa w 'intensywnym 2-dniowym bootcampie.' Potrzebujesz czasu, by nowe wzorce się zakorzeniły. By stary system faktycznie został zastąpiony nowym. Poczekaj, aż będziesz gotowy.",
+        "Masz. Nie mówię tego lekceważąco — ale jeśli prowadzisz firmę, masz rodzinę i czytasz tę stronę, to masz sesję w kalendarzu raz w tygodniu. Sesje trwają od 50 minut do 2,5 godziny. Między sesjami masz Signal. To nie wymaga \"porzucenia życia na 8 tygodni\". To wymaga pół godziny do dwóch godzin tygodniowo czystego skupienia.",
     },
     {
       question: "Ile osób bierzesz jednocześnie?",
       answer:
-        "Maximum 5. Nie dlatego, że sztuczna rzadkość. Ale żeby zapewnić quality. Ta praca wymaga mojej pełnej obecności. Nie mogę dać jej 15 ludziom jednocześnie.",
+        "Maksymalnie 5. Nie dlatego, żeby tworzyć sztuczny pośpiech — dlatego, że nie da się prowadzić kogoś przez zobaczenie własnego diamentu, jednocześnie pracując z 20 osobami. Ta praca wymaga, żebym pamiętał Twoje odpowiedzi z zeszłego tygodnia. I pamiętam.",
+    },
+    {
+      question: "A co jeśli znowu zainwestuję i znowu nic się nie zmieni?",
+      answer:
+        "To jest najuczciwsze pytanie na tej liście. I nie zamierzam Ci powiedzieć \"tym razem będzie inaczej\" — bo tak mówił każdy program, który kupowałeś do tej pory. Mogę Ci powiedzieć trzy rzeczy: (1) dlatego jest gwarancja zwrotu po 2 tygodniach, (2) dlatego jest Sesja Discovery, na której obaj sprawdzamy, czy to ma sens, i (3) dlatego nie pracuję z szablonem — bo szablon nie widzi Ciebie. Ja widzę.",
     },
   ];
 
@@ -172,399 +173,143 @@ export default function LifeOSSystemUpgrade() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Premium Badge */}
-            <div className="text-center mb-8">
-              <Badge className="bg-brand-gradient text-white border-0 text-base px-6 py-3">
-                <Crown className="inline h-5 w-5 mr-2" />
-                Premium System Upgrade
-              </Badge>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-8">
+              Tylko 5 miejsc jednocześnie
+            </p>
 
-            {/* Main Heading */}
-            <div className="text-center mb-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-                Life OS:{" "}
-                <span className="text-electric">
-                  System Upgrade
-                </span>
-              </h1>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-white/90 leading-tight">
-                8 tygodni transformacji dla liderów, którzy osiągnęli
-                wszystko... i właśnie dlatego czują się pusto.
-              </h2>
-            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              Life OS:{" "}
+              <span className="text-electric">System Upgrade</span>
+            </h1>
 
-            {/* Feature Pills */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    8 tygodni
-                  </span>
-                </CardContent>
-              </Card>
-              <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Users className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    Elite Cohort
-                  </span>
-                </CardContent>
-              </Card>
-              <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
-                <CardContent className="px-6 py-3 flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">
-                    Life Transformation
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-medium mb-8 text-white/90 leading-tight">
+              Nie kolejna aplikacja mentalna. Cały nowy system operacyjny.
+            </h2>
 
-            {/* CTA Button with Glow */}
-            <div className="text-center">
+            <p className="text-lg text-dim leading-relaxed mb-8 max-w-3xl mx-auto">
+              8 tygodni pracy 1:1 ze mną. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno — bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
+            </p>
+
+            <p className="text-sm text-dim mb-10">
+              8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <CTAButton
                 variant="premium"
                 size="xl"
-                aria-label="Zarezerwuj Sesję Discovery - przejdź do sekcji rejestracji"
+                aria-label="Sprawdź dostępność — Sesja Discovery"
                 showArrow
                 onClick={scrollToDiscovery}
               >
-                Zarezerwuj Sesję Discovery
+                Sprawdź dostępność — Sesja Discovery
               </CTAButton>
+              <a
+                href="#nie-dla-ciebie"
+                className="text-sm text-dim hover:text-electric transition-colors underline underline-offset-4"
+              >
+                Dla kogo to NIE jest →
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Recognition */}
-      <section className="relative py-20 bg-diamond overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
-                <AlertTriangle className="inline h-4 w-4 mr-2" />
-                Prawdziwy problem
-              </Badge>
-            </div>
-
+      {/* Rozpoznanie */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
               Rozpoznajesz ten stan?
             </h2>
 
-            {/* Success Description Card */}
-            <Card className="mb-8 border-2 border-electric/40 bg-gradient-to-br from-electric/5 to-white">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
-                    <Trophy className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1 space-y-4 text-left">
-                    <p className="text-xl text-on-light-dim leading-relaxed">
-                      Osiągnąłeś sukces, którego większość ludzi nie zrozumie.
-                    </p>
-                    <p className="text-xl text-on-light-dim leading-relaxed">
-                      Twoje cele są zrealizowane. Twoje firmy działają. Twoje
-                      życie wygląda perfekcyjnie z zewnątrz.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Pustka Alert Card */}
-            <Card className="mb-12 border-2 border-muted bg-muted/30">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
-                    <AlertTriangle className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-2xl font-bold text-on-light">
-                      Ale w środku?{" "}
-                      <span className="text-depth font-bold">
-                        Pustka.
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="space-y-6 mb-16">
-              <p className="text-xl text-on-light-dim leading-relaxed font-semibold">
-                I co gorsza - nikt nie rozumie tego problemu:
+            <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
+              <p>
+                Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie wygląda dobrze z zewnątrz.
               </p>
 
-              {/* Problem Cards - iOS Style */}
-              <div className="space-y-4">
-                {[
-                  {
-                    text: "Mówisz o tym znajomym",
-                    answer: '"Musisz więcej odpoczywać"',
-                  },
-                  {
-                    text: "Próbujesz z coachingiem",
-                    answer: '"Ustaw nowe cele SMART"',
-                  },
-                  {
-                    text: "Idziesz na terapię",
-                    answer: '"Opowiedz mi o swoich rodzicach"',
-                  },
-                ].map((item, index) => (
-                  <Card
-                    key={index}
-                    className="border border-muted bg-white"
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                          <AlertCircle className="h-5 w-5 text-dim" />
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-lg text-on-light-dim">
-                            <span className="font-semibold">{item.text}</span> →{" "}
-                            <span className="italic text-gray-600">
-                              {item.answer}
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+              <p>
+                A w środku? Konflikt, który zżera gigawaty energii:
+              </p>
+
+              <div className="space-y-3 text-on-light pl-4 border-l-4 border-electric/30 my-8">
+                <p>Część Ciebie chce budować dalej → Część Ciebie chce wreszcie odpocząć</p>
+                <p>Część Ciebie potrzebuje kontroli → Część Ciebie wie, że kontrola to iluzja</p>
+                <p>Część Ciebie goni kolejny cel → Część Ciebie pyta "po co?"</p>
               </div>
+
+              <p>
+                Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując je pogodzić — i zużywasz na to więcej energii niż na samą pracę.
+              </p>
+
+              <p className="font-semibold text-on-light mt-8 mb-4">Próbowałeś to rozwiązać:</p>
+
+              <div className="space-y-3">
+                <p><strong className="text-on-light">Mówisz o tym znajomym</strong> → "Musisz więcej odpoczywać"</p>
+                <p><strong className="text-on-light">Próbujesz z coachingiem</strong> → "Ustaw nowe cele SMART"</p>
+                <p><strong className="text-on-light">Idziesz na terapię</strong> → "Opowiedz mi o swoich rodzicach"</p>
+                <p><strong className="text-on-light">Kupujesz kurs</strong> → "Oto 7 kroków do lepszego Ciebie"</p>
+              </div>
+
+              <p className="mt-8">
+                Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w strategii, celach ani przeszłości. <strong className="text-on-light">Problem leży na poziomie tożsamości.</strong> Na suknie, które nałożyłeś na diament lata temu — i które od tamtego czasu zdążyło wrosnąć.
+              </p>
             </div>
-
-            {/* Problem Root Cause Card */}
-            <Card className="mb-12 border border-muted bg-muted/30">
-              <CardContent className="p-8 text-center">
-                <p className="text-2xl font-bold text-on-light mb-4">
-                  Żadne z tych rozwiązań nie trafia w sedno.
-                </p>
-                <p className="text-xl text-on-light-dim mb-6">
-                  Bo Twój problem nie leży w strategii, celach ani przeszłości.
-                </p>
-                <div className="bg-gradient-to-r from-electric/10 to-depth/10 px-8 py-4 rounded-md border border-electric/30">
-                  <p className="text-2xl font-bold text-on-light">
-                    Twój problem jest na poziomie tożsamości.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* System Upgrade Metaphor Card */}
-            <Card className="mb-16 border border-electric/30 bg-gradient-to-br from-electric/5 to-depth/5 group relative overflow-hidden">
-              <CardContent className="p-8 relative">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
-                    <Download className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1 space-y-4 text-left">
-                    <p className="text-xl text-on-light-dim leading-relaxed">
-                      Jesteś jak komputer z Windows 98, próbujący obsłużyć
-                      dzisiejsze oprogramowanie. System jest przestarzały,
-                      skonfliktowany, przeciążony.
-                    </p>
-                    <p className="text-xl text-on-light-dim leading-relaxed">
-                      Nie potrzebujesz więcej aplikacji (kolejnych "tricków").
-                    </p>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-r from-electric/10 to-depth/10 rounded-xl p-6 border border-electric/30">
-                  <p className="text-2xl font-bold text-depth text-center">
-                    Potrzebujesz upgrade'u całego Systemu Operacyjnego.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Before/After Slider */}
-            <BeforeAfterSlider />
           </div>
         </div>
       </section>
 
-      {/* Why Traditional Solutions Failed */}
-      <section className="relative py-20 bg-diamond overflow-hidden">
-        {/* Static gradient orbs */}
-        <div className="absolute bottom-40 left-20 w-80 h-80 bg-depth/10 rounded-full blur-3xl opacity-30"></div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-8">
-              <div className="relative inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-electric to-depth rounded-full blur opacity-30"></div>
-                <Badge className="relative bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 shadow-lg uppercase tracking-wide">
-                  <Target className="inline h-4 w-4 mr-2" />
-                  Dlaczego inne nie działają
-                </Badge>
-              </div>
-            </div>
-
+      {/* Dlaczego inne nie zadziałały */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
               Dlaczego to, co próbowałeś, nie zadziałało?
             </h2>
 
-            <div className="space-y-6 mb-12">
-              {/* Standard Coaching Card */}
-              <Card className="border border-muted bg-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-dim" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-on-light flex-1">
-                      Standard Coaching / Mentoring
-                    </h3>
-                  </div>
-                   <p className="text-on-light-dim mb-4 pl-14">
-                    Daje Ci nowe strategie. Więcej narzędzi. Kolejne frameworki.
-                  </p>
-                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
-                    <p className="text-on-light font-bold mb-2">
-                      Problem:
-                    </p>
-                    <p className="text-on-light-dim">
-                      Instalujesz nowe aplikacje na starym, skonfliktowanym
-                      systemie. Efekt jest chwilowy, a potem wracasz do starych
-                      wzorców.
-                    </p>
-                  </div>
-                  <p className="text-on-light-dim italic pl-14">
-                    To jak dokładanie krzeseł na Titanicu.
-                  </p>
-                </CardContent>
-              </Card>
+            <p className="text-lg text-on-light-dim leading-relaxed mb-8">
+              Nie dlatego, że było złe. Dlatego, że celowało nie tam, gdzie trzeba.
+            </p>
 
-              {/* Therapy Card */}
-              <Card className="border border-muted bg-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-dim" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-on-light flex-1">
-                      Terapia
-                    </h3>
-                  </div>
-                  <p className="text-on-light-dim mb-4 pl-14">
-                    Pomaga zrozumieć przeszłość. Analizować trauma. Rozumieć,
-                    skąd się to bierze.
-                  </p>
-                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
-                    <p className="text-on-light font-bold mb-2">
-                      Problem:
-                    </p>
-                    <p className="text-on-light-dim">
-                      Rozumiesz już SKĄD. Ale nadal nie wiesz JAK podjąć odważną
-                      decyzję w poniedziałek o 9 rano, kiedy na szali jest 2M
-                      PLN i przyszłość firmy.
-                    </p>
-                  </div>
-                  <p className="text-on-light-dim italic pl-14">
-                    Insight bez transformacji to tylko ciekawa historyjka.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-8 text-lg text-on-light-dim leading-relaxed">
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Coaching i mentoring</strong> dają Ci nowe strategie, więcej narzędzi, kolejne frameworki. I działają — na chwilę. A potem wracasz do starych wzorców, bo nowe narzędzia zainstalowałeś na starym, skonfliktowanym systemie. To jak wstawianie nowych mebli do domu, który ma pęknięty fundament. Pięknie wygląda. Przez tydzień.
+                </p>
+              </div>
 
-              {/* Online Courses Card */}
-              <Card className="border border-muted bg-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-dim" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-on-light flex-1">
-                      Kursy Online / Książki
-                    </h3>
-                  </div>
-                  <p className="text-on-light-dim mb-4 pl-14">
-                    Dostarczają wiedzę. Ramowe modele. Inspirację.
-                  </p>
-                  <div className="bg-muted/50 rounded-lg p-4 pl-14 mb-4">
-                    <p className="text-on-light font-bold mb-2">
-                      Problem:
-                    </p>
-                    <p className="text-on-light-dim">
-                      Prawdziwa transformacja nie zachodzi na poziomie
-                      intelektualnym. Możesz przeczytać 100 książek o pływaniu i
-                      nadal utoniesz, gdy wrzucą Cię do oceanu.
-                    </p>
-                  </div>
-                  <p className="text-on-light-dim italic pl-14">
-                    Plus: kupujesz kolejny kurs, bo poprzedni "nie zadziałał"
-                    (spoiler: problem nie był w kursie).
-                  </p>
-                </CardContent>
-              </Card>
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Terapia</strong> pomaga zrozumieć przeszłość. I to jest wartościowe — serio, bez ironii. Ale Ty już rozumiesz "skąd". Rozumiesz tak głęboko, że mógłbyś napisać o sobie pracę magisterską. Problem w tym, że w poniedziałek o 9 rano, kiedy musisz podjąć ważną decyzję, to zrozumienie nie pomaga. Insight bez zmiany perspektywy to ciekawa historyjka.
+                </p>
+              </div>
 
-              {/* Spirituality Card */}
-              <Card className="border border-muted bg-white">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center shrink-0">
-                      <X className="h-5 w-5 text-dim" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-on-light flex-1">
-                      Duchowość / Medytacja
-                    </h3>
-                  </div>
-                  <p className="text-on-light-dim mb-4 pl-14">
-                    Daje spokój. Perspektywę. Kontakt z czymś większym.
-                  </p>
-                  <div className="bg-muted/50 rounded-lg p-4 pl-14">
-                    <p className="text-on-light font-bold mb-2">
-                      Problem:
-                    </p>
-                    <p className="text-on-light-dim">
-                      Często oderwan od rzeczywistości biznesowej. Medutujesz,
-                      czujesz zen... a potem wracasz do biura i znowu jesteś tym
-                      samym człowiekiem podejmującym te same decyzje z tego
-                      samego strachu.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Kursy i książki</strong> dostarczają wiedzę. Masz jej wystarczająco dużo, żeby prowadzić podcast. (Może nawet prowadzisz.) Ale prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki nie wejdziesz do wody.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Duchowość i medytacja</strong> dają spokój. Perspektywę. Kontakt z czymś głębszym. A potem wracasz do biura i znowu jesteś tym samym człowiekiem, podejmującym te same decyzje z tego samego strachu. Zen na macie, chaos w Excelu.
+                </p>
+              </div>
             </div>
 
-            <div className="text-center bg-gradient-to-r from-electric/5 to-depth/5 p-8 rounded-md">
-              <h3 className="text-2xl font-bold text-on-light mb-4">
-                Prawdziwy problem: Konflikt systemowy
-              </h3>
-              <p className="text-xl text-on-light-dim mb-6">
-                Nie masz problemu z wiedzą, strategią ani nawet ze zdrowiem
-                psychicznym.
+            <div className="mt-12 text-lg text-on-light-dim leading-relaxed space-y-4">
+              <p>
+                <strong className="text-on-light">Żadne z tych podejść nie jest złe.</strong> Ale każde pracuje na jednej warstwie — powierzchni. Coaching zmienia strategię. Terapia zmienia narrację. Kursy zmieniają wiedzę. Medytacja zmienia stan.
               </p>
-              <p className="text-2xl font-bold text-electric mb-6">
-                Masz konflikt na poziomie tożsamości.
-              </p>
-              <div className="space-y-3 text-lg text-on-light-dim mb-6">
-                <p>
-                  Część Ciebie chce budować imperium → Część Ciebie chce spokoju
-                </p>
-                <p>
-                  Część Ciebie potrzebuje kontroli → Część Ciebie wie, że
-                  kontrola to iluzja
-                </p>
-                <p>Część Ciebie goni sukces → Część Ciebie pyta "po co?"</p>
-              </div>
-              <p className="text-xl text-on-light-dim mb-4">
-                Te części walczą ze sobą każdego dnia.
-              </p>
-              <p className="text-xl text-on-light-dim">
-                A Ty stoisz pośrodku tego konfliktu, zużywając gigawaty energii
-                na wewnętrzną wojnę.
+              <p className="text-xl font-bold text-on-light">
+                Żadne nie zmienia sukna. A problem jest w suknie.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Life OS System Upgrade */}
       <section className="relative py-20 bg-void-glow overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent"></div>
 
