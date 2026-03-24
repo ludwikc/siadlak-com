@@ -64,6 +64,7 @@ import WebinarKodKapitana from "./pages/WebinarKodKapitana";
 import WebinarDepresja from "./pages/WebinarDepresja";
 import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
+import Links from "./pages/Links";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
@@ -182,6 +183,7 @@ function App() {
 
               <Route path="/wyzwanie" element={<Wyzwanie />} />
               <Route path="/mct" element={<MCT />} />
+              <Route path="/links" element={<Links />} />
 
               <Route path="/help" element={<Help />} />
               <Route path="/help/:subpageSlug" element={<HelpSubpage />} />

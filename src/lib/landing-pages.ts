@@ -1,7 +1,8 @@
 // Configuration for pages that should hide header/footer (landing pages)
 export const LANDING_PAGES = new Set([
   '/webinar',
-  '/oto'
+  '/oto',
+  '/links'
 ]);
 
 export const isLandingPage = (pathname: string): boolean => {
