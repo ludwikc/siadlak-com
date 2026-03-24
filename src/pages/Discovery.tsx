@@ -1,12 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import {
-  ContentTextSection,
-  ContentGridSection,
-} from "@/components/sections/content";
+import { ContentTextSection } from "@/components/sections/content";
 import DiscoveryHero from "@/components/discovery/DiscoveryHero";
 import DiscoveryAvailabilityCheck from "@/components/discovery/DiscoveryAvailabilityCheck";
-import DiscoveryLifeOSOffer from "@/components/discovery/DiscoveryLifeOSOffer";
 
 export default function Discovery() {
   return (
@@ -60,166 +56,170 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* Rozpoznajesz ten stan? */}
+      {/* Skąd przychodzisz? */}
       <ContentTextSection
-        title="Rozpoznajesz ten stan?"
+        title="Skąd przychodzisz?"
         backgroundVariant="light"
         maxWidth="900px"
       >
         <p>
-          Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie
-          wygląda dobrze z zewnątrz.
+          Może właśnie przeczytałeś o{" "}
+          <Link
+            to="/program/lifeos-system-upgrade"
+            className="text-electric underline hover:no-underline"
+          >
+            Life OS: System Upgrade
+          </Link>{" "}
+          i chcesz sprawdzić, czy to dla Ciebie. Może ktoś Cię tu skierował.
+          Może szukasz czegoś, na co jeszcze nie masz nazwy.
         </p>
 
         <p>
-          A w środku? Konflikt, który zżera gigawaty energii:
+          Niezależnie od ścieżki — trafiłeś tutaj, bo coś nie gra. Nie na
+          zewnątrz. Na zewnątrz jest dobrze — może nawet za dobrze. To wewnątrz
+          jest ten dźwięk, który słyszysz tylko o trzeciej w nocy. Ten, który
+          mówi &quot;jest coś jeszcze&quot;, ale nie precyzuje co.
         </p>
 
-        <div className="space-y-4 mt-6 mb-6">
-          {[
-            ["Część Ciebie chce budować dalej", "Część Ciebie chce wreszcie odpocząć"],
-            ["Część Ciebie potrzebuje kontroli", "Część Ciebie wie, że kontrola to iluzja"],
-            ["Część Ciebie goni kolejny cel", 'Część Ciebie pyta "po co?"'],
-          ].map(([left, right]) => (
-            <div
-              key={left}
-              className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-lg"
-            >
-              <span className="font-semibold">{left}</span>
-              <span className="text-electric">→</span>
-              <span className="font-semibold">{right}</span>
-            </div>
-          ))}
-        </div>
+        <p>Nie musisz wiedzieć, co to jest. Na to jest ta sesja.</p>
 
         <p>
-          Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując
-          je pogodzić — i zużywasz na to więcej energii niż na samą pracę.
-        </p>
-
-        <p className="font-bold mt-8">Próbowałeś to rozwiązać:</p>
-
-        <div className="space-y-3 mt-4">
-          {[
-            ['Mówisz o tym znajomym', '"Musisz więcej odpoczywać"'],
-            ['Próbujesz z coachingiem', '"Ustaw nowe cele SMART"'],
-            ['Idziesz na terapię', '"Opowiedz mi o swoich rodzicach"'],
-            ['Kupujesz kurs', '"Oto 7 kroków do lepszego Ciebie"'],
-          ].map(([action, response]) => (
-            <div key={action} className="flex items-start gap-3 text-lg">
-              <span>{action}</span>
-              <span className="text-electric">→</span>
-              <span className="italic">{response}</span>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-8">
-          Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w
-          strategii, celach ani przeszłości.{" "}
-          <strong className="text-electric">
-            Problem leży na poziomie tożsamości.
-          </strong>{" "}
-          Na suknie, które nałożyłeś na diament lata temu — i które od tamtego
-          czasu zdążyło wrosnąć.
+          Muszę Ci tylko powiedzieć jedną rzecz, zanim się umówisz: ta rozmowa
+          nie jest kolejnym &quot;bezpłatnym konsultingiem&quot;, który istnieje
+          po to, żebyś kupił coś na końcu. To jest prawdziwa diagnostyka. Czasem
+          ludzie wychodzą z niej z taką zmianą perspektywy, że program staje się
+          opcjonalny. (Nie powiem, że mi to nie boli biznesowo. Ale powiem, że
+          wolę tak niż odwrotnie.)
         </p>
       </ContentTextSection>
 
       <div className="the-cut" />
 
       {/* Kim NIE jesteśmy dla siebie */}
-      <ContentGridSection
+      <ContentTextSection
         title="Kim NIE jesteśmy dla siebie"
-        columns={2}
-        gap="lg"
-        className="scroll-mt-20"
-        id="nie"
         backgroundVariant="muted"
+        maxWidth="900px"
+        id="nie"
       >
-        <div className="p-8 rounded-sm border border-white/10">
-          <h3 className="text-xl font-bold mb-6 text-text-on-dark">
-            ❌ To NIE jest dla Ciebie, jeśli:
-          </h3>
-          <ul className="space-y-4 text-lg text-text-dim">
-            {[
-              <>Szukasz kolejnego systemu produktywności, który &quot;w końcu zadziała&quot; (mam na to <Link to="/program/produktywnosc" className="text-electric underline hover:no-underline">osobny program</Link>)</>,
-              "Chcesz, żebym powiedział Ci, że wszystko jest okej i wystarczy zmienić aplikację",
-              "Potrzebujesz walidacji, nie zmiany perspektywy",
-              "Nie jesteś gotów na to, żeby się zaskoczyć — bo zaskoczenie bywa niewygodne",
-              "Szukasz szybkich rozwiązań zamiast głębokiej pracy",
-              "Jesteś na etapie, w którym potrzebujesz najpierw stabilizacji — finansowej, zdrowotnej, emocjonalnej. To nie jest słabość, to jest priorytet. Możesz wrócić, kiedy będziesz gotów",
-            ].map((text, i) => (
-              <li key={i} className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p>
+          Szanuję Twój czas, więc zanim się umówisz — zerknij, czy pasujesz do
+          tego, z czym pracuję.
+        </p>
 
-        <div className="p-8 rounded-sm border border-electric/20 bg-electric/5">
-          <h3 className="text-xl font-bold mb-6 text-electric">
-            ✅ To może być dla Ciebie, jeśli:
-          </h3>
-          <ul className="space-y-4 text-lg text-text-dim">
-            {[
-              "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
-              "Jesteś uwięziony w narracjach, które kiedyś Ci służyły, a teraz Cię więzą — i zaczynasz to widzieć",
-              "Testowałeś już systemy, metody, kursy — i wiesz, że problem leży głębiej niż to, co jest na powierzchni",
-              "Potrzebujesz kogoś, kto powie Ci prawdę z szacunkiem — a nie klepania po plecach ani brutalnych konfrontacji",
-              "Albo kogoś, kto da Ci pozwolenie na przestanie walki i przyjęcie tego, co już masz",
-              "Jesteś gotów na 8 tygodni intensywnej pracy, która zmieni sposób, w jaki widzisz siebie i świat",
-            ].map((text) => (
-              <li key={text} className="flex items-start">
-                <span className="mr-3">•</span>
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </ContentGridSection>
+        <p>
+          <strong>Ta sesja nie ma sensu</strong>, jeśli szukasz kolejnego systemu
+          produktywności (mam na to{" "}
+          <Link
+            to="/program/produktywnosc"
+            className="text-electric underline hover:no-underline"
+          >
+            osobny program
+          </Link>
+          ), oczekujesz potwierdzenia, że &quot;jest okej, po prostu zmień
+          aplikację&quot;, potrzebujesz motywacyjnego kopa i cheerleadera, albo
+          szukasz szybkich rozwiązań zamiast głębokiej pracy.
+        </p>
+
+        <p>
+          Jest jeszcze jeden scenariusz, o którym ważne jest, żebym powiedział
+          wprost: jeśli jesteś na etapie, w którym potrzebujesz najpierw
+          stabilizacji — finansowej, zdrowotnej, emocjonalnej — to nie jest
+          słabość. To jest priorytet. Możesz wrócić, kiedy będziesz gotów. Nikt
+          tu nikogo nie goni.
+        </p>
+
+        <p>
+          <strong>Ta sesja może mieć sens</strong>, jeśli osiągnąłeś sukces,
+          który nie smakuje tak, jak miał smakować. Jeśli jesteś uwięziony w
+          narracjach, które kiedyś Ci służyły, a teraz Cię więzą — i zaczynasz
+          to widzieć. Jeśli testowałeś już systemy, metody, kursy — i wiesz, że
+          problem leży głębiej niż to, co jest na powierzchni.
+        </p>
+
+        <p>
+          Albo jeśli po prostu potrzebujesz kogoś, kto powie Ci prawdę z
+          szacunkiem — nie klepania po plecach, nie brutalnej konfrontacji.
+          Kogoś, kto da Ci pozwolenie na przestanie walki i przyjęcie tego, co
+          już masz. Bez &quot;uzdrawiania&quot;. Bez &quot;naprawiania&quot;. Z
+          założeniem, że diament jest cały.
+        </p>
+      </ContentTextSection>
 
       <div className="the-cut" />
 
       {/* Co może się wydarzyć po rozmowie */}
-      <ContentGridSection
+      <ContentTextSection
         title="Co może się wydarzyć po tej rozmowie?"
-        subtitle="Transparentnie — jest kilka możliwych scenariuszy. I każdy z nich jest dobry."
-        columns={2}
-        gap="md"
         backgroundVariant="light"
+        maxWidth="900px"
       >
-        {[
-          {
-            title: "Scenariusz 1: Zaczynamy pracę",
-            desc: "Obaj czujemy, że to ma sens. Widzę, gdzie jesteś. Wiem, jakie pytania zadać. Ty jesteś gotów. Rozmawiamy o Life OS: System Upgrade i zaczynamy 8-tygodniową pracę.",
-          },
-          {
-            title: "Scenariusz 2: Nie teraz",
-            desc: "Może jesteś blisko, ale nie teraz. Może najpierw musisz przepracować coś innego — albo po prostu potrzebujesz czasu, żeby to, co usłyszałeś, mogło się ułożyć. Powiem Ci to wprost i skieruję tam, gdzie powinieneś być na tym etapie.",
-          },
-          {
-            title: "Scenariusz 3: To nie dla Ciebie",
-            desc: 'I to jest absolutnie w porządku. Czasem najlepsza pomoc to szczera informacja, że nasze drogi się rozchodzą. Zaoszczędzę Ci czasu, pieniędzy i energii — a Ty nie stracisz pół roku na coś, co od początku nie pasowało.',
-          },
-          {
-            title: "Scenariusz 4: Zaskoczenie",
-            desc: 'To jest mój ulubiony. Czasem podczas tych 30 minut dzieje się coś nieoczekiwanego. Jedno pytanie, jedna zmiana perspektywy, jedno przesunięcie narracji — i nagle widzisz coś, czego wcześniej nie widziałeś. Bez sprzedaży. Bez oferty. Po prostu — zmiana. Wiem, że brzmi to jak filmowa scena, ale zdarza się częściej, niż byś myślał.',
-          },
-        ].map((item) => (
-          <div
-            key={item.title}
-            className="rounded-sm p-8 border border-text-on-light/10"
-          >
-            <h3 className="text-lg font-bold mb-3 text-electric">
-              {item.title}
+        <p>
+          Transparentnie — jest kilka możliwych scenariuszy. I każdy z nich jest
+          dobry.
+        </p>
+
+        <div className="space-y-8 mt-8">
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Scenariusz 1: Zaczynamy pracę
             </h3>
-            <p className="text-lg text-text-on-light/80 leading-relaxed">
-              {item.desc}
+            <p>
+              Obaj czujemy, że to ma sens. Widzę, gdzie jesteś. Wiem, jakie
+              pytania zadać. Ty jesteś gotów. Rozmawiamy o{" "}
+              <Link
+                to="/program/lifeos-system-upgrade"
+                className="text-electric underline hover:no-underline"
+              >
+                Life OS: System Upgrade
+              </Link>{" "}
+              i zaczynamy 8-tygodniową pracę.
             </p>
           </div>
-        ))}
-      </ContentGridSection>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Scenariusz 2: Nie teraz
+            </h3>
+            <p>
+              Może jesteś blisko, ale nie teraz. Może najpierw musisz
+              przepracować coś innego — albo po prostu potrzebujesz czasu, żeby
+              to, co usłyszałeś, mogło się ułożyć. Powiem Ci to wprost i
+              skieruję tam, gdzie powinieneś być na tym etapie.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Scenariusz 3: To nie dla Ciebie
+            </h3>
+            <p>
+              I to jest absolutnie w porządku. Czasem najlepsza pomoc to szczera
+              informacja, że nasze drogi się rozchodzą. Zaoszczędzę Ci czasu,
+              pieniędzy i energii — a Ty nie stracisz pół roku na coś, co od
+              początku nie pasowało.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-3">
+              Scenariusz 4: Zaskoczenie
+            </h3>
+            <p>
+              To jest mój ulubiony. Czasem podczas tych 30 minut dzieje się coś
+              nieoczekiwanego. Jedno pytanie, jedna zmiana perspektywy, jedno
+              przesunięcie narracji — i nagle widzisz coś, czego wcześniej nie
+              widziałeś. Bez sprzedaży. Bez oferty. Po prostu — zmiana.
+            </p>
+            <p className="mt-4">
+              Wiem, że brzmi to jak filmowa scena, ale zdarza się częściej, niż
+              byś myślał. (Akurat w filmach takie sceny trwają trzy sekundy i
+              mają podkład z Hansa Zimmera. U mnie trwają siedemnaście minut i
+              podkładem jest cisza. Ale efekt jest podobny.)
+            </p>
+          </div>
+        </div>
+      </ContentTextSection>
 
       <div className="the-cut" />
 
@@ -233,7 +233,7 @@ export default function Discovery() {
           {[
             {
               num: "1. Wypełniasz formularz",
-              desc: 'Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) — ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej — i napiszę Ci o tym szczerze.',
+              desc: "Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) — ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej — i napiszę Ci o tym szczerze.",
             },
             {
               num: "2. 30 minut 1:1 na Zoom",
@@ -259,162 +259,47 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* Life OS: System Upgrade — co instalujesz */}
-      <DiscoveryLifeOSOffer />
-
-      <div className="the-cut" />
-
-      {/* Dlaczego 16 000 zł? */}
+      {/* A co z Life OS? — compressed bridge */}
       <ContentTextSection
-        title="Dlaczego 16 000 zł?"
-        maxWidth="900px"
-        backgroundVariant="muted"
-      >
-        <p>
-          Bo to nie jest kurs. Nie jest coaching w grupie. Nie jest &quot;program
-          online z dostępem do społeczności&quot;.
-        </p>
-
-        <p>
-          To jest 8 tygodni mojego pełnego zaangażowania. Maksymalnie 5 osób
-          jednocześnie — bo inaczej nie da się zrobić tej pracy dobrze. Nie da
-          się zadać właściwego pytania, jeśli nie pamiętasz odpowiedzi na
-          poprzednie. I nie da się prowadzić kogoś przez zobaczenie własnego
-          diamentu, jednocześnie prowadząc grupę 50 osób na webinarze.
-        </p>
-
-        <p className="font-bold mt-4">
-          Porównaj to z tym, co prawdopodobnie już próbowałeś:
-        </p>
-
-        <div className="space-y-6 mt-6">
-          {[
-            {
-              title: "Standardowy coaching",
-              price: "2-5 tys. PLN/miesiąc",
-              desc: "Daje Ci nowe strategie, więcej narzędzi, kolejne frameworki. Instalujesz nowe aplikacje na starym, skonfliktowanym systemie. Efekt jest chwilowy, a potem wracasz do starych wzorców.",
-            },
-            {
-              title: "Terapia",
-              price: "200-400 zł/sesja × rok = 10 000-20 000 zł",
-              desc: "Pomaga zrozumieć przeszłość. Rozumiesz już skąd. Ale nadal nie wiesz, jak podjąć odważną decyzję w poniedziałek o 9 rano. Insight bez zmiany perspektywy to ciekawa historyjka.",
-            },
-            {
-              title: "Kursy online i książki",
-              price: "2-5 tys. PLN",
-              desc: "Dostarczają wiedzę. Ale prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki nie wejdziesz do wody.",
-            },
-            {
-              title: "Kolejny rok szukania na własną rękę",
-              price: "",
-              desc: "Kosztuje nie tylko pieniądze. Kosztuje czas. A czas, jak już wiesz, jest jednym z tych dwóch zasobów, o które walczą wszyscy.",
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="rounded-sm p-6 border border-white/10"
-            >
-              <h3 className="font-heading text-base font-bold text-electric mb-1">
-                {item.title}
-                {item.price && (
-                  <span className="font-normal text-text-dim">
-                    {" "}
-                    ({item.price})
-                  </span>
-                )}
-              </h3>
-              <p>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-8">
-          Life OS łączy to, co najlepsze z każdego podejścia — głębię terapii,
-          precyzję coachingu, mądrość filozofii — w 8-tygodniowy proces celujący
-          w konkretny przełom. Nie w otwarty proces bez końca.
-        </p>
-
-        <p className="font-bold text-electric mt-4">
-          Nie mówię, że to tania inwestycja. Mówię, że to może być ostatnia
-          inwestycja tego typu, jakiej potrzebujesz.
-        </p>
-      </ContentTextSection>
-
-      <div className="the-cut" />
-
-      {/* Czego możesz się spodziewać? */}
-      <ContentTextSection
-        title="Czego możesz się spodziewać?"
+        title="A co z Life OS?"
         maxWidth="900px"
         backgroundVariant="light"
       >
         <p>
-          Nie obiecuję cudów. Obiecuję pracę, po której zobaczysz wymierne
-          zmiany:
+          Jeśli po sesji Discovery obaj zdecydujemy, że to ma sens — oto co Cię
+          czeka w skrócie:
         </p>
 
-        <div className="space-y-8 mt-8">
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-3">
-              Koniec z wewnętrzną wojną.
-            </h3>
-            <p>
-              Przestajesz zużywać 80% energii na konflikt między częściami
-              siebie. Nagle masz zasób mocy, o którym zapomniałeś.
-            </p>
-            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
-              &quot;Nie zdawałem sobie sprawy, ile energii szło na walkę z samym
-              sobą.&quot;
-              <span className="block text-sm mt-1 not-italic text-electric">
-                — Klient Life OS
-              </span>
-            </blockquote>
-          </div>
+        <p>
+          8 tygodni intensywnej pracy 1:1 ze mną. Sesje od 50 minut do 2,5
+          godziny (bez sztucznego limitu), dostęp do mnie między sesjami przez
+          Signal, pełna diagnostyka Twojego &quot;systemu operacyjnego&quot;,
+          spersonalizowana mapa transformacji, nagrania wszystkich sesji i
+          dożywotni dostęp do społeczności absolwentów — codziennie o 12:34 na
+          Discordzie Lifehackerów.
+        </p>
 
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-3">
-              Decyzyjność bez paraliżu.
-            </h3>
-            <p>
-              Intuicja + dane = szybkie, pewne decyzje. Bez trzech tygodni
-              bezsennych nocy nad każdym wyborem.
-            </p>
-            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
-              &quot;Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie
-              snu. Teraz wiem w 20 minut.&quot;
-              <span className="block text-sm mt-1 not-italic text-electric">
-                — Klientka Life OS
-              </span>
-            </blockquote>
-          </div>
+        <p>
+          Inwestycja: 16 000 PLN (lub 2 × 6 500 PLN netto na fakturę).
+          Gwarancja zwrotu po 2 tygodniach — jeśli nie poczujesz, że to
+          fundamentalnie inna praca, powiemy sobie &quot;do widzenia&quot; i nie
+          zapłacisz ani złotówki więcej.
+        </p>
 
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-3">
-              Prawdziwy spokój — nie tylko przerwa w pracy.
-            </h3>
-            <p>
-              Weekend staje się regeneracją, nie poczuciem winy.
-            </p>
-            <blockquote className="mt-4 pl-4 border-l-2 border-electric italic">
-              &quot;Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie
-              myślałem o firmie. I firma nie spłonęła.&quot;
-              <span className="block text-sm mt-1 not-italic text-electric">
-                — Klient Life OS
-              </span>
-            </blockquote>
-          </div>
+        <p>
+          Pełny opis programu, metodologii i odpowiedzi na pytania znajdziesz na{" "}
+          <Link
+            to="/program/lifeos-system-upgrade"
+            className="text-electric underline hover:no-underline"
+          >
+            stronie Life OS: System Upgrade
+          </Link>
+          .
+        </p>
 
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-3">
-              Ambicja bez lęku.
-            </h3>
-            <p>
-              Przestajesz potrzebować sukcesu jako potwierdzenia wartości. Ale
-              nadal go budujesz — tyle że z radości, nie ze strachu. To nie jest
-              rezygnacja z ambicji. To uwolnienie jej z lęku.
-            </p>
-          </div>
-        </div>
+        <p className="font-bold">
+          Ale najpierw — sesja. Bo bez niej żadna decyzja nie ma sensu.
+        </p>
       </ContentTextSection>
 
       <div className="the-cut" />
