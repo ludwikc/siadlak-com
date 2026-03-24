@@ -3,10 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
 
-import {
-  CheckCircle,
-  ChevronDown,
-} from "@/lib/icons";
+import { CheckCircle, ChevronDown } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 
@@ -49,8 +46,7 @@ export default function LifeOSSystemUpgrade() {
 
   const testimonials = [
     {
-      quote:
-        "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą.",
+      quote: "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą.",
       name: "Tomek, 38 lat",
       title: "CTO startupu, ojciec dwójki",
     },
@@ -61,8 +57,7 @@ export default function LifeOSSystemUpgrade() {
       title: "Life OS Absolwentka",
     },
     {
-      quote:
-        "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła.",
+      quote: "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła.",
       name: "Klient Life OS",
       title: "Life OS Absolwent",
     },
@@ -78,7 +73,7 @@ export default function LifeOSSystemUpgrade() {
     {
       question: "Jak to się różni od terapii?",
       answer:
-        "Terapia pomaga zrozumieć przeszłość. Life OS pomaga zmienić sposób, w jaki podejmujesz decyzje w teraźniejszości. To nie jest albo-albo — wielu moich klientów kontynuuje terapię równolegle. Ale jeśli Twój problem brzmi \"wiem, skąd się to bierze, ale nie wiem, co z tym zrobić\" — to jest miejsce, w którym zaczynam ja.",
+        'Terapia pomaga zrozumieć przeszłość. Life OS pomaga zmienić sposób, w jaki podejmujesz decyzje w teraźniejszości. To nie jest albo-albo — wielu moich klientów kontynuuje terapię równolegle. Ale jeśli Twój problem brzmi "wiem, skąd się to bierze, ale nie wiem, co z tym zrobić" — to jest miejsce, w którym zaczynam ja.',
     },
     {
       question: "Czy to coaching?",
@@ -98,23 +93,22 @@ export default function LifeOSSystemUpgrade() {
     {
       question: "Co jeśli nie mam 8 tygodni?",
       answer:
-        "Masz. Nie mówię tego lekceważąco — ale jeśli prowadzisz firmę, masz rodzinę i czytasz tę stronę, to masz sesję w kalendarzu raz w tygodniu. Sesje trwają od 50 minut do 2,5 godziny. Między sesjami masz Signal. To nie wymaga \"porzucenia życia na 8 tygodni\". To wymaga pół godziny do dwóch godzin tygodniowo czystego skupienia.",
+        'Masz. Nie mówię tego lekceważąco — ale jeśli prowadzisz firmę, masz rodzinę i czytasz tę stronę, to masz sesję w kalendarzu raz w tygodniu. Sesje trwają od 50 minut do 2,5 godziny. Między sesjami masz Signal. To nie wymaga "porzucenia życia na 8 tygodni". To wymaga pół godziny do dwóch godzin tygodniowo czystego skupienia.',
     },
     {
-      question: "Ile osób bierzesz jednocześnie?",
+      question: "Z iloma osobami pracujesz?",
       answer:
-        "Maksymalnie 5. Nie dlatego, żeby tworzyć sztuczny pośpiech — dlatego, że nie da się prowadzić kogoś przez zobaczenie własnego diamentu, jednocześnie pracując z 20 osobami. Ta praca wymaga, żebym pamiętał Twoje odpowiedzi z zeszłego tygodnia. I pamiętam.",
+        "Maksymalnie 5 jednocześnie. Z każdą indywidualnie.. Nie dlatego, żeby tworzyć sztuczny pośpiech — dlatego, że nie da się prowadzić kogoś przez zobaczenie własnego diamentu, jednocześnie pracując z 20 osobami. Ta praca wymaga, żebym pamiętał Twoje odpowiedzi z zeszłego tygodnia. I pamiętam.",
     },
     {
       question: "A co jeśli znowu zainwestuję i znowu nic się nie zmieni?",
       answer:
-        "To jest najuczciwsze pytanie na tej liście. I nie zamierzam Ci powiedzieć \"tym razem będzie inaczej\" — bo tak mówił każdy program, który kupowałeś do tej pory. Mogę Ci powiedzieć trzy rzeczy: (1) dlatego jest gwarancja zwrotu po 2 tygodniach, (2) dlatego jest Sesja Discovery, na której obaj sprawdzamy, czy to ma sens, i (3) dlatego nie pracuję z szablonem — bo szablon nie widzi Ciebie. Ja widzę.",
+        'To jest najuczciwsze pytanie na tej liście. I nie zamierzam Ci powiedzieć "tym razem będzie inaczej" — bo tak mówił każdy program, który kupowałeś do tej pory. Mogę Ci powiedzieć trzy rzeczy: (1) dlatego jest gwarancja zwrotu po 2 tygodniach, (2) dlatego jest Sesja Discovery, na której obaj sprawdzamy, czy to ma sens, i (3) dlatego nie pracuję z szablonem — bo szablon nie widzi Ciebie. Ja widzę.',
     },
   ];
 
   return (
     <Layout>
-
       {/* Sticky CTA Bar */}
       <div
         className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient transition-transform duration-300 ${
@@ -124,16 +118,9 @@ export default function LifeOSSystemUpgrade() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="text-white">
             <span className="font-bold text-lg">Life OS: System Upgrade</span>
-            <span className="ml-4 text-sm text-white/90">
-              {spotsAvailable}/5 miejsc dostępnych
-            </span>
+            <span className="ml-4 text-sm text-white/90">{spotsAvailable}/5 miejsc dostępnych</span>
           </div>
-          <CTAButton
-            variant="premium"
-            size="lg"
-            onClick={scrollToDiscovery}
-            showArrow
-          >
+          <CTAButton variant="premium" size="lg" onClick={scrollToDiscovery} showArrow>
             Zarezerwuj Sesję
           </CTAButton>
         </div>
@@ -141,7 +128,13 @@ export default function LifeOSSystemUpgrade() {
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-void overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
+          }}
+        />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -150,8 +143,7 @@ export default function LifeOSSystemUpgrade() {
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              Life OS:{" "}
-              <span className="text-electric">System Upgrade</span>
+              Life OS: <span className="text-electric">System Upgrade</span>
             </h1>
 
             <h2 className="text-2xl md:text-3xl font-medium mb-8 text-white/90 leading-tight">
@@ -159,12 +151,11 @@ export default function LifeOSSystemUpgrade() {
             </h2>
 
             <p className="text-lg text-dim leading-relaxed mb-8 max-w-3xl mx-auto">
-              8 tygodni pracy 1:1 ze mną. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno — bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
+              8 tygodni pracy 1:1 ze mną. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno —
+              bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
             </p>
 
-            <p className="text-sm text-dim mb-10">
-              8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób
-            </p>
+            <p className="text-sm text-dim mb-10">8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób</p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <CTAButton
@@ -191,18 +182,12 @@ export default function LifeOSSystemUpgrade() {
       <section className="py-20 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
-              Rozpoznajesz ten stan?
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">Rozpoznajesz ten stan?</h2>
 
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
-              <p>
-                Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie wygląda dobrze z zewnątrz.
-              </p>
+              <p>Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie wygląda dobrze z zewnątrz.</p>
 
-              <p>
-                A w środku? Konflikt, który zżera gigawaty energii:
-              </p>
+              <p>A w środku? Konflikt, który zżera gigawaty energii:</p>
 
               <div className="space-y-3 text-on-light pl-4 border-l-4 border-electric/30 my-8">
                 <p>Część Ciebie chce budować dalej → Część Ciebie chce wreszcie odpocząć</p>
@@ -211,20 +196,31 @@ export default function LifeOSSystemUpgrade() {
               </div>
 
               <p>
-                Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując je pogodzić — i zużywasz na to więcej energii niż na samą pracę.
+                Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując je pogodzić — i zużywasz na to
+                więcej energii niż na samą pracę.
               </p>
 
               <p className="font-semibold text-on-light mt-8 mb-4">Próbowałeś to rozwiązać:</p>
 
               <div className="space-y-3">
-                <p><strong className="text-on-light">Mówisz o tym znajomym</strong> → "Musisz więcej odpoczywać"</p>
-                <p><strong className="text-on-light">Próbujesz z coachingiem</strong> → "Ustaw nowe cele SMART"</p>
-                <p><strong className="text-on-light">Idziesz na terapię</strong> → "Opowiedz mi o swoich rodzicach"</p>
-                <p><strong className="text-on-light">Kupujesz kurs</strong> → "Oto 7 kroków do lepszego Ciebie"</p>
+                <p>
+                  <strong className="text-on-light">Mówisz o tym znajomym</strong> → "Musisz więcej odpoczywać"
+                </p>
+                <p>
+                  <strong className="text-on-light">Próbujesz z coachingiem</strong> → "Ustaw nowe cele SMART"
+                </p>
+                <p>
+                  <strong className="text-on-light">Idziesz na terapię</strong> → "Opowiedz mi o swoich rodzicach"
+                </p>
+                <p>
+                  <strong className="text-on-light">Kupujesz kurs</strong> → "Oto 7 kroków do lepszego Ciebie"
+                </p>
               </div>
 
               <p className="mt-8">
-                Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w strategii, celach ani przeszłości. <strong className="text-on-light">Problem leży na poziomie tożsamości.</strong> Na suknie, które nałożyłeś na diament lata temu — i które od tamtego czasu zdążyło wrosnąć.
+                Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w strategii, celach ani przeszłości.{" "}
+                <strong className="text-on-light">Problem leży na poziomie tożsamości.</strong> Na suknie, które
+                nałożyłeś na diament lata temu — i które od tamtego czasu zdążyło wrosnąć.
               </p>
             </div>
           </div>
@@ -246,36 +242,47 @@ export default function LifeOSSystemUpgrade() {
             <div className="space-y-8 text-lg text-on-light-dim leading-relaxed">
               <div>
                 <p>
-                  <strong className="text-on-light text-xl">Coaching i mentoring</strong> dają Ci nowe strategie, więcej narzędzi, kolejne frameworki. I działają — na chwilę. A potem wracasz do starych wzorców, bo nowe narzędzia zainstalowałeś na starym, skonfliktowanym systemie. To jak wstawianie nowych mebli do domu, który ma pęknięty fundament. Pięknie wygląda. Przez tydzień.
+                  <strong className="text-on-light text-xl">Coaching i mentoring</strong> dają Ci nowe strategie, więcej
+                  narzędzi, kolejne frameworki. I działają — na chwilę. A potem wracasz do starych wzorców, bo nowe
+                  narzędzia zainstalowałeś na starym, skonfliktowanym systemie. To jak wstawianie nowych mebli do domu,
+                  który ma pęknięty fundament. Pięknie wygląda. Przez tydzień.
                 </p>
               </div>
 
               <div>
                 <p>
-                  <strong className="text-on-light text-xl">Terapia</strong> pomaga zrozumieć przeszłość. I to jest wartościowe — serio, bez ironii. Ale Ty już rozumiesz "skąd". Rozumiesz tak głęboko, że mógłbyś napisać o sobie pracę magisterską. Problem w tym, że w poniedziałek o 9 rano, kiedy musisz podjąć ważną decyzję, to zrozumienie nie pomaga. Insight bez zmiany perspektywy to ciekawa historyjka.
+                  <strong className="text-on-light text-xl">Terapia</strong> pomaga zrozumieć przeszłość. I to jest
+                  wartościowe — serio, bez ironii. Ale Ty już rozumiesz "skąd". Rozumiesz tak głęboko, że mógłbyś
+                  napisać o sobie pracę magisterską. Problem w tym, że w poniedziałek o 9 rano, kiedy musisz podjąć
+                  ważną decyzję, to zrozumienie nie pomaga. Insight bez zmiany perspektywy to ciekawa historyjka.
                 </p>
               </div>
 
               <div>
                 <p>
-                  <strong className="text-on-light text-xl">Kursy i książki</strong> dostarczają wiedzę. Masz jej wystarczająco dużo, żeby prowadzić podcast. (Może nawet prowadzisz.) Ale prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki nie wejdziesz do wody.
+                  <strong className="text-on-light text-xl">Kursy i książki</strong> dostarczają wiedzę. Masz jej
+                  wystarczająco dużo, żeby prowadzić podcast. (Może nawet prowadzisz.) Ale prawdziwa zmiana nie zachodzi
+                  na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki
+                  nie wejdziesz do wody.
                 </p>
               </div>
 
               <div>
                 <p>
-                  <strong className="text-on-light text-xl">Duchowość i medytacja</strong> dają spokój. Perspektywę. Kontakt z czymś głębszym. A potem wracasz do biura i znowu jesteś tym samym człowiekiem, podejmującym te same decyzje z tego samego strachu. Zen na macie, chaos w Excelu.
+                  <strong className="text-on-light text-xl">Duchowość i medytacja</strong> dają spokój. Perspektywę.
+                  Kontakt z czymś głębszym. A potem wracasz do biura i znowu jesteś tym samym człowiekiem, podejmującym
+                  te same decyzje z tego samego strachu. Zen na macie, chaos w Excelu.
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-lg text-on-light-dim leading-relaxed space-y-4">
               <p>
-                <strong className="text-on-light">Żadne z tych podejść nie jest złe.</strong> Ale każde pracuje na jednej warstwie — powierzchni. Coaching zmienia strategię. Terapia zmienia narrację. Kursy zmieniają wiedzę. Medytacja zmienia stan.
+                <strong className="text-on-light">Żadne z tych podejść nie jest złe.</strong> Ale każde pracuje na
+                jednej warstwie — powierzchni. Coaching zmienia strategię. Terapia zmienia narrację. Kursy zmieniają
+                wiedzę. Medytacja zmienia stan.
               </p>
-              <p className="text-xl font-bold text-on-light">
-                Żadne nie zmienia sukna. A problem jest w suknie.
-              </p>
+              <p className="text-xl font-bold text-on-light">Żadne nie zmienia tła. A problem jest tam.</p>
             </div>
           </div>
         </div>
@@ -287,46 +294,42 @@ export default function LifeOSSystemUpgrade() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric text-center mb-8">
-              Metodologia
-            </p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric text-center mb-8">Metodologia</p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
               Czym jest Life OS: System Upgrade?
             </h2>
 
             <div className="space-y-6 text-lg text-dim leading-relaxed">
+              <p>Wyobraź sobie, że Twój umysł to diament. Czysty, przezroczysty, niezniszczalny.</p>
+
               <p>
-                Wyobraź sobie, że Twój umysł to diament. Czysty, przezroczysty, indestruktywny.
+                Ale leży pod warstwami sukna — narracji, oczekiwań, ról, lęków — które nagromadziły się przez lata.
+                Czerwone sukno sprawia, że widzisz siebie jako kogoś, kto musi walczyć. Zielone — jako kogoś, kto musi
+                więcej. Niebieskie — jako kogoś, kto nie zasługuje na spokój.
               </p>
 
               <p>
-                Ale leży pod warstwami sukna — narracji, oczekiwań, ról, lęków — które nagromadziły się przez lata. Czerwone sukno sprawia, że widzisz siebie jako kogoś, kto musi walczyć. Zielone — jako kogoś, kto musi więcej. Niebieskie — jako kogoś, kto nie zasługuje na spokój.
+                Każda warstwa zmienia "kolor" tego, kim myślisz, że jesteś. Ale diament pod spodem? Nie zmienił się ani
+                na chwilę.
+              </p>
+
+              <p className="text-xl font-bold text-white">Life OS to 8 tygodni zdejmowania sukna.</p>
+
+              <p>Nie daję Ci nowych narzędzi. Nie uczę Cię nowych technik. Nie mówię Ci, kim powinieneś być.</p>
+
+              <p>
+                Zadaję Ci pytania. Buduję z Tobą metaforę, która jest <em>Twoja</em>. I czekam — bo metafora działa tam,
+                gdzie logika się zatrzymuje. Logika mówi "powinieneś". Metafora mówi "aha — <em>widzę</em>". I w tym
+                "aha" wszystko się zmienia.
               </p>
 
               <p>
-                Każda warstwa zmienia "kolor" tego, kim myślisz, że jesteś. Ale diament pod spodem? Nie zmienił się ani na chwilę.
+                Czasem potrzebujesz kogoś, kto przetnie więzy. Czasem kogoś, kto da pozwolenie na rozwinięcie skrzydeł.
+                Najczęściej — obu, naprzemiennie.
               </p>
 
-              <p className="text-xl font-bold text-white">
-                Life OS to 8 tygodni zdejmowania sukna.
-              </p>
-
-              <p>
-                Nie daję Ci nowych narzędzi. Nie uczę Cię nowych technik. Nie mówię Ci, kim powinieneś być.
-              </p>
-
-              <p>
-                Zadaję Ci pytania. Buduję z Tobą metaforę, która jest <em>Twoja</em>. I czekam — bo metafora działa tam, gdzie logika się zatrzymuje. Logika mówi "powinieneś". Metafora mówi "aha — <em>widzę</em>". I w tym "aha" wszystko się zmienia.
-              </p>
-
-              <p>
-                Czasem potrzebujesz kogoś, kto przetnie więzy. Czasem kogoś, kto da pozwolenie na rozwinięcie skrzydeł. Najczęściej — obu, naprzemiennie.
-              </p>
-
-              <p>
-                Skąd wiem, czego potrzebujesz? Z 19 lat praktyki. I z tego, że sam przeszłem obie drogi.
-              </p>
+              <p>Skąd wiem, czego potrzebujesz? Z 19 lat praktyki. I z tego, że sam przeszłem obie drogi.</p>
             </div>
           </div>
         </div>
@@ -336,9 +339,7 @@ export default function LifeOSSystemUpgrade() {
       <section className="relative py-20 bg-void-glow overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white">
-              4 fazy procesu
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white">4 fazy procesu</h2>
 
             <div className="space-y-12">
               {/* Faza 1 */}
@@ -346,13 +347,17 @@ export default function LifeOSSystemUpgrade() {
                 <h3 className="text-2xl font-bold text-white mb-2">Tydzień 1-2: Diagnostyka systemu</h3>
                 <div className="space-y-4 text-lg text-dim leading-relaxed">
                   <p>
-                    Głęboki skan — gdzie jest konflikt tożsamości, jaka narracja Cię blokuje, jakiego rodzaju pracy potrzebujesz.
+                    Głęboki skan — gdzie jest konflikt tożsamości, jaka narracja Cię blokuje, jakiego rodzaju pracy
+                    potrzebujesz.
                   </p>
                   <p>
-                    Niektórzy potrzebują, żeby ktoś im przeciął więzy. Inni — pozwolenia na rozwinięcie skrzydeł. Większość — obu, naprzemiennie. Pierwsza faza to ustalenie, co leży na diamencie i w jakiej kolejności będziemy to zdejmować.
+                    Niektórzy potrzebują, żeby ktoś im przeciął więzy. Inni — pozwolenia na rozwinięcie skrzydeł.
+                    Większość — obu, naprzemiennie. Pierwsza faza to ustalenie, co leży na diamencie i w jakiej
+                    kolejności będziemy to zdejmować.
                   </p>
                   <p>
-                    Nie jest to przyjemna rozmowa. Ale nie jest też brutalna — jest uczciwa. A uczciwość, jak się okazuje, wystarczy.
+                    Nie jest to przyjemna rozmowa. Ale nie jest też brutalna — jest uczciwa. A uczciwość, jak się
+                    okazuje, wystarczy.
                   </p>
                 </div>
               </div>
@@ -361,15 +366,13 @@ export default function LifeOSSystemUpgrade() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Tydzień 3-4: Dekonstrukcja</h3>
                 <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>Tu zaczynamy zdejmować sukno. Warstwa po warstwie.</p>
                   <p>
-                    Tu zaczynamy zdejmować sukno. Warstwa po warstwie.
+                    Czasem przez metaforę. Czasem przez filozofię — Jung, Faust i Mistrz i Małgorzata to moje ulubione
+                    lustra. Czasem przez pytanie, po którym zapada cisza na kilka minut — i ta cisza mówi więcej niż
+                    wszystkie poprzednie odpowiedzi.
                   </p>
-                  <p>
-                    Czasem przez metaforę. Czasem przez filozofię — Jung, Faust i Mistrz i Małgorzata to moje ulubione lustra. Czasem przez pytanie, po którym zapada cisza na kilka minut — i ta cisza mówi więcej niż wszystkie poprzednie odpowiedzi.
-                  </p>
-                  <p>
-                    To jest ta faza, w której ludzie mówią: "Nie wiem, co się właśnie wydarzyło." I uśmiechają się.
-                  </p>
+                  <p>To jest ta faza, w której ludzie mówią: "Nie wiem, co się właśnie wydarzyło." I uśmiechają się.</p>
                 </div>
               </div>
 
@@ -378,10 +381,13 @@ export default function LifeOSSystemUpgrade() {
                 <h3 className="text-2xl font-bold text-white mb-2">Tydzień 5-6: Integracja</h3>
                 <div className="space-y-4 text-lg text-dim leading-relaxed">
                   <p>
-                    Teraz uczymy Twoje konfliktowe części współpracować. Bezwzględny CEO i wrażliwy wizjoner to nie wrogowie — to zespół. Energia, która szła na wewnętrzną wojnę, zaczyna iść na tworzenie.
+                    Teraz uczymy Twoje konfliktowe części współpracować. Bezwzględny CEO i wrażliwy wizjoner to nie
+                    wrogowie — to zespół. Energia, która szła na wewnętrzną wojnę, zaczyna iść na tworzenie.
                   </p>
                   <p>
-                    Decyzje przestają być polem bitwy. Działasz z miejsca spójności, nie wymuszonej dyscypliny. Wewnętrzny krytyk zostaje zintegrowany — nie uciszony. (Uciszanie nigdy nie działa. On zawsze wraca. Ale zintegrowany krytyk staje się doradcą.)
+                    Decyzje przestają być polem bitwy. Działasz z miejsca spójności, nie wymuszonej dyscypliny.
+                    Wewnętrzny krytyk zostaje zintegrowany — nie uciszony. (Uciszanie nigdy nie działa. On zawsze wraca.
+                    Ale zintegrowany krytyk staje się doradcą.)
                   </p>
                 </div>
               </div>
@@ -390,11 +396,10 @@ export default function LifeOSSystemUpgrade() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Tydzień 7-8: Nowy standard</h3>
                 <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>Nowy system operacyjny staje się Twoją drugą naturą.</p>
                   <p>
-                    Nowy system operacyjny staje się Twoją drugą naturą.
-                  </p>
-                  <p>
-                    Nie "fake it till you make it". Nie "stosuj tę technikę codziennie". Fundamentalna zmiana tego, jak podejmujesz decyzje, jak prowadzisz ludzi i jak żyjesz.
+                    Nie "fake it till you make it". Nie "stosuj tę technikę codziennie". Fundamentalna zmiana tego, jak
+                    podejmujesz decyzje, jak prowadzisz ludzi i jak żyjesz.
                   </p>
                 </div>
               </div>
@@ -407,20 +412,18 @@ export default function LifeOSSystemUpgrade() {
                 <strong className="text-white">Poniedziałek, 9 rano.</strong> Decyzja, na której stoi dużo.
               </p>
               <p className="text-dim mb-2">
-                <span className="font-bold text-dim">Przed:</span> Paraliż. Analiza. Więcej analiz. Lęk. Prokrastynacja. Decyzja z desperacji pod presją czasu.
+                <span className="font-bold text-dim">Przed:</span> Paraliż. Analiza. Więcej analiz. Lęk. Prokrastynacja.
+                Decyzja z desperacji pod presją czasu.
               </p>
               <p className="text-dim mb-4">
-                <span className="font-bold text-electric">Po:</span> Jasność. Połączenie intuicji i danych. Decyzja w pół godziny. Spokój niezależnie od wyniku. Bo wiesz, że decyzja nie definiuje Ciebie — Ty definiujesz decyzję.
+                <span className="font-bold text-electric">Po:</span> Jasność. Połączenie intuicji i danych. Decyzja w
+                pół godziny. Spokój niezależnie od wyniku. Bo wiesz, że decyzja nie definiuje Ciebie — Ty definiujesz
+                decyzję.
               </p>
             </div>
 
             <div className="text-center mt-16">
-              <CTAButton
-                variant="premium"
-                size="xl"
-                showArrow
-                onClick={scrollToDiscovery}
-              >
+              <CTAButton variant="premium" size="xl" showArrow onClick={scrollToDiscovery}>
                 Sprawdź dostępność — Sesja Discovery
               </CTAButton>
             </div>
@@ -445,11 +448,14 @@ export default function LifeOSSystemUpgrade() {
               <div>
                 <h3 className="text-2xl font-bold text-on-light mb-3">Koniec z wewnętrzną wojną</h3>
                 <p className="text-lg text-on-light-dim leading-relaxed mb-4">
-                  Przestajesz zużywać 80% energii na konflikt między częściami siebie. Nagle masz zasób mocy, o którym zapomniałeś.
+                  Przestajesz zużywać 80% energii na konflikt między częściami siebie. Nagle masz zasób mocy, o którym
+                  zapomniałeś.
                 </p>
                 <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
                   "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą."
-                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Tomek, 38 lat, CTO startupu, ojciec dwójki</footer>
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">
+                    — Tomek, 38 lat, CTO startupu, ojciec dwójki
+                  </footer>
                 </blockquote>
               </div>
 
@@ -460,7 +466,8 @@ export default function LifeOSSystemUpgrade() {
                   Intuicja + dane = szybkie, pewne decyzje. Bez trzech tygodni bezsennych nocy nad każdym wyborem.
                 </p>
                 <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
-                  "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej — wręcz przeciwnie."
+                  "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę
+                  się częściej — wręcz przeciwnie."
                   <footer className="mt-2 not-italic text-sm text-on-light-dim">— Klientka Life OS</footer>
                 </blockquote>
               </div>
@@ -469,7 +476,8 @@ export default function LifeOSSystemUpgrade() {
               <div>
                 <h3 className="text-2xl font-bold text-on-light mb-3">Prawdziwy spokój — nie tylko przerwa w pracy</h3>
                 <p className="text-lg text-on-light-dim leading-relaxed mb-4">
-                  Weekend staje się regeneracją, nie poczuciem winy. Urlop staje się urlopem, nie "zmianą lokalizacji pracy z laptopem".
+                  Weekend staje się regeneracją, nie poczuciem winy. Urlop staje się urlopem, nie "zmianą lokalizacji
+                  pracy z laptopem".
                 </p>
                 <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
                   "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła."
@@ -481,21 +489,22 @@ export default function LifeOSSystemUpgrade() {
               <div>
                 <h3 className="text-2xl font-bold text-on-light mb-3">Ambicja bez lęku</h3>
                 <p className="text-lg text-on-light-dim leading-relaxed mb-4">
-                  Przestajesz potrzebować sukcesu jako potwierdzenia wartości. Ale nadal go budujesz — tyle że z radości, nie ze strachu. To nie jest rezygnacja z ambicji. To uwolnienie jej z lęku.
+                  Przestajesz potrzebować sukcesu jako potwierdzenia wartości. Ale nadal go budujesz — tyle że z
+                  radości, nie ze strachu. To nie jest rezygnacja z ambicji. To uwolnienie jej z lęku.
                 </p>
                 <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
-                  "Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
-                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Anna, CEO Agencji Marketingowej</footer>
+                  "Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary
+                  do prawdziwej wiary w możliwości, które mam."
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">
+                    — Anna, CEO Agencji Marketingowej
+                  </footer>
                 </blockquote>
               </div>
             </div>
 
             {/* Testimonial Carousel */}
             <div className="mt-20">
-              <TestimonialCarousel
-                testimonials={testimonials}
-                title="Co mówią absolwenci programu"
-              />
+              <TestimonialCarousel testimonials={testimonials} title="Co mówią absolwenci programu" />
             </div>
           </div>
         </div>
@@ -505,53 +514,57 @@ export default function LifeOSSystemUpgrade() {
       <section className="relative py-20 bg-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">
-              Dlaczego akurat ja?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">Dlaczego akurat ja?</h2>
 
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
               <p>
-                19 lat jako Microsoft Certified Trainer. Fortune 500, NATO, jednostki specjalne, Oxford. 10 000+ profesjonalistów, których szkoliłem z systemów, produktywności i AI.
+                19 lat jako Microsoft Certified Trainer. Fortune 500, NATO, jednostki specjalne, Oxford. 10 000+
+                profesjonalistów, których szkoliłem z systemów, produktywności i AI.
+              </p>
+
+              <p>Brzmi imponująco? Może. Ale nie dlatego tu jestem.</p>
+
+              <p>
+                Jestem tu, bo w 2014 roku stałem na peronie metra Dworzec Gdański i rozważałem, czy nie zrobić jednego
+                kroku za dużo. Miałem dyplom z Oxfordu, kontrakty z NATO i zero powodów, żeby wstać rano.
               </p>
 
               <p>
-                Brzmi imponująco? Może. Ale nie dlatego tu jestem.
+                Zbudowałem cały system produktywności jako mechanizm przetrwania. Nie dlatego, że kochałem
+                „optymalizację" — dlatego, że bez systemu nie wiedziałem, jak przeżyć kolejny dzień.
               </p>
 
               <p>
-                Jestem tu, bo w 2014 roku stałem na peronie metra Dworzec Gdański i rozważałem, czy nie zrobić jednego kroku za dużo. Miałem dyplom z Oxfordu, kontrakty z NATO i zero powodów, żeby wstać rano.
-              </p>
-
-              <p>
-                Zbudowałem cały system produktywności jako mechanizm przetrwania. Nie dlatego, że kochałem „optymalizację" — dlatego, że bez systemu nie wiedziałem, jak przeżyć kolejny dzień.
-              </p>
-
-              <p>
-                A potem zrozumiałem, że system nie wystarczy. Że problem nie leży w tym, co robisz, ale w tym, kim się uważasz.
+                A potem zrozumiałem, że system nie wystarczy. Że problem nie leży w tym, co robisz, ale w tym, kim się
+                uważasz.
               </p>
 
               <p className="font-bold text-on-light text-xl">
-                Nie jestem guru transformacji. Jestem trenerem, który przeszedł przez to wszystko — depresję, uzależnienie, sukces bez sensu — i wyszedł z drugiej strony z mapą.
+                Nie jestem guru transformacji. Jestem trenerem, który przeszedł przez to wszystko — depresję,
+                uzależnienie, sukces bez sensu — i wyszedł z drugiej strony z mapą.
               </p>
 
               <p>
-                Ta mapa to nie teoria. To jest coś, co zbudowałem na własnej skórze przez 25 lat. I teraz prowadzę innych tą samą drogą — ale szybciej, bo nie muszą szukać ścieżki sami.
+                Ta mapa to nie teoria. To jest coś, co zbudowałem na własnej skórze przez 25 lat. I teraz prowadzę
+                innych tą samą drogą — ale szybciej, bo nie muszą szukać ścieżki sami.
               </p>
 
-              <p className="font-bold text-on-light">
-                Co mam, czego inni nie mają?
+              <p className="font-bold text-on-light">Co mam, czego inni nie mają?</p>
+
+              <p>
+                <strong>Filozofia spotyka biznes.</strong> Cytuję Junga podczas rozmowy o ARR. Bułhakowa wplatam w
+                strategię exit-u. Bo tak naprawdę działa świat — tylko nikt Ci tego nie mówi.
               </p>
 
               <p>
-                <strong>Filozofia spotyka biznes.</strong> Cytuję Junga podczas rozmowy o ARR. Bułhakowa wplatam w strategię exit-u. Bo tak naprawdę działa świat — tylko nikt Ci tego nie mówi.
+                <strong>Biegłość w obu ścieżkach.</strong> Większość coachów potrafi albo konfrontować, albo wspierać.
+                Ja robię oba — i wiem, kiedy którego potrzebujesz. Anna potrzebowała ostrej konfrontacji. Lucja
+                potrzebowała delikatnego prowadzenia. Obie przeszły transformację.
               </p>
 
               <p>
-                <strong>Biegłość w obu ścieżkach.</strong> Większość coachów potrafi albo konfrontować, albo wspierać. Ja robię oba — i wiem, kiedy którego potrzebujesz. Anna potrzebowała ostrej konfrontacji. Lucja potrzebowała delikatnego prowadzenia. Obie przeszły transformację.
-              </p>
-
-              <p>
-                <strong>Wschodnia głębia + zachodnia precyzja.</strong> Mam dostęp do tradycji, których amerykańscy coachowie nie mają. Ale działam z fokusem na rezultatach, nie na „energetycznych wibracjach".
+                <strong>Wschodnia głębia + zachodnia precyzja.</strong> Mam dostęp do tradycji, których amerykańscy
+                coachowie nie mają. Ale działam z fokusem na rezultatach, nie na „energetycznych wibracjach".
               </p>
             </div>
           </div>
@@ -560,22 +573,41 @@ export default function LifeOSSystemUpgrade() {
 
       {/* Co w cenie */}
       <section className="relative py-20 bg-void overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, rgba(109,40,217,0.15) 0%, transparent 50%)" }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ backgroundImage: "radial-gradient(circle at 30% 50%, rgba(109,40,217,0.15) 0%, transparent 50%)" }}
+        />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
-              Co jest w cenie?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">Co jest w cenie?</h2>
 
             <div className="space-y-5">
               {[
-                { title: "8 sesji 1:1", desc: "Od 50 minut do 2,5 godziny — w zależności od tego, gdzie jesteśmy w procesie. Bez sztucznego limitu czasowego." },
-                { title: "Dostęp do mnie między sesjami", desc: "Signal lub SMS — dla nagłych przełomów, gdy coś \"kliknie\" o 3 w nocy i potrzebujesz to przepracować." },
-                { title: "Pełna diagnostyka Life OS", desc: "Głęboki skan Twojego systemu operacyjnego na starcie — zanim cokolwiek zmienimy." },
-                { title: "Spersonalizowana mapa transformacji", desc: "Nie szablon. Plan szyty na miarę, który ewoluuje z każdą sesją." },
-                { title: "Nagrania wszystkich sesji", desc: "Żebyś mógł wracać do kluczowych momentów. Często to, co usłyszysz za trzecim razem, zmieni wszystko." },
-                { title: "Społeczność absolwentów", desc: "Dożywotni dostęp do 1234 Daily Coaching — codziennie o 12:34 na Discordzie Lifehackerów." },
+                {
+                  title: "8 sesji 1:1",
+                  desc: "Od 50 minut do 2,5 godziny — w zależności od tego, gdzie jesteśmy w procesie. Bez sztucznego limitu czasowego.",
+                },
+                {
+                  title: "Dostęp do mnie między sesjami",
+                  desc: 'Signal lub SMS — dla nagłych przełomów, gdy coś "kliknie" o 3 w nocy i potrzebujesz to przepracować.',
+                },
+                {
+                  title: "Pełna diagnostyka Life OS",
+                  desc: "Głęboki skan Twojego systemu operacyjnego na starcie — zanim cokolwiek zmienimy.",
+                },
+                {
+                  title: "Spersonalizowana mapa transformacji",
+                  desc: "Nie szablon. Plan szyty na miarę, który ewoluuje z każdą sesją.",
+                },
+                {
+                  title: "Nagrania wszystkich sesji",
+                  desc: "Żebyś mógł wracać do kluczowych momentów. Często to, co usłyszysz za trzecim razem, zmieni wszystko.",
+                },
+                {
+                  title: "Społeczność absolwentów",
+                  desc: "Dożywotni dostęp do 1234 Daily Coaching — codziennie o 12:34 na Discordzie Lifehackerów.",
+                },
               ].map((item, i) => (
                 <div key={i} className="flex items-start bg-white/5 rounded-lg p-5">
                   <CheckCircle className="w-5 h-5 mr-4 text-electric flex-shrink-0 mt-1" />
@@ -594,40 +626,38 @@ export default function LifeOSSystemUpgrade() {
       <section className="relative py-20 bg-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">
-              Inwestycja
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">Inwestycja</h2>
 
             <div className="text-center mb-10">
               <p className="text-5xl font-bold text-electric mb-3">16 000 PLN</p>
-              <p className="text-lg text-on-light-dim">
-                Lub 2 × 6 500 PLN netto, jeśli masz firmę i wolisz rozłożyć.
-              </p>
+              <p className="text-lg text-on-light-dim">Lub 2 × 6 500 PLN netto, jeśli masz firmę i wolisz rozłożyć.</p>
             </div>
 
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
               <h3 className="text-2xl font-bold text-on-light">Dlaczego tyle?</h3>
 
+              <p>Bo to nie jest kurs online. To nie jest godzinna sesja „trzymaj się tam".</p>
+
               <p>
-                Bo to nie jest kurs online. To nie jest godzinna sesja „trzymaj się tam".
+                To jest moja pełna obecność przez 8 tygodni — nie „3 pytania na email". Adaptacyjna metodologia, nie
+                szablon w PDF dla każdego. Filozoficzna głębia i biznesowa precyzja w jednym — rzadka kombinacja.
               </p>
 
               <p>
-                To jest moja pełna obecność przez 8 tygodni — nie „3 pytania na email". Adaptacyjna metodologia, nie szablon w PDF dla każdego. Filozoficzna głębia i biznesowa precyzja w jednym — rzadka kombinacja.
-              </p>
-
-              <p>
-                Plus: ludzie, którzy płacą więcej, angażują się bardziej. Inwestycja finansowa = inwestycja emocjonalna. A transformacja wymaga full skin in the game.
+                Plus: ludzie, którzy płacą więcej, angażują się bardziej. Inwestycja finansowa = inwestycja emocjonalna.
+                A transformacja wymaga full skin in the game.
               </p>
 
               <p className="font-bold text-on-light text-xl">
-                Pytanie nie brzmi „czy to drogie". Pytanie brzmi: ile kosztuje Cię kolejny rok życia w wewnętrznej wojnie?
+                Pytanie nie brzmi „czy to drogie". Pytanie brzmi: ile kosztuje Cię kolejny rok życia w wewnętrznej
+                wojnie?
               </p>
 
               <div className="bg-electric/5 border border-electric/20 rounded-lg p-6 mt-8">
                 <p className="font-bold text-on-light mb-3">Gwarancja zwrotu — 2 tygodnie.</p>
                 <p>
-                  Jeśli po 2 tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory — oddaję pieniądze. Bez pytań, bez tłumaczenia się.
+                  Jeśli po 2 tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś
+                  do tej pory — oddaję pieniądze. Bez pytań, bez tłumaczenia się.
                 </p>
               </div>
             </div>
@@ -637,7 +667,10 @@ export default function LifeOSSystemUpgrade() {
 
       {/* Dla kogo TAK / NIE */}
       <section id="nie-dla-ciebie" className="relative py-20 bg-void overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(109,40,217,0.15) 0%, transparent 50%)" }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ backgroundImage: "radial-gradient(circle at 70% 30%, rgba(109,40,217,0.15) 0%, transparent 50%)" }}
+        />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
@@ -647,40 +680,52 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
               <p>
-                Nie pracuję z każdym. Nie dlatego, że jestem elitarny — dlatego, że ta praca wymaga gotowości, której nie da się sfabrykować.
+                Nie pracuję z każdym. Nie dlatego, że jestem elitarny — dlatego, że ta praca wymaga gotowości, której
+                nie da się sfabrykować.
               </p>
 
               <p className="font-bold text-white text-xl">To jest dla Ciebie, jeśli:</p>
 
               <p>
-                Osiągnąłeś coś — firmę, stanowisko, status — ale czujesz, że „coś nie gra". Nie potrzebujesz motywacji. Potrzebujesz kogoś, kto zobaczy to, czego sam nie widzisz.
+                Osiągnąłeś coś — firmę, stanowisko, status — ale czujesz, że „coś nie gra". Nie potrzebujesz motywacji.
+                Potrzebujesz kogoś, kto zobaczy to, czego sam nie widzisz.
               </p>
               <p>
-                Myślisz systemowo. Interesujesz się Jungiem, filozofią, wzorcami. Widzisz połączenia tam, gdzie inni widzą chaos. I właśnie dlatego standardowy coaching Cię nudzi.
+                Myślisz systemowo. Interesujesz się Jungiem, filozofią, wzorcami. Widzisz połączenia tam, gdzie inni
+                widzą chaos. I właśnie dlatego standardowy coaching Cię nudzi.
               </p>
               <p>
-                Masz poczucie fragmentacji — różne role (lider, partner, ojciec, wizjoner) wojują ze sobą. Szukasz spójności, nie kolejnej techniki.
+                Masz poczucie fragmentacji — różne role (lider, partner, ojciec, wizjoner) wojują ze sobą. Szukasz
+                spójności, nie kolejnej techniki.
               </p>
               <p>
-                Jesteś gotowy na proces. 8 tygodni. Bez quick fixów, bez „3 kroków do sukcesu". Rozumiesz, że prawdziwa zmiana wymaga czasu i odwagi.
+                Jesteś gotowy na proces. 8 tygodni. Bez quick fixów, bez „3 kroków do sukcesu". Rozumiesz, że prawdziwa
+                zmiana wymaga czasu i odwagi.
               </p>
 
               <p className="font-bold text-white text-xl mt-10">To NIE jest dla Ciebie, jeśli:</p>
 
               <p>
-                <strong className="text-white">Szukasz motywacyjnego kopa.</strong> Nie jestem cheerleaderem. Jeśli chcesz, żebym Ci mówił „jesteś super, dasz radę" — to nie tutaj.
+                <strong className="text-white">Szukasz motywacyjnego kopa.</strong> Nie jestem cheerleaderem. Jeśli
+                chcesz, żebym Ci mówił „jesteś super, dasz radę" — to nie tutaj.
               </p>
               <p>
-                <strong className="text-white">Oczekujesz gotowych rozwiązań.</strong> Nie dam Ci „3 kroki do szczęścia". Pomogę Ci znaleźć własne odpowiedzi. Jeśli chcesz przepisu — kup kurs online.
+                <strong className="text-white">Oczekujesz gotowych rozwiązań.</strong> Nie dam Ci „3 kroki do
+                szczęścia". Pomogę Ci znaleźć własne odpowiedzi. Jeśli chcesz przepisu — kup kurs online.
               </p>
               <p>
-                <strong className="text-white">Nie jesteś gotowy zakwestionować siebie.</strong> Jeśli uważasz, że problem jest „tam na zewnątrz" — rynek, ludzie, okoliczności — nie pomogę Ci. Problem zawsze zaczyna się wewnątrz.
+                <strong className="text-white">Nie jesteś gotowy zakwestionować siebie.</strong> Jeśli uważasz, że
+                problem jest „tam na zewnątrz" — rynek, ludzie, okoliczności — nie pomogę Ci. Problem zawsze zaczyna się
+                wewnątrz.
               </p>
               <p>
-                <strong className="text-white">Przeżywasz ostry kryzys.</strong> To nie jest terapia kryzysowa. Jeśli jesteś w gwałtownym załamaniu — najpierw stabilizacja (psychiatra/terapeuta), potem transformacja.
+                <strong className="text-white">Przeżywasz ostry kryzys.</strong> To nie jest terapia kryzysowa. Jeśli
+                jesteś w gwałtownym załamaniu — najpierw stabilizacja (psychiatra/terapeuta), potem transformacja.
               </p>
               <p>
-                <strong className="text-white">Nie stać Cię na tę inwestycję bez stresu.</strong> Jeśli 16K PLN to duży wysiłek finansowy — poczekaj. Wolę, żebyś dołączył, gdy będziesz gotowy, niż żebyś się zadłużał i przez to blokował proces.
+                <strong className="text-white">Nie stać Cię na tę inwestycję bez stresu.</strong> Jeśli 16K PLN to duży
+                wysiłek finansowy — poczekaj. Wolę, żebyś dołączył, gdy będziesz gotowy, niż żebyś się zadłużał i przez
+                to blokował proces.
               </p>
             </div>
           </div>
@@ -697,11 +742,7 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
+                <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>
           </div>
@@ -712,7 +753,10 @@ export default function LifeOSSystemUpgrade() {
       <section
         id="discovery-section"
         className="py-20 bg-void"
-        style={{ backgroundImage: "radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }}
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)",
+        }}
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -722,72 +766,68 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="space-y-6 text-lg text-dim leading-relaxed mb-10">
               <p>
-                Zanim zdecydujemy o współpracy, musimy przeprowadzić <span className="text-electric font-bold">~30-minutową Sesję Discovery</span>.
+                Zanim zdecydujemy o współpracy, musimy przeprowadzić{" "}
+                <span className="text-electric font-bold">~30-minutową Sesję Discovery</span>.
               </p>
 
-              <p className="font-bold text-white text-xl">
-                To nie jest rozmowa sprzedażowa.
-              </p>
+              <p className="font-bold text-white text-xl">To nie jest rozmowa sprzedażowa.</p>
 
-              <p>
-                To wzajemna ocena, czy mamy ze sobą pracować. Ja oceniam Ciebie. Ty oceniasz mnie.
-              </p>
+              <p>To wzajemna ocena, czy mamy ze sobą pracować. Ja oceniam Ciebie. Ty oceniasz mnie.</p>
 
               <p className="font-bold text-white">Co się wydarzy w ~30 minut:</p>
 
               <p>
-                <strong className="text-white">Głęboka diagnostyka Twojego systemu.</strong> Nie będziemy mówić o celach i strategiach. Zejdziemy głębiej: gdzie jest konflikt tożsamości? Jaka narracja Cię blokuje? Która ścieżka transformacji jest Twoja?
+                <strong className="text-white">Głęboka diagnostyka Twojego systemu.</strong> Nie będziemy mówić o celach
+                i strategiach. Zejdziemy głębiej: gdzie jest konflikt tożsamości? Jaka narracja Cię blokuje? Która
+                ścieżka transformacji jest Twoja?
               </p>
               <p>
-                <strong className="text-white">Sprawdzenie chemii.</strong> Ta praca wymaga zaufania. Jeśli nie czujesz, że możesz mi zaufać w najtrudniejszych momentach — nie podejmujemy współpracy. I to ok.
+                <strong className="text-white">Sprawdzenie chemii.</strong> Ta praca wymaga zaufania. Jeśli nie czujesz,
+                że możesz mi zaufać w najtrudniejszych momentach — nie podejmujemy współpracy. I to ok.
               </p>
               <p>
-                <strong className="text-white">Decyzja obu stron.</strong> Na końcu sesji obaj decydujemy, czy chcemy współpracować. Nie ma presji. Jest uczciwość.
+                <strong className="text-white">Decyzja obu stron.</strong> Na końcu sesji obaj decydujemy, czy chcemy
+                współpracować. Nie ma presji. Jest uczciwość.
               </p>
 
               <div className="bg-electric/10 border border-electric/20 rounded-lg p-6 mt-4">
                 <p className="text-white font-bold mb-2">Uwaga:</p>
                 <p>
-                  Sesja Discovery to nie „darmowa próbka". To rzeczywista praca. Może być intensywna. Wyjdziesz z niej z clarity — niezależnie od tego, czy zdecydujemy się na współpracę.
+                  Sesja Discovery to nie „darmowa próbka". To rzeczywista praca. Może być intensywna. Wyjdziesz z niej z
+                  clarity — niezależnie od tego, czy zdecydujemy się na współpracę.
                 </p>
               </div>
             </div>
 
             <div className="text-center mb-10">
               <Link to="/discovery">
-                <CTAButton
-                  variant="premium"
-                  size="xl"
-                  className="mb-6"
-                  showArrow
-                >
+                <CTAButton variant="premium" size="xl" className="mb-6" showArrow>
                   Zarezerwuj Sesję Discovery
                 </CTAButton>
               </Link>
 
-              <p className="text-dim text-sm">
-                Liczba miejsc ściśle ograniczona do 5 osób jednocześnie.
-              </p>
+              <p className="text-dim text-sm">Liczba miejsc ściśle ograniczona do 5 osób jednocześnie.</p>
             </div>
 
             {/* P.S. Ladder */}
             <div className="space-y-6 text-lg text-dim leading-relaxed border-t border-white/10 pt-10">
               <p>
-                <span className="font-bold text-white">P.S.</span> Nie muszę Cię przekonywać. Jeśli to jest Twoje, wiesz. Jeśli nie wiesz — nie jest (jeszcze). Ufam Twojej intuicji. Zaufaj jej też.
+                <span className="font-bold text-white">P.S.</span> Nie muszę Cię przekonywać. Jeśli to jest Twoje,
+                wiesz. Jeśli nie wiesz — nie jest (jeszcze). Ufam Twojej intuicji. Zaufaj jej też.
               </p>
               <p>
-                <span className="font-bold text-white">P.P.S.</span> Życie jest za krótkie, żeby żyć w wewnętrznej wojnie. Nawet jeśli nie wybierzesz Life OS — znajdź kogoś, kto pomoże Ci to rozwiązać. Bo sukces bez spokoju to nie jest sukces. To wysokopłatne więzienie.
+                <span className="font-bold text-white">P.P.S.</span> Życie jest za krótkie, żeby żyć w wewnętrznej
+                wojnie. Nawet jeśli nie wybierzesz Life OS — znajdź kogoś, kto pomoże Ci to rozwiązać. Bo sukces bez
+                spokoju to nie jest sukces. To wysokopłatne więzienie.
               </p>
               <p>
-                <span className="font-bold text-white">P.P.P.S.</span> Jeśli dotarłeś aż tutaj i wciąż się wahasz — to jest właśnie jeden ze wzorców, z którym będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie 100% pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny sposób, by zbadać tę niepewność.
+                <span className="font-bold text-white">P.P.P.S.</span> Jeśli dotarłeś aż tutaj i wciąż się wahasz — to
+                jest właśnie jeden ze wzorców, z którym będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie
+                100% pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny sposób, by zbadać tę niepewność.
               </p>
 
-              <p className="text-center text-white/80 mt-8 italic">
-                Dziękuję, że jesteś.
-              </p>
-              <p className="text-center text-white font-bold text-xl">
-                — Ludwik
-              </p>
+              <p className="text-center text-white/80 mt-8 italic">Dziękuję, że jesteś.</p>
+              <p className="text-center text-white font-bold text-xl">— Ludwik</p>
             </div>
           </div>
         </div>
@@ -797,25 +837,14 @@ export default function LifeOSSystemUpgrade() {
 }
 
 // FAQ Accordion Item Component
-const FAQItem = ({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) => {
+const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card
-      className="cursor-pointer hover:shadow-lg transition-all duration-300"
-      onClick={() => setIsOpen(!isOpen)}
-    >
+    <Card className="cursor-pointer hover:shadow-lg transition-all duration-300" onClick={() => setIsOpen(!isOpen)}>
       <CardContent className="p-8">
         <div className="flex items-start justify-between">
-          <h3 className="text-xl font-bold text-on-light pr-8">
-            {question}
-          </h3>
+          <h3 className="text-xl font-bold text-on-light pr-8">{question}</h3>
           <ChevronDown
             className={`w-6 h-6 text-depth flex-shrink-0 transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
@@ -831,4 +860,3 @@ const FAQItem = ({
     </Card>
   );
 };
-
