@@ -130,13 +130,6 @@ export default function LifeOSSystemUpgrade() {
 
   return (
     <Layout>
-      {/* Exit Intent Modal */}
-      {showExitModal && (
-        <ExitIntentModal
-          onClose={() => setShowExitModal(false)}
-          onCTA={scrollToDiscovery}
-        />
-      )}
 
       {/* Sticky CTA Bar */}
       <div
