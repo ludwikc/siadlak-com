@@ -8,7 +8,6 @@ import {
   ChevronDown,
 } from "@/lib/icons";
 import { Link } from "react-router-dom";
-import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 
 export default function LifeOSSystemUpgrade() {
