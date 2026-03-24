@@ -310,482 +310,213 @@ export default function LifeOSSystemUpgrade() {
         </div>
       </section>
 
+      {/* Metodologia — Czym jest Life OS */}
       <section className="relative py-20 bg-void-glow overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-8">
-              <span className="inline-block px-6 py-2 bg-electric/20 rounded-full border-2 border-electric/40 text-electric font-semibold text-sm uppercase tracking-wide">
-                Metodologia
-              </span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-white">
-              Life OS: System Upgrade
-            </h2>
-
-            <p className="text-2xl text-center mb-4 text-white/90 font-bold">
-              Nie coaching. Nie terapia. Transformacja na poziomie tożsamości.
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric text-center mb-8">
+              Metodologia
             </p>
 
-            <div className="text-xl text-center mb-12 text-white/90 space-y-4">
-              <p>To 8 tygodni głębokiej pracy dla liderów, którzy:</p>
-              <ul className="space-y-3 text-left max-w-3xl mx-auto">
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
-                  <span>Osiągnęli sukces, ale czują, że to nie to</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
-                  <span>Są gotowi na brutalną szczerość z samym sobą</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
-                  <span>
-                    Rozumieją, że prawdziwa zmiana wymaga czasu i cierpienia
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
-                  <span>Myślą systemowo i filozoficznie</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 mr-3 text-electric flex-shrink-0 mt-1" />
-                  <span>
-                    Nie chcą kolejnych "porad", tylko fundamentalną przebudowę
-                  </span>
-                </li>
-              </ul>
-            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+              Czym jest Life OS: System Upgrade?
+            </h2>
 
-            <div className="bg-white/5 p-8 rounded-md border border-white/10 mb-16">
-              <p className="text-2xl text-electric font-bold mb-4 text-center">
-                Co to znaczy w praktyce?
+            <div className="space-y-6 text-lg text-dim leading-relaxed">
+              <p>
+                Wyobraź sobie, że Twój umysł to diament. Czysty, przezroczysty, indestruktywny.
               </p>
-              <p className="text-lg text-white/90 mb-6">
-                To nie są przyjemne sesje, gdzie klepię Cię po plecach i mówię,
-                jak jesteś świetny.
+
+              <p>
+                Ale leży pod warstwami sukna — narracji, oczekiwań, ról, lęków — które nagromadziły się przez lata. Czerwone sukno sprawia, że widzisz siebie jako kogoś, kto musi walczyć. Zielone — jako kogoś, kto musi więcej. Niebieskie — jako kogoś, kto nie zasługuje na spokój.
               </p>
-              <p className="text-lg text-white/90 mb-4">
-                W zależności od tego, czego potrzebujesz:
+
+              <p>
+                Każda warstwa zmienia "kolor" tego, kim myślisz, że jesteś. Ale diament pod spodem? Nie zmienił się ani na chwilę.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-white/5 p-6 rounded-md">
-                    <h4 className="text-xl font-bold text-electric mb-3">
-                    Albo dostaniesz "terapię szokową":
-                  </h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li>
-                      • Bezpośrednią konfrontację z historiami, które sobie
-                      opowiadasz
-                    </li>
-                    <li>
-                      • Wycięcie skrzydeł, które Cię nie niosą, tylko obciążają
-                    </li>
-                    <li>• Filozoficzną wojnę z Twoim ego</li>
-                    <li>• Kontrolowane cierpienie, które tworzy przełom</li>
-                  </ul>
-                </div>
-                <div className="bg-white/5 p-6 rounded-md">
-                  <h4 className="text-xl font-bold text-electric mb-3">
-                    Albo dostaniesz "przewodnictwo przez transcendencję":
-                  </h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li>• Delikatne prowadzenie przez mapy i terytoria</li>
-                    <li>• Pozwolenie na ekspansję i rozwój</li>
-                    <li>• Wsparcie w odkrywaniu głębszych warstw siebie</li>
-                    <li>• Integrację duchowości z realnością biznesową</li>
-                  </ul>
+
+              <p className="text-xl font-bold text-white">
+                Life OS to 8 tygodni zdejmowania sukna.
+              </p>
+
+              <p>
+                Nie daję Ci nowych narzędzi. Nie uczę Cię nowych technik. Nie mówię Ci, kim powinieneś być.
+              </p>
+
+              <p>
+                Zadaję Ci pytania. Buduję z Tobą metaforę, która jest <em>Twoja</em>. I czekam — bo metafora działa tam, gdzie logika się zatrzymuje. Logika mówi "powinieneś". Metafora mówi "aha — <em>widzę</em>". I w tym "aha" wszystko się zmienia.
+              </p>
+
+              <p>
+                Czasem potrzebujesz kogoś, kto przetnie więzy. Czasem kogoś, kto da pozwolenie na rozwinięcie skrzydeł. Najczęściej — obu, naprzemiennie.
+              </p>
+
+              <p>
+                Skąd wiem, czego potrzebujesz? Z 19 lat praktyki. I z tego, że sam przeszłem obie drogi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 Fazy procesu */}
+      <section className="relative py-20 bg-void-glow overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-white">
+              4 fazy procesu
+            </h2>
+
+            <div className="space-y-12">
+              {/* Faza 1 */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Tydzień 1-2: Diagnostyka systemu</h3>
+                <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>
+                    Głęboki skan — gdzie jest konflikt tożsamości, jaka narracja Cię blokuje, jakiego rodzaju pracy potrzebujesz.
+                  </p>
+                  <p>
+                    Niektórzy potrzebują, żeby ktoś im przeciął więzy. Inni — pozwolenia na rozwinięcie skrzydeł. Większość — obu, naprzemiennie. Pierwsza faza to ustalenie, co leży na diamencie i w jakiej kolejności będziemy to zdejmować.
+                  </p>
+                  <p>
+                    Nie jest to przyjemna rozmowa. Ale nie jest też brutalna — jest uczciwa. A uczciwość, jak się okazuje, wystarczy.
+                  </p>
                 </div>
               </div>
-              <p className="text-xl text-electric font-bold text-center">
-                A najczęściej dostaniesz oba.
+
+              {/* Faza 2 */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Tydzień 3-4: Dekonstrukcja</h3>
+                <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>
+                    Tu zaczynamy zdejmować sukno. Warstwa po warstwie.
+                  </p>
+                  <p>
+                    Czasem przez metaforę. Czasem przez filozofię — Jung, Faust i Mistrz i Małgorzata to moje ulubione lustra. Czasem przez pytanie, po którym zapada cisza na kilka minut — i ta cisza mówi więcej niż wszystkie poprzednie odpowiedzi.
+                  </p>
+                  <p>
+                    To jest ta faza, w której ludzie mówią: "Nie wiem, co się właśnie wydarzyło." I uśmiechają się.
+                  </p>
+                </div>
+              </div>
+
+              {/* Faza 3 */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Tydzień 5-6: Integracja</h3>
+                <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>
+                    Teraz uczymy Twoje konfliktowe części współpracować. Bezwzględny CEO i wrażliwy wizjoner to nie wrogowie — to zespół. Energia, która szła na wewnętrzną wojnę, zaczyna iść na tworzenie.
+                  </p>
+                  <p>
+                    Decyzje przestają być polem bitwy. Działasz z miejsca spójności, nie wymuszonej dyscypliny. Wewnętrzny krytyk zostaje zintegrowany — nie uciszony. (Uciszanie nigdy nie działa. On zawsze wraca. Ale zintegrowany krytyk staje się doradcą.)
+                  </p>
+                </div>
+              </div>
+
+              {/* Faza 4 */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Tydzień 7-8: Nowy standard</h3>
+                <div className="space-y-4 text-lg text-dim leading-relaxed">
+                  <p>
+                    Nowy system operacyjny staje się Twoją drugą naturą.
+                  </p>
+                  <p>
+                    Nie "fake it till you make it". Nie "stosuj tę technikę codziennie". Fundamentalna zmiana tego, jak podejmujesz decyzje, jak prowadzisz ludzi i jak żyjesz.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Before/After: Poniedziałek 9 rano */}
+            <div className="mt-16 bg-white/5 p-8 rounded-md border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-6">Jak to wygląda w praktyce?</h3>
+              <p className="text-lg text-dim mb-4">
+                <strong className="text-white">Poniedziałek, 9 rano.</strong> Decyzja, na której stoi dużo.
               </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto space-y-8">
-              {/* Phase 1: Diagnostyka */}
-              <div className="group relative">
-                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
-                  <CardContent className="p-8 relative">
-                    <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
-                        <Brain className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">
-                          FAZA 1: DIAGNOSTYKA SYSTEMU
-                        </h3>
-                        <p className="text-white/90 text-lg font-medium">
-                          Tydzień 1-2
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
-                      <p>Tutaj zaczyna się prawdziwa praca.</p>
-                      <p className="font-bold text-white">
-                        Niektórzy ludzie potrzebują, żeby ktoś przeciął ich
-                        więzy.
-                      </p>
-                      <p className="font-bold text-white">
-                        Inni potrzebują pozwolenia na rozwinięcie skrzydeł.
-                      </p>
-                      <p>
-                        Pierwsza faza to głęboka diagnostyka: którego rodzaju
-                        transformacji potrzebujesz?
-                      </p>
-                      <ul className="space-y-2 pl-4">
-                        <li>
-                          •{" "}
-                          <span className="font-bold">
-                            Ścieżka Katalizatora:
-                          </span>{" "}
-                          Dla tych, którzy utknęli w ofiarczych narracjach,
-                          potrzebują konfrontacji
-                        </li>
-                        <li>
-                          •{" "}
-                          <span className="font-bold">
-                            Ścieżka Przewodnika:
-                          </span>{" "}
-                          Dla tych, którzy są gotowi na ekspansję, potrzebują
-                          wsparcia w transcendencji
-                        </li>
-                        <li>
-                          •{" "}
-                          <span className="font-bold">Ścieżka Integracji:</span>{" "}
-                          Dla większości - potrzeba obu, sekwencyjnie lub
-                          równolegle
-                        </li>
-                      </ul>
-                      <p className="italic">
-                        To nie jest przyjemna rozmowa. To bezlitosna szczerość.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Phase 2: Dekonstrukcja */}
-              <div className="group relative">
-                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
-                  <CardContent className="p-8 relative">
-                    <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-depth to-electric rounded-xl flex items-center justify-center shrink-0">
-                        <Zap className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">
-                          FAZA 2: DEKONSTRUKCJA I WYZWANIE
-                        </h3>
-                        <p className="text-white/90 text-lg font-medium">
-                          Tydzień 3-4
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
-                      <p className="font-bold text-white">
-                        Tutaj zaczyna się prawdziwa praca.
-                      </p>
-
-                      <div className="bg-white/5 p-6 rounded-md">
-                        <p className="font-bold text-electric mb-3">
-                          Jeśli jesteś na Ścieżce Katalizatora:
-                        </p>
-                        <ul className="space-y-2">
-                          <li>
-                            • Konfrontuję Twoje historie głową w mur
-                            (filozoficznie, nie brutalnie)
-                          </li>
-                          <li>
-                            • Używam Junga, Fausta, Mistrza i Małgorzaty jako
-                            luster
-                          </li>
-                          <li>
-                            • Podcinam skrzydła, które nie niosą, tylko
-                            obciążają
-                          </li>
-                          <li>• Kontrolowane cierpienie → przełom</li>
-                        </ul>
-                      </div>
-
-                      <div className="bg-white/5 p-6 rounded-md">
-                        <p className="font-bold text-electric mb-3">
-                          Jeśli jesteś na Ścieżce Przewodnika:
-                        </p>
-                        <ul className="space-y-2">
-                          <li>
-                            • Prowadzę Cię delikatnie przez rozszerzanie
-                            świadomości
-                          </li>
-                          <li>
-                            • Wprowadzam koncepcje równoległych rzeczywistości i
-                            wyboru osi czasu
-                          </li>
-                          <li>
-                            • Daję pozwolenie na transcendencję (którego sam
-                            sobie nie dawałeś)
-                          </li>
-                          <li>• Medytacja, obecność, kontakt z duszą</li>
-                        </ul>
-                      </div>
-
-                      <p className="font-bold text-white italic">
-                        To nie jest przyjemne. Ale jest konieczne.
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Phase 3: Integracja */}
-              <div className="group relative">
-                <Card className="relative overflow-hidden bg-white/5 border border-white/10">
-                  <CardContent className="p-8 relative">
-                    <div className="flex items-center gap-6 mb-6">
-                      <div className="w-14 h-14 bg-gradient-to-br from-depth to-electric rounded-xl flex items-center justify-center shrink-0">
-                        <GitMerge className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">
-                          FAZA 3: INTEGRACJA RDZENIA
-                        </h3>
-                        <p className="text-white/90 text-lg font-medium">
-                          Tydzień 5-6
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-white/90 text-lg leading-relaxed space-y-4">
-                      <p>
-                        Teraz uczymy Twoje konfliktowe części współpracować.
-                      </p>
-                      <p className="font-bold text-electric text-xl">
-                        Bezwzględny CEO + Wrażliwy wizjoner = nie wrogowie,
-                        tylko zespół
-                      </p>
-
-                      <div className="bg-white/5 p-6 rounded-md">
-                        <p className="font-bold text-white mb-3">
-                          Wykorzystujemy framework Równoległych Rzeczywistości:
-                        </p>
-                        <p className="mb-3">
-                          Wszystkie wersje Ciebie istnieją jednocześnie. Ta,
-                          która cierpi. Ta, która triumfuje. Ta, która spoczywa
-                          na plaży.
-                        </p>
-                        <p className="italic">
-                          Pytanie nie brzmi "jak uciec od cierpienia" - pytanie
-                          brzmi "którą rzeczywistość wybierasz jako swoją?"
-                        </p>
-                        <p className="font-bold text-electric mt-3">
-                          Wolna wola to wybór osi czasu.
-                        </p>
-                      </div>
-
-                      <p className="font-bold text-white">
-                        Konkretne efekty na tym etapie:
-                      </p>
-                      <ul className="space-y-2 pl-4">
-                        <li>• Decyzje przestają być wojną wewnętrzną</li>
-                        <li>• Działasz z miejsca spójności (nie dyscypliny)</li>
-                        <li>
-                          • Wewnętrzny krytyk zostaje zintegrowany (nie
-                          uciszony)
-                        </li>
-                        <li>
-                          • Energia, która szła na konflikt, idzie teraz na
-                          tworzenie
-                        </li>
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Phase 4: Nowy Standard */}
-              <Card className="relative overflow-hidden bg-white/5 border border-white/10 group">
-                <CardContent className="p-8 relative">
-                  <div className="flex items-center gap-6 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-electric to-depth rounded-xl flex items-center justify-center shrink-0">
-                      <Crown className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">
-                        FAZA 4: NOWY STANDARD DZIAŁANIA
-                      </h3>
-                      <p className="text-white/90">Tydzień 7-8</p>
-                    </div>
-                  </div>
-                  <div className="text-white/90 text-lg leading-relaxed space-y-4">
-                    <p>Nowy system operacyjny staje się Twoją drugą naturą.</p>
-
-                    <div className="bg-gradient-to-r from-electric/20 to-depth/20 p-6 rounded-xl">
-                      <p className="font-bold text-white mb-3">
-                        To nie jest "fake it till you make it."
-                      </p>
-                      <p className="font-bold text-white mb-3">
-                        To nie jest "stosuj tę technikę codziennie."
-                      </p>
-                      <p className="text-electric text-xl font-bold">
-                        To jest fundamentalna zmiana tego, kim jesteś jako lider
-                        i człowiek.
-                      </p>
-                    </div>
-
-                    <p className="font-bold text-white">Działasz teraz z:</p>
-                    <ul className="space-y-2 pl-4">
-                      <li>
-                        • Wewnętrznej spójności (nie wymuszonej dyscypliny)
-                      </li>
-                      <li>• Autentycznej mocy (nie kompensacyjnej kontroli)</li>
-                      <li>
-                        • Intuicji zintegrowanej z analizą (nie paraliżu
-                        decyzyjnego)
-                      </li>
-                      <li>• Obecności (nie chronicznego lęku o przyszłość)</li>
-                    </ul>
-
-                    <div className="bg-white/10 p-6 rounded-xl mt-4">
-                      <p className="font-bold text-electric mb-3">
-                        Co to znaczy w praktyce:
-                      </p>
-                      <p className="mb-3">
-                        Poniedziałek, 9 rano. Decyzja o 2M PLN.
-                      </p>
-                      <p className="mb-2">
-                        <span className="font-bold text-dim">Przed:</span>{" "}
-                        Paraliż. Analiza. Więcej analiz. Lęk. Prokrastynacja.
-                        Decyzja z desperacji.
-                      </p>
-                      <p className="mb-4">
-                        <span className="font-bold text-electric">Po:</span>{" "}
-                        Jasność. Połączenie intuicji i danych. Decyzja w 30
-                        minut. Spokój niezależnie od wyniku.
-                      </p>
-                      <p className="text-white font-bold">
-                        Bo wiesz, że decyzja nie definiuje Ciebie - Ty
-                        definiujesz decyzję.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Phase Timeline Visualization */}
-            <div className="mt-20 mb-16">
-              <PhaseTimeline />
+              <p className="text-dim mb-2">
+                <span className="font-bold text-dim">Przed:</span> Paraliż. Analiza. Więcej analiz. Lęk. Prokrastynacja. Decyzja z desperacji pod presją czasu.
+              </p>
+              <p className="text-dim mb-4">
+                <span className="font-bold text-electric">Po:</span> Jasność. Połączenie intuicji i danych. Decyzja w pół godziny. Spokój niezależnie od wyniku. Bo wiesz, że decyzja nie definiuje Ciebie — Ty definiujesz decyzję.
+              </p>
             </div>
 
             <div className="text-center mt-16">
               <CTAButton
                 variant="premium"
                 size="xl"
-                className=""
                 showArrow
                 onClick={scrollToDiscovery}
               >
-                ZAREZERWUJ SESJĘ DISCOVERY
+                Sprawdź dostępność — Sesja Discovery
               </CTAButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Real Effects */}
-      <section className="relative py-20 bg-diamond overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
-                Rezultaty
-              </Badge>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
-              Czego możesz się spodziewać? (Realne efekty)
+      {/* Rezultaty */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-on-light text-center">
+              Czego możesz się spodziewać?
             </h2>
 
-            <div className="space-y-8 mb-16">
-              <Card className="border-l-4 border-depth bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-depth mb-4">
-                    1. Koniec z wewnętrzną wojną
-                  </h3>
-                  <p className="text-on-light-dim mb-4">
-                    Przestajesz zużywać 80% energii na konflikt wewnętrzny.
-                    Nagle masz zasób mocy, o którym zapomniałeś.
-                  </p>
-                  <div className="bg-depth/5 p-4 rounded-lg italic text-on-light-dim">
-                    Klient: "Nie zdawałem sobie sprawy, ile energii szło na
-                    walkę z samym sobą. Teraz czuję się jak po przesiadce z
-                    małego fiata do porsche."
-                  </div>
-                </CardContent>
-              </Card>
+            <p className="text-lg text-on-light-dim text-center mb-12 leading-relaxed">
+              Nie obiecuję cudów. Obiecuję pracę, po której zobaczysz wymierne zmiany:
+            </p>
 
-              <Card className="border-l-4 border-depth bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-depth mb-4">
-                    2. Decyzyjność bez paraliżu
-                  </h3>
-                  <p className="text-on-light-dim mb-4">
-                    Przestajesz tonąć w analizie. Intuicja + dane = szybkie,
-                    pewne decyzje.
-                  </p>
-                  <div className="bg-depth/5 p-4 rounded-lg italic text-on-light-dim">
-                    Klientka: "Wcześniej decyzja o zatrudnieniu kosztowała mnie
-                    3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się
-                    częściej - wręcz przeciwnie."
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-10">
+              {/* Rezultat 1 */}
+              <div>
+                <h3 className="text-2xl font-bold text-on-light mb-3">Koniec z wewnętrzną wojną</h3>
+                <p className="text-lg text-on-light-dim leading-relaxed mb-4">
+                  Przestajesz zużywać 80% energii na konflikt między częściami siebie. Nagle masz zasób mocy, o którym zapomniałeś.
+                </p>
+                <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
+                  "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą."
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Tomek, 38 lat, CTO startupu, ojciec dwójki</footer>
+                </blockquote>
+              </div>
 
-              <Card className="border-l-4 border-depth bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-depth mb-4">
-                    3. Przywództwo bez wysiłku
-                  </h3>
-                  <p className="text-on-light-dim">
-                    Ludzie podążają za Tobą naturalnie, bo czują Twoją spójność.
-                    Nie musisz już udawać pewności - po prostu ją masz.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Rezultat 2 */}
+              <div>
+                <h3 className="text-2xl font-bold text-on-light mb-3">Decyzyjność bez paraliżu</h3>
+                <p className="text-lg text-on-light-dim leading-relaxed mb-4">
+                  Intuicja + dane = szybkie, pewne decyzje. Bez trzech tygodni bezsennych nocy nad każdym wyborem.
+                </p>
+                <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
+                  "Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej — wręcz przeciwnie."
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Klientka Life OS</footer>
+                </blockquote>
+              </div>
 
-              <Card className="border-l-4 border-depth bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-depth mb-4">
-                    4. Prawdziwy spokój (nie tylko przerwa w pracy)
-                  </h3>
-                  <p className="text-on-light-dim mb-4">
-                    Uczysz się wyłączać tryb "praca". Weekend staje się
-                    regeneracją, nie poczuciem winy.
-                  </p>
-                  <div className="bg-depth/5 p-4 rounded-lg italic text-on-light-dim">
-                    Klient: "Pierwszy raz od 15 lat spędziłem sobotę z rodziną i
-                    nie myślałem o firmie. I firma nie spłonęła."
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Rezultat 3 */}
+              <div>
+                <h3 className="text-2xl font-bold text-on-light mb-3">Prawdziwy spokój — nie tylko przerwa w pracy</h3>
+                <p className="text-lg text-on-light-dim leading-relaxed mb-4">
+                  Weekend staje się regeneracją, nie poczuciem winy. Urlop staje się urlopem, nie "zmianą lokalizacji pracy z laptopem".
+                </p>
+                <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
+                  "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła."
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Klient Life OS</footer>
+                </blockquote>
+              </div>
 
-              <Card className="border-l-4 border-depth bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-depth mb-4">
-                    5. Transcendencja ego (ale trzymanie ambicji)
-                  </h3>
-                  <p className="text-on-light-dim mb-4">
-                    Przestajesz potrzebować sukcesu jako potwierdzenia wartości.
-                    Ale nadal go budujesz - tyle że z radości, nie strachu.
-                  </p>
-                  <p className="text-on-light font-bold">
-                    To nie jest rezygnacja z ambicji. To uwolnienie jej z lęku.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Rezultat 4 */}
+              <div>
+                <h3 className="text-2xl font-bold text-on-light mb-3">Ambicja bez lęku</h3>
+                <p className="text-lg text-on-light-dim leading-relaxed mb-4">
+                  Przestajesz potrzebować sukcesu jako potwierdzenia wartości. Ale nadal go budujesz — tyle że z radości, nie ze strachu. To nie jest rezygnacja z ambicji. To uwolnienie jej z lęku.
+                </p>
+                <blockquote className="border-l-4 border-electric/30 pl-6 italic text-on-light-dim">
+                  "Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
+                  <footer className="mt-2 not-italic text-sm text-on-light-dim">— Anna, CEO Agencji Marketingowej</footer>
+                </blockquote>
+              </div>
             </div>
 
             {/* Testimonial Carousel */}
