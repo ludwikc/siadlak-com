@@ -55,24 +55,9 @@ const LINKS = [
 ];
 
 export default function LinksPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Proszę wprowadź adres email");
-      return;
-    }
-    setIsLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://app.easycart.pl/checkout/siadlak/newsletter",
-        "_blank",
-      );
-      setIsLoading(false);
-    }, 1000);
-  };
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
