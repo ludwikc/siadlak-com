@@ -134,12 +134,183 @@ export default function LifeOSSystemUpgrade() {
         "To jest najuczciwsze pytanie na tej liście. I nie zamierzam Ci powiedzieć \"tym razem będzie inaczej\" — bo tak mówił każdy program, który kupowałeś do tej pory. Mogę Ci powiedzieć trzy rzeczy: (1) dlatego jest gwarancja zwrotu po 2 tygodniach, (2) dlatego jest Sesja Discovery, na której obaj sprawdzamy, czy to ma sens, i (3) dlatego nie pracuję z szablonem — bo szablon nie widzi Ciebie. Ja widzę.",
     },
   ];
+
+  return (
+    <Layout>
+      {/* Exit Intent Modal */}
+      {showExitModal && (
+        <ExitIntentModal
+          onClose={() => setShowExitModal(false)}
+          onCTA={scrollToDiscovery}
+        />
+      )}
+
+      {/* Sticky CTA Bar */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient transition-transform duration-300 ${
+          showStickyBar ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="text-white">
+            <span className="font-bold text-lg">Life OS: System Upgrade</span>
+            <span className="ml-4 text-sm text-white/90">
+              {spotsAvailable}/5 miejsc dostępnych
+            </span>
+          </div>
+          <CTAButton
+            variant="premium"
+            size="lg"
+            onClick={scrollToDiscovery}
+            showArrow
+          >
+            Zarezerwuj Sesję
+          </CTAButton>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 bg-void overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-8">
+              Tylko 5 miejsc jednocześnie
+            </p>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+              Life OS:{" "}
+              <span className="text-electric">System Upgrade</span>
+            </h1>
+
+            <h2 className="text-2xl md:text-3xl font-medium mb-8 text-white/90 leading-tight">
+              Nie kolejna aplikacja mentalna. Cały nowy system operacyjny.
+            </h2>
+
+            <p className="text-lg text-dim leading-relaxed mb-8 max-w-3xl mx-auto">
+              8 tygodni pracy 1:1 ze mną. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno — bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
+            </p>
+
+            <p className="text-sm text-dim mb-10">
+              8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <CTAButton
+                variant="premium"
+                size="xl"
+                aria-label="Sprawdź dostępność — Sesja Discovery"
+                showArrow
+                onClick={scrollToDiscovery}
+              >
+                Sprawdź dostępność — Sesja Discovery
+              </CTAButton>
+              <a
+                href="#nie-dla-ciebie"
+                className="text-sm text-dim hover:text-electric transition-colors underline underline-offset-4"
+              >
+                Dla kogo to NIE jest →
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Life OS System Upgrade */}
+      {/* Rozpoznanie */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
+              Rozpoznajesz ten stan?
+            </h2>
+
+            <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
+              <p>
+                Twoje cele są zrealizowane. Twoje projekty działają. Twoje życie wygląda dobrze z zewnątrz.
+              </p>
+
+              <p>
+                A w środku? Konflikt, który zżera gigawaty energii:
+              </p>
+
+              <div className="space-y-3 text-on-light pl-4 border-l-4 border-electric/30 my-8">
+                <p>Część Ciebie chce budować dalej → Część Ciebie chce wreszcie odpocząć</p>
+                <p>Część Ciebie potrzebuje kontroli → Część Ciebie wie, że kontrola to iluzja</p>
+                <p>Część Ciebie goni kolejny cel → Część Ciebie pyta "po co?"</p>
+              </div>
+
+              <p>
+                Te części walczą ze sobą każdego dnia. A Ty stoisz pośrodku, próbując je pogodzić — i zużywasz na to więcej energii niż na samą pracę.
+              </p>
+
+              <p className="font-semibold text-on-light mt-8 mb-4">Próbowałeś to rozwiązać:</p>
+
+              <div className="space-y-3">
+                <p><strong className="text-on-light">Mówisz o tym znajomym</strong> → "Musisz więcej odpoczywać"</p>
+                <p><strong className="text-on-light">Próbujesz z coachingiem</strong> → "Ustaw nowe cele SMART"</p>
+                <p><strong className="text-on-light">Idziesz na terapię</strong> → "Opowiedz mi o swoich rodzicach"</p>
+                <p><strong className="text-on-light">Kupujesz kurs</strong> → "Oto 7 kroków do lepszego Ciebie"</p>
+              </div>
+
+              <p className="mt-8">
+                Żadne z tych rozwiązań nie trafia w sedno. Bo problem nie leży w strategii, celach ani przeszłości. <strong className="text-on-light">Problem leży na poziomie tożsamości.</strong> Na suknie, które nałożyłeś na diament lata temu — i które od tamtego czasu zdążyło wrosnąć.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dlaczego inne nie zadziałały */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
+              Dlaczego to, co próbowałeś, nie zadziałało?
+            </h2>
+
+            <p className="text-lg text-on-light-dim leading-relaxed mb-8">
+              Nie dlatego, że było złe. Dlatego, że celowało nie tam, gdzie trzeba.
+            </p>
+
+            <div className="space-y-8 text-lg text-on-light-dim leading-relaxed">
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Coaching i mentoring</strong> dają Ci nowe strategie, więcej narzędzi, kolejne frameworki. I działają — na chwilę. A potem wracasz do starych wzorców, bo nowe narzędzia zainstalowałeś na starym, skonfliktowanym systemie. To jak wstawianie nowych mebli do domu, który ma pęknięty fundament. Pięknie wygląda. Przez tydzień.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Terapia</strong> pomaga zrozumieć przeszłość. I to jest wartościowe — serio, bez ironii. Ale Ty już rozumiesz "skąd". Rozumiesz tak głęboko, że mógłbyś napisać o sobie pracę magisterską. Problem w tym, że w poniedziałek o 9 rano, kiedy musisz podjąć ważną decyzję, to zrozumienie nie pomaga. Insight bez zmiany perspektywy to ciekawa historyjka.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Kursy i książki</strong> dostarczają wiedzę. Masz jej wystarczająco dużo, żeby prowadzić podcast. (Może nawet prowadzisz.) Ale prawdziwa zmiana nie zachodzi na poziomie intelektualnym. Możesz przeczytać 100 książek o pływaniu — i nadal nie popłyniesz, dopóki nie wejdziesz do wody.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  <strong className="text-on-light text-xl">Duchowość i medytacja</strong> dają spokój. Perspektywę. Kontakt z czymś głębszym. A potem wracasz do biura i znowu jesteś tym samym człowiekiem, podejmującym te same decyzje z tego samego strachu. Zen na macie, chaos w Excelu.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-lg text-on-light-dim leading-relaxed space-y-4">
+              <p>
+                <strong className="text-on-light">Żadne z tych podejść nie jest złe.</strong> Ale każde pracuje na jednej warstwie — powierzchni. Coaching zmienia strategię. Terapia zmienia narrację. Kursy zmieniają wiedzę. Medytacja zmienia stan.
+              </p>
+              <p className="text-xl font-bold text-on-light">
+                Żadne nie zmienia sukna. A problem jest w suknie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 bg-void-glow overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent"></div>
 
