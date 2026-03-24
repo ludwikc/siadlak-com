@@ -77,7 +77,7 @@ export default function LinksPage() {
       <SEO
         title="Ludwik C. Siadlak — Links"
         description="Life Hacker. Katalizuję wojowników. Prowadzę poszukiwaczy. Newsletter, programy, mentoring 1:1."
-        path="/links"
+        url="https://siadlak.com/links"
       />
 
       <div className="min-h-screen bg-[hsl(var(--surface-dark-base))] text-[hsl(var(--text-on-dark))]">
