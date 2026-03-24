@@ -526,317 +526,136 @@ export default function LifeOSSystemUpgrade() {
         </div>
       </section>
 
-      {/* Why Me */}
+      {/* Dlaczego ja */}
       <section className="relative py-20 bg-diamond overflow-hidden">
-        {/* Static gradient orbs */}
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-electric/10 rounded-full blur-3xl opacity-30"></div>
-
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
-                Dlaczego Ludwik
-              </Badge>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
-              Dlaczego akurat ja? (Co mam, czego inni nie mają)
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">
+              Dlaczego akurat ja?
             </h2>
 
-            <div className="space-y-8">
-              <Card className="border-l-4 border-electric bg-gradient-to-br from-electric/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-electric">
-                    1. Biegłość w obu ścieżkach
-                  </h3>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Większość coachów potrafi ALBO konfrontować ALBO wspierać.
-                  </p>
-                  <p className="text-on-light font-bold text-xl mb-4">
-                    Ja robię oba - i wiem, kiedy którego potrzebujesz.
-                  </p>
-                  <p className="text-on-light-dim italic">
-                    Anna potrzebowała ostrej konfrontacji. Lucja potrzebowała
-                    delikatnego prowadzenia. Obie przeszły transformację. Bo
-                    dostały dokładnie to, czego potrzebowały.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
+              <p>
+                19 lat jako Microsoft Certified Trainer. Fortune 500, NATO, jednostki specjalne, Oxford. 10 000+ profesjonalistów, których szkoliłem z systemów, produktywności i AI.
+              </p>
 
-              <Card className="border-l-4 border-electric bg-gradient-to-br from-electric/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-electric">
-                    2. Filozofia spotyka biznes
-                  </h3>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Nie rozdzielam "ducha" od "pieniędzy."
-                  </p>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Cytuję Junga podczas rozmowy o ARR. Fausta wplatam w
-                    strategię exit-u. Równoległe rzeczywistości stosuję do
-                    podejmowania decyzji inwestycyjnych.
-                  </p>
-                  <p className="text-on-light font-bold">
-                    Bo tak naprawdę działa świat - tylko nikt Ci tego nie mówi.
-                  </p>
-                </CardContent>
-              </Card>
+              <p>
+                Brzmi imponująco? Może. Ale nie dlatego tu jestem.
+              </p>
 
-              <Card className="border-l-4 border-electric bg-gradient-to-br from-electric/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-electric">
-                    3. Wschodnia głębia + Zachodnia skuteczność
-                  </h3>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Mam coś, czego amerykańscy coachowie nie mają: dostęp do
-                    wschodniej tradycji filozoficznej (Jung, Faust, literatura
-                    rosyjska to moje DNA).
-                  </p>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Ale działam z zachodnią precyzją i fokusem na rezultatach.
-                  </p>
-                  <p className="text-on-light font-bold">
-                    To połączenie jest rzadkie. I cenne.
-                  </p>
-                </CardContent>
-              </Card>
+              <p>
+                Jestem tu, bo w 2014 roku stałem na peronie metra Dworzec Gdański i rozważałem, czy nie zrobić jednego kroku za dużo. Miałem dyplom z Oxfordu, kontrakty z NATO i zero powodów, żeby wstać rano.
+              </p>
 
-              <Card className="border-l-4 border-electric bg-gradient-to-br from-electric/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-electric">
-                    4. 25 lat na własnej skórze
-                  </h3>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Byłem depresyjnym 16-latkiem uzależnionym od kodeiny,
-                    próbującym przeżyć migreny.
-                  </p>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Budowałem systemy produktywności jako mechanizm przetrwania.
-                  </p>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Osiągnąłem sukces - i czułem pustkę.
-                  </p>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Przeszedłem przez to wszystko, zanim zacząłem kogokolwiek
-                    prowadzić.
-                  </p>
-                  <p className="text-on-light font-bold text-xl">
-                    Nie uczę teorii. Opowiadam, co sprawdziło się na własnej
-                    skórze.
-                  </p>
-                </CardContent>
-              </Card>
+              <p>
+                Zbudowałem cały system produktywności jako mechanizm przetrwania. Nie dlatego, że kochałem „optymalizację" — dlatego, że bez systemu nie wiedziałem, jak przeżyć kolejny dzień.
+              </p>
 
-              <Card className="border-l-4 border-electric bg-gradient-to-br from-electric/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-electric">
-                    5. Trojan Horse Method™
-                  </h3>
-                  <p className="text-on-light-dim text-lg mb-4">
-                    Wchodzę przez "produktywność i skuteczność."
-                  </p>
-                  <p className="text-on-light font-bold text-xl mb-4">
-                    Dostarczam transformację duszy.
-                  </p>
-                  <p className="text-on-light-dim text-lg">
-                    Bo gdybym powiedział od razu "zróbmy pracę na tożsamości i
-                    transcendencji ego", połowa ludzi, którzy tego potrzebują,
-                    uciekłaby.
-                  </p>
-                </CardContent>
-              </Card>
+              <p>
+                A potem zrozumiałem, że system nie wystarczy. Że problem nie leży w tym, co robisz, ale w tym, kim się uważasz.
+              </p>
+
+              <p className="font-bold text-on-light text-xl">
+                Nie jestem guru transformacji. Jestem trenerem, który przeszedł przez to wszystko — depresję, uzależnienie, sukces bez sensu — i wyszedł z drugiej strony z mapą.
+              </p>
+
+              <p>
+                Ta mapa to nie teoria. To jest coś, co zbudowałem na własnej skórze przez 25 lat. I teraz prowadzę innych tą samą drogą — ale szybciej, bo nie muszą szukać ścieżki sami.
+              </p>
+
+              <p className="font-bold text-on-light">
+                Co mam, czego inni nie mają?
+              </p>
+
+              <p>
+                <strong>Filozofia spotyka biznes.</strong> Cytuję Junga podczas rozmowy o ARR. Bułhakowa wplatam w strategię exit-u. Bo tak naprawdę działa świat — tylko nikt Ci tego nie mówi.
+              </p>
+
+              <p>
+                <strong>Biegłość w obu ścieżkach.</strong> Większość coachów potrafi albo konfrontować, albo wspierać. Ja robię oba — i wiem, kiedy którego potrzebujesz. Anna potrzebowała ostrej konfrontacji. Lucja potrzebowała delikatnego prowadzenia. Obie przeszły transformację.
+              </p>
+
+              <p>
+                <strong>Wschodnia głębia + zachodnia precyzja.</strong> Mam dostęp do tradycji, których amerykańscy coachowie nie mają. Ale działam z fokusem na rezultatach, nie na „energetycznych wibracjach".
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Investment & Commitment */}
-      <section className="relative py-20 bg-transformation-light overflow-hidden">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 bg-transformation-grid opacity-20"></div>
-
-        {/* Static gradient orb */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-electric/10 rounded-full blur-3xl opacity-30"></div>
+      {/* Co w cenie */}
+      <section className="relative py-20 bg-void overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 30% 50%, rgba(109,40,217,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="text-center mb-8">
-              <Badge className="bg-gradient-to-r from-electric to-depth text-white border-0 text-sm px-6 py-2 uppercase tracking-wide">
-                Inwestycja
-              </Badge>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-on-light text-center">
-              Inwestycja i struktura
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
+              Co jest w cenie?
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-              <Card className="bg-gradient-to-br from-depth/5 to-white">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-depth">
-                    Program:
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-depth flex-shrink-0 mt-1" />
-                      <p className="text-on-light-dim">
-                        8 tygodni, 8 intensywnych sesji (50 min - 2,5h, w
-                        zależności od tego, gdzie jesteśmy w procesie)
-                      </p>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-depth flex-shrink-0 mt-1" />
-                      <p className="text-on-light-dim">
-                        Dostęp do mnie między sesjami (Signal/SMS dla nagłych
-                        przełomów)
-                      </p>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-depth flex-shrink-0 mt-1" />
-                      <p className="text-on-light-dim">
-                        Dożywotni dostęp do społeczności absolwentów (1234 Daily
-                        Coaching - codziennie 12:34 na Discordzie Lifehackerów)
-                      </p>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="w-6 h-6 mr-3 text-depth flex-shrink-0 mt-1" />
-                      <p className="text-on-light-dim">
-                        Nagrania wszystkich sesji (żebyś mógł wracać do
-                        kluczowych momentów)
-                      </p>
-                    </div>
+            <div className="space-y-5">
+              {[
+                { title: "8 sesji 1:1", desc: "Od 50 minut do 2,5 godziny — w zależności od tego, gdzie jesteśmy w procesie. Bez sztucznego limitu czasowego." },
+                { title: "Dostęp do mnie między sesjami", desc: "Signal lub SMS — dla nagłych przełomów, gdy coś \"kliknie\" o 3 w nocy i potrzebujesz to przepracować." },
+                { title: "Pełna diagnostyka Life OS", desc: "Głęboki skan Twojego systemu operacyjnego na starcie — zanim cokolwiek zmienimy." },
+                { title: "Spersonalizowana mapa transformacji", desc: "Nie szablon. Plan szyty na miarę, który ewoluuje z każdą sesją." },
+                { title: "Nagrania wszystkich sesji", desc: "Żebyś mógł wracać do kluczowych momentów. Często to, co usłyszysz za trzecim razem, zmieni wszystko." },
+                { title: "Społeczność absolwentów", desc: "Dożywotni dostęp do 1234 Daily Coaching — codziennie o 12:34 na Discordzie Lifehackerów." },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start bg-white/5 rounded-lg p-5">
+                  <CheckCircle className="w-5 h-5 mr-4 text-electric flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-bold text-white">{item.title}</p>
+                    <p className="text-dim text-base mt-1">{item.desc}</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <Card className="bg-gradient-to-br from-depth/5 to-electric/5">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-depth">
-                    Inwestycja:
-                  </h3>
-                  <div className="text-center mb-6">
-                    <p className="text-5xl font-bold text-electric mb-2">
-                      16 000 PLN
-                    </p>
-                    <p className="text-lg text-on-light-dim">
-                      (lub 2x 6 500 PLN netto, jeśli masz firmę i wolisz
-                      rozłożyć)
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+      {/* Inwestycja */}
+      <section className="relative py-20 bg-diamond overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">
+              Inwestycja
+            </h2>
+
+            <div className="text-center mb-10">
+              <p className="text-5xl font-bold text-electric mb-3">16 000 PLN</p>
+              <p className="text-lg text-on-light-dim">
+                Lub 2 × 6 500 PLN netto, jeśli masz firmę i wolisz rozłożyć.
+              </p>
             </div>
 
-            <Card className="bg-gradient-to-r from-electric/5 to-depth/5">
-              <CardContent className="p-8">
-                <h3 className="text-3xl font-bold mb-6 text-on-light text-center">
-                  Dlaczego tyle?
-                </h3>
+            <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
+              <h3 className="text-2xl font-bold text-on-light">Dlaczego tyle?</h3>
 
-                <p className="text-lg text-on-light-dim mb-6">
-                  Bo to nie jest kurs online. To nie jest godzinna sesja
-                  "trzymaj się tam."
+              <p>
+                Bo to nie jest kurs online. To nie jest godzinna sesja „trzymaj się tam".
+              </p>
+
+              <p>
+                To jest moja pełna obecność przez 8 tygodni — nie „3 pytania na email". Adaptacyjna metodologia, nie szablon w PDF dla każdego. Filozoficzna głębia i biznesowa precyzja w jednym — rzadka kombinacja.
+              </p>
+
+              <p>
+                Plus: ludzie, którzy płacą więcej, angażują się bardziej. Inwestycja finansowa = inwestycja emocjonalna. A transformacja wymaga full skin in the game.
+              </p>
+
+              <p className="font-bold text-on-light text-xl">
+                Pytanie nie brzmi „czy to drogie". Pytanie brzmi: ile kosztuje Cię kolejny rok życia w wewnętrznej wojnie?
+              </p>
+
+              <div className="bg-electric/5 border border-electric/20 rounded-lg p-6 mt-8">
+                <p className="font-bold text-on-light mb-3">Gwarancja zwrotu — 2 tygodnie.</p>
+                <p>
+                  Jeśli po 2 tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory — oddaję pieniądze. Bez pytań, bez tłumaczenia się.
                 </p>
-
-                <p className="text-xl font-bold text-on-light mb-4">
-                  To jest:
-                </p>
-                <ul className="space-y-3 text-lg text-on-light-dim mb-8">
-                  <li>
-                    •{" "}
-                    <span className="font-bold">
-                      Moja pełna obecność przez 8 tygodni
-                    </span>{" "}
-                    (nie "3 pytania email")
-                  </li>
-                  <li>
-                    • <span className="font-bold">Adaptacyjna metodologia</span>{" "}
-                    (nie szablon w PDF dla każdego)
-                  </li>
-                  <li>
-                    •{" "}
-                    <span className="font-bold">
-                      Filozoficzna głębia + biznesowa precyzja
-                    </span>{" "}
-                    (rzadka kombinacja)
-                  </li>
-                  <li>
-                    •{" "}
-                    <span className="font-bold">
-                      Bezpieczna przestrzeń do najtrudniejszych konfrontacji
-                    </span>{" "}
-                    (bezcenne)
-                  </li>
-                  <li>
-                    •{" "}
-                    <span className="font-bold">Rzeczywista transformacja</span>{" "}
-                    (nie motywacyjny high na 2 tygodnie)
-                  </li>
-                </ul>
-
-                <div className="bg-white p-6 rounded-xl mb-6">
-                  <p className="text-lg text-on-light-dim mb-4">
-                    <span className="font-bold">Plus:</span> Ludzie, którzy
-                    płacą więcej, angażują się bardziej. Inwestycja finansowa =
-                    inwestycja emocjonalna.
-                  </p>
-                  <p className="text-lg text-on-light-dim">
-                    A transformacja wymaga{" "}
-                    <span className="font-bold">full skin in the game</span>.
-                  </p>
-                </div>
-
-                <div className="bg-depth/10 p-6 rounded-xl mb-6">
-                  <h4 className="text-xl font-bold mb-4 text-depth">
-                    Porównanie:
-                  </h4>
-                  <ul className="space-y-3 text-on-light-dim">
-                    <li>
-                      • Standardowy coaching: 2-5K PLN/miesiąc = rezultaty
-                      tymczasowe
-                    </li>
-                    <li>
-                      • Terapia: 300-500 PLN/sesja × 24 sesje = 7-12K PLN =
-                      rozumiesz przeszłość (ale co z przyszłością?)
-                    </li>
-                    <li>• Kursy online: 2-5K PLN = wiedza bez transformacji</li>
-                    <li className="font-bold text-depth text-lg">
-                      • Life OS: 16K PLN = fundamentalna przemiana tożsamości =
-                      bezpośrednie przełożenie na decyzje, leadership, spokój
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="text-center bg-gradient-to-r from-electric/5 to-depth/5 p-8 rounded-md">
-                  <p className="text-2xl font-bold text-on-light mb-6">
-                    Pytanie nie brzmi "czy to drogie".
-                  </p>
-                  <p className="text-2xl font-bold text-electric mb-6">
-                    Pytanie brzmi: "ile kosztuje Cię życie bez tej
-                    transformacji?"
-                  </p>
-                  <p className="text-lg text-on-light-dim mb-4">
-                    Ile tracisz rocznie na:
-                  </p>
-                  <ul className="space-y-2 text-lg text-on-light-dim mb-6 text-left max-w-2xl mx-auto">
-                    <li>• Złe decyzje z paraliżu analitycznego?</li>
-                    <li>• Wypalenie i utratę energii?</li>
-                    <li>• Niewykorzystany potencjał biznesowy?</li>
-                    <li>• Życie w wewnętrznej wojnie?</li>
-                  </ul>
-                  <p className="text-lg text-on-light-dim mb-8">
-                    Jeśli jesteś liderem z przychodami w firmie 2-10M PLN, koszt
-                    braku tej transformacji to setki tysięcy rocznie. Minimum.
-                  </p>
-                  <p className="text-2xl font-bold text-depth">
-                    To nie jest wydatek. To inwestycja z najwyższym ROI, jaki
-                    kiedykolwiek zrobisz.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
