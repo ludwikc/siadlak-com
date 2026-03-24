@@ -761,42 +761,23 @@ export default function LifeOSSystemUpgrade() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white text-center">
-              Następny krok: Sesja Discovery
+              Następny krok
             </h2>
 
             <div className="space-y-6 text-lg text-dim leading-relaxed mb-10">
-              <p>
-                Zanim zdecydujemy o współpracy, musimy przeprowadzić{" "}
-                <span className="text-electric font-bold">~30-minutową Sesję Discovery</span>.
-              </p>
-
-              <p className="font-bold text-white text-xl">To nie jest rozmowa sprzedażowa.</p>
-
-              <p>To wzajemna ocena, czy mamy ze sobą pracować. Ja oceniam Ciebie. Ty oceniasz mnie.</p>
-
-              <p className="font-bold text-white">Co się wydarzy w ~30 minut:</p>
+              <p>Zanim cokolwiek zdecydujemy, musimy porozmawiać.</p>
 
               <p>
-                <strong className="text-white">Głęboka diagnostyka Twojego systemu.</strong> Nie będziemy mówić o celach
-                i strategiach. Zejdziemy głębiej: gdzie jest konflikt tożsamości? Jaka narracja Cię blokuje? Która
-                ścieżka transformacji jest Twoja?
-              </p>
-              <p>
-                <strong className="text-white">Sprawdzenie chemii.</strong> Ta praca wymaga zaufania. Jeśli nie czujesz,
-                że możesz mi zaufać w najtrudniejszych momentach — nie podejmujemy współpracy. I to ok.
-              </p>
-              <p>
-                <strong className="text-white">Decyzja obu stron.</strong> Na końcu sesji obaj decydujemy, czy chcemy
-                współpracować. Nie ma presji. Jest uczciwość.
+                30 minut na Zoom. Kamera włączona. Żadnego slajdu, żadnego pitcha. Zadam Ci kilka pytań — nie takich, jakie zadają na rozmowie kwalifikacyjnej, raczej takich, na które sam nie wpadłbyś, że potrzebujesz na nie odpowiedzieć.
               </p>
 
-              <div className="bg-electric/10 border border-electric/20 rounded-lg p-6 mt-4">
-                <p className="text-white font-bold mb-2">Uwaga:</p>
-                <p>
-                  Sesja Discovery to nie „darmowa próbka". To rzeczywista praca. Może być intensywna. Wyjdziesz z niej z
-                  clarity — niezależnie od tego, czy zdecydujemy się na współpracę.
-                </p>
-              </div>
+              <p>
+                To nie jest rozmowa sprzedażowa. To wzajemna ocena — ja sprawdzam, czy mogę Ci pomóc, Ty sprawdzasz, czy chcesz mi zaufać w najtrudniejszych momentach. Obaj mamy prawo powiedzieć „nie". I to jest w porządku.
+              </p>
+
+              <p>
+                Muszę Cię uprzedzić o jednej rzeczy: ta rozmowa bywa intensywna. Ludzie wychodzą z niej z clarity — niezależnie od tego, czy potem zdecydujemy się na współpracę. Niektórzy mówią, że te 30 minut dało im więcej niż pół roku terapii. (Terapeuci, przepraszam. Ale nie za bardzo.)
+              </p>
             </div>
 
             <div className="text-center mb-10">
@@ -806,7 +787,7 @@ export default function LifeOSSystemUpgrade() {
                 </CTAButton>
               </Link>
 
-              <p className="text-dim text-sm">Liczba miejsc ściśle ograniczona do 5 osób jednocześnie.</p>
+              <p className="text-dim text-sm">Maksymalnie 5 aktywnych klientów jednocześnie.</p>
             </div>
 
             {/* P.S. Ladder */}
