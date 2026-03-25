@@ -376,6 +376,60 @@ const Index = () => {
         author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
+      {/* ═══ DWIE ŚCIEŻKI ═══ */}
+      <section className="py-24 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Eyebrow>DWIE ŚCIEŻKI</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+            Dwie ścieżki. Jedna decyzja.
+          </h2>
+          <p className="text-lg text-dim leading-relaxed mb-16">
+            Nie każdy potrzebuje tego samego. Jedni przychodzą z walką, drudzy z ciszą. Dlatego pracuję na dwa sposoby — i wiem, kiedy którego użyć.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white font-heading">🛡 Ścieżka Wojownika</h3>
+              <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
+              <p className="text-dim leading-relaxed">
+                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko — a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
+              </p>
+              <p className="text-dim leading-relaxed">
+                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Używam metafor z życia — diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-4 mt-6">
+                <p className="text-muted-foreground italic text-sm leading-relaxed">
+                  Anna przyszła z narracją ofiary i kontrolą, która zjadała jej weekendy. Po 8 tygodniach powiedziała: „Pierwszy raz wierzę w możliwości, które mam — zamiast walczyć z tymi, których nie mam."
+                </p>
+              </blockquote>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
+              <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
+              <p className="text-dim leading-relaxed">
+                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie diamentu, który leży pod suknem sukcesu.
+              </p>
+              <p className="text-dim leading-relaxed">
+                To praca delikatna, głęboka, oparta na uważności i akceptacji — bez walki. O integrację tego, kim jesteś, z tym, jak żyjesz. O pozwolenie sobie na to, by być już tam, gdzie jesteś.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-4 mt-6">
+                <p className="text-muted-foreground italic text-sm leading-relaxed">
+                  Łucja była na wakacjach — ale mentalnie siedziała w biurze. Jedno zdanie wystarczyło: „Nic nie jest dla Ciebie zbyt dobre." I zrozumiała, że sukno, które na siebie nałożyła, było z materiału o nazwie „muszę zasłużyć".
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h4 className="text-xl font-bold text-white font-heading mb-4">Skąd wiem, czego potrzebujesz?</h4>
+            <p className="text-dim leading-relaxed max-w-2xl mx-auto">
+              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi — najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery — żebyśmy razem ustalili, którędy idziemy.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ╔═══════════════════════════════════════════╗
           ║     THE CUT — jedyny divider              ║
           ╚═══════════════════════════════════════════╝ */}
