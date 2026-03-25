@@ -36,9 +36,13 @@ const UwazneZycie = () => {
   return (
     <Layout hideFooter>
       <SEO
-        title="Uważne Życie: Zostań Kapitanem Własnego Życia"
-        description="6-tygodniowy program mentalny, który zamieni Cię z reaktywnego pasażera w proaktywnego kapitana. Przejmij kontrolę nad swoim umysłem."
+        {...getSEOConfig("/program/uwaznosc")}
+        jsonLd={[
+          getCourseEntity('uwazne-zycie')!,
+          getWebPageEntity('/program/uwaznosc', 'Uwazne Zycie', 'Program uwaznosci dla analitycznych umyslow.', ['/program', '/podcast/uwazne-zycie']),
+        ]}
       />
+      {(() => { const t = getTopicalConfig("/program/uwaznosc"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* HERO SECTION - Deep Ocean Premium Theme */}
       <section

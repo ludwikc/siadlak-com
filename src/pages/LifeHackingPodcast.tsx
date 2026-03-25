@@ -79,6 +79,11 @@ const LifeHackingPodcast = () => {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/podcast/life-hacking")} jsonLd={[
+        getPodcastEntity('life-hacking'),
+        getWebPageEntity('/podcast/life-hacking', 'Life Hacking Podcast', 'Podcast o hakach zyciowych i produktywnosci prowadzony przez Ludwika C. Siadlaka.'),
+      ]} />
+      {(() => { const t = getTopicalConfig("/podcast/life-hacking"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-void-glow text-white">
         <div className="container mx-auto px-4">
