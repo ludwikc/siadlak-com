@@ -1,36 +1,27 @@
 
 
-# Header Dropdown Update
+# Replace all em dashes (—) with hyphens (-) across the project
 
-## What Changes
+## Scope
+30 source files with ~2425 occurrences of `—` (em dash) to replace with `-` (hyphen).
 
-Update the dropdown menu structure in `src/components/layout/Header.tsx` to match the new hierarchy:
+## Affected files
+All `.tsx` and `.ts` files in `src/` containing em dashes — primarily in copy/text content across pages, components, and data files. Key files include:
 
-**New dropdown structure:**
-1. **Zacznij tutaj →** (`/start`) — highlighted at top, separated by divider
-2. Aplikacje Mentalne (`/program`) — desc: "Kursy i szkolenia"
-3. Praca 1:1 (`/program/lifeos-system-upgrade`) — desc: "Mentoring"
-4. Setki Opinii Klientów (`/testimonials`) — no desc
-5. Moja historia (`/about`) — no desc — **new item**
-6. Kontakt (`/contact`) — no desc
-7. Divider
-8. **Wszystkie możliwości →** (`/start`) — footer link (already exists)
+- `src/pages/Index.tsx` — homepage copy
+- `src/pages/About.tsx` — bio/story
+- `src/pages/Wspolpraca.tsx` — hub page
+- `src/pages/Discovery.tsx` — discovery page
+- `src/pages/Program.tsx` — programs
+- `src/pages/MCT.tsx`, `SilnaGlowa.tsx`, `MeskiKompas.tsx`, etc. — program pages
+- `src/pages/WebinarDepresja.tsx`, `WebinarMeskiKompas.tsx`, etc. — webinar pages
+- `src/components/discovery/*`, `src/components/oto/*`, `src/components/sections/*` — section components
+- `src/data/course-objections.ts` — FAQ data
+- `src/pages/help/*` — help subpages
 
-## Implementation
+## Approach
+Simple find-and-replace: every `—` → `-` in each file. No logic changes, no structural modifications. Pure text substitution.
 
-### Single file: `src/components/layout/Header.tsx`
-
-**1. Update `dropdownItems` array** (lines 6-11):
-- Reorder items, add `/about` entry with label "Moja historia", add `desc: "Mentoring"` to Praca 1:1
-- Remove Kontakt from this array (it stays but moves after the new item)
-
-**2. Update desktop dropdown** (lines 69-91):
-- Add "Zacznij tutaj →" as a highlighted link at the top before the items, with a divider below it
-- Render the updated items list
-- Keep "Wszystkie możliwości →" footer as-is
-
-**3. Update mobile menu** (lines 113-142):
-- Mirror the same structure: "Zacznij tutaj →" at top of the "Pracuj ze mną" section, then items, then footer link
-
-No new files, no new imports needed.
+## Risk
+None — this is a cosmetic typography change. No code logic is affected.
 
