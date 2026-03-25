@@ -5,8 +5,9 @@ import { Badge } from "../ui/badge";
 
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },
+  { label: "Praca 1:1", desc: "Mentoring", to: "/program/lifeos-system-upgrade" },
   { label: "Setki Opinii Klientów", to: "/testimonials" },
-  { label: "Praca 1:1", to: "/program/lifeos-system-upgrade" },
+  { label: "Moja historia", to: "/about" },
   { label: "Kontakt", to: "/contact" },
 ];
 
@@ -68,6 +69,14 @@ export default function Header() {
 
             {dropdownOpen && (
               <div className="absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
+                <Link
+                  to="/start"
+                  onClick={() => setDropdownOpen(false)}
+                  className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  Zacznij tutaj →
+                </Link>
+                <div className="border-t border-white/10 my-1" />
                 {dropdownItems.map((item) => (
                   <Link
                     key={item.to}
@@ -79,15 +88,14 @@ export default function Header() {
                     {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
                   </Link>
                 ))}
-                <div className="border-t border-white/10 mt-1 pt-1">
-                  <Link
-                    to="/start"
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
-                  >
-                    Wszystkie możliwości →
-                  </Link>
-                </div>
+                <div className="border-t border-white/10 my-1" />
+                <Link
+                  to="/start"
+                  onClick={() => setDropdownOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  Wszystkie możliwości →
+                </Link>
               </div>
             )}
           </div>
@@ -123,6 +131,14 @@ export default function Header() {
             </Link>
 
             <div className="text-white/40 text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
+            <Link
+              to="/start"
+              onClick={() => setMobileOpen(false)}
+              className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors"
+            >
+              Zacznij tutaj →
+            </Link>
+            <div className="border-t border-white/10 my-1" />
             {dropdownItems.map((item) => (
               <Link
                 key={item.to}
@@ -131,8 +147,10 @@ export default function Header() {
                 className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
               >
                 {item.label}
+                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
               </Link>
             ))}
+            <div className="border-t border-white/10 my-1" />
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
