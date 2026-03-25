@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { getSEOConfig } from "@/lib/seo-config";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getWebPageEntity, getOrganizationEntity } from "@/lib/structured-data";
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
