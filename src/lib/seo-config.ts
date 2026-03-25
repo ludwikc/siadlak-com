@@ -306,6 +306,15 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/start',
+    seo: {
+      title: 'Współpraca — Ludwik C. Siadlak',
+      description: 'Wszystkie możliwości współpracy w jednym miejscu. Bezpłatne zasoby, programy rozwojowe i mentoring 1:1. Znajdź swoją ścieżkę.',
+      keywords: 'współpraca, programy, mentoring, coaching, rozwój osobisty, Ludwik Siadlak',
+      url: '/start'
+    }
+  },
+  {
     path: '/mct',
     seo: {
       title: 'Mental Code Terminal',

@@ -31,12 +31,6 @@ export default function Header() {
     timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
   };
 
-  const scrollToFooter = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setDropdownOpen(false);
-    setMobileOpen(false);
-    document.querySelector("footer")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
@@ -86,13 +80,13 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="border-t border-white/10 mt-1 pt-1">
-                  <a
-                    href="#footer"
-                    onClick={scrollToFooter}
+                  <Link
+                    to="/start"
+                    onClick={() => setDropdownOpen(false)}
                     className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
                   >
-                    Więcej ≫
-                  </a>
+                    Wszystkie możliwości →
+                  </Link>
                 </div>
               </div>
             )}
@@ -139,13 +133,13 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href="#footer"
-              onClick={scrollToFooter}
+            <Link
+              to="/start"
+              onClick={() => setMobileOpen(false)}
               className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
             >
-              Więcej ≫
-            </a>
+              Wszystkie możliwości →
+            </Link>
 
             <Link
               to="/discovery"
