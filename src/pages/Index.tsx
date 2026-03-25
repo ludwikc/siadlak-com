@@ -195,10 +195,16 @@ const Index = () => {
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
       <section className="py-24 bg-void">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Eyebrow>DIAGNOZA</Eyebrow>
-          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
-            Diament nie potrzebuje kolejnej oprawki
+          <Eyebrow>PRAWDA, KTÓRĄ JUŻ CZUJESZ</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-6">
+            Branża rozwoju osobistego sprzedaje Ci plasterki 🩹
           </h2>
+          <p className="text-lg text-dim leading-relaxed mb-8">
+            A Ty masz w sobie diament — jesteś najtwardszą substancją na Ziemi, tylko jeszcze o tym nie wiesz. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
+          </p>
+          <h3 className="text-2xl md:text-3xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+            Diament nie potrzebuje kolejnej oprawki
+          </h3>
 
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>Przez lata próbowałeś go zmienić. Nie wiedziałeś, że wystarczyło zmienić tło, na którym leży.</p>
@@ -370,6 +376,60 @@ const Index = () => {
         author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
+      {/* ═══ DWIE ŚCIEŻKI ═══ */}
+      <section className="py-24 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Eyebrow>DWIE ŚCIEŻKI</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+            Dwie ścieżki. Jedna decyzja.
+          </h2>
+          <p className="text-lg text-dim leading-relaxed mb-16">
+            Nie każdy potrzebuje tego samego. Jedni przychodzą z walką, drudzy z ciszą. Dlatego pracuję na dwa sposoby — i wiem, kiedy którego użyć.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white font-heading">🛡 Ścieżka Wojownika</h3>
+              <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
+              <p className="text-dim leading-relaxed">
+                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko — a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
+              </p>
+              <p className="text-dim leading-relaxed">
+                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Używam metafor z życia — diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-4 mt-6">
+                <p className="text-muted-foreground italic text-sm leading-relaxed">
+                  Anna przyszła z narracją ofiary i kontrolą, która zjadała jej weekendy. Po 8 tygodniach powiedziała: „Pierwszy raz wierzę w możliwości, które mam — zamiast walczyć z tymi, których nie mam."
+                </p>
+              </blockquote>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
+              <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
+              <p className="text-dim leading-relaxed">
+                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie diamentu, który leży pod suknem sukcesu.
+              </p>
+              <p className="text-dim leading-relaxed">
+                To praca delikatna, głęboka, oparta na uważności i akceptacji — bez walki. O integrację tego, kim jesteś, z tym, jak żyjesz. O pozwolenie sobie na to, by być już tam, gdzie jesteś.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-4 mt-6">
+                <p className="text-muted-foreground italic text-sm leading-relaxed">
+                  Łucja była na wakacjach — ale mentalnie siedziała w biurze. Jedno zdanie wystarczyło: „Nic nie jest dla Ciebie zbyt dobre." I zrozumiała, że sukno, które na siebie nałożyła, było z materiału o nazwie „muszę zasłużyć".
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h4 className="text-xl font-bold text-white font-heading mb-4">Skąd wiem, czego potrzebujesz?</h4>
+            <p className="text-dim leading-relaxed max-w-2xl mx-auto">
+              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi — najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery — żebyśmy razem ustalili, którędy idziemy.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ╔═══════════════════════════════════════════╗
           ║     THE CUT — jedyny divider              ║
           ╚═══════════════════════════════════════════╝ */}
@@ -477,9 +537,15 @@ const Index = () => {
       {/* ═══ PROOF SECTION ═══ */}
       <section className="bg-paper py-24">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h3 className="font-heading text-3xl font-bold text-on-light mb-16 text-center">
-            Głosy tych, którzy zmienili tło
-          </h3>
+          <div className="text-center mb-16">
+            <Eyebrow color="depth">PRAWDZIWE TRANSFORMACJE</Eyebrow>
+            <h3 className="font-heading text-3xl font-bold text-on-light mb-6">
+              To nie są 5-gwiazdkowe opinie. To są prawdziwe zmiany.
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Nie pokażę Ci anonimowych testimoniali z „Dyrektorem Marketingu" i „Starszym Kierownikiem Projektów". Pokażę Ci prawdziwe historie ludzi, którzy przeszli przez to samo co Ty — i wyszli z drugiej strony z innym kolorem diamentu.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <TestimonialCard
               variant="light"
