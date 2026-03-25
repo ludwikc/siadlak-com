@@ -112,6 +112,12 @@ export default function LifeOSSystemUpgrade() {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program/lifeos-system-upgrade")} jsonLd={[
+        getServiceLifeOS(),
+        getWebPageEntity('/program/lifeos-system-upgrade', 'Life OS: System Upgrade', '8-tygodniowy program mentoringu 1:1 z Ludwikiem C. Siadlakiem.', ['/discovery', '/program', '/testimonials']),
+        getFAQSchema(faqs),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/lifeos-system-upgrade"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Sticky CTA Bar */}
       <div
         className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient transition-transform duration-300 ${
