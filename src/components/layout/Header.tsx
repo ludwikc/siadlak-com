@@ -6,7 +6,7 @@ import { Badge } from "../ui/badge";
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },
   { label: "Setki Opinii Klientów", to: "/testimonials" },
-  { label: "Praca 1:1", to: "/discovery" },
+  { label: "Praca 1:1", to: "/program/lifeos-system-upgrade" },
   { label: "Kontakt", to: "/contact" },
 ];
 
@@ -60,12 +60,7 @@ export default function Header() {
           </Link>
 
           {/* Pracuj ze mną – dropdown */}
-          <div
-            ref={dropdownRef}
-            className="relative"
-            onMouseEnter={openDropdown}
-            onMouseLeave={closeDropdown}
-          >
+          <div ref={dropdownRef} className="relative" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
             <button
               onClick={() => setDropdownOpen((v) => !v)}
               className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
@@ -87,9 +82,7 @@ export default function Header() {
                     className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     {item.label}
-                    {item.desc && (
-                      <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>
-                    )}
+                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
                   </Link>
                 ))}
                 <div className="border-t border-white/10 mt-1 pt-1">
@@ -115,11 +108,7 @@ export default function Header() {
         </div>
 
         {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden text-white p-1"
-          aria-label="Menu"
-        >
+        <button onClick={() => setMobileOpen((v) => !v)} className="md:hidden text-white p-1" aria-label="Menu">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -139,9 +128,7 @@ export default function Header() {
               </Badge>
             </Link>
 
-            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-2">
-              Pracuj ze mną
-            </div>
+            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
             {dropdownItems.map((item) => (
               <Link
                 key={item.to}
