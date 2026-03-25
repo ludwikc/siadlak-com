@@ -28,7 +28,7 @@ const freeItems = [
     emoji: "🧘",
     title: "Uważne Życie — Medytacje",
     headline: "Medytacja dla ludzi, którzy nie potrafią medytować.",
-    desc: "Bezpłatne prowadzone medytacje. Nie musisz siedzieć w lotosie. Nie musisz „wyciszyć umysłu". Wystarczy, że naciśniesz play.",
+    desc: 'Bezpłatne prowadzone medytacje. Nie musisz siedzieć w lotosie. Nie musisz \u201Ewyciszyć umysłu\u201D. Wystarczy, że naciśniesz play.',
     cta: "Zacznij medytować →",
     to: "https://uwaznezycie.pl",
     external: true,
