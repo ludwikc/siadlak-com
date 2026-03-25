@@ -13,6 +13,7 @@ export interface SEOProps {
   locale?: string;
   noindex?: boolean;
   favicon?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
 const defaultSEO = {
