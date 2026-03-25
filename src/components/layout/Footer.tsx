@@ -1,11 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Instagram,
-  Linkedin,
-  Youtube,
-  ExternalLink,
-  Calendar,
-} from "lucide-react";
+import { Instagram, Linkedin, Youtube, ExternalLink, Calendar } from "lucide-react";
 import XIcon from "../ui/x-icon";
 
 export default function Footer() {
@@ -28,15 +22,13 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="bg-white/10 rounded-md p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
-                <h3 className="text-2xl font-bold text-white">
-                  Ludwik&nbsp;C. Siadlak
-                </h3>
+                <h3 className="text-2xl font-bold text-white">Ludwik&nbsp;C. Siadlak</h3>
               </Link>
               <p className="text-white/90 text-sm leading-relaxed">
                 <span className="font-bold">Life Hacker. </span>
                 <br />
                 <br />
-                Katalizuję wojowników. <br />
+                Uzbrajam wojowników. <br />
                 Prowadzę poszukiwaczy.
                 <br /> <br /> Na co czekasz?
               </p>
@@ -193,9 +185,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 pt-8 mt-16 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/60 text-sm">
-            &copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
-          </p>
+          <p className="text-white/60 text-sm">&copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               to="/legal"
