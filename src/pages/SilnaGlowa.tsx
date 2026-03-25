@@ -1,4 +1,8 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -35,6 +39,11 @@ const SilnaGlowa = () => {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program/odpornosc")} jsonLd={[
+        getCourseEntity('silna-glowa')!,
+        getWebPageEntity('/program/odpornosc', 'Silna Glowa', 'Program odpornosci psychicznej autorstwa Ludwika C. Siadlaka.', ['/program', '/discovery']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section - Theme Locked */}
       <section className="py-12 md:py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
 

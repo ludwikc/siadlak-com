@@ -1,4 +1,8 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -34,6 +38,11 @@ import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
 export default function HakowanieProduktywnosci() {
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program/produktywnosc")} jsonLd={[
+        getCourseEntity('produktywnosc')!,
+        getWebPageEntity('/program/produktywnosc', 'Program: Produktywnosc', 'Program mentalny produktywnosci autorstwa Ludwika C. Siadlaka.', ['/program', '/discovery', '/testimonials']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/produktywnosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* HERO */}
       <section className="relative py-20 md:py-32 bg-void overflow-hidden">
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />

@@ -1,4 +1,8 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
 import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
@@ -26,6 +30,11 @@ export default function MeskiKompas() {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program/meskosc")} jsonLd={[
+        getCourseEntity('meski-kompas')!,
+        getWebPageEntity('/program/meskosc', 'Meski Kompas', '5-tygodniowy program nawigacji zyciowej dla mezczyzn 30+.', ['/program', '/discovery']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/meskosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Floating Top Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 shadow-lg">
         <div className="container mx-auto px-4">

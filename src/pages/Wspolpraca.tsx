@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { getSEOConfig } from "@/lib/seo-config";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getWebPageEntity, getOrganizationEntity } from "@/lib/structured-data";
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
@@ -84,7 +86,11 @@ export default function Wspolpraca() {
 
   return (
     <Layout>
-      <SEO {...seo} />
+      <SEO {...seo} jsonLd={[
+        getOrganizationEntity(),
+        getWebPageEntity('/start', 'Wspolpraca - Ludwik C. Siadlak', 'Wszystkie mozliwosci wspolpracy z Ludwikiem C. Siadlakiem.', ['/program', '/discovery', '/newsletter']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/start"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* ─── HERO ─── */}
       <section className="bg-void-glow py-24 md:py-32">

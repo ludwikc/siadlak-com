@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
 import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
 import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getProgramEntities } from "@/lib/structured-data";
 
 const decisionTree = [
   {
@@ -38,6 +42,8 @@ const decisionTree = [
 export default function Program() {
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program")} jsonLd={getProgramEntities()} />
+      {(() => { const t = getTopicalConfig("/program"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* 1. HERO - bg-void-glow (DARK) */}
       <section className="relative py-20 md:py-28 bg-void-glow">
         <div className="container mx-auto px-4">

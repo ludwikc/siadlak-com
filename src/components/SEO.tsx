@@ -13,6 +13,7 @@ export interface SEOProps {
   locale?: string;
   noindex?: boolean;
   favicon?: string;
+  jsonLd?: Record<string, unknown>[];
 }
 
 const defaultSEO = {
@@ -38,7 +39,8 @@ export default function SEO({
   modifiedDate,
   locale = defaultSEO.locale,
   noindex = false,
-  favicon
+  favicon,
+  jsonLd,
 }: SEOProps) {
   const fullTitle = title ? `${title} | ${defaultSEO.title}` : defaultSEO.title;
   const imageUrl = image.startsWith('http') ? image : `${url}${image}`;
@@ -114,9 +116,17 @@ export default function SEO({
       )}
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      {jsonLd && jsonLd.length > 0 ? (
+        jsonLd.map((data, i) => (
+          <script key={i} type="application/ld+json">
+            {JSON.stringify(data)}
+          </script>
+        ))
+      ) : (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
     </Helmet>
   );
 }

@@ -3,10 +3,19 @@ import { Link } from "react-router-dom";
 import { ContentTextSection } from "@/components/sections/content";
 import DiscoveryHero from "@/components/discovery/DiscoveryHero";
 import DiscoveryAvailabilityCheck from "@/components/discovery/DiscoveryAvailabilityCheck";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getServiceDiscovery, getWebPageEntity } from "@/lib/structured-data";
 
 export default function Discovery() {
   return (
     <Layout>
+      <SEO {...getSEOConfig("/discovery")} jsonLd={[
+        getServiceDiscovery(),
+        getWebPageEntity('/discovery', 'Sesja Discovery', 'Bezplatna 30-minutowa sesja diagnostyczna 1:1 z Ludwikiem C. Siadlakiem.', ['/program/lifeos-system-upgrade', '/program']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/discovery"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero */}
       <DiscoveryHero />
 

@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { CheckCircle, ChevronDown } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getServiceLifeOS, getFAQSchema, getWebPageEntity } from "@/lib/structured-data";
 
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
@@ -109,6 +112,12 @@ export default function LifeOSSystemUpgrade() {
 
   return (
     <Layout>
+      <SEO {...getSEOConfig("/program/lifeos-system-upgrade")} jsonLd={[
+        getServiceLifeOS(),
+        getWebPageEntity('/program/lifeos-system-upgrade', 'Life OS: System Upgrade', '8-tygodniowy program mentoringu 1:1 z Ludwikiem C. Siadlakiem.', ['/discovery', '/program', '/testimonials']),
+        getFAQSchema(faqs),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/lifeos-system-upgrade"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Sticky CTA Bar */}
       <div
         className={`fixed top-0 left-0 right-0 z-50 bg-brand-gradient transition-transform duration-300 ${
