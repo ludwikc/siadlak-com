@@ -85,10 +85,10 @@ const clients = {
 
 const courses = [
   { track: "AI & Business", items: "AI-3017 AI for Business Leaders · AI-3018 Copilot Foundations" },
-  { track: "Microsoft Fabric", items: "DP-600 · DP-601 · DP-602 · DP-603 · DP-604 · DP-605 — The complete Fabric & Power BI path" },
+  { track: "Microsoft Fabric", items: "DP-600 · DP-601 · DP-602 · DP-603 · DP-604 · DP-605 - The complete Fabric & Power BI path" },
   { track: "Data Engineering", items: "DP-203 Azure Data Engineering · DP-080 T-SQL · DP-3012 Synapse" },
   { track: "Data & SQL", items: "DP-300 Administering Azure SQL · DP-3001 Migration · DP-900 Fundamentals" },
-  { track: "Copilot & M365", items: "MS-4004 through MS-4012 — Adoption, Prompting, Executive Experience & Development" },
+  { track: "Copilot & M365", items: "MS-4004 through MS-4012 - Adoption, Prompting, Executive Experience & Development" },
   { track: "Power BI", items: "PL-300 Power BI Data Analyst" },
 ];
 
@@ -103,7 +103,7 @@ const comparison = [
 const whyCards: { title: string; badge?: string; body: string }[] = [
   {
     title: "Oxford-Trained, Production-Hardened",
-    body: "Started at University of Oxford at 21. Built the foundation in computing and psychology — which means I understand both the systems and the people using them. Full Microsoft certification stack: MCP, MCS, MS, MOS, MCSA, MCSE, MCTS, MCITP, MCT.",
+    body: "Started at University of Oxford at 21. Built the foundation in computing and psychology - which means I understand both the systems and the people using them. Full Microsoft certification stack: MCP, MCS, MS, MOS, MCSA, MCSE, MCTS, MCITP, MCT.",
   },
   {
     title: "Two Decades of Full-Stack Context",
@@ -144,7 +144,7 @@ const stacks = [
   {
     icon: "▣",
     title: "Modern Work & M365",
-    body: "Scaling Microsoft 365 adoption across your org. System-based productivity frameworks. Workflow automation that reclaims hundreds of hours per quarter. I don't teach features — I teach systems that make teams faster.",
+    body: "Scaling Microsoft 365 adoption across your org. System-based productivity frameworks. Workflow automation that reclaims hundreds of hours per quarter. I don't teach features - I teach systems that make teams faster.",
     tags: ["Microsoft 365","Adoption at Scale","Automation","Workflows","Productivity Systems"],
   },
 ];
@@ -156,7 +156,7 @@ export default function MCT() {
   return (
     <>
       <Helmet>
-        <title>Ludwik C. Siadlak — Microsoft Certified Trainer</title>
+        <title>Ludwik C. Siadlak - Microsoft Certified Trainer</title>
         <meta
           name="description"
           content="20+ years MCT. 10,000+ engineers trained across Fortune 500 and NATO. Microsoft Fabric, Copilot, Azure Data, Power BI."
@@ -177,7 +177,7 @@ export default function MCT() {
 
           <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 pb-0 md:pt-32 md:pb-0">
             <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
-              {/* Left column — text */}
+              {/* Left column - text */}
               <div className="flex-1 pb-16 md:pb-20">
                 {/* status badge */}
                 <div
@@ -205,7 +205,7 @@ export default function MCT() {
                   style={{ color: t.muted }}
                 >
                   I've spent 20&nbsp;years training two kinds of rooms: boardrooms at Unilever,
-                  HP, and General Motors — and classified briefing rooms for NATO, US&nbsp;Army
+                  HP, and General Motors - and classified briefing rooms for NATO, US&nbsp;Army
                   Europe, Norwegian Police and the US&nbsp;Marines. If your team is deploying
                   Fabric or Copilot in&nbsp;2026, I'll make sure they ship production, not just
                   pass a&nbsp;cert.
@@ -220,7 +220,7 @@ export default function MCT() {
                 </div>
               </div>
 
-              {/* Right column — photo */}
+              {/* Right column - photo */}
               <div className="hidden md:flex w-[320px] lg:w-[380px] shrink-0 items-end justify-end">
                 <img
                   src="/lovable-uploads/SIADLAK-coffee-transparent.png"
@@ -277,7 +277,7 @@ export default function MCT() {
             <SectionHeader>// what I train</SectionHeader>
 
             <div className="flex flex-col lg:flex-row gap-10">
-              {/* Left column — portrait (1/3) */}
+              {/* Left column - portrait (1/3) */}
               <div className="lg:w-[35%] flex-shrink-0">
                 <div className="sticky top-8">
                   <div
@@ -291,7 +291,7 @@ export default function MCT() {
                     />
                     <img
                       src={consultantPhoto}
-                      alt="Ludwik C. Siadlak — Microsoft Certified Trainer"
+                      alt="Ludwik C. Siadlak - Microsoft Certified Trainer"
                       className="relative w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     />
                     {/* Bottom gradient overlay with text */}
@@ -316,7 +316,7 @@ export default function MCT() {
                 </div>
               </div>
 
-              {/* Right column — training cards (2/3) */}
+              {/* Right column - training cards (2/3) */}
               <div className="lg:w-[65%] grid gap-8 md:gap-10">
                 {stacks.map((s) => (
                   <div
@@ -533,7 +533,7 @@ export default function MCT() {
 
             <p className="leading-relaxed mb-12" style={{ color: t.muted }}>
               Fabric deep-dive. Copilot rollout. AI&nbsp;strategy for the C-suite.
-              Custom engineering workshop. Tell me what your team needs —
+              Custom engineering workshop. Tell me what your team needs -
               I'll tell you exactly what I'd build and whether I'm the right fit.
             </p>
 

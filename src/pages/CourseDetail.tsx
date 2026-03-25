@@ -9,7 +9,7 @@ const coursesData = {
     title: "LifeOS: System Upgrade",
     subtitle: "Premium 8-Week Transformation Program",
     description: "A comprehensive program designed to elevate your mental performance, decision-making capabilities, and leadership presence.",
-    longDescription: "LifeOS: System Upgrade is a transformative 8-week journey designed for professionals seeking to enhance their cognitive capabilities in our complex, technology-driven world. This isn't just another productivity course—it's a personalized system for elevating your mental performance, decision-making framework, and overall effectiveness.",
+    longDescription: "LifeOS: System Upgrade is a transformative 8-week journey designed for professionals seeking to enhance their cognitive capabilities in our complex, technology-driven world. This isn't just another productivity course-it's a personalized system for elevating your mental performance, decision-making framework, and overall effectiveness.",
     features: ["Weekly 1:1 coaching sessions", "Customized productivity system", "Mental models toolkit", "Lifetime access to program materials", "Private community access"],
     curriculum: [
       { week: 1, title: "Foundations & Assessment", description: "Establish baseline capabilities and identify key enhancement areas." },

@@ -46,11 +46,11 @@ export default function HomeTest3() {
   return (
     <>
       <Helmet>
-        <title>Diamentowy Umysł — Ludwik C. Siadlak</title>
+        <title>Diamentowy Umysł - Ludwik C. Siadlak</title>
         <meta name="description" content="Nie szlifuję ludzi. Pokazuję im, że diament, którego szukają, już tam jest." />
       </Helmet>
 
-      {/* base layer — warm white background, dark text */}
+      {/* base layer - warm white background, dark text */}
       <div className="min-h-screen bg-[#faf8f5] text-[#2a2a35] antialiased selection:bg-[#c8b99a]/20 selection:text-[#1a1a2e]">
 
         {/* ═══════════════════════════════════════════════════
@@ -319,7 +319,7 @@ export default function HomeTest3() {
             {/* inline testimonial */}
             <div className="mt-14 p-8 rounded-2xl bg-white border border-[#e8e2d8] shadow-sm">
               <p className="text-[#8a7e6b] text-sm mb-4 tracking-wide uppercase font-medium">
-                Łukasz — informatyk, ADHD, sceptyk
+                Łukasz - informatyk, ADHD, sceptyk
               </p>
               <blockquote className="text-[#3a3a48] text-lg leading-relaxed italic">
                 „Jestem w szoku. Mam totalną pustkę w głowie. Jak rzadko.
@@ -342,7 +342,7 @@ export default function HomeTest3() {
         <DiamondDivider />
 
         {/* ═══════════════════════════════════════════════════
-            OFFER #1 — Life OS
+            OFFER #1 - Life OS
         ═══════════════════════════════════════════════════ */}
         <section className="relative py-24 md:py-32">
           <div className="absolute inset-0 bg-gradient-to-b from-[#f5f2ee] via-[#f0ece6] to-[#f5f2ee]" />
@@ -588,7 +588,7 @@ export default function HomeTest3() {
         <DiamondDivider />
 
         {/* ═══════════════════════════════════════════════════
-            SEPARATOR — Oferta #2
+            SEPARATOR - Oferta #2
         ═══════════════════════════════════════════════════ */}
         <section className="relative py-20">
           <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-3xl">
@@ -605,7 +605,7 @@ export default function HomeTest3() {
         </section>
 
         {/* ═══════════════════════════════════════════════════
-            OFFER #2 — Aplikacje Mentalne
+            OFFER #2 - Aplikacje Mentalne
         ═══════════════════════════════════════════════════ */}
         <section className="relative py-24 md:py-32">
           <div className="absolute inset-0 bg-gradient-to-b from-[#faf8f5] via-[#f7f4f0] to-[#faf8f5]" />
@@ -689,7 +689,7 @@ export default function HomeTest3() {
         <section className="relative py-24 md:py-32">
           <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-3xl text-center">
             <p className="text-[#3a3a48] text-xl mb-2">Diamentowy umysł. Otwarta przyłbica.</p>
-            <p className="text-[#9a9aaa] text-base">— Ludwik C. Siadlak</p>
+            <p className="text-[#9a9aaa] text-base">- Ludwik C. Siadlak</p>
           </div>
         </section>
 

@@ -230,7 +230,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/webinar/depresja',
     seo: {
       title: 'Dzień Walki z Depresją - Webinar',
-      description: 'Stałem na peronie i chciałem zrobić jeden krok — opowiem jak z tego wróciłem. Dołącz 23 lutego 2026.',
+      description: 'Stałem na peronie i chciałem zrobić jeden krok - opowiem jak z tego wróciłem. Dołącz 23 lutego 2026.',
       keywords: 'depresja, webinar, zdrowie psychiczne, wsparcie, odporność mentalna',
       url: '/webinar/depresja',
       type: 'event'
@@ -308,7 +308,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/start',
     seo: {
-      title: 'Współpraca — Ludwik C. Siadlak',
+      title: 'Współpraca - Ludwik C. Siadlak',
       description: 'Wszystkie możliwości współpracy w jednym miejscu. Bezpłatne zasoby, programy rozwojowe i mentoring 1:1. Znajdź swoją ścieżkę.',
       keywords: 'współpraca, programy, mentoring, coaching, rozwój osobisty, Ludwik Siadlak',
       url: '/start'

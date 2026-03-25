@@ -44,16 +44,16 @@ const About = () => {
 
             <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed">
               <p>
-                Mam szesnaście lat. Migreny, które nie pozwalają mi wstać z łóżka. Kodeina, która pozwala — ale w zamian zabiera wszystko inne. I stary, zawiasowy zeszyt, w którym zapisuję systemy: jak przetrwać dzień, jak nie oszaleć z bólu, jak ogarnąć jutro.
+                Mam szesnaście lat. Migreny, które nie pozwalają mi wstać z łóżka. Kodeina, która pozwala - ale w zamian zabiera wszystko inne. I stary, zawiasowy zeszyt, w którym zapisuję systemy: jak przetrwać dzień, jak nie oszaleć z bólu, jak ogarnąć jutro.
               </p>
               <p>
                 To nie było "budowanie produktywności". To był mechanizm przetrwania chłopaka, który nie wiedział, że istnieją lepsze opcje.
               </p>
               <p>
-                Potem przyszły lepsze opcje. Dużo lepszych opcji. Oxford. Certyfikowany Trener Microsoft — SQL, Power&nbsp;BI, Copilot. Dziewiętnaście lat w branży. Fortune&nbsp;500. Jednostki wojskowe. Setki szkoleń na trzech kontynentach. Systemy, które działały. Klienci, którzy wracali. Pieniądze, które rosły.
+                Potem przyszły lepsze opcje. Dużo lepszych opcji. Oxford. Certyfikowany Trener Microsoft - SQL, Power&nbsp;BI, Copilot. Dziewiętnaście lat w branży. Fortune&nbsp;500. Jednostki wojskowe. Setki szkoleń na trzech kontynentach. Systemy, które działały. Klienci, którzy wracali. Pieniądze, które rosły.
               </p>
               <p>
-                I pewnego dnia — ten peron metra w 2014 roku.
+                I pewnego dnia - ten peron metra w 2014 roku.
               </p>
               <p>
                 Stoisz tam i widzisz, jak całe Twoje życie jest perfekcyjnie ułożone. Certyfikaty w ramkach, rekomendacje na LinkedInie, konto, które nie wymaga sprawdzania. I myślisz sobie coś, co mówi Ci więcej o kondycji świata niż o Tobie samym:
@@ -61,15 +61,15 @@ const About = () => {
 
               <div className="rounded-sm border border-white/10 p-8 my-8">
                 <p className="text-on-dark font-bold text-xl md:text-2xl text-center">
-                  "Miałem wszystkie narzędzia — i żadne z nich nie było przeznaczone do tego, czego naprawdę potrzebowałem."
+                  "Miałem wszystkie narzędzia - i żadne z nich nie było przeznaczone do tego, czego naprawdę potrzebowałem."
                 </p>
               </div>
 
               <p>
-                Próbowałem rozwiązać ludzki problem technologicznymi metodami. To tak, jakbyś próbował naprawić pęknięte serce lepszym algorytmem. Jak ściszanie alarmu pożarowego zamiast gaszenia ognia. Jak zmiana sukna na stole — zamiast przyjrzenia się diamentowi, który na nim leży.
+                Próbowałem rozwiązać ludzki problem technologicznymi metodami. To tak, jakbyś próbował naprawić pęknięte serce lepszym algorytmem. Jak ściszanie alarmu pożarowego zamiast gaszenia ognia. Jak zmiana sukna na stole - zamiast przyjrzenia się diamentowi, który na nim leży.
               </p>
               <p className="text-dim/70 italic">
-                (Jeśli ta metafora z diamentem i suknem brzmi znajomo — to dobrze. Przewija się przez wszystko, co robię. Bo to nie jest metafora. To jest sposób, w jaki rozumiem ludzi od czasu, gdy trafiłem na buddyzm Diamentowej Drogi.)
+                (Jeśli ta metafora z diamentem i suknem brzmi znajomo - to dobrze. Przewija się przez wszystko, co robię. Bo to nie jest metafora. To jest sposób, w jaki rozumiem ludzi od czasu, gdy trafiłem na buddyzm Diamentowej Drogi.)
               </p>
             </div>
           </div>
@@ -94,10 +94,10 @@ const About = () => {
                 <h3 className="text-lg font-bold text-electric mb-4">Ścieżka Wojownika</h3>
                 <div className="space-y-4 text-on-light-dim leading-relaxed">
                   <p>
-                    Dla tych, którzy utknęli w narracjach — o sobie, o świecie, o tym, jak "powinno być". Którzy walczą z niewidzialnymi wrogami i płacą za tę walkę podatek, którego nawet nie widzą. Każdego dnia. Za narrację sprzed lat, która dawno przestała im służyć.
+                    Dla tych, którzy utknęli w narracjach - o sobie, o świecie, o tym, jak "powinno być". Którzy walczą z niewidzialnymi wrogami i płacą za tę walkę podatek, którego nawet nie widzą. Każdego dnia. Za narrację sprzed lat, która dawno przestała im służyć.
                   </p>
                   <p>
-                    To praca konfrontacyjna. Używam Junga, Fausta, <em>Mistrza i Małgorzaty</em> — bo w literaturze jest więcej prawdy o człowieku niż w większości podręczników psychologii. Nie dlatego, że jestem humanistą (jestem czarną owcą w rodzinie artystów — ja poszedłem w IT). Dlatego, że pewne pytania nie mają odpowiedzi w&nbsp;Excelu.
+                    To praca konfrontacyjna. Używam Junga, Fausta, <em>Mistrza i Małgorzaty</em> - bo w literaturze jest więcej prawdy o człowieku niż w większości podręczników psychologii. Nie dlatego, że jestem humanistą (jestem czarną owcą w rodzinie artystów - ja poszedłem w IT). Dlatego, że pewne pytania nie mają odpowiedzi w&nbsp;Excelu.
                   </p>
                 </div>
               </div>
@@ -106,17 +106,17 @@ const About = () => {
                 <h3 className="text-lg font-bold text-electric mb-4">Ścieżka Poszukiwacza</h3>
                 <div className="space-y-4 text-on-light-dim leading-relaxed">
                   <p>
-                    Dla tych, którzy osiągnęli już wszystko — i czują, że to za mało. Którzy potrzebują <em>pozwolenia na przestanie osiągania</em>. Na bycie. Na integrację tego, kim są naprawdę, z tym, co robią zawodowo.
+                    Dla tych, którzy osiągnęli już wszystko - i czują, że to za mało. Którzy potrzebują <em>pozwolenia na przestanie osiągania</em>. Na bycie. Na integrację tego, kim są naprawdę, z tym, co robią zawodowo.
                   </p>
                   <p>
-                    To praca delikatniejsza, wspierająca, otwierająca przestrzeń. Bo czasem najtrudniejsza rzecz na świecie to usiąść i nie robić absolutnie nic — i pozwolić, żeby to, co jest pod spodem, wreszcie się odezwało.
+                    To praca delikatniejsza, wspierająca, otwierająca przestrzeń. Bo czasem najtrudniejsza rzecz na świecie to usiąść i nie robić absolutnie nic - i pozwolić, żeby to, co jest pod spodem, wreszcie się odezwało.
                   </p>
                 </div>
               </div>
             </div>
 
             <p className="text-lg md:text-xl text-on-light font-bold leading-relaxed">
-              Większość ludzi, z którymi pracuję, potrzebuje obu ścieżek. W różnych momentach. I po dziewiętnastu latach wiem, kiedy której użyć. Nie dlatego, że mam certyfikat z "dobierania ścieżek" — ale dlatego, że sam na obu stałem boso.
+              Większość ludzi, z którymi pracuję, potrzebuje obu ścieżek. W różnych momentach. I po dziewiętnastu latach wiem, kiedy której użyć. Nie dlatego, że mam certyfikat z "dobierania ścieżek" - ale dlatego, że sam na obu stałem boso.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ const About = () => {
                 Chyba powinienem teraz napisać akapit o swoich osiągnięciach, żebyś poczuł się pewnie.
               </p>
               <p>
-                Więc dobrze: jestem Certyfikowanym Trenerem Microsoft od dziewiętnastu lat. SQL, Power&nbsp;BI, Copilot — w tych tematach szkoliłem zespoły Fortune&nbsp;500 i jednostki wojskowe w kilkunastu krajach. Mam dyplom z IT z Oxford Brookes. Prowadzę{" "}
+                Więc dobrze: jestem Certyfikowanym Trenerem Microsoft od dziewiętnastu lat. SQL, Power&nbsp;BI, Copilot - w tych tematach szkoliłem zespoły Fortune&nbsp;500 i jednostki wojskowe w kilkunastu krajach. Mam dyplom z IT z Oxford Brookes. Prowadzę{" "}
                 <a href="https://fundacja.hackerzy.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">Fundację Hackerzy.pl</a>, która uczy młodych ludzi, jak korzystać z technologii, zamiast pozwolić, by technologia korzystała z nich. Mój program{" "}
                 <a href="https://deepwork.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">DeepWork.pl</a>{" "}pomaga firmom budować kulturę głębokiej pracy. A{" "}
                 <a href="https://uwaznezycie.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">UwazneZycie.pl</a>{" "}łączy uważność z codziennym działaniem.
@@ -156,15 +156,15 @@ const About = () => {
               </p>
 
               <p>
-                Mam tatuaż Profesora Wołanda z <em>Mistrza i Małgorzaty</em> — zrobiony w Wielki Piątek, zupełnie przypadkowo. Odkryłem buddyzm Diamentowej Drogi i zamiast konwersji przeżyłem rozpoznanie: "to jest dokładnie to, czego szukałem, tylko nie miałem na to słów". Jestem w trakcie rozwodu i wciąż życzę mojej ex-żonie, żeby znalazła miłość i spokój. Czytam Machiavellego i Sun Tzu, żeby nauczyć się walczyć — bo współczucie przychodzi mi naturalnie, a stawianie granic nie.
+                Mam tatuaż Profesora Wołanda z <em>Mistrza i Małgorzaty</em> - zrobiony w Wielki Piątek, zupełnie przypadkowo. Odkryłem buddyzm Diamentowej Drogi i zamiast konwersji przeżyłem rozpoznanie: "to jest dokładnie to, czego szukałem, tylko nie miałem na to słów". Jestem w trakcie rozwodu i wciąż życzę mojej ex-żonie, żeby znalazła miłość i spokój. Czytam Machiavellego i Sun Tzu, żeby nauczyć się walczyć - bo współczucie przychodzi mi naturalnie, a stawianie granic nie.
               </p>
 
               <p>
-                I codziennie o 12:30 (tak, w samo południe plus pół godziny) jestem na żywo na Discordzie ze społecznością Lifehackerów. Nie jako odległy guru za paywallem — jako facet, który pokazuje się każdego dnia. Bo gdybym tego nie robił, nie miałbym prawa oczekiwać tego od nikogo innego.
+                I codziennie o 12:30 (tak, w samo południe plus pół godziny) jestem na żywo na Discordzie ze społecznością Lifehackerów. Nie jako odległy guru za paywallem - jako facet, który pokazuje się każdego dnia. Bo gdybym tego nie robił, nie miałbym prawa oczekiwać tego od nikogo innego.
               </p>
 
               <p className="text-on-dark font-bold">
-                Nie jestem teoretykiem. Nie jestem kolejnym guru produktywności w nowym opakowaniu. Jestem praktykiem, który przeszedł przez ogień — i teraz pomaga innym zobaczyć, że ten ogień nie był ich wrogiem. Był ich nauczycielem.
+                Nie jestem teoretykiem. Nie jestem kolejnym guru produktywności w nowym opakowaniu. Jestem praktykiem, który przeszedł przez ogień - i teraz pomaga innym zobaczyć, że ten ogień nie był ich wrogiem. Był ich nauczycielem.
               </p>
             </div>
           </div>
@@ -183,16 +183,16 @@ const About = () => {
 
             <div className="space-y-6 text-lg md:text-xl text-on-light-dim leading-relaxed">
               <p>
-                Jeśli szukasz kolejnego systemu, który pozwoli Ci robić więcej w mniej czasu — mam dla Ciebie złe wieści: to nie jest to miejsce. Jeśli szukasz kogoś, kto Cię przytuli, powie "jesteś wspaniały" i nigdy nie zada niewygodnego pytania — też nie tutaj.
+                Jeśli szukasz kolejnego systemu, który pozwoli Ci robić więcej w mniej czasu - mam dla Ciebie złe wieści: to nie jest to miejsce. Jeśli szukasz kogoś, kto Cię przytuli, powie "jesteś wspaniały" i nigdy nie zada niewygodnego pytania - też nie tutaj.
               </p>
               <p>
-                Ale jeśli osiągnąłeś coś, co z zewnątrz wygląda jak sukces — a od wewnątrz czujesz, że to za mało? Jeśli przetestowałeś już wystarczająco dużo narzędzi, metod i konferencji, żeby wiedzieć, że problem nie jest w narzędziach? Jeśli gdzieś w głębi masz przeczucie, że potrzebujesz nie kolejnego systemu, ale kogoś, kto pomoże Ci zobaczyć system, w którym już operujesz?
+                Ale jeśli osiągnąłeś coś, co z zewnątrz wygląda jak sukces - a od wewnątrz czujesz, że to za mało? Jeśli przetestowałeś już wystarczająco dużo narzędzi, metod i konferencji, żeby wiedzieć, że problem nie jest w narzędziach? Jeśli gdzieś w głębi masz przeczucie, że potrzebujesz nie kolejnego systemu, ale kogoś, kto pomoże Ci zobaczyć system, w którym już operujesz?
               </p>
               <p>
                 Wtedy mamy o czym rozmawiać.
               </p>
               <p>
-                Bo prawda jest prosta — i właśnie dlatego taka trudna do przyjęcia:
+                Bo prawda jest prosta - i właśnie dlatego taka trudna do przyjęcia:
               </p>
 
               <div className="rounded-sm border border-electric/20 bg-electric/5 p-8 my-4">
@@ -224,13 +224,13 @@ const About = () => {
                 Większość ludzi przychodzi do mnie z pytaniem o produktywność. Kalendarz w chaosie, prokrastynacja, za dużo na głowie. To są drzwi, przez które wchodzisz.
               </p>
               <p>
-                Ale dość szybko odkrywamy razem, że problem nie jest w tym, <em>jak</em> robisz rzeczy. Problem jest w tym, <em>dlaczego</em> je robisz — albo dlaczego przestałeś czuć, że mają sens.
+                Ale dość szybko odkrywamy razem, że problem nie jest w tym, <em>jak</em> robisz rzeczy. Problem jest w tym, <em>dlaczego</em> je robisz - albo dlaczego przestałeś czuć, że mają sens.
               </p>
               <p>
                 I wtedy zaczynamy prawdziwą pracę.
               </p>
               <p>
-                Nazywam to <strong className="text-on-dark">Life OS</strong> — bo Twój umysł naprawdę działa jak system operacyjny. Tyle że przez lata instalowałeś w nim cudze oprogramowanie: czyjeś oczekiwania, czyjeś definicje sukcesu, czyjeś kryteria "wystarczająco dobry". I teraz się dziwisz, że system się zacina.
+                Nazywam to <strong className="text-on-dark">Life OS</strong> - bo Twój umysł naprawdę działa jak system operacyjny. Tyle że przez lata instalowałeś w nim cudze oprogramowanie: czyjeś oczekiwania, czyjeś definicje sukcesu, czyjeś kryteria "wystarczająco dobry". I teraz się dziwisz, że system się zacina.
               </p>
               <p>
                 Nie dodaję Ci kolejnych aplikacji. Pomagam Ci <em>odinstalować</em> to, czego nigdy nie zamawiałeś.
@@ -267,7 +267,7 @@ const About = () => {
                 </h2>
 
                 <p className="text-lg md:text-xl text-dim leading-relaxed">
-                  Jeśli to, co przeczytałeś, rezonuje — nawet jeśli nie potrafisz jeszcze dokładnie powiedzieć, <em>co</em> z tego rezonuje — mamy dobry punkt wyjścia.
+                  Jeśli to, co przeczytałeś, rezonuje - nawet jeśli nie potrafisz jeszcze dokładnie powiedzieć, <em>co</em> z tego rezonuje - mamy dobry punkt wyjścia.
                 </p>
                 <p className="text-lg md:text-xl text-dim leading-relaxed">
                   Nie obiecuję, że będzie łatwo. Obiecuję, że będzie uczciwie.
@@ -292,7 +292,7 @@ const About = () => {
                 </div>
 
                 <p className="text-sm text-dim">
-                  (Pracuję maksymalnie z 5 klientami jednocześnie, bo ta praca wymaga pełnej obecności. Nie dlatego, że chcę brzmieć ekskluzywnie — dlatego, że nie da się być w pełni obecnym dla dwudziestu osób naraz.)
+                  (Pracuję maksymalnie z 5 klientami jednocześnie, bo ta praca wymaga pełnej obecności. Nie dlatego, że chcę brzmieć ekskluzywnie - dlatego, że nie da się być w pełni obecnym dla dwudziestu osób naraz.)
                 </p>
               </div>
             </div>
@@ -317,7 +317,7 @@ const About = () => {
                 Różnica? Ogromna.
               </p>
             </div>
-            <p className="text-xl font-bold text-electric mt-8">— Ludwik</p>
+            <p className="text-xl font-bold text-electric mt-8">- Ludwik</p>
           </div>
         </div>
       </section>

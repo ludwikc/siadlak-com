@@ -80,7 +80,7 @@ export default function SiedemTechnik() {
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-on-light-dim leading-relaxed">
-                  <strong>7 sprawdzonych technik</strong> w prostych punktach —
+                  <strong>7 sprawdzonych technik</strong> w prostych punktach -
                   zero „teorii dla teorii"
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function SiedemTechnik() {
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-on-light-dim leading-relaxed">
-                  <strong>Zero aplikacji</strong> — wystarczy zwykły timer
+                  <strong>Zero aplikacji</strong> - wystarczy zwykły timer
                 </p>
               </div>
 
@@ -179,7 +179,7 @@ export default function SiedemTechnik() {
                         <strong className="text-depth">
                           {t.title}
                         </strong>{" "}
-                        — {t.description}
+                        - {t.description}
                       </p>
                     </div>
                   </div>

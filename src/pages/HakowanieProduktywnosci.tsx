@@ -48,12 +48,12 @@ export default function HakowanieProduktywnosci() {
 
             {/* Subtitle */}
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-8 text-white/90 leading-tight max-w-4xl mx-auto">
-              To nie jest kolejny kurs produktywności. To jest aplikacja mentalna — raz zainstalowana, zostaje z Tobą na zawsze.
+              To nie jest kolejny kurs produktywności. To jest aplikacja mentalna - raz zainstalowana, zostaje z Tobą na zawsze.
             </h2>
 
             {/* Metaphor line */}
             <p className="text-lg md:text-xl text-dim leading-relaxed mb-12 max-w-3xl mx-auto">
-              Twój mózg jest jak telefon z 47 apkami w tle — potrzebujesz <em>wreszcie</em> zamknąć te, które Ci nie służą.
+              Twój mózg jest jak telefon z 47 apkami w tle - potrzebujesz <em>wreszcie</em> zamknąć te, które Ci nie służą.
             </p>
 
             {/* Feature Pills */}
@@ -106,7 +106,7 @@ export default function HakowanieProduktywnosci() {
                 Znasz ten dzień?
               </h3>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Siadasz do pracy. Otwierasz laptopa. Mija godzina — i jedyne, co udało Ci się zrobić, to sprawdzić trzy razy pocztę i przestawić ikonki na pulpicie. Wszyscy to znamy. Pytanie brzmi — co z tym robisz?
+                Siadasz do pracy. Otwierasz laptopa. Mija godzina - i jedyne, co udało Ci się zrobić, to sprawdzić trzy razy pocztę i przestawić ikonki na pulpicie. Wszyscy to znamy. Pytanie brzmi - co z tym robisz?
               </p>
               <p className="text-lg text-muted-foreground mt-6">
                 Sprawdź, ile z tych sytuacji jest Twoich:
@@ -245,10 +245,10 @@ export default function HakowanieProduktywnosci() {
                   <ShieldCheck className="h-8 w-8 text-electric" />
                 </div>
                 <p className="text-lg sm:text-xl text-foreground font-medium mb-4">
-                  Jeśli zaznaczyłeś więcej niż trzy — nie martw się. Większość ludzi zaznacza wszystkie.
+                  Jeśli zaznaczyłeś więcej niż trzy - nie martw się. Większość ludzi zaznacza wszystkie.
                 </p>
                 <p className="text-base sm:text-lg text-muted-foreground">
-                  I to nie jest Twoja wina. A już na pewno nie jest kwestia "braku dyscypliny" — to zdanie powinno zostać wymazane z historii rozwoju osobistego.
+                  I to nie jest Twoja wina. A już na pewno nie jest kwestia "braku dyscypliny" - to zdanie powinno zostać wymazane z historii rozwoju osobistego.
                 </p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* KONTEKST — DLACZEGO TAK JEST */}
+      {/* KONTEKST - DLACZEGO TAK JEST */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -273,7 +273,7 @@ export default function HakowanieProduktywnosci() {
 
             <div className="max-w-3xl mx-auto mb-12">
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Każda aplikacja na Twoim telefonie ma zespół inżynierów, których jedynym zadaniem jest sprawić, żebyś w nią zaglądał częściej. Każdy notification to mały haczyk — i nie mówię tego metaforycznie. Dosłownie zatrudniają psychologów behawioralnych, żeby te haczyki były skuteczniejsze.
+                Każda aplikacja na Twoim telefonie ma zespół inżynierów, których jedynym zadaniem jest sprawić, żebyś w nią zaglądał częściej. Każdy notification to mały haczyk - i nie mówię tego metaforycznie. Dosłownie zatrudniają psychologów behawioralnych, żeby te haczyki były skuteczniejsze.
               </p>
             </div>
 
@@ -290,7 +290,7 @@ export default function HakowanieProduktywnosci() {
                     </li>
                     <li>
                       • Dr Gloria Mark z UC Irvine zmierzyła, że średni czas
-                      skupienia spadł do 8 sekund. Złota rybka — o ile wierzysz w ten mit — podobno ma 9.
+                      skupienia spadł do 8 sekund. Złota rybka - o ile wierzysz w ten mit - podobno ma 9.
                     </li>
                     <li>
                       • Każde przerwanie w pracy kosztuje 23 minuty powrotu do
@@ -310,7 +310,7 @@ export default function HakowanieProduktywnosci() {
                     nadchodzących lat."
                   </blockquote>
                   <p className="text-muted-foreground">
-                    Nie mówię tego, żeby brzmiało mądrze. Mówię to, bo naprawdę tak uważam — i widzę to codziennie u ludzi, z którymi pracuję.
+                    Nie mówię tego, żeby brzmiało mądrze. Mówię to, bo naprawdę tak uważam - i widzę to codziennie u ludzi, z którymi pracuję.
                   </p>
                 </CardContent>
               </Card>
@@ -337,7 +337,7 @@ export default function HakowanieProduktywnosci() {
             <div className="glass-card p-8 mb-8">
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Im częściej go ćwiczysz, tym silniejszy się staje. Ale tak jak w
-                treningu — musisz wiedzieć, <strong>jak</strong> ćwiczyć,
+                treningu - musisz wiedzieć, <strong>jak</strong> ćwiczyć,
                 żeby nie zrobić sobie krzywdy.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -354,11 +354,11 @@ export default function HakowanieProduktywnosci() {
                   Tim Cook może wstawać o 4:30, bo ma armię asystentów i nie
                   musi sam robić zakupów.{" "}
                   <strong className="text-foreground font-bold">
-                    Liczy się to, co robisz — nie to, o której to robisz.
+                    Liczy się to, co robisz - nie to, o której to robisz.
                   </strong>
                 </p>
                 <p className="text-muted-foreground">
-                  Czy to brzmi jak herezja w świecie rozwoju osobistego? Z pewnością. Czy to jest prawda? Absolutnie. Czy to oznacza, że rutyny poranne nie mają sensu? Zupełnie nie — oznacza to, że Twoja rutyna musi być <strong className="text-foreground">Twoja</strong>.
+                  Czy to brzmi jak herezja w świecie rozwoju osobistego? Z pewnością. Czy to jest prawda? Absolutnie. Czy to oznacza, że rutyny poranne nie mają sensu? Zupełnie nie - oznacza to, że Twoja rutyna musi być <strong className="text-foreground">Twoja</strong>.
                 </p>
               </CardContent>
             </Card>
@@ -368,7 +368,7 @@ export default function HakowanieProduktywnosci() {
                 Nie kopia rutyn miliarderów. Nie podrabianie czyjegoś systemu.
               </h3>
               <p className="text-lg text-muted-foreground mb-4">
-                Twój unikalny sposób na maksymalizację wydajności — przy
+                Twój unikalny sposób na maksymalizację wydajności - przy
                 zachowaniu zdrowia psychicznego.
               </p>
                <p className="text-lg text-electric font-bold">
@@ -385,7 +385,7 @@ export default function HakowanieProduktywnosci() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                Zanim powiesz "kolejny kurs" — przeczytaj to
+                Zanim powiesz "kolejny kurs" - przeczytaj to
               </h2>
             </div>
 
@@ -394,7 +394,7 @@ export default function HakowanieProduktywnosci() {
                 Wiem, co myślisz. "1 497 zł za kurs online? Mam Netflixa za 50 złotych i YouTube'a za darmo."
               </p>
               <p>
-                Masz rację — gdyby to był "kolejny kurs online", byłoby za drogo.
+                Masz rację - gdyby to był "kolejny kurs online", byłoby za drogo.
               </p>
               <p>
                 Ale Program <strong className="text-foreground">Produktywność</strong> nie jest kursem do "przerobienia". Jest aplikacją mentalną do <em>zainstalowania</em>.
@@ -403,7 +403,7 @@ export default function HakowanieProduktywnosci() {
                 Jaka jest różnica?
               </p>
               <p>
-                Kurs przerabiasz, notujesz, a po trzech miesiącach pamiętasz z niego tyle, co z ostatniego odcinka serialu, który oglądałeś w tle. Aplikacja mentalna — raz zainstalowana — <strong className="text-foreground">zostaje z Tobą na zawsze</strong>. Staje się częścią tego, jak myślisz, jak działasz, jak podejmujesz decyzje. Nie musisz do niej "wracać". Ona działa w tle — jak system operacyjny.
+                Kurs przerabiasz, notujesz, a po trzech miesiącach pamiętasz z niego tyle, co z ostatniego odcinka serialu, który oglądałeś w tle. Aplikacja mentalna - raz zainstalowana - <strong className="text-foreground">zostaje z Tobą na zawsze</strong>. Staje się częścią tego, jak myślisz, jak działasz, jak podejmujesz decyzje. Nie musisz do niej "wracać". Ona działa w tle - jak system operacyjny.
               </p>
               <p>
                 Po zainstalowaniu Programu <strong className="text-foreground">Produktywność</strong> już nigdy nie będziesz potrzebować kolejnych technik, metod, trików ani "5 sposobów na poranny focus". Koniec z gromadzeniem kursów. Koniec z szukaniem złotego środka.
@@ -412,7 +412,7 @@ export default function HakowanieProduktywnosci() {
                 A co w zamian?
               </p>
               <p>
-                W zamian Twoje życie otworzy się na zupełnie nowe "problemy" — takie jak "mam za dużo wolnego czasu i nie wiem, jakie nowe hobby zacząć" albo "muszę się zdecydować, który z trzech projektów wybrać, bo na wszystkie mam energię". Wiem — straszne problemy. Ale ktoś musi je mieć.
+                W zamian Twoje życie otworzy się na zupełnie nowe "problemy" - takie jak "mam za dużo wolnego czasu i nie wiem, jakie nowe hobby zacząć" albo "muszę się zdecydować, który z trzech projektów wybrać, bo na wszystkie mam energię". Wiem - straszne problemy. Ale ktoś musi je mieć.
               </p>
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function HakowanieProduktywnosci() {
                 Jak wyglądałoby Twoje życie, gdybyś...
               </h3>
               <p className="text-lg sm:text-xl text-muted-foreground">
-                Nie poniedziałek — bo w poniedziałek wszyscy mają motywację. Wyobraź sobie zwykły wtorek:
+                Nie poniedziałek - bo w poniedziałek wszyscy mają motywację. Wyobraź sobie zwykły wtorek:
               </p>
             </div>
 
@@ -494,7 +494,7 @@ export default function HakowanieProduktywnosci() {
                 </span>
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground">
-                Co instalujesz — moduł po module:
+                Co instalujesz - moduł po module:
               </h3>
               <p className="text-lg text-muted-foreground mb-12">
                 Każda umiejętność z konkretnym terminem realizacji:
@@ -504,7 +504,7 @@ export default function HakowanieProduktywnosci() {
                 {[
                   {
                     benefit:
-                      "pokaże Ci, jak utrzymać skupienie przez dłuższy czas (nawet w open space — tak, da się)",
+                      "pokaże Ci, jak utrzymać skupienie przez dłuższy czas (nawet w open space - tak, da się)",
                     timeframe: "W 3 tygodnie",
                     icon: Brain,
                   },
@@ -606,7 +606,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* CO ZAWIERA PROGRAM — MODUŁY */}
+      {/* CO ZAWIERA PROGRAM - MODUŁY */}
       <section className="py-16 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -618,7 +618,7 @@ export default function HakowanieProduktywnosci() {
                 6 modułów gotowych do zainstalowania w Twoim umyśle
               </p>
               <p className="text-dim mb-8">
-                Nie musisz zmieniać wszystkiego naraz — instalujesz moduł po module, w swoim tempie.
+                Nie musisz zmieniać wszystkiego naraz - instalujesz moduł po module, w swoim tempie.
               </p>
             </div>
 
@@ -650,7 +650,7 @@ export default function HakowanieProduktywnosci() {
                   icon: Brain,
                   gradient: "from-electric to-depth",
                   description:
-                    "Jak trenować koncentrację i radzić sobie z rozproszeniami w świecie, który jest zaprojektowany, żebyś się nie skupił. Tak — da się medytować nawet na koncercie Metalliki. Prawie.",
+                    "Jak trenować koncentrację i radzić sobie z rozproszeniami w świecie, który jest zaprojektowany, żebyś się nie skupił. Tak - da się medytować nawet na koncercie Metalliki. Prawie.",
                   duration: "2 tygodnie",
                   lessons: 8,
                 },
@@ -660,7 +660,7 @@ export default function HakowanieProduktywnosci() {
                   icon: Target,
                   gradient: "from-electric to-depth",
                   description:
-                    'Słowo "priorytet" istnieje w liczbie pojedynczej nie bez powodu. "Lista priorytetów" to oksymoron. W tym module zbudujesz system wybierania tego, co najważniejsze — i odrzucania reszty bez poczucia winy.',
+                    'Słowo "priorytet" istnieje w liczbie pojedynczej nie bez powodu. "Lista priorytetów" to oksymoron. W tym module zbudujesz system wybierania tego, co najważniejsze - i odrzucania reszty bez poczucia winy.',
                   duration: "2 tygodnie",
                   lessons: 7,
                 },
@@ -670,7 +670,7 @@ export default function HakowanieProduktywnosci() {
                   icon: Clock,
                   gradient: "from-electric to-depth",
                   description:
-                    "Nie kolejna apka z akronimem w nazwie. System zarządzania zadaniami, który nie zawali się pod presją — bo życie regularnie rzuca kłody pod nogi i nie zamierza przestać.",
+                    "Nie kolejna apka z akronimem w nazwie. System zarządzania zadaniami, który nie zawali się pod presją - bo życie regularnie rzuca kłody pod nogi i nie zamierza przestać.",
                   duration: "2 tygodnie",
                   lessons: 9,
                 },
@@ -680,7 +680,7 @@ export default function HakowanieProduktywnosci() {
                   icon: Sparkles,
                   gradient: "from-electric to-depth",
                   description:
-                    "Większość ludzi próbuje zmienić nawyki siłą woli. To jest jak ręczne zbieranie piasku na plaży — fala i tak przyniesie nowy bałagan. Ten moduł uczy Cię zmieniać kierunek fali.",
+                    "Większość ludzi próbuje zmienić nawyki siłą woli. To jest jak ręczne zbieranie piasku na plaży - fala i tak przyniesie nowy bałagan. Ten moduł uczy Cię zmieniać kierunek fali.",
                   duration: "3 tygodnie",
                   lessons: 10,
                 },
@@ -690,7 +690,7 @@ export default function HakowanieProduktywnosci() {
                   icon: Zap,
                   gradient: "from-electric to-depth",
                   description:
-                    "AI nie zastąpi Twojego myślenia. Ale może przejąć te 40% pracy, której i tak nie lubisz. Pokażę Ci jak — praktycznie, bez hype'u.",
+                    "AI nie zastąpi Twojego myślenia. Ale może przejąć te 40% pracy, której i tak nie lubisz. Pokażę Ci jak - praktycznie, bez hype'u.",
                   duration: "2 tygodnie",
                   lessons: 6,
                 },
@@ -700,7 +700,7 @@ export default function HakowanieProduktywnosci() {
                   icon: ShieldCheck,
                   gradient: "from-electric to-depth",
                   description:
-                    "Bo najlepszy system produktywności nie pomoże, jeśli Twoja głowa nie jest w tym z Tobą. A bywa, że nie jest — i to też jest w porządku. Ale da się z tym pracować.",
+                    "Bo najlepszy system produktywności nie pomoże, jeśli Twoja głowa nie jest w tym z Tobą. A bywa, że nie jest - i to też jest w porządku. Ale da się z tym pracować.",
                   duration: "2 tygodnie",
                   lessons: 8,
                 },
@@ -779,10 +779,10 @@ export default function HakowanieProduktywnosci() {
 
             <div className="text-center mb-12">
               <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
-                Serce Programu Produktywność to społeczność — ludzie, którzy postanowili wziąć swoje życie w swoje ręce. I robią to razem.
+                Serce Programu Produktywność to społeczność - ludzie, którzy postanowili wziąć swoje życie w swoje ręce. I robią to razem.
               </p>
               <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Wiem, że "społeczność" brzmi jak kolejne słowo z bingo marketingowego. Ale tutaj chodzi o coś prostszego — o ludzi, do których możesz się odezwać, kiedy chcesz to wszystko rzucić w kąt. Bo takie momenty przyjdą. I lepiej mieć wtedy kogoś, kto powie "wiem, jak to jest" niż kolejny motywacyjny post na Instagramie.
+                Wiem, że "społeczność" brzmi jak kolejne słowo z bingo marketingowego. Ale tutaj chodzi o coś prostszego - o ludzi, do których możesz się odezwać, kiedy chcesz to wszystko rzucić w kąt. Bo takie momenty przyjdą. I lepiej mieć wtedy kogoś, kto powie "wiem, jak to jest" niż kolejny motywacyjny post na Instagramie.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -792,11 +792,11 @@ export default function HakowanieProduktywnosci() {
                       W społeczności znajdziesz:
                     </h4>
                     <ul className="space-y-2 text-muted-foreground text-left">
-                      <li>• Codzienne spotkania o 12:34 (tak, o tej porze — bo kto potrafi zapamiętać 12:34, ten zwraca uwagę na szczegóły)</li>
+                      <li>• Codzienne spotkania o 12:34 (tak, o tej porze - bo kto potrafi zapamiętać 12:34, ten zwraca uwagę na szczegóły)</li>
                       <li>• Ekspertów z wielu dziedzin gotowych pomóc</li>
                       <li>• Ludzi, którzy przeszli dokładnie tę samą drogę</li>
                       <li>• Wsparcie w trudnych momentach</li>
-                      <li>• Celebrację sukcesów — bo sukcesy trzeba świętować, nawet te małe</li>
+                      <li>• Celebrację sukcesów - bo sukcesy trzeba świętować, nawet te małe</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -821,7 +821,7 @@ export default function HakowanieProduktywnosci() {
               wszystko
             </h3>
             <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Przez lata dobudowałem do programu tyle materiałów, że sam się czasem gubię. Więc podsumowuję — dla nas obydwu:
+              Przez lata dobudowałem do programu tyle materiałów, że sam się czasem gubię. Więc podsumowuję - dla nas obydwu:
             </p>
 
             <ValueCalculator />
@@ -836,7 +836,7 @@ export default function HakowanieProduktywnosci() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-locked-white">
-              Podsumowując — oto co dostajesz:
+              Podsumowując - oto co dostajesz:
             </h2>
 
             <Card className="card-locked mb-12">
@@ -953,7 +953,7 @@ export default function HakowanieProduktywnosci() {
                 {/* Ludwik's comment */}
                 <div className="mt-8 text-left">
                   <p className="text-sm text-locked-silver leading-relaxed">
-                    Wiem, że widzisz tę kalkulację i myślisz "no tak, każdy tak pisze." I masz rację — każdy tak pisze. Różnica jest taka, że ja naprawdę policzyłem, ile czasu i pieniędzy włożyłem w te materiały, i ta liczba jest prawdziwa. Ale przekonać Cię może tylko jedno — Twoje własne doświadczenie. Dlatego jest gwarancja zwrotu (o tym za chwilę).
+                    Wiem, że widzisz tę kalkulację i myślisz "no tak, każdy tak pisze." I masz rację - każdy tak pisze. Różnica jest taka, że ja naprawdę policzyłem, ile czasu i pieniędzy włożyłem w te materiały, i ta liczba jest prawdziwa. Ale przekonać Cię może tylko jedno - Twoje własne doświadczenie. Dlatego jest gwarancja zwrotu (o tym za chwilę).
                   </p>
                 </div>
 
@@ -981,7 +981,7 @@ export default function HakowanieProduktywnosci() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left text-locked-silver mb-12">
                 <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
                   <h4 className="text-sm font-bold text-electric uppercase mb-2">Rozrywka</h4>
-                  <p className="text-sm leading-relaxed">50 wizyt w kinie (30 zł/bilet) — to 50 wieczorów w ciemnej sali. Wypoczniesz sobie. Tylko że po 50 filmach masz w głowie mix fabuł, ale zero zmiany w CV.</p>
+                  <p className="text-sm leading-relaxed">50 wizyt w kinie (30 zł/bilet) - to 50 wieczorów w ciemnej sali. Wypoczniesz sobie. Tylko że po 50 filmach masz w głowie mix fabuł, ale zero zmiany w CV.</p>
                 </div>
                 <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
                   <h4 className="text-sm font-bold text-electric uppercase mb-2">Edukacja</h4>
@@ -989,7 +989,7 @@ export default function HakowanieProduktywnosci() {
                 </div>
                 <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
                   <h4 className="text-sm font-bold text-electric uppercase mb-2">Awans i podwyżka</h4>
-                  <p className="text-sm leading-relaxed">Minimalna podwyżka po zmianie pracy to często 500-1 000 zł na rękę miesięcznie. Jeśli Program <strong className="text-locked-white">Produktywność</strong> pomoże Ci zdobyć nową pracę albo podwyżkę — zwraca się w 2-3 miesiące. Reszta to już Twój zysk.</p>
+                  <p className="text-sm leading-relaxed">Minimalna podwyżka po zmianie pracy to często 500-1 000 zł na rękę miesięcznie. Jeśli Program <strong className="text-locked-white">Produktywność</strong> pomoże Ci zdobyć nową pracę albo podwyżkę - zwraca się w 2-3 miesiące. Reszta to już Twój zysk.</p>
                 </div>
                 <div className="bg-locked-white/5 p-5 rounded-xl border border-locked-white/10">
                   <h4 className="text-sm font-bold text-electric uppercase mb-2">Sport</h4>
@@ -1018,7 +1018,7 @@ export default function HakowanieProduktywnosci() {
 
             <div className="mt-8">
               <p className="text-lg text-locked-silver max-w-2xl mx-auto">
-                Wiesz, jaki jest najdroższy dzień w roku? Jutro. Bo "jutro" nigdy nie nadchodzi — zawsze jest "dziś". A dziś masz przed sobą decyzję, którą za miesiąc albo będziesz świętować, albo będziesz znowu przeglądać tę stronę.
+                Wiesz, jaki jest najdroższy dzień w roku? Jutro. Bo "jutro" nigdy nie nadchodzi - zawsze jest "dziś". A dziś masz przed sobą decyzję, którą za miesiąc albo będziesz świętować, albo będziesz znowu przeglądać tę stronę.
               </p>
             </div>
           </div>
@@ -1049,7 +1049,7 @@ export default function HakowanieProduktywnosci() {
               {[
                 {
                   quote:
-                    "Dzięki programowi w końcu opanowałem chaos w mojej głowie. Mam system, który działa nawet w najbardziej stresujących momentach. I co najważniejsze — nie muszę o nim pamiętać, bo on sam mi przypomina, co teraz.",
+                    "Dzięki programowi w końcu opanowałem chaos w mojej głowie. Mam system, który działa nawet w najbardziej stresujących momentach. I co najważniejsze - nie muszę o nim pamiętać, bo on sam mi przypomina, co teraz.",
                   name: "Anna K.",
                   title: "Marketing Manager",
                   role: "Marketing",
@@ -1219,10 +1219,10 @@ export default function HakowanieProduktywnosci() {
                 30 dni. Bez pytań. Bez tłumaczenia się. Bez maili z "czy na pewno chcesz zrezygnować?"
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Jeśli cokolwiek Ci się nie spodoba — piszesz, zwracam pieniądze. Koniec historii.
+                Jeśli cokolwiek Ci się nie spodoba - piszesz, zwracam pieniądze. Koniec historii.
               </p>
               <p className="text-base text-muted-foreground">
-                Dlaczego daję taką gwarancję? Bo wiem, że ten program działa. 1 240+ osób to potwierdziło. Ale rozumiem, że Ty tego jeszcze nie wiesz — i nie oczekuję, że mi zaufasz na podstawie jednej strony w internecie. Dlatego ryzyko biorę na siebie.
+                Dlaczego daję taką gwarancję? Bo wiem, że ten program działa. 1 240+ osób to potwierdziło. Ale rozumiem, że Ty tego jeszcze nie wiesz - i nie oczekuję, że mi zaufasz na podstawie jednej strony w internecie. Dlatego ryzyko biorę na siebie.
               </p>
             </div>
           </div>
@@ -1338,11 +1338,11 @@ export default function HakowanieProduktywnosci() {
               <div className="text-left space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>Wiesz, co odkryłem po latach pracy z ludźmi?</p>
                 <p>
-                  Że produktywność nie polega na robieniu więcej. Polega na robieniu tego, co ważne — i odpuszczaniu reszty bez poczucia winy.
+                  Że produktywność nie polega na robieniu więcej. Polega na robieniu tego, co ważne - i odpuszczaniu reszty bez poczucia winy.
                 </p>
                 <p>To brzmi prosto. I jest proste. Ale proste nie znaczy łatwe.</p>
                 <p>
-                  Jeśli czujesz, że to jest to — zainstaluj. Jeśli jeszcze się wahasz — spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej — <strong className="text-foreground">dziękuję, że jesteś.</strong> Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
+                  Jeśli czujesz, że to jest to - zainstaluj. Jeśli jeszcze się wahasz - spróbuj darmowego wyzwania i sam zdecyduj. Tak czy inaczej - <strong className="text-foreground">dziękuję, że jesteś.</strong> Samo to, że doczytałeś do tego miejsca, mówi mi coś ważnego o Tobie.
                 </p>
                 <p className="text-foreground font-medium">-- Ludwik</p>
               </div>
@@ -1376,10 +1376,10 @@ export default function HakowanieProduktywnosci() {
             {/* P.S. Ladder */}
             <div className="space-y-6 text-muted-foreground text-base leading-relaxed border-t border-muted pt-8">
               <p>
-                <strong className="text-foreground">P.S.</strong> Grupa jest ograniczona do 50 osób. Nie dlatego, żeby tworzyć sztuczny pośpiech — dlatego, że chcę mieć czas dla każdego uczestnika. Kiedy grupa się zapełni, otwieram następną. Ale ta konkretna zamyka się za kilka dni.
+                <strong className="text-foreground">P.S.</strong> Grupa jest ograniczona do 50 osób. Nie dlatego, żeby tworzyć sztuczny pośpiech - dlatego, że chcę mieć czas dla każdego uczestnika. Kiedy grupa się zapełni, otwieram następną. Ale ta konkretna zamyka się za kilka dni.
               </p>
               <p>
-                <strong className="text-foreground">P.P.S.</strong> Jeśli masz pytania, na które nie znalazłeś odpowiedzi na tej stronie — napisz do mnie. Odpowiadam osobiście.
+                <strong className="text-foreground">P.P.S.</strong> Jeśli masz pytania, na które nie znalazłeś odpowiedzi na tej stronie - napisz do mnie. Odpowiadam osobiście.
               </p>
               <p>
                 <strong className="text-foreground">P.P.P.S.</strong> A jeśli czytasz ten trzeci dopisek, to znaczy, że chcesz to zrobić, ale jeszcze czegoś Ci brakuje. Może tego: masz 30 dni na zwrot. Jedyne ryzyko to ryzyko, że... zadziała. A wtedy Twoje życie otworzy się na "nowe problemy" ;) Tylko te "nowe problemy" będziesz już rozwiązywać z lekkością, bo <em>prokrastynacja</em> raz na zawsze przestanie być Twoim problemem. 🫡

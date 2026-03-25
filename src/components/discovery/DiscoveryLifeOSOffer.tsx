@@ -8,11 +8,11 @@ export default function DiscoveryLifeOSOffer() {
     },
     {
       title: "Diagnostyka Life OS",
-      desc: 'Na starcie przeskanujemy cały Twój "system operacyjny": od wartości, przez narracje, po codzienne nawyki. Żeby wiedzieć, co zdejmować — trzeba najpierw zobaczyć, co leży na diamencie.',
+      desc: 'Na starcie przeskanujemy cały Twój "system operacyjny": od wartości, przez narracje, po codzienne nawyki. Żeby wiedzieć, co zdejmować - trzeba najpierw zobaczyć, co leży na diamencie.',
     },
     {
       title: "Dostęp VIP 24/7",
-      desc: "Między sesjami nie zostajesz sam. Masz do mnie bezpośredni kontakt (Signal) — bo przełomy nie czekają na następną zaplanowaną sesję.",
+      desc: "Między sesjami nie zostajesz sam. Masz do mnie bezpośredni kontakt (Signal) - bo przełomy nie czekają na następną zaplanowaną sesję.",
     },
     {
       title: "Nagrania wszystkich sesji",
@@ -24,22 +24,22 @@ export default function DiscoveryLifeOSOffer() {
     },
     {
       title: "Gwarancja zwrotu po 2 tygodniach",
-      desc: 'Jeśli po dwóch tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory — powiemy sobie "do widzenia" i nie zapłacisz ani złotówki więcej.',
+      desc: 'Jeśli po dwóch tygodniach nie poczujesz, że ta praca jest fundamentalnie inna niż cokolwiek, co próbowałeś do tej pory - powiemy sobie "do widzenia" i nie zapłacisz ani złotówki więcej.',
     },
   ];
 
   const phases = [
     {
       title: "Tydzień 1-2: Diagnostyka systemu",
-      desc: "Głęboki skan — gdzie jest konflikt tożsamości, jaka narracja Cię blokuje, jakiego rodzaju pracy potrzebujesz. Niektórzy potrzebują, żeby ktoś im przeciął więzy. Inni — pozwolenia na rozwinięcie skrzydeł. Większość — obu, naprzemiennie.",
+      desc: "Głęboki skan - gdzie jest konflikt tożsamości, jaka narracja Cię blokuje, jakiego rodzaju pracy potrzebujesz. Niektórzy potrzebują, żeby ktoś im przeciął więzy. Inni - pozwolenia na rozwinięcie skrzydeł. Większość - obu, naprzemiennie.",
     },
     {
       title: "Tydzień 3-4: Dekonstrukcja",
-      desc: "Tu zaczynamy zdejmować sukno. Warstwa po warstwie. Czasem przez metaforę. Czasem przez filozofię (Jung, Faust i Mistrz i Małgorzata to moje ulubione lustra). Czasem przez pytanie, po którym zapada cisza na kilka minut — i ta cisza mówi więcej niż wszystkie poprzednie odpowiedzi.",
+      desc: "Tu zaczynamy zdejmować sukno. Warstwa po warstwie. Czasem przez metaforę. Czasem przez filozofię (Jung, Faust i Mistrz i Małgorzata to moje ulubione lustra). Czasem przez pytanie, po którym zapada cisza na kilka minut - i ta cisza mówi więcej niż wszystkie poprzednie odpowiedzi.",
     },
     {
       title: "Tydzień 5-6: Integracja",
-      desc: "Teraz uczymy Twoje konfliktowe części współpracować. Bezwzględny CEO i wrażliwy wizjoner to nie wrogowie — to zespół. Energia, która szła na wewnętrzną wojnę, zaczyna iść na tworzenie. Decyzje przestają być polem bitwy.",
+      desc: "Teraz uczymy Twoje konfliktowe części współpracować. Bezwzględny CEO i wrażliwy wizjoner to nie wrogowie - to zespół. Energia, która szła na wewnętrzną wojnę, zaczyna iść na tworzenie. Decyzje przestają być polem bitwy.",
     },
     {
       title: "Tydzień 7-8: Nowy standard",
@@ -52,7 +52,7 @@ export default function DiscoveryLifeOSOffer() {
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="mx-auto" style={{ maxWidth: "900px" }}>
           <h2 className="font-heading text-2xl md:text-4xl font-bold mb-8 text-text-on-light">
-            Life OS: System Upgrade — co instalujesz
+            Life OS: System Upgrade - co instalujesz
           </h2>
 
           <div className="space-y-6 text-lg md:text-xl leading-relaxed text-text-on-light/80">
@@ -117,7 +117,7 @@ export default function DiscoveryLifeOSOffer() {
                   <p className="text-base">
                     Jasność. Połączenie intuicji i danych. Decyzja w pół
                     godziny. Spokój niezależnie od wyniku. Bo wiesz, że decyzja
-                    nie definiuje Ciebie — Ty definiujesz decyzję.
+                    nie definiuje Ciebie - Ty definiujesz decyzję.
                   </p>
                 </div>
               </div>

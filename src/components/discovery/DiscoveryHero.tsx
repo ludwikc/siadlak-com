@@ -25,7 +25,7 @@ export default function DiscoveryHero() {
 
           <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-text-dim leading-relaxed text-center max-w-4xl mx-auto">
             W ciągu pół godziny sprawdzimy razem, pod jakimi warstwami sukna
-            jest ukryty — i czy jestem właściwą osobą, żeby pomóc Ci je zdjąć.
+            jest ukryty - i czy jestem właściwą osobą, żeby pomóc Ci je zdjąć.
           </p>
 
           {/* Social Proof */}

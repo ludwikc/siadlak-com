@@ -219,7 +219,7 @@ export default function WebinarMeskiKompas() {
                     <p className="text-muted-foreground leading-relaxed">
                       Reagujesz na życie, zamiast je kreować. Czekasz, aż coś
                       się wyklaruje. Analizujesz opcje, zamiast podejmować
-                      decyzje. W pracy, w związku, w rozwijaniu się — dryfujesz.
+                      decyzje. W pracy, w związku, w rozwijaniu się - dryfujesz.
                       Wiesz, że to nie tak powinno być. Ale nie masz kompasu,
                       który pokazałby ci, gdzie jest twój północ.
                     </p>
@@ -235,8 +235,8 @@ export default function WebinarMeskiKompas() {
                       TWÓJ ANALITYCZNY UMYSŁ CIĘ PARALIŻUJE
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      To co miało być twoją siłą — umiejętność myślenia,
-                      planowania, analizy — stało się klatką. Twój umysł działa
+                      To co miało być twoją siłą - umiejętność myślenia,
+                      planowania, analizy - stało się klatką. Twój umysł działa
                       na pełnych obrotach 24/7, ale to nie prowadzi do decyzji.
                       Prowadzi do paraliżu. Masz setki przemyśleń, zero działań.
                       I to cię wykańcza.
@@ -254,7 +254,7 @@ export default function WebinarMeskiKompas() {
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Tradycyjne wzorce męskości nie działają. "Ogarnij sam",
-                      "nie pokazuj słabości", "bądź silny" — to puste slogany,
+                      "nie pokazuj słabości", "bądź silny" - to puste slogany,
                       które prowadzą do wypalenia. A nowe wzorce? Nieczytelne.
                       Nie wiesz, czym jest męskość dzisiaj. I w tej próżni...
                       dryfujesz.
@@ -337,7 +337,7 @@ export default function WebinarMeskiKompas() {
                     <strong className="text-foreground">
                       Wykorzystać swój analityczny umysł jako siłę
                     </strong>{" "}
-                    — nie jako przeszkodę.
+                    - nie jako przeszkodę.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -346,7 +346,7 @@ export default function WebinarMeskiKompas() {
                     <strong className="text-foreground">
                       Podejmować decyzje bez paraliżu
                     </strong>{" "}
-                    — nawet wtedy, gdy nie masz wszystkich danych.
+                    - nawet wtedy, gdy nie masz wszystkich danych.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -355,7 +355,7 @@ export default function WebinarMeskiKompas() {
                     <strong className="text-foreground">
                       Nawigować przez życie z jasnością
                     </strong>{" "}
-                    — zamiast dryfować w chaosie opcji.
+                    - zamiast dryfować w chaosie opcji.
                   </span>
                 </li>
               </ul>
@@ -853,7 +853,7 @@ export default function WebinarMeskiKompas() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Na końcu warsztatu dostaniesz pitch do pełnego kursu. Jeśli
-                system rezonuje — zapisz się. Jeśli nie — nie ma presji.
+                system rezonuje - zapisz się. Jeśli nie - nie ma presji.
               </p>
               <p className="text-lg font-bold text-foreground">
                 Nie sprzedajemy obietnic. Dajemy narzędzia do ręki. Sam
