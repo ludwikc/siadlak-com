@@ -2,12 +2,15 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
-import { getSEOConfig } from "@/lib/seo-config";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getAboutEntities } from "@/lib/structured-data";
 
 const About = () => {
   return (
     <Layout>
-      <SEO {...getSEOConfig("/about")} />
+      <SEO {...getSEOConfig("/about")} jsonLd={getAboutEntities()} />
+      {(() => { const t = getTopicalConfig("/about"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* 1. HERO */}
       <section className="py-16 md:py-28 bg-void-glow relative overflow-hidden">
