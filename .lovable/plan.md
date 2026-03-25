@@ -1,65 +1,62 @@
 
 
-# Homepage Copy Update — Implementation Plan
+# Homepage — 3 Additive Changes
 
-## Summary
+## Change 1: New DIAGNOZA header "Plasterki 🩹"
+**Location**: Lines 198-201 (Eyebrow + h2 in DIAGNOZA section)
 
-9 changes to `src/pages/Index.tsx` (819 lines). No new files. No new dependencies.
+Replace the Eyebrow text and add a new h2 + intro paragraph before the existing "Diament nie potrzebuje kolejnej oprawki" heading. The existing h2 becomes a secondary heading below the new intro.
 
-## Phases
+**Before**:
+```
+<Eyebrow>DIAGNOZA</Eyebrow>
+<h2>Diament nie potrzebuje kolejnej oprawki</h2>
+```
 
-### Phase 1: Hero (lines 74-130)
-- Replace h1 copy: "Znasz ten moment..." → "Masz wszystko, czego potrzebujesz..."
-- Replace body text with new intro paragraph + bold line
-- Change CTA from single "PRACUJ ZE MNĄ 1:1" to dual: "SPRAWDŹ DOSTĘPNOŚĆ — Sesja Discovery →" (primary) + "ZOBACZ PROGRAMY →" (secondary, links to `/program`)
+**After**:
+```
+<Eyebrow>PRAWDA, KTÓRĄ JUŻ CZUJESZ</Eyebrow>
+<h2>Branża rozwoju osobistego sprzedaje Ci plasterki 🩹</h2>
+<p>A Ty masz w sobie diament — jesteś najtwardszą substancją na Ziemi, tylko jeszcze o tym nie wiesz. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".</p>
+<h3>Diament nie potrzebuje kolejnej oprawki</h3>
+```
 
-### Phase 2: Testimonial Marquee (lines 132-164)
-- Replace 5 testimonials with 7 new ones (including Łukasz/ADHD, Anna/CEO, Artur/ojciec, plus the existing Paweł, Betty, Adam, Yasith)
-- Each testimonial separated by ◆ diamond separator (already in place)
+Rest of the section unchanged.
 
-### Phase 3: Diagnoza (lines 198-253)
-- Add humor parenthetical to first bullet: "(Mam je na półce. Wszystkie. Niektóre nawet przeczytane.)"
-- Change "Headspace'em i Calmem" → "medytacją i mindfulness" (more universal)
-- Keep structure otherwise identical
+## Change 2: New "Dwie ścieżki" section
+**Location**: Between the Artur testimonial quote (line 371) and TheCut divider (line 376).
 
-### Phase 4: Autorytet (lines 255-321)
-- Add "10 000+" (plus sign) to the number
-- Add humor line at end of prose: "(I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)" — already present, keep
-- Testimonials grid (lines 298-321): keep as-is (already matches new copy)
+Insert a full new section with:
+- Eyebrow: "DWIE ŚCIEŻKI"
+- h2: "Dwie ścieżki. Jedna decyzja."
+- Intro paragraph
+- Two sub-sections with emoji headers: 🛡 Ścieżka Wojownika + 🌿 Ścieżka Poszukiwacza
+- Each with prose description + mini case study (Anna for Wojownik, Łucja for Poszukiwacz)
+- Closing "Skąd wiem, czego potrzebujesz?" bridge paragraph
+- Styled on `bg-void-glow` to alternate with surrounding sections
 
-### Phase 5: Life OS Offer (lines 386-465)
-- Add REMIND paragraph after pricing card: "Zanim popatrzysz na liczbę..." (value-based framing)
-- Add virtuous price cycle paragraph: "Jest jeszcze jeden powód..."
-- Add link to full program page: "Pełny opis programu i metodologii →" → `/program/lifeos-system-upgrade`
-- Update pricing card: add "Możliwość rozłożenia na 2 raty" to footer text
-- Keep Anna testimonial, replace Bergen testimonial with the Anna one being the only one here (remove duplicate)
+## Change 3: New testimonials bridge header
+**Location**: Lines 480-481 (h3 in PROOF SECTION)
 
-### Phase 6: Proof Section (lines 468-500)
-- Change heading: "zdjęli sukno" → "zmienili tło"
-- Replace 4 testimonials with new unique ones: Łucja/RefSpace, Klientka Life OS (decyzyjność), Tomek/CTO, Klient Life OS (sobota z rodziną)
-- Remove Anna duplicate (she's already in Offer section)
+Replace the simple heading with an Eyebrow + heading + intro paragraph.
 
-### Phase 7: Qualification (lines 502-577)
-- Update "nie dla ciebie" bullet 2: "Potrzebujesz kogoś, kto powie Ci, że jest okej" → "Chcesz gotową receptę z pudełka — 7 kroków, PDF, certyfikat na ścianę"
-- Add bullet 3: "Nie jesteś gotów zobaczyć tego, co zobaczysz"
-- Update "dla ciebie" bullet 3: add "i bez brutalnej konfrontacji"
+**Before**:
+```
+<h3>Głosy tych, którzy zmienili tło</h3>
+```
 
-### Phase 8: Scarcity CTA (lines 579-620)
-- Add Discovery context paragraph: "Zanim cokolwiek zdecydujemy — 30 minut na Zoom..."
-- Keep CTA button text as "ZAREZERWUJ SESJĘ DISCOVERY →"
-- Keep 30 MIN · BEZ SPRZEDAŻY · BEZ OBIETNIC footer
+**After**:
+```
+<Eyebrow color="depth">PRAWDZIWE TRANSFORMACJE</Eyebrow>
+<h3>To nie są 5-gwiazdkowe opinie. To są prawdziwe zmiany.</h3>
+<p>Nie pokażę Ci anonimowych testimoniali z „Dyrektorem Marketingu"... Pokażę Ci prawdziwe historie ludzi... z innym kolorem diamentu.</p>
+```
 
-### Phase 9: Downsell + Newsletter + Closing (lines 622-814)
-- **Downsell**: Add placeholder testimonial (Program → Life OS journey)
-- **Produktywność card**: Add "1 240+ osób zainstalowało." line
-- **Newsletter**: Expand copy with "algorytm vs. email" hook + "150+ osób czyta. Zero spam." footer
-- **Remove "OTWARTA PRZYŁBICA"** section (lines 773-814) — replace with P.S. ladder (3 post-scripts) + "— Ludwik" sign-off on `bg-void-glow`
+Testimonial cards below unchanged.
 
 ## Technical Details
-
-- Single file edit: `src/pages/Index.tsx`
-- No import changes needed (all assets already imported)
-- No component API changes
-- Testimonial deduplication: each quote appears exactly once across the page
-- All links use existing routes (`/discovery`, `/program`, `/program/lifeos-system-upgrade`, `/newsletter`)
+- Single file: `src/pages/Index.tsx`
+- No new imports needed (Eyebrow, Link already imported)
+- All changes are additive — no existing content removed except two replaced headings
+- Estimated ~60 lines added total
 
