@@ -31,12 +31,6 @@ export default function Header() {
     timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
   };
 
-  const scrollToFooter = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setDropdownOpen(false);
-    setMobileOpen(false);
-    document.querySelector("footer")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
