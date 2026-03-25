@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 import { getSEOConfig } from "../lib/seo-config";
 import { Link } from "react-router-dom";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
-import onPurple1 from "@/assets/Ludwik C. Siadlak-on-purple1.webp";
+import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
