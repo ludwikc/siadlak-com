@@ -1,55 +1,65 @@
 
 
-# Faza 1: Hero + Rozpoznanie + Dlaczego inne nie zadziałały
+# Homepage Copy Update — Implementation Plan
 
-## Zakres zmian: linie 80-565
+## Summary
 
-### 1. Dane (linie 80-134)
+9 changes to `src/pages/Index.tsx` (819 lines). No new files. No new dependencies.
 
-**Testimonials** (linie 81-100) — zaktualizować cytaty z kontekstem tożsamości:
-- "Tomek, 38 lat, CTO startupu, ojciec dwójki" zamiast "CEO, 8-cyfrowe przychody"
-- "Klientka Life OS" zamiast "Założycielka tech startup / €2M ARR"
-- Dodać cytat Anny ("Zapytał: 'Ile podatku płacisz...'")
+## Phases
 
-**FAQ** (linie 103-134) — zastąpić 6 pytań nowymi 7 z pełnymi odpowiedziami w tonie Ludwika (zgodnie z copy). Kluczowe dodanie: "A co jeśli znowu zainwestuję i znowu nic się nie zmieni?"
+### Phase 1: Hero (lines 74-130)
+- Replace h1 copy: "Znasz ten moment..." → "Masz wszystko, czego potrzebujesz..."
+- Replace body text with new intro paragraph + bold line
+- Change CTA from single "PRACUJ ZE MNĄ 1:1" to dual: "SPRAWDŹ DOSTĘPNOŚĆ — Sesja Discovery →" (primary) + "ZOBACZ PROGRAMY →" (secondary, links to `/program`)
 
-### 2. Hero (linie 170-240)
+### Phase 2: Testimonial Marquee (lines 132-164)
+- Replace 5 testimonials with 7 new ones (including Łukasz/ADHD, Anna/CEO, Artur/ojciec, plus the existing Paweł, Betty, Adam, Yasith)
+- Each testimonial separated by ◆ diamond separator (already in place)
 
-- Usunąć badge "Premium System Upgrade" z ikoną Crown
-- Dodać nad tytułem: eyebrow "TYLKO 5 MIEJSC JEDNOCZEŚNIE" (text-xs uppercase tracking-[0.2em] text-electric)
-- Zmienić subtitle na: "Nie kolejna aplikacja mentalna. Cały nowy system operacyjny."
-- Dodać pod subtitle prose: "8 tygodni pracy 1:1 ze mną. Dla tych, którzy przeglądali programy..."
-- Zamienić 3 Feature Pills ("8 tygodni", "Elite Cohort", "Life Transformation") na prosty tekst: "8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób"
-- CTA: zachować "Sprawdź dostępność — Sesja Discovery", dodać drugi link "Dla kogo to NIE jest" (anchor do #nie-dla-ciebie)
+### Phase 3: Diagnoza (lines 198-253)
+- Add humor parenthetical to first bullet: "(Mam je na półce. Wszystkie. Niektóre nawet przeczytane.)"
+- Change "Headspace'em i Calmem" → "medytacją i mindfulness" (more universal)
+- Keep structure otherwise identical
 
-### 3. Rozpoznanie (linie 242-388)
+### Phase 4: Autorytet (lines 255-321)
+- Add "10 000+" (plus sign) to the number
+- Add humor line at end of prose: "(I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)" — already present, keep
+- Testimonials grid (lines 298-321): keep as-is (already matches new copy)
 
-Zastąpić całą sekcję prostym prose w `max-w-3xl mx-auto`:
-- Usunąć karty z ikonami Trophy i AlertTriangle
-- Usunąć kartę "Windows 98" z ikoną Download
-- Usunąć `BeforeAfterSlider`
-- Nowa struktura: heading "Rozpoznajesz ten stan?" + prose paragraphs z nowym copy
-- "Część Ciebie → Część Ciebie" zachowane ale jako prose, nie w karcie
-- "Próbowałeś to rozwiązać:" zachowane ale bez kart — proste `<p>` z pogrubieniem i strzałką
-- Zamknięcie: "Problem leży na poziomie tożsamości. Na suknie, które nałożyłeś na diament..."
+### Phase 5: Life OS Offer (lines 386-465)
+- Add REMIND paragraph after pricing card: "Zanim popatrzysz na liczbę..." (value-based framing)
+- Add virtuous price cycle paragraph: "Jest jeszcze jeden powód..."
+- Add link to full program page: "Pełny opis programu i metodologii →" → `/program/lifeos-system-upgrade`
+- Update pricing card: add "Możliwość rozłożenia na 2 raty" to footer text
+- Keep Anna testimonial, replace Bergen testimonial with the Anna one being the only one here (remove duplicate)
 
-### 4. Dlaczego inne nie zadziałały (linie 390-565)
+### Phase 6: Proof Section (lines 468-500)
+- Change heading: "zdjęli sukno" → "zmienili tło"
+- Replace 4 testimonials with new unique ones: Łucja/RefSpace, Klientka Life OS (decyzyjność), Tomek/CTO, Klient Life OS (sobota z rodziną)
+- Remove Anna duplicate (she's already in Offer section)
 
-Zastąpić karty z X-ikonkami prose paragraphs:
-- Usunąć badge z glow i ikoną Target
-- Heading: "Dlaczego to, co próbowałeś, nie zadziałało?" (zachowane)
-- 4 paragraphs prose (Coaching, Terapia, Kursy, Duchowość) — każde zaczyna od pogrubionego tytułu, acknowledge + zakwestionowanie
-- Humor: "Zen na macie, chaos w Excelu", "Mógłbyś napisać o sobie pracę magisterską"
-- Podsumowanie: prose zamiast karty — "Żadne nie zmienia sukna. A problem jest w suknie."
-- Usunąć gradient orb dekoracyjny (linia 393)
+### Phase 7: Qualification (lines 502-577)
+- Update "nie dla ciebie" bullet 2: "Potrzebujesz kogoś, kto powie Ci, że jest okej" → "Chcesz gotową receptę z pudełka — 7 kroków, PDF, certyfikat na ścianę"
+- Add bullet 3: "Nie jesteś gotów zobaczyć tego, co zobaczysz"
+- Update "dla ciebie" bullet 3: add "i bez brutalnej konfrontacji"
 
-### 5. Cleanup importów (Faza 1 only)
+### Phase 8: Scarcity CTA (lines 579-620)
+- Add Discovery context paragraph: "Zanim cokolwiek zdecydujemy — 30 minut na Zoom..."
+- Keep CTA button text as "ZAREZERWUJ SESJĘ DISCOVERY →"
+- Keep 30 MIN · BEZ SPRZEDAŻY · BEZ OBIETNIC footer
 
-- Usunąć: `Trophy`, `AlertTriangle`, `Download`, `Target`, `Sparkles`, `Crown`
-- Usunąć: `BeforeAfterSlider` import
-- Zachować: `X` (używane później w FAQ), pozostałe ikony
+### Phase 9: Downsell + Newsletter + Closing (lines 622-814)
+- **Downsell**: Add placeholder testimonial (Program → Life OS journey)
+- **Produktywność card**: Add "1 240+ osób zainstalowało." line
+- **Newsletter**: Expand copy with "algorytm vs. email" hook + "150+ osób czyta. Zero spam." footer
+- **Remove "OTWARTA PRZYŁBICA"** section (lines 773-814) — replace with P.S. ladder (3 post-scripts) + "— Ludwik" sign-off on `bg-void-glow`
 
-### Pliki do edycji
+## Technical Details
 
-Tylko `src/pages/LifeOSSystemUpgrade.tsx` — linie 1-565.
+- Single file edit: `src/pages/Index.tsx`
+- No import changes needed (all assets already imported)
+- No component API changes
+- Testimonial deduplication: each quote appears exactly once across the page
+- All links use existing routes (`/discovery`, `/program`, `/program/lifeos-system-upgrade`, `/newsletter`)
 
