@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
-import { getSEOConfig } from "../lib/seo-config";
+import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
+import TopicalMeta from "../components/TopicalMeta";
+import { getHomepageEntities } from "../lib/structured-data";
 import { Link } from "react-router-dom";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
@@ -64,7 +66,8 @@ const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: str
 const Index = () => {
   return (
     <Layout>
-      <SEO {...getSEOConfig("home")} />
+      <SEO {...getSEOConfig("/")} jsonLd={getHomepageEntities()} />
+      {(() => { const t = getTopicalConfig("/"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* ╔═══════════════════════════════════════════╗
           ║       FAZA 1: THE VOID (ciemna)          ║
