@@ -86,7 +86,11 @@ export default function Wspolpraca() {
 
   return (
     <Layout>
-      <SEO {...seo} />
+      <SEO {...seo} jsonLd={[
+        getOrganizationEntity(),
+        getWebPageEntity('/start', 'Wspolpraca - Ludwik C. Siadlak', 'Wszystkie mozliwosci wspolpracy z Ludwikiem C. Siadlakiem.', ['/program', '/discovery', '/newsletter']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/start"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* ─── HERO ─── */}
       <section className="bg-void-glow py-24 md:py-32">
