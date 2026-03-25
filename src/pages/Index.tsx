@@ -195,10 +195,16 @@ const Index = () => {
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
       <section className="py-24 bg-void">
         <div className="container mx-auto px-4 max-w-4xl">
-          <Eyebrow>DIAGNOZA</Eyebrow>
-          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
-            Diament nie potrzebuje kolejnej oprawki
+          <Eyebrow>PRAWDA, KTÓRĄ JUŻ CZUJESZ</Eyebrow>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-6">
+            Branża rozwoju osobistego sprzedaje Ci plasterki 🩹
           </h2>
+          <p className="text-lg text-dim leading-relaxed mb-8">
+            A Ty masz w sobie diament — jesteś najtwardszą substancją na Ziemi, tylko jeszcze o tym nie wiesz. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
+          </p>
+          <h3 className="text-2xl md:text-3xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
+            Diament nie potrzebuje kolejnej oprawki
+          </h3>
 
           <div className="space-y-6 text-lg text-dim leading-relaxed mb-12">
             <p>Przez lata próbowałeś go zmienić. Nie wiedziałeś, że wystarczyło zmienić tło, na którym leży.</p>
@@ -477,9 +483,15 @@ const Index = () => {
       {/* ═══ PROOF SECTION ═══ */}
       <section className="bg-paper py-24">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h3 className="font-heading text-3xl font-bold text-on-light mb-16 text-center">
-            Głosy tych, którzy zmienili tło
-          </h3>
+          <div className="text-center mb-16">
+            <Eyebrow color="depth">PRAWDZIWE TRANSFORMACJE</Eyebrow>
+            <h3 className="font-heading text-3xl font-bold text-on-light mb-6">
+              To nie są 5-gwiazdkowe opinie. To są prawdziwe zmiany.
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Nie pokażę Ci anonimowych testimoniali z „Dyrektorem Marketingu" i „Starszym Kierownikiem Projektów". Pokażę Ci prawdziwe historie ludzi, którzy przeszli przez to samo co Ty — i wyszli z drugiej strony z innym kolorem diamentu.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <TestimonialCard
               variant="light"
