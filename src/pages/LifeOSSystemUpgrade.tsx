@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Card, CardContent } from "@/components/ui/card";
-
 import { CheckCircle, ChevronDown } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getServiceLifeOS, getFAQSchema, getWebPageEntity } from "@/lib/structured-data";
 
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
