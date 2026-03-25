@@ -13,11 +13,11 @@ const FAQAccordion = () => {
     },
     {
       question: "Czy można płacić w ratach?",
-      answer: "Tak — szczegóły znajdziesz na stronie zamówienia."
+      answer: "Tak - szczegóły znajdziesz na stronie zamówienia."
     },
     {
       question: "Kiedy dostanę dostęp do programu?",
-      answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut. Możesz zacząć \"instalację\" tego samego dnia."
+      answer: "Natychmiast po opłaceniu. Dosłownie - w ciągu kilku minut. Możesz zacząć \"instalację\" tego samego dnia."
     },
     {
       question: "Jak długo mam dostęp do materiałów?",

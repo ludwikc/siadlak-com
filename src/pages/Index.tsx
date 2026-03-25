@@ -56,7 +56,7 @@ const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: str
   <section className="py-16 md:py-20 bg-void">
     <div className="container mx-auto px-4 max-w-3xl text-center">
       <blockquote className="text-xl md:text-2xl text-white/90 italic leading-relaxed mb-6">{quote}</blockquote>
-      <footer className="text-sm text-dim font-bold uppercase tracking-widest not-italic">— {author}</footer>
+      <footer className="text-sm text-dim font-bold uppercase tracking-widest not-italic">- {author}</footer>
     </div>
   </section>
 );
@@ -90,9 +90,9 @@ const Index = () => {
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
-                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz.</p>
+                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze - zamiast szukać tego na zewnątrz.</p>
                 <p className="text-white font-medium">
-                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu — jesteś we właściwym miejscu.
+                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu - jesteś we właściwym miejscu.
                 </p>
               </div>
 
@@ -102,7 +102,7 @@ const Index = () => {
                   to="/discovery"
                   className="inline-block py-5 px-8 bg-brand-gradient text-white font-bold uppercase tracking-widest text-xs rounded shadow-sm hover:opacity-90 transition-opacity text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  SPRAWDŹ DOSTĘPNOŚĆ — Sesja Discovery →
+                  SPRAWDŹ DOSTĘPNOŚĆ - Sesja Discovery →
                 </Link>
                 <Link
                   to="/program"
@@ -150,7 +150,7 @@ const Index = () => {
                 <div key={i} className="flex items-start gap-6">
                   <div className="max-w-md whitespace-normal">
                     <p className="text-sm text-dim leading-relaxed">„{t.q}"</p>
-                    <p className="text-xs text-dim font-medium mt-1">— {t.a}</p>
+                    <p className="text-xs text-dim font-medium mt-1">- {t.a}</p>
                   </div>
                   <span className="text-white/10 self-center">◆</span>
                 </div>
@@ -160,7 +160,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══ PERSPEKTYWA — METAFORA DIAMENTU ═══ */}
+      {/* ═══ PERSPEKTYWA - METAFORA DIAMENTU ═══ */}
       <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow>PERSPEKTYWA</Eyebrow>
@@ -171,7 +171,7 @@ const Index = () => {
             </p>
 
             <p>
-              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd. Zmień sukno — zmieni się
+              Połóż go na czerwonym suknie - wygląda jak rubin. Na zielonym - jak szmaragd. Zmień sukno - zmieni się
               „kolor" diamentu.
             </p>
 
@@ -181,8 +181,8 @@ const Index = () => {
               Twój umysł działa dokładnie tak samo.
             </blockquote>
 
-            <p>Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
-            <p>Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
+            <p>Otaczasz się presją - nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
+            <p>Wchodzisz w sprint za kolejnym celem - nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
 
             <p>Ale to nie Ty się zmieniłeś.</p>
             <p className="text-white text-2xl font-bold">
@@ -200,7 +200,7 @@ const Index = () => {
             Branża rozwoju osobistego sprzedaje Ci plasterki 🩹
           </h2>
           <p className="text-lg text-dim leading-relaxed mb-8">
-            A Ty masz w sobie diament — jesteś najtwardszą substancją na Ziemi, tylko jeszcze o tym nie wiesz. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
+            A Ty masz w sobie diament - jesteś najtwardszą substancją na Ziemi, tylko jeszcze o tym nie wiesz. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
           </p>
           <h3 className="text-2xl md:text-3xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
             Diament nie potrzebuje kolejnej oprawki
@@ -215,8 +215,8 @@ const Index = () => {
             {[
               'Szlifowałeś go kursami: GTD, Todoist, Asana, "7 nawyków skutecznego wszystkiego". (Mam je na półce. Wszystkie. Niektóre nawet przeczytane.)',
               "Polerowałeś terapeutami i coachami (kolejny, i jeszcze jeden, i może ten wreszcie...).",
-              "Czyściłeś medytacją i mindfulness — bo ktoś Ci powiedział, że problem jest w Twojej głowie.",
-              'Kupowałeś nowe systemy i metody — bo stare "nie działały".',
+              "Czyściłeś medytacją i mindfulness - bo ktoś Ci powiedział, że problem jest w Twojej głowie.",
+              'Kupowałeś nowe systemy i metody - bo stare "nie działały".',
             ].map((item, i) => (
               <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
                 <span className="text-destructive font-bold shrink-0">✕</span>
@@ -252,7 +252,7 @@ const Index = () => {
             „Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
           </>
         }
-        author="ŁUKASZ — IT, ADHD, SCEPTYK"
+        author="ŁUKASZ - IT, ADHD, SCEPTYK"
       />
 
       {/* ═══ AUTHORITY SECTION ═══ */}
@@ -272,12 +272,12 @@ const Index = () => {
           <div className="text-dim text-lg space-y-6 max-w-3xl">
             <p>
               19 lat jako trener Microsoft. 10 000+ profesjonalistów. Fortune 500. NATO. Jednostki specjalne. 
-              Psychologia na SWPS, a IT — na{" "}
+              Psychologia na SWPS, a IT - na{" "}
               <a href="https://ox.ac.uk" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">
                 Oksfordzie
               </a>.
             </p>
-            <p>Imponujące, prawda? Mnie też imponowało — przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
+            <p>Imponujące, prawda? Mnie też imponowało - przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 my-8">
               <p className="text-white italic text-xl leading-relaxed">
@@ -291,7 +291,7 @@ const Index = () => {
             </p>
             <p>I tego nie nauczysz się na żadnym szkoleniu. Tego uczysz się stojąc na peronie i decydując, że jednak zostaniesz.</p>
             <p>
-              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)
+              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak - to wciąż trochę irytujące. Moi Klienci potwierdzą.)
             </p>
           </div>
         </div>
@@ -330,7 +330,7 @@ const Index = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-2">
             Diamentowy Umysł
           </h2>
-          <p className="text-dim uppercase tracking-widest text-sm mb-16">NIE METAFORA — METODA</p>
+          <p className="text-dim uppercase tracking-widest text-sm mb-16">NIE METAFORA - METODA</p>
         </div>
 
         <div className="container mx-auto px-4 max-w-6xl">
@@ -346,7 +346,7 @@ const Index = () => {
                 Zadaję Ci pytania. I buduję z Tobą metaforę, która jest <em>Twoja</em>.
               </p>
               <div className="border-l-2 border-electric pl-4 text-white font-medium">
-                Metafora działa tam, gdzie logika się zatrzymuje. Logika mówi „powinieneś". Metafora mówi „aha — widzę".
+                Metafora działa tam, gdzie logika się zatrzymuje. Logika mówi „powinieneś". Metafora mówi „aha - widzę".
                 I w tym „aha" wszystko się zmienia.
               </div>
             </div>
@@ -373,7 +373,7 @@ const Index = () => {
         quote={
           '„Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania."'
         }
-        author="ARTUR — OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
+        author="ARTUR - OJCIEC, PROGRAMISTA, PRZEDSIĘBIORCA"
       />
 
       {/* ═══ DWIE ŚCIEŻKI ═══ */}
@@ -384,7 +384,7 @@ const Index = () => {
             Dwie ścieżki. Jedna decyzja.
           </h2>
           <p className="text-lg text-dim leading-relaxed mb-16">
-            Nie każdy potrzebuje tego samego. Jedni przychodzą z walką, drudzy z ciszą. Dlatego pracuję na dwa sposoby — i wiem, kiedy którego użyć.
+            Nie każdy potrzebuje tego samego. Jedni przychodzą z walką, drudzy z ciszą. Dlatego pracuję na dwa sposoby - i wiem, kiedy którego użyć.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -392,14 +392,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold text-white font-heading">🛡 Ścieżka Wojownika</h3>
               <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
               <p className="text-dim leading-relaxed">
-                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko — a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
+                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
               </p>
               <p className="text-dim leading-relaxed">
-                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Używam metafor z życia — diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
+                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Używam metafor z życia - diamentu, żaglówki, jazdy po torze - żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy - żebyś mógł wreszcie rozwinąć skrzydła.
               </p>
               <blockquote className="border-l-2 border-accent pl-4 mt-6">
                 <p className="text-muted-foreground italic text-sm leading-relaxed">
-                  Anna przyszła z narracją ofiary i kontrolą, która zjadała jej weekendy. Po 8 tygodniach powiedziała: „Pierwszy raz wierzę w możliwości, które mam — zamiast walczyć z tymi, których nie mam."
+                  Anna przyszła z narracją ofiary i kontrolą, która zjadała jej weekendy. Po 8 tygodniach powiedziała: „Pierwszy raz wierzę w możliwości, które mam - zamiast walczyć z tymi, których nie mam."
                 </p>
               </blockquote>
             </div>
@@ -408,14 +408,14 @@ const Index = () => {
               <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
               <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
               <p className="text-dim leading-relaxed">
-                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie diamentu, który leży pod suknem sukcesu.
+                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku - cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie diamentu, który leży pod suknem sukcesu.
               </p>
               <p className="text-dim leading-relaxed">
-                To praca delikatna, głęboka, oparta na uważności i akceptacji — bez walki. O integrację tego, kim jesteś, z tym, jak żyjesz. O pozwolenie sobie na to, by być już tam, gdzie jesteś.
+                To praca delikatna, głęboka, oparta na uważności i akceptacji - bez walki. O integrację tego, kim jesteś, z tym, jak żyjesz. O pozwolenie sobie na to, by być już tam, gdzie jesteś.
               </p>
               <blockquote className="border-l-2 border-accent pl-4 mt-6">
                 <p className="text-muted-foreground italic text-sm leading-relaxed">
-                  Łucja była na wakacjach — ale mentalnie siedziała w biurze. Jedno zdanie wystarczyło: „Nic nie jest dla Ciebie zbyt dobre." I zrozumiała, że sukno, które na siebie nałożyła, było z materiału o nazwie „muszę zasłużyć".
+                  Łucja była na wakacjach - ale mentalnie siedziała w biurze. Jedno zdanie wystarczyło: „Nic nie jest dla Ciebie zbyt dobre." I zrozumiała, że sukno, które na siebie nałożyła, było z materiału o nazwie „muszę zasłużyć".
                 </p>
               </blockquote>
             </div>
@@ -424,14 +424,14 @@ const Index = () => {
           <div className="text-center">
             <h4 className="text-xl font-bold text-white font-heading mb-4">Skąd wiem, czego potrzebujesz?</h4>
             <p className="text-dim leading-relaxed max-w-2xl mx-auto">
-              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi — najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery — żebyśmy razem ustalili, którędy idziemy.
+              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi - najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery - żebyśmy razem ustalili, którędy idziemy.
             </p>
           </div>
         </div>
       </section>
 
       {/* ╔═══════════════════════════════════════════╗
-          ║     THE CUT — jedyny divider              ║
+          ║     THE CUT - jedyny divider              ║
           ╚═══════════════════════════════════════════╝ */}
       <TheCut />
 
@@ -484,7 +484,7 @@ const Index = () => {
               </Link>
             </div>
 
-            {/* Right column (5 cols) — sticky pricing card */}
+            {/* Right column (5 cols) - sticky pricing card */}
             <div className="lg:col-span-5 lg:sticky lg:top-24">
               <div className="bg-paper p-10 rounded-md shadow-sm relative">
                 {/* Tag */}
@@ -512,13 +512,13 @@ const Index = () => {
           {/* REMIND + Value-based framing */}
           <div className="max-w-3xl mt-16 space-y-6 text-on-light-dim leading-relaxed">
             <p>
-              Zanim popatrzysz na liczbę — przypomnij sobie, po co tu trafiłeś. Nie po kolejny kurs. Po zmianę sukna, na którym leży Twój diament.
+              Zanim popatrzysz na liczbę - przypomnij sobie, po co tu trafiłeś. Nie po kolejny kurs. Po zmianę sukna, na którym leży Twój diament.
             </p>
             <p>
-              A teraz pomyśl, ile kosztuje Cię kolejny rok życia na tym samym tle. Nie w pieniądzach — w energii, w decyzjach, których nie podejmujesz, w relacjach, które cierpią, bo walczysz wewnętrzną wojnę zamiast być obecny. Rok takiego życia kosztuje więcej niż jakikolwiek program.
+              A teraz pomyśl, ile kosztuje Cię kolejny rok życia na tym samym tle. Nie w pieniądzach - w energii, w decyzjach, których nie podejmujesz, w relacjach, które cierpią, bo walczysz wewnętrzną wojnę zamiast być obecny. Rok takiego życia kosztuje więcej niż jakikolwiek program.
             </p>
             <p>
-              Jest jeszcze jeden powód, o którym rzadko się mówi: ludzie, którzy inwestują poważnie, pracują poważnie. To nie jest teoria — to wzorzec, który widzę od lat. Klienci, którzy „próbują za darmo", próbują tak, jakby im nie zależało. Klienci, którzy podjęli konkretną decyzję finansową, przychodzą na sesję gotowi. I dlatego ich wyniki są inne.
+              Jest jeszcze jeden powód, o którym rzadko się mówi: ludzie, którzy inwestują poważnie, pracują poważnie. To nie jest teoria - to wzorzec, który widzę od lat. Klienci, którzy „próbują za darmo", próbują tak, jakby im nie zależało. Klienci, którzy podjęli konkretną decyzję finansową, przychodzą na sesję gotowi. I dlatego ich wyniki są inne.
             </p>
           </div>
 
@@ -543,7 +543,7 @@ const Index = () => {
               To nie są 5-gwiazdkowe opinie. To są prawdziwe zmiany.
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Nie pokażę Ci anonimowych testimoniali z „Dyrektorem Marketingu" i „Starszym Kierownikiem Projektów". Pokażę Ci prawdziwe historie ludzi, którzy przeszli przez to samo co Ty — i wyszli z drugiej strony z innym kolorem diamentu.
+              Nie pokażę Ci anonimowych testimoniali z „Dyrektorem Marketingu" i „Starszym Kierownikiem Projektów". Pokażę Ci prawdziwe historie ludzi, którzy przeszli przez to samo co Ty - i wyszli z drugiej strony z innym kolorem diamentu.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -555,7 +555,7 @@ const Index = () => {
             />
             <TestimonialCard
               variant="light"
-              quote="Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej — wręcz przeciwnie."
+              quote="Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej - wręcz przeciwnie."
               author="KLIENTKA LIFE OS"
             />
             <TestimonialCard
@@ -584,9 +584,9 @@ const Index = () => {
               </p>
               <ul className="space-y-4 text-on-light-dim">
                 {[
-                  "Szukasz kolejnego systemu produktywności (mam na to osobny program — patrz niżej)",
-                  "Chcesz gotową receptę z pudełka — 7 kroków, PDF, certyfikat na ścianę",
-                  "Nie jesteś gotów zobaczyć tego, co zobaczysz — bo ta praca nie zawsze pokazuje to, co chciałbyś zobaczyć",
+                  "Szukasz kolejnego systemu produktywności (mam na to osobny program - patrz niżej)",
+                  "Chcesz gotową receptę z pudełka - 7 kroków, PDF, certyfikat na ścianę",
+                  "Nie jesteś gotów zobaczyć tego, co zobaczysz - bo ta praca nie zawsze pokazuje to, co chciałbyś zobaczyć",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-destructive font-bold shrink-0">✕</span>
@@ -603,7 +603,7 @@ const Index = () => {
                 {[
                   "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
                   "Testowałeś narzędzia i wiesz, że problem leży głębiej",
-                  "Jesteś gotów na rozmowę bez klepania po plecach — i bez brutalnej konfrontacji",
+                  "Jesteś gotów na rozmowę bez klepania po plecach - i bez brutalnej konfrontacji",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-electric font-bold shrink-0">✔</span>
@@ -621,7 +621,7 @@ const Index = () => {
             <div className="text-on-light-dim leading-relaxed space-y-4">
               <p>
                 Jeśli po pierwszych 2 tygodniach nie poczujesz, że ta rozmowa jest fundamentalnie inna niż cokolwiek, co
-                próbowałeś do tej pory — powiemy sobie „do widzenia". Nie zapłacisz ani złotówki więcej.
+                próbowałeś do tej pory - powiemy sobie „do widzenia". Nie zapłacisz ani złotówki więcej.
               </p>
               <p>
                 Mogę to zaoferować, bo dostarczam momenty, w których mówisz:
@@ -638,11 +638,11 @@ const Index = () => {
               practical examples of tool usage a bit slower."
             </p>
             <p className="text-xs text-on-light-dim font-bold uppercase tracking-wide mb-4">
-              — Helge Vestoyl, Norwegia 🇳🇴
+              - Helge Vestoyl, Norwegia 🇳🇴
             </p>
             <div className="border-t border-border/50 mt-6 pt-6">
               <p className="text-sm text-on-light-dim">
-                Helge ma rację. Dużo mówię. Ale kiedy pytam — milknę. I to w tej ciszy dzieją się rzeczy. —{" "}
+                Helge ma rację. Dużo mówię. Ale kiedy pytam - milknę. I to w tej ciszy dzieją się rzeczy. -{" "}
                 <span className="font-medium text-on-light">Ludwik</span>
               </p>
             </div>
@@ -671,7 +671,7 @@ const Index = () => {
           {/* Discovery context */}
           <div className="max-w-2xl mb-12">
             <p className="text-on-light-dim leading-relaxed">
-              Zanim cokolwiek zdecydujemy — 30 minut na Zoom. Zadam Ci kilka pytań, na które sam nie wpadłbyś, że potrzebujesz na nie odpowiedzieć. To nie jest rozmowa sprzedażowa. To wzajemna ocena — Ty sprawdzasz mnie, ja sprawdzam Ciebie. Obaj mamy prawo powiedzieć "nie".
+              Zanim cokolwiek zdecydujemy - 30 minut na Zoom. Zadam Ci kilka pytań, na które sam nie wpadłbyś, że potrzebujesz na nie odpowiedzieć. To nie jest rozmowa sprzedażowa. To wzajemna ocena - Ty sprawdzasz mnie, ja sprawdzam Ciebie. Obaj mamy prawo powiedzieć "nie".
             </p>
           </div>
 
@@ -696,11 +696,11 @@ const Index = () => {
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
-            stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
+            stworzyłem programy, które możesz zainstalować samodzielnie - w swoim tempie, bez umawiania się na sesję.
           </p>
           <blockquote className="text-sm text-on-light-dim italic leading-relaxed max-w-xl mx-auto border-l-2 border-electric pl-4 text-left">
-            „Zacząłem od Produktywności — bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
-            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">— UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
+            „Zacząłem od Produktywności - bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
+            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">- UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
           </blockquote>
         </div>
       </section>
@@ -712,7 +712,7 @@ const Index = () => {
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
-              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem — bez reinstalacji całego OS.
+              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem - bez reinstalacji całego OS.
             </p>
           </div>
 
@@ -730,7 +730,7 @@ const Index = () => {
                 <p className="text-xs font-bold uppercase tracking-widest text-depth mb-2">PROGRAM FLAGOWY</p>
                 <h3 className="font-heading font-bold text-3xl text-on-light mb-4">Uważne Życie</h3>
                 <p className="text-on-light-dim mb-6">
-                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad
+                  Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami - przejmujesz kontrolę nad
                   kokpitem.
                 </p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
@@ -746,21 +746,21 @@ const Index = () => {
               {
                 title: "Produktywność",
                 subtitle: "1 240+ osób zainstalowało",
-                desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
+                desc: "Zamiast zarządzać zadaniami - zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
               },
               {
                 title: "Silna Głowa",
                 subtitle: "",
-                desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.",
+                desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować - zaczyna skupiać. Krytyka przestaje ranić - zaczyna informować.",
                 img: programOdpornosc,
                 link: "/program/odpornosc",
               },
               {
                 title: "Męski Kompas",
                 subtitle: "",
-                desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
+                desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską - staje się przezroczystą obecnością. Jak diament.",
                 img: programMeskiKompas,
                 link: "/program/meskosc",
               },
@@ -834,10 +834,10 @@ const Index = () => {
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <div className="text-dim leading-relaxed mb-10 space-y-4">
             <p>
-              Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Na Instagramie algorytm decyduje, czy to zobaczysz. Na moim newsletterze — decydujesz Ty.
+              Raz w tygodniu piszę do ludzi, którzy szukają głębi - nie kolejnych trików. Na Instagramie algorytm decyduje, czy to zobaczysz. Na moim newsletterze - decydujesz Ty.
             </p>
             <p>
-              Co niedzielę o 19:00 — jedna myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez listicli. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
+              Co niedzielę o 19:00 - jedna myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez listicli. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
             </p>
           </div>
           <Link
@@ -854,15 +854,15 @@ const Index = () => {
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-2xl space-y-8">
           <p className="text-dim leading-relaxed">
-            <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
+            <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć - zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>
           <p className="text-dim leading-relaxed">
-            <strong className="text-white">P.P.S.</strong> Jeśli myślisz „brzmi dobrze, ale skąd mam wiedzieć, że to nie kolejny coach z ładnym CV" — to uczciwe pytanie. Odpowiedź: nie wiesz. Ale możesz sprawdzić. Sesja Discovery to 30 minut, w których zobaczysz, jak pracuję. Bez zobowiązań, bez presji. Jeśli po 30 minutach pomyślisz „to jest dokładnie to, co próbuję powiedzieć każdemu i nikt nie rozumie" — to prawdopodobnie mamy ze sobą rozmawiać.
+            <strong className="text-white">P.P.S.</strong> Jeśli myślisz „brzmi dobrze, ale skąd mam wiedzieć, że to nie kolejny coach z ładnym CV" - to uczciwe pytanie. Odpowiedź: nie wiesz. Ale możesz sprawdzić. Sesja Discovery to 30 minut, w których zobaczysz, jak pracuję. Bez zobowiązań, bez presji. Jeśli po 30 minutach pomyślisz „to jest dokładnie to, co próbuję powiedzieć każdemu i nikt nie rozumie" - to prawdopodobnie mamy ze sobą rozmawiać.
           </p>
           <p className="text-dim leading-relaxed">
-            <strong className="text-white">P.P.P.S.</strong> A jeśli to, co tak naprawdę Cię powstrzymuje, to nie pieniądze, nie czas i nie zaufanie — tylko lęk, że spróbujesz i znowu nie zadziała — to jest najuczciwsze, co możesz poczuć. I dokładnie z tym pracuję. Bo ten lęk to nie jest słabość. To jest tło, to jest "sukno". I da się je zdjąć.
+            <strong className="text-white">P.P.P.S.</strong> A jeśli to, co tak naprawdę Cię powstrzymuje, to nie pieniądze, nie czas i nie zaufanie - tylko lęk, że spróbujesz i znowu nie zadziała - to jest najuczciwsze, co możesz poczuć. I dokładnie z tym pracuję. Bo ten lęk to nie jest słabość. To jest tło, to jest "sukno". I da się je zdjąć.
           </p>
-          <p className="text-white font-heading text-xl mt-12">— Ludwik</p>
+          <p className="text-white font-heading text-xl mt-12">- Ludwik</p>
         </div>
       </section>
     </Layout>

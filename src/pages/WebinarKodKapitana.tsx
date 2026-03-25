@@ -840,7 +840,7 @@ export default function WebinarKodKapitana() {
                     "
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    — Kasia, uczestniczka poprzedniego spotkania
+                    - Kasia, uczestniczka poprzedniego spotkania
                   </p>
                 </div>
               </div>

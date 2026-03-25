@@ -19,7 +19,7 @@ const decisionTree = [
     link: "/program/odpornosc",
   },
   {
-    problem: "Autopilot — dni lecą, a Ty nie pamiętasz, gdzie poszły",
+    problem: "Autopilot - dni lecą, a Ty nie pamiętasz, gdzie poszły",
     program: "Uważność ",
     link: "/program/uwaznosc",
   },
@@ -29,7 +29,7 @@ const decisionTree = [
     link: "/program/meskosc",
   },
   {
-    problem: "Wszystko powyżej naraz — i czujesz, że problem jest głębiej",
+    problem: "Wszystko powyżej naraz - i czujesz, że problem jest głębiej",
     program: "LifeOS: System Upgrade",
     link: "/discovery",
   },
@@ -38,7 +38,7 @@ const decisionTree = [
 export default function Program() {
   return (
     <Layout>
-      {/* 1. HERO — bg-void-glow (DARK) */}
+      {/* 1. HERO - bg-void-glow (DARK) */}
       <section className="relative py-20 md:py-28 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -47,29 +47,29 @@ export default function Program() {
             </h1>
 
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/90 mb-10 max-w-3xl mx-auto leading-[1.2]">
-              Programy, które instalujesz raz — a&nbsp;zostają z&nbsp;Tobą na zawsze.
+              Programy, które instalujesz raz - a&nbsp;zostają z&nbsp;Tobą na zawsze.
             </h2>
 
             <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-dim leading-relaxed text-left">
               <p>
-                Przez lata zbierałeś narzędzia, metody, techniki. Niektóre pomogły. Większość — dodała kolejną warstwę
+                Przez lata zbierałeś narzędzia, metody, techniki. Niektóre pomogły. Większość - dodała kolejną warstwę
                 na to, co już było skomplikowane.
               </p>
               <p>
-                Te programy działają inaczej. Nie dodają — zdejmują. Zdejmują sukno, pod którym Twój diament był cały
+                Te programy działają inaczej. Nie dodają - zdejmują. Zdejmują sukno, pod którym Twój diament był cały
                 czas.
               </p>
               <p>
                 Każdy z&nbsp;nich to 4–6 tygodni pracy z&nbsp;konkretnym problemem. Nie musisz do nich „wracać", bo nie
-                są kursami do „przerobienia". Są zmianami w&nbsp;sposobie, w&nbsp;jaki myślisz. A&nbsp;te — raz
-                zainstalowane — zostają.
+                są kursami do „przerobienia". Są zmianami w&nbsp;sposobie, w&nbsp;jaki myślisz. A&nbsp;te - raz
+                zainstalowane - zostają.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. DECISION TREE — bg-void (DARK) */}
+      {/* 2. DECISION TREE - bg-void (DARK) */}
       <section className="py-16 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -100,15 +100,15 @@ export default function Program() {
             </div>
 
             <p className="text-sm text-dim mt-6 text-center">
-              A&nbsp;jeśli nadal nie wiesz — przescrolluj niżej. Opisy pomogą.
+              A&nbsp;jeśli nadal nie wiesz - przescrolluj niżej. Opisy pomogą.
             </p>
           </div>
         </div>
       </section>
 
-      {/* THE CUT — dark → dark (visual separator before apps) */}
+      {/* THE CUT - dark → dark (visual separator before apps) */}
 
-      {/* 3-6. APP CARDS — bg-void-glow (DARK) */}
+      {/* 3-6. APP CARDS - bg-void-glow (DARK) */}
       <section className="py-16 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
@@ -135,23 +135,23 @@ export default function Program() {
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy testowali każdy system, kalendarz
-                i&nbsp;aplikację — a&nbsp;ich lista zadań i&nbsp;tak wygląda jak pole bitwy z&nbsp;samym sobą.
+                i&nbsp;aplikację - a&nbsp;ich lista zadań i&nbsp;tak wygląda jak pole bitwy z&nbsp;samym sobą.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
                 To nie jest kolejne narzędzie. To jest zmiana tego, jak podchodzisz do pracy, czasu i&nbsp;energii. Raz
-                zainstalowana — zostaje z&nbsp;Tobą na zawsze. Nie musisz do niej wracać. Nie musisz „odświeżać
-                motywacji". Ona działa w&nbsp;tle — jak system operacyjny.
+                zainstalowana - zostaje z&nbsp;Tobą na zawsze. Nie musisz do niej wracać. Nie musisz „odświeżać
+                motywacji". Ona działa w&nbsp;tle - jak system operacyjny.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
                 <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
-                  <p>Zamiast zarządzać zadaniami — zarządzasz energią.</p>
+                  <p>Zamiast zarządzać zadaniami - zarządzasz energią.</p>
                   <p>
-                    Zamiast walczyć z&nbsp;prokrastynacją — rozumiesz, skąd się bierze, i&nbsp;przestaje być problemem.
+                    Zamiast walczyć z&nbsp;prokrastynacją - rozumiesz, skąd się bierze, i&nbsp;przestaje być problemem.
                   </p>
-                  <p>Zamiast „być zajętym" — tworzysz przestrzeń na to, co naprawdę ważne.</p>
+                  <p>Zamiast „być zajętym" - tworzysz przestrzeń na to, co naprawdę ważne.</p>
                 </div>
               </div>
 
@@ -187,21 +187,21 @@ export default function Program() {
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy wiedzą, że ich głowa jest ich
-                największym sojusznikiem — i&nbsp;jednocześnie ich największym przeciwnikiem.
+                największym sojusznikiem - i&nbsp;jednocześnie ich największym przeciwnikiem.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
                 Firewall dla Twojego umysłu. Nie uczę „jak radzić sobie ze stresem" (masz już 15 artykułów
-                o&nbsp;oddychaniu). Instaluję sposób myślenia, w&nbsp;którym presja przestaje być wrogiem — i&nbsp;staje
+                o&nbsp;oddychaniu). Instaluję sposób myślenia, w&nbsp;którym presja przestaje być wrogiem - i&nbsp;staje
                 się paliwem.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
                 <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
-                  <p>Presja zewnętrzna przestaje paraliżować — zaczyna skupiać.</p>
-                  <p>Krytyka przestaje ranić — zaczyna informować.</p>
-                  <p>Niepewność przestaje przerażać — zaczyna być sygnałem, że robisz coś ważnego.</p>
+                  <p>Presja zewnętrzna przestaje paraliżować - zaczyna skupiać.</p>
+                  <p>Krytyka przestaje ranić - zaczyna informować.</p>
+                  <p>Niepewność przestaje przerażać - zaczyna być sygnałem, że robisz coś ważnego.</p>
                 </div>
               </div>
 
@@ -236,11 +236,11 @@ export default function Program() {
 
               <p className="text-base md:text-lg text-dim mb-4 leading-relaxed">
                 <strong className="text-white/90">Dla kogo:</strong> Dla tych, którzy odkryli, że autopilot prowadzi
-                donikąd — i&nbsp;chcą przejąć stery.
+                donikąd - i&nbsp;chcą przejąć stery.
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                Medytacja dla ludzi z&nbsp;ADHD i&nbsp;analitycznym umysłem. Nie walczysz z&nbsp;myślami — przejmujesz
+                Medytacja dla ludzi z&nbsp;ADHD i&nbsp;analitycznym umysłem. Nie walczysz z&nbsp;myślami - przejmujesz
                 kontrolę nad kokpitem. To nie jest „zamknij oczy i&nbsp;oddychaj". To jest praktyka, która działa nawet
                 gdy siedzisz w&nbsp;korku, na spotkaniu z&nbsp;zarządem albo w&nbsp;kolejce po kawę.
               </p>
@@ -248,9 +248,9 @@ export default function Program() {
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
                 <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
-                  <p>Życie przestaje Ci się „przydarzać" — zaczynasz je świadomie nawigować.</p>
-                  <p>Emocje przestają Tobą miotać — zaczynają Cię informować o&nbsp;tym, co ważne.</p>
-                  <p>Każda chwila przestaje uciekać — zaczyna być Twoim świadomym wyborem.</p>
+                  <p>Życie przestaje Ci się „przydarzać" - zaczynasz je świadomie nawigować.</p>
+                  <p>Emocje przestają Tobą miotać - zaczynają Cię informować o&nbsp;tym, co ważne.</p>
+                  <p>Każda chwila przestaje uciekać - zaczyna być Twoim świadomym wyborem.</p>
                 </div>
               </div>
 
@@ -286,16 +286,16 @@ export default function Program() {
               </p>
 
               <p className="text-base md:text-lg text-dim mb-6 leading-relaxed">
-                Reinstalacja systemu tożsamości. Nie mówię Ci, „jak być mężczyzną" — bo definicję męskości, którą
+                Reinstalacja systemu tożsamości. Nie mówię Ci, „jak być mężczyzną" - bo definicję męskości, którą
                 nosiłeś, napisał ktoś inny. Ten program pomaga Ci napisać własną. Od zera. Na Twoich warunkach.
               </p>
 
               <div className="bg-white/[0.03] rounded-sm p-5 border border-white/10 mb-6">
                 <p className="text-base md:text-lg text-white/90 font-medium mb-3">Co się zmienia po instalacji:</p>
                 <div className="space-y-2 text-base text-dim">
-                  <p>Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.</p>
-                  <p>Wrażliwość przestaje być słabością — staje się supermocą.</p>
-                  <p>Relacje przestają być polem walki — stają się przestrzenią współtworzenia.</p>
+                  <p>Siła przestaje być maską - staje się przezroczystą obecnością. Jak diament.</p>
+                  <p>Wrażliwość przestaje być słabością - staje się supermocą.</p>
+                  <p>Relacje przestają być polem walki - stają się przestrzenią współtworzenia.</p>
                 </div>
               </div>
 
@@ -315,7 +315,7 @@ export default function Program() {
       {/* THE CUT */}
       <div className="the-cut" />
 
-      {/* 7. NIE DLA / DLA — bg-void (DARK) */}
+      {/* 7. NIE DLA / DLA - bg-void (DARK) */}
       <section className="py-16 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
@@ -336,7 +336,7 @@ export default function Program() {
                 <p>
                   <strong className="text-white/90">Nie dla:</strong> osób szukających motywacyjnego kopa, szybkich
                   trików i&nbsp;magicznych formuł. Jeśli potrzebujesz, żeby ktoś Ci powiedział „dasz radę" przez 6
-                  tygodni — to nie tu. (Ale masz do tego pełne prawo — po prostu to nie jest moja robota.)
+                  tygodni - to nie tu. (Ale masz do tego pełne prawo - po prostu to nie jest moja robota.)
                 </p>
 
                 <p>
@@ -359,7 +359,7 @@ export default function Program() {
       {/* THE CUT */}
       <div className="the-cut" />
 
-      {/* 8. LIFEHACKERZY — bg-lifehacker-purple-dark (visual exception) */}
+      {/* 8. LIFEHACKERZY - bg-lifehacker-purple-dark (visual exception) */}
       <section className="py-16 sm:py-20 bg-lifehacker-purple-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -381,7 +381,7 @@ export default function Program() {
               </p>
               <p>
                 To jedyny sposób, żeby dołączyć do Lifehackerów. Nie ma osobnego wejścia. Nie ma subskrypcji. Jest
-                decyzja o&nbsp;zmianie — i&nbsp;ludzie, którzy ją podjęli razem z&nbsp;Tobą.
+                decyzja o&nbsp;zmianie - i&nbsp;ludzie, którzy ją podjęli razem z&nbsp;Tobą.
               </p>
             </div>
 
@@ -393,7 +393,7 @@ export default function Program() {
                   {
                     icon: Clock,
                     title: "12:34 Daily Coaching",
-                    desc: "Codzienne spotkania o stałej porze (tak, o 12:34 — bo kto potrafi zapamiętać 12:34, ten zwraca uwagę na szczegóły)",
+                    desc: "Codzienne spotkania o stałej porze (tak, o 12:34 - bo kto potrafi zapamiętać 12:34, ten zwraca uwagę na szczegóły)",
                   },
                   {
                     icon: Mic2,
@@ -446,9 +446,9 @@ export default function Program() {
                 <p className="text-xl text-white/90 mb-3 italic">
                   „Jesteśmy wypadkową pięciu osób, z&nbsp;którymi spędzamy najwięcej czasu."
                 </p>
-                <p className="text-base text-white/60 mb-4">— Jim Rohn</p>
+                <p className="text-base text-white/60 mb-4">- Jim Rohn</p>
                 <p className="text-base text-white/80">
-                  Otocz się ludźmi, którzy — tak jak Ty — chcą od życia czegoś więcej. I&nbsp;którzy wiedzą, że „więcej"
+                  Otocz się ludźmi, którzy - tak jak Ty - chcą od życia czegoś więcej. I&nbsp;którzy wiedzą, że „więcej"
                   nie znaczy „szybciej".
                 </p>
               </div>
@@ -460,7 +460,7 @@ export default function Program() {
       {/* THE CUT */}
       <div className="the-cut" />
 
-      {/* 9. LIFE OS: System Upgrade — bg-diamond (LIGHT) */}
+      {/* 9. LIFE OS: System Upgrade - bg-diamond (LIGHT) */}
       <section className="py-20 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -474,14 +474,14 @@ export default function Program() {
               </h2>
 
               <p className="text-lg md:text-xl text-on-light-dim max-w-3xl mx-auto leading-relaxed">
-                Nie aplikacja — cały nowy system operacyjny.
+                Nie aplikacja - cały nowy system operacyjny.
               </p>
             </div>
 
             <div className="max-w-3xl mx-auto space-y-6 text-base md:text-lg text-on-light-dim leading-relaxed mb-12">
               <p>
-                Jeśli przeglądasz tę stronę i&nbsp;czujesz, że żadna pojedyncza aplikacja nie trafia w&nbsp;sedno — bo
-                problem leży głębiej, na poziomie tego, kim jesteś, a&nbsp;nie tego, co robisz — to jest Twoje miejsce.
+                Jeśli przeglądasz tę stronę i&nbsp;czujesz, że żadna pojedyncza aplikacja nie trafia w&nbsp;sedno - bo
+                problem leży głębiej, na poziomie tego, kim jesteś, a&nbsp;nie tego, co robisz - to jest Twoje miejsce.
               </p>
               <p>
                 8 tygodni intensywnej pracy 1:1 ze mną. Maksymalnie 5 osób jednocześnie. Diagnostyka, dekonstrukcja,
@@ -522,7 +522,7 @@ export default function Program() {
                   className="inline-block focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   <CTAButton size="lg" className="bg-brand-gradient hover:opacity-90 text-white border-0 text-lg px-10">
-                    Sprawdź dostępność — Sesja Discovery →
+                    Sprawdź dostępność - Sesja Discovery →
                   </CTAButton>
                 </Link>
 
@@ -533,7 +533,7 @@ export default function Program() {
         </div>
       </section>
 
-      {/* 10. ZAMKNIĘCIE — bg-paper (LIGHT) */}
+      {/* 10. ZAMKNIĘCIE - bg-paper (LIGHT) */}
       <section className="py-16 bg-paper">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -549,17 +549,17 @@ export default function Program() {
               </p>
               <p>Bo tak działa diament. Nie trzeba go tworzyć. Trzeba odsłonić.</p>
               <p>
-                Wybierz aplikację, od której chcesz zacząć. Albo — jeśli czujesz, że to jest głębsze —{" "}
+                Wybierz aplikację, od której chcesz zacząć. Albo - jeśli czujesz, że to jest głębsze -{" "}
                 <Link to="/discovery" className="text-electric hover:underline font-medium">
                   umów się na rozmowę
                 </Link>
                 .
               </p>
               <p>
-                Tak czy inaczej — <strong className="text-on-light">dziękuję, że jesteś.</strong> Samo to, że doczytałeś
+                Tak czy inaczej - <strong className="text-on-light">dziękuję, że jesteś.</strong> Samo to, że doczytałeś
                 do tego miejsca, mówi mi coś ważnego o&nbsp;Tobie.
               </p>
-              <p className="text-on-light font-medium mt-8">— Ludwik</p>
+              <p className="text-on-light font-medium mt-8">- Ludwik</p>
             </div>
           </div>
         </div>

@@ -67,7 +67,7 @@ const testimonials: Testimonial[] = [
     premium: true,
   },
   {
-    quote: "With full conviction — the right person in the right place. Don't let him go.",
+    quote: "With full conviction - the right person in the right place. Don't let him go.",
     author: "Adam Aniola",
     premium: true,
   },
@@ -82,7 +82,7 @@ const testimonials: Testimonial[] = [
     author: "Training participant, M2778 in Warsaw, Poland 🇵🇱",
   },
   {
-    quote: "First impression: inconspicuous, but later — BEST OF THE BEST.",
+    quote: "First impression: inconspicuous, but later - BEST OF THE BEST.",
     author: "Małyszek",
   },
   {
@@ -98,7 +98,7 @@ const testimonials: Testimonial[] = [
     author: "Training participant, M10775 in London, UK 🇬🇧",
   },
   {
-    quote: "Very intelligent — would love for him to return for any refresher.",
+    quote: "Very intelligent - would love for him to return for any refresher.",
     author: "Ahkeel Reid",
   },
   {
@@ -138,7 +138,7 @@ const testimonials: Testimonial[] = [
     author: "Training participant, technical training in Warsaw, Poland 🇵🇱",
   },
   {
-    quote: "A CHANGE — THE LAST DAY WAS EPIC!!!!",
+    quote: "A CHANGE - THE LAST DAY WAS EPIC!!!!",
     author: "Training participant, Data Platform training in Warsaw, Poland 🇵🇱",
   },
   {
@@ -241,7 +241,7 @@ const PremiumCard = ({ item }: { item: Testimonial }) => (
       className="text-xs tracking-wide"
       style={{ fontFamily: t.mono, color: t.accent }}
     >
-      — {item.author}
+      - {item.author}
     </p>
   </div>
 );
@@ -258,7 +258,7 @@ const StandardCard = ({ item }: { item: Testimonial }) => (
       className="text-xs"
       style={{ fontFamily: t.mono, color: t.muted }}
     >
-      — {item.author}
+      - {item.author}
     </p>
   </div>
 );
@@ -286,7 +286,7 @@ export default function MCTSocialProof() {
           {testimonials.length} reviews. Zero scripted.
         </p>
         <p className="mb-12 max-w-2xl leading-relaxed" style={{ color: t.muted }}>
-          Every quote below is from an actual post-training evaluation form — unedited, unfiltered.
+          Every quote below is from an actual post-training evaluation form - unedited, unfiltered.
         </p>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

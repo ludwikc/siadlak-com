@@ -64,7 +64,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
               <div className="md:col-span-2 text-center md:text-left">
                 <div className="space-y-4 text-xl text-white/90 leading-relaxed mb-12">
                   <p>
-                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności — i&nbsp;wciąż kręcisz się w&nbsp;kółko.
+                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności - i&nbsp;wciąż kręcisz się w&nbsp;kółko.
                   </p>
                   <p>
                     Bo problem nie jest w&nbsp;narzędziach.{" "}
@@ -73,7 +73,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
                     </span>
                   </p>
                   <p>
-                    Hackuję fundamenty Twojego myślenia — o&nbsp;czasie, energii, tożsamości i&nbsp;narracjach.
+                    Hackuję fundamenty Twojego myślenia - o&nbsp;czasie, energii, tożsamości i&nbsp;narracjach.
                   </p>
                 </div>
 
@@ -920,12 +920,12 @@ Nie szukam skrótów. Przepisuję zasady.`}
                 zrujnować. Jeśli o tym pomyślisz, będziesz robić rzeczy
                 inaczej."
               </blockquote>
-              <p className="text-deep-charcoal/60">— Warren Buffett</p>
+              <p className="text-deep-charcoal/60">- Warren Buffett</p>
               <p className="text-xl text-neural-blue font-semibold mt-6">
                 I ja myślę o tym każdego dnia.
               </p>
               <p className="text-2xl font-bold text-deep-charcoal mt-2">
-                — Ludwik
+                - Ludwik
               </p>
             </div>
           </div>

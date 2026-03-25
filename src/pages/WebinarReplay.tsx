@@ -339,15 +339,15 @@ const WebinarReplay = () => {
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
                       <p className="text-on-light-dim italic mb-2">"Kurczę jakbym słyszał o swoim poprzednim związku - lata walki, za wszelką cenę inwestycja w związek i totalne załamanie, kiedy odeszła, totalny dołek i porażka - znam to"</p>
-                      <p className="text-sm font-medium text-depth">— Konrad</p>
+                      <p className="text-sm font-medium text-depth">- Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
                       <p className="text-on-light-dim italic mb-2">"Znam to uczucie bardzo dobrze z autopsji"</p>
-                      <p className="text-sm font-medium text-depth">— Daniel</p>
+                      <p className="text-sm font-medium text-depth">- Daniel</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
                       <p className="text-on-light-dim italic mb-2">"Hi5 z tym mózgiem analitycznym, nie jest łatwo 🙈"</p>
-                      <p className="text-sm font-medium text-depth">— Anna</p>
+                      <p className="text-sm font-medium text-depth">- Anna</p>
                     </blockquote>
                   </div>
                 </div>
@@ -358,11 +358,11 @@ const WebinarReplay = () => {
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-electric">
                       <p className="text-on-light-dim italic mb-2">"Nie da się ukryć że otoczenie prawdziwych osób wspierających daje przestrzeń, pozwala zrozumieć i daje siłę by iść dalej, zmieniać"</p>
-                      <p className="text-sm font-medium text-electric">— Artur</p>
+                      <p className="text-sm font-medium text-electric">- Artur</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-electric">
                       <p className="text-on-light-dim italic mb-2">"Ludwik to czarodziej 😉 to nie jest zwykły kurs"</p>
-                      <p className="text-sm font-medium text-electric">— Artur</p>
+                      <p className="text-sm font-medium text-electric">- Artur</p>
                     </blockquote>
                   </div>
                 </div>
@@ -373,23 +373,23 @@ const WebinarReplay = () => {
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"O spoko! Dobra cena. Ja myślałem że między 2500 a 5000"</p>
-                      <p className="text-sm font-medium text-on-light">— Konrad</p>
+                      <p className="text-sm font-medium text-on-light">- Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Kupione! Wiem że to będzie dobra współpraca z Wami. Poznałem Was w najgorszym dla mnie kryzysie"</p>
-                      <p className="text-sm font-medium text-on-light">— Konrad</p>
+                      <p className="text-sm font-medium text-on-light">- Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Ja płaciłem więcej niż na początku i dalej się bardzo bardzo opłaca. Polecam każdemu 😎"</p>
-                      <p className="text-sm font-medium text-on-light">— Jakub{" "}<span className="text-xs opacity-70">(członek społeczności Lifehackerzy)</span></p>
+                      <p className="text-sm font-medium text-on-light">- Jakub{" "}<span className="text-xs opacity-70">(członek społeczności Lifehackerzy)</span></p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Wchodzę w to 👍🏻"</p>
-                      <p className="text-sm font-medium text-on-light">— Kamil</p>
+                      <p className="text-sm font-medium text-on-light">- Kamil</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Już nie mogę się doczekać!"</p>
-                      <p className="text-sm font-medium text-on-light">— Patryk</p>
+                      <p className="text-sm font-medium text-on-light">- Patryk</p>
                     </blockquote>
                   </div>
                 </div>

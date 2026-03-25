@@ -20,7 +20,7 @@ export default function Discovery() {
       >
         <p>
           Zadam Ci kilka pytań. Nie takich, jakie zadają na rozmowie
-          kwalifikacyjnej — raczej takich, na które sam nie wpadłbyś, że
+          kwalifikacyjnej - raczej takich, na które sam nie wpadłbyś, że
           potrzebujesz na nie odpowiedzieć.
         </p>
 
@@ -30,15 +30,15 @@ export default function Discovery() {
           {[
             {
               num: "1. Za co walczysz?",
-              desc: "Każdy z nas nosi jakąś walkę — czasem z lat, czasem z pokoleń. Nie chodzi o to, żeby ją wygrać. Chodzi o to, żeby zobaczyć, ile podatku płacisz każdego dnia za historię, w której żyjesz. Bo niektóre walki dawno się skończyły — a my wciąż stoimy w okopach.",
+              desc: "Każdy z nas nosi jakąś walkę - czasem z lat, czasem z pokoleń. Nie chodzi o to, żeby ją wygrać. Chodzi o to, żeby zobaczyć, ile podatku płacisz każdego dnia za historię, w której żyjesz. Bo niektóre walki dawno się skończyły - a my wciąż stoimy w okopach.",
             },
             {
               num: "2. Czego próbujesz uniknąć?",
-              desc: "Większość ludzi, którzy do mnie przychodzą, nie szuka transformacji. Szukają kolejnego systemu, który pozwoli im uniknąć tego, czego naprawdę potrzebują: spojrzenia na diament bez sukna. Bez dekoracji. Bez oprawki. I to jest w porządku — ale trzeba to najpierw zobaczyć.",
+              desc: "Większość ludzi, którzy do mnie przychodzą, nie szuka transformacji. Szukają kolejnego systemu, który pozwoli im uniknąć tego, czego naprawdę potrzebują: spojrzenia na diament bez sukna. Bez dekoracji. Bez oprawki. I to jest w porządku - ale trzeba to najpierw zobaczyć.",
             },
             {
               num: "3. Ile jesteś gotów zainwestować?",
-              desc: "Nie mówię o pieniądzach (o nich porozmawiamy osobno, w pełni transparentnie). Mówię o energii. O gotowości na dyskomfort. O odwadze, żeby zobaczyć, kim jesteś — a nie kim myślisz, że powinieneś być.",
+              desc: "Nie mówię o pieniądzach (o nich porozmawiamy osobno, w pełni transparentnie). Mówię o energii. O gotowości na dyskomfort. O odwadze, żeby zobaczyć, kim jesteś - a nie kim myślisz, że powinieneś być.",
             },
           ].map((item) => (
             <div
@@ -75,8 +75,8 @@ export default function Discovery() {
         </p>
 
         <p>
-          Niezależnie od ścieżki — trafiłeś tutaj, bo coś nie gra. Nie na
-          zewnątrz. Na zewnątrz jest dobrze — może nawet za dobrze. To wewnątrz
+          Niezależnie od ścieżki - trafiłeś tutaj, bo coś nie gra. Nie na
+          zewnątrz. Na zewnątrz jest dobrze - może nawet za dobrze. To wewnątrz
           jest ten dźwięk, który słyszysz tylko o trzeciej w nocy. Ten, który
           mówi &quot;jest coś jeszcze&quot;, ale nie precyzuje co.
         </p>
@@ -103,7 +103,7 @@ export default function Discovery() {
         id="nie"
       >
         <p>
-          Szanuję Twój czas, więc zanim się umówisz — zerknij, czy pasujesz do
+          Szanuję Twój czas, więc zanim się umówisz - zerknij, czy pasujesz do
           tego, z czym pracuję.
         </p>
 
@@ -124,7 +124,7 @@ export default function Discovery() {
         <p>
           Jest jeszcze jeden scenariusz, o którym ważne jest, żebym powiedział
           wprost: jeśli jesteś na etapie, w którym potrzebujesz najpierw
-          stabilizacji — finansowej, zdrowotnej, emocjonalnej — to nie jest
+          stabilizacji - finansowej, zdrowotnej, emocjonalnej - to nie jest
           słabość. To jest priorytet. Możesz wrócić, kiedy będziesz gotów. Nikt
           tu nikogo nie goni.
         </p>
@@ -132,14 +132,14 @@ export default function Discovery() {
         <p>
           <strong>Ta sesja może mieć sens</strong>, jeśli osiągnąłeś sukces,
           który nie smakuje tak, jak miał smakować. Jeśli jesteś uwięziony w
-          narracjach, które kiedyś Ci służyły, a teraz Cię więzą — i zaczynasz
-          to widzieć. Jeśli testowałeś już systemy, metody, kursy — i wiesz, że
+          narracjach, które kiedyś Ci służyły, a teraz Cię więzą - i zaczynasz
+          to widzieć. Jeśli testowałeś już systemy, metody, kursy - i wiesz, że
           problem leży głębiej niż to, co jest na powierzchni.
         </p>
 
         <p>
           Albo jeśli po prostu potrzebujesz kogoś, kto powie Ci prawdę z
-          szacunkiem — nie klepania po plecach, nie brutalnej konfrontacji.
+          szacunkiem - nie klepania po plecach, nie brutalnej konfrontacji.
           Kogoś, kto da Ci pozwolenie na przestanie walki i przyjęcie tego, co
           już masz. Bez &quot;uzdrawiania&quot;. Bez &quot;naprawiania&quot;. Z
           założeniem, że diament jest cały.
@@ -155,7 +155,7 @@ export default function Discovery() {
         maxWidth="900px"
       >
         <p>
-          Transparentnie — jest kilka możliwych scenariuszy. I każdy z nich jest
+          Transparentnie - jest kilka możliwych scenariuszy. I każdy z nich jest
           dobry.
         </p>
 
@@ -183,7 +183,7 @@ export default function Discovery() {
             </h3>
             <p>
               Może jesteś blisko, ale nie teraz. Może najpierw musisz
-              przepracować coś innego — albo po prostu potrzebujesz czasu, żeby
+              przepracować coś innego - albo po prostu potrzebujesz czasu, żeby
               to, co usłyszałeś, mogło się ułożyć. Powiem Ci to wprost i
               skieruję tam, gdzie powinieneś być na tym etapie.
             </p>
@@ -196,7 +196,7 @@ export default function Discovery() {
             <p>
               I to jest absolutnie w porządku. Czasem najlepsza pomoc to szczera
               informacja, że nasze drogi się rozchodzą. Zaoszczędzę Ci czasu,
-              pieniędzy i energii — a Ty nie stracisz pół roku na coś, co od
+              pieniędzy i energii - a Ty nie stracisz pół roku na coś, co od
               początku nie pasowało.
             </p>
           </div>
@@ -208,8 +208,8 @@ export default function Discovery() {
             <p>
               To jest mój ulubiony. Czasem podczas tych 30 minut dzieje się coś
               nieoczekiwanego. Jedno pytanie, jedna zmiana perspektywy, jedno
-              przesunięcie narracji — i nagle widzisz coś, czego wcześniej nie
-              widziałeś. Bez sprzedaży. Bez oferty. Po prostu — zmiana.
+              przesunięcie narracji - i nagle widzisz coś, czego wcześniej nie
+              widziałeś. Bez sprzedaży. Bez oferty. Po prostu - zmiana.
             </p>
             <p className="mt-4">
               Wiem, że brzmi to jak filmowa scena, ale zdarza się częściej, niż
@@ -233,15 +233,15 @@ export default function Discovery() {
           {[
             {
               num: "1. Wypełniasz formularz",
-              desc: "Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) — ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej — i napiszę Ci o tym szczerze.",
+              desc: "Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) - ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej - i napiszę Ci o tym szczerze.",
             },
             {
               num: "2. 30 minut 1:1 na Zoom",
-              desc: "Kamera włączona. To nie jest szybki chat — to uczciwa rozmowa o tym, gdzie naprawdę jesteś. Nie o tym, gdzie byś chciał być. Nie o tym, co mówisz na LinkedInie. O tym, co widzisz, kiedy zdejmiesz sukno.",
+              desc: "Kamera włączona. To nie jest szybki chat - to uczciwa rozmowa o tym, gdzie naprawdę jesteś. Nie o tym, gdzie byś chciał być. Nie o tym, co mówisz na LinkedInie. O tym, co widzisz, kiedy zdejmiesz sukno.",
             },
             {
               num: "3. Jasna odpowiedź",
-              desc: 'Po rozmowie wiem, czy mogę Ci pomóc — i mówię Ci to wprost. Jeśli tak, rozmawiamy o współpracy. Jeśli nie, powiem dlaczego i gdzie szukać dalej. Żadnej "szarej strefy", żadnego "zastanowię się i wrócę".',
+              desc: 'Po rozmowie wiem, czy mogę Ci pomóc - i mówię Ci to wprost. Jeśli tak, rozmawiamy o współpracy. Jeśli nie, powiem dlaczego i gdzie szukać dalej. Żadnej "szarej strefy", żadnego "zastanowię się i wrócę".',
             },
           ].map((item) => (
             <div
@@ -259,14 +259,14 @@ export default function Discovery() {
 
       <div className="the-cut" />
 
-      {/* A co z Life OS? — compressed bridge */}
+      {/* A co z Life OS? - compressed bridge */}
       <ContentTextSection
         title="A co z Life OS?"
         maxWidth="900px"
         backgroundVariant="light"
       >
         <p>
-          Jeśli po sesji Discovery obaj zdecydujemy, że to ma sens — oto co Cię
+          Jeśli po sesji Discovery obaj zdecydujemy, że to ma sens - oto co Cię
           czeka w skrócie:
         </p>
 
@@ -275,13 +275,13 @@ export default function Discovery() {
           godziny (bez sztucznego limitu), dostęp do mnie między sesjami przez
           Signal, pełna diagnostyka Twojego &quot;systemu operacyjnego&quot;,
           spersonalizowana mapa transformacji, nagrania wszystkich sesji i
-          dożywotni dostęp do społeczności absolwentów — codziennie o 12:34 na
+          dożywotni dostęp do społeczności absolwentów - codziennie o 12:34 na
           Discordzie Lifehackerów.
         </p>
 
         <p>
           Inwestycja: 16 000 PLN (lub 2 × 6 500 PLN netto na fakturę).
-          Gwarancja zwrotu po 2 tygodniach — jeśli nie poczujesz, że to
+          Gwarancja zwrotu po 2 tygodniach - jeśli nie poczujesz, że to
           fundamentalnie inna praca, powiemy sobie &quot;do widzenia&quot; i nie
           zapłacisz ani złotówki więcej.
         </p>
@@ -298,7 +298,7 @@ export default function Discovery() {
         </p>
 
         <p className="font-bold">
-          Ale najpierw — sesja. Bo bez niej żadna decyzja nie ma sensu.
+          Ale najpierw - sesja. Bo bez niej żadna decyzja nie ma sensu.
         </p>
       </ContentTextSection>
 
@@ -317,7 +317,7 @@ export default function Discovery() {
 
           <p className="mb-6">
             Nie przychodzę do Ciebie jako ktoś, kto ma wszystkie odpowiedzi.
-            Przychodzę jako ktoś, kto przeszedł swoją własną drogę — od systemów
+            Przychodzę jako ktoś, kto przeszedł swoją własną drogę - od systemów
             produktywności w wieku 16 lat, przez sukces, który smakował jak
             pustka, aż po odkrycie, że diament był tam cały czas.
           </p>
@@ -330,7 +330,7 @@ export default function Discovery() {
 
           <p className="font-bold text-electric mb-12">
             Nie obiecuję, że będzie łatwo. Obiecuję, że będzie prawdziwe. I że
-            po tych 30 minutach — niezależnie od scenariusza — będziesz wiedział
+            po tych 30 minutach - niezależnie od scenariusza - będziesz wiedział
             więcej niż przed nimi.
           </p>
         </div>
@@ -350,15 +350,15 @@ export default function Discovery() {
           <p className="mb-6">
             <strong className="text-electric">P.S.</strong> Jeśli dotarłeś do
             tego miejsca i wciąż analizujesz wszystkie &quot;za&quot; i
-            &quot;przeciw&quot; — to jest dokładnie jeden ze wzorców, z którym
+            &quot;przeciw&quot; - to jest dokładnie jeden ze wzorców, z którym
             będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie 100%
             pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny
-            sposób, żeby zbadać tę niepewność — bez pełnego zobowiązania.
+            sposób, żeby zbadać tę niepewność - bez pełnego zobowiązania.
           </p>
 
           <p className="mb-6">
             <strong className="text-electric">P.P.S.</strong> Jeśli nie jesteś
-            gotów na pracę 1:1, ale chcesz zobaczyć, jak pracuję — zacznij od{" "}
+            gotów na pracę 1:1, ale chcesz zobaczyć, jak pracuję - zacznij od{" "}
             <Link
               to="/program/produktywnosc"
               className="text-electric underline hover:no-underline"
@@ -366,7 +366,7 @@ export default function Discovery() {
               Programu Produktywność
             </Link>
             . To aplikacja mentalna, którą instalujesz samodzielnie, w swoim
-            tempie. I wiele osób stamtąd trafia tutaj — kiedy są gotowe na coś
+            tempie. I wiele osób stamtąd trafia tutaj - kiedy są gotowe na coś
             głębszego.
           </p>
 
@@ -380,7 +380,7 @@ export default function Discovery() {
         </div>
 
         <p className="font-bold text-electric text-center mt-8 text-xl">
-          — Ludwik
+          - Ludwik
         </p>
       </ContentTextSection>
     </Layout>

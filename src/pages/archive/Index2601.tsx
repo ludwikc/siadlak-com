@@ -38,7 +38,7 @@ const Index2601 = () => {
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
               <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
-                {`Ludwik C. Siadlak — `}
+                {`Ludwik C. Siadlak - `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   przeprogramowuję fundamenty
                 </span>
@@ -61,7 +61,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
               <div className="md:col-span-2 text-center md:text-left">
                 <div className="space-y-4 text-xl text-white/90 leading-relaxed mb-12">
                   <p>
-                    Todoist, Notion, GTD, PARA, mindfulness appki — to wszystko
+                    Todoist, Notion, GTD, PARA, mindfulness appki - to wszystko
                     interfejs.
                   </p>
                   <p>Problem nie leży w ikonkach.</p>
@@ -165,7 +165,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                   Na tydzień. Na miesiąc.
                 </p>
                 <p className="text-xl text-deep-charcoal mb-8">
-                  A potem wracałeś do punktu wyjścia — tylko z kolejną warstwą
+                  A potem wracałeś do punktu wyjścia - tylko z kolejną warstwą
                   niespełnionych obietnic.
                 </p>
 
@@ -189,7 +189,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-6xl font-bold mb-8">
-                Moja droga —{" "}
+                Moja droga -{" "}
                 <span className="text-zenith-gold">
                   od wojownika do przewodnika
                 </span>
@@ -225,7 +225,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                       Żeby zmienić grę, musiałem zmienić gracza.
                     </p>
                     <p className="text-lg text-white/80 mt-3">
-                      Nie aplikacje — tylko system operacyjny duszy.
+                      Nie aplikacje - tylko system operacyjny duszy.
                     </p>
                   </div>
 
@@ -316,8 +316,8 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                       </p>
                     </div>
                     <p>
-                      Używam metafor z życia — diamentowego umysłu, żaglówki,
-                      jazdy po torze — by pokazać Ci, że to{" "}
+                      Używam metafor z życia - diamentowego umysłu, żaglówki,
+                      jazdy po torze - by pokazać Ci, że to{" "}
                       <strong className="text-deep-charcoal">
                         Ty trzymasz kierownicę
                       </strong>
@@ -325,7 +325,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                     </p>
                     <p className="text-xl font-semibold text-deep-charcoal mt-6">
                       To praca dla tych, którzy potrzebują, by ktoś odciął im
-                      skrzydła — żeby nauczyli się latać od nowa.
+                      skrzydła - żeby nauczyli się latać od nowa.
                     </p>
                   </div>
                 </CardContent>
@@ -351,7 +351,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
 
                   <div className="space-y-4 text-lg text-deep-charcoal/80 leading-relaxed">
                     <p>Zbudowałeś sukces. Zarabiasz. Masz uznanie.</p>
-                    <p>A w środku — cisza, która woła.</p>
+                    <p>A w środku - cisza, która woła.</p>
                     <div className="bg-twilight-indigo/5 p-4 rounded-lg border border-twilight-indigo/20 my-6">
                       <p className="font-bold text-twilight-indigo">
                         Tu nie chodzi o kolejny cel. Chodzi o przestanie
@@ -364,7 +364,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                     </p>
                     <p className="text-xl font-semibold text-deep-charcoal mt-6">
                       To praca delikatna, głęboka, oparta na uważności i
-                      akceptacji — bez walki.
+                      akceptacji - bez walki.
                     </p>
                   </div>
                 </CardContent>
@@ -857,7 +857,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-6xl font-bold text-deep-charcoal mb-8">
-              Jeśli dotarłeś tutaj —{" "}
+              Jeśli dotarłeś tutaj -{" "}
               <span className="text-neural-blue">
                 wiesz, że to nie jest zwykła oferta.
               </span>
@@ -906,7 +906,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
 
             <div className="space-y-6 text-xl text-deep-charcoal/80 mb-12">
               <p className="text-2xl font-bold text-deep-charcoal">
-                Jeśli czujesz, że to rezonuje — nie potrzebujesz więcej tekstu.
+                Jeśli czujesz, że to rezonuje - nie potrzebujesz więcej tekstu.
               </p>
               <p className="text-2xl font-semibold text-neural-blue">
                 Potrzebujesz rozmowy.
@@ -943,7 +943,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
 
             <div className="border-t-2 border-neural-blue/20 pt-8 mt-12">
               <p className="text-2xl font-bold text-deep-charcoal mb-2">
-                — Ludwik C. Siadlak
+                - Ludwik C. Siadlak
               </p>
               <p className="text-lg italic text-deep-charcoal/70">
                 Life Hacker. Przewodnik po własnym umyśle.

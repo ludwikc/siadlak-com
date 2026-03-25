@@ -11,27 +11,27 @@ const LINKS = [
   {
     emoji: "🎙️",
     label: "Najbliższy Webinar",
-    desc: "Wkrótce — zapisz się, żeby nie przegapić",
+    desc: "Wkrótce - zapisz się, żeby nie przegapić",
     href: `/webinar${UTM}`,
     internal: true,
   },
   {
     emoji: "📦",
-    label: "Programy — Aplikacje Mentalne",
+    label: "Programy - Aplikacje Mentalne",
     desc: "Od produktywności po odporność psychiczną. Instalujesz samodzielnie, w swoim tempie.",
     href: `/program${UTM}`,
     internal: true,
   },
   {
     emoji: "🔍",
-    label: "Sesja Discovery — pracuj ze mną 1:1",
+    label: "Sesja Discovery - pracuj ze mną 1:1",
     desc: "30 minut. Jedno pytanie, które może zmienić wszystko.",
     href: `/discovery${UTM}`,
     internal: true,
   },
   {
     emoji: "💬",
-    label: "Lifehackerzy — darmowa społeczność",
+    label: "Lifehackerzy - darmowa społeczność",
     desc: "Discord dla tych, którzy myślą głębiej. Wejście przez dowolny program.",
     href: `https://lifehackerzy.pl${UTM}`,
     internal: false,
@@ -46,7 +46,7 @@ const LINKS = [
   {
     emoji: "👤",
     label: "O mnie",
-    desc: "19 lat, 10 000+ profesjonalistów, Oxford, NATO — i historia, jak to wszystko prawie się skończyło na peronie metra.",
+    desc: "19 lat, 10 000+ profesjonalistów, Oxford, NATO - i historia, jak to wszystko prawie się skończyło na peronie metra.",
     href: `/about${UTM}`,
     internal: true,
   },
@@ -75,7 +75,7 @@ export default function LinksPage() {
   return (
     <>
       <SEO
-        title="Ludwik C. Siadlak — Links"
+        title="Ludwik C. Siadlak - Links"
         description="Life Hacker. Katalizuję wojowników. Prowadzę poszukiwaczy. Newsletter, programy, mentoring 1:1."
         url="https://siadlak.com/links"
       />
@@ -104,10 +104,10 @@ export default function LinksPage() {
             </h2>
             <p className="text-sm text-[hsl(var(--text-dim))] text-center leading-relaxed">
               Na Instagramie algorytm decyduje, czy to zobaczysz. Na moim
-              newsletterze — decydujesz Ty.
+              newsletterze - decydujesz Ty.
             </p>
             <p className="text-sm text-[hsl(var(--text-dim))] text-center leading-relaxed">
-              Co niedzielę o 19:00 — jedna myśl, która ma szansę zderzyć się
+              Co niedzielę o 19:00 - jedna myśl, która ma szansę zderzyć się
               z Twoją. Bez porad. Bez listicli. Bez bzdur.
             </p>
 
@@ -178,7 +178,7 @@ export default function LinksPage() {
           {/* === FOOTER === */}
           <div className="text-center pt-4 pb-8">
             <p className="text-sm text-[hsl(var(--text-dim)/0.5)]">
-              — Ludwik
+              - Ludwik
             </p>
           </div>
         </div>

@@ -113,9 +113,9 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
             <ul className="text-left max-w-2xl mx-auto space-y-3 text-lg leading-relaxed">
-              <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach — zero „teorii dla teorii”.</li>
+              <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach - zero „teorii dla teorii”.</li>
               <li className="text-foreground">• <strong>Po każdej technice jedno zadanie</strong>, które wdrażasz od razu.</li>
-              <li className="text-foreground">• <strong>Zero aplikacji</strong> — wystarczy zwykły timer.</li>
+              <li className="text-foreground">• <strong>Zero aplikacji</strong> - wystarczy zwykły timer.</li>
               <li className="text-foreground">• <strong>Dostęp natychmiast</strong> po zakupie.</li>
             </ul>
           </div>
@@ -139,7 +139,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                   {t.number}
                 </div>
                 <div className="text-foreground">
-                  <p className="leading-relaxed"><strong>{t.title}</strong> — {t.description}</p>
+                  <p className="leading-relaxed"><strong>{t.title}</strong> - {t.description}</p>
                 </div>
               </div>
             ))}
@@ -176,7 +176,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 </div>
                 <div className="text-3xl text-muted-foreground">→</div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa — i <s>tylko teraz</s></p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa - i <s>tylko teraz</s></p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
