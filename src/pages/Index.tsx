@@ -87,24 +87,29 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Znasz ten moment, kiedy masz wszystko &ndash; a&nbsp;czujesz, że&nbsp;czegoś brakuje?
+                Masz wszystko, czego potrzebujesz. Pytanie, ile warstw musisz zdjąć, żeby to&nbsp;zobaczyć.
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
-                <p>Masz kompetencje. Masz wyniki. I&nbsp;masz przeczucie, że&nbsp;to wciąż nie to.</p>
-                <p>
-                  Nie potrzebujesz kolejnego narzędzia. Potrzebujesz kogoś, kto pomoże Ci zobaczyć to, co masz w sobie
-                  od zawsze.
+                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz.</p>
+                <p className="text-white font-medium">
+                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu — jesteś we właściwym miejscu.
                 </p>
               </div>
 
-              {/* CTA */}
-              <div className="mt-12">
+              {/* Dual CTA */}
+              <div className="mt-12 flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/discovery"
-                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+                  className="inline-block py-5 px-8 bg-brand-gradient text-white font-bold uppercase tracking-widest text-xs rounded shadow-sm hover:opacity-90 transition-opacity text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                 >
-                  PRACUJ ZE MNĄ 1:1 →
+                  SPRAWDŹ DOSTĘPNOŚĆ — Sesja Discovery →
+                </Link>
+                <Link
+                  to="/program"
+                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-5 hover:border-electric hover:text-electric transition-colors text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+                >
+                  ZOBACZ PROGRAMY →
                 </Link>
               </div>
             </div>
@@ -135,20 +140,13 @@ const Index = () => {
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
               {[
-                {
-                  q: "Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting.",
-                  a: "Paweł Cerkaski",
-                },
-                {
-                  q: "Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years.",
-                  a: "Betty M. Greenberg",
-                },
-                {
-                  q: "Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Właściwa osoba na właściwym miejscu.",
-                  a: "Adam Anioła",
-                },
+                { q: "Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat.", a: "Łukasz, IT, ADHD, sceptyk" },
+                { q: "Ludwik is the best instructor I have ever met. His knowledge and teaching skills made this course incredibly interesting.", a: "Paweł Cerkaski" },
+                { q: "Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam.", a: "Anna, CEO" },
+                { q: "Bardzo fajny gość. Ma wiedzę ale przede wszystkim osobowość. Właściwa osoba na właściwym miejscu.", a: "Adam Anioła" },
+                { q: "Excellent instructor. Extremely knowledgeable, articulate and personable. Best instructor I've had in many years.", a: "Betty M. Greenberg" },
+                { q: "Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Nie dlatego, że Ludwik jest lepszy. Dlatego, że zadaje inne pytania.", a: "Artur, ojciec, przedsiębiorca" },
                 { q: "Easy to understand, clear explanations and a nice teaching personality.", a: "Yasith Navoda" },
-                { q: "Good pace and really good at explaining.", a: "Hilde Mykland Pihl" },
               ].map((t, i) => (
                 <div key={i} className="flex items-start gap-6">
                   <div className="max-w-md whitespace-normal">
@@ -210,9 +208,9 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-4 mb-12">
             {[
-              'Szlifowałeś go kursami: GTD, Todoist, Asana, "7 nawyków skutecznego wszystkiego".',
+              'Szlifowałeś go kursami: GTD, Todoist, Asana, "7 nawyków skutecznego wszystkiego". (Mam je na półce. Wszystkie. Niektóre nawet przeczytane.)',
               "Polerowałeś terapeutami i coachami (kolejny, i jeszcze jeden, i może ten wreszcie...).",
-              "Czyściłeś Headspace'em i Calmem — bo ktoś Ci powiedział, że problem jest w Twojej głowie.",
+              "Czyściłeś medytacją i mindfulness — bo ktoś Ci powiedział, że problem jest w Twojej głowie.",
               'Kupowałeś nowe systemy i metody — bo stare "nie działały".',
             ].map((item, i) => (
               <div key={i} className="p-4 bg-void rounded flex items-start gap-3">
@@ -268,7 +266,7 @@ const Index = () => {
 
           <div className="text-dim text-lg space-y-6 max-w-3xl">
             <p>
-              19 lat jako trener Microsoft. 10 000 profesjonalistów. Fortune 500. NATO. Jednostki specjalne. 
+              19 lat jako trener Microsoft. 10 000+ profesjonalistów. Fortune 500. NATO. Jednostki specjalne. 
               Psychologia na SWPS, a IT — na{" "}
               <a href="https://ox.ac.uk" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">
                 Oksfordzie
@@ -415,10 +413,16 @@ const Index = () => {
                 </li>
               </ul>
 
-              <p className="text-sm text-on-light-dim border-t border-border/50 pt-6">
+              <p className="text-sm text-on-light-dim border-t border-border/50 pt-6 mb-4">
                 Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Nie da się tego zrobić
-                na webinarze. Taka jest natura tej pracy.
+                na webinarze. Taka jest natura tej pracy. Dlatego maksymalnie 5 osób jednocześnie.
               </p>
+              <Link
+                to="/program/lifeos-system-upgrade"
+                className="text-sm font-bold text-electric hover:underline"
+              >
+                Pełny opis programu i metodologii →
+              </Link>
             </div>
 
             {/* Right column (5 cols) — sticky pricing card */}
@@ -441,24 +445,31 @@ const Index = () => {
                   APLIKUJ O MIEJSCE
                 </Link>
 
-                <p className="text-xs text-on-light-dim text-center">Dostępne: 3/5 miejsc · Faktura VAT</p>
+                <p className="text-xs text-on-light-dim text-center">Dostępne: 3/5 miejsc · Faktura VAT · Możliwość rozłożenia na 2 raty</p>
               </div>
             </div>
           </div>
 
-          {/* Testimonials dual */}
-          <div className="grid md:grid-cols-2 gap-8 mt-20">
+          {/* REMIND + Value-based framing */}
+          <div className="max-w-3xl mt-16 space-y-6 text-on-light-dim leading-relaxed">
+            <p>
+              Zanim popatrzysz na liczbę — przypomnij sobie, po co tu trafiłeś. Nie po kolejny kurs. Po zmianę sukna, na którym leży Twój diament.
+            </p>
+            <p>
+              A teraz pomyśl, ile kosztuje Cię kolejny rok życia na tym samym tle. Nie w pieniądzach — w energii, w decyzjach, których nie podejmujesz, w relacjach, które cierpią, bo walczysz wewnętrzną wojnę zamiast być obecny. Rok takiego życia kosztuje więcej niż jakikolwiek program.
+            </p>
+            <p>
+              Jest jeszcze jeden powód, o którym rzadko się mówi: ludzie, którzy inwestują poważnie, pracują poważnie. To nie jest teoria — to wzorzec, który widzę od lat. Klienci, którzy „próbują za darmo", próbują tak, jakby im nie zależało. Klienci, którzy podjęli konkretną decyzję finansową, przychodzą na sesję gotowi. I dlatego ich wyniki są inne.
+            </p>
+          </div>
+
+          {/* Anna testimonial */}
+          <div className="mt-12">
             <TestimonialCard
               variant="light"
               quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
               author="ANNA"
               label="CEO Agencji Marketingowej"
-            />
-            <TestimonialCard
-              variant="light"
-              quote="I am impressed of all the clear examples that he made during the course! He is the absolute best instructor I have ever had!!"
-              author="Uczestnik szkolenia w Bergen"
-              label="Norwegia 🇳🇴"
             />
           </div>
         </div>
@@ -468,32 +479,30 @@ const Index = () => {
       <section className="bg-paper py-24">
         <div className="container mx-auto px-4 max-w-7xl">
           <h3 className="font-heading text-3xl font-bold text-on-light mb-16 text-center">
-            Głosy tych, którzy zdjęli sukno
+            Głosy tych, którzy zmienili tło
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <TestimonialCard
               variant="light"
-              quote="Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat."
-              author="ŁUKASZ"
-              label="IT, ADHD, sceptyk"
-            />
-            <TestimonialCard
-              variant="light"
-              quote="Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają. Dlatego, że zadaje inne pytania."
-              author="ARTUR"
-              label="Ojciec, przedsiębiorca"
-            />
-            <TestimonialCard
-              variant="light"
-              quote="Zapytał: 'Ile podatku płacisz każdego dnia za tę historię?' W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam."
-              author="ANNA"
-              label="CEO"
-            />
-            <TestimonialCard
-              variant="light"
-              quote="Niby byłam na wakacjach, ale mentalnie byłam w biurze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I uwierzyłam."
+              quote="Niby byłam na wakacjach, ale mentalnie byłam w biurze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.' I zrozumiałam."
               author="ŁUCJA"
               label="Founder RefSpace"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Wcześniej decyzja o zatrudnieniu kosztowała mnie 3 tygodnie snu. Teraz wiem w 20 minut. I nie mylę się częściej — wręcz przeciwnie."
+              author="KLIENTKA LIFE OS"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą."
+              author="TOMEK, 38 lat"
+              label="CTO startupu, ojciec dwójki"
+            />
+            <TestimonialCard
+              variant="light"
+              quote="Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła."
+              author="KLIENT LIFE OS"
             />
           </div>
         </div>
@@ -511,8 +520,8 @@ const Index = () => {
               <ul className="space-y-4 text-on-light-dim">
                 {[
                   "Szukasz kolejnego systemu produktywności (mam na to osobny program — patrz niżej)",
-                  "Potrzebujesz kogoś, kto powie Ci, że wszystko jest okej",
-                  "Chcesz gotową receptę z pudełka",
+                  "Chcesz gotową receptę z pudełka — 7 kroków, PDF, certyfikat na ścianę",
+                  "Nie jesteś gotów zobaczyć tego, co zobaczysz — bo ta praca nie zawsze pokazuje to, co chciałbyś zobaczyć",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-destructive font-bold shrink-0">✕</span>
@@ -529,7 +538,7 @@ const Index = () => {
                 {[
                   "Osiągnąłeś sukces, który nie smakuje tak, jak miał smakować",
                   "Testowałeś narzędzia i wiesz, że problem leży głębiej",
-                  "Jesteś gotów na rozmowę bez klepania po plecach",
+                  "Jesteś gotów na rozmowę bez klepania po plecach — i bez brutalnej konfrontacji",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-electric font-bold shrink-0">✔</span>
@@ -586,8 +595,7 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
           <h2 className="font-heading text-4xl font-bold text-on-light mb-8">Tylko 5 miejsc jednocześnie.</h2>
           <p className="text-on-light-dim max-w-2xl mb-8">
-            Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Nie da się tego zrobić na
-            webinarze. Taka jest natura tej pracy.
+            Nie da się prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób. Taka jest natura tej pracy.
           </p>
 
           {/* Status badge */}
@@ -595,13 +603,11 @@ const Index = () => {
             STATUS: Ostatnie wolne miejsca
           </div>
 
-          {/* Łucja quote */}
-          <div className="py-16 max-w-2xl">
-            <blockquote className="text-xl md:text-2xl lg:text-3xl text-on-light italic leading-relaxed mb-6">
-              „Pracowałam na wakacjach w mentalnym garniturze. Ludwik powiedział: 'Nic nie jest dla Ciebie zbyt dobre.'
-              I uwierzyłam."
-            </blockquote>
-            <footer className="text-sm uppercase tracking-widest text-on-light-dim">— ŁUCJA — FOUNDER REFSPACE</footer>
+          {/* Discovery context */}
+          <div className="max-w-2xl mb-12">
+            <p className="text-on-light-dim leading-relaxed">
+              Zanim cokolwiek zdecydujemy — 30 minut na Zoom. Zadam Ci kilka pytań, na które sam nie wpadłbyś, że potrzebujesz na nie odpowiedzieć. To nie jest rozmowa sprzedażowa. To wzajemna ocena — Ty sprawdzasz mnie, ja sprawdzam Ciebie. Obaj mamy prawo powiedzieć "nie".
+            </p>
           </div>
 
           {/* CTA Card */}
@@ -610,7 +616,7 @@ const Index = () => {
               to="/discovery"
               className="block w-full py-5 bg-brand-gradient text-white font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4 focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
-              ZAREZERWUJ BEZPŁATNĄ ROZMOWĘ
+              ZAREZERWUJ SESJĘ DISCOVERY →
             </Link>
             <p className="text-xs text-on-light-dim uppercase tracking-wider">
               30 MINUT · BEZ SPRZEDAŻY · BEZ OBIETNIC
@@ -623,10 +629,14 @@ const Index = () => {
       <section className="py-16 bg-diamond text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
-          <p className="text-on-light-dim text-sm">
+          <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
             stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
           </p>
+          <blockquote className="text-sm text-on-light-dim italic leading-relaxed max-w-xl mx-auto border-l-2 border-electric pl-4 text-left">
+            „Zacząłem od Produktywności — bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
+            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">— UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
+          </blockquote>
         </div>
       </section>
 
@@ -670,7 +680,7 @@ const Index = () => {
             {[
               {
                 title: "Produktywność",
-                subtitle: "",
+                subtitle: "1 240+ osób zainstalowało",
                 desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
@@ -757,59 +767,37 @@ const Index = () => {
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
-          <p className="text-dim leading-relaxed mb-10">
-            Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Bez algorytmów, bez lajków, bez
-            komentarzy. Tylko Ty, ja i Twoja skrzynka mailowa.
-          </p>
+          <div className="text-dim leading-relaxed mb-10 space-y-4">
+            <p>
+              Raz w tygodniu piszę do ludzi, którzy szukają głębi — nie kolejnych trików. Na Instagramie algorytm decyduje, czy to zobaczysz. Na moim newsletterze — decydujesz Ty.
+            </p>
+            <p>
+              Co niedzielę o 19:00 — jedna myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez listicli. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
+            </p>
+          </div>
           <Link
             to="/newsletter"
             className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
           >
             DOŁĄCZ DO NEWSLETTERA →
           </Link>
+          <p className="text-xs text-dim mt-4">150+ osób czyta. Zero spam. Odejdziesz jednym kliknięciem.</p>
         </div>
       </section>
 
-      {/* ═══ CLOSING FOOTER ═══ */}
-      <section className="py-20 relative overflow-hidden bg-void-glow">
-        {/* Background photo – pinned left */}
-        <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img src={onPurple1} alt="" className="h-full w-auto object-cover object-left" />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
-        </div>
-        <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
-          <h2 className="font-heading text-2xl font-bold text-white mb-2">Diamentowy umysł.</h2>
-          <p className="text-dim uppercase tracking-widest text-xs mb-8">OTWARTA PRZYŁBICA.</p>
-
-          {/* Divider */}
-          <div className="w-12 h-1 bg-brand-gradient mx-auto rounded-full mb-8" />
-
-          <p className="font-heading text-xl text-white tracking-wide mb-8">Ludwik C. Siadlak</p>
-
-          <div className="flex justify-center gap-8">
-            <Link
-              to="/about"
-              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
-            >
-              O mnie
-            </Link>
-            <Link
-              to="/program"
-              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
-            >
-              Programy
-            </Link>
-            <Link
-              to="/contact"
-              className="text-xs text-dim uppercase tracking-wider hover:text-electric transition-colors"
-            >
-              Kontakt
-            </Link>
-          </div>
-
-          <p className="text-xs text-dim mt-12">
-            © {new Date().getFullYear()} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.
+      {/* ═══ P.S. LADDER + CLOSING ═══ */}
+      <section className="py-20 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-2xl space-y-8">
+          <p className="text-dim leading-relaxed">
+            <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>
+          <p className="text-dim leading-relaxed">
+            <strong className="text-white">P.P.S.</strong> Jeśli myślisz „brzmi dobrze, ale skąd mam wiedzieć, że to nie kolejny coach z ładnym CV" — to uczciwe pytanie. Odpowiedź: nie wiesz. Ale możesz sprawdzić. Sesja Discovery to 30 minut, w których zobaczysz, jak pracuję. Bez zobowiązań, bez presji. Jeśli po 30 minutach pomyślisz „to jest dokładnie to, co próbuję powiedzieć każdemu i nikt nie rozumie" — to prawdopodobnie mamy ze sobą rozmawiać.
+          </p>
+          <p className="text-dim leading-relaxed">
+            <strong className="text-white">P.P.P.S.</strong> A jeśli to, co tak naprawdę Cię powstrzymuje, to nie pieniądze, nie czas i nie zaufanie — tylko lęk, że spróbujesz i znowu nie zadziała — to jest najuczciwsze, co możesz poczuć. I dokładnie z tym pracuję. Bo ten lęk to nie jest słabość. To jest tło, to jest "sukno". I da się je zdjąć.
+          </p>
+          <p className="text-white font-heading text-xl mt-12">— Ludwik</p>
         </div>
       </section>
     </Layout>
