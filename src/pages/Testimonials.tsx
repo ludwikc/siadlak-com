@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
-import { getSEOConfig } from '@/lib/seo-config';
+import { getSEOConfig, getTopicalConfig } from '@/lib/seo-config';
+import TopicalMeta from '@/components/TopicalMeta';
+import { getWebPageEntity } from '@/lib/structured-data';
 
 type QuoteSegment = string | { highlight: string };
 
@@ -1144,7 +1146,10 @@ const Testimonials = () => {
 
   return (
     <Layout>
-      <SEO {...getSEOConfig('/testimonials')} />
+      <SEO {...getSEOConfig('/testimonials')} jsonLd={[
+        getWebPageEntity('/testimonials', '100+ Opinii Klientow', 'Ponad 100 opinii od klientow z Polski, Norwegii, UK i innych krajow.', ['/program', '/discovery']),
+      ]} />
+      {(() => { const t = getTopicalConfig("/testimonials"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       <header className="testimonials-header">
         <div className="header-inner">
