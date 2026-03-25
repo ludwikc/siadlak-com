@@ -4,6 +4,10 @@ import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
 import ValueProposition from '../components/podcast/ValueProposition';
 import PodcastEpisodeList, { PodcastEpisode } from '../components/podcast/PodcastEpisodeList';
 import { ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
+import { getSEOConfig, getTopicalConfig } from '../lib/seo-config';
+import TopicalMeta from '../components/TopicalMeta';
+import { getPodcastEntity, getWebPageEntity } from '../lib/structured-data';
 
 const LifeHackingPodcast = () => {
   // Sample episodes data - would be fetched from an API in a real scenario

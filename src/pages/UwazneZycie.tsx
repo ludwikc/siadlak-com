@@ -2,6 +2,9 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png";
 import "@fontsource/caveat/400.css";
 import {

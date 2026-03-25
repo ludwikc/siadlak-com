@@ -1,4 +1,8 @@
 import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
 import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
