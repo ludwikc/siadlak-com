@@ -89,7 +89,7 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Nie brakuje Ci czasu ani narzędzi. <br> Brakuje Ci przejrzystości.
+                Nie brakuje Ci czasu ani narzędzi. <br /> Brakuje Ci przejrzystości.
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
