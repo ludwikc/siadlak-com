@@ -30,7 +30,8 @@ export const routes = [
   '/thank-you',
   '/thank-you/meski-kompas',
   '/mct',
-  '/start'
+  '/start',
+  '/siadlakvip'
 ];
 
 // Dynamic routes that should be excluded from static generation

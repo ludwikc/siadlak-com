@@ -66,6 +66,7 @@ import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
 import Links from "./pages/Links";
 import Wspolpraca from "./pages/Wspolpraca";
+import SiadlakVIP from "./pages/SiadlakVIP";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
@@ -186,6 +187,7 @@ function App() {
               <Route path="/mct" element={<MCT />} />
               <Route path="/links" element={<Links />} />
               <Route path="/start" element={<Wspolpraca />} />
+              <Route path="/siadlakvip" element={<SiadlakVIP />} />
 
               <Route path="/help" element={<Help />} />
               <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
