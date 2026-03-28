@@ -40,7 +40,7 @@ const UwazneZycie = () => {
         {...getSEOConfig("/program/uwaznosc")}
         jsonLd={[
           getCourseEntity('uwazne-zycie')!,
-          getWebPageEntity('/program/uwaznosc', 'Uwazne Zycie', 'Program uwaznosci dla analitycznych umyslow.', ['/program', '/podcast/uwazne-zycie']),
+          getWebPageEntity('/program/uwaznosc', 'Uważne Życie', 'Program uważności dla analitycznych umysłów i osób z ADHD.', ['/program', '/podcast/uwazne-zycie']),
         ]}
       />
       {(() => { const t = getTopicalConfig("/program/uwaznosc"); return t ? <TopicalMeta {...t} /> : null; })()}

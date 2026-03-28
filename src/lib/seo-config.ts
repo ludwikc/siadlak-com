@@ -426,9 +426,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/siadlakvip',
     seo: {
-      title: 'SIADLAK.VIP - Społeczność',
-      description: 'SIADLAK.VIP to parasol nad spolecznosciami Ludwika C. Siadlaka: prywatna grupa na Telegramie, spolecznosc Lifehackerzy na Discordzie, sesje DeepWork.pl i medytacje UwazneZycie.pl.',
-      keywords: 'SIADLAK VIP, Lifehackerzy, DeepWork, Uwazne Zycie, spolecznosc, Ludwik Siadlak',
+      title: 'SIADLAK.VIP — Społeczność',
+      description: 'SIADLAK.VIP to parasol nad społecznościami Ludwika C. Siadlaka: prywatna grupa na Telegramie, społeczność Lifehackerzy na Discordzie, sesje DeepWork.pl i medytacje UwazneZycie.pl.',
+      keywords: 'SIADLAK VIP, Lifehackerzy, DeepWork, Uważne Życie, społeczność, Ludwik Siadlak',
       url: '/siadlakvip'
     },
     topical: {
