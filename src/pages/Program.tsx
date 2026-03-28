@@ -4,8 +4,6 @@ import { CTAButton } from "@/components/ui/cta-button";
 import { ArrowRight, Brain, Clock, Mic2, MapPin, Video } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png?w=80;160&format=avif;webp;png&as=picture";
-import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
-import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
@@ -329,7 +327,7 @@ export default function Program() {
             {/* Keynote image */}
             <div className="relative rounded-sm overflow-hidden border border-white/10">
               <OptimizedImage
-                src={keynoteImage}
+                src="/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg"
                 alt="Ludwik C. Siadlak presenting 'Hacker Umysłów' keynote at CAMPUS conference"
                 width={1920}
                 height={1080}
@@ -443,7 +441,7 @@ export default function Program() {
             <div className="max-w-4xl mx-auto mb-10">
               <div className="relative rounded-sm overflow-hidden border border-lifehacker-purple/30">
                 <OptimizedImage
-                  src={communityCallImage}
+                  src="/lovable-uploads/lifehackerzy-community-call.png"
                   alt="Lifehackerzy community video call - daily coaching sessions"
                   width={1920}
                   height={984}

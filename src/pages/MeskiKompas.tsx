@@ -2220,13 +2220,14 @@ export default function MeskiKompas() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto rounded-2xl shadow-2xl mb-8"
                 />
-                <OptimizedImage
+                <img
                   src="/lovable-uploads/lifehackerzy.svg"
                   alt="Lifehackerzy - Ekskluzywna społeczność"
                   width={500}
                   height={150}
-                  sizes="(max-width: 768px) 100vw, 448px"
                   className="w-full max-w-md h-auto mx-auto mb-6"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div
                   className="p-6 rounded-xl"
