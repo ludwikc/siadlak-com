@@ -38,48 +38,6 @@ export default function SiadlakVIP() {
 
       <TheCut />
 
-      {/* ─── OVERVIEW ─── */}
-      <section className="bg-diamond py-20 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <Eyebrow color="dim">STRUKTURA</Eyebrow>
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-8">
-            Jak to jest zorganizowane
-          </h2>
-
-          {/* Hierarchy diagram */}
-          <div className="bg-white border border-black/5 rounded-md p-6 md:p-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="text-electric font-bold text-lg">SIADLAK.VIP</span>
-                <span className="text-on-light-dim text-sm">— parasol</span>
-              </div>
-              <div className="ml-6 border-l-2 border-electric/20 pl-6 space-y-4">
-                <div>
-                  <p className="text-on-light font-bold text-sm">1) SIADLAK.VIP Telegram</p>
-                  <p className="text-on-light-dim text-sm">Prywatna grupa z przemyśleniami</p>
-                </div>
-                <div>
-                  <p className="text-on-light font-bold text-sm">2) LIFEHACKERZY</p>
-                  <p className="text-on-light-dim text-sm">Pełna społeczność na Discordzie</p>
-                  <div className="ml-6 border-l-2 border-depth/20 pl-6 mt-3 space-y-3">
-                    <div>
-                      <p className="text-on-light font-bold text-sm">2A) DeepWork.pl</p>
-                      <p className="text-on-light-dim text-sm">Wspólna praca głęboka</p>
-                    </div>
-                    <div>
-                      <p className="text-on-light font-bold text-sm">2B) UwazneZycie.pl</p>
-                      <p className="text-on-light-dim text-sm">Cotygodniowe medytacje (wt. 6:30)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <TheCut />
-
       {/* ─── TELEGRAM ─── */}
       <section className="bg-void-glow py-20 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
@@ -100,12 +58,12 @@ export default function SiadlakVIP() {
               To nie jest kanał z poradami. To jest okno do mojego procesu myślenia - w czasie rzeczywistym.
             </p>
             <a
-              href="https://siadlak.vip"
+              href="https://t.me/+bOZV8ebGFxgzYTMy"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
             >
-              Dołącz do SIADLAK.VIP →
+              Dołącz do SIADLAK.VIP na Telegramie →
             </a>
           </div>
         </div>
@@ -121,19 +79,44 @@ export default function SiadlakVIP() {
             LIFEHACKERZY
           </h2>
           <p className="text-on-light-dim text-base leading-relaxed mb-8">
-            Pełna społeczność na Discordzie. Dostęp dostajesz po zainstalowaniu dowolnego{" "}
-            <Link to="/program" className="text-electric font-bold hover:underline">programu</Link>.
-            W środku znajdziesz dwa otwarte kanały:
+            W środku znajdziesz:
           </p>
 
           <div className="space-y-6">
+            {/* Lifehackerzy */}
+            <div className="bg-white border border-black/5 rounded-md p-6 md:p-8">
+              <div className="flex items-start gap-4">
+                <span className="text-2xl flex-shrink-0" aria-hidden="true">💬</span>
+                <div>
+                  <h3 className="font-heading font-bold text-on-light text-lg mb-1">
+                    Lifehackerzy
+                  </h3>
+                  <p className="text-electric text-sm font-bold uppercase tracking-wider mb-4">
+                    Społeczność na Discordzie
+                  </p>
+                  <p className="text-on-light-dim text-base leading-relaxed mb-6">
+                    Pełna społeczność dla osób, które chcą rosnąć. Dostęp dostajesz po zainstalowaniu dowolnego{" "}
+                    <Link to="/program" className="text-electric font-bold hover:underline">programu</Link>.
+                  </p>
+                  <a
+                    href="https://Lifehackerzy.pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-electric text-sm font-bold hover:underline"
+                  >
+                    Wejdź na Lifehackerzy.pl →
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* DeepWork.pl */}
             <div className="bg-white border border-black/5 rounded-md p-6 md:p-8">
               <div className="flex items-start gap-4">
                 <span className="text-2xl flex-shrink-0" aria-hidden="true">🖥️</span>
                 <div>
                   <h3 className="font-heading font-bold text-on-light text-lg mb-1">
-                    2A) DeepWork.pl
+                    DeepWork.pl
                   </h3>
                   <p className="text-electric text-sm font-bold uppercase tracking-wider mb-4">
                     Kanał wspólnej pracy głębokiej
@@ -159,7 +142,7 @@ export default function SiadlakVIP() {
                 <span className="text-2xl flex-shrink-0" aria-hidden="true">🧘</span>
                 <div>
                   <h3 className="font-heading font-bold text-on-light text-lg mb-1">
-                    2B) UwazneZycie.pl
+                    UwazneZycie.pl
                   </h3>
                   <p className="text-electric text-sm font-bold uppercase tracking-wider mb-4">
                     Cotygodniowe medytacje · Wtorek 6:30 rano
