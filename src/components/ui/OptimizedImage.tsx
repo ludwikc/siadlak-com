@@ -1,4 +1,4 @@
-import type { Picture } from "imagetools-core";
+import type { Picture } from "vite-imagetools";
 
 type OptimizedImageProps = {
   src: string | Picture;
@@ -24,7 +24,7 @@ export default function OptimizedImage({
   sizes = "100vw",
 }: OptimizedImageProps) {
   const loading = priority ? "eager" : "lazy";
-  const fetchPriority = priority ? ("high" as const) : undefined;
+  const fetchPriority = priority ? "high" : undefined;
 
   if (typeof src === "string") {
     const webpSrc = deriveSiblingPath(src, ".webp");
@@ -48,8 +48,6 @@ export default function OptimizedImage({
     );
   }
 
-  // Track A: Picture object from vite-imagetools / imagetools-core
-  // sources is Record<string, string> where key = mime type, value = srcset
   const { sources, img } = src;
 
   return (
