@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getFAQSchema } from "@/lib/structured-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -36,12 +36,36 @@ import ValueCalculator from "@/components/sales/ValueCalculator";
 import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
+const produktywnoscFaqs = [
+  {
+    question: "Czy dostanę fakturę?",
+    answer: "Tak, faktura VAT wystawiana jest automatycznie.",
+  },
+  {
+    question: "Czy można płacić w ratach?",
+    answer: "Tak — szczegóły znajdziesz na stronie zamówienia.",
+  },
+  {
+    question: "Kiedy dostanę dostęp do programu?",
+    answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut. Możesz zacząć instalację tego samego dnia.",
+  },
+  {
+    question: "Jak długo mam dostęp do materiałów?",
+    answer: "Na zawsze. Bez limitu czasowego, bez subskrypcji.",
+  },
+  {
+    question: "Co jeśli nie będę miał czasu na społeczność?",
+    answer: "Społeczność jest tam dla Ciebie, nie Ty dla społeczności. Wchodzisz, gdy chcesz i potrzebujesz.",
+  },
+];
+
 export default function HakowanieProduktywnosci() {
   return (
     <Layout>
       <SEO {...getSEOConfig("/program/produktywnosc")} jsonLd={[
         getCourseEntity('produktywnosc')!,
-        getWebPageEntity('/program/produktywnosc', 'Program: Produktywnosc', 'Program mentalny produktywnosci autorstwa Ludwika C. Siadlaka.', ['/program', '/discovery', '/testimonials']),
+        getWebPageEntity('/program/produktywnosc', 'Program: Produktywność', 'Program mentalny produktywności (4–6 tygodni) autorstwa Ludwika C. Siadlaka. 100+ uczestników, ocena 4.9/5.0.', ['/program', '/discovery', '/testimonials']),
+        getFAQSchema(produktywnoscFaqs),
       ]} />
       {(() => { const t = getTopicalConfig("/program/produktywnosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* HERO */}

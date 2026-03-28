@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getFAQSchema } from "@/lib/structured-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -34,6 +34,21 @@ import {
   HelpCircle,
 } from "lucide-react";
 
+const silnaGlowaFaqs = [
+  {
+    question: "Kiedy dostanę kurs?",
+    answer: "Dostęp do platformy i pierwszych modułów otrzymasz natychmiast po zakupie. Kolejne moduły będą odblokowywane co tydzień, abyś miał czas na spokojne przepracowanie materiału.",
+  },
+  {
+    question: "Jak długo będę mieć dostęp do kursu?",
+    answer: "Na zawsze. Kupujesz raz — korzystasz zawsze. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje, automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat.",
+  },
+  {
+    question: "Jakieś bonusy?",
+    answer: "Tak! Uczestnicy przedsprzedaży otrzymują dostęp do zamkniętej grupy Mastermind oraz zaproszenie na live Q&A. Te bonusy są dostępne wyłącznie dla uczestników przedsprzedaży.",
+  },
+];
+
 const SilnaGlowa = () => {
   const ctaUrl = "https://buy.siadlak.com/checkout/program-odpornosc";
 
@@ -41,7 +56,8 @@ const SilnaGlowa = () => {
     <Layout>
       <SEO {...getSEOConfig("/program/odpornosc")} jsonLd={[
         getCourseEntity('silna-glowa')!,
-        getWebPageEntity('/program/odpornosc', 'Silna Glowa', 'Program odpornosci psychicznej autorstwa Ludwika C. Siadlaka.', ['/program', '/discovery']),
+        getWebPageEntity('/program/odpornosc', 'Silna Głowa', 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo.', ['/program', '/discovery']),
+        getFAQSchema(silnaGlowaFaqs),
       ]} />
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section - Theme Locked */}

@@ -16,8 +16,10 @@ export interface SEOProps {
   jsonLd?: Record<string, unknown>[];
 }
 
+const TITLE_SUFFIX = 'Ludwik C. Siadlak';
+
 const defaultSEO = {
-  title: 'SIADLAK.COM - Diamentowy Umysł | Ludwik C. Siadlak',
+  title: 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
   description: 'Odkryj swój potencjał z programami rozwoju osobistego, coachingiem i narzędziami produktywności. Dołącz do społeczności ludzi dążących do lepszego życia.',
   keywords: 'rozwój osobisty, coaching, produktywność, motywacja, sukces, życie, szczęście',
   image: '/og-image.jpg',
@@ -42,7 +44,7 @@ export default function SEO({
   favicon,
   jsonLd,
 }: SEOProps) {
-  const fullTitle = title ? `${title} | ${defaultSEO.title}` : defaultSEO.title;
+  const fullTitle = title ? `${title} | ${TITLE_SUFFIX}` : defaultSEO.title;
   const imageUrl = image.startsWith('http') ? image : `${url}${image}`;
   const canonicalUrl = url === defaultSEO.url ? url : `${defaultSEO.url}${url}`;
 
@@ -104,7 +106,11 @@ export default function SEO({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       
-      {/* Article specific */}
+      {/* Date signals - for all content types */}
+      {modifiedDate && <meta name="revised" content={modifiedDate} />}
+      {publishedDate && <meta name="date" content={publishedDate} />}
+
+      {/* Article specific OG tags */}
       {type === 'article' && publishedDate && (
         <meta property="article:published_time" content={publishedDate} />
       )}

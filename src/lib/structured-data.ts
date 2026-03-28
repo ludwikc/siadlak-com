@@ -215,7 +215,7 @@ const courseConfigs: Record<string, CourseConfig> = {
     name: 'Produktywność (Productivity Mental App)',
     description: 'A 4-6 week self-paced mental program that permanently changes how you approach work, time, and energy. Not another productivity course - a mental operating system upgrade. 100+ participants, 4.9/5.0 rating.',
     duration: 'P6W',
-    price: '777',
+    price: '1497',
     ratingValue: '4.9',
     ratingCount: '100',
   },

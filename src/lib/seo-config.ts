@@ -19,8 +19,8 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/',
     seo: {
       title: 'Ludwik C. Siadlak',
-      description: 'Ludwik C. Siadlak to coach produktywnosci i uwaznosci z 19-letnim doswiadczeniem. Pracuje z profesjonalistami IT poprzez mentoring 1:1 i samodzielne programy mentalne (Aplikacje Mentalne).',
-      keywords: 'Ludwik Siadlak, coach produktywnosci, coaching uwaznosci, rozwoj osobisty, tech professionals, Diamentowy Umysl',
+      description: 'Ludwik C. Siadlak to coach produktywności i uważności z 19-letnim doświadczeniem. Pracuje z profesjonalistami IT poprzez mentoring 1:1 i samodzielne programy mentalne (Aplikacje Mentalne).',
+      keywords: 'Ludwik Siadlak, coach produktywności, coaching uważności, rozwój osobisty, tech professionals, Diamentowy Umysł',
       url: '/',
       type: 'website'
     },
@@ -34,9 +34,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/about',
     seo: {
-      title: 'O mnie - Ludwik C. Siadlak',
-      description: 'Ludwik C. Siadlak: 19 lat jako Certyfikowany Trener Microsoft, absolwent Oxford Brookes, coach produktywnosci i uwaznosci. Zalozyciel Siadlak.com, DeepWork.pl i Fundacji Hackerzy.pl.',
-      keywords: 'Ludwik Siadlak, coach, trener Microsoft, Oxford Brookes, produktywnosc, uwaznosc, biografia',
+      title: 'Ludwik C. Siadlak — Coach Produktywności i Uważności | 19 Lat Doświadczenia',
+      description: 'Ludwik C. Siadlak: 19 lat jako Certyfikowany Trener Microsoft, absolwent Oxford Brookes, coach produktywności i uważności. Założyciel Siadlak.com, DeepWork.pl i Fundacji Hackerzy.pl.',
+      keywords: 'Ludwik Siadlak, coach, trener Microsoft, Oxford Brookes, produktywność, uważność, biografia',
       url: '/about'
     },
     topical: {
@@ -50,17 +50,17 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/contact',
     seo: {
       title: 'Kontakt',
-      description: 'Skontaktuj sie z Ludwikiem C. Siadlakiem. Umow sesje Discovery lub napisz w sprawie wspolpracy.',
-      keywords: 'kontakt, Ludwik Siadlak, konsultacja, wspolpraca',
+      description: 'Skontaktuj się z Ludwikiem C. Siadlakiem. Umów sesję Discovery lub napisz w sprawie współpracy.',
+      keywords: 'kontakt, Ludwik Siadlak, konsultacja, współpraca',
       url: '/contact'
     }
   },
   {
     path: '/program',
     seo: {
-      title: 'Aplikacje Mentalne - Programy Rozwojowe',
-      description: 'Cztery samodzielne programy mentalne: Produktywnosc, Silna Glowa (odpornosc psychiczna), Uwazne Zycie (mindfulness) i Meski Kompas. Kazdy instaluje sie raz i zostaje na zawsze.',
-      keywords: 'aplikacje mentalne, programy rozwojowe, produktywnosc, odpornosc psychiczna, uwaznosc, meski kompas',
+      title: 'Aplikacje Mentalne — Programy Rozwojowe',
+      description: 'Cztery samodzielne programy mentalne: Produktywność, Silna Głowa (odporność psychiczna), Uważne Życie (mindfulness) i Męski Kompas. Każdy instaluje się raz i zostaje na zawsze.',
+      keywords: 'aplikacje mentalne, programy rozwojowe, produktywność, odporność psychiczna, uważność, męski kompas',
       url: '/program',
       type: 'website'
     },
@@ -74,11 +74,12 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/produktywnosc',
     seo: {
-      title: 'Program: Produktywnosc - Aplikacja Mentalna',
-      description: 'Program mentalny produktywnosci (4-6 tygodni) autorstwa Ludwika C. Siadlaka. Zmienia sposob podejscia do pracy, czasu i energii. 100+ uczestnikow, ocena 4.9/5.0. Instaluje sie raz, zostaje na zawsze.',
-      keywords: 'produktywnosc, program mentalny, zarzadzanie czasem, deep work, focus, Ludwik Siadlak',
+      title: 'Program: Produktywność — Aplikacja Mentalna',
+      description: 'Program mentalny produktywności (4–6 tygodni) autorstwa Ludwika C. Siadlaka. Zmienia sposób podejścia do pracy, czasu i energii. 100+ uczestników, ocena 4.9/5.0. Instaluje się raz, zostaje na zawsze.',
+      keywords: 'produktywność, program mentalny, zarządzanie czasem, deep work, focus, Ludwik Siadlak',
       url: '/program/produktywnosc',
-      type: 'course'
+      type: 'course',
+      modifiedDate: '2026-03-28'
     },
     topical: {
       primaryTopic: 'productivity mental program',
@@ -90,11 +91,12 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/lifeos-system-upgrade',
     seo: {
-      title: 'Life OS: System Upgrade - Mentoring 1:1',
-      description: '8-tygodniowy program mentoringu 1:1 z Ludwikiem C. Siadlakiem. Dla liderow i profesjonalistow IT, ktorzy chca zmiany na poziomie tozsamosci, nie tylko nawykow. Maks. 5 osob jednoczesnie.',
+      title: 'Life OS: System Upgrade — Mentoring 1:1',
+      description: '8-tygodniowy program mentoringu 1:1 z Ludwikiem C. Siadlakiem. Dla liderów i profesjonalistów IT, którzy chcą zmiany na poziomie tożsamości, nie tylko nawyków. Maks. 5 osób jednocześnie.',
       keywords: 'Life OS, mentoring 1:1, coaching, transformacja, Ludwik Siadlak, liderzy IT',
       url: '/program/lifeos-system-upgrade',
-      type: 'course'
+      type: 'course',
+      modifiedDate: '2026-03-28'
     },
     topical: {
       primaryTopic: '1:1 identity-level mentoring',
@@ -106,11 +108,12 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/odpornosc',
     seo: {
-      title: 'Silna Glowa - Program Odpornosci Psychicznej',
-      description: 'Program odpornosci psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, ktory zamienia presje w paliwo. 118+ uczestnikow, ocena 4.8/5.0.',
-      keywords: 'odpornosc psychiczna, silna glowa, stres, presja, rezyliencja, Ludwik Siadlak',
+      title: 'Silna Głowa — Program Odporności Psychicznej',
+      description: 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo. 118+ uczestników, ocena 4.8/5.0.',
+      keywords: 'odporność psychiczna, silna głowa, stres, presja, rezyliencja, Ludwik Siadlak',
       url: '/program/odpornosc',
-      type: 'course'
+      type: 'course',
+      modifiedDate: '2026-03-28'
     },
     topical: {
       primaryTopic: 'mental resilience program',
@@ -122,12 +125,13 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/meskosc',
     seo: {
-      title: 'Meski Kompas - Program dla Mezczyzn 30+',
-      description: '5-tygodniowy program nawigacji zyciowej dla mezczyzn z analitycznym umyslem po 30-tce. System kompas-mapa-latarnia na paraliz analityczny. Autorstwa Ludwika C. Siadlaka.',
-      keywords: 'meski kompas, mezczyzni 30+, nawigacja zyciowa, rozwoj mezczyzn, Ludwik Siadlak',
+      title: 'Męski Kompas — Program dla Mężczyzn 30+',
+      description: '5-tygodniowy program nawigacji życiowej dla mężczyzn z analitycznym umysłem po 30-tce. System kompas-mapa-latarnia na paraliż analityczny. Autorstwa Ludwika C. Siadlaka.',
+      keywords: 'męski kompas, mężczyźni 30+, nawigacja życiowa, rozwój mężczyzn, Ludwik Siadlak',
       url: '/program/meskosc',
       type: 'course',
-      favicon: '/compass-favicon.png'
+      favicon: '/compass-favicon.png',
+      modifiedDate: '2026-03-28'
     },
     topical: {
       primaryTopic: 'masculine development and navigation',
@@ -140,8 +144,8 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/podcast/life-hacking',
     seo: {
       title: 'Life Hacking Podcast',
-      description: 'Podcast o hakach zyciowych, produktywnosci i optymalizacji codziennego funkcjonowania. Prowadzi Ludwik C. Siadlak.',
-      keywords: 'life hacking, produktywnosc, optymalizacja, podcast, efektywnosc, Ludwik Siadlak',
+      description: 'Podcast o hakach życiowych, produktywności i optymalizacji codziennego funkcjonowania. Prowadzi Ludwik C. Siadlak.',
+      keywords: 'life hacking, produktywność, optymalizacja, podcast, efektywność, Ludwik Siadlak',
       url: '/podcast/life-hacking',
       type: 'podcast'
     },
@@ -154,9 +158,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/podcast/uwazne-zycie',
     seo: {
-      title: 'Uwazne Zycie Podcast',
-      description: 'Podcast o uwaznosci, swiadomym zyciu i rownowadze w codziennosci. Prowadzi Ludwik C. Siadlak.',
-      keywords: 'mindfulness, uwaznosc, rownowaga, swiadomosc, medytacja, Ludwik Siadlak',
+      title: 'Uważne Życie Podcast',
+      description: 'Podcast o uważności, świadomym życiu i równowadze w codzienności. Prowadzi Ludwik C. Siadlak.',
+      keywords: 'mindfulness, uważność, równowaga, świadomość, medytacja, Ludwik Siadlak',
       url: '/podcast/uwazne-zycie',
       type: 'podcast'
     },
@@ -169,11 +173,12 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/uwaznosc',
     seo: {
-      title: 'Uwazne Zycie - Program Uwaznosci i Mindfulness',
-      description: 'Program uwaznosci (4-6 tygodni) dla analitycznych umyslow i osob z ADHD. Praktyczna medytacja, ktora dziala w korku, na spotkaniu i w kolejce. Autorstwa Ludwika C. Siadlaka.',
-      keywords: 'mindfulness, uwaznosc, medytacja, ADHD, program mentalny, Ludwik Siadlak',
+      title: 'Uważne Życie — Program Uważności i Mindfulness',
+      description: 'Program uważności (4–6 tygodni) dla analitycznych umysłów i osób z ADHD. Praktyczna medytacja, która działa w korku, na spotkaniu i w kolejce. Autorstwa Ludwika C. Siadlaka.',
+      keywords: 'mindfulness, uważność, medytacja, ADHD, program mentalny, Ludwik Siadlak',
       url: '/program/uwaznosc',
-      type: 'course'
+      type: 'course',
+      modifiedDate: '2026-03-28'
     },
     topical: {
       primaryTopic: 'mindfulness program for analytical minds',
@@ -185,9 +190,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/program/7-technik',
     seo: {
-      title: '7 Technik Produktywnosci, ktore dzialaja',
-      description: 'Siedem sprawdzonych technik produktywnosci autorstwa Ludwika C. Siadlaka. Praktyczne metody zarzadzania czasem, energia i skupieniem.',
-      keywords: '7 technik, produktywnosc, techniki mentalne, Ludwik Siadlak',
+      title: '7 Technik Produktywności, które działają',
+      description: 'Siedem sprawdzonych technik produktywności autorstwa Ludwika C. Siadlaka. Praktyczne metody zarządzania czasem, energią i skupieniem.',
+      keywords: '7 technik, produktywność, techniki mentalne, Ludwik Siadlak',
       url: '/program/7-technik',
       type: 'course'
     }
@@ -195,9 +200,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar',
     seo: {
-      title: 'Dolacz do spotkania online',
-      description: 'Bezplatny webinar o rozwoju osobistym z Ludwikiem C. Siadlakiem. Praktyczna wiedza o produktywnosci, uwaznosci i odpornosci psychicznej.',
-      keywords: 'webinar, bezplatne szkolenie, Ludwik Siadlak, rozwoj osobisty',
+      title: 'Dołącz do spotkania online',
+      description: 'Bezpłatny webinar o rozwoju osobistym z Ludwikiem C. Siadlakiem. Praktyczna wiedza o produktywności, uważności i odporności psychicznej.',
+      keywords: 'webinar, bezpłatne szkolenie, Ludwik Siadlak, rozwój osobisty',
       url: '/webinar',
       type: 'event'
     }
@@ -205,8 +210,8 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/testimonials',
     seo: {
-      title: '100+ Opinii Klientow Ludwika C. Siadlaka',
-      description: 'Ponad 100 opinii od klientow z Polski, Norwegii, UK i innych krajow. Uczestnicy szkolen Microsoft, programow mentalnych i mentoringu 1:1.',
+      title: '100+ Opinii Klientów Ludwika C. Siadlaka',
+      description: 'Ponad 100 opinii od klientów z Polski, Norwegii, UK i innych krajów. Uczestnicy szkoleń Microsoft, programów mentalnych i mentoringu 1:1.',
       keywords: 'opinie, referencje, Ludwik Siadlak, klienci, coaching, szkolenia Microsoft',
       url: '/testimonials'
     },
@@ -220,17 +225,17 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/newsletter',
     seo: {
-      title: 'Lista Mailingowa - dolacz bezplatnie',
-      description: 'Lista mailingowa Ludwika C. Siadlaka. Jedna mysl tygodniowo o produktywnosci, AI i sensie zycia. 150+ czytelnikow. Zero spamu.',
-      keywords: 'newsletter, lista mailingowa, Ludwik Siadlak, produktywnosc, AI',
+      title: 'Lista Mailingowa — dołącz bezpłatnie',
+      description: 'Lista mailingowa Ludwika C. Siadlaka. Jedna myśl tygodniowo o produktywności, AI i sensie życia. Zero spamu.',
+      keywords: 'newsletter, lista mailingowa, Ludwik Siadlak, produktywność, AI',
       url: '/newsletter'
     }
   },
   {
     path: '/discovery',
     seo: {
-      title: 'Sesja Discovery - Bezplatna 30-minutowa rozmowa',
-      description: 'Bezplatna 30-minutowa sesja diagnostyczna 1:1 z Ludwikiem C. Siadlakiem na Zoom. Prawdziwa diagnostyka, nie rozmowa sprzedazowa. Maks. 5 aktywnych klientow jednoczesnie.',
+      title: 'Sesja Discovery — Bezpłatna 30-minutowa rozmowa',
+      description: 'Bezpłatna 30-minutowa sesja diagnostyczna 1:1 z Ludwikiem C. Siadlakiem. Prawdziwa diagnostyka, nie rozmowa sprzedażowa. Maks. 5 aktywnych klientów jednocześnie.',
       keywords: 'sesja discovery, konsultacja, coaching, Ludwik Siadlak, mentoring',
       url: '/discovery'
     },
@@ -245,8 +250,8 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/legal',
     seo: {
       title: 'Informacje Prawne',
-      description: 'Regulaminy, polityka prywatnosci i inne informacje prawne dotyczace korzystania z serwisu Siadlak.com.',
-      keywords: 'regulamin, polityka prywatnosci, prawo, warunki',
+      description: 'Regulaminy, polityka prywatności i inne informacje prawne dotyczące korzystania z serwisu Siadlak.com.',
+      keywords: 'regulamin, polityka prywatności, prawo, warunki',
       url: '/legal',
       noindex: true,
     }
@@ -254,9 +259,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/legal/privacy',
     seo: {
-      title: 'Polityka Prywatnosci',
-      description: 'Polityka prywatnosci serwisu Siadlak.com. Informacje o ochronie danych osobowych zgodnie z RODO.',
-      keywords: 'polityka prywatnosci, RODO, dane osobowe',
+      title: 'Polityka Prywatności',
+      description: 'Polityka prywatności serwisu Siadlak.com. Informacje o ochronie danych osobowych zgodnie z RODO.',
+      keywords: 'polityka prywatności, RODO, dane osobowe',
       url: '/legal/privacy',
       noindex: true,
     }
@@ -265,7 +270,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/legal/terms',
     seo: {
       title: 'Regulamin',
-      description: 'Regulamin korzystania z serwisu Siadlak.com i oferowanych uslug.',
+      description: 'Regulamin korzystania z serwisu Siadlak.com i oferowanych usług.',
       keywords: 'regulamin, warunki korzystania',
       url: '/legal/terms',
       noindex: true,
@@ -275,7 +280,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/help',
     seo: {
       title: 'Pomoc',
-      description: 'Centrum pomocy Siadlak.com. Odpowiedzi na najczesciej zadawane pytania o programach, platnosci i wsparciu.',
+      description: 'Centrum pomocy Siadlak.com. Odpowiedzi na najczęściej zadawane pytania o programach, płatności i wsparciu.',
       keywords: 'pomoc, FAQ, wsparcie, Siadlak.com',
       url: '/help'
     }
@@ -284,7 +289,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/sitemap',
     seo: {
       title: 'Mapa Strony',
-      description: 'Pelna mapa strony Siadlak.com. Wszystkie programy, podcasty, webinary i zasoby w jednym miejscu.',
+      description: 'Pełna mapa strony Siadlak.com. Wszystkie programy, podcasty, webinary i zasoby w jednym miejscu.',
       keywords: 'mapa strony, nawigacja, struktura',
       url: '/sitemap'
     }
@@ -293,7 +298,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/oto',
     seo: {
       title: 'Oferta Specjalna',
-      description: 'Wyjatkowa oferta programow rozwojowych Ludwika C. Siadlaka dostepna przez ograniczony czas.',
+      description: 'Wyjątkowa oferta programów rozwojowych Ludwika C. Siadlaka dostępna przez ograniczony czas.',
       keywords: 'oferta specjalna, promocja, Ludwik Siadlak',
       url: '/oto',
       noindex: true,
@@ -302,9 +307,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar/kod-kapitana',
     seo: {
-      title: 'Kod Kapitana - Webinar',
-      description: 'Webinar "Kod Kapitana" z Ludwikiem C. Siadlakiem o uwaznosci, ktora dziala w praktyce. Praktyczne techniki mindfulness dla profesjonalistow.',
-      keywords: 'kod kapitana, webinar, uwaznosc, mindfulness, Ludwik Siadlak',
+      title: 'Kod Kapitana — Webinar',
+      description: 'Webinar "Kod Kapitana" z Ludwikiem C. Siadlakiem o uważności, która działa w praktyce. Praktyczne techniki mindfulness dla profesjonalistów.',
+      keywords: 'kod kapitana, webinar, uważność, mindfulness, Ludwik Siadlak',
       url: '/webinar/kod-kapitana',
       type: 'event'
     }
@@ -312,9 +317,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar/depresja',
     seo: {
-      title: 'Dzien Walki z Depresja - Webinar',
-      description: 'Stalem na peronie i chcialem zrobic jeden krok - opowiem jak z tego wrocilem. Ludwik C. Siadlak o depresji, odpornosci psychicznej i powrocie do zycia.',
-      keywords: 'depresja, webinar, zdrowie psychiczne, odpornosc mentalna, Ludwik Siadlak',
+      title: 'Dzień Walki z Depresją — Webinar',
+      description: 'Stałem na peronie i chciałem zrobić jeden krok — opowiem jak z tego wróciłem. Ludwik C. Siadlak o depresji, odporności psychicznej i powrocie do życia.',
+      keywords: 'depresja, webinar, zdrowie psychiczne, odporność mentalna, Ludwik Siadlak',
       url: '/webinar/depresja',
       type: 'event'
     }
@@ -323,8 +328,8 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/webinar/live',
     seo: {
       title: 'Webinar Live',
-      description: 'Webinar na zywo z Ludwikiem C. Siadlakiem.',
-      keywords: 'webinar live, na zywo, Ludwik Siadlak',
+      description: 'Webinar na żywo z Ludwikiem C. Siadlakiem.',
+      keywords: 'webinar live, na żywo, Ludwik Siadlak',
       url: '/webinar/live',
       type: 'event',
       noindex: true,
@@ -333,9 +338,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar/expired',
     seo: {
-      title: 'Webinar Zakonczony',
-      description: 'Ten webinar juz sie zakonczyl. Zapisz sie na kolejne wydarzenia Ludwika C. Siadlaka.',
-      keywords: 'webinar zakonczony, kolejne wydarzenia',
+      title: 'Webinar Zakończony',
+      description: 'Ten webinar już się zakończył. Zapisz się na kolejne wydarzenia Ludwika C. Siadlaka.',
+      keywords: 'webinar zakończony, kolejne wydarzenia',
       url: '/webinar/expired',
       type: 'event',
       noindex: true,
@@ -355,9 +360,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/webinar/meski-kompas',
     seo: {
-      title: 'Warsztat: Upgrade Systemu dla Analitykow 30+',
-      description: '90-minutowy warsztat dla facetow z paralizem analitycznym. Ludwik Siadlak + Mateusz Lizak. Bez teorii - konkretny plan na poniedzialek.',
-      keywords: 'warsztat, meski kompas, analitycy, programisci, produktywnosc',
+      title: 'Warsztat: Upgrade Systemu dla Analityków 30+',
+      description: '90-minutowy warsztat dla facetów z paraliżem analitycznym. Ludwik Siadlak + Mateusz Lizak. Bez teorii — konkretny plan na poniedziałek.',
+      keywords: 'warsztat, męski kompas, analitycy, programiści, produktywność',
       url: '/webinar/meski-kompas',
       type: 'event',
       favicon: '/compass-favicon.png'
@@ -366,18 +371,18 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/wyzwanie',
     seo: {
-      title: 'Drwal w Bialej Koszuli - 4-dniowe wyzwanie produktywnosci',
-      description: 'Darmowe 4-dniowe wyzwanie produktywnosci dla profesjonalistow, ktorzy osiagaja cele ale nie czuja spelnienia. Live na Discord z Ludwikiem C. Siadlakiem.',
-      keywords: 'produktywnosc, wyzwanie, cele, wartosci, Ludwik Siadlak, lifehackerzy',
+      title: 'Drwal w Białej Koszuli — 4-dniowe wyzwanie produktywności',
+      description: 'Darmowe 4-dniowe wyzwanie produktywności dla profesjonalistów, którzy osiągają cele ale nie czują spełnienia. Live na Discord z Ludwikiem C. Siadlakiem.',
+      keywords: 'produktywność, wyzwanie, cele, wartości, Ludwik Siadlak, lifehackerzy',
       url: '/wyzwanie'
     }
   },
   {
     path: '/thank-you',
     seo: {
-      title: 'Dziekujemy',
-      description: 'Potwierdzenie rejestracji. Sprawdz skrzynke e-mail po dalsze instrukcje.',
-      keywords: 'dziekujemy, potwierdzenie',
+      title: 'Dziękujemy',
+      description: 'Potwierdzenie rejestracji. Sprawdź skrzynkę e-mail po dalsze instrukcje.',
+      keywords: 'dziękujemy, potwierdzenie',
       url: '/thank-you',
       noindex: true,
     }
@@ -385,9 +390,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/thank-you/meski-kompas',
     seo: {
-      title: 'Miejsce Zarezerwowane - Meski Kompas',
-      description: 'Potwierdzenie rejestracji na warsztat Meski Kompas.',
-      keywords: 'meski kompas, potwierdzenie, warsztat',
+      title: 'Miejsce Zarezerwowane — Męski Kompas',
+      description: 'Potwierdzenie rejestracji na warsztat Męski Kompas.',
+      keywords: 'męski kompas, potwierdzenie, warsztat',
       url: '/thank-you/meski-kompas',
       favicon: '/compass-favicon.png',
       noindex: true,
@@ -396,9 +401,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/start',
     seo: {
-      title: 'Wspolpraca - Ludwik C. Siadlak',
-      description: 'Wszystkie mozliwosci wspolpracy z Ludwikiem C. Siadlakiem w jednym miejscu. Bezplatne zasoby, programy mentalne (777 PLN), mentoring 1:1 (16 000 PLN).',
-      keywords: 'wspolpraca, programy, mentoring, coaching, Ludwik Siadlak',
+      title: 'Współpraca — Ludwik C. Siadlak',
+      description: 'Wszystkie możliwości współpracy z Ludwikiem C. Siadlakiem w jednym miejscu. Bezpłatne zasoby, programy mentalne, mentoring 1:1 (16 000 PLN).',
+      keywords: 'współpraca, programy, mentoring, coaching, Ludwik Siadlak',
       url: '/start'
     },
     topical: {
@@ -412,7 +417,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/mct',
     seo: {
       title: 'Mental Code Terminal',
-      description: 'Interaktywne narzedzie diagnostyczne sprawdzajace Twoja obecna konfiguracje mentalna. Autorstwa Ludwika C. Siadlaka.',
+      description: 'Interaktywne narzędzie diagnostyczne sprawdzające Twoją obecną konfigurację mentalną. Autorstwa Ludwika C. Siadlaka.',
       keywords: 'mental code terminal, diagnostyka mentalna, Ludwik Siadlak',
       url: '/mct',
       type: 'tool'
@@ -439,7 +444,7 @@ export function getSEOConfig(path: string): import('@/components/SEO').SEOProps 
   const config = seoRouteConfig.find(route => route.path === path);
   return config?.seo || {
     title: 'Strona',
-    description: 'Rozwoj osobisty i coaching na SIADLAK.COM - Ludwik C. Siadlak',
+    description: 'Rozwój osobisty i coaching na SIADLAK.COM — Ludwik C. Siadlak',
     url: path
   };
 }
