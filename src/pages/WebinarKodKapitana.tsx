@@ -147,6 +147,7 @@ export default function WebinarKodKapitana() {
                     priority
                     sizes="(max-width: 768px) 100vw, 672px"
                     className="relative w-full rounded-xl shadow-2xl"
+                    style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
                   />
                 </div>
               </div>

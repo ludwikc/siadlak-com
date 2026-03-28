@@ -4,7 +4,7 @@ import "@fontsource/jetbrains-mono/700.css";
 import { Helmet } from "react-helmet-async";
 import { Mail, Phone } from "lucide-react";
 import MCTSocialProof from "@/components/mct/MCTSocialProof";
-import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp?format=avif;webp&as=picture";
+import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp?w=400;800&format=avif;webp&as=picture";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */

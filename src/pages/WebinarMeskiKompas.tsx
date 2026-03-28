@@ -575,7 +575,6 @@ export default function WebinarMeskiKompas() {
                     alt="Ludwik C. Siadlak"
                     width={1080}
                     height={1080}
-                    priority
                     sizes="128px"
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-accent"
                   />

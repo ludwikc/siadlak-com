@@ -169,7 +169,7 @@ const UwazneZycie = () => {
                     alt="Lifehackerzy"
                     width={500}
                     height={150}
-                    sizes="80px"
+                    sizes="200px"
                     className="h-12 sm:h-14 w-auto flex-shrink-0"
                   />
                   <div className="text-center sm:text-left">
