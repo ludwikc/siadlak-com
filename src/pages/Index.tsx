@@ -5,12 +5,13 @@ import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
 import { getHomepageEntities } from "../lib/structured-data";
 import { Link } from "react-router-dom";
-import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp";
-import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp";
-import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
-import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
-import programOdpornosc from "@/assets/LCS-program-Odpornosc.png";
-import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png";
+import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp?format=avif;webp&as=picture";
+import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp?format=avif;webp&as=picture";
+import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png?w=400;800&format=avif;webp;png&as=picture";
+import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;800&format=avif;webp;png&as=picture";
+import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
+import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -126,10 +127,14 @@ const Index = () => {
                   filter: "blur(100px)",
                 }}
               />
-              <img
+              <OptimizedImage
                 src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                 alt="Ludwik C. Siadlak"
                 className="relative z-10 h-[85%] w-auto object-contain mx-auto"
+                priority
+                width={1000}
+                height={1600}
+                sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
           </div>
@@ -262,7 +267,7 @@ const Index = () => {
       <section className="py-24 relative overflow-hidden bg-void">
         {/* Background photo – pinned left */}
         <div className="absolute left-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img src={sessionPhoto6} alt="" className="h-full w-auto object-cover object-left opacity-30" />
+          <OptimizedImage src={sessionPhoto6} alt="" className="h-full w-auto object-cover object-left opacity-30" sizes="50vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
 
@@ -657,7 +662,7 @@ const Index = () => {
       <section className="py-24 relative overflow-hidden bg-diamond" id="kontakt">
         {/* Background photo – pinned right */}
         <div className="absolute right-0 top-0 h-full pointer-events-none hidden lg:block">
-          <img src={sessionPhoto5} alt="" className="h-full w-auto object-cover object-right" />
+          <OptimizedImage src={sessionPhoto5} alt="" className="h-full w-auto object-cover object-right" sizes="50vw" />
           <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-diamond to-transparent" />
         </div>
         <div className="container mx-auto px-4 max-w-4xl text-left relative z-10">
@@ -726,7 +731,7 @@ const Index = () => {
           >
             <div className="grid lg:grid-cols-2">
               <div className="relative">
-                <img src={programUwaznosc} alt="Uważność" className="w-full h-full object-cover" />
+                <OptimizedImage src={programUwaznosc} alt="Uważność" className="w-full h-full object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
@@ -770,7 +775,7 @@ const Index = () => {
             ].map((card) => (
               <Link key={card.title} to={card.link} className="group bg-white rounded-md shadow-sm overflow-hidden">
                 <div className="relative pt-[125%]">
-                  <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <OptimizedImage src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-heading font-bold text-xl text-on-light group-hover:text-electric transition-colors mb-1">

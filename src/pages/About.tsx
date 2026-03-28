@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
@@ -132,10 +133,14 @@ const About = () => {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
             <div className="lg:w-5/12">
-              <img
+              <OptimizedImage
                 src="/lovable-uploads/SIADLAK-ig.png"
                 alt="Ludwik Siadlak"
                 className="w-full h-auto rounded-sm"
+                priority
+                width={1000}
+                height={1600}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
@@ -257,10 +262,13 @@ const About = () => {
           <div className="max-w-[800px] mx-auto">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-2/5">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
                   alt="Ludwik Siadlak"
                   className="w-full h-auto rounded-sm"
+                  width={1283}
+                  height={1920}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
 

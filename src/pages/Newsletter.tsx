@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import { ExternalLink } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -192,11 +193,13 @@ export default function NewsletterPage() {
               </h3>
 
               <div className="rounded-sm border border-on-light/10 overflow-hidden">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/newsletter-example.png"
-                  alt="Przyk&#322;ad newslettera - Fake it till you make it"
+                  alt="Przykład newslettera — Fake it till you make it"
                   className="w-full"
-                  loading="lazy"
+                  width={284}
+                  height={292}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 

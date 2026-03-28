@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import SEO from "@/components/SEO";
 import {
   Accordion,
@@ -711,10 +712,13 @@ export default function Wyzwanie() {
             <div className="grid md:grid-cols-[300px_1fr] gap-6 sm:gap-8 items-start">
               <div className="mx-auto md:mx-0 relative group/img">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/ludwik-siadlak-profile.png"
                   alt="Ludwik C. Siadlak"
                   className="relative rounded-xl w-full max-w-[300px] shadow-lg"
+                  width={1080}
+                  height={1080}
+                  sizes="120px"
                 />
                 {/* Stats Badges */}
                 <div className="absolute -top-3 -right-3 bg-white border border-border shadow-lg rounded-full px-3 py-1.5 text-xs sm:text-sm">
