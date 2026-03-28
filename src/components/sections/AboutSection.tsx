@@ -17,7 +17,7 @@ export default function AboutSection() {
                 alt="Ludwik Siadlak"
                 className="w-full h-full object-cover"
                 width={600}
-                height={600}
+                height={750}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>

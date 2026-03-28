@@ -19,9 +19,9 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
               src={coverArt}
               alt={`${title} cover art`}
               className="w-full h-full object-cover"
-              width={200}
-              height={200}
-              sizes="200px"
+              width={48}
+              height={48}
+              sizes="48px"
             />
           </div>
         )}

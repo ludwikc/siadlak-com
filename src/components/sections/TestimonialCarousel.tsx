@@ -57,9 +57,9 @@ export default function TestimonialCarousel({
                     src={currentTestimonial.image}
                     alt={currentTestimonial.name}
                     className="w-16 h-16 rounded-full object-cover mb-3"
-                    width={80}
-                    height={80}
-                    sizes="80px"
+                    width={64}
+                    height={64}
+                    sizes="64px"
                   />
                 ) : (
                   <div className="w-16 h-16 rounded-full bg-gradient-brand-primary mb-3"></div>

@@ -71,7 +71,11 @@ const BeforeAfterSlider = () => {
             onTouchStart={handleStart}
           >
             {/* Before Image (Windows 98) */}
-            <div className="absolute inset-0">
+            <div
+              className="absolute inset-0"
+              onDragStart={(e) => e.preventDefault()}
+              style={{ userSelect: 'none' }}
+            >
               <OptimizedImage
                 src={workspaceBeforePicture}
                 alt="Before"
@@ -83,8 +87,10 @@ const BeforeAfterSlider = () => {
             {/* After Image (Modern Workspace) - with clip */}
             <div
               className="absolute inset-0 transition-all duration-150 ease-out"
+              onDragStart={(e) => e.preventDefault()}
               style={{
                 clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
+                userSelect: 'none',
               }}
             >
               <OptimizedImage

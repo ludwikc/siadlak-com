@@ -39,9 +39,9 @@ const PodcastEpisodeList = ({
                   src={episode.imageUrl}
                   alt={episode.title}
                   className="w-full h-full object-cover"
-                  width={300}
-                  height={300}
-                  sizes="(max-width: 768px) 100vw, 300px"
+                  width={128}
+                  height={128}
+                  sizes="(max-width: 640px) 100vw, 128px"
                 />
               </div>
             )}
