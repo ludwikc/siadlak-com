@@ -1,6 +1,8 @@
 
 
 
+import OptimizedImage from "@/components/ui/OptimizedImage";
+
 const testimonials = [
   {
     name: "Marcin K.",
@@ -40,10 +42,13 @@ const WebinarTestimonials = () => {
               className="bg-white rounded-xl p-6 shadow-lg border border-gray-200"
             >
               <div className="flex items-center mb-4">
-                <img
+                <OptimizedImage
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="h-12 w-12 rounded-full mr-4"
+                  width={64}
+                  height={64}
+                  sizes="64px"
                 />
                 <div>
                   <p className="font-medium">{testimonial.name}</p>

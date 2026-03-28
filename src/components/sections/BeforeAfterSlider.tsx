@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import workspaceBefore from "@/assets/workspace-before.png";
-import workspaceAfter from "@/assets/workspace-after.png";
+import workspaceBeforePicture from "@/assets/workspace-before.png?w=400;800&format=avif;webp;png&as=picture";
+import workspaceAfterPicture from "@/assets/workspace-after.png?w=400;800&format=avif;webp;png&as=picture";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const BeforeAfterSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -71,11 +72,11 @@ const BeforeAfterSlider = () => {
           >
             {/* Before Image (Windows 98) */}
             <div className="absolute inset-0">
-              <img
-                src={workspaceBefore}
+              <OptimizedImage
+                src={workspaceBeforePicture}
                 alt="Before"
                 className="w-full h-full object-cover"
-                draggable={false}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
@@ -86,11 +87,11 @@ const BeforeAfterSlider = () => {
                 clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`,
               }}
             >
-              <img
-                src={workspaceAfter}
+              <OptimizedImage
+                src={workspaceAfterPicture}
                 alt="After"
                 className="w-full h-full object-cover"
-                draggable={false}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 

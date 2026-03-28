@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface Course {
   title: string;
@@ -48,10 +49,13 @@ export default function CoursePreview({
             >
               <div className="h-48 relative">
                 {course.image ? (
-                  <img
+                  <OptimizedImage
                     src={course.image}
                     alt={course.title}
                     className="w-full h-full object-cover"
+                    width={400}
+                    height={300}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-brand-primary flex items-center justify-center">

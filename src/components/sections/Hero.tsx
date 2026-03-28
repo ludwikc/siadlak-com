@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface HeroProps {
   title: string;
@@ -43,10 +44,14 @@ export default function Hero({
       {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
         <div className="absolute inset-0 z-0">
-          <img
+          <OptimizedImage
             src={backgroundImage}
             alt={imageDescription || "Background"}
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            sizes="100vw"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
         </div>
@@ -141,13 +146,17 @@ export default function Hero({
               relative z-0 flex justify-end h-full
             `}
             >
-              <img
+              <OptimizedImage
                 src={heroImage}
                 alt={imageDescription || "Hero"}
                 className={`
-                  ${isMobile ? "h-auto max-h-[60vh] w-auto mx-auto" : "h-full max-h-[80vh]"} 
+                  ${isMobile ? "h-auto max-h-[60vh] w-auto mx-auto" : "h-full max-h-[80vh]"}
                   object-contain object-right
                 `}
+                width={800}
+                height={1000}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority
               />
             </div>
           )}

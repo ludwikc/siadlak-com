@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface Testimonial {
   quote: string;
@@ -52,10 +53,13 @@ export default function TestimonialCarousel({
 
               <div className="flex flex-col items-center">
                 {currentTestimonial.image ? (
-                  <img
+                  <OptimizedImage
                     src={currentTestimonial.image}
                     alt={currentTestimonial.name}
                     className="w-16 h-16 rounded-full object-cover mb-3"
+                    width={80}
+                    height={80}
+                    sizes="80px"
                   />
                 ) : (
                   <div className="w-16 h-16 rounded-full bg-gradient-brand-primary mb-3"></div>

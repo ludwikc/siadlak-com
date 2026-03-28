@@ -3,6 +3,7 @@
 import { Link } from 'react-router-dom';
 
 import { ArrowRight } from 'lucide-react';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface PodcastCardProps {
   title: string;
@@ -23,10 +24,13 @@ const PodcastCard = ({
     <Link to={link} className="block h-full">
       <div className="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
-          <img
+          <OptimizedImage
             src={imageUrl}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            width={300}
+            height={300}
+            sizes="(max-width: 768px) 100vw, 300px"
           />
         </div>
         <div className="p-6 flex flex-col flex-grow">

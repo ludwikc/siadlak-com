@@ -1,6 +1,7 @@
 
 
 import { Headphones } from 'lucide-react';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface PodcastPlayerProps {
   title: string;
@@ -14,10 +15,13 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
       <div className="flex items-center p-4 border-b border-border">
         {coverArt && (
           <div className="mr-4 w-12 h-12 overflow-hidden rounded">
-            <img
+            <OptimizedImage
               src={coverArt}
               alt={`${title} cover art`}
               className="w-full h-full object-cover"
+              width={200}
+              height={200}
+              sizes="200px"
             />
           </div>
         )}

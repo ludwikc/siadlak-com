@@ -3,6 +3,7 @@ import { GlassCard } from '@/components/ui/glass-card';
 import { OTOCountdown } from './OTOCountdown';
 import HeroSection from '@/components/sections/HeroSection';
 import { useState, useEffect } from 'react';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 interface OTOProductDisplayProps {
   onExpired: () => void;
@@ -46,10 +47,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <div className="bg-card border-b border-border p-4">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  <img 
-                    src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png" 
+                  <OptimizedImage
+                    src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png"
                     alt="Ludwik C. Siadlak"
                     className="w-8 h-8 rounded-full object-cover"
+                    width={32}
+                    height={32}
+                    sizes="32px"
                   />
                   <div>
                     <div className="font-medium text-gray-900">Ludwik C. Siadlak</div>
@@ -81,10 +85,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
-              <img 
+              <OptimizedImage
                 src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
                 alt="7 Technik Produktywności - Logo kursu"
                 className="w-full h-auto rounded-2xl shadow-2xl"
+                width={400}
+                height={300}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
             </div>
@@ -149,10 +156,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         {/* Course Preview Visual */}
         <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-16">
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden flex items-center justify-center px-4 md:px-8">
-            <img 
+            <OptimizedImage
               src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
               alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
               className="max-h-full w-auto max-w-full object-contain object-center mx-auto"
+              width={400}
+              height={300}
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/20 to-transparent"></div>
           </div>
@@ -228,11 +238,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               </div>
             </div>
             <div className="relative">
-              <img
+              <OptimizedImage
                 src="/lovable-uploads/7e50788e-1ddd-4b3c-900f-62fd313d17e5.png"
                 alt="7 Technik Produktywności – podgląd kursu na telewizorze"
                 className="w-full h-auto rounded-xl shadow-2xl object-contain"
-                loading="lazy"
+                width={400}
+                height={300}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -263,11 +275,13 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             </div>
             
             <div className="flex items-center justify-center gap-3 mb-4">
-              <img
+              <OptimizedImage
                 src="/lovable-uploads/payment-processors.png"
                 alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
                 className="h-8 w-auto object-contain opacity-80"
-                loading="lazy"
+                width={300}
+                height={60}
+                sizes="300px"
               />
             </div>
           </GlassCard>

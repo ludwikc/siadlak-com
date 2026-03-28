@@ -1,6 +1,7 @@
 
 
 import { Play, Calendar } from 'lucide-react';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export interface PodcastEpisode {
   id: string;
@@ -34,10 +35,13 @@ const PodcastEpisodeList = ({
           >
             {episode.imageUrl && (
               <div className="flex-shrink-0 w-full sm:w-32 h-32 overflow-hidden rounded-md">
-                <img
+                <OptimizedImage
                   src={episode.imageUrl}
                   alt={episode.title}
                   className="w-full h-full object-cover"
+                  width={300}
+                  height={300}
+                  sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
             )}

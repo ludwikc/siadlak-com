@@ -2,6 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export default function AboutSection() {
   return (
@@ -11,10 +12,13 @@ export default function AboutSection() {
           {/* Image Column */}
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/5] rounded-md overflow-hidden">
-              <img
+              <OptimizedImage
                 src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
                 alt="Ludwik Siadlak"
                 className="w-full h-full object-cover"
+                width={600}
+                height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-gradient-to-br from-electric to-depth rounded-full blur-2xl opacity-30"></div>
