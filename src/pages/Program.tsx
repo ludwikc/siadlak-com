@@ -3,13 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { CTAButton } from "@/components/ui/cta-button";
 import { ArrowRight, Brain, Clock, Mic2, MapPin, Video } from "@/lib/icons";
 import { Link } from "react-router-dom";
-import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png";
+import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png?w=80;160&format=avif;webp;png&as=picture";
 import communityCallImage from "/lovable-uploads/lifehackerzy-community-call.png";
 import keynoteImage from "/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getProgramEntities } from "@/lib/structured-data";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const decisionTree = [
   {
@@ -327,9 +328,12 @@ export default function Program() {
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Keynote image */}
             <div className="relative rounded-sm overflow-hidden border border-white/10">
-              <img
+              <OptimizedImage
                 src={keynoteImage}
                 alt="Ludwik C. Siadlak presenting 'Hacker Umysłów' keynote at CAMPUS conference"
+                width={1920}
+                height={1080}
+                sizes="(max-width: 768px) 100vw, 672px"
                 className="w-full h-auto"
               />
             </div>
@@ -374,7 +378,7 @@ export default function Program() {
             </Badge>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-6">
-              <img src={lifehackerzyLogo} alt="Lifehackerzy" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
+              <OptimizedImage src={lifehackerzyLogo} alt="Lifehackerzy" width={80} height={80} sizes="80px" className="w-16 h-16 sm:w-20 sm:h-20 object-contain" />
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight text-center sm:text-left">
                 Społeczność <span className="text-lifehacker-purple">Lifehackerzy</span>
               </h2>
@@ -438,9 +442,12 @@ export default function Program() {
             {/* Community Call Image */}
             <div className="max-w-4xl mx-auto mb-10">
               <div className="relative rounded-sm overflow-hidden border border-lifehacker-purple/30">
-                <img
+                <OptimizedImage
                   src={communityCallImage}
                   alt="Lifehackerzy community video call - daily coaching sessions"
+                  width={1920}
+                  height={984}
+                  sizes="(max-width: 768px) 100vw, 672px"
                   className="w-full h-auto"
                 />
               </div>

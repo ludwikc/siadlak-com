@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import {
   Calendar,
   Clock,
@@ -569,9 +570,13 @@ export default function WebinarMeskiKompas() {
               {/* Ludwik */}
               <Card className="bg-gradient-to-br from-white via-gray-50 to-accent/5 border-accent/20 p-8">
                 <div className="mb-6">
-                  <img
+                  <OptimizedImage
                     src="/lovable-uploads/ludwik-siadlak-profile.png"
                     alt="Ludwik C. Siadlak"
+                    width={1080}
+                    height={1080}
+                    priority
+                    sizes="128px"
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-accent"
                   />
                   <h3 className="text-2xl font-bold text-foreground text-center">
@@ -605,9 +610,12 @@ export default function WebinarMeskiKompas() {
               {/* Mateusz */}
               <Card className="bg-gradient-to-br from-white via-gray-50 to-primary/5 border-primary/20 p-8">
                 <div className="mb-6">
-                  <img
+                  <OptimizedImage
                     src="/lovable-uploads/mateusz-lizak-profile.png"
                     alt="Mateusz Lizak"
+                    width={1024}
+                    height={1024}
+                    sizes="128px"
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-primary"
                   />
                   <h3 className="text-2xl font-bold text-foreground text-center">

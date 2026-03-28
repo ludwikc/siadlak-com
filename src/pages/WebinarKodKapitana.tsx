@@ -8,8 +8,9 @@ import {
   MessageSquare,
   Check,
 } from "lucide-react";
-import agendaTimelineBg from "@/assets/agenda-timeline-bg.png";
-import kodKapitanaHero from "@/assets/kod-kapitana-hero.png";
+import agendaTimelineBg from "@/assets/agenda-timeline-bg.png?w=800;1200&format=avif;webp;png&as=picture";
+import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
@@ -138,14 +139,14 @@ export default function WebinarKodKapitana() {
                       filter: "blur(20px)",
                     }}
                   />
-                  <img
+                  <OptimizedImage
                     src={kodKapitanaHero}
                     alt="Kapitan przy sterze statku podczas burzy - metafora uważnego życia"
-                    loading="lazy"
+                    width={1920}
+                    height={1071}
+                    priority
+                    sizes="(max-width: 768px) 100vw, 672px"
                     className="relative w-full rounded-xl shadow-2xl"
-                    style={{
-                      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
-                    }}
                   />
                 </div>
               </div>
@@ -859,11 +860,13 @@ export default function WebinarKodKapitana() {
       >
         {/* Desktop/Tablet: Show full image as the section - decorative, hidden from screen readers */}
         <div className="hidden md:block" aria-hidden="true">
-          <img
+          <OptimizedImage
             src={agendaTimelineBg}
             alt=""
+            width={1024}
+            height={572}
+            sizes="100vw"
             className="w-full h-auto"
-            role="presentation"
           />
         </div>
 

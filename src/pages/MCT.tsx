@@ -4,7 +4,8 @@ import "@fontsource/jetbrains-mono/700.css";
 import { Helmet } from "react-helmet-async";
 import { Mail, Phone } from "lucide-react";
 import MCTSocialProof from "@/components/mct/MCTSocialProof";
-import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp";
+import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp?format=avif;webp&as=picture";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */
 const t = {
@@ -222,9 +223,13 @@ export default function MCT() {
 
               {/* Right column - photo */}
               <div className="hidden md:flex w-[320px] lg:w-[380px] shrink-0 items-end justify-end">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                   alt="Ludwik C. Siadlak"
+                  width={1000}
+                  height={1600}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="w-full h-auto max-h-[600px] object-contain object-bottom drop-shadow-2xl"
                 />
               </div>
@@ -289,9 +294,12 @@ export default function MCT() {
                       className="absolute -inset-2 blur-3xl opacity-20 rounded-3xl"
                       style={{ background: `linear-gradient(135deg, ${t.accent}, transparent 70%)` }}
                     />
-                    <img
+                    <OptimizedImage
                       src={consultantPhoto}
-                      alt="Ludwik C. Siadlak - Microsoft Certified Trainer"
+                      alt="Ludwik C. Siadlak — Microsoft Certified Trainer"
+                      width={3388}
+                      height={4940}
+                      sizes="(max-width: 768px) 100vw, 35vw"
                       className="relative w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     />
                     {/* Bottom gradient overlay with text */}

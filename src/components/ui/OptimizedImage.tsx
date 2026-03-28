@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Picture } from "vite-imagetools";
 
 type OptimizedImageProps = {
@@ -8,6 +9,7 @@ type OptimizedImageProps = {
   priority?: boolean;
   className?: string;
   sizes?: string;
+  style?: CSSProperties;
 };
 
 function deriveSiblingPath(src: string, ext: string): string {
@@ -22,6 +24,7 @@ export default function OptimizedImage({
   priority = false,
   className,
   sizes = "100vw",
+  style,
 }: OptimizedImageProps) {
   const loading = priority ? "eager" : "lazy";
   const fetchPriority = priority ? "high" : undefined;
@@ -42,6 +45,7 @@ export default function OptimizedImage({
           loading={loading}
           fetchPriority={fetchPriority}
           className={className}
+          style={style}
           decoding="async"
         />
       </picture>
@@ -63,6 +67,7 @@ export default function OptimizedImage({
         loading={loading}
         fetchPriority={fetchPriority}
         className={className}
+        style={style}
         decoding="async"
       />
     </picture>

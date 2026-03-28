@@ -34,6 +34,7 @@ import CountdownTimer from "@/components/sales/CountdownTimer";
 import FAQAccordion from "@/components/sales/FAQAccordion";
 import ValueCalculator from "@/components/sales/ValueCalculator";
 import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export default function HakowanieProduktywnosci() {
   return (
@@ -642,9 +643,12 @@ export default function HakowanieProduktywnosci() {
                 </p>
               </div>
               <div className="relative rounded-md overflow-hidden border border-muted">
-                <img
+                <OptimizedImage
                   src="/src/assets/portal-hakprod.png"
                   alt="Platforma Programu Produktywność - widok modułu z video"
+                  width={3248}
+                  height={2112}
+                  sizes="(max-width: 768px) 100vw, 75vw"
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>

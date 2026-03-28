@@ -5,7 +5,8 @@ import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
-import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png";
+import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png?w=200;400&format=avif;webp;png&as=picture";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import "@fontsource/caveat/400.css";
 import {
   ArrowRight,
@@ -163,9 +164,12 @@ const UwazneZycie = () => {
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
                   }}
                 >
-                  <img 
-                    src={lifehackerzyLogo} 
-                    alt="Lifehackerzy" 
+                  <OptimizedImage
+                    src={lifehackerzyLogo}
+                    alt="Lifehackerzy"
+                    width={500}
+                    height={150}
+                    sizes="80px"
                     className="h-12 sm:h-14 w-auto flex-shrink-0"
                   />
                   <div className="text-center sm:text-left">
@@ -966,9 +970,12 @@ const UwazneZycie = () => {
 
             {/* Logo */}
             <div className="flex justify-center mb-12">
-              <img 
-                src={lifehackerzyLogo} 
-                alt="Lifehackerzy" 
+              <OptimizedImage
+                src={lifehackerzyLogo}
+                alt="Lifehackerzy"
+                width={500}
+                height={150}
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="h-20 md:h-28 w-auto"
               />
             </div>

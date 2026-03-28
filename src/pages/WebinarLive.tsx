@@ -3,9 +3,10 @@ import Layout from "../components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import calendarGcal from "@/assets/calendar-gcal.png";
-import calendarApple from "@/assets/calendar-apple.png";
-import calendarOutlook from "@/assets/calendar-outlook.png";
+import calendarGcal from "@/assets/calendar-gcal.png?w=64;128&format=avif;webp;png&as=picture";
+import calendarApple from "@/assets/calendar-apple.png?w=64;128&format=avif;webp;png&as=picture";
+import calendarOutlook from "@/assets/calendar-outlook.png?w=64;128&format=avif;webp;png&as=picture";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);
@@ -97,9 +98,12 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                       className="transition-transform duration-200 hover:scale-105"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
-                        <img
+                        <OptimizedImage
                           src={calendarGcal}
                           alt="Google Calendar"
+                          width={20}
+                          height={20}
+                          sizes="48px"
                           className="h-8 w-8"
                         />
                         <span className="text-white font-medium text-sm">
@@ -114,9 +118,12 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                       className="transition-transform duration-200 hover:scale-105"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
-                        <img
+                        <OptimizedImage
                           src={calendarApple}
                           alt="Apple Calendar"
+                          width={20}
+                          height={20}
+                          sizes="48px"
                           className="h-8 w-8"
                         />
                         <span className="text-white font-medium text-sm">
@@ -133,9 +140,12 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                       className="transition-transform duration-200 hover:scale-105"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
-                        <img
+                        <OptimizedImage
                           src={calendarOutlook}
                           alt="Outlook Calendar"
+                          width={20}
+                          height={20}
+                          sizes="48px"
                           className="h-8 w-8"
                         />
                         <span className="text-white font-medium text-sm">

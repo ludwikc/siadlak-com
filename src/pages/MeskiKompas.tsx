@@ -9,6 +9,7 @@ import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
 import { AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export default function MeskiKompas() {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
@@ -1978,9 +1979,12 @@ export default function MeskiKompas() {
                 className="p-12 flex flex-col items-center text-center"
                 style={{ backgroundColor: "hsl(210, 20%, 8%)" }}
               >
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png"
                   alt="Ludwik Siadlak - Mistrz porywania ludzi i pracy z emocjami"
+                  width={1080}
+                  height={1080}
+                  sizes="128px"
                   className="w-32 h-32 rounded-full mb-6 object-cover border-4"
                   style={{ borderColor: "hsl(45, 85%, 50%)" }}
                 />
@@ -1999,9 +2003,12 @@ export default function MeskiKompas() {
 
               {/* Mateusz - White (Yang) */}
               <div className="bg-white p-12 flex flex-col items-center text-center">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/mateusz-lizak-profile.png"
                   alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
+                  width={1024}
+                  height={1024}
+                  sizes="128px"
                   className="w-32 h-32 rounded-full mb-6 object-cover border-4"
                   style={{ borderColor: "hsl(210, 40%, 15%)" }}
                 />
@@ -2078,9 +2085,12 @@ export default function MeskiKompas() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Course Image */}
               <div className="order-2 lg:order-1">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/7technik_transparent.png"
                   alt="7 technik produktywności - kurs bonus"
+                  width={1920}
+                  height={1366}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -2202,14 +2212,20 @@ export default function MeskiKompas() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Community Logo & Visual */}
               <div className="order-2 lg:order-1 text-center">
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/lifehackerzy-community-call.png"
                   alt="Lifehackerzy - Codzienne spotkania społeczności"
+                  width={1920}
+                  height={984}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto rounded-2xl shadow-2xl mb-8"
                 />
-                <img
+                <OptimizedImage
                   src="/lovable-uploads/lifehackerzy.svg"
                   alt="Lifehackerzy - Ekskluzywna społeczność"
+                  width={500}
+                  height={150}
+                  sizes="(max-width: 768px) 100vw, 448px"
                   className="w-full max-w-md h-auto mx-auto mb-6"
                 />
                 <div
