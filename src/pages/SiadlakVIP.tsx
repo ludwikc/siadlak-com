@@ -79,9 +79,7 @@ export default function SiadlakVIP() {
             LIFEHACKERZY
           </h2>
           <p className="text-on-light-dim text-base leading-relaxed mb-8">
-            Pełna społeczność na Discordzie. Dostęp dostajesz po zainstalowaniu dowolnego{" "}
-            <Link to="/program" className="text-electric font-bold hover:underline">programu</Link>.
-            W środku znajdziesz dwa otwarte kanały:
+            W środku znajdziesz:
           </p>
 
           <div className="space-y-6">
