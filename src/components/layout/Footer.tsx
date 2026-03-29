@@ -105,6 +105,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  to="/siadlakvip"
+                  onClick={scrollToTop}
+                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                >
+                  SIADLAK.VIP Telegram
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/contact"
                   onClick={scrollToTop}
                   className="text-white/80 hover:text-depth transition-colors inline-block"
