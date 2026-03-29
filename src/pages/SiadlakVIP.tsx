@@ -50,12 +50,28 @@ export default function SiadlakVIP() {
           </p>
 
           <div className="bg-surface border border-white/10 rounded-md p-6 md:p-8">
-            <span className="text-2xl mb-4 block" aria-hidden="true">✈️</span>
-            <p className="text-dim text-base leading-relaxed mb-4">
-              Moje prywatne przemyślenia, które nie trafiają nigdzie indziej. Bez algorytmu, bez lajków, bez komentarzy pod postem. Piszę, Ty czytasz. Proste.
+            <p className="text-electric text-sm font-bold uppercase tracking-[0.15em] mb-4">
+              Value · Impact · Progress
             </p>
-            <p className="text-dim text-base leading-relaxed mb-8">
-              To nie jest kanał z poradami. To jest okno do mojego procesu myślenia - w czasie rzeczywistym.
+            <p className="text-white text-base leading-relaxed mb-4">
+              Mój warsztat. Miejsce na surowe myśli, zanim oprawię je w ramki i nazwę produktem. (A może nigdy.)
+            </p>
+            <p className="text-dim text-sm leading-relaxed mb-6">
+              Od razu ostrzegam: niektóre rozkminki mogą być "odklejone", kiedy temat sięga tak głęboko, że ani technologia ani nauka jeszcze nie potrafi tego opisać.
+            </p>
+            <div className="space-y-2 mb-6">
+              <p className="text-dim text-base leading-relaxed">
+                <span aria-hidden="true">➡️</span> <strong className="text-white">Wartość</strong> (Value) przychodzi z doświadczania życia.
+              </p>
+              <p className="text-dim text-base leading-relaxed">
+                <span aria-hidden="true">🔀</span> <strong className="text-white">Wpływ</strong> (Impact) pojawia się, gdy pozwolisz sobie na zmianę perspektywy.
+              </p>
+              <p className="text-dim text-base leading-relaxed">
+                <span aria-hidden="true">↗️</span> <strong className="text-white">Postęp</strong> (Progress) to już Twoja przestrzeń do zagospodarowania.
+              </p>
+            </div>
+            <p className="text-dim text-sm leading-relaxed italic mb-8">
+              Podróż do środka. Cieszę się, że decydujesz się towarzyszyć.
             </p>
             <a
               href="https://t.me/+bOZV8ebGFxgzYTMy"
