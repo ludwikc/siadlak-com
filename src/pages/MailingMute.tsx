@@ -8,7 +8,7 @@ export default function MailingMute() {
       <SEO
         title="Wyciszono temat | Siadlak.com"
         description="Potwierdzenie wyciszenia tematu mailingu."
-        noIndex
+        noindex
       />
       <section className="min-h-[70vh] flex items-center justify-center bg-void-glow py-20 px-6">
         <div className="max-w-md w-full text-center space-y-8">
