@@ -1,8 +1,13 @@
+import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import ludwikPhoto from "@/assets/ludwikc-selfie.png";
+import { muteTopics } from "@/data/mailing-mute-topics";
 
 export default function MailingMute() {
+  const { topic } = useParams<{ topic: string }>();
+  const content = muteTopics[topic ?? "default"] ?? muteTopics.default;
+
   return (
     <Layout>
       <SEO
@@ -16,10 +21,10 @@ export default function MailingMute() {
             {/* Text - left */}
             <div className="space-y-6 text-center md:text-left py-16">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-dark">
-                OK, przyjąłem 🫡
+                {content.heading}
               </h1>
               <p className="text-lg md:text-xl text-text-dim leading-relaxed">
-                Nie będziesz otrzymywać treści na ten temat.
+                {content.message}
               </p>
               <p className="text-text-dim/70 text-base md:text-lg">
                 Dziękuję, że jesteś!
