@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint v3 — Ludwik C. Siadlak — LifeOS: System Upgrade</title>
+<style>
+/* Wymuszony Dark Mode dla perfekcyjnego renderu PDF */
+:root {
+    --bg: #0a0a0d;
+    --bg2: #111118;
+    --bg3: #1a1a24;
+    --tx: #e5e5ea;
+    --tx2: #9ca3af;
+    --tx3: #6b7280;
+    --bd: #23232f;
+    --blue: #3b82f6;
+    --teal: #14b8a6;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --green: #10b981;
+    --purple: #8b5cf6;
+    --r: 12px;
+    --sh: 0 2px 8px rgba(0,0,0,.3);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background: var(--bg); 
+    color: var(--tx); 
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; 
+    line-height: 1.7; 
+    font-size: 15px;
+    -webkit-print-color-adjust: exact; /* Wymuszenie druku teł */
+    print-color-adjust: exact;
+}
+
+.w { max-width: 920px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+h1 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 .5rem; padding-bottom: .5rem; border-bottom: 3px solid var(--blue); }
+h2 { font-size: 1.2rem; font-weight: 600; margin: 1.6rem 0 .5rem; color: var(--blue); }
+h3 { font-size: 1rem; font-weight: 600; margin: 1rem 0 .3rem; color: var(--tx); }
+p { color: var(--tx2); margin-bottom: .7rem; }
+ul, ol { padding-left: 1.4rem; margin: .4rem 0 .8rem; color: var(--tx2); }
+li { margin-bottom: .35rem; }
+strong { color: var(--tx); font-weight: 600; }
+
+.card { background: var(--bg2); border: 1px solid var(--bd); border-radius: var(--r); padding: 1.1rem; margin: .6rem 0; box-shadow: var(--sh); }
+.accent { border-left: 4px solid; padding: .7rem 1rem; margin: .6rem 0; border-radius: 0 var(--r) var(--r) 0; background: var(--bg2); }
+.accent.blue { border-color: var(--blue); } .accent.green { border-color: var(--green); } .accent.amber { border-color: var(--amber); } .accent.red { border-color: var(--red); } .accent.purple { border-color: var(--purple); } .accent.teal { border-color: var(--teal); }
+
+.g { display: grid; gap: 12px; margin: .6rem 0; }
+.g2 { grid-template-columns: 1fr 1fr; }
+.g3 { grid-template-columns: 1fr 1fr 1fr; }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+
+.m { background: var(--bg3); border-radius: 8px; padding: .9rem; text-align: center; }
+.m .v { font-size: 1.4rem; font-weight: 700; }
+.m .l { font-size: .72rem; color: var(--tx3); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+table { width: 100%; border-collapse: collapse; font-size: .82rem; margin: .6rem 0; }
+th { background: var(--bg3); text-align: left; padding: 7px 9px; font-weight: 600; font-size: .76rem; color: var(--tx2); border-bottom: 1px solid var(--bd); }
+td { padding: 7px 9px; border-bottom: 1px solid var(--bd); vertical-align: top; color: var(--tx2); }
+
+/* Tagi zoptymalizowane pod dark mode */
+.tag { display: inline-block; font-size: .68rem; font-weight: 600; padding: 2px 9px; border-radius: 99px; margin-right: 3px; }
+.tag.b { background: #1e3a5f; color: #93c5fd; }
+.tag.t { background: #134e4a; color: #5eead4; }
+.tag.a { background: #451a03; color: #fcd34d; }
+.tag.r { background: #450a0a; color: #fca5a5; }
+.tag.p { background: #2e1065; color: #c4b5fd; }
+.tag.g { background: #064e3b; color: #6ee7b7; }
+
+.step { display: flex; gap: 10px; margin: .4rem 0; align-items: flex-start; }
+.sn { width: 23px; height: 23px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .68rem; font-weight: 700; flex-shrink: 0; color: #fff; }
+.sn.b { background: var(--blue); } .sn.t { background: var(--teal); } .sn.a { background: var(--amber); } .sn.r { background: var(--red); } .sn.g { background: var(--green); } .sn.p { background: var(--purple); }
+
+.st { font-size: .85rem; line-height: 1.6; }
+.arr { text-align: center; color: var(--tx3); font-size: .78rem; margin: 2px 0; }
+.sep { height: 1px; background: var(--bd); margin: 10px 0; }
+.toc a { display: block; padding: 3px 0; color: var(--blue); text-decoration: none; font-size: .85rem; }
+.toc a:hover { text-decoration: underline; }
+
+.cover { text-align: center; padding: 2.5rem 0 1.5rem; }
+.cover h1 { font-size: 1.8rem; border: none; margin: 0 0 .4rem; }
+
+.tl { position: relative; padding-left: 26px; margin: .8rem 0; }
+.tl::before { content: ''; position: absolute; left: 9px; top: 0; bottom: 0; width: 2px; background: var(--bd); }
+.tl-i { position: relative; margin-bottom: 1rem; }
+.tl-d { position: absolute; left: -21px; top: 4px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--blue); background: var(--bg); }
+
+.fr { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.fn { border: 1px solid var(--bd); border-radius: var(--r); padding: 1rem; background: var(--bg2); }
+
+.warn { background: var(--bg2); border: 2px solid var(--red); border-radius: var(--r); padding: 1rem; margin: .8rem 0; }
+.warn strong { color: var(--red); }
+
+/* Paginacja PDF - Zabezpieczenie przed ucinaniem elementów */
+@media print {
+    @page { size: A4; margin: 0; }
+    body { padding: 10mm 15mm; }
+    h1, h2 { page-break-after: avoid; }
+    .card, .accent, .warn, .fn, .tl-i, tr { page-break-inside: avoid; }
+    .sep { page-break-before: auto; page-break-after: auto; }
+}
+</style>
+</head>
+<body>
+<div class="w">
+
+<div class="cover">
+<div style="font-size:.8rem;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem">Blueprint v3 — zweryfikowany z playbookami</div>
+<h1 style="color:var(--blue)">LifeOS: System Upgrade</h1>
+<h1 style="font-size:1.2rem;color:var(--tx)">Ludwik C. Siadlak — siadlak.com</h1>
+<p>Marketing Machine + Fast Cash + $100M Leads + Lead Nurture + Retention<br>Kwiecień 2026 · Z fazą podgrzewania listy i aktywacji społeczności</p>
+</div>
+
+<div class="sep"></div>
+
+<div class="warn">
+<strong>KRYTYCZNA KOREKTA:</strong>
+<p>Hormozi, Fast Cash Playbook: <em>„If your list has neglected leads — you haven't sent them anything for six months or more — exclude them from this offer but start warming them up for the next one."</em></p>
+<p>Twoja baza 1 575 osób jest w większości zimna. Sporadyczne newslettery i powiadomienia o medytacjach to nie jest „ciepła lista". Nie możesz od razu zaproponować NFT Upgrade ani Fast Cash Play — bo (1) nie masz relacji emailowej, (2) społeczność Lifehackerzy nie daje jeszcze wystarczającej wartości, żeby uzasadnić upgrade.</p>
+<p><strong>Blueprint zaczyna się od FAZY 0: podgrzej listę i ożyw społeczność — ZANIM cokolwiek sprzedasz.</strong></p>
+</div>
+
+<h2>Spis treści</h2>
+<div class="toc">
+<a href="#s0">FAZA 0. Podgrzej listę + ożyw społeczność (tyg. 1-6)</a>
+<a href="#s1">1. Diagnoza</a>
+<a href="#s2">2. Ekosystem produktów (Value Ladder)</a>
+<a href="#s3">3. Core Four</a>
+<a href="#s4">4. Lejek główny: Program Produktywność</a>
+<a href="#s5">5. OTO 77 PLN (tripwire)</a>
+<a href="#s6">6. Deep Work + Uważne Życie (nurture)</a>
+<a href="#s7">7. Marketing Machine</a>
+<a href="#s8">8. Fast Cash Plays (dopiero po fazie 0!)</a>
+<a href="#s9">9. Lead Nurture</a>
+<a href="#s10">10. Roadmap 12 miesięcy</a>
+<a href="#s11">11. Metryki sukcesu</a>
+<a href="#s12">12. Weryfikacja: checklist</a>
+</div>
+
+<h1 id="s0" style="border-color:var(--red)">FAZA 0: Podgrzej listę + ożyw społeczność</h1>
+<p style="font-size:1rem;color:var(--tx)"><strong>Zanim cokolwiek sprzedasz — dawaj wartość. Zanim zrobisz Fast Cash — napraw społeczność. 4-6 tygodni.</strong></p>
+
+<div class="accent red">
+<strong>Hormozi, Lifetime Value Playbook:</strong> „I simply provide value to my list. This balances the give:ask ratio and keeps my business top of mind."<br>
+<strong>Hormozi, Fast Cash Playbook:</strong> „Cooldown your list. Get back to providing value."<br>
+<strong>Hormozi, Retention Playbook:</strong> „Make finding activation points your top priority." + „Manually introduce members. Elevate micro-celebrities within your community."
+</div>
+
+<h2>0A. Podgrzewanie listy (tydzień 1-4)</h2>
+<p>Przejście od „sporadyczny newsletter" do „regularny, wartościowy kontakt" — żeby za 4-6 tygodni mieli powód otworzyć mail sprzedażowy.</p>
+
+<div class="card">
+<h3>Sekwencja rozgrzewkowa — 4 maile w 4 tygodnie</h3>
+<div class="step"><div class="sn b">1</div><div class="st"><strong>Tydzień 1 — „Cześć, to ja"</strong><br>Mail osobisty. Zero sprzedaży. „Nie pisałem do Ciebie regularnie. To się zmienia. Przez najbliższe tygodnie podzielę się kilkoma rzeczami, które naprawdę działają." Opcja wypisania się. Ton: szczery, bez BS.</div></div>
+<div class="step"><div class="sn b">2</div><div class="st"><strong>Tydzień 2 — Wartość #1</strong><br>Jedna konkretna technika produktywności. CTA: „Odpowiedz mi, jeśli to zastosujesz." (Engagement → lepszy deliverability w MailerLite.)</div></div>
+<div class="step"><div class="sn b">3</div><div class="st"><strong>Tydzień 3 — Wartość #2: historia klienta</strong><br>Case study z Lifehackera (testimonial z Marketing Machine). „Tomek, CTO — decyzja o zatrudnieniu w 20 minut zamiast 3 tygodni." CTA: „Znasz kogoś takiego? Prześlij mu ten mail."</div></div>
+<div class="step"><div class="sn b">4</div><div class="st"><strong>Tydzień 4 — Wartość #3 + soft zaproszenie</strong><br>Kolejna technika. Na końcu: „PS — Jeśli chcesz pracować w skupieniu z innymi — dołącz do naszego bezpłatnego Deep Work: deepwork.pl" (lead magnet, nie produkt płatny).</div></div>
+</div>
+
+<div class="accent green">
+<strong>Zasada give:ask:</strong> Przez 4 tygodnie: 100% dawanie, 0% proszenie. Każdy mail wart otwarcia SAM W SOBIE. Nie teaser. Nie oferta. Czysta wartość. Podpis: „— Ludwik".
+</div>
+
+<h2>0B. Aktywacja społeczności Lifehackerzy (równolegle, tyg. 1-6)</h2>
+<p>NFT Upgrade i Fast Cash mają sens TYLKO gdy społeczność DAJE WARTOŚĆ. Inaczej sprzedajesz „dostęp do czegoś, w czym nic się nie dzieje".</p>
+
+<div class="card">
+<h3>Retention Playbook — checklist aktywacji</h3>
+<table>
+<tr><th>Działanie</th><th>Źródło</th><th>Konkretnie</th></tr>
+<tr><td><strong>Znajdź activation point</strong></td><td>„Every customer that does X stays longer"</td><td>Kto z Lifehackerów jest aktywny na #1234? Hipoteza: aktywność na Daily Coaching = activation point.</td></tr>
+<tr><td><strong>Onboarding 1:1</strong></td><td>„1:1 onboarding gave 25% boost"</td><td>Każdy nowy Lifehacker: 15-min call. Resell wartość. Pokaż kanały. Homework na 7 dni. Zaplanuj next call.</td></tr>
+<tr><td><strong>Unlockables</strong></td><td>„course, 1:1 call, badge, event"</td><td>30 dni → ProTipy 1-50. 90 dni → Grupa Energii. 6 mies → sesja 1:1 (15 min).</td></tr>
+<tr><td><strong>Community linking</strong></td><td>„Manually introduce members. Elevate micro-celebrities."</td><td>Ludwik przedstawia nowych. Pinuje posty. „Ekspert tygodnia." Chwali publicznie.</td></tr>
+<tr><td><strong>Kategorie postów</strong></td><td>„wins, fun, discovered, meetups"</td><td>Discord: #wins (testimoniale!), #fun, #discovered, #meetups. Pin 1-2 najlepsze/dzień.</td></tr>
+<tr><td><strong>Survey</strong></td><td>„If I removed everything but one, what would you keep?"</td><td>Ankieta w #1234. Dowiesz się, co rozbudować PRZED sprzedażą NFT.</td></tr>
+</table>
+</div>
+
+<div class="accent amber">
+<strong>Checkpoint przed przejściem do Fazy 1:</strong> (1) Open rate maili >30%? (2) Dostajesz odpowiedzi na maile? (3) #1234 ma >5 aktywnych postów/tydzień? (4) Masz min. 3-5 świeżych testimoniali? → Jeśli TAK → Faza 1.
+</div>
+
+<h1 id="s1">1. Diagnoza</h1>
+<div class="g g4">
+<div class="m"><div class="v" style="color:var(--blue)">1 575</div><div class="l">baza PL (zimna!)</div></div>
+<div class="m"><div class="v" style="color:var(--green)">~35%</div><div class="l">open rate</div></div>
+<div class="m"><div class="v" style="color:var(--amber)">100K PLN</div><div class="l">przychód z HP (bez reklam)</div></div>
+<div class="m"><div class="v" style="color:var(--red)">0 PLN</div><div class="l">wydatki na ads</div></div>
+</div>
+
+<h1 id="s2">2. Ekosystem produktów (Value Ladder)</h1>
+<table>
+<tr><th>Warstwa</th><th>Produkt</th><th>Cena</th><th>Rola</th></tr>
+<tr><td><span class="tag g">Lead Magnet</span></td><td><strong>Deep Work</strong> (Discord cowork)</td><td>0 PLN</td><td>Top of funnel → lista → cross-sell UŻ</td></tr>
+<tr><td><span class="tag g">Lead Magnet</span></td><td><strong>UŻ medytacje</strong> (wt. 6:30)</td><td>0 PLN</td><td>Nurture → sekwencja → webinar</td></tr>
+<tr><td><span class="tag a">OTO</span></td><td><strong>„7 technik produktywności"</strong><br><small>siadlak.com/oto · oficjalnie 497 PLN</small></td><td><strong>77 PLN</strong></td><td>Post-registration tripwire. Moduł 7→Deep Work.</td></tr>
+<tr><td><span class="tag b">Core</span></td><td><strong>Program: Produktywność</strong> (HP)</td><td>1 497 PLN</td><td>Flagowy. Webinar. → Lifehackerzy lifetime.</td></tr>
+<tr><td><span class="tag p">Core</span></td><td><strong>Program: Odporność Psychiczna</strong> (SG)</td><td>897 PLN</td><td>Next step po HP.</td></tr>
+<tr><td><span class="tag t">Core</span></td><td><strong>Program: Uważność</strong> (UŻ kurs)</td><td>777 PLN</td><td>Kampania email → evergreen.</td></tr>
+<tr><td><span class="tag r">Premium</span></td><td><strong>LifeOS: System Upgrade</strong> (ME)</td><td>16 000 PLN</td><td>Mentoring 1:1, max 5. Sesja Discovery.</td></tr>
+<tr><td><span class="tag p">Lifetime</span></td><td><strong>Tier NFT</strong></td><td>4 500+ PLN</td><td>Fast Cash — <strong>dopiero po ożywieniu!</strong></td></tr>
+</table>
+<div class="accent purple"><strong>Max LTV per OTO buyer:</strong> 77 + 1497 + 777 + 897 = <strong>3 248 PLN</strong>. Moduł 7 OTO → Deep Work → UŻ → SG → ME. Cały ekosystem połączony.</div>
+
+<h1 id="s3">3. Core Four ($100M Leads)</h1>
+<div class="g g2">
+<div class="card"><h3>Warm Outreach</h3><p><span class="tag g">FAZA 0</span> Newsletter co tydzień. Discord DM. „Czy znasz kogoś..." Rule of 100.</p></div>
+<div class="card"><h3>Post Free Content</h3><p><span class="tag a">FAZA 0 START</span> 100 min/dzień. Rolki IG + LinkedIn. Content z Marketing Machine. 1 post/dzień min.</p></div>
+<div class="card"><h3>Cold Outreach</h3><p><span class="tag r">PÓŹNIEJ (mies. 7+)</span> Cold DM do CTO/CEO z personalizacją.</p></div>
+<div class="card"><h3>Run Paid Ads</h3><p><span class="tag a">PO FAZIE 0 (tyg. 7+)</span> FB Ads → webinar HP. 2-3K PLN/mies. Lookalike + filtry.</p></div>
+</div>
+<div class="accent amber"><strong>More Better New:</strong> Zacznij od 2 metod (Warm + Content). MORE → BETTER (1 test/tyg.) → NEW (nowa platforma po mies. 7).</div>
+
+<h1 id="s4">4. Lejek główny: Program Produktywność</h1>
+<p><strong>Startuje PO fazie 0, od tygodnia 7.</strong> Lista musi być ciepła.</p>
+<div class="card">
+<div class="step"><div class="sn b">1</div><div class="st"><strong>FB Ad</strong> — proof-based (Marketing Machine). Testimonial klienta, nie Ludwik. Callout: ambitni mężczyźni 30-50.</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn b">2</div><div class="st"><strong>Landing Page webinaru HP</strong> → rejestracja → natychmiast:</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn a">⚡</div><div class="st"><strong>OTO (siadlak.com/oto)</strong> — 77 PLN zamiast 497. „Właśnie pokazałeś, że traktujesz to poważnie." Moduł 7→Deep Work.</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn g">3</div><div class="st"><strong>Pre-webinar emails</strong> (3-5 maili). OTO buyers = osobny track. Reminders 24h/12h/3h/1h.</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn b">4</div><div class="st"><strong>Webinar HP LIVE</strong> — Ludwik reaguje na komentarze (NIE skrypt). 60 min wartości → 15 min oferta.</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn b">5</div><div class="st"><strong>Follow-up</strong> (5-7 maili, 7 dni). Track A (OTO buyers): agresywny CTA + case study. Track B: edukacja + replay.</div></div>
+<div class="arr">↓</div>
+<div class="step"><div class="sn g">✓</div><div class="st"><strong>Konwersja:</strong> HP (1 497) → Lifehackerzy | Sesja Discovery → ME (16 000) | Nie kupił → long-term nurture.</div></div>
+</div>
+<div class="accent green"><strong>Matematyka:</strong> 3K PLN → 150 leadów → OTO 5% = 577 PLN → Webinar 40% show × 7% = 4 × HP = <strong>5 988 PLN</strong>. ROAS: ~2.2x. + ME co kwartał.</div>
+
+<h1 id="s5">5. OTO 77 PLN (tripwire)</h1>
+<div class="g g2">
+<div class="card"><h3>Dlaczego 77, nie za darmo</h3><ul><li>Micro-commitment = wyższy show rate</li><li>77 min contentu PRZED webinarem = zaufanie</li><li>Value Equation: Time Delay ↓ + Effort ↓</li><li>Pokrywa ~19% kosztów reklam</li></ul></div>
+<div class="card"><h3>Moduł 7 = most do ekosystemu</h3><ul><li>Moduł 7 → Deep Work → UŻ → SG → ME</li><li>Max LTV: <strong>3 248 PLN</strong></li><li>OTO page NATYCHMIAST po rejestracji (thank you page)</li></ul></div>
+</div>
+
+<h1 id="s6">6. Deep Work + Uważne Życie</h1>
+<div class="fr">
+<div class="fn"><span class="tag b">Deep Work</span><h3>Bezpłatny cowork</h3><div class="sep"></div>
+<div class="step"><div class="sn b">1</div><div class="st">FB/IG rolki → deepwork.pl → MailerLite</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn b">2</div><div class="st">Sekwencja onboardingowa (gotowa)</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn t">3</div><div class="st">Cross-sell na medytacje UŻ</div></div>
+<p style="font-size:.78rem;margin-top:8px">OTO buyers z modułu 7 trafiają tu automatycznie.</p></div>
+<div class="fn"><span class="tag t">Uważne Życie</span><h3>Medytacje → kurs 777 PLN</h3><div class="sep"></div>
+<div class="step"><div class="sn t">1</div><div class="st">Mail VSL do ciepłej bazy (po fazie 0!)</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn t">2</div><div class="st">Pre-kampania (co 3-4 dni, edukacja)</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn t">3</div><div class="st">Webinar sprzedażowy (specjalna cena)</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn a">4</div><div class="st">Sekwencja sprzedażowa (testymonialia + dobitka)</div></div><div class="arr">↓</div>
+<div class="step"><div class="sn g">✓</div><div class="st">Zamknięcie → Evergreen na zimny ruch</div></div>
+<p style="font-size:.78rem;margin-top:8px">Reklamy UŻ wstrzymane do zamknięcia okienka ciepłej bazy.</p></div>
+</div>
+
+<h1 id="s7">7. Marketing Machine</h1>
+<p>80/20: 80% reklam z klientami, 20% z Ludwikiem. Node 1-3 startują w fazie 0, żeby mieć creative gotowe na paid ads.</p>
+<table>
+<tr><th>#</th><th>Node</th><th>Działanie</th><th>Kiedy</th></tr>
+<tr><td>1</td><td>Konkurs testimoniali</td><td>6-pkt skrypt w #1234. Nagroda: sesja 1:1.</td><td><span class="tag g">Faza 0, tyg. 1</span></td></tr>
+<tr><td>2</td><td>Chat scrape</td><td>Screenshoty DM-ów → ads</td><td><span class="tag g">Faza 0, tyg. 1</span></td></tr>
+<tr><td>3</td><td>Community scrape</td><td>#wins screenshoty → FB Ads</td><td><span class="tag g">Faza 0, tyg. 2</span></td></tr>
+<tr><td>4</td><td>Reviews scrape</td><td>5-gwiazdkowe z Google/FB</td><td><span class="tag b">Tyg. 3-4</span></td></tr>
+<tr><td>5</td><td>Social media scrape</td><td>Stories @lifehackerzy</td><td><span class="tag b">Tyg. 3-4</span></td></tr>
+<tr><td>6</td><td>Bonus unlocks</td><td>ProTip #50, odznaki → reakcje</td><td><span class="tag a">Mies. 3+</span></td></tr>
+<tr><td>7</td><td>Award unlocks</td><td>Fizyczny „diament" → unboxing</td><td><span class="tag a">Mies. 3+</span></td></tr>
+<tr><td>8</td><td>Events</td><td>Webinary, #1234, konferencje</td><td><span class="tag p">Mies. 4+</span></td></tr>
+<tr><td>9</td><td>Lifecycle ads</td><td>90-sek kompilacja drogi klienta</td><td><span class="tag p">Mies. 5+</span></td></tr>
+</table>
+
+<h1 id="s8">8. Fast Cash Plays (dopiero po fazie 0!)</h1>
+<div class="warn">
+<strong>WARUNEK:</strong> Fast Cash startuje DOPIERO gdy: (1) lista ciepła, (2) społeczność żyje, (3) masz 3-5 świeżych testimoniali.<br>
+Między Fast Cash Plays: <strong>12 tygodni wartości, 0 sprzedaży.</strong> Zbierz 4R: Reviews, Results, Referrals, Resells.
+</div>
+
+<table>
+<tr><th>Kwartał</th><th>Oferta</th><th>Cena</th><th>Limit</th><th>Szacunek</th></tr>
+<tr><td><span class="tag a">Q3 2026</span></td><td><strong>„Reinstalacja"</strong> — HP+SG bundle (rok + 4× Q&A + priorytet)</td><td>3 497 PLN</td><td>10</td><td>34 970 PLN</td></tr>
+<tr><td><span class="tag b">Q4 2026</span></td><td><strong>„Diament"</strong> — 8-tyg. ME ultra-premium (24/7, fotoshoot)</td><td>25 000 PLN</td><td>3</td><td>75 000 PLN</td></tr>
+<tr><td><span class="tag t">Q1 2027</span></td><td><strong>„Upgrade NFT"</strong> — lifetime wszystkie programy + VIP</td><td>5 500 PLN</td><td>5</td><td>27 500 PLN</td></tr>
+<tr><td><span class="tag r">Q2 2027</span></td><td><strong>„Kapitan"</strong> — retreat 3-dniowy in-person</td><td>8 000 PLN</td><td>8</td><td>64 000 PLN</td></tr>
+</table>
+
+<div class="card">
+<h3>Sekwencja Fast Cash (7 dni — Push to Consult)</h3>
+<ol>
+<li><strong>Dzień 1 — Primer:</strong> „Coś nadchodzi. Limit X. Szczegóły jutro." Email + Discord + SMS.</li>
+<li><strong>Dzień 2 — The Offer:</strong> Pełna oferta + Bonus 1. CTA: umów rozmowę.</li>
+<li><strong>Dzień 3 — Bonus 2:</strong> Nowy bonus + testimonial. „Zostało X miejsc." + SMS.</li>
+<li><strong>Dzień 4 — Bonus 3:</strong> Najlepszy bonus + case study.</li>
+<li><strong>Dzień 5 — Last Call:</strong> „Ostatnie 2 miejsca."</li>
+<li><strong>Dzień 6 — Sold Out:</strong> „Wyprzedane. Następna za 90 dni."</li>
+<li><strong>Dzień 7 — Backup:</strong> „Jedno miejsce się zwolniło."</li>
+</ol>
+</div>
+
+<h1 id="s9">9. Lead Nurture (4 filary)</h1>
+<div class="g g2">
+<div class="card"><h3>Speed</h3><ul><li>Kontakt 5 min po zapisie</li><li>Double-dial</li><li>Appointment same/next-day</li><li>Odpowiedź &lt;10 min</li></ul></div>
+<div class="card"><h3>Personalization</h3><ul><li>Segment OTO vs non-OTO</li><li>LinkedIn/IG check (5 min prep)</li><li>Proof dopasowany do persony</li><li>ACA: Acknowledge, Compliment, Ask</li></ul></div>
+<div class="card"><h3>Volume</h3><ul><li>Dzień 1: 2× tel, 3× tekst, email, Discord</li><li>Dzień 2-3: 2× tel, 1× tekst</li><li>Dzień 4-7: 1× tel + tekst</li><li>Reminders: 24h, 12h, 3h, 1h</li></ul></div>
+<div class="card"><h3>Long-term nurture</h3><ul><li>Nie kupił → newsletter + Deep Work + UŻ</li><li>Reaktywacja co 90 dni (= Fast Cash)</li><li>Give:ask ratio — wartość między kampaniami</li></ul></div>
+</div>
+
+<h1 id="s10">10. Roadmap 12 miesięcy</h1>
+<div class="tl">
+<div class="tl-i"><div class="tl-d" style="background:var(--red)"></div>
+<strong style="color:var(--red)">FAZA 0 — Tydzień 1-6: PODGRZEWANIE</strong>
+<ul>
+<li><strong>Tyg. 1:</strong> Mail „Cześć, to ja". Marketing Machine node 1-2. Aktywacja Discorda.</li>
+<li><strong>Tyg. 2:</strong> Mail wartościowy #1 (technika). Node 3 (community scrape).</li>
+<li><strong>Tyg. 3:</strong> Mail wartościowy #2 (case study). Node 4-5. 3-5 rolek IG.</li>
+<li><strong>Tyg. 4:</strong> Mail wartościowy #3 + soft CTA. Ankieta #1234. Segmenty MailerLite.</li>
+<li><strong>Tyg. 5-6:</strong> Weekly newsletter. OTO flow. LP webinaru. Follow-upy.</li>
+</ul>
+<p style="color:var(--red);font-weight:600">✓ Checkpoint: OR >30%? Odpowiedzi? Discord >5 postów/tyg? → TAK → Faza 1.</p>
+</div>
+
+<div class="tl-i"><div class="tl-d" style="background:var(--blue)"></div>
+<strong>FAZA 1 — Tydzień 7-10: PIERWSZA KAMPANIA</strong>
+<ul>
+<li>FB Ads → webinar HP (2 000 PLN, lookalike z bazy)</li>
+<li>Pierwszy webinar HP live (reagowanie na komentarze)</li>
+<li>Follow-up 5-7 maili (zbierz dane: CPL, show rate, konwersja)</li>
+</ul>
+</div>
+
+<div class="tl-i"><div class="tl-d"></div>
+<strong>Miesiąc 3-4: OPTYMALIZACJA + DEEP WORK ADS</strong>
+<ul>
+<li>Test 1 rzecz/tyg. na FB (More Better New)</li>
+<li>Reklamy ciągłe na Deep Work (osobny budżet)</li>
+<li>Node 6-7 Marketing Machine</li>
+</ul>
+</div>
+
+<div class="tl-i"><div class="tl-d"></div>
+<strong>Miesiąc 4-5: FAST CASH #1 + UŻ KAMPANIA</strong>
+<ul>
+<li><strong>Pierwszy Fast Cash: „Reinstalacja"</strong> (HP+SG bundle)</li>
+<li>Kampania UŻ na ciepłej bazie: VSL → pre-kampania → webinar</li>
+</ul>
+</div>
+
+<div class="tl-i"><div class="tl-d"></div>
+<strong>Miesiąc 6-12: SKALOWANIE + EKOSYSTEM</strong>
+<ul>
+<li>Miesiąc 6-7: Pełny automat OTO. Drugi Fast Cash: „Diament" (ME)</li>
+<li>Miesiąc 8-10: Budżet FB Ads ×2-×3. Trzeci Fast Cash: „Upgrade NFT"</li>
+<li>Miesiąc 11-12: Czwarty Fast Cash: „Kapitan". Lifecycle ads. Program afiliacyjny.</li>
+</ul>
+</div>
+</div>
+
+<h1 id="s11">11. Metryki sukcesu</h1>
+<div class="g g4">
+<div class="m"><div class="v">10-20</div><div class="l">nowych Lifehackerów/mies.</div></div>
+<div class="m"><div class="v">>3x</div><div class="l">ROAS FB Ads</div></div>
+<div class="m"><div class="v">>40%</div><div class="l">show rate webinaru</div></div>
+<div class="m"><div class="v">>7%</div><div class="l">konwersja webinar→zakup</div></div>
+</div>
+<div class="g g4">
+<div class="m"><div class="v">>5%</div><div class="l">konwersja OTO</div></div>
+<div class="m"><div class="v">>25K</div><div class="l">Fast Cash / kwartał</div></div>
+<div class="m"><div class="v">>3/tyg</div><div class="l">nowe testimoniale</div></div>
+<div class="m"><div class="v">20/80</div><div class="l">Ludwik vs klienci w ads</div></div>
+</div>
+
+<h1 id="s12">12. Weryfikacja: checklist</h1>
+<table>
+<tr><th>Zasada</th><th>Status</th><th>✓</th></tr>
+<tr><td>Grand Slam Offer (Value Equation)</td><td>TAK. HP + OTO + ME.</td><td>✅</td></tr>
+<tr><td>Lead Magnet (narrow problem → core offer)</td><td>TAK. OTO 77 PLN. Moduł 7→Deep Work→HP.</td><td>✅</td></tr>
+<tr><td>Warm Outreach</td><td>TAK. Newsletter + Discord + Rule of 100.</td><td>✅</td></tr>
+<tr><td>Post Free Content</td><td>DO URUCHOMIENIA w Fazie 0. 100 min/dzień.</td><td>⚠️</td></tr>
+<tr><td>Cold Outreach</td><td>PÓŹNIEJ (mies. 7+). Celowe odroczenie.</td><td>🔜</td></tr>
+<tr><td>Run Paid Ads</td><td>STARTUJE po Fazie 0. FB Ads → webinar HP.</td><td>✅</td></tr>
+<tr><td>More Better New</td><td>TAK. More→Better (1 test/tyg.)→New (mies. 7+).</td><td>✅</td></tr>
+<tr><td>Retention: Activation point</td><td>TAK (Faza 0). Hipoteza: #1234 aktywność.</td><td>✅</td></tr>
+<tr><td>Fast Cash co 90 dni (z warmupem!)</td><td>TAK. 4 plays/rok. Dopiero po Fazie 0.</td><td>✅</td></tr>
+</table>
+
+<div class="accent green">
+<strong>Werdykt:</strong> Plan przechodzi weryfikację. Kluczowa zmiana vs. poprzedni blueprint: Faza 0 (podgrzewanie) + przesunięty NFT Upgrade + aktywacja społeczności PRZED sprzedażą.
+</div>
+
+<div class="sep" style="margin:2rem 0"></div>
+
+<div class="accent blue">
+<p style="font-size:1rem;color:var(--tx)"><strong>Podsumowanie:</strong></p>
+<p>Faza 0 (podgrzej listę + ożyw społeczność, 6 tyg.) → Faza 1 (FB Ads + webinar HP + OTO) → Marketing Machine (dowody co tydzień) → Fast Cash Plays co kwartał (~200K PLN/rok) → Deep Work / UŻ (nurture). System, który regularnie dostarcza Lifehackerów i pozwala skupić się na zmianie sposobu ich myślenia.</p>
+<p><em>Proof over promises. System over hustle. Najpierw daj — potem proś.</em></p>
+</div>
+
+</div>
+</body>
+</html>
