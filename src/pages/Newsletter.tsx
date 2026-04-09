@@ -312,10 +312,19 @@ export default function NewsletterPage() {
                 email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
+                <Input
+                  type="text"
+                  placeholder="Twoje imię"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="text-center sm:text-left"
+                  disabled={isLoading}
+                />
+                <div className="flex flex-col sm:flex-row gap-3">
                 <Input
                   type="email"
-                  placeholder="Tw&oacute;j adres email"
+                  placeholder="Twój adres email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 text-center sm:text-left"
