@@ -9,17 +9,26 @@ import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
 
 export default function NewsletterPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
-      toast.error("Prosz\u0119 wprowad\u017A adres email");
+      toast.error("Proszę wprowadź adres email");
       return;
     }
 
     setIsLoading(true);
+
+    if (typeof window.ml === 'function') {
+      window.ml('subscribe', {
+        fields: { email, name },
+        groups: ['99579628001166406'],
+      });
+    }
+
     setTimeout(() => {
       window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
       setIsLoading(false);
@@ -303,10 +312,19 @@ export default function NewsletterPage() {
                 email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
+                <Input
+                  type="text"
+                  placeholder="Twoje imię"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="text-center sm:text-left"
+                  disabled={isLoading}
+                />
+                <div className="flex flex-col sm:flex-row gap-3">
                 <Input
                   type="email"
-                  placeholder="Tw&oacute;j adres email"
+                  placeholder="Twój adres email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 text-center sm:text-left"
@@ -324,6 +342,7 @@ export default function NewsletterPage() {
                 >
                   {isLoading ? "Rejestruj\u0119..." : "Zapisuj\u0119 si\u0119 \u2192"}
                 </button>
+                </div>
               </form>
 
               <p className="text-sm text-on-light-dim">
