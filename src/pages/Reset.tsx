@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";

@@ -181,6 +181,7 @@ function App() {
               <Route path="/start" element={<Wspolpraca />} />
               <Route path="/siadlakvip" element={<SiadlakVIP />} />
               <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
+              <Route path="/reset" element={<Reset />} />
 
               <Route path="/help" element={<Help />} />
               <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
