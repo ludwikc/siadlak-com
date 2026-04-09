@@ -82,12 +82,17 @@ export default function Reset() {
 
   useEffect(() => {
     if (phase !== "lead-capture") return;
-    if (embedRef.current && typeof window.ml === "function") {
-      window.ml("embed", embedRef.current);
-    }
+    // Re-inject MailerLite script to discover dynamically rendered form
+    const script = document.createElement("script");
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    script.async = true;
+    document.head.appendChild(script);
     const handler = () => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); };
     document.addEventListener("mailerlite:form:success", handler);
-    return () => document.removeEventListener("mailerlite:form:success", handler);
+    return () => {
+      document.removeEventListener("mailerlite:form:success", handler);
+      script.remove();
+    };
   }, [phase]);
 
   const tier = getResultTier(totalScore);
