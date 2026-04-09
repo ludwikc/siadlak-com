@@ -1,7 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { ArrowRight } from "@/lib/icons";
 import {
@@ -27,9 +26,7 @@ export default function Reset() {
   });
   const [visible, setVisible] = useState(true);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [formError, setFormError] = useState("");
+  const embedRef = useRef<HTMLDivElement>(null);
 
   const totalScore = answers.reduce((a, b) => a + b, 0);
 
@@ -70,25 +67,15 @@ export default function Reset() {
     requestAnimationFrame(tick);
   }, [phase]);
 
-  const handleSubmitLead = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormError("");
-    if (!name.trim() || !email.trim()) {
-      setFormError("Oba pola są wymagane.");
-      return;
+  useEffect(() => {
+    if (phase !== "lead-capture") return;
+    if (embedRef.current && typeof window.ml === "function") {
+      window.ml("embed", embedRef.current);
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setFormError("Podaj poprawny adres email.");
-      return;
-    }
-    if (typeof window.ml === 'function') {
-      window.ml('subscribe', {
-        fields: { email, name },
-        groups: ['184282896583886063'],
-      });
-    }
-    setPhase("result");
-  };
+    const handler = () => setPhase("result");
+    document.addEventListener("mailerlite:form:success", handler);
+    return () => document.removeEventListener("mailerlite:form:success", handler);
+  }, [phase]);
 
   const tier = getResultTier(totalScore);
 
@@ -158,31 +145,16 @@ export default function Reset() {
                 Podaj dane, żeby zobaczyć szczegółową analizę.
               </p>
 
-              <form
-                onSubmit={handleSubmitLead}
-                className="flex flex-col gap-4 max-w-sm mx-auto"
+              <div className="max-w-sm mx-auto">
+                <div ref={embedRef} className="ml-embedded" data-form="9Ffuno" />
+              </div>
+
+              <button
+                onClick={() => setPhase("result")}
+                className="block mx-auto mt-6 text-sm text-dim underline hover:text-diamond transition-colors"
               >
-                <Input
-                  placeholder="Imię"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="bg-surface border-[var(--border-primary)] text-diamond h-12"
-                />
-                <Input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-surface border-[var(--border-primary)] text-diamond h-12"
-                />
-                {formError && (
-                  <p className="text-sm text-destructive">{formError}</p>
-                )}
-                <Button type="submit" size="lg" className="w-full">
-                  Zobacz wynik
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                </Button>
-              </form>
+                Pomiń i zobacz wynik
+              </button>
             </div>
           )}
 

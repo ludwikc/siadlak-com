@@ -1,39 +1,24 @@
 import Layout from "@/components/layout/Layout";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { ExternalLink } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { toast } from "sonner";
+import { useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
 
+function MailerLiteEmbed({ dataForm }: { dataForm: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current && typeof window.ml === "function") {
+      window.ml("embed", ref.current);
+    }
+  }, []);
+
+  return <div ref={ref} className="ml-embedded" data-form={dataForm} />;
+}
+
 export default function NewsletterPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Proszę wprowadź adres email");
-      return;
-    }
-
-    setIsLoading(true);
-
-    if (typeof window.ml === 'function') {
-      window.ml('subscribe', {
-        fields: { email, name },
-        groups: ['99579628001166406'],
-      });
-    }
-
-    setTimeout(() => {
-      window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
-      setIsLoading(false);
-    }, 1000);
-  };
 
   return (
     <Layout>
@@ -312,38 +297,7 @@ export default function NewsletterPage() {
                 email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
-                <Input
-                  type="text"
-                  placeholder="Twoje imię"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="text-center sm:text-left"
-                  disabled={isLoading}
-                />
-                <div className="flex flex-col sm:flex-row gap-3">
-                <Input
-                  type="email"
-                  placeholder="Twój adres email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 text-center sm:text-left"
-                  disabled={isLoading}
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="px-6 py-2.5 font-bold text-white rounded text-sm uppercase tracking-wide disabled:opacity-50 whitespace-nowrap"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                    boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-                  }}
-                >
-                  {isLoading ? "Rejestruj\u0119..." : "Zapisuj\u0119 si\u0119 \u2192"}
-                </button>
-                </div>
-              </form>
+              <MailerLiteEmbed dataForm="lFFyEs" />
 
               <p className="text-sm text-on-light-dim">
                 150+ os&oacute;b ju&#380; czyta. Do&#322;&#261;cz, je&#347;li chcesz my&#347;le&#263; g&#322;&#281;biej.
