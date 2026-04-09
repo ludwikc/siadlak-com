@@ -91,7 +91,7 @@ export default function Reset() {
       <SEO
         title="Reset — Test Otwartych Pętli"
         description="Sprawdź, czy Twoje otwarte pętle sabotują Twoją efektywność."
-        noIndex
+        noindex
       />
 
       <div className="min-h-screen bg-void-glow flex items-center justify-center px-4 py-12">
