@@ -63,6 +63,7 @@ import Links from "./pages/Links";
 import Wspolpraca from "./pages/Wspolpraca";
 import SiadlakVIP from "./pages/SiadlakVIP";
 import MailingMute from "./pages/MailingMute";
+import Reset from "./pages/Reset";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
