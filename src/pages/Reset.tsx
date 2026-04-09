@@ -14,7 +14,15 @@ type Phase = "quiz" | "analyzing" | "lead-capture" | "result";
 const STORAGE_KEY = "reset-quiz-answers";
 
 export default function Reset() {
-  const [phase, setPhase] = useState<Phase>("quiz");
+  const [phase, setPhase] = useState<Phase>(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved && JSON.parse(saved).length >= RESET_QUESTIONS.length) {
+        localStorage.removeItem(STORAGE_KEY);
+      }
+    } catch { /* ignore */ }
+    return "quiz";
+  });
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>(() => {
     try {
