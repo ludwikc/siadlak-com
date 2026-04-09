@@ -1,9 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { ExternalLink } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { toast } from "sonner";
+import { useEffect } from "react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
