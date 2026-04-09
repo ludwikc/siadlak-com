@@ -80,7 +80,7 @@ export default function Reset() {
     if (embedRef.current && typeof window.ml === "function") {
       window.ml("embed", embedRef.current);
     }
-    const handler = () => setPhase("result");
+    const handler = () => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); };
     document.addEventListener("mailerlite:form:success", handler);
     return () => document.removeEventListener("mailerlite:form:success", handler);
   }, [phase]);
@@ -158,7 +158,7 @@ export default function Reset() {
               </div>
 
               <button
-                onClick={() => setPhase("result")}
+                onClick={() => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); }}
                 className="block mx-auto mt-6 text-sm text-dim underline hover:text-diamond transition-colors"
               >
                 Pomiń i zobacz wynik
