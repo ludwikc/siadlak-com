@@ -9,17 +9,26 @@ import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
 
 export default function NewsletterPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
-      toast.error("Prosz\u0119 wprowad\u017A adres email");
+      toast.error("Proszę wprowadź adres email");
       return;
     }
 
     setIsLoading(true);
+
+    if (typeof window.ml === 'function') {
+      window.ml('subscribe', {
+        fields: { email, name },
+        groups: ['99579628001166406'],
+      });
+    }
+
     setTimeout(() => {
       window.open("https://app.easycart.pl/checkout/siadlak/newsletter", "_blank");
       setIsLoading(false);
