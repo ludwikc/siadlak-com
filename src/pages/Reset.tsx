@@ -47,10 +47,14 @@ export default function Reset() {
         setAnswers(next);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
 
-        if (currentQ + 1 >= RESET_QUESTIONS.length) {
+        const nextQ = currentQ + 1;
+        if (nextQ >= RESET_QUESTIONS.length) {
           setPhase("analyzing");
+        } else if (BLOCK_INTROS[nextQ]) {
+          setCurrentQ(nextQ);
+          setPhase("block-intro");
         } else {
-          setCurrentQ((q) => q + 1);
+          setCurrentQ(nextQ);
         }
         setVisible(true);
       }, 300);
