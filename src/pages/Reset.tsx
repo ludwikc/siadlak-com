@@ -6,6 +6,7 @@ import { ArrowRight } from "@/lib/icons";
 import {
   RESET_QUESTIONS,
   ANSWER_OPTIONS,
+  BLOCK_INTROS,
   getResultTier,
 } from "@/data/reset-quiz-data";
 
