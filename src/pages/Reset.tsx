@@ -81,6 +81,12 @@ export default function Reset() {
       setFormError("Podaj poprawny adres email.");
       return;
     }
+    if (typeof window.ml === 'function') {
+      window.ml('subscribe', {
+        fields: { email, name },
+        groups: ['184282896583886063'],
+      });
+    }
     setPhase("result");
   };
 
