@@ -1,4 +1,8 @@
 /// <reference types="vite/client" />
+
+interface Window {
+  ml?: (...args: unknown[]) => void;
+}
 /// <reference types="vite-imagetools/client" />
 
 declare module '*&as=picture' {
