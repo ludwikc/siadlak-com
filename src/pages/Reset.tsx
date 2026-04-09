@@ -6,10 +6,11 @@ import { ArrowRight } from "@/lib/icons";
 import {
   RESET_QUESTIONS,
   ANSWER_OPTIONS,
+  BLOCK_INTROS,
   getResultTier,
 } from "@/data/reset-quiz-data";
 
-type Phase = "quiz" | "analyzing" | "lead-capture" | "result";
+type Phase = "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
 
 const STORAGE_KEY = "reset-quiz-answers";
 
@@ -46,10 +47,14 @@ export default function Reset() {
         setAnswers(next);
         localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
 
-        if (currentQ + 1 >= RESET_QUESTIONS.length) {
+        const nextQ = currentQ + 1;
+        if (nextQ >= RESET_QUESTIONS.length) {
           setPhase("analyzing");
+        } else if (BLOCK_INTROS[nextQ]) {
+          setCurrentQ(nextQ);
+          setPhase("block-intro");
         } else {
-          setCurrentQ((q) => q + 1);
+          setCurrentQ(nextQ);
         }
         setVisible(true);
       }, 300);
@@ -130,7 +135,26 @@ export default function Reset() {
             </div>
           )}
 
-          {/* ANALYZING */}
+          {/* BLOCK INTRO */}
+          {phase === "block-intro" && BLOCK_INTROS[currentQ] && (
+            <div className="animate-fade-in text-center">
+              <span className="text-5xl mb-6 block">{BLOCK_INTROS[currentQ].emoji}</span>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-diamond mb-4 tracking-[-0.02em]">
+                {BLOCK_INTROS[currentQ].title}
+              </h2>
+              <p className="text-dim text-lg mb-10 max-w-md mx-auto leading-relaxed">
+                {BLOCK_INTROS[currentQ].description}
+              </p>
+              <Button
+                size="lg"
+                onClick={() => setPhase("quiz")}
+              >
+                Dalej
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+              </Button>
+            </div>
+          )}
+
           {phase === "analyzing" && (
             <div className="animate-fade-in text-center">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-diamond mb-6">

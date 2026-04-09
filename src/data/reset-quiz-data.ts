@@ -11,6 +11,24 @@ export const RESET_QUESTIONS = [
   "Czy masz jeden konkretny temat/projekt, którego unikasz — mimo że wiesz, że on najbardziej blokuje Twój progres?",
 ] as const;
 
+export const BLOCK_INTROS: Record<number, { emoji: string; title: string; description: string }> = {
+  3: {
+    emoji: "🧠",
+    title: "BLOK 2: OTWARTE PĘTLE",
+    description: "Najwięcej energii tracisz nie na działanie, ale na rzeczy, które ciągle krążą w Twojej głowie i nie są zamknięte.",
+  },
+  6: {
+    emoji: "⚡",
+    title: "BLOK 3: UKRYTE NAPIĘCIE",
+    description: "Możesz wyglądać na ogarniętego, ale Twoje ciało i głowa działają w trybie ciągłego napięcia.",
+  },
+  8: {
+    emoji: "🧱",
+    title: "BLOK 4: TOŻSAMOŚĆ I ODPOWIEDZIALNOŚĆ",
+    description: "Im więcej dźwigasz, tym trudniej odpuścić — nawet wtedy, gdy to właśnie brak odpuszczenia Cię blokuje.",
+  },
+};
+
 export const ANSWER_OPTIONS = [
   { label: "Tak, często", value: 2 },
   { label: "Czasami", value: 1 },
