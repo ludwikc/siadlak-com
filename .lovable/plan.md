@@ -1,43 +1,57 @@
 
 
-# Parametryzacja strony /mailing/mute/:topic
+# Nowa strona `/reset` — Quiz "Otwarte Pętle"
 
 ## Podsumowanie
 
-Strona `/mailing/mute/:topic` będzie wyświetlać różne komunikaty w zależności od segmentu URL. Konfiguracja komunikatów w osobnym pliku. Domyślny fallback dla nieznanych parametrów.
+Interaktywny quiz 10 pytań w stylu landing page (bez header/footer). Mobile-first, jedno pytanie na ekran, animacje fade, progress bar, lead capture, ekran wyniku z CTA.
 
-## Zmiany
+## Nowe pliki
 
-### 1. Nowy plik `src/data/mailing-mute-topics.ts`
+### 1. `src/data/reset-quiz-data.ts`
+Tablica 10 pytań (tekst z briefu). Opcje odpowiedzi z wagami (2/1/0). Definicje 3 progów wyniku (0-6, 7-13, 14-20) z nagłówkiem, opisem, kolorem, emoji.
 
-Słownik topic → komunikat:
+### 2. `src/pages/Reset.tsx`
+Główna strona z maszyną stanów: `quiz` → `analyzing` → `lead-capture` → `result`.
 
-```ts
-export const muteTopics: Record<string, { heading: string; message: string }> = {
-  default: {
-    heading: "OK, przyjąłem 🫡",
-    message: "Nie będziesz otrzymywać treści na ten temat.",
-  },
-  webinar: {
-    heading: "OK, przyjąłem 🫡",
-    message: "Nie będziesz otrzymywać zaproszeń na webinary.",
-  },
-  newsletter: {
-    heading: "OK, przyjąłem 🫡",
-    message: "Nie będziesz otrzymywać newslettera.",
-  },
-};
-```
+**Stan `quiz`:**
+- Wyświetla jedno pytanie na raz
+- 3 odpowiedzi jako duże klikalne karty (nie radio buttons) z hover microinteractions
+- Progress indicator "Pytanie 3/10" + cienki pasek postępu
+- Po kliknięciu odpowiedzi: fade-out → 300ms delay → fade-in następne pytanie
+- Odpowiedzi zapisywane w state + localStorage
 
-Łatwo rozszerzalny — wystarczy dodać nowy klucz.
+**Stan `analyzing`:**
+- Tekst "Analizuję Twoje odpowiedzi…"
+- Animowany progress bar (0→100% w 3s)
+- Po 3s automatyczne przejście dalej
 
-### 2. `src/pages/MailingMute.tsx`
+**Stan `lead-capture`:**
+- Formularz: Imię + Email
+- Walidacja: oba pola wymagane, email regex
+- Przycisk "Zobacz wynik"
 
-- Odczyt parametru `topic` z `useParams()`
-- Lookup w `muteTopics[topic]`, fallback na `muteTopics.default`
-- Reszta layoutu bez zmian
+**Stan `result`:**
+- Wynik na podstawie sumy punktów (3 progi z kolorami)
+- Nagłówek + opis + punktacja
+- CTA button "Zrób pełny reset systemu" (link do `/program/produktywnosc` lub external)
 
-### 3. `src/App.tsx`
+**Design:**
+- Ciemne tło (`bg-void-glow` / surface-dark)
+- Duża typografia, wycentrowany kontent, max-w-2xl
+- Animacje: existing `animate-fade-in` + custom fade-out via CSS class toggle
+- Mobile-first: pełna szerokość kart, duży tap target
 
-- Zmiana route z `/mailing/mute` na `/mailing/mute/:topic?` (opcjonalny segment — sam `/mailing/mute` też zadziała z domyślnym komunikatem)
+### 3. Zmiany w istniejących plikach
+
+**`src/App.tsx`:** Dodanie route `/reset` → `<Reset />`
+
+**`src/lib/landing-pages.ts`:** Dodanie `/reset` do `LANDING_PAGES` (ukrycie header/footer)
+
+## Szczegóły techniczne
+
+- Brak zewnętrznych zależności — wykorzystujemy istniejące komponenty (Button, Input, Progress) i animacje Tailwind
+- localStorage key: `reset-quiz-answers` — zapis tablicy odpowiedzi po każdym pytaniu
+- Formularz lead capture: na razie tylko frontend (bez wysyłki na backend) — łatwe do podpięcia później
+- SEO: komponent `<SEO>` z noindex (landing page)
 
