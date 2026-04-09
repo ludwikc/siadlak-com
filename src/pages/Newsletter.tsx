@@ -342,6 +342,7 @@ export default function NewsletterPage() {
                 >
                   {isLoading ? "Rejestruj\u0119..." : "Zapisuj\u0119 si\u0119 \u2192"}
                 </button>
+                </div>
               </form>
 
               <p className="text-sm text-on-light-dim">
