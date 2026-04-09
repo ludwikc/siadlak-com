@@ -10,7 +10,7 @@ import {
   getResultTier,
 } from "@/data/reset-quiz-data";
 
-type Phase = "quiz" | "analyzing" | "lead-capture" | "result";
+type Phase = "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
 
 const STORAGE_KEY = "reset-quiz-answers";
 
