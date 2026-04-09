@@ -2,7 +2,8 @@
 export const LANDING_PAGES = new Set([
   '/webinar',
   '/oto',
-  '/links'
+  '/links',
+  '/reset'
 ]);
 
 export const isLandingPage = (pathname: string): boolean => {

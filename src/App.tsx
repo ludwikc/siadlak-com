@@ -63,6 +63,7 @@ import Links from "./pages/Links";
 import Wspolpraca from "./pages/Wspolpraca";
 import SiadlakVIP from "./pages/SiadlakVIP";
 import MailingMute from "./pages/MailingMute";
+import Reset from "./pages/Reset";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
@@ -180,6 +181,7 @@ function App() {
               <Route path="/start" element={<Wspolpraca />} />
               <Route path="/siadlakvip" element={<SiadlakVIP />} />
               <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
+              <Route path="/reset" element={<Reset />} />
 
               <Route path="/help" element={<Help />} />
               <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
