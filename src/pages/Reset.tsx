@@ -196,7 +196,7 @@ export default function Reset() {
                 onClick={() => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); }}
                 className="block mx-auto mt-6 text-sm text-dim underline hover:text-diamond transition-colors"
               >
-                Pomiń i zobacz wynik
+                Zobacz wynik
               </button>
             </div>
           )}
