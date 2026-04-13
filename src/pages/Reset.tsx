@@ -36,7 +36,7 @@ export default function Reset() {
   });
   const [visible, setVisible] = useState(true);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
-  const embedRef = useRef<HTMLDivElement>(null);
+  
 
   const totalScore = answers.reduce((a, b) => a + b, 0);
 
