@@ -1,22 +1,10 @@
 import Layout from "@/components/layout/Layout";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { ExternalLink } from "lucide-react";
-import { useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
-
-function MailerLiteEmbed({ dataForm }: { dataForm: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (ref.current && typeof window.ml === "function") {
-      window.ml("embed", ref.current);
-    }
-  }, []);
-
-  return <div ref={ref} className="ml-embedded" data-form={dataForm} />;
-}
+import MailerLiteEmbed from "@/components/MailerLiteEmbed";
 
 export default function NewsletterPage() {
 

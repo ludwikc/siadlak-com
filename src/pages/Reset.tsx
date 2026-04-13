@@ -9,6 +9,7 @@ import {
   BLOCK_INTROS,
   getResultTier,
 } from "@/data/reset-quiz-data";
+import MailerLiteEmbed from "@/components/MailerLiteEmbed";
 
 type Phase = "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
 
@@ -82,17 +83,9 @@ export default function Reset() {
 
   useEffect(() => {
     if (phase !== "lead-capture") return;
-    // Re-inject MailerLite script to discover dynamically rendered form
-    const script = document.createElement("script");
-    script.src = "https://assets.mailerlite.com/js/universal.js";
-    script.async = true;
-    document.head.appendChild(script);
     const handler = () => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); };
     document.addEventListener("mailerlite:form:success", handler);
-    return () => {
-      document.removeEventListener("mailerlite:form:success", handler);
-      script.remove();
-    };
+    return () => { document.removeEventListener("mailerlite:form:success", handler); };
   }, [phase]);
 
   const tier = getResultTier(totalScore);
@@ -183,7 +176,7 @@ export default function Reset() {
               </p>
 
               <div className="max-w-sm mx-auto">
-                <div ref={embedRef} className="ml-embedded" data-form="9Ffuno" />
+                <MailerLiteEmbed dataForm="9Ffuno" />
               </div>
 
               <button
