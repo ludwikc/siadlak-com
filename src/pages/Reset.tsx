@@ -83,14 +83,22 @@ export default function Reset() {
 
   useEffect(() => {
     if (phase !== "lead-capture") return;
-    const handler = (e: MessageEvent) => {
-      if (typeof e.data === "string" && e.data.startsWith("mlWebformSubmitSuccess")) {
+
+    const observer = new MutationObserver(() => {
+      const successEl = document.querySelector(".ml-form-successBody");
+      if (successEl && getComputedStyle(successEl).display !== "none") {
+        observer.disconnect();
         localStorage.removeItem(STORAGE_KEY);
         setTimeout(() => setPhase("result"), 1500);
       }
-    };
-    window.addEventListener("message", handler);
-    return () => window.removeEventListener("message", handler);
+    });
+
+    const container = document.querySelector(".ml-embedded");
+    if (container) {
+      observer.observe(container, { attributes: true, childList: true, subtree: true });
+    }
+
+    return () => observer.disconnect();
   }, [phase]);
 
   const tier = getResultTier(totalScore);
