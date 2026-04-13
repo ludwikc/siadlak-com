@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit — siadlak.com</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --border: #333;
+    --text: #e0e0e0;
+    --text-muted: #999;
+    --accent: #a78bfa;
+    --green: #6ee7b7;
+    --yellow: #fcd34d;
+    --red: #fca5a5;
+    --orange: #fdba74;
+    --green-bg: rgba(110,231,183,0.08);
+    --yellow-bg: rgba(252,211,77,0.08);
+    --red-bg: rgba(252,165,165,0.08);
+    --orange-bg: rgba(253,186,116,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 2rem; max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
+  h2 { font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent); }
+  h4 { font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.35rem; color: var(--text); }
+  p { margin-bottom: 1rem; }
+  .subtitle { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem; }
+  .summary-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 1.5rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+  th, td { padding: 0.6rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .critical { color: var(--red); font-weight: 600; }
+  .high { color: var(--orange); font-weight: 600; }
+  .medium { color: var(--yellow); font-weight: 600; }
+  .low { color: var(--green); font-weight: 600; }
+  .pass { color: var(--green); font-weight: 600; }
+  .fail { color: var(--red); font-weight: 600; }
+  .warn { color: var(--yellow); font-weight: 600; }
+  .score { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .score-label { font-size: 0.85rem; color: var(--text-muted); }
+  .dim { background: var(--surface); border-radius: 10px; padding: 1.25rem 1.5rem; margin: 0.75rem 0; display: flex; justify-content: space-between; align-items: center; }
+  .dim-name { font-weight: 500; }
+  .dim-score { font-weight: 700; font-size: 1.1rem; }
+  .action-card { background: var(--surface); border-radius: 8px; padding: 1rem 1.25rem; margin: 0.5rem 0; border-left: 3px solid var(--accent); }
+  .action-title { font-weight: 600; margin-bottom: 0.25rem; }
+  .action-meta { font-size: 0.8rem; color: var(--text-muted); }
+  code { background: var(--surface2); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.85rem; color: var(--accent); }
+  .tag { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 99px; font-size: 0.7rem; font-weight: 600; margin-right: 0.25rem; }
+  .tag-high { background: var(--orange-bg); color: var(--orange); }
+  .tag-quick { background: var(--green-bg); color: var(--green); }
+  .tag-strategic { background: rgba(167,139,250,0.12); color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .note { background: var(--yellow-bg); border: 1px solid rgba(252,211,77,0.15); border-radius: 8px; padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<h1>SEO Audit Report</h1>
+<p class="subtitle">siadlak.com — Full Site Audit<br>March 28, 2026</p>
+
+<!-- ================================================================ -->
+<h2>Executive Summary</h2>
+
+<div class="summary-box">
+  <p>
+    siadlak.com has a <strong>solid SEO foundation</strong> with thoughtful meta tag configuration, structured data via JSON-LD, a prerendering pipeline for SPA crawlability, and well-structured URL paths. However, the site has several <strong>critical gaps</strong> preventing it from capturing organic traffic: no XML sitemap referenced in robots.txt, missing Polish diacritics in all meta descriptions (hurting relevance matching), no blog or indexable content layer for top-of-funnel keywords, and the site is a client-side SPA with prerendering that may not fully solve JavaScript rendering issues for all crawlers.
+  </p>
+  <p><strong>Biggest strength:</strong> Clean URL architecture, comprehensive per-page SEO config with unique titles/descriptions, and structured data on all key pages.</p>
+  <p><strong>Top 3 priorities:</strong></p>
+  <p>
+    1. <strong>Fix meta descriptions</strong> — all descriptions use ASCII transliterations (e.g., "produktywnosci" instead of "produktywności"), which hurts keyword matching for Polish search queries.<br>
+    2. <strong>Add XML sitemap</strong> and reference it in robots.txt — without it, Google has no authoritative URL list for this SPA.<br>
+    3. <strong>Build a content layer</strong> (blog/articles) — the site has zero indexable informational content, leaving all top-of-funnel keyword traffic on the table.
+  </p>
+</div>
+
+<!-- ================================================================ -->
+<h2>Technical SEO Checklist</h2>
+
+<table>
+<thead><tr><th style="width:30%">Check</th><th style="width:12%">Status</th><th>Details</th></tr></thead>
+<tbody>
+  <tr>
+    <td>HTTPS</td>
+    <td class="pass">Pass</td>
+    <td>Site served over HTTPS. OG/canonical URLs use <code>https://siadlak.com</code>.</td>
+  </tr>
+  <tr>
+    <td>robots.txt</td>
+    <td class="warn">Warning</td>
+    <td>Present and allows all crawlers. <strong>Missing <code>Sitemap:</code> directive</strong> — Google recommends including a sitemap reference in robots.txt.</td>
+  </tr>
+  <tr>
+    <td>XML Sitemap</td>
+    <td class="fail">Fail</td>
+    <td><strong>No sitemap.xml found</strong> in <code>public/</code> or <code>dist/</code>. The <code>/sitemap</code> page is an HTML sitemap for users — not machine-readable. An XML sitemap is critical for SPAs where link discovery is harder for bots.</td>
+  </tr>
+  <tr>
+    <td>Canonical Tags</td>
+    <td class="pass">Pass</td>
+    <td>SEO component generates <code>&lt;link rel="canonical"&gt;</code> for every page using the route's URL config. Correctly prefixes with <code>https://siadlak.com</code>.</td>
+  </tr>
+  <tr>
+    <td>Title Tags</td>
+    <td class="warn">Warning</td>
+    <td>All 25+ pages have unique titles via <code>seo-config.ts</code>. However, <code>index.html</code> has a static fallback title in English ("Where AI Meets Human Potential") that conflicts with the Polish Helmet-injected title — Googlebot may see the English version if JS fails.</td>
+  </tr>
+  <tr>
+    <td>Meta Descriptions</td>
+    <td class="fail">Fail</td>
+    <td><strong>All descriptions lack Polish diacritics</strong> (ą, ć, ę, ł, ń, ó, ś, ź, ż). Example: "produktywnosci" instead of "produktywności", "wspolpracy" instead of "współpracy". This reduces keyword matching accuracy for Polish queries. Same issue in <code>index.html</code> fallback (English description).</td>
+  </tr>
+  <tr>
+    <td>Structured Data (JSON-LD)</td>
+    <td class="pass">Pass</td>
+    <td>SEO component injects JSON-LD on every page. TopicalMeta adds WebPage schema with audience/intent data. Custom JSON-LD on program, about, and testimonial pages. Good foundation.</td>
+  </tr>
+  <tr>
+    <td>Open Graph Tags</td>
+    <td class="pass">Pass</td>
+    <td>Full OG implementation: og:title, og:description, og:image, og:url, og:locale, og:site_name. Twitter Card tags also present.</td>
+  </tr>
+  <tr>
+    <td>Prerendering / SSR</td>
+    <td class="warn">Warning</td>
+    <td>Puppeteer-based prerendering script exists (<code>scripts/prerender.mjs</code>) covering 30+ routes. This is better than pure CSR. However, <code>build:prerender</code> must be run manually — verify it's used in production CI/CD. Also, prerender waits only 2s — complex pages with async data may not fully render.</td>
+  </tr>
+  <tr>
+    <td>404 Handling</td>
+    <td class="pass">Pass</td>
+    <td>Catch-all route <code>*</code> renders <code>NotFound</code> component. SPA redirect hack in <code>index.html</code> for hosting environments that serve 404.html.</td>
+  </tr>
+  <tr>
+    <td>noindex Usage</td>
+    <td class="pass">Pass</td>
+    <td>Correctly applied to: legal pages, OTO (special offers), thank-you pages, webinar live/expired/replay. Good — no wasted crawl budget on transactional/ephemeral pages.</td>
+  </tr>
+  <tr>
+    <td>hreflang</td>
+    <td class="warn">Warning</td>
+    <td>No hreflang tags. Site content is primarily Polish but <code>index.html</code> has <code>lang="pl"</code> which is correct. Some English testimonials exist. If you don't serve separate English pages, this is acceptable — but the English fallback meta description in <code>index.html</code> creates a mixed-signal.</td>
+  </tr>
+  <tr>
+    <td>Image Alt Text</td>
+    <td class="warn">Warning</td>
+    <td>Found ~105 alt attributes across 30 files. This is reasonable coverage. However, many images use generic or empty alt text. Needs an audit per-image to ensure descriptive, keyword-relevant alt text.</td>
+  </tr>
+  <tr>
+    <td>URL Structure</td>
+    <td class="pass">Pass</td>
+    <td>Clean, readable, keyword-rich: <code>/program/produktywnosc</code>, <code>/program/lifeos-system-upgrade</code>, <code>/podcast/life-hacking</code>. Logical hierarchy. No excessive depth or parameters.</td>
+  </tr>
+  <tr>
+    <td>Mobile Viewport</td>
+    <td class="pass">Pass</td>
+    <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> present. Tailwind CSS framework ensures responsive design.</td>
+  </tr>
+  <tr>
+    <td>Page Speed Signals</td>
+    <td class="warn">Warning</td>
+    <td>Multiple render-blocking scripts in <code>&lt;head&gt;</code>: MailerLite universal.js, Google Tag Manager, CookieYes — all loaded synchronously or semi-synchronously. The MailerLite script is synchronous (no <code>async</code> on the IIFE wrapper). Consider deferring non-critical scripts.</td>
+  </tr>
+  <tr>
+    <td>Archive/Test Pages Indexed</td>
+    <td class="fail">Fail</td>
+    <td>Routes <code>/index2025</code>, <code>/index2601</code>, <code>/home-test</code>, <code>/home-test2</code>, <code>/home-test3</code> are publicly accessible and <strong>not marked noindex</strong>. These are test/archive pages that shouldn't be indexed. They dilute crawl budget and create duplicate content signals.</td>
+  </tr>
+  <tr>
+    <td>Prerender Route Mismatch</td>
+    <td class="warn">Warning</td>
+    <td>Prerender script has <code>/program/hakowanie-produktywnosci</code> and <code>/program/silna-glowa</code> but the actual routes are <code>/program/produktywnosc</code> and <code>/program/odpornosc</code>. These mismatched routes generate 404s during prerendering.</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- ================================================================ -->
+<h2>On-Page SEO Issues</h2>
+
+<table>
+<thead><tr><th>Page</th><th>Issue</th><th>Severity</th><th>Recommended Fix</th></tr></thead>
+<tbody>
+  <tr>
+    <td><code>/</code> (Home)</td>
+    <td>Static <code>index.html</code> title in English ("Where AI Meets Human Potential") and English meta description. If Googlebot can't execute JS, it sees the English fallback instead of the Polish Helmet title.</td>
+    <td class="critical">Critical</td>
+    <td>Change the static <code>index.html</code> title and meta description to Polish to match the Helmet-injected values. This ensures the fallback is also correct.</td>
+  </tr>
+  <tr>
+    <td>All pages</td>
+    <td>All meta descriptions in <code>seo-config.ts</code> use ASCII-only Polish (no diacritics). Google matches keywords including diacritics — "produktywności" ≠ "produktywnosci".</td>
+    <td class="critical">Critical</td>
+    <td>Add proper Polish diacritics to every description and keyword field in <code>seo-config.ts</code>. This is the single highest-impact quick fix.</td>
+  </tr>
+  <tr>
+    <td><code>/program/*</code></td>
+    <td>Program page titles append to the default site title, creating very long combined titles: "Program: Produktywnosc - Aplikacja Mentalna | SIADLAK.COM - Diamentowy Umysł | Ludwik C. Siadlak" = ~90 characters. Google truncates at ~60.</td>
+    <td class="high">High</td>
+    <td>Shorten the site-name suffix. Use "| Ludwik C. Siadlak" or "| SIADLAK.COM" instead of the full default title. Keep total under 60 chars.</td>
+  </tr>
+  <tr>
+    <td><code>/about</code></td>
+    <td>Title "O mnie - Ludwik C. Siadlak" is generic. Misses keyword opportunity for "coach produktywności Polska" or "trener rozwoju osobistego".</td>
+    <td class="medium">Medium</td>
+    <td>Optimize: "Ludwik C. Siadlak — Coach Produktywności i Uważności | 19 Lat Doświadczenia"</td>
+  </tr>
+  <tr>
+    <td><code>/discovery</code></td>
+    <td>Description includes "1:1 z Ludwikiem C. Siadlakiem na Zoom" — Zoom is a branded term that may change. Also 178 characters — exceeds 160-char guideline.</td>
+    <td class="low">Low</td>
+    <td>Trim to ~155 chars: "Bezpłatna 30-minutowa sesja diagnostyczna z Ludwikiem C. Siadlakiem. Prawdziwa diagnostyka, nie rozmowa sprzedażowa. Maks. 5 klientów."</td>
+  </tr>
+  <tr>
+    <td><code>/newsletter</code></td>
+    <td>"150+ czytelnikow" — low number as a selling point in meta description. Also no diacritics.</td>
+    <td class="low">Low</td>
+    <td>Rephrase to focus on value: "Cotygodniowa myśl o produktywności, AI i sensie życia od Ludwika C. Siadlaka. Bez spamu."</td>
+  </tr>
+  <tr>
+    <td><code>/podcast/*</code></td>
+    <td>Podcast pages lack Episode-specific structured data (PodcastEpisode or PodcastSeries schema). Missing opportunity for rich results.</td>
+    <td class="medium">Medium</td>
+    <td>Add <code>PodcastSeries</code> and <code>PodcastEpisode</code> JSON-LD schema to podcast pages.</td>
+  </tr>
+  <tr>
+    <td><code>/program/*</code></td>
+    <td>Program pages could benefit from <code>Course</code> schema with price, duration, rating, and provider. Currently using generic Article/Website schema.</td>
+    <td class="medium">Medium</td>
+    <td>Add Course schema: <code>{"@type": "Course", "name": "...", "provider": {...}, "offers": {"price": "1497", "priceCurrency": "PLN"}}</code></td>
+  </tr>
+  <tr>
+    <td><code>/testimonials</code></td>
+    <td>120+ testimonials on a single page. Massive page weight. No pagination or filtering for search engines.</td>
+    <td class="medium">Medium</td>
+    <td>Consider lazy-loading testimonials or using pagination. Add <code>Review</code> schema aggregation (<code>AggregateRating</code>) for rich star snippets.</td>
+  </tr>
+  <tr>
+    <td>Test pages</td>
+    <td><code>/index2025</code>, <code>/index2601</code>, <code>/home-test</code>, <code>/home-test2</code>, <code>/home-test3</code> are indexable.</td>
+    <td class="high">High</td>
+    <td>Add <code>noindex: true</code> to SEO config for all test/archive routes, or remove them from routing entirely.</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- ================================================================ -->
+<h2>Keyword Opportunity Table</h2>
+
+<div class="note">
+  <strong>Note:</strong> For precise volume and difficulty data, connect an SEO tool like Ahrefs or Semrush via MCP. The estimates below are based on competitive research and keyword landscape analysis.
+</div>
+
+<table>
+<thead><tr><th>Keyword</th><th>Difficulty</th><th>Opportunity</th><th>Current?</th><th>Intent</th><th>Content Type</th></tr></thead>
+<tbody>
+  <tr><td>coach produktywności</td><td>Moderate</td><td class="pass">High</td><td>Targeted (meta)</td><td>Commercial</td><td>About page + blog</td></tr>
+  <tr><td>jak zwiększyć produktywność</td><td>High</td><td class="pass">High</td><td>No content</td><td>Informational</td><td>Pillar blog post</td></tr>
+  <tr><td>odporność psychiczna ćwiczenia</td><td>Moderate</td><td class="pass">High</td><td>No content</td><td>Informational</td><td>Guide / blog post</td></tr>
+  <tr><td>mindfulness dla programistów</td><td>Low</td><td class="pass">High</td><td>No content</td><td>Informational</td><td>Blog post</td></tr>
+  <tr><td>coaching 1:1 online Polska</td><td>Moderate</td><td class="pass">High</td><td>Discovery page</td><td>Commercial</td><td>Landing page (optimize)</td></tr>
+  <tr><td>rozwój osobisty dla mężczyzn 30+</td><td>Low</td><td class="pass">High</td><td>Męski Kompas page</td><td>Commercial</td><td>Optimize existing + blog</td></tr>
+  <tr><td>jak radzić sobie ze stresem w pracy</td><td>High</td><td class="high">High</td><td>No content</td><td>Informational</td><td>Blog post / guide</td></tr>
+  <tr><td>medytacja ADHD</td><td>Low</td><td class="pass">High</td><td>Mentioned in copy</td><td>Informational</td><td>Dedicated blog post</td></tr>
+  <tr><td>mentoring dla liderów IT</td><td>Low</td><td class="pass">High</td><td>Life OS meta</td><td>Commercial</td><td>Landing page / blog</td></tr>
+  <tr><td>deep work techniki</td><td>Moderate</td><td class="high">Medium</td><td>DeepWork.pl linked</td><td>Informational</td><td>Blog post</td></tr>
+  <tr><td>prokrastynacja przyczyny i rozwiązania</td><td>Moderate</td><td class="high">Medium</td><td>No content</td><td>Informational</td><td>Blog post</td></tr>
+  <tr><td>life hacking po polsku</td><td>Low</td><td class="high">Medium</td><td>Podcast page</td><td>Informational</td><td>Blog / podcast SEO</td></tr>
+  <tr><td>coaching vs terapia różnice</td><td>Low</td><td class="high">Medium</td><td>FAQ in Life OS</td><td>Informational</td><td>Comparison article</td></tr>
+  <tr><td>jak znaleźć sens życia</td><td>High</td><td class="high">Medium</td><td>No content</td><td>Informational</td><td>Pillar content</td></tr>
+  <tr><td>szkolenie Microsoft certyfikat</td><td>Moderate</td><td class="high">Medium</td><td>About page mention</td><td>Commercial</td><td>Dedicated MCT page</td></tr>
+  <tr><td>wypalenie zawodowe objawy</td><td>High</td><td class="high">Medium</td><td>No content</td><td>Informational</td><td>Blog post</td></tr>
+  <tr><td>jak zacząć medytować</td><td>High</td><td class="high">Medium</td><td>UwazneZycie reference</td><td>Informational</td><td>Blog post / guide</td></tr>
+  <tr><td>zarządzanie energią nie czasem</td><td>Low</td><td class="high">Medium</td><td>Copy mentions it</td><td>Informational</td><td>Blog post</td></tr>
+  <tr><td>opinie coaching Ludwik Siadlak</td><td>Low</td><td class="low">Low</td><td>Testimonials page</td><td>Navigational</td><td>Existing (optimize)</td></tr>
+  <tr><td>diamentowy umysł coaching</td><td>Low</td><td class="low">Low</td><td>Homepage</td><td>Navigational</td><td>Branded — optimize existing</td></tr>
+</tbody>
+</table>
+
+<!-- ================================================================ -->
+<h2>Content Gap Analysis</h2>
+
+<h3>1. No Blog / Article Layer</h3>
+<p>This is the <strong>most significant content gap</strong>. The site has excellent conversion pages (program descriptions, discovery, about) but <strong>zero indexable informational content</strong>. Competitors like wiktortokarski.pl have 50+ blog posts ranking for "coaching", "rozwój osobisty", "jak zwiększyć produktywność" and similar queries. Without blog content, siadlak.com cannot capture any top-of-funnel organic traffic.</p>
+<p><strong>Priority:</strong> <span class="tag tag-high">Critical</span> &nbsp; <strong>Effort:</strong> Substantial (ongoing) &nbsp; <strong>Format:</strong> Blog section at <code>/blog</code> or <code>/artykuly</code></p>
+
+<h3>2. Missing FAQ Schema on FAQ-Heavy Pages</h3>
+<p>The Life OS page has 7 excellent FAQs. The Discovery page answers 3 key questions. None use <code>FAQPage</code> schema — missing rich FAQ snippets in SERPs that could dramatically increase click-through rate.</p>
+<p><strong>Priority:</strong> <span class="tag tag-quick">Quick Win</span> &nbsp; <strong>Effort:</strong> 1-2 hours &nbsp; <strong>Format:</strong> Add JSON-LD FAQPage schema to existing pages</p>
+
+<h3>3. No Comparison Content</h3>
+<p>Competitors publish "coaching vs terapia", "coaching vs mentoring", "jaki coach wybrać" comparison articles. These rank well for decision-stage queries. siadlak.com's Life OS FAQ addresses "Jak to się różni od terapii?" but it's buried in a page, not a standalone indexable article.</p>
+<p><strong>Priority:</strong> <span class="tag tag-high">High</span> &nbsp; <strong>Effort:</strong> Half day per article &nbsp; <strong>Format:</strong> Blog comparison posts</p>
+
+<h3>4. Podcast Episodes Not Individually Indexed</h3>
+<p>Life Hacking Podcast and Uważne Życie podcast have episode lists but individual episodes don't have their own URLs/pages. Each episode is a potential long-tail keyword target. Competitors who transcribe and index podcast episodes capture significant organic traffic.</p>
+<p><strong>Priority:</strong> <span class="tag tag-strategic">Strategic</span> &nbsp; <strong>Effort:</strong> Substantial &nbsp; <strong>Format:</strong> Individual episode pages with transcripts at <code>/podcast/life-hacking/[episode-slug]</code></p>
+
+<h3>5. No "Free Resources" Landing Pages</h3>
+<p>The site mentions DeepWork.pl and UwazneZycie.pl but doesn't create optimized landing pages about these tools on siadlak.com itself. "Deep work" and "praca w skupieniu" are searchable terms that could bring qualified traffic.</p>
+<p><strong>Priority:</strong> <span class="tag tag-high">Medium</span> &nbsp; <strong>Effort:</strong> Moderate &nbsp; <strong>Format:</strong> Dedicated resource pages on siadlak.com</p>
+
+<h3>6. Missing "About Coaching" Educational Content</h3>
+<p>Competitors dominate educational queries: "co to jest coaching", "jak działa coaching", "ile kosztuje coaching". siadlak.com doesn't have any educational content explaining coaching concepts — it goes straight to selling programs. Adding educational content builds topical authority.</p>
+<p><strong>Priority:</strong> <span class="tag tag-strategic">Strategic</span> &nbsp; <strong>Effort:</strong> Substantial &nbsp; <strong>Format:</strong> Pillar page + topic cluster</p>
+
+<!-- ================================================================ -->
+<h2>Competitor Comparison</h2>
+
+<table>
+<thead><tr><th>Dimension</th><th>siadlak.com</th><th>wiktortokarski.pl</th><th>michalpasterski.pl</th><th>Winner</th></tr></thead>
+<tbody>
+  <tr><td>Indexable pages (est.)</td><td>~25</td><td>~100+</td><td>~200+</td><td class="critical">Competitors</td></tr>
+  <tr><td>Blog / article content</td><td>None</td><td>50+ guides</td><td>100+ posts</td><td class="critical">Competitors</td></tr>
+  <tr><td>Content depth per page</td><td>Very deep (1000+ words)</td><td>Deep (1500+ words)</td><td>Moderate</td><td class="pass">siadlak.com</td></tr>
+  <tr><td>Structured data</td><td>JSON-LD on all pages + TopicalMeta</td><td>Basic</td><td>Basic</td><td class="pass">siadlak.com</td></tr>
+  <tr><td>URL structure</td><td>Clean, semantic</td><td>Clean</td><td>Clean</td><td>Tie</td></tr>
+  <tr><td>Meta optimization</td><td>Unique per page (no diacritics)</td><td>Optimized with diacritics</td><td>Optimized</td><td class="critical">Competitors</td></tr>
+  <tr><td>Social proof pages</td><td>120+ testimonials</td><td>Case studies</td><td>Social proof</td><td class="pass">siadlak.com</td></tr>
+  <tr><td>Prerendering / SSR</td><td>Puppeteer prerender</td><td>Server-rendered (WordPress)</td><td>Server-rendered</td><td class="warn">Competitors (native SSR)</td></tr>
+  <tr><td>Page speed (est.)</td><td>Moderate (3rd-party scripts)</td><td>Moderate</td><td>Moderate</td><td>Tie</td></tr>
+  <tr><td>Podcast SEO</td><td>Listing pages only</td><td>None</td><td>Some</td><td class="pass">siadlak.com</td></tr>
+  <tr><td>Niche differentiation</td><td>Strong (IT pros, Diamond Mind)</td><td>Generic (all audiences)</td><td>Generic</td><td class="pass">siadlak.com</td></tr>
+</tbody>
+</table>
+
+<p><strong>Key insight:</strong> siadlak.com has stronger conversion pages and more unique positioning than competitors, but dramatically fewer indexable pages. The competitors win on volume and top-of-funnel visibility. The strategy should be: keep the strong conversion layer, add a content layer on top.</p>
+
+<!-- ================================================================ -->
+<h2>Prioritized Action Plan</h2>
+
+<h3>Quick Wins (This Week)</h3>
+
+<div class="action-card">
+  <div class="action-title">1. Fix all Polish diacritics in seo-config.ts</div>
+  <p>Replace every ASCII-transliterated Polish word with proper diacritics across all meta descriptions and keywords. Single file change, massive impact on keyword matching.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: High &middot; Effort: 1 hour &middot; File: <code>src/lib/seo-config.ts</code></div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">2. Fix static index.html fallback to Polish</div>
+  <p>Change the <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code> in <code>index.html</code> from English to Polish to match the Helmet-injected values.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: High &middot; Effort: 15 minutes &middot; File: <code>index.html</code></div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">3. Generate and add XML sitemap</div>
+  <p>Create a <code>sitemap.xml</code> in <code>public/</code> listing all indexable routes with <code>&lt;lastmod&gt;</code> dates. Add <code>Sitemap: https://siadlak.com/sitemap.xml</code> to <code>robots.txt</code>. Consider auto-generating from the <code>seoRouteConfig</code> array.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: High &middot; Effort: 1-2 hours</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">4. Add noindex to test/archive pages</div>
+  <p>Mark <code>/index2025</code>, <code>/index2601</code>, <code>/home-test</code>, <code>/home-test2</code>, <code>/home-test3</code> as noindex in SEO config. Better yet: remove them from production routes entirely.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: Medium &middot; Effort: 30 minutes</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">5. Add FAQPage schema to Life OS and Discovery pages</div>
+  <p>Wrap existing FAQ content in <code>FAQPage</code> JSON-LD schema. Life OS has 7 Q&As, Discovery has 3. These could show as rich results in SERPs.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: Medium &middot; Effort: 1 hour</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">6. Shorten title tag suffix</div>
+  <p>Change <code>defaultSEO.title</code> in <code>SEO.tsx</code> to something shorter (e.g., "Ludwik C. Siadlak") so combined titles stay under 60 characters.</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: Medium &middot; Effort: 15 minutes</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">7. Fix prerender route mismatches</div>
+  <p>Update <code>scripts/prerender.mjs</code> to use correct route paths: <code>/program/produktywnosc</code> (not <code>hakowanie-produktywnosci</code>), <code>/program/odpornosc</code> (not <code>silna-glowa</code>), <code>/program/meskosc</code> (not <code>meski-kompas</code>), <code>/program/uwaznosc</code> (not <code>uwazne-zycie</code>).</p>
+  <div class="action-meta"><span class="tag tag-quick">Quick Win</span> Impact: Medium &middot; Effort: 15 minutes</div>
+</div>
+
+<h3>Strategic Investments (This Quarter)</h3>
+
+<div class="action-card">
+  <div class="action-title">8. Launch a blog / article section</div>
+  <p>Create <code>/blog</code> route with 2-3 pillar articles targeting high-opportunity keywords: "jak zwiększyć produktywność" (pillar), "mindfulness dla programistów", "odporność psychiczna ćwiczenia". Publish 2-4 posts per month. Use Ludwik's newsletter content as a starting point — repurpose for SEO.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: Very High &middot; Effort: Ongoing &middot; Dependency: Content workflow</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">9. Add Course schema to all program pages</div>
+  <p>Implement <code>Course</code> structured data with price, duration, provider, and aggregate rating. This enables rich course snippets in search results — a significant competitive advantage.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: High &middot; Effort: Half day</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">10. Create individual podcast episode pages with transcripts</div>
+  <p>Each episode gets its own URL with show notes and transcript. Transcripts are indexable text that targets long-tail keywords. Use AI transcription to scale this efficiently.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: High &middot; Effort: Substantial &middot; Dependency: Transcript generation</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">11. Build a "coaching vs X" comparison content cluster</div>
+  <p>Publish 3-5 comparison articles: coaching vs terapia, coaching vs mentoring, coaching online vs stacjonarny, coaching indywidualny vs grupowy. These target decision-stage queries with strong commercial intent.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: High &middot; Effort: 1 day per article</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">12. Evaluate SSR migration or hybrid approach</div>
+  <p>While prerendering works, server-side rendering (Next.js, Astro, or Vite SSR) would ensure every page is always crawlable. Evaluate effort vs. reward — if organic traffic becomes a priority, SSR is the most reliable foundation.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: Medium &middot; Effort: Substantial &middot; Dependency: Architecture decision</div>
+</div>
+
+<div class="action-card">
+  <div class="action-title">13. Defer non-critical third-party scripts</div>
+  <p>Move MailerLite, CookieYes, and GA scripts to load after page content. Use <code>defer</code> or dynamic injection after <code>DOMContentLoaded</code>. This improves LCP and FID Core Web Vitals.</p>
+  <div class="action-meta"><span class="tag tag-strategic">Strategic</span> Impact: Medium &middot; Effort: 2-3 hours</div>
+</div>
+
+<hr>
+
+<p style="color:var(--text-muted); font-size:0.85rem; margin-top:2rem;">
+  SEO audit for siadlak.com — based on codebase analysis and competitive research.<br>
+  Audit date: March 28, 2026. For precise keyword volume/ranking data, connect Ahrefs or Semrush via MCP.
+</p>
+
+</body>
+</html>

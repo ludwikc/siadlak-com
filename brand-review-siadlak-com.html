@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Voice Review — siadlak.com</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --border: #333;
+    --text: #e0e0e0;
+    --text-muted: #999;
+    --accent: #a78bfa;
+    --green: #6ee7b7;
+    --yellow: #fcd34d;
+    --red: #fca5a5;
+    --green-bg: rgba(110,231,183,0.08);
+    --yellow-bg: rgba(252,211,77,0.08);
+    --red-bg: rgba(252,165,165,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #fff; }
+  h2 { font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--accent); }
+  p { margin-bottom: 1rem; }
+  .subtitle { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem; }
+  .summary-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+  }
+  .score {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+  }
+  .score-label { font-size: 0.85rem; color: var(--text-muted); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th { color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .severity-high { color: var(--red); font-weight: 600; }
+  .severity-medium { color: var(--yellow); font-weight: 600; }
+  .severity-low { color: var(--green); font-weight: 600; }
+  .before-after {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    border-left: 3px solid var(--accent);
+  }
+  .ba-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 0.3rem; }
+  .ba-before { color: var(--red); margin-bottom: 1rem; font-style: italic; }
+  .ba-after { color: var(--green); font-style: italic; }
+  .dimension {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dim-name { font-weight: 500; }
+  .dim-score { font-weight: 700; font-size: 1.1rem; }
+  .dim-score.high { color: var(--green); }
+  .dim-score.mid { color: var(--yellow); }
+  .dim-score.low { color: var(--red); }
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .tag-strength { background: var(--green-bg); color: var(--green); }
+  .tag-issue { background: var(--red-bg); color: var(--red); }
+  .tag-note { background: var(--yellow-bg); color: var(--yellow); }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .compliance-flag {
+    background: var(--red-bg);
+    border: 1px solid rgba(252,165,165,0.2);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+  }
+  .flag-title { font-weight: 600; color: var(--red); margin-bottom: 0.25rem; }
+  .page-ref { color: var(--accent); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>Brand Voice Review</h1>
+<p class="subtitle">siadlak.com — reviewed against VOICE-PROFILE-LUDWIK-C-SIADLAK.md<br>March 28, 2026</p>
+
+<!-- ========== SUMMARY ========== -->
+<h2>Summary</h2>
+
+<div class="summary-box">
+  <div class="score">8.2 / 10</div>
+  <div class="score-label">Overall Voice Alignment</div>
+  <p style="margin-top:1rem;">
+    The website does a remarkable job of translating Ludwik's spoken voice into written form. The diamond metaphor is woven throughout with exceptional consistency, the "Install" (Instaluj) framing for programs is inspired OS-level language, the About page reads like someone speaking from the heart, and the Discovery page opens with a gift — exactly as the voice profile demands. The tone across most pages is warm, honest, non-guru, and avoids every major "Hard Rule" violation.
+  </p>
+  <p>
+    <strong>Biggest strengths:</strong> The About page is the crown jewel — deeply personal, funny in the right places, and structured exactly like spoken Ludwik. The diamond/cloth metaphor creates a coherent brand universe that never feels forced. The Discovery page nails the "hand extended, not wound inflicted" principle.
+  </p>
+  <p>
+    <strong>Most important improvements:</strong> Several pages (Programs, Help Center, Community CTA) lapse into generic marketing copy that sounds like "any coach" instead of Ludwik. Bullet-point lists appear in persuasive/reflective contexts — violating a Hard Rule. The humor that defines Ludwik's voice is unevenly distributed: strong on About and Discovery, nearly absent on Program cards and the Newsletter page.
+  </p>
+</div>
+
+<!-- ========== DIMENSION SCORES ========== -->
+<h2>Voice Alignment by Dimension</h2>
+
+<div class="dimension"><span class="dim-name">Voice &amp; Tone</span><span class="dim-score high">8.5</span></div>
+<div class="dimension"><span class="dim-name">Terminology &amp; Language</span><span class="dim-score high">8.0</span></div>
+<div class="dimension"><span class="dim-name">Messaging Pillars</span><span class="dim-score high">9.0</span></div>
+<div class="dimension"><span class="dim-name">Structural Patterns (Metaphors, Openings, Formatting)</span><span class="dim-score mid">7.0</span></div>
+<div class="dimension"><span class="dim-name">Hard Rule Compliance</span><span class="dim-score mid">7.5</span></div>
+<div class="dimension"><span class="dim-name">Humor &amp; Lightness</span><span class="dim-score mid">6.5</span></div>
+
+<!-- ========== DETAILED FINDINGS ========== -->
+<h2>Detailed Findings</h2>
+
+<table>
+<thead>
+  <tr><th>Issue</th><th>Location</th><th>Severity</th><th>Suggestion</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td><strong>Bullet-point lists in persuasive writing</strong> — Multiple program cards use bullet lists ("Co się zmienia po instalacji:") to describe transformational outcomes. Voice profile is unambiguous: "No lists, no bullets — ever — in persuasive or reflective writing." <span class="tag tag-issue">HARD RULE VIOLATION</span></td>
+    <td class="page-ref">Program.tsx, LifeOSSystemUpgrade.tsx</td>
+    <td class="severity-high">High</td>
+    <td>Rewrite outcomes as flowing prose or staccato question-answer pairs ("Presja paraliżuje? Po instalacji — skupia. Krytyka rani? Po instalacji — informuje."). This preserves scannability while honoring the prose-only rule.</td>
+  </tr>
+  <tr>
+    <td><strong>Emoji in body text</strong> — The homepage "Problem Diagnosis" section uses 🩹 inline ("Branża rozwoju osobistego sprzedaje Ci plasterki 🩹"). Program cards use emojis as section headers (🧠, 🛡️, 🧘, 🧭). Voice profile allows emojis only in P.S. sections, subject lines, and logistics. <span class="tag tag-issue">HARD RULE VIOLATION</span></td>
+    <td class="page-ref">Index.tsx (homepage), Program.tsx</td>
+    <td class="severity-high">High</td>
+    <td>Remove the 🩹 from body text. For program card headers, emojis function as icons — this is borderline acceptable as "functional/logistical" usage, but consider replacing with subtle SVG icons to stay within the rule, or move emojis to a badge/tag element rather than inline text.</td>
+  </tr>
+  <tr>
+    <td><strong>Missing humor on key conversion pages</strong> — The Programs overview page and individual program descriptions are entirely serious. No playful asides, no pop-culture references, no self-deprecation, no unexpected twist. Voice profile: "If something written 'as Ludwik' has NO humor in it — no lightness, no playful aside, no unexpected reference — it doesn't sound like him." <span class="tag tag-issue">HARD RULE VIOLATION</span></td>
+    <td class="page-ref">Program.tsx, program cards, Newsletter.tsx</td>
+    <td class="severity-high">High</td>
+    <td>Inject Ludwik's signature humor. Example: The Produktywność card says "jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności" — good, but clinical. Add a parenthetical aside like "(Tak, wiem. Kolejna obietnica. Ale ta ma gwarancję zwrotu — te kursy nie miały.)" — light, self-aware, spoken-Ludwik.</td>
+  </tr>
+  <tr>
+    <td><strong>Help Center sounds generic</strong> — "Znajdź odpowiedzi na najczęściej zadawane pytania i dowiedz się, jak najlepiej wykorzystać naszą platformę" is corporate SaaS copy. Zero Ludwik voice. Uses "naszą platformę" — Ludwik never uses "we" as a corporate pronoun.</td>
+    <td class="page-ref">Help.tsx</td>
+    <td class="severity-high">High</td>
+    <td>Rewrite in Ludwik's voice: "Szukasz czegoś konkretnego? Jestem tu, żeby pomóc — a poniżej jest kilka odpowiedzi, które większość osób potrzebuje na starcie."</td>
+  </tr>
+  <tr>
+    <td><strong>Community CTA is generic marketing</strong> — "Otoczenie wpływa na nas bardziej niż zdajemy sobie sprawę. Dołącz do społeczności ludzi, którzy wspólnie dążą do rozwoju i pomagają sobie nawzajem osiągać cele." — This is exactly the kind of engagement-driven content Ludwik distrusts. No personality, no metaphor, no humor.</td>
+    <td class="page-ref">CommunityCallToAction.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Rewrite with a concrete anchor and Ludwik's voice: "Codziennie o 12:30 jestem na żywo na Discordzie. Żadnych motywacyjnych cytatów na tapetach. Prawdziwe rozmowy z prawdziwymi ludźmi, którzy — tak jak Ty — szukają czegoś głębszego niż kolejna metoda."</td>
+  </tr>
+  <tr>
+    <td><strong>Inconsistent "you" vs. "we" in footer</strong> — Footer tagline: "Uzbrajam wojowników. Prowadzę poszukiwaczy. Na co czekasz?" — The first two lines are strong and on-brand. "Na co czekasz?" is a pressure/urgency move that borders on the "content that takes before it gives" pattern.</td>
+    <td class="page-ref">Footer.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Soften the CTA to stay within the "invitation, not pressure" rule. Consider: "Uzbrajam wojowników. Prowadzę poszukiwaczy. Reszta zależy od Ciebie." — respects autonomy, doesn't push.</td>
+  </tr>
+  <tr>
+    <td><strong>Life Hacking Podcast value props use bullet lists</strong> — Four bullet points listing who the podcast is for. This is persuasive context (convincing someone to listen), not a technical SOP.</td>
+    <td class="page-ref">LifeHackingPodcast.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Rewrite as prose or as a single paragraph: "Dla tych, którzy szukają konkretnych metod zamiast teorii — i cenią efektywność nie jako buzzword, tylko jako narzędzie do odzyskania czasu na to, co naprawdę ważne."</td>
+  </tr>
+  <tr>
+    <td><strong>Newsletter page lacks personality</strong> — The explanation of why email matters is logical and correct, but reads like a marketing strategist explaining distribution channels. Missing: a metaphor, a playful aside, or a concrete anchor. The voice profile says Ludwik always opens with a gift — here the opening is a product description.</td>
+    <td class="page-ref">Newsletter.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Open with a concrete anchor: a snippet from a real newsletter, or "Ostatnio napisałem o..." — then transition to why email matters. Let the reader taste the newsletter before being asked to subscribe.</td>
+  </tr>
+  <tr>
+    <td><strong>Some exclamation marks present</strong> — While rare, a few appear: the Webinar page and some CTAs. Voice profile marks exclamation marks as "rarely if ever" (Strong Tendency).</td>
+    <td class="page-ref">Various</td>
+    <td class="severity-low">Low</td>
+    <td>Audit all exclamation marks and replace with periods or em-dashes. The energy should come from word choice, not punctuation.</td>
+  </tr>
+  <tr>
+    <td><strong>Missing P.S. sections on landing pages</strong> — Voice profile identifies P.S. as a signature element — "where he's most himself" — yet no landing page includes one. The About page gets close with its loose closing, but doesn't use the P.S. format.</td>
+    <td class="page-ref">Discovery.tsx, LifeOSSystemUpgrade.tsx</td>
+    <td class="severity-low">Low</td>
+    <td>Add a P.S. block at the bottom of key conversion pages — below the main CTA. This is where Ludwik relaxes, gets casual, and catches people at different readiness levels. Example: "P.S. Jeśli jeszcze nie jesteś pewien — napisz do mnie. Serio. Odpowiem osobiście."</td>
+  </tr>
+  <tr>
+    <td><strong>"Aplikuj" button in header</strong> — "Aplikuj" (Apply) frames the relationship as if the visitor needs permission. This creates a guru-worship power dynamic that contradicts the voice profile's "Never position as above the reader" Hard Rule.</td>
+    <td class="page-ref">Header.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Consider "Porozmawiajmy" or "Sesja Discovery" — language that levels the dynamic. If limited spots justify the word "apply," add context: "Sprawdź, czy pasujemy" frames it as mutual fit, not gatekeeping.</td>
+  </tr>
+  <tr>
+    <td><strong>Wspolpraca page CTA language is inconsistent</strong> — "Zero spam" and "Proste jak drut" are colloquial and on-brand, but the framing "150+ osób czyta" is a vanity metric used as a hook — one of the specific distrust signals in the voice profile.</td>
+    <td class="page-ref">Wspolpraca.tsx</td>
+    <td class="severity-medium">Medium</td>
+    <td>Replace the subscriber count or reframe: instead of "150+ osób czyta" (which implies social proof through numbers), try "Mała grupa osób, które wolą myśleć niż scrollować" — more on-brand, less metric-driven.</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- ========== REVISED SECTIONS ========== -->
+<h2>Revised Sections (Top 5 Issues)</h2>
+
+<h3>1. Program Outcomes — Bullet Lists → Prose</h3>
+<div class="before-after">
+  <div class="ba-label">Before (Produktywność card)</div>
+  <div class="ba-before">
+    "Co się zmienia po instalacji:<br>
+    • Zamiast zarządzać zadaniami - zarządzasz energią.<br>
+    • Zamiast walczyć z prokrastynacją - rozumiesz, skąd się bierze, i przestaje być problemem.<br>
+    • Zamiast 'być zajętym' - tworzysz przestrzeń na to, co naprawdę ważne."
+  </div>
+  <div class="ba-label">After</div>
+  <div class="ba-after">
+    "Co się zmienia po instalacji? Przestajesz zarządzać zadaniami — i zaczynasz zarządzać energią. Prokrastynacja? Nie znika. Po prostu rozumiesz, skąd się bierze — i wtedy przestaje być problemem. A to 'bycie zajętym', które dotąd mylisz z produktywnością? Zamienia się w przestrzeń. Prawdziwą przestrzeń na to, co naprawdę ważne. (Tak, wiem — brzmi jak obietnica z kolejnego kursu. Ale po raz pierwszy nikt nie każe Ci kupować nowej apki.)"
+  </div>
+</div>
+
+<h3>2. Homepage Emoji — Remove from Body Text</h3>
+<div class="before-after">
+  <div class="ba-label">Before</div>
+  <div class="ba-before">
+    "Branża rozwoju osobistego sprzedaje Ci plasterki 🩹"
+  </div>
+  <div class="ba-label">After</div>
+  <div class="ba-after">
+    "Branża rozwoju osobistego sprzedaje Ci plasterki. Ładne, kolorowe plasterki — z logo i gwarancją."
+  </div>
+</div>
+
+<h3>3. Help Center — Generic → Ludwik Voice</h3>
+<div class="before-after">
+  <div class="ba-label">Before</div>
+  <div class="ba-before">
+    "Centrum pomocy — Znajdź odpowiedzi na najczęściej zadawane pytania i dowiedz się, jak najlepiej wykorzystać naszą platformę."
+  </div>
+  <div class="ba-label">After</div>
+  <div class="ba-after">
+    "Centrum pomocy — Szukasz czegoś konkretnego? Poniżej kilka odpowiedzi, które większość osób potrzebuje na starcie. Jeśli nie znajdziesz tego, czego szukasz — napisz do mnie. Odpowiadam osobiście."
+  </div>
+</div>
+
+<h3>4. Community CTA — Generic Marketing → Concrete Anchor</h3>
+<div class="before-after">
+  <div class="ba-label">Before</div>
+  <div class="ba-before">
+    "Otoczenie wpływa na nas bardziej niż zdajemy sobie sprawę. Dołącz do społeczności ludzi, którzy wspólnie dążą do rozwoju i pomagają sobie nawzajem osiągać cele."
+  </div>
+  <div class="ba-label">After</div>
+  <div class="ba-after">
+    "Codziennie o 12:30 jestem na żywo na Discordzie. Bez motywacyjnych cytatów na tapetach. Bez pozytywnych afirmacji w komentarzach. Prawdziwe rozmowy z prawdziwymi ludźmi, którzy — tak jak Ty — szukają czegoś głębszego niż kolejny system. Wpadnij. Posłuchaj. Zdecyduj sam."
+  </div>
+</div>
+
+<h3>5. Header CTA — "Aplikuj" → Level the Dynamic</h3>
+<div class="before-after">
+  <div class="ba-label">Before</div>
+  <div class="ba-before">
+    "Aplikuj"
+  </div>
+  <div class="ba-label">After</div>
+  <div class="ba-after">
+    "Porozmawiajmy" — or — "Sprawdź, czy pasujemy"
+  </div>
+</div>
+
+<!-- ========== STRENGTHS ========== -->
+<h2>What's Working Brilliantly</h2>
+
+<h3>The Diamond Metaphor — Consistent Brand Universe</h3>
+<p>The diamond/cloth metaphor is sustained across virtually every page — homepage, About, Programs, Life OS, Discovery. It's not decorative. It's diagnostic. It does exactly what the voice profile describes: giving people "multiple chances to widen their horizons, deepen their understanding." The website never says "you need to improve" — it says "you need to see what's already there." This is the voice profile's core belief, perfectly executed in copy.</p>
+
+<h3>The About Page — Spoken Ludwik in Written Form</h3>
+<p>This page reads like a transcript of Ludwik at his most authentic. The metro station opening is a textbook concrete anchor. The "I had everything and nothing" paradox is the kind of perspective flip the voice profile demands. The tattoo, the Buddhism, the divorce, the Machiavelli — it flexes and undercuts in the same breath. This is the gold standard for the rest of the site.</p>
+
+<h3>The "Install" (Instaluj) Language</h3>
+<p>Framing programs as "mental applications" that you "install once" is peak Life Hacker voice — technical metaphor serving personal development, exactly how the voice profile describes his cross-domain thinking. It's not gimmicky; it communicates the right promise (permanent change, not a course to "complete").</p>
+
+<h3>Discovery Page — Opens With a Gift</h3>
+<p>"Ty masz diament. Ja mam pytania." — This is perfect. Six words. No FOMO, no wound, no pressure. A hand extended. The page then walks the reader through three questions — each one a gift of perspective, not a demand. The "who this is NOT for" section is radically honest without being dismissive. This is exactly the velvet boundary the voice profile describes.</p>
+
+<h3>Testimonials — Real and Physical</h3>
+<p>"Poczułem, jak mięśnie w moim brzuchu się fizycznie rozluźniają" — testimonials emphasize bodily, felt experience, not vanity metrics. No "$45K in a month." No "10x my productivity." This is completely aligned with Ludwik's distrust of metric-based social proof.</p>
+
+<h3>Life OS FAQ — Radical Honesty in Action</h3>
+<p>"Czy gwarantujesz rezultaty? Nie. I uciekaj od każdego, kto gwarantuje." — This answer is pure Ludwik. It dissolves guru worship, establishes trust through honesty, and gives permission for healthy skepticism. The entire FAQ section is one of the strongest voice-aligned elements on the site.</p>
+
+<!-- ========== LEGAL/COMPLIANCE ========== -->
+<h2>Legal &amp; Compliance Flags</h2>
+
+<div class="compliance-flag">
+  <div class="flag-title">Money-back guarantee language needs precision</div>
+  <p>"Jeśli po 2 tygodniach nie poczujesz, że ta praca jest fundamentalnie inna — oddaję pieniądze." — The trigger for the guarantee is subjective ("if you don't feel it's fundamentally different"). Consider specifying the refund process and timeframe more precisely in the legal/terms page to avoid disputes. The conversational tone is on-brand, but the underlying terms should be documented formally.</p>
+  <p class="page-ref">LifeOSSystemUpgrade.tsx</p>
+</div>
+
+<div class="compliance-flag">
+  <div class="flag-title">Health-adjacent claims near depression webinar</div>
+  <p>The webinar page addresses International Day Against Depression. While the webinar title is sensitively framed ("Nie musisz znosić tego sam"), ensure that the webinar content and any recorded materials include a disclaimer that this is not a substitute for professional mental health treatment. The current page does not include such a disclaimer.</p>
+  <p class="page-ref">WebinarLive.tsx</p>
+</div>
+
+<div class="compliance-flag">
+  <div class="flag-title">Credentials listed without verification links</div>
+  <p>MCT, MCSA, MCSE, MCP, ECC credentials are mentioned on the webinar page and About page. Consider linking to verification or the issuing body, especially since the voice profile values congruence and walking the talk. This isn't legally required but strengthens trust.</p>
+  <p class="page-ref">WebinarLive.tsx, About.tsx</p>
+</div>
+
+<!-- ========== PAGE-BY-PAGE SCORECARD ========== -->
+<h2>Page-by-Page Voice Scorecard</h2>
+
+<table>
+<thead>
+  <tr><th>Page</th><th>Voice Alignment</th><th>Key Strength</th><th>Key Gap</th></tr>
+</thead>
+<tbody>
+  <tr><td>About</td><td class="severity-low" style="color:var(--green)">9.5 / 10</td><td>Spoken Ludwik fully expressed</td><td>Minor — could use a P.S.</td></tr>
+  <tr><td>Discovery</td><td class="severity-low" style="color:var(--green)">9.0 / 10</td><td>"Ty masz diament. Ja mam pytania."</td><td>Missing P.S. section</td></tr>
+  <tr><td>Homepage</td><td class="severity-low" style="color:var(--green)">8.5 / 10</td><td>Diamond metaphor, strong opening</td><td>Emoji in body text, some list patterns</td></tr>
+  <tr><td>Life OS</td><td class="severity-medium" style="color:var(--green)">8.5 / 10</td><td>FAQ section is gold</td><td>Bullet lists in persuasive sections</td></tr>
+  <tr><td>Contact</td><td class="severity-low" style="color:var(--green)">8.0 / 10</td><td>"Żadnych formularzy. Po prostu napisz."</td><td>Minimal — solid</td></tr>
+  <tr><td>Wspolpraca</td><td class="severity-medium">7.5 / 10</td><td>Good overview structure</td><td>Vanity metric ("150+ osób"), some generic language</td></tr>
+  <tr><td>Programs</td><td class="severity-medium">7.0 / 10</td><td>"Instaluj" framing is brilliant</td><td>Bullet lists, missing humor, emoji in body</td></tr>
+  <tr><td>Newsletter</td><td class="severity-medium">6.5 / 10</td><td>Email-as-last-intimate-channel angle</td><td>No concrete anchor, no humor, reads like strategy doc</td></tr>
+  <tr><td>Podcast</td><td class="severity-medium">6.5 / 10</td><td>"Praktyczne scenariusze przejmowania władzy nad światem"</td><td>Bullet lists, generic value props</td></tr>
+  <tr><td>Community CTA</td><td class="severity-high" style="color:var(--red)">4.0 / 10</td><td>—</td><td>Entirely generic, no Ludwik voice at all</td></tr>
+  <tr><td>Help Center</td><td class="severity-high" style="color:var(--red)">3.0 / 10</td><td>—</td><td>Corporate SaaS copy, zero personality</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<p style="color:var(--text-muted); font-size:0.85rem; margin-top:2rem;">
+  Brand voice review generated against VOICE-PROFILE-LUDWIK-C-SIADLAK.md — covering all page components in the siadlak.com codebase. Review date: March 28, 2026.
+</p>
+
+</body>
+</html>
