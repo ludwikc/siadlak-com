@@ -1,70 +1,36 @@
 
-Goal
 
-Make the MailerLite form on `/reset` render reliably in production on Vercel so that when the quiz reaches the lead-capture step, the page shows:
+## Fix: MailerLite forms not rendering in SPA
 
-```html
-<div class="ml-embedded" data-form="9Ffuno"></div>
-```
+### Problem
+`window.ml("account", "484845")` is a no-op when called a second time — MailerLite's Universal script caches its initialization state and won't re-scan the DOM for new `.ml-embedded` nodes. The placeholder div renders correctly (visible in DevTools) but stays empty (0px height).
 
-What I found
+### Solution
+Force a full MailerLite re-bootstrap by destroying its cached state and re-injecting the script from scratch each time the component mounts.
 
-- `index.html` already loads the MailerLite Universal bootstrap globally in `<head>` with `ml('account', '484845')`.
-- On `/reset`, the form placeholder is rendered only later, when `phase === "lead-capture"`.
-- The current fix tries to solve this by appending `https://assets.mailerlite.com/js/universal.js` again inside `useEffect`.
-- That is fragile in production because it re-adds the external script without re-running the original full bootstrap logic in a controlled way, and cleanup removes the script again. In an SPA on Vercel, that can easily leave the later-mounted `.ml-embedded` node undiscovered.
+### Changes
 
-Implementation plan
+**`src/components/MailerLiteEmbed.tsx`** — rewrite the `useEffect`:
 
-1. Replace the ad-hoc script re-injection in `src/pages/Reset.tsx`
-- Remove the current `useEffect` that appends/removes `universal.js`.
-- Keep the success listener logic, but separate it from script loading.
+1. On mount (after a short delay for React to flush the placeholder to DOM):
+   - Remove all existing MailerLite script tags from `<head>`
+   - Delete `window.ml` and any MailerLite internal globals (`window.mlDataset`, `window.MailerLite`)
+   - Create and append a fresh `<script src="https://assets.mailerlite.com/js/universal.js">` 
+   - On load, call `window.ml("account", "484845")` — this time it runs as a first-time init and scans the DOM, finding the placeholder
 
-2. Introduce a dedicated MailerLite embed helper
-- Create a small reusable component or hook for embedded forms.
-- It will:
-  - render the exact placeholder div with `class="ml-embedded"` and `data-form="9Ffuno"`
-  - detect whether `window.ml` is already available
-  - if MailerLite is not initialized yet, run the same bootstrap logic as in `index.html`
-  - if the script is already present, trigger a safe re-scan/re-init for the newly mounted placeholder instead of blindly adding/removing duplicate script tags
+2. On unmount (cleanup):
+   - Remove the injected script tag to keep the DOM clean
 
-3. Mount that helper only in the lead-capture phase
-- Keep the current quiz flow unchanged.
-- When `phase === "lead-capture"`, render the MailerLite embed helper inside the existing container.
-- Preserve the current “Pomiń i zobacz wynik” behavior.
+This approach works because MailerLite's script checks for its own global — if `window.ml` doesn't exist yet, it performs a full initialization including DOM scanning.
 
-4. Keep localStorage cleanup intact
-- Do not change the score/reset logic except where needed for event handling.
-- Ensure success still:
-  - clears `reset-quiz-answers`
-  - transitions to `result`
+**No other files change.** Both `/reset` and `/newsletter` already use `<MailerLiteEmbed>`, so fixing the component fixes both pages.
 
-5. Verify the same production-safe pattern against `/newsletter`
-- The newsletter page currently uses a different embed approach (`window.ml("embed", ref.current)`).
-- I will compare the final `/reset` solution with `/newsletter` and, if the same weakness exists there, align both to one reliable implementation so production behavior is consistent.
+### Why previous approach failed
+- `window.ml("account", "484845")` with `ml` already defined → MailerLite treats it as a queued command, not a fresh init → no DOM scan
+- The script in `index.html` `<head>` runs once on page load, finds zero `.ml-embedded` nodes (React hasn't rendered them yet), and never looks again
 
-Technical details
+### Risk mitigation
+- The `index.html` head script will still run on initial page load — that's fine, it handles any forms present in the initial HTML
+- The component's fresh re-injection only fires when React mounts the embed, ensuring the placeholder is in the DOM first
+- `initialized.current` ref prevents double-firing in React Strict Mode
 
-Files to update
-- `src/pages/Reset.tsx`
-- likely a new shared helper, e.g. `src/components/MailerLiteEmbed.tsx` or `src/lib/mailerlite.ts`
-
-Why this approach
-- Minimal surface-area change to the quiz page
-- Avoids race conditions from repeatedly appending/removing third-party scripts
-- Uses one consistent MailerLite mounting strategy for SPA route changes
-- Safer for production hosts like Vercel where timing differs from local preview
-
-Validation after implementation
-
-I will verify:
-1. `/reset` quiz reaches the lead-capture phase and the form visibly renders
-2. the DOM contains the expected `.ml-embedded[data-form="9Ffuno"]`
-3. submitting the form still moves the user to the result screen
-4. localStorage is cleared after success / skip
-5. the same flow works after a hard refresh and after client-side navigation
-6. production-style behavior is tested end-to-end, not only in local preview
-
-Expected outcome
-
-After the fix, `/reset` will reliably display the embedded MailerLite form in production instead of showing an empty area when the lead-capture step appears.
