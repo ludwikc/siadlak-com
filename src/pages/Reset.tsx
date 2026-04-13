@@ -83,9 +83,14 @@ export default function Reset() {
 
   useEffect(() => {
     if (phase !== "lead-capture") return;
-    const handler = () => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); };
-    document.addEventListener("mailerlite:form:success", handler);
-    return () => { document.removeEventListener("mailerlite:form:success", handler); };
+    const handler = (e: MessageEvent) => {
+      if (typeof e.data === "string" && e.data.startsWith("mlWebformSubmitSuccess")) {
+        localStorage.removeItem(STORAGE_KEY);
+        setTimeout(() => setPhase("result"), 1500);
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
   }, [phase]);
 
   const tier = getResultTier(totalScore);
