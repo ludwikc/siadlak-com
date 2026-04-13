@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 declare global {
   interface Window {
-    ml?: ((...args: unknown[]) => void) & { q?: unknown[] };
+    ml?: (...args: unknown[]) => void;
     mlDataset?: unknown;
     MailerLite?: unknown;
     MailerLiteObject?: unknown;
