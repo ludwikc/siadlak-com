@@ -31,6 +31,10 @@ export default function Footer() {
                 Uzbrajam wojowników. <br />
                 Prowadzę poszukiwaczy.
                 <br /> <br /> Na co czekasz?
+                <br />
+                <Link to="/discovery" onClick={scrollToTop} className="font-bold underline text-white hover:text-depth transition-colors">
+                  Umów się ze mną.
+                </Link>
               </p>
             </div>
             <div className="flex space-x-3">
