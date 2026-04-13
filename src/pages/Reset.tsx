@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
