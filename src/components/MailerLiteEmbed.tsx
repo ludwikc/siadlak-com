@@ -20,21 +20,19 @@ export default function MailerLiteEmbed({
   const scriptRef = useRef<HTMLScriptElement | null>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      // 1. Remove all existing MailerLite scripts
+    const raf = requestAnimationFrame(() => {
       document
         .querySelectorAll('script[src*="mailerlite.com/js/universal"]')
         .forEach((el) => el.remove());
 
-      // 2. Destroy cached MailerLite globals so it re-initializes fully
       delete window.ml;
       delete window.mlDataset;
       delete window.MailerLite;
       delete window.MailerLiteObject;
 
-      // 3. Inject a fresh script
       const script = document.createElement("script");
-      script.src = "https://assets.mailerlite.com/js/universal.js";
+      script.src =
+        "https://assets.mailerlite.com/js/universal.js?" + Date.now();
       script.async = true;
       script.onload = () => {
         if (typeof window.ml === "function") {
@@ -43,10 +41,10 @@ export default function MailerLiteEmbed({
       };
       document.head.appendChild(script);
       scriptRef.current = script;
-    }, 150);
+    });
 
     return () => {
-      clearTimeout(timer);
+      cancelAnimationFrame(raf);
       if (scriptRef.current) {
         scriptRef.current.remove();
         scriptRef.current = null;
