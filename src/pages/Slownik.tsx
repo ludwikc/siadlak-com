@@ -90,7 +90,7 @@ export default function Slownik() {
         title="Słownik Diamentowego Umysłu - Ludwik C. Siadlak"
         description="Definicje kluczowych pojęć: Aplikacja Mentalna, Diamentowy Umysł, Life OS, Sukno, Kapitan, Pancernik. Poznaj język programów Ludwika C. Siadlaka."
         url="https://siadlak.com/slownik"
-        jsonLd={getGlossarySchema()}
+        jsonLd={[getGlossarySchema()]}
       />
 
       <section className="py-16 md:py-24 bg-void-glow">
