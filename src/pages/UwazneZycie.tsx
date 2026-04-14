@@ -4,7 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png?w=200;400&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import "@fontsource/caveat/400.css";
@@ -31,6 +32,29 @@ import {
   Globe,
 } from "lucide-react";
 
+const uwazneZycieFaqs = [
+  {
+    question: "Czym jest Aplikacja Mentalna Uwa\u017Cne \u017Cycie?",
+    answer: "Uwa\u017Cne \u017Cycie to 4\u20136-tygodniowy program uwa\u017Cno\u015Bci (mindfulness) zaprojektowany specjalnie dla analitycznych umys\u0142\u00F3w i os\u00F3b z ADHD. Nie jest to medytacja w tradycyjnym sensie \u2014 to praktyczne przej\u0119cie kontroli nad kokpitem umys\u0142u. Dzia\u0142a na spotkaniach, w korku, w codziennym \u017Cyciu. 500+ kapitan\u00F3w w spo\u0142eczno\u015Bci, ocena 4.9/5.0. Tw\u00F3rca: Ludwik C. Siadlak.",
+  },
+  {
+    question: "Czy uwa\u017Cno\u015B\u0107 dzia\u0142a przy ADHD?",
+    answer: "Tak \u2014 ale nie ka\u017Cda forma uwa\u017Cno\u015Bci. Tradycyjne medytacje (\u2018zamknij oczy i oddychaj\u2019) cz\u0119sto nie dzia\u0142aj\u0105 przy ADHD, bo wymagaj\u0105 d\u0142ugiego skupienia. Program Uwa\u017Cne \u017Cycie zosta\u0142 zaprojektowany z my\u015Bl\u0105 o analitycznych umys\u0142ach: kr\u00F3tkie, konkretne \u0107wiczenia, metafory zamiast abstrakcji (kapitan, kokpit, \u017Cagle), natychmiastowe zastosowanie w pracy i \u017Cyciu.",
+  },
+  {
+    question: "Czym ten program r\u00F3\u017Cni si\u0119 od aplikacji do medytacji typu Headspace czy Calm?",
+    answer: "Aplikacje do medytacji ucz\u0105 technik relaksacji \u2014 oddychania, skanowania cia\u0142a, wizualizacji. Uwa\u017Cne \u017Cycie zmienia spos\u00F3b, w jaki Tw\u00F3j umys\u0142 przetwarza do\u015Bwiadczenia. Nie chodzi o 10 minut spok\u00F3ju na macie, lecz o uwa\u017Cno\u015B\u0107, kt\u00F3ra dzia\u0142a 24/7 \u2014 na spotkaniu z zarz\u0105dem, w rozmowie z dzieckiem, w kolejce w sklepie. Efekt jest trwa\u0142y, nie wymaga codziennego \u0107wiczenia.",
+  },
+  {
+    question: "Ile czasu dziennie wymaga program?",
+    answer: "Program jest zaprojektowany tak, by wpasowa\u0107 si\u0119 w \u017Cycie zaj\u0119tych profesjonalist\u00F3w. Nie wymaga godzinnych sesji medytacji. Modu\u0142y s\u0105 kr\u00F3tkie i konkretne, a \u0107wiczenia stosuje si\u0119 w codziennych sytuacjach \u2014 nie na macie, lecz w pracy, w domu, w ruchu.",
+  },
+  {
+    question: "Jak d\u0142ugo mam dost\u0119p do programu?",
+    answer: "Na zawsze. Kupujesz raz \u2014 korzystasz do\u017Cywotnie. W cenie programu otrzymujesz te\u017C dost\u0119p do spo\u0142eczno\u015Bci Lifehackerzy na Discordzie \u2014 500+ kapitan\u00F3w z 8+ kraj\u00F3w. Cena: 777 PLN. 30-dniowa gwarancja zwrotu.",
+  },
+];
+
 const UwazneZycie = () => {
   const ctaUrl = "https://buy.siadlak.com/checkout/program-uwaznosc";
 
@@ -41,6 +65,8 @@ const UwazneZycie = () => {
         jsonLd={[
           getCourseEntity('uwazne-zycie')!,
           getWebPageEntity('/program/uwaznosc', 'Uważne Życie', 'Program uważności dla analitycznych umysłów i osób z ADHD.', ['/program', '/podcast/uwazne-zycie']),
+          getCourseBreadcrumb('Uważne Życie', '/program/uwaznosc'),
+          getFAQSchema(uwazneZycieFaqs),
         ]}
       />
       {(() => { const t = getTopicalConfig("/program/uwaznosc"); return t ? <TopicalMeta {...t} /> : null; })()}
@@ -219,6 +245,27 @@ const UwazneZycie = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINICJA + ŚWIEŻOŚĆ */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-xs text-muted-foreground mb-6">
+            Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Czym jest program Uważne Życie?
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Aplikacja Mentalna Uważne Życie to 4–6-tygodniowy program uważności (mindfulness) zaprojektowany dla analitycznych umysłów i osób z ADHD. Nie jest medytacją w tradycyjnym sensie — to przejęcie kontroli nad kokpitem umysłu. Zamiast walczyć z myślami, uczysz się być ich kapitanem. Działa na spotkaniach, w korku, w codziennym życiu — nie tylko na macie do medytacji.
+          </p>
+          <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+            <span><strong className="text-foreground">Twórca:</strong> Ludwik C. Siadlak</span>
+            <span><strong className="text-foreground">Czas trwania:</strong> 4–6 tygodni</span>
+            <span><strong className="text-foreground">Cena:</strong> 777 PLN</span>
+            <span><strong className="text-foreground">Ocena:</strong> 4.9/5.0 (500+ kapitanów)</span>
           </div>
         </div>
       </section>
@@ -1750,6 +1797,30 @@ const UwazneZycie = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20" style={{ background: "linear-gradient(180deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 100%)" }}>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
+            Najczęściej zadawane pytania
+          </h2>
+          <div className="space-y-4">
+            {uwazneZycieFaqs.map((faq, i) => (
+              <details key={i} className="group rounded-lg border border-white/10 bg-white/5">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-white font-bold hover:text-sky-300 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span className="text-slate-400 group-open:rotate-45 transition-transform text-xl ml-4 shrink-0">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-slate-300 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RelatedPrograms currentPath="/program/uwaznosc" />
     </Layout>
   );
 };

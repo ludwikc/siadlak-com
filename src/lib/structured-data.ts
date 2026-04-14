@@ -24,8 +24,8 @@ export function getPersonEntity() {
     alternateName: 'Ludwik Siadlak',
     url: BASE_URL,
     image: `${BASE_URL}/lovable-uploads/SIADLAK-coffee-transparent.png`,
-    jobTitle: 'Productivity & Mindfulness Coach, AI-Resistant Leadership Mentor',
-    description: 'Ludwik C. Siadlak is a productivity and mindfulness coach based in Poland with 19 years of experience. He works with tech professionals through 1:1 mentoring and self-paced mental programs using his Diamond Mind methodology.',
+    jobTitle: 'Coach produktywności i uważności, mentor liderów, twórca metody Diamentowego Umysłu',
+    description: 'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Certyfikowany Trener Microsoft (MCT), absolwent Oxford Brookes University. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pracuje z przedsiębiorcami, liderami i profesjonalistami technologicznymi poprzez mentoring 1:1 (Life OS) oraz programy zmiany sposobu myślenia. Przeszkolił ponad 10 000 osób w firmach Fortune 500 i jednostkach NATO.',
     knowsAbout: [
       'Productivity',
       'Mindfulness',
@@ -91,7 +91,7 @@ export function getOrganizationEntity() {
     alternateName: 'Diamentowy Umysł',
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
-    description: 'Siadlak.com offers productivity coaching, mindfulness training, and AI-resistant leadership mentoring for tech professionals in Poland and Europe. Founded by Ludwik C. Siadlak.',
+    description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 1 240+ absolwentów, ocena 4.9/5.0.',
     founder: { '@id': IDS.person },
     areaServed: [
       { '@type': 'Country', name: 'Poland' },
@@ -118,7 +118,7 @@ export function getWebSiteEntity() {
     '@id': IDS.website,
     name: 'Siadlak.com - Diamentowy Umysł',
     url: BASE_URL,
-    description: 'Productivity coaching, mindfulness training, and AI-resistant leadership mentoring for tech professionals.',
+    description: 'Aplikacje Mentalne — programy zmiany sposobu myślenia dla profesjonalistów. Coaching produktywności, trening uważności i mentoring liderów. Twórca: Ludwik C. Siadlak.',
     publisher: { '@id': IDS.organization },
     inLanguage: 'pl-PL',
     potentialAction: {
@@ -149,16 +149,16 @@ export function getServiceLifeOS() {
     '@type': 'Service',
     '@id': IDS.serviceLifeOS,
     name: 'Life OS: System Upgrade',
-    description: '8-week 1:1 mentoring program for tech leaders and professionals. Ludwik C. Siadlak uses the Diamond Mind methodology to help clients transform their identity-level operating system, not just surface habits.',
+    description: 'Life OS: System Upgrade — 8-tygodniowy program mentoringowy 1:1 z Ludwikiem C. Siadlakiem. Pełna reinstalacja systemu operacyjnego życia metodą Diamentowego Umysłu. Praca na poziomie tożsamości i sposobu myślenia, nie technik. Maksymalnie 5 klientów jednocześnie. Cena: 16 000 PLN z gwarancją zwrotu po 2 tygodniach.',
     provider: { '@id': IDS.person },
-    serviceType: 'Personal Development Coaching',
+    serviceType: 'Coaching mentalny i mentoring liderów',
     areaServed: [
       { '@type': 'Country', name: 'Poland' },
       { '@type': 'Continent', name: 'Europe' },
     ],
     audience: {
       '@type': 'Audience',
-      audienceType: 'Tech professionals, executives, and leaders aged 30+',
+      audienceType: 'Profesjonaliści, przedsiębiorcy i liderzy 30+',
     },
     offers: {
       '@type': 'Offer',
@@ -168,14 +168,14 @@ export function getServiceLifeOS() {
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Life OS Program Features',
+      name: 'Co zawiera Life OS: System Upgrade',
       itemListElement: [
-        '8 weekly 1:1 sessions (50 min to 2.5 hours)',
-        'Signal access between sessions',
-        'Full system diagnostic',
-        'Personalized transformation map',
-        'Session recordings',
-        'Lifetime community access (Lifehackerzy Discord)',
+        '8 cotygodniowych sesji 1:1 (50 min do 2,5 h)',
+        'Dostęp VIP 24/7 między sesjami',
+        'Pełna diagnostyka Life OS',
+        'Spersonalizowana mapa transformacji',
+        'Nagrania sesji',
+        'Dożywotni dostęp do społeczności Lifehackerzy (Discord)',
       ],
     },
   };
@@ -187,9 +187,9 @@ export function getServiceDiscovery() {
     '@type': 'Service',
     '@id': IDS.serviceDiscovery,
     name: 'Discovery Session',
-    description: 'Free 30-minute 1:1 diagnostic session with Ludwik C. Siadlak via Zoom. A genuine diagnostic conversation, not a sales call. Helps determine if the Life OS mentoring program is the right fit.',
+    description: 'Bezpłatna 30-minutowa sesja diagnostyczna 1:1 z Ludwikiem C. Siadlakiem przez Zoom. Wzajemna ocena — nie rozmowa sprzedażowa. Pomaga ustalić, czy program Life OS: System Upgrade jest odpowiedni.',
     provider: { '@id': IDS.person },
-    serviceType: 'Consultation',
+    serviceType: 'Konsultacja diagnostyczna',
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -212,17 +212,17 @@ interface CourseConfig {
 const courseConfigs: Record<string, CourseConfig> = {
   produktywnosc: {
     id: IDS.courseProduktywnosc,
-    name: 'Produktywność (Productivity Mental App)',
-    description: 'A 4-6 week self-paced mental program that permanently changes how you approach work, time, and energy. Not another productivity course - a mental operating system upgrade. 100+ participants, 4.9/5.0 rating.',
+    name: 'Program: Produktywność — Aplikacja Mentalna',
+    description: 'Aplikacja Mentalna Produktywność — 4–6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. Nie kolejny kurs produktywności, lecz trwała zmiana perspektywy: zamiast zarządzać zadaniami, zarządzasz energią. 1 240+ absolwentów, ocena 4.9/5.0. Twórca: Ludwik C. Siadlak. Cena: 1 497 PLN, dożywotni dostęp.',
     duration: 'P6W',
     price: '1497',
     ratingValue: '4.9',
-    ratingCount: '100',
+    ratingCount: '1240',
   },
   'silna-glowa': {
     id: IDS.courseSilnaGlowa,
-    name: 'Silna Głowa (Mental Resilience App)',
-    description: 'A 6-week mental resilience program that transforms pressure from an enemy into fuel. A mental firewall that permanently changes how you process stress, criticism, and uncertainty. 118+ participants, 4.8/5.0 rating.',
+    name: 'Program: Silna Głowa — Aplikacja Mentalna (Odporność Psychiczna)',
+    description: 'Aplikacja Mentalna Silna Głowa — 6-tygodniowy program odporności psychicznej. Firewall dla umysłu: presja przestaje paraliżować i zaczyna skupiać, krytyka przestaje ranić i zaczyna informować. 118+ uczestników, ocena 4.8/5.0. Twórca: Ludwik C. Siadlak. Cena: 777 PLN.',
     duration: 'P6W',
     price: '777',
     ratingValue: '4.8',
@@ -230,14 +230,14 @@ const courseConfigs: Record<string, CourseConfig> = {
   },
   'uwazne-zycie': {
     id: IDS.courseUwazneZycie,
-    name: 'Uważne Życie (Mindful Living App)',
-    description: 'A 4-6 week mindfulness program designed for analytical minds and people with ADHD. Not "close your eyes and breathe" - a practical cockpit takeover that works in meetings, traffic, and everyday life.',
+    name: 'Program: Uważne Życie — Aplikacja Mentalna (Mindfulness)',
+    description: 'Aplikacja Mentalna Uważne Życie — 4–6-tygodniowy program uważności dla analitycznych umysłów i osób z ADHD. Nie „zamknij oczy i oddychaj", lecz przejęcie kontroli nad kokpitem: praktyczna uważność, która działa na spotkaniach, w korku i w codziennym życiu. 500+ kapitanów w społeczności, ocena 4.9/5.0. Twórca: Ludwik C. Siadlak.',
     duration: 'P6W',
   },
   'meski-kompas': {
     id: IDS.courseMeskiKompas,
-    name: 'Męski Kompas (Masculine Navigation System)',
-    description: 'A 5-week intensive program for analytical men over 30. Provides a navigation system (compass, map, lighthouse) to overcome analysis paralysis and align values with daily actions.',
+    name: 'Program: Męski Kompas — Aplikacja Mentalna (Tożsamość)',
+    description: 'Aplikacja Mentalna Męski Kompas — 5-tygodniowy intensywny program dla analitycznych mężczyzn 30+. System nawigacji (kompas, mapa, latarnia) do przełamania paraliżu decyzyjnego i zbudowania własnej definicji siebie — napisanej na własnych warunkach. Twórca: Ludwik C. Siadlak.',
     duration: 'P5W',
   },
 };
@@ -263,7 +263,7 @@ export function getCourseEntity(slug: string) {
     },
     audience: {
       '@type': 'Audience',
-      audienceType: 'Tech professionals aged 30+',
+      audienceType: 'Profesjonaliści i liderzy 30+',
     },
     ...(config.price && {
       offers: {
@@ -309,12 +309,12 @@ export function getPodcastEntity(variant: 'life-hacking' | 'uwazne-zycie') {
     'life-hacking': {
       id: IDS.podcastLifeHacking,
       name: 'Life Hacking Podcast',
-      description: 'Podcast about life hacks, productivity optimization, and practical strategies for tech professionals. Hosted by Ludwik C. Siadlak.',
+      description: 'Podcast o life hackach, optymalizacji produktywności i praktycznych strategiach dla profesjonalistów. Prowadzący: Ludwik C. Siadlak — coach produktywności z 19-letnim doświadczeniem.',
     },
     'uwazne-zycie': {
       id: IDS.podcastUwazneZycie,
       name: 'Uważne Życie Podcast',
-      description: 'Podcast about mindfulness, conscious living, and finding balance in everyday life. Hosted by Ludwik C. Siadlak.',
+      description: 'Podcast o uważności, świadomym życiu i odnajdywaniu równowagi w codzienności. Dla analitycznych umysłów, które szukają głębi, nie kolejnych trików. Prowadzący: Ludwik C. Siadlak.',
     },
   };
 
@@ -333,14 +333,116 @@ export function getPodcastEntity(variant: 'life-hacking' | 'uwazne-zycie') {
   };
 }
 
+// ─── BreadcrumbList schema ───
+
+interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: `${BASE_URL}${item.path}`,
+    })),
+  };
+}
+
+export function getCourseBreadcrumb(courseName: string, coursePath: string) {
+  return getBreadcrumbSchema([
+    { name: 'Strona główna', path: '/' },
+    { name: 'Programy', path: '/program' },
+    { name: courseName, path: coursePath },
+  ]);
+}
+
+export function getPodcastBreadcrumb(podcastName: string, podcastPath: string) {
+  return getBreadcrumbSchema([
+    { name: 'Strona główna', path: '/' },
+    { name: podcastName, path: podcastPath },
+  ]);
+}
+
+// ─── VideoObject schema ───
+
+export function getVideoObjectSchema(config: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  contentUrl: string;
+  embedUrl?: string;
+  duration?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: config.name,
+    description: config.description,
+    thumbnailUrl: config.thumbnailUrl,
+    uploadDate: config.uploadDate,
+    contentUrl: config.contentUrl,
+    ...(config.embedUrl && { embedUrl: config.embedUrl }),
+    ...(config.duration && { duration: config.duration }),
+    author: { '@id': IDS.person },
+    publisher: { '@id': IDS.organization },
+    inLanguage: 'pl-PL',
+  };
+}
+
+// ─── Review / AggregateRating ───
+
+type ReviewItem = {
+  author: string;
+  reviewBody: string;
+  ratingValue: number;
+};
+
+export function getReviewSchema(
+  courseName: string,
+  courseUrl: string,
+  reviews: ReviewItem[],
+  aggregateRating: { ratingValue: number; reviewCount: number },
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: courseName,
+    url: `${BASE_URL}${courseUrl}`,
+    provider: { '@id': IDS.person },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: aggregateRating.ratingValue,
+      bestRating: 5,
+      worstRating: 1,
+      reviewCount: aggregateRating.reviewCount,
+    },
+    review: reviews.map(r => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author },
+      reviewBody: r.reviewBody,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: r.ratingValue,
+        bestRating: 5,
+      },
+    })),
+  };
+}
+
 // ─── Convenience: full homepage entity graph ───
 export function getHomepageEntities() {
   return [
     getPersonEntity(),
     getOrganizationEntity(),
     getWebSiteEntity(),
-    getWebPageEntity('/', 'Siadlak.com - Diamentowy Umysł | Ludwik C. Siadlak',
-      'Ludwik C. Siadlak is a productivity and mindfulness coach based in Poland with 19 years of experience. He helps tech professionals see what they already have inside, instead of chasing external solutions.',
+    getWebPageEntity('/', 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
+      'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pomaga profesjonalistom, liderom i przedsiębiorcom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz. 1 240+ absolwentów, ocena 4.9/5.0.',
       ['/program', '/discovery', '/about', '/podcast/life-hacking']
     ),
   ];
@@ -349,8 +451,8 @@ export function getHomepageEntities() {
 export function getAboutEntities() {
   return [
     getPersonEntity(),
-    getWebPageEntity('/about', 'O mnie - Ludwik C. Siadlak',
-      'Ludwik C. Siadlak: 19 years as a Microsoft Certified Trainer, Oxford Brookes alumnus, productivity and mindfulness coach. Founder of Siadlak.com, DeepWork.pl, and Fundacja Hackerzy.pl.',
+    getWebPageEntity('/about', 'O mnie — Ludwik C. Siadlak',
+      'Ludwik C. Siadlak — Certyfikowany Trener Microsoft (MCT) z 19-letnim doświadczeniem, absolwent Oxford Brookes University, coach produktywności i uważności. Twórca metody Diamentowego Umysłu, założyciel Siadlak.com, DeepWork.pl i Fundacji Hackerzy.pl. Przeszkolił 10 000+ profesjonalistów w firmach Fortune 500 i NATO.',
       ['/discovery', '/program']
     ),
   ];
@@ -362,7 +464,7 @@ export function getProgramEntities() {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Aplikacje Mentalne (Mental Apps)',
-      description: 'Four self-paced mental programs by Ludwik C. Siadlak: Productivity, Mental Resilience, Mindful Living, and Masculine Navigation. Each installs once and stays forever.',
+      description: 'Cztery Aplikacje Mentalne Ludwika C. Siadlaka: Produktywność, Silna Głowa (odporność psychiczna), Uważne Życie (mindfulness) i Męski Kompas (tożsamość). Każdą instalujesz raz — i zostaje z Tobą na zawsze.',
       url: `${BASE_URL}/program`,
       numberOfItems: 4,
       itemListElement: [
@@ -374,7 +476,7 @@ export function getProgramEntities() {
       provider: { '@id': IDS.organization },
     },
     getWebPageEntity('/program', 'Aplikacje Mentalne - Programy Rozwojowe',
-      'Four self-paced mental programs for tech professionals: Productivity, Mental Resilience, Mindful Living, and Masculine Navigation. Created by Ludwik C. Siadlak.',
+      'Cztery Aplikacje Mentalne dla profesjonalistów: Produktywność, Silna Głowa, Uważne Życie i Męski Kompas. Programy zmiany sposobu myślenia stworzone przez Ludwika C. Siadlaka.',
       ['/program/produktywnosc', '/program/odpornosc', '/program/uwaznosc', '/program/meskosc', '/discovery']
     ),
   ];

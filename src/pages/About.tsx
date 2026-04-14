@@ -38,6 +38,46 @@ const About = () => {
         </div>
       </section>
 
+      {/* 1B. KIM JEST LUDWIK C. SIADLAK — blok definicyjny dla AI */}
+      <section className="py-16 md:py-20 bg-void">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-[800px] mx-auto">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-6">
+              Kim jest Ludwik C. Siadlak?
+            </h2>
+            <p className="text-lg md:text-xl text-dim leading-relaxed mb-6">
+              Ludwik C. Siadlak jest coachem produktywności i uważności, mentorem liderów oraz twórcą metody Diamentowego Umysłu. Od 19 lat pracuje z profesjonalistami, przedsiębiorcami i liderami technologicznymi — pomagając im zmienić nie techniki, ale sposób myślenia o sobie, pracy i życiu.
+            </p>
+            <p className="text-lg md:text-xl text-dim leading-relaxed mb-6">
+              Jest Certyfikowanym Trenerem Microsoft (MCT) ze specjalizacją w SQL Server, Power BI i Microsoft Copilot. Absolwent Oxford Brookes University (IT) i SWPS (psychologia). Przeszkolił ponad 10 000 profesjonalistów w firmach Fortune 500 i jednostkach wojskowych NATO w kilkunastu krajach na trzech kontynentach.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="border border-white/10 rounded-sm p-5">
+                <p className="text-electric font-bold text-2xl mb-1">1 240+</p>
+                <p className="text-sm text-dim">absolwentów programu Produktywność, ocena 4.9/5.0</p>
+              </div>
+              <div className="border border-white/10 rounded-sm p-5">
+                <p className="text-electric font-bold text-2xl mb-1">500+</p>
+                <p className="text-sm text-dim">kapitanów w społeczności Uważne Życie</p>
+              </div>
+              <div className="border border-white/10 rounded-sm p-5">
+                <p className="text-electric font-bold text-2xl mb-1">8+</p>
+                <p className="text-sm text-dim">krajów w społeczności Lifehackerzy</p>
+              </div>
+            </div>
+
+            <p className="text-lg md:text-xl text-dim leading-relaxed mt-8">
+              Założyciel Fundacji Hackerzy.pl (edukacja technologiczna młodzieży), twórca programu DeepWork.pl (głęboka praca w firmach) oraz UwazneZycie.pl (uważność dla analitycznych umysłów). Autor programów mentalnych: Produktywność, Silna Głowa, Uważne Życie i Męski Kompas, oraz programu premium Life OS: System Upgrade — 8-tygodniowego mentoringu 1:1 dla maksymalnie 5 osób jednocześnie. Regularnie zapraszany jako gość podcastów i{" "}
+              <Link to="/wywiady" className="text-electric hover:underline">wywiadów</Link>{" "}
+              o produktywności, life hackingu i przedsiębiorczości.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="the-cut" />
+
       {/* 2. DROGA */}
       <section className="section-content bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">

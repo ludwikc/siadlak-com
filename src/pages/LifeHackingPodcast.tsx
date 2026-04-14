@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSEOConfig, getTopicalConfig } from '../lib/seo-config';
 import TopicalMeta from '../components/TopicalMeta';
-import { getPodcastEntity, getWebPageEntity } from '../lib/structured-data';
+import { getPodcastEntity, getWebPageEntity, getPodcastBreadcrumb } from '../lib/structured-data';
 
 const LifeHackingPodcast = () => {
   // Sample episodes data - would be fetched from an API in a real scenario
@@ -82,6 +82,7 @@ const LifeHackingPodcast = () => {
       <SEO {...getSEOConfig("/podcast/life-hacking")} jsonLd={[
         getPodcastEntity('life-hacking'),
         getWebPageEntity('/podcast/life-hacking', 'Life Hacking Podcast', 'Podcast o hakach życiowych i produktywności prowadzony przez Ludwika C. Siadlaka.'),
+        getPodcastBreadcrumb('Life Hacking Podcast', '/podcast/life-hacking'),
       ]} />
       {(() => { const t = getTopicalConfig("/podcast/life-hacking"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section */}

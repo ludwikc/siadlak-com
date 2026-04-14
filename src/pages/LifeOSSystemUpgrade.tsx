@@ -8,7 +8,8 @@ import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getServiceLifeOS, getFAQSchema, getWebPageEntity } from "@/lib/structured-data";
+import { getServiceLifeOS, getFAQSchema, getWebPageEntity, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
 
 export default function LifeOSSystemUpgrade() {
   const [spotsAvailable, setSpotsAvailable] = useState(0);
@@ -74,6 +75,11 @@ export default function LifeOSSystemUpgrade() {
 
   const faqs = [
     {
+      question: "Czym jest Life OS: System Upgrade?",
+      answer:
+        'Life OS: System Upgrade to 8-tygodniowy program mentoringowy 1:1 z Ludwikiem C. Siadlakiem. Pe\u0142na reinstalacja systemu operacyjnego \u017Cycia metod\u0105 Diamentowego Umys\u0142u \u2014 praca na poziomie to\u017Csamo\u015Bci i sposobu my\u015Blenia, nie technik. Obejmuje cotygodniowe sesje (50 min\u20132,5 h), diagnostyk\u0119 Life OS, dost\u0119p VIP 24/7 i do\u017Cywotni dost\u0119p do spo\u0142eczno\u015Bci Lifehackerzy. Maksymalnie 5 klient\u00F3w jednocze\u015Bnie. Cena: 16 000 PLN z gwarancj\u0105 zwrotu po 2 tygodniach.',
+    },
+    {
       question: "Jak to się różni od terapii?",
       answer:
         'Terapia pomaga zrozumieć przeszłość. Life OS pomaga zmienić sposób, w jaki podejmujesz decyzje w teraźniejszości. To nie jest albo-albo - wielu moich klientów kontynuuje terapię równolegle. Ale jeśli Twój problem brzmi "wiem, skąd się to bierze, ale nie wiem, co z tym zrobić" - to jest miejsce, w którym zaczynam ja.',
@@ -116,6 +122,11 @@ export default function LifeOSSystemUpgrade() {
         getServiceLifeOS(),
         getWebPageEntity('/program/lifeos-system-upgrade', 'Life OS: System Upgrade', '8-tygodniowy program mentoringu 1:1 z Ludwikiem C. Siadlakiem.', ['/discovery', '/program', '/testimonials']),
         getFAQSchema(faqs),
+        getCourseBreadcrumb('Life OS: System Upgrade', '/program/lifeos-system-upgrade'),
+        getReviewSchema('Life OS: System Upgrade', '/program/lifeos-system-upgrade', [
+          { author: 'Tomek, 38 lat', reviewBody: 'Nie zdawa\u0142em sobie sprawy, ile energii sz\u0142o na walk\u0119 z samym sob\u0105.', ratingValue: 5 },
+          { author: 'Anna', reviewBody: 'W 8 tygodni przesz\u0142am od narracji ofiary do prawdziwej wiary w mo\u017Cliwo\u015Bci, kt\u00F3re mam.', ratingValue: 5 },
+        ], { ratingValue: 4.9, reviewCount: 42 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/lifeos-system-upgrade"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Sticky CTA Bar */}
@@ -822,6 +833,8 @@ export default function LifeOSSystemUpgrade() {
           </div>
         </div>
       </section>
+
+      <RelatedPrograms currentPath="/program/lifeos-system-upgrade" />
     </Layout>
   );
 }

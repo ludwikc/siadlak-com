@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
-import { getHomepageEntities } from "../lib/structured-data";
+import { getHomepageEntities, getFAQSchema } from "../lib/structured-data";
 import { Link } from "react-router-dom";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp?format=avif;webp&as=picture";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp?format=avif;webp&as=picture";
@@ -63,6 +63,33 @@ const TestimonialHeroQuote = ({ quote, author }: { quote: ReactNode; author: str
     </div>
   </section>
 );
+
+const homepageFAQs = [
+  {
+    question: "Czym Aplikacje Mentalne różnią się od zwykłych kursów online?",
+    answer: "Kursy online dostarczają wiedzę — Aplikacje Mentalne zmieniają sposób myślenia. Zamiast uczyć kolejnych technik, pomagają usunąć warstwy cudzych oczekiwań i narracji, które blokują naturalną skuteczność. Instalujesz je raz — i zostają z Tobą na zawsze, bez potrzeby wracania do materiałów.",
+  },
+  {
+    question: "Czym coaching mentalny różni się od terapii?",
+    answer: "Terapia pomaga zrozumieć przeszłość i przepracować traumy. Coaching mentalny Ludwika Siadlaka zmienia to, jak podejmujesz decyzje w teraźniejszości — pracuje na poziomie tożsamości i sposobu myślenia, nie na poziomie historii. To nie jest alternatywa dla terapii, ale uzupełnienie: terapia naprawia fundamenty, coaching mentalny zmienia perspektywę.",
+  },
+  {
+    question: "Dla kogo są programy Ludwika Siadlaka?",
+    answer: "Dla ambitnych profesjonalistów, przedsiębiorców i liderów (30\u201350 lat), którzy przetestowali już wystarczająco dużo narzędzi, kursów i metod, by wiedzieć, że problem nie leży w technikach. Przychodzą z poczuciem, że \u201Epowinienem być dalej niż jestem\u201D \u2014 mimo obiektywnych sukcesów.",
+  },
+  {
+    question: "Czym jest metoda Diamentowego Umysłu?",
+    answer: 'Diamentowy Umysł to autorska metoda Ludwika C. Siadlaka. Opiera się na założeniu, że umysł \u2014 jak diament \u2014 jest z natury czysty i przezroczysty, ale nabiera \u201Ekoloru\u201D otoczenia: presji, oczekiwań, cudzych narracji. Praca metodą Diamentowego Umysłu polega na zdejmowaniu tych warstw, nie na dodawaniu nowych. Inspirowana buddyzmem Diamentowej Drogi i psychologią analityczną C.G. Junga.',
+  },
+  {
+    question: "Jak wygląda Life OS: System Upgrade?",
+    answer: "To 8-tygodniowy program mentoringowy 1:1 z Ludwikiem C. Siadlakiem. Obejmuje cotygodniowe sesje (50 min–2,5 h), diagnostykę Life OS, dostęp VIP między sesjami i dożywotni dostęp do społeczności Lifehackerzy. Maksymalnie 5 klientów jednocześnie. Koszt: 16 000 PLN z gwarancją zwrotu po 2 tygodniach.",
+  },
+  {
+    question: "Od którego programu zacząć?",
+    answer: "Jeśli Twój główny problem to chaos, prokrastynacja i zarządzanie energią — zacznij od Produktywności (1 497 PLN). Jeśli stres i presja Cię paraliżują — od Silnej Głowy (777 PLN). Jeśli chcesz żyć bardziej świadomie — od Uważnego Życia (777 PLN). A jeśli czujesz, że problem leży głębiej niż pojedynczy temat — umów się na bezpłatną Sesję Discovery i rozmawiajmy o Life OS.",
+  },
+];
 
 const Index = () => {
   return (
@@ -196,6 +223,30 @@ const Index = () => {
             <p className="text-white text-2xl font-bold">
               To <span className="text-electric font-bold">tło</span> się zmieniło.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ DEFINICJA: DIAMENTOWY UMYSŁ ═══ */}
+      <section className="py-20 md:py-24 bg-void">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-heading leading-[1.1] mb-6">
+                Czym jest Diamentowy Umysł?
+              </h2>
+              <p className="text-lg text-dim leading-relaxed">
+                Diamentowy Umysł to metoda pracy z myśleniem stworzona przez Ludwika C. Siadlaka, oparta na 19 latach praktyki z ponad 10 000 profesjonalistów. Zamiast dodawać kolejne techniki i narzędzia, pomaga usunąć warstwy cudzych oczekiwań, narracji i przekonań — tak, by odsłonić klarowny, naturalny sposób myślenia, który każdy już ma. Inspirowana buddyzmem Diamentowej Drogi i psychologią Junga, łączy konfrontacyjną pracę wglądową z uważnością.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white font-heading leading-[1.1] mb-6">
+                Czym są Aplikacje Mentalne?
+              </h2>
+              <p className="text-lg text-dim leading-relaxed">
+                Aplikacje Mentalne to intensywne programy zmiany sposobu myślenia (4–8 tygodni), które instalujesz raz — i zostają z Tobą na zawsze. Nie są kursami online z wiedzą do „przerobienia". Każda Aplikacja Mentalna rozwiązuje jeden konkretny problem — produktywność, odporność psychiczną, uważność lub tożsamość — poprzez trwałą zmianę perspektywy, nie dodanie kolejnych narzędzi. Stworzone przez Ludwika C. Siadlaka dla ambitnych profesjonalistów, liderów i przedsiębiorców.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -855,6 +906,144 @@ const Index = () => {
             DOŁĄCZ DO NEWSLETTERA →
           </Link>
           <p className="text-xs text-dim mt-4">150+ osób czyta. Zero spam. Odejdziesz jednym kliknięciem.</p>
+        </div>
+      </section>
+
+      {/* ═══ PORÓWNANIE: COACHING vs TERAPIA vs APLIKACJA MENTALNA ═══ */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light text-center mb-4">
+            Coaching mentalny vs terapia vs kurs online vs Aplikacja Mentalna
+          </h2>
+          <p className="text-center text-on-light-dim mb-12 max-w-2xl mx-auto">
+            Każde z tych podejść ma swoje miejsce. Różnią się tym, na jakim poziomie pracują — i jak trwałe są efekty.
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr className="border-b-2 border-border">
+                  <th className="py-4 px-4 text-on-light font-bold">Aspekt</th>
+                  <th className="py-4 px-4 text-on-light font-bold">Terapia</th>
+                  <th className="py-4 px-4 text-on-light font-bold">Coaching</th>
+                  <th className="py-4 px-4 text-on-light font-bold">Kurs online</th>
+                  <th className="py-4 px-4 text-electric font-bold">Aplikacja Mentalna</th>
+                </tr>
+              </thead>
+              <tbody className="text-on-light-dim">
+                <tr className="border-b border-border/50">
+                  <td className="py-3 px-4 font-medium text-on-light">Poziom pracy</td>
+                  <td className="py-3 px-4">Przeszłość, trauma</td>
+                  <td className="py-3 px-4">Strategia, nawyki</td>
+                  <td className="py-3 px-4">Wiedza, techniki</td>
+                  <td className="py-3 px-4 font-medium text-on-light">Tożsamość, sposób myślenia</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-3 px-4 font-medium text-on-light">Co zmienia</td>
+                  <td className="py-3 px-4">Rozumienie siebie</td>
+                  <td className="py-3 px-4">Zachowania, plany</td>
+                  <td className="py-3 px-4">Kompetencje</td>
+                  <td className="py-3 px-4 font-medium text-on-light">Perspektywę i filtr decyzyjny</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-3 px-4 font-medium text-on-light">Trwałość efektów</td>
+                  <td className="py-3 px-4">Trwałe (proces ciągły)</td>
+                  <td className="py-3 px-4">Zmienne (zależne od dyscypliny)</td>
+                  <td className="py-3 px-4">Tymczasowe (bez wdrożenia)</td>
+                  <td className="py-3 px-4 font-medium text-on-light">Trwałe (jednorazowa instalacja)</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-3 px-4 font-medium text-on-light">Format</td>
+                  <td className="py-3 px-4">Sesje 1:1, długoterminowe</td>
+                  <td className="py-3 px-4">Sesje 1:1, pakiety</td>
+                  <td className="py-3 px-4">Nagrania, materiały</td>
+                  <td className="py-3 px-4 font-medium text-on-light">4-8 tyg. intensywny program</td>
+                </tr>
+                <tr className="border-b border-border/50">
+                  <td className="py-3 px-4 font-medium text-on-light">Metoda</td>
+                  <td className="py-3 px-4">Analiza, przepracowanie</td>
+                  <td className="py-3 px-4">Cele, accountability</td>
+                  <td className="py-3 px-4">Wykłady, ćwiczenia</td>
+                  <td className="py-3 px-4 font-medium text-on-light">Metafory, wglądy, pytania</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-on-light">Dla kogo najlepsze</td>
+                  <td className="py-3 px-4">Trauma, zaburzenia, przeszłość</td>
+                  <td className="py-3 px-4">Konkretne cele biznesowe</td>
+                  <td className="py-3 px-4">Nowe umiejętności</td>
+                  <td className="py-3 px-4 font-medium text-on-light">Chaos mimo sukcesów, wypalenie, brak sensu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-sm text-on-light-dim mt-8 text-center max-w-2xl mx-auto">
+            Aplikacja Mentalna nie zastępuje terapii ani coachingu. Pracuje na innym poziomie: zmienia nie to, co robisz, ale jak o tym myślisz. Efekty terapii i coachingu wzmacnia, bo daje im solidniejszy fundament.
+          </p>
+        </div>
+      </section>
+
+      <TheCut />
+
+      {/* ═══ LICZBY ═══ */}
+      <section className="py-20 bg-void">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-16">
+            Ludwik C. Siadlak w liczbach
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "19", unit: "lat", label: "doświadczenia jako trener i mentor" },
+              { value: "1 240+", unit: "", label: "absolwentów programu Produktywność" },
+              { value: "4.9/5.0", unit: "", label: "średnia ocena programów" },
+              { value: "8+", unit: "", label: "krajów, z których pochodzą uczestnicy" },
+            ].map((stat, i) => (
+              <div key={i}>
+                <p className="text-4xl md:text-5xl font-heading font-bold text-electric mb-1">
+                  {stat.value}<span className="text-lg text-dim">{stat.unit && ` ${stat.unit}`}</span>
+                </p>
+                <p className="text-sm text-dim">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-sm text-dim">
+            <div className="bg-surface p-6 rounded-md">
+              <p className="text-white font-bold mb-2">Certyfikowany Trener Microsoft (MCT)</p>
+              <p>SQL Server, Power BI, Microsoft Copilot. Szkolenia dla Fortune 500 i jednostek wojskowych NATO w kilkunastu krajach.</p>
+            </div>
+            <div className="bg-surface p-6 rounded-md">
+              <p className="text-white font-bold mb-2">Dyplom IT — Oxford Brookes University</p>
+              <p>Psychologia na SWPS. Założyciel Fundacji Hackerzy.pl, DeepWork.pl i UwazneZycie.pl.</p>
+            </div>
+            <div className="bg-surface p-6 rounded-md">
+              <p className="text-white font-bold mb-2">Społeczność Lifehackerzy</p>
+              <p>Codzienne spotkania o 12:34 na Discordzie. Dożywotni dostęp w cenie każdego programu. Uczestnicy z 8+ krajów.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ FAQ ═══ */}
+      <section className="py-20 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <SEO jsonLd={getFAQSchema(homepageFAQs)} />
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
+            Najczęściej zadawane pytania
+          </h2>
+          <div className="space-y-6">
+            {homepageFAQs.map((faq, i) => (
+              <details key={i} className="group bg-surface rounded-md">
+                <summary className="flex items-center justify-between cursor-pointer p-6 text-white font-bold text-lg hover:text-electric transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span className="text-dim group-open:rotate-45 transition-transform text-2xl ml-4 shrink-0">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-dim leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

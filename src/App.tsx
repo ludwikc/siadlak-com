@@ -45,6 +45,8 @@ import ThankYouMeskiKompas from "./pages/ThankYouMeskiKompas";
 import LifeOSSystemUpgrade from "./pages/LifeOSSystemUpgrade";
 
 import Sitemap from "./pages/Sitemap";
+import Slownik from "./pages/Slownik";
+import Wywiady from "./pages/Wywiady";
 import SilnaGlowa from "./pages/SilnaGlowa";
 import MeskiKompas from "./pages/MeskiKompas";
 import UwazneZycie from "./pages/UwazneZycie";
@@ -112,6 +114,8 @@ function App() {
                 }
               />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/slownik" element={<Slownik />} />
+              <Route path="/wywiady" element={<Wywiady />} />
               
 
               {/* Privacy and Terms redirects */}

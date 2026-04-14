@@ -2,7 +2,8 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getFAQSchema } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -36,16 +37,28 @@ import {
 
 const silnaGlowaFaqs = [
   {
-    question: "Kiedy dostanę kurs?",
-    answer: "Dostęp do platformy i pierwszych modułów otrzymasz natychmiast po zakupie. Kolejne moduły będą odblokowywane co tydzień, abyś miał czas na spokojne przepracowanie materiału.",
+    question: "Czym jest Aplikacja Mentalna Silna G\u0142owa?",
+    answer: "Silna G\u0142owa to 6-tygodniowy program odporno\u015Bci psychicznej \u2014 mentalny firewall, kt\u00F3ry zmienia spos\u00F3b, w jaki przetwarzasz stres, presj\u0119 i krytyk\u0119. Presja przestaje parali\u017Cowa\u0107 i zaczyna skupia\u0107. Krytyka przestaje rani\u0107 i zaczyna informowa\u0107. 118+ uczestnik\u00F3w, ocena 4.8/5.0. Tw\u00F3rca: Ludwik C. Siadlak. Cena: 777 PLN.",
   },
   {
-    question: "Jak długo będę mieć dostęp do kursu?",
-    answer: "Na zawsze. Kupujesz raz — korzystasz zawsze. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje, automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat.",
+    question: "Czym odporno\u015B\u0107 psychiczna r\u00F3\u017Cni si\u0119 od zarz\u0105dzania stresem?",
+    answer: "Zarz\u0105dzanie stresem uczy technik radzenia sobie z objawami \u2014 oddychanie, relaksacja, przerwy. Odporno\u015B\u0107 psychiczna w programie Silna G\u0142owa zmienia spos\u00F3b, w jaki Tw\u00F3j umys\u0142 interpretuje presj\u0119. Nie t\u0142umisz stresu \u2014 zmieniasz filtr, przez kt\u00F3ry go widzisz. To trwa\u0142a zmiana perspektywy, nie technika do powtarzania.",
   },
   {
-    question: "Jakieś bonusy?",
-    answer: "Tak! Uczestnicy przedsprzedaży otrzymują dostęp do zamkniętej grupy Mastermind oraz zaproszenie na live Q&A. Te bonusy są dostępne wyłącznie dla uczestników przedsprzedaży.",
+    question: "Dla kogo jest program Silna G\u0142owa?",
+    answer: "Dla profesjonalist\u00F3w i lider\u00F3w, kt\u00F3rych stres i presja parali\u017Cuj\u0105 zamiast mobilizowa\u0107. Kt\u00F3rzy reaguj\u0105 na krytyk\u0119 emocjonalnie, mimo \u017Ce racjonalnie wiedz\u0105, \u017Ce nie powinni. Kt\u00F3rzy czuj\u0105, \u017Ce \u2018zaraz si\u0119 z\u0142ami\u0105\u2019 \u2014 mimo obiektywnych sukces\u00F3w.",
+  },
+  {
+    question: "Kiedy dosta\u0144 kurs?",
+    answer: "Dost\u0119p do platformy i pierwszych modu\u0142\u00F3w otrzymasz natychmiast po zakupie. Kolejne modu\u0142y b\u0119d\u0105 odblokowywane co tydzie\u0144, aby\u015B mia\u0142 czas na spokojne przepracowanie materia\u0142u.",
+  },
+  {
+    question: "Jak d\u0142ugo b\u0119d\u0119 mie\u0107 dost\u0119p do kursu?",
+    answer: "Na zawsze. Kupujesz raz \u2014 korzystasz zawsze. W przysz\u0142o\u015Bci, gdy b\u0119d\u0119 dodawa\u0107 nowe materia\u0142y lub aktualizacje, automatycznie otrzymasz do nich dost\u0119p bez \u017Cadnych dodatkowych op\u0142at.",
+  },
+  {
+    question: "Jakie\u015B bonusy?",
+    answer: "Tak! Uczestnicy przedsprzeda\u017Cy otrzymuj\u0105 dost\u0119p do zamkni\u0119tej grupy Mastermind oraz zaproszenie na live Q&A. Te bonusy s\u0105 dost\u0119pne wy\u0142\u0105cznie dla uczestnik\u00F3w przedsprzeda\u017Cy.",
   },
 ];
 
@@ -58,6 +71,7 @@ const SilnaGlowa = () => {
         getCourseEntity('silna-glowa')!,
         getWebPageEntity('/program/odpornosc', 'Silna Głowa', 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo.', ['/program', '/discovery']),
         getFAQSchema(silnaGlowaFaqs),
+        getCourseBreadcrumb('Silna Głowa', '/program/odpornosc'),
       ]} />
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section - Theme Locked */}
@@ -177,6 +191,27 @@ const SilnaGlowa = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINICJA + ŚWIEŻOŚĆ */}
+      <section className="py-12 md:py-16 bg-background-primary">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-xs text-text-secondary mb-6">
+            Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+            Czym jest program Silna Głowa?
+          </h2>
+          <p className="text-lg text-text-secondary leading-relaxed mb-6">
+            Aplikacja Mentalna Silna Głowa to 6-tygodniowy program odporności psychicznej. Działa jak firewall dla umysłu: zmienia sposób, w jaki przetwarzasz stres, presję i krytykę. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować. Niepewność przestaje blokować — zaczyna otwierać możliwości. To nie technika zarządzania stresem. To trwała zmiana filtru, przez który widzisz wyzwania.
+          </p>
+          <div className="flex flex-wrap gap-6 text-sm text-text-secondary">
+            <span><strong className="text-text-primary">Twórca:</strong> Ludwik C. Siadlak</span>
+            <span><strong className="text-text-primary">Czas trwania:</strong> 6 tygodni</span>
+            <span><strong className="text-text-primary">Cena:</strong> 777 PLN</span>
+            <span><strong className="text-text-primary">Ocena:</strong> 4.8/5.0 (118+ uczestników)</span>
           </div>
         </div>
       </section>
@@ -1392,6 +1427,8 @@ const SilnaGlowa = () => {
           </div>
         </div>
       </section>
+
+      <RelatedPrograms currentPath="/program/odpornosc" />
     </Layout>
   );
 };

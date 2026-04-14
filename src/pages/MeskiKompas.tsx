@@ -2,7 +2,8 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
@@ -29,11 +30,32 @@ export default function MeskiKompas() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const meskiKompasFaqs = [
+    {
+      question: "Czym jest Aplikacja Mentalna M\u0119ski Kompas?",
+      answer: "M\u0119ski Kompas to 5-tygodniowy intensywny program dla analitycznych m\u0119\u017Cczyzn 30+, kt\u00F3rzy osi\u0105gn\u0119li sukces zawodowy, ale czuj\u0105 wewn\u0119trzny konflikt lub brak sensu. To system nawigacji \u017Cyciowej (kompas, mapa, latarnia), kt\u00F3ry pomaga prze\u0142ama\u0107 parali\u017C decyzyjny i zbudowa\u0107 w\u0142asn\u0105 definicj\u0119 siebie \u2014 napisan\u0105 na w\u0142asnych warunkach. Tw\u00F3rca: Ludwik C. Siadlak.",
+    },
+    {
+      question: "Czym M\u0119ski Kompas r\u00F3\u017Cni si\u0119 od coaching\u00F3w dla m\u0119\u017Cczyzn?",
+      answer: "Wi\u0119kszo\u015B\u0107 program\u00F3w dla m\u0119\u017Cczyzn pracuje na poziomie zachowa\u0144: b\u0105d\u017A bardziej zdecydowany, b\u0105d\u017A silniejszy, b\u0105d\u017A pewny siebie. M\u0119ski Kompas pracuje g\u0142\u0119biej \u2014 na poziomie to\u017Csamo\u015Bci. Nie m\u00F3wi Ci, kim powiniene\u015B by\u0107. Pomaga Ci zobaczy\u0107, kim ju\u017C jeste\u015B, kiedy zdejmiesz wszystkie maski i cudze oczekiwania.",
+    },
+    {
+      question: "Dla kogo jest program M\u0119ski Kompas?",
+      answer: "Dla m\u0119\u017Cczyzn 30+, kt\u00F3rzy osi\u0105gn\u0119li zewn\u0119trzny sukces (kariera, pieni\u0105dze, uznanie), ale w \u015Brodku czuj\u0105 konflikt, brak sensu lub pytanie \u2018kim jestem, kiedy zdejm\u0119 wszystkie maski?\u2019. Analityczne umys\u0142y, przedsi\u0119biorcy, liderzy, ojcowie \u2014 kt\u00F3rzy wiedz\u0105, \u017Ce problem le\u017Cy g\u0142\u0119biej ni\u017C kolejna strategia.",
+    },
+    {
+      question: "Ile kosztuje M\u0119ski Kompas i jak d\u0142ugo trwa?",
+      answer: "Program trwa 5 tygodni. Dost\u0119p jest do\u017Cywotni \u2014 kupujesz raz, korzystasz zawsze. W cenie programu otrzymujesz te\u017C dost\u0119p do spo\u0142eczno\u015Bci Lifehackerzy. Aktualne ceny i dost\u0119pno\u015B\u0107 znajdziesz na stronie programu. Zapisy prowadzone s\u0105 z listy oczekuj\u0105cych.",
+    },
+  ];
+
   return (
     <Layout>
       <SEO {...getSEOConfig("/program/meskosc")} jsonLd={[
         getCourseEntity('meski-kompas')!,
         getWebPageEntity('/program/meskosc', 'Meski Kompas', '5-tygodniowy program nawigacji zyciowej dla mezczyzn 30+.', ['/program', '/discovery']),
+        getCourseBreadcrumb('Męski Kompas', '/program/meskosc'),
+        getFAQSchema(meskiKompasFaqs),
       ]} />
       {(() => { const t = getTopicalConfig("/program/meskosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Floating Top Banner */}
@@ -118,6 +140,26 @@ export default function MeskiKompas() {
                 </span>
               </CTAButton>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINICJA + ŚWIEŻOŚĆ */}
+      <section className="py-12 md:py-16" style={{ background: "hsl(0, 0%, 97%)" }}>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-xs mb-6" style={{ color: "hsl(210, 10%, 55%)" }}>
+            Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: "hsl(210, 20%, 8%)" }}>
+            Czym jest program Męski Kompas?
+          </h2>
+          <p className="text-lg leading-relaxed mb-6" style={{ color: "hsl(210, 10%, 35%)" }}>
+            Aplikacja Mentalna Męski Kompas to 5-tygodniowy intensywny program dla analitycznych mężczyzn 30+, którzy osiągnęli sukces zawodowy, ale czują wewnętrzny konflikt lub brak sensu. Dostarcza system nawigacji życiowej — kompas (wartości), mapę (kierunek) i latarnię (cel) — do przełamania paraliżu decyzyjnego i zbudowania własnej definicji siebie. Nie mówi kim powinieneś być. Pomaga zobaczyć, kim już jesteś.
+          </p>
+          <div className="flex flex-wrap gap-6 text-sm" style={{ color: "hsl(210, 10%, 45%)" }}>
+            <span><strong style={{ color: "hsl(210, 20%, 8%)" }}>Twórca:</strong> Ludwik C. Siadlak</span>
+            <span><strong style={{ color: "hsl(210, 20%, 8%)" }}>Czas trwania:</strong> 5 tygodni</span>
+            <span><strong style={{ color: "hsl(210, 20%, 8%)" }}>Status:</strong> Lista oczekujących</span>
           </div>
         </div>
       </section>
@@ -3340,6 +3382,30 @@ export default function MeskiKompas() {
           </div>
         </div>
       )}
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-stone-950">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
+            Najczęściej zadawane pytania
+          </h2>
+          <div className="space-y-4">
+            {meskiKompasFaqs.map((faq, i) => (
+              <details key={i} className="group rounded-lg border border-white/10 bg-white/5">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-white font-bold hover:text-amber-400 transition-colors list-none [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <span className="text-stone-400 group-open:rotate-45 transition-transform text-xl ml-4 shrink-0">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-stone-300 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RelatedPrograms currentPath="/program/meskosc" />
     </Layout>
   );
 }

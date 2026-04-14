@@ -2,7 +2,8 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getFAQSchema } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -38,24 +39,36 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const produktywnoscFaqs = [
   {
-    question: "Czy dostanę fakturę?",
+    question: "Czym jest Aplikacja Mentalna Produktywność?",
+    answer: 'Aplikacja Mentalna Produktywność to 4\u20136-tygodniowy program zmiany sposobu my\u015Blenia o czasie, energii i prokrastynacji. Nie jest kolejnym kursem produktywno\u015Bci z technikami GTD czy Pomodoro. Zamiast zarz\u0105dza\u0107 zadaniami, uczysz si\u0119 zarz\u0105dza\u0107 energi\u0105. Tw\u00F3rca: Ludwik C. Siadlak. 1 240+ absolwent\u00F3w, ocena 4.9/5.0. Cena: 1 497 PLN, do\u017Cywotni dost\u0119p.',
+  },
+  {
+    question: "Czym ten program r\u00F3\u017Cni si\u0119 od kurs\u00F3w produktywno\u015Bci?",
+    answer: 'Kursy produktywno\u015Bci ucz\u0105 technik: jak u\u017Cywa\u0107 kalendarza, jak planowa\u0107 dzie\u0144, jak robi\u0107 listy zada\u0144. Aplikacja Mentalna Produktywno\u015B\u0107 zmienia spos\u00F3b my\u015Blenia, kt\u00F3ry powoduje, \u017Ce te techniki nie dzia\u0142aj\u0105. Efekt jest trwa\u0142y \u2014 nie musisz wraca\u0107 do materia\u0142\u00F3w. Instalujesz raz, zostaje na zawsze.',
+  },
+  {
+    question: "Dla kogo jest program Produktywno\u015B\u0107?",
+    answer: 'Dla profesjonalist\u00F3w, przedsi\u0119biorc\u00F3w i lider\u00F3w, kt\u00F3rzy przetestowali ju\u017C wystarczaj\u0105co du\u017Co narz\u0119dzi produktywno\u015Bci (GTD, Todoist, Asana, Notion) i wiedz\u0105, \u017Ce problem nie le\u017Cy w aplikacji, lecz w sposobie my\u015Blenia o pracy i czasie. Typowy uczestnik: 30\u201350 lat, ambitny, osi\u0105gaj\u0105cy \u2014 ale zm\u0119czony ci\u0105g\u0142ym chaosem.',
+  },
+  {
+    question: "Czy dosta\u0144 faktur\u0119?",
     answer: "Tak, faktura VAT wystawiana jest automatycznie.",
   },
   {
-    question: "Czy można płacić w ratach?",
-    answer: "Tak — szczegóły znajdziesz na stronie zamówienia.",
+    question: "Czy mo\u017Cna p\u0142aci\u0107 w ratach?",
+    answer: "Tak \u2014 szczeg\u00F3\u0142y znajdziesz na stronie zam\u00F3wienia.",
   },
   {
-    question: "Kiedy dostanę dostęp do programu?",
-    answer: "Natychmiast po opłaceniu. Dosłownie — w ciągu kilku minut. Możesz zacząć instalację tego samego dnia.",
+    question: "Kiedy dosta\u0144 dost\u0119p do programu?",
+    answer: "Natychmiast po op\u0142aceniu. Dos\u0142ownie \u2014 w ci\u0105gu kilku minut. Mo\u017Cesz zacz\u0105\u0107 instalacj\u0119 tego samego dnia.",
   },
   {
-    question: "Jak długo mam dostęp do materiałów?",
-    answer: "Na zawsze. Bez limitu czasowego, bez subskrypcji.",
+    question: "Jak d\u0142ugo mam dost\u0119p do materia\u0142\u00F3w?",
+    answer: "Na zawsze. Bez limitu czasowego, bez subskrypcji. Dost\u0119p do\u017Cywotni \u2014 w cenie ka\u017Cdego programu otrzymujesz te\u017C dost\u0119p do spo\u0142eczno\u015Bci Lifehackerzy na Discordzie.",
   },
   {
-    question: "Co jeśli nie będę miał czasu na społeczność?",
-    answer: "Społeczność jest tam dla Ciebie, nie Ty dla społeczności. Wchodzisz, gdy chcesz i potrzebujesz.",
+    question: "Co je\u015Bli nie b\u0119d\u0119 mia\u0142 czasu na spo\u0142eczno\u015B\u0107?",
+    answer: "Spo\u0142eczno\u015B\u0107 jest tam dla Ciebie, nie Ty dla spo\u0142eczno\u015Bci. Wchodzisz, gdy chcesz i potrzebujesz.",
   },
 ];
 
@@ -66,6 +79,12 @@ export default function HakowanieProduktywnosci() {
         getCourseEntity('produktywnosc')!,
         getWebPageEntity('/program/produktywnosc', 'Program: Produktywność', 'Program mentalny produktywności (4–6 tygodni) autorstwa Ludwika C. Siadlaka. 100+ uczestników, ocena 4.9/5.0.', ['/program', '/discovery', '/testimonials']),
         getFAQSchema(produktywnoscFaqs),
+        getCourseBreadcrumb('Produktywno\u015B\u0107', '/program/produktywnosc'),
+        getReviewSchema('Aplikacja Mentalna: Produktywno\u015B\u0107', '/program/produktywnosc', [
+          { author: 'Anna K.', reviewBody: 'Dzi\u0119ki programowi w ko\u0144cu opanowa\u0142am chaos w mojej g\u0142owie. Mam system, kt\u00F3ry dzia\u0142a nawet w najbardziej stresuj\u0105cych momentach.', ratingValue: 5 },
+          { author: 'Piotr M.', reviewBody: 'Jako programista sp\u0119dza\u0142em godziny na pseudo-pracy. Teraz ko\u0144cz\u0119 rzeczy dwa razy szybciej i mam czas na \u017Cycie.', ratingValue: 5 },
+          { author: 'Maria S.', reviewBody: 'Nigdy nie by\u0142am osob\u0105 produktywn\u0105. Teraz wiem, \u017Ce po prostu u\u017Cywa\u0142am z\u0142ych narz\u0119dzi.', ratingValue: 5 },
+        ], { ratingValue: 4.9, reviewCount: 127 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/produktywnosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* HERO */}
@@ -126,6 +145,27 @@ export default function HakowanieProduktywnosci() {
             >
               Bezpłatne 4-dniowe wyzwanie · Sprawdź, jak działasz pod presją →
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINICJA + ŚWIEŻOŚĆ */}
+      <section className="py-12 md:py-16 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-xs text-muted-foreground mb-6">
+            Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Czym jest program Produktywność?
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            Aplikacja Mentalna Produktywność to 4–6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. Nie uczy nowych technik zarządzania zadaniami — zmienia perspektywę, przez którą patrzysz na swoją pracę. Zamiast walczyć z prokrastynacją, rozumiesz jej źródło. Zamiast zarządzać czasem, zarządzasz energią. Efekt jest trwały: instalujesz raz, zostaje na zawsze.
+          </p>
+          <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+            <span><strong className="text-foreground">Twórca:</strong> Ludwik C. Siadlak</span>
+            <span><strong className="text-foreground">Czas trwania:</strong> 4–6 tygodni</span>
+            <span><strong className="text-foreground">Cena:</strong> 1 497 PLN</span>
+            <span><strong className="text-foreground">Ocena:</strong> 4.9/5.0 (1 240+ absolwentów)</span>
           </div>
         </div>
       </section>
@@ -1425,6 +1465,8 @@ export default function HakowanieProduktywnosci() {
           </div>
         </div>
       </section>
+
+      <RelatedPrograms currentPath="/program/produktywnosc" />
     </Layout>
   );
 }
