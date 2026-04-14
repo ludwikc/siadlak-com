@@ -144,11 +144,12 @@ export default function Wywiady() {
             </h1>
 
             <p className="text-lg text-dim leading-relaxed max-w-2xl">
-              Ludwik C. Siadlak jest regularnie zapraszany jako go&#347;&#263;
-              podcast&#243;w i wywiad&#243;w w obszarze produktywno&#347;ci,
-              rozwoju osobistego i przedsi&#281;biorczo&#347;ci. Poni&#380;ej
-              zebrane rozmowy z lat 2018{"\u2013"}2024 prowadzone przez
-              Gildi&#281; Trener&#243;w, Danut&#281; Piaseck&#261;, Damiana
+              Ludwik C. Siadlak jest regularnie zapraszany jako gość
+              podcastów i wywiadów w\u00A0obszarze produktywności,
+              rozwoju osobistego i\u00A0przedsiębiorczości. Poniżej
+              zebrane rozmowy z\u00A0lat 2018{"\u2013"}2025 prowadzone przez
+              Daniela Bartosiewicza, Gildię Trenerów, Danutę Piasecką, Damiana
+              Mazurka, Bogusza Pękalskiego i\u00A0kanał Lepiej Teraz.
               Mazurka, Bogusza P&#281;kalskiego i kana&#322; Lepiej Teraz.
             </p>
           </div>
