@@ -5,6 +5,17 @@ import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectS
 
 const interviews = [
   {
+    id: "MersV7TtoOU",
+    title: "Produktywność w\u00A0copywritingu - jak wziąć się do pracy jako freelancer?",
+    host: "Daniel Bartosiewicz (Content i\u00A0Automatyzacja)",
+    hostUrl: "https://www.youtube.com/@daniel_bartosiewicz",
+    date: "2025-04-10",
+    dateLabel: "10 kwietnia 2025",
+    description:
+      "Ludwik C. Siadlak w\u00A0rozmowie z\u00A0Danielem Bartosiewiczem o\u00A0produktywności dla freelancerów i\u00A0copywriterów. Jak przełamać opór przed pracą, zbudować system zamiast polegać na motywacji i\u00A0skutecznie zarządzać energią, gdy nikt nie patrzy Ci na ręce.",
+    topics: ["produktywność", "freelancing", "copywriting", "systemy"],
+  },
+  {
     id: "LFJKgaP8BlQ",
     title: "Jak robi\u0107 wi\u0119cej, gdy si\u0119 nie chce?",
     host: "Gildia Trener\u00F3w",
@@ -133,11 +144,12 @@ export default function Wywiady() {
             </h1>
 
             <p className="text-lg text-dim leading-relaxed max-w-2xl">
-              Ludwik C. Siadlak jest regularnie zapraszany jako go&#347;&#263;
-              podcast&#243;w i wywiad&#243;w w obszarze produktywno&#347;ci,
-              rozwoju osobistego i przedsi&#281;biorczo&#347;ci. Poni&#380;ej
-              zebrane rozmowy z lat 2018{"\u2013"}2024 prowadzone przez
-              Gildi&#281; Trener&#243;w, Danut&#281; Piaseck&#261;, Damiana
+              Ludwik C. Siadlak jest regularnie zapraszany jako gość
+              podcastów i wywiadów w\u00A0obszarze produktywności,
+              rozwoju osobistego i\u00A0przedsiębiorczości. Poniżej
+              zebrane rozmowy z\u00A0lat 2018{"\u2013"}2025 prowadzone przez
+              Daniela Bartosiewicza, Gildię Trenerów, Danutę Piasecką, Damiana
+              Mazurka, Bogusza Pękalskiego i\u00A0kanał Lepiej Teraz.
               Mazurka, Bogusza P&#281;kalskiego i kana&#322; Lepiej Teraz.
             </p>
           </div>
