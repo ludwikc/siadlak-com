@@ -29,7 +29,7 @@ export const redirects: RedirectConfig = {
   "/program/mental-elevator": "/program/lifeos-system-upgrade",
 
   // Temporary redirects (can be removed later)
-  "/webinar": "/webinar/depresja",
+  "/webinar": "/webinar/kod-kapitana",
 };
 
 /**
