@@ -12,7 +12,7 @@ const interviews = [
     date: "2025-04-10",
     dateLabel: "10 kwietnia 2025",
     description:
-      "Ludwik C. Siadlak w rozmowie z Danielem Bartosiewiczem o produktywności dla freelancerów i copywriterów. Jak przełamać opór przed pracą, zbudować system zamiast polegać na motywacji i skutecznie zarządzać energią, gdy nikt nie patrzy Ci na ręce.",
+      "Produktywność dla freelancerów i copywriterów. Jak przełamać opór przed pracą, zbudować system zamiast polegać na motywacji i skutecznie zarządzać energią, gdy nikt nie patrzy Ci na ręce.",
     topics: ["produktywność", "freelancing", "copywriting", "systemy"],
   },
   {
@@ -23,7 +23,7 @@ const interviews = [
     date: "2024-06-11",
     dateLabel: "11 czerwca 2024",
     description:
-      "Ludwik C. Siadlak tłumaczy, dlaczego motywacja to pułapka - i co działa zamiast niej. Rozmowa o prokrastynacji, systemach produktywności i różnicy między \u2018chcieć\u2019 a \u2018robić\u2019. Praktyczne podejście dla trenerów, coachów i osób pracujących z ludźmi.",
+      "Dlaczego motywacja to pułapka - i co faktycznie działa zamiast niej. Rozmowa o prokrastynacji, systemach produktywności i różnicy między \u2018chcieć\u2019 a \u2018robić\u2019. Dla trenerów, coachów i osób pracujących z ludźmi.",
     topics: ["produktywność", "prokrastynacja", "motywacja", "systemy"],
   },
   {
@@ -34,7 +34,7 @@ const interviews = [
     date: "2023-12-29",
     dateLabel: "29 grudnia 2023",
     description:
-      "Wywiad o strategii współpracy zamiast rywalizacji. Ludwik C. Siadlak opowiada, jak budował społeczności trenerskie i dlaczego dzielenie się wiedzą z \u2018konkurencją\u2019 jest najlepszą strategią biznesową na długą metę.",
+      "Strategia współpracy zamiast rywalizacji. O budowaniu społeczności trenerskich i tym, dlaczego dzielenie się wiedzą z \u2018konkurencją\u2019 jest najlepszą strategią biznesową na długą metę.",
     topics: ["biznes", "współpraca", "strategia", "społeczność"],
   },
   {
@@ -45,7 +45,7 @@ const interviews = [
     date: "2023-03-14",
     dateLabel: "14 marca 2023",
     description:
-      "Czym jest life hacking i skąd się wziął w Polsce? Ludwik C. Siadlak - jeden z pionierów polskiego life hackingu - o filozofii optymalizacji życia, narzędziach mentalnych i różnicy między prawdziwym life hackingiem a \u2018trikami produktywności\u2019.",
+      "Czym jest life hacking i skąd się wziął w Polsce? O filozofii optymalizacji życia, narzędziach mentalnych i różnicy między prawdziwym life hackingiem a \u2018trikami produktywności\u2019.",
     topics: ["life hacking", "filozofia", "optymalizacja", "mindset"],
   },
   {
@@ -56,7 +56,7 @@ const interviews = [
     date: "2018-02-20",
     dateLabel: "20 lutego 2018",
     description:
-      "Rozmowa o codziennym życiu trenera IT, który pracuje zdalnie z całego świata. Ludwik C. Siadlak o swoich rytuałach, książkach, które go ukształtowały, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
+      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
     topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
   },
   {
@@ -67,7 +67,7 @@ const interviews = [
     date: "2018-04-17",
     dateLabel: "17 kwietnia 2018",
     description:
-      "Ludwik C. Siadlak o ścieżce od Certyfikowanego Trenera Microsoft do własnego biznesu edukacyjnego. Jak zbudować karierę trenera IT, pracować z dowolnego miejsca na świecie i przejść od szkoleń korporacyjnych do rozwoju osobistego.",
+      "Ścieżka od Certyfikowanego Trenera Microsoft do własnego biznesu edukacyjnego. Jak zbudować karierę trenera IT, pracować z dowolnego miejsca na świecie i przejść od szkoleń korporacyjnych do rozwoju osobistego.",
     topics: ["kariera", "trener IT", "podróże", "przedsiębiorczość"],
   },
 ];
@@ -144,12 +144,10 @@ export default function Wywiady() {
             </h1>
 
             <p className="text-lg text-dim leading-relaxed max-w-2xl">
-              Ludwik C. Siadlak jest regularnie zapraszany jako gość
-              podcastów i wywiadów w obszarze produktywności,
-              rozwoju osobistego i przedsiębiorczości. Poniżej
-              zebrane rozmowy z lat 2018–2025 prowadzone przez
-              Daniela Bartosiewicza, Gildię Trenerów, Danutę Piasecką, Damiana
-              Mazurka, Bogusza Pękalskiego i kanał Lepiej Teraz.
+              Rozmowy z lat 2018–2025 w obszarze produktywności,
+              rozwoju osobistego i przedsiębiorczości. Zaproszenia od
+              Daniela Bartosiewicza, Gildi Trenerów, Danuty Piaseckiej, Damiana
+              Mazurka, Bogusza Pękalskiego i kanału Lepiej Teraz.
             </p>
           </div>
         </div>
