@@ -5,6 +5,17 @@ import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectS
 
 const interviews = [
   {
+    id: "MersV7TtoOU",
+    title: "Produktywność w\u00A0copywritingu - jak wziąć się do pracy jako freelancer?",
+    host: "Daniel Bartosiewicz (Content i\u00A0Automatyzacja)",
+    hostUrl: "https://www.youtube.com/@daniel_bartosiewicz",
+    date: "2025-04-10",
+    dateLabel: "10 kwietnia 2025",
+    description:
+      "Ludwik C. Siadlak w\u00A0rozmowie z\u00A0Danielem Bartosiewiczem o\u00A0produktywności dla freelancerów i\u00A0copywriterów. Jak przełamać opór przed pracą, zbudować system zamiast polegać na motywacji i\u00A0skutecznie zarządzać energią, gdy nikt nie patrzy Ci na ręce.",
+    topics: ["produktywność", "freelancing", "copywriting", "systemy"],
+  },
+  {
     id: "LFJKgaP8BlQ",
     title: "Jak robi\u0107 wi\u0119cej, gdy si\u0119 nie chce?",
     host: "Gildia Trener\u00F3w",
