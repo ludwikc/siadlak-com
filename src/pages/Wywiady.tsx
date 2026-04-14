@@ -2,7 +2,22 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
-import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectSchema } from "@/lib/structured-data";
+import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectSchema, getFAQSchema } from "@/lib/structured-data";
+
+const wywiadyFaqs = [
+  {
+    question: "O czym s\u0105 wywiady z Ludwikiem C. Siadlakiem?",
+    answer: "Rozmowy dotycz\u0105 produktywno\u015Bci, life hackingu, pracy zdalnej, budowania biznesu edukacyjnego i filozofii optymalizacji \u017Cycia. Prowadzone przez niezale\u017Cnych tw\u00F3rc\u00F3w \u2014 Gildi\u0119 Trener\u00F3w, Danut\u0119 Piaseck\u0105, Damiana Mazurka, Bogusza P\u0119kalskiego, Daniela Bartosiewicza i kana\u0142 Lepiej Teraz.",
+  },
+  {
+    question: "Czym jest life hacking?",
+    answer: "Life hacking to filozofia \u015Bwiadomej optymalizacji codziennego funkcjonowania \u2014 od zarz\u0105dzania energi\u0105 i czasem, przez systemy decyzyjne, po nawyki i rytua\u0142y. Nie chodzi o \u2018triki\u2019, ale o trwa\u0142\u0105 zmian\u0119 sposobu my\u015Blenia. Ludwik C. Siadlak jest jednym z pionier\u00F3w life hackingu w Polsce.",
+  },
+  {
+    question: "Jak zaprosi\u0107 Ludwika do wywiadu?",
+    answer: "Przez formularz kontaktowy na stronie siadlak.com/contact. Tematy, kt\u00F3re ch\u0119tnie poruszam: produktywno\u015B\u0107, uwa\u017Cno\u015B\u0107, odporno\u015B\u0107 psychiczna, praca zdalna, budowanie spo\u0142eczno\u015Bci, metoda Diamentowego Umys\u0142u i przej\u015Bcie od korporacji do w\u0142asnego biznesu.",
+  },
+];
 
 const interviews = [
   {
@@ -118,6 +133,7 @@ export default function Wywiady() {
           ),
           breadcrumb,
           itemListSchema,
+          getFAQSchema(wywiadyFaqs),
           ...videoSchemas,
         ]}
       />
@@ -149,6 +165,23 @@ export default function Wywiady() {
               Mazurka, Bogusza Pękalskiego i kanału Lepiej Teraz.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Definicja — extractable block */}
+      <section className="py-10 bg-void">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
+            Kim jest Ludwik C. Siadlak jako go&#347;&#263; wywiad&#243;w?
+          </h2>
+          <p className="text-lg text-dim leading-relaxed">
+            Coach produktywno&#347;ci i uwa&#380;no&#347;ci z 19-letnim
+            do&#347;wiadczeniem, Certyfikowany Trener Microsoft, absolwent
+            Oxford Brookes University. Tw&#243;rca Aplikacji Mentalnych i metody
+            Diamentowego Umys&#322;u. Zapraszany przez podcast&#243;w
+            i kana&#322;y YouTube w obszarze produktywno&#347;ci, life hackingu
+            i przedsi&#281;biorczo&#347;ci od 2018 roku.
+          </p>
         </div>
       </section>
 
@@ -204,6 +237,28 @@ export default function Wywiady() {
                   ))}
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-void">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
+            Najcz&#281;&#347;ciej zadawane pytania
+          </h2>
+          <div className="space-y-4">
+            {wywiadyFaqs.map((faq, i) => (
+              <details key={i} className="group border border-white/10 rounded-md">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-on-dark font-medium hover:text-electric transition-colors">
+                  {faq.question}
+                  <span className="ml-4 text-dim group-open:rotate-45 transition-transform text-xl">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-dim leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>

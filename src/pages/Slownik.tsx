@@ -2,7 +2,26 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
-import { getBreadcrumbSchema } from "@/lib/structured-data";
+import { getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+
+const slownikFaqs = [
+  {
+    question: "Czym jest Diamentowy Umys\u0142?",
+    answer: "Diamentowy Umys\u0142 to autorska metoda pracy z my\u015Bleniem stworzona przez Ludwika C. Siadlaka. Opiera si\u0119 na za\u0142o\u017Ceniu, \u017Ce umys\u0142 \u2014 jak diament \u2014 jest z natury czysty i przezroczysty, ale nabiera \u2018koloru\u2019 otoczenia: presji, oczekiwa\u0144, cudzych narracji. Praca t\u0105 metod\u0105 polega na zdejmowaniu warstw, nie na dodawaniu nowych.",
+  },
+  {
+    question: "Czym Aplikacja Mentalna r\u00F3\u017Cni si\u0119 od kursu online?",
+    answer: "Kurs daje wiedz\u0119 do przerobienia. Aplikacja Mentalna zmienia spos\u00F3b my\u015Blenia \u2014 instalujesz j\u0105 raz i zostaje z Tob\u0105 na zawsze. Ka\u017Cda rozwi\u0105zuje jeden konkretny problem (produktywno\u015B\u0107, odporno\u015B\u0107, uwa\u017Cno\u015B\u0107 lub to\u017Csamo\u015B\u0107) poprzez trwa\u0142\u0105 zmian\u0119 perspektywy, nie dodanie kolejnych narz\u0119dzi.",
+  },
+  {
+    question: "Co oznacza metafora \u2018sukna\u2019 w metodzie Diamentowego Umys\u0142u?",
+    answer: "Sukno to warstwy narracji, r\u00F3l, l\u0119k\u00F3w i oczekiwa\u0144, kt\u00F3re zakrywaj\u0105 diament (prawdziwe \u2018ja\u2019). Cudze definicje sukcesu, spo\u0142eczne oczekiwania, stare wzorce my\u015Blenia \u2014 to wszystko jest suknem. Praca z Ludwikiem polega na zdejmowaniu sukna, nie na zmienianiu go na \u0142adniejsze.",
+  },
+  {
+    question: "Czym jest Sesja Discovery?",
+    answer: "Bezp\u0142atna 30-minutowa rozmowa diagnostyczna 1:1 z Ludwikiem C. Siadlakiem przez Zoom. Nie jest rozmow\u0105 sprzeda\u017Cow\u0105 \u2014 to wzajemna ocena: Ty sprawdzasz, czy Ludwik jest w\u0142a\u015Bciwym mentorem, on sprawdza, czy jeste\u015B gotowy na t\u0119 prac\u0119. Obaj maj\u0105 prawo powiedzie\u0107 \u2018nie\u2019.",
+  },
+];
 
 const definitions = [
   {
@@ -96,6 +115,7 @@ export default function Slownik() {
             { name: 'Strona g\u0142\u00F3wna', url: '/' },
             { name: 'S\u0142ownik', url: '/slownik' },
           ]),
+          getFAQSchema(slownikFaqs),
         ]}
       />
 
@@ -150,6 +170,63 @@ export default function Slownik() {
               ))}
             </dl>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-void-glow">
+        <div className="container mx-auto px-6 md:px-12 max-w-[800px]">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
+            Najcz&#281;&#347;ciej zadawane pytania
+          </h2>
+          <div className="space-y-4">
+            {slownikFaqs.map((faq, i) => (
+              <details key={i} className="group border border-white/10 rounded-md">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-on-dark font-medium hover:text-electric transition-colors">
+                  {faq.question}
+                  <span className="ml-4 text-dim group-open:rotate-45 transition-transform text-xl">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-dim leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-link */}
+      <section className="py-12 bg-void">
+        <div className="container mx-auto px-6 md:px-12 max-w-[800px]">
+          <h2 className="font-heading text-xl font-bold text-on-dark mb-6">
+            Poznaj programy, kt&#243;re stoj&#261; za tymi poj&#281;ciami
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { title: "Produktywno\u015B\u0107", path: "/program/produktywnosc", desc: "Zmiana sposobu my\u015Blenia o czasie i energii" },
+              { title: "Silna G\u0142owa", path: "/program/odpornosc", desc: "Firewall mentalny \u2014 presja jako paliwo" },
+              { title: "Uwa\u017Cne \u017Bycie", path: "/program/uwaznosc", desc: "Uwa\u017Cno\u015B\u0107 dla analitycznych umys\u0142\u00F3w" },
+              { title: "M\u0119ski Kompas", path: "/program/meskosc", desc: "Nawigacja \u017Cyciowa dla m\u0119\u017Cczyzn 30+" },
+            ].map(p => (
+              <Link
+                key={p.path}
+                to={p.path}
+                className="group block p-5 rounded-md border border-white/10 hover:border-electric/40 transition-colors"
+              >
+                <p className="text-white font-bold group-hover:text-electric transition-colors mb-1">
+                  {p.title}
+                </p>
+                <p className="text-dim text-sm">{p.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-dim text-xs mt-6">
+            Nie wiesz, od czego zacz&#261;&#263;?{" "}
+            <Link to="/discovery" className="text-electric hover:underline">
+              Um&#243;w bezp&#322;atn&#261; Sesj&#281; Discovery
+            </Link>
+            {" "}&mdash; 30 minut, w kt&#243;rych razem ustalimy kierunek.
+          </p>
         </div>
       </section>
     </Layout>
