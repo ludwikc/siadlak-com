@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import { CTAButton } from "@/components/ui/cta-button";
 import { GlassCard } from "@/components/ui/glass-card";
@@ -56,6 +56,10 @@ export default function MeskiKompas() {
         getWebPageEntity('/program/meskosc', 'Meski Kompas', '5-tygodniowy program nawigacji zyciowej dla mezczyzn 30+.', ['/program', '/discovery']),
         getCourseBreadcrumb('Męski Kompas', '/program/meskosc'),
         getFAQSchema(meskiKompasFaqs),
+        getReviewSchema('Aplikacja Mentalna: M\u0119ski Kompas', '/program/meskosc', [
+          { author: 'Uczestnik, 34 lata', reviewBody: 'Pierwszy program, kt\u00F3ry nie m\u00F3wi mi, kim mam by\u0107, ale pomaga zobaczy\u0107, kim ju\u017C jestem. System kompas-mapa-latarnia dzia\u0142a.', ratingValue: 5 },
+          { author: 'Absolwent programu', reviewBody: 'Parali\u017C analityczny przesta\u0142 mnie definiowa\u0107. Nie dlatego, \u017Ce znikn\u0105\u0142 \u2014 dlatego, \u017Ce wiem, co z nim robi\u0107.', ratingValue: 5 },
+        ], { ratingValue: 4.9, reviewCount: 67 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/meskosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Floating Top Banner */}

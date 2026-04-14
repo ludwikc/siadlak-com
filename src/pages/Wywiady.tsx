@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
 import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectSchema } from "@/lib/structured-data";
 
 const interviews = [
@@ -106,9 +107,7 @@ export default function Wywiady() {
   return (
     <Layout>
       <SEO
-        title="Wywiady z Ludwikiem C. Siadlakiem - Rozmowy o Produktywności, Uważności i Life Hackingu"
-        description="Wywiady i podcasty z Ludwikiem C. Siadlakiem - coachem produktywności z 19-letnim doświadczeniem. Rozmowy o life hackingu, systemach mentalnych, pracy zdalnej i przedsiębiorczości."
-        url="/wywiady"
+        {...getSEOConfig("/wywiady")}
         jsonLd={[
           getPersonEntity(),
           getWebPageEntity(

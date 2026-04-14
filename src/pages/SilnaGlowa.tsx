@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -71,7 +71,11 @@ const SilnaGlowa = () => {
         getCourseEntity('silna-glowa')!,
         getWebPageEntity('/program/odpornosc', 'Silna Głowa', 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo.', ['/program', '/discovery']),
         getFAQSchema(silnaGlowaFaqs),
-        getCourseBreadcrumb('Silna Głowa', '/program/odpornosc'),
+        getCourseBreadcrumb('Silna G\u0142owa', '/program/odpornosc'),
+        getReviewSchema('Aplikacja Mentalna: Silna G\u0142owa', '/program/odpornosc', [
+          { author: 'Uczestnik programu', reviewBody: 'Pierwszy raz w \u017Cyciu poczu\u0142em, \u017Ce presja mo\u017Ce by\u0107 paliwem, a nie parali\u017Cem. Firewall mentalny dzia\u0142a.', ratingValue: 5 },
+          { author: 'Absolwentka Silnej G\u0142owy', reviewBody: 'Zmieni\u0142 si\u0119 nie poziom stresu \u2014 zmieni\u0142a si\u0119 moja relacja ze stresem. To fundamentalna r\u00F3\u017Cnica.', ratingValue: 5 },
+        ], { ratingValue: 4.8, reviewCount: 118 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section - Theme Locked */}

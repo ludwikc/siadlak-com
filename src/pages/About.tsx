@@ -5,12 +5,38 @@ import { Calendar, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getAboutEntities } from "@/lib/structured-data";
+import { getAboutEntities, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+
+const aboutFaqs = [
+  {
+    question: "Czym jest metoda Diamentowego Umys\u0142u?",
+    answer: "Metoda Diamentowego Umys\u0142u to autorskie podej\u015Bcie do pracy z my\u015Bleniem. Opiera si\u0119 na za\u0142o\u017Ceniu, \u017Ce umys\u0142 \u2014 jak diament \u2014 jest z natury czysty i przezroczysty, ale nabiera koloru otoczenia: presji, oczekiwa\u0144, cudzych narracji. Praca metod\u0105 Diamentowego Umys\u0142u polega na zdejmowaniu tych warstw, nie na dodawaniu nowych.",
+  },
+  {
+    question: "Jak wygl\u0105da wsp\u00F3\u0142praca z Ludwikiem?",
+    answer: "S\u0105 dwie \u015Bcie\u017Cki: samodzielne Aplikacje Mentalne (4\u20138 tygodni, dost\u0119p do\u017Cywotni) lub mentoring 1:1 Life OS: System Upgrade (8 tygodni, 16 000 PLN). Ka\u017Cda wsp\u00F3\u0142praca zaczyna si\u0119 od bezp\u0142atnej 30-minutowej Sesji Discovery.",
+  },
+  {
+    question: "Czym Aplikacje Mentalne r\u00F3\u017Cni\u0105 si\u0119 od kurs\u00F3w online?",
+    answer: "Kurs daje wiedz\u0119 do przerobienia. Aplikacja Mentalna zmienia spos\u00F3b my\u015Blenia \u2014 instalujesz j\u0105 raz i zostaje z Tob\u0105 na zawsze. Nie ma materia\u0142\u00F3w do \u2018nadrobienia\u2019. Ka\u017Cda rozwi\u0105zuje jeden konkretny problem: produktywno\u015B\u0107, odporno\u015B\u0107, uwa\u017Cno\u015B\u0107 lub to\u017Csamo\u015B\u0107.",
+  },
+  {
+    question: "Dla kogo s\u0105 programy?",
+    answer: "Dla profesjonalist\u00F3w, przedsi\u0119biorc\u00F3w i lider\u00F3w, kt\u00F3rzy osi\u0105gaj\u0105 cele, ale czuj\u0105, \u017Ce co\u015B nie gra \u2014 na poziomie g\u0142\u0119bszym ni\u017C techniki i narz\u0119dzia. Szczeg\u00F3lnie IT, finanse i zarz\u0105dzanie. Uczestnicy z 8+ kraj\u00F3w.",
+  },
+];
 
 const About = () => {
   return (
     <Layout>
-      <SEO {...getSEOConfig("/about")} jsonLd={getAboutEntities()} />
+      <SEO {...getSEOConfig("/about")} jsonLd={[
+        ...getAboutEntities(),
+        getBreadcrumbSchema([
+          { name: 'Strona g\u0142\u00F3wna', url: '/' },
+          { name: 'O mnie', url: '/about' },
+        ]),
+        getFAQSchema(aboutFaqs),
+      ]} />
       {(() => { const t = getTopicalConfig("/about"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* 1. HERO */}
@@ -52,10 +78,14 @@ const About = () => {
               Jest Certyfikowanym Trenerem Microsoft (MCT) ze specjalizacją w SQL Server, Power BI i Microsoft Copilot. Absolwent Oxford Brookes University (IT) i SWPS (psychologia). Przeszkolił ponad 10 000 profesjonalistów w firmach Fortune 500 i jednostkach wojskowych NATO w kilkunastu krajach na trzech kontynentach.
             </p>
 
+            <p className="text-xs text-dim mt-6">
+              Aktualizacja: <time dateTime="2026-04-14">kwiecie&#324; 2026</time>
+            </p>
+
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="border border-white/10 rounded-sm p-5">
                 <p className="text-electric font-bold text-2xl mb-1">1 240+</p>
-                <p className="text-sm text-dim">absolwentów programu Produktywność, ocena 4.9/5.0</p>
+                <p className="text-sm text-dim">absolwent&#243;w programu Produktywno&#347;&#263;, ocena 4.9/5.0</p>
               </div>
               <div className="border border-white/10 rounded-sm p-5">
                 <p className="text-electric font-bold text-2xl mb-1">500+</p>
@@ -369,6 +399,28 @@ const About = () => {
               </p>
             </div>
             <p className="text-xl font-bold text-electric mt-8">- Ludwik</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-20 bg-void">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
+            Najczęściej zadawane pytania
+          </h2>
+          <div className="space-y-4">
+            {aboutFaqs.map((faq, i) => (
+              <details key={i} className="group border border-white/10 rounded-md">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-on-dark font-medium hover:text-electric transition-colors">
+                  {faq.question}
+                  <span className="ml-4 text-dim group-open:rotate-45 transition-transform text-xl">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-dim leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

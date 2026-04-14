@@ -14,8 +14,10 @@ const Sitemap = () => {
         { name: 'Kontakt', path: '/contact', description: 'Umów rozmowę lub zadaj pytanie' },
         
         { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na cotygodniowe przemyślenia' },
-        { name: 'Opinie Klientów', path: '/testimonials', description: 'Co mówią moi klienci' },
-        { name: 'Discovery Call', path: '/discovery', description: 'Umów rozmowę odkrywczą' },
+        { name: 'Opinie Klient\u00F3w', path: '/testimonials', description: 'Co m\u00F3wi\u0105 moi klienci' },
+        { name: 'Wywiady', path: '/wywiady', description: 'Rozmowy i wywiady z lat 2018\u20132025' },
+        { name: 'S\u0142ownik', path: '/slownik', description: 'Definicje poj\u0119\u0107 Diamentowego Umys\u0142u' },
+        { name: 'Discovery Call', path: '/discovery', description: 'Um\u00F3w rozmow\u0119 odkrywcz\u0105' },
         { name: 'Strona podziękowania', path: '/thank-you', description: 'Strona potwierdzenia' },
         { name: 'Regulaminy', path: '/legal', description: 'Warunki użytkowania i polityka prywatności' },
         { name: 'Mapa strony', path: '/sitemap', description: 'Przegląd wszystkich stron' },

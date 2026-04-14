@@ -1,6 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
+import { getBreadcrumbSchema } from "@/lib/structured-data";
 
 const definitions = [
   {
@@ -87,17 +89,32 @@ export default function Slownik() {
   return (
     <Layout>
       <SEO
-        title="Słownik Diamentowego Umysłu - Ludwik C. Siadlak"
-        description="Definicje kluczowych pojęć: Aplikacja Mentalna, Diamentowy Umysł, Life OS, Sukno, Kapitan, Pancernik. Poznaj język programów Ludwika C. Siadlaka."
-        url="https://siadlak.com/slownik"
-        jsonLd={[getGlossarySchema()]}
+        {...getSEOConfig("/slownik")}
+        jsonLd={[
+          getGlossarySchema(),
+          getBreadcrumbSchema([
+            { name: 'Strona g\u0142\u00F3wna', url: '/' },
+            { name: 'S\u0142ownik', url: '/slownik' },
+          ]),
+        ]}
       />
 
       <section className="py-16 md:py-24 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-[800px] mx-auto">
+            <nav aria-label="breadcrumb" className="mb-8">
+              <ol className="flex items-center gap-2 text-sm text-dim">
+                <li>
+                  <Link to="/" className="hover:text-electric transition-colors">
+                    Strona g&#322;&#243;wna
+                  </Link>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li className="text-on-dark font-medium">S&#322;ownik</li>
+              </ol>
+            </nav>
             <h1 className="font-heading text-3xl md:text-5xl font-bold text-on-dark mb-6">
-              Słownik Diamentowego Umysłu
+              S&#322;ownik Diamentowego Umys&#322;u
             </h1>
             <p className="text-lg text-dim leading-relaxed mb-4">
               Kluczowe pojęcia używane w{"\u00A0"}programach i{"\u00A0"}metodologii Ludwika C. Siadlaka. Każda definicja jest samowystarczalna - możesz ją przeczytać niezależnie od pozostałych.

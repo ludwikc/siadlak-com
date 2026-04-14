@@ -175,7 +175,7 @@ export default function LifeOSSystemUpgrade() {
               bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
             </p>
 
-            <p className="text-sm text-dim mb-10">8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 osób</p>
+            <p className="text-sm text-dim mb-10">8 tygodni · 1:1 z Ludwikiem · Maksymalnie 5 os&#243;b · Aktualizacja: <time dateTime="2026-04-14">kwiecie&#324; 2026</time></p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <CTAButton
@@ -195,6 +195,25 @@ export default function LifeOSSystemUpgrade() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Definicja — extractable block dla AI */}
+      <section className="py-12 md:py-16 bg-void-glow">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
+            Czym jest Life OS: System Upgrade?
+          </h2>
+          <p className="text-lg text-dim leading-relaxed">
+            Life OS: System Upgrade to 8-tygodniowy program mentoringowy 1:1
+            z Ludwikiem C. Siadlakiem. Pe&#322;na reinstalacja systemu
+            operacyjnego &#380;ycia metod&#261; Diamentowego Umys&#322;u
+            &#8212; praca na poziomie to&#380;samo&#347;ci i sposobu
+            my&#347;lenia, nie technik. Cotygodniowe sesje (50 min&#8211;2,5 h),
+            diagnostyka Life OS, dost&#281;p VIP 24/7. Maksymalnie 5
+            klient&#243;w jednocze&#347;nie. Cena: 16 000 PLN z gwarancj&#261;
+            zwrotu po 2 tygodniach.
+          </p>
         </div>
       </section>
 

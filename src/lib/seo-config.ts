@@ -424,6 +424,36 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/slownik',
+    seo: {
+      title: 'Słownik pojęć — Diamentowy Umysł, Aplikacje Mentalne i inne',
+      description: 'Słownik kluczowych pojęć używanych w programach Ludwika C. Siadlaka: Aplikacja Mentalna, Diamentowy Umysł, Life OS, Sukno, Sesja Discovery i inne. Definicje w jednym miejscu.',
+      keywords: 'słownik, Diamentowy Umysł, Aplikacja Mentalna, Life OS, definicje, Ludwik Siadlak',
+      url: '/slownik'
+    },
+    topical: {
+      primaryTopic: 'glossary of Diamond Mind methodology terms',
+      secondaryTopics: ['mental apps definitions', 'coaching terminology', 'Life OS concepts'],
+      intent: 'informational',
+      significantLinks: ['/program', '/about', '/discovery'],
+    }
+  },
+  {
+    path: '/wywiady',
+    seo: {
+      title: 'Wywiady z Ludwikiem C. Siadlakiem — Rozmowy o Produktywności i Life Hackingu',
+      description: 'Wywiady i podcasty z Ludwikiem C. Siadlakiem — rozmowy o produktywności, life hackingu, pracy zdalnej i przedsiębiorczości. Zaproszenia od Gildi Trenerów, Damiana Mazurka, Bogusza Pękalskiego i innych.',
+      keywords: 'wywiady, Ludwik Siadlak, podcast, rozmowy, produktywność, life hacking',
+      url: '/wywiady'
+    },
+    topical: {
+      primaryTopic: 'interviews and guest appearances',
+      secondaryTopics: ['productivity', 'life hacking', 'remote work', 'IT training career'],
+      intent: 'informational',
+      significantLinks: ['/about', '/program', '/contact'],
+    }
+  },
+  {
     path: '/siadlakvip',
     seo: {
       title: 'SIADLAK.VIP — Społeczność',

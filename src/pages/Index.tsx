@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
-import { getHomepageEntities, getFAQSchema } from "../lib/structured-data";
+import { getHomepageEntities, getFAQSchema, getBreadcrumbSchema } from "../lib/structured-data";
 import { Link } from "react-router-dom";
 import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp?format=avif;webp&as=picture";
 import sessionPhoto5 from "@/assets/Ludwik C. Siadlak-sessionphotos5.webp?format=avif;webp&as=picture";
@@ -94,7 +94,10 @@ const homepageFAQs = [
 const Index = () => {
   return (
     <Layout>
-      <SEO {...getSEOConfig("/")} jsonLd={getHomepageEntities()} />
+      <SEO {...getSEOConfig("/")} jsonLd={[
+        ...getHomepageEntities(),
+        getBreadcrumbSchema([{ name: 'Strona g\u0142\u00F3wna', url: '/' }]),
+      ]} />
       {(() => { const t = getTopicalConfig("/"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* ╔═══════════════════════════════════════════╗
@@ -990,6 +993,7 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-16">
             Ludwik C. Siadlak w liczbach
+            <span className="block text-sm font-normal text-dim mt-2">Aktualizacja: <time dateTime="2026-04-14">kwiecie&#324; 2026</time></span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[

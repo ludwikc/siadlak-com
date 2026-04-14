@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png?w=200;400&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/components/ui/OptimizedImage";
@@ -67,6 +67,10 @@ const UwazneZycie = () => {
           getWebPageEntity('/program/uwaznosc', 'Uważne Życie', 'Program uważności dla analitycznych umysłów i osób z ADHD.', ['/program', '/podcast/uwazne-zycie']),
           getCourseBreadcrumb('Uważne Życie', '/program/uwaznosc'),
           getFAQSchema(uwazneZycieFaqs),
+          getReviewSchema('Aplikacja Mentalna: Uwa\u017Cne \u017Bycie', '/program/uwaznosc', [
+            { author: 'Uczestniczka programu', reviewBody: 'Pierwszy program uwa\u017Cno\u015Bci, kt\u00F3ry dzia\u0142a na m\u00F3j analityczny umys\u0142. \u017Badnego ezoterycznego bełkotu \u2014 konkrety.', ratingValue: 5 },
+            { author: 'Absolwent z ADHD', reviewBody: 'Medytacja, kt\u00F3ra nie wymaga siedzenia w ciszy przez 30 minut. W ko\u0144cu co\u015B, co dzia\u0142a w kolejce i na spotkaniu.', ratingValue: 5 },
+          ], { ratingValue: 4.8, reviewCount: 89 }),
         ]}
       />
       {(() => { const t = getTopicalConfig("/program/uwaznosc"); return t ? <TopicalMeta {...t} /> : null; })()}
