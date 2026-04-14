@@ -8,7 +8,7 @@
 /program/meski-kompas    /program/meskosc    301
 
 # Custom redirects
-/uwaznosc    /program/uwaznosc    301
-/u    /program/uwaznosc    301
+/depresja    /webinar/depresja    301
+/webinar    /webinar/kod-kapitana    301
 
 /*    /index.html   200
