@@ -1,18 +1,5 @@
 import { useEffect, useRef } from "react";
 
-declare global {
-  interface Window {
-    ml?: ((...args: unknown[]) => void) & {
-      q?: unknown[][];
-      fn?: {
-        jsonpRequest?: { make: (url: string, callback: string) => void };
-        account_id?: string;
-        [key: string]: unknown;
-      };
-    };
-  }
-}
-
 const ML_ACCOUNT = "484845";
 
 export default function MailerLiteEmbed({

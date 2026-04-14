@@ -1027,7 +1027,7 @@ const Index = () => {
       {/* ═══ FAQ ═══ */}
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl">
-          <SEO jsonLd={getFAQSchema(homepageFAQs)} />
+          <SEO jsonLd={[getFAQSchema(homepageFAQs)]} />
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
             Najczęściej zadawane pytania
           </h2>

@@ -63,8 +63,8 @@ const interviews = [
 
 export default function Wywiady() {
   const breadcrumb = getBreadcrumbSchema([
-    { name: "Strona g\u0142\u00F3wna", url: "/" },
-    { name: "Wywiady", url: "/wywiady" },
+    { name: "Strona główna", path: "/" },
+    { name: "Wywiady", path: "/wywiady" },
   ]);
 
   const videoSchemas = interviews.map(v =>
