@@ -89,15 +89,17 @@ const interviews = [
     topics: ["kariera", "trener IT", "podróże", "przedsiębiorczość"],
   },
   {
-    id: "G0U9KkV8Hw4",
+    id: "6PcsDxe3thcEHRTEgn4PkX",
+    type: "spotify" as const,
     title: "Życie trenera, lifehacking, rytuały, książki",
     host: "Bogusz Pękalski (Startup My Way)",
-    hostUrl: "https://www.youtube.com/@StartupMyWay",
+    hostUrl: "https://open.spotify.com/show/6PcsDxe3thcEHRTEgn4PkX",
     date: "2018-02-20",
     dateLabel: "20 lutego 2018",
     description:
       "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
     topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
+    contentUrl: "https://open.spotify.com/episode/6PcsDxe3thcEHRTEgn4PkX",
   },
 ];
 
