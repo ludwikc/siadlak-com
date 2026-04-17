@@ -113,6 +113,9 @@ export default function Wspolpraca() {
       <section className="bg-diamond py-20 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <Eyebrow color="dim">BEZPŁATNIE</Eyebrow>
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-8">
+            Zacznijmy lekko: bezpłatne projekty dostępne dla wszystkich
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {freeItems.map((item) => (
               <div key={item.title} className="bg-white border border-black/5 rounded-md p-6 flex flex-col">
