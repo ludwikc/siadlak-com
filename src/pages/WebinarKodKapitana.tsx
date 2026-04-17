@@ -368,7 +368,7 @@ export default function WebinarKodKapitana() {
               <BenefitCard
                 number={2}
                 title="DIAMENTOWY UMYSŁ"
-                subtitle="Dlaczego „chaotyczny" umysł to supermoc"
+                subtitle={'Dlaczego „chaotyczny” umysł to supermoc'}
                 body={
                   <>
                     Zwłaszcza przy ADHD. Przestaniesz walczyć z natłokiem myśli
