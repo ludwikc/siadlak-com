@@ -48,6 +48,7 @@ const routes = [
   '/program/meskosc',
   '/program/uwaznosc',
   '/program/7-technik',
+  '/program/ttt-ai',
   '/start',
   // '/oto', // Disabled - has dynamic dialog that conflicts with prerendering
   '/podcast/life-hacking',

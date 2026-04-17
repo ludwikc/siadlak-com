@@ -96,7 +96,7 @@ const Index = () => {
     <Layout>
       <SEO {...getSEOConfig("/")} jsonLd={[
         ...getHomepageEntities(),
-        getBreadcrumbSchema([{ name: 'Strona g\u0142\u00F3wna', url: '/' }]),
+        getBreadcrumbSchema([{ name: 'Strona g\u0142\u00F3wna', path: '/' }]),
       ]} />
       {(() => { const t = getTopicalConfig("/"); return t ? <TopicalMeta {...t} /> : null; })()}
 
