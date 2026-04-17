@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
 
 const tttFaqs = [
   {
@@ -258,6 +259,18 @@ export default function TrainTheTrainerAI() {
               <p>Bo prawda jest taka, i powiem Ci ją bez owijania: rynek nie płaci za to, co potrafisz <em>zbudować</em>. Rynek płaci za to, co potrafisz <em>przekazać</em> innemu człowiekowi tak, żeby <em>on</em> poczuł, że musi to mieć.</p>
               <p>I to jest dokładnie ta umiejętność, której na laptopie się nie nabywa.</p>
             </div>
+
+            <figure className="mt-12 max-w-3xl mx-auto">
+              <img
+                src={hackerUmyslowImg}
+                alt="Ludwik C. Siadlak na scenie podczas wystąpienia — slajd 'Hacker umysłów'"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto rounded-lg shadow-2xl border border-border-subtle"
+              />
+            </figure>
           </div>
         </div>
       </section>
