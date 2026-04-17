@@ -107,16 +107,18 @@ export default function Wywiady() {
     { name: "Wywiady", path: "/wywiady" },
   ]);
 
-  const videoSchemas = interviews.map(v =>
-    getVideoObjectSchema({
-      name: v.title,
-      description: v.description,
-      thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
-      uploadDate: v.date,
-      contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
-      embedUrl: `https://www.youtube.com/embed/${v.id}`,
-    })
-  );
+  const videoSchemas = interviews
+    .filter(v => !("type" in v) || v.type !== "spotify")
+    .map(v =>
+      getVideoObjectSchema({
+        name: v.title,
+        description: v.description,
+        thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+        uploadDate: v.date,
+        contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+        embedUrl: `https://www.youtube.com/embed/${v.id}`,
+      })
+    );
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -128,7 +130,10 @@ export default function Wywiady() {
     itemListElement: interviews.map((v, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://www.youtube.com/watch?v=${v.id}`,
+      url:
+        "type" in v && v.type === "spotify"
+          ? (v as { contentUrl: string }).contentUrl
+          : `https://www.youtube.com/watch?v=${v.id}`,
     })),
   };
 
