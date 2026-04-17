@@ -250,8 +250,9 @@ export default function TrainTheTrainerAI() {
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
               <p>
-                Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI” na
-                LinkedInie nawet nie słyszała.
+                Biegłość w Claude Code czy Gemini to dziś podstawa. Prawdziwa gra toczy się w warstwie integracji:
+                MCP, skill.md, autonomiczne agenty — o których większość tzw. „ekspertów AI” na LinkedInie pewnie
+                nawet nie słyszała.
               </p>
               <p>
                 Twój agent, którego zbudowałeś w zeszły weekend na własnym laptopie, robi rzeczy, na które Twoi znajomi
