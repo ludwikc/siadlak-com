@@ -65,12 +65,14 @@ export default function Header() {
           {/* Webinar */}
           <Link
             to="/webinar"
-            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-2"
+            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors inline-flex items-start gap-1"
           >
             Webinar
-            <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0 leading-tight uppercase tracking-wider animate-pulse">
-              wkrótce
-            </Badge>
+            <sup className="leading-none">
+              <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1 py-0 leading-none uppercase tracking-wider animate-pulse">
+                wkrótce
+              </Badge>
+            </sup>
           </Link>
 
           {/* Pracuj ze mną – dropdown */}
