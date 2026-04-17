@@ -167,7 +167,7 @@ const deliverables = [
 ];
 
 const forYou = [
-  "Jesteś biegły w narzędziach AI — Claude, Gemini, ChatGPT, agenci, MCP, prompt engineering — i ta biegłość to efekt setek godzin realnej pracy, a nie trzydniowego kursu.",
+  "Jesteś biegły w narzędziach AI — Claude Code i Cowork, Gemini, ChatGPT/Codex, polski Bielik, agenci, MCP, a prompt engineering masz w małym palcu — i ta biegłość to efekt setek godzin realnej pracy, a nie trzydniowego kursu.",
   "Obecnie łapiesz pojedyncze zlecenia — freelance, na godziny, za setki złotych albo niskie kilka tysięcy. Czujesz w kościach, że to jest dramatycznie poniżej Twojej faktycznej wartości.",
   "Nigdy nie stałeś przed salą pełną dyrektorów, HR-owców, menedżerów średniego szczebla. Cała Twoja praca dzieje się dziś przed ekranem — na Twoim komputerze, może czasem na czacie z klientem.",
   "Widzisz agentów i systemy, które zbudowałeś, i wiesz, że są warte krotnie więcej, niż za nie dostajesz — tylko jeszcze nie masz mechanizmu, żeby to uzasadnić i pokazać właściwym ludziom.",
