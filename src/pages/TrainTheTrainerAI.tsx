@@ -156,12 +156,12 @@ const weeks = [
 ];
 
 const deliverables = [
-  "8 × półtoragodzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
+  "8 × 1,5/2-godzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
   "Nieograniczony kontakt tekstowy (prywatny Slack) przez cały czas trwania programu. Piszesz, kiedy trafiasz na ścianę. Odpowiadam w ciągu 24h, zwykle szybciej. W tygodniu Twojego pierwszego warsztatu — praktycznie na żywo.",
-  "Dwa „interwencje ratunkowe” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
+  "Dwie sesje „interwencyjne” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
   "Nagrania i analiza Twoich wystąpień. Przynosisz materiał (nagrania symulacji od tygodnia 4, nagrania realnych wystąpień od tygodnia 8). Rozbieramy je wspólnie. Dostajesz arkusz obserwacji, który sam potem aplikujesz do następnych sesji.",
   "Twój osobisty Trainer's Toolbox. Nie gotowe szablony od kogoś innego. Twoje własne scenariusze, Twoje ćwiczenia, Twoja oferta, Twoja metoda — projektowane razem ze mną. Na końcu programu jest to gotowy do produkcji zestaw, którego nikt Ci nie zabierze i który jest Twoim własnym IP.",
-  "Certyfikacja HACKERZY.PL: Certified AI Trainer po egzaminie praktycznym.",
+  "Certyfikacja HACKERZY.PL Certified AI Trainer po egzaminie praktycznym.",
   "Dożywotni dostęp do sieci certyfikowanych trenerów — zamknięta grupa Discord + pierwszeństwo w zleceniach, których sam nie biorę.",
   "Jedno fizyczne spotkanie, dzień pracy, na zakończenie programu. W Warszawie lub u Ciebie, do uzgodnienia. Bo niektórych rzeczy nie da się przekazać przez Zoom.",
 ];
