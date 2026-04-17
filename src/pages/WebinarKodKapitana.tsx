@@ -378,7 +378,7 @@ export default function WebinarKodKapitana() {
                 }
                 bullets={[
                   "Technika Diamond Mind: ogarnięcie chaosu bez walki",
-                  "Dlaczego próba „uspokojenia umysłu" działa przeciwko Tobie",
+                  'Dlaczego próba „uspokojenia umysłu” działa przeciwko Tobie',
                 ]}
               />
 
@@ -417,7 +417,7 @@ export default function WebinarKodKapitana() {
                   </>
                 }
                 bullets={[
-                  "Nie dlatego, że jest „duchowy" — dlatego, że jest logiczny",
+                  'Nie dlatego, że jest „duchowy” — dlatego, że jest logiczny',
                   "Twój analityczny umysł to zrozumie",
                 ]}
               />
