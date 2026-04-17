@@ -5,12 +5,9 @@ import {
   Check,
   X,
   Brain,
-  Target,
-  Users,
   ShieldCheck,
   Award,
   TrendingUp,
-  Compass,
   MessageSquare,
   Mic,
   Repeat,
@@ -21,7 +18,7 @@ import TopicalMeta from "@/components/TopicalMeta";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import FAQAccordion from "@/components/sales/FAQAccordion";
+
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 
 const tttFaqs = [

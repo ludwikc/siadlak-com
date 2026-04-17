@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import PromoBanner from "./PromoBanner";
 import { useLocation } from "react-router-dom";
 import { isLandingPage } from "../../lib/landing-pages";
 
@@ -24,9 +25,10 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
+      {!shouldHideHeader && <PromoBanner />}
       {!shouldHideHeader && <Header />}
       <main
-        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-16"}`}
+        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[100px]"}`}
       >
         <div className="page-content animate-fade-in">{children}</div>
       </main>
