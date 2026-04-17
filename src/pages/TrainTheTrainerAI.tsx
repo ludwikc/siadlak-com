@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
 
 const tttFaqs = [
   {
