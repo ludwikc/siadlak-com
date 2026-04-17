@@ -857,9 +857,13 @@ export default function TrainTheTrainerAI() {
               <p>Nie sprzedaję tego programu przez formularz. Sprzedaję go przez rozmowę.</p>
               <p>
                 Powód jest prozaiczny: nie biorę każdego. W 2025 odmówiłem 6 osobom, które były gotowe zapłacić pełną
-                stawkę — ale nie widziałem w nich tego, co potrzebne, żeby program się udał. Program skuteczny to
-                program, który skutecznie kończy się transformacją. Transformacja wymaga zgodności energii z mojej
-                strony i z Twojej.
+                stawkę za program mentoringowy{" "}
+                <Link to="/program/lifeos-system-upgrade" className="text-electric hover:underline">
+                  LifeOS: System Upgrade
+                </Link>{" "}
+                — ale nie widziałem w nich tego, co potrzebne, żeby program się udał. Mentoring skuteczny to mentoring,
+                który skutecznie kończy się transformacją. Transformacja wymaga zgodności energii z mojej strony i z
+                Twojej.
               </p>
               <p>
                 Dlatego pierwszy krok to{" "}
