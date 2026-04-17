@@ -5,7 +5,7 @@ import { Badge } from "../ui/badge";
 
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },
-  { label: "Praca 1:1", desc: "Mentoring", to: "/program/lifeos-system-upgrade" },
+  { label: "Praca 1:1", desc: "Mentoring", to: "/mentoring" },
   { label: "Setki Opinii Klientów", to: "/testimonials" },
   { label: "Moja historia", to: "/about" },
   { label: "Kontakt", to: "/contact" },
