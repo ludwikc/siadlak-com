@@ -471,6 +471,23 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/mentoring',
+    seo: {
+      title: 'Mentoring 1:1 — Wybierz swoją ścieżkę | Life OS lub Train The Trainer: AI',
+      description: 'Dwa 8-tygodniowe prywatne programy mentoringowe 1:1 z Ludwikiem C. Siadlakiem. Life OS: System Upgrade — architektura wewnętrzna i diamentowy umysł. Train The Trainer: AI — pozycjonowanie rynkowe i sprzedaż dla ekspertów AI. Wybierz, który bottleneck rozbijamy w tym kwartale.',
+      keywords: 'mentoring 1:1, coaching biznesowy, Life OS, Train The Trainer AI, Ludwik Siadlak, mentoring dla liderów, mentoring dla ekspertów AI',
+      url: '/mentoring',
+      type: 'website'
+    },
+    topical: {
+      primaryTopic: '1:1 mentoring program selection',
+      secondaryTopics: ['Life OS System Upgrade', 'Train The Trainer AI', 'executive coaching', 'AI trainer mentoring'],
+      audience: 'tech leaders, AI experts, founders facing inner or market bottlenecks',
+      intent: 'commercial',
+      significantLinks: ['/program/lifeos-system-upgrade', '/program/ttt-ai', '/discovery'],
+    }
+  },
+  {
     path: '/siadlakvip',
     seo: {
       title: 'SIADLAK.VIP — Społeczność',
