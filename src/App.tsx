@@ -66,6 +66,7 @@ import Links from "./pages/Links";
 import Wspolpraca from "./pages/Wspolpraca";
 import SiadlakVIP from "./pages/SiadlakVIP";
 import MailingMute from "./pages/MailingMute";
+import Mentoring from "./pages/Mentoring";
 import Reset from "./pages/Reset";
 import { Toaster } from "@/components/ui/sonner";
 import Redirect from "./components/Redirect";
@@ -155,6 +156,7 @@ function App() {
               <Route path="/program/:courseSlug" element={<CourseDetail />} />
 
               <Route path="/oto" element={<OTO />} />
+              <Route path="/mentoring" element={<Mentoring />} />
 
               <Route
                 path="/podcast/life-hacking"
