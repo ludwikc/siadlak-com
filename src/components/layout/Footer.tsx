@@ -135,12 +135,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/program/lifeos-system-upgrade"
+                  to="/mentoring"
                   onClick={scrollToTop}
                   className="text-white hover:text-depth transition-colors inline-flex items-center gap-2 font-semibold group"
                 >
                   <span className="inline-block w-2 h-2 bg-gradient-to-br from-electric to-depth rounded-full group-hover:scale-125 transition-transform"></span>
-                  LifeOS: System Upgrade
+                  Mentoring 1:1
                 </Link>
               </li>
               <li>
