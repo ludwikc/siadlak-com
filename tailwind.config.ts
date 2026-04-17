@@ -281,6 +281,10 @@ const config: Config = {
   					opacity: '1',
   					transform: 'translateY(0)'
   				}
+  			},
+  			'marquee': {
+  				'0%': { transform: 'translateX(0%)' },
+  				'100%': { transform: 'translateX(-50%)' }
   			}
   		},
   		animation: {
@@ -293,6 +297,7 @@ const config: Config = {
   			'slide-in-right': 'slide-in-right 0.3s ease-out',
   			'slide-out-right': 'slide-out-right 0.3s ease-out',
   			'page-transition': 'page-transition 0.3s ease-out',
+  			'marquee': 'marquee 25s linear infinite',
   			enter: 'fade-in 0.3s ease-out, scale-in 0.2s ease-out',
   			exit: 'fade-out 0.3s ease-out, scale-out 0.2s ease-out'
   		}
