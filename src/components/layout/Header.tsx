@@ -19,13 +19,17 @@ const moreItems: { label: string; desc?: string; to: string; external?: boolean 
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const moreRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const moreTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (moreTimeoutRef.current) clearTimeout(moreTimeoutRef.current);
     };
   }, []);
 
@@ -36,6 +40,15 @@ export default function Header() {
 
   const closeDropdown = () => {
     timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+  };
+
+  const openMore = () => {
+    if (moreTimeoutRef.current) clearTimeout(moreTimeoutRef.current);
+    setMoreOpen(true);
+  };
+
+  const closeMore = () => {
+    moreTimeoutRef.current = setTimeout(() => setMoreOpen(false), 150);
   };
 
 
