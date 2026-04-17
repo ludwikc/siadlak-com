@@ -141,9 +141,11 @@ export default function HakowanieProduktywnosci() {
             <Button
               variant="special"
               size="lg"
-              className="text-lg px-12 py-5"
+              className="text-sm sm:text-lg px-4 sm:px-12 py-4 sm:py-5 w-full sm:w-auto whitespace-normal break-words text-center leading-tight max-w-full h-auto"
             >
-              Bezpłatne 4-dniowe wyzwanie · Sprawdź, jak działasz pod presją →
+              <span className="block sm:inline">Bezpłatne 4-dniowe wyzwanie</span>
+              <span className="hidden sm:inline"> · </span>
+              <span className="block sm:inline">Sprawdź, jak działasz pod presją →</span>
             </Button>
           </div>
         </div>
