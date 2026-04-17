@@ -72,14 +72,14 @@ export default function Mentoring() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Path 1: TTT:AI */}
-            <article className="flex flex-col rounded-lg border border-white/10 bg-void-glow p-6 md:p-8">
+            <article className="min-w-0 flex flex-col rounded-lg border border-white/10 bg-void-glow p-5 sm:p-6 md:p-8 overflow-hidden">
               <p className="text-electric font-mono text-xs uppercase tracking-widest mb-2">
                 Ścieżka 1 · Zewnątrz
               </p>
               <p className="text-dim text-sm mb-4">
                 Rynek, Dźwignia i Rzemiosło.
               </p>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-4">
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-on-dark mb-4 break-words hyphens-auto">
                 Train The Trainer: AI
               </h2>
               <div className="space-y-4 text-dim text-sm md:text-base leading-relaxed mb-6">
@@ -104,24 +104,24 @@ export default function Mentoring() {
               </ul>
 
               <div className="mt-auto">
-                <Button asChild className="w-full bg-brand-gradient text-white uppercase tracking-wide font-bold">
+                <Button asChild className="w-full h-auto min-h-[48px] py-3 px-4 bg-brand-gradient text-white uppercase tracking-wide font-bold whitespace-normal text-center text-xs sm:text-sm leading-tight">
                   <Link to="/program/ttt-ai">
-                    Sprawdź szczegóły Train The Trainer: AI
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <span className="break-words">Sprawdź szczegóły TTT: AI</span>
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                   </Link>
                 </Button>
               </div>
             </article>
 
             {/* Path 2: Life OS */}
-            <article className="flex flex-col rounded-lg border border-white/10 bg-void-glow p-6 md:p-8">
+            <article className="min-w-0 flex flex-col rounded-lg border border-white/10 bg-void-glow p-5 sm:p-6 md:p-8 overflow-hidden">
               <p className="text-electric font-mono text-xs uppercase tracking-widest mb-2">
                 Ścieżka 2 · Wewnątrz
               </p>
               <p className="text-dim text-sm mb-4">
                 Spokój, Decyzje i Architektura Umysłu.
               </p>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-4">
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-on-dark mb-4 break-words hyphens-auto">
                 Life OS: System Upgrade
               </h2>
               <div className="space-y-4 text-dim text-sm md:text-base leading-relaxed mb-6">
@@ -146,10 +146,10 @@ export default function Mentoring() {
               </ul>
 
               <div className="mt-auto">
-                <Button asChild className="w-full bg-brand-gradient text-white uppercase tracking-wide font-bold">
+                <Button asChild className="w-full h-auto min-h-[48px] py-3 px-4 bg-brand-gradient text-white uppercase tracking-wide font-bold whitespace-normal text-center text-xs sm:text-sm leading-tight">
                   <Link to="/program/lifeos-system-upgrade">
-                    Sprawdź szczegóły Life OS: System Upgrade
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <span className="break-words">Sprawdź szczegóły Life OS</span>
+                    <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
                   </Link>
                 </Button>
               </div>
@@ -170,10 +170,10 @@ export default function Mentoring() {
           <p className="text-on-light-dim text-base md:text-lg leading-relaxed mb-8">
             Wejdziemy na Meet. Zadam Ci kilka pytań, które błyskawicznie obnażą, gdzie leży Twój prawdziwy bottleneck. Na koniec tej rozmowy będziesz wiedział, co robić — niezależnie od tego, czy zrobimy to razem, czy pójdziesz z tym dalej sam.
           </p>
-          <Button asChild size="lg" className="w-full sm:w-auto bg-brand-gradient text-white uppercase tracking-wide font-bold">
+          <Button asChild size="lg" className="w-full sm:w-auto h-auto min-h-[48px] py-3 px-4 bg-brand-gradient text-white uppercase tracking-wide font-bold whitespace-normal text-center text-xs sm:text-sm leading-tight">
             <Link to="/discovery">
-              Umów bezpłatną, 30-minutową Sesję Discovery
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <span className="break-words">Umów bezpłatną Sesję Discovery</span>
+              <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
             </Link>
           </Button>
         </div>
