@@ -8,7 +8,7 @@ import { Sparkles, ArrowRight } from "lucide-react";
 export default function PromoBanner() {
   // Single message unit, repeated to create a seamless loop.
   const MessageUnit = () => (
-    <span className="inline-flex items-center gap-3 px-[120px] text-[11px] sm:text-xs whitespace-nowrap">
+    <span className="inline-flex items-center gap-3 px-[240px] text-[11px] sm:text-xs whitespace-nowrap">
       <Sparkles size={12} className="text-white/80 flex-shrink-0" aria-hidden="true" />
       <span className="text-white/70 uppercase tracking-[0.2em] font-semibold">
         Nowy program
