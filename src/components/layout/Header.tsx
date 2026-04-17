@@ -69,7 +69,7 @@ export default function Header() {
           >
             Webinar
             <sup className="leading-none">
-              <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1 py-0 leading-none uppercase tracking-wider animate-pulse">
+              <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
                 wkrótce
               </Badge>
             </sup>
@@ -177,7 +177,7 @@ export default function Header() {
             >
               Webinar
               <sup className="leading-none">
-                <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1 py-0 leading-none uppercase tracking-wider animate-pulse">
+                <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
                   wkrótce
                 </Badge>
               </sup>
