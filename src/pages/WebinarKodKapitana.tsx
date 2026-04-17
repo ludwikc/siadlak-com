@@ -51,6 +51,36 @@ export default function WebinarKodKapitana() {
               </div>
             </div>
 
+            {/* Prominent date / time strip */}
+            <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
+              <div
+                className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 px-5 py-4 sm:px-8 sm:py-5 rounded-2xl border backdrop-blur-md"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.45) 100%)",
+                  borderColor: "rgba(125,211,252,0.25)",
+                  boxShadow:
+                    "0 12px 32px rgba(0,0,0,0.35), 0 0 40px rgba(56,189,248,0.1)",
+                }}
+              >
+                <div className="flex items-center gap-2.5 text-slate-100">
+                  <span className="text-xl" aria-hidden="true">📅</span>
+                  <span className="font-semibold text-sm sm:text-base">
+                    <span className="text-sky-300/80 mr-1.5">Data:</span>
+                    poniedziałek 27.04
+                  </span>
+                </div>
+                <div className="hidden sm:block w-px h-6 bg-slate-600/60"></div>
+                <div className="flex items-center gap-2.5 text-slate-100">
+                  <span className="text-xl" aria-hidden="true">🕖</span>
+                  <span className="font-semibold text-sm sm:text-base">
+                    <span className="text-sky-300/80 mr-1.5">Godzina:</span>
+                    19:00 – 20:30
+                  </span>
+                </div>
+              </div>
+            </div>
+
             <div className="text-center animate-fade-in">
               <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-[1.15] tracking-tight">
                 <span className="text-slate-100">KOD KAPITANA:</span>
