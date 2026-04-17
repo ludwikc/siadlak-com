@@ -126,7 +126,7 @@ const weeks = [
   {
     n: 3,
     title: "Metoda. Projektowanie warsztatu, który działa.",
-    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni). Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
+    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji”, „Agenci AI w obsłudze klienta”, „Automatyzacja procesów back-office z Claude”, „AI dla działów prawnych i compliance”, „Prompt engineering dla analityków danych” — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
   },
   {
     n: 4,
@@ -151,23 +151,23 @@ const weeks = [
   {
     n: 8,
     title: "Certyfikacja i Twój pierwszy realny dzień jako Trener AI.",
-    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej, społeczności LIFEHACKERZY i Fundacji HACKERZY.PL — realny feedback, nie „klepanie po ramieniu”). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy całogodzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI HACKERZY.PL, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między tygodniem 6 a tygodniem 12 (cztery tygodnie po formalnym końcu programu).",
+    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej i Fundacji HACKERZY.PL, nie aktorzy). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy 3-godzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI Lifehackerzy, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między 6 a 12 tygodniem (dwa-cztery tygodnie po formalnym końcu programu).",
   },
 ];
 
 const deliverables = [
-  "8 × półtoragodzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
+  "8 × 1,5/2-godzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
   "Nieograniczony kontakt tekstowy (prywatny Slack) przez cały czas trwania programu. Piszesz, kiedy trafiasz na ścianę. Odpowiadam w ciągu 24h, zwykle szybciej. W tygodniu Twojego pierwszego warsztatu — praktycznie na żywo.",
-  "Dwa „interwencje ratunkowe” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
+  "Dwie sesje „interwencyjne” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
   "Nagrania i analiza Twoich wystąpień. Przynosisz materiał (nagrania symulacji od tygodnia 4, nagrania realnych wystąpień od tygodnia 8). Rozbieramy je wspólnie. Dostajesz arkusz obserwacji, który sam potem aplikujesz do następnych sesji.",
   "Twój osobisty Trainer's Toolbox. Nie gotowe szablony od kogoś innego. Twoje własne scenariusze, Twoje ćwiczenia, Twoja oferta, Twoja metoda — projektowane razem ze mną. Na końcu programu jest to gotowy do produkcji zestaw, którego nikt Ci nie zabierze i który jest Twoim własnym IP.",
-  "Certyfikacja HACKERZY.PL: Certified AI Trainer po egzaminie praktycznym.",
+  "Certyfikacja HACKERZY.PL Certified AI Trainer po egzaminie praktycznym.",
   "Dożywotni dostęp do sieci certyfikowanych trenerów — zamknięta grupa Discord + pierwszeństwo w zleceniach, których sam nie biorę.",
   "Jedno fizyczne spotkanie, dzień pracy, na zakończenie programu. W Warszawie lub u Ciebie, do uzgodnienia. Bo niektórych rzeczy nie da się przekazać przez Zoom.",
 ];
 
 const forYou = [
-  "Jesteś biegły w narzędziach AI — Claude, Gemini, ChatGPT, agenci, MCP, prompt engineering — i ta biegłość to efekt setek godzin realnej pracy, a nie trzydniowego kursu.",
+  "Jesteś biegły w narzędziach AI — Claude Code i Cowork, Gemini, ChatGPT/Codex, polski Bielik, agenci, MCP, a prompt engineering masz w małym palcu — i ta biegłość to efekt setek godzin realnej pracy, a nie trzydniowego kursu.",
   "Obecnie łapiesz pojedyncze zlecenia — freelance, na godziny, za setki złotych albo niskie kilka tysięcy. Czujesz w kościach, że to jest dramatycznie poniżej Twojej faktycznej wartości.",
   "Nigdy nie stałeś przed salą pełną dyrektorów, HR-owców, menedżerów średniego szczebla. Cała Twoja praca dzieje się dziś przed ekranem — na Twoim komputerze, może czasem na czacie z klientem.",
   "Widzisz agentów i systemy, które zbudowałeś, i wiesz, że są warte krotnie więcej, niż za nie dostajesz — tylko jeszcze nie masz mechanizmu, żeby to uzasadnić i pokazać właściwym ludziom.",
@@ -250,8 +250,9 @@ export default function TrainTheTrainerAI() {
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
               <p>
-                Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI” na
-                LinkedInie nawet nie słyszała.
+                Biegłość w Claude Code czy Gemini to dziś podstawa. Prawdziwa gra toczy się w warstwie integracji:
+                MCP, skill.md, autonomiczne agenty — o których większość tzw. „ekspertów AI” na LinkedInie pewnie
+                nawet nie słyszała.
               </p>
               <p>
                 Twój agent, którego zbudowałeś w zeszły weekend na własnym laptopie, robi rzeczy, na które Twoi znajomi
@@ -856,9 +857,13 @@ export default function TrainTheTrainerAI() {
               <p>Nie sprzedaję tego programu przez formularz. Sprzedaję go przez rozmowę.</p>
               <p>
                 Powód jest prozaiczny: nie biorę każdego. W 2025 odmówiłem 6 osobom, które były gotowe zapłacić pełną
-                stawkę — ale nie widziałem w nich tego, co potrzebne, żeby program się udał. Program skuteczny to
-                program, który skutecznie kończy się transformacją. Transformacja wymaga zgodności energii z mojej
-                strony i z Twojej.
+                stawkę za program mentoringowy{" "}
+                <Link to="/program/lifeos-system-upgrade" className="text-electric hover:underline">
+                  LifeOS: System Upgrade
+                </Link>{" "}
+                — ale nie widziałem w nich tego, co potrzebne, żeby program się udał. Mentoring skuteczny to mentoring,
+                który skutecznie kończy się transformacją. Transformacja wymaga zgodności energii z mojej strony i z
+                Twojej.
               </p>
               <p>
                 Dlatego pierwszy krok to{" "}
@@ -946,10 +951,19 @@ export default function TrainTheTrainerAI() {
               <p>Ale nie udawaj, że nie widziałeś tej strony.</p>
               <p>Do usłyszenia,</p>
               <p>
-                <strong className="text-on-light">Ludwik Siadlak</strong>
+                <strong className="text-on-light">Ludwik C. Siadlak</strong>
                 <br />
                 <span className="text-sm">
-                  Microsoft Certified Trainer · Twórca Lifehackerzy · Twój mentor w Train The Trainer: AI
+                  Microsoft Certified Trainer · Twórca społeczności{" "}
+                  <a
+                    href="https://lifehackerzy.pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-electric hover:underline"
+                  >
+                    Lifehackerzy
+                  </a>{" "}
+                  · Twój mentor w Train The Trainer: AI
                 </span>
               </p>
             </div>
@@ -966,10 +980,10 @@ export default function TrainTheTrainerAI() {
               </Button>
             </div>
             <p className="text-xs text-on-light-dim italic text-center max-w-2xl mx-auto">
-              Program Train The Trainer: AI prowadzony jest indywidualnie przeze mnie. Certyfikat „Certified AI Trainer”
-              wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja inauguracyjna Q2 2026 —
-              3 miejsca w cenie 7 999 zł netto. Edycja regularna od Q3 2026 — maksymalnie 4 miejsca na kwartał, 24 999
-              zł netto.
+              Program Train The Trainer: AI prowadzony jest osobiście przeze mnie. Certyfikat „HACKERZY.PL Certified
+              AI Trainer” wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja
+              inauguracyjna Q2 2026 — 3 miejsca w cenie 7 999 zł netto. Edycja regularna od Q3 2026 — maksymalnie 4
+              miejsca na kwartał, 24 999 zł netto.
             </p>
           </div>
         </div>
