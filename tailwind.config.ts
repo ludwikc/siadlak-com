@@ -281,6 +281,10 @@ const config: Config = {
   					opacity: '1',
   					transform: 'translateY(0)'
   				}
+  			},
+  			'marquee': {
+  				'0%': { transform: 'translateX(0%)' },
+  				'100%': { transform: 'translateX(-50%)' }
   			}
   		},
   		animation: {
