@@ -65,15 +65,17 @@ const interviews = [
     topics: ["life hacking", "filozofia", "optymalizacja", "mindset"],
   },
   {
-    id: "G0U9KkV8Hw4",
-    title: "Życie trenera, lifehacking, rytuały, książki",
-    host: "Bogusz Pękalski (Startup My Way)",
-    hostUrl: "https://www.youtube.com/@StartupMyWay",
-    date: "2018-02-20",
-    dateLabel: "20 lutego 2018",
+    id: "3xKk63ScdM3xXJDUquCGYd",
+    type: "spotify" as const,
+    title: "Dynamika talentów w praktyce",
+    host: "Dominik Juszczyk (Z pasją o mocnych stronach)",
+    hostUrl: "https://open.spotify.com/show/3xKk63ScdM3xXJDUquCGYd",
+    date: "2018-07-05",
+    dateLabel: "5 lipca 2018",
     description:
-      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
-    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
+      "Nasze działanie nie wynika z działania pojedynczych talentów. Talenty wzajemnie na siebie oddziałują, wzmacniają się, osłabiają — to dynamika talentów. Rozmowa z Dominikiem Juszczykiem, w której przechodzimy po dominujących talentach Ludwika, jego drodze i tym, co dziś robi w życiu. Jedna z tych rozmów, w których zapomina się o czasie.",
+    topics: ["talenty", "Gallup", "rozwój osobisty", "rozmowa"],
+    contentUrl: "https://open.spotify.com/episode/3xKk63ScdM3xXJDUquCGYd",
   },
   {
     id: "HENveKXgNpY",
@@ -86,6 +88,17 @@ const interviews = [
       "Ścieżka od Certyfikowanego Trenera Microsoft do własnego biznesu edukacyjnego. Jak zbudować karierę trenera IT, pracować z dowolnego miejsca na świecie i przejść od szkoleń korporacyjnych do rozwoju osobistego.",
     topics: ["kariera", "trener IT", "podróże", "przedsiębiorczość"],
   },
+  {
+    id: "G0U9KkV8Hw4",
+    title: "Życie trenera, lifehacking, rytuały, książki",
+    host: "Bogusz Pękalski (Startup My Way)",
+    hostUrl: "https://www.youtube.com/@StartupMyWay",
+    date: "2018-02-20",
+    dateLabel: "20 lutego 2018",
+    description:
+      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
+    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
+  },
 ];
 
 export default function Wywiady() {
@@ -94,16 +107,18 @@ export default function Wywiady() {
     { name: "Wywiady", path: "/wywiady" },
   ]);
 
-  const videoSchemas = interviews.map(v =>
-    getVideoObjectSchema({
-      name: v.title,
-      description: v.description,
-      thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
-      uploadDate: v.date,
-      contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
-      embedUrl: `https://www.youtube.com/embed/${v.id}`,
-    })
-  );
+  const videoSchemas = interviews
+    .filter(v => !("type" in v) || v.type !== "spotify")
+    .map(v =>
+      getVideoObjectSchema({
+        name: v.title,
+        description: v.description,
+        thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+        uploadDate: v.date,
+        contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+        embedUrl: `https://www.youtube.com/embed/${v.id}`,
+      })
+    );
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -115,7 +130,10 @@ export default function Wywiady() {
     itemListElement: interviews.map((v, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://www.youtube.com/watch?v=${v.id}`,
+      url:
+        "type" in v && v.type === "spotify"
+          ? (v as { contentUrl: string }).contentUrl
+          : `https://www.youtube.com/watch?v=${v.id}`,
     })),
   };
 
@@ -191,17 +209,32 @@ export default function Wywiady() {
           <div className="max-w-4xl mx-auto space-y-16">
             {interviews.map(interview => (
               <article key={interview.id} className="group">
-                <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${interview.id}`}
-                    title={interview.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    loading="lazy"
-                    className="w-full h-full"
-                  />
-                </div>
+                {"type" in interview && interview.type === "spotify" ? (
+                  <div className="rounded-md overflow-hidden mb-6 bg-void">
+                    <iframe
+                      src={`https://open.spotify.com/embed/episode/${interview.id}?utm_source=generator`}
+                      title={interview.title}
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      width="100%"
+                      height={352}
+                      style={{ borderRadius: 12 }}
+                      className="w-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${interview.id}`}
+                      title={interview.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      loading="lazy"
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
 
                 <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-2">
                   {interview.title}
