@@ -119,6 +119,36 @@ export default function Header() {
             )}
           </div>
 
+          {/* Więcej – dropdown */}
+          <div ref={moreRef} className="relative" onMouseEnter={openMore} onMouseLeave={closeMore}>
+            <button
+              onClick={() => setMoreOpen((v) => !v)}
+              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
+            >
+              Więcej
+              <ChevronDown
+                size={14}
+                className={`transition-transform duration-200 ${moreOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {moreOpen && (
+              <div className="absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
+                {moreItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMoreOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    {item.label}
+                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Aplikuj CTA */}
           <Link
             to="/discovery"
