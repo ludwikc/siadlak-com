@@ -126,7 +126,7 @@ const weeks = [
   {
     n: 3,
     title: "Metoda. Projektowanie warsztatu, który działa.",
-    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni). Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
+    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji”, „Agenci AI w obsłudze klienta”, „Automatyzacja procesów back-office z Claude”, „AI dla działów prawnych i compliance”, „Prompt engineering dla analityków danych” — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
   },
   {
     n: 4,
