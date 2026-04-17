@@ -951,10 +951,19 @@ export default function TrainTheTrainerAI() {
               <p>Ale nie udawaj, że nie widziałeś tej strony.</p>
               <p>Do usłyszenia,</p>
               <p>
-                <strong className="text-on-light">Ludwik Siadlak</strong>
+                <strong className="text-on-light">Ludwik C. Siadlak</strong>
                 <br />
                 <span className="text-sm">
-                  Microsoft Certified Trainer · Twórca Lifehackerzy · Twój mentor w Train The Trainer: AI
+                  Microsoft Certified Trainer · Twórca społeczności{" "}
+                  <a
+                    href="https://lifehackerzy.pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-electric hover:underline"
+                  >
+                    Lifehackerzy
+                  </a>{" "}
+                  · Twój mentor w Train The Trainer: AI
                 </span>
               </p>
             </div>
