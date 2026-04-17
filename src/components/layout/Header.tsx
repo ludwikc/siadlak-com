@@ -12,8 +12,8 @@ const dropdownItems: { label: string; desc?: string; to: string }[] = [
 ];
 
 const moreItems: { label: string; desc?: string; to: string; external?: boolean }[] = [
-  { label: "Wywiady", desc: "Media o mnie", to: "/wywiady" },
   { label: "O mnie", desc: "Moja historia", to: "/about" },
+  { label: "Wywiady", desc: "Rozmowy z Podcasterami", to: "/wywiady" },
   { label: "SIADLAK.VIP", desc: "Prywatna grupa Telegram", to: "/siadlakvip" },
 ];
 
