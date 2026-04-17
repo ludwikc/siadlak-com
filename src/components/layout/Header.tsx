@@ -11,6 +11,12 @@ const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Kontakt", to: "/contact" },
 ];
 
+const moreItems: { label: string; desc?: string; to: string; external?: boolean }[] = [
+  { label: "Wywiady", desc: "Media o mnie", to: "/wywiady" },
+  { label: "O mnie", desc: "Moja historia", to: "/about" },
+  { label: "SIADLAK.VIP", desc: "Prywatna grupa Telegram", to: "/siadlakvip" },
+];
+
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
