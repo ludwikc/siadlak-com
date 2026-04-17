@@ -56,6 +56,7 @@ import HelpSubpage from "./pages/HelpSubpage";
 
 import HakowanieProduktywnosci from "./pages/HakowanieProduktywnosci";
 import SiedemTechnik from "./pages/SiedemTechnik";
+import TrainTheTrainerAI from "./pages/TrainTheTrainerAI";
 import WebinarMeskiKompas from "./pages/WebinarMeskiKompas";
 import WebinarKodKapitana from "./pages/WebinarKodKapitana";
 import WebinarDepresja from "./pages/WebinarDepresja";
@@ -150,6 +151,7 @@ function App() {
               <Route path="/program/meskosc" element={<MeskiKompas />} />
               <Route path="/program/uwaznosc" element={<UwazneZycie />} />
               <Route path="/program/7-technik" element={<SiedemTechnik />} />
+              <Route path="/program/ttt-ai" element={<TrainTheTrainerAI />} />
               <Route path="/program/:courseSlug" element={<CourseDetail />} />
 
               <Route path="/oto" element={<OTO />} />

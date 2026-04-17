@@ -454,6 +454,23 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
+    path: '/program/ttt-ai',
+    seo: {
+      title: 'Train The Trainer: AI — Mentoring 1:1 dla ekspertów AI',
+      description: '8-tygodniowy prywatny mentoring 1:1 dla ekspertów AI, którzy chcą zostać certyfikowanymi trenerami. Prowadzi Ludwik Siadlak — Microsoft Certified Trainer z 20-letnim doświadczeniem (US Army, US Navy, Fortune 500). Maks. 4 miejsca na kwartał.',
+      keywords: 'train the trainer AI, trener AI, mentoring 1:1, certyfikacja trenera AI, szkolenia AI Polska, Ludwik Siadlak, MCT',
+      url: '/program/ttt-ai',
+      type: 'course'
+    },
+    topical: {
+      primaryTopic: 'AI trainer certification',
+      secondaryTopics: ['1:1 mentoring', 'AI training business', 'B2B sales for trainers', 'workshop design'],
+      audience: 'AI experts, prompt engineers, AI freelancers transitioning to corporate training',
+      intent: 'commercial',
+      significantLinks: ['/discovery', '/program', '/about'],
+    }
+  },
+  {
     path: '/siadlakvip',
     seo: {
       title: 'SIADLAK.VIP — Społeczność',

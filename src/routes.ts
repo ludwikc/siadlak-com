@@ -21,6 +21,7 @@ export const routes = [
   '/oto',
   '/podcast/life-hacking',
   '/program/uwaznosc',
+  '/program/ttt-ai',
   '/webinar',
   '/webinar/expired',
   '/webinar/replay',

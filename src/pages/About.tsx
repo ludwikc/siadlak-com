@@ -32,8 +32,8 @@ const About = () => {
       <SEO {...getSEOConfig("/about")} jsonLd={[
         ...getAboutEntities(),
         getBreadcrumbSchema([
-          { name: 'Strona g\u0142\u00F3wna', url: '/' },
-          { name: 'O mnie', url: '/about' },
+          { name: 'Strona g\u0142\u00F3wna', path: '/' },
+          { name: 'O mnie', path: '/about' },
         ]),
         getFAQSchema(aboutFaqs),
       ]} />

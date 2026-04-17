@@ -112,8 +112,8 @@ export default function Slownik() {
         jsonLd={[
           getGlossarySchema(),
           getBreadcrumbSchema([
-            { name: 'Strona g\u0142\u00F3wna', url: '/' },
-            { name: 'S\u0142ownik', url: '/slownik' },
+            { name: 'Strona g\u0142\u00F3wna', path: '/' },
+            { name: 'S\u0142ownik', path: '/slownik' },
           ]),
           getFAQSchema(slownikFaqs),
         ]}
