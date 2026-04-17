@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
 
 const tttFaqs = [
   {
@@ -285,6 +286,15 @@ export default function TrainTheTrainerAI() {
               </p>
               <p>I to jest dokładnie ta umiejętność, której na laptopie się nie nabywa.</p>
             </div>
+            <figure className="mt-12 max-w-3xl mx-auto">
+              <img
+                src={hackerUmyslowImg}
+                alt="Ludwik C. Siadlak na scenie podczas wystąpienia — slajd „Hacker umysłów”"
+                className="w-full h-auto rounded-lg shadow-2xl border border-on-light/10"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>
