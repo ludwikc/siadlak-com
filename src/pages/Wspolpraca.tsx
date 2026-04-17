@@ -198,38 +198,86 @@ export default function Wspolpraca() {
       <section className="bg-void-glow py-20 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <Eyebrow color="depth">PREMIUM</Eyebrow>
-          <div className="border-2 border-electric/40 rounded-md p-8 md:p-12 bg-surface">
-            <span className="text-3xl mb-4 block" aria-hidden="true">⚡</span>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-2">
-              Life OS: System Upgrade - Mentoring 1:1
-            </h2>
-            <p className="text-electric text-sm font-bold uppercase tracking-wider mb-6">
-              8 tygodni · Maksymalnie 5 osób · Cały nowy system operacyjny
-            </p>
-            <p className="text-dim text-base leading-relaxed mb-4">
-              Nie kolejna aplikacja mentalna - pełna praca nad fundamentami. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno. Bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
-            </p>
-            <p className="text-dim text-base leading-relaxed mb-8">
-              Zaczynamy od Sesji Discovery - 30 minut na Zoom, żebyśmy obaj wiedzieli, czy mamy ze sobą pracować.
-            </p>
-            <p className="text-white font-bold text-lg mb-8">
-              16 000 PLN · Faktura VAT · Gwarancja transformacji
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/discovery"
-                className="inline-block text-center bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
-              >
-                Sprawdź dostępność - Sesja Discovery →
-              </Link>
-              <Link
-                to="/program/lifeos-system-upgrade"
-                className="inline-block text-center border border-white/20 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-white/40 transition-colors"
-              >
-                Pełny opis programu →
-              </Link>
+          <p className="text-dim text-sm mb-6">
+            Dwa 8-tygodniowe programy mentoringowe 1:1. Wybierz, w którym miejscu uderzasz głową w sufit.
+          </p>
+
+          <div className="space-y-6">
+            {/* Life OS */}
+            <div className="border-2 border-electric/40 rounded-md p-6 sm:p-8 md:p-12 bg-surface">
+              <span className="text-3xl mb-4 block" aria-hidden="true">⚡</span>
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-2 break-words">
+                Life OS: System Upgrade — Mentoring 1:1
+              </h2>
+              <p className="text-electric text-xs sm:text-sm font-bold uppercase tracking-wider mb-6">
+                8 tygodni · Maksymalnie 5 osób · Cały nowy system operacyjny
+              </p>
+              <p className="text-dim text-base leading-relaxed mb-4">
+                Nie kolejna aplikacja mentalna - pełna praca nad fundamentami. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno. Bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
+              </p>
+              <p className="text-dim text-base leading-relaxed mb-8">
+                Zaczynamy od Sesji Discovery - 30 minut na Zoom, żebyśmy obaj wiedzieli, czy mamy ze sobą pracować.
+              </p>
+              <p className="text-white font-bold text-lg mb-8">
+                16 000 PLN · Faktura VAT · Gwarancja transformacji
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/discovery"
+                  className="inline-block text-center bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
+                >
+                  Sprawdź dostępność - Sesja Discovery →
+                </Link>
+                <Link
+                  to="/program/lifeos-system-upgrade"
+                  className="inline-block text-center border border-white/20 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-white/40 transition-colors"
+                >
+                  Pełny opis programu →
+                </Link>
+              </div>
+            </div>
+
+            {/* Train The Trainer: AI */}
+            <div className="border-2 border-electric/40 rounded-md p-6 sm:p-8 md:p-12 bg-surface">
+              <span className="text-3xl mb-4 block" aria-hidden="true">🎤</span>
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-2 break-words">
+                Train The Trainer: AI — Mentoring 1:1
+              </h2>
+              <p className="text-electric text-xs sm:text-sm font-bold uppercase tracking-wider mb-6">
+                8 tygodni · Maksymalnie 4 miejsca / kwartał · Rynek, dźwignia, rzemiosło
+              </p>
+              <p className="text-dim text-base leading-relaxed mb-4">
+                Dla ekspertów AI, którzy zbudowali potęgę na laptopie — i są gotowi w końcu dostawać za nią stawki, które są warci. Most z ligi „freelancera za kilkaset złotych” do „eksperta biorącego 5 000 – 10 000 zł za dzień warsztatowy”.
+              </p>
+              <p className="text-dim text-base leading-relaxed mb-8">
+                Prowadzi Microsoft Certified Trainer z 20-letnim doświadczeniem (US Army, US Navy, Fortune 500). Zaczynamy od rozmowy kwalifikacyjnej.
+              </p>
+              <p className="text-white font-bold text-lg mb-8">
+                Edycja inauguracyjna 7 999 zł netto · Regularna 24 999 zł netto · Faktura VAT
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/discovery"
+                  className="inline-block text-center bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
+                >
+                  Sprawdź dostępność - Sesja Discovery →
+                </Link>
+                <Link
+                  to="/program/ttt-ai"
+                  className="inline-block text-center border border-white/20 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-white/40 transition-colors"
+                >
+                  Pełny opis programu →
+                </Link>
+              </div>
             </div>
           </div>
+
+          <p className="text-dim text-sm mt-6 text-center">
+            Nie wiesz, który wybrać?{" "}
+            <Link to="/mentoring" className="text-electric font-bold hover:underline">
+              Porównaj oba programy →
+            </Link>
+          </p>
         </div>
       </section>
 
