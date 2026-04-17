@@ -65,15 +65,17 @@ const interviews = [
     topics: ["life hacking", "filozofia", "optymalizacja", "mindset"],
   },
   {
-    id: "G0U9KkV8Hw4",
-    title: "Życie trenera, lifehacking, rytuały, książki",
-    host: "Bogusz Pękalski (Startup My Way)",
-    hostUrl: "https://www.youtube.com/@StartupMyWay",
-    date: "2018-02-20",
-    dateLabel: "20 lutego 2018",
+    id: "3xKk63ScdM3xXJDUquCGYd",
+    type: "spotify" as const,
+    title: "Dynamika talentów w praktyce",
+    host: "Dominik Juszczyk (Z pasją o mocnych stronach)",
+    hostUrl: "https://open.spotify.com/show/3xKk63ScdM3xXJDUquCGYd",
+    date: "2018-07-05",
+    dateLabel: "5 lipca 2018",
     description:
-      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
-    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
+      "Nasze działanie nie wynika z działania pojedynczych talentów. Talenty wzajemnie na siebie oddziałują, wzmacniają się, osłabiają — to dynamika talentów. Rozmowa z Dominikiem Juszczykiem, w której przechodzimy po dominujących talentach Ludwika, jego drodze i tym, co dziś robi w życiu. Jedna z tych rozmów, w których zapomina się o czasie.",
+    topics: ["talenty", "Gallup", "rozwój osobisty", "rozmowa"],
+    contentUrl: "https://open.spotify.com/episode/3xKk63ScdM3xXJDUquCGYd",
   },
   {
     id: "HENveKXgNpY",
@@ -85,6 +87,17 @@ const interviews = [
     description:
       "Ścieżka od Certyfikowanego Trenera Microsoft do własnego biznesu edukacyjnego. Jak zbudować karierę trenera IT, pracować z dowolnego miejsca na świecie i przejść od szkoleń korporacyjnych do rozwoju osobistego.",
     topics: ["kariera", "trener IT", "podróże", "przedsiębiorczość"],
+  },
+  {
+    id: "G0U9KkV8Hw4",
+    title: "Życie trenera, lifehacking, rytuały, książki",
+    host: "Bogusz Pękalski (Startup My Way)",
+    hostUrl: "https://www.youtube.com/@StartupMyWay",
+    date: "2018-02-20",
+    dateLabel: "20 lutego 2018",
+    description:
+      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
+    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
   },
 ];
 
