@@ -2,13 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import {
-  Anchor,
-  Star,
-  MessageSquare,
-  Check,
-} from "lucide-react";
-import agendaTimelineBg from "@/assets/agenda-timeline-bg.png?w=800;1200&format=avif;webp;png&as=picture";
+import { Anchor, Star, MessageSquare, Check } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import "@fontsource/caveat/400.css";
@@ -20,10 +14,10 @@ export default function WebinarKodKapitana() {
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Kod Kapitana: Uważność, która naprawdę działa"
-        description="Jak zapanować nad natłokiem myśli i zostać kapitanem własnego życia? Praktyczny warsztat live online 2 lutego 2025 o 20:05."
+        description="Jak w 90 minut zmienić sposób, w jaki reagujesz na stres, natłok myśli i chaos — bez siadania po turecku. Bezpłatne spotkanie online, 27 kwietnia, 19:05."
       />
 
-      {/* HERO SECTION - Deep Ocean Premium Theme */}
+      {/* HERO SECTION */}
       <section
         className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
         style={{
@@ -31,19 +25,14 @@ export default function WebinarKodKapitana() {
             "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
         }}
       >
-        {/* Subtle depth layers */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-        
-        {/* Refined ambient glow - less aggressive, more elegant */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_20%,rgba(56,189,248,0.08),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_80%,rgba(59,130,246,0.06),transparent_50%)]"></div>
-        
-        {/* Subtle gold accent glow */}
         <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[radial-gradient(circle,rgba(251,191,36,0.04),transparent_70%)] blur-2xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            {/* Event badge - more refined */}
+            {/* Event badge */}
             <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
               <div
                 className="inline-flex items-center gap-2 sm:gap-3 px-4 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 rounded-full border max-w-full backdrop-blur-sm"
@@ -57,7 +46,7 @@ export default function WebinarKodKapitana() {
               >
                 <Anchor className="w-5 h-5 sm:w-6 sm:h-6 text-sky-300 flex-shrink-0" />
                 <span className="font-semibold text-sky-100 text-xs sm:text-sm md:text-base tracking-wider uppercase">
-                  Spotkanie na żywo • 2 lutego • 20:05
+                  Spotkanie na żywo · 90 minut · Bezpłatne
                 </span>
               </div>
             </div>
@@ -66,16 +55,14 @@ export default function WebinarKodKapitana() {
               <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-[1.15] tracking-tight">
                 <span className="text-slate-100">KOD KAPITANA:</span>
                 <br />
-                <span
-                  className="inline-block mt-2 md:mt-3 bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent"
-                >
+                <span className="inline-block mt-2 md:mt-3 bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent">
                   Uważność, która naprawdę działa
                 </span>
               </h1>
 
               <div className="mb-10 md:mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-2xl px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8 border max-w-4xl backdrop-blur-md transition-all duration-300"
+                  className="inline-block rounded-2xl px-4 py-5 sm:px-6 sm:py-6 md:px-10 md:py-8 border max-w-4xl backdrop-blur-md"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.5) 100%)",
@@ -85,17 +72,19 @@ export default function WebinarKodKapitana() {
                   }}
                 >
                   <p className="text-lg sm:text-xl md:text-2xl font-normal text-slate-200 leading-relaxed">
-                    Jak zapanować nad natłokiem myśli i{" "}
+                    Jak w 90 minut zmienić sposób, w jaki reagujesz na stres,
+                    natłok myśli i chaos —{" "}
                     <span className="font-semibold text-sky-300">
-                      zostać kapitanem własnego życia?
-                    </span>
+                      bez siadania po turecku
+                    </span>{" "}
+                    i udawania, że Twój umysł się wyłączył.
                   </p>
                 </div>
               </div>
 
-              {/* Social Proof - subtle, refined */}
+              {/* Social Proof */}
               <div className="mb-10 animate-fade-in">
-                <div 
+                <div
                   className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 px-6 py-4 rounded-xl backdrop-blur-sm"
                   style={{
                     background: "rgba(15, 23, 42, 0.5)",
@@ -103,10 +92,11 @@ export default function WebinarKodKapitana() {
                   }}
                 >
                   <div className="flex items-center gap-2.5 text-slate-300">
-                    <div 
+                    <div
                       className="flex items-center justify-center w-7 h-7 rounded-full border"
                       style={{
-                        background: "linear-gradient(135deg, hsl(200, 80%, 30%) 0%, hsl(180, 70%, 45%) 50%, hsl(145, 65%, 50%) 100%)",
+                        background:
+                          "linear-gradient(135deg, hsl(200, 80%, 30%) 0%, hsl(180, 70%, 45%) 50%, hsl(145, 65%, 50%) 100%)",
                         borderColor: "rgba(16, 185, 129, 0.4)",
                         boxShadow: "0 0 12px rgba(16, 185, 129, 0.4)",
                       }}
@@ -114,7 +104,7 @@ export default function WebinarKodKapitana() {
                       <Check className="w-3.5 h-3.5 text-white" />
                     </div>
                     <span className="font-medium text-sm">
-                      103 osoby już rozpoczęły rejs
+                      103+ osoby już na pokładzie
                     </span>
                   </div>
                   <div className="hidden sm:block w-px h-5 bg-slate-600"></div>
@@ -122,60 +112,38 @@ export default function WebinarKodKapitana() {
                     <div className="flex items-center justify-center w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/30">
                       <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                     </div>
-                    <span className="font-medium text-sm">
-                      Ocena 4.9/5
-                    </span>
+                    <span className="font-medium text-sm">Ocena 4.9/5</span>
                   </div>
                 </div>
               </div>
 
-              {/* Hero Image - with refined frame */}
+              {/* Hero Image */}
               <div className="mb-10 animate-fade-in">
                 <div className="relative max-w-2xl mx-auto">
-                  <div 
+                  <div
                     className="absolute -inset-1 rounded-2xl opacity-50"
                     style={{
-                      background: "linear-gradient(135deg, rgba(56,189,248,0.2), rgba(251,191,36,0.1))",
+                      background:
+                        "linear-gradient(135deg, rgba(56,189,248,0.2), rgba(251,191,36,0.1))",
                       filter: "blur(20px)",
                     }}
                   />
                   <OptimizedImage
                     src={kodKapitanaHero}
-                    alt="Kapitan przy sterze statku podczas burzy - metafora uważnego życia"
+                    alt="Kapitan przy sterze statku podczas burzy — metafora uważnego życia"
                     width={1920}
                     height={1071}
                     priority
                     sizes="(max-width: 768px) 100vw, 672px"
                     className="relative w-full rounded-xl shadow-2xl"
-                    style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
+                    style={{
+                      boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+                    }}
                   />
                 </div>
               </div>
 
-              {/* Bonus - elegant gold accent */}
-              <div className="mb-8 animate-fade-in">
-                <div 
-                  className="inline-flex items-center gap-4 px-6 py-4 rounded-xl backdrop-blur-sm"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.15) 100%)",
-                    border: "1px solid rgba(251,191,36,0.25)",
-                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/30">
-                    <span className="text-lg">🎁</span>
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold text-sm md:text-base text-amber-200">
-                      Bonus dla pierwszych 500 osób
-                    </p>
-                    <p className="text-xs md:text-sm text-amber-300/70">
-                      PDF „Mapa Kapitana" do druku
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+              {/* Primary CTA */}
               <div className="mb-6 animate-fade-in">
                 <a
                   href={ctaUrl}
@@ -194,136 +162,360 @@ export default function WebinarKodKapitana() {
                         "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
                     }}
                   >
-                    <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE – ROZPOCZNIJ REJS</span>
-                    <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
+                    🚢 ZAREZERWUJ MOJE MIEJSCE
                   </Button>
                 </a>
               </div>
 
-              <p className="text-slate-400 text-sm md:text-base animate-fade-in">
-                Bezpłatny warsztat na żywo • 90 minut
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SUB-HEADER & OSOBISTE WPROWADZENIE */}
-      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-                Przestań medytować jak mnich.{" "}
-                <span className="text-sky-600 dark:text-sky-400">
-                  Zacznij medytować jak Kapitan na własnym pokładzie.
-                </span>
-              </h2>
-
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Zapraszam Cię na praktyczny warsztat, podczas którego pokażę Ci,
-                jak używać uważności jako narzędzia do realnej zmiany – nawet
-                jeśli masz głowę pełną myśli i ADHD.
-              </p>
-
-              <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 mb-12">
-                <p className="text-lg md:text-xl font-bold text-foreground leading-relaxed">
-                  To nie jest spotkanie o tym, jak się wyciszyć. To trening, jak
-                  być świadomym nawet w chaosie. I to właśnie zmienia wszystko.
-                </p>
-              </Card>
-
-              <a
-                href={ctaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full sm:w-auto sm:inline-block mb-6"
-              >
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl whitespace-normal h-auto"
+              {/* Bonus */}
+              <div className="mb-2 animate-fade-in flex justify-center">
+                <div
+                  className="inline-flex items-center gap-4 px-6 py-4 rounded-xl backdrop-blur-sm"
                   style={{
                     background:
-                      "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
-                    color: "white",
+                      "linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.15) 100%)",
+                    border: "1px solid rgba(251,191,36,0.25)",
+                    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
                   }}
                 >
-                  <span className="hidden sm:inline">🚢 ZAREZERWUJ MOJE MIEJSCE - ROZPOCZNIJ REJS</span>
-                  <span className="sm:hidden">🚢 ZAREZERWUJ MIEJSCE</span>
-                </Button>
-              </a>
-
-              <p className="text-sm text-muted-foreground">
-                ⚡ <strong>Bonus:</strong> Pierwsze 500 osób otrzyma PDF z "Mapą
-                Kapitana" w wersji do druku
-              </p>
-            </div>
-
-            {/* Osobiste wprowadzenie */}
-            <div className="mt-16">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Cześć, tu Ludwik.
-              </h3>
-
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Przez lata medytacja kojarzyła mi się z siadaniem w ciszy,
-                  tłamszeniem myśli i czekaniem na oświecenie. Aż zrozumiałem,
-                  że to nie o to chodzi.
-                </p>
-
-                <p className="text-xl font-bold text-foreground">
-                  Prawdziwa uważność to nie jest ucieczka od życia. To bycie w
-                  jego centrum.
-                </p>
-
-                <p>
-                  To świadomość, która działa jak diament – jest twarda,
-                  przejrzysta i przybiera kolory tego, na co ją położysz.
-                </p>
-
-                <p>
-                  Na tym spotkaniu nie będziemy gasić świeczek i liczyć
-                  oddechów. Będziemy pracować nad tym, jak przejąć kontrolę nad
-                  własnym sterem. Jak odróżnić swoje myśli od siebie samego. Jak
-                  przestać być pasażerem, a zacząć być kierowcą własnego życia.
-                </p>
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/30">
+                    <span className="text-lg">🎁</span>
+                  </div>
+                  <div className="text-left">
+                    <p className="font-semibold text-sm md:text-base text-amber-200">
+                      Bonus: pierwsze 500 osób
+                    </p>
+                    <p className="text-xs md:text-sm text-amber-300/70">
+                      Otrzyma PDF „Mapa Kapitana" do druku
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NATYCHMIASTOWA KORZYŚĆ - MP3 PLAYER PLACEHOLDER */}
-      <section className="py-16 bg-gradient-to-b from-muted/20 to-background">
+      {/* OPENING NARRATIVE — Piątek 22:30 */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
-              ⚡ Co wyciągniesz z tego spotkania?
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-10 leading-tight text-center">
+              Piątek, 22:30.{" "}
+              <span className="text-sky-600 dark:text-sky-400">
+                Głowa pracuje na nocną zmianę.
+              </span>
             </h2>
 
-            <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-8 md:p-10 shadow-lg">
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Jedną, konkretną, działającą metaforę lub technikę, którą
-                  zapamiętasz i która zmieni Twój następny trudny moment.
-                </p>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>Leżysz w łóżku. Ciało zmęczone. Umysł — na pełnych obrotach.</p>
 
-                <p>
-                  Może to być obraz{" "}
-                  <strong className="text-foreground">
-                    "myśli jako chmur"
-                  </strong>{" "}
-                  podczas jazdy samochodem, może to być pytanie:{" "}
-                  <em className="text-sky-600 dark:text-sky-400">
-                    "Gdzie jest teraz mój ster?"
-                  </em>
-                </p>
+              <p>
+                Przelatuje niedokończona rozmowa z szefem. Mail, na który
+                zapomniałeś odpisać. Jutrzejsze spotkanie. Przedwczorajsza
+                kłótnia. Co powiedziałeś. Co mogłeś powiedzieć. Co powinieneś
+                był powiedzieć.
+              </p>
+
+              <p>
+                Próbujesz oddychać. Próbujesz „nie myśleć". Im bardziej
+                próbujesz — tym głośniej się robi.
+              </p>
+
+              <p>
+                I rano jest tak samo. I w pracy. I w domu. Reagujesz zanim
+                pomyślisz. Mówisz zanim usłyszysz. Sięgasz po telefon zanim
+                zauważysz, że Twoja ręka się ruszyła.
+              </p>
+
+              <p className="text-xl font-bold text-foreground">
+                To nie jest „rozbiegany umysł". To jest umysł bez kapitana na
+                mostku.
+              </p>
+
+              <p>
+                I nie jest to kwestia dyscypliny, silnej woli ani „wyciszenia
+                się". To jest kwestia jednej umiejętności, której nikt Cię nie
+                nauczył:{" "}
+                <strong className="text-foreground">
+                  jak być świadomym w chaosie, nie zamiast niego.
+                </strong>
+              </p>
+
+              <p className="text-lg italic text-sky-600 dark:text-sky-400">
+                Na tym spotkaniu pokażę Ci dokładnie, jak to działa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CZEGO NIE BĘDZIEMY ROBIĆ */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/10 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
+              Czego <span className="text-sky-600 dark:text-sky-400">NIE</span>{" "}
+              będziemy robić
+            </h2>
+
+            <Card className="bg-muted/40 border-muted-foreground/20 p-6 md:p-8 shadow-lg mb-8">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Nie będziemy gasić świeczek. Nie będziemy liczyć oddechów do
+                dziesięciu. Nie będziemy udawać, że da się „wyciszyć umysł" —
+                bo to nieprawda i każdy, kto próbował, wie, że to nie działa.
+              </p>
+            </Card>
+
+            <Card
+              className="border-0 p-6 md:p-8 shadow-lg text-white"
+              style={{
+                background:
+                  "linear-gradient(135deg, hsl(200, 70%, 25%) 0%, hsl(180, 60%, 35%) 50%, hsl(145, 55%, 40%) 100%)",
+                boxShadow:
+                  "0 8px 32px rgba(16, 185, 129, 0.25), 0 0 60px rgba(6, 182, 212, 0.15)",
+              }}
+            >
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                Będziemy pracować nad czymś innym:
+              </h3>
+              <ul className="space-y-4 text-base md:text-lg text-white">
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                  <span>
+                    Jak{" "}
+                    <strong className="text-white font-bold">
+                      przejąć kontrolę nad sterem
+                    </strong>{" "}
+                    — nawet gdy fale są wysokie.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                  <span>
+                    Jak{" "}
+                    <strong className="text-white font-bold">
+                      odróżnić swoje myśli od siebie samego
+                    </strong>{" "}
+                    — bo to zmienia wszystko.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                  <span>
+                    Jak złapać{" "}
+                    <strong className="text-white font-bold">
+                      ten jeden ułamek sekundy
+                    </strong>{" "}
+                    między bodźcem a reakcją — i w tym ułamku odzyskać wolność.
+                  </span>
+                </li>
+              </ul>
+            </Card>
+
+            <p className="text-center text-xl md:text-2xl font-bold text-foreground mt-10">
+              Jedno narzędzie. Jedna metafora. Jeden wieczór.
+            </p>
+            <p className="text-center text-base md:text-lg text-muted-foreground mt-4 leading-relaxed">
+              Jeśli po 90 minutach nie zmienisz sposobu, w jaki przeżyjesz swój
+              następny trudny moment — nic nie tracisz. Ale jeśli zmienisz — to
+              będzie wieczór, który zapamiętasz.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 RZECZY, KTÓRE WYCIĄGNIESZ */}
+      <section
+        className="py-16 md:py-24 relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(180deg, hsl(210, 40%, 96%) 0%, hsl(210, 35%, 98%) 50%, hsl(210, 40%, 96%) 100%)",
+        }}
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.05),transparent_50%)]"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+                4 rzeczy, które wyciągniesz z tego spotkania
+              </h2>
+            </div>
+
+            <div className="space-y-6">
+              {/* Card 1 */}
+              <BenefitCard
+                number={1}
+                title="METAFORA KAPITANA I ŻAGLÓWKI"
+                subtitle="Twój osobisty system nawigacji"
+                body={
+                  <>
+                    Nie ładna bajka, lecz{" "}
+                    <strong className="text-slate-900">praktyczny model</strong>
+                    . Kapitan (Ty), ster (decyzje), żagle (umiejętności), fale
+                    (życie). Po tym module zobaczysz swoją codzienność
+                    zupełnie innymi oczami.
+                  </>
+                }
+                bullets={[
+                  "Ludzie mówią, że ta jedna metafora daje im więcej jasności niż miesiące czytania o mindfulness",
+                  "Praktyczny obraz, który wraca do Ciebie w trudnym momencie — bez wysiłku",
+                ]}
+              />
+
+              {/* Card 2 */}
+              <BenefitCard
+                number={2}
+                title="DIAMENTOWY UMYSŁ"
+                subtitle={'Dlaczego „chaotyczny” umysł to supermoc'}
+                body={
+                  <>
+                    Zwłaszcza przy ADHD. Przestaniesz walczyć z natłokiem myśli
+                    i zobaczysz,{" "}
+                    <strong className="text-slate-900">jak go użyć</strong>.
+                  </>
+                }
+                bullets={[
+                  "Technika Diamond Mind: ogarnięcie chaosu bez walki",
+                  'Dlaczego próba „uspokojenia umysłu” działa przeciwko Tobie',
+                ]}
+              />
+
+              {/* Card 3 */}
+              <BenefitCard
+                number={3}
+                title="SEKUNDA, KTÓRA ZMIENIA WSZYSTKO"
+                subtitle="Mikro-pauza między bodźcem a reakcją"
+                body={
+                  <>
+                    Klucz do wyjścia z pętli stresu i reaktywności. Prosta
+                    technika{" "}
+                    <strong className="text-slate-900">
+                      „Stop — Oddech — Wybór"
+                    </strong>
+                    , która zadziała w najbardziej stresującym momencie.
+                  </>
+                }
+                bullets={[
+                  "Nie jutro. Dziś wieczorem",
+                  "Działa nawet gdy emocje są na maksimum",
+                ]}
+              />
+
+              {/* Card 4 */}
+              <BenefitCard
+                number={4}
+                title="KONIEC WEWNĘTRZNYCH WOJEN"
+                subtitle="Co działa zamiast walki ze sobą"
+                body={
+                  <>
+                    Dlaczego walka z lękiem, oporem i prokrastynacją{" "}
+                    <strong className="text-slate-900">je wzmacnia</strong>.
+                    Poznasz paradoksalny sposób, który działa lepiej niż
+                    „zmuszanie się".
+                  </>
+                }
+                bullets={[
+                  'Nie dlatego, że jest „duchowy” — dlatego, że jest logiczny',
+                  "Twój analityczny umysł to zrozumie",
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DLA KOGO */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/20 via-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
+              Dla kogo jest to spotkanie
+            </h2>
+
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                <strong className="text-foreground">Dla Ciebie</strong>, jeśli
+                masz głowę, która nie chce się wyłączyć. Jeśli próbowałeś
+                medytacji i stwierdziłeś, że „to nie dla mnie". Jeśli masz ADHD
+                (lub podejrzewasz). Jeśli jesteś analitykiem, programistą,
+                managerem, przedsiębiorcą — kimś, kto potrzebuje{" "}
+                <em>zrozumieć</em>, zanim zacznie robić.
+              </p>
+
+              <p>
+                Jeśli lubisz Headspace, ale czujesz, że 10 minut spokoju to za
+                mało — bo reszta dnia i tak wygląda tak samo.
+              </p>
+
+              <p>
+                Jeśli wiesz, że coś musi się zmienić — ale „siadanie w ciszy"
+                nie jest odpowiedzią.
+              </p>
+
+              <p className="text-xl font-bold text-foreground text-center pt-4">
+                To spotkanie jest odpowiedzią.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* KTO PROWADZI + VIDEO */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/10 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
+              Kto prowadzi
+            </h2>
+
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-10">
+              <p>
+                Nazywam się{" "}
+                <strong className="text-foreground">
+                  Ludwik C. Siadlak
+                </strong>
+                . Od 19 lat uczę ludzi systemów — od Microsoft i NATO po
+                codzienne życie. Przez lata medytacja kojarzyła mi się z
+                siadaniem w ciszy i tłamszeniem myśli. Aż zrozumiałem, że to
+                nie o to chodzi.
+              </p>
+
+              <p className="text-xl font-bold text-foreground">
+                Prawdziwa uważność to nie ucieczka od życia. To bycie w jego
+                centrum — ze świadomością, która działa jak diament: twarda,
+                przejrzysta i przybiera kolory tego, na co ją położysz.
+              </p>
+
+              <p>
+                100+ osób przeszło przez moje programy rozwojowe. Ocena 4.9/5.
+                Ale nie musisz mi ufać na słowo — przyjdź i sam zdecyduj.
+              </p>
+            </div>
+
+            <Card className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 border-slate-200 dark:border-slate-700 p-6 md:p-8 shadow-lg mb-12">
+              <div className="flex flex-col md:flex-row gap-4 items-start">
+                <div className="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-900 flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-6 h-6 text-sky-600 dark:text-sky-400" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-base md:text-lg italic text-muted-foreground mb-3 leading-relaxed">
+                    „Wyszłam ze spotkania z jasnością:{" "}
+                    <span className="font-semibold text-foreground">
+                      Aha… więc o TO chodzi.
+                    </span>
+                    "
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    — Kasia, uczestniczka poprzedniego spotkania
+                  </p>
+                </div>
               </div>
             </Card>
 
             {/* VIDEO PLAYER */}
-            <div className="mt-12 relative">
+            <div className="relative">
               <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/20 dark:to-blue-950/20 border-sky-200 dark:border-sky-800 p-4 md:p-6 shadow-lg">
                 <div
                   style={{ position: "relative", paddingTop: "56.25%" }}
@@ -344,10 +536,9 @@ export default function WebinarKodKapitana() {
                   ></iframe>
                 </div>
               </Card>
-              
-              {/* Handwritten annotation */}
+
               <div className="flex items-center justify-center mt-4 md:mt-6 animate-fade-in">
-                <span 
+                <span
                   className="text-xl sm:text-2xl md:text-3xl transform -rotate-2"
                   style={{
                     fontFamily: "Caveat, cursive",
@@ -364,1090 +555,65 @@ export default function WebinarKodKapitana() {
         </div>
       </section>
 
-      {/* DLACZEGO BRAK SYSTEMU CIĘ SABOTUJE */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/10 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
-              DLACZEGO BRAK SYSTEMU CIĘ SABOTUJE?
-            </h2>
-            <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed">
-              Większość ludzi nie potrzebuje więcej motywacji. Potrzebuje
-              lepszego systemu, który nie wymaga walki z samym sobą.
-            </p>
-
-            <div className="space-y-8">
-              <Card className="bg-muted/40 border-muted-foreground/20 p-6 md:p-8 shadow-lg">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  PRAWDA, KTÓREJ NIKT CI NIE POWIEDZIAŁ:
-                </h3>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Problem nie tkwi w Twojej motywacji, sile woli ani
-                  disciplinie. Problem tkwi w tym, że próbujesz{" "}
-                  <strong className="text-foreground">
-                    sterować swoim życiem intuicyjnie
-                  </strong>
-                  , bez jasnego systemu. To tak, jakby kapitan próbował żeglować
-                  bez mapy i kompasu – czasem coś wyjdzie, ale częściej skończy
-                  się chaosem i frustracją.
-                </p>
-              </Card>
-
-              <Card 
-                className="border-0 p-6 md:p-8 shadow-lg text-white"
-                style={{
-                  background: "linear-gradient(135deg, hsl(200, 70%, 25%) 0%, hsl(180, 60%, 35%) 50%, hsl(145, 55%, 40%) 100%)",
-                  boxShadow: "0 8px 32px rgba(16, 185, 129, 0.25), 0 0 60px rgba(6, 182, 212, 0.15)",
-                }}
-              >
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  CO JEŚLI MOGŁOBY BYĆ INACZEJ?
-                </h3>
-                <ul className="space-y-3 text-base md:text-lg text-white">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                    <span>
-                      <strong className="text-white font-bold">
-                        System, który działa na autopilocie
-                      </strong>{" "}
-                      – zamiast codziennej walki z chaosem
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                    <span>
-                      <strong className="text-white font-bold">
-                        Jasne priorytety każdego dnia
-                      </strong>{" "}
-                      – zamiast zastanawiania się „od czego zacząć?"
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                    <span>
-                      <strong className="text-white font-bold">
-                        Poczucie kontroli i spokoju
-                      </strong>{" "}
-                      – zamiast ciągłego biegu w próżni
-                    </span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CO WYNIESIESZ Z TEGO WARSZTATU - Premium Benefit Cards */}
-      <section 
-        className="py-16 md:py-24 relative overflow-hidden"
-        style={{
-          background: "linear-gradient(180deg, hsl(210, 40%, 96%) 0%, hsl(210, 35%, 98%) 50%, hsl(210, 40%, 96%) 100%)",
-        }}
-      >
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.05),transparent_50%)]"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-                CO WYNIESIESZ Z TEGO WARSZTATU?
-              </h2>
-              <p className="text-lg md:text-xl text-slate-600">
-                Cztery konkretne narzędzia, które zaczniesz stosować od razu
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {/* Benefit Card 1 */}
-              <div 
-                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                  border: "1px solid rgba(56, 189, 248, 0.15)",
-                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
-                }}
-              >
-                <div className="flex items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div 
-                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
-                      style={{
-                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
-                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
-                      }}
-                    >
-                      1
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                      METAFORA KAPITANA I ŻAGLÓWKI
-                    </h3>
-                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
-                      Twój osobisty system nawigacji życiowej
-                    </p>
-                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
-                      To nie ładna bajka – to{" "}
-                      <strong className="text-slate-900">
-                        praktyczny model zarządzania codziennością
-                      </strong>
-                      . Kapitan (Ty), ster (decyzje), żagle (umiejętności), fale
-                      (życie).
-                    </p>
-                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Jak rozpoznać, kiedy życie „steruje Tobą", a kiedy Ty
-                          sterujesz życiem
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Jak wyznaczać kurs na dzień, tydzień, miesiąc – i
-                          trzymać się go, nawet gdy przychodzą sztormy
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 2 */}
-              <div 
-                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                  border: "1px solid rgba(56, 189, 248, 0.15)",
-                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
-                }}
-              >
-                <div className="flex items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div 
-                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
-                      style={{
-                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
-                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
-                      }}
-                    >
-                      2
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                      DIAMENTOWY UMYSŁ (ADHD / NATŁOK MYŚLI)
-                    </h3>
-                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
-                      Przekształć „chaos" w supersilę
-                    </p>
-                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
-                      Dlaczego „chaotyczny" umysł to{" "}
-                      <strong className="text-slate-900">supermoc</strong>, a
-                      nie przeszkoda. Przestaniesz walczyć z własnymi myślami i
-                      zaczniesz je obserwować.
-                    </p>
-                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Technika „Diamond Mind" – jak ogarnąć natłok myśli bez
-                          walki
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Dlaczego próba „uspokojenia umysłu" działa przeciwko
-                          Tobie
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 3 */}
-              <div 
-                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                  border: "1px solid rgba(56, 189, 248, 0.15)",
-                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
-                }}
-              >
-                <div className="flex items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div 
-                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
-                      style={{
-                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
-                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
-                      }}
-                    >
-                      3
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                      OD AUTOMATU DO ŚWIADOMEGO DZIAŁANIA
-                    </h3>
-                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
-                      Sekunda, która zmienia wszystko
-                    </p>
-                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
-                      Jak złapać{" "}
-                      <strong className="text-slate-900">mikro-pauzę</strong>,
-                      w której odzyskujesz kontrolę. To klucz do wyjścia z pętli
-                      stresu, reaktywności i niemocy.
-                    </p>
-                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Prosta technika „Stop–Oddech–Wybór" – zadziała nawet w
-                          najbardziej stresującym momencie
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Jak rozpoznać moment, w którym „automatycznie
-                          reagujesz" zamiast świadomie działać
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Benefit Card 4 */}
-              <div 
-                className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
-                  border: "1px solid rgba(56, 189, 248, 0.15)",
-                  boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
-                }}
-              >
-                <div className="flex items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div 
-                      className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
-                      style={{
-                        background: "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
-                        boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
-                      }}
-                    >
-                      4
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-                      KONIEC WEWNĘTRZNYCH WOJEN
-                    </h3>
-                    <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
-                      Co działa zamiast walki z samym sobą
-                    </p>
-                    <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
-                      Dlaczego walka z lękiem, oporem i prokrastynacją{" "}
-                      <strong className="text-slate-900">je wzmacnia</strong>.
-                      Poznasz lepszy sposób – paradoksalny, ale skuteczny.
-                    </p>
-                    <ul className="space-y-2 text-sm md:text-base text-slate-600">
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Dlaczego „zmuszanie się" jest najgorszą strategią
-                          długoterminowo
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2.5">
-                        <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Jak przestać walczyć z prokrastynacją i zamiast tego
-                          „przełamać jej kod"
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DLACZEGO TEN WARSZTAT */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/20 via-background to-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
-              Dlaczego ten warsztat?
-            </h2>
-            <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16">
-              Praktyczny trening mentalny, nie motywacyjny wykład
-            </p>
-
-            <div className="space-y-8">
-              {/* What you'll get */}
-              <Card className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950/30 dark:to-blue-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  Co otrzymasz?
-                </h3>
-                <ul className="space-y-3 text-base md:text-lg text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-1" />
-                    <span>Gotowe ramy myślowe (model żaglówki)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-1" />
-                    <span>
-                      Proste techniki do użycia{" "}
-                      <strong className="text-foreground">
-                        jeszcze tego samego dnia
-                      </strong>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-1" />
-                    <span>
-                      Zmiana perspektywy: z „muszę się wyciszyć" na „mogę być
-                      świadomy nawet w chaosie"
-                    </span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Problems it solves */}
-              <Card className="bg-white dark:bg-slate-900 border-amber-200 dark:border-amber-800 p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                  Jakie problemy rozwiązuje?
-                </h3>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {[
-                    "Natłok myśli i brak koncentracji (także ADHD)",
-                    'Dni przeżywane „na autopilocie"',
-                    "Wewnętrzny krytyk i presja bycia lepszym",
-                    "Ciągłe życie w przeszłości lub przyszłości",
-                    "Brak spójności między działaniem a wartościami",
-                  ].map((problem, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                        {problem}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CO ZYSKUJESZ */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
-              Co zyskujesz?
-            </h2>
-            <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16">
-              Praktyczne narzędzia i długoterminowa transformacja
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-10">
-              <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-sky-600 dark:bg-sky-500 flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold">1</span>
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground pt-1">
-                    Natychmiast (podczas warsztatu)
-                  </h3>
-                </div>
-                <ul className="space-y-2.5 text-sm md:text-base text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
-                    <span>
-                      Uważność jako{" "}
-                      <strong className="text-foreground">aktywna siła</strong>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
-                    <span>Technika „zauważ i wróć do steru"</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-sky-600 dark:text-sky-400 flex-shrink-0 mt-0.5" />
-                    <span>Framework pierwszej pomocy w trudnej emocji</span>
-                  </li>
-                </ul>
-              </Card>
-
-              <Card 
-                className="border p-6 md:p-8 shadow-md hover:shadow-xl transition-all duration-300"
-                style={{
-                  background: "linear-gradient(135deg, hsl(180, 40%, 96%) 0%, hsl(165, 45%, 92%) 100%)",
-                  borderColor: "hsl(170, 50%, 70%)",
-                }}
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{
-                      background: "linear-gradient(135deg, hsl(200, 70%, 30%) 0%, hsl(180, 60%, 40%) 50%, hsl(145, 55%, 45%) 100%)",
-                      boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
-                    }}
-                  >
-                    <span className="text-white font-bold">2</span>
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground pt-1">
-                    Długoterminowo (po zastosowaniu)
-                  </h3>
-                </div>
-                <ul className="space-y-2.5 text-sm md:text-base text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
-                    <span>Większa odporność emocjonalna</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
-                    <span>Poczucie sprawczości i klarowność</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "hsl(165, 60%, 40%)" }} />
-                    <span>Decyzje w zgodzie ze sobą</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-
-            {/* Testimonial */}
-            <Card className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 border-slate-200 dark:border-slate-700 p-6 md:p-8 shadow-lg">
-              <div className="flex flex-col md:flex-row gap-4 items-start">
-                <div className="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-900 flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-sky-600 dark:text-sky-400" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-base md:text-lg italic text-muted-foreground mb-3 leading-relaxed">
-                    „Wyszłam ze spotkania z jasnością:{" "}
-                    <span className="font-semibold text-foreground">
-                      Aha… więc o TO chodzi.
-                    </span>
-                    "
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    - Kasia, uczestniczka poprzedniego spotkania
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* AGENDA */}
+      {/* SZCZEGÓŁY + REJESTRACJA */}
       <section
-        className="py-20 md:py-0 relative overflow-hidden"
-        style={{
-          background: "linear-gradient(180deg, #e8f4fc 0%, #d4e8f7 100%)",
-        }}
-        aria-label="Agenda dla Wybranych"
-      >
-        {/* Desktop/Tablet: Show full image as the section - decorative, hidden from screen readers */}
-        <div className="hidden md:block" aria-hidden="true">
-          <OptimizedImage
-            src={agendaTimelineBg}
-            alt=""
-            width={1024}
-            height={572}
-            sizes="100vw"
-            className="w-full h-auto"
-          />
-        </div>
-
-        {/* Screen reader accessible content for desktop (visually hidden but readable) */}
-        <div className="sr-only">
-          <h2>AGENDA DLA WYBRANYCH</h2>
-          <div>
-            <h3>KIERUNEK I START (25%)</h3>
-            <p>
-              Inicjowanie działań, określanie celów i przygotowanie do podróży.
-              Wprowadzenie w temat i ustalenie priorytetów.
-            </p>
-          </div>
-          <div>
-            <h3>OTWARCIE MOŻLIWOŚCI (50%)</h3>
-            <p>
-              Identyfikacja szans, dostęp do zasobów i odblokowanie potencjału.
-              Poznanie narzędzi i metod pracy.
-            </p>
-          </div>
-          <div>
-            <h3>NAWIGACJA I ROZWÓJ (75%)</h3>
-            <p>
-              Kierowanie procesem, dostosowanie do zmian i ciągłe doskonalenie.
-              Monitorowanie postępów i korekta kursu.
-            </p>
-          </div>
-          <div>
-            <h3>OSIĄGNIĘCIE CELU (100%)</h3>
-            <p>
-              Finalizacja projektu, wdrożenie rozwiązań i czerpanie korzyści.
-              Podsumowanie wyników i świętowanie sukcesu.
-            </p>
-          </div>
-        </div>
-
-        {/* Mobile: Show the original content (visible and accessible) */}
-        <div className="md:hidden container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-16 text-[#1e5a8a]">
-              AGENDA DLA WYBRANYCH
-            </h2>
-
-            {/* Timeline Container for mobile */}
-            <div className="relative">
-              {/* Steps container - stacked on mobile */}
-              <div className="grid grid-cols-1 gap-12">
-                {/* Step 1 - KIERUNEK I START */}
-                <div className="flex flex-col items-center text-center">
-                  {/* Icon Circle */}
-                  <div className="w-28 h-28 mb-2 relative z-10">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full drop-shadow-lg"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="46"
-                        fill="#2980b9"
-                        stroke="#1e5a8a"
-                        strokeWidth="3"
-                      />
-                      {/* Ship's wheel */}
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="22"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="8"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      {/* Wheel spokes */}
-                      <line
-                        x1="50"
-                        y1="24"
-                        x2="50"
-                        y2="76"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <line
-                        x1="24"
-                        y1="50"
-                        x2="76"
-                        y2="50"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <line
-                        x1="31"
-                        y1="31"
-                        x2="69"
-                        y2="69"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <line
-                        x1="69"
-                        y1="31"
-                        x2="31"
-                        y2="69"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      {/* Wheel handles */}
-                      <circle cx="50" cy="24" r="5" fill="white" />
-                      <circle cx="50" cy="76" r="5" fill="white" />
-                      <circle cx="24" cy="50" r="5" fill="white" />
-                      <circle cx="76" cy="50" r="5" fill="white" />
-                      <circle cx="31" cy="31" r="5" fill="white" />
-                      <circle cx="69" cy="69" r="5" fill="white" />
-                      <circle cx="69" cy="31" r="5" fill="white" />
-                      <circle cx="31" cy="69" r="5" fill="white" />
-                    </svg>
-                  </div>
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
-                    KIERUNEK I START
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
-                    Inicjowanie działań, określanie celów i przygotowanie do
-                    podróży. Wprowadzenie w temat i ustalenie priorytetów.
-                  </p>
-                  {/* Progress bar with percentage */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#2980b9] font-bold text-sm">
-                      25%
-                    </span>
-                    <div 
-                      className="w-24 h-3 rounded-full overflow-hidden"
-                      style={{
-                        background: "rgba(255,255,255,0.85)",
-                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.2)",
-                      }}
-                    >
-                      <div 
-                        className="h-full w-1/4 rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(190, 75%, 45%) 100%)",
-                          boxShadow: "0 0 8px rgba(6, 182, 212, 0.5)",
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 2 - OTWARCIE MOŻLIWOŚCI */}
-                <div className="flex flex-col items-center text-center">
-                  {/* Icon Circle */}
-                  <div className="w-28 h-28 mb-2 relative z-10">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full drop-shadow-lg"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="46"
-                        fill="#2980b9"
-                        stroke="#1e5a8a"
-                        strokeWidth="3"
-                      />
-                      {/* Keyhole */}
-                      <circle
-                        cx="50"
-                        cy="42"
-                        r="12"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <path
-                        d="M44 50 L44 68 L56 68 L56 50"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2.5"
-                        strokeLinejoin="round"
-                      />
-                      {/* Light rays */}
-                      <line
-                        x1="50"
-                        y1="20"
-                        x2="50"
-                        y2="26"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <line
-                        x1="30"
-                        y1="30"
-                        x2="34"
-                        y2="34"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <line
-                        x1="70"
-                        y1="30"
-                        x2="66"
-                        y2="34"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <line
-                        x1="24"
-                        y1="45"
-                        x2="30"
-                        y2="45"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <line
-                        x1="70"
-                        y1="45"
-                        x2="76"
-                        y2="45"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
-                    OTWARCIE MOŻLIWOŚCI
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
-                    Identyfikacja szans, dostęp do zasobów i odblokowanie
-                    potencjału. Poznanie narzędzi i metod pracy.
-                  </p>
-                  {/* Progress bar with percentage */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#2980b9] font-bold text-sm">
-                      50%
-                    </span>
-                    <div 
-                      className="w-24 h-3 rounded-full overflow-hidden"
-                      style={{
-                        background: "rgba(255,255,255,0.85)",
-                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 12px rgba(6, 182, 212, 0.25)",
-                      }}
-                    >
-                      <div 
-                        className="h-full w-1/2 rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, hsl(205, 70%, 45%) 0%, hsl(180, 70%, 45%) 50%, hsl(165, 60%, 45%) 100%)",
-                          boxShadow: "0 0 10px rgba(6, 182, 212, 0.5)",
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 3 - NAWIGACJA I ROZWÓJ */}
-                <div className="flex flex-col items-center text-center">
-                  {/* Icon Circle */}
-                  <div className="w-28 h-28 mb-2 relative z-10">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full drop-shadow-lg"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="46"
-                        fill="#2980b9"
-                        stroke="#1e5a8a"
-                        strokeWidth="3"
-                      />
-                      {/* Compass outer ring */}
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="28"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      {/* Compass inner circle */}
-                      <circle cx="50" cy="50" r="5" fill="white" />
-                      {/* Compass needle - north (red/filled) */}
-                      <polygon points="50,22 46,50 54,50" fill="white" />
-                      {/* Compass needle - south (outline) */}
-                      <polygon
-                        points="50,78 46,50 54,50"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="1.5"
-                      />
-                      {/* Direction ticks */}
-                      <line
-                        x1="50"
-                        y1="22"
-                        x2="50"
-                        y2="26"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="50"
-                        y1="74"
-                        x2="50"
-                        y2="78"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="22"
-                        y1="50"
-                        x2="26"
-                        y2="50"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="74"
-                        y1="50"
-                        x2="78"
-                        y2="50"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </div>
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
-                    NAWIGACJA I ROZWÓJ
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
-                    Kierowanie procesem, dostosowanie do zmian i ciągłe
-                    doskonalenie. Monitorowanie postępów i korekta kursu.
-                  </p>
-                  {/* Progress bar with percentage */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-[#2980b9] font-bold text-sm">
-                      75%
-                    </span>
-                    <div 
-                      className="w-24 h-3 rounded-full overflow-hidden"
-                      style={{
-                        background: "rgba(255,255,255,0.85)",
-                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 14px rgba(16, 185, 129, 0.3)",
-                      }}
-                    >
-                      <div 
-                        className="h-full w-3/4 rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, hsl(205, 70%, 40%) 0%, hsl(180, 70%, 45%) 40%, hsl(155, 60%, 48%) 100%)",
-                          boxShadow: "0 0 12px rgba(16, 185, 129, 0.5)",
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 4 - OSIĄGNIĘCIE CELU */}
-                <div className="flex flex-col items-center text-center">
-                  {/* Icon Circle */}
-                  <div className="w-28 h-28 mb-2 relative z-10">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full drop-shadow-lg"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="46"
-                        fill="#2980b9"
-                        stroke="#1e5a8a"
-                        strokeWidth="3"
-                      />
-                      {/* Main gear */}
-                      <circle
-                        cx="40"
-                        cy="45"
-                        r="15"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <circle
-                        cx="40"
-                        cy="45"
-                        r="6"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      {/* Gear teeth for main gear */}
-                      <rect
-                        x="37"
-                        y="27"
-                        width="6"
-                        height="6"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="37"
-                        y="57"
-                        width="6"
-                        height="6"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="22"
-                        y="42"
-                        width="6"
-                        height="6"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="52"
-                        y="42"
-                        width="6"
-                        height="6"
-                        fill="white"
-                        rx="1"
-                      />
-                      {/* Secondary gear */}
-                      <circle
-                        cx="62"
-                        cy="58"
-                        r="12"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2.5"
-                      />
-                      <circle
-                        cx="62"
-                        cy="58"
-                        r="5"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                      />
-                      {/* Gear teeth for secondary gear */}
-                      <rect
-                        x="59"
-                        y="44"
-                        width="5"
-                        height="4"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="59"
-                        y="68"
-                        width="5"
-                        height="4"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="48"
-                        y="55"
-                        width="4"
-                        height="5"
-                        fill="white"
-                        rx="1"
-                      />
-                      <rect
-                        x="72"
-                        y="55"
-                        width="4"
-                        height="5"
-                        fill="white"
-                        rx="1"
-                      />
-                    </svg>
-                  </div>
-                  {/* Content */}
-                  <h3 className="text-lg font-bold text-[#1e5a8a] mb-3 mt-4">
-                    OSIĄGNIĘCIE CELU
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-5 leading-relaxed px-2">
-                    Finalizacja projektu, wdrożenie rozwiązań i czerpanie
-                    korzyści. Podsumowanie wyników i świętowanie sukcesu.
-                  </p>
-                  {/* Progress bar with percentage */}
-                  <div className="flex items-center gap-3">
-                    <span style={{ color: "hsl(155, 60%, 42%)" }} className="font-bold text-sm">
-                      100%
-                    </span>
-                    <div 
-                      className="w-24 h-3 rounded-full overflow-hidden"
-                      style={{
-                        background: "rgba(255,255,255,0.85)",
-                        boxShadow: "inset 0 2px 4px rgba(0,0,0,0.1), 0 0 16px rgba(16, 185, 129, 0.4)",
-                      }}
-                    >
-                      <div 
-                        className="h-full w-full rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, hsl(205, 70%, 35%) 0%, hsl(185, 70%, 42%) 30%, hsl(165, 65%, 48%) 60%, hsl(145, 60%, 52%) 100%)",
-                          boxShadow: "0 0 14px rgba(16, 185, 129, 0.6)",
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* REJESTRACJA - Premium Design */}
-      <section 
         className="py-20 md:py-28 relative overflow-hidden"
         style={{
-          background: "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
+          background:
+            "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
         }}
       >
-        {/* Ambient glow effects */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(6,182,212,0.12),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.1),transparent_50%)]"></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            {/* Header with gradient text */}
             <div className="text-center mb-12 md:mb-16">
               <h2
                 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4"
                 id="rejestracja"
               >
-                <span 
+                <span
                   className="bg-clip-text text-transparent"
                   style={{
-                    backgroundImage: "linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(180, 70%, 70%) 50%, hsl(155, 60%, 60%) 100%)",
+                    backgroundImage:
+                      "linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(180, 70%, 70%) 50%, hsl(155, 60%, 60%) 100%)",
                   }}
                 >
-                  Dołącz do warsztatu
+                  Szczegóły
                 </span>
               </h2>
               <p className="text-lg md:text-xl text-slate-300/80">
-                Zarezerwuj swoje miejsce – bezpłatnie
+                Zarezerwuj swoje miejsce — bezpłatnie
               </p>
             </div>
 
-            {/* Main registration card with glass effect */}
-            <div 
+            <div
               className="rounded-3xl p-8 md:p-12 backdrop-blur-md border relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
+                background:
+                  "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)",
                 borderColor: "rgba(6, 182, 212, 0.25)",
-                boxShadow: "0 25px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(6, 182, 212, 0.1), inset 0 1px 0 rgba(255,255,255,0.1)",
+                boxShadow:
+                  "0 25px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(6, 182, 212, 0.1), inset 0 1px 0 rgba(255,255,255,0.1)",
               }}
             >
-              {/* Decorative gradient corner */}
-              <div 
+              <div
                 className="absolute top-0 right-0 w-64 h-64 opacity-30 pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle at top right, rgba(16, 185, 129, 0.3), transparent 70%)",
+                  background:
+                    "radial-gradient(circle at top right, rgba(16, 185, 129, 0.3), transparent 70%)",
                 }}
               ></div>
 
               <div className="grid md:grid-cols-2 gap-10 mb-12 relative z-10">
-                {/* Details column */}
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <div 
+                    <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center"
                       style={{
-                        background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(180, 60%, 40%) 100%)",
+                        background:
+                          "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(180, 60%, 40%) 100%)",
                         boxShadow: "0 4px 12px rgba(6, 182, 212, 0.3)",
                       }}
                     >
@@ -1457,26 +623,34 @@ export default function WebinarKodKapitana() {
                       Szczegóły
                     </h3>
                   </div>
-                  
+
                   <div className="space-y-4">
                     {[
-                      { label: "Data", value: "2 lutego 2025" },
-                      { label: "Godzina", value: "20:05 (60+ minut)" },
-                      { label: "Format", value: "Live Online" },
-                      { label: "Dostęp", value: "Bezpłatny", highlight: true },
-                      { label: "Nagranie", value: "48h po spotkaniu" },
+                      { label: "Data", value: "27.04 (poniedziałek)" },
+                      { label: "Godzina", value: "19:05 (90 minut)" },
+                      { label: "Format", value: "Live online" },
+                      { label: "Cena", value: "Bezpłatne", highlight: true },
+                      { label: "Nagranie", value: "Dostępne 48h po spotkaniu" },
                     ].map((item, index) => (
-                      <div 
+                      <div
                         key={index}
                         className="flex items-center gap-4 p-3 rounded-xl transition-all duration-200 hover:bg-white/5"
                         style={{
-                          borderLeft: item.highlight ? "3px solid hsl(165, 60%, 50%)" : "3px solid transparent",
+                          borderLeft: item.highlight
+                            ? "3px solid hsl(165, 60%, 50%)"
+                            : "3px solid transparent",
                         }}
                       >
-                        <span className="font-semibold text-slate-300 min-w-[80px]">{item.label}:</span>
-                        <span 
+                        <span className="font-semibold text-slate-300 min-w-[80px]">
+                          {item.label}:
+                        </span>
+                        <span
                           className={`${item.highlight ? "font-bold" : ""}`}
-                          style={{ color: item.highlight ? "hsl(165, 60%, 55%)" : "rgba(255,255,255,0.9)" }}
+                          style={{
+                            color: item.highlight
+                              ? "hsl(165, 60%, 55%)"
+                              : "rgba(255,255,255,0.9)",
+                          }}
                         >
                           {item.value}
                         </span>
@@ -1485,13 +659,13 @@ export default function WebinarKodKapitana() {
                   </div>
                 </div>
 
-                {/* Benefits column */}
                 <div>
                   <div className="flex items-center gap-3 mb-6">
-                    <div 
+                    <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center"
                       style={{
-                        background: "linear-gradient(135deg, hsl(165, 60%, 35%) 0%, hsl(145, 55%, 40%) 100%)",
+                        background:
+                          "linear-gradient(135deg, hsl(165, 60%, 35%) 0%, hsl(145, 55%, 40%) 100%)",
                         boxShadow: "0 4px 12px rgba(16, 185, 129, 0.3)",
                       }}
                     >
@@ -1501,23 +675,23 @@ export default function WebinarKodKapitana() {
                       Otrzymasz
                     </h3>
                   </div>
-                  
+
                   <ul className="space-y-3">
                     {[
                       "Dostęp na żywo do warsztatu",
                       "PDF z kluczowymi punktami",
-                      "Mapę Kapitana (pierwsze 500 osób)",
-                      "Ćwiczenie wprowadzające",
-                      "Nagranie dostępne przez 48h",
+                      "Mapę Kapitana do druku (pierwsze 500 osób)",
+                      "Ćwiczenie wprowadzające — zrobisz je tego samego wieczoru",
                     ].map((item, index) => (
-                      <li 
+                      <li
                         key={index}
                         className="flex items-start gap-3 p-3 rounded-xl transition-all duration-200 hover:bg-white/5 group"
                       >
-                        <div 
+                        <div
                           className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-transform duration-200 group-hover:scale-110"
                           style={{
-                            background: "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(165, 60%, 45%) 100%)",
+                            background:
+                              "linear-gradient(135deg, hsl(200, 70%, 35%) 0%, hsl(165, 60%, 45%) 100%)",
                             boxShadow: "0 2px 8px rgba(16, 185, 129, 0.4)",
                           }}
                         >
@@ -1530,16 +704,15 @@ export default function WebinarKodKapitana() {
                 </div>
               </div>
 
-              {/* CTA Button with enhanced glow */}
               <div className="text-center relative z-10">
-                {/* Button glow */}
-                <div 
+                <div
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-20 blur-2xl opacity-60 pointer-events-none"
                   style={{
-                    background: "linear-gradient(90deg, hsl(200, 70%, 45%), hsl(165, 60%, 50%), hsl(145, 55%, 50%))",
+                    background:
+                      "linear-gradient(90deg, hsl(200, 70%, 45%), hsl(165, 60%, 50%), hsl(145, 55%, 50%))",
                   }}
                 ></div>
-                
+
                 <a
                   href={ctaUrl}
                   target="_blank"
@@ -1550,18 +723,21 @@ export default function WebinarKodKapitana() {
                     size="lg"
                     className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-2xl whitespace-normal h-auto"
                     style={{
-                      background: "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
+                      background:
+                        "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
                       color: "white",
-                      boxShadow: "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+                      boxShadow:
+                        "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                     }}
                   >
-                    <span className="hidden sm:inline">🚢 ZAPISUJĘ SIĘ NA TO SPOTKANIE</span>
-                    <span className="sm:hidden">🚢 ZAPISUJĘ SIĘ</span>
+                    🚢 ZAPISUJĘ SIĘ NA SPOTKANIE
                   </Button>
                 </a>
-                
+
                 <p className="mt-6 text-sm text-slate-400">
-                  Dołączyło już <span className="font-semibold text-cyan-400">103+ osób</span> • Zostało kilka miejsc
+                  Dołączyło już{" "}
+                  <span className="font-semibold text-cyan-400">103+ osób</span>{" "}
+                  · Ocena 4.9/5
                 </p>
               </div>
             </div>
@@ -1573,67 +749,27 @@ export default function WebinarKodKapitana() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-muted/20 via-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
               Najczęściej zadawane pytania
             </h2>
-            <p className="text-lg md:text-xl text-center text-muted-foreground mb-12 md:mb-16">
-              Wszystko, co musisz wiedzieć
-            </p>
 
             <div className="grid md:grid-cols-2 gap-4">
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Czy potrzebuję specjalnego sprzętu?
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Nie. Wystarczy internet.
-                </p>
-              </Card>
-
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Nie mogę być na żywo.
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Nagranie dostępne 48h.
-                </p>
-              </Card>
-
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Dla początkujących?
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Tak. Startujemy od podstaw – w nowym ujęciu.
-                </p>
-              </Card>
-
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Materiały?
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Tak, PDF + bonus.
-                </p>
-              </Card>
-
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Czy to naprawdę bezpłatne?
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Tak. Pełnowartościowe 90 minut.
-                </p>
-              </Card>
-
-              <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
-                  Czy będzie interakcja?
-                </h3>
-                <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
-                  Tak, bez przymusu kamery/mikrofonu.
-                </p>
-              </Card>
+              <FAQCard
+                q="Nie mogę być na żywo."
+                a="Nagranie dostępne 48h. Ale na żywo jest lepiej — bo będziesz mógł ćwiczyć w czasie rzeczywistym."
+              />
+              <FAQCard
+                q='Nigdy nie medytowałem / medytacja „nie działa na mnie".'
+                a="Idealnie. To spotkanie jest zaprojektowane dla ludzi, którym tradycyjna medytacja nie pasuje. Nie będziemy siedzieć w ciszy. Będziemy pracować z tym, co masz — włącznie z chaosem w głowie."
+              />
+              <FAQCard
+                q="Mam ADHD. Wytrzymam 90 minut?"
+                a="Program jest zaprojektowany z myślą o umysłach, które nie siedzą spokojnie. Zmieniamy format co kilkanaście minut. Będziesz bardziej zaangażowany niż na spotkaniu w pracy."
+              />
+              <FAQCard
+                q="Czy to naprawdę bezpłatne?"
+                a="Tak. 90 minut pełnowartościowego treningu. Na koniec pokażę Ci, jak iść dalej — ale to Twoja decyzja. Żadnego nacisku."
+              />
             </div>
           </div>
         </div>
@@ -1642,22 +778,35 @@ export default function WebinarKodKapitana() {
       {/* NA KONIEC */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-foreground">
               Na koniec
             </h2>
 
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-12">
-              <p>Nie obiecuję oświecenia w 90 minut.</p>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-12 text-left">
+              <p className="text-center">
+                Nie obiecuję oświecenia w 90 minut.
+              </p>
 
-              <p className="text-xl font-bold text-foreground">
-                Obiecuję, że zobaczysz, jak wygląda{" "}
+              <p className="text-xl font-bold text-foreground text-center">
+                Obiecuję jedną rzecz: zobaczysz, jak wygląda{" "}
                 <span className="text-sky-600 dark:text-sky-400">
-                  medytacja, która nie ucieka od życia
+                  uważność, która nie ucieka od życia
+                </span>{" "}
+                — tylko w nim{" "}
+                <span className="text-sky-600 dark:text-sky-400">
+                  kotwiczy
                 </span>
-                , tylko w nim{" "}
-                <span className="text-sky-600 dark:text-sky-400">kotwiczy</span>
                 .
+              </p>
+
+              <p className="text-center">
+                I wyjdziesz z jednym konkretnym narzędziem, które zmieni Twój
+                następny trudny moment.
+              </p>
+
+              <p className="text-center italic">
+                Reszta jest Twoim wyborem. Ale ten wieczór — ten jest na mnie.
               </p>
             </div>
 
@@ -1669,7 +818,7 @@ export default function WebinarKodKapitana() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)]"
+                className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -1678,15 +827,27 @@ export default function WebinarKodKapitana() {
                     "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
                 }}
               >
-                🚢 DOŁĄCZ DO REJSU – ZAPISZ SIĘ TERAZ
+                🚢 DOŁĄCZ DO REJSU — ZAPISZ SIĘ TERAZ
               </Button>
             </a>
 
-            <p className="text-xl text-foreground leading-relaxed mb-4">
+            <p className="text-xl text-foreground leading-relaxed mb-8">
               Do zobaczenia na pokładzie,
               <br />
               <strong>Ludwik C. Siadlak</strong>
             </p>
+
+            {/* P.S. */}
+            <Card className="bg-muted/40 border-muted-foreground/20 p-6 md:p-8 text-left shadow-md mb-8">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">P.S.</strong> Jeśli wahasz
+                się, czy to dla Ciebie — zauważ, co robi Twój umysł. Szuka
+                powodów, żeby nie iść. Analizuje. Porównuje. Odwleka. To jest
+                dokładnie ten wzorzec, o którym będziemy mówić w punkcie 3{" "}
+                <em>(Sekunda, która zmienia wszystko)</em>. Przyjdź i złap tę
+                sekundę.
+              </p>
+            </Card>
 
             <div className="border-t border-muted-foreground/20 pt-8 mt-12">
               <p className="text-sm text-muted-foreground">
@@ -1694,13 +855,85 @@ export default function WebinarKodKapitana() {
                 <br />
                 Spotkanie ma charakter edukacyjny i nie zastępuje terapii
                 psychologicznej,
-                <br className="hidden md:block" /> nie jest też związane z żadną
-                religią ani wyznaniem.
+                <br className="hidden md:block" /> nie jest też związane z
+                żadną religią ani wyznaniem.
               </p>
             </div>
           </div>
         </div>
       </section>
     </Layout>
+  );
+}
+
+/* -------- Local helper components -------- */
+
+type BenefitCardProps = {
+  number: number;
+  title: string;
+  subtitle: string;
+  body: React.ReactNode;
+  bullets: string[];
+};
+
+function BenefitCard({ number, title, subtitle, body, bullets }: BenefitCardProps) {
+  return (
+    <div
+      className="relative p-6 md:p-8 rounded-2xl transition-all duration-300 hover:translate-y-[-2px]"
+      style={{
+        background:
+          "linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%)",
+        border: "1px solid rgba(56, 189, 248, 0.15)",
+        boxShadow:
+          "0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04)",
+      }}
+    >
+      <div className="flex items-start gap-5 md:gap-6">
+        <div className="flex-shrink-0">
+          <div
+            className="w-14 h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl md:text-3xl"
+            style={{
+              background:
+                "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(210, 78%, 55%) 100%)",
+              boxShadow: "0 4px 12px rgba(56, 189, 248, 0.25)",
+            }}
+          >
+            {number}
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+            {title}
+          </h3>
+          <p className="text-base md:text-lg font-semibold text-sky-600 mb-3">
+            {subtitle}
+          </p>
+          <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
+            {body}
+          </p>
+          <ul className="space-y-2 text-sm md:text-base text-slate-600">
+            {bullets.map((b, i) => (
+              <li key={i} className="flex items-start gap-2.5">
+                <Check className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
+                <span>{b}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FAQCard({ q, a }: { q: string; a: string }) {
+  return (
+    <Card className="bg-white dark:bg-slate-800 border-sky-200 dark:border-sky-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+      <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white mb-2">
+        {q}
+      </h3>
+      <p className="text-sm md:text-base text-slate-700 dark:text-slate-200">
+        {a}
+      </p>
+    </Card>
   );
 }
