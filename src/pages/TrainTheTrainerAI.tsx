@@ -59,12 +59,12 @@ const pillars = [
   {
     icon: Mic,
     title: "Twoja prezencja poza klawiaturą",
-    text: "Nie „umiejętności miękkie" z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
+    text: "Nie „umiejętności miękkie” z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
   },
   {
     icon: Brain,
     title: "Twoja metoda dydaktyczna",
-    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali".",
+    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali”.",
   },
   {
     icon: MessageSquare,
@@ -82,13 +82,13 @@ const protocolRows = [
   {
     letter: "P",
     name: "Pozycja",
-    crossing: "Od „freelancera, który łapie zlecenia" do „autorytet, którego się szuka"",
+    crossing: "Od „freelancera, który łapie zlecenia” do „autorytet, którego się szuka”",
     builds: "Twoja narracja o sobie, pozycjonowanie, strategia autorytetu",
   },
   {
     letter: "O",
     name: "Odbiorca",
-    crossing: "Od „każdy, kto zapłaci" do „ten jeden typ klienta, którego rozwiązuję jak nikt inny"",
+    crossing: "Od „każdy, kto zapłaci” do „ten jeden typ klienta, którego rozwiązuję jak nikt inny”",
     builds: "Segmentacja, język bólu klienta (Clear, Ugly, Specific Problem)",
   },
   {
@@ -106,7 +106,7 @@ const protocolRows = [
   {
     letter: "S",
     name: "Sprzedaż",
-    crossing: "Od „wyślij ofertę i się modlić" do rozmowy, w której klient sam dochodzi do decyzji",
+    crossing: "Od „wyślij ofertę i się modlić” do rozmowy, w której klient sam dochodzi do decyzji",
     builds: "Cztery Bramy Zobowiązania, konwersacja sprzedażowa 1:1, obsługa decydentów",
   },
   {
@@ -121,12 +121,12 @@ const weeks = [
   {
     n: 1,
     title: "Pozycja. Kim chcesz być, kiedy to się skończy.",
-    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy?. Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału" — odpowiedzi na pytanie „czym się zajmujesz?", po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
+    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy?. Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału” — odpowiedzi na pytanie „czym się zajmujesz?”, po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
   },
   {
     n: 2,
-    title: "Odbiorca. Bo nie sprzedajesz „szkoleń z AI". Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
-    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną" i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać".",
+    title: "Odbiorca. Bo nie sprzedajesz „szkoleń z AI”. Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
+    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
   },
   {
     n: 3,
@@ -136,7 +136,7 @@ const weeks = [
   {
     n: 4,
     title: "Obecność (część 1). Fizyka sali.",
-    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy" — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
+    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy” — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
   },
   {
     n: 5,
@@ -146,7 +146,7 @@ const weeks = [
   {
     n: 6,
     title: "Sprzedaż. Cztery Bramy Zobowiązania.",
-    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć". Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak".",
+    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć”. Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak”.",
   },
   {
     n: 7,
@@ -156,14 +156,14 @@ const weeks = [
   {
     n: 8,
     title: "Certyfikacja i Twój pierwszy realny dzień jako Trener AI.",
-    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej, społeczności LIFEHACKERZY i Fundacji HACKERZY.PL — realny feedback, nie „klepanie po ramieniu"). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy całogodzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI HACKERZY.PL, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między tygodniem 6 a tygodniem 12 (cztery tygodnie po formalnym końcu programu).",
+    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej, społeczności LIFEHACKERZY i Fundacji HACKERZY.PL — realny feedback, nie „klepanie po ramieniu”). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy całogodzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI HACKERZY.PL, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między tygodniem 6 a tygodniem 12 (cztery tygodnie po formalnym końcu programu).",
   },
 ];
 
 const deliverables = [
-  "8 × półtoragodzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie". To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
+  "8 × półtoragodzinna sesja mentoringowa 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
   "Nieograniczony kontakt tekstowy (prywatny Slack) przez cały czas trwania programu. Piszesz, kiedy trafiasz na ścianę. Odpowiadam w ciągu 24h, zwykle szybciej. W tygodniu Twojego pierwszego warsztatu — praktycznie na żywo.",
-  "Dwa „interwencje ratunkowe" — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
+  "Dwa „interwencje ratunkowe” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
   "Nagrania i analiza Twoich wystąpień. Przynosisz materiał (nagrania symulacji od tygodnia 4, nagrania realnych wystąpień od tygodnia 8). Rozbieramy je wspólnie. Dostajesz arkusz obserwacji, który sam potem aplikujesz do następnych sesji.",
   "Twój osobisty Trainer's Toolbox. Nie gotowe szablony od kogoś innego. Twoje własne scenariusze, Twoje ćwiczenia, Twoja oferta, Twoja metoda — projektowane razem ze mną. Na końcu programu jest to gotowy do produkcji zestaw, którego nikt Ci nie zabierze i który jest Twoim własnym IP.",
   "Certyfikacja HACKERZY.PL: Certified AI Trainer po egzaminie praktycznym.",
@@ -176,8 +176,8 @@ const forYou = [
   "Obecnie łapiesz pojedyncze zlecenia — freelance, na godziny, za setki złotych albo niskie kilka tysięcy. Czujesz w kościach, że to jest dramatycznie poniżej Twojej faktycznej wartości.",
   "Nigdy nie stałeś przed salą pełną dyrektorów, HR-owców, menedżerów średniego szczebla. Cała Twoja praca dzieje się dziś przed ekranem — na Twoim komputerze, może czasem na czacie z klientem.",
   "Widzisz agentów i systemy, które zbudowałeś, i wiesz, że są warte krotnie więcej, niż za nie dostajesz — tylko jeszcze nie masz mechanizmu, żeby to uzasadnić i pokazać właściwym ludziom.",
-  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś". Teraz. W ciągu najbliższych 2 miesięcy.",
-  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia". To jest transformacja, którą robimy razem.",
+  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś”. Teraz. W ciągu najbliższych 2 miesięcy.",
+  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia”. To jest transformacja, którą robimy razem.",
 ];
 
 const notForYou = [
@@ -185,7 +185,7 @@ const notForYou = [
   "Szukasz certyfikatu z hologramem, który powiesisz na ścianie. Dostaniesz certyfikat Lifehackerzy — ale on jest konsekwencją pracy, nie celem.",
   "Chcesz gotowych scenariuszy do odklepania z kartki. Uczymy tu tworzenia własnego warsztatu — zbudowanego od zera na Twojej unikalnej wiedzy, nie kopiowania cudzego zestawu.",
   "Wolisz dynamikę grupową, społeczność, networking. To program 1:1. Jesteśmy we dwóch. Czasem to jest niewygodne.",
-  "Masz w głowie, że „umiejętności miękkie" to coś gorszego, mniej poważnego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — zostajesz tam, gdzie jesteś.",
+  "Masz w głowie, że „umiejętności miękkie” to coś gorszego, mniej poważnego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — zostajesz tam, gdzie jesteś.",
 ];
 
 export default function TrainTheTrainerAI() {
@@ -250,11 +250,11 @@ export default function TrainTheTrainerAI() {
               Zacznijmy od prawdy, która boli
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
-              <p>Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI" na LinkedInie nawet nie słyszała.</p>
+              <p>Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI” na LinkedInie nawet nie słyszała.</p>
               <p>Twój agent, którego zbudowałeś w zeszły weekend na własnym laptopie, robi rzeczy, na które Twoi znajomi patrzą z otwartymi ustami. Nowy model od Anthropic wychodzi o 21:00? Masz z nim zrobione pierwsze testy do 23:30. Czytasz release notes OpenAI jak inni czytają sport.</p>
               <p>I jednocześnie — jeśli jesteś tu dalej — coś fundamentalnie nie gra.</p>
               <p>Zlecenia, które łapiesz, to setki złotych. Czasem, jak dobrze pójdzie, niskie kilka tysięcy. Klient znaleziony na grupie na Facebooku. Drugi z polecenia siostry. Trzeci — przez zupełny przypadek.</p>
-              <p>Każde zlecenie osobno to „cała historia": negocjacje, wyjaśnianie, dowożenie w nocy, wystawianie faktury, czekanie na przelew. A potem znowu od zera. Znowu szukanie. Znowu tłumaczenie komuś, po co to wszystko.</p>
+              <p>Każde zlecenie osobno to „cała historia”: negocjacje, wyjaśnianie, dowożenie w nocy, wystawianie faktury, czekanie na przelew. A potem znowu od zera. Znowu szukanie. Znowu tłumaczenie komuś, po co to wszystko.</p>
               <p>I patrzysz na to, co zbudowałeś na swoim komputerze — na tego agenta, tę automatyzację, ten system — i <em>wiesz</em>, że to jest warte nie setki złotych. To jest warte krocie. Ktoś, gdzieś w Polsce, bierze dokładnie takie rozwiązanie i inkasuje za nie pięciocyfrowe stawki dziennie.</p>
               <p>Tylko to nie jesteś Ty.</p>
               <p className="font-bold text-on-light text-xl">To nie jest Twoja wina. Ale jest Twoja odpowiedzialność.</p>
@@ -276,8 +276,8 @@ export default function TrainTheTrainerAI() {
             </h2>
             <div className="space-y-6 text-lg text-dim leading-relaxed">
               <p>Pozwól, że narysuję Ci mapę.</p>
-              <p>Po jednej stronie — Ty. I jeszcze kilka tysięcy takich jak Ty w Polsce. Ludzi, którzy mają kompetencję techniczną. Którzy rozumieją, co się dzieje wewnątrz modelu. Którzy potrafią zbudować rzeczy, o których trenerzy po „trzydniowym kursie AI" nie mają bladego pojęcia.</p>
-              <p>Po drugiej stronie — 2,5 miliona aktywnych firm w Polsce. Zarządy, które w 2026 mają w budżetach linię „transformacja AI" i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się porażką. HR-y korporacji, centra szkoleniowe, urzędy, banki, firmy produkcyjne — cała gospodarka potrzebuje <em>dziś</em> kogoś, kto pokaże pracownikom, jak zacząć używać tych narzędzi w realnej pracy.</p>
+              <p>Po jednej stronie — Ty. I jeszcze kilka tysięcy takich jak Ty w Polsce. Ludzi, którzy mają kompetencję techniczną. Którzy rozumieją, co się dzieje wewnątrz modelu. Którzy potrafią zbudować rzeczy, o których trenerzy po „trzydniowym kursie AI” nie mają bladego pojęcia.</p>
+              <p>Po drugiej stronie — 2,5 miliona aktywnych firm w Polsce. Zarządy, które w 2026 mają w budżetach linię „transformacja AI” i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się porażką. HR-y korporacji, centra szkoleniowe, urzędy, banki, firmy produkcyjne — cała gospodarka potrzebuje <em>dziś</em> kogoś, kto pokaże pracownikom, jak zacząć używać tych narzędzi w realnej pracy.</p>
               <p>Pomiędzy wami — <strong className="text-on-dark">przepaść kompetencyjna</strong>. Decydenci po drugiej stronie nie mają pojęcia, czego nie wiedzą. Nie potrafią ocenić, kto jest dobry. Nie potrafią zweryfikować oferty. Więc kupują to, co brzmi wiarygodnie. Kupują od człowieka, który potrafi <em>mówić</em> ich językiem, nie od człowieka, który potrafi <em>budować</em> w ich problemie.</p>
               <blockquote className="border-l-4 border-electric pl-6 my-10 italic text-on-dark text-xl md:text-2xl leading-relaxed">
                 W tej przepaści — nie na jej brzegach, dokładnie w środku — leżą pieniądze.
@@ -285,7 +285,7 @@ export default function TrainTheTrainerAI() {
               <p>Nie leżą po Twojej stronie. Ty konkurujesz z 50 innymi geekami o te same zlecenia, licytując się w dół.</p>
               <p>Nie leżą po stronie biznesu. Biznes nie wie, czego nie wie.</p>
               <p className="font-bold text-on-dark">Leżą w moście. W człowieku, który potrafi przejść tę przepaść w obie strony — i przeprowadzić innych.</p>
-              <p>Ten człowiek nie jest <em>lepszym</em> inżynierem promptów. Ten człowiek ma coś, czego Ty dziś jeszcze nie masz: <strong className="text-on-dark">rzemiosło trenerskie i rzemiosło sprzedażowe</strong>. Umiejętność stanięcia przed 30 nieufnymi dorosłymi w garniturach i wciągnięcia ich w materiał tak, że po warsztacie sami pytają, kiedy kolejny. Umiejętność usiąść naprzeciw dyrektora HR i przez 45 minut tak poprowadzić rozmowę, że na końcu <em>on</em> mówi: „rozumiem, wchodzimy w to, jaka jest stawka za dzień?".</p>
+              <p>Ten człowiek nie jest <em>lepszym</em> inżynierem promptów. Ten człowiek ma coś, czego Ty dziś jeszcze nie masz: <strong className="text-on-dark">rzemiosło trenerskie i rzemiosło sprzedażowe</strong>. Umiejętność stanięcia przed 30 nieufnymi dorosłymi w garniturach i wciągnięcia ich w materiał tak, że po warsztacie sami pytają, kiedy kolejny. Umiejętność usiąść naprzeciw dyrektora HR i przez 45 minut tak poprowadzić rozmowę, że na końcu <em>on</em> mówi: „rozumiem, wchodzimy w to, jaka jest stawka za dzień?”.</p>
               <p>To są umiejętności. Nie talent. Umiejętności. A umiejętności się trenuje.</p>
               <p className="font-bold text-electric text-xl">Train The Trainer: AI to jest właśnie o tym trenowaniu.</p>
             </div>
@@ -344,10 +344,10 @@ export default function TrainTheTrainerAI() {
               Co to <em>właściwie</em> jest
             </h2>
             <p className="text-lg text-dim leading-relaxed mb-4">
-              <strong className="text-on-dark">Train The Trainer: AI to 8-tygodniowy prywatny mentoring 1:1, który prowadzi Cię z pozycji „freelancera technicznego, który łapie zlecenia za kilkaset złotych" do pozycji „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy w centrum szkoleniowym bierze 2 000 zł, a za pierwszy dzień u bezpośredniego klienta — 5 000–10 000 zł".</strong>
+              <strong className="text-on-dark">Train The Trainer: AI to 8-tygodniowy prywatny mentoring 1:1, który prowadzi Cię z pozycji „freelancera technicznego, który łapie zlecenia za kilkaset złotych” do pozycji „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy w centrum szkoleniowym bierze 2 000 zł, a za pierwszy dzień u bezpośredniego klienta — 5 000–10 000 zł”.</strong>
             </p>
             <p className="text-dim leading-relaxed">
-              To jest moment przełomu. Nie „docelowa gra". Docelowa gra jest dużo większa — 15 000, 25 000 zł dziennie, kontrakty in-house, programy akademii — ale to przychodzi <em>po</em> tej przemianie. Najpierw musisz się tu przenieść.
+              To jest moment przełomu. Nie „docelowa gra”. Docelowa gra jest dużo większa — 15 000, 25 000 zł dziennie, kontrakty in-house, programy akademii — ale to przychodzi <em>po</em> tej przemianie. Najpierw musisz się tu przenieść.
             </p>
             <p className="text-dim leading-relaxed mt-4">
               Pracujemy nad tym, czego geek techniczny dziś <em>jeszcze nie ma</em>:
@@ -474,7 +474,7 @@ export default function TrainTheTrainerAI() {
               Co konkretnie dostajesz
             </h2>
             <p className="text-lg text-on-light-dim leading-relaxed mb-4">
-              <strong className="text-on-light">Osiem tygodni prywatnego dostępu do mnie.</strong> To jest rdzeń oferty. Nie „dostęp do platformy". Nie „cotygodniowe grupowe calls". Dostęp do mnie. 1:1.
+              <strong className="text-on-light">Osiem tygodni prywatnego dostępu do mnie.</strong> To jest rdzeń oferty. Nie „dostęp do platformy”. Nie „cotygodniowe grupowe calls”. Dostęp do mnie. 1:1.
             </p>
             <p className="text-on-light-dim">To oznacza:</p>
           </div>
@@ -553,7 +553,7 @@ export default function TrainTheTrainerAI() {
                 <h3 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">Wartość radialna — co jeszcze się poprawia, czego dziś nie masz</h3>
                 <ul className="space-y-2 pl-6 list-disc marker:text-electric text-dim leading-relaxed">
                   <li>Jakość klientów — przestajesz ścigać setki osób na grupach, zaczynasz być szukany</li>
-                  <li>Twoja obecność na LinkedInie jako autorytet AI, nie „kolejny chętny do współpracy"</li>
+                  <li>Twoja obecność na LinkedInie jako autorytet AI, nie „kolejny chętny do współpracy”</li>
                   <li>Twój spokój przed salą — ten, którego dziś nie masz, bo dziś nie wiesz, że nigdy tam nie byłeś</li>
                   <li>Twoja oferta produktowa — po 8 tygodniach masz własny flagowy program, którego do dziś nie zbudowałeś w pięć lat freelance'u</li>
                   <li>Twoja sieć — dostajesz się do grupy certyfikowanych trenerów, której członkowie wzajemnie przekazują sobie zlecenia</li>
@@ -568,7 +568,7 @@ export default function TrainTheTrainerAI() {
                   <li>Własna mała akademia, w której <em>Ty</em> szkolisz kolejnych — przychód skalowalny niezależny od Twojego czasu</li>
                   <li>Prelekcje na konferencjach z 4-cyfrowymi honorariami</li>
                   <li>Książka, podcast, kurs online — na fundamencie autorytetu zbudowanego przez rzemiosło, nie przez marketing</li>
-                  <li>Pozycja „konsultanta AI" u stałego klienta (retainer 8-15 tys. zł miesięcznie, praca 4-6 dni miesięcznie)</li>
+                  <li>Pozycja „konsultanta AI” u stałego klienta (retainer 8-15 tys. zł miesięcznie, praca 4-6 dni miesięcznie)</li>
                 </ul>
                 <p className="text-dim mt-6 leading-relaxed">Każda z tych rzeczy jest dziś poza Twoim zasięgiem — nie dlatego, że nie masz kompetencji, tylko dlatego, że nie masz mostu.</p>
               </div>
@@ -658,7 +658,7 @@ export default function TrainTheTrainerAI() {
               <p>Potem zostałem Microsoft Certified Trainerem. Przez kolejne kilkanaście lat prowadziłem szkolenia z SharePoint, Power BI, Microsoft 365, Microsoft Fabric dla korporacji na trzech kontynentach.</p>
               <p>Przed pandemią robiłem 100 lotów rocznie. W praktyce oznaczało to na przykład: w poniedziałek rano wsiadam w samolot do Oslo, prowadzę 3 dni warsztatu dla oficerów Policji Norweskiej (w języku angielskim), zamykam w piątek, wsiadam w sobotę w samolot do Wiesbaden, prowadzę 3 dni dla jednostki US Army na bazie, wracam do Warszawy w środę, w czwartek Fortune 500, w piątek znowu samolot.</p>
               <p>Przez te lata szkoliłem m.in. jednostki <strong className="text-on-dark">US Army</strong> w Wiesbaden (Niemcy), <strong className="text-on-dark">US Air Force</strong> w Ramstein (Niemcy), <strong className="text-on-dark">US Navy</strong> w Neapolu (Włochy), <strong className="text-on-dark">US Marine Corps</strong> i personel NATO w Mons (Belgia), a także w Vicenzy (Włochy). Jeśli potrafisz wejść na salę z oficerami operacyjnymi armii amerykańskiej — ludźmi, których zawodem jest weryfikowanie kompetencji innych w 30 sekund — i po 45 minutach mają do Ciebie zaufanie, to potrafisz wejść na każdą polską salę konferencyjną w korporacji. I potrafisz nauczyć tego kogoś innego.</p>
-              <p>Od 2022 pracuję też jako coach transformacyjny. Prowadzę ekosystem <em>Lifehackerzy</em> — społeczność, w której pomagam ludziom zamieniać wiedzę techniczną w realną zmianę zawodową i osobistą. Uważam, że szkolenie jest Trojan Horse — metodą wejścia do człowieka z głębszą transformacją, niż on sam oczekuje. To jest dokładnie to, co robię z Tobą w tym programie. Nie „uczę Cię trenować". Przeprowadzam Cię z jednej wersji Ciebie do kolejnej.</p>
+              <p>Od 2022 pracuję też jako coach transformacyjny. Prowadzę ekosystem <em>Lifehackerzy</em> — społeczność, w której pomagam ludziom zamieniać wiedzę techniczną w realną zmianę zawodową i osobistą. Uważam, że szkolenie jest Trojan Horse — metodą wejścia do człowieka z głębszą transformacją, niż on sam oczekuje. To jest dokładnie to, co robię z Tobą w tym programie. Nie „uczę Cię trenować”. Przeprowadzam Cię z jednej wersji Ciebie do kolejnej.</p>
             </div>
           </div>
         </div>
@@ -735,10 +735,10 @@ export default function TrainTheTrainerAI() {
               Ostatnie słowo
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed mb-10">
-              <p>Rynek szkoleń AI w Polsce jest dziś taki, jaki był rynek szkoleń z Excela w 2005 roku. Za 3 lata będzie nasycony. Trenerzy, którzy wejdą teraz — z rzemiosłem, nie z amatorką — zbudują praktyki, które będą pracować przez 15 lat. Trenerzy, którzy wejdą w 2029, będą konkurować z tysiącami certyfikowanych „trenerów AI" na LinkedInie.</p>
+              <p>Rynek szkoleń AI w Polsce jest dziś taki, jaki był rynek szkoleń z Excela w 2005 roku. Za 3 lata będzie nasycony. Trenerzy, którzy wejdą teraz — z rzemiosłem, nie z amatorką — zbudują praktyki, które będą pracować przez 15 lat. Trenerzy, którzy wejdą w 2029, będą konkurować z tysiącami certyfikowanych „trenerów AI” na LinkedInie.</p>
               <p>Ta różnica — 2026 vs. 2029 — jest <em>teraz</em>. Okno się zamyka szybciej, niż myślisz.</p>
               <p>Jeśli masz kompetencję techniczną, której Twoje konto bankowe dotąd nie zauważyło — napisz do mnie.</p>
-              <p>Jeśli wolisz jeszcze trochę poczekać, zbudować kolejnego agenta, przeczytać jeszcze jedną książkę zanim „naprawdę zaczniesz" — to też jest uczciwa odpowiedź. Wracaj, kiedy będziesz gotowy.</p>
+              <p>Jeśli wolisz jeszcze trochę poczekać, zbudować kolejnego agenta, przeczytać jeszcze jedną książkę zanim „naprawdę zaczniesz” — to też jest uczciwa odpowiedź. Wracaj, kiedy będziesz gotowy.</p>
               <p>Ale nie udawaj, że nie widziałeś tej strony.</p>
               <p>Do usłyszenia,</p>
               <p>
@@ -760,7 +760,7 @@ export default function TrainTheTrainerAI() {
               </Button>
             </div>
             <p className="text-xs text-on-light-dim italic text-center max-w-2xl mx-auto">
-              Program Train The Trainer: AI prowadzony jest indywidualnie przeze mnie. Certyfikat „Certified AI Trainer" wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja inauguracyjna Q2 2026 — 3 miejsca w cenie 7 999 zł netto. Edycja regularna od Q3 2026 — maksymalnie 4 miejsca na kwartał, 24 999 zł netto.
+              Program Train The Trainer: AI prowadzony jest indywidualnie przeze mnie. Certyfikat „Certified AI Trainer” wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja inauguracyjna Q2 2026 — 3 miejsca w cenie 7 999 zł netto. Edycja regularna od Q3 2026 — maksymalnie 4 miejsca na kwartał, 24 999 zł netto.
             </p>
           </div>
         </div>
