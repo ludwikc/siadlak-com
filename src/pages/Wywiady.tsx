@@ -209,17 +209,32 @@ export default function Wywiady() {
           <div className="max-w-4xl mx-auto space-y-16">
             {interviews.map(interview => (
               <article key={interview.id} className="group">
-                <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${interview.id}`}
-                    title={interview.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    loading="lazy"
-                    className="w-full h-full"
-                  />
-                </div>
+                {"type" in interview && interview.type === "spotify" ? (
+                  <div className="rounded-md overflow-hidden mb-6 bg-void">
+                    <iframe
+                      src={`https://open.spotify.com/embed/episode/${interview.id}?utm_source=generator`}
+                      title={interview.title}
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      width="100%"
+                      height={352}
+                      style={{ borderRadius: 12 }}
+                      className="w-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${interview.id}`}
+                      title={interview.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      loading="lazy"
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
 
                 <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-2">
                   {interview.title}
