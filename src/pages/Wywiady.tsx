@@ -2,20 +2,29 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
-import { getPersonEntity, getWebPageEntity, getBreadcrumbSchema, getVideoObjectSchema, getFAQSchema } from "@/lib/structured-data";
+import {
+  getPersonEntity,
+  getWebPageEntity,
+  getBreadcrumbSchema,
+  getVideoObjectSchema,
+  getFAQSchema,
+} from "@/lib/structured-data";
 
 const wywiadyFaqs = [
   {
     question: "O czym s\u0105 wywiady z Ludwikiem C. Siadlakiem?",
-    answer: "Rozmowy dotycz\u0105 produktywno\u015Bci, life hackingu, pracy zdalnej, budowania biznesu edukacyjnego i filozofii optymalizacji \u017Cycia. Prowadzone przez niezale\u017Cnych tw\u00F3rc\u00F3w \u2014 Gildi\u0119 Trener\u00F3w, Danut\u0119 Piaseck\u0105, Damiana Mazurka, Bogusza P\u0119kalskiego, Daniela Bartosiewicza i kana\u0142 Lepiej Teraz.",
+    answer:
+      "Rozmowy dotycz\u0105 produktywno\u015Bci, life hackingu, pracy zdalnej, budowania biznesu edukacyjnego i filozofii optymalizacji \u017Cycia. Prowadzone przez niezale\u017Cnych tw\u00F3rc\u00F3w \u2014 Gildi\u0119 Trener\u00F3w, Danut\u0119 Piaseck\u0105, Damiana Mazurka, Bogusza P\u0119kalskiego, Daniela Bartosiewicza i kana\u0142 Lepiej Teraz.",
   },
   {
     question: "Czym jest life hacking?",
-    answer: "Life hacking to filozofia \u015Bwiadomej optymalizacji codziennego funkcjonowania \u2014 od zarz\u0105dzania energi\u0105 i czasem, przez systemy decyzyjne, po nawyki i rytua\u0142y. Nie chodzi o \u2018triki\u2019, ale o trwa\u0142\u0105 zmian\u0119 sposobu my\u015Blenia. Ludwik C. Siadlak jest jednym z pionier\u00F3w life hackingu w Polsce.",
+    answer:
+      "Life hacking to filozofia \u015Bwiadomej optymalizacji codziennego funkcjonowania \u2014 od zarz\u0105dzania energi\u0105 i czasem, przez systemy decyzyjne, po nawyki i rytua\u0142y. Nie chodzi o \u2018triki\u2019, ale o trwa\u0142\u0105 zmian\u0119 sposobu my\u015Blenia. Ludwik C. Siadlak jest jednym z pionier\u00F3w life hackingu w Polsce.",
   },
   {
     question: "Jak zaprosi\u0107 Ludwika do wywiadu?",
-    answer: "Przez formularz kontaktowy na stronie siadlak.com/contact. Tematy, kt\u00F3re ch\u0119tnie poruszam: produktywno\u015B\u0107, uwa\u017Cno\u015B\u0107, odporno\u015B\u0107 psychiczna, praca zdalna, budowanie spo\u0142eczno\u015Bci, metoda Diamentowego Umys\u0142u i przej\u015Bcie od korporacji do w\u0142asnego biznesu.",
+    answer:
+      "Przez formularz kontaktowy na stronie siadlak.com/contact. Tematy, kt\u00F3re ch\u0119tnie poruszam: produktywno\u015B\u0107, uwa\u017Cno\u015B\u0107, odporno\u015B\u0107 psychiczna, praca zdalna, budowanie spo\u0142eczno\u015Bci, metoda Diamentowego Umys\u0142u i przej\u015Bcie od korporacji do w\u0142asnego biznesu.",
   },
 ];
 
@@ -65,17 +74,15 @@ const interviews = [
     topics: ["life hacking", "filozofia", "optymalizacja", "mindset"],
   },
   {
-    id: "3xKk63ScdM3xXJDUquCGYd",
-    type: "spotify" as const,
-    title: "Dynamika talentów w praktyce",
-    host: "Dominik Juszczyk (Z pasją o mocnych stronach)",
-    hostUrl: "https://open.spotify.com/show/3xKk63ScdM3xXJDUquCGYd",
-    date: "2018-07-05",
-    dateLabel: "5 lipca 2018",
+    id: "G0U9KkV8Hw4",
+    title: "Życie trenera, lifehacking, rytuały, książki",
+    host: "Bogusz Pękalski (Startup My Way)",
+    hostUrl: "https://www.youtube.com/@StartupMyWay",
+    date: "2018-02-20",
+    dateLabel: "20 lutego 2018",
     description:
-      "Nasze działanie nie wynika z działania pojedynczych talentów. Talenty wzajemnie na siebie oddziałują, wzmacniają się, osłabiają — to dynamika talentów. Rozmowa z Dominikiem Juszczykiem, w której przechodzimy po dominujących talentach Ludwika, jego drodze i tym, co dziś robi w życiu. Jedna z tych rozmów, w których zapomina się o czasie.",
-    topics: ["talenty", "Gallup", "rozwój osobisty", "rozmowa"],
-    contentUrl: "https://open.spotify.com/episode/3xKk63ScdM3xXJDUquCGYd",
+      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
+    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
   },
   {
     id: "HENveKXgNpY",
@@ -88,19 +95,6 @@ const interviews = [
       "Ścieżka od Certyfikowanego Trenera Microsoft do własnego biznesu edukacyjnego. Jak zbudować karierę trenera IT, pracować z dowolnego miejsca na świecie i przejść od szkoleń korporacyjnych do rozwoju osobistego.",
     topics: ["kariera", "trener IT", "podróże", "przedsiębiorczość"],
   },
-  {
-    id: "6PcsDxe3thcEHRTEgn4PkX",
-    type: "spotify" as const,
-    title: "Życie trenera, lifehacking, rytuały, książki",
-    host: "Bogusz Pękalski (Startup My Way)",
-    hostUrl: "https://open.spotify.com/show/6PcsDxe3thcEHRTEgn4PkX",
-    date: "2018-02-20",
-    dateLabel: "20 lutego 2018",
-    description:
-      "Codzienne życie trenera IT pracującego zdalnie z całego świata. O rytuałach, książkach, które kształtują myślenie, i o tym, jak łączyć życie cyfrowego nomada z głęboką pracą mentalną.",
-    topics: ["praca zdalna", "rytuały", "książki", "cyfrowy nomad"],
-    contentUrl: "https://open.spotify.com/episode/6PcsDxe3thcEHRTEgn4PkX",
-  },
 ];
 
 export default function Wywiady() {
@@ -109,18 +103,16 @@ export default function Wywiady() {
     { name: "Wywiady", path: "/wywiady" },
   ]);
 
-  const videoSchemas = interviews
-    .filter(v => !("type" in v) || v.type !== "spotify")
-    .map(v =>
-      getVideoObjectSchema({
-        name: v.title,
-        description: v.description,
-        thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
-        uploadDate: v.date,
-        contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
-        embedUrl: `https://www.youtube.com/embed/${v.id}`,
-      })
-    );
+  const videoSchemas = interviews.map((v) =>
+    getVideoObjectSchema({
+      name: v.title,
+      description: v.description,
+      thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+      uploadDate: v.date,
+      contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+      embedUrl: `https://www.youtube.com/embed/${v.id}`,
+    }),
+  );
 
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -132,10 +124,7 @@ export default function Wywiady() {
     itemListElement: interviews.map((v, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url:
-        "type" in v && v.type === "spotify"
-          ? (v as { contentUrl: string }).contentUrl
-          : `https://www.youtube.com/watch?v=${v.id}`,
+      url: `https://www.youtube.com/watch?v=${v.id}`,
     })),
   };
 
@@ -149,7 +138,7 @@ export default function Wywiady() {
             "/wywiady",
             "Wywiady z Ludwikiem C. Siadlakiem",
             "Wywiady i rozmowy z Ludwikiem C. Siadlakiem prowadzone przez Daniela Bartosiewicza, Gildię Trenerów, Danutę Piasecką, Damiana Mazurka, Bogusza Pękalskiego i kanał Lepiej Teraz.",
-            ["/about", "/program", "/discovery"]
+            ["/about", "/program", "/discovery"],
           ),
           breadcrumb,
           itemListSchema,
@@ -179,10 +168,9 @@ export default function Wywiady() {
             </h1>
 
             <p className="text-lg text-dim leading-relaxed max-w-2xl">
-              Rozmowy z lat 2018–2025 w obszarze produktywności,
-              rozwoju osobistego i przedsiębiorczości. Zaproszenia od
-              Daniela Bartosiewicza, Gildi Trenerów, Danuty Piaseckiej, Damiana
-              Mazurka, Bogusza Pękalskiego i kanału Lepiej Teraz.
+              Rozmowy z lat 2018–2025 w obszarze produktywności, rozwoju osobistego i przedsiębiorczości. Zaproszenia od
+              Daniela Bartosiewicza, Gildi Trenerów, Danuty Piaseckiej, Damiana Mazurka, Bogusza Pękalskiego i kanału
+              Lepiej Teraz.
             </p>
           </div>
         </div>
@@ -195,12 +183,10 @@ export default function Wywiady() {
             Kim jest Ludwik C. Siadlak jako go&#347;&#263; wywiad&#243;w?
           </h2>
           <p className="text-lg text-dim leading-relaxed">
-            Coach produktywno&#347;ci i uwa&#380;no&#347;ci z 19-letnim
-            do&#347;wiadczeniem, Certyfikowany Trener Microsoft, absolwent
-            Oxford Brookes University. Tw&#243;rca Aplikacji Mentalnych i metody
-            Diamentowego Umys&#322;u. Zapraszany przez podcast&#243;w
-            i kana&#322;y YouTube w obszarze produktywno&#347;ci, life hackingu
-            i przedsi&#281;biorczo&#347;ci od 2018 roku.
+            Coach produktywno&#347;ci i uwa&#380;no&#347;ci z 19-letnim do&#347;wiadczeniem, Certyfikowany Trener
+            Microsoft, absolwent Oxford University. Tw&#243;rca Aplikacji Mentalnych i metody Diamentowego Umys&#322;u.
+            Zapraszany przez podcast&#243;w i kana&#322;y YouTube w obszarze produktywno&#347;ci, life hackingu i
+            przedsi&#281;biorczo&#347;ci od 2018 roku.
           </p>
         </div>
       </section>
@@ -209,38 +195,21 @@ export default function Wywiady() {
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
-            {interviews.map(interview => (
+            {interviews.map((interview) => (
               <article key={interview.id} className="group">
-                {"type" in interview && interview.type === "spotify" ? (
-                  <div className="rounded-md overflow-hidden mb-6 bg-void">
-                    <iframe
-                      src={`https://open.spotify.com/embed/episode/${interview.id}?utm_source=generator`}
-                      title={interview.title}
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      loading="lazy"
-                      width="100%"
-                      height={352}
-                      style={{ borderRadius: 12 }}
-                      className="w-full"
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${interview.id}`}
-                      title={interview.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      loading="lazy"
-                      className="w-full h-full"
-                    />
-                  </div>
-                )}
+                <div className="aspect-video rounded-md overflow-hidden mb-6 bg-void">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${interview.id}`}
+                    title={interview.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full"
+                  />
+                </div>
 
-                <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-2">
-                  {interview.title}
-                </h2>
+                <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-2">{interview.title}</h2>
 
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-3">
                   <span>
@@ -257,16 +226,11 @@ export default function Wywiady() {
                   <time dateTime={interview.date}>{interview.dateLabel}</time>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {interview.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">{interview.description}</p>
 
                 <div className="flex flex-wrap gap-2">
-                  {interview.topics.map(topic => (
-                    <span
-                      key={topic}
-                      className="text-xs px-3 py-1 rounded-full bg-muted text-muted-foreground"
-                    >
+                  {interview.topics.map((topic) => (
+                    <span key={topic} className="text-xs px-3 py-1 rounded-full bg-muted text-muted-foreground">
                       {topic}
                     </span>
                   ))}
@@ -290,9 +254,7 @@ export default function Wywiady() {
                   {faq.question}
                   <span className="ml-4 text-dim group-open:rotate-45 transition-transform text-xl">+</span>
                 </summary>
-                <div className="px-5 pb-5 text-dim leading-relaxed">
-                  {faq.answer}
-                </div>
+                <div className="px-5 pb-5 text-dim leading-relaxed">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -306,19 +268,12 @@ export default function Wywiady() {
             Chcesz porozmawiać z Ludwikiem?
           </h2>
           <p className="text-dim mb-6">
-            Jeśli prowadzisz podcast lub kanał i chcesz zaprosić
-            Ludwika jako gościa{" "}
-            <Link
-              to="/contact"
-              className="text-electric hover:underline"
-            >
+            Jeśli prowadzisz podcast lub kanał i chcesz zaprosić Ludwika jako gościa{" "}
+            <Link to="/contact" className="text-electric hover:underline">
               skontaktuj się
             </Link>
             . Jeśli szukasz mentora{" "}
-            <Link
-              to="/discovery"
-              className="text-electric hover:underline"
-            >
+            <Link to="/discovery" className="text-electric hover:underline">
               umów Sesję Discovery
             </Link>
             .
