@@ -208,6 +208,19 @@ export default function Header() {
               Wszystkie możliwości →
             </Link>
 
+            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-3">Więcej</div>
+            {moreItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => setMobileOpen(false)}
+                className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+              >
+                {item.label}
+                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+              </Link>
+            ))}
+
             <Link
               to="/discovery"
               onClick={() => setMobileOpen(false)}
