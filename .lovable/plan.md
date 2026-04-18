@@ -1,51 +1,89 @@
 
+User points out that the proposed `public/llms.txt` plan was missing some pages. Let me audit `src/routes.ts` against my proposed file to make sure I include everything relevant.
 
-## Plan: Add /program/ttt-ai page
+Missing/uncovered from my draft:
+- `/program/ttt-ai` (Train the Trainer AI) — yes, was in draft but let me confirm
+- `/mentoring` — MISSING from draft
+- `/wyzwanie` — 4-day challenge, missing
+- `/program/7-technik` (Siedem Technik lead magnet) — missing
+- `/reset` — Open Loops quiz, missing  
+- `/links` — bio links page, low priority (Optional)
+- `/mct` — was in draft
+- `/słownik` — was in Optional
+- `/wywiady` — was in draft
 
-### 1. Create new page `src/pages/TrainTheTrainerAI.tsx`
+Will revise the plan to include all real pages from `src/routes.ts` + sitemap.
 
-Build a long-form sales page following the existing program-page pattern (e.g. `HakowanieProduktywnosci.tsx`, `SiedemTechnik.tsx`). The copy provided is preserved verbatim — I will only split it into typed React sections, never edit wording.
+## Plan: Add `llms.txt` for AI Crawlers
 
-Sections (top → bottom), all using existing brand utilities (`bg-void-glow`, `bg-diamond`, `bg-brand-gradient`, `Card`, `Button`, lucide icons):
+### Files
+1. **Create** `public/llms.txt`
+2. **Edit** `public/robots.txt` — add `Llms:` directive
 
-1. **Hero** (`bg-void-glow`, dark) — Title "TRAIN THE TRAINER: AI", subtitle "Prywatny, 8-tygodniowy mentoring 1:1…", credentials line about MCT/US Army, primary CTA "Zapisz się na rozmowę kwalifikacyjną →" → `/discovery`.
-2. **"Zacznijmy od prawdy, która boli"** — narrative section, light bg.
-3. **"Przepaść, w której leżą pieniądze"** — narrative with pull-quote on key line.
-4. **"Dla kogo to jest" / "Dla kogo to nie jest"** — two-column grid with check/x icons.
-5. **"Co to właściwie jest"** — 4 numbered pillar cards.
-6. **"Metoda: Protokół Pomostu™"** — table (POMOST acronym, 6 rows) rendered as a styled grid responsive on mobile.
-7. **"Program — 8 tygodni"** — 8 expandable/stacked week cards (Tydzień 1…8).
-8. **"Co konkretnie dostajesz"** — bullet list with icons (8 items + guarantee callout).
-9. **"Co to jest warte"** — ROI breakdown with sub-headings (Zwrot, Return OF, Return ON 2 lata, Wartość radialna, Amplifikator).
-10. **"Inwestycja"** — pricing cards: edycja inauguracyjna 7 999 zł (3 miejsca, Q2 2026) vs regularna 24 999 zł (Q3 2026+).
-11. **"Dlaczego ja"** — Ludwik bio narrative.
-12. **CTA + "Decyzja…"** section — booking process explained, big CTA button → `/discovery`.
-13. **FAQ** — using existing `FAQAccordion` with 7 questions from copy.
-14. **Closing "Ostatnie słowo"** + final CTA → `/discovery`.
-15. `RelatedPrograms` component at bottom.
+### `public/llms.txt` structure (complete page coverage)
 
-CTAs all link to `/discovery` (the rozmowa kwalifikacyjna route).
+```text
+# Siadlak.com
+> Ludwik C. Siadlak — Diamentowy Umysł, Life OS, Aplikacje Mentalne. 
+> Mentoring 1:1, programy rozwojowe i podcasty dla osób ambitnych po 30-tce.
 
-### 2. Wire up routing & SEO
+Krótki opis: kim jest Ludwik (MCT, US Army, 20+ lat life hackingu), 
+filozofia Diamentowego Umysłu, archetypy Wojownik/Poszukiwacz, voice: Diplomat.
 
-- **`src/App.tsx`** — add `<Route path="/program/ttt-ai" element={<TrainTheTrainerAI />} />` above the catch-all `/program/:courseSlug` route.
-- **`src/lib/seo-config.ts`** — add a new `RouteConfig` entry for `/program/ttt-ai` with title "Train The Trainer: AI — Mentoring 1:1 dla ekspertów AI", description summarising the 8-week 1:1 mentoring, type `course`, plus `topical` config (primaryTopic: "AI trainer certification", intent: commercial, significantLinks to `/discovery`, `/program`, `/about`).
-- **`src/routes.ts`** — append `/program/ttt-ai` so prerender picks it up.
-- **`scripts/prerender.mjs`** — append `/program/ttt-ai` to the static-route list.
-- **`public/sitemap.xml`** — add `<url>` entry for `https://siadlak.com/program/ttt-ai`.
+## Główne strony
+- /                — strona główna (Diamentowy Umysł, mapa ekosystemu)
+- /about           — historia osobista, anchor: stacja metra 2014
+- /discovery       — bezpłatna 30-min Sesja Discovery (diagnoza)
+- /start           — hub nawigacyjny ekosystemu
+- /testimonials    — opinie klientów
+- /newsletter      — cotygodniowe listy (intymna przystań)
+- /contact         — kontakt
 
-### 3. Fix blocking build errors (must do — repo won't build otherwise)
+## Mentoring 1:1 (high-ticket)
+- /mentoring                          — przegląd mentoringu 1:1
+- /program/lifeos-system-upgrade      — Life OS: System Upgrade (flagship 8 tyg.)
+- /program/ttt-ai                     — Train The Trainer: AI (8 tyg., 1:1, dla ekspertów AI)
 
-The `BreadcrumbItem` type expects `{ name, path }` but four files pass `{ name, url }`:
-- `src/pages/About.tsx` lines 35–36
-- `src/pages/Index.tsx` line 99
-- `src/pages/Slownik.tsx` lines 115–116
+## Programy (Aplikacje Mentalne)
+- /program                       — hub programów (decision tree)
+- /program/produktywnosc         — Hakowanie Produktywności
+- /program/odpornosc             — Silna Głowa (firewall mentalny)
+- /program/uwaznosc              — Uważne Życie (mindfulness dla ADHD)
+- /program/meskosc               — Męski Kompas (mężczyźni 30+)
+- /program/7-technik             — 7 Technik (lead magnet)
 
-Replace `url:` → `path:` in those breadcrumb item literals (and strip the `https://siadlak.com` prefix if present so values match `path` semantics — verify each call site).
+## Podcasty i media
+- /podcast/life-hacking          — Life Hacking Podcast
+- /wywiady                       — rozmowy z podcasterami (2018–2025)
+- /mct                           — MCT portfolio (English)
+
+## Wydarzenia
+- /webinar                       — Kod Kapitana (uważność, 90 min)
+- /webinar/meski-kompas          — webinar Męski Kompas
+- /wyzwanie                      — 4-dniowe wyzwanie
+
+## Społeczność
+- /siadlakvip                    — SIADLAK.VIP (Telegram parasol)
+
+## Optional
+- /slownik                       — Słownik Diamentowego Umysłu
+- /reset                         — quiz Open Loops (10 pytań)
+- /links                         — bio linki (Instagram)
+- /sitemap                       — mapa strony
+- /help                          — centrum pomocy
+- /legal/privacy, /legal/terms   — dokumenty prawne
+```
+
+(Each entry will get a 1-line Polish description in actual file; abbreviated above.)
+
+### `public/robots.txt` change
+Append before `Sitemap:` line:
+```
+Llms: https://siadlak.com/llms.txt
+```
 
 ### Notes
-
-- No new images required — page is text-rich; can use lucide icons (`Brain`, `Target`, `Users`, `ShieldCheck`, `Award`, `TrendingUp`, etc.) for visual rhythm.
-- All copy preserved verbatim per user instruction. Polish characters written as literals (no `\u…` escapes), per the recent /slownik and /wywiady fixes.
-- Using existing components only — no new dependencies.
-
+- All routes verified against `src/routes.ts` and `public/sitemap.xml`.
+- `/mentoring` and `/program/ttt-ai` now present.
+- Polish descriptions, literal characters (ś, ł, ą).
+- No build/SEO/route changes — pure static files.
