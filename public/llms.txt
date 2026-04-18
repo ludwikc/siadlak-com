@@ -1,0 +1,56 @@
+# Siadlak.com
+
+> Ludwik C. Siadlak — Diamentowy Umysł, Life OS, Aplikacje Mentalne. Mentoring 1:1, programy rozwojowe i podcasty dla ambitnych osób po 30-tce.
+
+Siadlak.com to ekosystem rozwojowy prowadzony przez Ludwika C. Siadlaka — Microsoft Certified Trainer, weterana programów szkoleniowych dla US Army, z 20+ latami praktyki life hackingu. Filozofia „Diamentowego Umysłu" traktuje umysł jak operacyjny system, który można świadomie aktualizować poprzez „Aplikacje Mentalne" (programy rozwojowe). Brand voice: Diplomat — ciepły, bez guru-marketingu, bez sztucznej presji. Dwa archetypy klientów: Wojownik (Warrior — system, dyscyplina) i Poszukiwacz (Seeker — sens, świadomość).
+
+## Główne strony
+
+- [Strona główna](https://siadlak.com/): mapa ekosystemu, narracja Diamentowego Umysłu
+- [O mnie](https://siadlak.com/about): osobista historia, anchor: stacja metra 2014
+- [Discovery Call](https://siadlak.com/discovery): bezpłatna 30-min sesja diagnostyczna
+- [Start — hub nawigacyjny](https://siadlak.com/start): mapa oferty wg poziomu zaangażowania
+- [Opinie klientów](https://siadlak.com/testimonials): centralna ściana social proof
+- [Newsletter](https://siadlak.com/newsletter): cotygodniowe listy, narracja „intymnej przystani"
+- [Kontakt](https://siadlak.com/contact): formularz i bezpośredni kontakt
+
+## Mentoring 1:1 (high-ticket)
+
+- [Mentoring 1:1](https://siadlak.com/mentoring): przegląd indywidualnego mentoringu
+- [Life OS: System Upgrade](https://siadlak.com/program/lifeos-system-upgrade): flagowy program 8-tygodniowy 1:1, „odinstalowanie" przestarzałego oprogramowania mentalnego
+- [Train The Trainer: AI](https://siadlak.com/program/ttt-ai): 8-tygodniowy mentoring 1:1 dla ekspertów AI chcących zostać trenerami (Protokół POMOST™)
+
+## Programy (Aplikacje Mentalne)
+
+- [Hub programów](https://siadlak.com/program): decision tree — który program wybrać
+- [Hakowanie Produktywności](https://siadlak.com/program/produktywnosc): Aplikacja Mentalna na produktywność i fokus
+- [Silna Głowa (Odporność)](https://siadlak.com/program/odpornosc): firewall mentalny, odporność psychiczna
+- [Uważne Życie](https://siadlak.com/program/uwaznosc): mindfulness dopasowany do ADHD i nadbodźców
+- [Męski Kompas](https://siadlak.com/program/meskosc): program dla mężczyzn 30+ szukających kierunku
+- [7 Technik](https://siadlak.com/program/7-technik): bezpłatny lead magnet — 7 fundamentalnych technik
+
+## Podcasty i media
+
+- [Life Hacking Podcast](https://siadlak.com/podcast/life-hacking): hub podcastu o hakach życiowych
+- [Wywiady](https://siadlak.com/wywiady): archiwum rozmów z podcasterami 2018–2025
+- [MCT portfolio (English)](https://siadlak.com/mct): Microsoft Certified Trainer portfolio, anglojęzyczne
+
+## Wydarzenia
+
+- [Kod Kapitana — webinar](https://siadlak.com/webinar): 90-min webinar o uważności (Deep Ocean Premium)
+- [Webinar Męski Kompas](https://siadlak.com/webinar/meski-kompas): webinar dla mężczyzn 30+
+- [4-dniowe wyzwanie](https://siadlak.com/wyzwanie): bezpłatne wyzwanie sprawdzające pracę pod presją
+
+## Społeczność
+
+- [SIADLAK.VIP](https://siadlak.com/siadlakvip): „parasol" społeczności — kanał Telegram + Discord Lifehackerzy
+
+## Optional
+
+- [Słownik Diamentowego Umysłu](https://siadlak.com/slownik): definicje pojęć i metafor brandu
+- [Reset — quiz Open Loops](https://siadlak.com/reset): 10-pytaniowy quiz psychologiczny
+- [Bio links](https://siadlak.com/links): mobilna strona linków (ruch z Instagrama)
+- [Mapa strony](https://siadlak.com/sitemap): pełen przegląd nawigacji
+- [Centrum pomocy](https://siadlak.com/help): FAQ i wsparcie
+- [Polityka prywatności](https://siadlak.com/legal/privacy)
+- [Warunki użytkowania](https://siadlak.com/legal/terms)

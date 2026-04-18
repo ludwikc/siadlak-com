@@ -33,3 +33,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://siadlak.com/sitemap.xml
+Llms: https://siadlak.com/llms.txt
