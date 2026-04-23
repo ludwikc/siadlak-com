@@ -10,6 +10,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
+import devJutraImg from "@/assets/ttt-ai/devjutra.webp";
+import aiDevs4Img from "@/assets/ttt-ai/aidevs4.webp";
 
 const tttFaqs = [
   {
