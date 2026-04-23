@@ -10,6 +10,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
+import devJutraImg from "@/assets/ttt-ai/devjutra.webp";
+import aiDevs4Img from "@/assets/ttt-ai/aidevs4.webp";
 
 const tttFaqs = [
   {
@@ -341,6 +343,38 @@ export default function TrainTheTrainerAI() {
                 rozumieją, co się dzieje wewnątrz modelu. Którzy potrafią zbudować rzeczy, o których trenerzy po
                 „trzydniowym kursie AI" nie mają bladego pojęcia.
               </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
+                <figure className="space-y-3">
+                  <img
+                    src={devJutraImg}
+                    alt="Developer Jutra — 2000+ Developerów Jutra już na pokładzie"
+                    width={760}
+                    height={500}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-auto rounded-sm border border-white/10"
+                  />
+                  <figcaption className="text-sm text-dim text-center">
+                    Źródło: DeveloperJutra.pl (kwiecień 2026)
+                  </figcaption>
+                </figure>
+                <figure className="space-y-3">
+                  <img
+                    src={aiDevs4Img}
+                    alt="AI_devs 4 — 6695 zapisanych, 10000+ absolwentów"
+                    width={760}
+                    height={500}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-auto rounded-sm border border-white/10"
+                  />
+                  <figcaption className="text-sm text-dim text-center">
+                    Źródło: AIDevs.pl (kwiecień 2026)
+                  </figcaption>
+                </figure>
+              </div>
+
               <p>
                 Po drugiej stronie — 2,5 miliona aktywnych firm w Polsce. Zarządy, które w 2026 mają w budżetach linię
                 „transformacja AI" i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się porażką. HR-y
