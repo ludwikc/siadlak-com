@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Layout from "../components/layout/Layout";
+import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, MailIcon, Download } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
