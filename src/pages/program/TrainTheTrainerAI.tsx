@@ -1042,7 +1042,7 @@ export default function TrainTheTrainerAI() {
             </div>
             <p className="text-xs text-on-light-dim italic text-center max-w-2xl mx-auto">
               Program Train The Trainer: AI prowadzony jest przez Lifehackerzy / SIADLAK.VIP. Certyfikat „Lifehackerzy
-              Certified AI Trainer" wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja
+              Certified AI Trainer” wydawany jest po pozytywnym zaliczeniu egzaminu praktycznego w 8. tygodniu. Edycja
               inauguracyjna Q2 2026 — 3 miejsca w cenie 7 999 zł netto. Edycja regularna od Q3 2026 — maksymalnie 4
               miejsca na kwartał, 24 999 zł netto.
             </p>
