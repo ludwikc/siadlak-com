@@ -32,7 +32,7 @@ const tttFaqs = [
   {
     question: "Boję się stać przed ludźmi. Naprawdę się boję. Czy ten program jest dla mnie?",
     answer:
-      "Tak. Szczególnie dla Ciebie. Większość moich najlepszych uczniów była dokładnie w tym miejscu, w którym Ty jesteś. Strach przed wystąpieniem jest trenowalny. To nie jest kwestia osobowości — to kwestia liczby powtórzeń w bezpiecznym środowisku. Tygodnie 4 i 5 programu są zaprojektowane dokładnie pod to. Na koniec programu prowadzisz 90-minutowy warsztat przed realną grupą. Nie dlatego, że będziesz gotowy w 100%. Dlatego, że ludzie czekający na „pełną gotowość" nigdy nie wchodzą na scenę. Uczymy się działania w obliczu strachu, nie jego eliminacji.",
+      "Tak. Szczególnie dla Ciebie. Większość moich najlepszych uczniów była dokładnie w tym miejscu, w którym Ty jesteś. Strach przed wystąpieniem jest trenowalny. To nie jest kwestia osobowości — to kwestia liczby powtórzeń w bezpiecznym środowisku. Tygodnie 4 i 5 programu są zaprojektowane dokładnie pod to. Na koniec programu prowadzisz 90-minutowy warsztat przed realną grupą. Nie dlatego, że będziesz gotowy w 100%. Dlatego, że ludzie czekający na „pełną gotowość” nigdy nie wchodzą na scenę. Uczymy się działania w obliczu strachu, nie jego eliminacji.",
   },
   {
     question: "Czy muszę mieć firmę, żeby wziąć udział?",
@@ -55,12 +55,12 @@ const pillars = [
   {
     icon: Mic,
     title: "Twoja prezencja poza klawiaturą",
-    text: "Nie „umiejętności miękkie" z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
+    text: "Nie „umiejętności miękkie” z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
   },
   {
     icon: Brain,
     title: "Twoja metoda dydaktyczna",
-    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali".",
+    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali”.",
   },
   {
     icon: MessageSquare,
@@ -78,13 +78,13 @@ const protocolRows = [
   {
     letter: "P",
     name: "Pozycja",
-    crossing: "Od „freelancera, który łapie zlecenia" do „autorytet, którego się szuka"",
+    crossing: "Od „freelancera, który łapie zlecenia” do „autorytet, którego się szuka”",
     builds: "Twoja narracja o sobie, pozycjonowanie, strategia autorytetu",
   },
   {
     letter: "O",
     name: "Odbiorca",
-    crossing: "Od „każdy, kto zapłaci" do „ten jeden typ klienta, którego rozwiązuję jak nikt inny"",
+    crossing: "Od „każdy, kto zapłaci” do „ten jeden typ klienta, którego rozwiązuję jak nikt inny”",
     builds: "Segmentacja, język bólu klienta (Clear, Ugly, Specific Problem)",
   },
   {
@@ -102,7 +102,7 @@ const protocolRows = [
   {
     letter: "S",
     name: "Sprzedaż",
-    crossing: "Od „wyślij ofertę i się modlić" do rozmowy, w której klient sam dochodzi do decyzji",
+    crossing: "Od „wyślij ofertę i się modlić” do rozmowy, w której klient sam dochodzi do decyzji",
     builds: "Cztery Bramy Zobowiązania, konwersacja sprzedażowa 1:1, obsługa decydentów",
   },
   {
@@ -117,23 +117,23 @@ const weeks = [
   {
     n: 1,
     title: "Pozycja. Kim chcesz być, kiedy to się skończy.",
-    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy? Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału" — odpowiedzi na pytanie „czym się zajmujesz?", po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
+    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy? Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału” — odpowiedzi na pytanie „czym się zajmujesz?”, po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
   },
   {
     n: 2,
     title:
-      "Odbiorca. Bo nie sprzedajesz „szkoleń z AI". Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
-    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną" i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać".",
+      "Odbiorca. Bo nie sprzedajesz „szkoleń z AI”. Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
+    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
   },
   {
     n: 3,
     title: "Metoda. Projektowanie warsztatu, który działa.",
-    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji", „Agenci AI w obsłudze klienta", „Automatyzacja procesów back-office z Claude", „AI dla działów prawnych i compliance", „Prompt engineering dla analityków danych" — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
+    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji”, „Agenci AI w obsłudze klienta”, „Automatyzacja procesów back-office z Claude”, „AI dla działów prawnych i compliance”, „Prompt engineering dla analityków danych” — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
   },
   {
     n: 4,
     title: "Obecność (część 1). Fizyka sali.",
-    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy" — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
+    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy” — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
   },
   {
     n: 5,
@@ -143,7 +143,7 @@ const weeks = [
   {
     n: 6,
     title: "Sprzedaż. Cztery Bramy Zobowiązania.",
-    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć". Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak".",
+    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć”. Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak”.",
   },
   {
     n: 7,
@@ -158,9 +158,9 @@ const weeks = [
 ];
 
 const deliverables = [
-  "8 × 90-minutowa sesja mentorska 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie". To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
+  "8 × 90-minutowa sesja mentorska 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
   "Nieograniczony kontakt tekstowy (Telegram/Signal) przez cały czas trwania programu. Piszesz, kiedy trafiasz na ścianę. Odpowiadam w ciągu 24h, zwykle szybciej. W tygodniu Twojego pierwszego warsztatu — praktycznie na żywo.",
-  "Dwie „interwencje ratunkowe" — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
+  "Dwie „interwencje ratunkowe” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
   "Nagrania i analiza Twoich wystąpień. Przynosisz materiał (nagrania symulacji od tygodnia 4, nagrania realnych wystąpień od tygodnia 8). Rozbieramy je wspólnie. Dostajesz arkusz obserwacji, który sam potem aplikujesz do następnych sesji.",
   "Twój osobisty Trainer's Toolbox. Nie gotowe szablony od kogoś innego. Twoje własne scenariusze, Twoje ćwiczenia, Twoja oferta, Twoja metoda — projektowane razem ze mną. Na końcu programu jest to gotowy do produkcji zestaw, którego nikt Ci nie zabierze i który jest Twoim własnym IP.",
   "Certyfikacja Lifehackerzy Certified AI Trainer po egzaminie praktycznym.",
@@ -173,8 +173,8 @@ const forYou = [
   "Obecnie łapiesz pojedyncze zlecenia — freelance, na godziny, za setki złotych albo niskie kilka tysięcy. I czujesz w kościach, że to jest dramatycznie poniżej Twojej faktycznej wartości.",
   "Nigdy nie stałeś przed salą pełną dyrektorów, HR-owców, menedżerów średniego szczebla. Cała Twoja praca dzieje się dziś przed ekranem.",
   "Widzisz agentów i systemy, które zbudowałeś, i wiesz, że są warte krotnie więcej, niż za nie dostajesz — tylko jeszcze nie masz mechanizmu, żeby to uzasadnić i pokazać właściwym ludziom.",
-  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś". Teraz. W ciągu najbliższych 2 miesięcy.",
-  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia". To jest transformacja, którą robimy razem.",
+  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś”. Teraz. W ciągu najbliższych 2 miesięcy.",
+  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia”. To jest transformacja, którą robimy razem.",
 ];
 
 const notForYou = [
@@ -182,7 +182,7 @@ const notForYou = [
   "Szukasz certyfikatu, który powiesisz na ścianie. Dostaniesz certyfikat Lifehackerzy — ale on jest konsekwencją pracy, nie celem.",
   "Chcesz gotowych scenariuszy do odklepania z kartki. Uczymy tu tworzenia Twojego własnego warsztatu — zbudowanego od zera na Twojej unikalnej wiedzy, nie kopiowania cudzego zestawu.",
   "Wolisz dynamikę grupową i networking. To program 1:1. Jesteśmy we dwóch. Czasem to jest niewygodne.",
-  "Masz w głowie, że „umiejętności miękkie" to coś gorszego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — masz rację, że tu Ci nie pasuje.",
+  "Masz w głowie, że „umiejętności miękkie” to coś gorszego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — masz rację, że tu Ci nie pasuje.",
 ];
 
 const transformationItems = [
@@ -196,7 +196,7 @@ const transformationItems = [
   },
   {
     label: "Twój wybór klientów",
-    text: "Przestajesz ścigać setki osób na grupach. Zaczynasz być szukany. Różnica energetyczna między „dam radę wziąć zlecenie" a „niestety w tym kwartale nie mam już miejsc" zmienia sposób, w jaki siebie widzisz.",
+    text: "Przestajesz ścigać setki osób na grupach. Zaczynasz być szukany. Różnica energetyczna między „dam radę wziąć zlecenie” a „niestety w tym kwartale nie mam już miejsc” zmienia sposób, w jaki siebie widzisz.",
   },
   {
     label: "Twoje IP",
@@ -208,7 +208,7 @@ const transformationItems = [
   },
   {
     label: "Twój spokój",
-    text: "Ten, którego dziś nie masz, bo dziś nie wiesz, że nigdy nie byłeś po drugiej stronie mostu. Ludzie, którzy zamknęli tę zmianę, opisują to jedną frazą: „w końcu robię to, do czego zostałem zbudowany". To nie jest marketingowa fraza. To jest to, co słyszę w 8 tygodniu, kiedy rozmowa schodzi z taktyki na sens.",
+    text: "Ten, którego dziś nie masz, bo dziś nie wiesz, że nigdy nie byłeś po drugiej stronie mostu. Ludzie, którzy zamknęli tę zmianę, opisują to jedną frazą: „w końcu robię to, do czego zostałem zbudowany”. To nie jest marketingowa fraza. To jest to, co słyszę w 8 tygodniu, kiedy rozmowa schodzi z taktyki na sens.",
   },
 ];
 
@@ -262,7 +262,7 @@ export default function TrainTheTrainerAI() {
             </Button>
             <blockquote className="mt-10 max-w-2xl mx-auto border-l-4 border-electric/40 pl-6 text-left">
               <p className="text-dim italic leading-relaxed">
-                „Po trzecim tygodniu programu dostałem pierwsze zapytanie ofertowe od centrum szkoleniowego — bez żadnych zimnych wiadomości. Po prostu napisali sami."
+                „Po trzecim tygodniu programu dostałem pierwsze zapytanie ofertowe od centrum szkoleniowego — bez żadnych zimnych wiadomości. Po prostu napisali sami.”
               </p>
               <footer className="mt-3 text-xs text-dim">
                 — [IMIĘ], uczestnik edycji inauguracyjnej Q1 2026 <span className="text-electric/60">(placeholder — dodaj prawdziwy cytat przed publishem)</span>
@@ -283,7 +283,7 @@ export default function TrainTheTrainerAI() {
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
               <p>
-                Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI" na
+                Jesteś biegły w Claude. W Gemini. W ChatGPT. W rzeczach, o których większość „ekspertów AI” na
                 LinkedInie nawet nie słyszała.
               </p>
               <p>
@@ -297,7 +297,7 @@ export default function TrainTheTrainerAI() {
               <p>I jednocześnie — jeśli czytasz to dalej — wiesz, że coś tu nie gra.</p>
               <p>
                 Zlecenia, które łapiesz, to setki złotych. Czasem niskie kilka tysięcy. Klient z grupy na Facebooku.
-                Drugi z polecenia siostry. Każde ze swoją „całą historią": negocjacje,
+                Drugi z polecenia siostry. Każde ze swoją „całą historią”: negocjacje,
                 wyjaśnianie, dowożenie w nocy, czekanie na przelew. A potem znowu od zera.
               </p>
               <p>
@@ -331,7 +331,7 @@ export default function TrainTheTrainerAI() {
                 Po jednej stronie — Ty. I jeszcze kilka tysięcy takich jak Ty w Polsce. Może skończyłeś którąś edycję
                 AI_Devs albo kupiłeś Developer Jutra od Maćka Aniserowicza. Ludzie z kompetencją techniczną. Którzy
                 rozumieją, co się dzieje wewnątrz modelu. Którzy potrafią zbudować rzeczy, o których trenerzy po
-                „trzydniowym kursie AI" nie mają bladego pojęcia.
+                „trzydniowym kursie AI” nie mają bladego pojęcia.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-10">
@@ -367,13 +367,13 @@ export default function TrainTheTrainerAI() {
 
               <p>
                 Po drugiej stronie — 2,5 miliona aktywnych firm w Polsce. Zarządy, które w 2026 mają w budżetach linię
-                „transformacja AI" i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się kolejną porażką wdrożeniową.
+                „transformacja AI” i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się kolejną porażką wdrożeniową.
               </p>
               <p>
                 Pomiędzy wami — <strong className="text-on-dark">Martwa Strefa</strong>.
               </p>
               <p>
-                Oto jak ona wygląda: decydenci nie potrafią ocenić, kto jest dobry. Nie mają narzędzi do weryfikacji oferty. Więc kupują od człowieka, który potrafi mówić ich językiem — nie od człowieka, który potrafi „tylko" zbudować rozwiązanie.
+                Oto jak ona wygląda: decydenci nie potrafią ocenić, kto jest dobry. Nie mają narzędzi do weryfikacji oferty. Więc kupują od człowieka, który potrafi mówić ich językiem — nie od człowieka, który potrafi „tylko” zbudować rozwiązanie.
               </p>
               <blockquote className="border-l-4 border-electric pl-6 my-10 italic text-on-dark text-xl md:text-2xl leading-relaxed">
                 Przepaść Kompetencyjna nie jest przypadkiem. Ona jest Twoim Rynkiem. Tylko musisz umieć przez nią przejść — i wiedzieć, jak przeprowadzić innych na drugą stronę.
@@ -417,7 +417,7 @@ export default function TrainTheTrainerAI() {
                 Wieczorem wystawiasz fakturę. <strong className="text-on-light">8 000 zł</strong> za dzień. Plus styczeń. Plus rozmowa o akademii — kontrakt na 80 000 zł rozłożony na kwartał.
               </p>
               <p>
-                Wracasz do domu. Ktoś pyta, jak było. Mówisz: „Dobrze." Już wiesz, że to się będzie powtarzało.
+                Wracasz do domu. Ktoś pyta, jak było. Mówisz: „Dobrze.” Już wiesz, że to się będzie powtarzało.
               </p>
               <p className="font-bold text-on-light text-xl">
                 To jest 7 miesięcy od dziś.
@@ -481,12 +481,12 @@ export default function TrainTheTrainerAI() {
             </h2>
             <p className="text-lg text-on-light-dim leading-relaxed mb-4">
               <strong className="text-on-light">
-                Train The Trainer: AI to prywatny mentoring 1:1, który prowadzi Cię z „technicznego freelancera za kilkaset złotych za zlecenie" do „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy bierze 2 000 zł, a za dzień u bezpośredniego
+                Train The Trainer: AI to prywatny mentoring 1:1, który prowadzi Cię z „technicznego freelancera za kilkaset złotych za zlecenie” do „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy bierze 2 000 zł, a za dzień u bezpośredniego
                 klienta — 5 000–10 000 zł".
               </strong>
             </p>
             <p className="text-on-light-dim leading-relaxed">
-              To jest moment przełomu. Nie „docelowa gra". Docelowa gra jest dużo większa — 15 000, 25 000 zł dziennie,
+              To jest moment przełomu. Nie „docelowa gra”. Docelowa gra jest dużo większa — 15 000, 25 000 zł dziennie,
               kontrakty in-house, programy akademii — ale to przychodzi <em>po</em> tej przemianie. Najpierw musisz się
               tu przenieść.
             </p>
@@ -611,7 +611,7 @@ export default function TrainTheTrainerAI() {
             </h2>
             <p className="text-lg text-dim leading-relaxed mb-4">
               <strong className="text-on-dark">Osiem tygodni prywatnego dostępu do mnie.</strong> To jest rdzeń oferty.
-              Nie „dostęp do platformy". Nie „cotygodniowe grupowe calls". Mnie. 1:1.
+              Nie „dostęp do platformy”. Nie „cotygodniowe grupowe calls”. Mnie. 1:1.
             </p>
             <p className="text-dim">To oznacza:</p>
           </div>
@@ -777,7 +777,7 @@ export default function TrainTheTrainerAI() {
                     marketing
                   </li>
                   <li>
-                    Pozycja „konsultanta AI" u stałego klienta (retainer 8-15 tys. zł miesięcznie, praca 4-6 dni
+                    Pozycja „konsultanta AI” u stałego klienta (retainer 8-15 tys. zł miesięcznie, praca 4-6 dni
                     miesięcznie)
                   </li>
                 </ul>
@@ -813,13 +813,13 @@ export default function TrainTheTrainerAI() {
                 Jeśli nauczyłem się robić to tam — mogę nauczyć Cię robić to w polskiej sali konferencyjnej.
               </p>
               <p>
-                Dziś jestem też coachem transformacyjnym i twórcą ekosystemu Lifehackerzy. Ten program to nie „kurs z certyfikatem". To jest to samo przejście, przez które ja sam przeszedłem — ustrukturyzowane i skrócone do 8 tygodni.
+                Dziś jestem też coachem transformacyjnym i twórcą ekosystemu Lifehackerzy. Ten program to nie „kurs z certyfikatem”. To jest to samo przejście, przez które ja sam przeszedłem — ustrukturyzowane i skrócone do 8 tygodni.
               </p>
             </div>
 
             <blockquote className="mt-10 border-l-4 border-electric/40 pl-6">
               <p className="text-on-light-dim italic leading-relaxed text-lg">
-                „Myślałem, że moja bariera to lęk przed wystąpieniami. Po tygodniu 4 zrozumiałem, że bariera była inna — nie wierzyłem, że moja wiedza jest warta tyle, ile Ludwik mówił. Ten program zmienił obie te rzeczy."
+                „Myślałem, że moja bariera to lęk przed wystąpieniami. Po tygodniu 4 zrozumiałem, że bariera była inna — nie wierzyłem, że moja wiedza jest warta tyle, ile Ludwik mówił. Ten program zmienił obie te rzeczy.”
               </p>
               <footer className="mt-3 text-xs text-on-light-dim">
                 — [IMIĘ], uczestnik <span className="text-electric/60">(placeholder)</span>
@@ -1001,7 +1001,7 @@ export default function TrainTheTrainerAI() {
               </p>
               <p>
                 Jeśli wolisz jeszcze trochę poczekać, zbudować kolejnego agenta, przeczytać jeszcze jedną książkę zanim
-                „naprawdę zaczniesz" — to też jest uczciwa odpowiedź. Wracaj, kiedy będziesz gotowy. Rynek na Ciebie nie
+                „naprawdę zaczniesz” — to też jest uczciwa odpowiedź. Wracaj, kiedy będziesz gotowy. Rynek na Ciebie nie
                 będzie czekał wiecznie, ale ja tu jestem.
               </p>
               <p>Do usłyszenia,</p>
