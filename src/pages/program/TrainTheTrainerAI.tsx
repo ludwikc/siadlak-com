@@ -9,16 +9,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
-import hackerUmyslowImg from "@/assets/SIADLAK-HackerUmyslow.webp";
 import devJutraImg from "@/assets/ttt-ai/devjutra.webp";
 import aiDevs4Img from "@/assets/ttt-ai/aidevs4.webp";
 
 const tttFaqs = [
   {
     question:
-      "Dziś łapię zlecenia za 1 500 zł. Dlaczego miałbym zainwestować 8 000 zł — ponad 5 moich obecnych dniówek — w program, żeby to zmienić?",
+      "Dziś łapię zlecenia za 1 500 zł. Dlaczego miałbym zainwestować 8 000 zł?",
     answer:
-      "Dwa poziomy odpowiedzi. Matematyczny: za 2 lata freelance'u na obecnej ścieżce zarobisz ~60-120 tys. zł. Za 2 lata pracy jako certyfikowany trener AI — 250-400 tys. zł. Różnica rzędu 200 tys. zł. Program kosztuje 3-4% tej różnicy. Matematyka domyka się w pierwszych 60-90 dniach po zakończeniu programu. Uczciwszy: jeśli ta kwota nie jest dla Ciebie sporym ruchem, program nie zadziała. Cena mentoringu wysokiej klasy nie jest opłatą za dostęp. Jest częścią mechanizmu zmiany. Ludzie, którzy inwestują lekko, lekko odpuszczają w tygodniu 4 — kiedy robi się niekomfortowo. Ludzie, którzy czują tę inwestycję w ciele, dochodzą do tygodnia 8. I do tygodnia 12. I do pierwszej faktury.",
+      "Jeśli odpowiedź matematyczna jest jedyną, która Cię przekonuje — to jest sygnał, że jeszcze nie pora. Bo w tygodniu 4 matematyka nie pomaga. Pomaga zobowiązanie. Ale skoro matematykę lubisz — oto ona. Za 2 lata freelance'u na obecnej ścieżce zarobisz ~60-120 tys. zł. Za 2 lata pracy jako certyfikowany trener AI — 250-400 tys. zł. Różnica rzędu 200 tys. zł. Program kosztuje 3-4% tej różnicy. Matematyka domyka się w pierwszych 60-90 dniach po zakończeniu programu.",
   },
   {
     question: "Czy jest wersja grupowa, tańsza?",
@@ -33,7 +32,7 @@ const tttFaqs = [
   {
     question: "Boję się stać przed ludźmi. Naprawdę się boję. Czy ten program jest dla mnie?",
     answer:
-      "Tak. Szczególnie dla Ciebie. Większość moich najlepszych uczniów była dokładnie w tym miejscu, w którym Ty jesteś. Strach przed wystąpieniem jest trenowalny. To nie jest kwestia osobowości — to kwestia liczby powtórzeń w bezpiecznym środowisku. Tygodnie 4 i 5 programu są zaprojektowane dokładnie pod to. Na koniec programu prowadzisz 90-minutowy warsztat przed realną grupą. Nie dlatego, że będziesz gotowy w 100%. Dlatego, że ludzie czekający na „pełną gotowość” nigdy nie wchodzą na scenę. Uczymy się działania w obliczu strachu, nie jego eliminacji.",
+      "Tak. Szczególnie dla Ciebie. Większość moich najlepszych uczniów była dokładnie w tym miejscu, w którym Ty jesteś. Strach przed wystąpieniem jest trenowalny. To nie jest kwestia osobowości — to kwestia liczby powtórzeń w bezpiecznym środowisku. Tygodnie 4 i 5 programu są zaprojektowane dokładnie pod to. Na koniec programu prowadzisz 90-minutowy warsztat przed realną grupą. Nie dlatego, że będziesz gotowy w 100%. Dlatego, że ludzie czekający na „pełną gotowość" nigdy nie wchodzą na scenę. Uczymy się działania w obliczu strachu, nie jego eliminacji.",
   },
   {
     question: "Czy muszę mieć firmę, żeby wziąć udział?",
@@ -56,12 +55,12 @@ const pillars = [
   {
     icon: Mic,
     title: "Twoja prezencja poza klawiaturą",
-    text: "Nie „umiejętności miękkie” z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
+    text: "Nie „umiejętności miękkie" z HR-owego katalogu. Fizyczna, realna, namacalna obecność, która sprawia, że kiedy wchodzisz na salę konferencyjną, ludzie podnoszą głowy znad telefonów. Od głosu przez postawę, tempo, oddech, kontakt wzrokowy. To się da wytrenować — i wiem to, bo sam przechodziłem przez to 20 lat temu jako geek, którego pierwsze wystąpienie zakończyło się tym, że mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.",
   },
   {
     icon: Brain,
     title: "Twoja metoda dydaktyczna",
-    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali”.",
+    text: "Jak z wiedzy, która u Ciebie jest intuicyjna, stworzyć ścieżkę, którą tamten człowiek — księgowa z 20-letnim stażem, która pierwszy raz w życiu widzi Claude'a — może przejść. Jak zaprojektować warsztat, w którym uczestnik wychodzi z konkretną, mierzalną umiejętnością, a nie z „wrażeniem, że coś tam pokazywali".",
   },
   {
     icon: MessageSquare,
@@ -79,13 +78,13 @@ const protocolRows = [
   {
     letter: "P",
     name: "Pozycja",
-    crossing: "Od „freelancera, który łapie zlecenia” do „autorytet, którego się szuka”",
+    crossing: "Od „freelancera, który łapie zlecenia" do „autorytet, którego się szuka"",
     builds: "Twoja narracja o sobie, pozycjonowanie, strategia autorytetu",
   },
   {
     letter: "O",
     name: "Odbiorca",
-    crossing: "Od „każdy, kto zapłaci” do „ten jeden typ klienta, którego rozwiązuję jak nikt inny”",
+    crossing: "Od „każdy, kto zapłaci" do „ten jeden typ klienta, którego rozwiązuję jak nikt inny"",
     builds: "Segmentacja, język bólu klienta (Clear, Ugly, Specific Problem)",
   },
   {
@@ -103,7 +102,7 @@ const protocolRows = [
   {
     letter: "S",
     name: "Sprzedaż",
-    crossing: "Od „wyślij ofertę i się modlić” do rozmowy, w której klient sam dochodzi do decyzji",
+    crossing: "Od „wyślij ofertę i się modlić" do rozmowy, w której klient sam dochodzi do decyzji",
     builds: "Cztery Bramy Zobowiązania, konwersacja sprzedażowa 1:1, obsługa decydentów",
   },
   {
@@ -118,23 +117,23 @@ const weeks = [
   {
     n: 1,
     title: "Pozycja. Kim chcesz być, kiedy to się skończy.",
-    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy? Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału” — odpowiedzi na pytanie „czym się zajmujesz?”, po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
+    text: "Zaczynamy od najtwardszej rozmowy: kim Ty chcesz być za 18 miesięcy, i jak musi brzmieć Twoja narracja o sobie, żeby ten człowiek za 18 miesięcy był w ogóle możliwy? Pracujemy nad Twoim Profilem Autorytetu, nad językiem LinkedInowym, nad pierwszą wersją Twojego 60-sekundowego „strzału" — odpowiedzi na pytanie „czym się zajmujesz?", po której rozmówca chce wejść głębiej. Zadanie wdrożeniowe: 3 realne rozmowy poprowadzone według naszego formatu.",
   },
   {
     n: 2,
     title:
-      "Odbiorca. Bo nie sprzedajesz „szkoleń z AI”. Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
-    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
+      "Odbiorca. Bo nie sprzedajesz „szkoleń z AI". Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
+    text: "Narzędzie: CUSP Mapping™ — technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu — w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną" i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać".",
   },
   {
     n: 3,
     title: "Metoda. Projektowanie warsztatu, który działa.",
-    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji”, „Agenci AI w obsłudze klienta”, „Automatyzacja procesów back-office z Claude”, „AI dla działów prawnych i compliance”, „Prompt engineering dla analityków danych” — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
+    text: "Tu robimy ciężką pracę dydaktyczną. Cykl Kolba (doświadczenie → refleksja → teoria → zastosowanie) na poziomie, który daje Ci strukturę na całe życie zawodowe — nie podręcznikowej. Projektujemy razem Twój pierwszy flagowy warsztat (1 dzień lub 2 dni) w Twojej niszy — może to być „AI dla HR i rekrutacji", „Agenci AI w obsłudze klienta", „Automatyzacja procesów back-office z Claude", „AI dla działów prawnych i compliance", „Prompt engineering dla analityków danych" — w zależności od tego, gdzie masz najmocniejsze doświadczenie techniczne. Piszemy scenariusz, nie tylko slajdy. Tworzymy ćwiczenia, które nie mogą nie zadziałać. Na końcu tygodnia masz gotowy produkt, który możesz sprzedawać — i wiesz dokładnie, dlaczego każdy jego element tam jest.",
   },
   {
     n: 4,
     title: "Obecność (część 1). Fizyka sali.",
-    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy” — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
+    text: "Jak stać. Jak oddychać. Co robi Twoja twarz, kiedy uczestnik pyta „czy AI nie zabierze nam pracy" — i co powinna robić. Gdzie stać w sali, żeby przyciągnąć uwagę rozproszonej grupy. Jak używać ciszy (największa broń trenera, o której nikt Cię nie nauczył). Jak pracować z uczestnikiem, który chce Cię sprawdzić — a taki zawsze jest, zwłaszcza kiedy wchodzisz jako ktoś nowy. Trenujemy na symulacjach. Na końcu tygodnia nagrywasz swoje pierwsze 20-minutowe wystąpienie, które rozbieramy razem na czynniki pierwsze.",
   },
   {
     n: 5,
@@ -144,7 +143,7 @@ const weeks = [
   {
     n: 6,
     title: "Sprzedaż. Cztery Bramy Zobowiązania.",
-    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć”. Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak”.",
+    text: "Najbardziej niekomfortowy tydzień dla geeka. I jednocześnie ten, który odblokowuje resztę życia zawodowego. Bierzemy framework Four Gates z zachodniego coachingu sprzedażowego — Prawda o Problemie, Prawda o Wizji, Prawda o Zobowiązaniu, Prawda o Decyzji — i adaptujemy go do polskiej konwersacji sprzedażowej B2B. Uczę Cię zadawać pytania, po których klient sam siebie przekonuje, że musi kupić. Bez nacisku. Bez skryptu. Bez „zamknięć". Na końcu tygodnia odbywasz 3 prawdziwe rozmowy sprzedażowe — z centrami szkoleniowymi, bezpośrednimi klientami albo obiema grupami — i razem robimy ich debrief. Cel tego tygodnia: pierwsze „tak".",
   },
   {
     n: 7,
@@ -159,9 +158,9 @@ const weeks = [
 ];
 
 const deliverables = [
-  "8 × 90-minutowa sesja mentorska 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie”. To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
+  "8 × 90-minutowa sesja mentorska 1:1, co tydzień, w stałym terminie ustalonym z Tobą. To nie są konsultacje „na wypadek gdybyś miał pytanie". To prowadzone przeze mnie, strukturalne sesje z agendą i celem.",
   "Nieograniczony kontakt tekstowy (Telegram/Signal) przez cały czas trwania programu. Piszesz, kiedy trafiasz na ścianę. Odpowiadam w ciągu 24h, zwykle szybciej. W tygodniu Twojego pierwszego warsztatu — praktycznie na żywo.",
-  "Dwie „interwencje ratunkowe” — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
+  "Dwie „interwencje ratunkowe" — sesje na zamówienie (60 min), które możesz wywołać w dowolnym momencie. Zwykle wykorzystuje się je przed pierwszą realną rozmową sprzedażową i przed pierwszym realnym warsztatem po programie.",
   "Nagrania i analiza Twoich wystąpień. Przynosisz materiał (nagrania symulacji od tygodnia 4, nagrania realnych wystąpień od tygodnia 8). Rozbieramy je wspólnie. Dostajesz arkusz obserwacji, który sam potem aplikujesz do następnych sesji.",
   "Twój osobisty Trainer's Toolbox. Nie gotowe szablony od kogoś innego. Twoje własne scenariusze, Twoje ćwiczenia, Twoja oferta, Twoja metoda — projektowane razem ze mną. Na końcu programu jest to gotowy do produkcji zestaw, którego nikt Ci nie zabierze i który jest Twoim własnym IP.",
   "Certyfikacja Lifehackerzy Certified AI Trainer po egzaminie praktycznym.",
@@ -174,8 +173,8 @@ const forYou = [
   "Obecnie łapiesz pojedyncze zlecenia — freelance, na godziny, za setki złotych albo niskie kilka tysięcy. I czujesz w kościach, że to jest dramatycznie poniżej Twojej faktycznej wartości.",
   "Nigdy nie stałeś przed salą pełną dyrektorów, HR-owców, menedżerów średniego szczebla. Cała Twoja praca dzieje się dziś przed ekranem.",
   "Widzisz agentów i systemy, które zbudowałeś, i wiesz, że są warte krotnie więcej, niż za nie dostajesz — tylko jeszcze nie masz mechanizmu, żeby to uzasadnić i pokazać właściwym ludziom.",
-  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś”. Teraz. W ciągu najbliższych 2 miesięcy.",
-  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia”. To jest transformacja, którą robimy razem.",
+  "Jesteś gotowy wyjść zza klawiatury. Nie „planujesz kiedyś". Teraz. W ciągu najbliższych 2 miesięcy.",
+  "Jesteś gotowy pracować. To nie jest kurs, który się „przerabia". To jest transformacja, którą robimy razem.",
 ];
 
 const notForYou = [
@@ -183,7 +182,7 @@ const notForYou = [
   "Szukasz certyfikatu, który powiesisz na ścianie. Dostaniesz certyfikat Lifehackerzy — ale on jest konsekwencją pracy, nie celem.",
   "Chcesz gotowych scenariuszy do odklepania z kartki. Uczymy tu tworzenia Twojego własnego warsztatu — zbudowanego od zera na Twojej unikalnej wiedzy, nie kopiowania cudzego zestawu.",
   "Wolisz dynamikę grupową i networking. To program 1:1. Jesteśmy we dwóch. Czasem to jest niewygodne.",
-  "Masz w głowie, że „umiejętności miękkie” to coś gorszego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — masz rację, że tu Ci nie pasuje.",
+  "Masz w głowie, że „umiejętności miękkie" to coś gorszego od kompetencji technicznej. Jeśli nie traktujesz komunikacji, prezencji i sprzedaży jako rzemiosła wartego 8 tygodni skupionej pracy — masz rację, że tu Ci nie pasuje.",
 ];
 
 const transformationItems = [
@@ -197,7 +196,7 @@ const transformationItems = [
   },
   {
     label: "Twój wybór klientów",
-    text: "Przestajesz ścigać setki osób na grupach. Zaczynasz być szukany. Różnica energetyczna między „dam radę wziąć zlecenie” a „niestety w tym kwartale nie mam już miejsc” zmienia sposób, w jaki siebie widzisz.",
+    text: "Przestajesz ścigać setki osób na grupach. Zaczynasz być szukany. Różnica energetyczna między „dam radę wziąć zlecenie" a „niestety w tym kwartale nie mam już miejsc" zmienia sposób, w jaki siebie widzisz.",
   },
   {
     label: "Twoje IP",
@@ -209,7 +208,7 @@ const transformationItems = [
   },
   {
     label: "Twój spokój",
-    text: "Ten, którego dziś nie masz, bo dziś nie wiesz, że nigdy nie byłeś po drugiej stronie mostu. Ludzie, którzy zamknęli tę zmianę, opisują to jedną frazą: „w końcu robię to, do czego zostałem zbudowany”. To nie jest marketingowa fraza. To jest to, co słyszę w 8 tygodniu, kiedy rozmowa schodzi z taktyki na sens.",
+    text: "Ten, którego dziś nie masz, bo dziś nie wiesz, że nigdy nie byłeś po drugiej stronie mostu. Ludzie, którzy zamknęli tę zmianę, opisują to jedną frazą: „w końcu robię to, do czego zostałem zbudowany". To nie jest marketingowa fraza. To jest to, co słyszę w 8 tygodniu, kiedy rozmowa schodzi z taktyki na sens.",
   },
 ];
 
@@ -242,17 +241,14 @@ export default function TrainTheTrainerAI() {
                 Edycja inauguracyjna · Q2 2026 · 3 miejsca
               </span>
             </div>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em] break-words">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-electric mb-4">
               TRAIN THE TRAINER: AI
+            </p>
+            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em] break-words">
+              Twoja wiedza o AI jest warta 5–10× więcej, niż za nią dziś dostajesz. Problem jest jeden — i nie jest techniczny.
             </h1>
             <p className="text-xl md:text-2xl text-dim mb-8 leading-relaxed">
-              Prywatny, 8-tygodniowy mentoring 1:1 dla ekspertów AI, którzy zbudowali potęgę na swoim laptopie — i są
-              gotowi w końcu dostawać za nią stawki, które są warci.
-            </p>
-            <p className="text-sm md:text-base text-dim italic mb-10 max-w-2xl mx-auto">
-              Maksymalnie 4 miejsca na kwartał. Prowadzi Ludwik C. Siadlak — Microsoft Certified Trainer z 20-letnim
-              doświadczeniem, szkolący m.in. jednostki US Army, US Navy, US Air Force i US Marine Corps w bazach w
-              Niemczech, Belgii i Włoszech.
+              Prywatny, 8-tygodniowy mentoring 1:1. Maksymalnie 4 miejsca na kwartał. Prowadzi Ludwik Siadlak — Microsoft Certified Trainer z 20-letnim doświadczeniem szkolenia m.in. jednostek US Army, US Navy, US Air Force i US Marine Corps.
             </p>
             <Button
               asChild
@@ -264,6 +260,14 @@ export default function TrainTheTrainerAI() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
+            <blockquote className="mt-10 max-w-2xl mx-auto border-l-4 border-electric/40 pl-6 text-left">
+              <p className="text-dim italic leading-relaxed">
+                „Po trzecim tygodniu programu dostałem pierwsze zapytanie ofertowe od centrum szkoleniowego — bez żadnych zimnych wiadomości. Po prostu napisali sami."
+              </p>
+              <footer className="mt-3 text-xs text-dim">
+                — [IMIĘ], uczestnik edycji inauguracyjnej Q1 2026 <span className="text-electric/60">(placeholder — dodaj prawdziwy cytat przed publishem)</span>
+              </footer>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -285,17 +289,15 @@ export default function TrainTheTrainerAI() {
               <p>
                 Twój agent, którego zbudowałeś w zeszły weekend na własnym laptopie, robi rzeczy, na które Twoi znajomi
                 patrzą z otwartymi ustami. Nowy model od Anthropic wychodzi o 21:00? Masz z nim pierwsze testy do 23:30.
-                Czytasz release notes OpenAI jak inni czytają wyniki ligi.
               </p>
               <p>
-                To jest coś rzadkiego. Ludzi, którzy naprawdę widzą, co dzieje się pod maską tych modeli, jest w Polsce
-                kilka tysięcy. Na około siedem milionów aktywnych zawodowo. Widzisz świat w rozdzielczości, której 99%
-                nawet nie podejrzewa, że istnieje.
+                To jest coś rzadkiego. Ludzi, którzy naprawdę widzą, co się dzieje pod maską tych modeli, jest w Polsce
+                kilka tysięcy. Na ponad siedem milionów aktywnych zawodowo.
               </p>
               <p>I jednocześnie — jeśli czytasz to dalej — wiesz, że coś tu nie gra.</p>
               <p>
                 Zlecenia, które łapiesz, to setki złotych. Czasem niskie kilka tysięcy. Klient z grupy na Facebooku.
-                Drugi z polecenia siostry. Trzeci — przez zupełny przypadek. Każde „cała historia": negocjacje,
+                Drugi z polecenia siostry. Każde ze swoją „całą historią": negocjacje,
                 wyjaśnianie, dowożenie w nocy, czekanie na przelew. A potem znowu od zera.
               </p>
               <p>
@@ -304,31 +306,19 @@ export default function TrainTheTrainerAI() {
               </p>
               <p className="font-bold text-on-light text-xl">Tylko to nie jesteś Ty.</p>
               <p>
-                I tu jest rzecz, którą chcę Ci powiedzieć bez owijania: to nie jest kwestia umiejętności technicznej.
-                Twoja jest w top 1%. To jest kwestia jednej brakującej części układanki. Rynek nie płaci za to, co
-                potrafisz <em>zbudować</em>. Rynek płaci za to, co potrafisz <em>przekazać</em> innemu człowiekowi tak,
-                żeby <em>on</em> poczuł, że musi to mieć.
+                I tu jest rzecz, którą chcę Ci powiedzieć bez owijania w bawełnę.
               </p>
-              <p className="font-bold text-on-light text-xl">
-                To jest most. I tej umiejętności na laptopie się nie nabywa.
+              <p>
+                To nie jest kwestia umiejętności technicznej. Twoja jest w top 1%. To kwestia jednej brakującej części układanki — i ta część nie jest oprogramowaniem.
               </p>
             </div>
-            <figure className="mt-12 max-w-3xl mx-auto">
-              <img
-                src={hackerUmyslowImg}
-                alt="Ludwik C. Siadlak na scenie podczas wystąpienia — slajd „Hacker umysłów”"
-                className="w-full h-auto rounded-lg shadow-2xl border border-on-light/10"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
           </div>
         </div>
       </section>
 
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
-      {/* THE GAP */}
+      {/* THE GAP — MARTWA STREFA */}
       <section className="py-20 md:py-28 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
@@ -377,33 +367,22 @@ export default function TrainTheTrainerAI() {
 
               <p>
                 Po drugiej stronie — 2,5 miliona aktywnych firm w Polsce. Zarządy, które w 2026 mają w budżetach linię
-                „transformacja AI" i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się porażką. HR-y
-                korporacji, centra szkoleniowe, urzędy, banki, firmy produkcyjne — cała gospodarka potrzebuje{" "}
-                <em>dziś</em> kogoś, kto pokaże pracownikom, jak zacząć używać tych narzędzi w realnej pracy.
+                „transformacja AI" i szukają, komu zapłacić, żeby to <em>nie</em> skończyło się kolejną porażką wdrożeniową.
               </p>
               <p>
-                Pomiędzy wami — <strong className="text-on-dark">przepaść kompetencyjna</strong>. Decydenci po drugiej
-                stronie nie mają pojęcia, czego nie wiedzą. Nie potrafią ocenić, kto jest dobry. Nie potrafią
-                zweryfikować oferty. Więc kupują to, co brzmi wiarygodnie. Kupują od człowieka, który potrafi{" "}
-                <em>mówić</em> ich językiem — nie od człowieka, który potrafi <em>budować</em> w ich problemie.
+                Pomiędzy wami — <strong className="text-on-dark">Martwa Strefa</strong>.
+              </p>
+              <p>
+                Oto jak ona wygląda: decydenci nie potrafią ocenić, kto jest dobry. Nie mają narzędzi do weryfikacji oferty. Więc kupują od człowieka, który potrafi mówić ich językiem — nie od człowieka, który potrafi „tylko" zbudować rozwiązanie.
               </p>
               <blockquote className="border-l-4 border-electric pl-6 my-10 italic text-on-dark text-xl md:text-2xl leading-relaxed">
-                W tej przepaści — dokładnie w jej środku — leżą pieniądze.
+                Przepaść Kompetencyjna nie jest przypadkiem. Ona jest Twoim Rynkiem. Tylko musisz umieć przez nią przejść — i wiedzieć, jak przeprowadzić innych na drugą stronę.
               </blockquote>
               <p>
-                Nie po Twojej stronie. Tam konkurujesz z 50 innymi geekami o te same zlecenia, licytując się w dół.
-              </p>
-              <p>Nie po stronie biznesu. Biznes nie wie, czego nie wie.</p>
-              <p className="font-bold text-on-dark">
-                Leżą w moście. W człowieku, który potrafi przejść tę przepaść w obie strony — i przeprowadzić innych.
-              </p>
-              <p>
-                Ten człowiek nie jest <em>lepszym</em> inżynierem promptów niż Ty. Ten człowiek ma coś, czego Ty dziś
+                Człowiek, który to potrafi, nie jest lepszym inżynierem promptów niż Ty. Ma coś, czego Ty dziś
                 jeszcze nie masz: <strong className="text-on-dark">rzemiosło trenerskie i rzemiosło sprzedażowe</strong>
                 . Umiejętność stanięcia przed 30 nieufnymi dorosłymi w garniturach i wciągnięcia ich w materiał tak, że
-                po warsztacie sami pytają, kiedy kolejny. Umiejętność usiąść naprzeciw dyrektora HR i przez 45 minut tak
-                poprowadzić rozmowę, że na końcu <em>on</em> mówi: „rozumiem, wchodzimy w to, jaka jest stawka za
-                dzień?".
+                po warsztacie sami pytają o kolejny termin.
               </p>
               <p className="font-bold text-electric text-xl">
                 To są umiejętności. Nie talent. Umiejętności. A umiejętności się trenuje.
@@ -420,36 +399,28 @@ export default function TrainTheTrainerAI() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
-              Zatrzymaj się na chwilę
+              Listopad 2026. Wyobraź sobie jeden konkretny poranek.
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
-              <p>Pomyśl o tym: listopad 2026. Za siedem miesięcy od dziś.</p>
               <p>
-                Siedzisz w sali konferencyjnej korporacji w centrum dużego miasta. 32 osoby. Średni szczebel
-                menedżerski. Przyszło czterech dyrektorów, bo słyszeli od HR-owczyni z innej firmy, że to się warto było
-                odsłuchać.
+                Siedzisz w sali konferencyjnej w centrum dużego miasta. 32 osoby. Przyszło czterech dyrektorów, bo słyszeli od HR-owczyni z innej firmy, że to się warto było odsłuchać.
               </p>
               <p>
-                Prowadzisz dzień. Pierwszy raz w życiu albo dziesiąty — nie ma znaczenia. Masz to w ciele. Wiesz, gdzie
-                stanąć. Wiesz, co zrobić z osobą, która próbuje Cię sprawdzić (bo taka osoba zawsze jest). Wiesz, kiedy
+                Prowadzisz dzień. Wiesz, gdzie stanąć. Wiesz, co zrobić z osobą, która próbuje Cię sprawdzić (bo taka zawsze jest). Wiesz, kiedy
                 zamilknąć na trzy sekundy — i dlaczego ta cisza działa mocniej niż kolejny slajd.
               </p>
               <p>
-                Po południu podchodzi do Ciebie dyrektorka HR: „Ludwik, mamy jeszcze trzy działy. Możemy ustawić kolejny
+                Po południu podchodzi do Ciebie dyrektorka HR: „Mamy jeszcze trzy działy. Możemy ustawić kolejny
                 termin w styczniu? I — chciałabym porozmawiać o akademii wewnętrznej. Znajdziesz we wtorek 45 minut?".
               </p>
               <p>
-                Wieczorem wystawiasz fakturę. <strong className="text-on-light">8 000 zł</strong> za dziś. Plus styczeń,
-                zaklepany. Plus rozmowa o akademii, która — jeśli pójdzie dobrze — jest kontraktem na 80 000 zł
-                rozłożonym na kwartał.
+                Wieczorem wystawiasz fakturę. <strong className="text-on-light">8 000 zł</strong> za dzień. Plus styczeń. Plus rozmowa o akademii — kontrakt na 80 000 zł rozłożony na kwartał.
               </p>
               <p>
-                Wracasz do domu. Ktoś Ci bliski pyta, jak było. Mówisz po prostu: „Dobrze.". Bo już wiesz, że to się
-                będzie powtarzało.
+                Wracasz do domu. Ktoś pyta, jak było. Mówisz: „Dobrze." Już wiesz, że to się będzie powtarzało.
               </p>
               <p className="font-bold text-on-light text-xl">
-                To jest wizja. Nie rysuje się na slajdzie. Rysuje się w pracy, którą wykonujemy przez 8 tygodni — tydzień
-                po tygodniu, na konkretnych umiejętnościach, bez skrótów.
+                To jest 7 miesięcy od dziś.
               </p>
             </div>
           </div>
@@ -506,14 +477,12 @@ export default function TrainTheTrainerAI() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-6 leading-[1.1] tracking-[-0.02em]">
-              Co to <em>właściwie</em> jest
+              To, co dostajesz — w 8 tygodniach razem
             </h2>
             <p className="text-lg text-on-light-dim leading-relaxed mb-4">
               <strong className="text-on-light">
-                Train The Trainer: AI to 8-tygodniowy prywatny mentoring 1:1, który prowadzi Cię z pozycji „freelancera
-                technicznego, który łapie zlecenia za kilkaset złotych" do pozycji „certyfikowanego trenera AI, który za
-                pierwszy dzień warsztatowy w centrum szkoleniowym bierze 2 000 zł, a za pierwszy dzień u bezpośredniego
-                klienta — 5 000-10 000 zł".
+                Train The Trainer: AI to prywatny mentoring 1:1, który prowadzi Cię z „technicznego freelancera za kilkaset złotych za zlecenie" do „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy bierze 2 000 zł, a za dzień u bezpośredniego
+                klienta — 5 000–10 000 zł".
               </strong>
             </p>
             <p className="text-on-light-dim leading-relaxed">
@@ -824,36 +793,72 @@ export default function TrainTheTrainerAI() {
 
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
-      {/* INVESTMENT */}
+      {/* WHY ME — moved before Investment */}
       <section className="py-20 md:py-28 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
+              Dlaczego ja — i dlaczego to ważne, że sam przez to przeszedłem
+            </h2>
+            <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">
+              <p>Zacznę od początku, bo jest w tej historii coś, co ma znaczenie dla Ciebie.</p>
+              <p>
+                Byłem geek. Wiedziałem wszystko o swoich narzędziach. I na pierwszym prawdziwym wystąpieniu mówiłem tak szybko, że moderator musiał mnie delikatnie przerwać po 7 minutach z planowanych 40.
+              </p>
+              <p className="font-bold text-on-light">Nie z braku wiedzy. Z braku rzemiosła.</p>
+              <p>
+                Kolejne kilkanaście lat spędziłem, budując to rzemiosło na bardzo wymagającej szkole — salach konferencyjnych baz wojskowych. Szkolenia dla jednostek US Army w Wiesbaden, US Air Force w Ramstein, US Navy w Neapolu, US Marine Corps i personelu NATO w Mons i Vicenzy. Oficerowie operacyjni, których zawodem jest weryfikowanie kompetencji innych w 30 sekund.
+              </p>
+              <p className="font-bold text-on-light">
+                Jeśli nauczyłem się robić to tam — mogę nauczyć Cię robić to w polskiej sali konferencyjnej.
+              </p>
+              <p>
+                Dziś jestem też coachem transformacyjnym i twórcą ekosystemu Lifehackerzy. Ten program to nie „kurs z certyfikatem". To jest to samo przejście, przez które ja sam przeszedłem — ustrukturyzowane i skrócone do 8 tygodni.
+              </p>
+            </div>
+
+            <blockquote className="mt-10 border-l-4 border-electric/40 pl-6">
+              <p className="text-on-light-dim italic leading-relaxed text-lg">
+                „Myślałem, że moja bariera to lęk przed wystąpieniami. Po tygodniu 4 zrozumiałem, że bariera była inna — nie wierzyłem, że moja wiedza jest warta tyle, ile Ludwik mówił. Ten program zmienił obie te rzeczy."
+              </p>
+              <footer className="mt-3 text-xs text-on-light-dim">
+                — [IMIĘ], uczestnik <span className="text-electric/60">(placeholder)</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+
+      {/* INVESTMENT */}
+      <section className="py-20 md:py-28 bg-void-glow">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-6 leading-[1.1] tracking-[-0.02em]">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
               Inwestycja
             </h2>
-            <p className="text-lg text-on-light-dim leading-relaxed">
-              Cena dobrej oferty ma ekscytować obie strony. Moja ekscytuje mnie, bo żeby ją uzasadnić, muszę dostarczyć
-              Ci transformację, którą sam będę nazywał swoją najlepszą pracą. Twoja ma ekscytować Ciebie — bo oznacza,
-              że wchodzisz w to z zobowiązaniem (mentalnym, emocjonalnym, fizycznym i finansowym), które uniemożliwia Ci
-              nie zmienić się.
+            <p className="text-lg text-dim leading-relaxed">
+              Jedna uczciwa liczba, zanim przejdziesz dalej:
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-            <Card className="rounded-md border-electric/40 bg-paper light-card relative">
+            <Card className="rounded-md border-electric/40 bg-surface border relative">
               <div className="absolute -top-3 left-6 px-3 py-1 bg-brand-gradient text-white text-xs font-bold uppercase tracking-[0.2em] rounded-sm">
                 Edycja inauguracyjna
               </div>
               <CardContent className="p-8 pt-10">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-on-light-dim mb-2">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-dim mb-2">
                   Q2 2026 · 3 miejsca
                 </p>
                 <div className="mb-4">
-                  <span className="font-heading text-5xl font-bold text-on-light">7 999 zł</span>
-                  <span className="text-on-light-dim ml-2">netto</span>
+                  <span className="font-heading text-5xl font-bold text-on-dark">7 999 zł</span>
+                  <span className="text-dim ml-2">netto</span>
                 </div>
-                <p className="text-on-light-dim text-sm leading-relaxed mb-6">
-                  <strong className="text-on-light">Bonus:</strong> dwa dodatkowe dni mentoringu po zakończeniu programu
+                <p className="text-on-dark font-bold text-sm mb-4">Zostały 3 miejsca.</p>
+                <p className="text-dim text-sm leading-relaxed mb-6">
+                  <strong className="text-on-dark">Bonus:</strong> dwa dodatkowe dni mentoringu po zakończeniu programu
                   (9 i 12 miesiąc) do kalibracji praktyki.
                 </p>
                 <Button asChild size="lg" className="w-full bg-brand-gradient text-white hover:opacity-90 rounded-sm">
@@ -865,23 +870,23 @@ export default function TrainTheTrainerAI() {
               </CardContent>
             </Card>
 
-            <Card className="rounded-md border-on-light/10 bg-paper light-card">
+            <Card className="rounded-md border-white/10 bg-surface">
               <CardContent className="p-8 pt-10">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-on-light-dim mb-2">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-dim mb-2">
                   Cena regularna od Q3 2026
                 </p>
                 <div className="mb-4">
-                  <span className="font-heading text-5xl font-bold text-on-light">24 999 zł</span>
-                  <span className="text-on-light-dim ml-2">netto</span>
+                  <span className="font-heading text-5xl font-bold text-on-dark">24 999 zł</span>
+                  <span className="text-dim ml-2">netto</span>
                 </div>
-                <p className="text-on-light-dim text-sm leading-relaxed mb-6">
+                <p className="text-dim text-sm leading-relaxed mb-6">
                   Maksymalnie 4 miejsca na kwartał. Po Q2 2026 edycja inauguracyjna jest zamknięta na zawsze.
                 </p>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="w-full rounded-sm border-on-light/20 text-on-light hover:bg-on-light/5"
+                  className="w-full rounded-sm border-white/20 text-on-dark hover:bg-white/5"
                 >
                   <Link to="/discovery">Zarezerwuj miejsce w kolejce</Link>
                 </Button>
@@ -889,91 +894,15 @@ export default function TrainTheTrainerAI() {
             </Card>
           </div>
 
-          <div className="max-w-3xl mx-auto mt-10 space-y-4 text-on-light-dim leading-relaxed">
+          <div className="max-w-3xl mx-auto mt-10 space-y-4 text-dim leading-relaxed">
             <p>
-              Płatność w dwóch ratach 50/50 możliwa. Płatność w całości — dodatkowy dzień mentoringu w 6 miesiącu
-              gratis.
-            </p>
-            <p>
-              Program kwalifikuje się do rozliczenia jako inwestycja w rozwój kompetencji zawodowych. Jeśli prowadzisz
-              JDG lub spółkę — odpisujesz jako koszt uzyskania przychodu.
+              Płatność w dwóch ratach możliwa. Płatność w całości — dodatkowy dzień mentoringu w 6. miesiącu
+              gratis. Program kwalifikuje się do odpisania jako koszt uzyskania przychodu.
             </p>
             <p className="text-sm">
-              <strong className="text-on-light">Dlaczego edycja inauguracyjna kosztuje ponad trzykrotnie mniej:</strong>{" "}
-              Bo buduję pierwsze case studies. Potrzebuję 3 osób, które przejdą przez program na tej cenie i dostarczą
-              mi później materiał dowodowy — wyniki, liczby, historie. To jest fair deal: Ty dostajesz dramatycznie
-              lepszą cenę, ja dostaję social proof, który napędza kolejne edycje. Po Q2 2026 edycja inauguracyjna jest
-              zamknięta na zawsze.
+              <strong className="text-on-dark">Dlaczego tak niska cena teraz:</strong>{" "}
+              Buduję pierwsze case studies. 3 osoby, które przejdą przez program teraz, dostarczą mi materiał dowodowy — wyniki, liczby, historie. To fair deal: Ty dostajesz cenę niższą o ponad 17 000 zł, ja dostaję social proof. Po Q2 2026 edycja inauguracyjna jest zamknięta na zawsze.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
-
-      {/* WHY ME */}
-      <section className="py-20 md:py-28 bg-void-glow">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-10 leading-[1.1] tracking-[-0.02em]">
-              Dlaczego ja
-            </h2>
-            <div className="space-y-6 text-lg text-dim leading-relaxed">
-              <p>
-                Nie napiszę Ci tu CV. Powiem Ci, dlaczego rzecz, której uczę, mogłem się nauczyć tylko tak, jak się jej
-                nauczyłem — i dlaczego nie nauczysz się tego na kursie z pakietem slajdów.
-              </p>
-
-              <h3 className="font-heading text-xl md:text-2xl font-bold text-on-dark pt-4">Doświadczenie.</h3>
-              <p>
-                Prowadzę szkolenia od 20+ lat. Zacząłem jako geek techniczny — znałem swoje narzędzia od podszewki, ale
-                pierwsze wystąpienie skończyłem w 7 minut z planowanych 40, bo mówiłem tak szybko, że moderator musiał
-                mnie delikatnie przerwać. <em>Dokładnie</em> ten problem, który Ty masz dziś, miałem ja wtedy.
-              </p>
-              <p>
-                Potem zostałem Microsoft Certified Trainerem. Przez kolejne kilkanaście lat prowadziłem szkolenia z
-                SharePoint, Power BI, Microsoft 365 i Microsoft Fabric dla korporacji na trzech kontynentach. Przed
-                pandemią robiłem 100 lotów rocznie. W praktyce to znaczyło: w poniedziałek rano samolot do Oslo, 3 dni
-                warsztatu po angielsku dla oficerów Policji Norweskiej, w piątek powrót, w sobotę samolot do Wiesbaden,
-                3 dni dla jednostki US Army na bazie, w środę Warszawa, w czwartek Fortune 500, w piątek znowu samolot.
-              </p>
-              <p>
-                Przez te lata szkoliłem m.in. jednostki <strong className="text-on-dark">US Army</strong> w Wiesbaden
-                (Niemcy), <strong className="text-on-dark">US Air Force</strong> w Ramstein (Niemcy),{" "}
-                <strong className="text-on-dark">US Navy</strong> w Neapolu (Włochy),{" "}
-                <strong className="text-on-dark">US Marine Corps</strong> i personel NATO w Mons (Belgia) oraz w
-                Vicenzy (Włochy). Jeśli potrafisz wejść na salę z oficerami operacyjnymi armii amerykańskiej — ludźmi,
-                których zawodem jest weryfikowanie kompetencji innych w 30 sekund — i po 45 minutach mają do Ciebie
-                zaufanie, to potrafisz wejść na każdą polską salę konferencyjną w korporacji. I potrafisz nauczyć tego
-                kogoś innego.
-              </p>
-
-              <h3 className="font-heading text-xl md:text-2xl font-bold text-on-dark pt-4">
-                Dwie lekcje, których nauczyłem się dopiero po 15 latach.
-              </h3>
-              <p>
-                <strong className="text-on-dark">Pierwsza:</strong> szkolenie nie jest o przekazaniu wiedzy. Szkolenie
-                jest <em>Koniem Trojańskim</em> — metodą wejścia do człowieka z głębszą transformacją, niż on sam
-                oczekuje. Ludzie kupują szkolenie techniczne, a dostają zmianę w sposobie, w jaki myślą o własnej pracy,
-                własnej przyszłości, własnej wartości. To jest moment, w którym trener zaczyna być warty pięciocyfrową
-                dniówkę — nie dlatego, że uczy lepiej, ale dlatego, że daje coś, czego klient nie kupuje w żaden inny
-                sposób.
-              </p>
-              <p>
-                <strong className="text-on-dark">Druga:</strong> rzemiosła trenerskiego nie nauczysz się z książki ani z
-                kursu online. Nauczysz się go w relacji z kimś, kto już to robi — przez obserwację, próbę, korektę,
-                kolejną próbę. Tak samo jak uczy się szermierki, chirurgii albo gotowania w kuchni Michelin. I dlatego
-                ten program nie jest i nigdy nie będzie kursem grupowym.
-              </p>
-
-              <h3 className="font-heading text-xl md:text-2xl font-bold text-on-dark pt-4">Co robię z Tobą.</h3>
-              <p>
-                Od 2022 pracuję też jako coach transformacyjny. Prowadzę ekosystem <em>Lifehackerzy</em> — społeczność,
-                w której pomagam ludziom zamieniać wiedzę techniczną w realną zmianę zawodową i osobistą. W tym
-                programie nie „uczę Cię trenować". Przeprowadzam Cię z jednej wersji Ciebie do kolejnej. Tak, jak mnie
-                kiedyś przeprowadzili inni mentorzy — tylko wtedy nikt tego jeszcze tak nie nazywał.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -1068,15 +997,8 @@ export default function TrainTheTrainerAI() {
             </h2>
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed mb-10">
               <p>
-                Rynek szkoleń AI w Polsce jest dziś taki, jaki był rynek szkoleń z Excela w 2005 roku. Za 3 lata będzie
-                nasycony. Trenerzy, którzy wejdą teraz — z rzemiosłem, nie z amatorką — zbudują praktyki, które będą
-                pracować przez 15 lat. Trenerzy, którzy wejdą w 2029, będą konkurować z tysiącami certyfikowanych
-                „trenerów AI" na LinkedInie.
+                Jeśli masz kompetencję techniczną, której Twoje konto bankowe dotąd nie zauważyło — napisz do mnie.
               </p>
-              <p>
-                Ta różnica — 2026 vs. 2029 — jest <em>teraz</em>.
-              </p>
-              <p>Jeśli masz kompetencję techniczną, której Twoje konto bankowe dotąd nie zauważyło — napisz do mnie.</p>
               <p>
                 Jeśli wolisz jeszcze trochę poczekać, zbudować kolejnego agenta, przeczytać jeszcze jedną książkę zanim
                 „naprawdę zaczniesz" — to też jest uczciwa odpowiedź. Wracaj, kiedy będziesz gotowy. Rynek na Ciebie nie
@@ -1084,20 +1006,26 @@ export default function TrainTheTrainerAI() {
               </p>
               <p>Do usłyszenia,</p>
               <p>
-                <strong className="text-on-light">Ludwik C. Siadlak</strong>
+                <strong className="text-on-light">Ludwik Siadlak</strong>
                 <br />
                 <span className="text-sm">
-                  Microsoft Certified Trainer · Twórca społeczności{" "}
+                  Microsoft Certified Trainer · Twórca{" "}
                   <a
                     href="https://lifehackerzy.pl"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-electric hover:underline"
                   >
-                    Lifehackerzy.pl
+                    Lifehackerzy
                   </a>{" "}
-                  · Założyciel Fundacji HACKERZY.PL · Twój mentor w Train The Trainer: AI
+                  · Twój mentor w Train The Trainer: AI
                 </span>
+              </p>
+              <p className="text-on-light-dim italic border-l-4 border-on-light/20 pl-6">
+                P.S. Rynek szkoleń AI w Polsce jest dziś dokładnie tam, gdzie był rynek szkoleń z Excela w 2005. Za 3 lata będzie nasycony. Trenerzy, którzy wejdą teraz — z rzemiosłem — zbudują praktyki na 15 lat.
+              </p>
+              <p className="text-on-light-dim italic border-l-4 border-on-light/20 pl-6">
+                P.P.S. Jeśli masz wątpliwości, czy to jest dla Ciebie — zapisz się na rozmowę wstępną. Jest bezpłatna, trwa 60 minut i nawet jeśli nie wejdziemy w program, wyjdziesz z niej z czymś konkretnym. To jedyne miejsce, gdzie mogę Ci to obiecać.
               </p>
             </div>
             <div className="text-center mb-10">
@@ -1107,7 +1035,7 @@ export default function TrainTheTrainerAI() {
                 className="bg-brand-gradient text-white hover:opacity-90 text-base px-8 py-6 rounded-sm"
               >
                 <Link to="/discovery">
-                  Zapisz się na rozmowę
+                  Zapisz się na rozmowę → Zostały 3 miejsca w edycji inauguracyjnej
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
