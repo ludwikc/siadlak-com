@@ -411,7 +411,7 @@ export default function TrainTheTrainerAI() {
               </p>
               <p>
                 Po południu podchodzi do Ciebie dyrektorka HR: „Mamy jeszcze trzy działy. Możemy ustawić kolejny
-                termin w styczniu? I — chciałabym porozmawiać o akademii wewnętrznej. Znajdziesz we wtorek 45 minut?".
+                termin w styczniu? I — chciałabym porozmawiać o akademii wewnętrznej. Znajdziesz we wtorek 45 minut?”.
               </p>
               <p>
                 Wieczorem wystawiasz fakturę. <strong className="text-on-light">8 000 zł</strong> za dzień. Plus styczeń. Plus rozmowa o akademii — kontrakt na 80 000 zł rozłożony na kwartał.
@@ -482,7 +482,7 @@ export default function TrainTheTrainerAI() {
             <p className="text-lg text-on-light-dim leading-relaxed mb-4">
               <strong className="text-on-light">
                 Train The Trainer: AI to prywatny mentoring 1:1, który prowadzi Cię z „technicznego freelancera za kilkaset złotych za zlecenie” do „certyfikowanego trenera AI, który za pierwszy dzień warsztatowy bierze 2 000 zł, a za dzień u bezpośredniego
-                klienta — 5 000–10 000 zł".
+                klienta — 5 000–10 000 zł”.
               </strong>
             </p>
             <p className="text-on-light-dim leading-relaxed">
