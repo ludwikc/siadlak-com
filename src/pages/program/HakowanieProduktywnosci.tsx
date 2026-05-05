@@ -1465,31 +1465,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* POWIĄZANE PROGRAMY */}
-      <RelatedPrograms
-        currentProgram="produktywnosc"
-        programs={[
-          {
-            title: "Silna Głowa",
-            description: "Firewall mentalny — presja jako paliwo, nie paraliż",
-            link: "/program/odpornosc",
-          },
-          {
-            title: "Uważne Życie",
-            description: "Uważność dla analitycznych umysłów i osób z ADHD",
-            link: "/program/uwaznosc",
-          },
-          {
-            title: "Męski Kompas",
-            description: "System nawigacji życiowej dla mężczyzn 30+",
-            link: "/program/meskosc",
-          },
-          {
-            title: "Life OS: System Upgrade",
-            description: "8-tygodniowy mentoring 1:1 — pełna reinstalacja",
-            link: "/program/lifeos-system-upgrade",
-          },
-        ]}
-      />
+      <RelatedPrograms currentPath="/program/produktywnosc" />
     </Layout>
   );
 }
