@@ -36,7 +36,7 @@ const silnaGlowaFaqs = [
   },
   {
     question: "Jak długo będę mieć dostęp do kursu?",
-    answer: "Na zawsze. \u015Awiat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
+    answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
   },
   {
     question: "Jakieś bonusy? 🎁",
@@ -861,7 +861,7 @@ const SilnaGlowa = () => {
                   title: "Nawigacja przez burze: Skuteczne strategie radzenia sobie z przeciwnościami",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i\u2026 mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest — i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
+                  description: "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i… mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest — i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
                 },
                 {
                   number: 6,
