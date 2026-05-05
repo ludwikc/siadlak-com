@@ -39,7 +39,7 @@ const uwazneZycieFaqs = [
   },
   {
     question: "Czy uważność działa przy ADHD?",
-    answer: "Tak — ale nie każda forma uważności. Tradycyjne medytacje (\u201Ezamknij oczy i\u00A0oddychaj\u201D) często nie działają przy ADHD, bo wymagają długiego skupienia. Program Uważne Życie został zaprojektowany z\u00A0myślą o\u00A0analitycznych umysłach: krótkie, konkretne ćwiczenia (10–20 minut), metafory zamiast abstrakcji (kapitan, kokpit, żagle), natychmiastowe zastosowanie w\u00A0pracy i\u00A0życiu. Jeśli klasyczny mindfulness Cię frustrował — to dobrze. Ten kurs powstał dokładnie dla Ciebie.",
+    answer: "Tak — ale nie każda forma uważności. Tradycyjne medytacje („zamknij oczy i\u00A0oddychaj”) często nie działają przy ADHD, bo wymagają długiego skupienia. Program Uważne Życie został zaprojektowany z\u00A0myślą o\u00A0analitycznych umysłach: krótkie, konkretne ćwiczenia (10–20 minut), metafory zamiast abstrakcji (kapitan, kokpit, żagle), natychmiastowe zastosowanie w\u00A0pracy i\u00A0życiu. Jeśli klasyczny mindfulness Cię frustrował — to dobrze. Ten kurs powstał dokładnie dla Ciebie.",
   },
   {
     question: "Czym ten program różni się od aplikacji do medytacji typu Headspace czy Calm?",
@@ -51,7 +51,7 @@ const uwazneZycieFaqs = [
   },
   {
     question: "Jak długo mam dostęp do programu?",
-    answer: "Na zawsze. Kupujesz raz — korzystasz dożywotnio. Bez subskrypcji, bez \u201Eważne przez rok\u201D, bez ukrytych kosztów. W\u00A0cenie programu otrzymujesz też dożywotni dostęp do społeczności Lifehackerzy na Discordzie — 100+ osób z\u00A08+ krajów. Cena: 777 PLN. 30-dniowa gwarancja zwrotu, jeśli program Ci nie odpowiada.",
+    answer: "Na zawsze. Kupujesz raz — korzystasz dożywotnio. Bez subskrypcji, bez „ważne przez rok”, bez ukrytych kosztów. W\u00A0cenie programu otrzymujesz też dożywotni dostęp do społeczności Lifehackerzy na Discordzie — 100+ osób z\u00A08+ krajów. Cena: 777 PLN. 30-dniowa gwarancja zwrotu, jeśli program Ci nie odpowiada.",
   },
 ];
 
@@ -283,15 +283,15 @@ const UwazneZycie = () => {
           </h2>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Program \u201EUważne Życie\u201D nie wymyśliłem w&nbsp;pokoju z&nbsp;białą tablicą.
+              Program „Uważne Życie” nie wymyśliłem w&nbsp;pokoju z&nbsp;białą tablicą.
             </p>
             <p>
               Powstał z&nbsp;<strong className="text-foreground">3 lat wtorkowych poranków</strong>.
             </p>
             <p>
-              Co wtorek o&nbsp;6:30 rano prowadzę bezpłatne <strong className="text-foreground">\u201Emedytacje motywujące\u201D</strong> na{" "}
+              Co wtorek o&nbsp;6:30 rano prowadzę bezpłatne <strong className="text-foreground">„medytacje motywujące”</strong> na{" "}
               <a href="https://uwaznezycie.pl" target="_blank" rel="noopener noreferrer" className="text-sky-600 dark:text-sky-400 underline hover:no-underline">UwazneZycie.pl</a>.
-              Każdy wtorek. Setki ludzi przez te 3 lata. Każdy z&nbsp;innym rozkładem dnia, każdy z&nbsp;innym \u201Erozbieganym umysłem\u201D, każdy z&nbsp;własnym powodem, dla którego nie potrafił sobie poradzić z&nbsp;własnymi myślami.
+              Każdy wtorek. Setki ludzi przez te 3 lata. Każdy z&nbsp;innym rozkładem dnia, każdy z&nbsp;innym „rozbieganym umysłem”, każdy z&nbsp;własnym powodem, dla którego nie potrafił sobie poradzić z&nbsp;własnymi myślami.
             </p>
             <p>
               Przez 3 lata słuchałem.
@@ -300,7 +300,7 @@ const UwazneZycie = () => {
               Co działa, a&nbsp;co tylko frustruje. Co przebija się przez ADHD, a&nbsp;co wymaga klasztornej ciszy. Co da się zastosować w&nbsp;korku, na meetingu i&nbsp;w&nbsp;kolejce w&nbsp;sklepie — a&nbsp;co tylko na macie i&nbsp;przy świecach.
             </p>
             <p>
-              To, co dostajesz w&nbsp;\u201EUważnym Życiu\u201D, <strong className="text-foreground">to nie teoria z&nbsp;książki o&nbsp;mindfulness</strong>. To destylacja 3 lat praktyki z&nbsp;ludźmi, którzy chcieli wynik, nie egzotykę.
+              To, co dostajesz w&nbsp;„Uważnym Życiu”, <strong className="text-foreground">to nie teoria z&nbsp;książki o&nbsp;mindfulness</strong>. To destylacja 3 lat praktyki z&nbsp;ludźmi, którzy chcieli wynik, nie egzotykę.
             </p>
             <p>
               Dlatego ten program brzmi inaczej niż każdy inny kurs uważności w&nbsp;polskim internecie. Bo nie jest jednym.
@@ -337,7 +337,7 @@ const UwazneZycie = () => {
 
               <Card className="bg-sky-50 dark:bg-sky-950/30 border-sky-200 dark:border-sky-800 p-6 md:p-8 my-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-                  A co, jeśli problemem NIE JEST Twój \u201Erozbiegany umysł\u201D?
+                  A co, jeśli problemem NIE JEST Twój „rozbiegany umysł”?
                 </h3>
                 <p className="text-xl text-foreground">
                   Co, jeśli problemem jest to, że{" "}
@@ -351,16 +351,16 @@ const UwazneZycie = () => {
 
               <p className="text-xl font-semibold text-foreground">
                 Przedstawiam Ci system, który nie ma nic wspólnego z&nbsp;siadaniem po
-                turecku i&nbsp;powtarzaniem \u201Eom\u201D. To{" "}
+                turecku i&nbsp;powtarzaniem „om”. To{" "}
                 <strong className="text-sky-600 dark:text-sky-400">
                   mentalny system operacyjny dla ludzi, którzy chcą WYGRYWAĆ w&nbsp;prawdziwym świecie.
                 </strong>
               </p>
 
               <p className="text-xl font-semibold text-sky-600 dark:text-sky-400">
-                To program <strong>\u201EUważne Życie\u201D</strong>. Ale nie nazywaj go
+                To program <strong>„Uważne Życie”</strong>. Ale nie nazywaj go
                 kursem mindfulness. Nazwij go{" "}
-                <strong>\u201EPrzejęciem kontroli nad własną psychiką\u201D.</strong>
+                <strong>„Przejęciem kontroli nad własną psychiką”.</strong>
               </p>
             </div>
 
@@ -409,7 +409,7 @@ const UwazneZycie = () => {
                   className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm"
                 >
                   <blockquote className="text-lg text-slate-700 italic mb-4">
-                    \u201E[CYTAT {n} — DO UZUPEŁNIENIA ZE SCREENSHOTA]\u201D
+                    „[CYTAT {n} — DO UZUPEŁNIENIA ZE SCREENSHOTA]”
                   </blockquote>
                   <p className="text-sm text-slate-500">
                     — Imię, kontekst
@@ -449,33 +449,33 @@ const UwazneZycie = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
-                  quote: '\u201EZawsze się spieszę, ale nigdzie nie dochodzę.\u201D',
+                  quote: '„Zawsze się spieszę, ale nigdzie nie dochodzę.”',
                   desc: 'Czujesz chroniczny pośpiech, ale Twoje najważniejsze cele stoją w\u00A0miejscu.',
                   icon: ShipWheel,
                 },
                 {
-                  quote: '\u201EMoja głowa to radio, które nie da się wyłączyć.\u201D',
+                  quote: '„Moja głowa to radio, które nie da się wyłączyć.”',
                   desc: 'Natłok myśli, zamartwianie się przyszłością, rozpamiętywanie przeszłości.',
                   icon: Brain,
                 },
                 {
-                  quote: '\u201EReaguję, zamiast odpowiadać.\u201D',
+                  quote: '„Reaguję, zamiast odpowiadać.”',
                   desc: 'Wysyłasz ostry mail, mówisz coś, czego żałujesz, sięgasz po niezdrową przekąskę – wszystko automatycznie.',
                   icon: Zap,
                 },
                 {
-                  quote: '\u201EGubię się w\u00A0swoich myślach.\u201D',
-                  desc: 'Utożsamiasz się z\u00A0każdą krytyczną myślą (\u201EJestem nie dość dobry\u201D) jakby to była prawda objawiona.',
+                  quote: '„Gubię się w\u00A0swoich myślach.”',
+                  desc: 'Utożsamiasz się z\u00A0każdą krytyczną myślą („Jestem nie dość dobry”) jakby to była prawda objawiona.',
                   icon: Eye,
                 },
                 {
-                  quote: '\u201EWypalam się.\u201D',
+                  quote: '„Wypalam się.”',
                   desc: 'Twoja energia wycieka jak z\u00A0dziurawego wiadra przez drobne stresy, rozproszenia i\u00A0wewnętrzny opór.',
                   icon: Battery,
                 },
                 {
-                  quote: '\u201EWiem, co jest dla mnie ważne, ale…\u201D',
-                  desc: 'Zawsze jest jakieś \u201Eale\u201D. Brakuje Ci wewnętrznej dyscypliny, by działać w\u00A0zgodzie ze swoimi wartościami.',
+                  quote: '„Wiem, co jest dla mnie ważne, ale…”',
+                  desc: 'Zawsze jest jakieś „ale”. Brakuje Ci wewnętrznej dyscypliny, by działać w\u00A0zgodzie ze swoimi wartościami.',
                   icon: Target,
                 },
               ].map((item, index) => (
@@ -554,14 +554,14 @@ const UwazneZycie = () => {
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-                PRZEDSTAWIAM CI: \u201EUWAŻNE ŻYCIE\u201D
+                PRZEDSTAWIAM CI: „UWAŻNE ŻYCIE”
               </h2>
               <p className="text-xl md:text-2xl font-semibold text-sky-600 dark:text-sky-400 mb-4">
                 System, który zamieni Cię z&nbsp;reaktywnego pasażera w&nbsp;proaktywnego kapitana.
               </p>
               <div className="max-w-3xl mx-auto space-y-4 text-lg text-muted-foreground">
                 <p>
-                  To nie jest kolejny \u201Ekurs o&nbsp;medytacji\u201D. To <strong className="text-foreground">6-tygodniowy trening mentalny w&nbsp;formie intensywnego bootcampu</strong>, który przeprojektuje Twój związek z&nbsp;własnym umysłem.
+                  To nie jest kolejny „kurs o&nbsp;medytacji”. To <strong className="text-foreground">6-tygodniowy trening mentalny w&nbsp;formie intensywnego bootcampu</strong>, który przeprojektuje Twój związek z&nbsp;własnym umysłem.
                 </p>
                 <p>
                   Oparte na neuronauce, psychologii i&nbsp;tysiącach godzin praktyki – bez mistycyzmu, bez ezoteryki. Czysta, praktyczna <strong className="text-foreground">inżynieria wewnętrzna</strong>.
@@ -638,7 +638,7 @@ const UwazneZycie = () => {
                 <div className="p-6 md:p-8 space-y-4">
                   {[
                     { title: "Lekcja 2.1: Bunt Maszyn.", desc: "Demaskujemy Twoje automatyczne wzorce — dlaczego wpadłeś w\u00A0te pułapki i\u00A0ile Cię to kosztuje (czas, energię, relacje)." },
-                    { title: "Lekcja 2.2: Przerwanie Pętli.", desc: 'Moment \u201EAha!\u201D. Nauczysz się wyłapywać ten ułamek sekundy, zanim automatyczna reakcja przejmie kontrolę.' },
+                    { title: "Lekcja 2.2: Przerwanie Pętli.", desc: 'Moment „Aha!”. Nauczysz się wyłapywać ten ułamek sekundy, zanim automatyczna reakcja przejmie kontrolę.' },
                     { title: "Lekcja 2.3: Świadoma Nawigacja.", desc: "Zamiast reagować — odpowiadasz. Wprowadzasz strategiczną pauzę, która daje Ci wolność wyboru." },
                     { title: "Lekcja 2.4: Wyzwanie: Odzyskaj Stery.", desc: "Celowo zmieniasz jeden kluczowy, nawykowy ruch, który do tej pory sabotował Twoje postępy." },
                   ].map((lesson, idx) => (
@@ -677,7 +677,7 @@ const UwazneZycie = () => {
                   {[
                     { title: "Lekcja 3.1: Czysty Horyzont.", desc: "Nauczysz się dystansować od własnych emocji i\u00A0myśli. To jak wyjście na wieżę widokową — widzisz burzę, ale nią nie jesteś." },
                     { title: "Lekcja 3.2: Poza Narracją.", desc: "Twoje myśli to nie rozkazy, tylko chmury na niebie. Przestaniesz wierzyć w\u00A0każdą dramatyczną historię, którą opowie Ci głowa." },
-                    { title: "Lekcja 3.3: Pułapka Tożsamości.", desc: '\u201EJestem nieśmiały\u201D, \u201EJestem nerwusem\u201D — rozbroimy te tożsamościowe bomby, które blokują Twój rozwój.' },
+                    { title: "Lekcja 3.3: Pułapka Tożsamości.", desc: '„Jestem nieśmiały”, „Jestem nerwusem” — rozbroimy te tożsamościowe bomby, które blokują Twój rozwój.' },
                     { title: "Lekcja 3.4: Wyzwanie: Tryb Obserwatora.", desc: "Cały dzień spędzisz na czystym zauważaniu bez oceniania. To reset, po którym nic nie będzie już takie samo." },
                   ].map((lesson, idx) => (
                     <div key={idx} className="flex items-start gap-3">
@@ -751,8 +751,8 @@ const UwazneZycie = () => {
                 </div>
                 <div className="p-6 md:p-8 space-y-4">
                   {[
-                    { title: "Lekcja 5.1: Północna Gwiazda.", desc: 'Odkryjesz, co naprawdę nadaje sens Twojej podróży (to nie są cele typu \u201Ewięcej pieniędzy\u201D).' },
-                    { title: "Lekcja 5.2: Pułapka Horyzontu.", desc: 'Przestaniesz żyć w\u00A0ciągłej \u201Epogoni za\u201D i\u00A0zaczniesz żyć w\u00A0\u201Epodróży do\u201D. Różnica jest kolosalna.' },
+                    { title: "Lekcja 5.1: Północna Gwiazda.", desc: 'Odkryjesz, co naprawdę nadaje sens Twojej podróży (to nie są cele typu „więcej pieniędzy”).' },
+                    { title: "Lekcja 5.2: Pułapka Horyzontu.", desc: 'Przestaniesz żyć w\u00A0ciągłej „pogoni za” i\u00A0zaczniesz żyć w\u00A0„podróży do”. Różnica jest kolosalna.' },
                     { title: "Lekcja 5.3: Trzymanie Kursu.", desc: "Prosty system codziennych raportów, który zapewni, że Twoje działania są w\u00A0100% spójne z\u00A0Twoimi fundamentami." },
                     { title: "Lekcja 5.4: Wyzwanie: Wybór Kierunku.", desc: "Wykonasz jeden, świadomy, strategiczny manewr, który przybliży Cię do Twojej Północnej Gwiazdy." },
                   ].map((lesson, idx) => (
@@ -790,7 +790,7 @@ const UwazneZycie = () => {
                 <div className="p-6 md:p-8 space-y-4">
                   {[
                     { title: "Lekcja 6.1: Pełne Żagle.", desc: "Zarządzanie energią, a\u00A0nie czasem. Jak ładować baterie i\u00A0jak rozkładać siły, by nie wypalić się na półmetku." },
-                    { title: "Lekcja 6.2: Łatanie Pokładu.", desc: 'Systematyczny audyt Twoich słabości i\u00A0\u201Eprzecieków\u201D energetycznych. Zamiast wypierać — naprawiasz.' },
+                    { title: "Lekcja 6.2: Łatanie Pokładu.", desc: 'Systematyczny audyt Twoich słabości i\u00A0„przecieków” energetycznych. Zamiast wypierać — naprawiasz.' },
                     { title: "Lekcja 6.3: Życzliwy Port.", desc: "Najpotężniejsza praktyka: bycie własnym sojusznikiem w\u00A0chwilach porażki, a\u00A0nie katem." },
                     { title: "Lekcja 6.4: Wyzwanie: Audyt Łodzi.", desc: "Ostatnia, kompleksowa misja. Sprawdzisz stan wszystkich zasobów i\u00A0stworzysz plan utrzymania zdobytej władzy." },
                   ].map((lesson, idx) => (
@@ -878,7 +878,7 @@ const UwazneZycie = () => {
                   Cenię swój czas i&nbsp;Twój. Ten program to esencja 3 lat prowadzenia medytacji wtorkowych plus 18 lat pracy z&nbsp;mentalem klientów Fortune 500, NATO i&nbsp;organizacji w&nbsp;50+ krajach.
                 </p>
                 <p className="text-2xl md:text-3xl text-white mb-2">
-                  Inwestycja w&nbsp;program \u201EUważne Życie\u201D:
+                  Inwestycja w&nbsp;program „Uważne Życie”:
                 </p>
                 <p className="text-4xl md:text-6xl font-extrabold mb-4"
                   style={{
@@ -1035,7 +1035,7 @@ const UwazneZycie = () => {
                 </span>
               </h2>
               <p className="text-xl md:text-2xl text-violet-100 mb-4">
-                Dołączając do \u201EUważnego Życia\u201D automatycznie stajesz się <strong className="text-violet-300">LIFEHACKEREM</strong>
+                Dołączając do „Uważnego Życia” automatycznie stajesz się <strong className="text-violet-300">LIFEHACKEREM</strong>
               </p>
               <p className="text-lg text-violet-200/80 max-w-3xl mx-auto">
                 To nie jest tylko społeczność. To codzienny system wsparcia, którego nie znajdziesz nigdzie indziej.
@@ -1165,7 +1165,7 @@ const UwazneZycie = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-violet-100">Widok innych osób, które właśnie teraz robią swoje — to jak psychologiczny \u201Edopalacz\u201D do działania</span>
+                      <span className="text-violet-100">Widok innych osób, które właśnie teraz robią swoje — to jak psychologiczny „dopalacz” do działania</span>
                     </li>
                   </ul>
                   <p className="text-lg text-violet-200/80 mb-4">
@@ -1290,7 +1290,7 @@ const UwazneZycie = () => {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-violet-100">O&nbsp;wychodzeniu z&nbsp;\u201Esytuacji bez wyjścia\u201D — kiedy czujesz, że utknąłeś</span>
+                      <span className="text-violet-100">O&nbsp;wychodzeniu z&nbsp;„sytuacji bez wyjścia” — kiedy czujesz, że utknąłeś</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
@@ -1317,10 +1317,10 @@ const UwazneZycie = () => {
               }}
             >
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-                KTO TO JEST \u201ELIFEHACKER\u201D?
+                KTO TO JEST „LIFEHACKER”?
               </h3>
               <p className="text-lg text-violet-200/80 mb-6 text-center">
-                Nazwa może zwieść. To nie jest grupa dla \u201Einformatyków\u201D ani \u201Etechnicznych ludzi\u201D.
+                Nazwa może zwieść. To nie jest grupa dla „informatyków” ani „technicznych ludzi”.
               </p>
               <p className="text-xl text-violet-300 font-semibold mb-8 text-center">
                 Hackujemy mindset, silną wolę i&nbsp;odporność psychiczną — nie kod.
@@ -1329,7 +1329,7 @@ const UwazneZycie = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5">
                   <Heart className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-violet-100">Wziął odpowiedzialność za swoje życie zamiast czekać na \u201Elepszy moment\u201D</span>
+                  <span className="text-violet-100">Wziął odpowiedzialność za swoje życie zamiast czekać na „lepszy moment”</span>
                 </div>
                 <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5">
                   <Zap className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
@@ -1352,11 +1352,11 @@ const UwazneZycie = () => {
                 }}
               >
                 <p className="text-violet-200 italic text-center text-lg">
-                  Jim Rohn powiedział kiedyś: \u201EJesteś wypadkową pięciu osób, z&nbsp;którymi spędzasz najwięcej czasu.\u201D
+                  Jim Rohn powiedział kiedyś: „Jesteś wypadkową pięciu osób, z&nbsp;którymi spędzasz najwięcej czasu.”
                 </p>
               </div>
               <p className="text-lg text-violet-200/80 text-center">
-                Jeśli otaczasz się ludźmi narzekającymi, ograniczającymi się, tkwiącymi w&nbsp;starych schematach — twoje \u201Ewewnętrzne oprogramowanie\u201D również będzie cię ciągnąć w&nbsp;dół.
+                Jeśli otaczasz się ludźmi narzekającymi, ograniczającymi się, tkwiącymi w&nbsp;starych schematach — twoje „wewnętrzne oprogramowanie” również będzie cię ciągnąć w&nbsp;dół.
               </p>
               <p className="text-xl font-bold text-violet-300 mt-4 text-center">
                 Wśród Lifehackerów ta średnia idzie drastycznie w&nbsp;górę.
@@ -1376,7 +1376,7 @@ const UwazneZycie = () => {
                 <p className="text-lg text-violet-300/80">Ale… po co?</p>
               </div>
               <p className="text-lg text-violet-200/80 mb-6 text-center max-w-3xl mx-auto">
-                Możesz przejść przez \u201EUważne Życie\u201D sam. Wykonać wszystkie lekcje. Wszystkie wyzwania. Walczyć ze swoim wewnętrznym krytykiem w&nbsp;pojedynkę.
+                Możesz przejść przez „Uważne Życie” sam. Wykonać wszystkie lekcje. Wszystkie wyzwania. Walczyć ze swoim wewnętrznym krytykiem w&nbsp;pojedynkę.
               </p>
               <p className="text-xl font-bold text-white text-center mb-6">ALE...</p>
               <div className="space-y-4 max-w-3xl mx-auto mb-8">
@@ -1384,7 +1384,7 @@ const UwazneZycie = () => {
                   Kiedy w&nbsp;tygodniu 3 poczujesz, że to za trudne...
                 </p>
                 <p className="text-lg text-violet-200">
-                  Kiedy twój umysł zacznie szeptać \u201Eto nie dla ciebie, poddaj się\u201D...
+                  Kiedy twój umysł zacznie szeptać „to nie dla ciebie, poddaj się”...
                 </p>
                 <p className="text-lg text-violet-200">
                   Kiedy staniesz przed wyborem: kontynuować czy wrócić do autopilota...
@@ -1401,7 +1401,7 @@ const UwazneZycie = () => {
                   Będziesz miał obok siebie ludzi, którzy powiedzą:
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-white text-center mt-4 italic">
-                  \u201ETez przez to przechodziłem. Wiem, jak to jest. Trzymaj się. Jestem tu, jeśli potrzebujesz pomocy.\u201D
+                  „Tez przez to przechodziłem. Wiem, jak to jest. Trzymaj się. Jestem tu, jeśli potrzebujesz pomocy.”
                 </p>
                 <p className="text-lg text-violet-300 text-center mt-6">
                   I&nbsp;każdego dnia o&nbsp;12:34 będziesz miał bezpośredni dostęp do mnie i&nbsp;całej społeczności.
@@ -1421,7 +1421,7 @@ const UwazneZycie = () => {
               }}
             >
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-                TO NIE JEST \u201ENICE TO HAVE\u201D. TO JEST RÓŻNICA MIĘDZY UKOŃCZENIEM A&nbsp;PORAŻKĄ.
+                TO NIE JEST „NICE TO HAVE”. TO JEST RÓŻNICA MIĘDZY UKOŃCZENIEM A&nbsp;PORAŻKĄ.
               </h3>
               <p className="text-lg text-red-200/80 mb-4 text-center">Statystyki branży są brutalne:</p>
               <p className="text-2xl md:text-3xl font-bold text-red-300 text-center mb-4">
@@ -1558,7 +1558,7 @@ const UwazneZycie = () => {
                     <Brain className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">Program \u201EUważne Życie\u201D</h3>
+                    <h3 className="text-2xl font-bold text-foreground">Program „Uważne Życie”</h3>
                     <p className="text-sm text-muted-foreground">6 tygodni transformacji mentalnej</p>
                   </div>
                 </div>
@@ -1697,7 +1697,7 @@ const UwazneZycie = () => {
               Przejmij Stery. Zostań Kapitanem.
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Program \u201EUważne Życie\u201D czeka. Twoja podróż do kontroli, spokoju i&nbsp;jasności umysłu zaczyna się teraz.
+              Program „Uważne Życie” czeka. Twoja podróż do kontroli, spokoju i&nbsp;jasności umysłu zaczyna się teraz.
             </p>
 
             <a
