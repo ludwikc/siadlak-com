@@ -5,6 +5,7 @@ import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import LifehackerzySection from "@/components/sections/LifehackerzySection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -825,53 +826,12 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* SPOŁECZNOŚĆ */}
+      <LifehackerzySection />
+
+      {/* VALUE CALCULATOR */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-foreground">
-              Sam kurs to dopiero początek
-            </h2>
-
-            <div className="text-center mb-12">
-              <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
-                Serce Programu Produktywność to społeczność — ludzie, którzy postanowili wziąć swoje życie w swoje ręce. I robią to razem.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Wiem, że „społeczność" brzmi jak kolejne słowo z bingo marketingowego. Ale tutaj chodzi o coś prostszego — o ludzi, do których możesz się odezwać, kiedy chcesz to wszystko rzucić w kąt. Bo takie momenty przyjdą. I lepiej mieć wtedy kogoś, kto powie „wiem, jak to jest", niż kolejny motywacyjny post na Instagramie.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <Card className="glass-card">
-                  <CardContent className="p-6">
-                    <h4 className="font-bold text-lg mb-4 text-foreground">
-                      W społeczności znajdziesz:
-                    </h4>
-                    <ul className="space-y-2 text-muted-foreground text-left">
-                      <li>• Codzienne spotkania o 12:34 (tak, o tej porze — bo kto potrafi zapamiętać 12:34, ten zwraca uwagę na szczegóły)</li>
-                      <li>• Ekspertów z wielu dziedzin gotowych pomóc</li>
-                      <li>• Ludzi, którzy przeszli dokładnie tę samą drogę</li>
-                      <li>• Wsparcie w trudnych momentach</li>
-                      <li>• Celebrację sukcesów — bo sukcesy trzeba świętować, nawet te małe</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <div className="space-y-4">
-                  <div className="bg-muted p-4 rounded-lg text-center">
-                    <p className="text-sm text-muted-foreground">
-                      [zdjęcia ze środka społeczności]
-                    </p>
-                  </div>
-                  <div className="bg-muted p-4 rounded-lg text-center">
-                    <p className="text-sm text-muted-foreground">
-                      [zdjęcie społeczności]
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <h3 className="text-2xl font-bold text-center mb-4 text-foreground">
               W społeczności jest największa wartość, ale to nadal nie jest
               wszystko
@@ -879,7 +839,6 @@ export default function HakowanieProduktywnosci() {
             <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
               Przez lata dobudowałem do programu tyle materiałów, że sam się czasem gubię. Więc podsumowuję — dla nas obydwu:
             </p>
-
             <ValueCalculator />
           </div>
         </div>
