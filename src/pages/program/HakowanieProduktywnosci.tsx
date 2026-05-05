@@ -5,6 +5,7 @@ import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import LifehackerzySection from "@/components/sections/LifehackerzySection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
