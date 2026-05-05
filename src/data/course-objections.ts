@@ -43,7 +43,7 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
   {
     myth: "Nie będę mieć czasu, żeby przerabiać kurs.",
     reality:
-      "To jest mój ulubiony argument. Jeśli nie masz czasu na naukę produktywności, to jest najlepszy dowód na to, że jej potrzebujesz. Program jest zaprojektowany dla ludzi, którzy naprawdę nie mają czasu - 15-20 minut dziennie wystarczy.",
+      "To jest mój ulubiony argument. Jeśli nie masz czasu na naukę produktywności, to jest najlepszy dowód na to, że jej potrzebujesz. Program jest zaprojektowany dla ludzi, którzy naprawdę nie mają czasu — lekcje trwają ~10 minut, więc 15-20 minut dziennie wystarczy.",
     icon: Clock,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
