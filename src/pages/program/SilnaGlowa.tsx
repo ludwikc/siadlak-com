@@ -32,7 +32,7 @@ import {
 const silnaGlowaFaqs = [
   {
     question: "Kiedy dostań kurs?",
-    answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „”.",
+    answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości".",
   },
   {
     question: "Jak długo będę mieć dostęp do kursu?",
@@ -69,7 +69,7 @@ const SilnaGlowa = () => {
             <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
               Czy zdarza ci się rano otworzyć oczy i pomyśleć:{" "}
               <span className="text-locked-white font-bold">
-                „”?
+                „Powinienem być dalej niż jestem"?
               </span>
             </p>
 
@@ -229,7 +229,7 @@ const SilnaGlowa = () => {
                   icon: Target,
                 },
                 {
-                  text: "Presja „” i wyścigu, który nie ma mety, tylko kolejne okrążenia zmęczenia.",
+                  text: "Presja „hustle" i wyścigu, który nie ma mety, tylko kolejne okrążenia zmęczenia.",
                   icon: Clock,
                 },
                 {
@@ -267,7 +267,7 @@ const SilnaGlowa = () => {
                     "„Po co ci to? I tak się nie uda, jak zawsze."",
                     "„Weź się za normalną robotę, a nie jakieś fanaberie."",
                     "„Nie nadajesz się do tego."",
-                    "„” (wypowiedziane z wyrzutem).",
+                    "„Zmieniłeś się..." (wypowiedziane z wyrzutem).",
                   ].map((quote, index) => (
                     <li key={index} className="text-foreground font-medium">
                       {quote}
@@ -276,7 +276,7 @@ const SilnaGlowa = () => {
                 </ul>
 
                 <p className="text-text-secondary mb-4">
-                  Mówią „”, ale często chcą, żebyś był… <span className="font-bold">przewidywalny</span>.
+                  Mówią „chcę dla ciebie dobrze", ale często chcą, żebyś był… <span className="font-bold">przewidywalny</span>.
                   Bo twoja zmiana to zagrożenie dla ich komfortu.
                 </p>
 
@@ -416,7 +416,7 @@ const SilnaGlowa = () => {
                 "Obwiniasz siebie (lub innych).",
                 "Marzysz o życiu równym jak tafla jeziora.",
                 "Patrzysz na tych, którzy — z zewnątrz — płyną jak po maśle.",
-                "Masz dość pustych pocieszań w stylu „”, „”.",
+                "Masz dość pustych pocieszań w stylu „będzie dobrze", „dasz radę".",
               ].map((item, index) => (
                 <div key={index} className="text-left p-4 bg-muted rounded-lg">
                   <p className="text-text-secondary">{item}</p>
@@ -481,7 +481,7 @@ const SilnaGlowa = () => {
                       Nazywam się{" "}
                       <span className="font-bold text-electric">Ludwik C. Siadlak</span>.
                       Od ponad 18 lat moją pracą jest{" "}
-                      <strong>aktualizowanie „” w głowach moich klientów</strong>{" "}
+                      <strong>aktualizowanie „oprogramowania" w głowach moich klientów</strong>{" "}
                       — w firmach z listy Fortune 500, dla NATO, armii USA i organizacji w ponad 50 krajach.
                     </p>
 
@@ -506,7 +506,7 @@ const SilnaGlowa = () => {
                       <p className="text-text-secondary mb-4">
                         Jedna z rzeczy, której nauczyłem się w praktyce:{" "}
                         <span className="font-bold text-depth italic">
-                          „”
+                          „forma jest pustką, a pustka jest formą"
                         </span>.
                       </p>
                       <p className="text-text-secondary mb-4">
@@ -551,7 +551,7 @@ const SilnaGlowa = () => {
 
                 <div className="bg-electric/5 p-6 rounded-lg">
                   <p className="text-text-secondary mb-4">
-                    Brian Tracy w „” pisał, że osoby z biednych domów i z bogatych mają taką samą szansę na bogactwo.
+                    Brian Tracy w „Psychologii sprzedaży" pisał, że osoby z biednych domów i z bogatych mają taką samą szansę na bogactwo.
                   </p>
                   <p className="text-text-secondary mb-4">
                     I taką samą szansę, by popaść w biedę.
@@ -608,7 +608,7 @@ const SilnaGlowa = () => {
                 },
                 {
                   step: 3,
-                  title: "Przekujesz „” w „wyzwanie"",
+                  title: "Przekujesz „zagrożenie" w „wyzwanie"",
                   benefit: "Nauczysz się obserwować myśli bez osądzania — i, co ważniejsze, zmieniać ich kształt. Bo to jest tylko myśl. Nie musisz się do niej przywiązywać.",
                   icon: Target,
                   gradient: "from-electric to-depth",
@@ -617,7 +617,7 @@ const SilnaGlowa = () => {
                 {
                   step: 4,
                   title: "Napełnisz żagle wiatrem",
-                  benefit: "Odkryjesz głęboką motywację, płynącą z twoich prawdziwych wartości, a nie z zewnętrznej presji. Bo prawdziwa siła nie bierze się z kawy i „”.",
+                  benefit: "Odkryjesz głęboką motywację, płynącą z twoich prawdziwych wartości, a nie z zewnętrznej presji. Bo prawdziwa siła nie bierze się z kawy i „must have".",
                   icon: Waves,
                   gradient: "from-electric to-depth",
                   timeframe: "Moduł 4",
@@ -776,7 +776,7 @@ const SilnaGlowa = () => {
                 </div>
 
                 <p className="text-lg font-bold text-text-primary mb-6">
-                  To wszystko staje się możliwe, gdy przeprogramujesz swój „” i zbudujesz Silną Głowę.
+                  To wszystko staje się możliwe, gdy przeprogramujesz swój „software" i zbudujesz Silną Głowę.
                 </p>
 
                 <div className="mt-8 bg-electric/5 p-6 rounded-lg">
@@ -834,7 +834,7 @@ const SilnaGlowa = () => {
                   title: "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z „” na „”. Opanujesz „” — bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
+                  description: "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z „wyszukiwania zagrożeń" na „wyszukiwanie możliwości". Opanujesz „kotwicę spokoju" — bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
                 },
                 {
                   number: 3,
@@ -843,7 +843,7 @@ const SilnaGlowa = () => {
                   title: "Ujarzmianie myśli: Moc percepcji",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania — tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I — co ważniejsze — zmieniać ich kształt. Przekujesz wewnętrzne „” w „”, a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
+                  description: "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania — tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I — co ważniejsze — zmieniać ich kształt. Przekujesz wewnętrzne „zagrożenie" w „wyzwanie", a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
                 },
                 {
                   number: 4,
@@ -852,7 +852,7 @@ const SilnaGlowa = () => {
                   title: "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Prawdziwa siła nie bierze się z kawy i „”. Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz — i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
+                  description: "Prawdziwa siła nie bierze się z kawy i „must have". Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz — i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
                 },
                 {
                   number: 5,
@@ -870,7 +870,7 @@ const SilnaGlowa = () => {
                   title: "Tworzenie własnego kompasu: Plan budowania odporności psychicznej",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument — „”. Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
+                  description: "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument — „Instrukcję Obsługi Sztormu". Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
                 },
               ].map((module) => (
                 <div
@@ -935,7 +935,7 @@ const SilnaGlowa = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
-              Inwestycja w swój najważniejszy „”: spokój i siłę
+              Inwestycja w swój najważniejszy „soft": spokój i siłę
             </h2>
 
             <div className="max-w-3xl mx-auto mb-8 space-y-4 text-left bg-card-bg p-6 rounded-xl">
@@ -1120,7 +1120,7 @@ const SilnaGlowa = () => {
               </p>
               <div className="bg-card-bg p-6 rounded-md border border-electric/20 max-w-2xl mx-auto">
                 <p className="text-lg font-medium text-center italic text-text-primary mb-2">
-                  „”.
+                  „Ja go nie widzę, to ono też mnie nie widzi".
                 </p>
                 <p className="text-xl font-bold text-electric text-center">
                   Ale życie Cię widzi.
@@ -1144,7 +1144,7 @@ const SilnaGlowa = () => {
                 },
                 {
                   title: "„A jeśli mi nie pomoże?"",
-                  answer: "To zwracam pieniądze. Bez pytań, bez tłumaczenia się, bez wyciągania z Ciebie powodów. Masz 30 dni — w tym czasie spokojnie przerobisz 4 z 6 modułów. Jeśli po tym powiesz „”, oddaję pieniądze. Ryzyko jest po mojej stronie. Ty ryzykujesz tylko klik.",
+                  answer: "To zwracam pieniądze. Bez pytań, bez tłumaczenia się, bez wyciągania z Ciebie powodów. Masz 30 dni — w tym czasie spokojnie przerobisz 4 z 6 modułów. Jeśli po tym powiesz „nic mi to nie dało", oddaję pieniądze. Ryzyko jest po mojej stronie. Ty ryzykujesz tylko klik.",
                 },
               ].map((objection, index) => (
                 <Card key={index} className="glass-card p-6">
@@ -1211,7 +1211,7 @@ const SilnaGlowa = () => {
               {[
                 {
                   question: "Kiedy dostanę kurs?",
-                  answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „”.",
+                  answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości".",
                 },
                 {
                   question: "Jak długo będę mieć dostęp do kursu?",
