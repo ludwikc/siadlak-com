@@ -1,0 +1,1242 @@
+import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
+import TopicalMeta from "@/components/TopicalMeta";
+import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
+import RelatedPrograms from "@/components/sections/RelatedPrograms";
+import LifehackerzySection from "@/components/sections/LifehackerzySection";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Shield,
+  ArrowRight,
+  Users,
+  Star,
+  Clock,
+  AlertTriangle,
+  Heart,
+  Anchor,
+  Waves,
+  ShipWheel,
+  XCircle,
+  Target,
+  Brain,
+  Zap,
+  CheckCircle2,
+  Sparkles,
+  Compass,
+  Trophy,
+  HelpCircle,
+} from "lucide-react";
+
+const silnaGlowaFaqs = [
+  {
+    question: "Kiedy dostań kurs?",
+    answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości”.",
+  },
+  {
+    question: "Jak długo będę mieć dostęp do kursu?",
+    answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
+  },
+  {
+    question: "Jakieś bonusy? 🎁",
+    answer: "Tak. Każdy, kto dołącza, dostaje:\n\n1. Dostęp do zamkniętej grupy Mastermind — miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy — w rozmowie z ludźmi, którzy są na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mną — odpowiadam na Wasze pytania bez filtra, bez skryptów. Jak na moich warsztatach: jeden temat potrafi zmienić całą perspektywę.",
+  },
+];
+
+const SilnaGlowa = () => {
+  const ctaUrl = "https://buy.siadlak.com/checkout/program-odpornosc";
+
+  return (
+    <Layout>
+      <SEO {...getSEOConfig("/program/odpornosc")} jsonLd={[
+        getCourseEntity('silna-glowa')!,
+        getWebPageEntity('/program/odpornosc', 'Silna Głowa', 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo.', ['/program', '/discovery']),
+        getFAQSchema(silnaGlowaFaqs),
+        getCourseBreadcrumb('Silna Głowa', '/program/odpornosc'),
+        getReviewSchema('Aplikacja Mentalna: Silna Głowa', '/program/odpornosc', [
+          { author: 'Uczestnik programu', reviewBody: 'Pierwszy raz w życiu poczułem, że presja może być paliwem, a nie paraliżem. Firewall mentalny działa.', ratingValue: 5 },
+          { author: 'Absolwentka Silnej Głowy', reviewBody: 'Zmienił się nie poziom stresu — zmieniła się moja relacja ze stresem. To fundamentalna różnica.', ratingValue: 5 },
+        ], { ratingValue: 5.0, reviewCount: 100 }),
+      ]} />
+      {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
+
+      {/* Hero Section - Theme Locked */}
+      <section className="py-12 md:py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Opening Question */}
+            <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
+              Czy zdarza ci się rano otworzyć oczy i pomyśleć:{" "}
+              <span className="text-locked-white font-bold">
+                „Powinienem być dalej niż jestem”?
+              </span>
+            </p>
+
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-locked-white text-center">
+              Zamień swój umysł ze zwykłej tratwy w{" "}
+              <span className="text-locked-gradient">
+                niezatapialny pancernik
+              </span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl md:text-2xl font-medium mb-8 sm:mb-10 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
+              Taki, który nie boi się sztormu, bo wie, że sztorm to tylko wiatr i woda.
+              Naucz się żeglować tak, by każde uderzenie fali zbliżało cię do celu, a nie odpychało.
+            </p>
+
+            {/* Social Proof Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="h-4 w-4 sm:h-5 sm:w-5 text-electric fill-electric"
+                  />
+                ))}
+                <span className="ml-2 text-sm sm:text-base font-semibold text-locked-white">
+                  5.0/5.0
+                </span>
+              </div>
+              <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
+                <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
+                <span className="text-sm sm:text-base font-semibold text-locked-white">
+                  Dostęp natychmiastowy
+                </span>
+              </div>
+              <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
+                <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
+                <span className="text-sm sm:text-base font-semibold text-locked-white">
+                  30 dni gwarancji zwrotu
+                </span>
+              </div>
+            </div>
+
+            {/* Primary CTA */}
+            <div className="flex flex-col items-center gap-4 mb-8">
+              <div className="relative group inline-block w-full sm:w-auto">
+                <div className="absolute -inset-1 bg-gradient-to-r from-electric via-depth to-electric rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <a
+                  href={ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative block"
+                >
+                  <Button
+                    variant="special"
+                    size="lg"
+                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                  >
+                    Dołączam do kursu Silna Głowa
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+              </div>
+
+              <div className="text-center space-y-2">
+                <p className="text-electric text-xl sm:text-2xl font-bold">
+                  897 zł
+                </p>
+                <p className="text-xs sm:text-sm text-locked-silver">
+                  Pełny dostęp na zawsze
+                </p>
+              </div>
+            </div>
+
+            {/* Video Teaser */}
+            <div className="max-w-3xl mx-auto">
+              <div className="aspect-video bg-locked-white/10 rounded-2xl flex items-center justify-center border border-locked-white/20 hover:border-electric/50 transition-colors cursor-pointer group">
+                <div className="text-center">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-electric to-depth rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-0 h-0 border-l-[12px] sm:border-l-[16px] border-l-white border-y-[9px] sm:border-y-[12px] border-y-transparent ml-1"></div>
+                  </div>
+                  <p className="text-sm sm:text-base text-locked-silver">
+                    <span className="font-semibold text-locked-white">
+                      Zobacz, jak działa kurs
+                    </span>
+                    <br />
+                    Video wprowadzające (2 min)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINICJA + ŚWIEŻOŚĆ */}
+      <section className="py-12 md:py-16 bg-background-primary">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-xs text-text-secondary mb-6">
+            Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+            Czym jest program Silna Głowa?
+          </h2>
+          <p className="text-lg text-text-secondary leading-relaxed mb-6">
+            Aplikacja Mentalna Silna Głowa to 6-tygodniowy program odporności psychicznej. 6 modułów. 36 lekcji po ~10 minut. Razem 6 godzin nagrań, do których wracasz raz — bo nie musisz wracać drugi.
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed mb-6">
+            Działa jak firewall dla umysłu: zmienia sposób, w jaki przetwarzasz stres, presję i krytykę. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować. Niepewność przestaje blokować — zaczyna otwierać możliwości.
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed mb-6">
+            To nie technika zarządzania stresem. To trwała zmiana filtru, przez który widzisz wyzwania.
+          </p>
+          <div className="flex flex-wrap gap-6 text-sm text-text-secondary">
+            <span><strong className="text-text-primary">Twórca:</strong> Ludwik C. Siadlak</span>
+            <span><strong className="text-text-primary">Czas trwania:</strong> 6 tygodni (~6 godzin nagrań)</span>
+            <span><strong className="text-text-primary">Cena:</strong> 897 PLN</span>
+            <span><strong className="text-text-primary">Ocena:</strong> 5.0/5.0</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-16 md:py-20 bg-background-primary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-text-primary">
+                Dobra, od początku bądźmy szczerzy.
+              </h2>
+              <p className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto">
+                Żyjemy w świecie, który potrafi być{" "}
+                <span className="font-bold text-foreground">
+                  piekielnie wymagający dla naszej głowy
+                </span>
+                .
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-12">
+              {[
+                {
+                  text: "Media społecznościowe są projektowane przez najlepszych inżynierów na świecie, byś spędzał w nich czas, a nie poza nimi.",
+                  icon: XCircle,
+                },
+                {
+                  text: "Sukcesy innych oglądasz jak wyciągnięte z kontekstu zwiastuny filmowe — efekt końcowy, bez tysięcy godzin montażu.",
+                  icon: Users,
+                },
+                {
+                  text: "Każdego dnia przetwarzasz więcej danych niż twój prapradziadek przez całe życie — a Twój układ nerwowy nie zdążył się do tego dostosować.",
+                  icon: AlertTriangle,
+                },
+                {
+                  text: "Wojna o uwagę — korporacje wydają miliardy, byś kliknął, oglądnął, kupił. Twoja uwaga jest najcenniejszą walutą.",
+                  icon: Target,
+                },
+                {
+                  text: "Presja „hustle” i wyścigu, który nie ma mety, tylko kolejne okrążenia zmęczenia.",
+                  icon: Clock,
+                },
+                {
+                  text: "Bagaż, który nosisz — rodzinne schematy, własne potknięcia, lęki, które czasem czują się jak twoja druga skóra.",
+                  icon: Heart,
+                },
+              ].map((problem, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-white rounded-md p-5 sm:p-6 border border-muted transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-muted rounded-md flex items-center justify-center">
+                      <problem.icon className="h-6 w-6 text-dim" />
+                    </div>
+                    <p className="text-text-secondary group-hover:text-text-primary transition-colors leading-relaxed pt-1.5 text-sm sm:text-base">
+                      {problem.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="glass-card p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-6 text-text-primary">
+                A do tego dochodzi otoczenie, które często — zupełnie nieświadomie — chce cię utrzymać w znanej sobie przystani.
+              </h3>
+
+              <div className="bg-muted p-6 rounded-lg mb-6">
+                <h4 className="font-bold mb-4 text-text-primary">
+                  Zastanów się przez chwilę. Czy zdarzyło ci się usłyszeć od bliskich coś w rodzaju:
+                </h4>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "„Po co ci to? I tak się nie uda, jak zawsze.”",
+                    "„Weź się za normalną robotę, a nie jakieś fanaberie.”",
+                    "„Nie nadajesz się do tego.”",
+                    "„Zmieniłeś się...” (wypowiedziane z wyrzutem).",
+                  ].map((quote, index) => (
+                    <li key={index} className="text-foreground font-medium">
+                      {quote}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-text-secondary mb-4">
+                  Mówią „chcę dla ciebie dobrze”, ale często chcą, żebyś był… <span className="font-bold">przewidywalny</span>.
+                  Bo twoja zmiana to zagrożenie dla ich komfortu.
+                </p>
+
+                <p className="text-text-secondary mb-4">
+                  Nie dlatego, że są źli. Dlatego, że twój rozwój stawia im lustro, w które nie chcą patrzeć.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <h4 className="text-xl font-bold mb-4 text-text-primary">
+                  Potem idziesz do pracy. Tu też loteria:
+                </h4>
+                <p className="text-text-secondary mb-4">
+                  Albo trafisz na załogę, która wie, że burza to nie powód do buntu, tylko do wytężonej pracy;
+                  albo na statek, gdzie kapitan krzyczy, a za błąd wrzuca za burtę.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Boat Metaphor Section */}
+      <section className="py-16 md:py-20 bg-background-secondary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-electric/20 to-transparent"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-electric/10 px-5 py-2 rounded-full mb-6">
+                <Anchor className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
+                  Metafora życia
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Wyobraź sobie, że jesteś żaglówką
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
+                Otoczenie, rodzinne schematy, stare lęki — to wszystko wyznaczyło ci początkowy kurs{" "}
+                <strong>prosto na wzburzone wody</strong>. To nie twoja wina.
+              </p>
+              <p className="text-base sm:text-lg text-text-secondary max-w-3xl mx-auto mt-4">
+                Nie twoją winą jest, że żagle się rwą, a ster drży. Nie twoją winą jest, że ocean bywa nieprzewidywalny.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+              <div className="group relative bg-white rounded-md p-6 sm:p-8 border border-muted transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-muted px-4 py-1 rounded-full border border-muted">
+                  <span className="text-xs font-bold text-dim">TERAZ</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-4 pt-2">
+                  <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+                    <Anchor className="h-8 w-8 text-dim" />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-sm text-text-secondary">łódź się chwieje</p>
+                    <p className="text-sm text-text-secondary">żagle rwą</p>
+                    <p className="text-sm text-text-secondary">kadłub przecieka</p>
+                  </div>
+                  <Waves className="h-6 w-6 text-dim" />
+                </div>
+              </div>
+
+              <div className="group relative bg-white rounded-md p-6 sm:p-8 border border-muted transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-muted px-4 py-1 rounded-full border border-muted">
+                  <span className="text-xs font-bold text-dim">OCEAN</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-4 pt-2">
+                  <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+                    <Waves className="h-8 w-8 text-dim" />
+                  </div>
+                  <p className="text-base text-text-primary font-medium">Ocean jest wzburzony</p>
+                  <p className="text-sm text-text-secondary italic">(i to też nie Twoja wina)</p>
+                </div>
+              </div>
+
+              <div className="group relative bg-electric/5 rounded-md p-6 sm:p-8 border border-electric/30 transition-all">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gradient px-4 py-1 rounded-full">
+                  <span className="text-xs font-bold text-white">ROZWIĄZANIE</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-4 pt-2">
+                  <div className="w-16 h-16 bg-brand-gradient rounded-full flex items-center justify-center">
+                    <ShipWheel className="h-8 w-8 text-white" />
+                  </div>
+                  <p className="text-base text-text-primary font-bold">Niezatapialny pancernik</p>
+                  <p className="text-sm text-electric font-semibold">↓ Zobacz poniżej</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative max-w-3xl mx-auto">
+              <div className="relative bg-white rounded-md p-8 sm:p-10 border border-muted">
+                <div className="space-y-4 text-center">
+                  <p className="text-lg sm:text-xl text-text-primary leading-relaxed">
+                    Są jachty, które całe życie stoją w suchym doku.
+                    Są takie, które ciągną holowniki.
+                  </p>
+                  <div className="pt-4 border-t border-muted">
+                    <p className="text-xl sm:text-2xl font-bold text-depth mb-2">
+                      Ty nie jesteś jedną z nich.
+                    </p>
+                    <p className="text-base sm:text-lg text-text-secondary">
+                      I dobrze.
+                      <br />
+                      <strong className="text-text-primary">
+                        Bo one nie poczują nigdy dumy z samodzielnego dopłynięcia do celu.
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Adversity Section */}
+      <section className="py-16 bg-card-bg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
+              A jak TY znosisz te przeciwności?
+            </h2>
+
+            <p className="text-lg text-center mb-8 text-text-secondary">
+              Zakładam, że nie jesteś robotem. Być może:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-12">
+              {[
+                "Przeżywasz je po raz setny, jak nakręconą płytę.",
+                "Rozpamiętujesz, co mogłeś zrobić inaczej. Tak jakbyś jechał autem po torze i cały wieczór myślał o tym jednym kiepskim zakręcie, zapominając o siedmiu świetnych przejazdach.",
+                "Obwiniasz siebie (lub innych).",
+                "Marzysz o życiu równym jak tafla jeziora.",
+                "Patrzysz na tych, którzy — z zewnątrz — płyną jak po maśle.",
+                "Masz dość pustych pocieszań w stylu „będzie dobrze”, „dasz radę”.",
+              ].map((item, index) => (
+                <div key={index} className="text-left p-4 bg-muted rounded-lg">
+                  <p className="text-text-secondary">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            <Card className="glass-card p-8 mb-8">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold mb-6 text-text-primary">
+                  Najpierw — wiedz, że to, co czujesz, jest NORMALNE.
+                </h3>
+                <p className="text-text-secondary mb-6">
+                  Wszyscy przez to przechodzimy. Różnica polega na tym, co z tym robimy dalej.
+                </p>
+                <p className="text-lg font-medium mb-6 text-text-primary">
+                  Są ludzie, na których fala uderza, a oni, otrzepując się, myślą:{" "}
+                  <span className="italic text-depth">„To jest tylko myśl. Nie muszę się do niej przywiązywać.”</span>{" "}
+                  A potem: <span className="italic text-depth">„OK, co teraz mogę z tym ZROBIĆ?”</span>
+                </p>
+              </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { situation: "Uciekł ci pociąg?", response: "Super, wreszcie przeczytam tę książkę na dworcu." },
+                { situation: "Zwolnili cię z pracy?", response: "Dobry znak. I tak nosiłem się z zamiarem zmiany. Czas na plan B." },
+                { situation: "Zachorowałeś?", response: "Ciało domaga się resetu. Zróbmy to." },
+                { situation: "Brakuje klientów?", response: "Idealny moment, żeby w końcu zaktualizować ofertę." },
+              ].map((example, index) => (
+                <Card key={index} className="glass-card p-6">
+                  <CardContent className="p-0">
+                    <p className="font-bold text-foreground mb-2">{example.situation}</p>
+                    <p className="text-electric font-medium">„{example.response}”</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-lg font-bold text-text-primary">
+                To nie jest naiwny optymizm. To jest <span className="text-electric">wybór perspektywy</span>. I można się tego nauczyć.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Author Section */}
+      <section className="py-16 bg-background-tertiary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
+              Kim jestem i dlaczego wiem, jak pomóc ci przepłynąć?
+            </h2>
+
+            <Card className="glass-card p-8">
+              <CardContent className="p-0">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1 space-y-6">
+                    <p className="text-lg text-text-primary">
+                      Nazywam się{" "}
+                      <span className="font-bold text-electric">Ludwik C. Siadlak</span>.
+                      Od ponad 18 lat moją pracą jest{" "}
+                      <strong>aktualizowanie „oprogramowania” w głowach moich klientów</strong>{" "}
+                      — w firmach z listy Fortune 500, dla NATO, armii USA i organizacji w ponad 50 krajach.
+                    </p>
+
+                    <p className="text-text-secondary">
+                      Pokazuję im bariery, lęki i przekonania, które często… wcale nie są ich własne.
+                      To tylko nieaktualne programy, które odziedziczyli lub zainstalowali pod presją.
+                      A potem pokazuję, jak je przepisać — na takie, które służą ich celom, a nie ograniczają.
+                    </p>
+
+                    <p className="text-text-secondary">
+                      Latami testowałem na sobie wszystko, o czym mówię: od medytacji Diamentowej Drogi, przez autohipnozę,
+                      po budowanie odporności psychicznej. Przeszedłem przez rozwód, kryzys tożsamości, jednoosobowe rodzicielstwo
+                      — i każda z tych sytuacji dała mi narzędzia, które dziś przekazuję innym.
+                    </p>
+
+                    <p className="text-text-secondary">
+                      Nie mówię teorii. Mówię z poziomu{" "}
+                      <strong className="text-text-primary">kapitana, który sam przeszedł przez niejedną burzę.</strong>
+                    </p>
+
+                    <div className="bg-electric/5 p-6 rounded-lg border-l-4 border-depth">
+                      <p className="text-text-secondary mb-4">
+                        Jedna z rzeczy, której nauczyłem się w praktyce:{" "}
+                        <span className="font-bold text-depth italic">
+                          „forma jest pustką, a pustka jest formą”
+                        </span>.
+                      </p>
+                      <p className="text-text-secondary mb-4">
+                        Brzmi filozoficznie? Owszem. Ale w praktyce oznacza to, że nawet to, co wygląda na katastrofę,
+                        jest tylko myślą — i nie musisz się do niej przywiązywać.
+                      </p>
+                      <p className="text-text-secondary">
+                        Tak jak mój klient Maciek, który podczas pierwszej medytacji zobaczył wybuch bomby atomowej
+                        w swoim idealnym świecie… i usłyszał: <em>„To jest tylko myśl.”</em> I nagle okazało się,
+                        że ta myśl nie ma nad nim żadnej władzy.
+                      </p>
+                    </div>
+
+                    <p className="text-lg font-medium text-electric">
+                      Dzisiaj chcę być twoim <strong>nawigatorem</strong>. Pokażę ci, jak czytać mapy, ustawiać żagle
+                      i sterować tak, by każdy sztorm — mały czy duży —{" "}
+                      <strong>uczynił cię lepszym żeglarzem, a nie ofiarą.</strong>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="mt-12 space-y-8">
+              <h3 className="text-2xl font-bold text-text-primary">
+                Moja praca już przynosi efekty
+              </h3>
+
+              <div className="space-y-6">
+                <h4 className="text-xl font-bold text-text-primary">
+                  Temat mentalu wraca do mnie co chwilę
+                </h4>
+                <p className="text-text-secondary">
+                  Czy to w rozmowach z podopiecznymi na mentoringu, czy w społeczności Hakerów Produktywności.
+                </p>
+                <p className="text-text-secondary">
+                  Co chwilę czytam i słyszę o lękach, blokadach, niskiej samoocenie.
+                </p>
+                <p className="text-lg font-bold text-text-primary">
+                  Też tak masz?
+                </p>
+
+                <div className="bg-electric/5 p-6 rounded-lg">
+                  <p className="text-text-secondary mb-4">
+                    Brian Tracy w „Psychologii sprzedaży” pisał, że osoby z biednych domów i z bogatych mają taką samą szansę na bogactwo.
+                  </p>
+                  <p className="text-text-secondary mb-4">
+                    I taką samą szansę, by popaść w biedę.
+                  </p>
+                  <p className="text-xl font-bold text-electric">
+                    Różnica jest w głowie.
+                  </p>
+                  <p className="text-lg mt-4 text-text-primary">
+                    Spokojnie, pomogę Ci z tym.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section - 6 Steps */}
+      <section className="py-16 md:py-20 bg-background-primary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <Sparkles className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
+                  Twoja transformacja
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Z moją pomocą zbudujesz swój własny, niezatapialny system
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary">
+                Oto, co dostajesz — i dlaczego każdy element jest zaprojektowany tak, żebyś widział efekty szybko:
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                {
+                  step: 1,
+                  title: "Przejmiesz stery",
+                  benefit: "Nauczysz się nawigować przez życie, używając metafor, które dają siłę i klarowność. Już po pierwszym module zobaczysz swoją sytuację zupełnie innymi oczami — to nie ster zawodzi, to mapa była nie ta.",
+                  icon: Compass,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 1",
+                },
+                {
+                  step: 2,
+                  title: "Opancerzysz kadłub",
+                  benefit: "Opanujesz ocean własnych myśli tak, że burza będzie tylko pogodą, a nie katastrofą. Nauczysz się widzieć myśli jak chmury — przychodzą i odchodzą, a ty zostajesz.",
+                  icon: ShipWheel,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 2",
+                },
+                {
+                  step: 3,
+                  title: "Przekujesz „zagrożenie” w „wyzwanie”",
+                  benefit: "Nauczysz się obserwować myśli bez osądzania — i, co ważniejsze, zmieniać ich kształt. Bo to jest tylko myśl. Nie musisz się do niej przywiązywać.",
+                  icon: Target,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 3",
+                },
+                {
+                  step: 4,
+                  title: "Napełnisz żagle wiatrem",
+                  benefit: "Odkryjesz głęboką motywację, płynącą z twoich prawdziwych wartości, a nie z zewnętrznej presji. Bo prawdziwa siła nie bierze się z kawy i „must have”.",
+                  icon: Waves,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 4",
+                },
+                {
+                  step: 5,
+                  title: "Nauczysz się sztormowych manewrów",
+                  benefit: "Będziesz miał strategie na trudności, które nie polegają na walce z falą, ale na mądrym wykorzystaniu jej energii. Jak powiedział Bruce Lee: Be water, my friend.",
+                  icon: Zap,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 5",
+                },
+                {
+                  step: 6,
+                  title: "Stworzysz swój kompas",
+                  benefit: "Zbudujesz personalny plan odporności, który zawsze wskaże ci kierunek, gdy zgubisz widok lądu. Nie plan na półkę. Plan, z którym wyjdziesz następnego dnia.",
+                  icon: Shield,
+                  gradient: "from-electric to-depth",
+                  timeframe: "Moduł 6",
+                },
+              ].map((item, index) => (
+                <div key={index} className="group relative">
+                  {index < 5 && (
+                    <div className="absolute left-8 sm:left-10 top-20 sm:top-24 w-0.5 h-6 bg-gradient-to-b from-muted to-transparent"></div>
+                  )}
+                  <div className="relative flex items-start gap-4 sm:gap-6">
+                    <div className="relative flex-shrink-0">
+                      <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center border-4 border-white`}>
+                        <item.icon className="h-7 w-7 sm:h-9 sm:w-9 text-white drop-shadow-md" />
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center border border-muted">
+                        <span className="text-xs sm:text-sm font-bold text-text-primary">{item.step}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <Card className="transition-all duration-300 border border-muted bg-white overflow-hidden">
+                        <CardContent className="p-5 sm:p-6">
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="text-xl sm:text-2xl font-bold text-text-primary">{item.title}</h3>
+                            <span className="text-xs sm:text-sm font-medium text-text-secondary bg-muted px-3 py-1 rounded-full">{item.timeframe}</span>
+                          </div>
+                          <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-4">{item.benefit}</p>
+                          <div className="relative h-2 bg-muted rounded-full overflow-hidden">
+                            <div className={`h-full bg-gradient-to-r ${item.gradient} rounded-full`} style={{ width: `${(item.step / 6) * 100}%` }}></div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Summary Card */}
+            <div className="mt-12 bg-gradient-to-br from-electric/10 to-depth/10 rounded-md p-8 border border-electric/20">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-gradient rounded-full mb-4">
+                  <Trophy className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-text-primary">
+                  Po ukończeniu kursu
+                </h3>
+                <p className="text-lg sm:text-xl text-text-secondary mb-6">
+                  Będziesz miał Silną Głowę, gotową na każde wyzwanie życiowe
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {["Spokój", "Pewność", "Odporność", "Kierunek"].map((trait, index) => (
+                    <div key={index} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm">
+                      <CheckCircle2 className="h-5 w-5 text-electric" />
+                      <span className="font-medium text-text-primary">{trait}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Audience */}
+      <section className="py-16 bg-background-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="glass-card p-6">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-bold text-electric mb-6">
+                    Ten program jest dla Ciebie, jeśli:
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "męczysz się ze sobą",
+                      "masz wrażenie, że brniesz przez życie z kulą u nogi",
+                      "otoczenie Cię nie wspiera, przeciwnie, ciągnie cię w dół",
+                      "każde trudne wydarzenie w życiu dokłada Ci cierpień i frustracji",
+                      "chcesz odpocząć od ciągłej presji",
+                      "boisz się o jutro",
+                      "nie potrafisz sobie poradzić z własnymi myślami",
+                    ].map((item, index) => (
+                      <li key={index} className="text-text-secondary">• {item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="glass-card p-6">
+                <CardContent className="p-0">
+                  <h3 className="text-xl font-bold text-dim mb-6">
+                    Ten program nie jest dla Ciebie, jeśli:
+                  </h3>
+                  <ul className="space-y-3">
+                    {[
+                      "masz wspierające otoczenie i pomoc na każdym kroku",
+                      "otaczasz się ludźmi, którzy w Ciebie wierzą",
+                      "masz wiarę w to, co robisz, i bez problemu przechodzisz do działania",
+                      "masz pewność siebie i lubisz to, kim jesteś",
+                      "perfekcyjnie radzisz sobie z trudnościami, a nieprzewidziane zdarzenia są dla Ciebie miłą odmianą, a nie tragedią",
+                    ].map((item, index) => (
+                      <li key={index} className="text-text-secondary">• {item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className="py-16 bg-card-bg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
+              Pomyśl, jak zmieni się twoje życie, gdy przestaniesz walczyć z oceanem, a zaczniesz po nim żeglować
+            </h2>
+
+            <Card className="glass-card p-8 mb-8">
+              <CardContent className="p-0">
+                <h3 className="text-2xl font-bold mb-6 text-text-primary">
+                  Puść wodze fantazji na chwilę. Jak inni ludzie zauważą tę zmianę?
+                </h3>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    "Twój partner zobaczy, że nie reagujesz już złością — i zacznie cię szanować na nowym poziomie.",
+                    "Twoje dzieci zobaczą ojca/matkę, która nie rozkleja się pod presją — i poczują się bezpiecznie.",
+                    "Twój szef zauważy, że przejmujesz inicjatywę zamiast narzekać.",
+                    "Uwolnisz się od długów lub toksycznej pracy, bo wreszcie będziesz miał głowę do podejmowania decyzji.",
+                    "Obudzisz się z poczuciem spokoju, a nie niepokoju. A to jest bezcenne.",
+                  ].map((dream, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-1.5 h-1.5 bg-electric rounded-full mt-2"></div>
+                      <p className="text-base text-text-secondary">{dream}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-lg font-bold text-text-primary mb-6">
+                  To wszystko staje się możliwe, gdy przeprogramujesz swój „software” i zbudujesz Silną Głowę.
+                </p>
+
+                <div className="mt-8 bg-electric/5 p-6 rounded-lg">
+                  <p className="text-text-secondary mb-4">
+                    Wracając do naszej żaglówki: wyobraź sobie, że płyniesz. Czujesz wiatr, czujesz fale.{" "}
+                    <strong className="text-text-primary">I nie boisz się.</strong>
+                  </p>
+                  <p className="text-text-secondary mb-4">
+                    Bo wiesz, że nawet gdy nadejdzie sztorm, ty wiesz, jak skorygować kurs. Masz plan.
+                  </p>
+                  <p className="text-xl font-bold text-electric">
+                    Jesteś Kapitanem.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Course Modules */}
+      <section className="py-16 md:py-20 bg-background-tertiary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <ShipWheel className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
+                  Program kursu
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Co zawiera kurs?
+              </h2>
+              <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto">
+                6 modułów. 36 lekcji po ~10 minut. 6 tygodni do trwałej zmiany.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+              {[
+                {
+                  number: 1,
+                  icon: Anchor,
+                  gradient: "from-electric to-depth",
+                  title: "Żeglując po morzach życia, to Ty jesteś żaglówką",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Czujesz się zagubiony? Otrzymasz potężną metaforę nawigacyjną, która uporządkuje chaos. Zobaczysz, jak twoje wartości są sterem, słabości — dziurami w kadłubie, a otoczenie — wiatrem i prądami. Zrozumiesz, kto i co tak naprawdę kieruje twoim życiem. Ten moduł zmienia percepcję — a zmiana percepcji to zmiana wszystkiego.",
+                },
+                {
+                  number: 2,
+                  icon: Brain,
+                  gradient: "from-electric to-depth",
+                  title: "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z „wyszukiwania zagrożeń” na „wyszukiwanie możliwości”. Opanujesz „kotwicę spokoju” — bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
+                },
+                {
+                  number: 3,
+                  icon: Target,
+                  gradient: "from-electric to-depth",
+                  title: "Ujarzmianie myśli: Moc percepcji",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania — tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I — co ważniejsze — zmieniać ich kształt. Przekujesz wewnętrzne „zagrożenie” w „wyzwanie”, a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
+                },
+                {
+                  number: 4,
+                  icon: Zap,
+                  gradient: "from-electric to-depth",
+                  title: "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Prawdziwa siła nie bierze się z kawy i „must have”. Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz — i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
+                },
+                {
+                  number: 5,
+                  icon: Waves,
+                  gradient: "from-electric to-depth",
+                  title: "Nawigacja przez burze: Skuteczne strategie radzenia sobie z przeciwnościami",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i… mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest — i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
+                },
+                {
+                  number: 6,
+                  icon: Shield,
+                  gradient: "from-electric to-depth",
+                  title: "Tworzenie własnego kompasu: Plan budowania odporności psychicznej",
+                  weeks: "1 tydzień",
+                  lessons: "6 lekcji",
+                  description: "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument — „Instrukcję Obsługi Sztormu”. Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
+                },
+              ].map((module) => (
+                <div
+                  key={module.number}
+                  className="group relative bg-white rounded-md p-6 sm:p-8 transition-all duration-300 border border-muted"
+                >
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-electric/10 to-depth/10 px-3 py-1.5 rounded-full border border-electric/20">
+                    <span className="text-xs font-bold text-electric">{module.number}/6</span>
+                  </div>
+
+                  <div className="flex items-start gap-4 sm:gap-5 mb-4">
+                    <div className="relative">
+                      <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${module.gradient} rounded-md flex items-center justify-center border border-white/20`}>
+                        <module.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white drop-shadow-md" />
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2 leading-tight">{module.title}</h3>
+                      <div className="flex gap-3 text-xs text-text-secondary">
+                        <span className="bg-muted px-2 py-1 rounded">{module.weeks}</span>
+                        <span className="bg-muted px-2 py-1 rounded">{module.lessons}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-5">{module.description}</p>
+
+                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:opacity-90 transition-all duration-200 flex items-center justify-center gap-2">
+                    <CheckCircle2 className="h-5 w-5" />
+                    <span className="text-sm sm:text-base">ODBLOKOWUJ MODUŁ</span>
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-16 text-center">
+              <h3 className="text-2xl font-bold mb-6 text-text-primary">
+                Po kursie Silna Głowa będziesz mieć silną psychikę.
+              </h3>
+
+              <Card className="glass-card p-8 max-w-3xl mx-auto">
+                <CardContent className="p-0">
+                  <h4 className="text-xl font-bold mb-6 text-text-primary">
+                    Kurs jest także biletem na pokład najbardziej wspierającej załogi w oceanie Internetu
+                  </h4>
+                  <p className="text-text-secondary mb-4">Każdego dnia.</p>
+                  <p className="text-lg font-medium text-electric">
+                    To jedna z niewielu społeczności totalnie pozbawionych hejtu.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lifehackerzy Community Section */}
+      <LifehackerzySection />
+
+      {/* Pricing Section */}
+      <section className="py-16 bg-background-primary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
+              Inwestycja w swój najważniejszy „soft”: spokój i siłę
+            </h2>
+
+            <div className="max-w-3xl mx-auto mb-8 space-y-4 text-left bg-card-bg p-6 rounded-xl">
+              <p className="text-base text-text-secondary">
+                Gdybym miał zsumować:
+              </p>
+              <ul className="space-y-2 text-base text-text-secondary">
+                <li className="flex items-start gap-2">
+                  <span className="text-depth">•</span>
+                  <span>18+ lat mówienia do ludzi i <strong>aktualizowania ich oprogramowania</strong> — od Fortune 500 po NATO,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-depth">•</span>
+                  <span>30+ lat testowania każdej metody najpierw na sobie,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-depth">•</span>
+                  <span>Psychologię i informatykę z Oxfordu, które pozwoliły mi łączyć głęboką wiedzę o umyśle z praktycznymi narzędziami,</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-depth">•</span>
+                  <span>Oraz pracę z setkami klientów 1:1 w ponad 50 krajach…</span>
+                </li>
+              </ul>
+              <p className="text-base text-text-secondary pt-4">
+                …wartość tej wiedzy byłaby bardzo wysoka.
+              </p>
+              <p className="text-lg font-bold text-text-primary">
+                Mój 1-dniowy mentoring kosztuje dziś 12 000 zł netto. I ludzie za to płacą, bo wiedzą,
+                że jeden dzień ze mną zmienia więcej niż rok samotnych prób.
+              </p>
+              <p className="text-base text-text-secondary">
+                Kurs <strong className="text-electric">„Silna Głowa”</strong> to ta sama wiedza — zdestylowana w 6 tygodni do samodzielnej instalacji. Za ułamek tej kwoty.
+              </p>
+            </div>
+
+            <Card className="glass-card p-8 max-w-2xl mx-auto border border-electric/20">
+              <CardContent className="p-0">
+                <div className="space-y-6">
+                  {/* Value Comparison */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <div className="bg-muted p-6 rounded-md text-center border border-muted">
+                      <p className="text-sm text-text-secondary uppercase tracking-wide mb-2">
+                        Wartość mentoringu 1:1
+                      </p>
+                      <p className="text-3xl font-bold text-text-secondary line-through mb-1">
+                        12 000 zł
+                      </p>
+                      <p className="text-xs text-text-secondary">
+                        (referencja, nie dyskonto — to inny produkt)
+                      </p>
+                    </div>
+
+                    <div className="relative">
+                      <div className="bg-brand-gradient p-6 rounded-md text-center border-4 border-white/20">
+                        <p className="text-sm text-white/90 uppercase tracking-wide mb-2">
+                          Twoja inwestycja
+                        </p>
+                        <p className="text-5xl font-extrabold text-white mb-1">
+                          897 zł
+                        </p>
+                        <div className="flex items-center justify-center gap-1.5 text-white/90 text-sm">
+                          <CheckCircle2 className="h-4 w-4" />
+                          <span>Dostęp na zawsze</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Value Stack */}
+                  <div className="bg-gradient-to-r from-electric/5 to-depth/5 p-6 rounded-md border border-electric/20">
+                    <h4 className="font-bold text-center mb-4 text-text-primary">
+                      W pakiecie otrzymujesz:
+                    </h4>
+                    <div className="space-y-3">
+                      {[
+                        { item: "6 modułów kursu", value: "3 000 zł" },
+                        { item: "Społeczność wsparcia (grupa Mastermind)", value: "bezcenne" },
+                        { item: "Materiały do ćwiczeń", value: "500 zł" },
+                        { item: "Aktualizacje na zawsze", value: "1 000 zł" },
+                        { item: "Plan budowania odporności", value: "2 000 zł" },
+                        { item: "Live Q&A ze mną", value: "1 500 zł" },
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="h-4 w-4 text-electric flex-shrink-0" />
+                            <span className="text-sm text-text-secondary">{item.item}</span>
+                          </div>
+                          <span className="text-sm font-bold text-text-primary">{item.value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-electric/20">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-bold text-text-primary">Łączna wartość</span>
+                        <span className="text-sm font-bold text-electric">8 000 zł</span>
+                      </div>
+                      <div className="flex items-center justify-between mt-2">
+                        <span className="text-base font-bold text-text-primary">Twoja inwestycja</span>
+                        <span className="text-base font-extrabold text-electric">897 zł</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Daily Cost */}
+                  <div className="text-center py-4">
+                    <p className="text-sm text-text-secondary mb-2">Przelicz to na dzienną stawkę:</p>
+                    <p className="text-lg font-bold text-electric">
+                      To mniej niż 2,46 zł dziennie przez rok
+                    </p>
+                    <p className="text-sm text-text-secondary italic">
+                      Mniej niż kawa z automatu. Za spokój w głowie i stery we własnych rękach.
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="special"
+                      size="lg"
+                      className="btn-locked-primary w-full text-base sm:text-lg py-4 sm:py-6 group"
+                    >
+                      To dobra cena za ten rejs, wchodzę na pokład
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
+
+                  {/* Guarantee */}
+                  <div className="mt-8 bg-electric/5 p-6 rounded-md border border-electric/20">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 bg-brand-gradient rounded-full flex items-center justify-center">
+                        <Shield className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold mb-2 text-text-primary">
+                          Dopłyniesz, gdzie chcesz, albo odstawię cię na brzeg — masz moją gwarancję
+                        </h4>
+                        <p className="text-sm text-text-secondary mb-3">
+                          Wierzę w to, co robię. Widziałem transformacje. Wiem, że to działa.
+                        </p>
+                        <p className="text-sm text-text-secondary">
+                          Ale jeśli dołączysz, przerobisz kurs i w ciągu 30 dni stwierdzisz, że nic ci nie dał —{" "}
+                          <strong className="text-text-primary">
+                            zwrócę ci 100% pieniędzy. Bez pytań, bez problemów, bez wyciągania z ciebie powodów.
+                          </strong>
+                        </p>
+                        <p className="text-sm text-text-secondary mt-3 font-medium">
+                          Całe ryzyko jest po mojej stronie. Jedyne ryzyko po twojej — to nie spróbować i za rok znowu czuć to samo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 text-sm text-text-secondary bg-white p-3 rounded-lg border border-muted">
+                    <Shield className="w-5 h-5 text-electric" />
+                    <span className="font-medium text-text-primary">30-dniowa gwarancja zwrotu pieniędzy</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Objections Section - Inline Cards */}
+      <section className="py-16 md:py-20 bg-background-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
+                <HelpCircle className="h-5 w-5 text-electric" />
+                <span className="text-sm font-bold text-electric uppercase">
+                  Rozwiązujemy wątpliwości
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
+                Możesz się wahać
+              </h2>
+              <p className="text-lg text-text-secondary mb-8">
+                Wcale mnie to nie dziwi. Życie nauczyło Cię unikać ryzyka.
+              </p>
+              <div className="bg-card-bg p-6 rounded-md border border-electric/20 max-w-2xl mx-auto">
+                <p className="text-lg font-medium text-center italic text-text-primary mb-2">
+                  „Ja go nie widzę, to ono też mnie nie widzi”.
+                </p>
+                <p className="text-xl font-bold text-electric text-center">
+                  Ale życie Cię widzi.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                {
+                  title: "„Nie mam teraz pieniędzy”",
+                  answer: "Często to pierwsza myśl, która wpada do głowy w stresie — i jednocześnie pierwsza myśl, którą można zaobserwować i zostawić. Bo to jest tylko myśl. Kurs kosztuje 897 zł i można rozłożyć na raty 0% przez Przelewy24/Stripe (zwykle 3-12 rat). To mniej niż jedna sesja u dobrego terapeuty. Jeśli mimo to nie pasuje finansowo — zacznij od bezpłatnej Sesji Discovery i porozmawiajmy.",
+                },
+                {
+                  title: "„Nie mam czasu na kursy”",
+                  answer: "Lekcja trwa średnio 10 minut. Jeden moduł tygodniowo. Razem ~6 godzin nagrań przez 6 tygodni. Jeśli nie masz na to czasu — to jest dokładnie ten moment, w którym potrzebujesz tego kursu. Brak czasu rzadko bywa problemem. Najczęściej jest objawem czegoś głębszego. Pracujemy nad źródłem.",
+                },
+                {
+                  title: "„Czy to mi się zwróci?”",
+                  answer: "Inaczej niż w kursach produktywnościowych, tu nie liczę godzin × stawki. Bo Silna Głowa nie zwraca Ci czasu — zwraca Ci spokój. A spokój nie ma stawki godzinowej. Ma za to kilka łatwo policzalnych konsekwencji: lepsze decyzje (mniej kosztownych pomyłek), lepsze relacje (mniej rozejść), lepsze zdrowie (mniej leków, mniej wizyt). Plus 30 dni gwarancji — jeśli nie zwróci Ci się w żaden sposób, oddaję pieniądze. Trudno o uczciwszy układ.",
+                },
+                {
+                  title: "„A jeśli mi nie pomoże?”",
+                  answer: "To zwracam pieniądze. Bez pytań, bez tłumaczenia się, bez wyciągania z Ciebie powodów. Masz 30 dni — w tym czasie spokojnie przerobisz 4 z 6 modułów. Jeśli po tym powiesz „nic mi to nie dało”, oddaję pieniądze. Ryzyko jest po mojej stronie. Ty ryzykujesz tylko klik.",
+                },
+              ].map((objection, index) => (
+                <Card key={index} className="glass-card p-6">
+                  <CardContent className="p-0">
+                    <h3 className="text-xl font-bold mb-3 text-text-primary">{objection.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">{objection.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-base sm:text-lg px-8 py-6 group"
+                >
+                  Wskakuję na pokład. Zamawiam dostęp
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA - Theme Locked */}
+      <section className="py-16 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-locked-white">
+              Chcesz wypracować swoją własną odporność psychiczną?
+            </h2>
+            <p className="text-xl text-locked-silver mb-8">
+              Wskakuj na pokład i naucz się, jak sterować łodzią życia, by pokonać każdy sztorm.
+            </p>
+
+            <div className="space-y-4">
+              <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="special"
+                  size="lg"
+                  className="btn-locked-primary text-lg px-8 py-4"
+                >
+                  Nie mam już wątpliwości, dołączam do kursu
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-card-bg">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
+              FAQ
+            </h2>
+
+            <div className="space-y-6">
+              {[
+                {
+                  question: "Kiedy dostanę kurs?",
+                  answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości”.",
+                },
+                {
+                  question: "Jak długo będę mieć dostęp do kursu?",
+                  answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
+                },
+                {
+                  question: "Jakieś bonusy? 🎁",
+                  answer: "Tak. Każdy, kto dołącza, dostaje:\n\n1. Dostęp do zamkniętej grupy Mastermind — miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy — w rozmowie z ludźmi, którzy są na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mną — odpowiadam na Wasze pytania bez filtra, bez skryptów. Jak na moich warsztatach: jeden temat potrafi zmienić całą perspektywę.",
+                },
+              ].map((faq, index) => (
+                <Card key={index} className="glass-card p-6">
+                  <CardContent className="p-0">
+                    <h3 className="text-xl font-bold mb-3 text-text-primary">{faq.question}</h3>
+                    <div className="text-text-secondary whitespace-pre-line">{faq.answer}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <RelatedPrograms currentPath="/program/odpornosc" />
+    </Layout>
+  );
+};
+
+export default SilnaGlowa;
