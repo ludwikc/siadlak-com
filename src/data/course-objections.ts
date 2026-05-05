@@ -2,12 +2,10 @@ import type { LucideIcon } from "lucide-react";
 import {
   DollarSign,
   Clock,
-  TrendingUp,
-  AlertTriangle,
-  Target,
   Brain,
   ShieldCheck,
   Lightbulb,
+  Target,
 } from "lucide-react";
 
 export interface MythRealityItem {
