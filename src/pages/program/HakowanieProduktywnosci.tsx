@@ -51,11 +51,11 @@ const produktywnoscFaqs = [
   },
   {
     question: "Kiedy dostanę dostęp do programu?",
-    answer: "Natychmiast. Po kliknięciu „Instaluję" dostajesz mail z dostępem do platformy w ciągu kilku minut. Pierwszy moduł możesz zacząć tego samego wieczoru — albo w ten weekend. Ja nie sprawdzam.",
+    answer: "Natychmiast. Po kliknięciu \u201EInstaluję" dostajesz mail z dostępem do platformy w ciągu kilku minut. Pierwszy moduł możesz zacząć tego samego wieczoru — albo w ten weekend. Ja nie sprawdzam.",
   },
   {
     question: "Jak długo mam dostęp do materiałów?",
-    answer: "Dożywotnio. Bez gwiazdki, bez „ważne przez rok", bez „subskrypcji do odnowienia". Płacisz raz, masz na zawsze — łącznie ze wszystkimi aktualizacjami, które przyjdą później. Bo aplikacja mentalna, która znika po 12 miesiącach, to nie aplikacja. To wynajem.",
+    answer: "Dożywotnio. Bez gwiazdki, bez \u201Eważne przez rok", bez \u201Esubskrypcji do odnowienia". Płacisz raz, masz na zawsze — łącznie ze wszystkimi aktualizacjami, które przyjdą później. Bo aplikacja mentalna, która znika po 12 miesiącach, to nie aplikacja. To wynajem.",
   },
   {
     question: "Co jeśli nie będę miał czasu na społeczność?",
