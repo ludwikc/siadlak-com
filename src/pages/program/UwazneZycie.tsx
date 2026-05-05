@@ -25,12 +25,8 @@ import {
   Eye,
   Battery,
   Users,
-  Video,
-  MessageSquare,
-  PlayCircle,
-  Heart,
-  Globe,
 } from "lucide-react";
+import LifehackerzySection from "@/components/sections/LifehackerzySection";
 
 const uwazneZycieFaqs = [
   {
