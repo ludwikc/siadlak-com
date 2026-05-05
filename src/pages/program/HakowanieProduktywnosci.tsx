@@ -35,7 +35,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-import CountdownTimer from "@/components/sales/CountdownTimer";
+
 import ValueCalculator from "@/components/sales/ValueCalculator";
 import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
 import OptimizedImage from "@/components/ui/OptimizedImage";
