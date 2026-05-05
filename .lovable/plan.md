@@ -1,39 +1,38 @@
-## Goal
 
-Replace the "Sam kurs to dopiero początek" community section on `/program/produktywnosc` with the purple Lifehackerzy section from `/program/uwaznosc`, extracted as a reusable component.
+# Aktualizacja copy: Program Odporność Psychiczna (Silna Głowa)
 
-## Why extract a component
+## Zakres zmian
 
-The Lifehackerzy section (~530 lines) is already used on UwazneZycie and referenced on 4+ other program pages (MeskiKompas, TrainTheTrainerAI, LifeOSSystemUpgrade, Program hub). Extracting it into a shared component avoids duplication and makes future copy updates trivial.
+### 1. Plik: `src/pages/program/SilnaGlowa.tsx` — pełna aktualizacja copy
 
-## Changes
+Kluczowe zmiany treściowe:
+- **Hero**: usunięcie badge'a "PRZEDSPRZEDAŻ" i daty "10 stycznia". Zmiana ceny z 777 zł na **897 zł**. Dodanie brakujących social proof pills (Ocena 5.0/5.0, Dostęp natychmiastowy, 30 dni gwarancji). Usunięcie strikethrough "12 000 zł → 777 zł".
+- **Definicja**: Aktualizacja opisu — dodanie "6 modułów. 36 lekcji po ~10 minut. Razem 6 godzin nagrań". Zmiana daty aktualizacji na 5 maja 2026. Zmiana ceny na 897 PLN, oceny na 5.0/5.0. Dodanie "~6 godzin nagrań" do czasu trwania.
+- **Problem section**: Dodanie brakującego tekstu o układzie nerwowym ("a Twój układ nerwowy nie zdążył się do tego dostosować").
+- **Boat metaphor**: Bez zmian — tekst się zgadza.
+- **Adversity section**: Bez zmian — tekst się zgadza.
+- **Author section**: Usunięcie "Przedsprzedaż trwa tylko do 10 stycznia!". Dodanie brakującego tekstu o "taką samą szansę na bogactwo".
+- **Benefits/Transformacja**: Aktualizacja na 6 kroków zamiast 5 (dodanie kroku 3 "Przekujesz zagrożenie w wyzwanie", przesunięcie pozostałych). Nowe opisy kroków zgodne z nowym copy.
+- **Course modules**: Aktualizacja opisów modułów, dodanie metadanych "1 tydzień / 6 lekcji" do każdego modułu. Nowy nagłówek "6 modułów. 36 lekcji po ~10 minut. 6 tygodni do trwałej zmiany."
+- **Pricing**: Zmiana ceny na 897 zł. Zmiana tekstu referencji mentoringu ("referencja, nie dyskonto — to inny produkt"). Dodanie "Live Q&A ze mną: 1 500 zł" i "Społeczność wsparcia (grupa Mastermind): bezcenne" do value stack. Dzienne rozbicie: "2,46 zł" (897/365).
+- **Objections**: Zastąpienie accordion-based `SILNA_GLOWA_OBJECTIONS` na nowe inline objections (4 pytania z nowymi odpowiedziami, m.in. raty 0% przez Przelewy24/Stripe, link do Discovery).
+- **Final CTA**: Usunięcie "Przedsprzedaż trwa tylko do 10 stycznia!".
+- **FAQ**: Aktualizacja na 3 nowe pytania z nowym copy (Kiedy dostanę kurs?, Jak długo?, Jakieś bonusy?). Treść bonusów bez wzmianki o "przedsprzedaży".
+- **LifehackerzySection**: Dodanie `<LifehackerzySection />` po sekcji modułów (po "najbardziej wspierającej załogi"), przed sekcją pricing — analogicznie do stron Produktywność i Uważność.
 
-### 1. Create `src/components/sections/LifehackerzySection.tsx`
+### 2. Plik: `src/data/course-objections.ts`
 
-Extract lines 1004-1531 from `UwazneZycie.tsx` into a standalone component. It includes:
-- Purple gradient background with radial overlays
-- Header with "Bonus" badge and "NIE BEDZIESZ SAM NA TEJ WYPRAWIE" title
-- Lifehackerzy logo (OptimizedImage)
-- 4 feature cards: 1234 Daily Coaching, DeepWork.pl, Forum (180+ threads), 50+ ProTipy
-- "Kto to jest Lifehacker?" identity section
-- "Dlaczego to ma znaczenie?" motivation section
-- Statistics section (completion rates)
-- Summary checklist
+Usunięcie `SILNA_GLOWA_OBJECTIONS` — te objections nie będą już potrzebne, bo nowe copy definiuje 4 inline objections bezpośrednio w komponencie strony (bez accordion, jako karty z pytaniem i odpowiedzią).
 
-The component will accept no props (it's fully self-contained content). All required icon imports and the logo asset import will move into the component file.
+### 3. Plik: `src/pages/program/SilnaGlowa.tsx` — SEO metadata
 
-### 2. Update `src/pages/program/UwazneZycie.tsx`
+- Aktualizacja `getReviewSchema` — zmiana `ratingValue` na 5.0, usunięcie `reviewCount: 118`.
+- Aktualizacja FAQ schema na nowe pytania.
 
-Replace lines 1004-1531 (the inline Lifehackerzy section) with `<LifehackerzySection />`. Remove now-unused icon imports that were only needed for that section (Video, MessageSquare, PlayCircle, Heart, Globe, etc. -- after verifying they aren't used elsewhere in the file).
+### Szczegóły techniczne
 
-### 3. Update `src/pages/program/HakowanieProduktywnosci.tsx`
-
-Replace lines 828-886 (the "Sam kurs to dopiero początek" section including the `ValueCalculator` reference) with `<LifehackerzySection />`. Add the import. Remove now-unused imports if any.
-
-Note: The `ValueCalculator` component currently rendered inside the replaced section will be moved to appear right after the Lifehackerzy section (before the pricing section), preserving the value stack.
-
-### Files affected
-
-1. **New**: `src/components/sections/LifehackerzySection.tsx`
-2. **Edit**: `src/pages/program/UwazneZycie.tsx` -- replace inline section with component
-3. **Edit**: `src/pages/program/HakowanieProduktywnosci.tsx` -- replace community section with component
+- Import `LifehackerzySection` z `@/components/sections/LifehackerzySection`
+- Usunięcie importu `SILNA_GLOWA_OBJECTIONS` z course-objections
+- Objections section zmienia się z accordion na inline karty — usunięcie nieużywanego `Accordion*` importu jeśli nie potrzebny
+- Cena w `ctaUrl` się nie zmienia (ten sam checkout link)
+- Unicode escapes (`\u201E`, `\u201D`) dla polskich cudzysłowów w string literals
