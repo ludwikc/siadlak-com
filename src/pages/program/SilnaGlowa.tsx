@@ -31,16 +31,16 @@ import {
 
 const silnaGlowaFaqs = [
   {
-    question: "Kiedy dosta\u0144 kurs?",
-    answer: "Dost\u0119p do platformy i pierwszego modu\u0142u otrzymasz natychmiast po zakupie. Kolejne modu\u0142y odblokowuj\u0105 si\u0119 co tydzie\u0144, aby\u015B mia\u0142 czas na spokojne przepracowanie materia\u0142u. Dzi\u0119ki temu zobaczysz pierwsze efekty ju\u017C w pierwszym tygodniu \u2014 nie musisz czeka\u0107 na „uko\u0144czenie ca\u0142o\u015Bci".",
+    question: "Kiedy dostań kurs?",
+    answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości".",
   },
   {
-    question: "Jak d\u0142ugo b\u0119d\u0119 mie\u0107 dost\u0119p do kursu?",
-    answer: "Na zawsze. \u015Awiat si\u0119 zmienia, a ty wraz z nim. W przysz\u0142o\u015Bci, gdy b\u0119d\u0119 dodawa\u0107 nowe materia\u0142y lub aktualizacje (np. warsztaty live, dodatkowe \u0107wiczenia) \u2014 automatycznie otrzymasz do nich dost\u0119p bez \u017Cadnych dodatkowych op\u0142at. Kupujesz raz \u2014 korzystasz zawsze. Bo aplikacja mentalna, kt\u00F3ra znika po roku, to nie aplikacja. To wynajem.",
+    question: "Jak długo będę mieć dostęp do kursu?",
+    answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
   },
   {
-    question: "Jakie\u015B bonusy? \uD83C\uDF81",
-    answer: "Tak. Ka\u017Cdy, kto do\u0142\u0105cza, dostaje:\n\n1. Dost\u0119p do zamkni\u0119tej grupy Mastermind \u2014 miejsce na wymian\u0119 do\u015Bwiadcze\u0144 i wsparcie za\u0142ogi. To tutaj dziej\u0105 si\u0119 prawdziwe prze\u0142omy \u2014 w rozmowie z lud\u017Ami, kt\u00F3rzy s\u0105 na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mn\u0105 \u2014 odpowiadam na Wasze pytania bez filtra, bez skrypt\u00F3w. Jak na moich warsztatach: jeden temat potrafi zmieni\u0107 ca\u0142\u0105 perspektyw\u0119.",
+    question: "Jakieś bonusy? 🎁",
+    answer: "Tak. Każdy, kto dołącza, dostaje:\n\n1. Dostęp do zamkniętej grupy Mastermind — miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy — w rozmowie z ludźmi, którzy są na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mną — odpowiadam na Wasze pytania bez filtra, bez skryptów. Jak na moich warsztatach: jeden temat potrafi zmienić całą perspektywę.",
   },
 ];
 
@@ -51,12 +51,12 @@ const SilnaGlowa = () => {
     <Layout>
       <SEO {...getSEOConfig("/program/odpornosc")} jsonLd={[
         getCourseEntity('silna-glowa')!,
-        getWebPageEntity('/program/odpornosc', 'Silna G\u0142owa', 'Program odporno\u015Bci psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, kt\u00F3ry zamienia presj\u0119 w paliwo.', ['/program', '/discovery']),
+        getWebPageEntity('/program/odpornosc', 'Silna Głowa', 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo.', ['/program', '/discovery']),
         getFAQSchema(silnaGlowaFaqs),
-        getCourseBreadcrumb('Silna G\u0142owa', '/program/odpornosc'),
-        getReviewSchema('Aplikacja Mentalna: Silna G\u0142owa', '/program/odpornosc', [
-          { author: 'Uczestnik programu', reviewBody: 'Pierwszy raz w \u017Cyciu poczu\u0142em, \u017Ce presja mo\u017Ce by\u0107 paliwem, a nie parali\u017Cem. Firewall mentalny dzia\u0142a.', ratingValue: 5 },
-          { author: 'Absolwentka Silnej G\u0142owy', reviewBody: 'Zmieni\u0142 si\u0119 nie poziom stresu \u2014 zmieni\u0142a si\u0119 moja relacja ze stresem. To fundamentalna r\u00F3\u017Cnica.', ratingValue: 5 },
+        getCourseBreadcrumb('Silna Głowa', '/program/odpornosc'),
+        getReviewSchema('Aplikacja Mentalna: Silna Głowa', '/program/odpornosc', [
+          { author: 'Uczestnik programu', reviewBody: 'Pierwszy raz w życiu poczułem, że presja może być paliwem, a nie paraliżem. Firewall mentalny działa.', ratingValue: 5 },
+          { author: 'Absolwentka Silnej Głowy', reviewBody: 'Zmienił się nie poziom stresu — zmieniła się moja relacja ze stresem. To fundamentalna różnica.', ratingValue: 5 },
         ], { ratingValue: 5.0, reviewCount: 100 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
@@ -825,7 +825,7 @@ const SilnaGlowa = () => {
                   title: "Żeglując po morzach życia, to Ty jesteś żaglówką",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Czujesz się zagubiony? Otrzymasz potężną metaforę nawigacyjną, która uporządkuje chaos. Zobaczysz, jak twoje wartości są sterem, słabości \u2014 dziurami w kadłubie, a otoczenie \u2014 wiatrem i prądami. Zrozumiesz, kto i co tak naprawdę kieruje twoim życiem. Ten moduł zmienia percepcję \u2014 a zmiana percepcji to zmiana wszystkiego.",
+                  description: "Czujesz się zagubiony? Otrzymasz potężną metaforę nawigacyjną, która uporządkuje chaos. Zobaczysz, jak twoje wartości są sterem, słabości — dziurami w kadłubie, a otoczenie — wiatrem i prądami. Zrozumiesz, kto i co tak naprawdę kieruje twoim życiem. Ten moduł zmienia percepcję — a zmiana percepcji to zmiana wszystkiego.",
                 },
                 {
                   number: 2,
@@ -834,7 +834,7 @@ const SilnaGlowa = () => {
                   title: "Sterowanie umysłem: Opanowanie sztuki skupienia uwagi",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z „wyszukiwania zagrożeń" na „wyszukiwanie możliwości". Opanujesz „kotwicę spokoju" \u2014 bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
+                  description: "Dlaczego mózg łatwiej łapie negatywy? Bo kiedyś to było potrzebne do przetrwania. Dziś to sabotażysta. Nauczysz się przełączać jego tryb z „wyszukiwania zagrożeń" na „wyszukiwanie możliwości". Opanujesz „kotwicę spokoju" — bo medytacja to siłownia dla umysłu. Jak idziesz na siłkę, to dźwigasz ciężar. A później trzeba wnieść kanapę na piętro? Robisz to z luzem.",
                 },
                 {
                   number: 3,
@@ -843,7 +843,7 @@ const SilnaGlowa = () => {
                   title: "Ujarzmianie myśli: Moc percepcji",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania \u2014 tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I \u2014 co ważniejsze \u2014 zmieniać ich kształt. Przekujesz wewnętrzne „zagrożenie" w „wyzwanie", a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
+                  description: "Twoje myśli to nie ty. To tylko chmury na niebie twojego umysłu. Nauczysz się je obserwować bez osądzania — tak jak na medytacji obserwujesz myśli, które przychodzą i odchodzą. I — co ważniejsze — zmieniać ich kształt. Przekujesz wewnętrzne „zagrożenie" w „wyzwanie", a problem w niespodziewaną szansę. Bo pamiętaj: to jest tylko myśl. Nie musisz się do niej przywiązywać.",
                 },
                 {
                   number: 4,
@@ -852,7 +852,7 @@ const SilnaGlowa = () => {
                   title: "Napędzanie swojej podróży: Motywacja do ciągłego rozwoju",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Prawdziwa siła nie bierze się z kawy i „must have". Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz \u2014 i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
+                  description: "Prawdziwa siła nie bierze się z kawy i „must have". Płynie z głębokiej zgodności z tym, co dla ciebie naprawdę ważne. Odkryjesz swoje rdzenne wartości i zbudujesz na nich silnik, który będzie napędzał cię nawet, gdy wiatr zgaśnie. To jak znalezienie tego zakrętu na torze, w który wchodzisz dokładnie tak, jak chcesz — i nikt nie siedzi na miejscu pasażera, wydzierając ci kierownicę.",
                 },
                 {
                   number: 5,
@@ -861,7 +861,7 @@ const SilnaGlowa = () => {
                   title: "Nawigacja przez burze: Skuteczne strategie radzenia sobie z przeciwnościami",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i\u2026 mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest \u2014 i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
+                  description: "Co robić, gdy fala już nadchodzi? Będziesz miał gotowe strategie sztormowe. Nauczysz się rozróżniać, na co masz wpływ (ster, żagle), a co musisz zaakceptować (wiatr, falę). Poznasz siłę aktywnego działania i… mądrego poddania się, gdy walka jest stratą energii. Bo czasem nie chodzi o to, żeby wyciągać zbroję i miecz. Czasem chodzi o to, żeby się poddać temu, co jest — i odkryć, że to, czego się boisz, rozpuszcza się w momencie, gdy pozwolisz temu być.",
                 },
                 {
                   number: 6,
@@ -870,7 +870,7 @@ const SilnaGlowa = () => {
                   title: "Tworzenie własnego kompasu: Plan budowania odporności psychicznej",
                   weeks: "1 tydzień",
                   lessons: "6 lekcji",
-                  description: "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument \u2014 „Instrukcję Obsługi Sztormu". Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
+                  description: "Czas złożyć wszystko w całość. Stworzysz swój osobisty, żywy dokument — „Instrukcję Obsługi Sztormu". Połączysz ster, żagle, silnik i strategie w jeden spójny system. Wyjdziesz z tego kursu nie tylko z wiedzą, ale z działającym planem, który będziesz mógł stosować od zaraz.",
                 },
               ].map((module) => (
                 <div
@@ -1132,19 +1132,19 @@ const SilnaGlowa = () => {
               {[
                 {
                   title: "„Nie mam teraz pieniędzy"",
-                  answer: "Często to pierwsza myśl, która wpada do głowy w stresie \u2014 i jednocześnie pierwsza myśl, którą można zaobserwować i zostawić. Bo to jest tylko myśl. Kurs kosztuje 897 zł i można rozłożyć na raty 0% przez Przelewy24/Stripe (zwykle 3-12 rat). To mniej niż jedna sesja u dobrego terapeuty. Jeśli mimo to nie pasuje finansowo \u2014 zacznij od bezpłatnej Sesji Discovery i porozmawiajmy.",
+                  answer: "Często to pierwsza myśl, która wpada do głowy w stresie — i jednocześnie pierwsza myśl, którą można zaobserwować i zostawić. Bo to jest tylko myśl. Kurs kosztuje 897 zł i można rozłożyć na raty 0% przez Przelewy24/Stripe (zwykle 3-12 rat). To mniej niż jedna sesja u dobrego terapeuty. Jeśli mimo to nie pasuje finansowo — zacznij od bezpłatnej Sesji Discovery i porozmawiajmy.",
                 },
                 {
                   title: "„Nie mam czasu na kursy"",
-                  answer: "Lekcja trwa średnio 10 minut. Jeden moduł tygodniowo. Razem ~6 godzin nagrań przez 6 tygodni. Jeśli nie masz na to czasu \u2014 to jest dokładnie ten moment, w którym potrzebujesz tego kursu. Brak czasu rzadko bywa problemem. Najczęściej jest objawem czegoś głębszego. Pracujemy nad źródłem.",
+                  answer: "Lekcja trwa średnio 10 minut. Jeden moduł tygodniowo. Razem ~6 godzin nagrań przez 6 tygodni. Jeśli nie masz na to czasu — to jest dokładnie ten moment, w którym potrzebujesz tego kursu. Brak czasu rzadko bywa problemem. Najczęściej jest objawem czegoś głębszego. Pracujemy nad źródłem.",
                 },
                 {
                   title: "„Czy to mi się zwróci?"",
-                  answer: "Inaczej niż w kursach produktywnościowych, tu nie liczę godzin × stawki. Bo Silna Głowa nie zwraca Ci czasu \u2014 zwraca Ci spokój. A spokój nie ma stawki godzinowej. Ma za to kilka łatwo policzalnych konsekwencji: lepsze decyzje (mniej kosztownych pomyłek), lepsze relacje (mniej rozejść), lepsze zdrowie (mniej leków, mniej wizyt). Plus 30 dni gwarancji \u2014 jeśli nie zwróci Ci się w żaden sposób, oddaję pieniądze. Trudno o uczciwszy układ.",
+                  answer: "Inaczej niż w kursach produktywnościowych, tu nie liczę godzin × stawki. Bo Silna Głowa nie zwraca Ci czasu — zwraca Ci spokój. A spokój nie ma stawki godzinowej. Ma za to kilka łatwo policzalnych konsekwencji: lepsze decyzje (mniej kosztownych pomyłek), lepsze relacje (mniej rozejść), lepsze zdrowie (mniej leków, mniej wizyt). Plus 30 dni gwarancji — jeśli nie zwróci Ci się w żaden sposób, oddaję pieniądze. Trudno o uczciwszy układ.",
                 },
                 {
                   title: "„A jeśli mi nie pomoże?"",
-                  answer: "To zwracam pieniądze. Bez pytań, bez tłumaczenia się, bez wyciągania z Ciebie powodów. Masz 30 dni \u2014 w tym czasie spokojnie przerobisz 4 z 6 modułów. Jeśli po tym powiesz „nic mi to nie dało", oddaję pieniądze. Ryzyko jest po mojej stronie. Ty ryzykujesz tylko klik.",
+                  answer: "To zwracam pieniądze. Bez pytań, bez tłumaczenia się, bez wyciągania z Ciebie powodów. Masz 30 dni — w tym czasie spokojnie przerobisz 4 z 6 modułów. Jeśli po tym powiesz „nic mi to nie dało", oddaję pieniądze. Ryzyko jest po mojej stronie. Ty ryzykujesz tylko klik.",
                 },
               ].map((objection, index) => (
                 <Card key={index} className="glass-card p-6">
@@ -1211,15 +1211,15 @@ const SilnaGlowa = () => {
               {[
                 {
                   question: "Kiedy dostanę kurs?",
-                  answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu \u2014 nie musisz czekać na „ukończenie całości".",
+                  answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości".",
                 },
                 {
                   question: "Jak długo będę mieć dostęp do kursu?",
-                  answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) \u2014 automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz \u2014 korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
+                  answer: "Na zawsze. Świat się zmienia, a ty wraz z nim. W przyszłości, gdy będę dodawać nowe materiały lub aktualizacje (np. warsztaty live, dodatkowe ćwiczenia) — automatycznie otrzymasz do nich dostęp bez żadnych dodatkowych opłat. Kupujesz raz — korzystasz zawsze. Bo aplikacja mentalna, która znika po roku, to nie aplikacja. To wynajem.",
                 },
                 {
-                  question: "Jakieś bonusy? \uD83C\uDF81",
-                  answer: "Tak. Każdy, kto dołącza, dostaje:\n\n1. Dostęp do zamkniętej grupy Mastermind \u2014 miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy \u2014 w rozmowie z ludźmi, którzy są na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mną \u2014 odpowiadam na Wasze pytania bez filtra, bez skryptów. Jak na moich warsztatach: jeden temat potrafi zmienić całą perspektywę.",
+                  question: "Jakieś bonusy? 🎁",
+                  answer: "Tak. Każdy, kto dołącza, dostaje:\n\n1. Dostęp do zamkniętej grupy Mastermind — miejsce na wymianę doświadczeń i wsparcie załogi. To tutaj dzieją się prawdziwe przełomy — w rozmowie z ludźmi, którzy są na tej samej drodze.\n\n2. Zaproszenie na live Q&A ze mną — odpowiadam na Wasze pytania bez filtra, bez skryptów. Jak na moich warsztatach: jeden temat potrafi zmienić całą perspektywę.",
                 },
               ].map((faq, index) => (
                 <Card key={index} className="glass-card p-6">
