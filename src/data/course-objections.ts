@@ -2,10 +2,10 @@ import type { LucideIcon } from "lucide-react";
 import {
   DollarSign,
   Clock,
+  Target,
   Brain,
   ShieldCheck,
   Lightbulb,
-  Target,
 } from "lucide-react";
 
 export interface MythRealityItem {
@@ -14,19 +14,6 @@ export interface MythRealityItem {
   icon: LucideIcon;
   mythColor: string;
   realityColor: string;
-}
-
-export interface ObjectionItem {
-  value: string;
-  icon: LucideIcon;
-  title: string;
-  color: string;
-  content: {
-    intro: string;
-    paragraphs: string[];
-    highlight?: string;
-    conclusion: string;
-  };
 }
 
 export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
@@ -77,72 +64,5 @@ export const HAKOWANIE_OBJECTIONS: MythRealityItem[] = [
     icon: Lightbulb,
     mythColor: "from-red-500 to-red-600",
     realityColor: "from-green-500 to-green-600",
-  },
-];
-
-export const SILNA_GLOWA_OBJECTIONS: ObjectionItem[] = [
-  {
-    value: "money",
-    icon: DollarSign,
-    title: "Nie mam teraz pieniędzy",
-    color: "red",
-    content: {
-      intro: "W tym cały problem.",
-      paragraphs: [
-        "Twój mental blokuje Cię przed zarobieniem dobrych pieniędzy. I będzie Cię blokował przez całe życie, jeśli tak to zostawisz.",
-        "Otoczenie nauczyło Cię myśleć źle o pieniądzach. Że są domeną chciwych i chytrych ludzi. Że można je stracić.",
-      ],
-      highlight:
-        "Twój umysł broni Cię przed dużymi pieniędzmi! Na pewno masz marzenia. Bez pieniędzy ich nie zrealizujesz. Musisz przełamać ten schemat.",
-      conclusion:
-        "Gdyby Twój umysł był zaprogramowany na dobrą kasę, to już byś ją miał. Osobiście wolę sam decydować o tym, ile zarabiam 🙂",
-    },
-  },
-  {
-    value: "time",
-    icon: Clock,
-    title: "Nie mam czasu na kursy",
-    color: "orange",
-    content: {
-      intro:
-        "Oczywiście. Świat pędzi, nie czeka, presja, hustlowanie, wyścig szczurów. Gnasz ze spotkania na spotkanie. Gdzie tu jeszcze wcisnąć kurs?",
-      paragraphs: [
-        "Ale pomyśl o tych wszystkich momentach, kiedy się martwisz. Kiedy nie możesz zasnąć. Kiedy łapiesz się na rozpamiętywaniu stresujących sytuacji.",
-      ],
-      highlight:
-        "Ile czasu na to tracisz? Ile czasu możesz odzyskać? Pomyśl o tym, jak kolejne trudne wydarzenia z życia powstrzymują Cię przed działaniem. Ile masz takich złych dni? Ile są warte w przeliczeniu na pieniądze?",
-      conclusion: "",
-    },
-  },
-  {
-    value: "roi",
-    icon: TrendingUp,
-    title: "Czy to mi się zwróci?",
-    color: "green",
-    content: {
-      intro:
-        "Warren Buffett powiedział, że najlepszą inwestycją jest inwestycja w siebie. Jeśli tak mówi najwybitniejszy inwestor wszech czasów, to widocznie musi tak być.",
-      paragraphs: [
-        "Cokolwiek robisz w życiu, czymkolwiek się zajmujesz, Twój mental pozwoli Ci osiągać cele, ale też przed nimi powstrzyma.",
-      ],
-      highlight:
-        '"Nie trafiłem ponad 9000 rzutów w moim życiu. Przegrałem prawie 300 meczów. 26 razy powierzono mi zwycięski rzut i nie trafiłem. Poniosłem porażkę raz po raz w moim życiu. I dlatego odnoszę sukcesy." - Michael Jordan',
-      conclusion:
-        "Bez odporności psychicznej nie ma sukcesu. Zainwestuj w siebie.",
-    },
-  },
-  {
-    value: "doubt",
-    icon: AlertTriangle,
-    title: "A jeśli mi nie pomoże?",
-    color: "blue",
-    content: {
-      intro:
-        "To pytanie też jest objawem słabej głowy. Wątpisz w siebie i swoje zdolności. Ale masz rację - jeśli się nie zdarzy cud, to faktycznie nic Ci nie pomoże.",
-      paragraphs: [],
-      highlight:
-        "Ale ja oferuję coś lepszego niż cud: 30-dniową gwarancję zwrotu pieniędzy, sprawdzony system oparty na nauce, setki osób, którym już pomógł.",
-      conclusion: "Jedyne ryzyko to pozostać tam, gdzie jesteś teraz.",
-    },
   },
 ];
