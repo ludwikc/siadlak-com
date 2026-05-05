@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-*Last updated: 2026-03-28*
+*Last updated: 2026-05-04*
 
 ---
 
@@ -8,20 +8,24 @@
 
 **Brand:** Ludwik C. Siadlak (siadlak.com)
 **One-liner:** Aplikacje Mentalne — programy zmiany sposobu myślenia, które instalujesz raz i zostają z tobą na zawsze.
-**What it does:** Ludwik C. Siadlak tworzy i prowadzi intensywne programy mentalne (4–8 tygodni) skierowane do ambitnych mężczyzn — liderów, przedsiębiorców, ojców — którzy chcą zmienić nie techniki, ale fundament: sposób myślenia o sobie, pracy i życiu. Oferta obejmuje samodzielne kursy online, programy grupowe i mentoring 1:1.
+**What it does:** Ludwik C. Siadlak tworzy i prowadzi intensywne programy mentalne (4–8 tygodni) skierowane do ambitnych mężczyzn — liderów, przedsiębiorców, ojców — którzy chcą zmienić nie techniki, ale fundament: sposób myślenia o sobie, pracy i życiu. Oferta obejmuje mini-kurs wejściowy (7 Technik), samodzielne kursy online (Aplikacje Mentalne), mentoring premium 1:1 (Life OS) oraz wyspecjalizowany program biznesowy dla freelancerów AI (Train The Trainer: AI).
 **Product category:** Rozwój osobisty / coaching mentalny dla mężczyzn (kategoria: "aplikacja mentalna", nie "kurs")
 **Product type:** Kursy online + mentoring premium 1:1
 **Business model:** Jednorazowy zakup dostępu; brak subskrypcji. Bonus: dożywotni dostęp do społeczności Lifehackerzy przy zakupie dowolnego programu.
 
 ### Produkty
 
+Wszystkie ceny są **brutto**.
+
 | Produkt | Cena | Długość | Opis |
 |---------|------|---------|------|
-| Program: Produktywność | 1 497 PLN | 4–6 tyg. | Zmiana podejścia do czasu, energii i prokrastynacji |
-| Program: Silna Głowa (Odporność Psychiczna) | 777 PLN (przedsprzedaż) | 6 tyg. | Firewall dla umysłu — presja jako paliwo, nie paraliż |
-| Program: Uważne Życie | 777 PLN | 6 tyg. | Mindfulness dla analitycznych umysłów i osób z ADHD |
-| Program: Męski Kompas | lista oczekujących | 5 tyg. | Reinstalacja systemu tożsamości — kim jestem naprawdę |
-| Life OS: System Upgrade | 16 000 PLN | 8 tyg. | Mentoring 1:1, max 5 osób jednocześnie, pełny upgrade systemu operacyjnego |
+| 7 Technik Produktywności | 497 PLN | 77 min · lifetime | Mini-kurs wejściowy — 7 sprawdzonych technik produktywności w punktach, z zadaniem wdrożeniowym po każdej |
+| Program: Produktywność (Hakowanie Produktywności) | 1 497 PLN | 4–6 tyg. | Zmiana podejścia do czasu, energii i prokrastynacji |
+| Program: Silna Głowa (Odporność Psychiczna) | 897 PLN | 6 tyg. | Firewall dla umysłu — presja jako paliwo, nie paraliż |
+| Program: Uważne Życie (Uważność) | 897 PLN | 4–6 tyg. | Mindfulness dla analitycznych umysłów i osób z ADHD |
+| Program: Męski Kompas (Męskość) | 997 PLN | 5 tyg. | Reinstalacja systemu tożsamości — kim jestem naprawdę (cena pilotażowa) |
+| Life OS: System Upgrade | 16 000 PLN | 8 tyg. | Mentoring 1:1, max 5 osób jednocześnie, pełny upgrade systemu operacyjnego (możliwość 2 rat) |
+| Train The Trainer: AI (TTT:AI) | 7 999 PLN (edycja inauguracyjna) / 24 999 PLN (cena regularna od Q3 2026) | 8 tyg. | Prywatny mentoring 1:1 dla geeków-freelancerów AI, którzy chcą zostać certyfikowanymi trenerami AI. Max 4 miejsca/kwartał |
 | Newsletter | bezpłatny | ongoing | Cotygodniowe eseje o produktywności, AI, sensie życia |
 | Lifehackerzy (społeczność) | bonus do każdego programu | dożywotni | Discord: daily coaching 12:34, warsztaty, 50+ protipów |
 
@@ -244,4 +248,29 @@
 **Business goal:** Sprzedaż programów mentalnych + kwalifikacja klientów do Life OS (premium 1:1)
 **Primary conversion action:** Zakup programu przez buy.siadlak.com LUB umówienie Sesji Discovery (/discovery) dla Life OS
 **Secondary conversion actions:** Zapis do newslettera (/newsletter), dołączenie do bezpłatnych zasobów (DeepWork.pl, medytacje)
-**Funnel:** Newsletter → Program → Life OS (lub bezpośrednio do Life OS przez Discovery)
+**Funnel:** Newsletter → 7 Technik (497 PLN, mini-kurs wejściowy) → Aplikacja Mentalna (897–1 497 PLN) → Life OS (16 000 PLN, mentoring 1:1) lub bezpośrednio do Life OS przez Discovery. **Boczna ścieżka biznesowa:** Train The Trainer: AI (7 999 / 24 999 PLN) — dla geeków-freelancerów AI chcących zostać certyfikowanymi trenerami; rekrutacja przez rozmowę wstępną, max 4 osoby/kwartał.
+
+---
+
+## Train The Trainer: AI — Sub-Brand Notes
+
+TTT:AI jest **odrębną propozycją wartości** od reszty oferty Aplikacji Mentalnych — celuje w innego klienta i ma inną ekonomię.
+
+**Persona:** Geek-freelancer AI 25–45 lat — zna narzędzia (Claude, GPT, n8n, agenci, prompt engineering, automatyzacja), zarabia 36–70 tys. zł/rok jako freelancer techniczny, sufit zlecenia ~kilkaset zł, brak rzemiosła trenerskiego i sprzedażowego.
+
+**Job to be done:** Wyjść ze ścieżki freelancera technicznego (60–120 tys. zł / 2 lata) na ścieżkę trenera AI (180–400 tys. zł / 2 lata) — przez nabycie rzemiosła trenerskiego (cykl Kolba, praca z grupą, głos/ciało, praca z oporem) i sprzedażowego (warsztat → 2,3 kolejne zlecenia w 90 dni).
+
+**Format:** 8 tygodni 1:1 z Ludwikiem. Egzamin praktyczny: prowadzisz 90-min warsztat dla realnej grupy. Po egzaminie: certyfikacja "Lifehackerzy Certified AI Trainer", dożywotni dostęp do zamkniętej sieci trenerów Discord, pierwszeństwo w zleceniach Ludwika.
+
+**Mentor proof:** Microsoft Certified Trainer, 20 lat doświadczenia, szkolił m.in. jednostki US Army, US Navy, US Air Force, US Marines. Twórca Fundacji HACKERZY.PL.
+
+**Cennik i pozycjonowanie ceny:**
+- Edycja inauguracyjna (Q2 2026, 3 miejsca): **7 999 PLN brutto** — uzasadnienie: budujemy pierwsze case studies, fair deal: niższa cena za social proof
+- Cena regularna od Q3 2026: **24 999 PLN brutto**
+- ROI argument: różnica ścieżek ~200 tys. zł / 2 lata; program kosztuje 3–4% tej różnicy
+
+**Gwarancja:** Po 3 tygodniach jeśli widać, że nie zadziała — rozstanie + zwrot 50% proporcjonalnej reszty. Jeśli do tygodnia 12 nie ma pierwszej faktury — Ludwik pracuje dalej bezpłatnie.
+
+**Anti-persona TTT:AI:** Początkujący w AI; ludzie szukający gotowych szablonów do odklepania; ludzie szukający grupowego szkolenia (TTT:AI jest świadomie 1:1).
+
+**Words to use (TTT:AI):** rzemiosło trenerskie, certyfikowany trener AI, scenariusz warsztatu, cykl Kolba, IP trenerskie, Trainer's Toolbox.
