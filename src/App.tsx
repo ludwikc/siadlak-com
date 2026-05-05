@@ -51,8 +51,8 @@ import SilnaGlowa from "./pages/program/SilnaGlowa";
 import MeskiKompas from "./pages/program/MeskiKompas";
 import UwazneZycie from "./pages/program/UwazneZycie";
 import OTO from "./pages/OTO";
-import Help from "./pages/Help";
-import HelpSubpage from "./pages/HelpSubpage";
+import Help from "./pages/help/Help";
+import HelpSubpage from "./pages/help/HelpSubpage";
 
 import HakowanieProduktywnosci from "./pages/program/HakowanieProduktywnosci";
 import SiedemTechnik from "./pages/program/SiedemTechnik";
