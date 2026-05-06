@@ -306,6 +306,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Handwritten Testimonial */}
+      <section className="bg-void">
+        <img
+          src={jakubGlowaczOpinia}
+          alt="Ręcznie napisana opinia: Dzięku wielkie za to co robisz. Zmieniasz życie ludziom, którzy tego rzeczywiście potrzebują — Jakub Głowacz, :solute"
+          className="w-full h-auto block"
+          loading="lazy"
+        />
+      </section>
+
       {/* ═══ MECHANISM SECTION ═══ */}
       <section className="py-24 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl text-center">
