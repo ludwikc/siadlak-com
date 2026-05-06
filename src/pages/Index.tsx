@@ -1,4 +1,5 @@
 import Layout from "../components/layout/Layout";
+import jakubGlowaczOpinia from "@/assets/JakubGlowacz-opinia.webp";
 import SEO from "../components/SEO";
 import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
@@ -303,6 +304,16 @@ const Index = () => {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Handwritten Testimonial */}
+      <section className="bg-void">
+        <img
+          src={jakubGlowaczOpinia}
+          alt="Ręcznie napisana opinia: Dzięku wielkie za to co robisz. Zmieniasz życie ludziom, którzy tego rzeczywiście potrzebują — Jakub Głowacz, :solute"
+          className="w-full h-auto block"
+          loading="lazy"
+        />
       </section>
 
       {/* ═══ MECHANISM SECTION ═══ */}
