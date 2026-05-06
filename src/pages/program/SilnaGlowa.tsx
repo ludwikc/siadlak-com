@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout";
+import jakubGlowaczOpinia from "@/assets/JakubGlowacz-opinia.webp";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
@@ -297,6 +298,16 @@ const SilnaGlowa = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Handwritten Testimonial */}
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-void overflow-hidden">
+        <img
+          src={jakubGlowaczOpinia}
+          alt="Ręcznie napisana opinia: Dzięku wielkie za to co robisz. Zmieniasz życie ludziom, którzy tego rzeczywiście potrzebują — Jakub Głowacz, :solute"
+          className="w-full h-full object-cover absolute inset-0"
+          loading="lazy"
+        />
       </section>
 
       {/* Boat Metaphor Section */}
