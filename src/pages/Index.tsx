@@ -1,4 +1,5 @@
 import Layout from "../components/layout/Layout";
+import jakubGlowaczOpinia from "@/assets/JakubGlowacz-opinia.webp";
 import SEO from "../components/SEO";
 import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
