@@ -300,6 +300,16 @@ const SilnaGlowa = () => {
         </div>
       </section>
 
+      {/* Handwritten Testimonial */}
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-void overflow-hidden">
+        <img
+          src={jakubGlowaczOpinia}
+          alt="Ręcznie napisana opinia: Dzięku wielkie za to co robisz. Zmieniasz życie ludziom, którzy tego rzeczywiście potrzebują — Jakub Głowacz, :solute"
+          className="w-full h-full object-cover absolute inset-0"
+          loading="lazy"
+        />
+      </section>
+
       {/* Boat Metaphor Section */}
       <section className="py-16 md:py-20 bg-background-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
