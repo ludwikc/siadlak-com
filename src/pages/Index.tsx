@@ -469,7 +469,7 @@ const Index = () => {
                   PREMIUM
                 </div>
 
-                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-4">Pełen Proces</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-depth mb-4">Pełen proces już od</p>
                 <p className="text-5xl md:text-6xl font-heading font-bold text-electric tracking-tighter mb-8">
                   16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
@@ -705,7 +705,7 @@ const Index = () => {
             <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>
           <p className="text-dim leading-relaxed">
-            <strong className="text-white">P.P.S.</strong> Jeśli myślisz „brzmi dobrze, ale skąd mam wiedzieć, że to nie kolejny coach z ładnym CV" — to uczciwe pytanie. Odpowiedź: nie wiesz. Ale możesz sprawdzić. Sesja Discovery to 30 minut, w których zobaczysz, jak pracuję. Bez zobowiązań. Jeśli po 30 minutach pomyślisz „to jest dokładnie to, co próbuję powiedzieć każdemu i nikt nie rozumie" — to prawdopodobnie mamy ze sobą rozmawiać.
+            <strong className="text-white">P.P.S.</strong> Jeśli myślisz „brzmi dobrze, ale skąd mam wiedzieć, że to nie kolejny coach z ładnym CV" — to uczciwe pytanie. Odpowiedź: nie wiesz. Ale możesz sprawdzić. Sesja Discovery to 30 minut, w których zobaczysz, jak pracuję. Bez zobowiązań. Jeśli po 30 minutach pomyślisz „to jest dokładnie to, co próbuję powiedzieć każdemu i nikt nie rozumie" — to prawdopodobnie mamy o czym ze sobą rozmawiać.
           </p>
           <p className="text-dim leading-relaxed">
             <strong className="text-white">P.P.P.S.</strong> A jeśli to, co Cię powstrzymuje, to nie pieniądze, nie czas i nie zaufanie — tylko lęk, że spróbujesz i znowu nie zadziała — to jest najuczciwsze, co możesz poczuć. I dokładnie z tym pracuję. Bo ten lęk to nie jest słabość. To jest sukno. I da się je zdjąć.
