@@ -7,6 +7,9 @@
 /program/uwazne-zycie    /program/uwaznosc    301
 /program/meski-kompas    /program/meskosc    301
 
+# Shortcut redirects
+/kontakt    /contact    301
+
 # Custom redirects
 /depresja    /webinar/depresja    301
 /webinar    /webinar/kod-kapitana    301
