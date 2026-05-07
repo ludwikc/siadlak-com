@@ -1,5 +1,7 @@
 import Layout from "../components/layout/Layout";
 import jakubGlowaczOpinia from "@/assets/JakubGlowacz-opinia.webp";
+import slackIcon from "@/assets/slack-icon.png";
+import slackVerifiedIcon from "@/assets/slack-verified-icon.png";
 import SEO from "../components/SEO";
 import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
@@ -445,7 +447,7 @@ const Index = () => {
                 <li>Diagnostyka Life OS</li>
                 <li>Dostęp VIP 24/7</li>
                 <li>
-                  <span className="font-bold text-depth">Dedykowany Workspace Slack Verified</span>
+                  <span className="font-bold text-depth inline-flex items-center gap-1.5">Dedykowany Workspace <img src={slackIcon} alt="Slack" className="inline h-5 w-5" /> Slack Verified <img src={slackVerifiedIcon} alt="Verified" className="inline h-5 w-5" /></span>
                 </li>
               </ul>
 
