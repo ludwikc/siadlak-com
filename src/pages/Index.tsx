@@ -445,7 +445,7 @@ const Index = () => {
                 <li>Diagnostyka Life OS</li>
                 <li>Dostęp VIP 24/7</li>
                 <li>
-                  <span className="font-bold text-depth">Gwarancja zwrotu po 2 tygodniach</span>
+                  <span className="font-bold text-depth">Dedykowany Workspace Slack Verified</span>
                 </li>
               </ul>
 
