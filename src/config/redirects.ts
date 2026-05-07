@@ -9,6 +9,7 @@ export type RedirectConfig = Record<string, string>;
 
 export const redirects: RedirectConfig = {
   // Shortcut redirects for marketing/social media
+  "/kontakt": "/contact",
   "/mk": "/program/meskosc",
   "/meskikompas": "/program/meskosc",
   "/meski-kompas": "/program/meskosc",
