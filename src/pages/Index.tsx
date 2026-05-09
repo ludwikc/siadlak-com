@@ -71,7 +71,7 @@ const homepageFAQs = [
   },
   {
     question: "Czym jest metoda Diamentowego Umysłu?",
-    answer: "Autorska metoda oparta na założeniu, że umysł — jak diament — jest z natury czysty, ale nabiera „koloru” otoczenia. Praca polega na zdejmowaniu warstw, nie dodawaniu nowych. Inspirowana buddyzmem Diamentowej Drogi i psychologią C.G. Junga.",
+    answer: "Autorska metoda oparta na założeniu, że umysł — jak Diament — jest z natury czysty, ale nabiera „koloru” otoczenia. Praca polega na zdejmowaniu warstw, nie dodawaniu nowych. Inspirowana buddyzmem Diamentowej Drogi i psychologią C.G. Junga.",
   },
   {
     question: "Od którego programu zacząć?",
@@ -198,11 +198,11 @@ const Index = () => {
 
             <p>
               Połóż go na czerwonym suknie - wygląda jak rubin. Na zielonym - jak szmaragd. Zmień sukno - zmieni się
-              „kolor" diamentu.
+              „kolor" Diamentu.
             </p>
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 text-white italic">
-              Ale diament sam w sobie? Nie ma koloru. Jest czysty.
+              Ale Diament sam w sobie? Nie ma koloru. Jest czysty.
               <br />
               Twój umysł działa dokładnie tak samo.
             </blockquote>
@@ -226,7 +226,7 @@ const Index = () => {
             Branża rozwoju osobistego sprzedaje Ci plasterki
           </h2>
           <p className="text-lg text-dim leading-relaxed mb-12">
-            A Ty masz w sobie diament. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
+            A Ty masz w sobie Diament. Problem nigdy nie był w Tobie. Był w tym, co Ci sprzedawano jako „rozwiązanie".
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mb-12">
@@ -292,7 +292,7 @@ const Index = () => {
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 my-8">
               <p className="text-white italic text-xl leading-relaxed">
-                „Miałem wszystko. Najpiękniejszy diament w najdroższej oprawce. I kompletną pustkę w środku."
+                „Miałem wszystko. Najpiękniejszy Diament w najdroższej oprawce. I kompletną pustkę w środku."
               </p>
             </blockquote>
 
@@ -331,7 +331,7 @@ const Index = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-dim text-lg space-y-6">
             <p>
-              Większość metod pracuje na powierzchni: nawyki, czas, emocje. To szlifowanie diamentu, który nie
+              Większość metod pracuje na powierzchni: nawyki, czas, emocje. To szlifowanie Diamentu, który nie
               potrzebuje szlifu. Ja pracuję głębiej. Na poziomie jądra systemu.
             </p>
             <p>Nie daję Ci odpowiedzi. Nie prowadzę Cię przez 12 kroków. (Nie mam nawet 12 kroków. Mam pytania.)</p>
@@ -373,7 +373,7 @@ const Index = () => {
                 Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
               </p>
               <p className="text-dim leading-relaxed">
-                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Metafory z życia — diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
+                Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Metafory z życia — Diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
               </p>
               <blockquote className="border-l-2 border-accent pl-4 mt-6">
                 <p className="text-muted-foreground italic text-sm leading-relaxed">
@@ -386,7 +386,7 @@ const Index = () => {
               <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
               <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
               <p className="text-dim leading-relaxed">
-                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie diamentu pod suknem sukcesu.
+                Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie Diamentu pod suknem sukcesu.
               </p>
               <p className="text-dim leading-relaxed">
                 Praca delikatna, głęboka, oparta na uważności i akceptacji. O integrację tego, kim jesteś, z tym, jak żyjesz. O pozwolenie sobie na to, by być już tam, gdzie jesteś.
@@ -449,11 +449,12 @@ const Index = () => {
                 <li>
                   <span className="font-bold text-depth inline-flex items-center gap-1.5">Dedykowany Workspace <img src={slackIcon} alt="Slack" className="inline h-5 w-5" /> Slack Verified <img src={slackVerifiedIcon} alt="Verified" className="inline h-5 w-5" /></span>
                 </li>
+                <li>Dostęp Lifetime do społeczności LIFEHACKERZY.pl</li>
               </ul>
 
               <p className="text-sm text-on-light-dim border-t border-border/50 pt-6 mb-4">
                 Maksymalnie 5 osób jednocześnie. Nie dlatego, żeby brzmiało ekskluzywnie — dlatego, że nie da się
-                prowadzić kogoś przez zobaczenie własnego diamentu w grupie 50 osób.
+                prowadzić kogoś przez zobaczenie własnego Diamentu w grupie 50 osób.
               </p>
               <Link
                 to="/program/lifeos-system-upgrade"
@@ -581,7 +582,7 @@ const Index = () => {
               {
                 title: "Męski Kompas",
                 subtitle: "",
-                desc: "Reinstalacja systemu tożsamości dla mężczyzn 30+. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
+                desc: "Reinstalacja systemu tożsamości dla mężczyzn 30+. Siła przestaje być maską — staje się przezroczystą obecnością. Jak Diament.",
                 img: programMeskiKompas,
                 link: "/program/meskosc",
               },
