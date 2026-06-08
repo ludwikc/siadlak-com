@@ -9,6 +9,7 @@
 
 # Shortcut redirects
 /kontakt    /contact    301
+/stream    https://deepwork.pl    301
 
 # Custom redirects
 /depresja    /webinar/depresja    301
