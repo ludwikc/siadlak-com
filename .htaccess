@@ -19,6 +19,7 @@ RewriteRule ^program/meski-kompas$ /program/meskosc [R=301,L]
 
 # Shortcut redirects
 RewriteRule ^kontakt$ /contact [R=301,L]
+RewriteRule ^stream$ https://deepwork.pl [R=301,L]
 RewriteRule ^meski-kompas$ /program/meskosc [R=301,L]
 RewriteRule ^mk$ /program/meskosc [R=301,L]
 RewriteRule ^meskikompas$ /program/meskosc [R=301,L]

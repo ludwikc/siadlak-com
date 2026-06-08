@@ -185,6 +185,12 @@ function App() {
 
               <Route path="/wyzwanie" element={<Wyzwanie />} />
               <Route path="/mct" element={<MCT />} />
+              <Route
+                path="/stream"
+                element={
+                  <ExternalRedirect url="https://deepwork.pl" />
+                }
+              />
               <Route path="/links" element={<Links />} />
               <Route path="/start" element={<Wspolpraca />} />
               <Route path="/siadlakvip" element={<SiadlakVIP />} />
