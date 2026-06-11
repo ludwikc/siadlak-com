@@ -42,7 +42,7 @@ const tttFaqs = [
   {
     question: "Jak szybko mogę zacząć?",
     answer:
-      "Najbliższa edycja rusza w Q2 2026. 3 miejsca w cenie inauguracyjnej. Jeśli nie trafisz - kolejna edycja Q3 2026 już w cenie regularnej 24 999 zł.",
+      "Edycja inauguracyjna właśnie trwa - jedno z trzech miejsc jest już zajęte. Po jej wypełnieniu kolejna edycja (Q3 2026) rusza w cenie regularnej 24 999 zł.",
   },
   {
     question: "Pracujesz po polsku czy angielsku?",
@@ -123,7 +123,7 @@ const weeks = [
     n: 2,
     title:
       "Odbiorca. Bo nie sprzedajesz „szkoleń z AI”. Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
-    text: "Narzędzie: CUSP Mapping™ - technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu - w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
+    text: "Narzędzie: CUSP Mapping - technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu - w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
   },
   {
     n: 3,
@@ -238,7 +238,7 @@ export default function TrainTheTrainerAI() {
             <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-5 py-2.5 mb-8">
               <Award className="h-4 w-4 text-electric" />
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-on-dark">
-                Edycja inauguracyjna · Q2 2026 · 3 miejsca
+                Edycja inauguracyjna · 1 z 3 miejsc zajęte
               </span>
             </div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-electric mb-4">
@@ -260,14 +260,6 @@ export default function TrainTheTrainerAI() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <blockquote className="mt-10 max-w-2xl mx-auto border-l-4 border-electric/40 pl-6 text-left">
-              <p className="text-dim italic leading-relaxed">
-                „Po trzecim tygodniu programu dostałem pierwsze zapytanie ofertowe od centrum szkoleniowego - bez żadnych zimnych wiadomości. Po prostu napisali sami.”
-              </p>
-              <footer className="mt-3 text-xs text-dim">
-                - [IMIĘ], uczestnik edycji inauguracyjnej Q1 2026 <span className="text-electric/60">(placeholder - dodaj prawdziwy cytat przed publishem)</span>
-              </footer>
-            </blockquote>
           </div>
         </div>
       </section>
@@ -420,7 +412,7 @@ export default function TrainTheTrainerAI() {
                 Wracasz do domu. Ktoś pyta, jak było. Mówisz: „Dobrze.” Już wiesz, że to się będzie powtarzało.
               </p>
               <p className="font-bold text-on-light text-xl">
-                To jest 7 miesięcy od dziś.
+                To jest 5 miesięcy od dziś.
               </p>
             </div>
           </div>
@@ -526,13 +518,13 @@ export default function TrainTheTrainerAI() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
-              Metoda: Protokół Pomostu™
+              Metoda: Protokół Pomostu
             </h2>
             <p className="text-lg text-dim leading-relaxed mb-4">
               Każda praca, którą tu robimy, to przekraczanie tej samej przepaści - tylko z coraz głębszego poziomu.
             </p>
             <p className="text-dim leading-relaxed">
-              Nazwałem to <strong className="text-on-dark">Protokół Pomostu™</strong>. Sześć filarów, które razem tworzą
+              Nazwałem to <strong className="text-on-dark">Protokół Pomostu</strong>. Sześć filarów, które razem tworzą
               most od Twojego laptopa do portfela klienta biznesowego:
             </p>
           </div>
@@ -782,7 +774,7 @@ export default function TrainTheTrainerAI() {
                 </ul>
                 <p className="text-dim mt-6 leading-relaxed">
                   Każda z tych rzeczy jest dziś poza Twoim zasięgiem - nie dlatego, że nie masz kompetencji, tylko
-                  dlatego, że nie masz Protokołu Pomostu™.
+                  dlatego, że nie masz Protokołu Pomostu.
                 </p>
               </div>
             </div>
@@ -816,14 +808,6 @@ export default function TrainTheTrainerAI() {
               </p>
             </div>
 
-            <blockquote className="mt-10 border-l-4 border-electric/40 pl-6">
-              <p className="text-on-light-dim italic leading-relaxed text-lg">
-                „Myślałem, że moja bariera to lęk przed wystąpieniami. Po tygodniu 4 zrozumiałem, że bariera była inna - nie wierzyłem, że moja wiedza jest warta tyle, ile Ludwik mówił. Ten program zmienił obie te rzeczy.”
-              </p>
-              <footer className="mt-3 text-xs text-on-light-dim">
-                - [IMIĘ], uczestnik <span className="text-electric/60">(placeholder)</span>
-              </footer>
-            </blockquote>
           </div>
         </div>
       </section>
@@ -855,7 +839,7 @@ export default function TrainTheTrainerAI() {
                   <span className="font-heading text-5xl font-bold text-on-dark">7 999 zł</span>
                   <span className="text-dim ml-2">netto</span>
                 </div>
-                <p className="text-on-dark font-bold text-sm mb-4">Zostały 3 miejsca.</p>
+                <p className="text-on-dark font-bold text-sm mb-4">Jedno miejsce zajęte. Zostały 2.</p>
                 <p className="text-dim text-sm leading-relaxed mb-6">
                   <strong className="text-on-dark">Bonus:</strong> dwa dodatkowe dni mentoringu po zakończeniu programu
                   (9 i 12 miesiąc) do kalibracji praktyki.
@@ -879,7 +863,7 @@ export default function TrainTheTrainerAI() {
                   <span className="text-dim ml-2">netto</span>
                 </div>
                 <p className="text-dim text-sm leading-relaxed mb-6">
-                  Maksymalnie 4 miejsca na kwartał. Po Q2 2026 edycja inauguracyjna jest zamknięta na zawsze.
+                  Maksymalnie 4 miejsca na kwartał.
                 </p>
                 <Button
                   asChild
@@ -900,7 +884,7 @@ export default function TrainTheTrainerAI() {
             </p>
             <p className="text-sm">
               <strong className="text-on-dark">Dlaczego tak niska cena teraz:</strong>{" "}
-              Buduję pierwsze case studies. 3 osoby, które przejdą przez program teraz, dostarczą mi materiał dowodowy - wyniki, liczby, historie. To fair deal: Ty dostajesz cenę niższą o ponad 17 000 zł, ja dostaję social proof. Po Q2 2026 edycja inauguracyjna jest zamknięta na zawsze.
+              Buduję pierwsze case studies. 3 osoby, które przejdą przez program teraz, dostarczą mi materiał dowodowy - wyniki, liczby, historie. To fair deal: Ty dostajesz cenę niższą o ponad 17 000 zł, ja dostaję social proof. Kiedy te miejsca się wypełnią, cena inauguracyjna nie wraca.
             </p>
           </div>
         </div>
@@ -1034,7 +1018,7 @@ export default function TrainTheTrainerAI() {
                 className="bg-brand-gradient text-white hover:opacity-90 text-base px-8 py-6 rounded-sm"
               >
                 <Link to="/discovery">
-                  Zapisz się na rozmowę → Zostały 3 miejsca w edycji inauguracyjnej
+                  Zapisz się na rozmowę
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

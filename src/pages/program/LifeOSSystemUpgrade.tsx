@@ -12,7 +12,6 @@ import { getServiceLifeOS, getFAQSchema, getWebPageEntity, getCourseBreadcrumb, 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 
 export default function LifeOSSystemUpgrade() {
-  const [spotsAvailable, setSpotsAvailable] = useState(0);
   const [showStickyBar, setShowStickyBar] = useState(false);
 
   const scrollToDiscovery = () => {
@@ -21,20 +20,6 @@ export default function LifeOSSystemUpgrade() {
       discoverySection.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    let count = 0;
-    const targetCount = 2;
-    const interval = setInterval(() => {
-      if (count < targetCount) {
-        count++;
-        setSpotsAvailable(count);
-      } else {
-        clearInterval(interval);
-      }
-    }, 500);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,7 +92,7 @@ export default function LifeOSSystemUpgrade() {
     {
       question: "Z iloma osobami pracujesz?",
       answer:
-        "Maksymalnie 5 jednocześnie. Z każdą indywidualnie.. Nie dlatego, żeby tworzyć sztuczny pośpiech - dlatego, że nie da się prowadzić kogoś przez zobaczenie własnego diamentu, jednocześnie pracując z 20 osobami. Ta praca wymaga, żebym pamiętał Twoje odpowiedzi z zeszłego tygodnia. I pamiętam.",
+        "Maksymalnie 5 jednocześnie. Z każdą indywidualnie. Nie dlatego, żeby tworzyć sztuczny pośpiech - dlatego, że nie da się prowadzić kogoś przez zobaczenie własnego diamentu, jednocześnie pracując z 20 osobami. Ta praca wymaga, żebym pamiętał Twoje odpowiedzi z zeszłego tygodnia. I pamiętam.",
     },
     {
       question: "A co jeśli znowu zainwestuję i znowu nic się nie zmieni?",
@@ -126,7 +111,7 @@ export default function LifeOSSystemUpgrade() {
         getReviewSchema('Life OS: System Upgrade', '/program/lifeos-system-upgrade', [
           { author: 'Tomek, 38 lat', reviewBody: 'Nie zdawa\u0142em sobie sprawy, ile energii sz\u0142o na walk\u0119 z samym sob\u0105.', ratingValue: 5 },
           { author: 'Anna', reviewBody: 'W 8 tygodni przesz\u0142am od narracji ofiary do prawdziwej wiary w mo\u017Cliwo\u015Bci, kt\u00F3re mam.', ratingValue: 5 },
-        ], { ratingValue: 4.9, reviewCount: 42 }),
+        ], { ratingValue: 5, reviewCount: 4 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/lifeos-system-upgrade"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Sticky CTA Bar */}
@@ -138,7 +123,7 @@ export default function LifeOSSystemUpgrade() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="text-white">
             <span className="font-bold text-lg">Life OS: System Upgrade</span>
-            <span className="ml-4 text-sm text-white/90">{spotsAvailable}/5 miejsc dostępnych</span>
+            <span className="ml-4 text-sm text-white/90">Mentoring 1:1 · maks. 5 osób jednocześnie</span>
           </div>
           <CTAButton variant="premium" size="lg" onClick={scrollToDiscovery} showArrow>
             Zarezerwuj Sesję
@@ -368,7 +353,7 @@ export default function LifeOSSystemUpgrade() {
                 Najczęściej - obu, naprzemiennie.
               </p>
 
-              <p>Skąd wiem, czego potrzebujesz? Z 19 lat praktyki. I z tego, że sam przeszłem obie drogi.</p>
+              <p>Skąd wiem, czego potrzebujesz? Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi.</p>
             </div>
           </div>
         </div>
@@ -597,7 +582,7 @@ export default function LifeOSSystemUpgrade() {
 
               <p>
                 <strong>Biegłość w obu ścieżkach.</strong> Większość coachów potrafi albo konfrontować, albo wspierać.
-                Ja robię oba - i wiem, kiedy którego potrzebujesz. Anna potrzebowała ostrej konfrontacji. Lucja
+                Ja robię oba - i wiem, kiedy którego potrzebujesz. Anna potrzebowała ostrej konfrontacji. Łucja
                 potrzebowała delikatnego prowadzenia. Obie przeszły transformację.
               </p>
 
@@ -841,9 +826,9 @@ export default function LifeOSSystemUpgrade() {
                 spokoju to nie jest sukces. To wysokopłatne więzienie.
               </p>
               <p>
-                <span className="font-bold text-white">P.P.P.S.</span> Jeśli dotarłeś aż tutaj i wciąż się wahasz - to
-                jest właśnie jeden ze wzorców, z którym będziemy pracować. Twój analityczny umysł próbuje zapewnić sobie
-                100% pewności przed podjęciem decyzji. Sesja Discovery to bezpieczny sposób, by zbadać tę niepewność.
+                <span className="font-bold text-white">P.P.P.S.</span> Jeśli dotarłeś aż tutaj i wciąż się wahasz - w
+                porządku. Wahanie przy decyzjach tej wagi to nie słabość, to rozsądek. Nie musisz go dziś rozwiązywać.
+                Sesja Discovery istnieje właśnie po to, żebyś mógł sprawdzić - bez zobowiązań i bez przekonywania.
               </p>
 
               <p className="text-center text-white/80 mt-8 italic">Dziękuję, że jesteś.</p>
