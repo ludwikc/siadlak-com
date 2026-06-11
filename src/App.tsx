@@ -63,6 +63,7 @@ import WebinarDepresja from "./pages/webinar/WebinarDepresja";
 import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
 import Links from "./pages/Links";
+import IG from "./pages/IG";
 import Wspolpraca from "./pages/Wspolpraca";
 import SiadlakVIP from "./pages/SiadlakVIP";
 import MailingMute from "./pages/MailingMute";
@@ -192,6 +193,7 @@ function App() {
                 }
               />
               <Route path="/links" element={<Links />} />
+              <Route path="/ig" element={<IG />} />
               <Route path="/start" element={<Wspolpraca />} />
               <Route path="/siadlakvip" element={<SiadlakVIP />} />
               <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
