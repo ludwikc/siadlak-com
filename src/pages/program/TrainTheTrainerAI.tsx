@@ -42,11 +42,7 @@ const tttFaqs = [
   {
     question: "Jak szybko mogę zacząć?",
     answer:
-<<<<<<< Updated upstream
       "Edycja inauguracyjna właśnie trwa - jedno z trzech miejsc jest już zajęte. Po jej wypełnieniu kolejna edycja (Q3 2026) rusza w cenie regularnej 24 999 zł.",
-=======
-      "Najbliższa edycja rusza w Q2 2026. 3 miejsca w cenie inauguracyjnej. Jeśli nie trafisz - kolejna edycja Q3 2026 już w cenie regularnej 24 999 zł.",
->>>>>>> Stashed changes
   },
   {
     question: "Pracujesz po polsku czy angielsku?",
@@ -127,11 +123,7 @@ const weeks = [
     n: 2,
     title:
       "Odbiorca. Bo nie sprzedajesz „szkoleń z AI”. Sprzedajesz rozwiązanie konkretnego bólu konkretnego człowieka.",
-<<<<<<< Updated upstream
     text: "Narzędzie: CUSP Mapping - technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu - w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
-=======
-    text: "Narzędzie: CUSP Mapping™ - technika adaptowana z zachodniego podejścia do sprzedaży konsultingowej na polski rynek B2B. Uczę Cię wchodzić w głowę HR-managerki z korporacji finansowej i wyciągać stamtąd dokładne, emocjonalne, bolesne sformułowanie problemu - w jej języku, nie Twoim. To jest moment, w którym Twoja wiedza o Claude przestaje być „ciekawostką techniczną” i zaczyna być „rozwiązaniem, na które ona czeka od 6 miesięcy, ale nie potrafi tego nazwać”.",
->>>>>>> Stashed changes
   },
   {
     n: 3,
@@ -268,17 +260,6 @@ export default function TrainTheTrainerAI() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-<<<<<<< Updated upstream
-=======
-            <blockquote className="mt-10 max-w-2xl mx-auto border-l-4 border-electric/40 pl-6 text-left">
-              <p className="text-dim italic leading-relaxed">
-                „Po trzecim tygodniu programu dostałem pierwsze zapytanie ofertowe od centrum szkoleniowego - bez żadnych zimnych wiadomości. Po prostu napisali sami.”
-              </p>
-              <footer className="mt-3 text-xs text-dim">
-                - [IMIĘ], uczestnik edycji inauguracyjnej Q1 2026 <span className="text-electric/60">(placeholder - dodaj prawdziwy cytat przed publishem)</span>
-              </footer>
-            </blockquote>
->>>>>>> Stashed changes
           </div>
         </div>
       </section>
@@ -793,11 +774,7 @@ export default function TrainTheTrainerAI() {
                 </ul>
                 <p className="text-dim mt-6 leading-relaxed">
                   Każda z tych rzeczy jest dziś poza Twoim zasięgiem - nie dlatego, że nie masz kompetencji, tylko
-<<<<<<< Updated upstream
                   dlatego, że nie masz Protokołu Pomostu.
-=======
-                  dlatego, że nie masz Protokołu Pomostu™.
->>>>>>> Stashed changes
                 </p>
               </div>
             </div>
@@ -831,17 +808,6 @@ export default function TrainTheTrainerAI() {
               </p>
             </div>
 
-<<<<<<< Updated upstream
-=======
-            <blockquote className="mt-10 border-l-4 border-electric/40 pl-6">
-              <p className="text-on-light-dim italic leading-relaxed text-lg">
-                „Myślałem, że moja bariera to lęk przed wystąpieniami. Po tygodniu 4 zrozumiałem, że bariera była inna - nie wierzyłem, że moja wiedza jest warta tyle, ile Ludwik mówił. Ten program zmienił obie te rzeczy.”
-              </p>
-              <footer className="mt-3 text-xs text-on-light-dim">
-                - [IMIĘ], uczestnik <span className="text-electric/60">(placeholder)</span>
-              </footer>
-            </blockquote>
->>>>>>> Stashed changes
           </div>
         </div>
       </section>
@@ -918,11 +884,7 @@ export default function TrainTheTrainerAI() {
             </p>
             <p className="text-sm">
               <strong className="text-on-dark">Dlaczego tak niska cena teraz:</strong>{" "}
-<<<<<<< Updated upstream
               Buduję pierwsze case studies. 3 osoby, które przejdą przez program teraz, dostarczą mi materiał dowodowy - wyniki, liczby, historie. To fair deal: Ty dostajesz cenę niższą o ponad 17 000 zł, ja dostaję social proof. Kiedy te miejsca się wypełnią, cena inauguracyjna nie wraca.
-=======
-              Buduję pierwsze case studies. 3 osoby, które przejdą przez program teraz, dostarczą mi materiał dowodowy - wyniki, liczby, historie. To fair deal: Ty dostajesz cenę niższą o ponad 17 000 zł, ja dostaję social proof. Po Q2 2026 edycja inauguracyjna jest zamknięta na zawsze.
->>>>>>> Stashed changes
             </p>
           </div>
         </div>
