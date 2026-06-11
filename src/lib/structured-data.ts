@@ -222,9 +222,9 @@ const courseConfigs: Record<string, CourseConfig> = {
   'silna-glowa': {
     id: IDS.courseSilnaGlowa,
     name: 'Program: Silna Głowa — Aplikacja Mentalna (Odporność Psychiczna)',
-    description: 'Aplikacja Mentalna Silna Głowa — 6-tygodniowy program odporności psychicznej. Firewall dla umysłu: presja przestaje paraliżować i zaczyna skupiać, krytyka przestaje ranić i zaczyna informować. 20+ uczestników, ocena 4.8/5.0. Twórca: Ludwik C. Siadlak. Cena: 777 PLN.',
+    description: 'Aplikacja Mentalna Silna Głowa — 6-tygodniowy program odporności psychicznej. Firewall dla umysłu: presja przestaje paraliżować i zaczyna skupiać, krytyka przestaje ranić i zaczyna informować. 20+ uczestników, ocena 4.8/5.0. Twórca: Ludwik C. Siadlak. Cena: 897 PLN.',
     duration: 'P6W',
-    price: '777',
+    price: '897',
     ratingValue: '4.8',
     ratingCount: '20',
   },
