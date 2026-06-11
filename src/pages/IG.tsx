@@ -5,6 +5,8 @@ import { ArrowRight } from "@/lib/icons";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
 
+import ludwikAvatar from "@/assets/ludwik-avatar.png.asset.json";
+
 const UTM = "?utm_source=instagram&utm_medium=bio&utm_campaign=ig";
 
 const PATHS = [
@@ -58,11 +60,11 @@ export default function IGPage() {
         <div className="max-w-md mx-auto px-4 py-10 space-y-8">
           {/* === HEADER === */}
           <div className="text-center space-y-3">
-            <div className="w-24 h-24 mx-auto rounded-full bg-[hsl(var(--depth-purple)/0.3)] border-2 border-[hsl(var(--depth-purple)/0.5)] flex items-center justify-center">
-              <span className="text-3xl font-heading font-bold text-[hsl(var(--electric-blue))]">
-                LS
-              </span>
-            </div>
+            <img
+              src={ludwikAvatar.url}
+              alt="Ludwik C. Siadlak"
+              className="w-24 h-24 mx-auto rounded-full object-cover border-2 border-[hsl(var(--depth-purple)/0.5)]"
+            />
             <h1 className="text-xl font-heading font-bold">
               Cześć. Skoro tu jesteś - pewnie przez rolkę.
             </h1>
