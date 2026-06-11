@@ -13,7 +13,7 @@ const Sitemap = () => {
         { name: 'O mnie', path: '/about', description: 'Poznaj moją historię i podejście' },
         { name: 'Kontakt', path: '/contact', description: 'Umów rozmowę lub zadaj pytanie' },
         
-        { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na cotygodniowe przemyślenia' },
+        { name: 'Newsletter', path: '/newsletter', description: 'Zapisz się na mailing — myśli bez harmonogramu' },
         { name: 'Opinie Klient\u00F3w', path: '/testimonials', description: 'Co m\u00F3wi\u0105 moi klienci' },
         { name: 'Wywiady', path: '/wywiady', description: 'Rozmowy i wywiady z lat 2018\u20132025' },
         { name: 'S\u0142ownik', path: '/slownik', description: 'Definicje poj\u0119\u0107 Diamentowego Umys\u0142u' },

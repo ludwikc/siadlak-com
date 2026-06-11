@@ -27,10 +27,11 @@ export default function NewsletterPage() {
               </h2>
 
               <p className="text-lg sm:text-xl text-dim max-w-2xl mx-auto leading-relaxed">
-                Cotygodniowy newsletter Ludwika&nbsp;C.&nbsp;Siadlaka.
+                Mailing Ludwika&nbsp;C.&nbsp;Siadlaka.
                 <br />
-                Ka&#380;da niedziela, 19:00. Prosto na Twoj&#261; skrzynk&#281; - jedyne miejsce, gdzie algorytm nie
-                decyduje, czy to zobaczysz.
+                Bez harmonogramu i bez kalendarza tre&#347;ci. Pisz&#281;, kiedy mam co&#347;, co naprawd&#281; warto
+                wys&#322;a&#263; - prosto na Twoj&#261; skrzynk&#281;, jedyne miejsce, gdzie algorytm nie decyduje, czy
+                to zobaczysz.
               </p>
 
               <a
@@ -79,7 +80,7 @@ export default function NewsletterPage() {
                 </p>
 
                 <p>
-                  Kiedy wysy&#322;am Ci wiadomo&#347;&#263; w niedziel&#281; o 19:00 - ona na Ciebie czeka. Nie musi
+                  Kiedy wysy&#322;am Ci wiadomo&#347;&#263; - ona na Ciebie czeka. Nie musi
                   walczy&#263; z algorytmem. Nie musi zbiera&#263; polubie&#324;, &#380;eby do Ciebie dotrze&#263;. Nie
                   musi by&#263; &#8222;viralowa&#8221;. Musi by&#263; tylko <em>prawdziwa</em>.
                 </p>
@@ -104,11 +105,17 @@ export default function NewsletterPage() {
                 Jak to dzia&#322;a?
               </h2>
 
-              {/* Niedziela */}
+              {/* Kiedy przychodzi myśl */}
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-on-light">
-                  Niedziela, 19:00 - rzucam my&#347;l.
+                  Kiedy przychodzi my&#347;l - wysy&#322;am.
                 </h3>
+                <p className="text-base text-on-light-dim leading-relaxed">
+                  Nie pisz&#281; w ka&#380;d&#261; niedziel&#281; o 19:00, bo nie jestem maszyn&#261; do produkcji
+                  tre&#347;ci. Pisz&#281; wtedy, kiedy co&#347; we mnie dojrzeje na tyle, &#380;e nie wys&#322;a&#263;
+                  by&#322;oby strat&#261; - czasem dwa razy w tygodniu, czasem raz na dwa. Inspiracja nie zagl&#261;da
+                  do kalendarza. Ja te&#380; przesta&#322;em.
+                </p>
                 <p className="text-base text-on-light-dim leading-relaxed">
                   Nie porad&#281;. Nie &#8222;5 krok&oacute;w do lepszego Ciebie&#8221;. Jedn&#261; perspektyw&#281;,
                   kt&oacute;ra ma szans&#281; zderzy&#263; si&#281; z Twoj&#261;. Czasem o AI i o tym, jak zmienia
@@ -171,7 +178,7 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-on-light">
-                Jak wygl&#261;da prawdziwy newsletter?
+                Jak wygl&#261;da prawdziwy mail?
               </h3>
 
               <div className="rounded-sm border border-on-light/10 overflow-hidden">
@@ -281,14 +288,14 @@ export default function NewsletterPage() {
               </h2>
 
               <p className="text-base text-on-light-dim leading-relaxed">
-                Jedna wiadomo&#347;&#263; w tygodniu. W ka&#380;d&#261; niedziel&#281; o 19:00. Prosto na Tw&oacute;j
-                email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
+                &#379;adnego harmonogramu - tylko wiadomo&#347;ci, kt&oacute;re mia&#322;y pow&oacute;d powsta&#263;.
+                Prosto na Tw&oacute;j email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
               </p>
 
               <MailerLiteEmbed dataForm="lFFyEs" />
 
               <p className="text-sm text-on-light-dim">
-                150+ os&oacute;b ju&#380; czyta. Do&#322;&#261;cz, je&#347;li chcesz my&#347;le&#263; g&#322;&#281;biej.
+                1 500+ os&oacute;b ju&#380; czyta. Do&#322;&#261;cz, je&#347;li chcesz my&#347;le&#263; g&#322;&#281;biej.
               </p>
             </div>
           </div>
@@ -314,7 +321,7 @@ export default function NewsletterPage() {
                   powiedzie&#263; &#8222;nie wiem, co dalej&#8221;.
                 </p>
 
-                <p>Ten newsletter nie rozwi&#261;&#380;e tego problemu. Ale mo&#380;e by&#263; pocz&#261;tkiem.</p>
+                <p>Ten mailing nie rozwi&#261;&#380;e tego problemu. Ale mo&#380;e by&#263; pocz&#261;tkiem.</p>
 
                 <p>
                   Bo ka&#380;da dobra rozmowa zaczyna si&#281; od jednej my&#347;li, kt&oacute;r&#261; kto&#347;
@@ -323,8 +330,8 @@ export default function NewsletterPage() {
                 </p>
 
                 <p>
-                  To jest to, co robi&#281; w ka&#380;d&#261; niedziel&#281; o 19:00. Rzucam my&#347;l. Ty decydujesz,
-                  co z ni&#261; zrobisz.
+                  To jest to, co robi&#281; za ka&#380;dym razem, kiedy do Ciebie pisz&#281;. Rzucam my&#347;l. Ty
+                  decydujesz, co z ni&#261; zrobisz.
                 </p>
 
                 <p className="text-on-dark font-bold text-lg sm:text-xl">Dzi&#281;kuj&#281;, &#380;e jeste&#347;.</p>
@@ -335,7 +342,7 @@ export default function NewsletterPage() {
               {/* P.S. ladder */}
               <div className="pt-8 border-t border-white/10 space-y-6 text-sm sm:text-base text-dim leading-relaxed">
                 <p>
-                  <strong className="text-on-dark">P.S.</strong> Je&#347;li po kilku newsletterach poczujesz, &#380;e
+                  <strong className="text-on-dark">P.S.</strong> Je&#347;li po kilku mailach poczujesz, &#380;e
                   chcesz wi&#281;cej - mam{" "}
                   <Link to="/program" className="text-electric underline underline-offset-4 hover:text-electric/80">
                     programy
@@ -351,17 +358,17 @@ export default function NewsletterPage() {
                     Sesja Discovery
                   </Link>
                   . 30 minut rozmowy, &#380;eby&#347;my obaj wiedzieli, czy mo&#380;emy sobie pom&oacute;c. Ale to jest
-                  rozmowa na p&oacute;&#378;niej. Najpierw - przeczytaj kilka niedziel. Zobaczysz, czy m&oacute;j
+                  rozmowa na p&oacute;&#378;niej. Najpierw - przeczytaj kilka moich maili. Zobaczysz, czy m&oacute;j
                   j&#281;zyk do Ciebie trafia.
                 </p>
 
                 <p>
                   <strong className="text-on-dark">P.P.P.S.</strong> A je&#347;li zastanawiasz si&#281;, czy to jest
-                  &#8222;kolejny newsletter, kt&oacute;ry przeczytam dwa razy i zapomn&#281;&#8221; - to uczciwe
-                  pytanie. Nie obiecuj&#281;, &#380;e zmieni&#281; Ci &#380;ycie jednym emailem. Obiecuj&#281;, &#380;e
-                  w ka&#380;d&#261; niedziel&#281; wy&#347;l&#281; Ci co&#347;, nad czym warto si&#281; na chwil&#281;
-                  zatrzyma&#263;. A w &#347;wiecie, kt&oacute;ry krzyczy &#8222;scrolluj dalej&#8221; - zatrzymanie
-                  si&#281; to ju&#380; jest co&#347;.
+                  &#8222;kolejny mailing, kt&oacute;ry przeczytam dwa razy i zapomn&#281;&#8221; - to uczciwe
+                  pytanie. Nie obiecuj&#281;, &#380;e zmieni&#281; Ci &#380;ycie jednym emailem. Obiecuj&#281; co&#347;
+                  innego: je&#347;li co&#347; ode mnie dostaniesz, to b&#281;dzie co&#347;, nad czym warto si&#281; na
+                  chwil&#281; zatrzyma&#263;. A w &#347;wiecie, kt&oacute;ry krzyczy &#8222;scrolluj dalej&#8221; -
+                  zatrzymanie si&#281; to ju&#380; jest co&#347;.
                 </p>
               </div>
             </div>

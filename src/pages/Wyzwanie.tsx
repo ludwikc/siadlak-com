@@ -730,7 +730,7 @@ export default function Wyzwanie() {
                     📚 30+ kursów
                   </span>
                   <span className="text-xs px-3 py-1 bg-muted rounded-full">
-                    👥 500+ klientów
+                    👥 10 000+ przeszkolonych
                   </span>
                 </div>
               </div>

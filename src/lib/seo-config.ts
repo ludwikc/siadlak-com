@@ -109,7 +109,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/program/odpornosc',
     seo: {
       title: 'Silna Głowa — Program Odporności Psychicznej',
-      description: 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo. 118+ uczestników, ocena 4.8/5.0.',
+      description: 'Program odporności psychicznej (6 tygodni) autorstwa Ludwika C. Siadlaka. Firewall mentalny, który zamienia presję w paliwo. 20+ uczestników, ocena 4.8/5.0.',
       keywords: 'odporność psychiczna, silna głowa, stres, presja, rezyliencja, Ludwik Siadlak',
       url: '/program/odpornosc',
       type: 'course',
@@ -226,7 +226,7 @@ export const seoRouteConfig: RouteConfig[] = [
     path: '/newsletter',
     seo: {
       title: 'Lista Mailingowa — dołącz bezpłatnie',
-      description: 'Lista mailingowa Ludwika C. Siadlaka. Jedna myśl tygodniowo o produktywności, AI i sensie życia. Zero spamu.',
+      description: 'Lista mailingowa Ludwika C. Siadlaka. Myśli o produktywności, AI i sensie życia — wysyłane wtedy, kiedy jest coś wartego wysłania. Zero spamu.',
       keywords: 'newsletter, lista mailingowa, Ludwik Siadlak, produktywność, AI',
       url: '/newsletter'
     }

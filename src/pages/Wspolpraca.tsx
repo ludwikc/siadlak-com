@@ -21,7 +21,7 @@ const freeItems = [
     emoji: "📬",
     title: "Lista Mailingowa",
     headline: "Jedna myśl, która ma szansę zderzyć się z Twoją.",
-    desc: "Jedyne miejsce, gdzie algorytm nie decyduje, czy to zobaczysz. Piszę o produktywności, AI, sensie życia - i o tym, co widzę z okna hotelowego pokoju w Norwegii. 150+ osób czyta. Zero spam.",
+    desc: "Jedyne miejsce, gdzie algorytm nie decyduje, czy to zobaczysz. Piszę o produktywności, AI, sensie życia - i o tym, co widzę z okna hotelowego pokoju w Norwegii. Piszę, kiedy mam coś wartego wysłania - nie według kalendarza. 1 500+ osób czyta. Zero spamu.",
     cta: "Dołącz do Listy Mailingowej →",
     to: "/newsletter",
     external: false,
@@ -52,7 +52,7 @@ const programs = [
     title: "Instaluj: Produktywność",
     emoji: "🧠",
     desc: "Zamiast zarządzać zadaniami - zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
-    price: "1 497 PLN · 1 240+ osób zainstalowało",
+    price: "1 497 PLN · 110+ absolwentów",
     to: "/program/produktywnosc",
   },
   {
@@ -352,7 +352,7 @@ export default function Wspolpraca() {
       <section className="bg-void-glow pb-20 pt-4">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-dim text-sm leading-relaxed italic">
-            <strong className="text-white not-italic">P.S.</strong> Jeśli ktoś Cię tu wysłał z poleceniem „sprawdź tego gościa" - to miłe. Ale nie wierz mi na słowo. Przeczytaj kilka niedzielnych newsletterów i zdecyduj sam. Dobry mentor nie potrzebuje rekomendacji - potrzebuje Twojego doświadczenia z nim. A ono zaczyna się od jednego kliknięcia.
+            <strong className="text-white not-italic">P.S.</strong> Jeśli ktoś Cię tu wysłał z poleceniem „sprawdź tego gościa" - to miłe. Ale nie wierz mi na słowo. Przeczytaj kilka moich maili i zdecyduj sam. Dobry mentor nie potrzebuje rekomendacji - potrzebuje Twojego doświadczenia z nim. A ono zaczyna się od jednego kliknięcia.
           </p>
           <p className="text-white text-sm font-bold mt-4">- Ludwik</p>
         </div>

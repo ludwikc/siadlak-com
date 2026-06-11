@@ -107,8 +107,9 @@ export default function LinksPage() {
               newsletterze - decydujesz Ty.
             </p>
             <p className="text-sm text-[hsl(var(--text-dim))] text-center leading-relaxed">
-              Co niedzielę o 19:00 - jedna myśl, która ma szansę zderzyć się
-              z Twoją. Bez porad. Bez listicli. Bez bzdur.
+              Bez harmonogramu - jedna myśl, która ma szansę zderzyć się
+              z Twoją, wtedy, kiedy naprawdę jest coś do powiedzenia.
+              Bez porad. Bez listicli. Bez bzdur.
             </p>
 
             <form onSubmit={handleSubmit} className="flex gap-2">
@@ -135,7 +136,7 @@ export default function LinksPage() {
             </form>
 
             <p className="text-xs text-[hsl(var(--text-dim)/0.6)] text-center">
-              150+ osób już czyta. Zero spam. Możesz odejść jednym kliknięciem.
+              1 500+ osób już czyta. Zero spamu. Możesz odejść jednym kliknięciem.
             </p>
           </div>
 

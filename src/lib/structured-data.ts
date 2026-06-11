@@ -91,7 +91,7 @@ export function getOrganizationEntity() {
     alternateName: 'Diamentowy Umysł',
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
-    description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 1 240+ absolwentów, ocena 4.9/5.0.',
+    description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 130+ absolwentów programów, ocena 4.9/5.0.',
     founder: { '@id': IDS.person },
     areaServed: [
       { '@type': 'Country', name: 'Poland' },
@@ -213,25 +213,25 @@ const courseConfigs: Record<string, CourseConfig> = {
   produktywnosc: {
     id: IDS.courseProduktywnosc,
     name: 'Program: Produktywność — Aplikacja Mentalna',
-    description: 'Aplikacja Mentalna Produktywność — 4–6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. Nie kolejny kurs produktywności, lecz trwała zmiana perspektywy: zamiast zarządzać zadaniami, zarządzasz energią. 1 240+ absolwentów, ocena 4.9/5.0. Twórca: Ludwik C. Siadlak. Cena: 1 497 PLN, dożywotni dostęp.',
+    description: 'Aplikacja Mentalna Produktywność — 4–6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. Nie kolejny kurs produktywności, lecz trwała zmiana perspektywy: zamiast zarządzać zadaniami, zarządzasz energią. 110+ absolwentów, ocena 4.9/5.0. Twórca: Ludwik C. Siadlak. Cena: 1 497 PLN, dożywotni dostęp.',
     duration: 'P6W',
     price: '1497',
     ratingValue: '4.9',
-    ratingCount: '1240',
+    ratingCount: '110',
   },
   'silna-glowa': {
     id: IDS.courseSilnaGlowa,
     name: 'Program: Silna Głowa — Aplikacja Mentalna (Odporność Psychiczna)',
-    description: 'Aplikacja Mentalna Silna Głowa — 6-tygodniowy program odporności psychicznej. Firewall dla umysłu: presja przestaje paraliżować i zaczyna skupiać, krytyka przestaje ranić i zaczyna informować. 118+ uczestników, ocena 4.8/5.0. Twórca: Ludwik C. Siadlak. Cena: 777 PLN.',
+    description: 'Aplikacja Mentalna Silna Głowa — 6-tygodniowy program odporności psychicznej. Firewall dla umysłu: presja przestaje paraliżować i zaczyna skupiać, krytyka przestaje ranić i zaczyna informować. 20+ uczestników, ocena 4.8/5.0. Twórca: Ludwik C. Siadlak. Cena: 777 PLN.',
     duration: 'P6W',
     price: '777',
     ratingValue: '4.8',
-    ratingCount: '118',
+    ratingCount: '20',
   },
   'uwazne-zycie': {
     id: IDS.courseUwazneZycie,
     name: 'Program: Uważne Życie — Aplikacja Mentalna (Mindfulness)',
-    description: 'Aplikacja Mentalna Uważne Życie — 4–6-tygodniowy program uważności dla analitycznych umysłów i osób z ADHD. Nie „zamknij oczy i oddychaj", lecz przejęcie kontroli nad kokpitem: praktyczna uważność, która działa na spotkaniach, w korku i w codziennym życiu. 500+ kapitanów w społeczności, ocena 4.9/5.0. Twórca: Ludwik C. Siadlak.',
+    description: 'Aplikacja Mentalna Uważne Życie — 4–6-tygodniowy program uważności dla analitycznych umysłów i osób z ADHD. Nie „zamknij oczy i oddychaj", lecz przejęcie kontroli nad kokpitem: praktyczna uważność, która działa na spotkaniach, w korku i w codziennym życiu. Przedsprzedaż. Twórca: Ludwik C. Siadlak.',
     duration: 'P6W',
   },
   'meski-kompas': {
@@ -442,7 +442,7 @@ export function getHomepageEntities() {
     getOrganizationEntity(),
     getWebSiteEntity(),
     getWebPageEntity('/', 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
-      'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pomaga profesjonalistom, liderom i przedsiębiorcom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz. 1 240+ absolwentów, ocena 4.9/5.0.',
+      'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pomaga profesjonalistom, liderom i przedsiębiorcom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz. 130+ absolwentów programów, ocena 4.9/5.0.',
       ['/program', '/discovery', '/about', '/podcast/life-hacking']
     ),
   ];

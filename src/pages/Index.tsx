@@ -351,6 +351,19 @@ const Index = () => {
               — Artur, ojciec, programista, przedsiębiorca
             </footer>
           </div>
+
+          <div className="mt-16 text-center">
+            <p className="text-dim mb-4">
+              Jeszcze nie wiesz, czy mój język do Ciebie trafia? Sprawdź bez ryzyka — jedna myśl w Twojej skrzynce,
+              wtedy, kiedy naprawdę jest coś do powiedzenia.
+            </p>
+            <Link
+              to="/newsletter"
+              className="inline-block text-electric font-bold uppercase tracking-widest text-xs hover:underline"
+            >
+              DOŁĄCZ DO MAILINGU →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -484,7 +497,7 @@ const Index = () => {
                   ZAREZERWUJ SESJĘ DISCOVERY →
                 </Link>
 
-                <p className="text-xs text-on-light-dim text-center">Dostępne: 3/5 miejsc · Faktura VAT · Możliwość płatności 50/50</p>
+                <p className="text-xs text-on-light-dim text-center">Faktura VAT · Możliwość płatności 50/50</p>
               </div>
             </div>
           </div>
@@ -554,7 +567,7 @@ const Index = () => {
                   Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad
                   kokpitem.
                 </p>
-                <p className="text-xs text-on-light-dim mb-6">500+ kapitanów · 4.9/5 · 777 PLN</p>
+                <p className="text-xs text-on-light-dim mb-6">777 PLN · przedsprzedaż</p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
                   INSTALUJ PROGRAM →
                 </p>
@@ -617,6 +630,29 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══ DLA TRENERÓW I EKSPERTÓW AI ═══ */}
+      <section className="bg-diamond py-16 md:py-20 border-t border-border/50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <Eyebrow color="depth">DLA TRENERÓW I EKSPERTÓW AI</Eyebrow>
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-6">
+            Szkolisz z AI? To osobna rozmowa.
+          </h2>
+          <p className="text-on-light-dim text-base md:text-lg leading-relaxed mb-4">
+            Większość tej strony mówi o tym, co masz w sobie. Ta sekcja — o tym, ile warte jest to, co już umiesz.
+          </p>
+          <p className="text-on-light-dim text-base md:text-lg leading-relaxed mb-8">
+            Train The Trainer: AI to 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami. Most z ligi „freelancera za
+            kilkaset złotych" do „eksperta biorącego 5 000–10 000 zł za dzień warsztatowy".
+          </p>
+          <Link
+            to="/program/ttt-ai"
+            className="inline-block border border-on-light/20 text-on-light font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+          >
+            ZOBACZ PROGRAM →
+          </Link>
+        </div>
+      </section>
+
       {/* ═══ NEWSLETTER CTA ═══ */}
       <TheCut />
       <section className="py-20 bg-void-glow">
@@ -624,7 +660,7 @@ const Index = () => {
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <div className="text-dim leading-relaxed mb-10 space-y-4">
             <p>
-              Raz w tygodniu — jedna myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez litości. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
+              Bez harmonogramu i bez kalendarza treści — piszę, kiedy mam myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez litości. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
             </p>
           </div>
           <Link

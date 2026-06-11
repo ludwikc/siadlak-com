@@ -84,12 +84,12 @@ const About = () => {
 
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="border border-white/10 rounded-sm p-5">
-                <p className="text-electric font-bold text-2xl mb-1">1 240+</p>
+                <p className="text-electric font-bold text-2xl mb-1">110+</p>
                 <p className="text-sm text-dim">absolwent&#243;w programu Produktywno&#347;&#263;, ocena 4.9/5.0</p>
               </div>
               <div className="border border-white/10 rounded-sm p-5">
-                <p className="text-electric font-bold text-2xl mb-1">500+</p>
-                <p className="text-sm text-dim">kapitanów w społeczności Uważne Życie</p>
+                <p className="text-electric font-bold text-2xl mb-1">1 500+</p>
+                <p className="text-sm text-dim">czytelników mojego mailingu</p>
               </div>
               <div className="border border-white/10 rounded-sm p-5">
                 <p className="text-electric font-bold text-2xl mb-1">8+</p>
