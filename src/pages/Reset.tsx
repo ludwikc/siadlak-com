@@ -67,7 +67,7 @@ export default function Reset() {
     if (phase !== "analyzing") return;
     setAnalyzeProgress(0);
     const start = Date.now();
-    const duration = 3000;
+    const duration = 1200;
     const tick = () => {
       const elapsed = Date.now() - start;
       const pct = Math.min((elapsed / duration) * 100, 100);
@@ -169,7 +169,7 @@ export default function Reset() {
           {phase === "analyzing" && (
             <div className="animate-fade-in text-center">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-diamond mb-6">
-                Analizuję Twoje odpowiedzi…
+                Liczę Twój wynik…
               </h2>
               <Progress
                 value={analyzeProgress}
@@ -184,8 +184,11 @@ export default function Reset() {
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-diamond mb-2 text-center">
                 Twój wynik jest gotowy
               </h2>
-              <p className="text-dim text-center mb-8">
-                Podaj dane, żeby zobaczyć szczegółową analizę.
+              <p className="text-dim text-center mb-8 max-w-md mx-auto leading-relaxed">
+                Zobaczysz go tak czy inaczej - przycisk jest niżej. Ale jeśli
+                zostawisz maila, dostaniesz ode mnie też to, co z tym wynikiem
+                zrobić. I od czasu do czasu jedną myśl, która domyka pętle
+                zamiast otwierać nowe.
               </p>
 
               <div className="max-w-sm mx-auto">
@@ -196,7 +199,7 @@ export default function Reset() {
                 onClick={() => { localStorage.removeItem(STORAGE_KEY); setPhase("result"); }}
                 className="block mx-auto mt-6 text-sm text-dim underline hover:text-diamond transition-colors"
               >
-                Zobacz wynik
+                Pokaż mi tylko wynik
               </button>
             </div>
           )}
@@ -219,12 +222,33 @@ export default function Reset() {
                 {tier.description}
               </p>
 
-              <Button size="lg" asChild>
-                <a href="/program/produktywnosc">
-                  Zrób pełny reset systemu
-                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                </a>
-              </Button>
+              {totalScore >= 14 ? (
+                <div className="space-y-4">
+                  <p className="text-dim text-sm max-w-md mx-auto">
+                    Przy tym poziomie przeciążenia kolejny kurs to za mało -
+                    problem leży głębiej niż technika. Porozmawiajmy.
+                  </p>
+                  <Button size="lg" asChild>
+                    <a href="/discovery">
+                      Zarezerwuj Sesję Discovery
+                      <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                    </a>
+                  </Button>
+                  <a
+                    href="/program/produktywnosc"
+                    className="block text-sm text-dim underline hover:text-diamond transition-colors"
+                  >
+                    Wolę zacząć samodzielnie - program Produktywność
+                  </a>
+                </div>
+              ) : (
+                <Button size="lg" asChild>
+                  <a href="/program/produktywnosc">
+                    Zrób pełny reset systemu
+                    <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                  </a>
+                </Button>
+              )}
             </div>
           )}
         </div>

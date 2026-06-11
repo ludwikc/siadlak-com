@@ -1,9 +1,5 @@
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "@/lib/icons";
-import { toast } from "sonner";
 import SEO from "@/components/SEO";
+import MailerLiteEmbed from "@/components/MailerLiteEmbed";
 
 import ludwikAvatar from "@/assets/ludwik-avatar.png.asset.json";
 
@@ -29,25 +25,6 @@ const PATHS = [
 ];
 
 export default function IGPage() {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Proszę wprowadź adres email");
-      return;
-    }
-    setIsLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://app.easycart.pl/checkout/siadlak/newsletter",
-        "_blank",
-      );
-      setIsLoading(false);
-    }, 1000);
-  };
-
   return (
     <>
       <SEO
@@ -78,7 +55,30 @@ export default function IGPage() {
             </p>
           </div>
 
+          {/* === AUDYT SYSTEMU (LEAD MAGNET) === */}
+          <a
+            href={`/reset${UTM}`}
+            className="group block w-full rounded-2xl border-2 border-[hsl(var(--electric-blue)/0.5)] bg-[hsl(var(--surface-dark-elevated))] p-6 transition-all duration-200 hover:border-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--surface-dark-floating))]"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[hsl(var(--electric-blue))] mb-2">
+              <span aria-hidden="true">🧠</span> AUDYT SYSTEMU - zacznij tutaj
+            </p>
+            <h2 className="font-heading font-bold text-base mb-2">
+              Jak bardzo przeciążony jest Twój system operacyjny?
+            </h2>
+            <p className="text-sm text-[hsl(var(--text-dim))] leading-relaxed mb-4">
+              10 pytań, 2 minuty. Test Otwartych Pętli pokaże Ci, ile energii
+              zżera to, co krąży w Twojej głowie i nie jest domknięte.
+            </p>
+            <p className="text-sm font-bold text-[hsl(var(--electric-blue))] group-hover:underline">
+              Zrób test →
+            </p>
+          </a>
+
           {/* === DWIE ŚCIEŻKI === */}
+          <p className="text-sm font-medium text-[hsl(var(--text-dim))] text-center uppercase tracking-widest pt-2">
+            Wiesz już, czego szukasz?
+          </p>
           <div className="space-y-3">
             {PATHS.map((path) => (
               <a
@@ -113,28 +113,7 @@ export default function IGPage() {
               powiedzenia. Bez porad. Bez listicli. Bez bzdur.
             </p>
 
-            <form onSubmit={handleSubmit} className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Twój email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-[hsl(var(--surface-dark-floating))] border-[hsl(var(--text-dim)/0.2)] text-[hsl(var(--text-on-dark))] placeholder:text-[hsl(var(--text-dim)/0.5)] text-sm"
-                required
-              />
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="bg-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue-light))] text-white shrink-0 text-sm px-4"
-              >
-                {isLoading ? "..." : (
-                  <>
-                    Zapisuję się
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </form>
+            <MailerLiteEmbed dataForm="9Ffuno" />
 
             <p className="text-xs text-[hsl(var(--text-dim)/0.6)] text-center">
               1 500+ osób już czyta. Zero spamu. Odejdziesz jednym kliknięciem.
