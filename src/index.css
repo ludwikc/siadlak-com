@@ -69,6 +69,11 @@
   --primary: 211 100% 50%;
   --primary-foreground: 0 0% 100%;
 
+  /* Aliasy używane przez komponent Button (wcześniej niezdefiniowane —
+     przyciski default renderowały się bez tła) */
+  --color-primary: hsl(211 100% 50%);
+  --color-primary-light: hsl(211 100% 62%);
+
   --secondary: 210 17% 95%;
   --secondary-foreground: 222 47% 11%;
 

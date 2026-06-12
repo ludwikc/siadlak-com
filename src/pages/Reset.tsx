@@ -11,7 +11,7 @@ import {
 } from "@/data/reset-quiz-data";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
 
-type Phase = "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
+type Phase = "intro" | "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
 
 const STORAGE_KEY = "reset-quiz-answers";
 
@@ -19,21 +19,28 @@ export default function Reset() {
   const [phase, setPhase] = useState<Phase>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && JSON.parse(saved).length >= RESET_QUESTIONS.length) {
-        localStorage.removeItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.length >= RESET_QUESTIONS.length) {
+          localStorage.removeItem(STORAGE_KEY);
+        } else if (parsed.length > 0) {
+          return "quiz";
+        }
       }
     } catch { /* ignore */ }
-    return "quiz";
+    return "intro";
   });
-  const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<number[]>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved ? JSON.parse(saved) : [];
+      if (!saved) return [];
+      const parsed = JSON.parse(saved);
+      return parsed.length < RESET_QUESTIONS.length ? parsed : [];
     } catch {
       return [];
     }
   });
+  const [currentQ, setCurrentQ] = useState(() => answers.length);
   const [visible, setVisible] = useState(true);
   const [analyzeProgress, setAnalyzeProgress] = useState(0);
   
@@ -113,6 +120,35 @@ export default function Reset() {
 
       <div className="min-h-screen bg-void-glow flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-2xl">
+          {/* INTRO */}
+          {phase === "intro" && (
+            <div className="animate-fade-in text-center">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-4">
+                AUDYT SYSTEMU
+              </p>
+              <h1 className="font-heading text-3xl md:text-4xl font-bold text-diamond mb-4 tracking-[-0.02em]">
+                Test Otwartych Pętli
+              </h1>
+              <p className="text-dim text-lg mb-2 max-w-md mx-auto leading-relaxed">
+                Ile energii zżera Ci to, co krąży w głowie i nie jest domknięte?
+              </p>
+              <p className="text-dim text-sm mb-10">
+                10 pytań · 2 minuty · bez dobrych i złych odpowiedzi
+              </p>
+              <Button
+                size="lg"
+                className="w-full sm:w-auto min-h-[56px] text-lg"
+                onClick={() => setPhase("quiz")}
+              >
+                Zaczynam
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+              </Button>
+              <p className="text-xs text-dim mt-6">
+                Odpowiadaj pierwszą myślą - ona jest najbliżej prawdy.
+              </p>
+            </div>
+          )}
+
           {/* QUIZ */}
           {phase === "quiz" && (
             <div className="animate-fade-in">
@@ -136,7 +172,7 @@ export default function Reset() {
                     <button
                       key={opt.label}
                       onClick={() => handleAnswer(opt.value)}
-                      className="w-full rounded-md border border-[var(--border-primary)] bg-surface px-6 py-5 text-left text-lg text-diamond transition-colors duration-200 hover:border-electric hover:bg-[hsl(220_60%_15%)] focus-visible:ring-2 focus-visible:ring-electric min-h-[56px]"
+                      className="w-full rounded-md border border-white/15 bg-surface px-6 py-5 text-left text-lg text-diamond transition-all duration-200 hover:border-electric hover:bg-[hsl(220_60%_15%)] active:scale-[0.99] active:border-electric focus-visible:ring-2 focus-visible:ring-electric min-h-[56px]"
                     >
                       {opt.label}
                     </button>
@@ -158,6 +194,7 @@ export default function Reset() {
               </p>
               <Button
                 size="lg"
+                className="w-full sm:w-auto min-h-[56px] text-lg"
                 onClick={() => setPhase("quiz")}
               >
                 Dalej

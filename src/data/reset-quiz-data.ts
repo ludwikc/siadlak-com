@@ -1,14 +1,14 @@
 export const RESET_QUESTIONS = [
-  "Czy masz wrażenie, że przez cały dzień podejmujesz decyzje, ale żadna nie daje Ci poczucia domknięcia?",
+  "Czy przez cały dzień podejmujesz decyzje — a żadna nie daje poczucia domknięcia?",
   "Czy odkładasz ważne zadania nie dlatego, że są trudne — tylko dlatego, że jest ich za dużo naraz?",
   "Czy często zmieniasz, nadpisujesz lub porzucasz własne plany w trakcie dnia?",
-  "Czy masz w głowie listę rzeczy, które \"powinieneś zrobić\", ale nie są nigdzie jasno zapisane i zamknięte?",
-  "Czy wracasz myślami do tych samych niedokończonych spraw (rozmowy, projekty, decyzje)?",
-  "Czy kończysz dzień z poczuciem, że byłeś zajęty — ale nie zrobiłeś tego, co naprawdę ważne?",
-  "Czy czujesz napięcie lub niepokój, gdy próbujesz odpocząć, mimo że jesteś zmęczony?",
-  "Czy masz wrażenie, że \"ogarniasz wszystko\", ale wewnętrznie tracisz kontrolę?",
+  "Czy nosisz w głowie listę spraw „do zrobienia”, która nie jest nigdzie zapisana — tylko ciągle krąży?",
+  "Czy wracasz myślami do tych samych niedokończonych spraw — rozmów, projektów, decyzji?",
+  "Czy kończysz dzień z poczuciem, że zajęć było mnóstwo — a to, co naprawdę ważne, dalej czeka?",
+  "Czy czujesz napięcie, kiedy próbujesz odpocząć — mimo zmęczenia?",
+  "Czy masz wrażenie, że „ogarniasz wszystko”, ale wewnętrznie tracisz kontrolę?",
   "Czy trudno Ci delegować lub odpuścić, bo masz poczucie, że wtedy coś się posypie?",
-  "Czy masz jeden konkretny temat/projekt, którego unikasz — mimo że wiesz, że on najbardziej blokuje Twój progres?",
+  "Czy jest jeden temat, którego unikasz — choć wiesz, że to właśnie on najbardziej Cię blokuje?",
 ] as const;
 
 export const BLOCK_INTROS: Record<number, { emoji: string; title: string; description: string }> = {
@@ -20,7 +20,7 @@ export const BLOCK_INTROS: Record<number, { emoji: string; title: string; descri
   6: {
     emoji: "⚡",
     title: "BLOK 3: UKRYTE NAPIĘCIE",
-    description: "Możesz wyglądać na ogarniętego, ale Twoje ciało i głowa działają w trybie ciągłego napięcia.",
+    description: "Z zewnątrz wszystko może wyglądać na ogarnięte — ale głowa i ciało działają w trybie ciągłego napięcia.",
   },
   8: {
     emoji: "🧱",
