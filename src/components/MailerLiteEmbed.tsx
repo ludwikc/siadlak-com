@@ -5,9 +5,16 @@ const ML_ACCOUNT = "484845";
 export default function MailerLiteEmbed({
   dataForm,
   className,
+  hiddenFields,
 }: {
   dataForm: string;
   className?: string;
+  /**
+   * Dodatkowe pola przekazywane do MailerLite jako custom fields.
+   * Klucz = klucz pola w MailerLite (np. "reset_score"), wartość = co zapisać.
+   * Pola muszą istnieć w koncie MailerLite (Subscribers → Fields).
+   */
+  hiddenFields?: Record<string, string | number>;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -28,6 +35,40 @@ export default function MailerLiteEmbed({
     });
     return () => cancelAnimationFrame(raf);
   }, [dataForm]);
+
+  // Wstrzyknij ukryte pola do <form>, gdy tylko MailerLite go wyrenderuje.
+  useEffect(() => {
+    if (!hiddenFields || Object.keys(hiddenFields).length === 0) return;
+    const container = containerRef.current;
+    if (!container) return;
+
+    const inject = (form: HTMLFormElement) => {
+      Object.entries(hiddenFields).forEach(([key, value]) => {
+        const name = `fields[${key}]`;
+        let input = form.querySelector<HTMLInputElement>(
+          `input[name="${name}"]`,
+        );
+        if (!input) {
+          input = document.createElement("input");
+          input.type = "hidden";
+          input.name = name;
+          form.appendChild(input);
+        }
+        input.value = String(value);
+      });
+    };
+
+    const existing = container.querySelector("form");
+    if (existing) inject(existing);
+
+    const observer = new MutationObserver(() => {
+      const form = container.querySelector("form");
+      if (form) inject(form);
+    });
+    observer.observe(container, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [hiddenFields]);
 
   return (
     <div

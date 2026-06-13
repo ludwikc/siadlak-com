@@ -229,7 +229,13 @@ export default function Reset() {
               </p>
 
               <div className="max-w-sm mx-auto">
-                <MailerLiteEmbed dataForm="9Ffuno" />
+                <MailerLiteEmbed
+                  dataForm="9Ffuno"
+                  hiddenFields={{
+                    reset_score: totalScore,
+                    reset_tier: tier.heading,
+                  }}
+                />
               </div>
 
               <button
