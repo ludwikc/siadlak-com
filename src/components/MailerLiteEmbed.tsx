@@ -70,11 +70,35 @@ export default function MailerLiteEmbed({
     return () => observer.disconnect();
   }, [hiddenFields]);
 
+  // Ukryj wizualnie pola przekazywane jako hiddenFields — użytkownik ich nie
+  // widzi, ale MailerLite je renderuje (są na formularzu) i wysyła przy zapisie.
+  const hideStyles = hiddenFields
+    ? Object.keys(hiddenFields)
+        .map((key) => {
+          const sel = `input[name="fields[${key}]"]`;
+          return [
+            `.ml-field-${key}`,
+            `.ml-form-fieldRow:has(${sel})`,
+            `.ml-field-group:has(${sel})`,
+            `label:has(${sel})`,
+            sel,
+          ]
+            .map((s) => `.ml-embedded ${s}`)
+            .join(",");
+        })
+        .join(",")
+    : "";
+
   return (
-    <div
-      ref={containerRef}
-      className={`ml-embedded ${className ?? ""}`}
-      data-form={dataForm}
-    />
+    <>
+      {hideStyles && (
+        <style>{`${hideStyles}{display:none!important}`}</style>
+      )}
+      <div
+        ref={containerRef}
+        className={`ml-embedded ${className ?? ""}`}
+        data-form={dataForm}
+      />
+    </>
   );
 }
