@@ -1,4 +1,5 @@
-import { Quote } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, Quote } from "lucide-react";
 
 const t = {
   bg: "#0a0a0b",
@@ -191,32 +192,11 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-// Interleave: premium cards spread evenly among standard ones
-function interleaveTestimonials(items: Testimonial[]): Testimonial[] {
-  const premium = items.filter((i) => i.premium);
-  const standard = items.filter((i) => !i.premium);
-  const result: Testimonial[] = [];
-  const ratio = Math.max(1, Math.floor(standard.length / (premium.length + 1)));
-
-  let si = 0;
-  let pi = 0;
-
-  while (si < standard.length || pi < premium.length) {
-    // Insert a batch of standard
-    for (let j = 0; j < ratio && si < standard.length; j++) {
-      result.push(standard[si++]);
-    }
-    // Insert a premium
-    if (pi < premium.length) {
-      result.push(premium[pi++]);
-    }
-  }
-  return result;
-}
+const FEATURED_COUNT = 6;
 
 const PremiumCard = ({ item }: { item: Testimonial }) => (
   <div
-    className="rounded-xl p-6 md:p-8 relative md:col-span-2"
+    className="rounded-xl p-6 md:p-8 relative"
     style={{
       background: `linear-gradient(135deg, ${t.surface}, ${t.accent}08)`,
       border: `1px solid ${t.accent}40`,
@@ -264,7 +244,10 @@ const StandardCard = ({ item }: { item: Testimonial }) => (
 );
 
 export default function MCTSocialProof() {
-  const ordered = interleaveTestimonials(testimonials);
+  const [expanded, setExpanded] = useState(false);
+
+  const featured = testimonials.filter((item) => item.premium).slice(0, FEATURED_COUNT);
+  const rest = testimonials.filter((item) => !featured.includes(item));
 
   return (
     <section
@@ -273,30 +256,51 @@ export default function MCTSocialProof() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <p
-          className="mb-6 text-sm tracking-wider uppercase"
-          style={{ fontFamily: t.mono, color: t.muted }}
+          className="mb-3 text-sm tracking-wider uppercase"
+          style={{ fontFamily: t.mono, color: t.accent }}
         >
           // wall of proof
         </p>
 
-        <p
-          className="text-2xl md:text-3xl font-bold mb-4"
+        <h2
+          className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
           style={{ color: t.text }}
         >
           {testimonials.length} reviews. Zero scripted.
-        </p>
-        <p className="mb-12 max-w-2xl leading-relaxed" style={{ color: t.muted }}>
-          Every quote below is from an actual post-training evaluation form - unedited, unfiltered.
+        </h2>
+        <p className="mb-12 max-w-2xl text-lg leading-relaxed" style={{ color: t.muted }}>
+          Every quote is pulled straight from an actual post-training evaluation form - unedited, unfiltered.
         </p>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {ordered.map((item, i) =>
-            item.premium ? (
-              <PremiumCard key={i} item={item} />
-            ) : (
+        {/* Featured — the strongest reviews, always visible */}
+        <div className="grid gap-5 md:grid-cols-2">
+          {featured.map((item, i) => (
+            <PremiumCard key={i} item={item} />
+          ))}
+        </div>
+
+        {/* The rest — collapsed by default to keep the page skimmable */}
+        {expanded && (
+          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {rest.map((item, i) => (
               <StandardCard key={i} item={item} />
-            )
-          )}
+            ))}
+          </div>
+        )}
+
+        <div className="mt-10 text-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200 hover:brightness-125"
+            style={{ background: t.surface, border: `1px solid ${t.border}`, color: t.text, fontFamily: t.mono }}
+          >
+            {expanded ? "Show fewer" : `Read all ${testimonials.length} reviews`}
+            <ChevronDown
+              className="w-4 h-4 transition-transform duration-200"
+              style={{ transform: expanded ? "rotate(180deg)" : "none" }}
+            />
+          </button>
         </div>
       </div>
     </section>

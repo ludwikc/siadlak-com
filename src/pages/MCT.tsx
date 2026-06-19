@@ -1,11 +1,34 @@
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import "@fontsource/jetbrains-mono/700.css";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Mail, Phone } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, Mail, Phone, X } from "lucide-react";
 import MCTSocialProof from "@/components/mct/MCTSocialProof";
 import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp?w=400;800&format=avif;webp&as=picture";
 import OptimizedImage from "@/components/ui/OptimizedImage";
+import unileverLogo from "@/assets/logos/unilever.svg";
+import hpLogo from "@/assets/logos/hp.svg";
+import gmLogo from "@/assets/logos/gm.svg";
+import geLogo from "@/assets/logos/ge.svg";
+import volkswagenLogo from "@/assets/logos/volkswagen.svg";
+import volvoLogo from "@/assets/logos/volvo.svg";
+import scaniaLogo from "@/assets/logos/scania.svg";
+
+/* ── conversion funnel: page → scoping form → book-a-call ───────── */
+const FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScgmwMxhOcy0QyXyXeyjLH4NneRFgJhO3FKyrJNiqNafHfXzA/viewform?usp=publish-editor";
+const CALL_URL = "https://calendar.app.google/HfZb2pjWRUt5tRxV8";
+const EMAIL = "ludwikc@siadlak.email";
+const PHONE_PL = "+48510666531";
+const PHONE_DE = "+49 162 833 2261";
+
+/* Scarcity. `cap` is the real per-quarter limit — when set, it renders a
+   sharper, honest scarcity line. Until then only the soft badge shows. */
+const availability = {
+  badge: "Available for Q2/Q3 2026",
+  cap: "", // e.g. "Only 4 corporate engagements per quarter"
+};
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */
 const t = {
@@ -16,63 +39,99 @@ const t = {
   muted:   "#a1a1aa",
   accent:  "#3b82f6",
   green:   "#22c55e",
+  red:     "#f87171",
   mono:    "'JetBrains Mono', monospace",
   sans:    "'Inter', system-ui, sans-serif",
 } as const;
 
-/* ── tiny helpers ───────────────────────────────────────────────── */
-const Tag = ({ children }: { children: string }) => (
-  <span
-    className="inline-block rounded px-2 py-0.5 text-xs font-medium"
-    style={{
-      fontFamily: t.mono,
-      background: `${t.accent}18`,
-      color: t.accent,
-      border: `1px solid ${t.accent}30`,
-    }}
-  >
-    {children}
-  </span>
-);
-
-const SectionHeader = ({ children }: { children: string }) => (
-  <p
-    className="mb-6 text-sm tracking-wider uppercase"
-    style={{ fontFamily: t.mono, color: t.muted }}
-  >
-    {children}
-  </p>
-);
-
-const StatCard = ({ value, label }: { value: string; label: string }) => (
-  <div
-    className="rounded-lg px-6 py-5 text-center"
-    style={{ background: t.surface, border: `1px solid ${t.border}` }}
-  >
-    <div
-      className="text-3xl font-bold mb-1"
-      style={{ fontFamily: t.mono, color: t.text }}
-    >
-      {value}
-    </div>
-    <div className="text-sm" style={{ color: t.muted }}>
-      {label}
-    </div>
-  </div>
-);
-
 /* ── data ────────────────────────────────────────────────────────── */
+const brandLogos = [
+  { name: "Unilever", src: unileverLogo },
+  { name: "Hewlett-Packard", src: hpLogo },
+  { name: "General Motors", src: gmLogo },
+  { name: "General Electric", src: geLogo },
+  { name: "Volkswagen", src: volkswagenLogo },
+  { name: "Volvo", src: volvoLogo },
+  { name: "Scania", src: scaniaLogo },
+];
+
+const stats = [
+  { value: "20+", label: "Years MCT" },
+  { value: "10K+", label: "Engineers Trained" },
+  { value: "8+",  label: "Countries" },
+  { value: "30+", label: "Microsoft Courses" },
+];
+
+const problems = [
+  "Your team passes the exam - then can't apply any of it in production.",
+  "The \"trainer\" reads the official slides aloud. Your team could've done that alone.",
+  "Six months later the new tool is shelfware, and the training budget is gone.",
+  "Generic courseware ignores your actual stack, your actual rollout, your actual deadline.",
+];
+
+const stacks = [
+  {
+    icon: "⚡",
+    title: "AI & Microsoft Copilot",
+    outcome: "Leadership stops guessing about AI - and your team ships Copilot people actually use.",
+    body: "Strategic AI transformation that drives ROI, not slide decks. Prompt-engineering governance. Custom Copilot plugin & connector development. Executive workshops without the hype.",
+    tags: ["Copilot Studio", "Plugins", "Connectors", "Governance", "Prompt Engineering", "ROI Strategy"],
+  },
+  {
+    icon: "◆",
+    title: "Data & Analytics",
+    outcome: "Your data team ships lakehouses and reports that change decisions - not dashboards nobody opens.",
+    body: "Lakehouse and warehouse architecture in Microsoft Fabric. End-to-end pipelines with Azure Synapse and Real-Time Intelligence. Predictive modeling. Power BI that actually moves the org.",
+    tags: ["Microsoft Fabric", "Azure Synapse", "Power BI", "Azure SQL", "Lakehouse", "Real-Time Intelligence", "ML"],
+  },
+  {
+    icon: "▣",
+    title: "Modern Work & M365",
+    outcome: "Your org adopts M365 at scale and reclaims hundreds of hours a quarter in automation.",
+    body: "Microsoft 365 adoption across the org. System-based productivity frameworks. Workflow automation that gives time back. I don't teach features - I teach systems that make teams faster.",
+    tags: ["Microsoft 365", "Adoption at Scale", "Automation", "Workflows", "Productivity Systems"],
+  },
+];
+
+const whyCards: { title: string; badge?: string; body: string }[] = [
+  {
+    title: "Two Decades of Full-Stack Context",
+    badge: "2004 → 2025",
+    body: "SQL Server 2000 → Azure SQL → Fabric. I didn't read about the evolution of the Microsoft data stack - I trained engineers through every generation of it. Oxford-trained at 21 in computing and psychology, so I teach the systems and the people using them.",
+  },
+  {
+    title: "The Rooms I've Trained",
+    body: "Unilever, HP, General Motors, GE, Volkswagen, Volvo. Classified sessions for NATO, US Army Europe, the US Navy and the Marines. The Norwegian Police, the Polish Department of Defense, government ministries. 8+ countries, two languages. The rooms I've been in are my resume.",
+  },
+  {
+    title: "Engineer ↔ Executive in the Same Day",
+    body: "Debug T-SQL at 10am. Present an AI transformation roadmap to the board at 2pm. Your team gets the depth. Leadership gets the clarity. Same week, zero context lost.",
+  },
+  {
+    title: "Battle-Tested, Not Lab-Tested",
+    body: "I'm a founder and consultant, not a professional slide-reader. Every session draws from production experience. Your team learns systems that survive Monday morning - not just certification day.",
+  },
+];
+
+const comparison = [
+  ["Read the official courseware", "Wrote custom training programs for NATO"],
+  ["Teach features", "Teaches systems that survive production"],
+  ["Know the current version", "Trained every generation since SQL Server 2000"],
+  ["Deliver in a lab", "Has consulted for Fortune 500 and military orgs"],
+  ["Speak one language to one audience", "Switches between deep T-SQL and C-level strategy in the same day"],
+];
+
 const clients = {
-  "Enterprise & Corporate": [
-    "Unilever","Hewlett-Packard","Thomson-Reuters","General Motors",
-    "General Electric","Volkswagen","Volvo","Scania","Nordea","DNB",
-    "ING","Tikkurila",
-  ],
   "Defense & Government": [
     "NATO","US Army Europe","US Army Africa","US Navy","US Marines",
     "Department of Defense","Army of Poland","Police of Norway",
     "Police of Poland","Ministry of Finance","Customs Service",
     "Ministry of Administration and Internal Affairs",
+  ],
+  "Enterprise & Corporate": [
+    "Unilever","Hewlett-Packard","Thomson-Reuters","General Motors",
+    "General Electric","Volkswagen","Volvo","Scania","Nordea","DNB",
+    "ING","Tikkurila",
   ],
   "Education & Technology": [
     "Oxford University","Oslo University","Asseco","Bisnode",
@@ -84,6 +143,29 @@ const clients = {
   ],
 } as const;
 
+const processSteps = [
+  {
+    step: "01",
+    title: "Tell me your stack & timeline",
+    body: "A two-minute form. Team size, the tools you run, what you're deploying, and when.",
+  },
+  {
+    step: "02",
+    title: "20-minute scope call",
+    body: "We pin down exactly what your team needs. No sales pitch - if I'm not the right fit, I'll tell you.",
+  },
+  {
+    step: "03",
+    title: "A program built around you",
+    body: "Custom-built for your tools and your rollout - not off-the-shelf courseware.",
+  },
+  {
+    step: "04",
+    title: "Delivery that sticks",
+    body: "Remote or on-site. English or Polish. Across EU, US & the Middle East. Your team ships production - not just certs.",
+  },
+];
+
 const courses = [
   { track: "AI & Business", items: "AI-3017 AI for Business Leaders · AI-3018 Copilot Foundations" },
   { track: "Microsoft Fabric", items: "DP-600 · DP-601 · DP-602 · DP-603 · DP-604 · DP-605 - The complete Fabric & Power BI path" },
@@ -93,62 +175,147 @@ const courses = [
   { track: "Power BI", items: "PL-300 Power BI Data Analyst" },
 ];
 
-const comparison = [
-  ["Read the official courseware", "Wrote custom training programs for NATO"],
-  ["Teach features", "Teaches systems that survive production"],
-  ["Know the current version", "Trained every generation since SQL Server 2000"],
-  ["Deliver in a lab", "Has consulted for Fortune 500 and military orgs"],
-  ["Speak one language to one audience", "Switches between deep T-SQL and C-level strategy in the same day"],
-];
+/* ── reusable bits ──────────────────────────────────────────────── */
+const Tag = ({ children }: { children: string }) => (
+  <span
+    className="inline-block rounded px-2 py-0.5 text-xs font-medium"
+    style={{ fontFamily: t.mono, background: `${t.accent}18`, color: t.accent, border: `1px solid ${t.accent}30` }}
+  >
+    {children}
+  </span>
+);
 
-const whyCards: { title: string; badge?: string; body: string }[] = [
-  {
-    title: "Oxford-Trained, Production-Hardened",
-    body: "Started at University of Oxford at 21. Built the foundation in computing and psychology - which means I understand both the systems and the people using them. Full Microsoft certification stack: MCP, MCS, MS, MOS, MCSA, MCSE, MCTS, MCITP, MCT.",
-  },
-  {
-    title: "Two Decades of Full-Stack Context",
-    badge: "2004 → 2025",
-    body: "SQL Server 2000 → 2005 → 2008 → 2012 → 2014 → Azure SQL → Fabric. I didn't read about the evolution of the Microsoft data stack. I trained engineers through every single generation of it. When I teach architecture decisions, I teach from scar tissue, not slide decks.",
-  },
-  {
-    title: "Engineer ↔ Executive in the Same Day",
-    body: "Debug T-SQL at 10am. Present AI transformation roadmap to the board at 2pm. Your team gets the depth. Leadership gets the clarity. Same trainer, same week, zero context lost.",
-  },
-  {
-    title: "The Rooms I've Trained",
-    body: "Most trainers have delivered for a handful of companies. I've trained engineers at Unilever, HP, General Motors, General Electric, Volkswagen, and Volvo. I've delivered classified sessions for NATO, US Army Europe, US Navy, and the US Marines. I've worked with the Norwegian Police, the Polish Department of Defense, and multiple government ministries. 50+ countries. Two languages. The rooms I've been in are my resume.",
-  },
-  {
-    title: "Battle-Tested, Not Lab-Tested",
-    body: "I'm a founder and consultant, not a professional slide reader. Every session I deliver draws from production experience. Your team learns systems that survive Monday morning, not just certification day.",
-  },
-  {
-    title: "Global, Flexible, Ready",
-    body: "Full professional fluency in English and Polish. Remote and on-site. Timezone-flexible across Europe, US, and Middle East. Currently delivering through Glasspaper, Global Knowledge, and Asseco Data Academy.",
-  },
-];
+const StatCard = ({ value, label }: { value: string; label: string }) => (
+  <div className="rounded-lg px-6 py-5 text-center" style={{ background: t.surface, border: `1px solid ${t.border}` }}>
+    <div className="text-3xl font-bold mb-1" style={{ fontFamily: t.mono, color: t.text }}>{value}</div>
+    <div className="text-sm" style={{ color: t.muted }}>{label}</div>
+  </div>
+);
 
-const stacks = [
-  {
-    icon: "⚡",
-    title: "AI & Microsoft Copilot",
-    body: "Strategic AI transformation that drives ROI, not PowerPoint decks. Prompt engineering governance and standards. Custom Copilot plugin & connector development. Executive workshops for leadership teams who need to understand AI without the hype.",
-    tags: ["Copilot Studio","Plugins","Connectors","Governance","Prompt Engineering","ROI Strategy"],
-  },
-  {
-    icon: "◆",
-    title: "Data & Analytics",
-    body: "Lakehouse and Data Warehouse architecture in Microsoft Fabric. End-to-end data pipelines with Azure Synapse and Real-Time Intelligence. Predictive modeling and ML. Power BI reporting that actually changes how your org makes decisions.",
-    tags: ["Microsoft Fabric","Azure Synapse","Power BI","Azure SQL","Lakehouse","Real-Time Intelligence","ML"],
-  },
-  {
-    icon: "▣",
-    title: "Modern Work & M365",
-    body: "Scaling Microsoft 365 adoption across your org. System-based productivity frameworks. Workflow automation that reclaims hundreds of hours per quarter. I don't teach features - I teach systems that make teams faster.",
-    tags: ["Microsoft 365","Adoption at Scale","Automation","Workflows","Productivity Systems"],
-  },
-];
+const SectionHead = ({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) => (
+  <div className="mb-12 max-w-3xl">
+    <p className="mb-3 text-sm tracking-wider uppercase" style={{ fontFamily: t.mono, color: t.accent }}>{eyebrow}</p>
+    <h2 className="text-3xl md:text-4xl font-bold leading-tight" style={{ color: t.text }}>{title}</h2>
+    {sub && <p className="mt-4 text-lg leading-relaxed" style={{ color: t.muted }}>{sub}</p>}
+  </div>
+);
+
+const PrimaryCTA = ({ label = "Get your team's training plan", className = "" }: { label?: string; className?: string }) => (
+  <a
+    href={FORM_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`inline-flex items-center justify-center gap-2 rounded-lg px-7 py-4 text-base font-semibold transition-all duration-200 hover:brightness-110 ${className}`}
+    style={{ background: t.accent, color: "#fff" }}
+  >
+    {label}
+    <ArrowRight className="w-4 h-4" />
+  </a>
+);
+
+const CallLink = ({ className = "" }: { className?: string }) => (
+  <a
+    href={CALL_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`text-sm underline-offset-4 hover:underline ${className}`}
+    style={{ color: t.muted }}
+  >
+    or book a 20-min call →
+  </a>
+);
+
+/* Slim CTA bar that slides in after the hero and hides near the final CTA. */
+function StickyCTA() {
+  const [show, setShow] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY > document.body.offsetHeight - 900;
+      setShow(window.scrollY > 600 && !nearBottom);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  if (dismissed) return null;
+
+  return (
+    <div
+      className={`fixed inset-x-0 bottom-0 z-50 transition-transform duration-300 ${show ? "translate-y-0" : "translate-y-full"}`}
+    >
+      <div
+        className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
+        style={{ background: `${t.surface}f2`, borderTop: `1px solid ${t.border}`, backdropFilter: "blur(8px)" }}
+      >
+        <p className="hidden text-sm sm:block" style={{ color: t.text }}>
+          Deploying Fabric or Copilot in 2026?{" "}
+          <span style={{ color: t.accent }}>Let's scope it.</span>
+        </p>
+        <div className="flex flex-1 items-center justify-end gap-3">
+          <PrimaryCTA label="Get a training plan" className="!px-5 !py-2.5 !text-sm flex-1 sm:flex-none" />
+          <button
+            type="button"
+            onClick={() => setDismissed(true)}
+            aria-label="Dismiss"
+            className="shrink-0 rounded p-1.5 transition-colors hover:brightness-150"
+            style={{ color: t.muted }}
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* Full Microsoft course list — collapsed so it never breaks the skim. */
+function CourseList() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200 hover:brightness-125"
+        style={{ background: t.surface, border: `1px solid ${t.border}`, color: t.text, fontFamily: t.mono }}
+      >
+        {open ? "Hide the full course list" : "See the full certified course list (30+ courses)"}
+        <ChevronDown
+          className="h-4 w-4 transition-transform duration-200"
+          style={{ transform: open ? "rotate(180deg)" : "none" }}
+        />
+      </button>
+
+      {open && (
+        <div className="mt-8 overflow-x-auto">
+          <table className="w-full text-left" style={{ borderCollapse: "separate", borderSpacing: 0 }}>
+            <thead>
+              <tr>
+                <th className="py-3 pr-6 text-xs uppercase tracking-widest" style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}>Track</th>
+                <th className="py-3 text-xs uppercase tracking-widest" style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}>Courses</th>
+              </tr>
+            </thead>
+            <tbody>
+              {courses.map((c) => (
+                <tr key={c.track}>
+                  <td className="py-4 pr-6 align-top font-medium whitespace-nowrap" style={{ color: t.accent, fontFamily: t.mono, borderBottom: `1px solid ${t.border}22` }}>{c.track}</td>
+                  <td className="py-4 leading-relaxed" style={{ color: t.muted, borderBottom: `1px solid ${t.border}22` }}>{c.items}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="mt-6 text-sm" style={{ color: t.muted }}>
+            Plus custom workshops built around your team's specific stack and deployment timeline.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 /* ════════════════════════════════════════════════════════════════════
    PAGE
@@ -157,72 +324,65 @@ export default function MCT() {
   return (
     <>
       <Helmet>
-        <title>Ludwik C. Siadlak - Microsoft Certified Trainer</title>
+        <title>Microsoft Certified Trainer for Fabric, Copilot & AI - Ludwik C. Siadlak</title>
         <meta
           name="description"
-          content="20+ years MCT. 10,000+ engineers trained across Fortune 500 and NATO. Microsoft Fabric, Copilot, Azure Data, Power BI."
+          content="20+ years MCT. 10,000+ engineers trained across Fortune 500 and NATO. Custom Microsoft Fabric, Copilot, Azure Data & Power BI training that ships production - not just certs."
         />
       </Helmet>
 
-      <div
-        className="min-h-screen"
-        style={{ background: t.bg, color: t.text, fontFamily: t.sans }}
-      >
+      <div className="min-h-screen" style={{ background: t.bg, color: t.text, fontFamily: t.sans }}>
+        <StickyCTA />
+
         {/* ── HERO ──────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
-          {/* ambient glow */}
           <div
-            className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-[0.07]"
+            className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full opacity-[0.07]"
             style={{ background: `radial-gradient(circle, ${t.accent}, transparent 70%)` }}
           />
 
-          <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 pb-0 md:pt-32 md:pb-0">
-            <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
-              {/* Left column - text */}
-              <div className="flex-1 pb-16 md:pb-20">
-                {/* status badge */}
+          <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 pb-16 md:pt-32 md:pb-20">
+            <div className="flex flex-col gap-8 md:flex-row md:items-end md:gap-12">
+              {/* text */}
+              <div className="flex-1">
                 <div
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-8"
-                  style={{
-                    fontFamily: t.mono,
-                    background: `${t.green}12`,
-                    border: `1px solid ${t.green}30`,
-                    color: t.green,
-                  }}
+                  className="mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm"
+                  style={{ fontFamily: t.mono, background: `${t.green}12`, border: `1px solid ${t.green}30`, color: t.green }}
                 >
-                  <span className="inline-block w-2 h-2 rounded-full" style={{ background: t.green }} />
-                  Available for Q2/Q3 2026
+                  <span className="inline-block h-2 w-2 rounded-full" style={{ background: t.green }} />
+                  {availability.badge}
                 </div>
 
                 <h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-[1.15] tracking-tight mb-8"
+                  className="mb-8 text-3xl font-bold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.4rem]"
                   style={{ color: t.text }}
                 >
                   The trainer behind 10,000+ Microsoft certifications across Fortune&nbsp;500 and&nbsp;NATO.
                 </h1>
 
-                <p
-                  className="max-w-3xl text-lg md:text-xl leading-relaxed mb-14"
-                  style={{ color: t.muted }}
-                >
-                  I've spent 20&nbsp;years training two kinds of rooms: boardrooms at Unilever,
-                  HP, and General Motors - and classified briefing rooms for NATO, US&nbsp;Army
-                  Europe, Norwegian Police and the US&nbsp;Marines. If your team is deploying
-                  Fabric or Copilot in&nbsp;2026, I'll make sure they ship production, not just
-                  pass a&nbsp;cert.
+                <p className="mb-10 max-w-3xl text-lg leading-relaxed md:text-xl" style={{ color: t.muted }}>
+                  20&nbsp;years. Two kinds of rooms - boardrooms at Unilever, HP and General&nbsp;Motors,
+                  and classified briefings for NATO, the US&nbsp;Navy and the Marines. If your team is
+                  deploying Fabric or Copilot in&nbsp;2026,{" "}
+                  <span className="font-semibold" style={{ color: t.text }}>
+                    I'll make sure they ship production, not just pass a&nbsp;cert.
+                  </span>
                 </p>
 
-                {/* stats row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <StatCard value="20+" label="Years MCT" />
-                  <StatCard value="10K+" label="Engineers Trained" />
-                  <StatCard value="8+" label="Countries" />
-                  <StatCard value="30+" label="Microsoft Courses" />
+                <div className="mb-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                  <PrimaryCTA />
+                  <CallLink />
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  {stats.map((s) => (
+                    <StatCard key={s.label} value={s.value} label={s.label} />
+                  ))}
                 </div>
               </div>
 
-              {/* Right column - photo */}
-              <div className="hidden md:flex w-[320px] lg:w-[380px] shrink-0 items-end justify-end">
+              {/* photo */}
+              <div className="hidden w-[320px] shrink-0 items-end justify-end md:flex lg:w-[380px]">
                 <OptimizedImage
                   src="/lovable-uploads/SIADLAK-coffee-transparent.png"
                   alt="Ludwik C. Siadlak"
@@ -230,41 +390,200 @@ export default function MCT() {
                   height={1600}
                   priority
                   sizes="(max-width: 768px) 100vw, 40vw"
-                  className="w-full h-auto max-h-[600px] object-contain object-bottom drop-shadow-2xl"
+                  className="h-auto max-h-[600px] w-full object-contain object-bottom drop-shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── TRUSTED BY (logo wall) ───────────────────────────── */}
-        <section
-          className="py-16 md:py-24"
-          style={{ borderTop: `1px solid ${t.border}`, borderBottom: `1px solid ${t.border}` }}
-        >
-          <div className="mx-auto max-w-6xl px-6">
-            <SectionHeader>// trusted by</SectionHeader>
+        {/* ── TRUST BAND ───────────────────────────────────────── */}
+        <section style={{ borderTop: `1px solid ${t.border}`, borderBottom: `1px solid ${t.border}`, background: t.surface }}>
+          <div className="mx-auto flex max-w-6xl flex-col items-start gap-5 px-6 py-7 md:flex-row md:items-center md:gap-10">
+            <p className="text-xs uppercase tracking-widest whitespace-nowrap" style={{ fontFamily: t.mono, color: t.muted }}>
+              Trusted to train teams at
+            </p>
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-5 md:gap-x-10">
+              {brandLogos.map((logo) => (
+                <img
+                  key={logo.name}
+                  src={logo.src}
+                  alt={logo.name}
+                  loading="lazy"
+                  className="h-6 w-auto opacity-50 transition-opacity duration-200 hover:opacity-90 md:h-7"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <div className="grid gap-12 md:gap-16">
+        {/* ── PROBLEM (agitate) ────────────────────────────────── */}
+        <section className="py-16 md:py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <SectionHead
+              eyebrow="// the problem"
+              title="Most Microsoft training is forgotten by Monday."
+              sub="You're not buying slides. You're buying a team that can actually run the thing you just bought. Here's where it usually goes wrong:"
+            />
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {problems.map((p) => (
+                <div
+                  key={p}
+                  className="flex items-start gap-3 rounded-xl p-5"
+                  style={{ background: t.surface, border: `1px solid ${t.border}` }}
+                >
+                  <X className="mt-0.5 h-5 w-5 shrink-0" style={{ color: t.red }} />
+                  <p className="leading-relaxed" style={{ color: t.muted }}>{p}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-10 text-xl font-semibold md:text-2xl" style={{ color: t.text }}>
+              I've spent 20 years building the opposite of that.
+            </p>
+          </div>
+        </section>
+
+        {/* ── WHAT YOUR TEAM GETS ──────────────────────────────── */}
+        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+          <div className="mx-auto max-w-6xl px-6">
+            <SectionHead
+              eyebrow="// what your team gets"
+              title="Three stacks. One outcome: your team ships."
+              sub="Pick the track your rollout needs - or combine them. Every engagement is built around your tools and your timeline."
+            />
+
+            <div className="grid gap-6 lg:grid-cols-3">
+              {stacks.map((s) => (
+                <div key={s.title} className="flex flex-col rounded-xl p-6 md:p-8" style={{ background: t.surface, border: `1px solid ${t.border}` }}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className="text-2xl">{s.icon}</span>
+                    <h3 className="text-xl font-bold" style={{ color: t.text }}>{s.title}</h3>
+                  </div>
+                  <p className="mb-4 text-lg font-semibold leading-snug" style={{ color: t.text }}>{s.outcome}</p>
+                  <p className="mb-6 text-sm leading-relaxed" style={{ color: t.muted }}>{s.body}</p>
+                  <div className="mt-auto flex flex-wrap gap-2">
+                    {s.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <PrimaryCTA label="Tell me what your team needs" />
+              <CallLink />
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHY ME ───────────────────────────────────────────── */}
+        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+          <div className="mx-auto max-w-6xl px-6">
+            <SectionHead
+              eyebrow="// why me"
+              title="Most trainers read the courseware. I wrote it for NATO."
+            />
+
+            <div className="flex flex-col gap-10 lg:flex-row">
+              {/* portrait */}
+              <div className="lg:w-[34%] lg:shrink-0">
+                <div className="sticky top-8">
+                  <div className="relative overflow-hidden rounded-2xl" style={{ border: `1px solid ${t.border}` }}>
+                    <div className="absolute -inset-2 rounded-3xl opacity-20 blur-3xl" style={{ background: `linear-gradient(135deg, ${t.accent}, transparent 70%)` }} />
+                    <OptimizedImage
+                      src={consultantPhoto}
+                      alt="Ludwik C. Siadlak — Microsoft Certified Trainer"
+                      width={3388}
+                      height={4940}
+                      sizes="(max-width: 768px) 100vw, 34vw"
+                      className="relative h-auto w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 p-6" style={{ background: `linear-gradient(to top, ${t.bg}ee, transparent)` }}>
+                      <p className="text-xs font-medium uppercase tracking-widest" style={{ fontFamily: t.mono, color: t.accent }}>20+ years in tech</p>
+                      <p className="mt-1 text-lg font-bold" style={{ color: t.text }}>Floor-to-ceiling expertise.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* differentiators */}
+              <div className="grid flex-1 gap-6">
+                {whyCards.map((card) => (
+                  <div key={card.title} className="rounded-xl p-6 md:p-7" style={{ background: t.surface, border: `1px solid ${t.border}` }}>
+                    <div className="mb-3 flex flex-wrap items-center gap-3">
+                      <h3 className="text-lg font-bold" style={{ color: t.text }}>{card.title}</h3>
+                      {card.badge && (
+                        <span className="shrink-0 rounded px-2 py-0.5 text-xs font-medium" style={{ fontFamily: t.mono, background: `${t.green}18`, color: t.green, border: `1px solid ${t.green}30` }}>
+                          {card.badge}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm leading-relaxed md:text-base" style={{ color: t.muted }}>{card.body}</p>
+                    {card.badge && (
+                      <div className="mt-5 flex flex-wrap items-center gap-1 text-xs" style={{ fontFamily: t.mono, color: t.accent }}>
+                        {["SQL 2000","2005","2008","2012","2014","Azure SQL","Fabric"].map((v, i, a) => (
+                          <span key={v} className="flex items-center gap-1">
+                            <span className="rounded px-1.5 py-0.5" style={{ background: `${t.accent}15`, border: `1px solid ${t.accent}25` }}>{v}</span>
+                            {i < a.length - 1 && <span style={{ color: t.border }}>→</span>}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* the difference */}
+            <div className="mt-16">
+              <p className="mb-6 text-sm uppercase tracking-wider" style={{ fontFamily: t.mono, color: t.accent }}>// the difference</p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left" style={{ borderCollapse: "separate", borderSpacing: 0 }}>
+                  <thead>
+                    <tr>
+                      <th className="w-1/2 py-3 pr-6 text-xs uppercase tracking-widest" style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}>Most Microsoft trainers</th>
+                      <th className="w-1/2 py-3 text-xs uppercase tracking-widest" style={{ color: t.accent, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}>Ludwik</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparison.map(([them, me], i) => (
+                      <tr key={i}>
+                        <td className="py-4 pr-6 align-top" style={{ color: `${t.muted}99`, borderBottom: `1px solid ${t.border}22` }}>{them}</td>
+                        <td className="py-4 align-top font-medium" style={{ color: t.text, borderBottom: `1px solid ${t.border}22` }}>
+                          <span className="flex items-start gap-2">
+                            <Check className="mt-1 h-4 w-4 shrink-0" style={{ color: t.green }} />
+                            {me}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── TRUSTED BY (full wall) ───────────────────────────── */}
+        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+          <div className="mx-auto max-w-6xl px-6">
+            <SectionHead
+              eyebrow="// trusted by"
+              title="The highest-stakes rooms there are."
+              sub="Fortune 500 boardrooms and classified military briefings. The list below is the unedited record."
+            />
+
+            <div className="grid gap-10 md:gap-12">
               {Object.entries(clients).map(([category, names]) => (
                 <div key={category}>
-                  <p
-                    className="text-xs tracking-widest uppercase mb-5"
-                    style={{ color: t.muted, fontFamily: t.mono }}
-                  >
-                    {category}
-                  </p>
-                  <div className="flex flex-wrap gap-3">
+                  <p className="mb-4 text-xs uppercase tracking-widest" style={{ color: t.muted, fontFamily: t.mono }}>{category}</p>
+                  <div className="flex flex-wrap gap-2.5">
                     {names.map((name) => (
                       <span
                         key={name}
-                        className="rounded-md px-4 py-2 text-sm font-medium"
-                        style={{
-                          fontFamily: t.mono,
-                          background: t.surface,
-                          border: `1px solid ${t.border}`,
-                          color: t.text,
-                        }}
+                        className="rounded-md px-3.5 py-1.5 text-sm font-medium"
+                        style={{ fontFamily: t.mono, background: t.surface, border: `1px solid ${t.border}`, color: t.text }}
                       >
                         {name}
                       </span>
@@ -276,308 +595,99 @@ export default function MCT() {
           </div>
         </section>
 
-        {/* ── CORE STACK ───────────────────────────────────────── */}
-        <section className="py-16 md:py-24">
+        {/* ── SOCIAL PROOF ─────────────────────────────────────── */}
+        <MCTSocialProof />
+
+        {/* ── MID CTA ──────────────────────────────────────────── */}
+        <section className="py-16" style={{ borderTop: `1px solid ${t.border}`, background: t.surface }}>
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl" style={{ color: t.text }}>
+              Ready to see what this looks like for your team?
+            </h2>
+            <div className="flex flex-col items-center gap-4 sm:flex-row">
+              <PrimaryCTA />
+              <CallLink />
+            </div>
+          </div>
+        </section>
+
+        {/* ── HOW WE WORK ──────────────────────────────────────── */}
+        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
-            <SectionHeader>// what I train</SectionHeader>
+            <SectionHead
+              eyebrow="// how we work together"
+              title="From first form to team shipping - four steps."
+              sub="No drawn-out procurement dance. Here's exactly what happens after you click below."
+            />
 
-            <div className="flex flex-col lg:flex-row gap-10">
-              {/* Left column - portrait (1/3) */}
-              <div className="lg:w-[35%] flex-shrink-0">
-                <div className="sticky top-8">
-                  <div
-                    className="relative rounded-2xl overflow-hidden"
-                    style={{ border: `1px solid ${t.border}` }}
-                  >
-                    {/* Accent glow behind image */}
-                    <div
-                      className="absolute -inset-2 blur-3xl opacity-20 rounded-3xl"
-                      style={{ background: `linear-gradient(135deg, ${t.accent}, transparent 70%)` }}
-                    />
-                    <OptimizedImage
-                      src={consultantPhoto}
-                      alt="Ludwik C. Siadlak — Microsoft Certified Trainer"
-                      width={3388}
-                      height={4940}
-                      sizes="(max-width: 768px) 100vw, 35vw"
-                      className="relative w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                    />
-                    {/* Bottom gradient overlay with text */}
-                    <div
-                      className="absolute inset-x-0 bottom-0 p-6"
-                      style={{ background: `linear-gradient(to top, ${t.bg}ee, transparent)` }}
-                    >
-                      <p
-                        className="text-xs tracking-widest uppercase font-medium"
-                        style={{ fontFamily: t.mono, color: t.accent }}
-                      >
-                        20+ years in tech
-                      </p>
-                      <p
-                        className="text-lg font-bold mt-1"
-                        style={{ color: t.text }}
-                      >
-                        Floor-to-ceiling expertise.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right column - training cards (2/3) */}
-              <div className="lg:w-[65%] grid gap-8 md:gap-10">
-                {stacks.map((s) => (
-                  <div
-                    key={s.title}
-                    className="rounded-xl p-6 md:p-8"
-                    style={{ background: t.surface, border: `1px solid ${t.border}` }}
-                  >
-                    <h3
-                      className="text-xl md:text-2xl font-bold mb-4"
-                      style={{ color: t.text }}
-                    >
-                      <span className="mr-3">{s.icon}</span>
-                      {s.title}
-                    </h3>
-                    <p
-                      className="leading-relaxed mb-6"
-                      style={{ color: t.muted }}
-                    >
-                      {s.body}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {s.tags.map((tag) => (
-                        <Tag key={tag}>{tag}</Tag>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── OFFICIAL CURRICULUM ──────────────────────────────── */}
-        <section
-          className="py-16 md:py-24"
-          style={{ borderTop: `1px solid ${t.border}` }}
-        >
-          <div className="mx-auto max-w-5xl px-6">
-            <SectionHeader>// certified courses I deliver</SectionHeader>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left" style={{ borderCollapse: "separate", borderSpacing: 0 }}>
-                <thead>
-                  <tr>
-                    <th
-                      className="text-xs uppercase tracking-widest py-3 pr-6"
-                      style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}
-                    >
-                      Track
-                    </th>
-                    <th
-                      className="text-xs uppercase tracking-widest py-3"
-                      style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}
-                    >
-                      Courses
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {courses.map((c) => (
-                    <tr key={c.track}>
-                      <td
-                        className="py-4 pr-6 font-medium whitespace-nowrap align-top"
-                        style={{ color: t.accent, fontFamily: t.mono, borderBottom: `1px solid ${t.border}22` }}
-                      >
-                        {c.track}
-                      </td>
-                      <td
-                        className="py-4 leading-relaxed"
-                        style={{ color: t.muted, borderBottom: `1px solid ${t.border}22` }}
-                      >
-                        {c.items}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <p className="mt-8 text-sm" style={{ color: t.muted }}>
-              Plus custom-tailored workshops built around your team's specific stack and deployment timeline.
-            </p>
-          </div>
-        </section>
-
-        {/* ── WHY THIS TRAINER ─────────────────────────────────── */}
-        <section
-          className="py-16 md:py-24"
-          style={{ borderTop: `1px solid ${t.border}` }}
-        >
-          <div className="mx-auto max-w-5xl px-6">
-            <SectionHeader>// why not the other guy</SectionHeader>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              {whyCards.map((card) => (
-                <div
-                  key={card.title}
-                  className="rounded-xl p-6 md:p-8"
-                  style={{ background: t.surface, border: `1px solid ${t.border}` }}
-                >
-                  <div className="flex items-start gap-3 mb-4">
-                    <h3 className="text-lg font-bold" style={{ color: t.text }}>
-                      {card.title}
-                    </h3>
-                    {card.badge && (
-                      <span
-                        className="shrink-0 rounded px-2 py-0.5 text-xs font-medium"
-                        style={{
-                          fontFamily: t.mono,
-                          background: `${t.green}18`,
-                          color: t.green,
-                          border: `1px solid ${t.green}30`,
-                        }}
-                      >
-                        {card.badge}
-                      </span>
-                    )}
-                  </div>
-                  <p className="leading-relaxed text-sm md:text-base" style={{ color: t.muted }}>
-                    {card.body}
-                  </p>
-
-                  {/* SQL version chain for the timeline card */}
-                  {card.badge && (
-                    <div
-                      className="mt-5 flex flex-wrap items-center gap-1 text-xs"
-                      style={{ fontFamily: t.mono, color: t.accent }}
-                    >
-                      {["SQL 2000","2005","2008","2012","2014","Azure SQL","Fabric"].map((v, i, a) => (
-                        <span key={v} className="flex items-center gap-1">
-                          <span
-                            className="rounded px-1.5 py-0.5"
-                            style={{ background: `${t.accent}15`, border: `1px solid ${t.accent}25` }}
-                          >
-                            {v}
-                          </span>
-                          {i < a.length - 1 && <span style={{ color: t.border }}>→</span>}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {processSteps.map((s) => (
+                <div key={s.step} className="rounded-xl p-6" style={{ background: t.surface, border: `1px solid ${t.border}` }}>
+                  <div className="mb-3 text-2xl font-bold" style={{ fontFamily: t.mono, color: t.accent }}>{s.step}</div>
+                  <h3 className="mb-2 font-bold" style={{ color: t.text }}>{s.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: t.muted }}>{s.body}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* ── THE DIFFERENCE ───────────────────────────────────── */}
-        <section
-          className="py-16 md:py-24"
-          style={{ borderTop: `1px solid ${t.border}` }}
-        >
-          <div className="mx-auto max-w-5xl px-6">
-            <SectionHeader>// the difference</SectionHeader>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left" style={{ borderCollapse: "separate", borderSpacing: 0 }}>
-                <thead>
-                  <tr>
-                    <th
-                      className="text-xs uppercase tracking-widest py-3 pr-6 w-1/2"
-                      style={{ color: t.muted, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}
-                    >
-                      Most Microsoft trainers
-                    </th>
-                    <th
-                      className="text-xs uppercase tracking-widest py-3 w-1/2"
-                      style={{ color: `${t.accent}`, fontFamily: t.mono, borderBottom: `1px solid ${t.border}` }}
-                    >
-                      Ludwik
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparison.map(([them, me], i) => (
-                    <tr key={i}>
-                      <td
-                        className="py-4 pr-6 align-top"
-                        style={{ color: `${t.muted}99`, borderBottom: `1px solid ${t.border}22` }}
-                      >
-                        {them}
-                      </td>
-                      <td
-                        className="py-4 align-top font-medium"
-                        style={{ color: t.text, borderBottom: `1px solid ${t.border}22` }}
-                      >
-                        {me}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="mt-12">
+              <CourseList />
             </div>
           </div>
         </section>
 
-        {/* ── SOCIAL PROOF ──────────────────────────────────── */}
-        <MCTSocialProof />
-
-        {/* ── CTA ──────────────────────────────────────────────── */}
-        <section
-          className="py-16 md:py-24"
-          style={{ borderTop: `1px solid ${t.border}` }}
-        >
+        {/* ── FINAL CTA ────────────────────────────────────────── */}
+        <section className="py-20 md:py-28" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <SectionHeader>// let's talk</SectionHeader>
+            <p className="mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: t.mono, color: t.accent }}>// let's talk</p>
 
-            <h2
-              className="text-2xl md:text-4xl font-bold mb-6"
-              style={{ color: t.text }}
-            >
+            {availability.cap ? (
+              <p className="mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-medium" style={{ fontFamily: t.mono, background: `${t.green}12`, border: `1px solid ${t.green}30`, color: t.green }}>
+                {availability.cap} · {availability.badge}
+              </p>
+            ) : (
+              <p className="mb-6 inline-block rounded-full px-4 py-1.5 text-sm font-medium" style={{ fontFamily: t.mono, background: `${t.green}12`, border: `1px solid ${t.green}30`, color: t.green }}>
+                {availability.badge}
+              </p>
+            )}
+
+            <h2 className="mb-6 text-2xl font-bold md:text-4xl" style={{ color: t.text }}>
               Your next training should actually change something.
             </h2>
 
-            <p className="leading-relaxed mb-12" style={{ color: t.muted }}>
-              Fabric deep-dive. Copilot rollout. AI&nbsp;strategy for the C-suite.
-              Custom engineering workshop. Tell me what your team needs -
-              I'll tell you exactly what I'd build and whether I'm the right fit.
+            <p className="mb-10 text-lg leading-relaxed" style={{ color: t.muted }}>
+              Fabric deep-dive. Copilot rollout. AI&nbsp;strategy for the C-suite. A custom engineering
+              workshop. Tell me what your team needs - I'll tell you exactly what I'd build and whether
+              I'm the right fit.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <a
-                href="mailto:ludwikc@siadlak.email"
-                className="inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-base font-semibold transition-all duration-200 hover:brightness-110"
-                style={{ background: t.accent, color: "#fff" }}
-              >
-                <Mail className="w-4 h-4" />
-                ludwikc@siadlak.email
-              </a>
-              <a
-                href="tel:+48510666531"
-                className="inline-flex items-center gap-2 rounded-lg px-8 py-3.5 text-base font-medium transition-all duration-200 hover:brightness-110"
-                style={{ background: t.surface, border: `1px solid ${t.border}`, color: t.text }}
-              >
-                <Phone className="w-4 h-4" />
-                +48 510 666 531
+            <div className="mb-8 flex flex-col items-center justify-center gap-4">
+              <PrimaryCTA label="Get your team's training plan" className="w-full sm:w-auto" />
+              <a href={CALL_URL} target="_blank" rel="noopener noreferrer" className="text-sm underline-offset-4 hover:underline" style={{ color: t.muted }}>
+                Prefer to skip ahead? Book a 20-min scope call →
               </a>
             </div>
 
-            <p className="text-xs" style={{ color: t.muted, fontFamily: t.mono }}>
-              DE: +49 162 833 2261 · Response time: typically within 24 hours.
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
+              <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 text-sm transition-colors hover:brightness-125" style={{ color: t.muted }}>
+                <Mail className="h-4 w-4" /> {EMAIL}
+              </a>
+              <a href={`tel:${PHONE_PL}`} className="inline-flex items-center gap-2 text-sm transition-colors hover:brightness-125" style={{ color: t.muted }}>
+                <Phone className="h-4 w-4" /> {PHONE_PL.replace("+48", "+48 ")}
+              </a>
+            </div>
+
+            <p className="mt-8 text-xs" style={{ color: t.muted, fontFamily: t.mono }}>
+              DE: {PHONE_DE} · Response time: typically within 24 hours.
             </p>
-            <p className="text-xs mt-1" style={{ color: t.muted }}>
-              I'll ask about your team size, tech stack, and timeline. No sales calls. No fluff. Just scope and fit.
+            <p className="mt-2 text-xs" style={{ color: t.muted }}>
+              No sales calls. No fluff. Just scope and fit.
             </p>
           </div>
         </section>
 
         {/* ── footer ───────────────────────────────────────────── */}
-        <footer
-          className="py-8 text-center text-xs"
-          style={{ borderTop: `1px solid ${t.border}`, color: t.muted }}
-        >
+        <footer className="py-8 text-center text-xs" style={{ borderTop: `1px solid ${t.border}`, color: t.muted }}>
           <p>© {new Date().getFullYear()} Ludwik C. Siadlak · Microsoft Certified Trainer</p>
         </footer>
       </div>
