@@ -23,7 +23,25 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
 
    > **Note:** Only install the packages whose components you actually use. At minimum you need `react`, `react-dom`, `tailwindcss`, `tailwindcss-animate`, `clsx`, `tailwind-merge`, `class-variance-authority`, `lucide-react`, and `@radix-ui/react-slot`.
 
-3. Wire Tailwind — `tailwind.config.ts`:
+3. Install and configure **PostCSS** — the design system uses `@import` chains in its CSS files (`tokens.css` imports fonts; `index.css` imports tokens/base/components). These only resolve at build time if `postcss-import` is the **first** PostCSS plugin:
+
+   ```bash
+   npm install -D postcss-import
+   ```
+
+   `postcss.config.js`:
+
+   ```js
+   export default {
+     plugins: {
+       "postcss-import": {},
+       tailwindcss: {},
+       autoprefixer: {},
+     },
+   };
+   ```
+
+4. Wire Tailwind — `tailwind.config.ts`:
 
    ```ts
    import preset from "./src/design-system/tailwind-preset";
@@ -35,21 +53,33 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
    };
    ```
 
-4. Import the brand CSS in your global stylesheet, in this order:
+   > **Note:** The `darkMode: ["class", "class"]` duplication is intentional — it matches the source config exactly. Do not "fix" it to a single entry.
+
+5. Wire the CSS in **two separate places** — this is required to preserve cascade order.
+
+   **`src/index.css`** (your global stylesheet) — import only the layer-safe files, **before** `@tailwind`:
 
    ```css
-   @import "@/design-system/tokens.css";
+   @import "@/design-system/tokens.css";          /* fonts + :root tokens */
+   @import "@/design-system/styles/base.css";     /* @layer base */
+   @import "@/design-system/styles/components.css"; /* @layer components */
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
-   @import "@/design-system/styles/base.css";
-   @import "@/design-system/styles/components.css";
-   @import "@/design-system/styles/global.css";
    ```
+
+   **`src/main.tsx`** (or `_app.tsx`) — import `global.css` **after** the stylesheet, so it loads after `@tailwind utilities`:
+
+   ```ts
+   import "./index.css";
+   import "@/design-system/styles/global.css"; // raw unlayered brand CSS — must load AFTER @tailwind utilities
+   ```
+
+   > **WARNING:** Do NOT `@import` `global.css` inside the stylesheet. Because `postcss-import` is required (see step 3), it hoists ALL CSS `@import` statements to the top of the output — above `@tailwind utilities`. `global.css` contains raw unlayered CSS (`.hero h1`, `body{}`, `@keyframes`, marquee, brand gradients) that must load **after** Tailwind utilities. Importing it via the stylesheet causes it to be hoisted above Tailwind and subtly shifts rendering.
 
    Relative paths work too (e.g. `./design-system/tokens.css`) if your bundler doesn't resolve `@/`.
 
-5. Use components:
+6. Use components:
 
    ```tsx
    import { Button, CTAButton, GlassCard, cn } from "@/design-system";
