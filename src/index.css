@@ -1,7 +1,6 @@
 @import "./design-system/tokens.css";
 @import "./design-system/styles/base.css";
 @import "./design-system/styles/components.css";
-@import "./design-system/styles/global.css";
 
 @tailwind base;
 @tailwind components;
