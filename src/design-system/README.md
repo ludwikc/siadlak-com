@@ -68,7 +68,7 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
    @tailwind utilities;
    ```
 
-   **`src/main.tsx`** (or `_app.tsx`) — import `global.css` **after** the stylesheet, so it loads after `@tailwind utilities`:
+   **`src/main.tsx`** (client-entry bundlers: Vite, CRA-style single entry) — import `global.css` **after** the stylesheet, so it loads after `@tailwind utilities`:
 
    ```ts
    import "./index.css";
@@ -76,6 +76,8 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
    ```
 
    > **WARNING:** Do NOT `@import` `global.css` inside the stylesheet. Because `postcss-import` is required (see step 3), it hoists ALL CSS `@import` statements to the top of the output — above `@tailwind utilities`. `global.css` contains raw unlayered CSS (`.hero h1`, `body{}`, `@keyframes`, marquee, brand gradients) that must load **after** Tailwind utilities. Importing it via the stylesheet causes it to be hoisted above Tailwind and subtly shifts rendering.
+
+   > **Next.js / SSR note:** The `main.tsx` import order above is reliable for Vite-style single-entry bundling. Under Next.js (App Router or `_app.tsx`), CSS ordering across route segments and RSC boundaries is not guaranteed, so `global.css` may not reliably resolve after `@tailwind utilities`. The safest long-term fix is to wrap the unlayered rules in `global.css` inside an `@layer` (e.g. `@layer brand { … }`) — once layered, load order stops mattering. Until then, ensure `global.css` is imported **after** the Tailwind stylesheet in your root layout and test for cascade regressions when upgrading Next.js.
 
    Relative paths work too (e.g. `./design-system/tokens.css`) if your bundler doesn't resolve `@/`.
 
@@ -85,11 +87,13 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
    import { Button, CTAButton, GlassCard, cn } from "@/design-system";
    ```
 
+   > **Note:** `index.ts` re-exports a curated set of primary component names. Sub-components and variant helpers (e.g. `CardContent`, `DialogContent`, `buttonVariants`) are not in the barrel — import them via deep paths: `@/design-system/components/<name>`.
+
 ## Layout
 
-- `tokens.css` — CSS variables (colors, shadows, radii, fonts) + `.dark` overrides + brand font imports.
+- `tokens.css` — CSS variables (colors, shadows, radii, fonts) + brand font imports (no `.dark` overrides — those live in `styles/base.css`).
 - `tailwind-preset.ts` — theme extension + custom utility classes (`-locked-*`, premium surfaces, gradients, `the-cut`, `glass-card`, …) + `tailwindcss-animate`.
-- `styles/` — brand base typography, component classes, and global brand CSS.
+- `styles/` — brand base typography (`base.css`, includes `.dark` font-var overrides in `@layer base`), component classes (`components.css`), and global brand CSS (`global.css`).
 - `components/` — UI primitives (shadcn-derived + custom: `cta-button`, `glass-card`, `app-card`, `x-icon`, `OptimizedImage`).
 - `lib/` — `cn`, `use-mobile`, `use-toast`.
 - `index.ts` — public entry.
