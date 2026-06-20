@@ -1,7 +1,7 @@
 
 
 import { Headphones } from 'lucide-react';
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface PodcastPlayerProps {
   title: string;

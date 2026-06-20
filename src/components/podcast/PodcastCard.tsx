@@ -3,7 +3,7 @@
 import { Link } from 'react-router-dom';
 
 import { ArrowRight } from 'lucide-react';
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface PodcastCardProps {
   title: string;

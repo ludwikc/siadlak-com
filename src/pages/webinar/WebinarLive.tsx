@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/design-system";
 import calendarGcal from "@/assets/calendar-gcal.png?w=64;128&format=avif;webp;png&as=picture";
 import calendarApple from "@/assets/calendar-apple.png?w=64;128&format=avif;webp;png&as=picture";
 import calendarOutlook from "@/assets/calendar-outlook.png?w=64;128&format=avif;webp;png&as=picture";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);

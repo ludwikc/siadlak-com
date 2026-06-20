@@ -7,11 +7,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "@/components/ui/dialog";
+} from "@/design-system/components/dialog";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import { OTOCountdown } from "./OTOCountdown";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { cn } from "@/lib/utils";
 
 interface OTOWelcomeDialogProps {

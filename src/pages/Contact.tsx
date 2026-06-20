@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { Linkedin, Instagram, Heart } from "lucide-react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";

@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Button } from "@/design-system/components/button";
+import { Card } from "@/design-system/components/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 import {
   Calendar,
   Clock,

@@ -1,5 +1,5 @@
 import Layout from '@/components/layout/Layout';
-import { GlassCard } from '@/components/ui/glass-card';
+import { GlassCard } from '@/design-system/components/glass-card';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Book, Mic2, Video, FileText, Mail } from '@/lib/icons';
 

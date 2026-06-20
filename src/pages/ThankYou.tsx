@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Layout from '../components/layout/Layout';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/design-system/components/button';
 import { Zap, Calendar, Mail, Clock, ArrowRight, CheckCheck } from 'lucide-react';
 import SpecialOfferCountdown from '@/components/webinar/SpecialOfferCountdown';
 

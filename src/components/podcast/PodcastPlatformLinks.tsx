@@ -1,7 +1,7 @@
 
 
 import { ExternalLink } from 'lucide-react';
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface PlatformLink {
   name: string;

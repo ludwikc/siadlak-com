@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
-import { Badge } from "@/components/ui/badge";
-import { CTAButton } from "@/components/ui/cta-button";
+import { Badge } from "@/design-system/components/badge";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { ArrowRight, Brain, Clock, Mic2, MapPin, Video } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logo.png?w=80;160&format=avif;webp;png&as=picture";
@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getProgramEntities } from "@/lib/structured-data";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 const decisionTree = [
   {

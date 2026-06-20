@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { getSEOConfig } from "@/lib/seo-config";
 import { getBreadcrumbSchema } from "@/lib/structured-data";
 

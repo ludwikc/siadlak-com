@@ -1,7 +1,7 @@
 import React from "react";
 import { Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 
 interface Persona {
   title: string;

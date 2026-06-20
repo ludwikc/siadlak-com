@@ -4,13 +4,13 @@ import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
-import { CTAButton } from "@/components/ui/cta-button";
-import { GlassCard } from "@/components/ui/glass-card";
+import { CTAButton } from "@/design-system/components/cta-button";
+import { GlassCard } from "@/design-system/components/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
 import { AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 export default function MeskiKompas() {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);

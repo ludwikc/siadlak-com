@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { Badge } from "../ui/badge";
+import { Badge } from "@/design-system/components/badge";
 
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+import { Button } from "@/design-system/components/button";
+import { Progress } from "@/design-system/components/progress";
 import { ArrowRight } from "@/lib/icons";
 import {
   RESET_QUESTIONS,

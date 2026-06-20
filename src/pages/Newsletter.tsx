@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";

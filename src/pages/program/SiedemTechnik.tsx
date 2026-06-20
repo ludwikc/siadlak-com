@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import { ArrowRight, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 export default function SiedemTechnik() {
   return (

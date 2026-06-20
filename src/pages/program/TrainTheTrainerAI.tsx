@@ -5,8 +5,8 @@ import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/design-system/components/button";
+import { Card, CardContent } from "@/design-system/components/card";
 
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import devJutraImg from "@/assets/ttt-ai/devjutra.webp";

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { Clock } from "lucide-react";
 
 type TimelineLink = {

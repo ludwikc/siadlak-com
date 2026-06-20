@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Check, ChevronDown, Mail, Phone, X } from "lucide-react";
 import MCTSocialProof from "@/components/mct/MCTSocialProof";
 import consultantPhoto from "@/assets/Ludwik C. Siadlak-bw-consultant.webp?w=400;800&format=avif;webp&as=picture";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 import unileverLogo from "@/assets/logos/unilever.svg";
 import hpLogo from "@/assets/logos/hp.svg";
 import gmLogo from "@/assets/logos/gm.svg";

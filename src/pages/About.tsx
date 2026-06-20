@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";

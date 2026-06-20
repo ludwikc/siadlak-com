@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/design-system/components/button';
 import { ArrowRight, CheckCircle, Users, Clock, Calendar, Star, BarChart } from 'lucide-react';
 
 // Course data (would typically come from API/backend)

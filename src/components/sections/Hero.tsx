@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/design-system/components/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface HeroProps {
   title: string;

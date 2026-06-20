@@ -1,7 +1,7 @@
 
 
 import { Play, Calendar } from 'lucide-react';
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 export interface PodcastEpisode {
   id: string;
