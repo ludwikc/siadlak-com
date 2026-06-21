@@ -12,7 +12,7 @@ import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png?w=400;800&format=
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 /* ─── tiny reusable pieces ─── */
 

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/design-system/components/button';
 import { Calendar, Clock, Mail, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function ThankYouMeskiKompas() {

@@ -6,8 +6,8 @@ import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import LifehackerzySection from "@/components/sections/LifehackerzySection";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/design-system/components/button";
+import { Card, CardContent } from "@/design-system/components/card";
 import { Link } from "react-router-dom";
 
 import {
@@ -39,7 +39,7 @@ import {
 
 import ValueCalculator from "@/components/sales/ValueCalculator";
 import { HAKOWANIE_OBJECTIONS } from "@/data/course-objections";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 const produktywnoscFaqs = [
   {

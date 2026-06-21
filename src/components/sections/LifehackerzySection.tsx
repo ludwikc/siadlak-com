@@ -12,7 +12,7 @@ import {
   Shield,
 } from "lucide-react";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png?w=200;400&format=avif;webp;png&as=picture";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 export default function LifehackerzySection() {
   return (

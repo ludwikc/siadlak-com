@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Button } from "@/design-system/components/button";
+import { Card } from "@/design-system/components/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import { Anchor, Star, MessageSquare, Check } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {

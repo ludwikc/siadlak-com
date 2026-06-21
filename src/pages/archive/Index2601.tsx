@@ -1,9 +1,9 @@
 import Layout from "../../components/layout/Layout";
 import SEO from "../../components/SEO";
 import { getSEOConfig } from "../../lib/seo-config";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CTAButton } from "@/components/ui/cta-button";
+import { Card, CardContent } from "@/design-system/components/card";
+import { Badge } from "@/design-system/components/badge";
+import { CTAButton } from "@/design-system/components/cta-button";
 import {
   ArrowRight,
   AlertTriangle,

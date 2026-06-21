@@ -1,9 +1,9 @@
 import { ArrowRight } from '@/lib/icons';
-import { GlassCard } from '@/components/ui/glass-card';
+import { GlassCard } from '@/design-system/components/glass-card';
 import { OTOCountdown } from './OTOCountdown';
 import HeroSection from '@/components/sections/HeroSection';
 import { useState, useEffect } from 'react';
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface OTOProductDisplayProps {
   onExpired: () => void;

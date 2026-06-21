@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
-import { CTAButton } from "@/components/ui/cta-button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CTAButton } from "@/design-system/components/cta-button";
+import { Card, CardContent } from "@/design-system/components/card";
 import { CheckCircle, ChevronDown } from "@/lib/icons";
 import { Link } from "react-router-dom";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";

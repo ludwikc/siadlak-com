@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/design-system/components/card';
 
 const FAQAccordion = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import workspaceBeforePicture from "@/assets/workspace-before.png?w=400;800&format=avif;webp;png&as=picture";
 import workspaceAfterPicture from "@/assets/workspace-after.png?w=400;800&format=avif;webp;png&as=picture";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 const BeforeAfterSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);

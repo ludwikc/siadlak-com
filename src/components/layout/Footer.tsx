@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Youtube, ExternalLink, Calendar } from "lucide-react";
-import XIcon from "../ui/x-icon";
+import XIcon from "@/design-system/components/x-icon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

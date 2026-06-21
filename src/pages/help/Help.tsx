@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight, Book, MessageCircle, Settings, Shield, CreditCard, Users } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import { GlassCard } from '@/components/ui/glass-card';
+import { GlassCard } from '@/design-system/components/glass-card';
 import SEO from '@/components/SEO';
 import { getSEOConfig } from '@/lib/seo-config';
 

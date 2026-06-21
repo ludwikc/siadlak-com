@@ -69,7 +69,7 @@ import SiadlakVIP from "./pages/SiadlakVIP";
 import MailingMute from "./pages/MailingMute";
 import Mentoring from "./pages/Mentoring";
 import Reset from "./pages/Reset";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/design-system/components/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
 import MobileWebinarBar from "./components/webinar/MobileWebinarBar";

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/design-system/components/input";
+import { Button } from "@/design-system/components/button";
 import { ArrowRight, ExternalLink } from "@/lib/icons";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";

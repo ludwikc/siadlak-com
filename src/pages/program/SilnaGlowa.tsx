@@ -5,8 +5,8 @@ import TopicalMeta from "@/components/TopicalMeta";
 import { getCourseEntity, getWebPageEntity, getFAQSchema, getCourseBreadcrumb, getReviewSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import LifehackerzySection from "@/components/sections/LifehackerzySection";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/design-system/components/button";
+import { Card, CardContent } from "@/design-system/components/card";
 import {
   Shield,
   ArrowRight,

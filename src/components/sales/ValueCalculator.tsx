@@ -1,5 +1,5 @@
 
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/design-system/components/card';
 import { CheckCircle2 } from 'lucide-react';
 
 const ValueCalculator = () => {
