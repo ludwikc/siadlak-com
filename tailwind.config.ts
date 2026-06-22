@@ -8,6 +8,7 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./.storybook/**/*.{ts,tsx}",
     "!./src/design-system/tailwind-preset.ts",
   ],
   prefix: "",
