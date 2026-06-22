@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -121,9 +122,7 @@ function ValidationForm() {
     mode: "onChange",
   });
 
-  // Trigger validation immediately to show error state
-  const { formState } = form;
-  void formState.errors;
+  React.useEffect(() => { form.trigger(); }, [form]);
 
   return (
     <Form {...form}>
