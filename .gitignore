@@ -31,3 +31,5 @@ ds-bundle/
 .design-sync/node_modules
 
 storybook-static/
+
+.claude/worktrees/
