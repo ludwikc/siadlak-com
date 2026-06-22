@@ -37,12 +37,12 @@ function ChartDemo() {
 
 const meta = {
   title: "Components/Chart",
-  component: ChartDemo,
+  component: ChartContainer,
   tags: ["autodocs"],
   parameters: {
     layout: "padded",
   },
-} satisfies Meta<typeof ChartDemo>;
+} satisfies Meta<typeof ChartContainer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

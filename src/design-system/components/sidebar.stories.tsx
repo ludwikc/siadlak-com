@@ -64,12 +64,12 @@ function SidebarDemo() {
 
 const meta = {
   title: "Components/Sidebar",
-  component: SidebarDemo,
+  component: SidebarProvider,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof SidebarDemo>;
+} satisfies Meta<typeof SidebarProvider>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
