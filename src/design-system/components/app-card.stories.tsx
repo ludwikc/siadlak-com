@@ -108,23 +108,21 @@ export const Unavailable: Story = {
 
 export const AllStatuses: Story = {
   render: () => (
-    <MemoryRouter>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-4">
-        {(["NOWA", "POLECANE", "DOSTĘPNA", "NIEDOSTĘPNA"] as const).map((status) => (
-          <AppCard
-            key={status}
-            title="Przykładowy kurs"
-            subtitle="Podtytuł kursu"
-            description="Krótki opis kursu pokazujący jak wygląda dany status na karcie aplikacji."
-            category="Produktywność"
-            rating={4.5}
-            downloads="2 000"
-            status={status}
-            features={["Funkcja pierwsza", "Funkcja druga", "Funkcja trzecia"]}
-            link="/kursy/przykladowy"
-          />
-        ))}
-      </div>
-    </MemoryRouter>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-4">
+      {(["NOWA", "POLECANE", "DOSTĘPNA", "NIEDOSTĘPNA"] as const).map((status) => (
+        <AppCard
+          key={status}
+          title="Przykładowy kurs"
+          subtitle="Podtytuł kursu"
+          description="Krótki opis kursu pokazujący jak wygląda dany status na karcie aplikacji."
+          category="Produktywność"
+          rating={4.5}
+          downloads="2 000"
+          status={status}
+          features={["Funkcja pierwsza", "Funkcja druga", "Funkcja trzecia"]}
+          link="/kursy/przykladowy"
+        />
+      ))}
+    </div>
   ),
 };
