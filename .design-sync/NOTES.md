@@ -95,7 +95,7 @@ gitignored scratch — safe to delete; re-copied on the next run.
 
 ## Re-sync risks (watch-list)
 - **cssEntry = site-purged CSS.** `cfg.cssEntry=dist/brand.css` is a COPY of the website's compiled CSS (regenerate: `npm run build` → copy newest `dist/assets/*.css` to `src/design-system/dist/brand.css`; then `git checkout -- dist`). It only contains classes the SITE uses, so a few brand preset utilities (`bg-gradient-text-brand`, `bg-premium-*`, `font-primary`) are PURGED and absent from the shipped bundle — designs using them render unstyled. Future improvement: compile the brand CSS with a safelist of all preset utilities so the full vocabulary ships.
-- **dist/brand.css + dist/index.js + dist/index.d.ts are gitignored build output** — regenerate via `npm run build:ds` (tsup → index.js/index.d.ts) and the brand.css copy above before a re-sync.
-- **ds-full-entry.ts** is NOT used (we build from `dist/index.js`); leftover, harmless.
-- Library build entry mismatch: `src/design-system/package.json` `module` says `./dist/index.mjs` but tsup emits `index.js` (no `"type":"module"`). Converter uses `--entry src/design-system/dist/index.js` so it's fine; fix the package.json field if publishing.
+- **dist/brand.css + dist/index.mjs + dist/index.d.ts are gitignored build output** — regenerate via `npm run build:ds` (tsup → index.mjs/index.d.ts) and the brand.css copy above before a re-sync. The converter entry is `--entry src/design-system/dist/index.mjs`.
+- **ds-full-entry.ts** is NOT used (we build from `dist/index.mjs`); leftover, harmless.
+- tsup emits `.mjs` (true ESM) via `outExtension`; `src/design-system/package.json` `module`/`exports.import` point at `./dist/index.mjs` — manifest and output agree.
 - Overlays (Dialog/AlertDialog/Sheet/InputOTP/Toast/Tooltip/Popover) portal → graded on preview render, not side-by-side. `close` grades: Tabs (active-tab indicator), Toggle (unpressed frame), NavigationMenu (at-rest trigger bg), XIcon In Context (tone), OptimizedImage Public Asset/Avatar (env-unresolvable URLs), ChartContainer (axis max). All reference-deficiency or framing, not component bugs.
