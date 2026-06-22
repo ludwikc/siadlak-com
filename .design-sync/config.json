@@ -1,5 +1,31 @@
 {
   "projectId": "edb1cc1b-751b-4551-916e-6f4c642e3c91",
   "pkg": "siadlak-design-system",
-  "globalName": "SiadlakDS"
+  "globalName": "SiadlakDS",
+  "shape": "storybook",
+  "storybookStatic": ".design-sync/sb-reference",
+  "storybookConfigDir": ".storybook",
+  "cssEntry": "dist/brand.css",
+  "readmeHeader": ".design-sync/conventions.md",
+  "provider": { "component": "TooltipProvider" },
+  "titleMap": {
+    "Chart": "ChartContainer",
+    "Resizable": "ResizablePanelGroup",
+    "Sonner": "SonnerToaster"
+  },
+  "overrides": {
+    "Accordion": { "cardMode": "column" },
+    "Pagination": { "cardMode": "column" },
+    "RadioGroup": { "cardMode": "column" },
+    "ResizablePanelGroup": { "cardMode": "column" },
+    "Separator": { "cardMode": "column" },
+    "Tabs": { "cardMode": "column" },
+    "AlertDialog": { "cardMode": "single", "primaryStory": "Default" },
+    "Dialog": { "cardMode": "single", "primaryStory": "Default" },
+    "HoverCard": { "cardMode": "single", "primaryStory": "Default" },
+    "Popover": { "cardMode": "single", "primaryStory": "Default" },
+    "Sheet": { "cardMode": "single", "primaryStory": "Default" },
+    "Sidebar": { "cardMode": "single", "primaryStory": "Default" },
+    "Tooltip": { "cardMode": "single", "primaryStory": "Default" }
+  }
 }

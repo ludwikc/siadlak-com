@@ -1,12 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "./tooltip";
 
 const meta = {
   title: "Components/Tooltip",
   component: Tooltip,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
+  decorators: [
+    (Story) => (
+      <TooltipProvider>
+        <Story />
+      </TooltipProvider>
+    ),
+  ],
 } satisfies Meta<typeof Tooltip>;
 
 export default meta;

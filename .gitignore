@@ -32,4 +32,9 @@ ds-bundle/
 
 storybook-static/
 
+# Design system library build output
+src/design-system/dist/
+
 .claude/worktrees/
+.design-sync/sb-reference/
+.design-sync/ds-full-entry.ts

@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:ds": "tsup"
   },
   "dependencies": {
     "@fontsource/caveat": "^5.2.8",
@@ -93,6 +94,7 @@
     "sharp": "^0.34.5",
     "storybook": "^8.6.18",
     "tailwindcss": "^3.4.11",
+    "tsup": "^8.5.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",

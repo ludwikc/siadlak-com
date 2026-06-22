@@ -1,0 +1,9 @@
+{
+  "name": "siadlak-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.mjs" } },
+  "sideEffects": ["*.css"]
+}
