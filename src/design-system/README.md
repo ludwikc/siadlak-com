@@ -103,3 +103,9 @@ Self-contained brand design system: tokens, Tailwind preset, brand CSS, and UI p
 - `react-router-dom` is used by `app-card.tsx` (internal `<Link>`). If your project uses a different router, swap that import in `app-card.tsx`.
 - `next-themes` (`ThemeProvider`) is not part of this folder — wire it in your app shell if you need dark-mode toggling.
 - The `use-toast` hook is a single-instance store; only one `<Toaster>` should be mounted per app.
+
+## Storybook
+
+Each component family has a co-located `*.stories.tsx` (CSF3, autodocs). `.storybook/` runs `@storybook/react-vite` and loads the brand CSS in `preview.ts` the same way the app does (`preview.css` then `global.css` after it). Run `npm run storybook`; build with `npm run build-storybook`.
+
+**Convention — stories must reuse existing site utility classes.** The production Tailwind config scans `./src/**`, which includes the story files, so a utility class used *only* in a story would be emitted into the shipped site CSS. Keep stories to the utility vocabulary already used in the app (don't introduce one-off classes just for a story) so the production bundle stays lean. If stories ever need their own classes, give Storybook a dedicated Tailwind content config instead.
