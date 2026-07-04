@@ -102,7 +102,7 @@ export function CTAButton({
       type={type}
       className={classes}
       variant="ghost"
-      size={size}
+      size={size === 'xl' ? 'lg' : size}
       aria-label={ariaLabel}
     >
       {content}
