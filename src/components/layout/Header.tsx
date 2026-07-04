@@ -39,7 +39,7 @@ export default function Header() {
   };
 
   const closeDropdown = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 80);
   };
 
   const openMore = () => {
@@ -48,7 +48,7 @@ export default function Header() {
   };
 
   const closeMore = () => {
-    moreTimeoutRef.current = setTimeout(() => setMoreOpen(false), 150);
+    moreTimeoutRef.current = setTimeout(() => setMoreOpen(false), 80);
   };
 
 
@@ -65,11 +65,11 @@ export default function Header() {
           {/* Webinar */}
           <Link
             to="/webinar"
-            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors inline-flex items-start gap-1"
+            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors duration-150 ease-out inline-flex items-start gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-void rounded-sm"
           >
             Webinar
             <sup className="leading-none">
-              <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
+              <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0.5 leading-none uppercase tracking-wider">
                 wkrótce
               </Badge>
             </sup>
@@ -154,7 +154,7 @@ export default function Header() {
           {/* Aplikuj CTA */}
           <Link
             to="/discovery"
-            className="text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded hover:bg-white/90 transition-colors"
+            className="text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-[var(--border-radius-sm)] hover:-translate-y-px hover:shadow-md transition-all duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-void"
           >
             Aplikuj
           </Link>
@@ -177,7 +177,7 @@ export default function Header() {
             >
               Webinar
               <sup className="leading-none">
-                <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
+                <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0.5 leading-none uppercase tracking-wider">
                   wkrótce
                 </Badge>
               </sup>
