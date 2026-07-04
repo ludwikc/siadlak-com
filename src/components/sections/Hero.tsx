@@ -1,5 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { CTAButton } from "@/design-system/components/cta-button";
@@ -133,5 +132,3 @@ export default function Hero({
   );
 }
 
-// Re-export ArrowRight to keep tree-shakable icon usage explicit where callers used it
-export { ArrowRight };
