@@ -36,10 +36,11 @@ const baseClasses =
 const sizeClasses = {
   default: 'px-6 py-3 text-sm',
   lg: 'px-8 py-4 text-base',
-};
+  xl: 'px-10 py-5 text-lg',
+} as const;
 
-function variantClasses(variant: 'primary' | 'secondary' | 'tertiary', onDark: boolean) {
-  if (variant === 'primary') {
+function variantClasses(variant: 'primary' | 'secondary' | 'tertiary' | 'premium', onDark: boolean) {
+  if (variant === 'primary' || variant === 'premium') {
     return 'text-white bg-[image:var(--gradient-premium)] shadow-[var(--shadow-premium)]';
   }
   if (variant === 'secondary') {
