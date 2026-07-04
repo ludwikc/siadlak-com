@@ -8,11 +8,11 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "premium"],
+      options: ["primary", "secondary", "tertiary"],
     },
     size: {
       control: "select",
-      options: ["default", "lg", "xl"],
+      options: ["default", "lg"],
     },
     showArrow: { control: "boolean" },
   },
@@ -31,21 +31,22 @@ export const Default: Story = {
 };
 
 export const Variants: Story = {
+  args: { children: "Zacznij teraz" },
   render: () => (
     <div className="flex flex-wrap items-center gap-4 p-6">
       <CTAButton variant="primary">Dołącz do kursu</CTAButton>
       <CTAButton variant="secondary">Dowiedz się więcej</CTAButton>
-      <CTAButton variant="premium">Odbierz dostęp Premium</CTAButton>
+      <CTAButton variant="tertiary">Zobacz szczegóły</CTAButton>
     </div>
   ),
 };
 
 export const Sizes: Story = {
+  args: { children: "Zacznij teraz" },
   render: () => (
     <div className="flex flex-wrap items-center gap-4 p-6">
       <CTAButton size="default">Zacznij teraz</CTAButton>
       <CTAButton size="lg">Zacznij teraz</CTAButton>
-      <CTAButton size="xl">Zacznij teraz</CTAButton>
     </div>
   ),
 };
@@ -71,8 +72,8 @@ export const WithoutArrow: Story = {
 export const AsLink: Story = {
   args: {
     children: "Zapisz się na webinar",
-    variant: "premium",
-    size: "xl",
+    variant: "primary",
+    size: "lg",
     showArrow: true,
     href: "https://siadlak.com/webinar",
   },
