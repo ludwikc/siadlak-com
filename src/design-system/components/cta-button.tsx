@@ -7,9 +7,9 @@ interface CTAButtonProps {
   /** Button text content */
   children: ReactNode;
   /** primary = brand gradient fill; secondary = outlined; tertiary = electric text link */
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'premium';
   /** Button size */
-  size?: 'default' | 'lg';
+  size?: 'default' | 'lg' | 'xl';
   /** Use dark-surface border on secondary */
   onDark?: boolean;
   /** Optional click handler */
