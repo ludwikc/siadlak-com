@@ -7,9 +7,9 @@ interface CTAButtonProps {
   /** Button text content */
   children: ReactNode;
   /** primary = brand gradient fill; secondary = outlined; tertiary = electric text link */
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'premium';
   /** Button size */
-  size?: 'default' | 'lg';
+  size?: 'default' | 'lg' | 'xl';
   /** Use dark-surface border on secondary */
   onDark?: boolean;
   /** Optional click handler */
@@ -36,10 +36,11 @@ const baseClasses =
 const sizeClasses = {
   default: 'px-6 py-3 text-sm',
   lg: 'px-8 py-4 text-base',
-};
+  xl: 'px-10 py-5 text-lg',
+} as const;
 
-function variantClasses(variant: 'primary' | 'secondary' | 'tertiary', onDark: boolean) {
-  if (variant === 'primary') {
+function variantClasses(variant: 'primary' | 'secondary' | 'tertiary' | 'premium', onDark: boolean) {
+  if (variant === 'primary' || variant === 'premium') {
     return 'text-white bg-[image:var(--gradient-premium)] shadow-[var(--shadow-premium)]';
   }
   if (variant === 'secondary') {
@@ -101,7 +102,7 @@ export function CTAButton({
       type={type}
       className={classes}
       variant="ghost"
-      size={size}
+      size={size === 'xl' ? 'lg' : size}
       aria-label={ariaLabel}
     >
       {content}
