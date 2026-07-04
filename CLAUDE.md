@@ -85,9 +85,19 @@ The app uses React Router with routes defined in `src/App.tsx`. Main route categ
 
 ## Brand Design System
 
-The project uses a custom color palette defined in `tailwind.config.ts`:22
+Design tokens (colors, gradients, shadows, radii, typography) are defined in `src/design-system/tokens.css` — that file is the single source of truth. Do not restate values elsewhere.
 
-Custom fonts: Inter (sans-serif), Montserrat (headings)
+Fonts: Inter (body/sans-serif), **Space Grotesk** (headings).
+
+### Forbidden
+
+- **No raw hex colors** in `src/pages` or `src/components`. Use tokens (`hsl(var(--electric-blue))`, `text-electric`, `bg-void`, etc.). Only exception: third-party brand colors (LinkedIn `#0077B5`, etc.).
+- **No styled `<Link>` used as a button.** Use `CTAButton` from `@/design-system/components/cta-button` — three variants only: `primary`, `secondary`, `tertiary`.
+- **No new hero markup.** Use the shared `Hero` component in `src/components/sections/Hero.tsx`.
+- **No custom hover physics.** Buttons use `hover:-translate-y-px hover:shadow-md` — never `scale(1.05)` or `translateY(-2px)`.
+- **Use `-locked-*` utilities in dark sections** where dark-mode overrides would leak through.
+
+
 
 ## Content Architecture
 

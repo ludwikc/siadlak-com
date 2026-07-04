@@ -13,6 +13,7 @@ import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;8
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { Shield, Leaf } from "lucide-react";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -160,7 +161,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIAL MARQUEE ═══ */}
-      <section className="py-5 overflow-hidden" style={{ backgroundColor: '#080808' }}>
+      <section className="py-5 overflow-hidden bg-void">
         <div className="marquee-track flex gap-12 animate-marquee" style={{ width: "max-content" }}>
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
@@ -176,7 +177,7 @@ const Index = () => {
                 <div key={i} className="flex items-start gap-6">
                   <div className="max-w-md whitespace-normal">
                     <p className="text-sm text-dim leading-relaxed">„{t.q}"</p>
-                    <p className="text-xs text-dim font-medium mt-1">- {t.a}</p>
+                    <p className="text-xs text-dim font-medium mt-1">— {t.a}</p>
                   </div>
                   <span className="text-white/10 self-center">◆</span>
                 </div>
@@ -380,7 +381,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading">🛡 Ścieżka Wojownika</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-2"><Shield className="text-electric" size={22} aria-hidden="true" /> Ścieżka Wojownika</h3>
               <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
               <p className="text-dim leading-relaxed">
                 Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
@@ -396,7 +397,7 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-2"><Leaf className="text-electric" size={22} aria-hidden="true" /> Ścieżka Poszukiwacza</h3>
               <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
               <p className="text-dim leading-relaxed">
                 Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie Diamentu pod suknem sukcesu.

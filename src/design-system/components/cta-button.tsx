@@ -6,72 +6,91 @@ import { cn } from '../lib/cn';
 interface CTAButtonProps {
   /** Button text content */
   children: ReactNode;
-  /** Button variant - primary for main CTAs, secondary for alternative actions */
-  variant?: 'primary' | 'secondary' | 'premium';
-  /** Button size - defaults to large for optimal mobile touch targets */
-  size?: 'default' | 'lg' | 'xl';
+  /** primary = brand gradient fill; secondary = outlined; tertiary = electric text link */
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  /** Button size */
+  size?: 'default' | 'lg';
+  /** Use dark-surface border on secondary */
+  onDark?: boolean;
   /** Optional click handler */
   onClick?: () => void;
   /** Optional href for link buttons */
   href?: string;
   /** Additional CSS classes */
   className?: string;
-  /** Whether to show arrow icon */
+  /** Whether to show ArrowRight icon */
   showArrow?: boolean;
-  /** Aria label for accessibility */
+  /** Aria label */
   'aria-label'?: string;
+  /** Optional type attribute */
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const baseClasses =
+  'inline-flex items-center justify-center gap-2 font-bold uppercase tracking-widest ' +
+  'rounded-[var(--border-radius-sm)] transition-all duration-150 ease-out ' +
+  'hover:-translate-y-px hover:shadow-md ' +
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 ' +
+  'min-h-[44px]';
+
+const sizeClasses = {
+  default: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-base',
+};
+
+function variantClasses(variant: 'primary' | 'secondary' | 'tertiary', onDark: boolean) {
+  if (variant === 'primary') {
+    return 'text-white bg-[image:var(--gradient-premium)] shadow-[var(--shadow-premium)]';
+  }
+  if (variant === 'secondary') {
+    return onDark
+      ? 'bg-transparent border border-white/20 text-white hover:border-white/40'
+      : 'bg-transparent border border-border text-foreground hover:border-foreground/40';
+  }
+  // tertiary — text link, electric
+  return 'p-0 min-h-0 text-electric hover:text-electric/80 normal-case tracking-normal font-semibold shadow-none';
 }
 
 /**
- * Standardized CTA button component for consistent conversion-focused design.
- * Ensures minimum 44px touch targets and consistent hover states.
- * Optimized for both desktop and mobile experiences.
+ * Standardized CTA button — three variants, one hover physic.
+ * Never use raw styled <Link> as a button; use this component.
  */
-export function CTAButton({ 
-  children, 
-  variant = 'primary', 
+export function CTAButton({
+  children,
+  variant = 'primary',
   size = 'lg',
-  onClick, 
-  href, 
+  onDark = false,
+  onClick,
+  href,
   className,
   showArrow = true,
   'aria-label': ariaLabel,
-  ...props 
+  type,
 }: CTAButtonProps) {
-  const baseClasses = cn(
-    // Ensure minimum touch target size
-    'min-h-[44px] min-w-[44px]',
-    // Consistent padding for different sizes
-    size === 'xl' && 'py-6 px-12 text-xl',
-    size === 'lg' && 'py-4 px-8 text-lg',
-    // Smooth transitions and hover effects
-    'transition-all duration-300 transform hover:scale-105',
-    'shadow-lg hover:shadow-xl',
-    className
+  const classes = cn(
+    baseClasses,
+    variant !== 'tertiary' && sizeClasses[size],
+    variantClasses(variant, onDark),
+    className,
   );
 
-  const variantClasses = {
-    primary: 'bg-depth hover:bg-electric text-white',
-    secondary: 'bg-transparent border-2 border-depth text-depth hover:bg-depth hover:text-white',
-    premium: 'bg-gradient-to-r from-electric to-depth hover:from-depth hover:to-electric text-white'
-  };
-
-  const buttonContent = (
+  const content = (
     <>
       {children}
-      {showArrow && <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />}
+      {showArrow && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
     </>
   );
 
   if (href) {
+    const isExternal = /^https?:\/\//.test(href);
     return (
-      <a 
+      <a
         href={href}
-        className={cn(baseClasses, variantClasses[variant], 'inline-flex items-center justify-center rounded-lg font-medium')}
+        className={classes}
         aria-label={ariaLabel}
-        {...props}
+        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       >
-        {buttonContent}
+        {content}
       </a>
     );
   }
@@ -79,12 +98,15 @@ export function CTAButton({
   return (
     <Button
       onClick={onClick}
-      className={cn(baseClasses, variantClasses[variant])}
-      size={size === "xl" ? "lg" : size}
+      type={type}
+      className={classes}
+      variant="ghost"
+      size={size}
       aria-label={ariaLabel}
-      {...props}
     >
-      {buttonContent}
+      {content}
     </Button>
   );
 }
+
+export default CTAButton;
