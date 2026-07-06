@@ -85,9 +85,21 @@ The app uses React Router with routes defined in `src/App.tsx`. Main route categ
 
 ## Brand Design System
 
-The project uses a custom color palette defined in `tailwind.config.ts`:22
+`src/design-system/tokens.css` is the single source of truth for all design values (colors, typography, radii, shadows, transitions, layout offsets). Tailwind aliases for the tokens live in `src/design-system/tailwind-preset.ts`. Do not restate or hardcode token values — reference them.
 
-Custom fonts: Inter (sans-serif), Montserrat (headings)
+Custom fonts: Inter (sans-serif), Space Grotesk (headings — applied automatically to h1–h6 via the base layer; no `font-heading` class needed).
+
+### Forbidden (design consistency rules)
+
+- **No raw hex colors** in pages/components — use tokens or their Tailwind aliases (exception: third-party brand colors like LinkedIn's `#0077B5`).
+- **No styled raw `<Link>`/`<a>` acting as a button** — use `CTAButton` (`src/design-system/components/cta-button.tsx`) with `variant="primary" | "secondary" | "tertiary"` and the `to` prop for internal routes.
+- **No new hero markup** — use the single `Hero` component (`src/components/sections/Hero.tsx`) with the `align` prop.
+- **No scale/opacity hover on buttons** — the one hover physics is `translateY(-1px)` + shadow, 150–200ms ease-out.
+- **No `→` characters in link/button text** — use the `<ArrowRight>` icon (CTAButton renders it via `showArrow`).
+- **No emoji as icons** — use lucide-react icons in `text-electric`.
+- **No per-link `window.scrollTo`** — router scroll restoration lives in `App.tsx`.
+- **Content widths**: only `max-w-6xl` (grids/wide sections) and `max-w-3xl` (narrative prose). Section paddings: `py-20` (standard) or `py-24 md:py-32` (spacious).
+- **Dark sections**: use `-locked-*` utilities and token text colors (`text-dim`, `text-on-dark-tertiary`) — no ad-hoc `text-white/80` mixes.
 
 ## Content Architecture
 
