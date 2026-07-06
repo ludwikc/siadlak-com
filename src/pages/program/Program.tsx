@@ -164,14 +164,9 @@ export default function Program() {
                 Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.
               </p>
 
-              <Link
-                to="/program/produktywnosc"
-                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
-              >
-                <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
-                  INSTALUJ PROGRAM →
-                </CTAButton>
-              </Link>
+              <CTAButton to="/program/produktywnosc">
+                INSTALUJ PROGRAM
+              </CTAButton>
             </div>
 
             {/* APP #2: Silna Głowa */}
@@ -210,14 +205,9 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link
-                to="/program/odpornosc"
-                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
-              >
-                <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
-                  INSTALUJ PROGRAM →
-                </CTAButton>
-              </Link>
+              <CTAButton to="/program/odpornosc">
+                INSTALUJ PROGRAM
+              </CTAButton>
             </div>
 
             {/* APP #3: Uważne Życie */}
@@ -259,14 +249,9 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link
-                to="/program/uwaznosc"
-                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
-              >
-                <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
-                  INSTALUJ PROGRAM →
-                </CTAButton>
-              </Link>
+              <CTAButton to="/program/uwaznosc">
+                INSTALUJ PROGRAM
+              </CTAButton>
             </div>
 
             {/* APP #4: Męski Kompas */}
@@ -304,14 +289,9 @@ export default function Program() {
                 </div>
               </div>
 
-              <Link
-                to="/program/meskosc"
-                className="focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded inline-block"
-              >
-                <CTAButton className="bg-brand-gradient hover:opacity-90 text-white border-0 rounded">
-                  INSTALUJ PROGRAM →
-                </CTAButton>
-              </Link>
+              <CTAButton to="/program/meskosc">
+                INSTALUJ PROGRAM
+              </CTAButton>
             </div>
           </div>
         </div>
@@ -528,14 +508,9 @@ export default function Program() {
                 </p>
                 <p className="text-sm text-on-light-dim/70 mb-8">Dostępne: max 5 aktywnych klientów jednocześnie</p>
 
-                <Link
-                  to="/discovery"
-                  className="inline-block focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
-                >
-                  <CTAButton size="lg" className="bg-brand-gradient hover:opacity-90 text-white border-0 text-lg px-10">
-                    Sprawdź dostępność - Sesja Discovery →
-                  </CTAButton>
-                </Link>
+                <CTAButton to="/discovery" size="xl">
+                  Sprawdź dostępność — Sesja Discovery
+                </CTAButton>
 
                 <p className="text-sm text-on-light-dim mt-4">30 minut · Bez zobowiązań · Żebyśmy obaj wiedzieli</p>
               </div>

@@ -80,7 +80,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                 <div className="flex flex-col gap-4 items-center md:items-start">
                   <Link to="/discovery">
                     <CTAButton
-                      variant="premium"
+                      variant="primary"
                       size="xl"
                       className="shadow-xl"
                     >
@@ -711,7 +711,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                   </div>
 
                   <Link to="/program/lifeos-system-upgrade">
-                    <CTAButton variant="premium" className="w-full group">
+                    <CTAButton variant="primary" className="w-full group">
                       Sprawdź dostępność
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </CTAButton>
@@ -918,7 +918,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                 <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur-xl opacity-50 animate-pulse"></div>
                 <Link to="/discovery">
                   <CTAButton
-                    variant="premium"
+                    variant="primary"
                     size="xl"
                     className="relative shadow-2xl"
                   >

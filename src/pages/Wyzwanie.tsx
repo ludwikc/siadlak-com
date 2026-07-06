@@ -203,7 +203,7 @@ export default function Wyzwanie() {
                   href="https://buy.siadlak.com/checkout/spotkanie-online"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative flex flex-col items-center justify-center px-6 py-4 sm:px-10 sm:py-5 text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105"
+                  className="relative flex flex-col items-center justify-center px-6 py-4 sm:px-10 sm:py-5 text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:-translate-y-px"
                 >
                   <span className="block text-xs sm:text-sm uppercase tracking-wider opacity-90 mb-1">
                     Darmowe 4-dniowe wyzwanie
@@ -1246,7 +1246,7 @@ export default function Wyzwanie() {
               href="https://buy.siadlak.com/checkout/spotkanie-online"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-px"
             >
               Ostatnia szansa: Zapisuję się teraz →
             </a>

@@ -233,8 +233,8 @@ export default function AppCard({
             flex items-center justify-center gap-2
             ${
               premium
-                ? "bg-brand-gradient text-white hover:opacity-90"
-                : "bg-depth text-white hover:opacity-90"
+                ? "bg-brand-gradient text-white hover:-translate-y-px hover:shadow-lg"
+                : "bg-depth text-white hover:-translate-y-px hover:shadow-lg"
             }
           `}
           >

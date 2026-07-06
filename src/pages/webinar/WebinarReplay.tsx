@@ -303,7 +303,7 @@ const WebinarReplay = () => {
                 className={`w-full text-lg font-bold py-6 ${
                   offerExpired
                     ? "bg-muted hover:bg-muted text-muted-foreground cursor-not-allowed"
-                    : "bg-brand-gradient hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    : "bg-brand-gradient hover:-translate-y-px hover:shadow-lg text-white shadow-lg hover:shadow-xl transition-all duration-300"
                 }`}
                 onClick={() => navigate("/program/meskosc")}
                 disabled={offerExpired}

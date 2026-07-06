@@ -134,7 +134,7 @@ export default function WebinarDepresja() {
 
                 <a
                   href="https://buy.siadlak.com/checkout/depresja2026"
-                  className="inline-flex items-center justify-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:opacity-90"
+                  className="inline-flex items-center justify-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:-translate-y-px hover:shadow-lg"
                   style={{
                     background: 'linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))',
                     boxShadow: '0 4px 15px hsla(263, 70%, 50%, 0.4)',
@@ -281,7 +281,7 @@ export default function WebinarDepresja() {
 
             <a
               href="https://buy.siadlak.com/checkout/depresja2026"
-              className="inline-flex items-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:-translate-y-px hover:shadow-lg"
               style={{
                 background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
                 boxShadow: "0 4px 15px hsla(263, 70%, 50%, 0.4)",

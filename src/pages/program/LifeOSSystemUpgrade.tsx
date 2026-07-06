@@ -125,7 +125,7 @@ export default function LifeOSSystemUpgrade() {
             <span className="font-bold text-lg">Life OS: System Upgrade</span>
             <span className="ml-4 text-sm text-white/90">Mentoring 1:1 · maks. 5 osób jednocześnie</span>
           </div>
-          <CTAButton variant="premium" size="lg" onClick={scrollToDiscovery} showArrow>
+          <CTAButton variant="primary" size="lg" onClick={scrollToDiscovery} showArrow>
             Zarezerwuj Sesję
           </CTAButton>
         </div>
@@ -164,7 +164,7 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <CTAButton
-                variant="premium"
+                variant="primary"
                 size="xl"
                 aria-label="Sprawdź dostępność - Sesja Discovery"
                 showArrow
@@ -447,7 +447,7 @@ export default function LifeOSSystemUpgrade() {
             </div>
 
             <div className="text-center mt-16">
-              <CTAButton variant="premium" size="xl" showArrow onClick={scrollToDiscovery}>
+              <CTAButton variant="primary" size="xl" showArrow onClick={scrollToDiscovery}>
                 Sprawdź dostępność - Sesja Discovery
               </CTAButton>
             </div>
@@ -806,7 +806,7 @@ export default function LifeOSSystemUpgrade() {
 
             <div className="text-center mb-10">
               <Link to="/discovery">
-                <CTAButton variant="premium" size="xl" className="mb-6" showArrow>
+                <CTAButton variant="primary" size="xl" className="mb-6" showArrow>
                   Zarezerwuj Sesję Discovery
                 </CTAButton>
               </Link>

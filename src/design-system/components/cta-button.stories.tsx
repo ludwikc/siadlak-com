@@ -8,7 +8,7 @@ const meta = {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "premium"],
+      options: ["primary", "secondary", "tertiary"],
     },
     size: {
       control: "select",
@@ -35,7 +35,7 @@ export const Variants: Story = {
     <div className="flex flex-wrap items-center gap-4 p-6">
       <CTAButton variant="primary">Dołącz do kursu</CTAButton>
       <CTAButton variant="secondary">Dowiedz się więcej</CTAButton>
-      <CTAButton variant="premium">Odbierz dostęp Premium</CTAButton>
+      <CTAButton variant="tertiary">Odbierz dostęp Premium</CTAButton>
     </div>
   ),
 };
@@ -71,7 +71,7 @@ export const WithoutArrow: Story = {
 export const AsLink: Story = {
   args: {
     children: "Zapisz się na webinar",
-    variant: "premium",
+    variant: "primary",
     size: "xl",
     showArrow: true,
     href: "https://siadlak.com/webinar",

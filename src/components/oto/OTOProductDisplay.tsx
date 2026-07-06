@@ -203,7 +203,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               </div>
               <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca katalogowa cena 497 PLN.</p>
               <div className="mt-6">
-                <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full md:w-auto bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Dodaj kurs 7 Technik Produktywności za 77 PLN">
+                <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full md:w-auto bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 inline-flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Dodaj kurs 7 Technik Produktywności za 77 PLN">
                   Dodaj kurs za 77 PLN
                   <ArrowRight className="h-6 w-6" />
                 </a>
@@ -258,7 +258,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         {/* CTA Section */}
         <div className="text-center mb-16">
           <GlassCard className="max-w-md mx-auto" padding="lg">
-             <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 mb-6 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Tak, chcę 7 Technik Produktywności za 77 PLN">
+             <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 mb-6 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Tak, chcę 7 Technik Produktywności za 77 PLN">
                Tak, chcę 7 Technik Produktywności za 77 PLN
                <ArrowRight className="h-6 w-6" />
              </a>

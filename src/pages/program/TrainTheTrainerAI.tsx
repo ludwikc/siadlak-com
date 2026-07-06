@@ -253,7 +253,7 @@ export default function TrainTheTrainerAI() {
             <Button
               asChild
               size="lg"
-              className="bg-brand-gradient text-white hover:opacity-90 text-base px-8 py-6 rounded-sm"
+              className="bg-brand-gradient text-white hover:-translate-y-px hover:shadow-lg text-base px-8 py-6 rounded-sm"
             >
               <Link to="/discovery">
                 Zapisz się na rozmowę
@@ -844,7 +844,7 @@ export default function TrainTheTrainerAI() {
                   <strong className="text-on-dark">Bonus:</strong> dwa dodatkowe dni mentoringu po zakończeniu programu
                   (9 i 12 miesiąc) do kalibracji praktyki.
                 </p>
-                <Button asChild size="lg" className="w-full bg-brand-gradient text-white hover:opacity-90 rounded-sm">
+                <Button asChild size="lg" className="w-full bg-brand-gradient text-white hover:-translate-y-px hover:shadow-lg rounded-sm">
                   <Link to="/discovery">
                     Zapisz się na rozmowę
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -933,7 +933,7 @@ export default function TrainTheTrainerAI() {
               <Button
                 asChild
                 size="lg"
-                className="bg-brand-gradient text-white hover:opacity-90 text-base px-8 py-6 rounded-sm"
+                className="bg-brand-gradient text-white hover:-translate-y-px hover:shadow-lg text-base px-8 py-6 rounded-sm"
               >
                 <Link to="/discovery">
                   Zapisz się na rozmowę
@@ -1015,7 +1015,7 @@ export default function TrainTheTrainerAI() {
               <Button
                 asChild
                 size="lg"
-                className="bg-brand-gradient text-white hover:opacity-90 text-base px-8 py-6 rounded-sm"
+                className="bg-brand-gradient text-white hover:-translate-y-px hover:shadow-lg text-base px-8 py-6 rounded-sm"
               >
                 <Link to="/discovery">
                   Zapisz się na rozmowę

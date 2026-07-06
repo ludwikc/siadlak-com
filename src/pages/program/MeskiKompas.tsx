@@ -258,7 +258,7 @@ export default function MeskiKompas() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="animate-fade-in hover-scale group cursor-pointer"
+                  className="animate-fade-in hover:-translate-y-px group cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <GlassCard

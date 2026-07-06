@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Badge } from "@/design-system/components/badge";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },
@@ -152,12 +153,9 @@ export default function Header() {
           </div>
 
           {/* Aplikuj CTA */}
-          <Link
-            to="/discovery"
-            className="text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded hover:bg-white/90 transition-colors"
-          >
+          <CTAButton to="/discovery" variant="primary" size="default" showArrow={false} className="px-4 py-2 min-h-0">
             Aplikuj
-          </Link>
+          </CTAButton>
         </div>
 
         {/* Mobile hamburger */}
@@ -225,13 +223,16 @@ export default function Header() {
               </Link>
             ))}
 
-            <Link
+            <CTAButton
               to="/discovery"
+              variant="primary"
+              size="default"
+              showArrow={false}
               onClick={() => setMobileOpen(false)}
-              className="block text-center text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 rounded mt-3"
+              className="flex w-full mt-3"
             >
               Aplikuj
-            </Link>
+            </CTAButton>
           </div>
         </div>
       )}

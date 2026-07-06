@@ -95,7 +95,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Dzie%C5%84+Walki+z+Depresj%C4%85+%28spotkanie+online%29&details=Sta%C5%82em+na+peronie+i+chcia%C5%82em+zrobi%C4%87+jeden+krok+%E2%80%94+opowiem+jak+z+tego+wr%C3%B3ci%C5%82em.+Do%C5%82%C4%85cz+do+naszego+spotkania+w+poniedzia%C5%82ek+23+lutego+2026+o+19%3A05+na+https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&dates=20260223T180500Z%2F20260223T190000Z"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-transform duration-200 hover:scale-105"
+                      className="transition-transform duration-200 hover:-translate-y-px"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
                         <OptimizedImage
@@ -115,7 +115,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                     {/* APPLE CALENDAR (ICS) */}
                     <a
                       href="/webinar.ics"
-                      className="transition-transform duration-200 hover:scale-105"
+                      className="transition-transform duration-200 hover:-translate-y-px"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
                         <OptimizedImage
@@ -137,7 +137,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                       href="https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject=Dzie%C5%84+Walki+z+Depresj%C4%85+%28spotkanie+online%29&body=Sta%C5%82em+na+peronie+i+chcia%C5%82em+zrobi%C4%87+jeden+krok+%E2%80%94+opowiem+jak+z+tego+wr%C3%B3ci%C5%82em.+Do%C5%82%C4%85cz+do+naszego+spotkania+w+poniedzia%C5%82ek+23+lutego+2026+o+19%3A05+na+https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&location=https%3A%2F%2Fsiadlak.com%2Fwebinar%2Flive&startdt=20260223T180500Z&enddt=20260223T190000Z"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-transform duration-200 hover:scale-105"
+                      className="transition-transform duration-200 hover:-translate-y-px"
                     >
                       <div className="bg-gray-700 rounded-lg px-6 py-3 flex items-center gap-3 shadow-md hover:shadow-lg hover:bg-gray-600">
                         <OptimizedImage

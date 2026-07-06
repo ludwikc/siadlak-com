@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Layout from '@/components/layout/Layout';
-import { Link } from 'react-router-dom';
+import { CTAButton } from '@/design-system/components/cta-button';
 import SEO from '@/components/SEO';
 import { getSEOConfig, getTopicalConfig } from '@/lib/seo-config';
 import TopicalMeta from '@/components/TopicalMeta';
@@ -110,7 +110,7 @@ const testimonials: Testimonial[] = [
     type: 'cta',
     theme: 'dark',
     text: 'Chcesz zobaczyć, jak to wygląda na żywo?',
-    buttonText: 'Umów bezpłatną rozmowę →',
+    buttonText: 'Umów bezpłatną rozmowę',
     link: '/umow-rozmowe',
   },
 
@@ -395,7 +395,7 @@ const testimonials: Testimonial[] = [
     type: 'cta',
     theme: 'light',
     text: 'Jeszcze nie gotowy? Zacznij od kursu.',
-    buttonText: 'Zobacz Aplikacje Mentalne →',
+    buttonText: 'Zobacz Aplikacje Mentalne',
     link: '/mental-software-update',
   },
 
@@ -557,7 +557,7 @@ const testimonials: Testimonial[] = [
     type: 'cta',
     theme: 'dark',
     text: 'Wciąż czytasz? To dobry znak.',
-    buttonText: 'Porozmawiajmy →',
+    buttonText: 'Porozmawiajmy',
     link: '/umow-rozmowe',
   },
 
@@ -812,7 +812,7 @@ const testimonials: Testimonial[] = [
     type: 'cta',
     theme: 'light-bordered',
     text: 'Alex Hormozi twierdzi, że ludzie, którzy czytają wszystkie opinie, to najlepsi klienci. Mam nadzieję, że ma rację.',
-    buttonText: 'Umów rozmowę →',
+    buttonText: 'Umów rozmowę',
     link: '/umow-rozmowe',
   },
 
@@ -996,9 +996,9 @@ const Testimonials = () => {
       return (
         <div key={index} className={`cta-block ${item.theme}`}>
           <div className="cta-text">{item.text}</div>
-          <Link to={item.link} className="cta-button">
+          <CTAButton to={item.link} variant="primary" showArrow={false}>
             {item.buttonText}
-          </Link>
+          </CTAButton>
         </div>
       );
     }
@@ -1179,9 +1179,9 @@ const Testimonials = () => {
         <footer className="testimonials-footer">
           <p className="footer-text">Dobra, wystarczy. Możesz tak scrollować bez końca.</p>
           <p className="footer-subtext">Albo weźmiesz sprawy w swoje ręce i dołączysz do tego niesamowitego grona:</p>
-          <Link to="/umow-rozmowe" className="cta-button">
-            Umów Sesję Discovery →
-          </Link>
+          <CTAButton to="/umow-rozmowe" variant="primary">
+            Umów Sesję Discovery
+          </CTAButton>
         </footer>
       )}
     </Layout>

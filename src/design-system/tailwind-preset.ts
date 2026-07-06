@@ -330,9 +330,9 @@ const preset: Partial<Config> = {
             transformOrigin: "bottom left",
           },
         },
-        ".hover-scale": {
-          transition: "transform 0.2s ease-out",
-          "&:hover": { transform: "scale(1.05)" },
+        ".hover-lift": {
+          transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
+          "&:hover": { transform: "translateY(-1px)" },
         },
         ".glass-card": {
           backgroundColor: "hsl(0 0% 100% / 0.1)",

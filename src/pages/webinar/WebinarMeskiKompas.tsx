@@ -43,7 +43,7 @@ export default function WebinarMeskiKompas() {
             {/* Urgency badge with premium styling */}
             <div className="flex justify-center mb-10 animate-fade-in">
               <div
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover-scale"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover:-translate-y-px"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 50%) 100%)",
@@ -83,7 +83,7 @@ export default function WebinarMeskiKompas() {
 
               <div className="mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover-scale transition-all duration-300"
+                  className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover:-translate-y-px transition-all duration-300"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
@@ -126,7 +126,7 @@ export default function WebinarMeskiKompas() {
 
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 animate-fade-in">
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -141,7 +141,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -156,7 +156,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -171,7 +171,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",

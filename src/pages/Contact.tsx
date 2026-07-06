@@ -96,7 +96,7 @@ const Contact = () => {
                     onClick={() =>
                       window.open("https://instagram.com/ludwikc", "_blank")
                     }
-                    className="w-full bg-brand-gradient hover:opacity-90 text-white font-semibold py-6 rounded transition-all"
+                    className="w-full bg-brand-gradient hover:-translate-y-px hover:shadow-lg text-white font-semibold py-6 rounded transition-all"
                   >
                     Napisz na DM
                   </Button>

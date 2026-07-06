@@ -96,7 +96,7 @@ const HomeTest = () => {
 
                 <div className="flex flex-col gap-4 items-center md:items-start">
                   <Link to="/discovery">
-                    <CTAButton variant="premium" size="xl" className="shadow-xl">
+                    <CTAButton variant="primary" size="xl" className="shadow-xl">
                       Umów bezpłatną rozmowę
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </CTAButton>
@@ -457,7 +457,7 @@ const HomeTest = () => {
 
             <div className="text-center">
               <Link to="/discovery">
-                <CTAButton variant="premium" size="xl" className="shadow-2xl">
+                <CTAButton variant="primary" size="xl" className="shadow-2xl">
                   Sprawdź dostępność
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </CTAButton>
@@ -816,7 +816,7 @@ const HomeTest = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur-xl opacity-50 animate-pulse" />
               <Link to="/discovery">
                 <CTAButton
-                  variant="premium"
+                  variant="primary"
                   size="xl"
                   className="relative shadow-2xl"
                 >

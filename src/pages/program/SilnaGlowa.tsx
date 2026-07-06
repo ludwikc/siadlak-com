@@ -127,7 +127,7 @@ const SilnaGlowa = () => {
                   <Button
                     variant="special"
                     size="lg"
-                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:-translate-y-px transition-transform duration-200 font-bold"
                   >
                     Dołączam do kursu Silna Głowa
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -899,7 +899,7 @@ const SilnaGlowa = () => {
 
                   <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-5">{module.description}</p>
 
-                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:opacity-90 transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:-translate-y-px hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">ODBLOKOWUJ MODUŁ</span>
                   </button>

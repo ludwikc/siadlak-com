@@ -754,7 +754,7 @@ export default function WebinarKodKapitana() {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-2xl whitespace-normal h-auto"
+                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-2xl whitespace-normal h-auto"
                     style={{
                       background:
                         "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
@@ -851,7 +851,7 @@ export default function WebinarKodKapitana() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
+                className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
