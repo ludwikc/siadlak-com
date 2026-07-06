@@ -23,7 +23,6 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
   const [isOfferExpired, setIsOfferExpired] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     const storedEndTime = localStorage.getItem("specialOfferEndTime");
     if (storedEndTime) {
       const endTimeMs = parseInt(storedEndTime, 10);

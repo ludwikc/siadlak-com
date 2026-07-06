@@ -26,6 +26,7 @@ const preset: Partial<Config> = {
 			'on-light': 'hsl(var(--text-on-light))',
 			'on-light-dim': '#4B5563',
 			'on-dark': 'hsl(var(--text-on-dark))',
+			'on-dark-tertiary': 'hsl(var(--text-on-dark-tertiary))',
   			electric: '#007AFF',
   			depth: '#6D28D9',
   			void: '#080808',

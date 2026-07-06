@@ -342,7 +342,7 @@ const CourseDetail = () => {
             </div>
 
             {courseSlug === '7-technik' && (
-              <div className="mt-8 opacity-30 hover:opacity-100 transition-opacity duration-300">
+              <div className="mt-8 opacity-30 hover:opacity-100 transition-opacity duration-150">
                 <Link to="/oto">
                   <Button
                     variant="ghost"

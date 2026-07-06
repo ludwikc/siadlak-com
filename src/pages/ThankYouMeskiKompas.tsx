@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
@@ -7,10 +6,6 @@ import { Calendar, Clock, Mail, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function ThankYouMeskiKompas() {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <Layout>

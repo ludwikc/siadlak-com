@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import PromoBanner from "./PromoBanner";
@@ -17,11 +17,6 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
   // Auto-detect landing pages if props not explicitly set
   const shouldHideHeader = hideHeader ?? isLandingPage(location.pathname);
   const shouldHideFooter = hideFooter ?? isLandingPage(location.pathname);
-
-  // Scroll to top on route change
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">

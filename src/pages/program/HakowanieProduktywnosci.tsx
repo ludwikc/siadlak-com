@@ -622,7 +622,7 @@ export default function HakowanieProduktywnosci() {
                           <p className="text-sm font-bold text-electric mb-2">
                             {item.module}
                           </p>
-                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-150 leading-relaxed text-sm sm:text-base">
                             {item.benefit}
                           </p>
                         </div>

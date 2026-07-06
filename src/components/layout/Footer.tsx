@@ -5,12 +5,8 @@ import XIcon from "@/design-system/components/x-icon";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <footer className="relative bg-gradient-to-br from-void via-electric to-void text-white pt-20 pb-8 overflow-hidden">
+    <footer className="relative bg-void bg-void-glow text-white pt-20 pb-8 overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-[0.04]">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-electric/50 to-depth rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-tl from-depth to-electric rounded-full blur-3xl"></div>
@@ -21,10 +17,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="bg-white/10 rounded-md p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
+              <Link to="/" className="inline-block mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
                 <h3 className="text-2xl font-bold text-white">Ludwik&nbsp;C. Siadlak</h3>
               </Link>
-              <p className="text-white/90 text-sm leading-relaxed">
+              <p className="text-dim text-sm leading-relaxed">
                 <span className="font-bold">Life Hacker. </span>
                 <br />
                 <br />
@@ -32,7 +28,7 @@ export default function Footer() {
                 Prowadzę poszukiwaczy.
                 <br /> <br /> Na co czekasz?
                 <br />
-                <Link to="/discovery" onClick={scrollToTop} className="font-bold underline text-white hover:text-depth transition-colors">
+                <Link to="/discovery" className="font-bold underline text-white hover:text-electric transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
                   Umów się ze mną.
                 </Link>
               </p>
@@ -47,7 +43,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href={href}
-                  className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center transition-all duration-300"
+                  className="w-10 h-10 bg-gradient-to-br from-electric to-depth rounded-full flex items-center justify-center hover:opacity-80 transition-opacity duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
                   aria-label={label}
                 >
                   <Icon size={18} className="text-white" />
@@ -64,8 +60,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/about"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   O mnie
                 </Link>
@@ -73,8 +69,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/discovery"
-                  onClick={scrollToTop}
-                  className="text-electric hover:text-electric/80 transition-colors inline-flex items-center gap-2 font-semibold"
+                 
+                  className="text-electric hover:text-electric/80 transition-colors inline-flex items-center gap-2 font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Sesja Discovery
                   <Calendar size={16} className="flex-shrink-0" />
@@ -83,8 +79,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/newsletter"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Newsletter
                 </Link>
@@ -92,8 +88,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/testimonials"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Opinie Klientów (120+)
                 </Link>
@@ -101,8 +97,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/webinar"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Najbliższy Webinar
                 </Link>
@@ -110,8 +106,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/siadlakvip"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   SIADLAK.VIP Telegram
                 </Link>
@@ -119,8 +115,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Kontakt
                 </Link>
@@ -136,8 +132,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/mentoring"
-                  onClick={scrollToTop}
-                  className="text-white hover:text-depth transition-colors inline-flex items-center gap-2 font-semibold group"
+                 
+                  className="text-white hover:text-electric transition-colors inline-flex items-center gap-2 font-semibold group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   <span className="inline-block w-2 h-2 bg-gradient-to-br from-electric to-depth rounded-full group-hover:scale-125 transition-transform"></span>
                   Mentoring 1:1
@@ -146,8 +142,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/produktywnosc"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Instaluj: Produktywność
                 </Link>
@@ -155,8 +151,8 @@ export default function Footer() {
               <li>
                 <Link
                   to="/program/odpornosc"
-                  onClick={scrollToTop}
-                  className="text-white/80 hover:text-depth transition-colors inline-block"
+                 
+                  className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Instaluj: Odporność Psychiczna
                 </Link>
@@ -164,8 +160,8 @@ export default function Footer() {
               <li className="pt-2 mt-2 border-t border-white/10">
                 <Link
                   to="/program"
-                  onClick={scrollToTop}
-                  className="text-white/60 hover:text-depth transition-colors inline-flex items-center gap-1.5 text-sm"
+                 
+                  className="text-on-dark-tertiary hover:text-electric transition-colors inline-flex items-center gap-1.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
                   Zobacz wszystkie programy
                   <ExternalLink size={12} className="rotate-[-45deg]" />
@@ -186,7 +182,7 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/80 hover:text-depth transition-colors inline-flex items-center gap-1.5"
+                    className="text-dim hover:text-electric transition-colors inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                   >
                     {label}
                     <ExternalLink size={14} className="flex-shrink-0" />
@@ -198,26 +194,26 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 pt-8 mt-16 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/60 text-sm">&copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.</p>
+          <p className="text-on-dark-tertiary text-sm">&copy; {currentYear} Ludwik C. Siadlak. Wszelkie prawa zastrzeżone.</p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link
               to="/legal"
-              onClick={scrollToTop}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+             
+              className="text-sm text-on-dark-tertiary hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Informacje Prawne
             </Link>
             <Link
               to="/legal/privacy"
-              onClick={scrollToTop}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+             
+              className="text-sm text-on-dark-tertiary hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Polityka Prywatności
             </Link>
             <Link
               to="/legal/terms"
-              onClick={scrollToTop}
-              className="text-sm text-white/60 hover:text-white transition-colors"
+             
+              className="text-sm text-on-dark-tertiary hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Regulamin
             </Link>

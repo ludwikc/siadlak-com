@@ -273,7 +273,7 @@ export default function MeskiKompas() {
                   >
                     <div className="relative">
                       <div
-                        className="rounded-full p-2 transition-colors duration-300"
+                        className="rounded-full p-2 transition-colors duration-150"
                         style={{ backgroundColor: "hsl(0, 65%, 95%)" }}
                       >
                         <AlertCircle
@@ -284,7 +284,7 @@ export default function MeskiKompas() {
                       </div>
                       {/* Subtle glow effect */}
                       <div
-                        className="absolute inset-0 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300"
+                        className="absolute inset-0 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-150"
                         style={{
                           background:
                             "radial-gradient(circle, hsl(0, 65%, 51%) 0%, transparent 70%)",

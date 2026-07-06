@@ -64,9 +64,18 @@
 /* Card Types */
 .testimonial-card {
   margin-bottom: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 300ms ease forwards;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .testimonial-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 300ms ease-out forwards;
+  }
+
+  .testimonial-card:nth-child(2n) { animation-delay: 50ms; }
+  .testimonial-card:nth-child(3n) { animation-delay: 100ms; }
+  .testimonial-card:nth-child(4n) { animation-delay: 150ms; }
 }
 
 @keyframes fadeInUp {

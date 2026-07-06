@@ -48,7 +48,7 @@ export default function AboutSection() {
               effectiveness without sacrificing their well-being.
             </p>
 
-            <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/about">
               <Button variant="secondary">Learn More About Ludwik</Button>
             </Link>
           </div>

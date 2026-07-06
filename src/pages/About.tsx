@@ -358,7 +358,7 @@ const About = () => {
                 </p>
 
                 <div>
-                  <Link to="/discovery" onClick={() => window.scrollTo(0, 0)}>
+                  <Link to="/discovery">
                     <button
                       className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm"
                       style={{

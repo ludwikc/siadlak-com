@@ -20,7 +20,9 @@ const moreItems: { label: string; desc?: string; to: string; external?: boolean 
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownClosing, setDropdownClosing] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [moreClosing, setMoreClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const moreRef = useRef<HTMLDivElement>(null);
@@ -36,20 +38,34 @@ export default function Header() {
 
   const openDropdown = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setDropdownClosing(false);
     setDropdownOpen(true);
   };
 
   const closeDropdown = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 150);
+    timeoutRef.current = setTimeout(() => {
+      setDropdownClosing(true);
+      timeoutRef.current = setTimeout(() => {
+        setDropdownOpen(false);
+        setDropdownClosing(false);
+      }, 280);
+    }, 80);
   };
 
   const openMore = () => {
     if (moreTimeoutRef.current) clearTimeout(moreTimeoutRef.current);
+    setMoreClosing(false);
     setMoreOpen(true);
   };
 
   const closeMore = () => {
-    moreTimeoutRef.current = setTimeout(() => setMoreOpen(false), 150);
+    moreTimeoutRef.current = setTimeout(() => {
+      setMoreClosing(true);
+      moreTimeoutRef.current = setTimeout(() => {
+        setMoreOpen(false);
+        setMoreClosing(false);
+      }, 280);
+    }, 80);
   };
 
 
@@ -57,7 +73,7 @@ export default function Header() {
     <nav className="fixed top-[var(--banner-height)] w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand */}
-        <Link to="/" className="text-white font-heading font-bold tracking-widest uppercase text-sm">
+        <Link to="/" className="text-white font-heading font-bold tracking-widest uppercase text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
           LCS <span className="text-electric">/</span> Upgrade
         </Link>
 
@@ -66,11 +82,11 @@ export default function Header() {
           {/* Webinar */}
           <Link
             to="/webinar"
-            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors inline-flex items-start gap-1"
+            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors inline-flex items-start gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
           >
             Webinar
             <sup className="leading-none">
-              <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
+              <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0.5 leading-none uppercase tracking-wider">
                 wkrótce
               </Badge>
             </sup>
@@ -80,7 +96,7 @@ export default function Header() {
           <div ref={dropdownRef} className="relative" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
             <button
               onClick={() => setDropdownOpen((v) => !v)}
-              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
+              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Pracuj ze mną
               <ChevronDown
@@ -90,11 +106,11 @@ export default function Header() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
+              <div className={`absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 ${dropdownClosing ? "animate-fade-out" : "animate-fade-in"}`}>
                 <Link
                   to="/start"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                 >
                   Zacznij tutaj →
                 </Link>
@@ -104,7 +120,7 @@ export default function Header() {
                     key={item.to}
                     to={item.to}
                     onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                   >
                     {item.label}
                     {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
@@ -114,7 +130,7 @@ export default function Header() {
                 <Link
                   to="/start"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                 >
                   Wszystkie możliwości →
                 </Link>
@@ -126,7 +142,7 @@ export default function Header() {
           <div ref={moreRef} className="relative" onMouseEnter={openMore} onMouseLeave={closeMore}>
             <button
               onClick={() => setMoreOpen((v) => !v)}
-              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
+              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Więcej
               <ChevronDown
@@ -136,13 +152,13 @@ export default function Header() {
             </button>
 
             {moreOpen && (
-              <div className="absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
+              <div className={`absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 ${moreClosing ? "animate-fade-out" : "animate-fade-in"}`}>
                 {moreItems.map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
                     onClick={() => setMoreOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                   >
                     {item.label}
                     {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
@@ -175,7 +191,7 @@ export default function Header() {
             >
               Webinar
               <sup className="leading-none">
-                <Badge className="bg-electric/90 text-white border-0 text-[8px] px-1.5 py-0.5 leading-none uppercase tracking-wider animate-pulse">
+                <Badge className="bg-electric/90 text-white border-0 text-[10px] px-1.5 py-0.5 leading-none uppercase tracking-wider">
                   wkrótce
                 </Badge>
               </sup>
