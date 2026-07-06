@@ -90,7 +90,7 @@ export default function MeskiKompas() {
             <h1
               className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-wider"
               style={{
-                background: "linear-gradient(135deg, white 0%, #ECB614 100%)",
+                background: "linear-gradient(135deg, white 0%, hsl(45 85% 50%) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",

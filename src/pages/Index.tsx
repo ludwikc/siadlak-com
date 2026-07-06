@@ -14,6 +14,7 @@ import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&forma
 import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { CTAButton } from "@/design-system/components/cta-button";
+import { Shield, Leaf } from "lucide-react";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -155,7 +156,7 @@ const Index = () => {
       </section>
 
       {/* ═══ TESTIMONIAL MARQUEE ═══ */}
-      <section className="py-5 overflow-hidden" style={{ backgroundColor: '#080808' }}>
+      <section className="py-5 overflow-hidden bg-void">
         <div className="marquee-track flex gap-12 animate-marquee" style={{ width: "max-content" }}>
           {[0, 1].map((copy) => (
             <div key={copy} className="flex gap-12 items-start" aria-hidden={copy === 1 ? "true" : undefined}>
@@ -372,7 +373,10 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading">🛡 Ścieżka Wojownika</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-3">
+                <Shield className="h-6 w-6 text-electric" aria-hidden="true" />
+                Ścieżka Wojownika
+              </h3>
               <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
               <p className="text-dim leading-relaxed">
                 Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
@@ -388,7 +392,10 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading">🌿 Ścieżka Poszukiwacza</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-3">
+                <Leaf className="h-6 w-6 text-electric" aria-hidden="true" />
+                Ścieżka Poszukiwacza
+              </h3>
               <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
               <p className="text-dim leading-relaxed">
                 Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie Diamentu pod suknem sukcesu.
