@@ -173,7 +173,7 @@ export default function Header() {
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setMobileOpen((v) => !v)} className="md:hidden text-white p-1" aria-label="Menu">
+        <button onClick={() => setMobileOpen((v) => !v)} className="md:hidden text-white p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded" aria-label="Menu">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -185,7 +185,7 @@ export default function Header() {
             <Link
               to="/webinar"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-start gap-1 text-white text-sm font-bold uppercase tracking-widest py-2"
+              className="inline-flex items-start gap-1 text-white text-sm font-bold uppercase tracking-widest py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Webinar
               <sup className="leading-none">
@@ -199,7 +199,7 @@ export default function Header() {
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
-              className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors"
+              className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
             >
               Zacznij tutaj</Link>
             <div className="border-t border-white/10 my-1" />
@@ -208,7 +208,7 @@ export default function Header() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
               >
                 {item.label}
                 {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
@@ -218,7 +218,7 @@ export default function Header() {
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
-              className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+              className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
             >
               Wszystkie możliwości</Link>
 
@@ -228,7 +228,7 @@ export default function Header() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
               >
                 {item.label}
                 {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
