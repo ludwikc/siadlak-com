@@ -588,7 +588,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         ARCHITEKTURA UWAGI
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Odzyskaj Ster</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Odzyskaj Ster</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 1 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -626,7 +626,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         DEAUTOMATYZACJA
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Wyłącz Automat, Włącz Świadomość</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Wyłącz Automat, Włącz Świadomość</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 2 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -664,7 +664,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         DYSTANS STRATEGICZNY
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Uwolnij Się od Tyranii Myśli</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Uwolnij Się od Tyranii Myśli</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 3 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -702,7 +702,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         NAWIGACJA EMOCJONALNA
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Nawiguj Wśród Burzy</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Nawiguj Wśród Burzy</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 4 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -740,7 +740,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         KOMPAS WARTOŚCI
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Płyń Tam, Gdzie Chcesz Dotrzeć</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Płyń Tam, Gdzie Chcesz Dotrzeć</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 5 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -778,7 +778,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         OPTYMALIZACJA ZASOBÓW
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Zarządzaj Energią, Nie Czasem</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Zarządzaj Energią, Nie Czasem</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 6 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>

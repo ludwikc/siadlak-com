@@ -726,8 +726,8 @@ export default function MeskiKompas() {
                   {
                     title: "Framework Granic i Delegowania",
                     points: [
-                      "Kompas 3W (Who/What/When) - wiesz, co delegować",
-                      'Ćwiczenie "NIE" - umiesz odmawiać bez poczucia winy',
+                      "Kompas 3W (Who/What/When) — wiesz, co delegować",
+                      'Ćwiczenie "NIE" — umiesz odmawiać bez poczucia winy',
                       "Odzyskane minimum 5-10 godzin tygodniowo",
                     ],
                   },
@@ -827,7 +827,7 @@ export default function MeskiKompas() {
                     number: "1",
                     title: "Metodyka dla analityków",
                     points: [
-                      'Nie "odkrywanie siebie" - inżynieria życia',
+                      'Nie "odkrywanie siebie" — inżynieria życia',
                       "Frameworki logiczne, testowalne i powtarzalne",
                       "Każde narzędzie ma INPUT → PROCES → OUTPUT",
                     ],
@@ -836,8 +836,8 @@ export default function MeskiKompas() {
                     number: "2",
                     title: "Dwóch prowadzących = dwie perspektywy",
                     points: [
-                      "Ludwik C. Siadlak: Emocje, inspiracja, głębia - zapala iskrę",
-                      "Mateusz Lizak: Konkret, warsztat, grunt - dostarcza narzędzi",
+                      "Ludwik C. Siadlak: Emocje, inspiracja, głębia — zapala iskrę",
+                      "Mateusz Lizak: Konkret, warsztat, grunt — dostarcza narzędzi",
                       "Wielka wizja + realne działanie w jednym programie",
                     ],
                   },
@@ -855,7 +855,7 @@ export default function MeskiKompas() {
                     title: "System przetestowany na własnej skórze",
                     points: [
                       "Te narzędzia zostały wypróbowane w okopach przez facetów takich jak ty",
-                      "Nie teoria z książki - praktyka z życia",
+                      "Nie teoria z książki — praktyka z życia",
                       'No-bullshit approach: tylko to, co faktycznie działa (a nie co się "klika")',
                     ],
                   },
@@ -866,7 +866,7 @@ export default function MeskiKompas() {
                     points: [
                       'Struktura, która wymusza działanie (nie "jeśli znajdziesz czas")',
                       "Raportowanie postępów w grupie (społeczna presja robi robotę)",
-                      "Widzisz, kto wykonuje wyzwania, kto nie - to motywuje bardziej niż cokolwiek",
+                      "Widzisz, kto wykonuje wyzwania, kto nie — to motywuje bardziej niż cokolwiek",
                     ],
                   },
                 ].map((item, idx) => (
@@ -964,7 +964,7 @@ export default function MeskiKompas() {
                     week: "TYDZIEŃ 5 – WRAŻLIWOŚĆ I SKUTECZNOŚĆ",
                     challenge: "Emotional Truth + Curiosity Sprint",
                     result:
-                      "Stajesz się kompletnym mężczyzną - czującym i działającym. Silnym i wrażliwym.",
+                      "Stajesz się kompletnym mężczyzną — czującym i działającym. Silnym i wrażliwym.",
                     time: "35 dni",
                   },
                 ].map((item, idx) => (
@@ -1272,7 +1272,7 @@ export default function MeskiKompas() {
                     <li className="flex items-start gap-2">
                       <span className="text-green-400">•</span>
                       <span>
-                        Nie abstrakcje ("za swoją przyszłość") - konkrety ("za
+                        Nie abstrakcje ("za swoją przyszłość") — konkrety ("za
                         to, że jem fast food 4x w tygodniu")
                       </span>
                     </li>
@@ -1341,7 +1341,7 @@ export default function MeskiKompas() {
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400">•</span>
                       <span>
-                        Nie ogólniki - tylko konkret (np. "Biorę
+                        Nie ogólniki — tylko konkret (np. "Biorę
                         odpowiedzialność za to, że nie odezwałem się do żony
                         przez 4 godziny wieczorem, bo siedziałem w telefonie")
                       </span>
@@ -1379,7 +1379,7 @@ export default function MeskiKompas() {
                   >
                     Po tygodniu przestajesz czuć się ofiarą okoliczności.
                     Zaczynasz widzieć, gdzie masz realną władzę. To
-                    fundamentalny shift - wszystko inne będzie budowane na tym.
+                    fundamentalny shift — wszystko inne będzie budowane na tym.
                   </p>
                 </div>
               </div>
@@ -1399,24 +1399,24 @@ export default function MeskiKompas() {
                   toolPoints: [
                     "Framework mikrodecyzyjności: 3 decyzje dziennie przez 3 dni, każda w max 3 minuty",
                     "Decision matrix: Ważne/Nieważne × Odwracalne/Nieodwracalne",
-                    "80% decyzji życiowych to decyzje odwracalne - przestań traktować je jak życie lub śmierć",
+                    "80% decyzji życiowych to decyzje odwracalne — przestań traktować je jak życie lub śmierć",
                     "Timer: max 3 minuty na decyzję (fizyczny timer, serio)",
                     "Decision log: zapisujesz decyzję, rezultat, co się nauczyłeś",
                   ],
                   why: "Twój mózg uczy się decydować przez praktykę, nie przez myślenie o decydowaniu. Im więcej małych decyzji podejmiesz szybko, tym łatwiej przychodzą Ci duże. To trening mięśnia decyzyjnego.",
                   challenge: "One Big Call",
                   challengeDesc:
-                    "Podjąć JEDNĄ decyzję w obszarze, w którym zazwyczaj zwlekasz. Praca: projekt, który odkładasz / Relacja: rozmowa, której unikasz / Ciało: zmiana, którą planujesz od miesięcy. Użyj frameworku 3-3-3: max 3 minuty na podjęcie decyzji. Nie musi być perfekcyjna - ma być PODJĘTA.",
+                    "Podjąć JEDNĄ decyzję w obszarze, w którym zazwyczaj zwlekasz. Praca: projekt, który odkładasz / Relacja: rozmowa, której unikasz / Ciało: zmiana, którą planujesz od miesięcy. Użyj frameworku 3-3-3: max 3 minuty na podjęcie decyzji. Nie musi być perfekcyjna — ma być PODJĘTA.",
                   result:
-                    'Odkryjesz, że 90% rzeczy, których się obawiasz, nigdy się nie dzieje. Poczujesz moc sprawczości - życie znów jest w twoich rękach. Ludzie wokół Ciebie przestaną pytać "co myślisz?" i zaczną pytać "co robimy?", bo będą widzieć w Tobie lidera.',
+                    'Odkryjesz, że 90% rzeczy, których się obawiasz, nigdy się nie dzieje. Poczujesz moc sprawczości — życie znów jest w twoich rękach. Ludzie wokół Ciebie przestaną pytać "co myślisz?" i zaczną pytać "co robimy?", bo będą widzieć w Tobie lidera.',
                 },
                 {
                   week: "TYDZIEŃ 3: GRANICE",
                   effect: "ODZYSKANIE PRZESTRZENI",
                   problem:
-                    'Jesteś dostępny dla wszystkich - oprócz siebie. Każdy może zabrać Twój czas, energię, uwagę. Mówisz "tak", gdy myślisz "nie". Robisz rzeczy dla innych, bo "nie chcesz ranić uczuć". Tymczasem ranisz siebie każdego dnia.',
+                    'Jesteś dostępny dla wszystkich — oprócz siebie. Każdy może zabrać Twój czas, energię, uwagę. Mówisz "tak", gdy myślisz "nie". Robisz rzeczy dla innych, bo "nie chcesz ranić uczuć". Tymczasem ranisz siebie każdego dnia.',
                   truth:
-                    'Granice to nie egoizm. Granice to komunikat: "to jest moja przestrzeń, a to twoja". Mężczyzna bez granic to dom bez ścian - każdy wchodzi, kiedy chce, bierze, co chce, zostawia, co chce. I dziwimy się, że czujemy się wykorzystani.',
+                    'Granice to nie egoizm. Granice to komunikat: "to jest moja przestrzeń, a to twoja". Mężczyzna bez granic to dom bez ścian — każdy wchodzi, kiedy chce, bierze, co chce, zostawia, co chce. I dziwimy się, że czujemy się wykorzystani.',
                   tool: "MAPA OSOBISTYCH GRANIC",
                   toolPoints: [
                     "Identyfikacja obszarów w których Twoje granice są przekraczane",
@@ -1427,9 +1427,9 @@ export default function MeskiKompas() {
                   why: "Nie możesz chronić granic, których nie znasz. Ta mapa pokazuje, gdzie tracisz siebie. A kiedy to zobaczysz czarno na białym, nie możesz już udawać, że tego nie widzisz.",
                   challenge: "Boundary Declaration",
                   challengeDesc:
-                    "Jedna rozmowa lub decyzja, w której postawisz lub wyrazisz swoją granicę jasno i spokojnie. Nie agresywnie, nie przepraszając - po prostu jasno i czytelnie. Może być z rodziną, w pracy, w przyjaźni - tam gdzie wiesz, że granica jest przekraczana.",
+                    "Jedna rozmowa lub decyzja, w której postawisz lub wyrazisz swoją granicę jasno i spokojnie. Nie agresywnie, nie przepraszając — po prostu jasno i czytelnie. Może być z rodziną, w pracy, w przyjaźni — tam gdzie wiesz, że granica jest przekraczana.",
                   result:
-                    'Pierwszy raz od długiego czasu poczujesz, że masz prawo do własnej przestrzeni. Odzyskasz czas i energię, które dotąd szły "na zewnątrz". Ludzie wokół Ciebie zaczną Cię szanować bardziej (nie mniej - BARDZIEJ).',
+                    'Pierwszy raz od długiego czasu poczujesz, że masz prawo do własnej przestrzeni. Odzyskasz czas i energię, które dotąd szły "na zewnątrz". Ludzie wokół Ciebie zaczną Cię szanować bardziej (nie mniej — BARDZIEJ).',
                 },
                 {
                   week: "TYDZIEŃ 4: PEWNOŚĆ SIEBIE",
@@ -1437,29 +1437,29 @@ export default function MeskiKompas() {
                   problem:
                     'Szukasz potwierdzenia na zewnątrz. Dobra decyzja to ta, którą inni pochwalą. Sukces to więcej pieniędzy, więcej uznania, więcej "lajków". Tymczasem w środku pustka, bo nie wiesz, kim JESTEŚ, kiedy nikt nie patrzy.',
                   truth:
-                    'Pewność siebie to nie "czuć się pewnie". To WIEDZIEĆ, kim jesteś i dokąd idziesz - niezależnie od tego, co czujesz w danym momencie. Mężczyzna z pewnością siebie nie potrzebuje aplauzu, żeby wiedzieć, że idzie właściwą drogą. Pewność to kompas wewnętrzny, a nie zewnętrzny barometr nastrojów.',
+                    'Pewność siebie to nie "czuć się pewnie". To WIEDZIEĆ, kim jesteś i dokąd idziesz — niezależnie od tego, co czujesz w danym momencie. Mężczyzna z pewnością siebie nie potrzebuje aplauzu, żeby wiedzieć, że idzie właściwą drogą. Pewność to kompas wewnętrzny, a nie zewnętrzny barometr nastrojów.',
                   tool: "LUSTRO TOŻSAMOŚCI",
                   toolPoints: [
                     'Codzienne 2-minutowe ćwiczenie werbalizacji: "Kim jestem" i "Kim się staję"',
-                    'Nie afirmacje ("jestem pewny siebie") - FAKTY ("jestem facetem, który dotrzymuje słowa danego sobie")',
+                    'Nie afirmacje ("jestem pewny siebie") — FAKTY ("jestem facetem, który dotrzymuje słowa danego sobie")',
                     "Framework: 3 tożsamości (Teraz / Za 90 dni / Za rok)",
                     "Lista 10 pytań budujących tożsamość (odpowiadasz każdego dnia na 1-2)",
                     'Przykład: "Mogę sobie ufać, bo..." (wypełniasz konkretnymi przykładami z życia)',
                   ],
-                  why: 'Tożsamość buduje się przez powtarzanie, nie przez puste "afirmacje". Mówisz to na głos każdego dnia, Twój mózg zaczyna to widzieć jako prawdę. To nie manipulacja - to zsynchronizowanie tego, kim JESTEŚ z tym, jak się o sobie MYŚLISZ.',
+                  why: 'Tożsamość buduje się przez powtarzanie, nie przez puste "afirmacje". Mówisz to na głos każdego dnia, Twój mózg zaczyna to widzieć jako prawdę. To nie manipulacja — to zsynchronizowanie tego, kim JESTEŚ z tym, jak się o sobie MYŚLISZ.',
                   challenge: "Voice of Truth",
                   challengeDesc:
                     'Nagraj (dla siebie) 30-sekundową głosówkę odpowiadającą na pytanie: "Dlaczego mogę ufać sobie jako facetowi?" Konkretne przykłady z życia (nie teoria). Minimum 3 sytuacje, kiedy dotrzymałeś słowa / zrobiłeś trudną rzecz / postawiłeś na swoim. Słuchaj tego nagrania przez 7 dni każdego ranka.',
                   result:
-                    'Przestaniesz szukać walidacji na zewnątrz. Będziesz miał wewnętrzny punkt odniesienia - "wiem, kim jestem i to wystarczy". W relacjach, w pracy, w każdej interakcji - będziesz stabilny, bo Twoja wartość nie zależy od opinii innych.',
+                    'Przestaniesz szukać walidacji na zewnątrz. Będziesz miał wewnętrzny punkt odniesienia — "wiem, kim jestem i to wystarczy". W relacjach, w pracy, w każdej interakcji — będziesz stabilny, bo Twoja wartość nie zależy od opinii innych.',
                 },
                 {
                   week: "TYDZIEŃ 5: WRAŻLIWOŚĆ I SKUTECZNOŚĆ",
-                  effect: "INTEGRACJA - KOMPLETNY MĘŻCZYZNA",
+                  effect: "INTEGRACJA — KOMPLETNY MĘŻCZYZNA",
                   problem:
                     'Myślisz, że "męskość" to twardość, logika, brak emocji. Więc tłumisz, co czujesz. "Chłopaki nie płaczą." "Emocje to słabość." Tymczasem ta nieprzetworzona energia zjada Cię od środka. Albo wybuchasz w najmniej odpowiednich momentach. Albo stajesz się emocjonalną pustynią.',
                   truth:
-                    "Najpotężniejsi mężczyźni w historii to nie ci bez emocji - to ci, którzy ZNALI swoje emocje i używali ich jako źródła informacji. Wrażliwość to nie przeciwieństwo siły - to jej paliwo. Mężczyzna, który czuje głęboko i działa skutecznie, to kompletny wojownik.",
+                    "Najpotężniejsi mężczyźni w historii to nie ci bez emocji — to ci, którzy ZNALI swoje emocje i używali ich jako źródła informacji. Wrażliwość to nie przeciwieństwo siły — to jej paliwo. Mężczyzna, który czuje głęboko i działa skutecznie, to kompletny wojownik.",
                   tool: "WEWNĘTRZNA MAPA SYGNALIZACJI EMOCJI + DZIENNIK CIEKAWOŚCI",
                   toolPoints: [
                     "Proces: Emocja → Co mi mówi → Co z tym zrobić",
@@ -1471,9 +1471,9 @@ export default function MeskiKompas() {
                   why: "Kiedy przestajesz walczyć z własnymi emocjami, zyskujesz energię na walkę o to, co ważne. Kiedy stajesz się ciekawy świata, przestajesz być jego ofiarą. To jest integracja: czuć głęboko + działać skutecznie.",
                   challenge: "Emotional Truth + Curiosity Sprint",
                   challengeDesc:
-                    'Jedna szczera rozmowa z bliską osobą, w której powiesz: "Czuję, że..." (nie "myślę, że" - CZUJĘ). Przez 5 dni pod rząd zrób jedną NOWĄ rzecz (nawet małą), tylko z ciekawości. Prowadź Dziennik Ciekawości.',
+                    'Jedna szczera rozmowa z bliską osobą, w której powiesz: "Czuję, że..." (nie "myślę, że" — CZUJĘ). Przez 5 dni pod rząd zrób jedną NOWĄ rzecz (nawet małą), tylko z ciekawości. Prowadź Dziennik Ciekawości.',
                   result:
-                    'Stajesz się kompletnym mężczyzną - czującym i działającym. Silnym i wrażliwym. Skutecznym i żywym. To nie są sprzeczności - to integracja. Po 5 tygodniach nie jesteś "nową osobą" - jesteś SOBĄ, bez cenzury, bez maski, z pełnym dostępem do swojej mocy.',
+                    'Stajesz się kompletnym mężczyzną — czującym i działającym. Silnym i wrażliwym. Skutecznym i żywym. To nie są sprzeczności — to integracja. Po 5 tygodniach nie jesteś "nową osobą" — jesteś SOBĄ, bez cenzury, bez maski, z pełnym dostępem do swojej mocy.',
                 },
               ].map((weekData, idx) => (
                 <div key={idx} className="mb-16">
@@ -1692,7 +1692,7 @@ export default function MeskiKompas() {
                         <li className="flex items-start gap-2">
                           <span className="text-lg leading-none mt-1">•</span>
                           <span>
-                            Google Docs + Markdown - prościej się nie da
+                            Google Docs + Markdown — prościej się nie da
                           </span>
                         </li>
                       </ul>
@@ -1927,7 +1927,7 @@ export default function MeskiKompas() {
                         className="text-xl font-bold mb-3"
                         style={{ color: "hsl(210, 20%, 8%)" }}
                       >
-                        Discord - Zamknięta Grupa 10 Osób
+                        Discord — Zamknięta Grupa 10 Osób
                       </h4>
                       <ul
                         className="space-y-2"
@@ -2117,7 +2117,7 @@ export default function MeskiKompas() {
                   "7 technik produktywności"
                 </span>
               </h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-dim mb-8 max-w-2xl mx-auto">
                 Zapisując się na Męski Kompas, automatycznie otrzymujesz dostęp
                 do pełnego kursu "7 technik, które natychmiast zwiększą Twoją
                 produktywność" -{" "}
@@ -2133,7 +2133,7 @@ export default function MeskiKompas() {
               <div className="order-2 lg:order-1">
                 <OptimizedImage
                   src="/lovable-uploads/7technik_transparent.png"
-                  alt="7 technik produktywności - kurs bonus"
+                  alt="7 technik produktywności — kurs bonus"
                   width={1920}
                   height={1366}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -2160,7 +2160,7 @@ export default function MeskiKompas() {
                       "Konkretne narzędzia do natychmiastowego wdrożenia",
                       "Praktyczne ćwiczenia i case studies",
                       "Materiały video i audio w wysokiej jakości",
-                      "Dostęp na zawsze - bez ograniczeń czasowych",
+                      "Dostęp na zawsze — bez ograniczeń czasowych",
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <CheckCircle
@@ -2215,7 +2215,7 @@ export default function MeskiKompas() {
                   Twoja cena: tylko 997 zł 
                 </p>
                 <p className="text-lg text-white/70 mt-2">
-                  To prawdziwa oferta 2 w 1 - płacisz za jeden, dostajesz dwa
+                  To prawdziwa oferta 2 w 1 — płacisz za jeden, dostajesz dwa
                   kursy!
                 </p>
               </div>
@@ -2248,7 +2248,7 @@ export default function MeskiKompas() {
                   LIFEHACKERZY
                 </span>
               </h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-dim mb-8 max-w-2xl mx-auto">
                 Ekskluzywna społeczność dostępna wyłącznie dla klientów moich
                 programów rozwojowych. Miejsce, gdzie spotkasz ludzi o podobnych
                 wartościach, gotowych do wspólnego rozwoju.
@@ -2260,7 +2260,7 @@ export default function MeskiKompas() {
               <div className="order-2 lg:order-1 text-center">
                 <OptimizedImage
                   src="/lovable-uploads/lifehackerzy-community-call.png"
-                  alt="Lifehackerzy - Codzienne spotkania społeczności"
+                  alt="Lifehackerzy — Codzienne spotkania społeczności"
                   width={1920}
                   height={984}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -2268,7 +2268,7 @@ export default function MeskiKompas() {
                 />
                 <img
                   src="/lovable-uploads/lifehackerzy.svg"
-                  alt="Lifehackerzy - Ekskluzywna społeczność"
+                  alt="Lifehackerzy — Ekskluzywna społeczność"
                   width={500}
                   height={150}
                   className="w-full max-w-md h-auto mx-auto mb-6"
@@ -2315,7 +2315,7 @@ export default function MeskiKompas() {
                       "Eksperymentalne warsztaty i kreatywne metody pracy",
                       "Wsparcie motywacyjne i inspiracja każdego dnia",
                       "Społeczność z całego świata o podobnych wartościach",
-                      "Dostęp dożywotni - bez ograniczeń czasowych",
+                      "Dostęp dożywotni — bez ograniczeń czasowych",
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <Users
@@ -2370,7 +2370,7 @@ export default function MeskiKompas() {
         </div>
       </section>
 
-      {/* Target Audience - Dla Kogo Jest Męski Kompas */}
+      {/* Target Audience — Dla Kogo Jest Męski Kompas */}
       <section className="py-20" style={{ backgroundColor: "hsl(0, 0%, 99%)" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2562,7 +2562,7 @@ export default function MeskiKompas() {
                   style={{ color: "hsl(210, 20%, 85%)" }}
                 >
                   Energia tej grupy 10 mężczyzn, którzy przechodzą przez te same
-                  wyzwania w tym samym czasie - to coś, czego nie odtworzysz z
+                  wyzwania w tym samym czasie — to coś, czego nie odtworzysz z
                   nagrania za pół roku. To momentum, które powstaje tylko tutaj
                   i tylko teraz. Albo jesteś w środku, albo patrzysz, jak inni
                   to przeżywają.
@@ -2573,7 +2573,7 @@ export default function MeskiKompas() {
         </div>
       </section>
 
-      {/* Comparison Table - Męski Kompas vs Everything Else */}
+      {/* Comparison Table — Męski Kompas vs Everything Else */}
       <section
         className="py-20"
         style={{ backgroundColor: "hsl(210, 40%, 15%)" }}
@@ -3243,7 +3243,7 @@ export default function MeskiKompas() {
                   className="text-base"
                   style={{ color: "hsl(210, 10%, 45%)" }}
                 >
-                  Ukończ Tydzień 1. Jeśli nie widzisz wartości - zwrot 100%
+                  Ukończ Tydzień 1. Jeśli nie widzisz wartości — zwrot 100%
                   pieniędzy. Bez pytań.
                 </p>
               </div>
@@ -3289,7 +3289,7 @@ export default function MeskiKompas() {
                   className="text-lg leading-relaxed"
                   style={{ color: "hsl(210, 10%, 45%)" }}
                 >
-                  Jeśli myślisz "zrobię to później" - to ten sam mechanizm,
+                  Jeśli myślisz "zrobię to później" — to ten sam mechanizm,
                   który trzyma Cię w paraliżu analitycznym. Jest 10 miejsc.
                   Zostały 4. Decyzja jest prosta: albo płyniesz z nami, albo
                   zostajesz na brzegu.
@@ -3313,7 +3313,7 @@ export default function MeskiKompas() {
                   className="text-lg leading-relaxed"
                   style={{ color: "hsl(210, 10%, 45%)" }}
                 >
-                  Jeśli zastanawiasz się "czy to dla mnie" - jeśli przeczytałeś
+                  Jeśli zastanawiasz się "czy to dla mnie" — jeśli przeczytałeś
                   do tego miejsca, jest dla Ciebie. Ludzie, dla których to nie
                   jest, zrezygnowali 3 sekcje temu. Ty jesteś wciąż tutaj. To
                   wystarczający sygnał.
@@ -3366,7 +3366,7 @@ export default function MeskiKompas() {
                     className="text-sm hidden sm:block"
                     style={{ color: "hsl(210, 20%, 20%)" }}
                   >
-                    Program startuje w październiku - nie przegap
+                    Program startuje w październiku — nie przegap
                   </p>
                 </div>
               </div>
@@ -3378,8 +3378,8 @@ export default function MeskiKompas() {
                     color: "white",
                   }}
                 >
-                  <span className="inline sm:hidden">Rezerwuję Miejsce →</span>
-                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych →</span>
+                  <span className="inline sm:hidden">Rezerwuję Miejsce</span>
+                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych</span>
                 </button>
               </Link>
             </div>

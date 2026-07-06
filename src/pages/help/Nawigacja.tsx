@@ -15,18 +15,18 @@ const data: HelpPageData = {
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Główne menu</h2>
       <ul className="list-disc list-inside space-y-1 ml-4">
-        <li><strong>Strona główna</strong> - aktualności i polecane treści</li>
-        <li><strong>Programy</strong> - wszystkie dostępne kursy i szkolenia</li>
-        <li><strong>Podcast</strong> - odcinki podcastów z różnych serii</li>
-        <li><strong>Społeczność</strong> - forum dyskusyjne i grupy tematyczne</li>
-        <li><strong>Mój profil</strong> - ustawienia konta i historia aktywności</li>
+        <li><strong>Strona główna</strong> — aktualności i polecane treści</li>
+        <li><strong>Programy</strong> — wszystkie dostępne kursy i szkolenia</li>
+        <li><strong>Podcast</strong> — odcinki podcastów z różnych serii</li>
+        <li><strong>Społeczność</strong> — forum dyskusyjne i grupy tematyczne</li>
+        <li><strong>Mój profil</strong> — ustawienia konta i historia aktywności</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Skróty klawiszowe</h2>
       <ul className="list-disc list-inside space-y-1 ml-4">
-        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + /</code> - otwórz wyszukiwarkę</li>
-        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + H</code> - powrót do strony głównej</li>
-        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + P</code> - szybki dostęp do profilu</li>
+        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + /</code> — otwórz wyszukiwarkę</li>
+        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + H</code> — powrót do strony głównej</li>
+        <li><code className="bg-muted px-2 py-1 rounded text-sm">Ctrl + P</code> — szybki dostęp do profilu</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Wyszukiwarka</h2>

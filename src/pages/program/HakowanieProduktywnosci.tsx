@@ -138,7 +138,7 @@ export default function HakowanieProduktywnosci() {
               >
                 <span className="block sm:inline">Bezpłatna diagnoza krytyczna</span>
                 <span className="hidden sm:inline"> · </span>
-                <span className="block sm:inline">Sprawdź, jak bardzo jesteś przeciążony →</span>
+                <span className="block sm:inline">Sprawdź, jak bardzo jesteś przeciążony</span>
               </Button>
             </Link>
           </div>
@@ -660,7 +660,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* CO ZAWIERA PROGRAM - MODUŁY */}
+      {/* CO ZAWIERA PROGRAM — MODUŁY */}
       <section className="py-20 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -689,7 +689,7 @@ export default function HakowanieProduktywnosci() {
               <div className="relative rounded-md overflow-hidden border border-muted">
                 <OptimizedImage
                   src="/src/assets/portal-hakprod.png"
-                  alt="Platforma Programu Produktywność - widok modułu z video"
+                  alt="Platforma Programu Produktywność — widok modułu z video"
                   width={3248}
                   height={2112}
                   sizes="(max-width: 768px) 100vw, 75vw"
@@ -1405,8 +1405,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base px-6 py-3"
                 >
-                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie →
-                </Button>
+                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie</Button>
               </Link>
             </div>
 

@@ -11,7 +11,7 @@ const LINKS = [
   {
     emoji: "🎙️",
     label: "Najbliższy Webinar",
-    desc: "Wkrótce - zapisz się, żeby nie przegapić",
+    desc: "Wkrótce — zapisz się, żeby nie przegapić",
     href: `/webinar${UTM}`,
     internal: true,
   },
@@ -24,14 +24,14 @@ const LINKS = [
   },
   {
     emoji: "🔍",
-    label: "Sesja Discovery - pracuj ze mną 1:1",
+    label: "Sesja Discovery — pracuj ze mną 1:1",
     desc: "30 minut. Jedno pytanie, które może zmienić wszystko.",
     href: `/discovery${UTM}`,
     internal: true,
   },
   {
     emoji: "💬",
-    label: "Lifehackerzy - darmowa społeczność",
+    label: "Lifehackerzy — darmowa społeczność",
     desc: "Discord dla tych, którzy myślą głębiej. Wejście przez dowolny program.",
     href: `https://lifehackerzy.pl${UTM}`,
     internal: false,
@@ -46,7 +46,7 @@ const LINKS = [
   {
     emoji: "👤",
     label: "O mnie",
-    desc: "19 lat, 10 000+ profesjonalistów, Oxford, NATO - i historia, jak to wszystko prawie się skończyło na peronie metra.",
+    desc: "19 lat, 10 000+ profesjonalistów, Oxford, NATO — i historia, jak to wszystko prawie się skończyło na peronie metra.",
     href: `/about${UTM}`,
     internal: true,
   },
@@ -107,7 +107,7 @@ export default function LinksPage() {
               newsletterze - decydujesz Ty.
             </p>
             <p className="text-sm text-[hsl(var(--text-dim))] text-center leading-relaxed">
-              Bez harmonogramu - jedna myśl, która ma szansę zderzyć się
+              Bez harmonogramu — jedna myśl, która ma szansę zderzyć się
               z Twoją, wtedy, kiedy naprawdę jest coś do powiedzenia.
               Bez porad. Bez listicli. Bez bzdur.
             </p>

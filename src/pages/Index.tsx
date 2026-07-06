@@ -114,9 +114,9 @@ const Index = () => {
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
-                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze - zamiast szukać tego na zewnątrz.</p>
+                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz.</p>
                 <p className="text-white font-medium">
-                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu - jesteś we właściwym miejscu.
+                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu — jesteś we właściwym miejscu.
                 </p>
               </div>
 
@@ -172,7 +172,7 @@ const Index = () => {
                 <div key={i} className="flex items-start gap-6">
                   <div className="max-w-md whitespace-normal">
                     <p className="text-sm text-dim leading-relaxed">„{t.q}"</p>
-                    <p className="text-xs text-dim font-medium mt-1">- {t.a}</p>
+                    <p className="text-xs text-dim font-medium mt-1">— {t.a}</p>
                   </div>
                   <span className="text-white/10 self-center">◆</span>
                 </div>
@@ -193,7 +193,7 @@ const Index = () => {
             </p>
 
             <p>
-              Połóż go na czerwonym suknie - wygląda jak rubin. Na zielonym - jak szmaragd. Zmień sukno - zmieni się
+              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd. Zmień sukno — zmieni się
               „kolor" Diamentu.
             </p>
 
@@ -203,8 +203,8 @@ const Index = () => {
               Twój umysł działa dokładnie tak samo.
             </blockquote>
 
-            <p>Otaczasz się presją - nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
-            <p>Wchodzisz w sprint za kolejnym celem - nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
+            <p>Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
+            <p>Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
 
             <p>Ale to nie Ty się zmieniłeś.</p>
             <p className="text-white text-2xl font-bold">
@@ -284,7 +284,7 @@ const Index = () => {
                 Oksfordzie
               </a>.
             </p>
-            <p>Imponujące, prawda? Mnie też imponowało - przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
+            <p>Imponujące, prawda? Mnie też imponowało — przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 my-8">
               <p className="text-white italic text-xl leading-relaxed">
@@ -298,7 +298,7 @@ const Index = () => {
             </p>
             <p>I tego nie nauczysz się na żadnym szkoleniu. Tego uczysz się stojąc na peronie i decydując, że jednak zostaniesz.</p>
             <p>
-              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak - to wciąż trochę irytujące. Moi Klienci potwierdzą.)
+              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)
             </p>
           </div>
         </div>
@@ -379,7 +379,7 @@ const Index = () => {
               </h3>
               <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
               <p className="text-dim leading-relaxed">
-                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
+                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko — a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
               </p>
               <p className="text-dim leading-relaxed">
                 Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Metafory z życia — Diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
@@ -414,7 +414,7 @@ const Index = () => {
           <div className="text-center">
             <h4 className="text-xl font-bold text-white font-heading mb-4">Skąd wiem, czego potrzebujesz?</h4>
             <p className="text-dim leading-relaxed max-w-2xl mx-auto">
-              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi - najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery - żebyśmy razem ustalili, którędy idziemy.
+              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi — najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery — żebyśmy razem ustalili, którędy idziemy.
             </p>
           </div>
         </div>
@@ -472,8 +472,7 @@ const Index = () => {
                 to="/program/lifeos-system-upgrade"
                 className="text-sm font-bold text-electric hover:underline"
               >
-                Pełny opis programu →
-              </Link>
+                Pełny opis programu</Link>
             </div>
 
             {/* Right column (5 cols) - sticky pricing card */}
@@ -526,11 +525,11 @@ const Index = () => {
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
-            stworzyłem programy, które możesz zainstalować samodzielnie - w swoim tempie, bez umawiania się na sesję.
+            stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
           </p>
           <blockquote className="text-sm text-on-light-dim italic leading-relaxed max-w-xl mx-auto border-l-2 border-electric pl-4 text-left">
-            „Zacząłem od Produktywności - bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
-            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">- UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
+            „Zacząłem od Produktywności — bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
+            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">— UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
           </blockquote>
         </div>
       </section>
@@ -542,7 +541,7 @@ const Index = () => {
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
-              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem - bez reinstalacji całego OS.
+              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem — bez reinstalacji całego OS.
             </p>
           </div>
 
@@ -565,8 +564,7 @@ const Index = () => {
                 </p>
                 <p className="text-xs text-on-light-dim mb-6">777 PLN · przedsprzedaż</p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
-                  INSTALUJ PROGRAM →
-                </p>
+                  INSTALUJ PROGRAM</p>
               </div>
             </div>
           </Link>
@@ -607,8 +605,7 @@ const Index = () => {
                   {card.subtitle && <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>}
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
                   <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
-                    INSTALUJ PROGRAM →
-                  </p>
+                    INSTALUJ PROGRAM</p>
                 </div>
               </Link>
             ))}

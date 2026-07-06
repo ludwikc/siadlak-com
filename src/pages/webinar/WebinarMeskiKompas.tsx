@@ -18,7 +18,7 @@ export default function WebinarMeskiKompas() {
   return (
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
-        title="Warsztat: Męski Kompas - Koniec z Dryfowaniem"
+        title="Warsztat: Męski Kompas — Koniec z Dryfowaniem"
         description="90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. 16 października."
       />
 
@@ -116,10 +116,9 @@ export default function WebinarMeskiKompas() {
                         "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    <span className="inline sm:hidden">OBEJRZYJ REPLAY →</span>
+                    <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
                     <span className="hidden sm:inline">
-                      TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →
-                    </span>
+                      TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY)</span>
                   </Button>
                 </a>
               </div>
@@ -220,7 +219,7 @@ export default function WebinarMeskiKompas() {
                     <p className="text-muted-foreground leading-relaxed">
                       Reagujesz na życie, zamiast je kreować. Czekasz, aż coś
                       się wyklaruje. Analizujesz opcje, zamiast podejmować
-                      decyzje. W pracy, w związku, w rozwijaniu się - dryfujesz.
+                      decyzje. W pracy, w związku, w rozwijaniu się — dryfujesz.
                       Wiesz, że to nie tak powinno być. Ale nie masz kompasu,
                       który pokazałby ci, gdzie jest twój północ.
                     </p>
@@ -236,8 +235,8 @@ export default function WebinarMeskiKompas() {
                       TWÓJ ANALITYCZNY UMYSŁ CIĘ PARALIŻUJE
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      To co miało być twoją siłą - umiejętność myślenia,
-                      planowania, analizy - stało się klatką. Twój umysł działa
+                      To co miało być twoją siłą — umiejętność myślenia,
+                      planowania, analizy — stało się klatką. Twój umysł działa
                       na pełnych obrotach 24/7, ale to nie prowadzi do decyzji.
                       Prowadzi do paraliżu. Masz setki przemyśleń, zero działań.
                       I to cię wykańcza.
@@ -255,7 +254,7 @@ export default function WebinarMeskiKompas() {
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Tradycyjne wzorce męskości nie działają. "Ogarnij sam",
-                      "nie pokazuj słabości", "bądź silny" - to puste slogany,
+                      "nie pokazuj słabości", "bądź silny" — to puste slogany,
                       które prowadzą do wypalenia. A nowe wzorce? Nieczytelne.
                       Nie wiesz, czym jest męskość dzisiaj. I w tej próżni...
                       dryfujesz.
@@ -333,16 +332,16 @@ export default function WebinarMeskiKompas() {
               </p>
               <ul className="space-y-3 text-lg text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Wykorzystać swój analityczny umysł jako siłę
                     </strong>{" "}
-                    - nie jako przeszkodę.
+                    — nie jako przeszkodę.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Podejmować decyzje bez paraliżu
@@ -351,12 +350,12 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Nawigować przez życie z jasnością
                     </strong>{" "}
-                    - zamiast dryfować w chaosie opcji.
+                    — zamiast dryfować w chaosie opcji.
                   </span>
                 </li>
               </ul>
@@ -596,10 +595,10 @@ export default function WebinarMeskiKompas() {
                     Co dostarcza Ludwik:
                   </strong>
                   <br />
-                  → Perspektywę emocjonalną i mindsetową
+                  — Perspektywę emocjonalną i mindsetową
                   <br />
-                  → Narzędzia ze styku psychologii i męskiej świadomości
-                  <br />→ Autentyczną transformację bez bullshitu
+                  — Narzędzia ze styku psychologii i męskiej świadomości
+                  <br />— Autentyczną transformację bez bullshitu
                 </p>
                 <div className="inline-block px-4 py-2 bg-accent/10 border border-accent rounded-lg text-accent font-semibold">
                   [ISKRA] Mindset | Emocje | Transformacja
@@ -634,10 +633,10 @@ export default function WebinarMeskiKompas() {
                     Co dostarcza Mateusz:
                   </strong>
                   <br />
-                  → Sprawdzone narzędzia z ziemi (nie z chmur)
+                  — Sprawdzone narzędzia z ziemi (nie z chmur)
                   <br />
-                  → Warsztatowy podział pracy - konkret ponad teorię
-                  <br />→ Praktyczne działania które zrobisz dziś, nie "kiedyś"
+                  — Warsztatowy podział pracy — konkret ponad teorię
+                  <br />— Praktyczne działania które zrobisz dziś, nie "kiedyś"
                 </p>
                 <div className="inline-block px-4 py-2 bg-primary/10 border border-primary rounded-lg text-primary font-semibold">
                   [GRUNT] Konkret | Narzędzia | Działanie
@@ -682,39 +681,39 @@ export default function WebinarMeskiKompas() {
                 </h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Jesteś analitycznym profesjonalistą 30+ (developer, team
                       leader, manager, freelancer, przedsiębiorca)
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Czujesz, że dryfujesz zamiast nawigować przez życie
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Twój analityczny umysł cię paraliżuje zamiast wspierać
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Potrzebujesz systemu nawigacyjnego, nie kolejnej
                       motywacyjnej gadki
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Cenisz konkret, strukturę i praktyczne narzędzia
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>Chcesz przestać analizować i zacząć działać</span>
                   </li>
                 </ul>
@@ -860,7 +859,7 @@ export default function WebinarMeskiKompas() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Na końcu warsztatu dostaniesz pitch do pełnego kursu. Jeśli
-                system rezonuje - zapisz się. Jeśli nie - nie ma presji.
+                system rezonuje — zapisz się. Jeśli nie — nie ma presji.
               </p>
               <p className="text-lg font-bold text-foreground">
                 Nie sprzedajemy obietnic. Dajemy narzędzia do ręki. Sam
@@ -954,7 +953,7 @@ export default function WebinarMeskiKompas() {
               >
                 <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
                 <span className="hidden sm:inline">
-                  TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY
+                  TO WYDARZENIE JUŻ MINĘŁO — OBEJRZYJ REPLAY
                 </span>
               </Button>
             </a>
@@ -981,7 +980,7 @@ export default function WebinarMeskiKompas() {
                   <br />
                   Będziesz pracował live przez 90 minut.
                   <br />
-                  Jeśli nie jesteś gotowy na konkret - nie zapisuj się.
+                  Jeśli nie jesteś gotowy na konkret — nie zapisuj się.
                 </p>
                 <p>
                   <strong className="text-foreground">P.P.S.</strong>

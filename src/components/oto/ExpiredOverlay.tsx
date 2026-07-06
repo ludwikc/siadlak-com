@@ -4,7 +4,7 @@ export function ExpiredOverlay() {
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-xl z-50 flex flex-col items-center justify-center text-white text-center p-8">
       <div className="max-w-md mx-auto space-y-6">
-        <Lock className="h-16 w-16 mx-auto text-white/80" />
+        <Lock className="h-16 w-16 mx-auto text-dim" />
         
         <div className="space-y-3">
           <h1 className="text-3xl font-bold">

@@ -57,7 +57,7 @@ const Sitemap = () => {
       category: 'Oferty specjalne',
       icon: <ExternalLink className="h-5 w-5" />,
       pages: [
-        { name: 'OTO - Oferta specjalna', path: '/oto', description: 'Jednorazowa oferta dla uczestników webinaru' },
+        { name: 'OTO — Oferta specjalna', path: '/oto', description: 'Jednorazowa oferta dla uczestników webinaru' },
       ]
     },
     {
@@ -167,7 +167,7 @@ const Sitemap = () => {
               Nie możesz znaleźć tego, czego szukasz?
             </h2>
             <p className="text-lg mb-8 text-gray-600">
-              Skontaktuj się ze mną bezpośrednio - chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
+              Skontaktuj się ze mną bezpośrednio — chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
             </p>
             <Link to="/contact">
               <button className="inline-flex items-center px-6 py-3 bg-depth hover:bg-depth/90 text-white rounded font-medium transition-colors">

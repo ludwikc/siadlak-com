@@ -9,8 +9,8 @@ const PATHS = [
   {
     keyword: "TRENER",
     emoji: "🎤",
-    title: "Szkolisz z AI - albo chcesz zacząć?",
-    desc: "Twoja wiedza jest warta więcej, niż za nią dziś dostajesz. Problem nie jest techniczny. Train The Trainer: AI - 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami.",
+    title: "Szkolisz z AI — albo chcesz zacząć?",
+    desc: "Twoja wiedza jest warta więcej, niż za nią dziś dostajesz. Problem nie jest techniczny. Train The Trainer: AI — 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami.",
     cta: "Zobacz program",
     href: `/program/ttt-ai${UTM}`,
   },
@@ -18,7 +18,7 @@ const PATHS = [
     keyword: "SYSTEM",
     emoji: "⚡",
     title: "Sukces na zewnątrz, chaos w środku?",
-    desc: "Testowałeś narzędzia, kursy, coaching - i wciąż kręcisz się w kółko. Bo problem leży głębiej. Zacznij od Sesji Discovery: 30 minut, bez zobowiązań.",
+    desc: "Testowałeś narzędzia, kursy, coaching — i wciąż kręcisz się w kółko. Bo problem leży głębiej. Zacznij od Sesji Discovery: 30 minut, bez zobowiązań.",
     cta: "Zarezerwuj Sesję Discovery",
     href: `/discovery${UTM}`,
   },
@@ -43,7 +43,7 @@ export default function IGPage() {
               className="w-24 h-24 mx-auto rounded-full object-cover border-2 border-[hsl(var(--depth-purple)/0.5)]"
             />
             <h1 className="text-xl font-heading font-bold">
-              Cześć. Skoro tu jesteś - pewnie przez rolkę.
+              Cześć. Skoro tu jesteś — pewnie przez rolkę.
             </h1>
             <p className="text-sm text-[hsl(var(--text-dim))] leading-relaxed">
               Tu nie znajdziesz 10 trików dziennie. Znajdziesz jedną tezę:
@@ -71,8 +71,7 @@ export default function IGPage() {
               zżera to, co krąży w Twojej głowie i nie jest domknięte.
             </p>
             <p className="text-sm font-bold text-[hsl(var(--electric-blue))] group-hover:underline">
-              Zrób test →
-            </p>
+              Zrób test</p>
           </a>
 
           {/* === DWIE ŚCIEŻKI === */}
@@ -96,8 +95,7 @@ export default function IGPage() {
                   {path.desc}
                 </p>
                 <p className="text-sm font-bold text-[hsl(var(--electric-blue))] group-hover:underline">
-                  {path.cta} →
-                </p>
+                  {path.cta}</p>
               </a>
             ))}
           </div>
@@ -109,7 +107,7 @@ export default function IGPage() {
             </h2>
             <p className="text-sm text-[hsl(var(--text-dim))] text-center leading-relaxed">
               Najpierw sprawdź, czy mój język do Ciebie trafia. Mailing bez
-              harmonogramu - jedna myśl, wtedy, kiedy naprawdę jest coś do
+              harmonogramu — jedna myśl, wtedy, kiedy naprawdę jest coś do
               powiedzenia. Bez porad. Bez listicli. Bez bzdur.
             </p>
 
@@ -126,9 +124,8 @@ export default function IGPage() {
               href={`/start${UTM}`}
               className="text-sm text-[hsl(var(--text-dim))] hover:text-[hsl(var(--electric-blue))] transition-colors"
             >
-              Programy, podcasty, społeczność - cała reszta jest tutaj →
-            </a>
-            <p className="text-sm text-[hsl(var(--text-dim)/0.5)]">- Ludwik</p>
+              Programy, podcasty, społeczność — cała reszta jest tutaj</a>
+            <p className="text-sm text-[hsl(var(--text-dim)/0.5)]">— Ludwik</p>
           </div>
         </div>
       </div>

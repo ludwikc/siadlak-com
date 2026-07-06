@@ -2,13 +2,13 @@ import { useState } from "react";
 import { ChevronDown, Quote } from "lucide-react";
 
 const t = {
-  bg: "#0a0a0b",
-  surface: "#111113",
-  border: "#27272a",
-  text: "#fafafa",
-  muted: "#a1a1aa",
-  accent: "#3b82f6",
-  green: "#22c55e",
+  bg: "hsl(240 5% 4%)",
+  surface: "hsl(240 6% 7%)",
+  border: "hsl(240 4% 16%)",
+  text: "hsl(0 0% 98%)",
+  muted: "hsl(240 5% 65%)",
+  accent: "hsl(217 91% 60%)",
+  green: "hsl(142 71% 45%)",
   mono: "'JetBrains Mono', monospace",
   sans: "'Inter', system-ui, sans-serif",
 } as const;
@@ -221,7 +221,7 @@ const PremiumCard = ({ item }: { item: Testimonial }) => (
       className="text-xs tracking-wide"
       style={{ fontFamily: t.mono, color: t.accent }}
     >
-      - {item.author}
+      — {item.author}
     </p>
   </div>
 );
@@ -238,7 +238,7 @@ const StandardCard = ({ item }: { item: Testimonial }) => (
       className="text-xs"
       style={{ fontFamily: t.mono, color: t.muted }}
     >
-      - {item.author}
+      — {item.author}
     </p>
   </div>
 );

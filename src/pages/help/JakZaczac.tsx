@@ -15,9 +15,9 @@ const data: HelpPageData = {
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Rejestracja i logowanie</h2>
       <ol className="list-decimal list-inside space-y-2 ml-4">
-        <li><strong>Utwórz konto</strong> - kliknij przycisk "Zarejestruj się" i wypełnij formularz</li>
-        <li><strong>Potwierdź email</strong> - sprawdź swoją skrzynkę pocztową i kliknij link aktywacyjny</li>
-        <li><strong>Zaloguj się</strong> - użyj swoich danych do pierwszego logowania</li>
+        <li><strong>Utwórz konto</strong> — kliknij przycisk "Zarejestruj się" i wypełnij formularz</li>
+        <li><strong>Potwierdź email</strong> — sprawdź swoją skrzynkę pocztową i kliknij link aktywacyjny</li>
+        <li><strong>Zaloguj się</strong> — użyj swoich danych do pierwszego logowania</li>
       </ol>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Pierwsze kroki</h2>

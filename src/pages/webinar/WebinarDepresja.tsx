@@ -6,19 +6,19 @@ import { ArrowRight, Check, Phone } from "lucide-react";
 const symptoms = [
   {
     bold: "Budzisz się zmęczony",
-    text: " - niezależnie od tego, ile spałeś. Wstanie z łóżka wymaga wysiłku, którego nie potrafisz nikomu wytłumaczyć.",
+    text: " — niezależnie od tego, ile spałeś. Wstanie z łóżka wymaga wysiłku, którego nie potrafisz nikomu wytłumaczyć.",
   },
   {
     bold: "Nawet najprostsze decyzje",
-    text: " - co zjeść, co obejrzeć, co odpisać - paraliżują cię jak nigdy wcześniej.",
+    text: " — co zjeść, co obejrzeć, co odpisać — paraliżują cię jak nigdy wcześniej.",
   },
   {
     bold: "Wiadomości od znajomych leżą nieprzeczytane",
-    text: ". Mówisz sobie \u201Eodpiszę za chwilę\u201D - i nigdy tego nie robisz.",
+    text: ". Mówisz sobie \u201Eodpiszę za chwilę\u201D — i nigdy tego nie robisz.",
   },
   {
     bold: "Na zewnątrz uśmiechasz się i działasz",
-    text: ". W środku - cisza, pustka i pytanie: \u201Edlaczego mi się nie chce żyć tak jak kiedyś?\u201D",
+    text: ". W środku — cisza, pustka i pytanie: \u201Edlaczego mi się nie chce żyć tak jak kiedyś?\u201D",
   },
   {
     bold: "Próbujesz wspominać dobre chwile",
@@ -31,10 +31,10 @@ const symptoms = [
 ];
 
 const benefits = [
-  "Konkretne sygnały ostrzegawcze, po których rozpoznasz depresję u siebie - zanim będzie za późno.",
+  "Konkretne sygnały ostrzegawcze, po których rozpoznasz depresję u siebie — zanim będzie za późno.",
   "Jak zauważyć depresję u bliskiej osoby, nawet gdy nosi maskę uśmiechu.",
-  "Szczerą historię człowieka, który przeszedł przez najczarniejszy moment - i wyszedł po drugiej stronie.",
-  "Bezpieczną przestrzeń do pytań - bez kamery, bez nagrywania, bez oceniania.",
+  "Szczerą historię człowieka, który przeszedł przez najczarniejszy moment — i wyszedł po drugiej stronie.",
+  "Bezpieczną przestrzeń do pytań — bez kamery, bez nagrywania, bez oceniania.",
   "Pierwszy krok, który możesz zrobić jeszcze dziś, nawet jeśli wydaje ci się, że nie masz siły na nic.",
 ];
 
@@ -91,7 +91,7 @@ export default function WebinarDepresja() {
   return (
     <Layout hideHeader hideFooter>
       <SEO
-        title="Nie musisz tego znosić sam - bezpłatne spotkanie"
+        title="Nie musisz tego znosić sam — bezpłatne spotkanie"
         description="Bezpłatne spotkanie online z okazji Międzynarodowego Dnia Walki z Depresją. 23 lutego 2026, godz. 19:05. Prowadzi Ludwik C. Siadlak."
         keywords="depresja, pomoc, spotkanie online, zdrowie psychiczne, wsparcie"
         url="/webinar/depresja"
@@ -114,7 +114,7 @@ export default function WebinarDepresja() {
 
                 <p className="text-lg md:text-xl leading-relaxed text-text-dim mb-10">
                   Bezpłatne spotkanie online z człowiekiem, który stał na krawędzi
-                  peronu - i wrócił.
+                  peronu — i wrócił.
                 </p>
 
                 {/* Meeting Details */}
@@ -206,7 +206,7 @@ export default function WebinarDepresja() {
 
             <blockquote className="border-l-4 border-electric-blue pl-6 italic text-text-dim text-lg md:text-xl leading-relaxed mb-10">
               „Stojąc na peronie metra Dworzec Gdański, po raz pierwszy od
-              miesięcy poczułem motywację - żeby zrobić jeden krok w przód, pod
+              miesięcy poczułem motywację — żeby zrobić jeden krok w przód, pod
               nadjeżdżający pociąg."
             </blockquote>
 
@@ -214,7 +214,7 @@ export default function WebinarDepresja() {
               <p>
                 Nazywam się <span className="text-text-on-dark font-semibold">Ludwik Siadlak</span>. Jestem trenerem, mężem, ojcem dwójki
                 dzieci. Prowadzę szkolenia, coaching, buduję społeczność. Z
-                zewnątrz - człowiek, który „ma wszystko poukładane".
+                zewnątrz — człowiek, który „ma wszystko poukładane".
               </p>
               <p>
                 Ale kilka lat temu świat wyglądał jak film o zombie. Ludzie wokół
@@ -224,7 +224,7 @@ export default function WebinarDepresja() {
                 wewnątrz.
               </p>
               <p>
-                Sięgnąłem po pomoc w ostatnim momencie. Dzisiaj jestem tu - żeby
+                Sięgnąłem po pomoc w ostatnim momencie. Dzisiaj jestem tu — żeby
                 powiedzieć ci, że <span className="text-text-on-dark font-semibold">depresja to nie słabość</span>. To choroba. Normalna,
                 ludzka choroba, z której się wychodzi. I chcę ci pokazać, jak
                 wygląda ta droga.
@@ -275,7 +275,7 @@ export default function WebinarDepresja() {
 
             <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-2xl mx-auto text-text-dim">
               To nie jest webinar sprzedażowy. Nie mam ci niczego do sprzedania.
-              Chcę się z tobą spotkać i porozmawiać - bo kiedyś ktoś spotkał się
+              Chcę się z tobą spotkać i porozmawiać — bo kiedyś ktoś spotkał się
               ze mną i uratował mi życie.
             </p>
 

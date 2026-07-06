@@ -138,7 +138,7 @@ const DesktopWebinarBar = () => {
           className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-20 cursor-pointer"
           aria-label="Zamknij"
         >
-          <X size={24} className="text-white/80" />
+          <X size={24} className="text-dim" />
         </button>
 
         {/* Content wrapper - allows for bonus text below */}

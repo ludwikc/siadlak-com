@@ -27,7 +27,7 @@ const Contact = () => {
               </a>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90 leading-relaxed max-w-2xl mx-auto">
-            Żadnych formularzy. Po prostu napisz. Jeśli chcesz porozmawiać 1:1, "synchronicznie" - umów się na Sesję Discovery.
+            Żadnych formularzy. Po prostu napisz. Jeśli chcesz porozmawiać 1:1, "synchronicznie" — umów się na Sesję Discovery.
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                 Social Media
               </h2>
               <p className="text-lg text-dim">
-                Najczęściej jestem na Discordzie SIADLAK.VIP - tam spotkasz mnie cały czas. Ale jeśli wolisz inne appki - jestem też na: 
+                Najczęściej jestem na Discordzie SIADLAK.VIP — tam spotkasz mnie cały czas. Ale jeśli wolisz inne appki — jestem też na: 
               </p>
             </div>
 

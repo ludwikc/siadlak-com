@@ -36,9 +36,9 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             {/* macOS window title bar */}
             <div className="bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-[#ff5f57] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[#ffbd2e] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[#28c840] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(3_100%_67%)] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(41_100%_59%)] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(129_65%_47%)] border border-black/10"></span>
               </div>
               <div className="text-xs text-muted-foreground select-none">Email z mojego biurka</div>
               <div className="w-14" />
@@ -87,7 +87,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
                 src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                alt="7 Technik Produktywności - Logo kursu"
+                alt="7 Technik Produktywności — Logo kursu"
                 className="w-full h-auto rounded-2xl shadow-2xl"
                 width={672}
                 height={377}
@@ -123,7 +123,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <ul className="text-left max-w-2xl mx-auto space-y-3 text-lg leading-relaxed">
               <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach - zero „teorii dla teorii”.</li>
               <li className="text-foreground">• <strong>Po każdej technice jedno zadanie</strong>, które wdrażasz od razu.</li>
-              <li className="text-foreground">• <strong>Zero aplikacji</strong> - wystarczy zwykły timer.</li>
+              <li className="text-foreground">• <strong>Zero aplikacji</strong> — wystarczy zwykły timer.</li>
               <li className="text-foreground">• <strong>Dostęp natychmiast</strong> po zakupie.</li>
             </ul>
           </div>
@@ -159,7 +159,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden flex items-center justify-center px-4 md:px-8">
             <OptimizedImage
               src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
-              alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
+              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
               className="max-h-full w-auto max-w-full object-contain object-center mx-auto"
               width={800}
               height={569}
@@ -185,9 +185,9 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                   <p className="text-sm text-muted-foreground mb-1">Regularnie</p>
                   <p className="text-2xl font-bold line-through text-muted-foreground">497 PLN</p>
                 </div>
-                <div className="text-3xl text-muted-foreground">→</div>
+                <div className="text-3xl text-muted-foreground"></div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa - i <s>tylko teraz</s></p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie — mojego Gościa — i <s>tylko teraz</s></p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
@@ -230,11 +230,11 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 </p>
                 
                 <p className="text-muted-foreground">
-                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
+                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo — okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
                 </p>
                 
                 <p className="text-lg font-medium text-primary">
-                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
+                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz — kliknij poniżej.
                 </p>
               </div>
             </div>

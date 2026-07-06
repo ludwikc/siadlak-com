@@ -15,16 +15,16 @@ const data: HelpPageData = {
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Podstawowe informacje</h2>
       <ul className="list-disc list-inside space-y-1 ml-4">
-        <li><strong>Nazwa użytkownika</strong> - jak inni Cię widzą na platformie</li>
-        <li><strong>Email</strong> - adres do logowania i powiadomień</li>
-        <li><strong>Zdjęcie profilowe</strong> - Twoja wizytówka w społeczności</li>
+        <li><strong>Nazwa użytkownika</strong> — jak inni Cię widzą na platformie</li>
+        <li><strong>Email</strong> — adres do logowania i powiadomień</li>
+        <li><strong>Zdjęcie profilowe</strong> — Twoja wizytówka w społeczności</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Preferencje prywatności</h2>
       <ul className="list-disc list-inside space-y-1 ml-4">
-        <li><strong>Widoczność profilu</strong> - kto może widzieć Twój profil</li>
-        <li><strong>Historia aktywności</strong> - czy pokazywać Twoją aktywność</li>
-        <li><strong>Udostępnianie postępów</strong> - czy udostępniać postępy w nauce</li>
+        <li><strong>Widoczność profilu</strong> — kto może widzieć Twój profil</li>
+        <li><strong>Historia aktywności</strong> — czy pokazywać Twoją aktywność</li>
+        <li><strong>Udostępnianie postępów</strong> — czy udostępniać postępy w nauce</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Powiadomienia</h2>
@@ -38,9 +38,9 @@ const data: HelpPageData = {
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Bezpieczeństwo</h2>
       <ul className="list-disc list-inside space-y-1 ml-4">
-        <li><strong>Zmiana hasła</strong> - regularna zmiana hasła zwiększa bezpieczeństwo</li>
-        <li><strong>Logowanie dwuskładnikowe</strong> - dodatkowa warstwa ochrony</li>
-        <li><strong>Aktywne sesje</strong> - przegląd urządzeń, na których jesteś zalogowany</li>
+        <li><strong>Zmiana hasła</strong> — regularna zmiana hasła zwiększa bezpieczeństwo</li>
+        <li><strong>Logowanie dwuskładnikowe</strong> — dodatkowa warstwa ochrony</li>
+        <li><strong>Aktywne sesje</strong> — przegląd urządzeń, na których jesteś zalogowany</li>
       </ul>
     </div>
   )

@@ -117,7 +117,7 @@ export default function AppCard({
             <p
               className={`
               text-base sm:text-lg font-medium
-              ${premium ? "text-white/80" : "text-dim"}
+              ${premium ? "text-dim" : "text-dim"}
             `}
             >
               {subtitle}

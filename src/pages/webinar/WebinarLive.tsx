@@ -24,7 +24,7 @@ const WebinarLive = () => {
     <Layout hideFooter={true}>
       <div
         className="min-h-screen pt-12 pb-20"
-        style={{ backgroundColor: "#1E1F22" }}
+        style={{ backgroundColor: "hsl(225 6% 13%)" }}
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -76,7 +76,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                 </div>
               </div>
 
-              {/* GÓRNY BOKS - Data + Zapisz w kalendarzu */}
+              {/* GÓRNY BOKS — Data + Zapisz w kalendarzu */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">
                   Poniedziałek, 23 lutego 2026, <br />
@@ -157,7 +157,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                 </div>
               </div>
 
-              {/* DOLNY BOKS - Oglądaj na platformach */}
+              {/* DOLNY BOKS — Oglądaj na platformach */}
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-lg text-white mb-4 text-center">
                   Możesz też oglądać na swojej ulubionej platformie:
@@ -193,7 +193,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                   </Button>
                   <Button
                     asChild
-                    className="bg-[#0077b5] hover:bg-[#006399] text-white border-0"
+                    className="bg-[#0077b5] hover:bg-[hsl(199_100%_30%)] text-white border-0"
                   >
                     <a
                       href="https://fb.me/e/5FLNV3UAi"
@@ -212,7 +212,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
               {false && showOffer && (
                 <div className="bg-gradient-to-r from-depth/30 to-electric/30 backdrop-blur-lg rounded-md p-6 border border-depth/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
-                    Program LifeOS: System Upgrade - Odkryj pełną transformację
+                    Program LifeOS: System Upgrade — Odkryj pełną transformację
                   </h3>
                   <p className="text-gray-300 mb-6">
                     Teraz możesz dowiedzieć się więcej o pełnym programie
@@ -229,7 +229,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                     TAK, CHCĘ DOWIEDZIEĆ SIĘ WIĘCEJ O PROGRAMIE LIFEOS
                   </Button>
                   <p className="text-sm text-center text-gray-400 mt-2">
-                    Kliknij, aby zobaczyć szczegóły - nie przegapisz żadnej
+                    Kliknij, aby zobaczyć szczegóły — nie przegapisz żadnej
                     części webinaru
                   </p>
                 </div>

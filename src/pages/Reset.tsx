@@ -144,7 +144,7 @@ export default function Reset() {
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </Button>
               <p className="text-xs text-dim mt-6">
-                Odpowiadaj pierwszą myślą - ona jest najbliżej prawdy.
+                Odpowiadaj pierwszą myślą — ona jest najbliżej prawdy.
               </p>
             </div>
           )}
@@ -222,7 +222,7 @@ export default function Reset() {
                 Twój wynik jest gotowy
               </h2>
               <p className="text-dim text-center mb-8 max-w-md mx-auto leading-relaxed">
-                Zobaczysz go tak czy inaczej - przycisk jest niżej. Ale jeśli
+                Zobaczysz go tak czy inaczej — przycisk jest niżej. Ale jeśli
                 zostawisz maila, dostaniesz ode mnie też to, co z tym wynikiem
                 zrobić. I od czasu do czasu jedną myśl, która domyka pętle
                 zamiast otwierać nowe.
@@ -281,7 +281,7 @@ export default function Reset() {
                     href="/program/produktywnosc"
                     className="block text-sm text-dim underline hover:text-diamond transition-colors"
                   >
-                    Wolę zacząć samodzielnie - program Produktywność
+                    Wolę zacząć samodzielnie — program Produktywność
                   </a>
                 </div>
               ) : (

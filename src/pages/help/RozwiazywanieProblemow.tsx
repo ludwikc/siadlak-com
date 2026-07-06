@@ -49,9 +49,9 @@ const data: HelpPageData = {
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Problemy techniczne</h2>
       <ul className="list-disc list-inside space-y-2 ml-4">
-        <li><strong>Strona się nie ładuje</strong> - Sprawdź połączenie internetowe i spróbuj odświeżyć</li>
-        <li><strong>Powiadomienia nie działają</strong> - Sprawdź ustawienia przeglądarki i pozwolenia</li>
-        <li><strong>Nie mogę pobrać materiałów</strong> - Sprawdź blokery popup i ustawienia pobierania</li>
+        <li><strong>Strona się nie ładuje</strong> — Sprawdź połączenie internetowe i spróbuj odświeżyć</li>
+        <li><strong>Powiadomienia nie działają</strong> — Sprawdź ustawienia przeglądarki i pozwolenia</li>
+        <li><strong>Nie mogę pobrać materiałów</strong> — Sprawdź blokery popup i ustawienia pobierania</li>
       </ul>
       
       <h2 className="text-2xl font-semibold mt-6 mb-3">Wsparcie techniczne</h2>

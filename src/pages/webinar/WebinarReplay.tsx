@@ -225,7 +225,7 @@ const WebinarReplay = () => {
               >
                 {offerExpired
                   ? "Ta specjalna oferta wygasła. Sprawdź stronę Męski Kompas, aby poznać aktualne możliwości."
-                  : "Podczas webinaru na żywo przedstawiliśmy ekskluzywną ofertę pilotażową programu Męski Kompas - 5-tygodniową transformację przez wszystkie filary męskości."}
+                  : "Podczas webinaru na żywo przedstawiliśmy ekskluzywną ofertę pilotażową programu Męski Kompas — 5-tygodniową transformację przez wszystkie filary męskości."}
               </p>
 
               {!offerExpired && (
@@ -242,7 +242,7 @@ const WebinarReplay = () => {
 
                       <div className="flex items-end justify-between mb-6">
                         <div>
-                          <p className="text-sm font-medium text-white/80 mb-2 uppercase tracking-wide">Cena pilotażu</p>
+                          <p className="text-sm font-medium text-dim mb-2 uppercase tracking-wide">Cena pilotażu</p>
                           <div className="flex items-baseline gap-3">
                             <p className="text-6xl md:text-7xl font-black text-white drop-shadow-lg">497</p>
                             <p className="text-3xl font-bold text-white/90 mb-2">zł</p>
@@ -309,15 +309,15 @@ const WebinarReplay = () => {
                 disabled={offerExpired}
               >
                 {offerExpired
-                  ? "Oferta wygasła - Było, minęło..."
-                  : "DOŁĄCZ DO MĘSKIEGO KOMPASU →"}
+                  ? "Oferta wygasła — Było, minęło..."
+                  : "DOŁĄCZ DO MĘSKIEGO KOMPASU"}
               </Button>
 
               {!offerExpired && (
                 <div className="mt-4 p-4 bg-depth/5 rounded-lg border border-depth/10">
                   <p className="text-sm text-center text-foreground/70 leading-relaxed">
                     <span className="font-semibold text-depth">✓ Gwarancja satysfakcji:</span>{" "}
-                    Jeśli po pierwszym tygodniu uznasz, że to nie dla Ciebie - zwrot 100% środków, bez pytań.
+                    Jeśli po pierwszym tygodniu uznasz, że to nie dla Ciebie — zwrot 100% środków, bez pytań.
                   </p>
                 </div>
               )}
@@ -329,7 +329,7 @@ const WebinarReplay = () => {
                 💬 Tak zareagowali mężczyźni podczas transmisji na żywo:
               </h3>
               <p className="text-on-light-dim mb-6">
-                Poniżej prawdziwe komentarze z czatu webinaru - bez edycji, bez filtrów.
+                Poniżej prawdziwe komentarze z czatu webinaru — bez edycji, bez filtrów.
               </p>
 
               <div className="space-y-8">
@@ -338,16 +338,16 @@ const WebinarReplay = () => {
                   <h4 className="font-semibold text-lg mb-4 text-depth">"To brzmi jak moja historia..."</h4>
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
-                      <p className="text-on-light-dim italic mb-2">"Kurczę jakbym słyszał o swoim poprzednim związku - lata walki, za wszelką cenę inwestycja w związek i totalne załamanie, kiedy odeszła, totalny dołek i porażka - znam to"</p>
-                      <p className="text-sm font-medium text-depth">- Konrad</p>
+                      <p className="text-on-light-dim italic mb-2">"Kurczę jakbym słyszał o swoim poprzednim związku — lata walki, za wszelką cenę inwestycja w związek i totalne załamanie, kiedy odeszła, totalny dołek i porażka — znam to"</p>
+                      <p className="text-sm font-medium text-depth">— Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
                       <p className="text-on-light-dim italic mb-2">"Znam to uczucie bardzo dobrze z autopsji"</p>
-                      <p className="text-sm font-medium text-depth">- Daniel</p>
+                      <p className="text-sm font-medium text-depth">— Daniel</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-depth">
                       <p className="text-on-light-dim italic mb-2">"Hi5 z tym mózgiem analitycznym, nie jest łatwo 🙈"</p>
-                      <p className="text-sm font-medium text-depth">- Anna</p>
+                      <p className="text-sm font-medium text-depth">— Anna</p>
                     </blockquote>
                   </div>
                 </div>
@@ -358,11 +358,11 @@ const WebinarReplay = () => {
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-electric">
                       <p className="text-on-light-dim italic mb-2">"Nie da się ukryć że otoczenie prawdziwych osób wspierających daje przestrzeń, pozwala zrozumieć i daje siłę by iść dalej, zmieniać"</p>
-                      <p className="text-sm font-medium text-electric">- Artur</p>
+                      <p className="text-sm font-medium text-electric">— Artur</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-electric">
                       <p className="text-on-light-dim italic mb-2">"Ludwik to czarodziej 😉 to nie jest zwykły kurs"</p>
-                      <p className="text-sm font-medium text-electric">- Artur</p>
+                      <p className="text-sm font-medium text-electric">— Artur</p>
                     </blockquote>
                   </div>
                 </div>
@@ -373,23 +373,23 @@ const WebinarReplay = () => {
                   <div className="space-y-4">
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"O spoko! Dobra cena. Ja myślałem że między 2500 a 5000"</p>
-                      <p className="text-sm font-medium text-on-light">- Konrad</p>
+                      <p className="text-sm font-medium text-on-light">— Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Kupione! Wiem że to będzie dobra współpraca z Wami. Poznałem Was w najgorszym dla mnie kryzysie"</p>
-                      <p className="text-sm font-medium text-on-light">- Konrad</p>
+                      <p className="text-sm font-medium text-on-light">— Konrad</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Ja płaciłem więcej niż na początku i dalej się bardzo bardzo opłaca. Polecam każdemu 😎"</p>
-                      <p className="text-sm font-medium text-on-light">- Jakub{" "}<span className="text-xs opacity-70">(członek społeczności Lifehackerzy)</span></p>
+                      <p className="text-sm font-medium text-on-light">— Jakub{" "}<span className="text-xs opacity-70">(członek społeczności Lifehackerzy)</span></p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Wchodzę w to 👍🏻"</p>
-                      <p className="text-sm font-medium text-on-light">- Kamil</p>
+                      <p className="text-sm font-medium text-on-light">— Kamil</p>
                     </blockquote>
                     <blockquote className="bg-white/60 rounded-lg p-4 border-l-4 border-on-light">
                       <p className="text-on-light-dim italic mb-2">"Już nie mogę się doczekać!"</p>
-                      <p className="text-sm font-medium text-on-light">- Patryk</p>
+                      <p className="text-sm font-medium text-on-light">— Patryk</p>
                     </blockquote>
                   </div>
                 </div>
@@ -405,8 +405,7 @@ const WebinarReplay = () => {
                   className="w-full bg-depth hover:bg-depth/90 text-white"
                    onClick={() => navigate("/program/meskosc")}
                 >
-                  DOŁĄCZ ZANIM OFERTA WYGAŚNIE →
-                </Button>
+                  DOŁĄCZ ZANIM OFERTA WYGAŚNIE</Button>
               </div>
             </div>
 
@@ -430,15 +429,14 @@ const WebinarReplay = () => {
                   className="block border-l-4 border-blue-900 hover:bg-blue-900/5 -ml-6 pl-6 pr-4 py-3 rounded-r-lg transition-colors group"
                 >
                   <h4 className="font-semibold text-blue-900 mb-2 group-hover:text-blue-800 transition-colors">
-                    🖥️ DeepWork.pl →
-                  </h4>
+                    🖥️ DeepWork.pl</h4>
                   <p className="text-sm text-on-light-dim mb-2">
                     Bezpłatny cowork online
                   </p>
                   <p className="text-sm text-on-light-dim">
                     Codziennie na Discordzie Lifehackerów. To właśnie tam
                     Mateusz siedział w dniu swojej obrony, otrzymując wsparcie
-                    społeczności. Jak mówił Jakub - "zmiana poranna i zmiana
+                    społeczności. Jak mówił Jakub — "zmiana poranna i zmiana
                     wieczorna wspierają się nawzajem". Wejdź, włącz kamerę,
                     zacznij pracować nad tym, co odkładasz.
                   </p>
@@ -451,15 +449,14 @@ const WebinarReplay = () => {
                   className="block border-l-4 border-green-800 hover:bg-green-800/5 -ml-6 pl-6 pr-4 py-3 rounded-r-lg transition-colors group"
                 >
                   <h4 className="font-semibold text-green-800 mb-2 group-hover:text-green-700 transition-colors">
-                    🧘 UważneŻycie.pl →
-                  </h4>
+                    🧘 UważneŻycie.pl</h4>
                   <p className="text-sm text-on-light-dim mb-2">
                     Bezpłatne medytacje prowadzone przez Ludwika
                   </p>
                   <p className="text-sm text-on-light-dim">
                     Każdy wtorek o 6:30 rano. Mniej niż 20 minut medytacji,
                     które pomagają uporządkować myśli i zacząć dzień z
-                    wewnętrznym spokojem. Bo jak mówiliśmy - spokój to
+                    wewnętrznym spokojem. Bo jak mówiliśmy — spokój to
                     najważniejszy element wszystkich filarów.
                   </p>
                 </a>
@@ -471,8 +468,7 @@ const WebinarReplay = () => {
                   className="block border-l-4 border-lifehacker-purple hover:bg-lifehacker-purple/5 -ml-6 pl-6 pr-4 py-3 rounded-r-lg transition-colors group"
                 >
                   <h4 className="font-semibold text-lifehacker-purple mb-2 group-hover:text-lifehacker-purple-light transition-colors">
-                    👥 Lifehackerzy.pl →
-                  </h4>
+                    👥 Lifehackerzy.pl</h4>
                   <p className="text-sm text-on-light-dim mb-2">
                     Społeczność Klientów Ludwika
                   </p>
@@ -498,7 +494,7 @@ const WebinarReplay = () => {
                     Czy muszę być Lifehackerem?
                   </h4>
                   <p className="text-sm text-on-light-dim">
-                    Nie - program Męski Kompas jest otwarty dla wszystkich.
+                    Nie — program Męski Kompas jest otwarty dla wszystkich.
                     Otrzymujesz w bonusie lifetime dostęp do społeczności
                     Lifehackerzy.
                   </p>
@@ -520,7 +516,7 @@ const WebinarReplay = () => {
                     Co jeśli po tygodniu uznam, że to nie dla mnie?
                   </h4>
                   <p className="text-sm text-on-light-dim">
-                    Gwarancja satysfakcji - jeśli po pierwszym tygodniu uznasz,
+                    Gwarancja satysfakcji — jeśli po pierwszym tygodniu uznasz,
                     że to nie dla Ciebie, otrzymujesz zwrot 100% środków, bez
                     pytań.
                   </p>
@@ -563,8 +559,8 @@ const WebinarReplay = () => {
                   className="w-full sm:w-auto bg-white text-depth hover:bg-white/90 font-bold shadow-lg px-6 py-3"
                   onClick={() => navigate("/program/meskosc")}
                 >
-                  <span className="inline sm:hidden">DOŁĄCZ →</span>
-                  <span className="hidden sm:inline">DOŁĄCZ TERAZ →</span>
+                  <span className="inline sm:hidden">DOŁĄCZ</span>
+                  <span className="hidden sm:inline">DOŁĄCZ TERAZ</span>
                 </Button>
               </div>
             </div>

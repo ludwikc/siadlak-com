@@ -51,7 +51,7 @@ export default function SiedemTechnik() {
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
                 src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                alt="7 Technik Produktywności - Logo kursu"
+                alt="7 Technik Produktywności — Logo kursu"
                 width={1920}
                 height={1076}
                 sizes="(max-width: 768px) 100vw, 672px"
@@ -104,7 +104,7 @@ export default function SiedemTechnik() {
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-on-light-dim leading-relaxed">
-                  <strong>Zero aplikacji</strong> - wystarczy zwykły timer
+                  <strong>Zero aplikacji</strong> — wystarczy zwykły timer
                 </p>
               </div>
 
@@ -200,7 +200,7 @@ export default function SiedemTechnik() {
           <div className="max-w-6xl mx-auto">
             <OptimizedImage
               src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
-              alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
+              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
               width={1920}
               height={1366}
               sizes="(max-width: 768px) 100vw, 1152px"
@@ -243,7 +243,7 @@ export default function SiedemTechnik() {
                 </button>
               </a>
 
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-dim">
                 <div className="flex items-center gap-2">
                    <div className="h-2 w-2 bg-electric rounded-full"></div>
                    <span>Bezpieczne płatności</span>

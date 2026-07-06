@@ -112,7 +112,7 @@ const WebinarExpired = () => {
                 Metodologia Black Panther pomogła mi odzyskać kontrolę nad swoim
                 życiem zawodowym i zwiększyć zarobki o 62% w ciągu 6 miesięcy."
               </p>
-              <p className="font-medium">- Karol M., Software Architect</p>
+              <p className="font-medium">— Karol M., Software Architect</p>
             </div>
           </div>
         </div>

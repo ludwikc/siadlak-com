@@ -23,14 +23,14 @@ export default function NewsletterPage() {
               </h1>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                Umysł + AI do pot&#281;gi Serca.
+                Umysł + AI do potęgi Serca.
               </h2>
 
               <p className="text-lg sm:text-xl text-dim max-w-2xl mx-auto leading-relaxed">
-                Mailing Ludwika&nbsp;C.&nbsp;Siadlaka.
+                Mailing Ludwika C. Siadlaka.
                 <br />
-                Bez harmonogramu i bez kalendarza tre&#347;ci. Pisz&#281;, kiedy mam co&#347;, co naprawd&#281; warto
-                wys&#322;a&#263; - prosto na Twoj&#261; skrzynk&#281;, jedyne miejsce, gdzie algorytm nie decyduje, czy
+                Bez harmonogramu i bez kalendarza treści. Piszę, kiedy mam coś, co naprawdę warto
+                wysłać - prosto na Twoją skrzynkę, jedyne miejsce, gdzie algorytm nie decyduje, czy
                 to zobaczysz.
               </p>
 
@@ -42,8 +42,7 @@ export default function NewsletterPage() {
                   boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
                 }}
               >
-                Zapisuj&#281; si&#281; →
-              </a>
+                Zapisuję się</a>
             </div>
           </div>
         </section>
@@ -53,42 +52,42 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                Dlaczego pisz&#281; do Ciebie na email?
+                Dlaczego piszę do Ciebie na email?
               </h2>
 
               <div className="space-y-6 text-base sm:text-lg text-dim leading-relaxed">
                 <p>
-                  Bo to jedyne miejsce, w kt&oacute;rym mog&#281; do Ciebie <em>dotrze&#263;</em>.
+                  Bo to jedyne miejsce, w którym mogę do Ciebie <em>dotrzeć</em>.
                 </p>
 
                 <p>
-                  Pomy&#347;l o tym. Na LinkedInie algorytm decyduje, czy zobaczysz m&oacute;j post - w
-                  zale&#380;no&#347;ci od tego, ile os&oacute;b go polubiło w pierwszej godzinie. Na Instagramie
-                  Tw&oacute;j feed jest kuratorem tre&#347;ci, ale kuratorem nie jeste&#347; Ty - jest nim maszyna,
-                  kt&oacute;ra zarabia na Twojej uwadze. Na YouTube&#8217;ie &#8222;polecane&#8221; to synonim
-                  &#8222;uzale&#380;niaj&#261;ce&#8221;, nie &#8222;warto&#347;ciowe&#8221;.
+                  Pomyśl o tym. Na LinkedInie algorytm decyduje, czy zobaczysz mój post - w
+                  zależności od tego, ile osób go polubiło w pierwszej godzinie. Na Instagramie
+                  Twój feed jest kuratorem treści, ale kuratorem nie jesteś Ty - jest nim maszyna,
+                  która zarabia na Twojej uwadze. Na YouTube’ie „polecane” to synonim
+                  „uzależniające”, nie „wartościowe”.
                 </p>
 
                 <p>
-                  Wsz&#281;dzie tam kto&#347; stoi mi&#281;dzy nami. Kto&#347;, kto nie zna Ci&#281;, nie rozumie
-                  Ci&#281; i - co najwa&#380;niejsze - nie obchodzi go, czy to, co zobaczysz, cokolwiek w Tobie zmieni.
-                  Obchodzi go, &#380;eby&#347; <em>scrollowa&#322; dalej</em>.
+                  Wszędzie tam ktoś stoi między nami. Ktoś, kto nie zna Cię, nie rozumie
+                  Cię i - co najważniejsze - nie obchodzi go, czy to, co zobaczysz, cokolwiek w Tobie zmieni.
+                  Obchodzi go, żebyś <em>scrollował dalej</em>.
                 </p>
 
                 <p className="text-on-dark font-bold text-lg sm:text-xl">
-                  Twoja skrzynka email to ostatnia jeszcze w miar&#281; intymna przysta&#324; w internecie.
+                  Twoja skrzynka email to ostatnia jeszcze w miarę intymna przystań w internecie.
                 </p>
 
                 <p>
-                  Kiedy wysy&#322;am Ci wiadomo&#347;&#263; - ona na Ciebie czeka. Nie musi
-                  walczy&#263; z algorytmem. Nie musi zbiera&#263; polubie&#324;, &#380;eby do Ciebie dotrze&#263;. Nie
-                  musi by&#263; &#8222;viralowa&#8221;. Musi by&#263; tylko <em>prawdziwa</em>.
+                  Kiedy wysyłam Ci wiadomość - ona na Ciebie czeka. Nie musi
+                  walczyć z algorytmem. Nie musi zbierać polubień, żeby do Ciebie dotrzeć. Nie
+                  musi być „viralowa”. Musi być tylko <em>prawdziwa</em>.
                 </p>
 
                 <p>
-                  I dlatego pisz&#281; w&#322;a&#347;nie tu. Bo zale&#380;y mi na kontakcie z &#380;ywym
-                  cz&#322;owiekiem. Z Tob&#261; - nie z Twoim profilem, nie z Twoim avatarem, nie z Twoj&#261;
-                  &#8222;sieci&#261; kontakt&oacute;w&#8221;. Z&nbsp;Tob&#261;.
+                  I dlatego piszę właśnie tu. Bo zależy mi na kontakcie z żywym
+                  człowiekiem. Z Tobą - nie z Twoim profilem, nie z Twoim avatarem, nie z Twoją
+                  „siecią kontaktów”. Z Tobą.
                 </p>
               </div>
             </div>
@@ -102,37 +101,37 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-10">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-light leading-[1.1] tracking-[-0.02em]">
-                Jak to dzia&#322;a?
+                Jak to działa?
               </h2>
 
               {/* Kiedy przychodzi myśl */}
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-on-light">
-                  Kiedy przychodzi my&#347;l - wysy&#322;am.
+                  Kiedy przychodzi myśl - wysyłam.
                 </h3>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Nie pisz&#281; w ka&#380;d&#261; niedziel&#281; o 19:00, bo nie jestem maszyn&#261; do produkcji
-                  tre&#347;ci. Pisz&#281; wtedy, kiedy co&#347; we mnie dojrzeje na tyle, &#380;e nie wys&#322;a&#263;
-                  by&#322;oby strat&#261; - czasem dwa razy w tygodniu, czasem raz na dwa. Inspiracja nie zagl&#261;da
-                  do kalendarza. Ja te&#380; przesta&#322;em.
+                  Nie piszę w każdą niedzielę o 19:00, bo nie jestem maszyną do produkcji
+                  treści. Piszę wtedy, kiedy coś we mnie dojrzeje na tyle, że nie wysłać
+                  byłoby stratą - czasem dwa razy w tygodniu, czasem raz na dwa. Inspiracja nie zagląda
+                  do kalendarza. Ja też przestałem.
                 </p>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Nie porad&#281;. Nie &#8222;5 krok&oacute;w do lepszego Ciebie&#8221;. Jedn&#261; perspektyw&#281;,
-                  kt&oacute;ra ma szans&#281; zderzy&#263; si&#281; z Twoj&#261;. Czasem o AI i o tym, jak zmienia
-                  spos&oacute;b, w jaki my&#347;limy. Czasem o produktywno&#347;ci i o tym, dlaczego robimy wi&#281;cej,
-                  a czujemy mniej. Czasem o czym&#347;, co zobaczy&#322;em z okna hotelowego pokoju w Norwegii i co
-                  zmieni&#322;o mi spos&oacute;b patrzenia na reszt&#281; tygodnia.
+                  Nie poradę. Nie „5 kroków do lepszego Ciebie”. Jedną perspektywę,
+                  która ma szansę zderzyć się z Twoją. Czasem o AI i o tym, jak zmienia
+                  sposób, w jaki myślimy. Czasem o produktywności i o tym, dlaczego robimy więcej,
+                  a czujemy mniej. Czasem o czymś, co zobaczyłem z okna hotelowego pokoju w Norwegii i co
+                  zmieniło mi sposób patrzenia na resztę tygodnia.
                 </p>
                 <div className="space-y-2 pl-4 border-l-2 border-electric">
                   <p className="text-base text-on-light-dim italic">
-                    &#8222;Udawaj, a&#380; ci si&#281; uda - robisz to dobrze czy &#378;le?&#8221;
+                    „Udawaj, aż ci się uda - robisz to dobrze czy źle?”
                   </p>
                   <p className="text-base text-on-light-dim italic">
-                    &#8222;Czy sztuczna inteligencja czyni nas m&#261;drzejszymi, czy tylko bardziej wydajnymi?&#8221;
+                    „Czy sztuczna inteligencja czyni nas mądrzejszymi, czy tylko bardziej wydajnymi?”
                   </p>
                   <p className="text-base text-on-light-dim italic">
-                    &#8222;Dlaczego najlepsi liderzy w erze AI m&oacute;wi&#261; &#8218;nie wiem&#8217;
-                    cz&#281;&#347;ciej ni&#380; kiedykolwiek?&#8221;
+                    „Dlaczego najlepsi liderzy w erze AI mówią ‚nie wiem’
+                    częściej niż kiedykolwiek?”
                   </p>
                 </div>
               </div>
@@ -140,33 +139,33 @@ export default function NewsletterPage() {
               {/* Ty odpowiadasz */}
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-on-light">
-                  Ty odpowiadasz - je&#347;li chcesz.
+                  Ty odpowiadasz - jeśli chcesz.
                 </h3>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Odpowied&#378; na wiadomo&#347;&#263;. Podwa&#380; moj&#261; my&#347;l. Rozbuduj j&#261;. Podziel
-                  si&#281; swoj&#261; histori&#261;. Albo po prostu przeczytaj i id&#378; dalej - to te&#380; jest w
-                  porz&#261;dku.
+                  Odpowiedź na wiadomość. Podważ moją myśl. Rozbuduj ją. Podziel
+                  się swoją historią. Albo po prostu przeczytaj i idź dalej - to też jest w
+                  porządku.
                 </p>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Ale je&#347;li odpowiesz - czytam. I odpisuj&#281;. Nie autoresponder, nie &#8222;Twoja
-                  wiadomo&#347;&#263; jest dla nas wa&#380;na&#8221;.{" "}
-                  <strong className="text-on-light">Ja. Osobi&#347;cie.</strong>
+                  Ale jeśli odpowiesz - czytam. I odpisuję. Nie autoresponder, nie „Twoja
+                  wiadomość jest dla nas ważna”.{" "}
+                  <strong className="text-on-light">Ja. Osobiście.</strong>
                 </p>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Bo po to wybra&#322;em email. &#379;eby m&oacute;c z Tob&#261; <em>rozmawia&#263;</em>, nie
-                  &#8222;budowa&#263; zasi&#281;g&#8221;.
+                  Bo po to wybrałem email. Żeby móc z Tobą <em>rozmawiać</em>, nie
+                  „budować zasięg”.
                 </p>
               </div>
 
               {/* Sobota */}
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-heading font-bold text-on-light">
-                  Discord Lifehackerów - zderzenie perspektyw.
+                  Discord Lifehackerów — zderzenie perspektyw.
                 </h3>
                 <p className="text-base text-on-light-dim leading-relaxed">
-                  Najlepsze wymiany z tygodnia. 12 r&oacute;&#380;nych punkt&oacute;w widzenia na jeden temat. Zero
-                  zgody. Mn&oacute;stwo m&#261;dro&#347;ci. Bo prawda rzadko le&#380;y po jednej stronie -
-                  cz&#281;&#347;ciej jest tym, co widzisz, kiedy staniesz po&#347;rodku i spojrzysz w obie strony naraz.
+                  Najlepsze wymiany z tygodnia. 12 różnych punktów widzenia na jeden temat. Zero
+                  zgody. Mnóstwo mądrości. Bo prawda rzadko leży po jednej stronie -
+                  częściej jest tym, co widzisz, kiedy staniesz pośrodku i spojrzysz w obie strony naraz.
                 </p>
               </div>
             </div>
@@ -178,7 +177,7 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-on-light">
-                Jak wygl&#261;da prawdziwy mail?
+                Jak wygląda prawdziwy mail?
               </h3>
 
               <div className="rounded-sm border border-on-light/10 overflow-hidden">
@@ -193,12 +192,12 @@ export default function NewsletterPage() {
               </div>
 
               <blockquote className="border-l-2 border-electric pl-6 italic text-on-light-dim text-lg">
-                &#8222;Udawaj, a&#380; ci si&#281; uda - robisz to dobrze czy &#378;le?&#8221;
+                „Udawaj, aż ci się uda - robisz to dobrze czy źle?”
               </blockquote>
 
               <p className="text-base text-on-light-dim leading-relaxed">
-                47 odpowiedzi. 12 zupe&#322;nie przeciwstawnych perspektyw. To nie jest artyku&#322; do przeczytania i
-                zamkni&#281;cia. To jest &#380;ywa rozmowa, kt&oacute;ra ewoluuje przez ca&#322;y tydzie&#324;.
+                47 odpowiedzi. 12 zupełnie przeciwstawnych perspektyw. To nie jest artykuł do przeczytania i
+                zamknięcia. To jest żywa rozmowa, która ewoluuje przez cały tydzień.
               </p>
 
               <a
@@ -230,22 +229,22 @@ export default function NewsletterPage() {
 
                 <div className="space-y-6 text-base sm:text-lg text-dim leading-relaxed">
                   <p>
-                    <strong className="text-on-dark">Nie dla Ciebie, je&#347;li</strong> szukasz kolejnej listy &#8222;10
-                    narz&#281;dzi AI, kt&oacute;re musisz zna&#263;&#8221;. Mam do Ciebie zbyt du&#380;o szacunku,
-                    &#380;eby wysy&#322;a&#263; Ci co&#347;, co jutro b&#281;dzie nieaktualne.
+                    <strong className="text-on-dark">Nie dla Ciebie, jeśli</strong> szukasz kolejnej listy „10
+                    narzędzi AI, które musisz znać”. Mam do Ciebie zbyt dużo szacunku,
+                    żeby wysyłać Ci coś, co jutro będzie nieaktualne.
                   </p>
 
                   <p>
-                    <strong className="text-on-dark">Dla Ciebie, je&#347;li</strong> masz do&#347;&#263; konsumowania
-                    trend&oacute;w i chcesz co&#347; z nimi <em>zrobi&#263;</em>. Je&#347;li czujesz, &#380;e im
-                    wi&#281;cej narz&#281;dzi, tym bardziej brakuje Ci czego&#347;, co trudno nazwa&#263;. Je&#347;li
-                    chcesz my&#347;le&#263; g&#322;&#281;biej - i mie&#263; z kim.
+                    <strong className="text-on-dark">Dla Ciebie, jeśli</strong> masz dość konsumowania
+                    trendów i chcesz coś z nimi <em>zrobić</em>. Jeśli czujesz, że im
+                    więcej narzędzi, tym bardziej brakuje Ci czegoś, co trudno nazwać. Jeśli
+                    chcesz myśleć głębiej - i mieć z kim.
                   </p>
 
                   <p>
-                    Wi&#281;kszo&#347;&#263; ludzi, kt&oacute;rzy tu trafiaj&#261;, to programi&#347;ci, liderzy,
-                    przedsi&#281;biorcy, tw&oacute;rcy - ludzie, kt&oacute;rzy maj&#261; wiedz&#281;, ale szukaj&#261;
-                    m&#261;dro&#347;ci. Kt&oacute;rzy wiedz&#261; <em>jak</em>, ale coraz cz&#281;&#347;ciej pytaj&#261;{" "}
+                    Większość ludzi, którzy tu trafiają, to programiści, liderzy,
+                    przedsiębiorcy, twórcy - ludzie, którzy mają wiedzę, ale szukają
+                    mądrości. Którzy wiedzą <em>jak</em>, ale coraz częściej pytają{" "}
                     <em>po co</em>.
                   </p>
                 </div>
@@ -253,25 +252,25 @@ export default function NewsletterPage() {
 
               <div className="space-y-8">
                 <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
-                  Co m&oacute;wi&#261; czytelnicy?
+                  Co mówią czytelnicy?
                 </h2>
 
                 <div className="space-y-6">
                   <blockquote className="border-l-2 border-electric pl-6 space-y-3">
                     <p className="text-base sm:text-lg text-dim italic leading-relaxed">
-                      &#8222;Ludwik nie ma racji w 40% przypadk&oacute;w. I w&#322;a&#347;nie dlatego rozmowy z nim
-                      s&#261; najcenniejsze. Kwestionuje moje za&#322;o&#380;enia, nie potakuje im.&#8221;
+                      „Ludwik nie ma racji w 40% przypadków. I właśnie dlatego rozmowy z nim
+                      są najcenniejsze. Kwestionuje moje założenia, nie potakuje im.”
                     </p>
-                    <footer className="text-sm text-dim not-italic">- Katarzyna L., konsultantka AI</footer>
+                    <footer className="text-sm text-dim not-italic">— Katarzyna L., konsultantka AI</footer>
                   </blockquote>
 
                   <blockquote className="border-l-2 border-electric pl-6 space-y-3">
                     <p className="text-base sm:text-lg text-dim italic leading-relaxed">
-                      &#8222;Jedna my&#347;l z newslettera zmieni&#322;a wi&#281;cej ni&#380; 100 &#8218;porad
-                      produktywno&#347;ci&#8217; z LinkedIn. Przesta&#322;am optymalizowa&#263; czas. Zacz&#281;&#322;am
-                      optymalizowa&#263; jako&#347;&#263; my&#347;lenia.&#8221;
+                      „Jedna myśl z newslettera zmieniła więcej niż 100 ‚porad
+                      produktywności’ z LinkedIn. Przestałam optymalizować czas. Zaczęłam
+                      optymalizować jakość myślenia.”
                     </p>
-                    <footer className="text-sm text-dim not-italic">- Anna K., trenerka przyw&oacute;dztwa</footer>
+                    <footer className="text-sm text-dim not-italic">— Anna K., trenerka przywództwa</footer>
                   </blockquote>
                 </div>
               </div>
@@ -284,18 +283,18 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-xl mx-auto text-center space-y-8">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-light leading-[1.1] tracking-[-0.02em]">
-                Do&#322;&#261;cz do rozmowy
+                Dołącz do rozmowy
               </h2>
 
               <p className="text-base text-on-light-dim leading-relaxed">
-                &#379;adnego harmonogramu - tylko wiadomo&#347;ci, kt&oacute;re mia&#322;y pow&oacute;d powsta&#263;.
-                Prosto na Tw&oacute;j email - bez algorytm&oacute;w, bez paywalli, bez bzdur.
+                Żadnego harmonogramu - tylko wiadomości, które miały powód powstać.
+                Prosto na Twój email - bez algorytmów, bez paywalli, bez bzdur.
               </p>
 
               <MailerLiteEmbed dataForm="lFFyEs" />
 
               <p className="text-sm text-on-light-dim">
-                1 500+ os&oacute;b ju&#380; czyta. Do&#322;&#261;cz, je&#347;li chcesz my&#347;le&#263; g&#322;&#281;biej.
+                1 500+ osób już czyta. Dołącz, jeśli chcesz myśleć głębiej.
               </p>
             </div>
           </div>
@@ -315,60 +314,60 @@ export default function NewsletterPage() {
                 <p>Wiesz, co jest ironiczne?</p>
 
                 <p>
-                  &#379;yjemy w erze, w kt&oacute;rej mamy nieograniczony dost&#281;p do informacji - i
-                  jednocze&#347;nie coraz mniej okazji do prawdziwej rozmowy. Mamy tysi&#261;ce
-                  &#8222;po&#322;&#261;cze&#324;&#8221; na LinkedInie i zero ludzi, kt&oacute;rym mo&#380;emy
-                  powiedzie&#263; &#8222;nie wiem, co dalej&#8221;.
+                  Żyjemy w erze, w której mamy nieograniczony dostęp do informacji - i
+                  jednocześnie coraz mniej okazji do prawdziwej rozmowy. Mamy tysiące
+                  „połączeń” na LinkedInie i zero ludzi, którym możemy
+                  powiedzieć „nie wiem, co dalej”.
                 </p>
 
-                <p>Ten mailing nie rozwi&#261;&#380;e tego problemu. Ale mo&#380;e by&#263; pocz&#261;tkiem.</p>
+                <p>Ten mailing nie rozwiąże tego problemu. Ale może być początkiem.</p>
 
                 <p>
-                  Bo ka&#380;da dobra rozmowa zaczyna si&#281; od jednej my&#347;li, kt&oacute;r&#261; kto&#347;
-                  mia&#322; odwag&#281; wypowiedzie&#263; na g&#322;os. I od drugiej osoby, kt&oacute;ra mia&#322;a
-                  odwag&#281; odpowiedzie&#263;: &#8222;widz&#281; to inaczej.&#8221;
+                  Bo każda dobra rozmowa zaczyna się od jednej myśli, którą ktoś
+                  miał odwagę wypowiedzieć na głos. I od drugiej osoby, która miała
+                  odwagę odpowiedzieć: „widzę to inaczej.”
                 </p>
 
                 <p>
-                  To jest to, co robi&#281; za ka&#380;dym razem, kiedy do Ciebie pisz&#281;. Rzucam my&#347;l. Ty
-                  decydujesz, co z ni&#261; zrobisz.
+                  To jest to, co robię za każdym razem, kiedy do Ciebie piszę. Rzucam myśl. Ty
+                  decydujesz, co z nią zrobisz.
                 </p>
 
-                <p className="text-on-dark font-bold text-lg sm:text-xl">Dzi&#281;kuj&#281;, &#380;e jeste&#347;.</p>
+                <p className="text-on-dark font-bold text-lg sm:text-xl">Dziękuję, że jesteś.</p>
 
-                <p className="text-on-dark font-bold">- Ludwik</p>
+                <p className="text-on-dark font-bold">— Ludwik</p>
               </div>
 
               {/* P.S. ladder */}
               <div className="pt-8 border-t border-white/10 space-y-6 text-sm sm:text-base text-dim leading-relaxed">
                 <p>
-                  <strong className="text-on-dark">P.S.</strong> Je&#347;li po kilku mailach poczujesz, &#380;e
-                  chcesz wi&#281;cej - mam{" "}
+                  <strong className="text-on-dark">P.S.</strong> Jeśli po kilku mailach poczujesz, że
+                  chcesz więcej - mam{" "}
                   <Link to="/program" className="text-electric underline underline-offset-4 hover:text-electric/80">
                     programy
                   </Link>
-                  , kt&oacute;re mo&#380;esz zainstalowa&#263; samodzielnie, w swoim tempie. Wiele os&oacute;b zaczyna
-                  od newslettera, a potem trafia do Aplikacji Mentalnych - kiedy s&#261; gotowe. Nie ma po&#347;piechu.
+                  , które możesz zainstalować samodzielnie, w swoim tempie. Wiele osób zaczyna
+                  od newslettera, a potem trafia do Aplikacji Mentalnych - kiedy są gotowe. Nie ma pośpiechu.
                 </p>
 
                 <p>
-                  <strong className="text-on-dark">P.P.S.</strong> Je&#347;li czujesz, &#380;e Tw&oacute;j problem
-                  le&#380;y g&#322;&#281;biej ni&#380; produktywno&#347;&#263; czy narz&#281;dzia - jest{" "}
+                  <strong className="text-on-dark">P.P.S.</strong> Jeśli czujesz, że Twój problem
+                  leży głębiej niż produktywność czy narzędzia - jest{" "}
                   <Link to="/discovery" className="text-electric underline underline-offset-4 hover:text-electric/80">
                     Sesja Discovery
                   </Link>
-                  . 30 minut rozmowy, &#380;eby&#347;my obaj wiedzieli, czy mo&#380;emy sobie pom&oacute;c. Ale to jest
-                  rozmowa na p&oacute;&#378;niej. Najpierw - przeczytaj kilka moich maili. Zobaczysz, czy m&oacute;j
-                  j&#281;zyk do Ciebie trafia.
+                  . 30 minut rozmowy, żebyśmy obaj wiedzieli, czy możemy sobie pomóc. Ale to jest
+                  rozmowa na później. Najpierw - przeczytaj kilka moich maili. Zobaczysz, czy mój
+                  język do Ciebie trafia.
                 </p>
 
                 <p>
-                  <strong className="text-on-dark">P.P.P.S.</strong> A je&#347;li zastanawiasz si&#281;, czy to jest
-                  &#8222;kolejny mailing, kt&oacute;ry przeczytam dwa razy i zapomn&#281;&#8221; - to uczciwe
-                  pytanie. Nie obiecuj&#281;, &#380;e zmieni&#281; Ci &#380;ycie jednym emailem. Obiecuj&#281; co&#347;
-                  innego: je&#347;li co&#347; ode mnie dostaniesz, to b&#281;dzie co&#347;, nad czym warto si&#281; na
-                  chwil&#281; zatrzyma&#263;. A w &#347;wiecie, kt&oacute;ry krzyczy &#8222;scrolluj dalej&#8221; -
-                  zatrzymanie si&#281; to ju&#380; jest co&#347;.
+                  <strong className="text-on-dark">P.P.P.S.</strong> A jeśli zastanawiasz się, czy to jest
+                  „kolejny mailing, który przeczytam dwa razy i zapomnę” - to uczciwe
+                  pytanie. Nie obiecuję, że zmienię Ci życie jednym emailem. Obiecuję coś
+                  innego: jeśli coś ode mnie dostaniesz, to będzie coś, nad czym warto się na
+                  chwilę zatrzymać. A w świecie, który krzyczy „scrolluj dalej” -
+                  zatrzymanie się to już jest coś.
                 </p>
               </div>
             </div>

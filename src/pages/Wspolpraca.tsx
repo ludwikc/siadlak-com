@@ -21,17 +21,17 @@ const freeItems = [
     emoji: "📬",
     title: "Lista Mailingowa",
     headline: "Jedna myśl, która ma szansę zderzyć się z Twoją.",
-    desc: "Jedyne miejsce, gdzie algorytm nie decyduje, czy to zobaczysz. Piszę o produktywności, AI, sensie życia - i o tym, co widzę z okna hotelowego pokoju w Norwegii. Piszę, kiedy mam coś wartego wysłania - nie według kalendarza. 1 500+ osób czyta. Zero spamu.",
-    cta: "Dołącz do Listy Mailingowej →",
+    desc: "Jedyne miejsce, gdzie algorytm nie decyduje, czy to zobaczysz. Piszę o produktywności, AI, sensie życia — i o tym, co widzę z okna hotelowego pokoju w Norwegii. Piszę, kiedy mam coś wartego wysłania — nie według kalendarza. 1 500+ osób czyta. Zero spamu.",
+    cta: "Dołącz do Listy Mailingowej",
     to: "/newsletter",
     external: false,
   },
   {
     emoji: "🧘",
-    title: "Uważne Życie - Medytacje",
+    title: "Uważne Życie — Medytacje",
     headline: "Medytacja dla ludzi, którzy nie potrafią medytować.",
     desc: 'Bezpłatne prowadzone medytacje. Nie musisz siedzieć w lotosie. Nie musisz \u201Ewyciszyć umysłu\u201D. Wystarczy, że naciśniesz play.',
-    cta: "Zacznij medytować →",
+    cta: "Zacznij medytować",
     to: "https://uwaznezycie.pl",
     external: true,
   },
@@ -39,8 +39,8 @@ const freeItems = [
     emoji: "🖥️",
     title: "DeepWork.pl",
     headline: "Pracuj głęboko. Razem z innymi. Za darmo.",
-    desc: "Wirtualna przestrzeń do pracy w skupieniu. Włączasz kamerę, wyłączasz rozpraszacze, pracujesz. Proste jak drut - i działa lepiej niż kolejna apka do blokowania stron.",
-    cta: "Dołącz do sesji →",
+    desc: "Wirtualna przestrzeń do pracy w skupieniu. Włączasz kamerę, wyłączasz rozpraszacze, pracujesz. Proste jak drut — i działa lepiej niż kolejna apka do blokowania stron.",
+    cta: "Dołącz do sesji",
     to: "https://deepwork.pl",
     external: true,
   },
@@ -51,7 +51,7 @@ const programs = [
     img: programProduktywnosc,
     title: "Instaluj: Produktywność",
     emoji: "🧠",
-    desc: "Zamiast zarządzać zadaniami - zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
+    desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
     price: "1 497 PLN · 110+ absolwentów",
     to: "/program/produktywnosc",
   },
@@ -59,7 +59,7 @@ const programs = [
     img: programOdpornosc,
     title: "Instaluj: Silna Głowa",
     emoji: "🛡️",
-    desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować - zaczyna skupiać. Krytyka przestaje ranić - zaczyna informować.",
+    desc: "Firewall dla Twojego umysłu. Presja przestaje paraliżować — zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.",
     price: "897 PLN",
     to: "/program/odpornosc",
   },
@@ -67,7 +67,7 @@ const programs = [
     img: programUwaznosc,
     title: "Instaluj: Uważne Życie",
     emoji: "🧘",
-    desc: "Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami - przejmujesz kontrolę nad kokpitem.",
+    desc: "Medytacja dla ludzi z ADHD i analitycznym umysłem. Nie walczysz z myślami — przejmujesz kontrolę nad kokpitem.",
     price: "777 PLN · przedsprzedaż",
     to: "/program/uwaznosc",
   },
@@ -75,7 +75,7 @@ const programs = [
     img: programMeskiKompas,
     title: "Instaluj: Męski Kompas",
     emoji: "🧭",
-    desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską - staje się przezroczystą obecnością. Jak diament.",
+    desc: "Reinstalacja systemu tożsamości. Siła przestaje być maską — staje się przezroczystą obecnością. Jak diament.",
     price: "Lista oczekujących",
     to: "/program/meskosc",
   },
@@ -99,7 +99,7 @@ export default function Wspolpraca() {
             Wszystko w jednym miejscu.
           </h1>
           <p className="text-dim text-base md:text-lg leading-relaxed mb-4">
-            Nie lubię, kiedy muszę przekopywać czyjąś stronę, żeby zrozumieć, co oferuje. Ty pewnie też nie. Więc oto wszystko, co robię - uporządkowane, uczciwe i bez ukrytych drzwi.
+            Nie lubię, kiedy muszę przekopywać czyjąś stronę, żeby zrozumieć, co oferuje. Ty pewnie też nie. Więc oto wszystko, co robię — uporządkowane, uczciwe i bez ukrytych drzwi.
           </p>
           <p className="text-dim text-base md:text-lg leading-relaxed">
             Zacznij tam, gdzie czujesz, że jest sens. Nie ma złej kolejności.
@@ -153,7 +153,7 @@ export default function Wspolpraca() {
             Aplikacje Mentalne
           </h2>
           <p className="text-dim text-base leading-relaxed mb-10 max-w-2xl">
-            Kompaktowe programy (4-6 tygodni), które instalujesz w swoim umyśle, żeby rozwiązać konkretny problem - bez reinstalacji całego systemu operacyjnego.
+            Kompaktowe programy (4-6 tygodni), które instalujesz w swoim umyśle, żeby rozwiązać konkretny problem — bez reinstalacji całego systemu operacyjnego.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -182,14 +182,13 @@ export default function Wspolpraca() {
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-sm">
             <Link to="/program" className="text-electric font-bold hover:underline">
-              Wszystkie programy w jednym miejscu →
-            </Link>
+              Wszystkie programy w jednym miejscu</Link>
             <span className="text-dim">
               Po zainstalowaniu dowolnego programu dostajesz dostęp do{" "}
               <a href="https://lifehackerzy.pl" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">
                 Lifehackerów
               </a>{" "}
-              - bezpłatnej społeczności na Discordzie.
+              — bezpłatnej społeczności na Discordzie.
             </span>
           </div>
         </div>
@@ -216,10 +215,10 @@ export default function Wspolpraca() {
                 8 tygodni · Maksymalnie 5 osób · Cały nowy system operacyjny
               </p>
               <p className="text-dim text-base leading-relaxed mb-4">
-                Nie kolejna aplikacja mentalna - pełna praca nad fundamentami. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno. Bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
+                Nie kolejna aplikacja mentalna — pełna praca nad fundamentami. Dla tych, którzy przeglądali programy i czuli, że żaden nie trafia w sedno. Bo problem leży głębiej, na poziomie tego, kim jesteś, a nie tego, co robisz.
               </p>
               <p className="text-dim text-base leading-relaxed mb-8">
-                Zaczynamy od Sesji Discovery - 30 minut na Zoom, żebyśmy obaj wiedzieli, czy mamy ze sobą pracować.
+                Zaczynamy od Sesji Discovery — 30 minut na Zoom, żebyśmy obaj wiedzieli, czy mamy ze sobą pracować.
               </p>
               <p className="text-white font-bold text-lg mb-8">
                 16 000 PLN · Faktura VAT · Gwarancja transformacji
@@ -229,14 +228,12 @@ export default function Wspolpraca() {
                   to="/discovery"
                   className="inline-block text-center bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
                 >
-                  Sprawdź dostępność - Sesja Discovery →
-                </Link>
+                  Sprawdź dostępność — Sesja Discovery</Link>
                 <Link
                   to="/program/lifeos-system-upgrade"
                   className="inline-block text-center border border-white/20 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-white/40 transition-colors"
                 >
-                  Pełny opis programu →
-                </Link>
+                  Pełny opis programu</Link>
               </div>
             </div>
 
@@ -263,14 +260,12 @@ export default function Wspolpraca() {
                   to="/discovery"
                   className="inline-block text-center bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
                 >
-                  Sprawdź dostępność - Sesja Discovery →
-                </Link>
+                  Sprawdź dostępność — Sesja Discovery</Link>
                 <Link
                   to="/program/ttt-ai"
                   className="inline-block text-center border border-white/20 text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:border-white/40 transition-colors"
                 >
-                  Pełny opis programu →
-                </Link>
+                  Pełny opis programu</Link>
               </div>
             </div>
           </div>
@@ -278,8 +273,7 @@ export default function Wspolpraca() {
           <p className="text-dim text-sm mt-6 text-center">
             Nie wiesz, który wybrać?{" "}
             <Link to="/mentoring" className="text-electric font-bold hover:underline">
-              Porównaj oba programy →
-            </Link>
+              Porównaj oba programy</Link>
           </p>
         </div>
       </section>
@@ -300,21 +294,21 @@ export default function Wspolpraca() {
           <div className="space-y-6">
             <div>
               <p className="text-on-light text-base leading-relaxed">
-                <strong>Jeśli dopiero mnie poznałeś</strong> - zacznij od{" "}
+                <strong>Jeśli dopiero mnie poznałeś</strong> — zacznij od{" "}
                 <Link to="/newsletter" className="text-electric font-bold hover:underline">newslettera</Link>.
                 Zobaczysz, czy mój język do Ciebie trafia. Nic nie kosztuje, nic nie zobowiązuje.
               </p>
             </div>
             <div>
               <p className="text-on-light text-base leading-relaxed">
-                <strong>Jeśli masz konkretny problem</strong> (produktywność, odporność, uważność) - wybierz{" "}
+                <strong>Jeśli masz konkretny problem</strong> (produktywność, odporność, uważność) — wybierz{" "}
                 <Link to="/program" className="text-electric font-bold hover:underline">program</Link>,
                 który go adresuje. 4-6 tygodni, samodzielnie, w swoim tempie.
               </p>
             </div>
             <div>
               <p className="text-on-light text-base leading-relaxed">
-                <strong>Jeśli wiesz, że problem leży głębiej</strong> - i żaden program go nie dotknie - to jest{" "}
+                <strong>Jeśli wiesz, że problem leży głębiej</strong> — i żaden program go nie dotknie — to jest{" "}
                 <Link to="/program/lifeos-system-upgrade" className="text-electric font-bold hover:underline">Life OS</Link>.
                 Ale najpierw{" "}
                 <Link to="/discovery" className="text-electric font-bold hover:underline">Sesja Discovery</Link>.
@@ -343,8 +337,7 @@ export default function Wspolpraca() {
             to="/contact"
             className="inline-block bg-electric text-white text-sm font-bold uppercase tracking-widest px-6 py-3 rounded hover:bg-electric/90 transition-colors shadow-lg shadow-electric/20"
           >
-            Skontaktuj się →
-          </Link>
+            Skontaktuj się</Link>
         </div>
       </section>
 
@@ -352,9 +345,9 @@ export default function Wspolpraca() {
       <section className="bg-void-glow pb-20 pt-4">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-dim text-sm leading-relaxed italic">
-            <strong className="text-white not-italic">P.S.</strong> Jeśli ktoś Cię tu wysłał z poleceniem „sprawdź tego gościa" - to miłe. Ale nie wierz mi na słowo. Przeczytaj kilka moich maili i zdecyduj sam. Dobry mentor nie potrzebuje rekomendacji - potrzebuje Twojego doświadczenia z nim. A ono zaczyna się od jednego kliknięcia.
+            <strong className="text-white not-italic">P.S.</strong> Jeśli ktoś Cię tu wysłał z poleceniem „sprawdź tego gościa" — to miłe. Ale nie wierz mi na słowo. Przeczytaj kilka moich maili i zdecyduj sam. Dobry mentor nie potrzebuje rekomendacji — potrzebuje Twojego doświadczenia z nim. A ono zaczyna się od jednego kliknięcia.
           </p>
-          <p className="text-white text-sm font-bold mt-4">- Ludwik</p>
+          <p className="text-white text-sm font-bold mt-4">— Ludwik</p>
         </div>
       </section>
     </Layout>

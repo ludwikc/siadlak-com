@@ -14,7 +14,7 @@ export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
     <Layout>
       <SEO 
         title={`${data.title} - Centrum Pomocy`}
-        description={`${data.title} - centrum pomocy i baza wiedzy. Znajdź odpowiedzi na pytania dotyczące platformy.`}
+        description={`${data.title} — centrum pomocy i baza wiedzy. Znajdź odpowiedzi na pytania dotyczące platformy.`}
         url={`/help/${data.slug || ''}`}
         type="article"
         publishedDate={data.lastUpdated}
@@ -63,7 +63,7 @@ export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
             <div className="text-center">
               <h3 className="text-lg font-semibold mb-2">Czy ten artykuł był pomocny?</h3>
               <p className="text-muted-foreground mb-4">
-                Jeśli masz dodatkowe pytania - napisz, jestem.
+                Jeśli masz dodatkowe pytania — napisz, jestem.
               </p>
               <Link 
                 to="/contact" 

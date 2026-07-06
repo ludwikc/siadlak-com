@@ -112,18 +112,17 @@ export default function Header() {
                   onClick={() => setDropdownOpen(false)}
                   className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                 >
-                  Zacznij tutaj →
-                </Link>
+                  Zacznij tutaj</Link>
                 <div className="border-t border-white/10 my-1" />
                 {dropdownItems.map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
                     onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
+                    className="block px-4 py-2.5 text-sm text-dim hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                   >
                     {item.label}
-                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                    {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
                   </Link>
                 ))}
                 <div className="border-t border-white/10 my-1" />
@@ -132,8 +131,7 @@ export default function Header() {
                   onClick={() => setDropdownOpen(false)}
                   className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                 >
-                  Wszystkie możliwości →
-                </Link>
+                  Wszystkie możliwości</Link>
               </div>
             )}
           </div>
@@ -158,10 +156,10 @@ export default function Header() {
                     key={item.to}
                     to={item.to}
                     onClick={() => setMoreOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
+                    className="block px-4 py-2.5 text-sm text-dim hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                   >
                     {item.label}
-                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                    {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
                   </Link>
                 ))}
               </div>
@@ -197,24 +195,23 @@ export default function Header() {
               </sup>
             </Link>
 
-            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
+            <div className="text-on-dark-tertiary text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
               className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors"
             >
-              Zacznij tutaj →
-            </Link>
+              Zacznij tutaj</Link>
             <div className="border-t border-white/10 my-1" />
             {dropdownItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
               >
                 {item.label}
-                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
               </Link>
             ))}
             <div className="border-t border-white/10 my-1" />
@@ -223,19 +220,18 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
             >
-              Wszystkie możliwości →
-            </Link>
+              Wszystkie możliwości</Link>
 
-            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-3">Więcej</div>
+            <div className="text-on-dark-tertiary text-[10px] uppercase tracking-widest pt-3">Więcej</div>
             {moreItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
               >
                 {item.label}
-                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
               </Link>
             ))}
 
