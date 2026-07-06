@@ -1,21 +1,34 @@
-import { Link, useLocation } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/design-system/components/button";
+import type { ReactNode } from "react";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface HeroProps {
-  title: string;
-  subtitle: string | React.ReactNode;
-  ctaText: string;
-  ctaLink: string;
+  title: string | ReactNode;
+  subtitle?: string | ReactNode;
+  ctaText?: string;
+  ctaLink?: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   imageDescription?: string;
   backgroundImage?: string;
   heroImage?: string;
   fullHeight?: boolean;
+  align?: "left" | "center" | "right";
+  children?: ReactNode;
 }
+
+const textAlignClasses = {
+  left: "text-left",
+  center: "text-center",
+  right: "text-right",
+} as const;
+
+const justifyClasses = {
+  left: "justify-start",
+  center: "justify-center",
+  right: "justify-end",
+} as const;
 
 export default function Hero({
   title,
@@ -28,16 +41,20 @@ export default function Hero({
   backgroundImage,
   heroImage,
   fullHeight = false,
+  align = "left",
+  children,
 }: HeroProps) {
-  const location = useLocation();
   const isMobile = useIsMobile();
 
-  const isHomePage = location.pathname === "/";
-  const isUwazneZyciePage = location.pathname === "/program/uwaznosc";
+  const subtitleWidthClasses = {
+    left: "max-w-lg",
+    center: "max-w-xl mx-auto",
+    right: "max-w-lg ml-auto",
+  } as const;
 
   return (
     <section
-      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} ${isHomePage ? "bg-void-glow" : "bg-void-glow"} flex items-center overflow-hidden`}
+      className={`relative ${fullHeight ? "min-h-[90vh]" : "pt-24 pb-16 md:pt-32 md:pb-24"} bg-void-glow flex items-center overflow-hidden`}
       aria-labelledby="hero-title"
       role="banner"
     >
@@ -57,85 +74,61 @@ export default function Hero({
         </div>
       )}
 
-      <div
-        className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}
-      >
-        <div
-          className={`flex ${isMobile ? "flex-col" : "flex-row"} ${fullHeight && !isUwazneZyciePage ? "items-center h-full" : fullHeight && isUwazneZyciePage ? "items-start pt-12 h-full" : "items-center"} ${isUwazneZyciePage ? "justify-end" : ""}`}
-        >
-          {/* Left column - Text content (2/3 width on desktop) */}
+      <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}>
+        <div className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${fullHeight ? "h-full" : ""} ${align === "right" ? "justify-end" : ""}`}>
+          {/* Text content */}
           <div
             className={`
-            ${isMobile ? "w-full text-center order-1 mb-8" : isUwazneZyciePage ? "w-1/2 pr-20 text-right" : "w-2/3 pr-8"} 
-            ${fullHeight && !isUwazneZyciePage ? "flex flex-col justify-center" : ""}
-            ${isHomePage ? "text-center" : isUwazneZyciePage ? "text-right" : "text-left"}
+            ${isMobile ? "w-full text-center order-1 mb-8" : align === "center" ? "w-full" : "w-2/3 pr-8"}
+            ${fullHeight ? "flex flex-col justify-center" : ""}
+            ${isMobile ? "" : textAlignClasses[align]}
           `}
           >
             <h1
               id="hero-title"
-              className={`
-              mb-6 font-heading font-bold !leading-tight animate-fade-in text-white
-              ${isHomePage ? "text-5xl md:text-6xl lg:text-7xl text-center" : "text-5xl md:text-6xl lg:text-7xl"} 
-              ${isUwazneZyciePage ? "text-right" : isHomePage ? "text-center" : "text-left"}
-              `}
+              className="mb-6 font-heading font-bold !leading-tight animate-fade-in text-white text-4xl md:text-6xl lg:text-7xl"
             >
               {title}
             </h1>
 
-            <p
-              className={`
-              mb-10 animate-fade-in text-dim
-              ${isHomePage ? "text-2xl md:text-3xl max-w-xl mx-auto text-center" : isUwazneZyciePage ? "text-xl md:text-2xl max-w-lg ml-auto text-right" : "text-xl md:text-2xl max-w-lg text-left"}
-              `}
-              style={{ animationDelay: "0.2s" }}
-            >
-              {subtitle}
-            </p>
-
-            <div
-              className={`
-              flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in
-              ${isHomePage ? "justify-center" : isUwazneZyciePage ? "justify-end" : "justify-start"}
-            `}
-              style={{ animationDelay: "0.4s" }}
-            >
-              <Link
-                to={ctaLink}
-                onClick={() => window.scrollTo(0, 0)}
-                aria-label={`${ctaText} - primary action`}
-                className={`${isMobile ? "w-full" : ""} focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded`}
+            {subtitle && (
+              <p
+                className={`mb-10 animate-fade-in text-dim text-xl md:text-2xl ${isMobile ? "" : subtitleWidthClasses[align]}`}
+                style={{ animationDelay: "0.2s" }}
               >
-                <Button
-                  variant="special"
-                  className={`
-                    ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
-                  `}
-                  size={isMobile ? "default" : "lg"}
+                {subtitle}
+              </p>
+            )}
+
+            {ctaText && ctaLink && (
+              <div
+                className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in ${isMobile ? "" : justifyClasses[align]}`}
+                style={{ animationDelay: "0.4s" }}
+              >
+                <CTAButton
+                  to={ctaLink}
+                  variant="primary"
+                  aria-label={`${ctaText} - primary action`}
+                  className={isMobile ? "flex w-full" : ""}
                 >
                   {ctaText}
-                  <ArrowRight size={18} className="text-white" />
-                </Button>
-              </Link>
+                </CTAButton>
 
-              {secondaryCtaText && secondaryCtaLink && (
-                <Link
-                  to={secondaryCtaLink}
-                  onClick={() => window.scrollTo(0, 0)}
-                  aria-label={`${secondaryCtaText} - secondary action`}
-                  className={`${isMobile ? "w-full" : ""} focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded`}
-                >
-                  <Button
+                {secondaryCtaText && secondaryCtaLink && (
+                  <CTAButton
+                    to={secondaryCtaLink}
                     variant="secondary"
-                    className={`
-                      ${isMobile ? "w-full justify-center" : "px-6 py-3 text-base"}
-                    `}
-                    size={isMobile ? "default" : "lg"}
+                    showArrow={false}
+                    aria-label={`${secondaryCtaText} - secondary action`}
+                    className={`border-white/20 text-white ${isMobile ? "flex w-full" : ""}`}
                   >
                     {secondaryCtaText}
-                  </Button>
-                </Link>
-              )}
-            </div>
+                  </CTAButton>
+                )}
+              </div>
+            )}
+
+            {children}
           </div>
 
           {/* Right column - Image (1/3 width on desktop) */}

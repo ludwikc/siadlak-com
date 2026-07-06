@@ -1,7 +1,7 @@
 import { ArrowRight } from '@/lib/icons';
 import { GlassCard } from '@/design-system/components/glass-card';
 import { OTOCountdown } from './OTOCountdown';
-import HeroSection from '@/components/sections/HeroSection';
+import Hero from '@/components/sections/Hero';
 import { useState, useEffect } from 'react';
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
@@ -108,8 +108,9 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       </section>
 
       {/* Hero section */}
-      <HeroSection 
-        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności" 
+      <Hero
+        align="center"
+        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności"
         subtitle="czyli 77 minut, które ustawią Ci (każdy!) dzień"
       />
 
