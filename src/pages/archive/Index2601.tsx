@@ -34,10 +34,10 @@ const Index2601 = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-6xl mx-auto px-4">
                 {`Ludwik C. Siadlak - `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   przeprogramowuję fundamenty
@@ -493,7 +493,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 6: PROOF - REAL TRANSFORMATIONS */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-twilight-indigo/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-gradient-to-r from-zenith-gold to-orange-500 text-white border-0 text-lg px-6 py-3 mb-6">
                 <Users className="inline h-5 w-5 mr-2" />
@@ -608,7 +608,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 7: THE OPTIONS - CLEAR PATHS FORWARD */}
       <section className="py-20 md:py-32 bg-luminous-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold text-deep-charcoal mb-6">
                 Dwie opcje.{" "}
@@ -726,7 +726,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 8: WHO THIS IS FOR - POLARIZING FILTER */}
       <section className="py-20 md:py-32 bg-deep-charcoal text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 To nie jest dla każdego.{" "}

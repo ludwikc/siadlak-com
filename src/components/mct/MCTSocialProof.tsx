@@ -251,7 +251,7 @@ export default function MCTSocialProof() {
 
   return (
     <section
-      className="py-16 md:py-24"
+      className="py-20"
       style={{ borderTop: `1px solid ${t.border}` }}
     >
       <div className="mx-auto max-w-6xl px-6">

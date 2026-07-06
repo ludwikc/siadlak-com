@@ -28,7 +28,7 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
       {!shouldHideHeader && <PromoBanner />}
       {!shouldHideHeader && <Header />}
       <main
-        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[100px]"}`}
+        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[var(--header-offset)]"}`}
       >
         <div className="page-content animate-fade-in">{children}</div>
       </main>

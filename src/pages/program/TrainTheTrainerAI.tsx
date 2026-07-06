@@ -267,7 +267,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* WHAT YOU ALREADY HAVE */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
@@ -311,7 +311,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* THE GAP - MARTWA STREFA */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-10 leading-[1.1] tracking-[-0.02em]">
@@ -387,7 +387,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* PAUSE - VISION SCENE */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
@@ -422,7 +422,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* FOR / NOT FOR */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             <Card className="rounded-md bg-surface border-white/10">
@@ -465,7 +465,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* WHAT IT IS - PILLARS */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -486,7 +486,7 @@ export default function TrainTheTrainerAI() {
               Pracujemy nad tym, czego geek techniczny dziś <em>jeszcze nie ma</em>:
             </p>
           </div>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
             {pillars.map((p, i) => (
               <Card key={i} className="rounded-md bg-paper border-on-light/10 light-card">
                 <CardContent className="p-8">
@@ -514,7 +514,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* PROTOCOL POMOSTU */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-4xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -529,7 +529,7 @@ export default function TrainTheTrainerAI() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-3">
+          <div className="max-w-6xl mx-auto space-y-3">
             <div className="hidden md:grid md:grid-cols-12 gap-4 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-dim border-b border-white/10">
               <div className="col-span-3">Filar</div>
               <div className="col-span-5">Co przekraczamy</div>
@@ -562,7 +562,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* 8 WEEKS */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4 leading-[1.1] tracking-[-0.02em]">
@@ -595,7 +595,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* WHAT YOU GET */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -635,7 +635,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* SIX TRANSFORMATIONS */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -670,7 +670,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* ROI */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -785,7 +785,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* WHY ME - moved before Investment */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
@@ -815,7 +815,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* INVESTMENT */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-6 leading-[1.1] tracking-[-0.02em]">
@@ -826,7 +826,7 @@ export default function TrainTheTrainerAI() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
             <Card className="rounded-md border-electric/40 bg-surface border relative">
               <div className="absolute -top-3 left-6 px-3 py-1 bg-brand-gradient text-white text-xs font-bold uppercase tracking-[0.2em] rounded-sm">
                 Edycja inauguracyjna
@@ -893,7 +893,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* DECISION + CTA */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">
@@ -948,7 +948,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-void-glow">
+      <section className="py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-dark mb-10 leading-[1.1] tracking-[-0.02em] text-center">
@@ -972,7 +972,7 @@ export default function TrainTheTrainerAI() {
       <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
 
       {/* CLOSING */}
-      <section className="py-20 md:py-28 bg-diamond">
+      <section className="py-24 md:py-32 bg-diamond">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-10 leading-[1.1] tracking-[-0.02em]">

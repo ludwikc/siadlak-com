@@ -39,7 +39,7 @@ export default function WebinarMeskiKompas() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Urgency badge with premium styling */}
             <div className="flex justify-center mb-10 animate-fade-in">
               <div
@@ -199,7 +199,7 @@ export default function WebinarMeskiKompas() {
       {/* PAIN AGITATION */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               CZY TO O TOBIE?
             </h2>
@@ -296,7 +296,7 @@ export default function WebinarMeskiKompas() {
       {/* THE PROBLEM */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               DLACZEGO ANALITYCZNY UMYSŁ CIĘ SABOTUJE?
             </h2>
@@ -368,7 +368,7 @@ export default function WebinarMeskiKompas() {
       {/* WHAT YOU'LL GET */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               CO WYNIESIESZ Z TEGO WARSZTATU?
             </h2>
@@ -519,7 +519,7 @@ export default function WebinarMeskiKompas() {
       {/* PROOF */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLACZEGO MOŻESZ NAM ZAUFAĆ?
             </h2>
@@ -670,7 +670,7 @@ export default function WebinarMeskiKompas() {
       {/* WHO IS THIS FOR */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLA KOGO JEST TEN WARSZTAT?
             </h2>
@@ -844,7 +844,7 @@ export default function WebinarMeskiKompas() {
       {/* VALUE PROPOSITION */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLACZEGO TO JEST DARMOWE?
             </h2>

@@ -39,10 +39,10 @@ const HomeTest = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-6xl mx-auto px-4">
                 Diament jest najtwardszą substancją na&nbsp;Ziemi.{" "}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   I&nbsp;jest kompletnie przezroczysty.
@@ -472,7 +472,7 @@ const HomeTest = () => {
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-twilight-indigo/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-gradient-to-r from-zenith-gold to-orange-500 text-white border-0 text-lg px-6 py-3 mb-6">
                 <Users className="inline h-5 w-5 mr-2" />
@@ -637,7 +637,7 @@ const HomeTest = () => {
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-deep-charcoal text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 Nie każdy jest gotowy.{" "}
@@ -712,7 +712,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 8: AUTORYTET - Twarde fakty
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl text-deep-charcoal/60 mb-8">
@@ -753,7 +753,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 9: GWARANCJA
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-zenith-gold/5">
+      <section className="py-20 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Shield className="h-12 w-12 text-neural-blue mx-auto mb-6" />
@@ -832,7 +832,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 11: TRANSITION - Separator
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
@@ -982,7 +982,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 13: CLOSING
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-16 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="border-t-2 border-neural-blue/20 pt-12">

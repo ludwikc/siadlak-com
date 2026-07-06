@@ -123,6 +123,10 @@
   --border-radius-lg: 16px;
   --border-radius-pill: 999px;
 
+  /* === LAYOUT === */
+  --banner-height: 36px;
+  --header-offset: 100px; /* banner (36px) + fixed nav (64px) */
+
   /* === TRANSITIONS === */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;

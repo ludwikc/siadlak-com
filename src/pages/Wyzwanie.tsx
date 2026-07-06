@@ -539,7 +539,7 @@ export default function Wyzwanie() {
             4 DNI, 4 DIAGNOZ
           </h2>
 
-          <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
+          <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto">
             {/* Day 1 - Light Blue */}
             <div className="relative bg-[#2563eb]/5 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
@@ -708,7 +708,7 @@ export default function Wyzwanie() {
             kolejny webinar motywacyjny
           </h2>
 
-          <div className="bg-card border border-border hover:shadow-xl rounded-xl p-6 sm:p-8 md:p-12 max-w-5xl mx-auto transition-all duration-300">
+          <div className="bg-card border border-border hover:shadow-xl rounded-xl p-6 sm:p-8 md:p-12 max-w-6xl mx-auto transition-all duration-300">
             <div className="grid md:grid-cols-[300px_1fr] gap-6 sm:gap-8 items-start">
               <div className="mx-auto md:mx-0 relative group/img">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
@@ -1059,7 +1059,7 @@ export default function Wyzwanie() {
         id="signup"
         className="py-16 sm:py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
       >
-        <div className="container max-w-5xl mx-auto space-y-10 sm:space-y-12">
+        <div className="container max-w-6xl mx-auto space-y-10 sm:space-y-12">
           <div className="text-center space-y-6 sm:space-y-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
               Dwa scenariusze:

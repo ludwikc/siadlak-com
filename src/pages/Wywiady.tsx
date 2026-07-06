@@ -148,7 +148,7 @@ export default function Wywiady() {
       />
 
       {/* HERO */}
-      <section className="py-16 md:py-24 bg-void-glow relative overflow-hidden">
+      <section className="py-20 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
             <nav aria-label="breadcrumb" className="mb-8">
@@ -192,7 +192,7 @@ export default function Wywiady() {
       </section>
 
       {/* INTERVIEWS */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
             {interviews.map((interview) => (
@@ -242,7 +242,7 @@ export default function Wywiady() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-void">
+      <section className="py-20 bg-void">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
             Najcz&#281;&#347;ciej zadawane pytania
@@ -262,7 +262,7 @@ export default function Wywiady() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
             Chcesz porozmawiać z Ludwikiem?

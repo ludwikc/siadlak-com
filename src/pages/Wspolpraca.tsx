@@ -110,8 +110,8 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── BEZPŁATNIE ─── */}
-      <section className="bg-diamond py-20 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="bg-diamond py-20">
+        <div className="max-w-6xl mx-auto px-6">
           <Eyebrow color="dim">BEZPŁATNIE</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-8">
             Zacznijmy lekko: bezpłatne projekty dostępne dla wszystkich
@@ -146,8 +146,8 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── PROGRAMY ─── */}
-      <section className="bg-void-glow py-20 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="bg-void-glow py-20">
+        <div className="max-w-6xl mx-auto px-6">
           <Eyebrow>PROGRAMY</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-3">
             Aplikacje Mentalne
@@ -198,7 +198,7 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── PREMIUM ─── */}
-      <section className="bg-void-glow py-20 md:py-24">
+      <section className="bg-void-glow py-20">
         <div className="max-w-3xl mx-auto px-6">
           <Eyebrow color="depth">PREMIUM</Eyebrow>
           <p className="text-dim text-sm mb-6">
@@ -287,7 +287,7 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── NIE WIESZ OD CZEGO ZACZĄĆ? ─── */}
-      <section className="bg-diamond py-20 md:py-24">
+      <section className="bg-diamond py-20">
         <div className="max-w-3xl mx-auto px-6">
           <Eyebrow color="dim">NAWIGACJA</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-8">
@@ -333,7 +333,7 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── KONTAKT ─── */}
-      <section className="bg-void-glow py-16 md:py-20">
+      <section className="bg-void-glow py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Eyebrow>KONTAKT</Eyebrow>
           <p className="text-dim text-base leading-relaxed mb-6">

@@ -34,7 +34,7 @@ export default function Mentoring() {
       />
 
       {/* HERO */}
-      <section className="relative bg-void-glow py-16 md:py-24">
+      <section className="relative bg-void-glow py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-electric font-mono text-xs md:text-sm uppercase tracking-widest mb-4">
             Mentoring 1:1
@@ -49,7 +49,7 @@ export default function Mentoring() {
       </section>
 
       {/* INTRO */}
-      <section className="bg-diamond py-12 md:py-16">
+      <section className="bg-diamond py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-electric font-mono text-xs md:text-sm uppercase tracking-widest mb-4">
             Zanim przejdziemy do wyboru
@@ -82,7 +82,7 @@ export default function Mentoring() {
       </section>
 
       {/* TWO PATHS */}
-      <section className="bg-void py-12 md:py-20">
+      <section className="bg-void py-20">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Path 1: TTT:AI */}
@@ -181,7 +181,7 @@ export default function Mentoring() {
       </section>
 
       {/* DISCOVERY CTA */}
-      <section className="bg-diamond py-16 md:py-24">
+      <section className="bg-diamond py-20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-on-light mb-6 leading-tight">
             Stoisz w kropce? To jest dokładnie ten moment, żeby pomówić.

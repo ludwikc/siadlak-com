@@ -105,7 +105,7 @@ const Index = () => {
         />
 
         <div className="container mx-auto px-4 relative z-10 flex items-center min-h-[calc(100vh-5rem)]">
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
@@ -424,7 +424,7 @@ const Index = () => {
 
       {/* ═══ OFFER SECTION ═══ */}
       <section className="bg-diamond py-24 md:py-32" id="oferta">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             {/* Left column (7 cols) */}
             <div className="lg:col-span-7">
@@ -514,7 +514,7 @@ const Index = () => {
       </section>
 
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
-      <section className="py-16 bg-diamond text-center">
+      <section className="py-20 bg-diamond text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
@@ -530,7 +530,7 @@ const Index = () => {
 
       {/* ═══ OFFER 2: APLIKACJE MENTALNE ═══ */}
       <section className="bg-white py-24">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
@@ -617,7 +617,7 @@ const Index = () => {
       </section>
 
       {/* ═══ DLA TRENERÓW I EKSPERTÓW AI ═══ */}
-      <section className="bg-diamond py-16 md:py-20 border-t border-border/50">
+      <section className="bg-diamond py-20 border-t border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow color="depth">DLA TRENERÓW I EKSPERTÓW AI</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-6">
@@ -657,7 +657,7 @@ const Index = () => {
 
       {/* ═══ LICZBY ═══ */}
       <section className="py-20 bg-void">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-16">
             Ludwik C. Siadlak w liczbach
           </h2>

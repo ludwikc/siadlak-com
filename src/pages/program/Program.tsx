@@ -44,7 +44,7 @@ export default function Program() {
       <SEO {...getSEOConfig("/program")} jsonLd={getProgramEntities()} />
       {(() => { const t = getTopicalConfig("/program"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* 1. HERO - bg-void-glow (DARK) */}
-      <section className="relative py-20 md:py-28 bg-void-glow">
+      <section className="relative py-24 md:py-32 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-[1.1] tracking-[-0.02em]">
@@ -75,7 +75,7 @@ export default function Program() {
       </section>
 
       {/* 2. DECISION TREE - bg-void (DARK) */}
-      <section className="py-16 bg-void">
+      <section className="py-20 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 text-center">Nie wiesz, od czego zacząć?</h3>
@@ -114,7 +114,7 @@ export default function Program() {
       {/* THE CUT - dark → dark (visual separator before apps) */}
 
       {/* 3-6. APP CARDS - bg-void-glow (DARK) */}
-      <section className="py-16 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
             {/* APP #1: Produktywność */}
@@ -301,7 +301,7 @@ export default function Program() {
       <div className="the-cut" />
 
       {/* 7. NIE DLA / DLA - bg-void (DARK) */}
-      <section className="py-16 bg-void">
+      <section className="py-20 bg-void">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Keynote image */}
@@ -348,7 +348,7 @@ export default function Program() {
       <div className="the-cut" />
 
       {/* 8. LIFEHACKERZY - bg-lifehacker-purple-dark (visual exception) */}
-      <section className="py-16 sm:py-20 bg-lifehacker-purple-dark">
+      <section className="py-20 sm:py-20 bg-lifehacker-purple-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 text-white border-0 px-6 py-2 text-sm font-bold bg-lifehacker-purple">
@@ -520,7 +520,7 @@ export default function Program() {
       </section>
 
       {/* 10. ZAMKNIĘCIE - bg-paper (LIGHT) */}
-      <section className="py-16 bg-paper">
+      <section className="py-20 bg-paper">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-8 text-on-light leading-[1.1] tracking-[-0.02em]">

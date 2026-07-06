@@ -17,7 +17,7 @@ import OptimizedImage from "@/design-system/components/OptimizedImage";
 export default function LifehackerzySection() {
   return (
     <section
-      className="py-20 md:py-28 relative overflow-hidden"
+      className="py-24 md:py-32 relative overflow-hidden"
       style={{
         background: "linear-gradient(165deg, hsl(270, 50%, 8%) 0%, hsl(265, 45%, 12%) 50%, hsl(260, 40%, 16%) 100%)",
       }}
@@ -26,7 +26,7 @@ export default function LifehackerzySection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(167,139,250,0.1),transparent_50%)]"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
             <div

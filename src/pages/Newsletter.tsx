@@ -49,7 +49,7 @@ export default function NewsletterPage() {
         </section>
 
         {/* ===== 2. DLACZEGO EMAIL (DARK) ===== */}
-        <section className="py-16 sm:py-20 bg-void">
+        <section className="py-20 sm:py-20 bg-void">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">
@@ -98,7 +98,7 @@ export default function NewsletterPage() {
         <div className="the-cut" />
 
         {/* ===== 3. JAK TO DZIAŁA (LIGHT) ===== */}
-        <section className="py-16 sm:py-20 bg-diamond">
+        <section className="py-20 sm:py-20 bg-diamond">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-10">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-light leading-[1.1] tracking-[-0.02em]">
@@ -220,7 +220,7 @@ export default function NewsletterPage() {
 
 
         {/* ===== 5-6. DLA KOGO + SOCIAL PROOF (DARK) ===== */}
-        <section className="py-16 sm:py-20 bg-void-glow">
+        <section className="py-20 sm:py-20 bg-void-glow">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-16">
               <div className="space-y-8">
@@ -280,7 +280,7 @@ export default function NewsletterPage() {
         </section>
 
         {/* ===== 7. CTA ZAPIS (LIGHT) ===== */}
-        <section id="formularz" className="py-16 sm:py-20 bg-diamond">
+        <section id="formularz" className="py-20 sm:py-20 bg-diamond">
           <div className="container mx-auto px-4">
             <div className="max-w-xl mx-auto text-center space-y-8">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-light leading-[1.1] tracking-[-0.02em]">
@@ -304,7 +304,7 @@ export default function NewsletterPage() {
         <div className="the-cut" />
 
         {/* ===== 8. ZAMKNIĘCIE + P.S. (DARK) ===== */}
-        <section className="py-16 sm:py-20 bg-void-glow">
+        <section className="py-20 sm:py-20 bg-void-glow">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-on-dark leading-[1.1] tracking-[-0.02em]">

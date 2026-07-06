@@ -31,7 +31,7 @@ export default function WebinarKodKapitana() {
         <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[radial-gradient(circle,rgba(251,191,36,0.04),transparent_70%)] blur-2xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Event badge */}
             <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
               <div
@@ -227,7 +227,7 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* OPENING NARRATIVE — Piątek 22:30 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <p className="text-center text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-sky-600 dark:text-sky-400 mb-4">
@@ -284,7 +284,7 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* CZEGO NIE BĘDZIEMY ROBIĆ */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/10 to-background">
+      <section className="py-20 bg-gradient-to-b from-background via-muted/10 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
@@ -360,7 +360,7 @@ export default function WebinarKodKapitana() {
 
       {/* 4 RZECZY, KTÓRE WYCIĄGNIESZ */}
       <section
-        className="py-16 md:py-24 relative overflow-hidden"
+        className="py-20 relative overflow-hidden"
         style={{
           background:
             "linear-gradient(180deg, hsl(210, 40%, 96%) 0%, hsl(210, 35%, 98%) 50%, hsl(210, 40%, 96%) 100%)",
@@ -369,7 +369,7 @@ export default function WebinarKodKapitana() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.05),transparent_50%)]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
                 4 rzeczy, które wyciągniesz z tego spotkania
@@ -460,7 +460,7 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* DLA KOGO */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/20 via-background to-muted/20">
+      <section className="py-20 bg-gradient-to-b from-muted/20 via-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
@@ -496,7 +496,7 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* KTO PROWADZI + VIDEO */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/10 to-background">
+      <section className="py-20 bg-gradient-to-b from-background via-muted/10 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">
@@ -590,7 +590,7 @@ export default function WebinarKodKapitana() {
 
       {/* SZCZEGÓŁY + REJESTRACJA */}
       <section
-        className="py-20 md:py-28 relative overflow-hidden"
+        className="py-24 md:py-32 relative overflow-hidden"
         style={{
           background:
             "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
@@ -779,7 +779,7 @@ export default function WebinarKodKapitana() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/20 via-background to-muted/20">
+      <section className="py-20 bg-gradient-to-b from-muted/20 via-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-foreground">

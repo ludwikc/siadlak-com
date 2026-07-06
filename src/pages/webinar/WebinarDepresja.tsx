@@ -173,7 +173,7 @@ export default function WebinarDepresja() {
         <TheCut />
 
         {/* Symptoms - bg-diamond */}
-        <section className="bg-diamond-light py-20 md:py-28 px-4">
+        <section className="bg-diamond-light py-24 md:py-32 px-4">
           <div className="container mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl md:text-4xl font-bold leading-tight text-text-on-light mb-10 text-center">
               Czy ostatnio łapiesz się na tym, że…
@@ -198,7 +198,7 @@ export default function WebinarDepresja() {
         <TheCut />
 
         {/* Personal Story - void-glow */}
-        <section className="bg-void-glow py-20 md:py-28 px-4">
+        <section className="bg-void-glow py-24 md:py-32 px-4">
           <div className="container mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl md:text-4xl font-bold leading-tight text-text-on-dark mb-8 text-center">
               Wiem, co czujesz. Bo to czułem.
@@ -236,7 +236,7 @@ export default function WebinarDepresja() {
         <TheCut />
 
         {/* Benefits - bg-diamond */}
-        <section className="bg-diamond-light py-20 md:py-28 px-4">
+        <section className="bg-diamond-light py-24 md:py-32 px-4">
           <div className="container mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl md:text-4xl font-bold leading-tight text-text-on-light mb-8 text-center">
               Co wyniesiesz z tego spotkania

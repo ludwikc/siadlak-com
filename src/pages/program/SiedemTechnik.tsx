@@ -12,7 +12,7 @@ export default function SiedemTechnik() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <div className="inline-block mb-6 px-5 py-2 bg-white/10 rounded-full border border-white/20">
               <span className="text-sm font-medium text-white">
                 77 minut, które zmienią Twój dzień
@@ -45,7 +45,7 @@ export default function SiedemTechnik() {
       </section>
 
       {/* Course Logo */}
-      <section className="py-16 bg-gradient-to-b from-diamond to-background">
+      <section className="py-20 bg-gradient-to-b from-diamond to-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
@@ -63,9 +63,9 @@ export default function SiedemTechnik() {
       </section>
 
       {/* What You Get Section */}
-      <section className="relative py-20 md:py-24 bg-gradient-to-b from-background to-diamond overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-b from-background to-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-block mb-4 px-5 py-2 bg-depth/10 rounded-full border border-depth/20">
                 <span className="text-sm font-semibold text-depth uppercase tracking-wide">
@@ -195,7 +195,7 @@ export default function SiedemTechnik() {
       </section>
 
       {/* Course Preview */}
-      <section className="py-16 bg-gradient-to-b from-diamond to-background">
+      <section className="py-20 bg-gradient-to-b from-diamond to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <OptimizedImage
@@ -211,7 +211,7 @@ export default function SiedemTechnik() {
       </section>
 
       {/* Pricing Section */}
-      <section className="relative py-20 md:py-24 bg-void-glow text-white overflow-hidden">
+      <section className="relative py-20 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 rounded-sm p-10 md:p-16 border border-white/20">

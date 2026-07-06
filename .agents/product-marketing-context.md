@@ -224,6 +224,8 @@ Kursy i Life OS: ceny **brutto**. TTT:AI: ceny **netto** (+ faktura VAT).
 - Metafory technologiczne dla niematerialnych pojęć
 - Kończenie tekstów podpisem "— Ludwik"
 
+**Origin story (autorytet przez paradoks):** CV z Fortune 500 i NATO + moment na peronie metra w 2014 (myśli samobójcze mimo "sukcesu"). "Nie jestem teoretykiem. Przeszedłem przez ogień." Wykształcenie: Oxford Brookes University (IT) + SWPS (psychologia). Detale osobiste budujące autentyczność: tatuaż profesora Wolanda (Mistrz i Małgorzata), codzienna obecność na Discordzie o 12:34.
+
 ---
 
 ## Proof Points
@@ -245,6 +247,12 @@ Kursy i Life OS: ceny **brutto**. TTT:AI: ceny **netto** (+ faktura VAT).
 > "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła." — Klient Life OS, absolwent
 
 > "W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam." — Anna, CEO Agencji Marketingowej
+
+> "Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat." — Łukasz, IT, ADHD, sceptyk
+
+> "Robię w 3 godziny to, na co kiedyś szło mi pół dnia." — Anna K., Marketing Manager (Program Produktywność)
+
+> "Pierwszy raz poczułem, że presja może być paliwem, a nie paraliżem." — uczestnik Silnej Głowy, 34 lata
 
 **Value themes:**
 
@@ -295,3 +303,19 @@ TTT:AI jest **odrębną propozycją wartości** od reszty oferty Aplikacji Menta
 **Anti-persona TTT:AI:** Początkujący w AI; ludzie szukający gotowych szablonów do odklepania; ludzie szukający grupowego szkolenia (TTT:AI jest świadomie 1:1).
 
 **Words to use (TTT:AI):** rzemiosło trenerskie, certyfikowany trener AI, scenariusz warsztatu, cykl Kolba, IP trenerskie, Trainer's Toolbox.
+
+---
+
+## MCT — B2B Notes (szkolenia korporacyjne)
+
+Strona /mct (całość po angielsku) — osobny track B2B, inny odbiorca niż Aplikacje Mentalne.
+
+**Oferta:** Custom training dla zespołów enterprise wdrażających Microsoft Fabric, Copilot, Azure. Trzy stacki: (1) AI & Microsoft Copilot — governance, prompt engineering, strategia ROI "not hype"; (2) Data & Analytics — Fabric, Azure Synapse, Power BI, lakehouses; (3) Modern Work & M365 — adopcja w skali, automatyzacja, systemy produktywności.
+
+**Autorytet:** "20+ Years MCT", 10 000+ przeszkolonych inżynierów. Logotypy: Unilever, HP, GM, GE, Volkswagen, Volvo, Scania, Nordea, ING; NATO, US Army Europe/Africa, US Navy, US Marines, Wojsko Polskie, policja norweska.
+
+**Differentiation vs generyczny trener:** pisze courseware dla NATO (nie czyta cudzych slajdów); uczy systemów, nie feature'ów; "debug T-SQL o 10:00, prezentacja dla zarządu o 14:00"; battle-tested, nie lab-tested.
+
+**Proces sprzedaży:** 2-min formularz scopingowy → 20-min scope call (bez pitchu) → custom program → delivery (remote/on-site, EN/PL, EU/US/Bliski Wschód). Bez cennika — wycena indywidualna.
+
+**Proof (testimonials EN):** "One of the best instructors I've ever had" — Ron Wilson, US Army; "Best class I've attended in very long time" — Lisa Blankenship, US Army.

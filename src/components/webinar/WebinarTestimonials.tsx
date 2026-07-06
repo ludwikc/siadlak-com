@@ -29,7 +29,7 @@ const testimonials = [
 
 const WebinarTestimonials = () => {
   return (
-    <section className="py-16 bg-white/20 backdrop-blur-sm">
+    <section className="py-20 bg-white/20 backdrop-blur-sm">
       <div className="container max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
           Co mówią uczestnicy poprzednich webinarów

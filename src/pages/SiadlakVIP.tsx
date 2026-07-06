@@ -42,7 +42,7 @@ export default function SiadlakVIP() {
       <TheCut />
 
       {/* ─── TELEGRAM ─── */}
-      <section className="bg-void-glow py-20 md:py-24">
+      <section className="bg-void-glow py-20">
         <div className="max-w-3xl mx-auto px-6">
           <Eyebrow>01 · SIADLAK.VIP TELEGRAM</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-3">
@@ -93,7 +93,7 @@ export default function SiadlakVIP() {
       <TheCut />
 
       {/* ─── TRZY PRZESTRZENIE ─── */}
-      <section className="bg-diamond py-20 md:py-24">
+      <section className="bg-diamond py-20">
         <div className="max-w-3xl mx-auto px-6">
           <Eyebrow color="dim">02 · TRZY PRZESTRZENIE</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-8">
@@ -192,7 +192,7 @@ export default function SiadlakVIP() {
       <TheCut />
 
       {/* ─── NAWIGACJA ─── */}
-      <section className="bg-void-glow py-20 md:py-24">
+      <section className="bg-void-glow py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Eyebrow>CO DALEJ?</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white leading-[1.1] tracking-[-0.02em] mb-8">

@@ -119,7 +119,7 @@ export default function Slownik() {
         ]}
       />
 
-      <section className="py-16 md:py-24 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-[800px] mx-auto">
             <nav aria-label="breadcrumb" className="mb-8">
@@ -146,7 +146,7 @@ export default function Slownik() {
         </div>
       </section>
 
-      <section className="py-16 bg-void">
+      <section className="py-20 bg-void">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-[800px] mx-auto">
             <dl className="space-y-10">
@@ -174,7 +174,7 @@ export default function Slownik() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12 max-w-[800px]">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
             Najcz&#281;&#347;ciej zadawane pytania

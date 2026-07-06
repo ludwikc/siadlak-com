@@ -2,9 +2,9 @@ import { Flame, Users, Star } from "@/lib/icons";
 
 export default function DiscoveryHero() {
   return (
-    <section className="py-16 md:py-24 bg-void-glow relative overflow-hidden">
+    <section className="py-20 bg-void-glow relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-4 sm:px-6 py-2 sm:py-3">

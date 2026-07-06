@@ -418,8 +418,8 @@ export default function MCT() {
         </section>
 
         {/* ── PROBLEM (agitate) ────────────────────────────────── */}
-        <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-5xl px-6">
+        <section className="py-20">
+          <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// the problem"
               title="Most Microsoft training is forgotten by Monday."
@@ -446,7 +446,7 @@ export default function MCT() {
         </section>
 
         {/* ── WHAT YOUR TEAM GETS ──────────────────────────────── */}
-        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// what your team gets"
@@ -478,7 +478,7 @@ export default function MCT() {
         </section>
 
         {/* ── WHY ME ───────────────────────────────────────────── */}
-        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// why me"
@@ -566,7 +566,7 @@ export default function MCT() {
         </section>
 
         {/* ── TRUSTED BY (full wall) ───────────────────────────── */}
-        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// trusted by"
@@ -599,7 +599,7 @@ export default function MCT() {
         <MCTSocialProof />
 
         {/* ── MID CTA ──────────────────────────────────────────── */}
-        <section className="py-16" style={{ borderTop: `1px solid ${t.border}`, background: t.surface }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}`, background: t.surface }}>
           <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 text-center">
             <h2 className="text-2xl font-bold md:text-3xl" style={{ color: t.text }}>
               Ready to see what this looks like for your team?
@@ -612,7 +612,7 @@ export default function MCT() {
         </section>
 
         {/* ── HOW WE WORK ──────────────────────────────────────── */}
-        <section className="py-16 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// how we work together"
@@ -637,7 +637,7 @@ export default function MCT() {
         </section>
 
         {/* ── FINAL CTA ────────────────────────────────────────── */}
-        <section className="py-20 md:py-28" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-24 md:py-32" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: t.mono, color: t.accent }}>// let's talk</p>
 
