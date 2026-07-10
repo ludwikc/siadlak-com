@@ -184,7 +184,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                   <p className="text-sm text-muted-foreground mb-1">Regularnie</p>
                   <p className="text-2xl font-bold line-through text-muted-foreground">497 PLN</p>
                 </div>
-                <div className="text-3xl text-muted-foreground">→</div>
+                <ArrowRight className="text-muted-foreground" size={28} aria-hidden="true" />
                 <div>
                   <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa - i <s>tylko teraz</s></p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
