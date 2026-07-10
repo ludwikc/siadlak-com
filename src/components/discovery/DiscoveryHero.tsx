@@ -1,4 +1,5 @@
 import { Flame, Users, Star } from "@/lib/icons";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryHero() {
   return (
