@@ -23,13 +23,16 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Publish header offset as a CSS variable so heroes/anchors can align
-  // to the actual header stack (banner 36px + header 64px = 100px).
+  // Publish header offset as CSS variables so heroes/anchors align to the
+  // actual header stack (banner 36px + header 64px). When the header/banner
+  // is hidden, offsets collapse to 0.
   useEffect(() => {
-    const offset = shouldHideHeader ? "0px" : "100px";
-    document.documentElement.style.setProperty("--header-offset", offset);
+    const root = document.documentElement.style;
+    root.setProperty("--banner-height", shouldHideHeader ? "0px" : "36px");
+    root.setProperty("--header-offset", shouldHideHeader ? "0px" : "100px");
     return () => {
-      document.documentElement.style.removeProperty("--header-offset");
+      root.removeProperty("--banner-height");
+      root.removeProperty("--header-offset");
     };
   }, [shouldHideHeader]);
 
