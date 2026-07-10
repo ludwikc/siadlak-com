@@ -88,37 +88,41 @@ export default function Header() {
               />
             </button>
 
-            {dropdownOpen && (
-              <div className="absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
+            <div
+              className={`absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 origin-top-right transition-all duration-300 ease-out ${
+                dropdownOpen
+                  ? "opacity-100 scale-100 pointer-events-auto"
+                  : "opacity-0 scale-95 pointer-events-none"
+              }`}
+            >
+              <Link
+                to="/start"
+                onClick={() => setDropdownOpen(false)}
+                className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors"
+              >
+                Zacznij tutaj →
+              </Link>
+              <div className="border-t border-white/10 my-1" />
+              {dropdownItems.map((item) => (
                 <Link
-                  to="/start"
+                  key={item.to}
+                  to={item.to}
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
                 >
-                  Zacznij tutaj →
+                  {item.label}
+                  {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
                 </Link>
-                <div className="border-t border-white/10 my-1" />
-                {dropdownItems.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    onClick={() => setDropdownOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
-                  >
-                    {item.label}
-                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
-                  </Link>
-                ))}
-                <div className="border-t border-white/10 my-1" />
-                <Link
-                  to="/start"
-                  onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
-                >
-                  Wszystkie możliwości →
-                </Link>
-              </div>
-            )}
+              ))}
+              <div className="border-t border-white/10 my-1" />
+              <Link
+                to="/start"
+                onClick={() => setDropdownOpen(false)}
+                className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
+              >
+                Wszystkie możliwości →
+              </Link>
+            </div>
           </div>
 
           {/* Więcej – dropdown */}
