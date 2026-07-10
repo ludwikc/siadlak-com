@@ -3378,8 +3378,8 @@ export default function MeskiKompas() {
                     color: "white",
                   }}
                 >
-                  <span className="inline sm:hidden">Rezerwuję Miejsce →</span>
-                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych →</span>
+                  <span className="inline sm:hidden">Rezerwuję Miejsce</span>
+                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych</span>
                 </button>
               </Link>
             </div>

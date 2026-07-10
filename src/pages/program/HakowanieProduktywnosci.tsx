@@ -138,7 +138,7 @@ export default function HakowanieProduktywnosci() {
               >
                 <span className="block sm:inline">Bezpłatna diagnoza krytyczna</span>
                 <span className="hidden sm:inline"> · </span>
-                <span className="block sm:inline">Sprawdź, jak bardzo jesteś przeciążony →</span>
+                <span className="block sm:inline">Sprawdź, jak bardzo jesteś przeciążony</span>
               </Button>
             </Link>
           </div>

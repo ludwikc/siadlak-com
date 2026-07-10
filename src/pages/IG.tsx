@@ -71,7 +71,7 @@ export default function IGPage() {
               zżera to, co krąży w Twojej głowie i nie jest domknięte.
             </p>
             <p className="text-sm font-bold text-[hsl(var(--electric-blue))] group-hover:underline">
-              Zrób test →
+              Zrób test
             </p>
           </a>
 
@@ -96,7 +96,7 @@ export default function IGPage() {
                   {path.desc}
                 </p>
                 <p className="text-sm font-bold text-[hsl(var(--electric-blue))] group-hover:underline">
-                  {path.cta} →
+                  {path.cta}
                 </p>
               </a>
             ))}

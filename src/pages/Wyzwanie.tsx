@@ -209,7 +209,7 @@ export default function Wyzwanie() {
                     Darmowe 4-dniowe wyzwanie
                   </span>
                   <span className="block text-lg sm:text-xl md:text-2xl font-bold">
-                    Sprawdzam, w którym lesie stoję →
+                    Sprawdzam, w którym lesie stoję
                   </span>
                 </a>
               </div>
@@ -1128,7 +1128,7 @@ export default function Wyzwanie() {
                   <span className="text-xs sm:text-sm uppercase tracking-wider opacity-90">
                     Darmowe wyzwanie
                   </span>
-                  <span>Sprawdzam, w którym lesie stoję →</span>
+                  <span>Sprawdzam, w którym lesie stoję</span>
                   <span className="text-xs sm:text-sm opacity-90">
                     (4 dni, 0 zł)
                   </span>
