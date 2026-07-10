@@ -264,7 +264,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* WHAT YOU ALREADY HAVE */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -308,7 +308,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* THE GAP - MARTWA STREFA */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -384,7 +384,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* PAUSE - VISION SCENE */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -419,7 +419,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* FOR / NOT FOR */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -462,7 +462,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* WHAT IT IS - PILLARS */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -511,7 +511,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* PROTOCOL POMOSTU */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -559,7 +559,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* 8 WEEKS */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -592,7 +592,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* WHAT YOU GET */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -632,7 +632,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* SIX TRANSFORMATIONS */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -667,7 +667,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* ROI */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -782,7 +782,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* WHY ME - moved before Investment */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -812,7 +812,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* INVESTMENT */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -890,7 +890,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* DECISION + CTA */}
       <section className="py-20 md:py-28 bg-diamond">
@@ -945,7 +945,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* FAQ */}
       <section className="py-20 md:py-28 bg-void-glow">
@@ -969,7 +969,7 @@ export default function TrainTheTrainerAI() {
         </div>
       </section>
 
-      <div className="h-1 bg-[linear-gradient(90deg,#080808_0%,#007AFF_40%,#6D28D9_60%,#F9FAFB_100%)]" />
+      <div className="h-1 brand-rainbow-bar" />
 
       {/* CLOSING */}
       <section className="py-20 md:py-28 bg-diamond">
