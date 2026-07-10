@@ -71,9 +71,20 @@
 }
 
 /* === Homepage: Phase backgrounds === */
-.bg-void { background-color: #080808; }
-.bg-surface { background-color: rgba(255,255,255,0.03); }
-.bg-paper { background-color: #FFFFFF; }
+.bg-void { background-color: hsl(var(--void-black)); }
+.bg-surface { background-color: hsl(0 0% 100% / 0.03); }
+.bg-paper { background-color: hsl(var(--card)); }
+
+/* Brand-palette rainbow bar (void → electric → depth → diamond) */
+.brand-rainbow-bar {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--void-black)) 0%,
+    hsl(var(--electric-blue)) 40%,
+    hsl(var(--depth-purple)) 60%,
+    hsl(var(--diamond-light)) 100%
+  );
+}
 
 /* ================================================
    TESTIMONIALS PAGE STYLES (tokenized)
