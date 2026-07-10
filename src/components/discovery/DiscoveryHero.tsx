@@ -3,7 +3,7 @@ import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryHero() {
   return (
-    <section className="py-16 md:py-24 bg-void-glow relative overflow-hidden">
+    <section className="py-20 md:py-24 bg-void-glow relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}

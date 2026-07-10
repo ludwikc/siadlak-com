@@ -82,7 +82,7 @@ const Sitemap = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-brand-primary">
+      <section className="py-20 md:py-24 bg-gradient-brand-primary">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -96,7 +96,7 @@ const Sitemap = () => {
       </section>
 
       {/* Sitemap Content */}
-      <section className="py-16 md:py-24 bg-diamond">
+      <section className="py-20 md:py-24 bg-diamond">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {siteStructure.map((section, sectionIndex) => (
@@ -160,7 +160,7 @@ const Sitemap = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-20 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-on-light">

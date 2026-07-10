@@ -149,8 +149,8 @@ export default function MeskiKompas() {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-16" style={{ background: "hsl(0, 0%, 97%)" }}>
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="py-12 md:py-20" style={{ background: "hsl(0, 0%, 97%)" }}>
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs mb-6" style={{ color: "hsl(210, 10%, 55%)" }}>
             Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
           </p>
@@ -3388,7 +3388,7 @@ export default function MeskiKompas() {
       )}
 
       {/* FAQ */}
-      <section className="py-16 md:py-20 bg-stone-950">
+      <section className="py-20 md:py-20 bg-stone-950">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
             Najczęściej zadawane pytania

@@ -167,8 +167,8 @@ const SilnaGlowa = () => {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-16 bg-background-primary">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="py-12 md:py-20 bg-background-primary">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs text-text-secondary mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>
@@ -194,7 +194,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 md:py-20 bg-background-primary">
+      <section className="py-20 md:py-20 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -301,7 +301,7 @@ const SilnaGlowa = () => {
 
 
       {/* Boat Metaphor Section */}
-      <section className="py-16 md:py-20 bg-background-secondary relative overflow-hidden">
+      <section className="py-20 md:py-20 bg-background-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-electric/20 to-transparent"></div>
         </div>
@@ -399,7 +399,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Adversity Section */}
-      <section className="py-16 bg-card-bg">
+      <section className="py-20 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
@@ -467,7 +467,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Author Section */}
-      <section className="py-16 bg-background-tertiary">
+      <section className="py-20 bg-background-tertiary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
@@ -571,7 +571,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Benefits Section - 6 Steps */}
-      <section className="py-16 md:py-20 bg-background-primary">
+      <section className="py-20 md:py-20 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -699,7 +699,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Target Audience */}
-      <section className="py-16 bg-background-secondary">
+      <section className="py-20 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
@@ -748,7 +748,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 bg-card-bg">
+      <section className="py-20 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">
@@ -799,7 +799,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Course Modules */}
-      <section className="py-16 md:py-20 bg-background-tertiary">
+      <section className="py-20 md:py-20 bg-background-tertiary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -932,7 +932,7 @@ const SilnaGlowa = () => {
       <LifehackerzySection />
 
       {/* Pricing Section */}
-      <section className="py-16 bg-background-primary">
+      <section className="py-20 bg-background-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-text-primary">
@@ -1103,7 +1103,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Objections Section - Inline Cards */}
-      <section className="py-16 md:py-20 bg-background-secondary">
+      <section className="py-20 md:py-20 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -1174,7 +1174,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Final CTA - Theme Locked */}
-      <section className="py-16 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+      <section className="py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-locked-white">
@@ -1201,7 +1201,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-card-bg">
+      <section className="py-20 bg-card-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-text-primary">

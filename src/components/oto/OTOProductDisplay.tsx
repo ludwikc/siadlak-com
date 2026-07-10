@@ -31,7 +31,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
     <div className="min-h-screen">
       {/* Gmail-style email */}
       <section aria-label="Email z mojego biurka" className="bg-background py-8 md:py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <div className="bg-card rounded-2xl border border-border/70 shadow-2xl overflow-hidden">
             {/* macOS window title bar */}
             <div className="bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
@@ -82,7 +82,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
       {/* Course Logo Section */}
       <section className="py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
@@ -115,7 +115,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
 
       {/* Product Section */}
-      <div className="container mx-auto px-4 max-w-4xl py-16">
+      <div className="container mx-auto px-4 max-w-3xl py-20">
         <GlassCard className="mb-16" padding="xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
@@ -171,8 +171,8 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
 
       {/* Wartość vs. cena */}
-      <div className="bg-muted/30 py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <div className="bg-muted/30 py-20">
+        <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena</h2>
           </div>
@@ -214,7 +214,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </div>
       </div>
       {/* Urgency Section */}
-      <div className="container mx-auto px-4 max-w-4xl py-16">
+      <div className="container mx-auto px-4 max-w-3xl py-20">
         <div className="mb-12">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="text-left">

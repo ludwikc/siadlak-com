@@ -216,7 +216,7 @@ const Index = () => {
 
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
       <section className="py-24 bg-void">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow>PRAWDA, KTÓRĄ JUŻ CZUJESZ</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-6">
             Branża rozwoju osobistego sprzedaje Ci plasterki
@@ -270,7 +270,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
 
-        <div className="container mx-auto px-4 max-w-4xl relative z-10">
+        <div className="container mx-auto px-4 max-w-3xl relative z-10">
           <Eyebrow color="electric">AUTORYTET</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-12">
             Mam świetne CV. Ale to nie ono przekonuje ludzi.
@@ -362,7 +362,7 @@ const Index = () => {
 
       {/* ═══ DWIE ŚCIEŻKI ═══ */}
       <section className="py-24 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow>DWIE ŚCIEŻKI</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
             Dwie ścieżki. Jedna decyzja.
@@ -425,7 +425,7 @@ const Index = () => {
 
       {/* ═══ OFFER SECTION ═══ */}
       <section className="bg-diamond py-24 md:py-32" id="oferta">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             {/* Left column (7 cols) */}
             <div className="lg:col-span-7">
@@ -515,8 +515,8 @@ const Index = () => {
       </section>
 
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
-      <section className="py-16 bg-diamond text-center">
-        <div className="container mx-auto px-4 max-w-2xl">
+      <section className="py-20 bg-diamond text-center">
+        <div className="container mx-auto px-4 max-w-3xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
@@ -531,7 +531,7 @@ const Index = () => {
 
       {/* ═══ OFFER 2: APLIKACJE MENTALNE ═══ */}
       <section className="bg-white py-24">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
@@ -621,7 +621,7 @@ const Index = () => {
       </section>
 
       {/* ═══ DLA TRENERÓW I EKSPERTÓW AI ═══ */}
-      <section className="bg-diamond py-16 md:py-20 border-t border-border/50">
+      <section className="bg-diamond py-20 md:py-20 border-t border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow color="depth">DLA TRENERÓW I EKSPERTÓW AI</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-6">
@@ -643,7 +643,7 @@ const Index = () => {
       {/* ═══ NEWSLETTER CTA ═══ */}
       <TheCut />
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-2xl text-center">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <div className="text-dim leading-relaxed mb-10 space-y-4">
             <p>
@@ -661,7 +661,7 @@ const Index = () => {
 
       {/* ═══ LICZBY ═══ */}
       <section className="py-20 bg-void">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-16">
             Ludwik C. Siadlak w liczbach
           </h2>
@@ -723,7 +723,7 @@ const Index = () => {
 
       {/* ═══ P.S. LADDER + CLOSING ═══ */}
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-2xl space-y-8">
+        <div className="container mx-auto px-4 max-w-3xl space-y-8">
           <p className="text-dim leading-relaxed">
             <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>

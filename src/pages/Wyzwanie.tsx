@@ -1057,7 +1057,7 @@ export default function Wyzwanie() {
       {/* FINAL CTA SECTION */}
       <section
         id="signup"
-        className="py-16 sm:py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
+        className="py-20 sm:py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
       >
         <div className="container max-w-5xl mx-auto space-y-10 sm:space-y-12">
           <div className="text-center space-y-6 sm:space-y-8">

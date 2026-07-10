@@ -10,7 +10,7 @@ const PROFILE_IMAGE = "/lovable-uploads/SIADLAK-coffee-transparent.png";
 
 function DiamondDivider() {
   return (
-    <div className="flex items-center justify-center gap-4 py-16">
+    <div className="flex items-center justify-center gap-4 py-20">
       <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#c8b99a]/30" />
       <Diamond size={14} className="text-[#c8b99a]/40" />
       <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#c8b99a]/30" />
