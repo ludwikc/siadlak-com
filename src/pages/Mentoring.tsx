@@ -35,7 +35,7 @@ export default function Mentoring() {
 
       {/* HERO */}
       <section className="relative bg-void-glow py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-electric font-mono text-xs md:text-sm uppercase tracking-widest mb-4">
             Mentoring 1:1
           </p>
@@ -50,7 +50,7 @@ export default function Mentoring() {
 
       {/* INTRO */}
       <section className="bg-diamond py-12 md:py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-electric font-mono text-xs md:text-sm uppercase tracking-widest mb-4">
             Zanim przejdziemy do wyboru
           </p>

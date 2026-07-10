@@ -147,7 +147,7 @@ export default function HakowanieProduktywnosci() {
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
       <section className="py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>

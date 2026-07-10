@@ -39,7 +39,7 @@ export default function RelatedPrograms({ currentPath }: { currentPath: string }
 
   return (
     <section className="py-12 md:py-16 bg-void-glow">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-2">
           Nie wiesz, czy to właściwy program?
         </h2>

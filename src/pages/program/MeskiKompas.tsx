@@ -150,7 +150,7 @@ export default function MeskiKompas() {
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
       <section className="py-12 md:py-16" style={{ background: "hsl(0, 0%, 97%)" }}>
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs mb-6" style={{ color: "hsl(210, 10%, 55%)" }}>
             Ostatnia aktualizacja: <time dateTime="2026-03-28">28 marca 2026</time>
           </p>

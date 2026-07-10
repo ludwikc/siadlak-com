@@ -46,7 +46,7 @@ export default function SiedemTechnik() {
 
       {/* Course Logo */}
       <section className="py-16 bg-gradient-to-b from-diamond to-background">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage

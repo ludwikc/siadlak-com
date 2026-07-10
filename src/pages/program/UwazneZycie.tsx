@@ -246,7 +246,7 @@ const UwazneZycie = () => {
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>
@@ -273,7 +273,7 @@ const UwazneZycie = () => {
 
       {/* GENEZA PROGRAMU */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Skąd się wziął ten program (i&nbsp;dlaczego nie powstał za biurkiem)
           </h2>
