@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global heading font — Space Grotesk everywhere, no opt-in class needed */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+}
+
 /* === TrainTheTrainer Hero === */
 .hero-section {
   position: relative;
@@ -104,9 +109,9 @@
 
 .testimonials-header h1 {
   font-family: var(--font-family-heading);
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1.1;
   margin-bottom: 20px;
-  line-height: 1.2;
   color: hsl(var(--text-on-dark));
 }
 
