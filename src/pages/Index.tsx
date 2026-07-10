@@ -650,12 +650,9 @@ const Index = () => {
               Bez harmonogramu i bez kalendarza treści — piszę, kiedy mam myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez litości. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
             </p>
           </div>
-          <Link
-            to="/newsletter"
-            className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-          >
-            DOŁĄCZ DO NEWSLETTERA →
-          </Link>
+          <CTAButton variant="secondary" onDark href="/newsletter">
+            DOŁĄCZ DO NEWSLETTERA
+          </CTAButton>
           <p className="text-xs text-dim mt-4">1500+ osób czyta. Zero spamu. Odejdziesz jednym kliknięciem.</p>
         </div>
       </section>
