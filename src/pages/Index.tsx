@@ -13,6 +13,7 @@ import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;8
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { Shield, Leaf } from "lucide-react";
 
 /* ─── tiny reusable pieces ─── */
@@ -121,18 +122,12 @@ const Index = () => {
 
               {/* Dual CTA */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/discovery"
-                  className="inline-block py-5 px-8 bg-brand-gradient text-white font-bold uppercase tracking-widest text-xs rounded shadow-sm hover:opacity-90 transition-opacity text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  SESJA DISCOVERY →
-                </Link>
-                <Link
-                  to="/program"
-                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-5 hover:border-electric hover:text-electric transition-colors text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  APLIKACJE MENTALNE →
-                </Link>
+                <CTAButton variant="primary" href="/discovery" size="default">
+                  SESJA DISCOVERY
+                </CTAButton>
+                <CTAButton variant="secondary" onDark href="/program" size="default" showArrow={false}>
+                  APLIKACJE MENTALNE
+                </CTAButton>
               </div>
             </div>
 
@@ -358,12 +353,9 @@ const Index = () => {
               Jeszcze nie wiesz, czy mój język do Ciebie trafia? Sprawdź bez ryzyka — jedna myśl w Twojej skrzynce,
               wtedy, kiedy naprawdę jest coś do powiedzenia.
             </p>
-            <Link
-              to="/newsletter"
-              className="inline-block text-electric font-bold uppercase tracking-widest text-xs hover:underline"
-            >
-              DOŁĄCZ DO MAILINGU →
-            </Link>
+            <CTAButton variant="tertiary" href="/newsletter">
+              DOŁĄCZ DO MAILINGU
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -491,12 +483,9 @@ const Index = () => {
                   16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
 
-                <Link
-                  to="/discovery"
-                  className="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4 focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  ZAREZERWUJ SESJĘ DISCOVERY →
-                </Link>
+                <CTAButton variant="primary" href="/discovery" className="w-full mb-4">
+                  ZAREZERWUJ SESJĘ DISCOVERY
+                </CTAButton>
 
                 <p className="text-xs text-on-light-dim text-center">Faktura VAT · Możliwość płatności 50/50</p>
               </div>
@@ -645,12 +634,9 @@ const Index = () => {
             Train The Trainer: AI to 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami. Most z ligi „freelancera za
             kilkaset złotych" do „eksperta biorącego 5 000–10 000 zł za dzień warsztatowy".
           </p>
-          <Link
-            to="/program/ttt-ai"
-            className="inline-block border border-on-light/20 text-on-light font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-          >
-            ZOBACZ PROGRAM →
-          </Link>
+          <CTAButton variant="secondary" href="/program/ttt-ai">
+            ZOBACZ PROGRAM
+          </CTAButton>
         </div>
       </section>
 
@@ -664,12 +650,9 @@ const Index = () => {
               Bez harmonogramu i bez kalendarza treści — piszę, kiedy mam myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez litości. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
             </p>
           </div>
-          <Link
-            to="/newsletter"
-            className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-          >
-            DOŁĄCZ DO NEWSLETTERA →
-          </Link>
+          <CTAButton variant="secondary" onDark href="/newsletter">
+            DOŁĄCZ DO NEWSLETTERA
+          </CTAButton>
           <p className="text-xs text-dim mt-4">1500+ osób czyta. Zero spamu. Odejdziesz jednym kliknięciem.</p>
         </div>
       </section>

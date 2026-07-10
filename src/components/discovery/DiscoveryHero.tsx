@@ -1,4 +1,5 @@
 import { Flame, Users, Star } from "@/lib/icons";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryHero() {
   return (
@@ -51,26 +52,21 @@ export default function DiscoveryHero() {
 
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4 mb-6">
-            <button
-              className="inline-flex items-center justify-center px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm"
-              style={{
-                background:
-                  "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-              }}
+            <CTAButton
+              variant="primary"
               onClick={() => {
                 const el = document.querySelector("#formularz");
                 el?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Sprawdź dostępność →
-            </button>
+              Sprawdź dostępność
+            </CTAButton>
 
             <a
               href="#nie"
               className="text-sm text-text-dim hover:text-electric transition-colors underline"
             >
-              Dla kogo to NIE jest →
+              Dla kogo to NIE jest
             </a>
           </div>
         </div>
