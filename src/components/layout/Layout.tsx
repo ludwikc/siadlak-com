@@ -23,12 +23,22 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Publish header offset as a CSS variable so heroes/anchors can align
+  // to the actual header stack (banner 36px + header 64px = 100px).
+  useEffect(() => {
+    const offset = shouldHideHeader ? "0px" : "100px";
+    document.documentElement.style.setProperty("--header-offset", offset);
+    return () => {
+      document.documentElement.style.removeProperty("--header-offset");
+    };
+  }, [shouldHideHeader]);
+
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {!shouldHideHeader && <PromoBanner />}
       {!shouldHideHeader && <Header />}
       <main
-        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[100px]"}`}
+        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[var(--header-offset,100px)]"}`}
       >
         <div className="page-content animate-fade-in">{children}</div>
       </main>
