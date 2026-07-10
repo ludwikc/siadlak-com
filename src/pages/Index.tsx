@@ -634,12 +634,9 @@ const Index = () => {
             Train The Trainer: AI to 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami. Most z ligi „freelancera za
             kilkaset złotych" do „eksperta biorącego 5 000–10 000 zł za dzień warsztatowy".
           </p>
-          <Link
-            to="/program/ttt-ai"
-            className="inline-block border border-on-light/20 text-on-light font-bold uppercase tracking-widest text-xs rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-          >
-            ZOBACZ PROGRAM →
-          </Link>
+          <CTAButton variant="secondary" href="/program/ttt-ai">
+            ZOBACZ PROGRAM
+          </CTAButton>
         </div>
       </section>
 
