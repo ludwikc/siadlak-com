@@ -209,7 +209,7 @@ export default function Wyzwanie() {
                     Darmowe 4-dniowe wyzwanie
                   </span>
                   <span className="block text-lg sm:text-xl md:text-2xl font-bold">
-                    Sprawdzam, w którym lesie stoję →
+                    Sprawdzam, w którym lesie stoję
                   </span>
                 </a>
               </div>
@@ -1128,7 +1128,7 @@ export default function Wyzwanie() {
                   <span className="text-xs sm:text-sm uppercase tracking-wider opacity-90">
                     Darmowe wyzwanie
                   </span>
-                  <span>Sprawdzam, w którym lesie stoję →</span>
+                  <span>Sprawdzam, w którym lesie stoję</span>
                   <span className="text-xs sm:text-sm opacity-90">
                     (4 dni, 0 zł)
                   </span>
@@ -1248,7 +1248,7 @@ export default function Wyzwanie() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              Ostatnia szansa: Zapisuję się teraz →
+              Ostatnia szansa: Zapisuję się teraz
             </a>
             <p className="text-xs sm:text-sm text-muted-foreground mt-4 max-w-md mx-auto">
               Dołącz do{" "}
