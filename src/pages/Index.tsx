@@ -515,8 +515,8 @@ const Index = () => {
       </section>
 
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
-      <section className="py-16 bg-diamond text-center">
-        <div className="container mx-auto px-4 max-w-2xl">
+      <section className="py-20 bg-diamond text-center">
+        <div className="container mx-auto px-4 max-w-3xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
@@ -621,7 +621,7 @@ const Index = () => {
       </section>
 
       {/* ═══ DLA TRENERÓW I EKSPERTÓW AI ═══ */}
-      <section className="bg-diamond py-16 md:py-20 border-t border-border/50">
+      <section className="bg-diamond py-20 md:py-20 border-t border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow color="depth">DLA TRENERÓW I EKSPERTÓW AI</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-6">
@@ -643,7 +643,7 @@ const Index = () => {
       {/* ═══ NEWSLETTER CTA ═══ */}
       <TheCut />
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-2xl text-center">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <div className="text-dim leading-relaxed mb-10 space-y-4">
             <p>
@@ -723,7 +723,7 @@ const Index = () => {
 
       {/* ═══ P.S. LADDER + CLOSING ═══ */}
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-2xl space-y-8">
+        <div className="container mx-auto px-4 max-w-3xl space-y-8">
           <p className="text-dim leading-relaxed">
             <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>

@@ -107,7 +107,7 @@ const CourseDetail = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-void-glow">
+      <section className="py-20 md:py-24 bg-void-glow">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {course.featured && (

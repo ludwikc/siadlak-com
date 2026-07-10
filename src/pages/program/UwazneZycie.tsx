@@ -73,7 +73,7 @@ const UwazneZycie = () => {
 
       {/* HERO SECTION - Deep Ocean Premium Theme */}
       <section
-        className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
+        className="relative py-20 sm:py-24 md:py-40 overflow-hidden"
         style={{
           background:
             "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
@@ -245,7 +245,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
@@ -272,7 +272,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* GENEZA PROGRAMU */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Skąd się wziął ten program (i&nbsp;dlaczego nie powstał za biurkiem)
@@ -306,7 +306,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* OPENING SECTION - Hook */}
-      <section className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-20 md:py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -386,7 +386,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* TESTIMONIAL SECTION - Placeholder quotes */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-20 md:py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -423,7 +423,7 @@ const UwazneZycie = () => {
 
       {/* CHECKLIST SECTION - Pain Points */}
       <section
-        className="py-16 md:py-24 relative overflow-hidden"
+        className="py-20 md:py-24 relative overflow-hidden"
         style={{
           background: "linear-gradient(180deg, hsl(0, 15%, 97%) 0%, hsl(0, 10%, 95%) 50%, hsl(0, 15%, 97%) 100%)",
         }}
@@ -538,7 +538,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* CO WYNIESIESZ Z PROGRAMU - Full Curriculum */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
+      <section className="py-20 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Header */}
@@ -1155,7 +1155,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-16 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-full mb-6">
@@ -1203,7 +1203,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-20" style={{ background: "linear-gradient(180deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 100%)" }}>
+      <section className="py-20 md:py-20" style={{ background: "linear-gradient(180deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 100%)" }}>
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
             Najczęściej zadawane pytania

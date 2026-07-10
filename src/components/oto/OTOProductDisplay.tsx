@@ -115,7 +115,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
 
       {/* Product Section */}
-      <div className="container mx-auto px-4 max-w-3xl py-16">
+      <div className="container mx-auto px-4 max-w-3xl py-20">
         <GlassCard className="mb-16" padding="xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
@@ -171,7 +171,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
 
       {/* Wartość vs. cena */}
-      <div className="bg-muted/30 py-16">
+      <div className="bg-muted/30 py-20">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena</h2>
@@ -214,7 +214,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </div>
       </div>
       {/* Urgency Section */}
-      <div className="container mx-auto px-4 max-w-3xl py-16">
+      <div className="container mx-auto px-4 max-w-3xl py-20">
         <div className="mb-12">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="text-left">

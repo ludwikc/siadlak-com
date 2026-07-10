@@ -106,7 +106,7 @@ const LifeHackingPodcast = () => {
       ]} />
       {(() => { const t = getTopicalConfig("/podcast/life-hacking"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-void-glow text-white">
+      <section className="py-20 md:py-24 bg-void-glow text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -235,7 +235,7 @@ const LifeHackingPodcast = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-void">
+      <section className="py-20 bg-void">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
             Najcz&#281;&#347;ciej zadawane pytania

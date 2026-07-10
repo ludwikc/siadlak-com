@@ -146,7 +146,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 max-w-3xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
@@ -170,7 +170,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ROZPOZNANIE PROBLEMU */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-20 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -329,7 +329,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* KONTEKST - DLACZEGO TAK JEST */}
-      <section className="py-16 bg-muted">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -401,7 +401,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* OBIETNICA / FILOZOFIA */}
-      <section className="py-16 bg-card">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
@@ -455,7 +455,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ZANIM POWIESZ "KOLEJNY KURS" */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-20 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -495,7 +495,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* WIZJA PRZYSZŁOŚCI */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-20 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
@@ -661,7 +661,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* CO ZAWIERA PROGRAM - MODUŁY */}
-      <section className="py-16 bg-void-glow relative overflow-hidden">
+      <section className="py-20 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -829,7 +829,7 @@ export default function HakowanieProduktywnosci() {
       <LifehackerzySection />
 
       {/* VALUE CALCULATOR */}
-      <section className="py-16 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl font-bold text-center mb-4 text-foreground">
@@ -1038,7 +1038,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* SOCIAL PROOF / OPINIE */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-20 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -1219,7 +1219,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* GWARANCJA */}
-      <section className="py-16 bg-muted">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="glass-card p-8 border-4 border-electric">
@@ -1242,7 +1242,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* OBIEKCJE & FAQ */}
-      <section className="py-16 md:py-20 bg-card">
+      <section className="py-20 md:py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1363,7 +1363,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ZAMKNIĘCIE + P.S. */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-20 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">

@@ -184,7 +184,7 @@ export default function LifeOSSystemUpgrade() {
       </section>
 
       {/* Definicja — extractable block dla AI */}
-      <section className="py-12 md:py-16 bg-void-glow">
+      <section className="py-12 md:py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
             Czym jest Life OS: System Upgrade?

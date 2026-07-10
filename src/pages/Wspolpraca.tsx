@@ -333,7 +333,7 @@ export default function Wspolpraca() {
       <TheCut />
 
       {/* ─── KONTAKT ─── */}
-      <section className="bg-void-glow py-16 md:py-20">
+      <section className="bg-void-glow py-20 md:py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <Eyebrow>KONTAKT</Eyebrow>
           <p className="text-dim text-base leading-relaxed mb-6">
