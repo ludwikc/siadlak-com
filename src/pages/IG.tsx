@@ -126,7 +126,7 @@ export default function IGPage() {
               href={`/start${UTM}`}
               className="text-sm text-[hsl(var(--text-dim))] hover:text-[hsl(var(--electric-blue))] transition-colors"
             >
-              Programy, podcasty, społeczność - cała reszta jest tutaj →
+              Programy, podcasty, społeczność - cała reszta jest tutaj
             </a>
             <p className="text-sm text-[hsl(var(--text-dim)/0.5)]">- Ludwik</p>
           </div>

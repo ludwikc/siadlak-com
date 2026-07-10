@@ -1248,7 +1248,7 @@ export default function Wyzwanie() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              Ostatnia szansa: Zapisuję się teraz →
+              Ostatnia szansa: Zapisuję się teraz
             </a>
             <p className="text-xs sm:text-sm text-muted-foreground mt-4 max-w-md mx-auto">
               Dołącz do{" "}

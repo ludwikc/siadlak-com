@@ -1405,7 +1405,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base px-6 py-3"
                 >
-                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie →
+                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie
                 </Button>
               </Link>
             </div>
