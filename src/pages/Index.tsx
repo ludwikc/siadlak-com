@@ -353,12 +353,9 @@ const Index = () => {
               Jeszcze nie wiesz, czy mój język do Ciebie trafia? Sprawdź bez ryzyka — jedna myśl w Twojej skrzynce,
               wtedy, kiedy naprawdę jest coś do powiedzenia.
             </p>
-            <Link
-              to="/newsletter"
-              className="inline-block text-electric font-bold uppercase tracking-widest text-xs hover:underline"
-            >
-              DOŁĄCZ DO MAILINGU →
-            </Link>
+            <CTAButton variant="tertiary" href="/newsletter">
+              DOŁĄCZ DO MAILINGU
+            </CTAButton>
           </div>
         </div>
       </section>
