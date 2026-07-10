@@ -486,12 +486,9 @@ const Index = () => {
                   16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
 
-                <Link
-                  to="/discovery"
-                  className="block w-full py-5 bg-brand-gradient text-white text-center font-bold uppercase tracking-widest text-sm rounded shadow-sm hover:opacity-90 transition-opacity mb-4 focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  ZAREZERWUJ SESJĘ DISCOVERY →
-                </Link>
+                <CTAButton variant="primary" href="/discovery" className="w-full mb-4">
+                  ZAREZERWUJ SESJĘ DISCOVERY
+                </CTAButton>
 
                 <p className="text-xs text-on-light-dim text-center">Faktura VAT · Możliwość płatności 50/50</p>
               </div>
