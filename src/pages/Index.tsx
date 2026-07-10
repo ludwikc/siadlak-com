@@ -122,18 +122,12 @@ const Index = () => {
 
               {/* Dual CTA */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/discovery"
-                  className="inline-block py-5 px-8 bg-brand-gradient text-white font-bold uppercase tracking-widest text-xs rounded shadow-sm hover:opacity-90 transition-opacity text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  SESJA DISCOVERY →
-                </Link>
-                <Link
-                  to="/program"
-                  className="inline-block border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded px-8 py-5 hover:border-electric hover:text-electric transition-colors text-center focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-                >
-                  APLIKACJE MENTALNE →
-                </Link>
+                <CTAButton variant="primary" href="/discovery" size="default">
+                  SESJA DISCOVERY
+                </CTAButton>
+                <CTAButton variant="secondary" onDark href="/program" size="default" showArrow={false}>
+                  APLIKACJE MENTALNE
+                </CTAButton>
               </div>
             </div>
 
