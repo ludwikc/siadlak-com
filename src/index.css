@@ -6,6 +6,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global heading font — Space Grotesk everywhere, no opt-in class needed */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+}
+
 /* === TrainTheTrainer Hero === */
 .hero-section {
   position: relative;
