@@ -141,7 +141,7 @@ const Sitemap = () => {
                           ) : (
                             <Link 
                               to={page.path} 
-                              onClick={() => window.scrollTo(0, 0)}
+                             
                               className="inline-flex items-center text-electric hover:text-electric/80 transition-colors text-sm font-medium"
                             >
                               Przejdź do strony
@@ -169,7 +169,7 @@ const Sitemap = () => {
             <p className="text-lg mb-8 text-gray-600">
               Skontaktuj się ze mną bezpośrednio - chętnie pomogę Ci znaleźć odpowiednie rozwiązanie.
             </p>
-            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/contact">
               <button className="inline-flex items-center px-6 py-3 bg-depth hover:bg-depth/90 text-white rounded font-medium transition-colors">
                 Skontaktuj się ze mną
                 <Mail className="h-4 w-4 ml-2" />
