@@ -13,6 +13,7 @@ import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;8
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { Shield, Leaf } from "lucide-react";
 
 /* ─── tiny reusable pieces ─── */
