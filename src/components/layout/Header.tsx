@@ -138,21 +138,25 @@ export default function Header() {
               />
             </button>
 
-            {moreOpen && (
-              <div className="absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 animate-fade-in">
-                {moreItems.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    onClick={() => setMoreOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
-                  >
-                    {item.label}
-                    {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
-                  </Link>
-                ))}
-              </div>
-            )}
+            <div
+              className={`absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 origin-top-right transition-all duration-300 ease-out ${
+                moreOpen
+                  ? "opacity-100 scale-100 pointer-events-auto"
+                  : "opacity-0 scale-95 pointer-events-none"
+              }`}
+            >
+              {moreItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setMoreOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  {item.label}
+                  {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Aplikuj CTA */}
