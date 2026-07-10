@@ -18,10 +18,7 @@ function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
   const shouldHideHeader = hideHeader ?? isLandingPage(location.pathname);
   const shouldHideFooter = hideFooter ?? isLandingPage(location.pathname);
 
-  // Scroll to top on route change
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+  // Scroll restoration lives in App.tsx (<ScrollToTop />) — do not duplicate here.
 
   // Publish header offset as CSS variables so heroes/anchors align to the
   // actual header stack (banner 36px + header 64px). When the header/banner
