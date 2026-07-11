@@ -19,7 +19,7 @@ export default function MailingMute() {
         <div className="container mx-auto px-6 md:px-12 lg:px-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text - left */}
-            <div className="space-y-6 text-center md:text-left py-16">
+            <div className="space-y-6 text-center md:text-left py-20">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-dark">
                 {content.heading}
               </h1>
