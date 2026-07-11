@@ -12,7 +12,7 @@ export default function SiedemTechnik() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <div className="inline-block mb-6 px-5 py-2 bg-white/10 rounded-full border border-white/20">
               <span className="text-sm font-medium text-white">
                 77 minut, które zmienią Twój dzień
@@ -46,12 +46,12 @@ export default function SiedemTechnik() {
 
       {/* Course Logo */}
       <section className="py-20 bg-gradient-to-b from-diamond to-background">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
                 src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                alt="7 Technik Produktywności - Logo kursu"
+                alt="7 Technik Produktywności — Logo kursu"
                 width={1920}
                 height={1076}
                 sizes="(max-width: 768px) 100vw, 672px"
@@ -63,9 +63,9 @@ export default function SiedemTechnik() {
       </section>
 
       {/* What You Get Section */}
-      <section className="relative py-20 md:py-24 bg-gradient-to-b from-background to-diamond overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-b from-background to-diamond overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-block mb-4 px-5 py-2 bg-depth/10 rounded-full border border-depth/20">
                 <span className="text-sm font-semibold text-depth uppercase tracking-wide">
@@ -104,7 +104,7 @@ export default function SiedemTechnik() {
                   <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <p className="text-on-light-dim leading-relaxed">
-                  <strong>Zero aplikacji</strong> - wystarczy zwykły timer
+                  <strong>Zero aplikacji</strong> — wystarczy zwykły timer
                 </p>
               </div>
 
@@ -200,7 +200,7 @@ export default function SiedemTechnik() {
           <div className="max-w-6xl mx-auto">
             <OptimizedImage
               src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
-              alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
+              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
               width={1920}
               height={1366}
               sizes="(max-width: 768px) 100vw, 1152px"
@@ -211,7 +211,7 @@ export default function SiedemTechnik() {
       </section>
 
       {/* Pricing Section */}
-      <section className="relative py-20 md:py-24 bg-void-glow text-white overflow-hidden">
+      <section className="relative py-20 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 rounded-sm p-10 md:p-16 border border-white/20">
@@ -243,7 +243,7 @@ export default function SiedemTechnik() {
                 </button>
               </a>
 
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-dim">
                 <div className="flex items-center gap-2">
                    <div className="h-2 w-2 bg-electric rounded-full"></div>
                    <span>Bezpieczne płatności</span>

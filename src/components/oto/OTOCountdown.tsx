@@ -54,7 +54,7 @@ export function OTOCountdown({ onExpired, className }: OTOCountdownProps) {
       </div>
       
       <p className="text-sm text-muted-foreground mt-2">
-        To jednorazowa oferta - po wygaśnięciu nie będzie dostępna ponownie
+        To jednorazowa oferta — po wygaśnięciu nie będzie dostępna ponownie
       </p>
     </div>
   );

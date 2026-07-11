@@ -23,7 +23,6 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
   const [isOfferExpired, setIsOfferExpired] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     const storedEndTime = localStorage.getItem("specialOfferEndTime");
     if (storedEndTime) {
       const endTimeMs = parseInt(storedEndTime, 10);
@@ -209,10 +208,10 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
 
             <div className={`p-4 rounded border mt-6 ${isOfferExpired ? "bg-white/5 border-white/10" : "bg-depth/10 border-depth/20"}`}>
               <div className="flex justify-between items-center mb-2">
-                <h3 className={`font-medium ${isOfferExpired ? "text-white/40" : "text-electric"}`}>
+                <h3 className={`font-medium ${isOfferExpired ? "text-on-dark-tertiary" : "text-electric"}`}>
                   {isOfferExpired ? "⏱️ Było, minęło..." : "⏱️ Czy chcesz przyspieszyć?"}
                 </h3>
-                <span className={`text-xs px-2 py-0.5 rounded-full ${isOfferExpired ? "bg-white/10 text-white/40" : "bg-depth/20 text-depth"}`}>
+                <span className={`text-xs px-2 py-0.5 rounded-full ${isOfferExpired ? "bg-white/10 text-on-dark-tertiary" : "bg-depth/20 text-depth"}`}>
                   {isOfferExpired ? "Oferta wygasła" : "Oferta specjalna"}
                 </span>
               </div>
@@ -226,7 +225,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
                 <div className="flex items-center justify-between mt-1">
                   <div className="flex items-center">
                     <span className="line-through mr-2">499 PLN</span>
-                    <span className={`font-bold ${isOfferExpired ? "text-white/40" : "text-electric"}`}>77 PLN</span>
+                    <span className={`font-bold ${isOfferExpired ? "text-on-dark-tertiary" : "text-electric"}`}>77 PLN</span>
                   </div>
                   <span className="text-xs">{isOfferExpired ? "Oferta wygasła" : "Oferta ważna przez ograniczony czas"}</span>
                 </div>
@@ -237,7 +236,7 @@ export default function ThankYou({ type = "newsletter" }: ThankYouProps) {
               <Button
                 className={`w-full font-semibold py-4 px-6 rounded shadow-lg transition-all duration-300 group ${
                   isOfferExpired
-                    ? "bg-white/10 text-white/40 cursor-not-allowed"
+                    ? "bg-white/10 text-on-dark-tertiary cursor-not-allowed"
                     : "bg-brand-gradient text-white hover:shadow-xl hover:-translate-y-0.5"
                 }`}
                 onClick={() => !isOfferExpired && navigate("/checkout/special-offer")}

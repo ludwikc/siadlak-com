@@ -1,9 +1,8 @@
 /**
  * Content-Heavy Section Components
  *
- * Three reusable section types optimized for long-form, content-heavy pages:
+ * Reusable section types optimized for long-form, content-heavy pages:
  *
- * - ContentHeroSection: Full-width centered hero sections
  * - ContentTextSection: Left-aligned text-heavy sections
  * - ContentGridSection: Grid-based card/feature sections
  *
@@ -15,6 +14,5 @@
  * - Background alternation support
  */
 
-export { ContentHeroSection } from "./ContentHeroSection";
 export { ContentTextSection } from "./ContentTextSection";
 export { ContentGridSection } from "./ContentGridSection";

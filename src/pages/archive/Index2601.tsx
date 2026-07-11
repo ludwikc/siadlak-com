@@ -34,10 +34,10 @@ const Index2601 = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-6xl mx-auto px-4">
                 {`Ludwik C. Siadlak - `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   przeprogramowuję fundamenty
@@ -80,7 +80,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                 <div className="flex flex-col gap-4 items-center md:items-start">
                   <Link to="/discovery">
                     <CTAButton
-                      variant="premium"
+                      variant="primary"
                       size="xl"
                       className="shadow-xl"
                     >
@@ -165,7 +165,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                   Na tydzień. Na miesiąc.
                 </p>
                 <p className="text-xl text-deep-charcoal mb-8">
-                  A potem wracałeś do punktu wyjścia - tylko z kolejną warstwą
+                  A potem wracałeś do punktu wyjścia — tylko z kolejną warstwą
                   niespełnionych obietnic.
                 </p>
 
@@ -224,7 +224,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                     <p className="text-xl text-white">
                       Żeby zmienić grę, musiałem zmienić gracza.
                     </p>
-                    <p className="text-lg text-white/80 mt-3">
+                    <p className="text-lg text-dim mt-3">
                       Nie aplikacje - tylko system operacyjny duszy.
                     </p>
                   </div>
@@ -263,7 +263,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
         </div>
       </section>
 
-      {/* SECTION 4: DWIE ŚCIEŻKI - DUAL PATH */}
+      {/* SECTION 4: DWIE ŚCIEŻKI — DUAL PATH */}
       <section className="py-20 md:py-32 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -316,8 +316,8 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                       </p>
                     </div>
                     <p>
-                      Używam metafor z życia - diamentowego umysłu, żaglówki,
-                      jazdy po torze - by pokazać Ci, że to{" "}
+                      Używam metafor z życia — diamentowego umysłu, żaglówki,
+                      jazdy po torze — by pokazać Ci, że to{" "}
                       <strong className="text-deep-charcoal">
                         Ty trzymasz kierownicę
                       </strong>
@@ -325,7 +325,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                     </p>
                     <p className="text-xl font-semibold text-deep-charcoal mt-6">
                       To praca dla tych, którzy potrzebują, by ktoś odciął im
-                      skrzydła - żeby nauczyli się latać od nowa.
+                      skrzydła — żeby nauczyli się latać od nowa.
                     </p>
                   </div>
                 </CardContent>
@@ -351,7 +351,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
 
                   <div className="space-y-4 text-lg text-deep-charcoal/80 leading-relaxed">
                     <p>Zbudowałeś sukces. Zarabiasz. Masz uznanie.</p>
-                    <p>A w środku - cisza, która woła.</p>
+                    <p>A w środku — cisza, która woła.</p>
                     <div className="bg-twilight-indigo/5 p-4 rounded-lg border border-twilight-indigo/20 my-6">
                       <p className="font-bold text-twilight-indigo">
                         Tu nie chodzi o kolejny cel. Chodzi o przestanie
@@ -493,7 +493,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 6: PROOF - REAL TRANSFORMATIONS */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-twilight-indigo/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-gradient-to-r from-zenith-gold to-orange-500 text-white border-0 text-lg px-6 py-3 mb-6">
                 <Users className="inline h-5 w-5 mr-2" />
@@ -608,7 +608,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 7: THE OPTIONS - CLEAR PATHS FORWARD */}
       <section className="py-20 md:py-32 bg-luminous-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold text-deep-charcoal mb-6">
                 Dwie opcje.{" "}
@@ -711,7 +711,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                   </div>
 
                   <Link to="/program/lifeos-system-upgrade">
-                    <CTAButton variant="premium" className="w-full group">
+                    <CTAButton variant="primary" className="w-full group">
                       Sprawdź dostępność
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </CTAButton>
@@ -726,7 +726,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
       {/* SECTION 8: WHO THIS IS FOR - POLARIZING FILTER */}
       <section className="py-20 md:py-32 bg-deep-charcoal text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 To nie jest dla każdego.{" "}
@@ -906,7 +906,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
 
             <div className="space-y-6 text-xl text-deep-charcoal/80 mb-12">
               <p className="text-2xl font-bold text-deep-charcoal">
-                Jeśli czujesz, że to rezonuje - nie potrzebujesz więcej tekstu.
+                Jeśli czujesz, że to rezonuje — nie potrzebujesz więcej tekstu.
               </p>
               <p className="text-2xl font-semibold text-neural-blue">
                 Potrzebujesz rozmowy.
@@ -918,7 +918,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
                 <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur-xl opacity-50 animate-pulse"></div>
                 <Link to="/discovery">
                   <CTAButton
-                    variant="premium"
+                    variant="primary"
                     size="xl"
                     className="relative shadow-2xl"
                   >

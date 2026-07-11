@@ -54,7 +54,7 @@ const BeforeAfterSlider = () => {
   }, [isDragging]);
 
   return (
-    <div className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/20">
+    <div className="py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -63,7 +63,7 @@ const BeforeAfterSlider = () => {
           <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
         </div>
         
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div
             ref={containerRef}
             className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize select-none ring-2 ring-border/40"

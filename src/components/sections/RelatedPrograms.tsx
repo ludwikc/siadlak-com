@@ -38,8 +38,8 @@ export default function RelatedPrograms({ currentPath }: { currentPath: string }
   const related = allPrograms.filter(p => p.path !== currentPath);
 
   return (
-    <section className="py-12 md:py-20 bg-void-glow">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section className="py-20 bg-void-glow">
+      <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-2">
           Nie wiesz, czy to właściwy program?
         </h2>

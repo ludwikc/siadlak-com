@@ -62,9 +62,9 @@ const SilnaGlowa = () => {
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
 
       {/* Hero Section - Theme Locked */}
-      <section className="py-12 md:py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
+      <section className="py-20 relative overflow-hidden bg-void" style={{ backgroundImage: 'radial-gradient(ellipse at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)' }}>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Opening Question */}
             <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 text-locked-silver leading-relaxed text-center max-w-4xl mx-auto">
               Czy zdarza ci się rano otworzyć oczy i pomyśleć:{" "}
@@ -127,7 +127,7 @@ const SilnaGlowa = () => {
                   <Button
                     variant="special"
                     size="lg"
-                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:scale-105 transition-transform duration-200 font-bold"
+                    className="relative btn-locked-primary text-base sm:text-lg px-10 sm:px-14 py-4 sm:py-6 w-full sm:w-auto shadow-2xl hover:-translate-y-px transition-transform duration-200 font-bold"
                   >
                     Dołączam do kursu Silna Głowa
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -167,8 +167,8 @@ const SilnaGlowa = () => {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-20 bg-background-primary">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 bg-background-primary">
+        <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-xs text-text-secondary mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>
@@ -194,9 +194,9 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 md:py-20 bg-background-primary">
+      <section className="py-20 bg-background-primary">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-text-primary">
                 Dobra, od początku bądźmy szczerzy.
@@ -301,13 +301,13 @@ const SilnaGlowa = () => {
 
 
       {/* Boat Metaphor Section */}
-      <section className="py-20 md:py-20 bg-background-secondary relative overflow-hidden">
+      <section className="py-20 bg-background-secondary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-electric/20 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-electric/10 px-5 py-2 rounded-full mb-6">
                 <Anchor className="h-5 w-5 text-electric" />
@@ -571,9 +571,9 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Benefits Section - 6 Steps */}
-      <section className="py-20 md:py-20 bg-background-primary">
+      <section className="py-20 bg-background-primary">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-electric/10 to-depth/10 px-5 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5 text-electric" />
@@ -799,7 +799,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Course Modules */}
-      <section className="py-20 md:py-20 bg-background-tertiary">
+      <section className="py-20 bg-background-tertiary">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -899,7 +899,7 @@ const SilnaGlowa = () => {
 
                   <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-5">{module.description}</p>
 
-                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:opacity-90 transition-all duration-200 flex items-center justify-center gap-2">
+                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:-translate-y-px hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
                     <span className="text-sm sm:text-base">ODBLOKOWUJ MODUŁ</span>
                   </button>
@@ -1103,7 +1103,7 @@ const SilnaGlowa = () => {
       </section>
 
       {/* Objections Section - Inline Cards */}
-      <section className="py-20 md:py-20 bg-background-secondary">
+      <section className="py-20 bg-background-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">

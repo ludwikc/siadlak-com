@@ -106,7 +106,7 @@ const Index = () => {
         />
 
         <div className="container mx-auto px-4 relative z-10 flex items-center min-h-[calc(100vh-5rem)]">
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
@@ -114,18 +114,18 @@ const Index = () => {
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
-                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze - zamiast szukać tego na zewnątrz.</p>
+                <p>Nazywam się Ludwik C. Siadlak. Od 19 lat pomagam ludziom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz.</p>
                 <p className="text-white font-medium">
-                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu - jesteś we właściwym miejscu.
+                  Jeśli wiesz, że problem nie leży w kolejnym narzędziu — jesteś we właściwym miejscu.
                 </p>
               </div>
 
               {/* Dual CTA */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                <CTAButton variant="primary" href="/discovery" size="default">
+                <CTAButton to="/discovery" variant="primary">
                   SESJA DISCOVERY
                 </CTAButton>
-                <CTAButton variant="secondary" onDark href="/program" size="default" showArrow={false}>
+                <CTAButton to="/program" variant="secondary" className="border-white/20 text-white">
                   APLIKACJE MENTALNE
                 </CTAButton>
               </div>
@@ -193,7 +193,7 @@ const Index = () => {
             </p>
 
             <p>
-              Połóż go na czerwonym suknie - wygląda jak rubin. Na zielonym - jak szmaragd. Zmień sukno - zmieni się
+              Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym — jak szmaragd. Zmień sukno — zmieni się
               „kolor" Diamentu.
             </p>
 
@@ -203,8 +203,8 @@ const Index = () => {
               Twój umysł działa dokładnie tak samo.
             </blockquote>
 
-            <p>Otaczasz się presją - nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
-            <p>Wchodzisz w sprint za kolejnym celem - nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
+            <p>Otaczasz się presją — nabiera koloru napięcia. Myślisz: „jestem zestresowany".</p>
+            <p>Wchodzisz w sprint za kolejnym celem — nabiera koloru głodu. Myślisz: „nigdy nie mam dość".</p>
 
             <p>Ale to nie Ty się zmieniłeś.</p>
             <p className="text-white text-2xl font-bold">
@@ -216,7 +216,7 @@ const Index = () => {
 
       {/* ═══ PROBLEM SECTION (Diagnoza) ═══ */}
       <section className="py-24 bg-void">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <Eyebrow>PRAWDA, KTÓRĄ JUŻ CZUJESZ</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-6">
             Branża rozwoju osobistego sprzedaje Ci plasterki
@@ -270,7 +270,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-void" />
         </div>
 
-        <div className="container mx-auto px-4 max-w-3xl relative z-10">
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <Eyebrow color="electric">AUTORYTET</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-12">
             Mam świetne CV. Ale to nie ono przekonuje ludzi.
@@ -284,7 +284,7 @@ const Index = () => {
                 Oksfordzie
               </a>.
             </p>
-            <p>Imponujące, prawda? Mnie też imponowało - przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
+            <p>Imponujące, prawda? Mnie też imponowało — przez jakieś piętnaście lat. A potem stanąłem na peronie metra Dworzec Gdański i jedyne, o czym myślałem, to jak łatwo byłoby zrobić jeden krok.</p>
 
             <blockquote className="border-l-2 border-electric pl-6 py-2 my-8">
               <p className="text-white italic text-xl leading-relaxed">
@@ -298,7 +298,7 @@ const Index = () => {
             </p>
             <p>I tego nie nauczysz się na żadnym szkoleniu. Tego uczysz się stojąc na peronie i decydując, że jednak zostaniesz.</p>
             <p>
-              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak - to wciąż trochę irytujące. Moi Klienci potwierdzą.)
+              Od tamtego dnia doskonalę jedną umiejętność: zadawanie pytań, które pomagają ludziom zobaczyć to, co mieli w sobie od zawsze. Nie dlatego, że znam Twoje odpowiedzi. Dlatego, że wiem, jak zapytać Cię tak, żebyś sam je znalazł. (I tak — to wciąż trochę irytujące. Moi Klienci potwierdzą.)
             </p>
           </div>
         </div>
@@ -353,7 +353,7 @@ const Index = () => {
               Jeszcze nie wiesz, czy mój język do Ciebie trafia? Sprawdź bez ryzyka — jedna myśl w Twojej skrzynce,
               wtedy, kiedy naprawdę jest coś do powiedzenia.
             </p>
-            <CTAButton variant="tertiary" href="/newsletter">
+            <CTAButton to="/newsletter" variant="tertiary">
               DOŁĄCZ DO MAILINGU
             </CTAButton>
           </div>
@@ -362,7 +362,7 @@ const Index = () => {
 
       {/* ═══ DWIE ŚCIEŻKI ═══ */}
       <section className="py-24 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <Eyebrow>DWIE ŚCIEŻKI</Eyebrow>
           <h2 className="text-3xl md:text-5xl font-bold text-white font-heading leading-[1.1] tracking-[-0.02em] mb-8">
             Dwie ścieżki. Jedna decyzja.
@@ -373,10 +373,13 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-2"><Shield className="text-electric" size={22} aria-hidden="true" /> Ścieżka Wojownika</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-3">
+                <Shield className="h-6 w-6 text-electric" aria-hidden="true" />
+                Ścieżka Wojownika
+              </h3>
               <p className="text-sm text-accent italic">Dla tych, którzy wciąż walczą</p>
               <p className="text-dim leading-relaxed">
-                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko - a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
+                Jesteś uwięziony w narracjach walki, sprawiedliwości, niewidzialnych wrogów. Masz wszystko — a czujesz, że to za mało. Sukno na Twoim diamencie ma kolor bitwy.
               </p>
               <p className="text-dim leading-relaxed">
                 Pracujemy wglądami, konfrontacją, filozoficznym rozbijaniem schematów. Metafory z życia — Diamentu, żaglówki, jazdy po torze — żeby pokazać Ci, że to Ty trzymasz kierownicę. Czasem potrzebujesz kogoś, kto przetnie więzy — żebyś mógł wreszcie rozwinąć skrzydła.
@@ -389,7 +392,10 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-2"><Leaf className="text-electric" size={22} aria-hidden="true" /> Ścieżka Poszukiwacza</h3>
+              <h3 className="text-2xl font-bold text-white font-heading flex items-center gap-3">
+                <Leaf className="h-6 w-6 text-electric" aria-hidden="true" />
+                Ścieżka Poszukiwacza
+              </h3>
               <p className="text-sm text-accent italic">Dla tych, którzy osiągnęli szczyt i zobaczyli pustkę</p>
               <p className="text-dim leading-relaxed">
                 Zbudowałeś sukces. Zarabiasz. Masz uznanie. A w środku — cisza, która woła. Tu nie chodzi o kolejny cel. Chodzi o przestanie gonienia. O zobaczenie Diamentu pod suknem sukcesu.
@@ -408,7 +414,7 @@ const Index = () => {
           <div className="text-center">
             <h4 className="text-xl font-bold text-white font-heading mb-4">Skąd wiem, czego potrzebujesz?</h4>
             <p className="text-dim leading-relaxed max-w-2xl mx-auto">
-              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi - najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery - żebyśmy razem ustalili, którędy idziemy.
+              Z 19 lat praktyki. I z tego, że sam przeszedłem obie drogi — najpierw walczyłem, potem szukałem. Większość ludzi potrzebuje obu, naprzemiennie. Na to jest sesja Discovery — żebyśmy razem ustalili, którędy idziemy.
             </p>
           </div>
         </div>
@@ -466,8 +472,7 @@ const Index = () => {
                 to="/program/lifeos-system-upgrade"
                 className="text-sm font-bold text-electric hover:underline"
               >
-                Pełny opis programu →
-              </Link>
+                Pełny opis programu</Link>
             </div>
 
             {/* Right column (5 cols) - sticky pricing card */}
@@ -483,7 +488,7 @@ const Index = () => {
                   16 000 <span className="text-2xl text-on-light-dim font-sans font-normal">PLN</span>
                 </p>
 
-                <CTAButton variant="primary" href="/discovery" className="w-full mb-4">
+                <CTAButton to="/discovery" variant="primary" className="flex w-full mb-4">
                   ZAREZERWUJ SESJĘ DISCOVERY
                 </CTAButton>
 
@@ -516,15 +521,15 @@ const Index = () => {
 
       {/* ═══ DOWNSELL SEPARATOR ═══ */}
       <section className="py-20 bg-diamond text-center">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-2xl">
           <h3 className="text-xs font-bold text-on-light-dim uppercase tracking-widest mb-4">JESZCZE NIE TERAZ?</h3>
           <p className="text-on-light-dim text-sm mb-8">
             Rozumiem. Czasem najpierw chcesz zobaczyć, jak pracuję. Wyczuć, czy ten język do Ciebie trafia. Dlatego
-            stworzyłem programy, które możesz zainstalować samodzielnie - w swoim tempie, bez umawiania się na sesję.
+            stworzyłem programy, które możesz zainstalować samodzielnie — w swoim tempie, bez umawiania się na sesję.
           </p>
           <blockquote className="text-sm text-on-light-dim italic leading-relaxed max-w-xl mx-auto border-l-2 border-electric pl-4 text-left">
-            „Zacząłem od Produktywności - bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
-            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">- UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
+            „Zacząłem od Produktywności — bo wydawało mi się, że chodzi o czas. Po trzech miesiącach wiedziałem, że chodzi o coś innego. Teraz jestem w Life OS i po raz pierwszy rozumiem, po co właściwie wstaję rano."
+            <footer className="text-xs font-bold uppercase tracking-wide mt-2 not-italic">— UCZESTNIK PROGRAMU → KLIENT LIFE OS</footer>
           </blockquote>
         </div>
       </section>
@@ -536,7 +541,7 @@ const Index = () => {
             <Eyebrow color="depth">OFERTA #2</Eyebrow>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-on-light mb-4">Aplikacje Mentalne</h2>
             <p className="text-on-light-dim max-w-2xl mx-auto">
-              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem - bez reinstalacji całego OS.
+              Programy, które instalujesz w swoim umyśle, aby rozwiązać konkretny problem — bez reinstalacji całego OS.
             </p>
           </div>
 
@@ -559,8 +564,7 @@ const Index = () => {
                 </p>
                 <p className="text-xs text-on-light-dim mb-6">777 PLN · przedsprzedaż</p>
                 <p className="text-sm font-bold uppercase tracking-widest text-on-light group-hover:text-electric transition-colors">
-                  INSTALUJ PROGRAM →
-                </p>
+                  INSTALUJ PROGRAM</p>
               </div>
             </div>
           </Link>
@@ -601,8 +605,7 @@ const Index = () => {
                   {card.subtitle && <p className="text-xs text-on-light-dim mb-2">{card.subtitle}</p>}
                   <p className="text-sm text-on-light-dim mb-4">{card.desc}</p>
                   <p className="text-xs font-bold uppercase tracking-widest text-on-light-dim group-hover:text-electric transition-colors">
-                    INSTALUJ PROGRAM →
-                  </p>
+                    INSTALUJ PROGRAM</p>
                 </div>
               </Link>
             ))}
@@ -610,18 +613,15 @@ const Index = () => {
 
           {/* Footer link */}
           <div className="text-center">
-            <Link
-              to="/program"
-              className="inline-block border border-border text-on-light-dim font-bold uppercase text-xs tracking-[0.2em] rounded px-8 py-4 hover:border-electric hover:text-electric transition-colors focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
-            >
+            <CTAButton to="/program" variant="secondary" showArrow={false}>
               PRZEGLĄDAJ WSZYSTKIE PROGRAMY
-            </Link>
+            </CTAButton>
           </div>
         </div>
       </section>
 
       {/* ═══ DLA TRENERÓW I EKSPERTÓW AI ═══ */}
-      <section className="bg-diamond py-20 md:py-20 border-t border-border/50">
+      <section className="bg-diamond py-20 border-t border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">
           <Eyebrow color="depth">DLA TRENERÓW I EKSPERTÓW AI</Eyebrow>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-light leading-[1.1] tracking-[-0.02em] mb-6">
@@ -634,7 +634,7 @@ const Index = () => {
             Train The Trainer: AI to 8 tygodni pracy 1:1 nad rzemiosłem, sceną i stawkami. Most z ligi „freelancera za
             kilkaset złotych" do „eksperta biorącego 5 000–10 000 zł za dzień warsztatowy".
           </p>
-          <CTAButton variant="secondary" href="/program/ttt-ai">
+          <CTAButton to="/program/ttt-ai" variant="secondary">
             ZOBACZ PROGRAM
           </CTAButton>
         </div>
@@ -643,14 +643,14 @@ const Index = () => {
       {/* ═══ NEWSLETTER CTA ═══ */}
       <TheCut />
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
+        <div className="container mx-auto px-4 max-w-2xl text-center">
           <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Wolisz najpierw poczytać?</h3>
           <div className="text-dim leading-relaxed mb-10 space-y-4">
             <p>
               Bez harmonogramu i bez kalendarza treści — piszę, kiedy mam myśl, która ma szansę zderzyć się z Twoją. Bez porad. Bez litości. Bez bzdur. Tylko Ty, ja i Twoja skrzynka mailowa.
             </p>
           </div>
-          <CTAButton variant="secondary" onDark href="/newsletter">
+          <CTAButton to="/newsletter" variant="secondary" className="border-white/20 text-white">
             DOŁĄCZ DO NEWSLETTERA
           </CTAButton>
           <p className="text-xs text-dim mt-4">1500+ osób czyta. Zero spamu. Odejdziesz jednym kliknięciem.</p>
@@ -723,7 +723,7 @@ const Index = () => {
 
       {/* ═══ P.S. LADDER + CLOSING ═══ */}
       <section className="py-20 bg-void-glow">
-        <div className="container mx-auto px-4 max-w-3xl space-y-8">
+        <div className="container mx-auto px-4 max-w-2xl space-y-8">
           <p className="text-dim leading-relaxed">
             <strong className="text-white">P.S.</strong> Jeśli dotarłeś do końca tej strony i wciąż nie wiesz, od czego zacząć — zacznij od newslettera. Nic nie kosztuje. Nic nie zobowiązuje. I zobaczysz, czy mój język do Ciebie trafia, zanim podejmiesz jakąkolwiek decyzję.
           </p>

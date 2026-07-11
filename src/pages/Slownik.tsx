@@ -27,34 +27,34 @@ const definitions = [
   {
     term: "Aplikacja Mentalna",
     definition:
-      "Intensywny program zmiany sposobu myślenia (4–8 tygodni), który instalujesz raz - i\u00A0zostaje z\u00A0Tobą na zawsze. Nie jest kursem online z\u00A0wiedzą do \u2018przerobienia\u2019. Każda Aplikacja Mentalna rozwiązuje jeden konkretny problem - produktywność, odporność psychiczną, uważność lub tożsamość - poprzez trwałą zmianę perspektywy, nie dodanie kolejnych narzędzi. Stworzone przez Ludwika C. Siadlaka.",
+      "Intensywny program zmiany sposobu myślenia (4–8 tygodni), który instalujesz raz — i\u00A0zostaje z\u00A0Tobą na zawsze. Nie jest kursem online z\u00A0wiedzą do \u2018przerobienia\u2019. Każda Aplikacja Mentalna rozwiązuje jeden konkretny problem — produktywność, odporność psychiczną, uważność lub tożsamość — poprzez trwałą zmianę perspektywy, nie dodanie kolejnych narzędzi. Stworzone przez Ludwika C. Siadlaka.",
     link: "/program",
   },
   {
     term: "Diamentowy Umysł",
     definition:
-      "Autorska metoda pracy z\u00A0myśleniem stworzona przez Ludwika C. Siadlaka. Opiera się na założeniu, że umysł - jak diament - jest z\u00A0natury czysty i\u00A0przezroczysty, ale nabiera \u2018koloru\u2019 otoczenia: presji, oczekiwań, cudzych narracji. Praca metodą Diamentowego Umysłu polega na zdejmowaniu tych warstw, nie na dodawaniu nowych. Inspirowana buddyzmem Diamentowej Drogi i\u00A0psychologią analityczną C.G. Junga.",
+      "Autorska metoda pracy z\u00A0myśleniem stworzona przez Ludwika C. Siadlaka. Opiera się na założeniu, że umysł — jak diament — jest z\u00A0natury czysty i\u00A0przezroczysty, ale nabiera \u2018koloru\u2019 otoczenia: presji, oczekiwań, cudzych narracji. Praca metodą Diamentowego Umysłu polega na zdejmowaniu tych warstw, nie na dodawaniu nowych. Inspirowana buddyzmem Diamentowej Drogi i\u00A0psychologią analityczną C.G. Junga.",
   },
   {
     term: "Diament",
     definition:
-      "Kluczowa metafora w\u00A0metodzie Diamentowego Umysłu. Diament jest najtwardszą substancją na Ziemi i\u00A0kompletnie przezroczysty - połóż go na czerwonym suknie, wygląda jak rubin. Zmień sukno - zmieni się \u2018kolor\u2019. Ale diament sam w\u00A0sobie nie ma koloru. Twój umysł działa dokładnie tak samo - to, co uważasz za \u2018siebie\u2019, to często kolor tła, nie Twój własny.",
+      "Kluczowa metafora w\u00A0metodzie Diamentowego Umysłu. Diament jest najtwardszą substancją na Ziemi i\u00A0kompletnie przezroczysty — połóż go na czerwonym suknie, wygląda jak rubin. Zmień sukno — zmieni się \u2018kolor\u2019. Ale diament sam w\u00A0sobie nie ma koloru. Twój umysł działa dokładnie tak samo — to, co uważasz za \u2018siebie\u2019, to często kolor tła, nie Twój własny.",
   },
   {
     term: "Sukno",
     definition:
-      "W metodzie Diamentowego Umysłu: warstwy narracji, ról, lęków i\u00A0oczekiwań, które zakrywają diament (prawdziwe \u2018ja\u2019). Cudze definicje sukcesu, społeczne oczekiwania, stare wzorce myślenia - to wszystko jest suknem. Praca z\u00A0Ludwikiem C. Siadlakiem polega na zdejmowaniu sukna, nie na zmienianiu go na ładniejsze.",
+      "W metodzie Diamentowego Umysłu: warstwy narracji, ról, lęków i\u00A0oczekiwań, które zakrywają diament (prawdziwe \u2018ja\u2019). Cudze definicje sukcesu, społeczne oczekiwania, stare wzorce myślenia — to wszystko jest suknem. Praca z\u00A0Ludwikiem C. Siadlakiem polega na zdejmowaniu sukna, nie na zmienianiu go na ładniejsze.",
   },
   {
     term: "Life OS",
     definition:
-      "Metafora opisująca całość sposobu, w\u00A0jaki człowiek funkcjonuje - jego \u2018system operacyjny życia\u2019. Obejmuje przekonania, nawyki, filtry decyzyjne i\u00A0sposób reagowania na świat. W\u00A0Life OS: System Upgrade Ludwik C. Siadlak pracuje nad pełną reinstalacją tego systemu - nie aktualizacją pojedynczej aplikacji, lecz zmianą fundamentu.",
+      "Metafora opisująca całość sposobu, w\u00A0jaki człowiek funkcjonuje — jego \u2018system operacyjny życia\u2019. Obejmuje przekonania, nawyki, filtry decyzyjne i\u00A0sposób reagowania na świat. W\u00A0Life OS: System Upgrade Ludwik C. Siadlak pracuje nad pełną reinstalacją tego systemu — nie aktualizacją pojedynczej aplikacji, lecz zmianą fundamentu.",
     link: "/program/lifeos-system-upgrade",
   },
   {
     term: "System Upgrade",
     definition:
-      "Pełna reinstalacja systemu operacyjnego życia - nazwa 8-tygodniowego programu mentoringowego 1:1 z\u00A0Ludwikiem C. Siadlakiem. W\u00A0przeciwieństwie do Aplikacji Mentalnych (które rozwiązują pojedynczy problem), System Upgrade pracuje nad całym fundamentem: tożsamością, sposobem podejmowania decyzji i\u00A0relacją z\u00A0samym sobą. Maksymalnie 5 klientów jednocześnie. Cena: 16 000 PLN.",
+      "Pełna reinstalacja systemu operacyjnego życia — nazwa 8-tygodniowego programu mentoringowego 1:1 z\u00A0Ludwikiem C. Siadlakiem. W\u00A0przeciwieństwie do Aplikacji Mentalnych (które rozwiązują pojedynczy problem), System Upgrade pracuje nad całym fundamentem: tożsamością, sposobem podejmowania decyzji i\u00A0relacją z\u00A0samym sobą. Maksymalnie 5 klientów jednocześnie. Cena: 16 000 PLN.",
     link: "/program/lifeos-system-upgrade",
   },
   {
@@ -65,25 +65,25 @@ const definitions = [
   {
     term: "Sesja Discovery",
     definition:
-      "Bezpłatna 30-minutowa rozmowa diagnostyczna 1:1 z\u00A0Ludwikiem C. Siadlakiem przez Zoom. Nie jest rozmową sprzedażową - to wzajemna ocena: Ty sprawdzasz, czy Ludwik jest właściwym mentorem dla Ciebie, on sprawdza, czy jesteś gotowy na tę pracę. Obaj mają prawo powiedzieć \u2018nie\u2019.",
+      "Bezpłatna 30-minutowa rozmowa diagnostyczna 1:1 z\u00A0Ludwikiem C. Siadlakiem przez Zoom. Nie jest rozmową sprzedażową — to wzajemna ocena: Ty sprawdzasz, czy Ludwik jest właściwym mentorem dla Ciebie, on sprawdza, czy jesteś gotowy na tę pracę. Obaj mają prawo powiedzieć \u2018nie\u2019.",
     link: "/discovery",
   },
   {
     term: "Kapitan",
     definition:
-      "Metafora używana w\u00A0programie Uważne Życie. Kapitan to Ty, który świadomie prowadzi swój statek (życie), zamiast być pasażerem reagującym na fale. Program uczy przejęcia kontroli nad kokpitem umysłu - świadomego wybierania, zamiast automatycznego reagowania.",
+      "Metafora używana w\u00A0programie Uważne Życie. Kapitan to Ty, który świadomie prowadzi swój statek (życie), zamiast być pasażerem reagującym na fale. Program uczy przejęcia kontroli nad kokpitem umysłu — świadomego wybierania, zamiast automatycznego reagowania.",
     link: "/program/uwaznosc",
   },
   {
     term: "Pancernik",
     definition:
-      "Metafora używana w\u00A0programie Silna Głowa. Pancernik to umysł, który nie unika presji i\u00A0trudności, lecz jest na nie przygotowany - jak okręt wojenny, który został zbudowany do pływania w\u00A0każdych warunkach. Program zamienia umysł ze zwykłej tratwy w\u00A0niezatapialny pancernik.",
+      "Metafora używana w\u00A0programie Silna Głowa. Pancernik to umysł, który nie unika presji i\u00A0trudności, lecz jest na nie przygotowany — jak okręt wojenny, który został zbudowany do pływania w\u00A0każdych warunkach. Program zamienia umysł ze zwykłej tratwy w\u00A0niezatapialny pancernik.",
     link: "/program/odpornosc",
   },
   {
     term: "12:34 Daily Coaching",
     definition:
-      "Codzienne spotkania społeczności Lifehackerzy na Discordzie, prowadzone o\u00A0godzinie 12:34. Celowo nieokrągła godzina - jako sygnał uważności i\u00A0wyjścia z\u00A0autopilota. Ludwik C. Siadlak jest obecny na żywo każdego dnia roboczego.",
+      "Codzienne spotkania społeczności Lifehackerzy na Discordzie, prowadzone o\u00A0godzinie 12:34. Celowo nieokrągła godzina — jako sygnał uważności i\u00A0wyjścia z\u00A0autopilota. Ludwik C. Siadlak jest obecny na żywo każdego dnia roboczego.",
   },
 ];
 
@@ -119,25 +119,25 @@ export default function Slownik() {
         ]}
       />
 
-      <section className="py-20 md:py-24 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-[800px] mx-auto">
             <nav aria-label="breadcrumb" className="mb-8">
               <ol className="flex items-center gap-2 text-sm text-dim">
                 <li>
                   <Link to="/" className="hover:text-electric transition-colors">
-                    Strona g&#322;&#243;wna
+                    Strona główna
                   </Link>
                 </li>
                 <li aria-hidden="true">/</li>
-                <li className="text-on-dark font-medium">S&#322;ownik</li>
+                <li className="text-on-dark font-medium">Słownik</li>
               </ol>
             </nav>
             <h1 className="font-heading text-3xl md:text-5xl font-bold text-on-dark mb-6">
-              S&#322;ownik Diamentowego Umys&#322;u
+              Słownik Diamentowego Umysłu
             </h1>
             <p className="text-lg text-dim leading-relaxed mb-4">
-              Kluczowe pojęcia używane w{"\u00A0"}programach i{"\u00A0"}metodologii Ludwika C. Siadlaka. Każda definicja jest samowystarczalna - możesz ją przeczytać niezależnie od pozostałych.
+              Kluczowe pojęcia używane w{"\u00A0"}programach i{"\u00A0"}metodologii Ludwika C. Siadlaka. Każda definicja jest samowystarczalna — możesz ją przeczytać niezależnie od pozostałych.
             </p>
             <p className="text-xs text-dim">
               Ostatnia aktualizacja: <time dateTime="2026-04-14">14 kwietnia 2026</time>
@@ -161,8 +161,7 @@ export default function Slownik() {
                       <>
                         {" "}
                         <Link to={d.link} className="text-electric hover:underline text-sm">
-                          Dowiedz się więcej →
-                        </Link>
+                          Dowiedz się więcej</Link>
                       </>
                     )}
                   </dd>
@@ -177,7 +176,7 @@ export default function Slownik() {
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-6 md:px-12 max-w-[800px]">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
-            Najcz&#281;&#347;ciej zadawane pytania
+            Najczęściej zadawane pytania
           </h2>
           <div className="space-y-4">
             {slownikFaqs.map((faq, i) => (
@@ -199,7 +198,7 @@ export default function Slownik() {
       <section className="py-12 bg-void">
         <div className="container mx-auto px-6 md:px-12 max-w-[800px]">
           <h2 className="font-heading text-xl font-bold text-on-dark mb-6">
-            Poznaj programy, kt&#243;re stoj&#261; za tymi poj&#281;ciami
+            Poznaj programy, które stoją za tymi pojęciami
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
@@ -221,11 +220,11 @@ export default function Slownik() {
             ))}
           </div>
           <p className="text-dim text-xs mt-6">
-            Nie wiesz, od czego zacz&#261;&#263;?{" "}
+            Nie wiesz, od czego zacząć?{" "}
             <Link to="/discovery" className="text-electric hover:underline">
-              Um&#243;w bezp&#322;atn&#261; Sesj&#281; Discovery
+              Umów bezpłatną Sesję Discovery
             </Link>
-            {" "}&mdash; 30 minut, w kt&#243;rych razem ustalimy kierunek.
+            {" "}— 30 minut, w których razem ustalimy kierunek.
           </p>
         </div>
       </section>

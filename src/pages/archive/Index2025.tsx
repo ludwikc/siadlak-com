@@ -34,11 +34,11 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
 
             {/* TIER 1: Full-Width Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="whitespace-pre-line break-words hyphens-auto text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-6xl mx-auto px-4">
                 {`Life Hacking to nie droga na skróty.
 `}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
@@ -64,7 +64,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
               <div className="md:col-span-2 text-center md:text-left">
                 <div className="space-y-4 text-xl text-white/90 leading-relaxed mb-12">
                   <p>
-                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności - i&nbsp;wciąż kręcisz się w&nbsp;kółko.
+                    Testowałeś już Todoist, Asanę, Notion, wszystkie inne appki i&nbsp;systemy produktywności — i&nbsp;wciąż kręcisz się w&nbsp;kółko.
                   </p>
                   <p>
                     Bo problem nie jest w&nbsp;narzędziach.{" "}
@@ -73,14 +73,14 @@ Nie szukam skrótów. Przepisuję zasady.`}
                     </span>
                   </p>
                   <p>
-                    Hackuję fundamenty Twojego myślenia - o&nbsp;czasie, energii, tożsamości i&nbsp;narracjach.
+                    Hackuję fundamenty Twojego myślenia — o&nbsp;czasie, energii, tożsamości i&nbsp;narracjach.
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-4 items-center md:items-start">
                   <Link to="/discovery">
                     <CTAButton
-                      variant="premium"
+                      variant="primary"
                       size="xl"
                       className="shadow-xl"
                     >
@@ -486,7 +486,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
       {/* SECTION 6: PROOF - REAL TRANSFORMATIONS */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-twilight-indigo/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-gradient-to-r from-zenith-gold to-orange-500 text-white border-0 text-lg px-6 py-3 mb-6">
                 <Users className="inline h-5 w-5 mr-2" />
@@ -601,7 +601,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
       {/* SECTION 7: THE OPTIONS - CLEAR PATHS FORWARD */}
       <section className="py-20 md:py-32 bg-luminous-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold text-deep-charcoal mb-6">
                 Dwie opcje.{" "}
@@ -704,7 +704,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
                   </div>
 
                   <Link to="/program/lifeos-system-upgrade">
-                    <CTAButton variant="premium" className="w-full group">
+                    <CTAButton variant="primary" className="w-full group">
                       Sprawdź dostępność
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </CTAButton>
@@ -719,7 +719,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
       {/* SECTION 8: WHO THIS IS FOR - POLARIZING FILTER */}
       <section className="py-20 md:py-32 bg-deep-charcoal text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 To nie jest dla każdego.{" "}
@@ -903,7 +903,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
                 <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur-xl opacity-50 animate-pulse"></div>
                 <Link to="/discovery">
                   <CTAButton
-                    variant="premium"
+                    variant="primary"
                     size="xl"
                     className="relative shadow-2xl"
                   >
@@ -920,7 +920,7 @@ Nie szukam skrótów. Przepisuję zasady.`}
                 zrujnować. Jeśli o tym pomyślisz, będziesz robić rzeczy
                 inaczej."
               </blockquote>
-              <p className="text-deep-charcoal/60">- Warren Buffett</p>
+              <p className="text-deep-charcoal/60">— Warren Buffett</p>
               <p className="text-xl text-neural-blue font-semibold mt-6">
                 I ja myślę o tym każdego dnia.
               </p>

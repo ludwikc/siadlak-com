@@ -18,7 +18,7 @@ export default function WebinarMeskiKompas() {
   return (
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
-        title="Warsztat: Męski Kompas - Koniec z Dryfowaniem"
+        title="Warsztat: Męski Kompas — Koniec z Dryfowaniem"
         description="90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. 16 października."
       />
 
@@ -39,11 +39,11 @@ export default function WebinarMeskiKompas() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-yellow-600/10 to-transparent rounded-full blur-3xl"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Urgency badge with premium styling */}
             <div className="flex justify-center mb-10 animate-fade-in">
               <div
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover-scale"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 shadow-2xl hover:-translate-y-px"
                 style={{
                   background:
                     "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 50%) 100%)",
@@ -83,7 +83,7 @@ export default function WebinarMeskiKompas() {
 
               <div className="mb-12 flex justify-center animate-scale-in">
                 <div
-                  className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover-scale transition-all duration-300"
+                  className="inline-block rounded-3xl px-10 py-8 border-2 max-w-3xl backdrop-blur-md hover:-translate-y-px transition-all duration-300"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%)",
@@ -116,17 +116,16 @@ export default function WebinarMeskiKompas() {
                         "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
                     }}
                   >
-                    <span className="inline sm:hidden">OBEJRZYJ REPLAY →</span>
+                    <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
                     <span className="hidden sm:inline">
-                      TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY) →
-                    </span>
+                      TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY)</span>
                   </Button>
                 </a>
               </div>
 
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 animate-fade-in">
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -141,7 +140,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -156,7 +155,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -171,7 +170,7 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </div>
                 <div
-                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover-scale transition-all duration-200"
+                  className="flex items-center gap-3 px-6 py-3 rounded-xl backdrop-blur-sm hover:-translate-y-px transition-all duration-200"
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%)",
@@ -199,7 +198,7 @@ export default function WebinarMeskiKompas() {
       {/* PAIN AGITATION */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               CZY TO O TOBIE?
             </h2>
@@ -220,7 +219,7 @@ export default function WebinarMeskiKompas() {
                     <p className="text-muted-foreground leading-relaxed">
                       Reagujesz na życie, zamiast je kreować. Czekasz, aż coś
                       się wyklaruje. Analizujesz opcje, zamiast podejmować
-                      decyzje. W pracy, w związku, w rozwijaniu się - dryfujesz.
+                      decyzje. W pracy, w związku, w rozwijaniu się — dryfujesz.
                       Wiesz, że to nie tak powinno być. Ale nie masz kompasu,
                       który pokazałby ci, gdzie jest twój północ.
                     </p>
@@ -236,8 +235,8 @@ export default function WebinarMeskiKompas() {
                       TWÓJ ANALITYCZNY UMYSŁ CIĘ PARALIŻUJE
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      To co miało być twoją siłą - umiejętność myślenia,
-                      planowania, analizy - stało się klatką. Twój umysł działa
+                      To co miało być twoją siłą — umiejętność myślenia,
+                      planowania, analizy — stało się klatką. Twój umysł działa
                       na pełnych obrotach 24/7, ale to nie prowadzi do decyzji.
                       Prowadzi do paraliżu. Masz setki przemyśleń, zero działań.
                       I to cię wykańcza.
@@ -255,7 +254,7 @@ export default function WebinarMeskiKompas() {
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Tradycyjne wzorce męskości nie działają. "Ogarnij sam",
-                      "nie pokazuj słabości", "bądź silny" - to puste slogany,
+                      "nie pokazuj słabości", "bądź silny" — to puste slogany,
                       które prowadzą do wypalenia. A nowe wzorce? Nieczytelne.
                       Nie wiesz, czym jest męskość dzisiaj. I w tej próżni...
                       dryfujesz.
@@ -296,7 +295,7 @@ export default function WebinarMeskiKompas() {
       {/* THE PROBLEM */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               DLACZEGO ANALITYCZNY UMYSŁ CIĘ SABOTUJE?
             </h2>
@@ -333,16 +332,16 @@ export default function WebinarMeskiKompas() {
               </p>
               <ul className="space-y-3 text-lg text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Wykorzystać swój analityczny umysł jako siłę
                     </strong>{" "}
-                    - nie jako przeszkodę.
+                    — nie jako przeszkodę.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Podejmować decyzje bez paraliżu
@@ -351,12 +350,12 @@ export default function WebinarMeskiKompas() {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600 mt-1">→</span>
+                  <span className="text-green-600 mt-1"></span>
                   <span>
                     <strong className="text-foreground">
                       Nawigować przez życie z jasnością
                     </strong>{" "}
-                    - zamiast dryfować w chaosie opcji.
+                    — zamiast dryfować w chaosie opcji.
                   </span>
                 </li>
               </ul>
@@ -368,7 +367,7 @@ export default function WebinarMeskiKompas() {
       {/* WHAT YOU'LL GET */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-foreground">
               CO WYNIESIESZ Z TEGO WARSZTATU?
             </h2>
@@ -519,7 +518,7 @@ export default function WebinarMeskiKompas() {
       {/* PROOF */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLACZEGO MOŻESZ NAM ZAUFAĆ?
             </h2>
@@ -596,10 +595,10 @@ export default function WebinarMeskiKompas() {
                     Co dostarcza Ludwik:
                   </strong>
                   <br />
-                  → Perspektywę emocjonalną i mindsetową
+                  — Perspektywę emocjonalną i mindsetową
                   <br />
-                  → Narzędzia ze styku psychologii i męskiej świadomości
-                  <br />→ Autentyczną transformację bez bullshitu
+                  — Narzędzia ze styku psychologii i męskiej świadomości
+                  <br />— Autentyczną transformację bez bullshitu
                 </p>
                 <div className="inline-block px-4 py-2 bg-accent/10 border border-accent rounded-lg text-accent font-semibold">
                   [ISKRA] Mindset | Emocje | Transformacja
@@ -634,10 +633,10 @@ export default function WebinarMeskiKompas() {
                     Co dostarcza Mateusz:
                   </strong>
                   <br />
-                  → Sprawdzone narzędzia z ziemi (nie z chmur)
+                  — Sprawdzone narzędzia z ziemi (nie z chmur)
                   <br />
-                  → Warsztatowy podział pracy - konkret ponad teorię
-                  <br />→ Praktyczne działania które zrobisz dziś, nie "kiedyś"
+                  — Warsztatowy podział pracy — konkret ponad teorię
+                  <br />— Praktyczne działania które zrobisz dziś, nie "kiedyś"
                 </p>
                 <div className="inline-block px-4 py-2 bg-primary/10 border border-primary rounded-lg text-primary font-semibold">
                   [GRUNT] Konkret | Narzędzia | Działanie
@@ -670,7 +669,7 @@ export default function WebinarMeskiKompas() {
       {/* WHO IS THIS FOR */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLA KOGO JEST TEN WARSZTAT?
             </h2>
@@ -682,39 +681,39 @@ export default function WebinarMeskiKompas() {
                 </h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Jesteś analitycznym profesjonalistą 30+ (developer, team
                       leader, manager, freelancer, przedsiębiorca)
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Czujesz, że dryfujesz zamiast nawigować przez życie
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Twój analityczny umysł cię paraliżuje zamiast wspierać
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Potrzebujesz systemu nawigacyjnego, nie kolejnej
                       motywacyjnej gadki
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>
                       Cenisz konkret, strukturę i praktyczne narzędzia
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-600 mt-1">→</span>
+                    <span className="text-green-600 mt-1"></span>
                     <span>Chcesz przestać analizować i zacząć działać</span>
                   </li>
                 </ul>
@@ -844,7 +843,7 @@ export default function WebinarMeskiKompas() {
       {/* VALUE PROPOSITION */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground">
               DLACZEGO TO JEST DARMOWE?
             </h2>
@@ -860,7 +859,7 @@ export default function WebinarMeskiKompas() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Na końcu warsztatu dostaniesz pitch do pełnego kursu. Jeśli
-                system rezonuje - zapisz się. Jeśli nie - nie ma presji.
+                system rezonuje — zapisz się. Jeśli nie — nie ma presji.
               </p>
               <p className="text-lg font-bold text-foreground">
                 Nie sprzedajemy obietnic. Dajemy narzędzia do ręki. Sam
@@ -954,7 +953,7 @@ export default function WebinarMeskiKompas() {
               >
                 <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
                 <span className="hidden sm:inline">
-                  TO WYDARZENIE JUŻ MINĘŁO - OBEJRZYJ REPLAY
+                  TO WYDARZENIE JUŻ MINĘŁO — OBEJRZYJ REPLAY
                 </span>
               </Button>
             </a>
@@ -981,7 +980,7 @@ export default function WebinarMeskiKompas() {
                   <br />
                   Będziesz pracował live przez 90 minut.
                   <br />
-                  Jeśli nie jesteś gotowy na konkret - nie zapisuj się.
+                  Jeśli nie jesteś gotowy na konkret — nie zapisuj się.
                 </p>
                 <p>
                   <strong className="text-foreground">P.P.S.</strong>

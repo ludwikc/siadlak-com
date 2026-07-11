@@ -27,7 +27,7 @@ const PodcastCard = ({
           <OptimizedImage
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 hover:-translate-y-px"
             width={300}
             height={300}
             sizes="(max-width: 768px) 100vw, 300px"

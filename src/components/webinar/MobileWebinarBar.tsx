@@ -102,7 +102,7 @@ const MobileWebinarBar = () => {
           className="absolute top-3 right-3 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-20 cursor-pointer"
           aria-label="Zamknij"
         >
-          <X size={20} className="text-white/80" />
+          <X size={20} className="text-dim" />
         </button>
 
         {/* Content */}

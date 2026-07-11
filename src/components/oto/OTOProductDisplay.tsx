@@ -1,7 +1,7 @@
 import { ArrowRight } from '@/lib/icons';
 import { GlassCard } from '@/design-system/components/glass-card';
 import { OTOCountdown } from './OTOCountdown';
-import HeroSection from '@/components/sections/HeroSection';
+import Hero from '@/components/sections/Hero';
 import { useState, useEffect } from 'react';
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
@@ -31,14 +31,14 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
     <div className="min-h-screen">
       {/* Gmail-style email */}
       <section aria-label="Email z mojego biurka" className="bg-background py-8 md:py-12">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-card rounded-2xl border border-border/70 shadow-2xl overflow-hidden">
             {/* macOS window title bar */}
             <div className="bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-[#ff5f57] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[#ffbd2e] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[#28c840] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(3_100%_67%)] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(41_100%_59%)] border border-black/10"></span>
+                <span className="h-3 w-3 rounded-full bg-[hsl(129_65%_47%)] border border-black/10"></span>
               </div>
               <div className="text-xs text-muted-foreground select-none">Email z mojego biurka</div>
               <div className="w-14" />
@@ -82,12 +82,12 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
       {/* Course Logo Section */}
       <section className="py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
                 src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                alt="7 Technik Produktywności - Logo kursu"
+                alt="7 Technik Produktywności — Logo kursu"
                 className="w-full h-auto rounded-2xl shadow-2xl"
                 width={672}
                 height={377}
@@ -108,21 +108,22 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       </section>
 
       {/* Hero section */}
-      <HeroSection 
-        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności" 
+      <Hero
+        align="center"
+        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności"
         subtitle="czyli 77 minut, które ustawią Ci (każdy!) dzień"
       />
 
 
       {/* Product Section */}
-      <div className="container mx-auto px-4 max-w-3xl py-20">
+      <div className="container mx-auto px-4 max-w-4xl py-16">
         <GlassCard className="mb-16" padding="xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
             <ul className="text-left max-w-2xl mx-auto space-y-3 text-lg leading-relaxed">
               <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach - zero „teorii dla teorii”.</li>
               <li className="text-foreground">• <strong>Po każdej technice jedno zadanie</strong>, które wdrażasz od razu.</li>
-              <li className="text-foreground">• <strong>Zero aplikacji</strong> - wystarczy zwykły timer.</li>
+              <li className="text-foreground">• <strong>Zero aplikacji</strong> — wystarczy zwykły timer.</li>
               <li className="text-foreground">• <strong>Dostęp natychmiast</strong> po zakupie.</li>
             </ul>
           </div>
@@ -158,7 +159,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden flex items-center justify-center px-4 md:px-8">
             <OptimizedImage
               src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
-              alt="7 Technik Produktywności - Podgląd kursu na różnych urządzeniach"
+              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
               className="max-h-full w-auto max-w-full object-contain object-center mx-auto"
               width={800}
               height={569}
@@ -171,8 +172,8 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
 
       {/* Wartość vs. cena */}
-      <div className="bg-muted/30 py-20">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <div className="bg-muted/30 py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena</h2>
           </div>
@@ -184,9 +185,9 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                   <p className="text-sm text-muted-foreground mb-1">Regularnie</p>
                   <p className="text-2xl font-bold line-through text-muted-foreground">497 PLN</p>
                 </div>
-                <ArrowRight className="text-muted-foreground" size={28} aria-hidden="true" />
+                <div className="text-3xl text-muted-foreground"></div>
                 <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie - mojego Gościa - i <s>tylko teraz</s></p>
+                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie — mojego Gościa — i <s>tylko teraz</s></p>
                   <p className="text-4xl font-bold text-primary">77 PLN</p>
                 </div>
               </div>
@@ -203,7 +204,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               </div>
               <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca katalogowa cena 497 PLN.</p>
               <div className="mt-6">
-                <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full md:w-auto bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Dodaj kurs 7 Technik Produktywności za 77 PLN">
+                <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full md:w-auto bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 inline-flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Dodaj kurs 7 Technik Produktywności za 77 PLN">
                   Dodaj kurs za 77 PLN
                   <ArrowRight className="h-6 w-6" />
                 </a>
@@ -214,7 +215,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         </div>
       </div>
       {/* Urgency Section */}
-      <div className="container mx-auto px-4 max-w-3xl py-20">
+      <div className="container mx-auto px-4 max-w-4xl py-16">
         <div className="mb-12">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="text-left">
@@ -229,11 +230,11 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
                 </p>
                 
                 <p className="text-muted-foreground">
-                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo - okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
+                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo — okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
                 </p>
                 
                 <p className="text-lg font-medium text-primary">
-                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz - kliknij poniżej.
+                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz — kliknij poniżej.
                 </p>
               </div>
             </div>
@@ -258,7 +259,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         {/* CTA Section */}
         <div className="text-center mb-16">
           <GlassCard className="max-w-md mx-auto" padding="lg">
-             <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 mb-6 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Tak, chcę 7 Technik Produktywności za 77 PLN">
+             <a href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl" className="w-full bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 mb-6 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Tak, chcę 7 Technik Produktywności za 77 PLN">
                Tak, chcę 7 Technik Produktywności za 77 PLN
                <ArrowRight className="h-6 w-6" />
              </a>

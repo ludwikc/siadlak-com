@@ -26,6 +26,7 @@ const preset: Partial<Config> = {
 			'on-light': 'hsl(var(--text-on-light))',
 			'on-light-dim': '#4B5563',
 			'on-dark': 'hsl(var(--text-on-dark))',
+			'on-dark-tertiary': 'hsl(var(--text-on-dark-tertiary))',
   			electric: '#007AFF',
   			depth: '#6D28D9',
   			void: '#080808',
@@ -330,9 +331,9 @@ const preset: Partial<Config> = {
             transformOrigin: "bottom left",
           },
         },
-        ".hover-scale": {
-          transition: "transform 0.2s ease-out",
-          "&:hover": { transform: "scale(1.05)" },
+        ".hover-lift": {
+          transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
+          "&:hover": { transform: "translateY(-1px)" },
         },
         ".glass-card": {
           backgroundColor: "hsl(0 0% 100% / 0.1)",

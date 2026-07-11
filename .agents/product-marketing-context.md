@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-*Last updated: 2026-05-04*
+*Last updated: 2026-07-06*
 
 ---
 
@@ -8,26 +8,31 @@
 
 **Brand:** Ludwik C. Siadlak (siadlak.com)
 **One-liner:** Aplikacje Mentalne — programy zmiany sposobu myślenia, które instalujesz raz i zostają z tobą na zawsze.
-**What it does:** Ludwik C. Siadlak tworzy i prowadzi intensywne programy mentalne (4–8 tygodni) skierowane do ambitnych mężczyzn — liderów, przedsiębiorców, ojców — którzy chcą zmienić nie techniki, ale fundament: sposób myślenia o sobie, pracy i życiu. Oferta obejmuje mini-kurs wejściowy (7 Technik), samodzielne kursy online (Aplikacje Mentalne), mentoring premium 1:1 (Life OS) oraz wyspecjalizowany program biznesowy dla freelancerów AI (Train The Trainer: AI).
+**What it does:** Ludwik C. Siadlak tworzy i prowadzi intensywne programy mentalne (4–8 tygodni) skierowane do ambitnych mężczyzn — liderów, przedsiębiorców, ojców — którzy chcą zmienić nie techniki, ale fundament: sposób myślenia o sobie, pracy i życiu. Oferta obejmuje mini-kurs wejściowy (7 Technik), samodzielne kursy online (Aplikacje Mentalne), mentoring premium 1:1 (Life OS) oraz wyspecjalizowany program biznesowy dla freelancerów AI (Train The Trainer: AI). Osobna noga B2B: szkolenia korporacyjne MCT (Microsoft Fabric / Copilot / Azure) — patrz sekcja "MCT — B2B Notes".
+**Metodologia:** "Metoda Diamentowego Umysłu" — umysł jest z natury czysty jak diament; praca polega na zdejmowaniu warstw sukna (narracji, ról, cudzych oczekiwań), nie na dodawaniu narzędzi. Inspiracje: buddyzm Diamentowej Drogi + psychologia analityczna C.G. Junga.
+**Dwie ścieżki pracy (framing na Index/About):** "Ścieżka Wojownika" (dla uwięzionych w narracji walki — Jung, Dostojewski, Sun Tzu, praca konfrontacyjna) i "Ścieżka Poszukiwacza" (dla tych, którzy osiągnęli sukces, ale czują pustkę — praca łagodna, integracyjna, oparta na akceptacji).
 **Product category:** Rozwój osobisty / coaching mentalny dla mężczyzn (kategoria: "aplikacja mentalna", nie "kurs")
 **Product type:** Kursy online + mentoring premium 1:1
 **Business model:** Jednorazowy zakup dostępu; brak subskrypcji. Bonus: dożywotni dostęp do społeczności Lifehackerzy przy zakupie dowolnego programu.
 
 ### Produkty
 
-Wszystkie ceny są **brutto**.
+Kursy i Life OS: ceny **brutto**. TTT:AI: ceny **netto** (+ faktura VAT).
 
 | Produkt | Cena | Długość | Opis |
 |---------|------|---------|------|
-| 7 Technik Produktywności | 497 PLN | 77 min · lifetime | Mini-kurs wejściowy — 7 sprawdzonych technik produktywności w punktach, z zadaniem wdrożeniowym po każdej |
-| Program: Produktywność (Hakowanie Produktywności) | 1 497 PLN | 4–6 tyg. | Zmiana podejścia do czasu, energii i prokrastynacji |
-| Program: Silna Głowa (Odporność Psychiczna) | 897 PLN | 6 tyg. | Firewall dla umysłu — presja jako paliwo, nie paraliż |
-| Program: Uważne Życie (Uważność) | 897 PLN | 4–6 tyg. | Mindfulness dla analitycznych umysłów i osób z ADHD |
-| Program: Męski Kompas (Męskość) | 997 PLN | 5 tyg. | Reinstalacja systemu tożsamości — kim jestem naprawdę (cena pilotażowa) |
-| Life OS: System Upgrade | 16 000 PLN | 8 tyg. | Mentoring 1:1, max 5 osób jednocześnie, pełny upgrade systemu operacyjnego (możliwość 2 rat) |
-| Train The Trainer: AI (TTT:AI) | 7 999 PLN (edycja inauguracyjna) / 24 999 PLN (cena regularna od Q3 2026) | 8 tyg. | Prywatny mentoring 1:1 dla geeków-freelancerów AI, którzy chcą zostać certyfikowanymi trenerami AI. Max 4 miejsca/kwartał |
-| Newsletter | bezpłatny | ongoing | Cotygodniowe eseje o produktywności, AI, sensie życia |
-| Lifehackerzy (społeczność) | bonus do każdego programu | dożywotni | Discord: daily coaching 12:34, warsztaty, 50+ protipów |
+| 7 Technik Produktywności | 497 PLN | 77 min · lifetime | Mini-kurs wejściowy — 7 sprawdzonych technik produktywności w punktach, z zadaniem wdrożeniowym po każdej. Zero aplikacji — wystarczy timer |
+| Program: Produktywność (Hakowanie Produktywności) | 1 497 PLN | 6 tyg. · 6 modułów, 36 lekcji (~6 h wideo) | Zmiana podejścia do czasu, energii i prokrastynacji |
+| Program: Silna Głowa (Odporność Psychiczna) | 897 PLN | 6 tyg. · 6 modułów, 36 lekcji | Firewall dla umysłu — presja jako paliwo, nie paraliż. "Zamień umysł ze zwykłej tratwy w niezatapialny pancernik" |
+| Program: Uważne Życie (Uważność) | 777 PLN (przedsprzedaż) | 4–6 tyg. | Mindfulness dla analitycznych umysłów i osób z ADHD — działa na spotkaniach i w korku, nie na macie |
+| Program: Męski Kompas (Męskość) | 997 PLN pilot (regularna 1 997 PLN) + bonus 7 Technik | 5 tyg. · max 10 osób/kohorta | Reinstalacja systemu tożsamości. **Pilot wyprzedany — aktywna lista oczekujących na kolejną edycję.** Współprowadzący: Mateusz Lizak |
+| Life OS: System Upgrade | 16 000 PLN | 8 tyg. | Mentoring 1:1, max 5 osób jednocześnie, pełny upgrade systemu operacyjnego (możliwość 2 × 6 500 PLN netto na firmę) |
+| Train The Trainer: AI (TTT:AI) | 7 999 PLN netto (edycja inauguracyjna — trwa, 1 z 3 miejsc zajęte) / 24 999 PLN netto (regularna od Q3 2026) | 8 tyg. | Prywatny mentoring 1:1 dla geeków-freelancerów AI, którzy chcą zostać certyfikowanymi trenerami AI. Max 4 miejsca/kwartał |
+| Szkolenia MCT (B2B) | wycena indywidualna | wg projektu | Szkolenia korporacyjne: AI & Microsoft Copilot, Data & Analytics (Fabric, Power BI), Modern Work & M365. EN/PL, remote/on-site |
+| Newsletter | bezpłatny | ongoing | Eseje o produktywności, AI, sensie życia — bez harmonogramu, 1 500+ czytelników |
+| Test Otwartych Pętli (/reset) | bezpłatny | 2 min | Lead magnet: 10-pytaniowy quiz mierzący drenaż energii z niedomkniętych pętli; zapis przez MailerLite |
+| Lifehackerzy (społeczność) | bonus do każdego programu | dożywotni | Discord: daily coaching 12:34, warsztaty, 50+ protipów, 500+ członków, 8+ krajów |
+| SIADLAK.VIP | osobny kanał | ongoing | Prywatny Telegram — "myślenie na głos", surowe voice notes, inner circle |
 
 ---
 
@@ -194,9 +199,16 @@ Wszystkie ceny są **brutto**.
 | Life OS | System operacyjny życia — metafora dla całości sposobu, w jaki człowiek funkcjonuje |
 | System Upgrade | Pełna reinstalacja systemu operacyjnego (nie pojedynczej aplikacji) |
 | Lifehackerzy | Społeczność absolwentów i uczestników programów na Discordzie |
-| Sesja Discovery | 30-minutowa rozmowa kwalifikacyjna do Life OS — bez zobowiązań |
+| Sesja Discovery | 30-minutowa rozmowa kwalifikacyjna do Life OS — bez zobowiązań; 3 pytania: "Za co walczysz?", "Czego próbujesz uniknąć?", "Ile jesteś gotów zainwestować (energii, nie pieniędzy)?" |
 | 12:34 Daily Coaching | Codzienne spotkania społeczności o 12:34 (celowo nieokrągła godzina jako sygnał uważności) |
 | Kapitán / pancernik | Metafory w programach Uważne Życie / Silna Głowa |
+| Metoda Diamentowego Umysłu | Nazwa własna metodologii — diament (czysta natura umysłu) + sukno (warstwy narracji) |
+| Ścieżka Wojownika / Poszukiwacza | Dwa archetypy klienta i dwa tryby pracy: konfrontacyjny vs integracyjny |
+| Test Otwartych Pętli | Quiz lead-magnet na /reset — mierzy koszt energetyczny niedomkniętych spraw; wynik 14+ kieruje na Discovery, niższy na Program Produktywność |
+| Otwarte pętle | Niedokończone zadania/decyzje drenujące energię — język problemu w funnelu /reset |
+| Drwal w Białej Koszuli | 4-dniowe bezpłatne wyzwanie live na Discordzie (paź 2025); metafora "rąbiesz drzewa w cudzym lesie — problem nie jest w siekierze, problem jest w lesie" |
+| SIADLAK.VIP | Prywatny kanał Telegram — surowe przemyślenia głosowe, inner circle |
+| Trainer's Toolbox | (TTT:AI) Własne IP trenerskie absolwenta: scenariusze, ćwiczenia, oferta |
 
 ---
 
@@ -212,15 +224,20 @@ Wszystkie ceny są **brutto**.
 - Metafory technologiczne dla niematerialnych pojęć
 - Kończenie tekstów podpisem "— Ludwik"
 
+**Origin story (autorytet przez paradoks):** CV z Fortune 500 i NATO + moment na peronie metra w 2014 (myśli samobójcze mimo "sukcesu"). "Nie jestem teoretykiem. Przeszedłem przez ogień." Wykształcenie: Oxford Brookes University (IT) + SWPS (psychologia). Detale osobiste budujące autentyczność: tatuaż profesora Wolanda (Mistrz i Małgorzata), codzienna obecność na Discordzie o 12:34.
+
 ---
 
 ## Proof Points
 
-**Metrics:**
-- Program Produktywność: 100+ uczestników, ocena 4.9/5.0, 1 240+ osób zainstalowało
-- Silna Głowa: 118+ osób, ocena 4.8/5.0
-- Uważne Życie: 500+ kapitanów w społeczności, ocena 4.9/5
-- Lifehackerzy: 8+ krajów
+**Metrics (po korekcie "uczciwy social proof", czerwiec 2026 — używaj TYLKO tych liczb):**
+- 19 lat jako trener Microsoft (MCT); 10 000+ przeszkolonych profesjonalistów (Fortune 500, NATO, jednostki wojskowe US — Army, Navy, Marines)
+- Program Produktywność: 110+ absolwentów, ocena 4.9/5.0
+- Silna Głowa: 20+ uczestników, ocena 4.8/5.0
+- Męski Kompas: ocena 4.9/5.0 (67 opinii); pilot (10 miejsc) wyprzedany
+- Newsletter: 1 500+ czytelników
+- Lifehackerzy: 500+ członków na Discordzie, 8+ krajów
+- NIE używać dawnych liczb: "1 240+ zainstalowało", "118+ osób Silnej Głowy", "500+ kapitanów Uważnego Życia"
 
 **Key testimonials:**
 > "Nie zdawałem sobie sprawy, ile energii szło na walkę z samym sobą." — Tomek, 38 lat, CTO startupu, ojciec dwójki
@@ -230,6 +247,12 @@ Wszystkie ceny są **brutto**.
 > "Pierwszy raz od 14 lat spędziłem sobotę z rodziną i nie myślałem o firmie. I firma nie spłonęła." — Klient Life OS, absolwent
 
 > "W 8 tygodni przeszłam od narracji ofiary do prawdziwej wiary w możliwości, które mam." — Anna, CEO Agencji Marketingowej
+
+> "Po godzinie rozmowy o torach, zakrętach i hamulcach… miałem totalną pustkę w głowie. Pierwszy raz od lat." — Łukasz, IT, ADHD, sceptyk
+
+> "Robię w 3 godziny to, na co kiedyś szło mi pół dnia." — Anna K., Marketing Manager (Program Produktywność)
+
+> "Pierwszy raz poczułem, że presja może być paliwem, a nie paraliżem." — uczestnik Silnej Głowy, 34 lata
 
 **Value themes:**
 
@@ -247,8 +270,13 @@ Wszystkie ceny są **brutto**.
 
 **Business goal:** Sprzedaż programów mentalnych + kwalifikacja klientów do Life OS (premium 1:1)
 **Primary conversion action:** Zakup programu przez buy.siadlak.com LUB umówienie Sesji Discovery (/discovery) dla Life OS
-**Secondary conversion actions:** Zapis do newslettera (/newsletter), dołączenie do bezpłatnych zasobów (DeepWork.pl, medytacje)
-**Funnel:** Newsletter → 7 Technik (497 PLN, mini-kurs wejściowy) → Aplikacja Mentalna (897–1 497 PLN) → Life OS (16 000 PLN, mentoring 1:1) lub bezpośrednio do Life OS przez Discovery. **Boczna ścieżka biznesowa:** Train The Trainer: AI (7 999 / 24 999 PLN) — dla geeków-freelancerów AI chcących zostać certyfikowanymi trenerami; rekrutacja przez rozmowę wstępną, max 4 osoby/kwartał.
+**Secondary conversion actions:** Zapis do newslettera (/newsletter), Test Otwartych Pętli (/reset), dołączenie do bezpłatnych zasobów (DeepWork.pl, medytacje UwazneZycie.pl wtorki 6:30)
+**Funnel główny:** Newsletter → 7 Technik (497 PLN, mini-kurs wejściowy) → Aplikacja Mentalna (777–1 497 PLN) → Life OS (16 000 PLN, mentoring 1:1) lub bezpośrednio do Life OS przez Discovery.
+**Funnel Instagram (nowy, cze 2026):** ruch z IG → /ig (bio-landing, 3 segmentowane CTA: 🧠 AUDYT SYSTEMU → /reset, ⚡ SYSTEM → /discovery, 🎤 TRENER → /program/ttt-ai) → /reset (Test Otwartych Pętli, 10 pytań, zapis MailerLite z custom fields `reset_score`/`reset_tier`) → segmentacja wynikiem: 14+ pkt → Sesja Discovery ("problem leży głębiej"), <14 pkt → Program Produktywność. Strona /reset jest noindex.
+**OTO:** po rezerwacji Sesji Discovery działa strona one-time offer (/oto) z licznikiem i logiką wygasania — upsell po zapisie.
+**Wyzwania live:** format "Drwal w Białej Koszuli" — 4-dniowe bezpłatne wyzwanie na Discordzie (limit 50 miejsc, scarcity), kończące się prezentacją programu Hakowanie Produktywności (edycja: 7–10 paź 2025).
+**Boczna ścieżka biznesowa #1:** Train The Trainer: AI (7 999 / 24 999 PLN netto) — dla geeków-freelancerów AI chcących zostać certyfikowanymi trenerami; rekrutacja przez rozmowę wstępną, max 4 osoby/kwartał. Strona /mentoring zestawia obie ścieżki 1:1 obok siebie: TTT:AI = "praca na zewnątrz", Life OS = "praca wewnątrz".
+**Boczna ścieżka biznesowa #2 (B2B):** Szkolenia MCT (/mct, strona po angielsku) — enterprise training (Copilot, Fabric, Azure, M365); proces: 2-min formularz → 20-min scope call → custom program; wycena indywidualna, bez cennika.
 
 ---
 
@@ -265,12 +293,29 @@ TTT:AI jest **odrębną propozycją wartości** od reszty oferty Aplikacji Menta
 **Mentor proof:** Microsoft Certified Trainer, 20 lat doświadczenia, szkolił m.in. jednostki US Army, US Navy, US Air Force, US Marines. Twórca Fundacji HACKERZY.PL.
 
 **Cennik i pozycjonowanie ceny:**
-- Edycja inauguracyjna (Q2 2026, 3 miejsca): **7 999 PLN brutto** — uzasadnienie: budujemy pierwsze case studies, fair deal: niższa cena za social proof
-- Cena regularna od Q3 2026: **24 999 PLN brutto**
-- ROI argument: różnica ścieżek ~200 tys. zł / 2 lata; program kosztuje 3–4% tej różnicy
+- Edycja inauguracyjna (trwa, stan lipiec 2026: **1 z 3 miejsc zajęte**): **7 999 PLN netto** (+ faktura VAT) — uzasadnienie: budujemy pierwsze case studies, fair deal: niższa cena za social proof
+- Cena regularna od Q3 2026: **24 999 PLN netto**
+- ROI argument: ścieżka freelancera ~60–120 tys. zł netto / 2 lata vs ścieżka trenera ~288 tys. zł netto / 2 lata (3 dni szkoleniowe/mies. × 4 000 zł netto); różnica 170–230 tys. zł; program kosztuje 3–4% tej różnicy
+- Stawki docelowe w copy: pierwszy dzień warsztatowy 2 000 zł; dzień u klienta bezpośredniego 5 000–10 000 zł netto; "docelowa gra" 15 000–25 000 zł/dzień
 
-**Gwarancja:** Po 3 tygodniach jeśli widać, że nie zadziała — rozstanie + zwrot 50% proporcjonalnej reszty. Jeśli do tygodnia 12 nie ma pierwszej faktury — Ludwik pracuje dalej bezpłatnie.
+**Gwarancja ("Gwarancja pierwszego zlecenia"):** Po 3 tygodniach jeśli widać, że nie zadziała — rozstanie + zwrot 50% proporcjonalnej reszty. Jeśli do tygodnia 12 nie ma pierwszej faktury — Ludwik pracuje dalej bezpłatnie.
 
 **Anti-persona TTT:AI:** Początkujący w AI; ludzie szukający gotowych szablonów do odklepania; ludzie szukający grupowego szkolenia (TTT:AI jest świadomie 1:1).
 
 **Words to use (TTT:AI):** rzemiosło trenerskie, certyfikowany trener AI, scenariusz warsztatu, cykl Kolba, IP trenerskie, Trainer's Toolbox.
+
+---
+
+## MCT — B2B Notes (szkolenia korporacyjne)
+
+Strona /mct (całość po angielsku) — osobny track B2B, inny odbiorca niż Aplikacje Mentalne.
+
+**Oferta:** Custom training dla zespołów enterprise wdrażających Microsoft Fabric, Copilot, Azure. Trzy stacki: (1) AI & Microsoft Copilot — governance, prompt engineering, strategia ROI "not hype"; (2) Data & Analytics — Fabric, Azure Synapse, Power BI, lakehouses; (3) Modern Work & M365 — adopcja w skali, automatyzacja, systemy produktywności.
+
+**Autorytet:** "20+ Years MCT", 10 000+ przeszkolonych inżynierów. Logotypy: Unilever, HP, GM, GE, Volkswagen, Volvo, Scania, Nordea, ING; NATO, US Army Europe/Africa, US Navy, US Marines, Wojsko Polskie, policja norweska.
+
+**Differentiation vs generyczny trener:** pisze courseware dla NATO (nie czyta cudzych slajdów); uczy systemów, nie feature'ów; "debug T-SQL o 10:00, prezentacja dla zarządu o 14:00"; battle-tested, nie lab-tested.
+
+**Proces sprzedaży:** 2-min formularz scopingowy → 20-min scope call (bez pitchu) → custom program → delivery (remote/on-site, EN/PL, EU/US/Bliski Wschód). Bez cennika — wycena indywidualna.
+
+**Proof (testimonials EN):** "One of the best instructors I've ever had" — Ron Wilson, US Army; "Best class I've attended in very long time" — Lisa Blankenship, US Army.

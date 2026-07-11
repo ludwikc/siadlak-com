@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
@@ -8,15 +7,11 @@ import { Calendar, Clock, Mail, CheckCircle2, AlertCircle } from 'lucide-react';
 export default function ThankYouMeskiKompas() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <Layout>
       <SEO
-        title="Miejsce Zarezerwowane - Męski Kompas"
-        description="Potwierdzenie rejestracji na warsztat 'Koniec z dryfowaniem' - 16 października 2025 o 19:00"
+        title="Miejsce Zarezerwowane — Męski Kompas"
+        description="Potwierdzenie rejestracji na warsztat 'Koniec z dryfowaniem' — 16 października 2025 o 19:00"
         keywords="męski kompas, warsztat, webinar, rozwój osobisty, mężczyźni 30+"
         url="/thank-you/meski-kompas"
       />
@@ -259,7 +254,7 @@ export default function ThankYouMeskiKompas() {
             <div className="bg-destructive/5 border-2 border-destructive/30 rounded-xl p-6 space-y-4">
               <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center break-words">
                 <span className="text-xl sm:text-2xl mr-2 sm:mr-3 shrink-0">⚠️</span>
-                <span className="break-words">WAŻNE - PRZECZYTAJ:</span>
+                <span className="break-words">WAŻNE — PRZECZYTAJ:</span>
               </h3>
               <p className="text-lg font-semibold text-foreground">
                 To NIE jest typowy webinar motywacyjny.
@@ -285,8 +280,8 @@ export default function ThankYouMeskiKompas() {
               </div>
 
               <div className="bg-background/50 rounded-lg p-4 space-y-2">
-                <p className="text-sm"><strong className="text-foreground">Jeśli szukasz inspiracji i motywacji</strong> - to nie jest dla Ciebie.</p>
-                <p className="text-sm"><strong className="text-foreground">Jeśli szukasz konkretnych narzędzi do pracy</strong> - jesteś we właściwym miejscu.</p>
+                <p className="text-sm"><strong className="text-foreground">Jeśli szukasz inspiracji i motywacji</strong> — to nie jest dla Ciebie.</p>
+                <p className="text-sm"><strong className="text-foreground">Jeśli szukasz konkretnych narzędzi do pracy</strong> — jesteś we właściwym miejscu.</p>
               </div>
             </div>
 
@@ -301,11 +296,11 @@ export default function ThankYouMeskiKompas() {
 
               <ol className="space-y-3">
                 {[
-                  'Przyjdź 5 minut wcześniej - sprawdź dźwięk, obraz, połączenie',
-                  'Wyłącz powiadomienia - telefon, email, Slack - wszystko',
-                  'Przygotuj notes - będziesz pisał, nie tylko słuchał',
-                  'Przyjdź z konkretnym problemem - jedna decyzja którą odkładasz',
-                  'Zostań na Q&A - tam padają najcenniejsze pytania - również Twoje'
+                  'Przyjdź 5 minut wcześniej — sprawdź dźwięk, obraz, połączenie',
+                  'Wyłącz powiadomienia — telefon, email, Slack — wszystko',
+                  'Przygotuj notes — będziesz pisał, nie tylko słuchał',
+                  'Przyjdź z konkretnym problemem — jedna decyzja którą odkładasz',
+                  'Zostań na Q&A — tam padają najcenniejsze pytania — również Twoje'
                 ].map((tip, index) => (
                   <li key={index} className="flex items-start space-x-3 bg-muted/20 rounded-lg p-4">
                     <div className="bg-primary text-primary-foreground h-6 w-6 rounded-full flex items-center justify-center shrink-0 text-sm font-bold mt-0.5">
@@ -385,10 +380,10 @@ export default function ThankYouMeskiKompas() {
             {/* P.S. Notes */}
             <div className="border-t border-border/50 pt-6 space-y-4 text-sm text-muted-foreground">
               <p>
-                <strong className="text-foreground">P.S.</strong> Jeśli znasz innego analitycznego faceta 30+, który dryfuje zamiast nawigować - prześlij mu link do zapisu. Warsztat jest darmowy, a miejsc ograniczona liczba.
+                <strong className="text-foreground">P.S.</strong> Jeśli znasz innego analitycznego faceta 30+, który dryfuje zamiast nawigować — prześlij mu link do zapisu. Warsztat jest darmowy, a miejsc ograniczona liczba.
               </p>
               <p>
-                <strong className="text-foreground">P.P.S.</strong> Link do spotkania dostaniesz 24h przed warsztatem. Zachowaj tego maila - będziesz go potrzebował.
+                <strong className="text-foreground">P.P.S.</strong> Link do spotkania dostaniesz 24h przed warsztatem. Zachowaj tego maila — będziesz go potrzebował.
               </p>
               <p className="italic text-xs pt-4">
                 *Liczba miejsc ograniczona do 98 osób + my, aby zapewnić jakość sesji Q&A

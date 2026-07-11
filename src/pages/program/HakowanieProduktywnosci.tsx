@@ -87,7 +87,7 @@ export default function HakowanieProduktywnosci() {
         <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, rgba(109,40,217,0.25) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(0,122,255,0.15) 0%, transparent 50%)" }} />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
               Program:{" "}
               <span className="text-electric">Produktywność</span>
@@ -146,8 +146,8 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-20 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>
@@ -170,7 +170,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ROZPOZNANIE PROBLEMU */}
-      <section className="py-20 md:py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -455,7 +455,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ZANIM POWIESZ "KOLEJNY KURS" */}
-      <section className="py-20 md:py-20 bg-muted">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -495,7 +495,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* WIZJA PRZYSZŁOŚCI */}
-      <section className="py-20 md:py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Future Vision Header */}
@@ -622,7 +622,7 @@ export default function HakowanieProduktywnosci() {
                           <p className="text-sm font-bold text-electric mb-2">
                             {item.module}
                           </p>
-                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                          <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-150 leading-relaxed text-sm sm:text-base">
                             {item.benefit}
                           </p>
                         </div>
@@ -660,7 +660,7 @@ export default function HakowanieProduktywnosci() {
         </div>
       </section>
 
-      {/* CO ZAWIERA PROGRAM - MODUŁY */}
+      {/* CO ZAWIERA PROGRAM — MODUŁY */}
       <section className="py-20 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -689,7 +689,7 @@ export default function HakowanieProduktywnosci() {
               <div className="relative rounded-md overflow-hidden border border-muted">
                 <OptimizedImage
                   src="/src/assets/portal-hakprod.png"
-                  alt="Platforma Programu Produktywność - widok modułu z video"
+                  alt="Platforma Programu Produktywność — widok modułu z video"
                   width={3248}
                   height={2112}
                   sizes="(max-width: 768px) 100vw, 75vw"
@@ -1038,7 +1038,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* SOCIAL PROOF / OPINIE */}
-      <section className="py-20 md:py-20 bg-muted">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -1242,7 +1242,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* OBIEKCJE & FAQ */}
-      <section className="py-20 md:py-20 bg-card">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1363,7 +1363,7 @@ export default function HakowanieProduktywnosci() {
       </section>
 
       {/* ZAMKNIĘCIE + P.S. */}
-      <section className="py-20 md:py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -1405,8 +1405,7 @@ export default function HakowanieProduktywnosci() {
                   size="lg"
                   className="text-base px-6 py-3"
                 >
-                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie
-                </Button>
+                  Najpierw sprawdzam darmowe 4-dniowe wyzwanie</Button>
               </Link>
             </div>
 

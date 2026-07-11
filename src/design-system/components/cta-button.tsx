@@ -1,113 +1,116 @@
 import type { ReactNode } from 'react';
-import { Button } from './button';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '../lib/cn';
 
 interface CTAButtonProps {
   /** Button text content */
   children: ReactNode;
-  /** primary = brand gradient fill; secondary = outlined; tertiary = electric text link */
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'premium';
-  /** Button size */
+  /** primary — gradient fill; secondary — outlined; tertiary — text link */
+  variant?: 'primary' | 'secondary' | 'tertiary';
+  /** Button size - defaults to large for optimal mobile touch targets */
   size?: 'default' | 'lg' | 'xl';
-  /** Use dark-surface border on secondary */
-  onDark?: boolean;
   /** Optional click handler */
   onClick?: () => void;
-  /** Optional href for link buttons */
+  /** External URL — renders a plain anchor */
   href?: string;
+  /** Internal route — renders a react-router Link (no full page reload) */
+  to?: string;
   /** Additional CSS classes */
   className?: string;
-  /** Whether to show ArrowRight icon */
+  /** Whether to show arrow icon */
   showArrow?: boolean;
-  /** Aria label */
+  /** Aria label for accessibility */
   'aria-label'?: string;
-  /** Optional type attribute */
-  type?: 'button' | 'submit' | 'reset';
 }
 
-const baseClasses =
-  'inline-flex items-center justify-center gap-2 font-bold uppercase tracking-widest ' +
-  'rounded-[var(--border-radius-sm)] transition-all duration-150 ease-out ' +
-  'hover:-translate-y-px hover:shadow-md ' +
-  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 ' +
-  'min-h-[44px]';
-
-const sizeClasses = {
-  default: 'px-6 py-3 text-sm',
-  lg: 'px-8 py-4 text-base',
-  xl: 'px-10 py-5 text-lg',
+const fillSizeClasses = {
+  default: 'py-3 px-6 text-xs',
+  lg: 'py-4 px-8 text-sm',
+  xl: 'py-5 px-12 text-base',
 } as const;
 
-function variantClasses(variant: 'primary' | 'secondary' | 'tertiary' | 'premium', onDark: boolean) {
-  if (variant === 'primary' || variant === 'premium') {
-    return 'text-white bg-[image:var(--gradient-premium)] shadow-[var(--shadow-premium)]';
-  }
-  if (variant === 'secondary') {
-    return onDark
-      ? 'bg-transparent border border-white/20 text-white hover:border-white/40'
-      : 'bg-transparent border border-border text-foreground hover:border-foreground/40';
-  }
-  // tertiary — text link, electric
-  return 'p-0 min-h-0 text-electric hover:text-electric/80 normal-case tracking-normal font-semibold shadow-none';
-}
+const tertiarySizeClasses = {
+  default: 'text-xs',
+  lg: 'text-sm',
+  xl: 'text-base',
+} as const;
 
 /**
- * Standardized CTA button — three variants, one hover physic.
- * Never use raw styled <Link> as a button; use this component.
+ * Standardized CTA button component for consistent conversion-focused design.
+ * Ensures minimum 44px touch targets and one hover physics site-wide
+ * (translateY(-1px) + shadow — never scale).
  */
 export function CTAButton({
   children,
   variant = 'primary',
   size = 'lg',
-  onDark = false,
   onClick,
   href,
+  to,
   className,
   showArrow = true,
   'aria-label': ariaLabel,
-  type,
+  ...props
 }: CTAButtonProps) {
+  const variantClasses = {
+    primary: cn(
+      'min-h-[44px] rounded-[var(--border-radius-sm)] uppercase tracking-widest',
+      '[background:var(--gradient-premium)] text-white shadow-sm',
+      'hover:-translate-y-px hover:shadow-lg',
+      fillSizeClasses[size],
+    ),
+    secondary: cn(
+      'min-h-[44px] rounded-[var(--border-radius-sm)] uppercase tracking-widest',
+      'bg-transparent border border-border text-on-light',
+      'hover:-translate-y-px hover:shadow-sm',
+      fillSizeClasses[size],
+    ),
+    tertiary: cn(
+      'uppercase tracking-widest text-electric hover:underline underline-offset-4',
+      tertiarySizeClasses[size],
+    ),
+  };
+
   const classes = cn(
-    baseClasses,
-    variant !== 'tertiary' && sizeClasses[size],
-    variantClasses(variant, onDark),
+    'inline-flex items-center justify-center gap-2 whitespace-nowrap font-bold',
+    'transition-all duration-200 ease-out',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2',
+    variantClasses[variant],
     className,
   );
 
   const content = (
     <>
       {children}
-      {showArrow && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
+      {showArrow && (
+        <ArrowRight
+          className={variant === 'tertiary' ? 'h-4 w-4' : 'h-5 w-5'}
+          aria-hidden="true"
+        />
+      )}
     </>
   );
 
-  if (href) {
-    const isExternal = /^https?:\/\//.test(href);
+  if (to) {
     return (
-      <a
-        href={href}
-        className={classes}
-        aria-label={ariaLabel}
-        {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      >
+      <Link to={to} onClick={onClick} className={classes} aria-label={ariaLabel} {...props}>
+        {content}
+      </Link>
+    );
+  }
+
+  if (href) {
+    return (
+      <a href={href} onClick={onClick} className={classes} aria-label={ariaLabel} {...props}>
         {content}
       </a>
     );
   }
 
   return (
-    <Button
-      onClick={onClick}
-      type={type}
-      className={classes}
-      variant="ghost"
-      size={size === 'xl' ? 'lg' : size}
-      aria-label={ariaLabel}
-    >
+    <button type="button" onClick={onClick} className={classes} aria-label={ariaLabel} {...props}>
       {content}
-    </Button>
+    </button>
   );
 }
-
-export default CTAButton;

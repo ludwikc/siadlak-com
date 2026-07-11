@@ -100,7 +100,7 @@ export default function Wyzwanie() {
   return (
     <Layout hideHeader hideFooter>
       <SEO
-        title="Drwal w Białej Koszuli - 4-dniowe wyzwanie produktywności"
+        title="Drwal w Białej Koszuli — 4-dniowe wyzwanie produktywności"
         description="Darmowe 4-dniowe wyzwanie dla profesjonalistów, którzy osiągają cele, ale nie czują spełnienia. 7-10 października 2025."
         keywords="produktywność, wyzwanie, cele, wartości, efektywność, coaching"
       />
@@ -111,7 +111,7 @@ export default function Wyzwanie() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20"></div>
 
         {/* Gradient orbs for depth */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
         <div
           className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-30 animate-pulse"
           style={{ animationDelay: "1s" }}
@@ -127,17 +127,17 @@ export default function Wyzwanie() {
               >
                 Ile kursów produktywności
                 <br />
-                <span className="text-[#2563eb]">już kupiłeś?</span>
+                <span className="text-electric">już kupiłeś?</span>
               </h1>
 
               <div className="flex items-center justify-center gap-3 sm:gap-4 text-2xl sm:text-3xl md:text-4xl text-muted-foreground font-light">
-                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-[#2563eb] hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
+                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-electric hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
                   3?
                 </span>
-                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-[#2563eb] hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
+                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-electric hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
                   5?
                 </span>
-                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-[#2563eb] hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
+                <span className="inline-block transition-all duration-300 hover:scale-125 hover:text-electric hover:drop-shadow-[0_0_15px_rgba(37,99,235,0.8)] cursor-default">
                   7?
                 </span>
               </div>
@@ -148,11 +148,11 @@ export default function Wyzwanie() {
               className="relative animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="absolute -inset-4 bg-[#2563eb]/5 blur-xl rounded-full"></div>
+              <div className="absolute -inset-4 bg-electric/5 blur-xl rounded-full"></div>
               <p className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl text-foreground font-semibold max-w-4xl mx-auto leading-tight">
                 I pytanie drugie:
                 <br />
-                <span className="text-[#2563eb]">
+                <span className="text-electric">
                   Dlaczego nadal czujesz,
                   <br />
                   że coś jest nie tak?
@@ -170,9 +170,9 @@ export default function Wyzwanie() {
               </p>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
                 Dlatego, że{" "}
-                <span className="text-[#2563eb] relative inline-block">
+                <span className="text-electric relative inline-block">
                   rąbiesz drzewa w cudzym lesie.
-                  <span className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-[#2563eb]/30 rounded-full"></span>
+                  <span className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-electric/30 rounded-full"></span>
                 </span>
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function Wyzwanie() {
               <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
                 4 dni, które pokażą Ci,
                 <br />
-                <span className="text-[#2563eb]">GDZIE</span> powinieneś rąbać
+                <span className="text-electric">GDZIE</span> powinieneś rąbać
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
                 (Zamiast DAĆ Ci ostrzejszą siekierę do rąbania w złym miejscu)
@@ -198,30 +198,29 @@ export default function Wyzwanie() {
               style={{ animationDelay: "0.8s" }}
             >
               <div className="relative group inline-block">
-                <div className="absolute -inset-2 bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-electric to-[hsl(var(--electric-blue-dark))] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
                 <a
                   href="https://buy.siadlak.com/checkout/spotkanie-online"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative flex flex-col items-center justify-center px-6 py-4 sm:px-10 sm:py-5 text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all duration-300 hover:scale-105"
+                  className="relative flex flex-col items-center justify-center px-6 py-4 sm:px-10 sm:py-5 text-white bg-electric hover:bg-[hsl(var(--electric-blue-dark))] rounded-xl transition-all duration-300 hover:-translate-y-px"
                 >
                   <span className="block text-xs sm:text-sm uppercase tracking-wider opacity-90 mb-1">
                     Darmowe 4-dniowe wyzwanie
                   </span>
                   <span className="block text-lg sm:text-xl md:text-2xl font-bold">
-                    Sprawdzam, w którym lesie stoję
-                  </span>
+                    Sprawdzam, w którym lesie stoję</span>
                 </a>
               </div>
 
               {/* Social proof reframed as scarcity */}
               <div className="space-y-2">
                 <p className="text-base sm:text-lg font-semibold text-foreground">
-                  <span className="text-[#2563eb]">
+                  <span className="text-electric">
                     Grupa ograniczona do 50 osób
                   </span>{" "}
                   • Zostało{" "}
-                  <span className="text-[#2563eb] font-bold">16 miejsc</span>
+                  <span className="text-electric font-bold">16 miejsc</span>
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground italic">
                   (34 profesjonalistów już dołączyło)
@@ -232,11 +231,11 @@ export default function Wyzwanie() {
             {/* Event details card - MOVED DOWN */}
             <div className="animate-fade-in" style={{ animationDelay: "1s" }}>
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-electric/20 to-accent/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
                 <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 sm:p-8 md:p-10 max-w-2xl mx-auto">
                   <div className="grid gap-3 sm:gap-4 text-left">
                     <div className="flex items-center gap-3 group/item hover:bg-muted/30 p-2 rounded-lg transition-colors cursor-default">
-                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-electric/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
                         <span className="text-2xl">📅</span>
                       </div>
                       <div>
@@ -250,7 +249,7 @@ export default function Wyzwanie() {
                     </div>
 
                     <div className="flex items-center gap-3 group/item hover:bg-muted/30 p-2 rounded-lg transition-colors cursor-default">
-                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-electric/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
                         <span className="text-2xl">⏰</span>
                       </div>
                       <div>
@@ -264,7 +263,7 @@ export default function Wyzwanie() {
                     </div>
 
                     <div className="flex items-center gap-3 group/item hover:bg-muted/30 p-2 rounded-lg transition-colors cursor-default">
-                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-electric/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
                         <span className="text-2xl">💬</span>
                       </div>
                       <div>
@@ -278,7 +277,7 @@ export default function Wyzwanie() {
                     </div>
 
                     <div className="flex items-center gap-3 group/item hover:bg-muted/30 p-2 rounded-lg transition-colors cursor-default">
-                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-[#2563eb]/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                      <div className="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-electric/10 flex items-center justify-center group-hover/item:scale-110 transition-transform">
                         <span className="text-2xl">📹</span>
                       </div>
                       <div>
@@ -292,7 +291,7 @@ export default function Wyzwanie() {
                     </div>
 
                     <div className="pt-3 sm:pt-4 border-t border-border/50">
-                      <p className="text-base sm:text-lg md:text-xl font-bold text-[#2563eb] text-center">
+                      <p className="text-base sm:text-lg md:text-xl font-bold text-electric text-center">
                         ZERO kosztów • Zero bullshitu • Zero motywacyjnych
                         frazesów
                       </p>
@@ -357,7 +356,7 @@ export default function Wyzwanie() {
                     .getElementById("pain-section")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="text-sm sm:text-base text-muted-foreground hover:text-[#2563eb] transition-colors underline decoration-dotted underline-offset-4"
+                className="text-sm sm:text-base text-muted-foreground hover:text-electric transition-colors underline decoration-dotted underline-offset-4"
               >
                 Dowiedz się więcej ↓
               </button>
@@ -375,7 +374,7 @@ export default function Wyzwanie() {
 
           <div className="space-y-6 sm:space-y-8 mb-8 sm:mb-12">
             {/* Pain Card 1 */}
-            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+            <div className="bg-card border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                   ⏰
@@ -409,7 +408,7 @@ export default function Wyzwanie() {
             </div>
 
             {/* Pain Card 2 */}
-            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+            <div className="bg-card border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                   📚
@@ -438,7 +437,7 @@ export default function Wyzwanie() {
             </div>
 
             {/* Pain Card 3 */}
-            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+            <div className="bg-card border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                   🎯
@@ -470,7 +469,7 @@ export default function Wyzwanie() {
             </div>
 
             {/* Pain Card 4 */}
-            <div className="bg-card border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
+            <div className="bg-card border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                   🔄
@@ -491,7 +490,7 @@ export default function Wyzwanie() {
                       <strong className="text-foreground">
                         paralysis analysis
                       </strong>{" "}
-                      - objaw tego, że nie wiesz, KTÓRY las jest Twój.
+                      — objaw tego, że nie wiesz, KTÓRY las jest Twój.
                     </p>
 
                     <p>
@@ -505,8 +504,8 @@ export default function Wyzwanie() {
           </div>
 
           {/* Summary Box with Badge */}
-          <div className="relative bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-xl p-6 sm:p-8 md:p-10 max-w-4xl mx-auto">
-            <div className="absolute -top-3 left-4 sm:left-6 bg-[#2563eb] text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+          <div className="relative bg-electric/10 border-l-4 border-electric rounded-xl p-6 sm:p-8 md:p-10 max-w-4xl mx-auto">
+            <div className="absolute -top-3 left-4 sm:left-6 bg-electric text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
               💡 Kluczowa prawda
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 pt-2">
@@ -539,12 +538,12 @@ export default function Wyzwanie() {
             4 DNI, 4 DIAGNOZ
           </h2>
 
-          <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
+          <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto">
             {/* Day 1 - Light Blue */}
-            <div className="relative bg-[#2563eb]/5 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+            <div className="relative bg-electric/5 border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-electric to-[hsl(var(--electric-blue-dark))] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
                     <span className="relative z-10">1</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
@@ -575,10 +574,10 @@ export default function Wyzwanie() {
             </div>
 
             {/* Day 2 - Medium Blue */}
-            <div className="relative bg-[#2563eb]/10 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+            <div className="relative bg-electric/10 border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-electric to-[hsl(var(--electric-blue-dark))] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
                     <span className="relative z-10">2</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
@@ -594,7 +593,7 @@ export default function Wyzwanie() {
                   </p>
                   <p className="text-sm sm:text-base text-muted-foreground">
                     <strong className="text-foreground">Ćwiczenie:</strong>{" "}
-                    Kalibracja Kompasu - Twoje TOP 5 wartości
+                    Kalibracja Kompasu — Twoje TOP 5 wartości
                   </p>
                   <div className="flex items-start gap-2 mt-3 sm:mt-4 p-3 bg-green-500/10 border-l-2 border-green-500 rounded">
                     <span className="text-green-500 text-lg flex-shrink-0">
@@ -610,10 +609,10 @@ export default function Wyzwanie() {
             </div>
 
             {/* Day 3 - Bold Blue */}
-            <div className="relative bg-[#2563eb]/15 border border-border hover:border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
+            <div className="relative bg-electric/15 border border-border hover:border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-lg group">
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-[#1d4ed8] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-electric to-[hsl(var(--electric-blue-dark))] flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform">
                     <span className="relative z-10">3</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
@@ -645,13 +644,13 @@ export default function Wyzwanie() {
             </div>
 
             {/* Day 4 - Gradient Special */}
-            <div className="relative bg-gradient-to-br from-[#2563eb]/20 to-accent/15 border border-[#2563eb]/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl group">
-              <div className="absolute -top-3 right-4 sm:right-6 bg-gradient-to-r from-[#2563eb] to-accent text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
+            <div className="relative bg-gradient-to-br from-electric/20 to-accent/15 border border-electric/50 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl group">
+              <div className="absolute -top-3 right-4 sm:right-6 bg-gradient-to-r from-electric to-accent text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold shadow-md">
                 🎁 Bonus Day
               </div>
               <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 pt-2">
                 <div className="flex-shrink-0">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#2563eb] to-accent flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-electric to-accent flex items-center justify-center text-3xl sm:text-4xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform">
                     <span className="relative z-10">4</span>
                     <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity"></div>
                   </div>
@@ -708,10 +707,10 @@ export default function Wyzwanie() {
             kolejny webinar motywacyjny
           </h2>
 
-          <div className="bg-card border border-border hover:shadow-xl rounded-xl p-6 sm:p-8 md:p-12 max-w-5xl mx-auto transition-all duration-300">
+          <div className="bg-card border border-border hover:shadow-xl rounded-xl p-6 sm:p-8 md:p-12 max-w-6xl mx-auto transition-all duration-300">
             <div className="grid md:grid-cols-[300px_1fr] gap-6 sm:gap-8 items-start">
               <div className="mx-auto md:mx-0 relative group/img">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#2563eb]/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-electric/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
                 <OptimizedImage
                   src="/lovable-uploads/ludwik-siadlak-profile.png"
                   alt="Ludwik C. Siadlak"
@@ -722,7 +721,7 @@ export default function Wyzwanie() {
                 />
                 {/* Stats Badges */}
                 <div className="absolute -top-3 -right-3 bg-white border border-border shadow-lg rounded-full px-3 py-1.5 text-xs sm:text-sm">
-                  <span className="font-bold text-[#2563eb]">10+ lat</span>
+                  <span className="font-bold text-electric">10+ lat</span>
                   <span className="text-muted-foreground"> coaching</span>
                 </div>
                 <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center">
@@ -794,13 +793,13 @@ export default function Wyzwanie() {
       <section className="py-12 sm:py-20 px-4 bg-background">
         <div className="container max-w-4xl mx-auto space-y-6 sm:space-y-8">
           {/* Objection 1 - Time */}
-          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-electric rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
             <div className="flex items-start gap-4 sm:gap-6">
               <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                 ⏱️
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-electric transition-colors">
                   "Nie mam czasu na 4-dniowe wyzwanie"
                 </h3>
                 <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -820,20 +819,20 @@ export default function Wyzwanie() {
                 {/* Social Proof */}
                 <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
                   💬 "To samo myślałem. Ale te 4 dni zaoszczędziły mi 4
-                  miesiące." - Michał K.
+                  miesiące." — Michał K.
                 </div>
               </div>
             </div>
           </div>
 
           {/* Objection 2 - Skepticism */}
-          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-electric rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
             <div className="flex items-start gap-4 sm:gap-6">
               <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                 😔
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-electric transition-colors">
                   "Już próbowałem tysiąca rzeczy. To też nie zadziała."
                 </h3>
                 <div className="space-y-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -848,29 +847,29 @@ export default function Wyzwanie() {
                   </p>
 
                   <p>
-                    Jeśli nie - żadne narzędzie nie pomoże.
+                    Jeśli nie — żadne narzędzie nie pomoże.
                     <br />
-                    Jeśli tak - w końcu będziesz wiedział, dlaczego warto
+                    Jeśli tak — w końcu będziesz wiedział, dlaczego warto
                     kontynuować.
                   </p>
                 </div>
                 {/* Social Proof */}
                 <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
                   💬 "Wreszcie ktoś mi powiedział, GDZIE kopać, zamiast dać mi
-                  lepszą łopatę." - Anna W.
+                  lepszą łopatę." — Anna W.
                 </div>
               </div>
             </div>
           </div>
 
           {/* Objection 3 - Fear */}
-          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-[#2563eb] rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
+          <div className="bg-card border border-border border-l-4 border-l-amber-500 hover:border-l-electric rounded-xl p-6 sm:p-8 transition-all hover:shadow-md group">
             <div className="flex items-start gap-4 sm:gap-6">
               <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform flex-shrink-0">
                 🤔
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-[#2563eb] transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-electric transition-colors">
                   "Co jeśli odkryję, że rąbię w cudzym lesie i... będę musiał to
                   zmienić?"
                 </h3>
@@ -893,7 +892,7 @@ export default function Wyzwanie() {
                 </div>
                 {/* Social Proof */}
                 <div className="mt-4 pt-4 border-t border-border/50 text-xs sm:text-sm text-muted-foreground italic">
-                  💬 "Przestałem udawać. Najlepsza decyzja w karierze." - Tomasz
+                  💬 "Przestałem udawać. Najlepsza decyzja w karierze." — Tomasz
                   P.
                 </div>
               </div>
@@ -921,9 +920,9 @@ export default function Wyzwanie() {
           >
             <AccordionItem
               value="item-1"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">💰</span>
                   <span>Czy to naprawdę za darmo?</span>
@@ -938,9 +937,9 @@ export default function Wyzwanie() {
 
             <AccordionItem
               value="item-2"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">📹</span>
                   <span>Co jeśli nie mogę być na żywo?</span>
@@ -951,15 +950,15 @@ export default function Wyzwanie() {
                 <strong className="text-foreground">
                   interakcja na żywo jest najważniejsza
                 </strong>{" "}
-                - szczególnie w dniu 4 (live coaching).
+                — szczególnie w dniu 4 (live coaching).
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem
               value="item-3"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">🤔</span>
                   <span>Czy to kolejny kurs o Pomodoro i GTD?</span>
@@ -976,9 +975,9 @@ export default function Wyzwanie() {
 
             <AccordionItem
               value="item-4"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">⚠️</span>
                   <span>Dla kogo to NIE jest?</span>
@@ -995,9 +994,9 @@ export default function Wyzwanie() {
 
             <AccordionItem
               value="item-5"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">⚙️</span>
                   <span>Jak wygląda techniczne setup?</span>
@@ -1015,9 +1014,9 @@ export default function Wyzwanie() {
 
             <AccordionItem
               value="item-6"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">🚀</span>
                   <span>Co po wyzwaniu?</span>
@@ -1033,9 +1032,9 @@ export default function Wyzwanie() {
 
             <AccordionItem
               value="item-7"
-              className="bg-card border border-border hover:border-[#2563eb]/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
+              className="bg-card border border-border hover:border-electric/50 rounded-lg px-4 sm:px-6 transition-all hover:shadow-md"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-[#2563eb] py-4 sm:py-5">
+              <AccordionTrigger className="text-base sm:text-lg font-semibold text-foreground hover:text-electric py-4 sm:py-5">
                 <span className="flex items-center gap-2 sm:gap-3">
                   <span className="text-xl sm:text-2xl">👥</span>
                   <span>Kto jeszcze będzie na wyzwaniu?</span>
@@ -1057,9 +1056,9 @@ export default function Wyzwanie() {
       {/* FINAL CTA SECTION */}
       <section
         id="signup"
-        className="py-20 sm:py-20 px-4 bg-gradient-to-br from-[#2563eb]/20 to-muted/30"
+        className="py-16 sm:py-20 px-4 bg-gradient-to-br from-electric/20 to-muted/30"
       >
-        <div className="container max-w-5xl mx-auto space-y-10 sm:space-y-12">
+        <div className="container max-w-6xl mx-auto space-y-10 sm:space-y-12">
           <div className="text-center space-y-6 sm:space-y-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
               Dwa scenariusze:
@@ -1117,12 +1116,12 @@ export default function Wyzwanie() {
           {/* Primary CTA */}
           <div className="text-center space-y-6 sm:space-y-8">
             <div className="relative group inline-block">
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#2563eb] to-[#1d4ed8] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-electric to-[hsl(var(--electric-blue-dark))] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-300"></div>
               <a
                 href="https://buy.siadlak.com/checkout/spotkanie-online"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative inline-flex items-center justify-center px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-xl transition-all shadow-lg"
+                className="relative inline-flex items-center justify-center px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl font-bold text-white bg-electric hover:bg-[hsl(var(--electric-blue-dark))] rounded-xl transition-all shadow-lg"
               >
                 <span className="flex flex-col items-center gap-1">
                   <span className="text-xs sm:text-sm uppercase tracking-wider opacity-90">
@@ -1182,7 +1181,7 @@ export default function Wyzwanie() {
               <div className="mt-6 pt-6 border-t border-green-500/30 text-center">
                 <p className="text-base sm:text-lg font-bold text-foreground">
                   🗓️ Start:{" "}
-                  <span className="text-[#2563eb]">7 października</span>, godz.
+                  <span className="text-electric">7 października</span>, godz.
                   będzie niespodzianka
                 </p>
               </div>
@@ -1190,7 +1189,7 @@ export default function Wyzwanie() {
           </div>
 
           {/* P.S. Section */}
-          <div className="bg-[#2563eb]/10 border-l-4 border-[#2563eb] rounded-xl p-6 sm:p-8 max-w-3xl mx-auto">
+          <div className="bg-electric/10 border-l-4 border-electric rounded-xl p-6 sm:p-8 max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl font-bold text-foreground mb-4">
               P.S. To nie jest dla każdego.
             </p>
@@ -1200,7 +1199,7 @@ export default function Wyzwanie() {
                 <strong className="text-foreground">
                   motywacyjnych frazesów
                 </strong>{" "}
-                - odpuść.
+                — odpuść.
                 <br />
                 Jeśli chcesz{" "}
                 <strong className="text-foreground">magicznej pigułki</strong> -
@@ -1210,7 +1209,7 @@ export default function Wyzwanie() {
                 <strong className="text-foreground">
                   "wszystko jest OK"
                 </strong>{" "}
-                - odpuść.
+                — odpuść.
               </p>
 
               <p className="font-semibold text-foreground text-base sm:text-lg pt-2">
@@ -1218,15 +1217,15 @@ export default function Wyzwanie() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span className="text-electric flex-shrink-0">✓</span>
                   <span>Mają dość udawania, że wszystko jest OK</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span className="text-electric flex-shrink-0">✓</span>
                   <span>Są gotowi skonfrontować się z prawdą</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#2563eb] flex-shrink-0">✓</span>
+                  <span className="text-electric flex-shrink-0">✓</span>
                   <span>
                     Chcą wiedzieć, CZY rąbią w swoim lesie (nawet jeśli
                     odpowiedź będzie trudna)
@@ -1235,7 +1234,7 @@ export default function Wyzwanie() {
               </ul>
 
               <p className="text-base sm:text-lg font-bold text-foreground pt-4">
-                Jeśli to Ty - widzimy się 7 października.
+                Jeśli to Ty — widzimy się 7 października.
               </p>
             </div>
           </div>
@@ -1246,10 +1245,9 @@ export default function Wyzwanie() {
               href="https://buy.siadlak.com/checkout/spotkanie-online"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-bold text-white bg-electric hover:bg-[hsl(var(--electric-blue-dark))] rounded-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-px"
             >
-              Ostatnia szansa: Zapisuję się teraz
-            </a>
+              Ostatnia szansa: Zapisuję się teraz</a>
             <p className="text-xs sm:text-sm text-muted-foreground mt-4 max-w-md mx-auto">
               Dołącz do{" "}
               <strong className="text-foreground">34 profesjonalistów</strong>,
@@ -1266,7 +1264,7 @@ export default function Wyzwanie() {
             Masz pytania? Napisz:{" "}
             <a
               href="mailto:ludwikc@siadlak.email"
-              className="text-[#2563eb] hover:underline"
+              className="text-electric hover:underline"
             >
               ludwikc@siadlak.email
             </a>
@@ -1275,13 +1273,13 @@ export default function Wyzwanie() {
           <div className="flex justify-center gap-6 mb-6 text-sm">
             <Link
               to="/legal/privacy"
-              className="text-muted-foreground hover:text-[#2563eb]"
+              className="text-muted-foreground hover:text-electric"
             >
               Polityka prywatności
             </Link>
             <Link
               to="/legal/terms"
-              className="text-muted-foreground hover:text-[#2563eb]"
+              className="text-muted-foreground hover:text-electric"
             >
               Regulamin
             </Link>

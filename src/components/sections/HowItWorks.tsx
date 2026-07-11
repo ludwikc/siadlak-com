@@ -16,7 +16,7 @@ interface HowItWorksProps {
 
 export default function HowItWorks({ title, steps }: HowItWorksProps) {
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-b from-background to-diamond relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-background to-diamond relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-32 h-32 bg-depth rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-40 h-40 bg-depth rounded-full blur-3xl"></div>
@@ -35,7 +35,7 @@ export default function HowItWorks({ title, steps }: HowItWorksProps) {
           <div className="w-24 h-1.5 bg-brand-gradient mx-auto rounded-full"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {steps.slice(0, 2).map((step, index) => {
               const gradients = [

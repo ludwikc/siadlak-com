@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Badge } from "@/design-system/components/badge";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 const dropdownItems: { label: string; desc?: string; to: string }[] = [
   { label: "Aplikacje Mentalne", desc: "Kursy i szkolenia", to: "/program" },
@@ -19,7 +20,9 @@ const moreItems: { label: string; desc?: string; to: string; external?: boolean 
 
 export default function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownClosing, setDropdownClosing] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [moreClosing, setMoreClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const moreRef = useRef<HTMLDivElement>(null);
@@ -35,28 +38,42 @@ export default function Header() {
 
   const openDropdown = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setDropdownClosing(false);
     setDropdownOpen(true);
   };
 
   const closeDropdown = () => {
-    timeoutRef.current = setTimeout(() => setDropdownOpen(false), 80);
+    timeoutRef.current = setTimeout(() => {
+      setDropdownClosing(true);
+      timeoutRef.current = setTimeout(() => {
+        setDropdownOpen(false);
+        setDropdownClosing(false);
+      }, 280);
+    }, 80);
   };
 
   const openMore = () => {
     if (moreTimeoutRef.current) clearTimeout(moreTimeoutRef.current);
+    setMoreClosing(false);
     setMoreOpen(true);
   };
 
   const closeMore = () => {
-    moreTimeoutRef.current = setTimeout(() => setMoreOpen(false), 80);
+    moreTimeoutRef.current = setTimeout(() => {
+      setMoreClosing(true);
+      moreTimeoutRef.current = setTimeout(() => {
+        setMoreOpen(false);
+        setMoreClosing(false);
+      }, 280);
+    }, 80);
   };
 
 
   return (
-    <nav className="fixed top-[var(--banner-height,36px)] w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-[var(--banner-height)] w-full z-50 bg-void/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Brand */}
-        <Link to="/" className="text-white font-heading font-bold tracking-widest uppercase text-sm">
+        <Link to="/" className="text-white font-heading font-bold tracking-widest uppercase text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded">
           LCS <span className="text-electric">/</span> Upgrade
         </Link>
 
@@ -65,7 +82,7 @@ export default function Header() {
           {/* Webinar */}
           <Link
             to="/webinar"
-            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors duration-150 ease-out inline-flex items-start gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-void rounded-sm"
+            className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors inline-flex items-start gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
           >
             Webinar
             <sup className="leading-none">
@@ -79,7 +96,7 @@ export default function Header() {
           <div ref={dropdownRef} className="relative" onMouseEnter={openDropdown} onMouseLeave={closeDropdown}>
             <button
               onClick={() => setDropdownOpen((v) => !v)}
-              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
+              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Pracuj ze mną
               <ChevronDown
@@ -88,48 +105,42 @@ export default function Header() {
               />
             </button>
 
-            <div
-              className={`absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 origin-top-right transition-all duration-300 ease-out ${
-                dropdownOpen
-                  ? "opacity-100 scale-100 pointer-events-auto"
-                  : "opacity-0 scale-95 pointer-events-none"
-              }`}
-            >
-              <Link
-                to="/start"
-                onClick={() => setDropdownOpen(false)}
-                className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors"
-              >
-                Zacznij tutaj →
-              </Link>
-              <div className="border-t border-white/10 my-1" />
-              {dropdownItems.map((item) => (
+            {dropdownOpen && (
+              <div className={`absolute top-full right-0 mt-2 w-56 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 ${dropdownClosing ? "animate-fade-out" : "animate-fade-in"}`}>
                 <Link
-                  key={item.to}
-                  to={item.to}
+                  to="/start"
                   onClick={() => setDropdownOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                  className="block px-4 py-2.5 text-sm font-bold text-electric hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
                 >
-                  {item.label}
-                  {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
-                </Link>
-              ))}
-              <div className="border-t border-white/10 my-1" />
-              <Link
-                to="/start"
-                onClick={() => setDropdownOpen(false)}
-                className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors"
-              >
-                Wszystkie możliwości →
-              </Link>
-            </div>
+                  Zacznij tutaj</Link>
+                <div className="border-t border-white/10 my-1" />
+                {dropdownItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setDropdownOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-dim hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
+                  >
+                    {item.label}
+                    {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
+                  </Link>
+                ))}
+                <div className="border-t border-white/10 my-1" />
+                <Link
+                  to="/start"
+                  onClick={() => setDropdownOpen(false)}
+                  className="block px-4 py-2.5 text-sm text-white/50 hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
+                >
+                  Wszystkie możliwości</Link>
+              </div>
+            )}
           </div>
 
           {/* Więcej – dropdown */}
           <div ref={moreRef} className="relative" onMouseEnter={openMore} onMouseLeave={closeMore}>
             <button
               onClick={() => setMoreOpen((v) => !v)}
-              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1"
+              className="text-white text-xs font-bold uppercase tracking-widest hover:text-electric transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Więcej
               <ChevronDown
@@ -138,38 +149,31 @@ export default function Header() {
               />
             </button>
 
-            <div
-              className={`absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 origin-top-right transition-all duration-300 ease-out ${
-                moreOpen
-                  ? "opacity-100 scale-100 pointer-events-auto"
-                  : "opacity-0 scale-95 pointer-events-none"
-              }`}
-            >
-              {moreItems.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setMoreOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
-                >
-                  {item.label}
-                  {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
-                </Link>
-              ))}
-            </div>
+            {moreOpen && (
+              <div className={`absolute top-full right-0 mt-2 w-64 bg-void-black border border-white/10 rounded-lg shadow-xl py-2 z-50 ${moreClosing ? "animate-fade-out" : "animate-fade-in"}`}>
+                {moreItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMoreOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-dim hover:text-white hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
+                  >
+                    {item.label}
+                    {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Aplikuj CTA */}
-          <Link
-            to="/discovery"
-            className="text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-[var(--border-radius-sm)] hover:-translate-y-px hover:shadow-md transition-all duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-void"
-          >
+          <CTAButton to="/discovery" variant="primary" size="default" showArrow={false} className="px-4 py-2 min-h-0">
             Aplikuj
-          </Link>
+          </CTAButton>
         </div>
 
         {/* Mobile hamburger */}
-        <button onClick={() => setMobileOpen((v) => !v)} className="md:hidden text-white p-1" aria-label="Menu">
+        <button onClick={() => setMobileOpen((v) => !v)} className="md:hidden text-white p-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded" aria-label="Menu">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -181,7 +185,7 @@ export default function Header() {
             <Link
               to="/webinar"
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-start gap-1 text-white text-sm font-bold uppercase tracking-widest py-2"
+              className="inline-flex items-start gap-1 text-white text-sm font-bold uppercase tracking-widest py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
             >
               Webinar
               <sup className="leading-none">
@@ -191,55 +195,56 @@ export default function Header() {
               </sup>
             </Link>
 
-            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
+            <div className="text-on-dark-tertiary text-[10px] uppercase tracking-widest pt-2">Pracuj ze mną</div>
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
-              className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors"
+              className="block text-electric text-sm font-bold py-1.5 pl-3 border-l border-electric/30 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
             >
-              Zacznij tutaj →
-            </Link>
+              Zacznij tutaj</Link>
             <div className="border-t border-white/10 my-1" />
             {dropdownItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
               >
                 {item.label}
-                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
               </Link>
             ))}
             <div className="border-t border-white/10 my-1" />
             <Link
               to="/start"
               onClick={() => setMobileOpen(false)}
-              className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+              className="block text-white/50 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
             >
-              Wszystkie możliwości →
-            </Link>
+              Wszystkie możliwości</Link>
 
-            <div className="text-white/40 text-[10px] uppercase tracking-widest pt-3">Więcej</div>
+            <div className="text-on-dark-tertiary text-[10px] uppercase tracking-widest pt-3">Więcej</div>
             {moreItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 onClick={() => setMobileOpen(false)}
-                className="block text-white/80 text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors"
+                className="block text-dim text-sm py-1.5 pl-3 border-l border-white/10 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-inset"
               >
                 {item.label}
-                {item.desc && <span className="block text-[11px] text-white/40 mt-0.5">{item.desc}</span>}
+                {item.desc && <span className="block text-[11px] text-on-dark-tertiary mt-0.5">{item.desc}</span>}
               </Link>
             ))}
 
-            <Link
+            <CTAButton
               to="/discovery"
+              variant="primary"
+              size="default"
+              showArrow={false}
               onClick={() => setMobileOpen(false)}
-              className="block text-center text-void bg-white text-xs font-bold uppercase tracking-widest px-4 py-2.5 rounded mt-3"
+              className="flex w-full mt-3"
             >
               Aplikuj
-            </Link>
+            </CTAButton>
           </div>
         </div>
       )}

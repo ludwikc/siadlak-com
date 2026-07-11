@@ -22,8 +22,8 @@ const HomeTest = () => {
   return (
     <Layout>
       <SEO
-        title="Ludwik C. Siadlak - Diamentowy Umysł"
-        description="Pomagam ludziom, którzy zbudowali imponujące życie, ale gdzieś po drodze stracili kontakt z tym, co leży pod kolorami - zobaczyć własny diament."
+        title="Ludwik C. Siadlak — Diamentowy Umysł"
+        description="Pomagam ludziom, którzy zbudowali imponujące życie, ale gdzieś po drodze stracili kontakt z tym, co leży pod kolorami — zobaczyć własny diament."
       />
 
       {/* ═══════════════════════════════════════════════════════════
@@ -39,10 +39,10 @@ const HomeTest = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Headline */}
             <div className="text-center mb-12 md:mb-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-5xl mx-auto px-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] max-w-6xl mx-auto px-4">
                 Diament jest najtwardszą substancją na&nbsp;Ziemi.{" "}
                 <span className="bg-gradient-to-r from-zenith-gold to-orange-500 bg-clip-text text-transparent">
                   I&nbsp;jest kompletnie przezroczysty.
@@ -56,8 +56,8 @@ const HomeTest = () => {
               <div className="md:col-span-2 text-center md:text-left">
                 <div className="space-y-4 text-xl text-white/90 leading-relaxed mb-12">
                   <p>
-                    Połóż go na czerwonym suknie - wygląda jak rubin. Na zielonym
-                    - jak szmaragd. Na niebieskim - jak szafir. Zmień sukno -
+                    Połóż go na czerwonym suknie — wygląda jak rubin. Na zielonym
+                    — jak szmaragd. Na niebieskim — jak szafir. Zmień sukno -
                     zmieni się „kolor" diamentu.
                   </p>
                   <p>
@@ -70,8 +70,8 @@ const HomeTest = () => {
                     Twój umysł działa dokładnie tak samo.
                   </p>
                   <p>
-                    Otaczasz się presją - nabiera koloru napięcia. Wchodzisz
-                    w&nbsp;sprint za kolejnym celem - nabiera koloru głodu.
+                    Otaczasz się presją — nabiera koloru napięcia. Wchodzisz
+                    w&nbsp;sprint za kolejnym celem — nabiera koloru głodu.
                     Wracasz do domu po 14&nbsp;godzinach - nabiera koloru pustki.
                   </p>
                   <p className="text-white/70">
@@ -81,7 +81,7 @@ const HomeTest = () => {
                     Jestem Ludwik C. Siadlak.
                   </p>
                   <p>
-                    Pomagam ludziom takim jak Ty - ludziom, którzy zbudowali
+                    Pomagam ludziom takim jak Ty — ludziom, którzy zbudowali
                     imponujące życie, ale gdzieś po drodze stracili kontakt
                     z&nbsp;tym, co leży pod kolorami -{" "}
                     <span className="text-zenith-gold font-semibold">
@@ -96,7 +96,7 @@ const HomeTest = () => {
 
                 <div className="flex flex-col gap-4 items-center md:items-start">
                   <Link to="/discovery">
-                    <CTAButton variant="premium" size="xl" className="shadow-xl">
+                    <CTAButton variant="primary" size="xl" className="shadow-xl">
                       Umów bezpłatną rozmowę
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </CTAButton>
@@ -160,7 +160,7 @@ const HomeTest = () => {
                   <li className="flex items-start gap-3">
                     <X className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
                     <span>
-                      Szlifowałeś go kursami - Todoist, Asana, Notion, GTD, Deep
+                      Szlifowałeś go kursami — Todoist, Asana, Notion, GTD, Deep
                       Work.
                     </span>
                   </li>
@@ -175,7 +175,7 @@ const HomeTest = () => {
                   <li className="flex items-start gap-3">
                     <X className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
                     <span>
-                      Kupowałeś nowe oprawki - nowe systemy, nowe metody, nowe
+                      Kupowałeś nowe oprawki — nowe systemy, nowe metody, nowe
                       narzędzia.
                     </span>
                   </li>
@@ -185,7 +185,7 @@ const HomeTest = () => {
                   I&nbsp;każde z&nbsp;nich działało. Tydzień. Może miesiąc.
                 </p>
                 <p className="text-xl text-deep-charcoal mb-8">
-                  A&nbsp;potem ten znajomy moment - kiedy wracasz do punktu wyjścia
+                  A&nbsp;potem ten znajomy moment — kiedy wracasz do punktu wyjścia
                   z&nbsp;kolejną warstwą niespełnionych obietnic.
                 </p>
 
@@ -203,7 +203,7 @@ const HomeTest = () => {
                 <p className="text-lg text-deep-charcoal/80">
                   To jest moment, którego nie da się osiągnąć kolejnym kursem. Bo
                   problem nie leży w&nbsp;tym, czego nie wiesz. Leży w&nbsp;tym,
-                  czego nie widzisz - bo patrzysz w&nbsp;niewłaściwą stronę.
+                  czego nie widzisz — bo patrzysz w&nbsp;niewłaściwą stronę.
                 </p>
               </CardContent>
             </Card>
@@ -222,7 +222,7 @@ const HomeTest = () => {
                 Wiem, jak to wygląda{" "}
                 <span className="text-zenith-gold">od środka</span>.
               </h2>
-              <p className="text-xl text-white/80">
+              <p className="text-xl text-dim">
                 Przez lata leżałem na wszystkich kolorach sukna naraz.
               </p>
             </div>
@@ -233,7 +233,7 @@ const HomeTest = () => {
                   <p>
                     W&nbsp;wieku 16 lat byłem uzależniony od kodeiny. Codzienne
                     migreny. Systemy produktywności budowałem nie po to, żeby się
-                    rozwijać - po to, żeby przeżyć kolejny dzień.
+                    rozwijać — po to, żeby przeżyć kolejny dzień.
                   </p>
 
                   <p className="text-xl text-white/90 mt-8">
@@ -262,9 +262,9 @@ const HomeTest = () => {
                       Żeby zmienić grę, musiałem zobaczyć, że nie jestem graczem.
                       Jestem tym, kto patrzy.
                     </p>
-                    <p className="text-lg text-white/80 mt-3">
+                    <p className="text-lg text-dim mt-3">
                       Nie diamentem. Nie kolorem sukna. Obserwatorem, który może
-                      wybrać - na czym ten diament położyć.
+                      wybrać — na czym ten diament położyć.
                     </p>
                   </div>
 
@@ -281,7 +281,7 @@ const HomeTest = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
-          SECTION 4: MECHANIZM - Diamentowy Umysł
+          SECTION 4: MECHANIZM — Diamentowy Umysł
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-luminous-white">
         <div className="container mx-auto px-4">
@@ -301,8 +301,8 @@ const HomeTest = () => {
                 diamentu, który nie potrzebuje szlifu.
               </p>
               <p className="text-xl text-deep-charcoal font-semibold mt-4">
-                Ja pracuję głębiej. Na poziomie, na którym Ty - świadomie lub nie
-                - decydujesz, na jakim suknie leżysz.
+                Ja pracuję głębiej. Na poziomie, na którym Ty — świadomie lub nie
+                — decydujesz, na jakim suknie leżysz.
               </p>
             </div>
 
@@ -323,7 +323,7 @@ const HomeTest = () => {
                   </p>
                   <p>
                     Bo jeden człowiek potrzebuje metafory samochodu sportowego na
-                    torze. Inny - żaglówki na otwartym morzu. Jeszcze inny -
+                    torze. Inny — żaglówki na otwartym morzu. Jeszcze inny -
                     ciemnego pokoju pełnego pająków.
                   </p>
                   <p className="font-semibold text-deep-charcoal">
@@ -333,7 +333,7 @@ const HomeTest = () => {
               </CardContent>
             </Card>
 
-            {/* Inline testimonial - Łukasz */}
+            {/* Inline testimonial — Łukasz */}
             <Card className="border-2 border-zenith-gold/30 bg-zenith-gold/5">
               <CardContent className="p-8 md:p-12">
                 <p className="text-lg text-deep-charcoal/80 italic leading-relaxed mb-4">
@@ -342,7 +342,7 @@ const HomeTest = () => {
                   więcej."
                 </p>
                 <p className="text-deep-charcoal font-bold">
-                  - Łukasz, informatyk z&nbsp;ADHD
+                  — Łukasz, informatyk z&nbsp;ADHD
                 </p>
                 <p className="text-deep-charcoal/60 text-sm mt-2">
                   Nie uczył się medytacji. Rozmawialiśmy o&nbsp;samochodach
@@ -366,7 +366,7 @@ const HomeTest = () => {
                 LIFE OS:{" "}
                 <span className="text-zenith-gold">System Upgrade</span>
               </h2>
-              <p className="text-2xl text-white/80">
+              <p className="text-2xl text-dim">
                 8&nbsp;tygodni. Maksymalnie 5&nbsp;osób. Pełne zobaczenie
                 diamentu pod suknem.
               </p>
@@ -377,7 +377,7 @@ const HomeTest = () => {
                 <div className="space-y-4 text-lg text-white/90 leading-relaxed mb-8">
                   <p>
                     Nie poprawiamy jednego koloru. Nie zmieniamy sukna na
-                    ładniejsze. Zdejmujesz wszystkie warstwy - i&nbsp;po raz
+                    ładniejsze. Zdejmujesz wszystkie warstwy — i&nbsp;po raz
                     pierwszy widzisz, co jest pod nimi. Czyste. Twarde.
                     Przezroczyste. Twoje.
                   </p>
@@ -402,7 +402,7 @@ const HomeTest = () => {
                     },
                     {
                       title: "8 tygodni sesji 1:1",
-                      desc: "intensywna praca filozoficzna. Nie będziesz mi opowiadał o\u00A0swoim tygodniu. Będziemy razem odsłaniali to, czego jeszcze nie widzisz - z\u00A0troską, ale bez znieczulenia.",
+                      desc: "intensywna praca filozoficzna. Nie będziesz mi opowiadał o\u00A0swoim tygodniu. Będziemy razem odsłaniali to, czego jeszcze nie widzisz — z\u00A0troską, ale bez znieczulenia.",
                       value: "16 000 PLN",
                     },
                     {
@@ -457,7 +457,7 @@ const HomeTest = () => {
 
             <div className="text-center">
               <Link to="/discovery">
-                <CTAButton variant="premium" size="xl" className="shadow-2xl">
+                <CTAButton variant="primary" size="xl" className="shadow-2xl">
                   Sprawdź dostępność
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </CTAButton>
@@ -472,7 +472,7 @@ const HomeTest = () => {
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-twilight-indigo/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-gradient-to-r from-zenith-gold to-orange-500 text-white border-0 text-lg px-6 py-3 mb-6">
                 <Users className="inline h-5 w-5 mr-2" />
@@ -544,7 +544,7 @@ const HomeTest = () => {
                       „Chodziłem na terapię. Myślałem, że mam przepracowane
                       rzeczy z&nbsp;dzieciństwa. A&nbsp;tu na jednym spotkaniu
                       z&nbsp;Ludwikiem poczułem, jak mięśnie w&nbsp;moim brzuchu
-                      się fizycznie rozluźniają - bo w&nbsp;końcu dotarłem do
+                      się fizycznie rozluźniają — bo w&nbsp;końcu dotarłem do
                       czegoś, czego terapeuta ze mną nie wydobył.
                     </p>
                     <p className="font-bold not-italic text-deep-charcoal">
@@ -637,7 +637,7 @@ const HomeTest = () => {
       ═══════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-32 bg-deep-charcoal text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 Nie każdy jest gotowy.{" "}
@@ -712,7 +712,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 8: AUTORYTET - Twarde fakty
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xl text-deep-charcoal/60 mb-8">
@@ -753,7 +753,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 9: GWARANCJA
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-24 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-zenith-gold/5">
+      <section className="py-20 bg-gradient-to-br from-neural-blue/5 via-luminous-white to-zenith-gold/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Shield className="h-12 w-12 text-neural-blue mx-auto mb-6" />
@@ -763,7 +763,7 @@ const HomeTest = () => {
             <p className="text-xl text-deep-charcoal/80 leading-relaxed mb-6">
               Jeśli po pierwszych 2&nbsp;tygodniach pracy razem nie poczujesz, że
               ta rozmowa jest fundamentalnie inna niż cokolwiek, co próbowałeś
-              do tej pory - powiemy sobie „do&nbsp;widzenia" i&nbsp;nie zapłacisz
+              do tej pory — powiemy sobie „do&nbsp;widzenia" i&nbsp;nie zapłacisz
               ani złotówki więcej.
             </p>
             <p className="text-lg text-deep-charcoal/60">
@@ -785,7 +785,7 @@ const HomeTest = () => {
               Mam miejsce dla maksymalnie{" "}
               <span className="text-zenith-gold">5 osób</span> jednocześnie.
             </h2>
-            <p className="text-xl text-white/80 mb-4">
+            <p className="text-xl text-dim mb-4">
               Nie dlatego, że taki mam marketing. Dlatego, że taka jest natura
               tej pracy.
             </p>
@@ -796,10 +796,10 @@ const HomeTest = () => {
 
             <div className="bg-zenith-gold/10 rounded-2xl p-8 border border-zenith-gold/30 mb-12 max-w-xl mx-auto">
               <p className="text-6xl font-bold text-zenith-gold mb-2">5</p>
-              <p className="text-white/80 text-lg">miejsc dostępnych</p>
+              <p className="text-dim text-lg">miejsc dostępnych</p>
             </div>
 
-            <p className="text-xl text-white/80 mb-4">
+            <p className="text-xl text-dim mb-4">
               Jeśli to, co przeczytałeś, wywołało w&nbsp;Tobie jakiekolwiek
               poruszenie - to jest dobry znak.
             </p>
@@ -816,7 +816,7 @@ const HomeTest = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-neural-blue via-zenith-gold to-neural-blue rounded-2xl blur-xl opacity-50 animate-pulse" />
               <Link to="/discovery">
                 <CTAButton
-                  variant="premium"
+                  variant="primary"
                   size="xl"
                   className="relative shadow-2xl"
                 >
@@ -832,7 +832,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 11: TRANSITION - Separator
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-deep-charcoal mb-6">
@@ -907,7 +907,7 @@ const HomeTest = () => {
                   </div>
                   <p className="text-lg text-deep-charcoal/80 leading-relaxed">
                     Firewall dla Twojego umysłu. Presja przestaje paraliżować -
-                    zaczyna skupiać. Krytyka przestaje ranić - zaczyna informować.
+                    zaczyna skupiać. Krytyka przestaje ranić — zaczyna informować.
                     Dla tych, którzy w&nbsp;stresie dolewają benzyny do ognia
                     własnych myśli.
                   </p>
@@ -928,7 +928,7 @@ const HomeTest = () => {
                   </div>
                   <p className="text-lg text-deep-charcoal/80 leading-relaxed">
                     Medytacja, ale nie ta, w&nbsp;której walczysz z&nbsp;myślami
-                    przed pustą ścianą. Ta, w&nbsp;której Łukasz - informatyk
+                    przed pustą ścianą. Ta, w&nbsp;której Łukasz — informatyk
                     z&nbsp;ADHD - po jednej rozmowie o&nbsp;samochodach
                     doświadczył totalnej pustki umysłu. Przejmujesz kontrolę nad
                     kokpitem.
@@ -951,7 +951,7 @@ const HomeTest = () => {
                   <p className="text-lg text-deep-charcoal/80 leading-relaxed">
                     Dla mężczyzn, którzy grali według cudzych reguł w&nbsp;grę,
                     której nie chcą wygrywać. Reinstalacja systemu tożsamości.
-                    Siła przestaje być maską - staje się przezroczystą obecnością.
+                    Siła przestaje być maską — staje się przezroczystą obecnością.
                     Jak diament.
                   </p>
                 </CardContent>
@@ -961,7 +961,7 @@ const HomeTest = () => {
             <div className="text-center mb-8">
               <p className="text-lg text-deep-charcoal/60 max-w-2xl mx-auto">
                 Każda Aplikacja Mentalna daje Ci dostęp do społeczności
-                Lifehackerów - cotygodniowe medytacje prowadzone (wtorki, 6:30),
+                Lifehackerów — cotygodniowe medytacje prowadzone (wtorki, 6:30),
                 codzienne sesje coachingowe o&nbsp;12:34, i&nbsp;ludzie, którzy
                 myślą jak Ty.
               </p>
@@ -982,7 +982,7 @@ const HomeTest = () => {
       {/* ═══════════════════════════════════════════════════════════
           SECTION 13: CLOSING
       ═══════════════════════════════════════════════════════════ */}
-      <section className="py-20 md:py-24 bg-luminous-white">
+      <section className="py-20 bg-luminous-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="border-t-2 border-neural-blue/20 pt-12">

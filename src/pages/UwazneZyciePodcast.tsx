@@ -60,7 +60,7 @@ const UwazneZyciePodcast = () => {
               Sesje live
             </h2>
             <p className="text-foreground mb-6">
-              Dołącz do cotygodniowej sesji medytacji na żywo - to wyjątkowa
+              Dołącz do cotygodniowej sesji medytacji na żywo — to wyjątkowa
               okazja, by praktykować uważność w grupie podobnie myślących
               profesjonalistów. Sesje odbywają się każdy wtorek o 6:30 rano –
               idealny moment na reset na resztę tygodnia, po ugaszeniu

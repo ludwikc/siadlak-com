@@ -53,7 +53,7 @@ const LifeHackingPodcast = () => {
     },
     {
       id: "3",
-      title: "Jak zamienić wiedzę w działanie - protokół implementacji",
+      title: "Jak zamienić wiedzę w działanie — protokół implementacji",
       description:
         'Największym wyzwaniem nie jest zdobywanie wiedzy, ale jej wdrażanie. W tym odcinku przedstawiam sprawdzony protokół, który pomaga przejść od "wiem jak" do "robię to" w zaledwie 72 godziny.',
       date: "14 kwietnia 2025",
@@ -106,7 +106,7 @@ const LifeHackingPodcast = () => {
       ]} />
       {(() => { const t = getTopicalConfig("/podcast/life-hacking"); return t ? <TopicalMeta {...t} /> : null; })()}
       {/* Hero Section */}
-      <section className="py-20 md:py-24 bg-void-glow text-white">
+      <section className="py-20 bg-void-glow text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -127,14 +127,14 @@ const LifeHackingPodcast = () => {
           </h2>
           <p className="text-lg text-dim leading-relaxed">
             Life Hacking Podcast to podcast o praktycznych strategiach
-            produktywno&#347;ci i optymalizacji &#380;ycia, prowadzony przez
-            Ludwika C. Siadlaka &#8212; coacha z 19-letnim do&#347;wiadczeniem,
-            Certyfikowanego Trenera Microsoft i tw&#243;rc&#281; Aplikacji
-            Mentalnych. Ka&#380;dy odcinek skupia si&#281; na jednym
-            implementowalnym narz&#281;dziu. Nowe odcinki co czwartek.
+            produktywności i optymalizacji życia, prowadzony przez
+            Ludwika C. Siadlaka — coacha z 19-letnim doświadczeniem,
+            Certyfikowanego Trenera Microsoft i twórcę Aplikacji
+            Mentalnych. Każdy odcinek skupia się na jednym
+            implementowalnym narzędziu. Nowe odcinki co czwartek.
           </p>
           <p className="text-xs text-dim mt-3">
-            Aktualizacja: <time dateTime="2026-04-14">kwiecie&#324; 2026</time>
+            Aktualizacja: <time dateTime="2026-04-14">kwiecień 2026</time>
           </p>
         </div>
       </section>
@@ -143,8 +143,8 @@ const LifeHackingPodcast = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-on-light mb-6">
-              Je&#347;li jeste&#347; freelancerem, przedsiębiorcą, prawnikiem, politykiem
-              czy płatnym zabójcą - ten podcast jest dla CIebie.
+              Jeśli jesteś freelancerem, przedsiębiorcą, prawnikiem, politykiem
+              czy płatnym zabójcą — ten podcast jest dla CIebie.
             </p>
             <p className="text-lg text-on-light-dim mb-6">
               Docenisz konkretne, oparte na doświadczeniu strategie zamiast
@@ -238,7 +238,7 @@ const LifeHackingPodcast = () => {
       <section className="py-20 bg-void">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
-            Najcz&#281;&#347;ciej zadawane pytania
+            Najczęściej zadawane pytania
           </h2>
           <div className="space-y-4">
             {podcastFaqs.map((faq, i) => (

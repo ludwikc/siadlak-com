@@ -31,7 +31,7 @@ const wywiadyFaqs = [
 const interviews = [
   {
     id: "MersV7TtoOU",
-    title: "Produktywność w copywritingu - jak wziąć się do pracy jako freelancer?",
+    title: "Produktywność w copywritingu — jak wziąć się do pracy jako freelancer?",
     host: "Daniel Bartosiewicz (Content i Automatyzacja)",
     hostUrl: "https://www.youtube.com/@daniel_bartosiewicz",
     date: "2025-04-10",
@@ -48,7 +48,7 @@ const interviews = [
     date: "2024-06-11",
     dateLabel: "11 czerwca 2024",
     description:
-      "Dlaczego motywacja to pułapka - i co faktycznie działa zamiast niej. Rozmowa o prokrastynacji, systemach produktywności i różnicy między \u2018chcieć\u2019 a \u2018robić\u2019. Dla trenerów, coachów i osób pracujących z ludźmi.",
+      "Dlaczego motywacja to pułapka — i co faktycznie działa zamiast niej. Rozmowa o prokrastynacji, systemach produktywności i różnicy między \u2018chcieć\u2019 a \u2018robić\u2019. Dla trenerów, coachów i osób pracujących z ludźmi.",
     topics: ["produktywność", "prokrastynacja", "motywacja", "systemy"],
   },
   {
@@ -119,7 +119,7 @@ export default function Wywiady() {
     "@type": "ItemList",
     name: "Wywiady z Ludwikiem C. Siadlakiem",
     description:
-      "Wywiady i rozmowy z Ludwikiem C. Siadlakiem - coachem produktywności i uważności, twórcą Aplikacji Mentalnych i metody Diamentowego Umysłu.",
+      "Wywiady i rozmowy z Ludwikiem C. Siadlakiem — coachem produktywności i uważności, twórcą Aplikacji Mentalnych i metody Diamentowego Umysłu.",
     numberOfItems: interviews.length,
     itemListElement: interviews.map((v, i) => ({
       "@type": "ListItem",
@@ -148,7 +148,7 @@ export default function Wywiady() {
       />
 
       {/* HERO */}
-      <section className="py-20 md:py-24 bg-void-glow relative overflow-hidden">
+      <section className="py-20 bg-void-glow relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto">
             <nav aria-label="breadcrumb" className="mb-8">
@@ -180,19 +180,19 @@ export default function Wywiady() {
       <section className="py-10 bg-void">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
-            Kim jest Ludwik C. Siadlak jako go&#347;&#263; wywiad&#243;w?
+            Kim jest Ludwik C. Siadlak jako gość wywiadów?
           </h2>
           <p className="text-lg text-dim leading-relaxed">
-            Coach produktywno&#347;ci i uwa&#380;no&#347;ci z 19-letnim do&#347;wiadczeniem, Certyfikowany Trener
-            Microsoft, absolwent Oxford University. Tw&#243;rca Aplikacji Mentalnych i metody Diamentowego Umys&#322;u.
-            Zapraszany przez podcast&#243;w i kana&#322;y YouTube w obszarze produktywno&#347;ci, life hackingu i
-            przedsi&#281;biorczo&#347;ci od 2018 roku.
+            Coach produktywności i uważności z 19-letnim doświadczeniem, Certyfikowany Trener
+            Microsoft, absolwent Oxford University. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu.
+            Zapraszany przez podcastów i kanały YouTube w obszarze produktywności, life hackingu i
+            przedsiębiorczości od 2018 roku.
           </p>
         </div>
       </section>
 
       {/* INTERVIEWS */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-16">
             {interviews.map((interview) => (
@@ -245,7 +245,7 @@ export default function Wywiady() {
       <section className="py-20 bg-void">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-on-dark mb-10 text-center">
-            Najcz&#281;&#347;ciej zadawane pytania
+            Najczęściej zadawane pytania
           </h2>
           <div className="space-y-4">
             {wywiadyFaqs.map((faq, i) => (
@@ -262,7 +262,7 @@ export default function Wywiady() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-20 bg-void-glow">
+      <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="font-heading text-xl md:text-2xl font-bold text-on-dark mb-4">
             Chcesz porozmawiać z Ludwikiem?

@@ -9,7 +9,7 @@ const Contact = () => {
     <Layout>
       <SEO {...getSEOConfig("/contact")} />
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-void-glow text-white overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-void-glow text-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-6 px-4 py-2 bg-white/10 rounded-full border border-white/20">
@@ -27,7 +27,7 @@ const Contact = () => {
               </a>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-white/90 leading-relaxed max-w-2xl mx-auto">
-            Żadnych formularzy. Po prostu napisz. Jeśli chcesz porozmawiać 1:1, "synchronicznie" - umów się na Sesję Discovery.
+            Żadnych formularzy. Po prostu napisz. Jeśli chcesz porozmawiać 1:1, "synchronicznie" — umów się na Sesję Discovery.
             </p>
           </div>
         </div>
@@ -36,13 +36,13 @@ const Contact = () => {
       {/* Contact Options Section */}
       <section className="py-20 bg-diamond">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Social Media
               </h2>
               <p className="text-lg text-dim">
-                Najczęściej jestem na Discordzie SIADLAK.VIP - tam spotkasz mnie cały czas. Ale jeśli wolisz inne appki - jestem też na: 
+                Najczęściej jestem na Discordzie SIADLAK.VIP — tam spotkasz mnie cały czas. Ale jeśli wolisz inne appki — jestem też na: 
               </p>
             </div>
 
@@ -96,8 +96,7 @@ const Contact = () => {
                     onClick={() =>
                       window.open("https://instagram.com/ludwikc", "_blank")
                     }
-                    variant="special"
-                    className="w-full py-6"
+                    className="w-full bg-brand-gradient hover:-translate-y-px hover:shadow-lg text-white font-semibold py-6 rounded transition-all"
                   >
                     Napisz na DM
                   </Button>

@@ -32,14 +32,14 @@ const availability = {
 
 /* ── design tokens (inline, page-scoped) ────────────────────────── */
 const t = {
-  bg:      "#0a0a0b",
-  surface: "#111113",
-  border:  "#27272a",
-  text:    "#fafafa",
-  muted:   "#a1a1aa",
-  accent:  "#3b82f6",
-  green:   "#22c55e",
-  red:     "#f87171",
+  bg:      "hsl(240 5% 4%)",
+  surface: "hsl(240 6% 7%)",
+  border:  "hsl(240 4% 16%)",
+  text:    "hsl(0 0% 98%)",
+  muted:   "hsl(240 5% 65%)",
+  accent:  "hsl(217 91% 60%)",
+  green:   "hsl(142 71% 45%)",
+  red:     "hsl(0 91% 71%)",
   mono:    "'JetBrains Mono', monospace",
   sans:    "'Inter', system-ui, sans-serif",
 } as const;
@@ -221,8 +221,7 @@ const CallLink = ({ className = "" }: { className?: string }) => (
     className={`text-sm underline-offset-4 hover:underline ${className}`}
     style={{ color: t.muted }}
   >
-    or book a 20-min call →
-  </a>
+    or book a 20-min call</a>
 );
 
 /* Slim CTA bar that slides in after the hero and hides near the final CTA. */
@@ -418,8 +417,8 @@ export default function MCT() {
         </section>
 
         {/* ── PROBLEM (agitate) ────────────────────────────────── */}
-        <section className="py-20 md:py-24">
-          <div className="mx-auto max-w-5xl px-6">
+        <section className="py-20">
+          <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// the problem"
               title="Most Microsoft training is forgotten by Monday."
@@ -446,7 +445,7 @@ export default function MCT() {
         </section>
 
         {/* ── WHAT YOUR TEAM GETS ──────────────────────────────── */}
-        <section className="py-20 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// what your team gets"
@@ -478,7 +477,7 @@ export default function MCT() {
         </section>
 
         {/* ── WHY ME ───────────────────────────────────────────── */}
-        <section className="py-20 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// why me"
@@ -525,7 +524,7 @@ export default function MCT() {
                         {["SQL 2000","2005","2008","2012","2014","Azure SQL","Fabric"].map((v, i, a) => (
                           <span key={v} className="flex items-center gap-1">
                             <span className="rounded px-1.5 py-0.5" style={{ background: `${t.accent}15`, border: `1px solid ${t.accent}25` }}>{v}</span>
-                            {i < a.length - 1 && <span style={{ color: t.border }}>→</span>}
+                            {i < a.length - 1 && <span style={{ color: t.border }}></span>}
                           </span>
                         ))}
                       </div>
@@ -566,7 +565,7 @@ export default function MCT() {
         </section>
 
         {/* ── TRUSTED BY (full wall) ───────────────────────────── */}
-        <section className="py-20 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// trusted by"
@@ -612,7 +611,7 @@ export default function MCT() {
         </section>
 
         {/* ── HOW WE WORK ──────────────────────────────────────── */}
-        <section className="py-20 md:py-24" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-20" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-6xl px-6">
             <SectionHead
               eyebrow="// how we work together"
@@ -637,7 +636,7 @@ export default function MCT() {
         </section>
 
         {/* ── FINAL CTA ────────────────────────────────────────── */}
-        <section className="py-20 md:py-28" style={{ borderTop: `1px solid ${t.border}` }}>
+        <section className="py-24 md:py-32" style={{ borderTop: `1px solid ${t.border}` }}>
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: t.mono, color: t.accent }}>// let's talk</p>
 
@@ -664,8 +663,7 @@ export default function MCT() {
             <div className="mb-8 flex flex-col items-center justify-center gap-4">
               <PrimaryCTA label="Get your team's training plan" className="w-full sm:w-auto" />
               <a href={CALL_URL} target="_blank" rel="noopener noreferrer" className="text-sm underline-offset-4 hover:underline" style={{ color: t.muted }}>
-                Prefer to skip ahead? Book a 20-min scope call →
-              </a>
+                Prefer to skip ahead? Book a 20-min scope call</a>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">

@@ -73,7 +73,7 @@ const UwazneZycie = () => {
 
       {/* HERO SECTION - Deep Ocean Premium Theme */}
       <section
-        className="relative py-20 sm:py-24 md:py-40 overflow-hidden"
+        className="relative py-16 sm:py-24 md:py-40 overflow-hidden"
         style={{
           background:
             "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
@@ -85,7 +85,7 @@ const UwazneZycie = () => {
         <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[radial-gradient(circle,rgba(251,191,36,0.04),transparent_70%)] blur-2xl"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Event badge */}
             <div className="flex justify-center mb-8 md:mb-10 animate-fade-in">
               <div
@@ -245,8 +245,8 @@ const UwazneZycie = () => {
       </section>
 
       {/* DEFINICJA + ŚWIEŻOŚĆ */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-muted/30 to-background">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+        <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-xs text-muted-foreground mb-6">
             Ostatnia aktualizacja: <time dateTime="2026-05-05">5 maja 2026</time>
           </p>
@@ -272,8 +272,8 @@ const UwazneZycie = () => {
       </section>
 
       {/* GENEZA PROGRAMU */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4 max-w-3xl">
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Skąd się wziął ten program (i&nbsp;dlaczego nie powstał za biurkiem)
           </h2>
@@ -306,7 +306,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* OPENING SECTION - Hook */}
-      <section className="py-20 md:py-20 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -369,7 +369,7 @@ const UwazneZycie = () => {
               >
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl whitespace-normal h-auto"
+                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl whitespace-normal h-auto"
                   style={{
                     background:
                       "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -386,9 +386,9 @@ const UwazneZycie = () => {
       </section>
 
       {/* TESTIMONIAL SECTION - Placeholder quotes */}
-      <section className="py-20 md:py-24 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
                 Co mówią ci, którzy już praktykują
@@ -423,7 +423,7 @@ const UwazneZycie = () => {
 
       {/* CHECKLIST SECTION - Pain Points */}
       <section
-        className="py-20 md:py-24 relative overflow-hidden"
+        className="py-20 relative overflow-hidden"
         style={{
           background: "linear-gradient(180deg, hsl(0, 15%, 97%) 0%, hsl(0, 10%, 95%) 50%, hsl(0, 15%, 97%) 100%)",
         }}
@@ -432,7 +432,7 @@ const UwazneZycie = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(185,28,28,0.04),transparent_50%)]"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
                 CZY TO TOBIE?
@@ -538,9 +538,9 @@ const UwazneZycie = () => {
       </section>
 
       {/* CO WYNIESIESZ Z PROGRAMU - Full Curriculum */}
-      <section className="py-20 md:py-24 bg-gradient-to-b from-background via-muted/20 to-background">
+      <section className="py-20 bg-gradient-to-b from-background via-muted/20 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12 md:mb-16">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500/20 to-cyan-500/20 px-5 py-2 rounded-full mb-6">
@@ -588,7 +588,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         ARCHITEKTURA UWAGI
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Odzyskaj Ster</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Odzyskaj Ster</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 1 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -626,7 +626,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         DEAUTOMATYZACJA
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Wyłącz Automat, Włącz Świadomość</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Wyłącz Automat, Włącz Świadomość</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 2 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -664,7 +664,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         DYSTANS STRATEGICZNY
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Uwolnij Się od Tyranii Myśli</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Uwolnij Się od Tyranii Myśli</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 3 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -702,7 +702,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         NAWIGACJA EMOCJONALNA
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Nawiguj Wśród Burzy</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Nawiguj Wśród Burzy</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 4 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -740,7 +740,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         KOMPAS WARTOŚCI
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Płyń Tam, Gdzie Chcesz Dotrzeć</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Płyń Tam, Gdzie Chcesz Dotrzeć</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 5 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -778,7 +778,7 @@ const UwazneZycie = () => {
                       <h3 className="text-xl md:text-2xl font-bold text-white">
                         OPTYMALIZACJA ZASOBÓW
                       </h3>
-                      <p className="text-white/80 italic text-sm md:text-base mt-1">Zarządzaj Energią, Nie Czasem</p>
+                      <p className="text-dim italic text-sm md:text-base mt-1">Zarządzaj Energią, Nie Czasem</p>
                       <p className="text-white/60 text-xs mt-1">Moduł 6 · 1 tydzień · 4 lekcje + wyzwanie</p>
                     </div>
                   </div>
@@ -808,7 +808,7 @@ const UwazneZycie = () => {
               >
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:scale-105 border-0 shadow-xl whitespace-normal h-auto"
+                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl whitespace-normal h-auto"
                   style={{
                     background:
                       "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
@@ -826,7 +826,7 @@ const UwazneZycie = () => {
 
       {/* PRICING SECTION - Premium Design */}
       <section
-        className="py-20 md:py-28 relative overflow-hidden"
+        className="py-24 md:py-32 relative overflow-hidden"
         style={{
           background: "linear-gradient(165deg, hsl(210, 50%, 8%) 0%, hsl(200, 45%, 12%) 50%, hsl(190, 40%, 16%) 100%)",
         }}
@@ -929,7 +929,7 @@ const UwazneZycie = () => {
                 >
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:scale-105 border-0 shadow-2xl whitespace-normal h-auto"
+                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-2xl whitespace-normal h-auto"
                     style={{
                       background: "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
                       color: "white",
@@ -999,7 +999,7 @@ const UwazneZycie = () => {
       <LifehackerzySection />
 
       {/* COMPREHENSIVE SUMMARY SECTION */}
-      <section id="podsumowanie" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <section id="podsumowanie" className="py-24 md:py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
@@ -1176,7 +1176,7 @@ const UwazneZycie = () => {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto text-lg px-12 py-6 group transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto text-lg px-12 py-6 group transition-all duration-300 hover:-translate-y-px"
                 style={{
                   background: "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
                   color: "white",
@@ -1203,7 +1203,7 @@ const UwazneZycie = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-20" style={{ background: "linear-gradient(180deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 100%)" }}>
+      <section className="py-20" style={{ background: "linear-gradient(180deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 100%)" }}>
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
             Najczęściej zadawane pytania

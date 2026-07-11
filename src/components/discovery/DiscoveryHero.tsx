@@ -1,11 +1,10 @@
 import { Flame, Users, Star } from "@/lib/icons";
-import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryHero() {
   return (
-    <section className="py-20 md:py-24 bg-void-glow relative overflow-hidden">
+    <section className="py-20 bg-void-glow relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-6 sm:mb-8">
             <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-4 sm:px-6 py-2 sm:py-3">
@@ -26,7 +25,7 @@ export default function DiscoveryHero() {
 
           <p className="text-lg sm:text-xl md:text-2xl font-medium mb-6 sm:mb-8 text-text-dim leading-relaxed text-center max-w-4xl mx-auto">
             W ciągu pół godziny sprawdzimy razem, pod jakimi warstwami sukna
-            jest ukryty - i czy jestem właściwą osobą, żeby pomóc Ci je zdjąć.
+            jest ukryty — i czy jestem właściwą osobą, żeby pomóc Ci je zdjąć.
           </p>
 
           {/* Social Proof */}
@@ -52,22 +51,25 @@ export default function DiscoveryHero() {
 
           {/* CTAs */}
           <div className="flex flex-col items-center gap-4 mb-6">
-            <CTAButton
-              variant="primary"
+            <button
+              className="inline-flex items-center justify-center px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm"
+              style={{
+                background:
+                  "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
+                boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
+              }}
               onClick={() => {
                 const el = document.querySelector("#formularz");
                 el?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Sprawdź dostępność
-            </CTAButton>
+              Sprawdź dostępność</button>
 
             <a
               href="#nie"
               className="text-sm text-text-dim hover:text-electric transition-colors underline"
             >
-              Dla kogo to NIE jest
-            </a>
+              Dla kogo to NIE jest</a>
           </div>
         </div>
       </div>

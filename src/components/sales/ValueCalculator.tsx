@@ -9,7 +9,7 @@ const ValueCalculator = () => {
     { name: "34 Wewnętrzne Protipy na temat produktywności", value: "bezcenne", total: 1000 },
     { name: "12 Sesji Live Q&A", value: "wartość 15 000 zł", total: 15000 },
     { name: "Dostęp w wersji anglojęzycznej", value: "ok. 4 000 zł", total: 4000 },
-    { name: "Społeczność Hakerów - dożywotni dostęp", value: "bezcenne", total: 3000 }
+    { name: "Społeczność Hakerów — dożywotni dostęp", value: "bezcenne", total: 3000 }
   ];
 
   const totalValue = bonuses.reduce((sum, bonus) => sum + bonus.total, 0);

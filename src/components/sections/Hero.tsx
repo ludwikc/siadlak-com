@@ -1,27 +1,35 @@
-import { useLocation } from "react-router-dom";
+import type { ReactNode } from "react";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
-import { CTAButton } from "@/design-system/components/cta-button";
 
 interface HeroProps {
-  title: string;
-  subtitle: string | React.ReactNode;
-  ctaText: string;
-  ctaLink: string;
+  title: string | ReactNode;
+  subtitle?: string | ReactNode;
+  ctaText?: string;
+  ctaLink?: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   imageDescription?: string;
   backgroundImage?: string;
   heroImage?: string;
   fullHeight?: boolean;
-  /** Text alignment */
   align?: "left" | "center" | "right";
+  children?: ReactNode;
 }
 
-/**
- * Unified Hero — one component, one h1 ramp, one background treatment.
- * Uses Diamond Hybrid void-glow surface.
- */
+const textAlignClasses = {
+  left: "text-left",
+  center: "text-center",
+  right: "text-right",
+} as const;
+
+const justifyClasses = {
+  left: "justify-start",
+  center: "justify-center",
+  right: "justify-end",
+} as const;
+
 export default function Hero({
   title,
   subtitle,
@@ -33,17 +41,16 @@ export default function Hero({
   backgroundImage,
   heroImage,
   fullHeight = false,
-  align,
+  align = "left",
+  children,
 }: HeroProps) {
-  const location = useLocation();
   const isMobile = useIsMobile();
 
-  // Default alignment: center for home, left elsewhere
-  const resolvedAlign = align ?? (location.pathname === "/" ? "center" : "left");
-  const alignText =
-    resolvedAlign === "center" ? "text-center" : resolvedAlign === "right" ? "text-right" : "text-left";
-  const alignFlex =
-    resolvedAlign === "center" ? "justify-center" : resolvedAlign === "right" ? "justify-end" : "justify-start";
+  const subtitleWidthClasses = {
+    left: "max-w-lg",
+    center: "max-w-xl mx-auto",
+    right: "max-w-lg ml-auto",
+  } as const;
 
   return (
     <section
@@ -51,6 +58,7 @@ export default function Hero({
       aria-labelledby="hero-title"
       role="banner"
     >
+      {/* Background Image (if provided) */}
       {backgroundImage && !heroImage && (
         <div className="absolute inset-0 z-0">
           <OptimizedImage
@@ -67,58 +75,77 @@ export default function Hero({
       )}
 
       <div className={`container mx-auto px-4 relative z-10 ${fullHeight ? "h-full" : ""}`}>
-        <div className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${resolvedAlign === "right" ? "justify-end" : ""}`}>
+        <div className={`flex ${isMobile ? "flex-col" : "flex-row"} items-center ${fullHeight ? "h-full" : ""} ${align === "right" ? "justify-end" : ""}`}>
+          {/* Text content */}
           <div
-            className={`${isMobile ? "w-full text-center order-1 mb-8" : heroImage ? "w-2/3 pr-8" : "w-full"} ${isMobile ? "text-center" : alignText}`}
+            className={`
+            ${isMobile ? "w-full text-center order-1 mb-8" : align === "center" ? "w-full" : "w-2/3 pr-8"}
+            ${fullHeight ? "flex flex-col justify-center" : ""}
+            ${isMobile ? "" : textAlignClasses[align]}
+          `}
           >
             <h1
               id="hero-title"
-              className={`mb-6 font-heading font-bold !leading-tight animate-fade-in text-white text-4xl md:text-6xl lg:text-7xl ${isMobile ? "text-center" : alignText}`}
+              className="mb-6 font-heading font-bold !leading-tight animate-fade-in text-white text-4xl md:text-6xl lg:text-7xl"
             >
               {title}
             </h1>
 
-            <p
-              className={`mb-10 animate-fade-in text-dim text-xl md:text-2xl max-w-lg ${isMobile ? "text-center mx-auto" : alignText} ${resolvedAlign === "center" ? "mx-auto" : ""} ${resolvedAlign === "right" ? "ml-auto" : ""}`}
-              style={{ animationDelay: "0.2s" }}
-            >
-              {subtitle}
-            </p>
-
-            <div
-              className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in ${isMobile ? "justify-center" : alignFlex}`}
-              style={{ animationDelay: "0.4s" }}
-            >
-              <CTAButton
-                variant="primary"
-                href={ctaLink}
-                className={isMobile ? "w-full" : ""}
-                aria-label={`${ctaText} - primary action`}
+            {subtitle && (
+              <p
+                className={`mb-10 animate-fade-in text-dim text-xl md:text-2xl ${isMobile ? "" : subtitleWidthClasses[align]}`}
+                style={{ animationDelay: "0.2s" }}
               >
-                {ctaText}
-              </CTAButton>
+                {subtitle}
+              </p>
+            )}
 
-              {secondaryCtaText && secondaryCtaLink && (
+            {ctaText && ctaLink && (
+              <div
+                className={`flex ${isMobile ? "flex-col" : "flex-row"} gap-4 animate-fade-in ${isMobile ? "" : justifyClasses[align]}`}
+                style={{ animationDelay: "0.4s" }}
+              >
                 <CTAButton
-                  variant="secondary"
-                  onDark
-                  href={secondaryCtaLink}
-                  className={isMobile ? "w-full" : ""}
-                  showArrow={false}
-                  aria-label={`${secondaryCtaText} - secondary action`}
+                  to={ctaLink}
+                  variant="primary"
+                  aria-label={`${ctaText} - primary action`}
+                  className={isMobile ? "flex w-full" : ""}
                 >
-                  {secondaryCtaText}
+                  {ctaText}
                 </CTAButton>
-              )}
-            </div>
+
+                {secondaryCtaText && secondaryCtaLink && (
+                  <CTAButton
+                    to={secondaryCtaLink}
+                    variant="secondary"
+                    showArrow={false}
+                    aria-label={`${secondaryCtaText} - secondary action`}
+                    className={`border-white/20 text-white ${isMobile ? "flex w-full" : ""}`}
+                  >
+                    {secondaryCtaText}
+                  </CTAButton>
+                )}
+              </div>
+            )}
+
+            {children}
           </div>
 
+          {/* Right column - Image (1/3 width on desktop) */}
           {heroImage && (
-            <div className={`${isMobile ? "w-full order-2 mt-4" : "w-1/3 -ml-6"} relative z-0 flex justify-end h-full`}>
+            <div
+              className={`
+              ${isMobile ? "w-full order-2 mt-4" : "w-1/3 -ml-6"}
+              relative z-0 flex justify-end h-full
+            `}
+            >
               <OptimizedImage
                 src={heroImage}
                 alt={imageDescription || "Hero"}
-                className={`${isMobile ? "h-auto max-h-[60vh] w-auto mx-auto" : "h-full max-h-[80vh]"} object-contain object-right`}
+                className={`
+                  ${isMobile ? "h-auto max-h-[60vh] w-auto mx-auto" : "h-full max-h-[80vh]"}
+                  object-contain object-right
+                `}
                 width={800}
                 height={1000}
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -131,4 +158,3 @@ export default function Hero({
     </section>
   );
 }
-
