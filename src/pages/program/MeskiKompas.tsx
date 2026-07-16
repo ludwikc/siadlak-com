@@ -8,7 +8,6 @@ import { CTAButton } from "@/design-system/components/cta-button";
 import { GlassCard } from "@/design-system/components/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
 import { AlertTriangle } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
@@ -130,20 +129,19 @@ export default function MeskiKompas() {
               Edycja 1: październik 2025 | Tylko 10 miejsc | Wszystkie miejsca wyprzedane
               (edycja pilotażowa)
             </div>
-            <Link to="https://buy.siadlak.com/checkout/program-meskosc">
-              <CTAButton
-                variant="primary"
-                size="xl"
-                className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                aria-label="Dołącz do listy oczekujących na kolejną edycję"
-                showArrow
-              >
-                <span className="inline sm:hidden">Dołącz do listy oczekujących</span>
-                <span className="hidden sm:inline">
-                  Dołącz do listy oczekujących na kolejną edycję
-                </span>
-              </CTAButton>
-            </Link>
+            <CTAButton
+              href="https://buy.siadlak.com/checkout/program-meskosc"
+              variant="primary"
+              size="xl"
+              className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+              aria-label="Dołącz do listy oczekujących na kolejną edycję"
+              showArrow
+            >
+              <span className="inline sm:hidden">Dołącz do listy oczekujących</span>
+              <span className="hidden sm:inline">
+                Dołącz do listy oczekujących na kolejną edycję
+              </span>
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -2121,9 +2119,14 @@ export default function MeskiKompas() {
                 Zapisując się na Męski Kompas, automatycznie otrzymujesz dostęp
                 do pełnego kursu "7 technik, które natychmiast zwiększą Twoją
                 produktywność" -{" "}
-                <Link to="https://buy.siadlak.com/checkout/7technik">
+                <a
+                  href="https://buy.siadlak.com/checkout/7technik"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-electric transition-colors"
+                >
                   normalnie sprzedawanego za 497 zł
-                </Link>
+                </a>
                 .
               </p>
             </div>
@@ -3251,23 +3254,22 @@ export default function MeskiKompas() {
 
             {/* Primary CTA */}
             <div className="text-center mb-8">
-              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
-                <CTAButton
-                  variant="primary"
-                  size="xl"
-                  className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                  aria-label="Dołącz do listy oczekujących na kolejną edycję"
-                  showArrow
-                >
-                  <span className="inline sm:hidden">BRAK MIEJSC</span>
-                  <span className="hidden sm:inline lg:hidden">
-                    Dołącz do listy oczekujących na kolejną edycję
-                  </span>
-                  <span className="hidden lg:inline">
-                    Dołącz do listy oczekujących na kolejną edycję
-                  </span>
-                </CTAButton>
-              </Link>
+              <CTAButton
+                href="https://buy.siadlak.com/checkout/program-meskosc"
+                variant="primary"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+                aria-label="Dołącz do listy oczekujących na kolejną edycję"
+                showArrow
+              >
+                <span className="inline sm:hidden">BRAK MIEJSC</span>
+                <span className="hidden sm:inline lg:hidden">
+                  Dołącz do listy oczekujących na kolejną edycję
+                </span>
+                <span className="hidden lg:inline">
+                  Dołącz do listy oczekujących na kolejną edycję
+                </span>
+              </CTAButton>
             </div>
 
             {/* P.S. Sections */}
@@ -3323,20 +3325,19 @@ export default function MeskiKompas() {
 
             {/* Secondary CTA */}
             <div className="text-center mt-8">
-              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
-                <CTAButton
-                  variant="primary"
-                  size="xl"
-                  className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                  aria-label="Tak, chcę miejsce w Męskim Kompasie"
-                  showArrow
-                >
-                  <span className="inline sm:hidden">TAK, CHCĘ MIEJSCE</span>
-                  <span className="hidden sm:inline">
-                    TAK, CHCĘ MIEJSCE W MĘSKIM KOMPASIE
-                  </span>
-                </CTAButton>
-              </Link>
+              <CTAButton
+                href="https://buy.siadlak.com/checkout/program-meskosc"
+                variant="primary"
+                size="xl"
+                className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+                aria-label="Tak, chcę miejsce w Męskim Kompasie"
+                showArrow
+              >
+                <span className="inline sm:hidden">TAK, CHCĘ MIEJSCE</span>
+                <span className="hidden sm:inline">
+                  TAK, CHCĘ MIEJSCE W MĘSKIM KOMPASIE
+                </span>
+              </CTAButton>
             </div>
           </div>
         </div>
@@ -3370,7 +3371,11 @@ export default function MeskiKompas() {
                   </p>
                 </div>
               </div>
-              <Link to="https://buy.siadlak.com/checkout/program-meskosc">
+              <a
+                href="https://buy.siadlak.com/checkout/program-meskosc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button
                   className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
                   style={{
@@ -3381,7 +3386,7 @@ export default function MeskiKompas() {
                   <span className="inline sm:hidden">Rezerwuję Miejsce</span>
                   <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych</span>
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

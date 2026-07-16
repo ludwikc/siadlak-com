@@ -233,7 +233,9 @@ export default function SiedemTechnik() {
               </p>
 
               <a
-                href="https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7K8LDgmse4Mm3C7S7M9Yx&lang=pl"
+                href="https://buy.siadlak.com/checkout/7technik"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative inline-block group"
               >
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-depth via-depth to-depth rounded blur-md opacity-60 group-hover:opacity-100 transition duration-300"></div>
