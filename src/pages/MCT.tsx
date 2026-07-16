@@ -17,7 +17,7 @@ import scaniaLogo from "@/assets/logos/scania.svg";
 
 /* ── conversion funnel: page → scoping form → book-a-call ───────── */
 const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScgmwMxhOcy0QyXyXeyjLH4NneRFgJhO3FKyrJNiqNafHfXzA/viewform?usp=publish-editor";
+  "https://docs.google.com/forms/d/e/1FAIpQLScgmwMxhOcy0QyXyXeyjLH4NneRFgJhO3FKyrJNiqNafHfXzA/viewform";
 const CALL_URL = "https://calendar.app.google/HfZb2pjWRUt5tRxV8";
 const EMAIL = "ludwikc@siadlak.email";
 const PHONE_PL = "+48510666531";

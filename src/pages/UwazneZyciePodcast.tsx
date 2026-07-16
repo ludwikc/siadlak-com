@@ -4,6 +4,8 @@ import Layout from '../components/layout/Layout';
 import Hero from '../components/sections/Hero';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
 import NextSessionCountdown from '../components/podcast/NextSessionCountdown';
+import MailerLiteEmbed from '@/components/MailerLiteEmbed';
+import { CTAButton } from '@/design-system/components/cta-button';
 import { Calendar } from 'lucide-react';
 
 const UwazneZyciePodcast = () => {
@@ -69,29 +71,19 @@ const UwazneZyciePodcast = () => {
 
             <NextSessionCountdown />
 
-            <form className="mb-4">
+            <div className="mb-4">
               <h4 className="font-semibold text-foreground mb-3">
                 Zapisz się na powiadomienia o sesjach:
               </h4>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Twój adres email"
-                  className="flex-grow py-2 px-4 rounded-lg sm:rounded-r-none border border-border focus:outline-none focus:ring-2 focus:ring-depth"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-depth hover:bg-depth/80 text-white px-4 py-2 rounded-lg sm:rounded-l-none transition-colors"
-                >
-                  Zapisz się
-                </button>
-              </div>
+              <MailerLiteEmbed
+                dataForm="lFFyEs"
+                hiddenFields={{ source: "podcast-uwazne-zycie" }}
+              />
               <p className="text-sm text-dim mt-2">
                 Otrzymasz przypomnienie na 30 minut przed każdą sesją oraz
                 dostęp do nagrań.
               </p>
-            </form>
+            </div>
 
             <div className="flex justify-center space-x-4">
               <a
@@ -111,6 +103,26 @@ const UwazneZyciePodcast = () => {
                 Dodaj do iCloud/Outlook
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-void">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-on-dark mb-4">
+            Chcesz pójść głębiej niż wtorkowe sesje?
+          </h2>
+          <p className="text-lg text-dim mb-8 max-w-2xl mx-auto">
+            Program Uważne Życie zamyka 3 lata tej praktyki w 6-tygodniową
+            strukturę dla analitycznych umysłów.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <CTAButton variant="primary" to="/program/uwaznosc">
+              Poznaj program Uważne Życie
+            </CTAButton>
+            <CTAButton variant="secondary" to="/discovery" showArrow={false}>
+              Umów Sesję Discovery
+            </CTAButton>
           </div>
         </div>
       </section>
