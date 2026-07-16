@@ -28,6 +28,11 @@ export const redirects: RedirectConfig = {
 
   // Legacy/renamed routes
   "/program/mental-elevator": "/program/lifeos-system-upgrade",
+  "/program/7-technik": "/program",
+  "/program/tech-leadership": "/mentoring",
+
+  // Retired funnels
+  "/wyzwanie": "/newsletter",
 
   // Temporary redirects (can be removed later)
   "/webinar": "/webinar/kod-kapitana",

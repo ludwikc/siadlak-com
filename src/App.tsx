@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   BrowserRouter as Router,
+  Navigate,
   Route,
   Routes,
   useLocation,
@@ -32,7 +33,6 @@ import Contact from "./pages/Contact";
 import Newsletter from "./pages/Newsletter";
 import NotFound from "./pages/NotFound";
 import Program from "./pages/program/Program";
-import CourseDetail from "./pages/CourseDetail";
 import LifeHackingPodcast from "./pages/LifeHackingPodcast";
 import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
 import WebinarExpired from "./pages/webinar/WebinarExpired";
@@ -55,12 +55,10 @@ import Help from "./pages/help/Help";
 import HelpSubpage from "./pages/help/HelpSubpage";
 
 import HakowanieProduktywnosci from "./pages/program/HakowanieProduktywnosci";
-import SiedemTechnik from "./pages/program/SiedemTechnik";
 import TrainTheTrainerAI from "./pages/program/TrainTheTrainerAI";
 import WebinarMeskiKompas from "./pages/webinar/WebinarMeskiKompas";
 import WebinarKodKapitana from "./pages/webinar/WebinarKodKapitana";
 import WebinarDepresja from "./pages/webinar/WebinarDepresja";
-import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
 import Links from "./pages/Links";
 import IG from "./pages/IG";
@@ -152,9 +150,11 @@ function App() {
               <Route path="/program/odpornosc" element={<SilnaGlowa />} />
               <Route path="/program/meskosc" element={<MeskiKompas />} />
               <Route path="/program/uwaznosc" element={<UwazneZycie />} />
-              <Route path="/program/7-technik" element={<SiedemTechnik />} />
               <Route path="/program/ttt-ai" element={<TrainTheTrainerAI />} />
-              <Route path="/program/:courseSlug" element={<CourseDetail />} />
+              <Route
+                path="/program/:courseSlug"
+                element={<Navigate to="/program" replace />}
+              />
 
               <Route path="/oto" element={<OTO />} />
               <Route path="/mentoring" element={<Mentoring />} />
@@ -184,7 +184,6 @@ function App() {
                 element={<WebinarDepresja />}
               />
 
-              <Route path="/wyzwanie" element={<Wyzwanie />} />
               <Route path="/mct" element={<MCT />} />
               <Route
                 path="/stream"
