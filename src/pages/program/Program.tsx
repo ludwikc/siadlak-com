@@ -134,7 +134,7 @@ export default function Program() {
               <p className="text-sm text-dim mb-6">
                 4–6 tygodni · Instalacja na zawsze ·{" "}
                 <Link to="/testimonials" className="text-electric hover:underline">
-                  100+ uczestników · 4.9/5.0
+                  110+ uczestników · 4.9/5.0
                 </Link>
               </p>
 
@@ -514,6 +514,33 @@ export default function Program() {
 
                 <p className="text-sm text-on-light-dim mt-4">30 minut · Bez zobowiązań · Żebyśmy obaj wiedzieli</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9b. TRAIN THE TRAINER: AI — bg-diamond (LIGHT) */}
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <Badge className="mb-6 rounded-sm border border-depth/20 bg-depth/5 text-depth border-0 px-6 py-2 text-sm font-bold">
+              ŚCIEŻKA ZAWODOWA
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-on-light leading-[1.1] tracking-[-0.02em]">
+              Train The Trainer: AI
+            </h2>
+            <p className="text-lg text-on-light-dim mb-8 leading-relaxed">
+              Osobna ścieżka dla geeków-freelancerów AI, którzy chcą zostać
+              certyfikowanymi trenerami. 8 tygodni mentoringu 1:1 — praca na
+              zewnątrz, podczas gdy Life OS to praca wewnątrz.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <CTAButton to="/program/ttt-ai">
+                Poznaj program
+              </CTAButton>
+              <CTAButton variant="secondary" to="/mentoring" showArrow={false}>
+                Porównaj obie ścieżki 1:1
+              </CTAButton>
             </div>
           </div>
         </div>

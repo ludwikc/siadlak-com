@@ -28,9 +28,17 @@ export const redirects: RedirectConfig = {
 
   // Legacy/renamed routes
   "/program/mental-elevator": "/program/lifeos-system-upgrade",
+  "/program/7-technik": "/program",
+  "/program/tech-leadership": "/mentoring",
 
-  // Temporary redirects (can be removed later)
-  "/webinar": "/webinar/kod-kapitana",
+  // Retired funnels
+  "/wyzwanie": "/newsletter",
+  "/webinar/expired": "/discovery",
+
+  // Legacy webinar routes (funnel pages now live under /webinar/<slug>/*)
+  "/webinar/replay": "/webinar/meski-kompas/replay",
+  "/webinar/live": "/webinar/depresja/live",
+  "/thank-you/meski-kompas": "/webinar/meski-kompas/dziekuje",
 };
 
 /**

@@ -45,12 +45,10 @@ const Sitemap = () => {
       category: 'Wydarzenia',
       icon: <Video className="h-5 w-5" />,
       pages: [
-        { name: 'Strona główna wydarzenia', path: '/webinar', description: 'Główna strona webinaru' },
-        { name: 'Wydarzenie: Rejestracja', path: '/webinar/registration', description: 'Zarejestruj się na webinar' },
-        { name: 'Wydarzenie: Poczekalnia', path: '/webinar/lobby', description: 'Poczekaj na rozpoczęcie webinaru' },
-        { name: 'Wydarzenie: Pokój LIVE', path: '/webinar/live', description: 'Webinar na żywo' },
-        { name: 'Wydarzenie: Powtórka', path: '/webinar/replay', description: 'Obejrzyj powtórkę webinaru' },
-        { name: 'Wydarzenie: Wygasłe', path: '/webinar/expired', description: 'Webinar już się zakończył' },
+        { name: 'Najbliższe wydarzenie', path: '/webinar', description: 'Przekierowanie na aktualny webinar' },
+        { name: 'Koniec z Dryfowaniem', path: '/webinar/meski-kompas', description: 'Warsztat dla analitycznych mężczyzn' },
+        { name: 'Kod Kapitana', path: '/webinar/kod-kapitana', description: 'Uważność, która naprawdę działa' },
+        { name: 'Nie musisz tego znosić sam', path: '/webinar/depresja', description: 'Spotkanie online o depresji' },
       ]
     },
     {

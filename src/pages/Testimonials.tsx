@@ -111,7 +111,7 @@ const testimonials: Testimonial[] = [
     theme: 'dark',
     text: 'Chcesz zobaczyć, jak to wygląda na żywo?',
     buttonText: 'Umów bezpłatną rozmowę',
-    link: '/umow-rozmowe',
+    link: '/discovery',
   },
 
   // SEKCJA 2: MILITARY + SUPERLATIVES (5-16)
@@ -396,7 +396,7 @@ const testimonials: Testimonial[] = [
     theme: 'light',
     text: 'Jeszcze nie gotowy? Zacznij od kursu.',
     buttonText: 'Zobacz Aplikacje Mentalne',
-    link: '/mental-software-update',
+    link: '/program',
   },
 
   // SEKCJA 4: EXPLAINS WELL + TEACHING SKILL (31-48)
@@ -558,7 +558,7 @@ const testimonials: Testimonial[] = [
     theme: 'dark',
     text: 'Wciąż czytasz? To dobry znak.',
     buttonText: 'Porozmawiajmy',
-    link: '/umow-rozmowe',
+    link: '/discovery',
   },
 
   // SEKCJA 5: ADAPTABILITY + SHORT PUNCHY + REMAINING (49-70+)
@@ -813,7 +813,7 @@ const testimonials: Testimonial[] = [
     theme: 'light-bordered',
     text: 'Alex Hormozi twierdzi, że ludzie, którzy czytają wszystkie opinie, to najlepsi klienci. Mam nadzieję, że ma rację.',
     buttonText: 'Umów rozmowę',
-    link: '/umow-rozmowe',
+    link: '/discovery',
   },
 
   // SEKCJA 7: REMAINING (79-końca)
@@ -1153,7 +1153,7 @@ const Testimonials = () => {
 
       <header className="testimonials-header">
         <div className="header-inner">
-          <h1>100+ opinii od uczestników z 12 krajów</h1>
+          <h1>100+ opinii od uczestników z 8+ krajów</h1>
           <p className="subheadline">
             Żołnierze US Army, Navy i Marines, inżynierowie z Fortune 500, menedżerowie z NATO,
             przedsiębiorcy z Polski i Norwegii. Nie mówię Ci, że jestem dobry. Niech
@@ -1161,8 +1161,8 @@ const Testimonials = () => {
           </p>
           <p className="testimonials-stats">
             <strong>10 000+</strong> uczestników · <strong>19</strong> lat ·{' '}
-            <strong>12+</strong> krajów ·{' '}
-            <strong>US Department of Defense · EY · PWC · NATO · Microsoft</strong>
+            <strong>8+</strong> krajów ·{' '}
+            <strong>US Department of Defense · NATO · Microsoft</strong>
           </p>
         </div>
       </header>
@@ -1179,7 +1179,7 @@ const Testimonials = () => {
         <footer className="testimonials-footer">
           <p className="footer-text">Dobra, wystarczy. Możesz tak scrollować bez końca.</p>
           <p className="footer-subtext">Albo weźmiesz sprawy w swoje ręce i dołączysz do tego niesamowitego grona:</p>
-          <CTAButton to="/umow-rozmowe" variant="primary">
+          <CTAButton to="/discovery" variant="primary">
             Umów Sesję Discovery
           </CTAButton>
         </footer>

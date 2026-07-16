@@ -574,7 +574,7 @@ const Index = () => {
             {[
               {
                 title: "Produktywność",
-                subtitle: "100+ osób · 4.9/5 · 1 497 PLN",
+                subtitle: "110+ osób · 4.9/5 · 1 497 PLN",
                 desc: "Zamiast zarządzać zadaniami — zarządzasz energią. Jedyna aplikacja mentalna, po której nigdy więcej nie potrzebujesz kolejnego kursu produktywności.",
                 img: programProduktywnosc,
                 link: "/program/produktywnosc",
@@ -668,7 +668,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { value: "19", unit: "lat", label: "doświadczenia jako trener i mentor" },
-              { value: "100+", unit: "", label: "absolwentów programu Produktywność" },
+              { value: "110+", unit: "", label: "absolwentów programu Produktywność" },
               { value: "4.9/5.0", unit: "", label: "średnia ocena programów" },
               { value: "8+", unit: "", label: "krajów, z których pochodzą uczestnicy" },
             ].map((stat, i) => (
@@ -687,7 +687,7 @@ const Index = () => {
               <p>SQL Server, Power BI, Microsoft Copilot. Szkolenia dla Fortune 500 i jednostek wojskowych NATO w kilkunastu krajach.</p>
             </div>
             <div className="bg-surface p-6 rounded-md">
-              <p className="text-white font-bold mb-2">Dyplom IT — Oxford Brookes University</p>
+              <p className="text-white font-bold mb-2">Diploma in Computing — University of Oxford</p>
               <p>Psychologia na SWPS. Założyciel Fundacji Hackerzy.pl, DeepWork.pl i UwazneZycie.pl.</p>
             </div>
             <div className="bg-surface p-6 rounded-md">

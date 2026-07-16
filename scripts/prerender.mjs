@@ -47,7 +47,6 @@ const routes = [
   '/program/odpornosc',
   '/program/meskosc',
   '/program/uwaznosc',
-  '/program/7-technik',
   '/program/ttt-ai',
   '/mentoring',
   '/start',
@@ -57,13 +56,8 @@ const routes = [
   '/webinar/kod-kapitana',
   '/webinar/meski-kompas',
   '/webinar/depresja',
-  '/webinar/expired',
-  '/webinar/replay',
-  '/webinar/live',
   '/help',
   '/thank-you',
-  '/thank-you/meski-kompas',
-  '/wyzwanie',
   '/mct',
   // Add redirect routes from config
   ...redirectRoutes

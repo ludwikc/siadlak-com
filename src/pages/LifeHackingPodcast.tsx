@@ -1,9 +1,8 @@
 import Layout from '../components/layout/Layout';
 import PodcastPlayer from '../components/podcast/PodcastPlayer';
-import PodcastPlatformLinks from '../components/podcast/PodcastPlatformLinks';
 import ValueProposition from '../components/podcast/ValueProposition';
-import PodcastEpisodeList, { PodcastEpisode } from '../components/podcast/PodcastEpisodeList';
-import { ArrowRight } from 'lucide-react';
+import MailerLiteEmbed from '@/components/MailerLiteEmbed';
+import { CTAButton } from '@/design-system/components/cta-button';
 import SEO from '../components/SEO';
 import { getSEOConfig, getTopicalConfig } from '../lib/seo-config';
 import TopicalMeta from '../components/TopicalMeta';
@@ -24,77 +23,17 @@ const podcastFaqs = [
   },
   {
     question: "Gdzie mog\u0119 s\u0142ucha\u0107?",
-    answer: "Na Spotify, Apple Podcasts, Google Podcasts i\u00A0YouTube. Nowe odcinki pojawiaj\u0105 si\u0119 co czwartek \u2014 idealny moment na refleksj\u0119 przed ko\u0144cem tygodnia.",
+    answer: "Na Spotify \u2014 odtwarzacz znajdziesz bezpo\u015Brednio na tej stronie. Nowe odcinki pojawiaj\u0105 si\u0119 co czwartek \u2014 idealny moment na refleksj\u0119 przed ko\u0144cem tygodnia.",
   },
 ];
 
 const LifeHackingPodcast = () => {
-  // Sample episodes data - would be fetched from an API in a real scenario
-  const episodes: PodcastEpisode[] = [
-    {
-      id: "1",
-      title: "Jak stworzyć system produktywności, który faktycznie działa",
-      description:
-        "W tym odcinku omawiam praktyczne podejście do budowy systemu produktywności, który nie tylko działa na papierze, ale faktycznie wspiera Cię w codziennych wyzwaniach. Poznasz konkretne narzędzia i techniki.",
-      date: "28 kwietnia 2025",
-      duration: "38 min",
-      audioUrl: "#",
-      imageUrl: "/lovable-uploads/208a0c75-6c6d-4324-8241-a7de28c2fa3e.png",
-    },
-    {
-      id: "2",
-      title: "Sztuka strategicznej niekompetencji",
-      description:
-        "Czy wiesz, że bycie ekspertem we wszystkim może być Twoją największą słabością? W tym odcinku omawiam, jak strategicznie wybierać obszary, w których warto być przeciętnym, aby ekscelować w tym, co naprawdę ma znaczenie.",
-      date: "21 kwietnia 2025",
-      duration: "42 min",
-      audioUrl: "#",
-      imageUrl: "/lovable-uploads/2c4874da-4f8d-472e-a5ca-ec2c0b34fcd1.png",
-    },
-    {
-      id: "3",
-      title: "Jak zamienić wiedzę w działanie — protokół implementacji",
-      description:
-        'Największym wyzwaniem nie jest zdobywanie wiedzy, ale jej wdrażanie. W tym odcinku przedstawiam sprawdzony protokół, który pomaga przejść od "wiem jak" do "robię to" w zaledwie 72 godziny.',
-      date: "14 kwietnia 2025",
-      duration: "45 min",
-      audioUrl: "#",
-    },
-  ];
-
-  const platforms = [
-    {
-      name: "Spotify",
-      url: "https://spotify.com",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
-    },
-    {
-      name: "Apple Podcasts",
-      url: "https://apple.com/apple-podcasts",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Podcasts_%28iOS%29.svg",
-    },
-    {
-      name: "Google Podcasts",
-      url: "https://podcasts.google.com",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/42/Google_Podcasts_icon.svg",
-    },
-    {
-      name: "YouTube",
-      url: "https://youtube.com",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg",
-    },
-  ];
-
   const valuePropositionItems = [
     "Szukasz konkretnych, weryfikowalnych metod zamiast teoretycznych rozważań",
     "Cenisz efektywność i optymalizację procesów w życiu zawodowym i osobistym",
     "Potrzebujesz sprawdzonych sposobów na zarządzanie energią, nie tylko czasem",
     "Chcesz czerpać z doświadczeń innych wysoko funkcjonujących profesjonalistów",
   ];
-
-  const handlePlayEpisode = (episode: PodcastEpisode) => {
-    console.log("Playing episode:", episode.title);
-  };
 
   return (
     <Layout>
@@ -144,7 +83,7 @@ const LifeHackingPodcast = () => {
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-on-light mb-6">
               Jeśli jesteś freelancerem, przedsiębiorcą, prawnikiem, politykiem
-              czy płatnym zabójcą — ten podcast jest dla CIebie.
+              czy płatnym zabójcą — ten podcast jest dla Ciebie.
             </p>
             <p className="text-lg text-on-light-dim mb-6">
               Docenisz konkretne, oparte na doświadczeniu strategie zamiast
@@ -176,33 +115,14 @@ const LifeHackingPodcast = () => {
           <div id="player" className="max-w-3xl mx-auto">
             <PodcastPlayer
               title="Life Hacking Podcast"
-              embedUrl="https://open.spotify.com/embed/show/example"
+              embedUrl="https://open.spotify.com/embed/show/2WtHOHHGeeRZtsyYszSIlB"
               coverArt="/lovable-uploads/208a0c75-6c6d-4324-8241-a7de28c2fa3e.png"
             />
-
-            <PodcastPlatformLinks platforms={platforms} />
 
             <ValueProposition
               title="Ten podcast jest dla Ciebie, jeśli:"
               items={valuePropositionItems}
             />
-          </div>
-        </div>
-      </section>
-
-      <section id="episodes" className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <PodcastEpisodeList
-              episodes={episodes}
-              onPlayEpisode={handlePlayEpisode}
-            />
-
-            <div className="mt-10 text-center">
-              <button className="inline-flex items-center px-6 py-3 bg-brand-gradient text-white rounded-lg transition-colors">
-                Załaduj więcej odcinków <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -217,20 +137,32 @@ const LifeHackingPodcast = () => {
             powiadomienia o nowych odcinkach i ekskluzywne materiały, które nie
             są publikowane nigdzie indziej.
           </p>
-          <form className="max-w-md mx-auto flex">
-            <input
-              type="email"
-              placeholder="Twój adres email"
-              className="flex-grow py-2 px-4 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-depth"
-              required
+          <div className="max-w-md mx-auto">
+            <MailerLiteEmbed
+              dataForm="lFFyEs"
+              hiddenFields={{ source: "podcast-life-hacking" }}
             />
-            <button
-              type="submit"
-              className="bg-depth hover:bg-depth/80 text-white px-4 py-2 rounded-r-lg transition-colors"
-            >
-              Zapisz się
-            </button>
-          </form>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-void">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-on-dark mb-4">
+            Podcast to dopiero początek
+          </h2>
+          <p className="text-lg text-dim mb-8 max-w-2xl mx-auto">
+            Jeśli chcesz przejść od słuchania do zmiany — zobacz Aplikacje
+            Mentalne albo porozmawiajmy 1:1.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <CTAButton variant="primary" to="/discovery">
+              Umów Sesję Discovery
+            </CTAButton>
+            <CTAButton variant="secondary" to="/program" showArrow={false}>
+              Zobacz programy
+            </CTAButton>
+          </div>
         </div>
       </section>
 

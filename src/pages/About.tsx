@@ -75,7 +75,7 @@ const About = () => {
               Ludwik C. Siadlak jest coachem produktywności i uważności, mentorem liderów oraz twórcą metody Diamentowego Umysłu. Od 19 lat pracuje z profesjonalistami, przedsiębiorcami i liderami technologicznymi — pomagając im zmienić nie techniki, ale sposób myślenia o sobie, pracy i życiu.
             </p>
             <p className="text-lg md:text-xl text-dim leading-relaxed mb-6">
-              Jest Certyfikowanym Trenerem Microsoft (MCT) ze specjalizacją w SQL Server, Power BI i Microsoft Copilot. Absolwent Oxford Brookes University (IT) i SWPS (psychologia). Przeszkolił ponad 10 000 profesjonalistów w firmach Fortune 500 i jednostkach wojskowych NATO w kilkunastu krajach na trzech kontynentach.
+              Jest Certyfikowanym Trenerem Microsoft (MCT) ze specjalizacją w SQL Server, Power BI i Microsoft Copilot. Absolwent University of Oxford (Diploma in Computing) i SWPS (psychologia). Przeszkolił ponad 10 000 profesjonalistów w firmach Fortune 500 i jednostkach wojskowych NATO w kilkunastu krajach na trzech kontynentach.
             </p>
 
             <p className="text-xs text-dim mt-6">
@@ -223,7 +223,7 @@ const About = () => {
                 Chyba powinienem teraz napisać akapit o swoich osiągnięciach, żebyś poczuł się pewnie.
               </p>
               <p>
-                Więc dobrze: jestem Certyfikowanym Trenerem Microsoft od dziewiętnastu lat. SQL, Power BI, Copilot — w tych tematach szkoliłem zespoły Fortune 500 i jednostki wojskowe w kilkunastu krajach. Mam dyplom z IT z Oxford Brookes. Prowadzę{" "}
+                Więc dobrze: jestem Certyfikowanym Trenerem Microsoft od dziewiętnastu lat. SQL, Power BI, Copilot — w tych tematach szkoliłem zespoły Fortune 500 i jednostki wojskowe w kilkunastu krajach. Mam dyplom z informatyki z University of Oxford. Prowadzę{" "}
                 <a href="https://fundacja.hackerzy.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">Fundację Hackerzy.pl</a>, która uczy młodych ludzi, jak korzystać z technologii, zamiast pozwolić, by technologia korzystała z nich. Mój program{" "}
                 <a href="https://deepwork.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">DeepWork.pl</a>{" "}pomaga firmom budować kulturę głębokiej pracy. A{" "}
                 <a href="https://uwaznezycie.pl/" target="_blank" rel="noopener noreferrer" className="text-electric hover:underline">UwazneZycie.pl</a>{" "}łączy uważność z codziennym działaniem.

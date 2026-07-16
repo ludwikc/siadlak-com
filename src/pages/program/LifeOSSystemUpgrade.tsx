@@ -652,8 +652,8 @@ export default function LifeOSSystemUpgrade() {
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-on-light text-center">Inwestycja</h2>
 
             <div className="text-center mb-10">
-              <p className="text-5xl font-bold text-electric mb-3">16 000 PLN</p>
-              <p className="text-lg text-on-light-dim">Lub 2 × 6 500 PLN netto, jeśli masz firmę i wolisz rozłożyć.</p>
+              <p className="text-5xl font-bold text-electric mb-3">16 000 PLN brutto</p>
+              <p className="text-lg text-on-light-dim">Masz firmę? Na fakturę: 2 raty × 6 500 PLN netto (13 000 PLN netto + VAT).</p>
             </div>
 
             <div className="space-y-6 text-lg text-on-light-dim leading-relaxed">

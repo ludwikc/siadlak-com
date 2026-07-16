@@ -1,0 +1,49 @@
+import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getFunnelBySlug } from "@/config/funnels";
+import { useFunnelPhase } from "@/hooks/use-funnel-phase";
+import FunnelCountdown from "@/components/funnel/FunnelCountdown";
+import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
+
+export default function {{PascalSlug}}Live() {
+  const funnel = getFunnelBySlug("{{slug}}")!;
+  const { phase, eventStart } = useFunnelPhase(funnel);
+
+  return (
+    <Layout hideHeader hideFooter>
+      <SEO title={`${funnel.name} — LIVE`} description="Transmisja na żywo" noindex />
+
+      <section className="py-12 md:py-20 bg-void min-h-screen">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            {funnel.name}
+          </h1>
+
+          {phase === "upcoming" && (
+            <FunnelCountdown
+              target={eventStart}
+              label="Transmisja startuje za:"
+              className="mb-10 text-white"
+            />
+          )}
+
+          {phase === "live" && (
+            <div className="aspect-video w-full rounded-xl overflow-hidden border border-white/10 mb-8">
+              <iframe
+                src="{{liveEmbedUrl}}"
+                title={funnel.name}
+                className="w-full h-full"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          )}
+
+          {(phase === "replay" || phase === "expired") && (
+            <FunnelRegistrationCTA funnel={funnel} />
+          )}
+        </div>
+      </section>
+    </Layout>
+  );
+}

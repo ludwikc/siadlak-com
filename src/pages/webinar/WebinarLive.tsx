@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/design-system/components/button";
-import { Facebook, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Youtube } from "lucide-react";
 import { toast } from "@/design-system";
 import calendarGcal from "@/assets/calendar-gcal.png?w=64;128&format=avif;webp;png&as=picture";
 import calendarApple from "@/assets/calendar-apple.png?w=64;128&format=avif;webp;png&as=picture";
@@ -189,20 +189,6 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                     >
                       <Facebook className="w-5 h-5" />
                       Facebook
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    className="bg-[#0077b5] hover:bg-[hsl(199_100%_30%)] text-white border-0"
-                  >
-                    <a
-                      href="https://fb.me/e/5FLNV3UAi"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                      LinkedIn
                     </a>
                   </Button>
                 </div>

@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/design-system/components/card";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
-import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema, getReviewSchema } from "@/lib/structured-data";
+import { getCourseEntity, getWebPageEntity, getCourseBreadcrumb, getFAQSchema } from "@/lib/structured-data";
 import RelatedPrograms from "@/components/sections/RelatedPrograms";
 import lifehackerzyLogo from "@/assets/lifehackerzy-logotyp.png?w=200;400&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
@@ -47,7 +47,7 @@ const uwazneZycieFaqs = [
   },
   {
     question: "Jak długo mam dostęp do programu?",
-    answer: "Na zawsze. Kupujesz raz — korzystasz dożywotnio. Bez subskrypcji, bez „ważne przez rok”, bez ukrytych kosztów. W\u00A0cenie programu otrzymujesz też dożywotni dostęp do społeczności Lifehackerzy na Discordzie — 100+ osób z\u00A08+ krajów. Cena: 777 PLN. 30-dniowa gwarancja zwrotu, jeśli program Ci nie odpowiada.",
+    answer: "Na zawsze. Kupujesz raz — korzystasz dożywotnio. Bez subskrypcji, bez „ważne przez rok”, bez ukrytych kosztów. W\u00A0cenie programu otrzymujesz też dożywotni dostęp do społeczności Lifehackerzy na Discordzie — 500+ osób z\u00A08+ krajów. Cena: 777 PLN. 30-dniowa gwarancja zwrotu, jeśli program Ci nie odpowiada.",
   },
 ];
 
@@ -63,10 +63,6 @@ const UwazneZycie = () => {
           getWebPageEntity('/program/uwaznosc', 'Uważne Życie', 'Program uważności dla analitycznych umysłów i osób z ADHD.', ['/program', '/podcast/uwazne-zycie']),
           getCourseBreadcrumb('Uważne Życie', '/program/uwaznosc'),
           getFAQSchema(uwazneZycieFaqs),
-          getReviewSchema('Aplikacja Mentalna: Uwa\u017Cne \u017Bycie', '/program/uwaznosc', [
-            { author: 'Uczestniczka programu', reviewBody: 'Pierwszy program uwa\u017Cno\u015Bci, kt\u00F3ry dzia\u0142a na m\u00F3j analityczny umys\u0142. \u017Badnego ezoterycznego bełkotu \u2014 konkrety.', ratingValue: 5 },
-            { author: 'Absolwent z ADHD', reviewBody: 'Medytacja, kt\u00F3ra nie wymaga siedzenia w ciszy przez 30 minut. W ko\u0144cu co\u015B, co dzia\u0142a w kolejce i na spotkaniu.', ratingValue: 5 },
-          ], { ratingValue: 4.8, reviewCount: 89 }),
         ]}
       />
       {(() => { const t = getTopicalConfig("/program/uwaznosc"); return t ? <TopicalMeta {...t} /> : null; })()}
@@ -158,7 +154,7 @@ const UwazneZycie = () => {
                       <Check className="w-3.5 h-3.5 text-white" />
                     </div>
                     <span className="font-medium text-sm">
-                      100+ Lifehackerów w&nbsp;Społeczności
+                      500+ Lifehackerów w&nbsp;Społeczności
                     </span>
                   </div>
                   <div className="hidden sm:block w-px h-5 bg-slate-600"></div>
@@ -266,7 +262,7 @@ const UwazneZycie = () => {
             <span><strong className="text-foreground">Twórca:</strong> Ludwik C. Siadlak</span>
             <span><strong className="text-foreground">Czas trwania:</strong> 6 tygodni</span>
             <span><strong className="text-foreground">Cena:</strong> 777 PLN</span>
-            <span><strong className="text-foreground">Społeczność:</strong> 100+ Lifehackerów</span>
+            <span><strong className="text-foreground">Społeczność:</strong> 500+ Lifehackerów</span>
           </div>
         </div>
       </section>
@@ -385,37 +381,22 @@ const UwazneZycie = () => {
         </div>
       </section>
 
-      {/* TESTIMONIAL SECTION - Placeholder quotes */}
       <section className="py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-                Co mówią ci, którzy już praktykują
-              </h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                Nie absolwenci kursu (kurs właśnie startuje). Ludzie z&nbsp;<strong className="text-slate-900">3 lat wtorkowych medytacji</strong> o&nbsp;6:30 — ci sami, których głosy ukształtowały ten program:
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {[1, 2, 3, 4].map((n) => (
-                <div
-                  key={n}
-                  className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm"
-                >
-                  <blockquote className="text-lg text-slate-700 italic mb-4">
-                    „[CYTAT {n} — DO UZUPEŁNIENIA ZE SCREENSHOTA]”
-                  </blockquote>
-                  <p className="text-sm text-slate-500">
-                    — Imię, kontekst
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center text-slate-600 max-w-3xl mx-auto text-lg">
-              Te cytaty nie są o&nbsp;kursie. Są o&nbsp;tym, co ten kurs destyluje — o&nbsp;praktyce, która już dla nich zadziałała. Kurs zamyka tę praktykę w&nbsp;6-tygodniową strukturę, żebyś nie musiał czekać 3 lat, jak oni.
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
+              Kurs właśnie startuje
+            </h2>
+            <p className="text-lg text-slate-600 mb-4">
+              Nie pokażę Ci jeszcze opinii absolwentów — pierwsze pojawią się tu,
+              gdy pierwsza grupa przejdzie 6 tygodni. Program destyluje{" "}
+              <strong className="text-slate-900">3 lata wtorkowych medytacji</strong>{" "}
+              o&nbsp;6:30 — praktykę, która już zadziałała dla setek uczestników
+              tych sesji.
+            </p>
+            <p className="text-lg text-slate-600">
+              Kurs zamyka tę praktykę w&nbsp;6-tygodniową strukturę, żebyś nie
+              musiał czekać 3 lat, jak oni.
             </p>
           </div>
         </div>
@@ -895,7 +876,7 @@ const UwazneZycie = () => {
               <div className="grid md:grid-cols-2 gap-4 mb-8 relative z-10">
                 {[
                   "6 modułów kursu (24 lekcje + 6 tygodniowych wyzwań)",
-                  "Społeczność Lifehackerzy (100+ osób, 8+ krajów)",
+                  "Społeczność Lifehackerzy (500+ osób, 8+ krajów)",
                   "1234 Daily Coaching (codzienne live o\u00A012:34)",
                   "DeepWork.pl (pokój skupionej pracy)",
                   "50+ Protipów (nagrania niedostępne nigdzie indziej)",
@@ -1089,7 +1070,7 @@ const UwazneZycie = () => {
 
                 <div className="space-y-4">
                   {[
-                    { name: "100+ Lifehackerów na Discordzie", desc: "Z\u00A08+ krajów, od freelancerów po CEO" },
+                    { name: "500+ Lifehackerów na Discordzie", desc: "Z\u00A08+ krajów, od freelancerów po CEO" },
                     { name: "1234 Daily Coaching", desc: "Codzienne live Q&A o\u00A012:34" },
                     { name: "DeepWork.pl", desc: "Pokój skupionej pracy z\u00A0innymi Lifehackerami" },
                     { name: "50+ Protipów", desc: "Ekskluzywne nagrania niedostępne nigdzie indziej" },

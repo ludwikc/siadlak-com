@@ -1,0 +1,48 @@
+import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { CTAButton } from "@/design-system/components/cta-button";
+import { getFunnelBySlug } from "@/config/funnels";
+import { useFunnelPhase } from "@/hooks/use-funnel-phase";
+import FunnelCountdown from "@/components/funnel/FunnelCountdown";
+
+export default function {{PascalSlug}}Dziekuje() {
+  const funnel = getFunnelBySlug("{{slug}}")!;
+  const { phase, eventStart } = useFunnelPhase(funnel);
+
+  return (
+    <Layout>
+      <SEO title={`Miejsce zarezerwowane — ${funnel.name}`} description="Potwierdzenie zapisu" noindex />
+
+      <section className="py-20 md:py-32 bg-void text-center min-h-screen">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Miejsce zarezerwowane
+          </h1>
+          <p className="text-lg text-dim mb-8">
+            Szczegóły i link do spotkania wysłałem na Twój email.
+            Dodaj wydarzenie do kalendarza — 87% osób, które to robią,
+            faktycznie się pojawia.
+          </p>
+
+          {phase === "upcoming" && (
+            <FunnelCountdown
+              target={eventStart}
+              label="Widzimy się za:"
+              className="mb-10 text-white"
+            />
+          )}
+
+          <CTAButton
+            variant="primary"
+            size="xl"
+            to={funnel.oto ? "/oto" : "/discovery"}
+          >
+            {funnel.oto
+              ? "Zanim pójdziesz — mam coś dla Ciebie"
+              : "Poznaj Sesję Discovery"}
+          </CTAButton>
+        </div>
+      </section>
+    </Layout>
+  );
+}

@@ -241,8 +241,8 @@ export default function Discovery() {
         <div className="space-y-6">
           {[
             {
-              num: "1. Wypełniasz formularz",
-              desc: "Zadaję kilka pytań przed rozmową. Nie dlatego, że lubię formularze (nikt nie lubi formularzy) — ale żebyśmy nie marnowali Twoich 30 minut na rzeczy, które mogę sprawdzić wcześniej. Czasem już na tym etapie widzę, że mogę Ci pomóc lepiej inaczej — i napiszę Ci o tym szczerze.",
+              num: "1. Rezerwujesz termin",
+              desc: "Wybierasz slot w moim kalendarzu i odpowiadasz sobie na trzy pytania: za co walczysz, czego próbujesz uniknąć i ile jesteś gotów zainwestować — energii, nie pieniędzy. Nie musisz mieć gotowych odpowiedzi. Musisz być gotów ich szukać.",
             },
             {
               num: "2. 30 minut 1:1 na Zoom",
@@ -289,7 +289,7 @@ export default function Discovery() {
         </p>
 
         <p>
-          Inwestycja: 16 000 PLN (lub 2 × 6 500 PLN netto na fakturę).
+          Inwestycja: 16 000 PLN brutto (na fakturę: 2 raty × 6 500 PLN netto).
           Gwarancja zwrotu po 2 tygodniach — jeśli nie poczujesz, że to
           fundamentalnie inna praca, powiemy sobie &quot;do widzenia&quot; i nie
           zapłacisz ani złotówki więcej.

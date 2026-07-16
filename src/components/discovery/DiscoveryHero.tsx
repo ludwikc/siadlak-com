@@ -63,7 +63,7 @@ export default function DiscoveryHero() {
                 el?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              Sprawdź dostępność</button>
+              Umów Sesję Discovery</button>
 
             <a
               href="#nie"

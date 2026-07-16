@@ -146,7 +146,7 @@ export default function DiscoveryLifeOSOffer() {
                   el?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Sprawdź dostępność</button>
+                Umów Sesję Discovery</button>
               <p className="text-sm text-text-on-light/50 mt-4">
                 Dostępne: max 5 aktywnych klientów jednocześnie
               </p>

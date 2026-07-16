@@ -9,6 +9,8 @@ import { GlassCard } from "@/design-system/components/glass-card";
 import { CheckCircle, AlertCircle, Users } from "@/lib/icons";
 import { AlertTriangle } from "lucide-react";
 import { useState, useEffect } from "react";
+
+const waitlistUrl = "https://buy.siadlak.com/checkout/program-meskosc";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 export default function MeskiKompas() {
@@ -126,13 +128,12 @@ export default function MeskiKompas() {
               className="text-sm md:text-base font-medium mb-6"
               style={{ color: "hsl(45, 85%, 65%)" }}
             >
-              Edycja 1: październik 2025 | Tylko 10 miejsc | Wszystkie miejsca wyprzedane
-              (edycja pilotażowa)
+              Edycja pilotażowa (10 miejsc) wyprzedana | Kolejna edycja: 1 997 zł
             </div>
             <CTAButton
-              href="https://buy.siadlak.com/checkout/program-meskosc"
               variant="primary"
               size="xl"
+              href={waitlistUrl}
               className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
               aria-label="Dołącz do listy oczekujących na kolejną edycję"
               showArrow
@@ -2118,16 +2119,7 @@ export default function MeskiKompas() {
               <p className="text-xl text-dim mb-8 max-w-2xl mx-auto">
                 Zapisując się na Męski Kompas, automatycznie otrzymujesz dostęp
                 do pełnego kursu "7 technik, które natychmiast zwiększą Twoją
-                produktywność" -{" "}
-                <a
-                  href="https://buy.siadlak.com/checkout/7technik"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-electric transition-colors"
-                >
-                  normalnie sprzedawanego za 497 zł
-                </a>
-                .
+                produktywność" - normalnie sprzedawanego za 497 zł.
               </p>
             </div>
 
@@ -3161,7 +3153,7 @@ export default function MeskiKompas() {
                 "Udział w 3 sesjach LIVE z prowadzącymi",
                 "Praca w zamkniętej, wspierającej grupie 10 mężczyzn",
                 'Kurs bonusowy "7 Technik Produktywności" (497 zł)',
-                "Dożywotni dostęp do społeczności Lifehackerzy (10,000+/bezcenne)",
+                "Dożywotni dostęp do społeczności Lifehackerzy (500+ członków/bezcenne)",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3 text-lg">
                   <span
@@ -3193,11 +3185,10 @@ export default function MeskiKompas() {
                 className="text-3xl md:text-4xl font-bold mb-2"
                 style={{ color: "hsl(45, 85%, 50%)" }}
               >
-                Twoja inwestycja:{" "}
-                <span className="line-through opacity-60">1,997 zł</span> 997 zł
+                Edycja pilotażowa: 997 zł (wyprzedana)
               </p>
               <p className="text-lg" style={{ color: "hsl(210, 10%, 45%)" }}>
-                (edycja pilotażowa)
+                Kolejna edycja: 1 997 zł — pierwszeństwo ma lista oczekujących
               </p>
             </div>
 
@@ -3215,7 +3206,7 @@ export default function MeskiKompas() {
               <p>Nie ma skomplikowanych formularzy.</p>
               <p>Nie ma "rozmów kwalifikacyjnych".</p>
               <p className="font-bold" style={{ color: "hsl(210, 20%, 8%)" }}>
-                Po prostu dołącz i zacznij działać.
+                Zostaw email — odezwę się, zanim ruszy kolejna edycja.
               </p>
             </div>
 
@@ -3252,24 +3243,37 @@ export default function MeskiKompas() {
               </div>
             </div>
 
-            {/* Primary CTA */}
-            <div className="text-center mb-8">
+            {/* Waitlist signup */}
+            <div
+              id="lista-oczekujacych"
+              className="max-w-xl mx-auto mb-8 p-6 rounded-xl scroll-mt-24 text-center"
+              style={{
+                backgroundColor: "hsl(0, 0%, 99%)",
+                border: "2px solid hsl(45, 85%, 50%)",
+              }}
+            >
+              <h3
+                className="text-xl font-bold mb-4"
+                style={{ color: "hsl(210, 20%, 8%)" }}
+              >
+                Lista oczekujących — kolejna edycja
+              </h3>
               <CTAButton
-                href="https://buy.siadlak.com/checkout/program-meskosc"
                 variant="primary"
                 size="xl"
-                className="shadow-2xl hover:shadow-3xl mb-4 font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                aria-label="Dołącz do listy oczekujących na kolejną edycję"
+                href={waitlistUrl}
+                className="font-bold !text-black border-0 !bg-yellow-500 hover:!bg-yellow-600 w-full sm:w-auto"
+                aria-label="Dołącz do listy oczekujących"
                 showArrow
               >
-                <span className="inline sm:hidden">BRAK MIEJSC</span>
-                <span className="hidden sm:inline lg:hidden">
-                  Dołącz do listy oczekujących na kolejną edycję
-                </span>
-                <span className="hidden lg:inline">
-                  Dołącz do listy oczekujących na kolejną edycję
-                </span>
+                DOŁĄCZAM DO LISTY OCZEKUJĄCYCH
               </CTAButton>
+              <p
+                className="text-sm mt-3"
+                style={{ color: "hsl(210, 10%, 45%)" }}
+              >
+                Bezpłatny zapis — zero zobowiązań, pierwszeństwo przy starcie.
+              </p>
             </div>
 
             {/* P.S. Sections */}
@@ -3292,9 +3296,9 @@ export default function MeskiKompas() {
                   style={{ color: "hsl(210, 10%, 45%)" }}
                 >
                   Jeśli myślisz "zrobię to później" — to ten sam mechanizm,
-                  który trzyma Cię w paraliżu analitycznym. Jest 10 miejsc.
-                  Zostały 4. Decyzja jest prosta: albo płyniesz z nami, albo
-                  zostajesz na brzegu.
+                  który trzyma Cię w paraliżu analitycznym. Edycja pilotażowa
+                  rozeszła się w 10 osób. Kolejna będzie miała tyle samo miejsc
+                  — a lista oczekujących wchodzi pierwsza.
                 </p>
               </div>
 
@@ -3326,16 +3330,16 @@ export default function MeskiKompas() {
             {/* Secondary CTA */}
             <div className="text-center mt-8">
               <CTAButton
-                href="https://buy.siadlak.com/checkout/program-meskosc"
                 variant="primary"
                 size="xl"
+                href={waitlistUrl}
                 className="shadow-2xl hover:shadow-3xl font-bold !text-black border-0 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 !bg-yellow-500 hover:!bg-yellow-600 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-                aria-label="Tak, chcę miejsce w Męskim Kompasie"
+                aria-label="Dołącz do listy oczekujących"
                 showArrow
               >
-                <span className="inline sm:hidden">TAK, CHCĘ MIEJSCE</span>
+                <span className="inline sm:hidden">DOŁĄCZAM DO LISTY</span>
                 <span className="hidden sm:inline">
-                  TAK, CHCĘ MIEJSCE W MĘSKIM KOMPASIE
+                  DOŁĄCZAM DO LISTY OCZEKUJĄCYCH
                 </span>
               </CTAButton>
             </div>
@@ -3367,15 +3371,11 @@ export default function MeskiKompas() {
                     className="text-sm hidden sm:block"
                     style={{ color: "hsl(210, 20%, 20%)" }}
                   >
-                    Program startuje w październiku — nie przegap
+                    Kolejna edycja wkrótce — lista oczekujących wchodzi pierwsza
                   </p>
                 </div>
               </div>
-              <a
-                href="https://buy.siadlak.com/checkout/program-meskosc"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={waitlistUrl} className="w-full sm:w-auto">
                 <button
                   className="w-full sm:w-auto px-4 sm:px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
                   style={{
@@ -3384,7 +3384,7 @@ export default function MeskiKompas() {
                   }}
                 >
                   <span className="inline sm:hidden">Rezerwuję Miejsce</span>
-                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujacych</span>
+                  <span className="hidden sm:inline">Rezerwuję Miejsce na liście oczekujących</span>
                 </button>
               </a>
             </div>

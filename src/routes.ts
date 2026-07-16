@@ -3,16 +3,16 @@ export const routes = [
   '/',
   '/about',
   '/contact',
-  
+
   '/newsletter',
   '/testimonials',
-  
+
   '/discovery',
   '/legal',
   '/legal/privacy',
   '/legal/terms',
   '/sitemap',
-  
+
   '/program',
   '/program/produktywnosc',
   '/program/lifeos-system-upgrade',
@@ -23,14 +23,11 @@ export const routes = [
   '/program/uwaznosc',
   '/program/ttt-ai',
   '/mentoring',
-  '/webinar',
-  '/webinar/expired',
-  '/webinar/replay',
   '/webinar/meski-kompas',
-  '/wyzwanie',
+  '/webinar/kod-kapitana',
+  '/webinar/depresja',
   '/help',
   '/thank-you',
-  '/thank-you/meski-kompas',
   '/mct',
   '/start',
   '/siadlakvip'
@@ -38,7 +35,10 @@ export const routes = [
 
 // Dynamic routes that should be excluded from static generation
 export const dynamicRoutes = [
+  '/webinar',
   '/program/:courseSlug',
   '/help/:subpageSlug',
-  '/webinar/live' // Real-time content
+  '/webinar/meski-kompas/replay',
+  '/webinar/meski-kompas/dziekuje',
+  '/webinar/depresja/live'
 ];

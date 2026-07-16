@@ -1,11 +1,8 @@
-import { useState } from "react";
-import { Input } from "@/design-system/components/input";
-import { Button } from "@/design-system/components/button";
-import { ArrowRight, ExternalLink } from "@/lib/icons";
-import { toast } from "sonner";
+import { ExternalLink } from "@/lib/icons";
 import SEO from "@/components/SEO";
+import MailerLiteEmbed from "@/components/MailerLiteEmbed";
 
-const UTM = "?utm_source=instagram&utm_medium=bio&utm_campaign=links";
+const UTM = "?utm_source=social&utm_medium=bio&utm_campaign=links";
 
 const LINKS = [
   {
@@ -38,7 +35,7 @@ const LINKS = [
   },
   {
     emoji: "⭐",
-    label: "Opinie Klientów (120+)",
+    label: "Opinie Klientów (100+)",
     desc: "Nie mów mi, że jestem dobry. Posłuchaj, co mówią inni.",
     href: `/testimonials${UTM}`,
     internal: true,
@@ -53,25 +50,6 @@ const LINKS = [
 ];
 
 export default function LinksPage() {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Proszę wprowadź adres email");
-      return;
-    }
-    setIsLoading(true);
-    setTimeout(() => {
-      window.open(
-        "https://app.easycart.pl/checkout/siadlak/newsletter",
-        "_blank",
-      );
-      setIsLoading(false);
-    }, 1000);
-  };
-
   return (
     <>
       <SEO
@@ -112,28 +90,10 @@ export default function LinksPage() {
               Bez porad. Bez listicli. Bez bzdur.
             </p>
 
-            <form onSubmit={handleSubmit} className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Twój email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-[hsl(var(--surface-dark-floating))] border-[hsl(var(--text-dim)/0.2)] text-[hsl(var(--text-on-dark))] placeholder:text-[hsl(var(--text-dim)/0.5)] text-sm"
-                required
-              />
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="bg-[hsl(var(--electric-blue))] hover:bg-[hsl(var(--electric-blue-light))] text-white shrink-0 text-sm px-4"
-              >
-                {isLoading ? "..." : (
-                  <>
-                    Zapisuję się
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </form>
+            <MailerLiteEmbed
+              dataForm="9Ffuno"
+              hiddenFields={{ source: "links" }}
+            />
 
             <p className="text-xs text-[hsl(var(--text-dim)/0.6)] text-center">
               1 500+ osób już czyta. Zero spamu. Możesz odejść jednym kliknięciem.

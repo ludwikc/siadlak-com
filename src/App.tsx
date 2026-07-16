@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   BrowserRouter as Router,
+  Navigate,
   Route,
   Routes,
   useLocation,
@@ -32,12 +33,11 @@ import Contact from "./pages/Contact";
 import Newsletter from "./pages/Newsletter";
 import NotFound from "./pages/NotFound";
 import Program from "./pages/program/Program";
-import CourseDetail from "./pages/CourseDetail";
 import LifeHackingPodcast from "./pages/LifeHackingPodcast";
 import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
-import WebinarExpired from "./pages/webinar/WebinarExpired";
 import WebinarLive from "./pages/webinar/WebinarLive";
 import WebinarReplay from "./pages/webinar/WebinarReplay";
+import CurrentWebinar from "./pages/webinar/CurrentWebinar";
 import Testimonials from "./pages/Testimonials";
 
 import ThankYou from "./pages/ThankYou";
@@ -55,12 +55,10 @@ import Help from "./pages/help/Help";
 import HelpSubpage from "./pages/help/HelpSubpage";
 
 import HakowanieProduktywnosci from "./pages/program/HakowanieProduktywnosci";
-import SiedemTechnik from "./pages/program/SiedemTechnik";
 import TrainTheTrainerAI from "./pages/program/TrainTheTrainerAI";
 import WebinarMeskiKompas from "./pages/webinar/WebinarMeskiKompas";
 import WebinarKodKapitana from "./pages/webinar/WebinarKodKapitana";
 import WebinarDepresja from "./pages/webinar/WebinarDepresja";
-import Wyzwanie from "./pages/Wyzwanie";
 import MCT from "./pages/MCT";
 import Links from "./pages/Links";
 import IG from "./pages/IG";
@@ -94,10 +92,6 @@ function App() {
               <Route path="/testimonials" element={<Testimonials />} />
               
               <Route path="/thank-you" element={<ThankYou />} />
-              <Route
-                path="/thank-you/meski-kompas"
-                element={<ThankYouMeskiKompas />}
-              />
               <Route
                 path="/legal"
                 element={
@@ -152,9 +146,11 @@ function App() {
               <Route path="/program/odpornosc" element={<SilnaGlowa />} />
               <Route path="/program/meskosc" element={<MeskiKompas />} />
               <Route path="/program/uwaznosc" element={<UwazneZycie />} />
-              <Route path="/program/7-technik" element={<SiedemTechnik />} />
               <Route path="/program/ttt-ai" element={<TrainTheTrainerAI />} />
-              <Route path="/program/:courseSlug" element={<CourseDetail />} />
+              <Route
+                path="/program/:courseSlug"
+                element={<Navigate to="/program" replace />}
+              />
 
               <Route path="/oto" element={<OTO />} />
               <Route path="/mentoring" element={<Mentoring />} />
@@ -168,12 +164,18 @@ function App() {
                 element={<UwazneZyciePodcast />}
               />
 
-              <Route path="/webinar/live" element={<WebinarLive />} />
-              <Route path="/webinar/expired" element={<WebinarExpired />} />
-              <Route path="/webinar/replay" element={<WebinarReplay />} />
+              <Route path="/webinar" element={<CurrentWebinar />} />
               <Route
                 path="/webinar/meski-kompas"
                 element={<WebinarMeskiKompas />}
+              />
+              <Route
+                path="/webinar/meski-kompas/replay"
+                element={<WebinarReplay />}
+              />
+              <Route
+                path="/webinar/meski-kompas/dziekuje"
+                element={<ThankYouMeskiKompas />}
               />
               <Route
                 path="/webinar/kod-kapitana"
@@ -183,8 +185,11 @@ function App() {
                 path="/webinar/depresja"
                 element={<WebinarDepresja />}
               />
+              <Route
+                path="/webinar/depresja/live"
+                element={<WebinarLive />}
+              />
 
-              <Route path="/wyzwanie" element={<Wyzwanie />} />
               <Route path="/mct" element={<MCT />} />
               <Route
                 path="/stream"
