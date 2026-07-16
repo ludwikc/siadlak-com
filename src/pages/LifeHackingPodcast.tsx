@@ -1,4 +1,5 @@
 import Layout from '../components/layout/Layout';
+import PodcastPlayer from '../components/podcast/PodcastPlayer';
 import ValueProposition from '../components/podcast/ValueProposition';
 import MailerLiteEmbed from '@/components/MailerLiteEmbed';
 import { CTAButton } from '@/design-system/components/cta-button';
@@ -22,7 +23,7 @@ const podcastFaqs = [
   },
   {
     question: "Gdzie mog\u0119 s\u0142ucha\u0107?",
-    answer: "Na Spotify, Apple Podcasts, Google Podcasts i\u00A0YouTube. Nowe odcinki pojawiaj\u0105 si\u0119 co czwartek \u2014 idealny moment na refleksj\u0119 przed ko\u0144cem tygodnia.",
+    answer: "Na Spotify \u2014 odtwarzacz znajdziesz bezpo\u015Brednio na tej stronie. Nowe odcinki pojawiaj\u0105 si\u0119 co czwartek \u2014 idealny moment na refleksj\u0119 przed ko\u0144cem tygodnia.",
   },
 ];
 
@@ -112,7 +113,12 @@ const LifeHackingPodcast = () => {
           </div>
 
           <div id="player" className="max-w-3xl mx-auto">
-            {/* TODO(owner): embed real Spotify show + platform links (previous ones were placeholders) */}
+            <PodcastPlayer
+              title="Life Hacking Podcast"
+              embedUrl="https://open.spotify.com/embed/show/2WtHOHHGeeRZtsyYszSIlB"
+              coverArt="/lovable-uploads/208a0c75-6c6d-4324-8241-a7de28c2fa3e.png"
+            />
+
             <ValueProposition
               title="Ten podcast jest dla Ciebie, jeśli:"
               items={valuePropositionItems}
