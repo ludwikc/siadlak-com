@@ -188,16 +188,6 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/program/7-technik',
-    seo: {
-      title: '7 Technik Produktywności, które działają',
-      description: 'Siedem sprawdzonych technik produktywności autorstwa Ludwika C. Siadlaka. Praktyczne metody zarządzania czasem, energią i skupieniem.',
-      keywords: '7 technik, produktywność, techniki mentalne, Ludwik Siadlak',
-      url: '/program/7-technik',
-      type: 'course'
-    }
-  },
-  {
     path: '/webinar',
     seo: {
       title: 'Dołącz do spotkania online',
@@ -366,15 +356,6 @@ export const seoRouteConfig: RouteConfig[] = [
       url: '/webinar/meski-kompas',
       type: 'event',
       favicon: '/compass-favicon.png'
-    }
-  },
-  {
-    path: '/wyzwanie',
-    seo: {
-      title: 'Drwal w Białej Koszuli — 4-dniowe wyzwanie produktywności',
-      description: 'Darmowe 4-dniowe wyzwanie produktywności dla profesjonalistów, którzy osiągają cele ale nie czują spełnienia. Live na Discord z Ludwikiem C. Siadlakiem.',
-      keywords: 'produktywność, wyzwanie, cele, wartości, Ludwik Siadlak, lifehackerzy',
-      url: '/wyzwanie'
     }
   },
   {
