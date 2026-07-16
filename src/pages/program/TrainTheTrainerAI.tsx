@@ -153,7 +153,7 @@ const weeks = [
   {
     n: 8,
     title: "Certyfikacja i Twój pierwszy realny dzień jako Trener AI.",
-    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej i Fundacji HACKERZY.PL, nie aktorzy). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy 3-godzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI Lifehackerzy, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między tygodniem 6 a tygodniem 10 (dwa tygodnie po formalnym końcu programu). Jeśli do końca tygodnia 12 nie masz pierwszej faktury — pracujemy dalej, bezpłatnie, aż będzie.",
+    text: "Ostatni tydzień to egzamin praktyczny: prowadzisz 90-minutowy mini-warsztat dla realnej grupy uczestników (organizuję ją ja — to rzeczywiści ludzie, często z mojej sieci coachingowej i Fundacji HACKERZY.PL, nie aktorzy). Ja siedzę z tyłu i nie pomagam. Po warsztacie robimy 3-godzinny debrief — ostatnią, najgłębszą rozmowę mentorską w tym programie. Jeśli spełniasz standard — a po 7 tygodniach intensywnej pracy zwykle tak — zostajesz Certyfikowanym Trenerem AI Lifehackerzy, z dożywotnim dostępem do sieci certyfikowanych trenerów i pierwszeństwem w zleceniach, których sam nie biorę. Cel minimalny na koniec programu: masz pierwsze płatne zlecenie w kieszeni albo na stole. Zwykle pierwsze zlecenie przychodzi między tygodniem 6 a tygodniem 10 (dwa tygodnie po formalnym końcu programu).",
   },
 ];
 
@@ -248,7 +248,7 @@ export default function TrainTheTrainerAI() {
               Twoja wiedza o AI jest warta 5–10× więcej, niż za nią dziś dostajesz. <br /> Problem jest jeden — i nie jest techniczny.
             </h1>
             <p className="text-xl md:text-2xl text-dim mb-8 leading-relaxed">
-              Prywatny, 8-tygodniowy mentoring 1:1. Maksymalnie 4 miejsca na kwartał. Prowadzi Ludwik C. Siadlak — Microsoft Certified Trainer z 20-letnim doświadczeniem szkolenia m.in. jednostek US Army, US Navy, US Air Force i US Marine Corps.
+              Prywatny, 8-tygodniowy mentoring 1:1. Edycja inauguracyjna: 3 miejsca (od edycji regularnej — maksymalnie 4 na kwartał). Prowadzi Ludwik C. Siadlak — Microsoft Certified Trainer z 20-letnim doświadczeniem szkolenia m.in. jednostek US Army, US Navy, US Air Force i US Marine Corps.
             </p>
             <Button
               asChild
@@ -619,10 +619,11 @@ export default function TrainTheTrainerAI() {
                 <div className="flex items-start gap-4">
                   <ShieldCheck className="h-8 w-8 text-white flex-shrink-0" />
                   <div>
-                    <h3 className="font-heading text-xl font-bold text-white mb-2">Gwarancja pierwszego zlecenia</h3>
+                    <h3 className="font-heading text-xl font-bold text-white mb-2">Uczciwe rozstanie</h3>
                     <p className="text-white/90 leading-relaxed text-sm md:text-base">
-                      Jeśli do tygodnia 12 (4 tygodnie po formalnym końcu programu) nie masz pierwszej płatnej faktury
-                      za dzień szkoleniowy — pracujemy dalej, bezpłatnie, aż ją wystawisz.
+                      Rozmowa wstępna filtruje dopasowanie. Ale jeśli mimo wszystko po 3 tygodniach widzimy,
+                      że program się nie uda — rozstajemy się i zwracam Ci 50% proporcjonalnej reszty.
+                      Nie chcę pracować z kimś, kto nie chce pracować ze mną. Ani odwrotnie.
                     </p>
                   </div>
                 </div>

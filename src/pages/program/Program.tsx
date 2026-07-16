@@ -134,7 +134,7 @@ export default function Program() {
               <p className="text-sm text-dim mb-6">
                 4–6 tygodni · Instalacja na zawsze ·{" "}
                 <Link to="/testimonials" className="text-electric hover:underline">
-                  100+ uczestników · 4.9/5.0
+                  110+ uczestników · 4.9/5.0
                 </Link>
               </p>
 

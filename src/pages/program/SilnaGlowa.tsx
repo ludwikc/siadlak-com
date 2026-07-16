@@ -31,7 +31,7 @@ import {
 
 const silnaGlowaFaqs = [
   {
-    question: "Kiedy dostań kurs?",
+    question: "Kiedy dostanę kurs?",
     answer: "Dostęp do platformy i pierwszego modułu otrzymasz natychmiast po zakupie. Kolejne moduły odblokowują się co tydzień, abyś miał czas na spokojne przepracowanie materiału. Dzięki temu zobaczysz pierwsze efekty już w pierwszym tygodniu — nie musisz czekać na „ukończenie całości”.",
   },
   {
@@ -57,7 +57,7 @@ const SilnaGlowa = () => {
         getReviewSchema('Aplikacja Mentalna: Silna Głowa', '/program/odpornosc', [
           { author: 'Uczestnik programu', reviewBody: 'Pierwszy raz w życiu poczułem, że presja może być paliwem, a nie paraliżem. Firewall mentalny działa.', ratingValue: 5 },
           { author: 'Absolwentka Silnej Głowy', reviewBody: 'Zmienił się nie poziom stresu — zmieniła się moja relacja ze stresem. To fundamentalna różnica.', ratingValue: 5 },
-        ], { ratingValue: 5.0, reviewCount: 100 }),
+        ], { ratingValue: 4.8, reviewCount: 20 }),
       ]} />
       {(() => { const t = getTopicalConfig("/program/odpornosc"); return t ? <TopicalMeta {...t} /> : null; })()}
 
@@ -97,7 +97,7 @@ const SilnaGlowa = () => {
                   />
                 ))}
                 <span className="ml-2 text-sm sm:text-base font-semibold text-locked-white">
-                  5.0/5.0
+                  4.8/5.0
                 </span>
               </div>
               <div className="flex items-center gap-2 bg-locked-white/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 border border-locked-white/20">
@@ -145,23 +145,6 @@ const SilnaGlowa = () => {
               </div>
             </div>
 
-            {/* Video Teaser */}
-            <div className="max-w-3xl mx-auto">
-              <div className="aspect-video bg-locked-white/10 rounded-2xl flex items-center justify-center border border-locked-white/20 hover:border-electric/50 transition-colors cursor-pointer group">
-                <div className="text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-electric to-depth rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                    <div className="w-0 h-0 border-l-[12px] sm:border-l-[16px] border-l-white border-y-[9px] sm:border-y-[12px] border-y-transparent ml-1"></div>
-                  </div>
-                  <p className="text-sm sm:text-base text-locked-silver">
-                    <span className="font-semibold text-locked-white">
-                      Zobacz, jak działa kurs
-                    </span>
-                    <br />
-                    Video wprowadzające (2 min)
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -188,7 +171,7 @@ const SilnaGlowa = () => {
             <span><strong className="text-text-primary">Twórca:</strong> Ludwik C. Siadlak</span>
             <span><strong className="text-text-primary">Czas trwania:</strong> 6 tygodni (~6 godzin nagrań)</span>
             <span><strong className="text-text-primary">Cena:</strong> 897 PLN</span>
-            <span><strong className="text-text-primary">Ocena:</strong> 5.0/5.0</span>
+            <span><strong className="text-text-primary">Ocena:</strong> 4.8/5.0</span>
           </div>
         </div>
       </section>
@@ -899,10 +882,10 @@ const SilnaGlowa = () => {
 
                   <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-5">{module.description}</p>
 
-                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded hover:-translate-y-px hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2">
+                  <div className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">ODBLOKOWUJ MODUŁ</span>
-                  </button>
+                    <span className="text-sm sm:text-base">W PROGRAMIE</span>
+                  </div>
                 </div>
               ))}
             </div>

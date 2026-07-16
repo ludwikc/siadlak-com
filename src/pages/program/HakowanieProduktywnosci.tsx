@@ -9,6 +9,7 @@ import LifehackerzySection from "@/components/sections/LifehackerzySection";
 import { Button } from "@/design-system/components/button";
 import { Card, CardContent } from "@/design-system/components/card";
 import { Link } from "react-router-dom";
+import portalHakprod from "@/assets/portal-hakprod.png?w=800;1600&format=avif;webp;png&as=picture";
 
 import {
   ArrowRight,
@@ -71,7 +72,7 @@ export default function HakowanieProduktywnosci() {
     <Layout>
       <SEO {...getSEOConfig("/program/produktywnosc")} jsonLd={[
         getCourseEntity('produktywnosc')!,
-        getWebPageEntity('/program/produktywnosc', 'Program: Produktywność', 'Aplikacja Mentalna Produktywność — 6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. 100+ uczestników, ocena 4.9/5.0.', ['/program', '/discovery', '/testimonials']),
+        getWebPageEntity('/program/produktywnosc', 'Program: Produktywność', 'Aplikacja Mentalna Produktywność — 6-tygodniowy program zmiany sposobu myślenia o czasie, energii i prokrastynacji. 110+ uczestników, ocena 4.9/5.0.', ['/program', '/discovery', '/testimonials']),
         getFAQSchema(produktywnoscFaqs),
         getCourseBreadcrumb('Produktywność', '/program/produktywnosc'),
         getReviewSchema('Aplikacja Mentalna: Produktywność', '/program/produktywnosc', [
@@ -106,7 +107,7 @@ export default function HakowanieProduktywnosci() {
               <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
                 <CardContent className="px-6 py-3 flex items-center gap-2">
                   <Users className="h-4 w-4 text-electric" />
-                  <span className="text-sm font-semibold text-white">100+ uczestników</span>
+                  <span className="text-sm font-semibold text-white">110+ uczestników</span>
                 </CardContent>
               </Card>
               <Card className="border border-electric/30 bg-white/10 backdrop-blur-sm hover:border-electric/50 transition-colors">
@@ -164,7 +165,7 @@ export default function HakowanieProduktywnosci() {
             <span><strong className="text-foreground">Twórca:</strong> Ludwik C. Siadlak</span>
             <span><strong className="text-foreground">Czas trwania:</strong> 6 tygodni (~6 godzin nagrań)</span>
             <span><strong className="text-foreground">Cena:</strong> 1 497 PLN</span>
-            <span><strong className="text-foreground">Ocena:</strong> 4.9/5.0 (100+ uczestników)</span>
+            <span><strong className="text-foreground">Ocena:</strong> 4.9/5.0 (110+ uczestników)</span>
           </div>
         </div>
       </section>
@@ -688,7 +689,7 @@ export default function HakowanieProduktywnosci() {
               </div>
               <div className="relative rounded-md overflow-hidden border border-muted">
                 <OptimizedImage
-                  src="/src/assets/portal-hakprod.png"
+                  src={portalHakprod}
                   alt="Platforma Programu Produktywność — widok modułu z video"
                   width={3248}
                   height={2112}
@@ -814,11 +815,10 @@ export default function HakowanieProduktywnosci() {
                     {module.description}
                   </p>
 
-                  {/* Install Button */}
-                  <button className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded-[4px] flex items-center justify-center gap-2">
+                  <div className="w-full bg-brand-gradient text-white font-bold py-3 sm:py-3.5 px-6 rounded-[4px] flex items-center justify-center gap-2">
                     <CheckCircle2 className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">ODBLOKOWUJ</span>
-                  </button>
+                    <span className="text-sm sm:text-base">W PROGRAMIE</span>
+                  </div>
                 </div>
               ))}
             </div>

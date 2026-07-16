@@ -289,7 +289,7 @@ export default function Discovery() {
         </p>
 
         <p>
-          Inwestycja: 16 000 PLN (lub 2 × 6 500 PLN netto na fakturę).
+          Inwestycja: 16 000 PLN brutto (na fakturę: 2 raty × 6 500 PLN netto).
           Gwarancja zwrotu po 2 tygodniach — jeśli nie poczujesz, że to
           fundamentalnie inna praca, powiemy sobie &quot;do widzenia&quot; i nie
           zapłacisz ani złotówki więcej.
