@@ -35,9 +35,9 @@ import NotFound from "./pages/NotFound";
 import Program from "./pages/program/Program";
 import LifeHackingPodcast from "./pages/LifeHackingPodcast";
 import UwazneZyciePodcast from "./pages/UwazneZyciePodcast";
-import WebinarExpired from "./pages/webinar/WebinarExpired";
 import WebinarLive from "./pages/webinar/WebinarLive";
 import WebinarReplay from "./pages/webinar/WebinarReplay";
+import CurrentWebinar from "./pages/webinar/CurrentWebinar";
 import Testimonials from "./pages/Testimonials";
 
 import ThankYou from "./pages/ThankYou";
@@ -92,10 +92,6 @@ function App() {
               <Route path="/testimonials" element={<Testimonials />} />
               
               <Route path="/thank-you" element={<ThankYou />} />
-              <Route
-                path="/thank-you/meski-kompas"
-                element={<ThankYouMeskiKompas />}
-              />
               <Route
                 path="/legal"
                 element={
@@ -168,12 +164,18 @@ function App() {
                 element={<UwazneZyciePodcast />}
               />
 
-              <Route path="/webinar/live" element={<WebinarLive />} />
-              <Route path="/webinar/expired" element={<WebinarExpired />} />
-              <Route path="/webinar/replay" element={<WebinarReplay />} />
+              <Route path="/webinar" element={<CurrentWebinar />} />
               <Route
                 path="/webinar/meski-kompas"
                 element={<WebinarMeskiKompas />}
+              />
+              <Route
+                path="/webinar/meski-kompas/replay"
+                element={<WebinarReplay />}
+              />
+              <Route
+                path="/webinar/meski-kompas/dziekuje"
+                element={<ThankYouMeskiKompas />}
               />
               <Route
                 path="/webinar/kod-kapitana"
@@ -182,6 +184,10 @@ function App() {
               <Route
                 path="/webinar/depresja"
                 element={<WebinarDepresja />}
+              />
+              <Route
+                path="/webinar/depresja/live"
+                element={<WebinarLive />}
               />
 
               <Route path="/mct" element={<MCT />} />

@@ -1,0 +1,24 @@
+import type { FunnelConfig } from "./types";
+
+export const {{camelSlug}}: FunnelConfig = {
+  slug: "{{slug}}",
+  name: "{{name}}",
+  eventStart: "{{eventStartIsoWithOffset}}",
+  eventDurationMinutes: {{durationMinutes}},
+  format: "{{format}}",
+  registration: {
+    type: "easycart",
+    checkoutUrl: "{{checkoutUrl}}",
+  },
+  replay: { availableHours: {{replayHours}} },
+  oto: {{oto}},
+  promoBar: {
+    copy: "{{promoBarCopy}}",
+    ctaLabel: "{{promoBarCtaLabel}}",
+  },
+  seo: {
+    title: "{{seoTitle}}",
+    description: "{{seoDescription}}",
+    keywords: "{{seoKeywords}}",
+  },
+};

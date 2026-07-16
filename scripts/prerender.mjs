@@ -56,12 +56,8 @@ const routes = [
   '/webinar/kod-kapitana',
   '/webinar/meski-kompas',
   '/webinar/depresja',
-  '/webinar/expired',
-  '/webinar/replay',
-  '/webinar/live',
   '/help',
   '/thank-you',
-  '/thank-you/meski-kompas',
   '/mct',
   // Add redirect routes from config
   ...redirectRoutes

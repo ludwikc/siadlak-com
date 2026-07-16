@@ -33,9 +33,12 @@ export const redirects: RedirectConfig = {
 
   // Retired funnels
   "/wyzwanie": "/newsletter",
+  "/webinar/expired": "/discovery",
 
-  // Temporary redirects (can be removed later)
-  "/webinar": "/webinar/kod-kapitana",
+  // Legacy webinar routes (funnel pages now live under /webinar/<slug>/*)
+  "/webinar/replay": "/webinar/meski-kompas/replay",
+  "/webinar/live": "/webinar/depresja/live",
+  "/thank-you/meski-kompas": "/webinar/meski-kompas/dziekuje",
 };
 
 /**

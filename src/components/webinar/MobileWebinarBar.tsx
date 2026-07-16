@@ -1,101 +1,90 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
+import { funnels, getNextUpcomingFunnel, getPhaseBoundaries } from "@/config/funnels";
 
-// Target date: 02.02.2026 at 20:05 - after this time the bar will not appear
-const TARGET_DATE = new Date("2026-02-02T20:05:00");
-
-interface TimeLeft {
+type TimeLeft = {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
-}
+};
+
+const calculateTimeLeft = (target: Date): TimeLeft | null => {
+  const difference = target.getTime() - Date.now();
+  if (difference <= 0) return null;
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((difference % (1000 * 60)) / 1000),
+  };
+};
 
 const MobileWebinarBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const location = useLocation();
 
-  // Hide on the webinar page itself and OTO page
-  const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
+  const funnel = getNextUpcomingFunnel(funnels, new Date());
+  const promoBar = funnel?.promoBar;
+  const ctaClickedKey = funnel ? `webinarBarCTAClicked:${funnel.slug}` : "";
+  const isFunnelPage = location.pathname.startsWith("/webinar");
   const isOTOPage = location.pathname === "/oto";
 
-  // Reset visibility on every route change (unless CTA was clicked permanently)
   useEffect(() => {
-    const ctaClicked = localStorage.getItem("webinarBarCTAClicked");
-
-    if (ctaClicked || isWebinarPage || isOTOPage) {
+    if (!funnel || localStorage.getItem(ctaClickedKey) || isFunnelPage || isOTOPage) {
       setIsVisible(false);
     } else {
-      // Show bar on every route change
       setIsVisible(true);
     }
-  }, [location.pathname, isWebinarPage, isOTOPage]);
+  }, [location.pathname, funnel, ctaClickedKey, isFunnelPage, isOTOPage]);
 
   useEffect(() => {
-    const calculateTimeLeft = (): TimeLeft | null => {
-      const now = new Date().getTime();
-      const target = TARGET_DATE.getTime();
-      const difference = target - now;
-
-      if (difference <= 0) {
-        return null;
-      }
-
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
-    };
-
-    setTimeLeft(calculateTimeLeft());
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
+    if (!funnel) return;
+    const target = getPhaseBoundaries(funnel).liveAt;
+    setTimeLeft(calculateTimeLeft(target));
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft(target)), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [funnel]);
 
   const handleDismiss = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    // Just hide for current view - will reappear on refresh
     setIsVisible(false);
   };
 
   const handleCTAClick = () => {
-    // Permanently hide - won't show again even after refresh
-    localStorage.setItem("webinarBarCTAClicked", "true");
+    localStorage.setItem(ctaClickedKey, "true");
     setIsVisible(false);
   };
 
-  // Don't show on desktop, if dismissed, if event passed, on webinar page, or on OTO page
-  if (!isVisible || !timeLeft || isWebinarPage || isOTOPage) {
+  if (!funnel || !promoBar || !isVisible || !timeLeft || isFunnelPage || isOTOPage) {
     return null;
   }
 
   const formatNumber = (num: number) => num.toString().padStart(2, "0");
 
+  const countdownUnits: { value: number; label: string }[] = [
+    { value: timeLeft.days, label: "dni" },
+    { value: timeLeft.hours, label: "godz" },
+    { value: timeLeft.minutes, label: "min" },
+    { value: timeLeft.seconds, label: "sek" },
+  ];
+
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 animate-fade-in">
-      {/* Deep Ocean backdrop - takes ~1/4 of screen */}
-      <div 
+      <div
         className="relative backdrop-blur-xl border-t shadow-2xl"
-        style={{ 
+        style={{
           minHeight: "25vh",
           background: "linear-gradient(165deg, hsl(215, 50%, 6%) 0%, hsl(210, 45%, 10%) 40%, hsl(205, 40%, 14%) 100%)",
           borderColor: "rgba(56, 189, 248, 0.15)",
         }}
       >
-        {/* Ambient glow effects */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(56,189,248,0.1),transparent_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.08),transparent_50%)]"></div>
-        
-        {/* Close button */}
+
         <button
           type="button"
           onClick={handleDismiss}
@@ -105,13 +94,11 @@ const MobileWebinarBar = () => {
           <X size={20} className="text-dim" />
         </button>
 
-        {/* Content */}
         <div className="flex flex-col items-center justify-center h-full px-4 py-5 relative z-10">
-          {/* Title */}
           <div className="text-center mb-3">
-            <span 
+            <span
               className="text-2xl sm:text-3xl font-black uppercase tracking-wider drop-shadow-lg"
-              style={{ 
+              style={{
                 background: "linear-gradient(135deg, hsl(199, 89%, 58%) 0%, hsl(190, 95%, 65%) 50%, hsl(199, 89%, 58%) 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -119,59 +106,34 @@ const MobileWebinarBar = () => {
                 textShadow: "0 0 30px rgba(56, 189, 248, 0.5)",
               }}
             >
-              Kod Kapitana
+              {funnel.name}
             </span>
-            <p className="text-slate-300 text-sm mt-1">
-              Spotkanie online już za:
-            </p>
+            <p className="text-slate-300 text-sm mt-1">{promoBar.copy}</p>
           </div>
 
-          {/* Countdown */}
           <div className="flex items-center justify-center gap-1 mb-4">
-            <div 
-              className="flex flex-col items-center rounded-lg px-2.5 py-1.5"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.days)}
-              </span>
-              <span className="text-[10px] text-cyan-400/70 uppercase">dni</span>
-            </div>
-            <span className="text-cyan-400/50 text-lg font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-2.5 py-1.5"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.hours)}
-              </span>
-              <span className="text-[10px] text-cyan-400/70 uppercase">godz</span>
-            </div>
-            <span className="text-cyan-400/50 text-lg font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-2.5 py-1.5"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.minutes)}
-              </span>
-              <span className="text-[10px] text-cyan-400/70 uppercase">min</span>
-            </div>
-            <span className="text-cyan-400/50 text-lg font-bold">:</span>
-            <div 
-              className="flex flex-col items-center rounded-lg px-2.5 py-1.5"
-              style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
-            >
-              <span className="text-xl font-bold text-white font-mono">
-                {formatNumber(timeLeft.seconds)}
-              </span>
-              <span className="text-[10px] text-cyan-400/70 uppercase">sek</span>
-            </div>
+            {countdownUnits.map((unit, i) => (
+              <div key={unit.label} className="flex items-center gap-1">
+                {i > 0 && (
+                  <span className="text-cyan-400/50 text-lg font-bold">:</span>
+                )}
+                <div
+                  className="flex flex-col items-center rounded-lg px-2.5 py-1.5"
+                  style={{ background: "rgba(56, 189, 248, 0.1)", border: "1px solid rgba(56, 189, 248, 0.2)" }}
+                >
+                  <span className="text-xl font-bold text-white font-mono">
+                    {formatNumber(unit.value)}
+                  </span>
+                  <span className="text-[10px] text-cyan-400/70 uppercase">
+                    {unit.label}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* CTA Button - matching Kod Kapitana style */}
           <Link
-            to="/webinar/depresja"
+            to={`/webinar/${funnel.slug}`}
             onClick={handleCTAClick}
             className="w-full max-w-xs text-white font-bold py-3 px-6 rounded-xl text-center transition-all active:scale-[0.98]"
             style={{
@@ -179,7 +141,7 @@ const MobileWebinarBar = () => {
               boxShadow: "0 0 30px rgba(56, 189, 248, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3)",
             }}
           >
-            🚢 Zarezerwuj miejsce
+            {promoBar.ctaLabel}
           </Link>
         </div>
       </div>

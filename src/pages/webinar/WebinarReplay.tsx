@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/design-system/components/button";
 import { Clock } from "lucide-react";
+import { getFunnelBySlug, getPhaseBoundaries } from "@/config/funnels";
+import FunnelExpiredNotice from "@/components/funnel/FunnelExpiredNotice";
 
 type TimelineLink = {
   time: string;
@@ -59,16 +61,16 @@ const timelineLinks: TimelineLink[] = [
 
 const WebinarReplay = () => {
   const navigate = useNavigate();
+  const funnel = getFunnelBySlug("meski-kompas")!;
   const [timeLeft, setTimeLeft] = useState(0);
   const [offerExpired, setOfferExpired] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
 
   useEffect(() => {
-    // Target date: October 18, 2025 at 21:00 (9:00 PM)
-    const targetDate = new Date("2025-10-18T21:00:00").getTime();
+    const targetDate = getPhaseBoundaries(funnel).expiredAt.getTime();
 
     const updateTimer = () => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const difference = targetDate - now;
 
       if (difference <= 0) {
@@ -83,7 +85,7 @@ const WebinarReplay = () => {
     const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [funnel]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -298,20 +300,17 @@ const WebinarReplay = () => {
                 </div>
               )}
 
-              <Button
-                size="lg"
-                className={`w-full text-lg font-bold py-6 ${
-                  offerExpired
-                    ? "bg-muted hover:bg-muted text-muted-foreground cursor-not-allowed"
-                    : "bg-brand-gradient hover:-translate-y-px hover:shadow-lg text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                }`}
-                onClick={() => navigate("/program/meskosc")}
-                disabled={offerExpired}
-              >
-                {offerExpired
-                  ? "Oferta wygasła — Było, minęło..."
-                  : "DOŁĄCZ DO MĘSKIEGO KOMPASU"}
-              </Button>
+              {offerExpired ? (
+                <FunnelExpiredNotice funnel={funnel} />
+              ) : (
+                <Button
+                  size="lg"
+                  className="w-full text-lg font-bold py-6 bg-brand-gradient hover:-translate-y-px hover:shadow-lg text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  onClick={() => navigate("/program/meskosc")}
+                >
+                  DOŁĄCZ DO MĘSKIEGO KOMPASU
+                </Button>
+              )}
 
               {!offerExpired && (
                 <div className="mt-4 p-4 bg-depth/5 rounded-lg border border-depth/10">

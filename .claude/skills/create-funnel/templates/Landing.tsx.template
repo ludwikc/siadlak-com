@@ -1,0 +1,68 @@
+import Layout from "@/components/layout/Layout";
+import SEO from "@/components/SEO";
+import { getFunnelBySlug, getPhaseBoundaries } from "@/config/funnels";
+import { useFunnelPhase } from "@/hooks/use-funnel-phase";
+import FunnelCountdown from "@/components/funnel/FunnelCountdown";
+import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
+
+export default function {{PascalSlug}}Landing() {
+  const funnel = getFunnelBySlug("{{slug}}")!;
+  const { phase, eventStart } = useFunnelPhase(funnel);
+
+  return (
+    <Layout hideHeader hideFooter>
+      <SEO
+        title={funnel.seo.title}
+        description={funnel.seo.description}
+      />
+
+      <section className="py-20 md:py-32 bg-void text-center">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric mb-6">
+            Bezpłatne wydarzenie online ·{" "}
+            {eventStart.toLocaleDateString("pl-PL", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+            , {eventStart.toLocaleTimeString("pl-PL", { hour: "2-digit", minute: "2-digit" })}
+          </p>
+
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            {funnel.name}
+          </h1>
+
+          <p className="text-lg md:text-xl text-dim mb-10">
+            {"{{heroSubheadline}}"}
+          </p>
+
+          {phase === "upcoming" && (
+            <FunnelCountdown
+              target={eventStart}
+              label="Start już za:"
+              className="mb-10 text-white"
+            />
+          )}
+
+          <FunnelRegistrationCTA funnel={funnel}>
+            Rezerwuję miejsce
+          </FunnelRegistrationCTA>
+        </div>
+      </section>
+
+      <section className="py-20 bg-diamond">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">
+            Czego się dowiesz
+          </h2>
+          <p className="text-lg text-on-light-dim mb-10">
+            {"{{benefitsIntro}}"}
+          </p>
+          <FunnelRegistrationCTA funnel={funnel}>
+            Zapisuję się
+          </FunnelRegistrationCTA>
+        </div>
+      </section>
+    </Layout>
+  );
+}

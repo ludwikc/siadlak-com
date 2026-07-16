@@ -1,16 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X } from "lucide-react";
+import { funnels, getNextUpcomingFunnel, getPhaseBoundaries } from "@/config/funnels";
 
-// Target date: 02.02.2026 at 20:05 - after this time the bar will not appear
-const TARGET_DATE = new Date("2026-02-02T20:05:00");
-
-interface TimeLeft {
+type TimeLeft = {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
-}
+};
+
+const calculateTimeLeft = (target: Date): TimeLeft | null => {
+  const difference = target.getTime() - Date.now();
+  if (difference <= 0) return null;
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((difference % (1000 * 60)) / 1000),
+  };
+};
 
 const DesktopWebinarBar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,12 +27,13 @@ const DesktopWebinarBar = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const location = useLocation();
 
-  // Hide on the webinar page itself and OTO page
-  const isWebinarPage = location.pathname === "/webinar/kod-kapitana";
+  const funnel = getNextUpcomingFunnel(funnels, new Date());
+  const promoBar = funnel?.promoBar;
+  const ctaClickedKey = funnel ? `webinarBarCTAClicked:${funnel.slug}` : "";
+  const isFunnelPage = location.pathname.startsWith("/webinar");
   const isOTOPage = location.pathname === "/oto";
   const isHomePage = location.pathname === "/";
 
-  // Check scroll position to detect when user reaches the "truth" section
   useEffect(() => {
     if (!isHomePage) {
       setHasScrolledToTruth(false);
@@ -34,7 +44,6 @@ const DesktopWebinarBar = () => {
       const truthSection = document.getElementById("truth");
       if (truthSection) {
         const rect = truthSection.getBoundingClientRect();
-        // Trigger when the section comes into view
         if (rect.top <= window.innerHeight * 0.5) {
           setHasScrolledToTruth(true);
         }
@@ -42,60 +51,36 @@ const DesktopWebinarBar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial position
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage, location.pathname]);
 
-  // Reset visibility on route change (unless CTA was clicked)
   useEffect(() => {
-    const ctaClicked = localStorage.getItem("webinarBarCTAClicked");
-
-    if (ctaClicked || isWebinarPage || isOTOPage) {
+    if (!funnel || localStorage.getItem(ctaClickedKey) || isFunnelPage || isOTOPage) {
       setIsVisible(false);
     } else if (isHomePage && hasScrolledToTruth) {
       setIsVisible(true);
-    } else if (!isHomePage && !isOTOPage && !isWebinarPage) {
-      // On other pages (not homepage, not OTO, not webinar), show immediately
+    } else if (!isHomePage) {
       setIsVisible(true);
     }
   }, [
     location.pathname,
-    isWebinarPage,
+    funnel,
+    ctaClickedKey,
+    isFunnelPage,
     isOTOPage,
     isHomePage,
     hasScrolledToTruth,
   ]);
 
-  // Countdown timer
   useEffect(() => {
-    const calculateTimeLeft = (): TimeLeft | null => {
-      const now = new Date().getTime();
-      const target = TARGET_DATE.getTime();
-      const difference = target - now;
-
-      if (difference <= 0) {
-        return null;
-      }
-
-      return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        ),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
-    };
-
-    setTimeLeft(calculateTimeLeft());
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
+    if (!funnel) return;
+    const target = getPhaseBoundaries(funnel).liveAt;
+    setTimeLeft(calculateTimeLeft(target));
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft(target)), 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [funnel]);
 
   const handleDismiss = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -104,20 +89,25 @@ const DesktopWebinarBar = () => {
   };
 
   const handleCTAClick = () => {
-    localStorage.setItem("webinarBarCTAClicked", "true");
+    localStorage.setItem(ctaClickedKey, "true");
     setIsVisible(false);
   };
 
-  // Don't show on mobile, if event passed, on webinar page, or on OTO page
-  if (!isVisible || !timeLeft || isWebinarPage || isOTOPage) {
+  if (!funnel || !promoBar || !isVisible || !timeLeft || isFunnelPage || isOTOPage) {
     return null;
   }
 
   const formatNumber = (num: number) => num.toString().padStart(2, "0");
 
+  const countdownUnits: { value: number; label: string }[] = [
+    { value: timeLeft.days, label: "dni" },
+    { value: timeLeft.hours, label: "godz" },
+    { value: timeLeft.minutes, label: "min" },
+    { value: timeLeft.seconds, label: "sek" },
+  ];
+
   return (
     <div className="hidden md:block fixed bottom-0 left-0 right-0 z-50 animate-fade-in">
-      {/* Deep Ocean backdrop - takes ~1/4 of screen */}
       <div
         className="relative backdrop-blur-xl border-t shadow-2xl flex items-center justify-center"
         style={{
@@ -127,11 +117,9 @@ const DesktopWebinarBar = () => {
           borderColor: "rgba(56, 189, 248, 0.15)",
         }}
       >
-        {/* Ambient glow effects */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(56,189,248,0.1),transparent_60%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(16,185,129,0.08),transparent_50%)]"></div>
 
-        {/* Close button - positioned absolutely, not affected by centering */}
         <button
           type="button"
           onClick={handleDismiss}
@@ -141,11 +129,8 @@ const DesktopWebinarBar = () => {
           <X size={24} className="text-dim" />
         </button>
 
-        {/* Content wrapper - allows for bonus text below */}
         <div className="flex flex-col items-center justify-center px-8 relative z-10">
-          {/* Main content row */}
           <div className="flex items-center justify-center gap-10">
-            {/* Title */}
             <div className="text-center">
               <span
                 className="text-3xl lg:text-4xl font-black uppercase tracking-wider drop-shadow-lg block"
@@ -158,84 +143,43 @@ const DesktopWebinarBar = () => {
                   textShadow: "0 0 30px rgba(56, 189, 248, 0.5)",
                 }}
               >
-                Kod Kapitana
+                {funnel.name}
               </span>
-              <p className="text-slate-300 text-base mt-1">
-                Spotkanie online już za:
-              </p>
+              <p className="text-slate-300 text-base mt-1">{promoBar.copy}</p>
             </div>
 
-            {/* Countdown and CTA with bonus text below */}
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-10">
-                {/* Countdown */}
                 <div className="flex items-center justify-center gap-2">
-                  <div
-                    className="flex flex-col items-center rounded-lg px-4 py-2"
-                    style={{
-                      background: "rgba(56, 189, 248, 0.1)",
-                      border: "1px solid rgba(56, 189, 248, 0.2)",
-                    }}
-                  >
-                    <span className="text-3xl font-bold text-white font-mono">
-                      {formatNumber(timeLeft.days)}
-                    </span>
-                    <span className="text-xs text-cyan-400/70 uppercase">
-                      dni
-                    </span>
-                  </div>
-                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-                  <div
-                    className="flex flex-col items-center rounded-lg px-4 py-2"
-                    style={{
-                      background: "rgba(56, 189, 248, 0.1)",
-                      border: "1px solid rgba(56, 189, 248, 0.2)",
-                    }}
-                  >
-                    <span className="text-3xl font-bold text-white font-mono">
-                      {formatNumber(timeLeft.hours)}
-                    </span>
-                    <span className="text-xs text-cyan-400/70 uppercase">
-                      godz
-                    </span>
-                  </div>
-                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-                  <div
-                    className="flex flex-col items-center rounded-lg px-4 py-2"
-                    style={{
-                      background: "rgba(56, 189, 248, 0.1)",
-                      border: "1px solid rgba(56, 189, 248, 0.2)",
-                    }}
-                  >
-                    <span className="text-3xl font-bold text-white font-mono">
-                      {formatNumber(timeLeft.minutes)}
-                    </span>
-                    <span className="text-xs text-cyan-400/70 uppercase">
-                      min
-                    </span>
-                  </div>
-                  <span className="text-cyan-400/50 text-2xl font-bold">:</span>
-                  <div
-                    className="flex flex-col items-center rounded-lg px-4 py-2"
-                    style={{
-                      background: "rgba(56, 189, 248, 0.1)",
-                      border: "1px solid rgba(56, 189, 248, 0.2)",
-                    }}
-                  >
-                    <span className="text-3xl font-bold text-white font-mono">
-                      {formatNumber(timeLeft.seconds)}
-                    </span>
-                    <span className="text-xs text-cyan-400/70 uppercase">
-                      sek
-                    </span>
-                  </div>
+                  {countdownUnits.map((unit, i) => (
+                    <div key={unit.label} className="flex items-center gap-2">
+                      {i > 0 && (
+                        <span className="text-cyan-400/50 text-2xl font-bold">
+                          :
+                        </span>
+                      )}
+                      <div
+                        className="flex flex-col items-center rounded-lg px-4 py-2"
+                        style={{
+                          background: "rgba(56, 189, 248, 0.1)",
+                          border: "1px solid rgba(56, 189, 248, 0.2)",
+                        }}
+                      >
+                        <span className="text-3xl font-bold text-white font-mono">
+                          {formatNumber(unit.value)}
+                        </span>
+                        <span className="text-xs text-cyan-400/70 uppercase">
+                          {unit.label}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
-                {/* CTA Button */}
                 <Link
-                  to="/webinar/depresja"
+                  to={`/webinar/${funnel.slug}`}
                   onClick={handleCTAClick}
-                  className="text-white font-bold py-4 px-10 rounded-xl text-center transition-all hover:scale-[1.02] active:scale-[0.98] text-lg"
+                  className="text-white font-bold py-4 px-10 rounded-xl text-center transition-all active:scale-[0.98] text-lg"
                   style={{
                     background:
                       "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
@@ -243,21 +187,9 @@ const DesktopWebinarBar = () => {
                       "0 0 30px rgba(56, 189, 248, 0.3), 0 8px 20px rgba(0, 0, 0, 0.3)",
                   }}
                 >
-                  🚢 Zarezerwuj miejsce
+                  {promoBar.ctaLabel}
                 </Link>
               </div>
-
-              {/* Bonus text - yellow highlighted */}
-              <p
-                className="mt-3 text-sm font-semibold text-center px-3 py-1 rounded"
-                style={{
-                  backgroundColor: "hsl(50, 100%, 50%)",
-                  color: "hsl(0, 0%, 10%)",
-                }}
-              >
-                Jeszcze zdążysz odebrać BONUS dla pierwszych 500 zapisanych
-                osób!
-              </p>
             </div>
           </div>
         </div>

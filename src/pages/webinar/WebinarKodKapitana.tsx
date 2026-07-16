@@ -5,10 +5,19 @@ import SEO from "@/components/SEO";
 import { Anchor, Star, MessageSquare, Check } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { getFunnelBySlug } from "@/config/funnels";
+import { useFunnelPhase } from "@/hooks/use-funnel-phase";
+import FunnelExpiredNotice from "@/components/funnel/FunnelExpiredNotice";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
-  const ctaUrl = "https://buy.siadlak.com/checkout/kod-kapitana";
+  const funnel = getFunnelBySlug("kod-kapitana")!;
+  const { phase } = useFunnelPhase(funnel);
+  const isExpired = phase === "expired";
+  const ctaUrl =
+    funnel.registration.type === "easycart"
+      ? funnel.registration.checkoutUrl
+      : "#";
 
   return (
     <Layout hideHeader={true} hideFooter={true}>
@@ -175,26 +184,30 @@ export default function WebinarKodKapitana() {
 
               {/* Primary CTA */}
               <div className="mb-6 animate-fade-in">
-                <a
-                  href={ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full sm:w-auto sm:inline-block group"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-14 py-5 sm:py-7 md:py-9 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[56px] touch-manipulation whitespace-normal h-auto"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
-                      color: "white",
-                      boxShadow:
-                        "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                    }}
+                {isExpired ? (
+                  <FunnelExpiredNotice funnel={funnel} />
+                ) : (
+                  <a
+                    href={ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full sm:w-auto sm:inline-block group"
                   >
-                    🚢 ZAREZERWUJ MOJE MIEJSCE
-                  </Button>
-                </a>
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-14 py-5 sm:py-7 md:py-9 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[56px] touch-manipulation whitespace-normal h-auto"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
+                        color: "white",
+                        boxShadow:
+                          "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                      }}
+                    >
+                      🚢 ZAREZERWUJ MOJE MIEJSCE
+                    </Button>
+                  </a>
+                )}
               </div>
 
               {/* Bonus */}
@@ -746,26 +759,30 @@ export default function WebinarKodKapitana() {
                   }}
                 ></div>
 
-                <a
-                  href={ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full sm:w-auto sm:inline-block relative"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-2xl whitespace-normal h-auto"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
-                      color: "white",
-                      boxShadow:
-                        "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
-                    }}
+                {isExpired ? (
+                  <FunnelExpiredNotice funnel={funnel} />
+                ) : (
+                  <a
+                    href={ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full sm:w-auto sm:inline-block relative"
                   >
-                    🚢 ZAPISUJĘ SIĘ NA SPOTKANIE
-                  </Button>
-                </a>
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-2xl whitespace-normal h-auto"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
+                        color: "white",
+                        boxShadow:
+                          "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+                      }}
+                    >
+                      🚢 ZAPISUJĘ SIĘ NA SPOTKANIE
+                    </Button>
+                  </a>
+                )}
 
                 <p className="mt-6 text-sm text-slate-400">
                   Dołączyło już{" "}
@@ -843,26 +860,30 @@ export default function WebinarKodKapitana() {
               </p>
             </div>
 
-            <a
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full sm:w-auto sm:inline-block mb-12"
-            >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
-                style={{
-                  background:
-                    "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
-                  color: "white",
-                  boxShadow:
-                    "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
-                }}
+            {isExpired ? (
+              <FunnelExpiredNotice funnel={funnel} className="mb-12" />
+            ) : (
+              <a
+                href={ctaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full sm:w-auto sm:inline-block mb-12"
               >
-                🚢 DOŁĄCZ DO REJSU — ZAPISZ SIĘ TERAZ
-              </Button>
-            </a>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
+                    color: "white",
+                    boxShadow:
+                      "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                  }}
+                >
+                  🚢 DOŁĄCZ DO REJSU — ZAPISZ SIĘ TERAZ
+                </Button>
+              </a>
+            )}
 
             <p className="text-xl text-foreground leading-relaxed mb-8">
               Do zobaczenia na pokładzie,

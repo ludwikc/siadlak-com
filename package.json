@@ -14,7 +14,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:ds": "tsup"
+    "build:ds": "tsup",
+    "test": "vitest run"
   },
   "dependencies": {
     "@fontsource/caveat": "^5.2.8",
@@ -98,6 +99,7 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
-    "vite-imagetools": "^6.2.9"
+    "vite-imagetools": "^6.2.9",
+    "vitest": "^4.1.10"
   }
 }

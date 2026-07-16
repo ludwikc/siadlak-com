@@ -315,34 +315,23 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/webinar/live',
+    path: '/webinar/depresja/live',
     seo: {
       title: 'Webinar Live',
       description: 'Webinar na żywo z Ludwikiem C. Siadlakiem.',
       keywords: 'webinar live, na żywo, Ludwik Siadlak',
-      url: '/webinar/live',
+      url: '/webinar/depresja/live',
       type: 'event',
       noindex: true,
     }
   },
   {
-    path: '/webinar/expired',
-    seo: {
-      title: 'Webinar Zakończony',
-      description: 'Ten webinar już się zakończył. Zapisz się na kolejne wydarzenia Ludwika C. Siadlaka.',
-      keywords: 'webinar zakończony, kolejne wydarzenia',
-      url: '/webinar/expired',
-      type: 'event',
-      noindex: true,
-    }
-  },
-  {
-    path: '/webinar/replay',
+    path: '/webinar/meski-kompas/replay',
     seo: {
       title: 'Nagranie Webinaru',
       description: 'Obejrzyj nagranie z webinaru Ludwika C. Siadlaka.',
       keywords: 'nagranie webinaru, Ludwik Siadlak',
-      url: '/webinar/replay',
+      url: '/webinar/meski-kompas/replay',
       type: 'event',
       noindex: true,
     }
@@ -369,12 +358,12 @@ export const seoRouteConfig: RouteConfig[] = [
     }
   },
   {
-    path: '/thank-you/meski-kompas',
+    path: '/webinar/meski-kompas/dziekuje',
     seo: {
       title: 'Miejsce Zarezerwowane — Męski Kompas',
       description: 'Potwierdzenie rejestracji na warsztat Męski Kompas.',
       keywords: 'męski kompas, potwierdzenie, warsztat',
-      url: '/thank-you/meski-kompas',
+      url: '/webinar/meski-kompas/dziekuje',
       favicon: '/compass-favicon.png',
       noindex: true,
     }
