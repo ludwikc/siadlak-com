@@ -79,6 +79,7 @@ import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
 import GlobalWebinarBar from "./components/conversion/GlobalWebinarBar";
 import PageViewTracker from "./components/analytics/PageViewTracker";
+import ExitIntentController from "./components/exit-intent/ExitIntentController";
 import { initAnalytics } from "./lib/analytics";
 
 const queryClient = new QueryClient();
@@ -222,6 +223,7 @@ function App() {
               </Routes>
             </Suspense>
             <GlobalWebinarBar />
+            <ExitIntentController />
             <Toaster />
           </Router>
         </ThemeProvider>
