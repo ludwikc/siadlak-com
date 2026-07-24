@@ -61,16 +61,6 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="app"></div>
-    <script>
-      // Handle 404.html redirect for SPA routing
-      (function() {
-        var redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          sessionStorage.removeItem('redirect');
-          history.replaceState(null, '', redirect);
-        }
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

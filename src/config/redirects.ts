@@ -3,6 +3,11 @@
  *
  * Add new redirects here to keep them organized and easy to maintain.
  * Supports both shortcut URLs and legacy route redirects.
+ *
+ * NOTE: The authoritative edge copy lives in `vercel.json` (server-side 308s,
+ * fired before the SPA loads — better for SEO and no-JS clients). This map is
+ * the client-side fallback for in-app <Link> navigation to legacy paths.
+ * Keep both in sync when adding or changing a redirect.
  */
 
 export type RedirectConfig = Record<string, string>;

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/kontakt", "destination": "/contact", "permanent": true },
+    { "source": "/mk", "destination": "/program/meskosc", "permanent": true },
+    { "source": "/meskikompas", "destination": "/program/meskosc", "permanent": true },
+    { "source": "/meski-kompas", "destination": "/program/meskosc", "permanent": true },
+    { "source": "/hp", "destination": "/program/produktywnosc", "permanent": true },
+    { "source": "/lh", "destination": "/podcast/life-hacking", "permanent": true },
+    { "source": "/u", "destination": "/program/uwaznosc", "permanent": true },
+    { "source": "/uwaznosc", "destination": "/program/uwaznosc", "permanent": true },
+    { "source": "/depresja", "destination": "/webinar/depresja", "permanent": true },
+    { "source": "/ttt", "destination": "/program/ttt-ai", "permanent": true },
+    { "source": "/wyzwanie", "destination": "/newsletter", "permanent": true },
+    { "source": "/program/hakowanie-produktywnosci", "destination": "/program/produktywnosc", "permanent": true },
+    { "source": "/program/silna-glowa", "destination": "/program/odpornosc", "permanent": true },
+    { "source": "/program/uwazne-zycie", "destination": "/program/uwaznosc", "permanent": true },
+    { "source": "/program/meski-kompas", "destination": "/program/meskosc", "permanent": true },
+    { "source": "/program/mental-elevator", "destination": "/program/lifeos-system-upgrade", "permanent": true },
+    { "source": "/program/7-technik", "destination": "/program", "permanent": true },
+    { "source": "/program/tech-leadership", "destination": "/mentoring", "permanent": true },
+    { "source": "/webinar/expired", "destination": "/discovery", "permanent": true },
+    { "source": "/webinar/replay", "destination": "/webinar/meski-kompas/replay", "permanent": true },
+    { "source": "/webinar/live", "destination": "/webinar/depresja/live", "permanent": true },
+    { "source": "/thank-you/meski-kompas", "destination": "/webinar/meski-kompas/dziekuje", "permanent": true },
+    { "source": "/stream", "destination": "https://deepwork.pl", "permanent": true },
+    { "source": "/legal", "destination": "https://docs.siadlak.com/legal/regulaminy", "permanent": true },
+    { "source": "/legal/privacy", "destination": "https://docs.siadlak.com/legal/privacy", "permanent": true },
+    { "source": "/legal/terms", "destination": "https://docs.siadlak.com/legal/regulaminy", "permanent": true },
+    { "source": "/privacy", "destination": "https://docs.siadlak.com/legal/privacy", "permanent": true },
+    { "source": "/terms", "destination": "https://docs.siadlak.com/legal/regulaminy", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|webp|avif|svg|ico|woff|woff2)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    }
+  ]
+}
