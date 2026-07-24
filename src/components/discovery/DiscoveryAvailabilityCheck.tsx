@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckCircle } from "@/lib/icons";
 import { CTAButton } from "@/design-system/components/cta-button";
+import { track } from "@/lib/analytics";
 
 const discoveryQuestions = [
   "Za co walczysz?",
@@ -12,6 +13,7 @@ export default function DiscoveryAvailabilityCheck() {
   const [booked, setBooked] = useState(false);
 
   const handleScheduleSession = () => {
+    track("discovery_booking_click", { placement: "availability_check" });
     const calendarUrl = "https://calendar.app.google/Xj5U39t9HaVNqS1HA";
     const popup = window.open(
       calendarUrl,

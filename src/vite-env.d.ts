@@ -12,6 +12,8 @@ interface Window {
   mlDataset?: unknown;
   MailerLite?: unknown;
   MailerLiteObject?: string;
+  dataLayer?: Record<string, unknown>[];
+  clarity?: (...args: unknown[]) => void;
 }
 /// <reference types="vite-imagetools/client" />
 

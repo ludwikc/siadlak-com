@@ -17,10 +17,74 @@
     <meta name="twitter:site" content="@ludwikc" />
     <meta name="twitter:image" content="https://siadlak.com/images/og-image.jpg" />
     
-    <!-- MailerLite Universal -->
-       <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <!-- Preconnect to the third-party origins used for tracking + forms -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://cdn-cookieyes.com" />
+    <link rel="preconnect" href="https://assets.mailerlite.com" />
+    <link rel="dns-prefetch" href="https://www.clarity.ms" />
 
-<script>
+    <!-- Google Consent Mode v2 — defaults DENIED. MUST run before any Google tag. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 2000
+      });
+      gtag('set', 'url_passthrough', true);
+      gtag('set', 'ads_data_redaction', true);
+      gtag('js', new Date());
+    </script>
+
+    <!-- CookieYes CMP — updates Consent Mode on the visitor's choice -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7a00710ab4d1d167ad01acea/script.js"></script>
+
+    <!-- CookieYes -> dataLayer bridge: exposes consent categories to GTM (for non-Google tags) -->
+    <script>
+      (function () {
+        function pushConsent(detail) {
+          var accepted = (detail && detail.accepted) || [];
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'cky_consent_update',
+            cky_accepted: accepted,
+            cky_analytics: accepted.indexOf('analytics') > -1,
+            cky_advertisement: accepted.indexOf('advertisement') > -1
+          });
+        }
+        document.addEventListener('cookieyes_consent_update', function (e) { pushConsent(e.detail); });
+        // Returning visitor: replay stored consent from the cookie on load.
+        var m = document.cookie.match(/cookieyes-consent=([^;]+)/);
+        if (m && /action:yes/.test(m[1])) {
+          var accepted = [];
+          ['necessary','functional','analytics','performance','advertisement'].forEach(function (c) {
+            if (new RegExp(c + ':yes').test(m[1])) accepted.push(c);
+          });
+          pushConsent({ accepted: accepted });
+        }
+      })();
+    </script>
+
+    <!-- Google Tag Manager (GTM-5QCTH53T hosts GA4, Meta Pixel, Clarity — see docs/analytics/gtm-setup.md) -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5QCTH53T"></script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Ads (AW-997103617). Consent-gated by the defaults above. Kept inline
+         to avoid a remarketing gap; migrate into GTM per docs/analytics/gtm-setup.md. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-997103617"></script>
+    <script>
+      gtag('config', 'AW-997103617');
+    </script>
+
+    <!-- MailerLite Universal -->
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
         n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
@@ -28,27 +92,6 @@
         ml('account', '484845');
     </script>
     <!-- End MailerLite Universal -->
-
-
-<!-- Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5QCTH53T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-997103617"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-997103617');
-</script>
-<!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7a00710ab4d1d167ad01acea/script.js"></script> <!-- End cookieyes banner -->
     <meta property="og:title" content="Ludwik C. Siadlak | Coach Produktywności i Uważności">
   <meta name="twitter:title" content="Ludwik C. Siadlak | Coach Produktywności i Uważności">
   <meta property="og:description" content="Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Programy mentalne i mentoring 1:1 dla profesjonalistów.">

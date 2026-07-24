@@ -79,8 +79,12 @@ import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
 import MobileWebinarBar from "./components/webinar/MobileWebinarBar";
 import DesktopWebinarBar from "./components/webinar/DesktopWebinarBar";
+import PageViewTracker from "./components/analytics/PageViewTracker";
+import { initAnalytics } from "./lib/analytics";
 
 const queryClient = new QueryClient();
+
+initAnalytics();
 
 function App() {
   return (
@@ -89,6 +93,7 @@ function App() {
         <ThemeProvider>
           <Router future={{ v7_startTransition: true }}>
             <ScrollToTop />
+            <PageViewTracker />
             <Suspense fallback={<RouteFallback />}>
               <Routes>
                 <Route path="/" element={<Index />} />

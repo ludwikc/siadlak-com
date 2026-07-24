@@ -1,4 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { track } from "@/lib/analytics";
+import { getMailerLiteFields } from "@/lib/attribution";
 
 const ML_ACCOUNT = "484845";
 
@@ -6,6 +8,8 @@ export default function MailerLiteEmbed({
   dataForm,
   className,
   hiddenFields,
+  source,
+  onSuccess,
 }: {
   dataForm: string;
   className?: string;
@@ -15,8 +19,21 @@ export default function MailerLiteEmbed({
    * Pola muszą istnieć w koncie MailerLite (Subscribers → Fields).
    */
   hiddenFields?: Record<string, string | number>;
+  /** Etykieta źródła do analityki (np. "newsletter-page", "reset"). */
+  source?: string;
+  /** Wywoływane raz, gdy MailerLite pokaże ekran sukcesu (double opt-in wysłany). */
+  onSuccess?: () => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const onSuccessRef = useRef(onSuccess);
+  onSuccessRef.current = onSuccess;
+
+  // Attribution (utm_*, landing_page) is injected automatically; explicit
+  // hiddenFields win over it.
+  const mergedFields = useMemo<Record<string, string | number>>(
+    () => ({ ...getMailerLiteFields(), ...hiddenFields }),
+    [hiddenFields],
+  );
 
   useEffect(() => {
     const raf = requestAnimationFrame(() => {
@@ -38,12 +55,12 @@ export default function MailerLiteEmbed({
 
   // Wstrzyknij ukryte pola do <form>, gdy tylko MailerLite go wyrenderuje.
   useEffect(() => {
-    if (!hiddenFields || Object.keys(hiddenFields).length === 0) return;
+    if (Object.keys(mergedFields).length === 0) return;
     const container = containerRef.current;
     if (!container) return;
 
     const inject = (form: HTMLFormElement) => {
-      Object.entries(hiddenFields).forEach(([key, value]) => {
+      Object.entries(mergedFields).forEach(([key, value]) => {
         const name = `fields[${key}]`;
         let input = form.querySelector<HTMLInputElement>(
           `input[name="${name}"]`,
@@ -68,12 +85,43 @@ export default function MailerLiteEmbed({
     observer.observe(container, { childList: true, subtree: true });
 
     return () => observer.disconnect();
-  }, [hiddenFields]);
+  }, [mergedFields]);
+
+  // Wykryj ekran sukcesu MailerLite i zgłoś zdarzenie lead_submitted (raz).
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    let fired = false;
+
+    const check = () => {
+      if (fired) return;
+      const success = container.querySelector<HTMLElement>(".ml-form-successBody");
+      if (success && success.offsetParent !== null) {
+        fired = true;
+        try {
+          localStorage.setItem("lead:submitted", new Date().toISOString());
+        } catch {
+          /* ignore */
+        }
+        track("lead_submitted", {
+          form_id: dataForm,
+          page_path: window.location.pathname,
+          source,
+        });
+        onSuccessRef.current?.();
+      }
+    };
+
+    check();
+    const observer = new MutationObserver(check);
+    observer.observe(container, { childList: true, subtree: true, attributes: true });
+    return () => observer.disconnect();
+  }, [dataForm, source]);
 
   // Ukryj wizualnie pola przekazywane jako hiddenFields — użytkownik ich nie
   // widzi, ale MailerLite je renderuje (są na formularzu) i wysyła przy zapisie.
-  const hideStyles = hiddenFields
-    ? Object.keys(hiddenFields)
+  const hideStyles = Object.keys(mergedFields).length
+    ? Object.keys(mergedFields)
         .map((key) => {
           const sel = `input[name="fields[${key}]"]`;
           return [

@@ -10,6 +10,7 @@ import {
   getResultTier,
 } from "@/data/reset-quiz-data";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
+import { track } from "@/lib/analytics";
 
 type Phase = "intro" | "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
 
@@ -88,27 +89,12 @@ export default function Reset() {
     requestAnimationFrame(tick);
   }, [phase]);
 
-  useEffect(() => {
-    if (phase !== "lead-capture") return;
-
-    const observer = new MutationObserver(() => {
-      const successEl = document.querySelector(".ml-form-successBody");
-      if (successEl && getComputedStyle(successEl).display !== "none") {
-        observer.disconnect();
-        localStorage.removeItem(STORAGE_KEY);
-        setTimeout(() => setPhase("result"), 1500);
-      }
-    });
-
-    const container = document.querySelector(".ml-embedded");
-    if (container) {
-      observer.observe(container, { attributes: true, childList: true, subtree: true });
-    }
-
-    return () => observer.disconnect();
-  }, [phase]);
-
   const tier = getResultTier(totalScore);
+
+  useEffect(() => {
+    if (phase !== "result") return;
+    track("reset_quiz_complete", { score: totalScore, tier: tier.heading });
+  }, [phase, totalScore, tier.heading]);
 
   return (
     <>
@@ -138,7 +124,7 @@ export default function Reset() {
               <Button
                 size="lg"
                 className="w-full sm:w-auto min-h-[56px] text-lg"
-                onClick={() => setPhase("quiz")}
+                onClick={() => { track("reset_quiz_start", {}); setPhase("quiz"); }}
               >
                 Zaczynam
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
@@ -231,9 +217,14 @@ export default function Reset() {
               <div className="max-w-sm mx-auto">
                 <MailerLiteEmbed
                   dataForm="9Ffuno"
+                  source="reset"
                   hiddenFields={{
                     reset_score: totalScore,
                     reset_tier: tier.heading,
+                  }}
+                  onSuccess={() => {
+                    localStorage.removeItem(STORAGE_KEY);
+                    setTimeout(() => setPhase("result"), 1500);
                   }}
                 />
               </div>

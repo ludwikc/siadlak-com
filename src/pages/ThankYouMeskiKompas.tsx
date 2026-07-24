@@ -1,11 +1,17 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SEO from '@/components/SEO';
 import { Button } from '@/design-system/components/button';
 import { Calendar, Clock, Mail, CheckCircle2, AlertCircle } from 'lucide-react';
+import { track } from '@/lib/analytics';
 
 export default function ThankYouMeskiKompas() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    track('registration_complete', { funnel_slug: 'meski-kompas' });
+  }, []);
 
   return (
     <Layout>

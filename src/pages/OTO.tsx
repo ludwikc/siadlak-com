@@ -5,6 +5,7 @@ import { OTOProductDisplay } from "@/components/oto/OTOProductDisplay";
 import { OTOWelcomeDialog } from "@/components/oto/OTOWelcomeDialog";
 import { OTOMinimizedTimer } from "@/components/oto/OTOMinimizedTimer";
 import { getOTOCookie, setOTOCookie, isOfferExpired } from "@/lib/oto-utils";
+import { track } from "@/lib/analytics";
 
 enum OTOState {
   LOADING = "loading",
@@ -26,9 +27,11 @@ function OTOContent() {
         // User has visited before
         if (isOfferExpired()) {
           setState(OTOState.EXPIRED);
+          track("oto_expired", { product: "oto" });
         } else {
           // Still within time limit
           setState(OTOState.ACTIVE);
+          track("oto_view", { product: "oto" });
 
           // Show welcome dialog only if not seen before
           if (!hasSeenWelcome) {
@@ -41,6 +44,7 @@ function OTOContent() {
         // First-time visitor - set cookie and start timer
         setOTOCookie({});
         setState(OTOState.ACTIVE);
+        track("oto_view", { product: "oto" });
 
         // Show welcome dialog only if not seen before
         if (!hasSeenWelcome) {
@@ -59,6 +63,7 @@ function OTOContent() {
   const handleExpired = () => {
     setState(OTOState.EXPIRED);
     setShowMinimizedTimer(false);
+    track("oto_expired", { product: "oto" });
   };
 
   const handleWelcomeContinue = () => {
