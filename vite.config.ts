@@ -22,8 +22,12 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: undefined,
-      }
+        manualChunks(id) {
+          if (/node_modules\/(react|react-dom|scheduler|react-router|react-router-dom)\//.test(id)) {
+            return "react-vendor";
+          }
+        },
+      },
     },
     charset: 'utf8'
   },

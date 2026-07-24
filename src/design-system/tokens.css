@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+/* Fonts are self-hosted via @fontsource-variable, imported once in src/main.tsx
+   (Inter Variable, Space Grotesk Variable, Roboto Mono). No render-blocking
+   Google Fonts @import here. */
 
 /* === Diamond Hybrid Design System === */
 /* 4 Core Colors: Void Black, Electric Blue, Depth Purple, Diamond Light */
@@ -108,8 +108,8 @@
   --sidebar-ring: 211 100% 50%;
 
   /* === TYPOGRAPHY === */
-  --font-family-primary: "Inter", sans-serif;
-  --font-family-heading: "Space Grotesk", sans-serif;
+  --font-family-primary: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-family-heading: "Space Grotesk Variable", "Space Grotesk", sans-serif;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;

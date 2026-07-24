@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/design-system/components/button";
 import { ArrowRight, Clock, MailIcon, Download } from "lucide-react";
-import { toast } from "@/design-system";
+import { toast } from "@/design-system/lib/use-toast";
 
 const WebinarExpired = () => {
   const navigate = useNavigate();

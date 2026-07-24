@@ -4,10 +4,11 @@ import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getWebPageEntity, getOrganizationEntity } from "@/lib/structured-data";
-import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png";
-import programOdpornosc from "@/assets/LCS-program-Odpornosc.png";
-import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png";
-import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png";
+import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=80;160&format=avif;webp;png&as=picture";
+import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=80;160&format=avif;webp;png&as=picture";
+import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png?w=80;160&format=avif;webp;png&as=picture";
+import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=80;160&format=avif;webp;png&as=picture";
+import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 const TheCut = () => <div className="the-cut" />;
 
@@ -163,12 +164,14 @@ export default function Wspolpraca() {
                 to={prog.to}
                 className="group bg-surface border border-white/10 rounded-md p-6 flex gap-5 hover:border-electric/40 transition-colors"
               >
-                <img
-                  src={prog.img}
-                  alt={prog.title}
-                  className="w-20 h-20 rounded-md object-cover flex-shrink-0"
-                  loading="lazy"
-                />
+                <div className="w-20 h-20 flex-shrink-0">
+                  <OptimizedImage
+                    src={prog.img}
+                    alt={prog.title}
+                    sizes="80px"
+                    className="w-20 h-20 rounded-md object-cover"
+                  />
+                </div>
                 <div className="min-w-0">
                   <h3 className="font-heading font-bold text-white text-base mb-1 group-hover:text-electric transition-colors">
                     <span aria-hidden="true">{prog.emoji}</span> {prog.title}

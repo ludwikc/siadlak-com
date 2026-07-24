@@ -2,7 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/design-system/components/button";
 import { Facebook, Youtube } from "lucide-react";
-import { toast } from "@/design-system";
+import { toast } from "@/design-system/lib/use-toast";
 import calendarGcal from "@/assets/calendar-gcal.png?w=64;128&format=avif;webp;png&as=picture";
 import calendarApple from "@/assets/calendar-apple.png?w=64;128&format=avif;webp;png&as=picture";
 import calendarOutlook from "@/assets/calendar-outlook.png?w=64;128&format=avif;webp;png&as=picture";

@@ -27,9 +27,16 @@ export default function OptimizedImage({
   style,
 }: OptimizedImageProps) {
   const loading = priority ? "eager" : "lazy";
-  const fetchPriority = priority ? "high" : undefined;
+  // React 18.3 warns on the camelCase `fetchPriority` prop; the DOM attribute is
+  // lowercase, so pass it through as a plain attribute only when prioritising.
+  const priorityAttr = (priority ? { fetchpriority: "high" } : {}) as Record<string, string>;
 
   if (typeof src === "string") {
+    if (import.meta.env.DEV && (width === undefined || height === undefined)) {
+      console.warn(
+        `[OptimizedImage] string src "${src}" is missing width/height — set both to avoid layout shift (CLS), or import via the imagetools \`?...&as=picture\` query so dimensions are inferred.`,
+      );
+    }
     const webpSrc = deriveSiblingPath(src, ".webp");
     const avifSrc = deriveSiblingPath(src, ".avif");
 
@@ -43,7 +50,7 @@ export default function OptimizedImage({
           width={width}
           height={height}
           loading={loading}
-          fetchPriority={fetchPriority}
+          {...priorityAttr}
           className={className}
           style={style}
           decoding="async"
@@ -65,7 +72,7 @@ export default function OptimizedImage({
         width={width ?? img.w}
         height={height ?? img.h}
         loading={loading}
-        fetchPriority={fetchPriority}
+        {...priorityAttr}
         className={className}
         style={style}
         decoding="async"
