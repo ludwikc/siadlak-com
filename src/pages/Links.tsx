@@ -1,6 +1,7 @@
 import { ExternalLink } from "@/lib/icons";
 import SEO from "@/components/SEO";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
+import LandingLayout from "@/components/layout/LandingLayout";
 
 const UTM = "?utm_source=social&utm_medium=bio&utm_campaign=links";
 
@@ -58,7 +59,7 @@ export default function LinksPage() {
         url="https://siadlak.com/links"
       />
 
-      <div className="min-h-screen bg-[hsl(var(--surface-dark-base))] text-[hsl(var(--text-on-dark))]">
+      <LandingLayout className="bg-[hsl(var(--surface-dark-base))] text-[hsl(var(--text-on-dark))]">
         <div className="max-w-md mx-auto px-4 py-10 space-y-8">
           {/* === AVATAR + BIO === */}
           <div className="text-center space-y-3">
@@ -143,7 +144,7 @@ export default function LinksPage() {
             </p>
           </div>
         </div>
-      </div>
+      </LandingLayout>
     </>
   );
 }

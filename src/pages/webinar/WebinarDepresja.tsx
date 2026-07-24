@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import Layout from "@/components/layout/Layout";
+import LandingLayout from "@/components/layout/LandingLayout";
 import SEO from "@/components/SEO";
 import { Check, Phone } from "lucide-react";
 import { getFunnelBySlug } from "@/config/funnels";
@@ -101,7 +101,7 @@ export default function WebinarDepresja() {
   }, []);
 
   return (
-    <Layout hideHeader hideFooter>
+    <LandingLayout>
       <SEO
         title="Nie musisz tego znosić sam — bezpłatne spotkanie"
         description="Bezpłatne spotkanie online z okazji Międzynarodowego Dnia Walki z Depresją. 23 lutego 2026, godz. 19:05. Prowadzi Ludwik C. Siadlak."
@@ -319,6 +319,6 @@ export default function WebinarDepresja() {
           </div>
         </section>
       </div>
-    </Layout>
+    </LandingLayout>
   );
 }

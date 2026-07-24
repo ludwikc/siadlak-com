@@ -1,6 +1,6 @@
 import { CTAButton } from "@/design-system/components/cta-button";
 import { Card } from "@/design-system/components/card";
-import Layout from "@/components/layout/Layout";
+import LandingLayout from "@/components/layout/LandingLayout";
 import SEO from "@/components/SEO";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import {
@@ -24,7 +24,7 @@ export default function WebinarMeskiKompas() {
   const eventDate = formatEventDate(funnel);
 
   return (
-    <Layout hideHeader={true} hideFooter={true}>
+    <LandingLayout>
       <SEO
         title="Warsztat: Męski Kompas — Koniec z Dryfowaniem"
         description={`90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. ${formatEventDateShort(funnel)}.`}
@@ -968,6 +968,6 @@ export default function WebinarMeskiKompas() {
           </div>
         </div>
       </section>
-    </Layout>
+    </LandingLayout>
   );
 }

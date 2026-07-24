@@ -2,8 +2,6 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import PromoBanner from "./PromoBanner";
-import { useLocation } from "react-router-dom";
-import { isLandingPage } from "../../lib/landing-pages";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,37 +9,24 @@ interface LayoutProps {
   hideFooter?: boolean;
 }
 
-function LayoutContent({ children, hideHeader, hideFooter }: LayoutProps) {
-  const location = useLocation();
-
-  // Auto-detect landing pages if props not explicitly set
-  const shouldHideHeader = hideHeader ?? isLandingPage(location.pathname);
-  const shouldHideFooter = hideFooter ?? isLandingPage(location.pathname);
-
+// Chrome is controlled by explicit props only. Strict landing pages use
+// <LandingLayout>; routes like /webinar/*/live and /replay keep the header via
+// hideFooter alone, which prefix auto-detection would have wrongly stripped.
+export default function Layout({
+  children,
+  hideHeader = false,
+  hideFooter = false,
+}: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      {!shouldHideHeader && <PromoBanner />}
-      {!shouldHideHeader && <Header />}
+      {!hideHeader && <PromoBanner />}
+      {!hideHeader && <Header />}
       <main
-        className={`flex-grow animate-page-transition ${shouldHideHeader ? "" : "pt-[var(--header-offset)]"}`}
+        className={`flex-grow animate-page-transition ${hideHeader ? "" : "pt-[var(--header-offset)]"}`}
       >
         <div className="page-content animate-fade-in">{children}</div>
       </main>
-      {!shouldHideFooter && <Footer />}
+      {!hideFooter && <Footer />}
     </div>
-  );
-}
-
-export default function Layout({
-  children,
-  hideHeader,
-  hideFooter,
-}: LayoutProps) {
-  return (
-    <LayoutContent
-      children={children}
-      hideHeader={hideHeader}
-      hideFooter={hideFooter}
-    />
   );
 }

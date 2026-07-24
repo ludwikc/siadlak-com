@@ -10,6 +10,7 @@ import {
   getResultTier,
 } from "@/data/reset-quiz-data";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
+import LandingLayout from "@/components/layout/LandingLayout";
 import { track } from "@/lib/analytics";
 
 type Phase = "intro" | "quiz" | "block-intro" | "analyzing" | "lead-capture" | "result";
@@ -104,8 +105,9 @@ export default function Reset() {
         noindex
       />
 
-      <div className="min-h-screen bg-void-glow flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-2xl">
+      <LandingLayout className="bg-void-glow">
+        <div className="flex min-h-[100svh] items-center justify-center px-4 py-12">
+          <div className="w-full max-w-2xl">
           {/* INTRO */}
           {phase === "intro" && (
             <div className="animate-fade-in text-center">
@@ -285,8 +287,9 @@ export default function Reset() {
               )}
             </div>
           )}
+          </div>
         </div>
-      </div>
+      </LandingLayout>
     </>
   );
 }

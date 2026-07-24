@@ -1,5 +1,6 @@
 import SEO from "@/components/SEO";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
+import LandingLayout from "@/components/layout/LandingLayout";
 
 import ludwikAvatar from "@/assets/ludwik-avatar.png.asset.json";
 
@@ -33,7 +34,7 @@ export default function IGPage() {
         url="https://siadlak.com/ig"
       />
 
-      <div className="min-h-screen bg-[hsl(var(--surface-dark-base))] text-[hsl(var(--text-on-dark))]">
+      <LandingLayout className="bg-[hsl(var(--surface-dark-base))] text-[hsl(var(--text-on-dark))]">
         <div className="max-w-md mx-auto px-4 py-10 space-y-8">
           {/* === HEADER === */}
           <div className="text-center space-y-3">
@@ -128,7 +129,7 @@ export default function IGPage() {
             <p className="text-sm text-[hsl(var(--text-dim)/0.5)]">— Ludwik</p>
           </div>
         </div>
-      </div>
+      </LandingLayout>
     </>
   );
 }

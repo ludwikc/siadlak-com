@@ -1,5 +1,5 @@
 import { Card } from "@/design-system/components/card";
-import Layout from "@/components/layout/Layout";
+import LandingLayout from "@/components/layout/LandingLayout";
 import SEO from "@/components/SEO";
 import { Anchor, Star, MessageSquare, Check } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
@@ -24,7 +24,7 @@ export default function WebinarKodKapitana() {
   const eventTimeRange = formatEventTimeRange(funnel); // "20:05–21:35"
 
   return (
-    <Layout hideHeader={true} hideFooter={true}>
+    <LandingLayout showLegal={false}>
       <SEO
         title="Kod Kapitana: Uważność, która naprawdę działa"
         description={`Jak w 90 minut zmienić sposób, w jaki reagujesz na stres, natłok myśli i chaos — bez siadania po turecku. Bezpłatne spotkanie online, ${eventDateShort}, ${eventTime}.`}
@@ -864,7 +864,7 @@ export default function WebinarKodKapitana() {
           </div>
         </div>
       </section>
-    </Layout>
+    </LandingLayout>
   );
 }
 

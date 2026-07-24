@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Layout from "../components/layout/Layout";
+import LandingLayout from "../components/layout/LandingLayout";
 import { ReferrerGuard } from "@/components/oto/ReferrerGuard";
 import { OTOProductDisplay } from "@/components/oto/OTOProductDisplay";
 import { OTOWelcomeDialog } from "@/components/oto/OTOWelcomeDialog";
@@ -101,10 +101,10 @@ function OTOContent() {
 
 export default function OTO() {
   return (
-    <Layout>
+    <LandingLayout showLegal={false}>
       <ReferrerGuard>
         <OTOContent />
       </ReferrerGuard>
-    </Layout>
+    </LandingLayout>
   );
 }

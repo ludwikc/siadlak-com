@@ -77,8 +77,7 @@ const Reset = lazy(() => import("./pages/Reset"));
 import { Toaster } from "@/design-system/components/sonner";
 import Redirect from "./components/Redirect";
 import { redirects } from "./config/redirects";
-import MobileWebinarBar from "./components/webinar/MobileWebinarBar";
-import DesktopWebinarBar from "./components/webinar/DesktopWebinarBar";
+import GlobalWebinarBar from "./components/conversion/GlobalWebinarBar";
 import PageViewTracker from "./components/analytics/PageViewTracker";
 import { initAnalytics } from "./lib/analytics";
 
@@ -222,8 +221,7 @@ function App() {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
-            <MobileWebinarBar />
-            <DesktopWebinarBar />
+            <GlobalWebinarBar />
             <Toaster />
           </Router>
         </ThemeProvider>
