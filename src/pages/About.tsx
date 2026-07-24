@@ -3,6 +3,7 @@ import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { Link } from "react-router-dom";
 import { Calendar, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
+import ProofInline from "@/components/proof/ProofInline";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getAboutEntities, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
@@ -84,15 +85,24 @@ const About = () => {
 
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="border border-white/10 rounded-sm p-5">
-                <p className="text-electric font-bold text-2xl mb-1">110+</p>
-                <p className="text-sm text-dim">absolwentów programu Produktywność, ocena 4.9/5.0</p>
+                <p className="text-electric font-bold text-2xl mb-1">
+                  <ProofInline stat="produktywnoscGraduates" />
+                </p>
+                <p className="text-sm text-dim">
+                  absolwentów programu Produktywność, ocena{" "}
+                  <ProofInline stat="produktywnoscRating" />
+                </p>
               </div>
               <div className="border border-white/10 rounded-sm p-5">
-                <p className="text-electric font-bold text-2xl mb-1">1 500+</p>
+                <p className="text-electric font-bold text-2xl mb-1">
+                  <ProofInline stat="newsletterReaders" />
+                </p>
                 <p className="text-sm text-dim">czytelników mojego mailingu</p>
               </div>
               <div className="border border-white/10 rounded-sm p-5">
-                <p className="text-electric font-bold text-2xl mb-1">8+</p>
+                <p className="text-electric font-bold text-2xl mb-1">
+                  <ProofInline stat="countries" />
+                </p>
                 <p className="text-sm text-dim">krajów w społeczności Lifehackerzy</p>
               </div>
             </div>

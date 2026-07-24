@@ -91,7 +91,7 @@ export function getOrganizationEntity() {
     alternateName: 'Diamentowy Umysł',
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
-    description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 130+ absolwentów programów, ocena 4.9/5.0.',
+    description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 110+ absolwentów programów, ocena 4.9/5.0.',
     founder: { '@id': IDS.person },
     areaServed: [
       { '@type': 'Country', name: 'Poland' },
@@ -442,7 +442,7 @@ export function getHomepageEntities() {
     getOrganizationEntity(),
     getWebSiteEntity(),
     getWebPageEntity('/', 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
-      'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pomaga profesjonalistom, liderom i przedsiębiorcom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz. 130+ absolwentów programów, ocena 4.9/5.0.',
+      'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pomaga profesjonalistom, liderom i przedsiębiorcom zobaczyć to, co mieli w sobie od zawsze — zamiast szukać tego na zewnątrz. 110+ absolwentów programów, ocena 4.9/5.0.',
       ['/program', '/discovery', '/about', '/podcast/life-hacking']
     ),
   ];

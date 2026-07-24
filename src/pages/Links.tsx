@@ -36,7 +36,7 @@ const LINKS = [
   },
   {
     emoji: "⭐",
-    label: "Opinie Klientów (100+)",
+    label: "Opinie Klientów",
     desc: "Nie mów mi, że jestem dobry. Posłuchaj, co mówią inni.",
     href: `/testimonials${UTM}`,
     internal: true,

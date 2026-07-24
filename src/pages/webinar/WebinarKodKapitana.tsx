@@ -13,6 +13,7 @@ import {
 } from "@/config/funnels/format";
 import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
 import { useFunnelDtr } from "@/lib/dtr";
+import { proof } from "@/config/proof";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
@@ -151,7 +152,7 @@ export default function WebinarKodKapitana() {
                       <Check className="w-3.5 h-3.5 text-white" />
                     </div>
                     <span className="font-medium text-sm">
-                      103+ osoby już na pokładzie
+                      Bezpłatne · online · na żywo
                     </span>
                   </div>
                   <div className="hidden sm:block w-px h-5 bg-slate-600"></div>
@@ -751,9 +752,10 @@ export default function WebinarKodKapitana() {
                 />
 
                 <p className="mt-6 text-sm text-slate-400">
-                  Dołączyło już{" "}
-                  <span className="font-semibold text-cyan-400">103+ osób</span>{" "}
-                  · Ocena 4.9/5
+                  Prowadzi Ludwik C. Siadlak{" "}
+                  <span className="font-semibold text-cyan-400">
+                    · {proof.yearsMct} lat doświadczenia
+                  </span>
                 </p>
               </div>
             </div>

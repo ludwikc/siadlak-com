@@ -91,7 +91,7 @@ export default function Footer() {
                  
                   className="text-dim hover:text-electric transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 rounded"
                 >
-                  Opinie Klientów (120+)
+                  Opinie Klientów
                 </Link>
               </li>
               <li>
