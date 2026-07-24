@@ -1,11 +1,12 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/space-grotesk/wght.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/700.css";
 import App from "./App.tsx";
 import { initAttribution } from "./lib/attribution";
+import { reportWebVitals } from "./lib/web-vitals";
 import "./index.css";
 import "./design-system/styles/global.css";
 
@@ -19,8 +20,19 @@ window.addEventListener("vite:preloadError", () => {
   window.location.reload();
 });
 
-createRoot(document.getElementById("app")!).render(
+const container = document.getElementById("app")!;
+const app = (
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+// Prerendered HTML (dist/<route>/index.html) is hydrated; the plain SPA shell
+// (empty #app in dev / non-prerendered routes) is mounted fresh.
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}
+
+reportWebVitals();
