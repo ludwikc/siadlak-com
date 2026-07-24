@@ -1,4 +1,3 @@
-import { Button } from "@/design-system/components/button";
 import { Card } from "@/design-system/components/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -6,24 +5,27 @@ import { Anchor, Star, MessageSquare, Check } from "lucide-react";
 import kodKapitanaHero from "@/assets/kod-kapitana-hero.png?w=400;800&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { getFunnelBySlug } from "@/config/funnels";
-import { useFunnelPhase } from "@/hooks/use-funnel-phase";
-import FunnelExpiredNotice from "@/components/funnel/FunnelExpiredNotice";
+import {
+  formatEventDate,
+  formatEventDateShort,
+  formatEventTime,
+  formatEventTimeRange,
+} from "@/config/funnels/format";
+import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
   const funnel = getFunnelBySlug("kod-kapitana")!;
-  const { phase } = useFunnelPhase(funnel);
-  const isExpired = phase === "expired";
-  const ctaUrl =
-    funnel.registration.type === "easycart"
-      ? funnel.registration.checkoutUrl
-      : "#";
+  const eventDate = formatEventDate(funnel); // "poniedziałek, 2 lutego 2026"
+  const eventDateShort = formatEventDateShort(funnel); // "2.02"
+  const eventTime = formatEventTime(funnel); // "20:05"
+  const eventTimeRange = formatEventTimeRange(funnel); // "20:05–21:35"
 
   return (
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Kod Kapitana: Uważność, która naprawdę działa"
-        description="Jak w 90 minut zmienić sposób, w jaki reagujesz na stres, natłok myśli i chaos — bez siadania po turecku. Bezpłatne spotkanie online, 27 kwietnia, 19:05."
+        description={`Jak w 90 minut zmienić sposób, w jaki reagujesz na stres, natłok myśli i chaos — bez siadania po turecku. Bezpłatne spotkanie online, ${eventDateShort}, ${eventTime}.`}
       />
 
       {/* HERO SECTION */}
@@ -76,7 +78,7 @@ export default function WebinarKodKapitana() {
                   <span className="text-xl" aria-hidden="true">📅</span>
                   <span className="font-semibold text-sm sm:text-base">
                     <span className="text-sky-300/80 mr-1.5">Data:</span>
-                    poniedziałek 27.04
+                    {eventDate}
                   </span>
                 </div>
                 <div className="hidden sm:block w-px h-6 bg-slate-600/60"></div>
@@ -84,7 +86,7 @@ export default function WebinarKodKapitana() {
                   <span className="text-xl" aria-hidden="true">🕖</span>
                   <span className="font-semibold text-sm sm:text-base">
                     <span className="text-sky-300/80 mr-1.5">Godzina:</span>
-                    19:00 – 20:30
+                    {eventTimeRange}
                   </span>
                 </div>
               </div>
@@ -184,30 +186,7 @@ export default function WebinarKodKapitana() {
 
               {/* Primary CTA */}
               <div className="mb-6 animate-fade-in">
-                {isExpired ? (
-                  <FunnelExpiredNotice funnel={funnel} />
-                ) : (
-                  <a
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full sm:w-auto sm:inline-block group"
-                  >
-                    <Button
-                      size="lg"
-                      className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-6 sm:px-10 md:px-14 py-5 sm:py-7 md:py-9 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] border-0 text-center leading-tight min-h-[56px] touch-manipulation whitespace-normal h-auto"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, hsl(199, 89%, 48%) 0%, hsl(217, 91%, 50%) 100%)",
-                        color: "white",
-                        boxShadow:
-                          "0 0 40px rgba(56, 189, 248, 0.25), 0 16px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-                      }}
-                    >
-                      🚢 ZAREZERWUJ MOJE MIEJSCE
-                    </Button>
-                  </a>
-                )}
+                <FunnelRegistrationCTA funnel={funnel} dataCta="kod-kapitana:hero" />
               </div>
 
               {/* Bonus */}
@@ -672,8 +651,8 @@ export default function WebinarKodKapitana() {
 
                   <div className="space-y-4">
                     {[
-                      { label: "Data", value: "27.04 (poniedziałek)" },
-                      { label: "Godzina", value: "19:05 (90 minut)" },
+                      { label: "Data", value: eventDate },
+                      { label: "Godzina", value: `${eventTime} (90 minut)` },
                       { label: "Format", value: "Live online" },
                       { label: "Cena", value: "Bezpłatne", highlight: true },
                       { label: "Nagranie", value: "Dostępne 48h po spotkaniu" },
@@ -759,30 +738,11 @@ export default function WebinarKodKapitana() {
                   }}
                 ></div>
 
-                {isExpired ? (
-                  <FunnelExpiredNotice funnel={funnel} />
-                ) : (
-                  <a
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full sm:w-auto sm:inline-block relative"
-                  >
-                    <Button
-                      size="lg"
-                      className="w-full sm:w-auto text-sm sm:text-base md:text-lg font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-2xl whitespace-normal h-auto"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, hsl(200, 75%, 45%) 0%, hsl(180, 70%, 42%) 40%, hsl(155, 65%, 45%) 100%)",
-                        color: "white",
-                        boxShadow:
-                          "0 15px 40px rgba(0, 0, 0, 0.3), 0 0 50px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
-                      }}
-                    >
-                      🚢 ZAPISUJĘ SIĘ NA SPOTKANIE
-                    </Button>
-                  </a>
-                )}
+                <FunnelRegistrationCTA
+                  funnel={funnel}
+                  dataCta="kod-kapitana:details"
+                  labels={{ upcoming: "Zapisuję się na spotkanie" }}
+                />
 
                 <p className="mt-6 text-sm text-slate-400">
                   Dołączyło już{" "}
@@ -860,30 +820,12 @@ export default function WebinarKodKapitana() {
               </p>
             </div>
 
-            {isExpired ? (
-              <FunnelExpiredNotice funnel={funnel} className="mb-12" />
-            ) : (
-              <a
-                href={ctaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full sm:w-auto sm:inline-block mb-12"
-              >
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto text-sm sm:text-lg md:text-xl font-bold px-8 sm:px-12 md:px-16 py-5 sm:py-7 md:py-9 transition-all duration-300 hover:-translate-y-px border-0 shadow-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] whitespace-normal h-auto"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, hsl(200, 80%, 50%) 0%, hsl(210, 70%, 45%) 100%)",
-                    color: "white",
-                    boxShadow:
-                      "0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
-                  }}
-                >
-                  🚢 DOŁĄCZ DO REJSU — ZAPISZ SIĘ TERAZ
-                </Button>
-              </a>
-            )}
+            <FunnelRegistrationCTA
+              funnel={funnel}
+              className="mb-12"
+              dataCta="kod-kapitana:final"
+              labels={{ upcoming: "Dołącz do rejsu — zapisz się teraz" }}
+            />
 
             <p className="text-xl text-foreground leading-relaxed mb-8">
               Do zobaczenia na pokładzie,

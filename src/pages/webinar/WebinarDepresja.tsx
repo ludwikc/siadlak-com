@@ -1,10 +1,14 @@
 import { useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { Check, Phone } from "lucide-react";
 import { getFunnelBySlug } from "@/config/funnels";
-import { useFunnelPhase } from "@/hooks/use-funnel-phase";
-import FunnelExpiredNotice from "@/components/funnel/FunnelExpiredNotice";
+import {
+  formatEventDate,
+  formatEventDateShort,
+  formatEventTime,
+} from "@/config/funnels/format";
+import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
 
 const symptoms = [
   {
@@ -47,12 +51,10 @@ function TheCut() {
 
 export default function WebinarDepresja() {
   const funnel = getFunnelBySlug("depresja")!;
-  const { phase } = useFunnelPhase(funnel);
-  const isExpired = phase === "expired";
-  const ctaUrl =
-    funnel.registration.type === "easycart"
-      ? funnel.registration.checkoutUrl
-      : "#";
+  const eventDate = formatEventDate(funnel);
+  const eventTime = formatEventTime(funnel);
+  const eventDateShort = formatEventDateShort(funnel);
+  const eventWeekday = eventDate.split(",")[0];
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -115,7 +117,7 @@ export default function WebinarDepresja() {
               {/* Left Column - 2/3 */}
               <div className="lg:col-span-2 text-center lg:text-left">
                 <span className="inline-block rounded-sm px-4 py-1.5 text-sm font-medium tracking-wide uppercase text-electric-blue border border-electric-blue/30 mb-8">
-                  Międzynarodowy Dzień Walki z Depresją · 23 lutego 2026
+                  Międzynarodowy Dzień Walki z Depresją · {eventDate}
                 </span>
 
                 <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-text-on-dark mb-6">
@@ -134,29 +136,19 @@ export default function WebinarDepresja() {
                       Międzynarodowy Dzień Walki z Depresją
                     </p>
                     <p className="text-3xl md:text-4xl font-bold text-text-on-dark mb-2">
-                      23 lutego 2026
+                      {eventDate}
                     </p>
                     <p className="text-2xl md:text-3xl font-semibold text-text-on-dark">
-                      godz. 19:05
+                      godz. {eventTime}
                     </p>
                   </div>
                 </div>
 
-                {isExpired ? (
-                  <FunnelExpiredNotice funnel={funnel} />
-                ) : (
-                  <a
-                    href={ctaUrl}
-                    className="inline-flex items-center justify-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:-translate-y-px hover:shadow-lg"
-                    style={{
-                      background: 'linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))',
-                      boxShadow: '0 4px 15px hsla(263, 70%, 50%, 0.4)',
-                    }}
-                  >
-                    Dołączam do spotkania
-                    <ArrowRight size={18} />
-                  </a>
-                )}
+                <FunnelRegistrationCTA
+                  funnel={funnel}
+                  dataCta="depresja:hero"
+                  labels={{ upcoming: "Dołączam do spotkania" }}
+                />
               </div>
 
               {/* Right Column - 1/3 */}
@@ -275,7 +267,7 @@ export default function WebinarDepresja() {
         <section className="bg-void-glow py-24 md:py-32 px-4">
           <div className="container mx-auto max-w-3xl text-center">
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {["23.02", "poniedziałek", "godz. 19:05", "online", "bezpłatnie"].map(
+              {[eventDateShort, eventWeekday, `godz. ${eventTime}`, "online", "bezpłatnie"].map(
                 (label) => (
                   <span
                     key={label}
@@ -293,27 +285,14 @@ export default function WebinarDepresja() {
               ze mną i uratował mi życie.
             </p>
 
-            {isExpired ? (
-              <FunnelExpiredNotice funnel={funnel} />
-            ) : (
-              <>
-                <a
-                  href={ctaUrl}
-                  className="inline-flex items-center gap-2 rounded px-10 py-4 text-sm font-semibold text-white uppercase tracking-wide transition-all hover:-translate-y-px hover:shadow-lg"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                    boxShadow: "0 4px 15px hsla(263, 70%, 50%, 0.4)",
-                  }}
-                >
-                  Dołączam do spotkania
-                  <ArrowRight size={18} />
-                </a>
-
-                <p className="mt-4 text-sm text-text-dim">
-                  Spotkanie jest bezpłatne. Część Q&A nie będzie nagrywana.
-                </p>
-              </>
-            )}
+            <FunnelRegistrationCTA
+              funnel={funnel}
+              dataCta="depresja:final"
+              labels={{ upcoming: "Dołączam do spotkania" }}
+            />
+            <p className="mt-4 text-sm text-text-dim">
+              Spotkanie jest bezpłatne. Część Q&A nie będzie nagrywana.
+            </p>
           </div>
         </section>
 

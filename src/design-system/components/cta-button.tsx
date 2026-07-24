@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Loader2 } from 'lucide-react';
 import { cn } from '../lib/cn';
 
 interface CTAButtonProps {
@@ -16,12 +16,22 @@ interface CTAButtonProps {
   href?: string;
   /** Internal route — renders a react-router Link (no full page reload) */
   to?: string;
+  /** button type — only used in <button> mode (no href/to). Defaults to "button". */
+  type?: 'button' | 'submit';
+  /** Disable the control (button mode) */
+  disabled?: boolean;
+  /** Show a spinner, disable interaction and set aria-busy (e.g. form submit) */
+  loading?: boolean;
+  /** Open an external href in a new tab (adds rel="noopener noreferrer") */
+  target?: '_blank';
   /** Additional CSS classes */
   className?: string;
   /** Whether to show arrow icon */
   showArrow?: boolean;
   /** Aria label for accessibility */
   'aria-label'?: string;
+  /** Analytics identifier, convention "{surface}:{position}" (e.g. "kod-kapitana:hero") */
+  'data-cta'?: string;
 }
 
 const fillSizeClasses = {
@@ -48,6 +58,10 @@ export function CTAButton({
   onClick,
   href,
   to,
+  type = 'button',
+  disabled = false,
+  loading = false,
+  target,
   className,
   showArrow = true,
   'aria-label': ariaLabel,
@@ -76,18 +90,19 @@ export function CTAButton({
     'inline-flex items-center justify-center gap-2 whitespace-nowrap font-bold',
     'transition-all duration-200 ease-out',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2',
+    (disabled || loading) && 'opacity-70 pointer-events-none',
     variantClasses[variant],
     className,
   );
 
+  const iconSize = variant === 'tertiary' ? 'h-4 w-4' : 'h-5 w-5';
   const content = (
     <>
       {children}
-      {showArrow && (
-        <ArrowRight
-          className={variant === 'tertiary' ? 'h-4 w-4' : 'h-5 w-5'}
-          aria-hidden="true"
-        />
+      {loading ? (
+        <Loader2 className={cn(iconSize, 'animate-spin')} aria-hidden="true" />
+      ) : (
+        showArrow && <ArrowRight className={iconSize} aria-hidden="true" />
       )}
     </>
   );
@@ -102,14 +117,30 @@ export function CTAButton({
 
   if (href) {
     return (
-      <a href={href} onClick={onClick} className={classes} aria-label={ariaLabel} {...props}>
+      <a
+        href={href}
+        onClick={onClick}
+        target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+        className={classes}
+        aria-label={ariaLabel}
+        {...props}
+      >
         {content}
       </a>
     );
   }
 
   return (
-    <button type="button" onClick={onClick} className={classes} aria-label={ariaLabel} {...props}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
+      className={classes}
+      aria-label={ariaLabel}
+      {...props}
+    >
       {content}
     </button>
   );

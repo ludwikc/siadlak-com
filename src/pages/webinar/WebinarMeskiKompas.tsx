@@ -1,4 +1,4 @@
-import { Button } from "@/design-system/components/button";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { Card } from "@/design-system/components/card";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
@@ -13,19 +13,21 @@ import {
 } from "lucide-react";
 import { getFunnelBySlug } from "@/config/funnels";
 import { useFunnelPhase } from "@/hooks/use-funnel-phase";
-import FunnelExpiredNotice from "@/components/funnel/FunnelExpiredNotice";
+import { formatEventDate, formatEventDateShort } from "@/config/funnels/format";
+import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
 
 export default function WebinarMeskiKompas() {
   const funnel = getFunnelBySlug("meski-kompas")!;
   const { phase } = useFunnelPhase(funnel);
   const isExpired = phase === "expired";
   const ctaUrl = `/webinar/${funnel.slug}/replay`;
+  const eventDate = formatEventDate(funnel);
 
   return (
     <Layout hideHeader={true} hideFooter={true}>
       <SEO
         title="Warsztat: Męski Kompas — Koniec z Dryfowaniem"
-        description="90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. 16 października."
+        description={`90-minutowy warsztat dla analitycznych mężczyzn 30+. Jak analityczny umysł sabotuje męskość i jak zamienić go w największą siłę. Ludwik Siadlak + Mateusz Lizak. ${formatEventDateShort(funnel)}.`}
       />
 
       {/* HERO SECTION */}
@@ -107,30 +109,11 @@ export default function WebinarMeskiKompas() {
               </div>
 
               <div className="mb-10 animate-fade-in">
-                {isExpired ? (
-                  <FunnelExpiredNotice funnel={funnel} />
-                ) : (
-                  <a
-                    href={ctaUrl}
-                    className="block w-full sm:w-auto sm:inline-block"
-                  >
-                    <Button
-                      size="lg"
-                      className="w-full sm:w-auto text-base sm:text-lg md:text-2xl font-bold px-6 sm:px-10 md:px-16 py-5 sm:py-7 md:py-10 transition-all duration-300 border-0 shadow-2xl hover:shadow-[0_0_60px_rgba(255,204,0,0.6),0_20px_40px_rgba(0,0,0,0.4)]"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, hsl(45, 95%, 55%) 0%, hsl(45, 85%, 48%) 100%)",
-                        color: "hsl(210, 20%, 8%)",
-                        boxShadow:
-                          "0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 10px rgba(0, 0, 0, 0.2)",
-                      }}
-                    >
-                      <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
-                      <span className="hidden sm:inline">
-                        TO WYDARZENIE JUŻ MINĘŁO (OBEJRZYJ REPLAY)</span>
-                    </Button>
-                  </a>
-                )}
+                <FunnelRegistrationCTA
+                  funnel={funnel}
+                  dataCta="meski-kompas:hero"
+                  labels={{ replay: "Obejrzyj replay" }}
+                />
               </div>
 
               <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 animate-fade-in">
@@ -146,7 +129,7 @@ export default function WebinarMeskiKompas() {
                 >
                   <span className="text-2xl">📅</span>
                   <span className="text-white font-semibold text-sm md:text-base">
-                    16 października 2025
+                    {eventDate}
                   </span>
                 </div>
                 <div
@@ -287,17 +270,9 @@ export default function WebinarMeskiKompas() {
                 Potrzebujesz 2 prostych narzędzi nawigacyjnych.
               </p>
               {!isExpired && (
-                <a
-                  href={ctaUrl}
-                  className="block w-full sm:w-auto sm:inline-block"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
-                  >
-                    OBEJRZYJ REPLAY WYDARZENIA
-                  </Button>
-                </a>
+                <CTAButton to={ctaUrl} variant="primary" size="lg" data-cta="meski-kompas:problem">
+                  Obejrzyj replay wydarzenia
+                </CTAButton>
               )}
             </Card>
           </div>
@@ -512,17 +487,9 @@ export default function WebinarMeskiKompas() {
 
             <div className="text-center mt-8">
               {!isExpired && (
-                <a
-                  href={ctaUrl}
-                  className="block w-full sm:w-auto sm:inline-block"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto text-lg px-8 py-4 bg-accent hover:bg-accent/90 text-accent-foreground"
-                  >
-                    OBEJRZYJ REPLAY WYDARZENIA
-                  </Button>
-                </a>
+                <CTAButton to={ctaUrl} variant="primary" size="lg" data-cta="meski-kompas:tools">
+                  Obejrzyj replay wydarzenia
+                </CTAButton>
               )}
             </div>
           </div>
@@ -783,10 +750,8 @@ export default function WebinarMeskiKompas() {
               <Card className="bg-background border p-6 text-center">
                 <Calendar className="w-12 h-12 mx-auto mb-4 text-accent" />
                 <h4 className="text-xl font-bold text-foreground mb-2">DATA</h4>
-                <p className="text-muted-foreground">
-                  Czwartek,
-                  <br />
-                  16 października 2025
+                <p className="text-muted-foreground capitalize">
+                  {eventDate}
                 </p>
               </Card>
 
@@ -960,25 +925,16 @@ export default function WebinarMeskiKompas() {
               </p>
             </Card>
 
-            {isExpired ? (
-              <FunnelExpiredNotice funnel={funnel} className="mb-8" />
-            ) : (
-              <a href={ctaUrl} className="block w-full sm:w-auto sm:inline-block">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12 py-5 sm:py-6 md:py-8 mb-8 bg-accent hover:bg-accent/90 text-accent-foreground"
-                >
-                  <span className="inline sm:hidden">OBEJRZYJ REPLAY</span>
-                  <span className="hidden sm:inline">
-                    TO WYDARZENIE JUŻ MINĘŁO — OBEJRZYJ REPLAY
-                  </span>
-                </Button>
-              </a>
-            )}
+            <FunnelRegistrationCTA
+              funnel={funnel}
+              className="mb-8"
+              dataCta="meski-kompas:final"
+              labels={{ replay: "Obejrzyj replay" }}
+            />
 
             <Card className="bg-card border p-6 text-left">
               <p className="text-foreground font-bold mb-4">
-                WIDZIMY SIĘ 16 PAŹDZIERNIKA.
+                WIDZIMY SIĘ NA WYDARZENIU.
               </p>
               <p className="text-muted-foreground mb-6">
                 Ludwik + Mateusz
