@@ -8,7 +8,7 @@ export const funnels: FunnelConfig[] = [meskiKompas, kodKapitana, depresja];
 export const getFunnelBySlug = (slug: string): FunnelConfig | undefined =>
   funnels.find((f) => f.slug === slug);
 
-export type { FunnelConfig, FunnelPhase } from "./types";
+export type { FunnelConfig, FunnelPhase, DtrConfig, DtrVariantContent } from "./types";
 export {
   getFunnelPhase,
   getNextPhaseChange,

@@ -12,10 +12,12 @@ import {
   formatEventTimeRange,
 } from "@/config/funnels/format";
 import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
+import { useFunnelDtr } from "@/lib/dtr";
 import "@fontsource/caveat/400.css";
 
 export default function WebinarKodKapitana() {
   const funnel = getFunnelBySlug("kod-kapitana")!;
+  const dtr = useFunnelDtr(funnel);
   const eventDate = formatEventDate(funnel); // "poniedziałek, 2 lutego 2026"
   const eventDateShort = formatEventDateShort(funnel); // "2.02"
   const eventTime = formatEventTime(funnel); // "20:05"
@@ -97,7 +99,7 @@ export default function WebinarKodKapitana() {
                 <span className="text-slate-100">KOD KAPITANA:</span>
                 <br />
                 <span className="inline-block mt-2 md:mt-3 bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent">
-                  Uważność, która naprawdę działa
+                  {dtr?.title ?? "Uważność, która naprawdę działa"}
                 </span>
               </h1>
 
@@ -113,12 +115,16 @@ export default function WebinarKodKapitana() {
                   }}
                 >
                   <p className="text-lg sm:text-xl md:text-2xl font-normal text-slate-200 leading-relaxed">
-                    Jak w 90 minut zmienić sposób, w jaki reagujesz na stres,
-                    natłok myśli i chaos —{" "}
-                    <span className="font-semibold text-sky-300">
-                      bez siadania po turecku
-                    </span>{" "}
-                    i udawania, że Twój umysł się wyłączył.
+                    {dtr?.subtitle ?? (
+                      <>
+                        Jak w 90 minut zmienić sposób, w jaki reagujesz na stres,
+                        natłok myśli i chaos —{" "}
+                        <span className="font-semibold text-sky-300">
+                          bez siadania po turecku
+                        </span>{" "}
+                        i udawania, że Twój umysł się wyłączył.
+                      </>
+                    )}
                   </p>
                 </div>
               </div>

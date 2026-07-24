@@ -23,4 +23,26 @@ export const kodKapitana: FunnelConfig = {
     keywords:
       "uważność, mindfulness, ADHD, stres, Kod Kapitana, Ludwik Siadlak",
   },
+  // Message-match for paid traffic: ?utm_term=<key> swaps the H1 + subtitle to
+  // the matching angle. Unknown values fall back to the default copy above.
+  dtr: {
+    param: "utm_term",
+    variants: {
+      produktywnosc: {
+        title: "Produktywność bez wewnętrznego chaosu",
+        subtitle:
+          "Jak w 90 minut odzyskać kontrolę nad natłokiem zadań i myśli — bez kolejnej aplikacji do zadań i bez zaciskania zębów.",
+      },
+      koncentracja: {
+        title: "Koncentracja, która naprawdę wraca",
+        subtitle:
+          "Jak w 90 minut nauczyć się wracać uwagą tam, gdzie chcesz — nawet gdy wokół chaos, a w głowie sto otwartych kart.",
+      },
+      prokrastynacja: {
+        title: "Prokrastynacja to nie lenistwo",
+        subtitle:
+          "Jak w 90 minut zrozumieć, dlaczego odkładasz — i co działa zamiast walki ze sobą i presji kolejnych deadline'ów.",
+      },
+    },
+  },
 };
