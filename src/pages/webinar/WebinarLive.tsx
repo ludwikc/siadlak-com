@@ -8,6 +8,9 @@ import calendarApple from "@/assets/calendar-apple.png?w=64;128&format=avif;webp
 import calendarOutlook from "@/assets/calendar-outlook.png?w=64;128&format=avif;webp;png&as=picture";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
+// Offer sections stay parked until a live event runs with an active OTO.
+const OFFER_ENABLED = false;
+
 const WebinarLive = () => {
   const [showOffer, setShowOffer] = useState(false);
 
@@ -194,8 +197,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                 </div>
               </div>
 
-              {/* CTA During Webinar - HIDDEN */}
-              {false && showOffer && (
+              {OFFER_ENABLED && showOffer && (
                 <div className="bg-gradient-to-r from-depth/30 to-electric/30 backdrop-blur-lg rounded-md p-6 border border-depth/30 animate-fade-in">
                   <h3 className="text-xl font-bold text-white mb-4">
                     Program LifeOS: System Upgrade — Odkryj pełną transformację
@@ -221,7 +223,7 @@ Międzynarodowy Dzień Walki z Depresją 2026            </p>
                 </div>
               )}
 
-              {false && (
+              {OFFER_ENABLED && (
                 <div className="text-center">
                   <Button
                     variant="outline"

@@ -5,7 +5,15 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  {
+    ignores: [
+      "dist",
+      ".design-sync",
+      "ds-bundle",
+      "storybook-static",
+      "src/design-system/dist",
+    ],
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -24,6 +32,8 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-unused-vars": "off",
+      // Polish copy uses U+00A0 to keep single-letter words off line ends.
+      "no-irregular-whitespace": ["error", { skipJSXText: true }],
     },
   }
 );
