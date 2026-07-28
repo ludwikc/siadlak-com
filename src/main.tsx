@@ -5,7 +5,9 @@ import "@fontsource-variable/space-grotesk/wght.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/700.css";
 import App from "./App.tsx";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { initAttribution } from "./lib/attribution";
+import { claimAutoReload } from "./lib/recovery";
 import { reportWebVitals } from "./lib/web-vitals";
 import "./index.css";
 import "./design-system/styles/global.css";
@@ -15,15 +17,18 @@ initAttribution();
 
 // A new deploy renames every content-hashed chunk. A tab opened before the
 // deploy can 404 on a lazy chunk it tries to import; reload to pick up the
-// fresh index.html and asset map.
+// fresh index.html and asset map. Claimed through recovery so a persistent
+// failure falls through to the ErrorBoundary instead of a reload loop.
 window.addEventListener("vite:preloadError", () => {
-  window.location.reload();
+  if (claimAutoReload(Date.now(), sessionStorage)) window.location.reload();
 });
 
 const container = document.getElementById("app")!;
 const app = (
   <React.StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </React.StrictMode>
 );
 

@@ -37,8 +37,11 @@
       gtag('js', new Date());
     </script>
 
-    <!-- CookieYes CMP — updates Consent Mode on the visitor's choice -->
-    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7a00710ab4d1d167ad01acea/script.js"></script>
+    <!-- CookieYes CMP — updates Consent Mode on the visitor's choice.
+         MUST stay async: a synchronous CMP script blocks first paint for as
+         long as their CDN hangs (observed in production). Consent defaults are
+         already denied above, so tags stay safe until it arrives. -->
+    <script id="cookieyes" type="text/javascript" async src="https://cdn-cookieyes.com/client_data/7a00710ab4d1d167ad01acea/script.js"></script>
 
     <!-- CookieYes -> dataLayer bridge: exposes consent categories to GTM (for non-Google tags) -->
     <script>
