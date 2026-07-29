@@ -1,4 +1,5 @@
 import { CheckCircle } from "@/lib/icons";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryLifeOSOffer() {
   const features = [
