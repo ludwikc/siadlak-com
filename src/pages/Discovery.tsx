@@ -21,6 +21,9 @@ export default function Discovery() {
       {/* Hero */}
       <DiscoveryHero />
 
+      {/* Social proof — instant trust for IG traffic */}
+      <DiscoverySocialProof />
+
       <div className="the-cut" />
 
       {/* Co się dzieje podczas sesji */}
