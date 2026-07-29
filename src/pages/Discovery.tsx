@@ -2,6 +2,8 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ContentTextSection } from "@/components/sections/content";
 import DiscoveryHero from "@/components/discovery/DiscoveryHero";
+import DiscoverySocialProof from "@/components/discovery/DiscoverySocialProof";
+import DiscoveryStickyMobileCTA from "@/components/discovery/DiscoveryStickyMobileCTA";
 import DiscoveryAvailabilityCheck from "@/components/discovery/DiscoveryAvailabilityCheck";
 import SEO from "@/components/SEO";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
