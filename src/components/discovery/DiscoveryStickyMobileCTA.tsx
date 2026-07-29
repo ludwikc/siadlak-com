@@ -49,7 +49,7 @@ export default function DiscoveryStickyMobileCTA() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
-  return (
+  const bar = (
     <div
       className={`md:hidden fixed inset-x-0 bottom-0 z-40 bg-void/95 backdrop-blur border-t border-white/10 transition-transform duration-300 ease-out ${
         visible ? "translate-y-0" : "translate-y-full"
@@ -70,4 +70,7 @@ export default function DiscoveryStickyMobileCTA() {
       </div>
     </div>
   );
+
+  if (typeof document === "undefined") return null;
+  return createPortal(bar, document.body);
 }
