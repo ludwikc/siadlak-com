@@ -397,6 +397,9 @@ export default function Discovery() {
           - Ludwik
         </p>
       </ContentTextSection>
+
+      {/* Sticky mobile CTA — appears after hero leaves viewport */}
+      <DiscoveryStickyMobileCTA />
     </Layout>
   );
 }
