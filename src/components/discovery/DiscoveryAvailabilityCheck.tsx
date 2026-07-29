@@ -29,7 +29,7 @@ export default function DiscoveryAvailabilityCheck() {
   };
 
   return (
-    <div className="p-12 rounded-sm border border-white/10 text-center relative overflow-hidden">
+    <div className="p-6 sm:p-12 rounded-sm border border-white/10 text-center relative overflow-hidden">
       <div className="relative z-10">
         <h3 className="text-xl font-bold mb-4 text-text-on-dark">
           Umów Sesję Discovery
@@ -39,7 +39,7 @@ export default function DiscoveryAvailabilityCheck() {
           je razem:
         </p>
 
-        <ul className="max-w-md mx-auto mb-10 space-y-3 text-left">
+        <ul className="mb-10 space-y-3 text-left">
           {discoveryQuestions.map((q) => (
             <li key={q} className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-electric shrink-0 mt-1" />
@@ -65,17 +65,15 @@ export default function DiscoveryAvailabilityCheck() {
             </CTAButton>
           </div>
         ) : (
-          <button
+          <CTAButton
+            variant="primary"
+            size="xl"
             onClick={handleScheduleSession}
-            className="px-10 py-4 rounded font-bold text-lg text-white"
-            style={{
-              background:
-                "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-              boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-            }}
+            className="w-full sm:w-auto"
+            data-cta="discovery:availability"
           >
-            Umów Sesję Discovery
-          </button>
+            Sprawdź dostępność
+          </CTAButton>
         )}
       </div>
     </div>
