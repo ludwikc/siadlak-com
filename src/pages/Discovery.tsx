@@ -57,7 +57,7 @@ export default function Discovery() {
           ].map((item) => (
             <div
               key={item.num}
-              className="rounded-sm p-8 border border-white/10"
+              className="rounded-sm p-6 sm:p-8 border border-white/10"
             >
               <h3 className="font-heading text-lg font-semibold mb-3 text-electric">
                 {item.num}
@@ -260,7 +260,7 @@ export default function Discovery() {
           ].map((item) => (
             <div
               key={item.num}
-              className="rounded-sm p-8 border border-white/10"
+              className="rounded-sm p-6 sm:p-8 border border-white/10"
             >
               <h3 className="text-lg font-bold mb-3 text-electric">
                 {item.num}
@@ -360,7 +360,7 @@ export default function Discovery() {
 
       {/* P.S. Section */}
       <ContentTextSection maxWidth="800px" backgroundVariant="light">
-        <div className="rounded-sm p-8 border border-text-on-light/10">
+        <div className="rounded-sm p-6 sm:p-8 border border-text-on-light/10">
           <p className="mb-6">
             <strong className="text-electric">P.S.</strong> Jeśli dotarłeś do
             tego miejsca i wciąż analizujesz wszystkie &quot;za&quot; i
