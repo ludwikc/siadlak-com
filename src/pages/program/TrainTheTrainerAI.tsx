@@ -148,7 +148,7 @@ const weeks = [
   {
     n: 7,
     title: "Transmisja. System, który pracuje po Tobie.",
-    text: "Jedno zlecenie = średnio 0,3 kolejne. To jest scenariusz geeka-freelancera. U trenera, który opanował ten filar, jeden warsztat = 2,3 kolejne zlecenia w ciągu 90 dni. Różnica jest w systemie, nie w jakości pracy. Uczę Cię, jak: zaprojektować warsztat tak, żeby naturalnie prowadził do rozmowy o kontynuacji; robić follow-up, za który HR-manager Ci dziękuje, zamiast go ignorować; budować bank case studies, który zamienia Twoich byłych klientów w aktywnych sprzedawców Twojej usługi — bez programów partnerskich i prowizji.",
+    text: "Jedno zlecenie to koniec z pracy z danym klientem. To jest scenariusz geeka-freelancera. U trenera, który opanował ten filar, jeden warsztat to 2-3 kolejne zlecenia w ciągu 90 dni. Różnica jest w systemie, nie w jakości pracy. Uczę Cię, jak: zaprojektować warsztat tak, żeby naturalnie prowadził do rozmowy o kontynuacji; robić follow-up, za który HR-manager Ci dziękuje, zamiast go ignorować; budować bank case studies, który zamienia Twoich byłych klientów w aktywnych sprzedawców Twojej usługi — bez programów partnerskich i prowizji.",
   },
   {
     n: 8,
@@ -338,7 +338,7 @@ export default function TrainTheTrainerAI() {
                     className="w-full h-auto rounded-sm border border-white/10"
                   />
                   <figcaption className="text-sm text-dim text-center">
-                    Źródło: DeveloperJutra.pl (kwiecień 2026)
+                    Źródło: DeveloperJutra.pl (lipiec 2026)
                   </figcaption>
                 </figure>
                 <figure className="space-y-3">
@@ -352,7 +352,7 @@ export default function TrainTheTrainerAI() {
                     className="w-full h-auto rounded-sm border border-white/10"
                   />
                   <figcaption className="text-sm text-dim text-center">
-                    Źródło: AIDevs.pl (kwiecień 2026)
+                    Źródło: AIDevs.pl (lipiec 2026)
                   </figcaption>
                 </figure>
               </div>
