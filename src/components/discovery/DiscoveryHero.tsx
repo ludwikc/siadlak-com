@@ -1,21 +1,48 @@
-import { Flame, Users, Star } from "@/lib/icons";
+import { Flame, Users, Star, Clock } from "@/lib/icons";
+import { CTAButton } from "@/design-system/components/cta-button";
+import ludwikAvatar from "@/assets/LUDWIKCSIADLAK-2025-sq.webp";
 
 export default function DiscoveryHero() {
+  const scrollToForm = () => {
+    const el = document.querySelector("#formularz");
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="py-20 bg-void-glow relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-void-glow relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Badge */}
-          <div className="flex justify-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-4 sm:px-6 py-2 sm:py-3">
-              <Flame className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
-              <span className="text-xs sm:text-sm font-bold text-text-on-dark">
-                TYLKO 5 MIEJSC JEDNOCZEŚNIE
+          {/* Avatar — LCP */}
+          <div className="flex justify-center mb-5 sm:mb-6">
+            <img
+              src={ludwikAvatar}
+              alt="Ludwik C. Siadlak"
+              width={128}
+              height={128}
+              loading="eager"
+              // @ts-expect-error fetchpriority is a valid HTML attr
+              fetchpriority="high"
+              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-white/20 shadow-lg"
+            />
+          </div>
+
+          {/* Badges */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-3 sm:px-4 py-2">
+              <Flame className="h-4 w-4 text-electric" />
+              <span className="text-xs sm:text-sm font-bold text-text-on-dark uppercase tracking-wide">
+                5 miejsc
+              </span>
+            </div>
+            <div className="inline-flex items-center gap-2 border border-white/10 rounded-sm px-3 sm:px-4 py-2">
+              <Clock className="h-4 w-4 text-electric" />
+              <span className="text-xs sm:text-sm font-bold text-text-on-dark uppercase tracking-wide">
+                30 min · bezpłatna
               </span>
             </div>
           </div>
 
-          <h1 className="whitespace-pre-line break-words hyphens-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-4 sm:mb-6 leading-tight text-text-on-dark text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-4 sm:mb-6 leading-tight text-text-on-dark text-center">
             <span className="text-electric">Sesja Discovery</span>
           </h1>
 
@@ -29,7 +56,7 @@ export default function DiscoveryHero() {
           </p>
 
           {/* Social Proof */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-6 mb-8">
             <div className="flex items-center gap-2 border border-white/10 rounded-sm px-3 sm:px-4 py-2">
               <Users className="h-4 w-4 sm:h-5 sm:w-5 text-electric" />
               <span className="text-sm sm:text-base font-semibold text-text-on-dark">
@@ -50,26 +77,23 @@ export default function DiscoveryHero() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col items-center gap-4 mb-6">
-            <button
-              className="inline-flex items-center justify-center px-10 py-4 rounded font-semibold text-white uppercase tracking-wide text-sm"
-              style={{
-                background:
-                  "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-              }}
-              onClick={() => {
-                const el = document.querySelector("#formularz");
-                el?.scrollIntoView({ behavior: "smooth" });
-              }}
+          <div className="flex flex-col items-center gap-4 mb-2">
+            <CTAButton
+              variant="primary"
+              size="xl"
+              onClick={scrollToForm}
+              className="w-full sm:w-auto"
+              data-cta="discovery:hero"
             >
-              Umów Sesję Discovery</button>
+              Sprawdź dostępność
+            </CTAButton>
 
             <a
               href="#nie"
-              className="text-sm text-text-dim hover:text-electric transition-colors underline"
+              className="text-base text-text-dim hover:text-electric transition-colors underline py-2"
             >
-              Dla kogo to NIE jest</a>
+              Dla kogo to NIE jest
+            </a>
           </div>
         </div>
       </div>

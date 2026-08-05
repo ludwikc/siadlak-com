@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import { CTAButton } from "@/design-system/components/cta-button";
 

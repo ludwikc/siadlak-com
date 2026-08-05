@@ -1,4 +1,5 @@
 import { CheckCircle } from "@/lib/icons";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 export default function DiscoveryLifeOSOffer() {
   const features = [
@@ -134,19 +135,18 @@ export default function DiscoveryLifeOSOffer() {
               <p className="text-base text-text-on-light/60 mb-8">
                 Faktura VAT · Możliwość rozłożenia na 2 raty
               </p>
-              <button
-                className="px-10 py-4 rounded font-bold text-lg text-white"
-                style={{
-                  background:
-                    "linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%))",
-                  boxShadow: "0 4px 15px rgba(109,40,217,0.4)",
-                }}
+              <CTAButton
+                variant="primary"
+                size="xl"
+                className="w-full sm:w-auto"
                 onClick={() => {
                   const el = document.querySelector("#formularz");
                   el?.scrollIntoView({ behavior: "smooth" });
                 }}
+                data-cta="discovery:lifeos-offer"
               >
-                Umów Sesję Discovery</button>
+                Sprawdź dostępność
+              </CTAButton>
               <p className="text-sm text-text-on-light/50 mt-4">
                 Dostępne: max 5 aktywnych klientów jednocześnie
               </p>
