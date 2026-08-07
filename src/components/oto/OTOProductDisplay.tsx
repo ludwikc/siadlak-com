@@ -1,9 +1,9 @@
-import { ArrowRight } from '@/lib/icons';
-import { GlassCard } from '@/design-system/components/glass-card';
-import { OTOCountdown } from './OTOCountdown';
-import Hero from '@/components/sections/Hero';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { ArrowRight, Check, Timer } from "@/lib/icons";
+import { OTOCountdown } from "./OTOCountdown";
+import { OTOStickyBar } from "./OTOStickyBar";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { track } from "@/lib/analytics";
 import { withAttribution } from "@/lib/attribution";
 
@@ -14,298 +14,435 @@ interface OTOProductDisplayProps {
 const OTO_CHECKOUT_URL =
   "https://cart.easy.tools/checkout/siadlak/7technik?plan=price_1QY7IaLDgmse4Mm3CGLkB7VI&lang=pl";
 
+const CHECKOUT_HREF = withAttribution(OTO_CHECKOUT_URL);
+
 const handleOtoPurchaseClick = () => {
-  track("oto_purchase_click", { product: "7-technik", value: 77, currency: "PLN" });
+  track("oto_purchase_click", {
+    product: "7-technik",
+    value: 77,
+    currency: "PLN",
+  });
 };
 
+const TECHNIQUES = [
+  {
+    number: "1",
+    title: "Blokowanie zadań",
+    description:
+      "grupujesz podobne rzeczy w jednym bloku; jedziesz A→B bez postojów.",
+  },
+  {
+    number: "2",
+    title: "Praca głęboka",
+    description: "25 minut w trybie „samolot”: powiadomienia OFF, Ty ON.",
+  },
+  {
+    number: "3",
+    title: "Zatrudnij pierwszego robota",
+    description:
+      "Zapier/IFTTT/Make: zaloguj → połącz → start; gwiazdka w Gmailu = zadanie w Todoist.",
+  },
+  {
+    number: "4",
+    title: "Hackowanie własnego maila",
+    description:
+      "plusy i kropki (ludwik+fb@… / lu.dw.ik@…) = porządek, filtry i automaty.",
+  },
+  {
+    number: "5",
+    title: "Werwa do pracy",
+    description:
+      "zrób „próżnię”: usuń Gmail z telefonu na weekend, zainstaluj w poniedziałek.",
+  },
+  {
+    number: "6",
+    title: "Estymowanie czasochłonności",
+    description:
+      "doliczasz połowę czasu i pracujesz spokojnie, bez czerwonego pola.",
+  },
+  {
+    number: "7",
+    title: "Otaczanie się skutecznymi Ludźmi",
+    description:
+      "silent co-working i społeczność siadlak.wip (PL kanał) trzymają Cię w działaniu.",
+  },
+];
+
+const INCLUDED = [
+  "7 sprawdzonych technik w prostych punktach — zero „teorii dla teorii”.",
+  "Po każdej technice jedno zadanie, które wdrażasz od razu.",
+  "Zero aplikacji — wystarczy zwykły timer.",
+  "Dostęp natychmiast po zakupie i na zawsze.",
+];
+
+const FAQ = [
+  {
+    q: "Ile to zajmie?",
+    a: "77 minut. Możesz obejrzeć wszystko za jednym razem albo technikę dziennie przez tydzień.",
+  },
+  {
+    q: "Czy potrzebuję jakichś narzędzi?",
+    a: "Nie. Wystarczy zwykły timer i Twoja skrzynka mailowa. Nic nie musisz kupować ani instalować.",
+  },
+  {
+    q: "Kiedy dostanę dostęp?",
+    a: "Natychmiast po płatności — link trafia na Twojego maila w kilkanaście sekund. Dostęp jest bezterminowy.",
+  },
+  {
+    q: "Co, jeśli nie zdążę w te 7 minut?",
+    a: "Kurs zostaje w katalogu w cenie 497 PLN. Ta cena jest tylko tutaj i tylko teraz.",
+  },
+];
+
+function TrustRow({ dark = false }: { dark?: boolean }) {
+  const items = [
+    "Bezpieczne płatności",
+    "Dostęp natychmiast",
+    "Dostęp na zawsze",
+  ];
+  return (
+    <ul
+      className={`flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs uppercase tracking-widest ${
+        dark ? "text-dim" : "text-on-light-dim"
+      }`}
+    >
+      {items.map((item) => (
+        <li key={item} className="flex items-center gap-1.5">
+          <Check className="h-3.5 w-3.5 text-electric" aria-hidden="true" />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function PaymentIcons() {
+  return (
+    <OptimizedImage
+      src="/lovable-uploads/payment-processors.png"
+      alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
+      className="mx-auto h-7 w-auto object-contain opacity-80"
+      width={300}
+      height={60}
+      sizes="300px"
+    />
+  );
+}
+
+function PriceBlock({ dark = false }: { dark?: boolean }) {
+  return (
+    <div className="flex items-end justify-center gap-4">
+      <div className="text-center">
+        <p
+          className={`mb-1 text-[11px] uppercase tracking-widest ${dark ? "text-on-dark-tertiary" : "text-on-light-dim"}`}
+        >
+          Cena katalogowa
+        </p>
+        <p
+          className={`text-2xl font-bold line-through ${dark ? "text-on-dark-tertiary" : "text-on-light-dim"}`}
+        >
+          497 PLN
+        </p>
+      </div>
+      <div className="text-center">
+        <p className="mb-1 text-[11px] uppercase tracking-widest text-electric">
+          Teraz, dla Gościa webinaru
+        </p>
+        <p
+          className={`text-5xl font-bold leading-none ${dark ? "text-locked-white" : "text-on-light"}`}
+        >
+          77 PLN
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
-  const [currentDateTime, setCurrentDateTime] = useState('');
+  const [currentDateTime, setCurrentDateTime] = useState("");
 
   useEffect(() => {
     const now = new Date();
     const monthNames = [
-      'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca',
-      'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'
+      "stycznia",
+      "lutego",
+      "marca",
+      "kwietnia",
+      "maja",
+      "czerwca",
+      "lipca",
+      "sierpnia",
+      "września",
+      "października",
+      "listopada",
+      "grudnia",
     ];
-    
+
     const day = now.getDate();
     const month = monthNames[now.getMonth()];
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    
+    const hours = now.getHours().toString().padStart(2, "0");
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+
     setCurrentDateTime(`${day} ${month} (dzisiaj), ${hours}:${minutes}`);
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* Gmail-style email */}
-      <section aria-label="Email z mojego biurka" className="bg-background py-8 md:py-12">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-card rounded-2xl border border-border/70 shadow-2xl overflow-hidden">
-            {/* macOS window title bar */}
-            <div className="bg-muted/40 border-b border-border px-4 py-2 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-[hsl(3_100%_67%)] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[hsl(41_100%_59%)] border border-black/10"></span>
-                <span className="h-3 w-3 rounded-full bg-[hsl(129_65%_47%)] border border-black/10"></span>
+    <div className="min-h-screen pb-24 md:pb-0">
+      <OTOStickyBar
+        href={CHECKOUT_HREF}
+        onClick={handleOtoPurchaseClick}
+        onExpired={onExpired}
+      />
+
+      {/* 1. OFFER HERO — decision above the fold */}
+      <section className="relative bg-void-glow py-12 md:py-20">
+        <div className="container relative z-10 mx-auto max-w-6xl px-4">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div className="text-center lg:text-left">
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5">
+                <Timer className="h-4 w-4 text-electric" aria-hidden="true" />
+                <span className="text-[11px] font-bold uppercase tracking-widest text-locked-white">
+                  Oferta jednorazowa · 7 minut
+                </span>
               </div>
-              <div className="text-xs text-muted-foreground select-none">Email z mojego biurka</div>
-              <div className="w-14" />
-            </div>
-            {/* Gmail header */}
-            <div className="bg-card border-b border-border p-4">
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <OptimizedImage
-                    src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png"
-                    alt="Ludwik C. Siadlak"
-                    className="w-8 h-8 rounded-full object-cover"
-                    width={32}
-                    height={32}
-                    sizes="32px"
-                  />
-                  <div>
-                    <div className="font-medium text-gray-900">Ludwik C. Siadlak</div>
-                    <div className="text-sm text-gray-500">ludwik@siadlak.email</div>
-                  </div>
+
+              <h1 className="mb-4 text-3xl font-bold leading-tight text-locked-white md:text-5xl">
+                7 najskuteczniejszych technik produktywności
+              </h1>
+              <p className="mb-6 text-lg text-dim md:text-xl">
+                77 minut, które ustawią Ci — każdy — dzień. Bez aplikacji, bez
+                systemów, bez teorii. Siedem rzeczy, które wdrażasz jeszcze
+                dzisiaj.
+              </p>
+
+              <div className="mb-6 rounded-[var(--border-radius-sm)] border border-white/15 bg-white/5 p-5">
+                <PriceBlock dark />
+                <div className="mt-5">
+                  <OTOCountdown onExpired={onExpired} />
                 </div>
-                <div className="text-sm text-gray-500">{currentDateTime}</div>
               </div>
-              <div className="text-sm text-gray-600">
-                <span className="font-medium">Do:</span> Ciebie &lt;****@gmail.com&gt;
+
+              <CTAButton
+                href={CHECKOUT_HREF}
+                onClick={handleOtoPurchaseClick}
+                size="lg"
+                className="w-full sm:w-auto"
+                data-cta="oto:hero"
+                aria-label="Kup 7 Technik Produktywności za 77 PLN"
+              >
+                Tak, chcę to za 77 PLN
+              </CTAButton>
+
+              <div className="mt-5 space-y-3">
+                <TrustRow dark />
+                <PaymentIcons />
               </div>
             </div>
-            
-            {/* Email content */}
-            <div className="p-6 bg-muted/30">
-              <div className="space-y-4 text-base leading-relaxed">
-                <p>Właśnie zapisałeś się na mój webinar.</p>
-                <p><strong>Mój</strong> webinar.</p>
-                <p>A to oznacza, że jesteś <strong>moim gościem</strong>. A to oznacza, że traktuję Cię szacunkiem, należnym moim Gościom. I zaczniemy od tego, że chcę Ci podziękować za to, że… jesteś.</p>
-                <p>I mam już pomysł, jak zrobić to najlepiej.</p> <p>Mam coś dla Ciebie:</p>
-              </div>
+
+            <div className="relative">
+              <OptimizedImage
+                src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                alt="7 Technik Produktywności — kurs wideo"
+                className="mx-auto h-auto w-full max-w-xl rounded-[var(--border-radius-sm)]"
+                width={672}
+                height={377}
+                sizes="(max-width: 1024px) 100vw, 560px"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Course Logo Section */}
-      <section className="py-12 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center">
-            <div className="relative max-w-2xl mx-auto">
-              <OptimizedImage
-                src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
-                alt="7 Technik Produktywności — Logo kursu"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-                width={672}
-                height={377}
-                sizes="(max-width: 768px) 100vw, 672px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-2xl"></div>
+      {/* 2. WHY YOU SEE THIS — the email context */}
+      <section className="bg-diamond py-16 md:py-20">
+        <div className="container mx-auto max-w-3xl px-4">
+          <div className="overflow-hidden rounded-[var(--border-radius-sm)] border border-border bg-white">
+            <div className="flex items-center justify-between border-b border-border px-5 py-4">
+              <div className="flex items-center gap-3">
+                <OptimizedImage
+                  src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png"
+                  alt="Ludwik C. Siadlak"
+                  className="h-10 w-10 rounded-full object-cover"
+                  width={40}
+                  height={40}
+                  sizes="40px"
+                />
+                <div>
+                  <div className="font-medium text-on-light">
+                    Ludwik C. Siadlak
+                  </div>
+                  <div className="text-sm text-on-light-dim">
+                    ludwik@siadlak.email
+                  </div>
+                </div>
+              </div>
+              <div className="hidden text-sm text-on-light-dim sm:block">
+                {currentDateTime}
+              </div>
             </div>
-            <div className="mt-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Witaj w świecie efektywności
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                77 minut, które zmienią sposób, w jaki organizujesz swój dzień
+
+            <div className="space-y-4 px-5 py-6 text-base leading-relaxed text-on-light-dim">
+              <p>Właśnie zapisał(a)eś się na mój webinar.</p>
+              <p>
+                A to oznacza, że jesteś <strong>moim Gościem</strong> — i że
+                traktuję Cię z szacunkiem należnym Gościom. Zacznę od
+                podziękowania za to, że jesteś.
+              </p>
+              <p>
+                Mam już pomysł, jak zrobić to najlepiej:{" "}
+                <strong className="text-on-light">
+                  oddaję Ci mój kurs za 77 PLN zamiast 497 PLN.
+                </strong>{" "}
+                Bez haczyków, bez subskrypcji. Jednorazowo, tylko na tej
+                stronie.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Hero section */}
-      <Hero
-        align="center"
-        title="7 NAJSKUTECZNIEJSZYCH Technik Produktywności"
-        subtitle="czyli 77 minut, które ustawią Ci (każdy!) dzień"
-      />
+      {/* 3. WHAT YOU GET */}
+      <section className="bg-background py-16 md:py-20">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold text-on-light md:text-4xl">
+            Co dostajesz w 77 minut
+          </h2>
+          <ul className="mb-12 grid gap-4 sm:grid-cols-2">
+            {INCLUDED.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 rounded-[var(--border-radius-sm)] border border-border bg-white p-5"
+              >
+                <Check
+                  className="mt-0.5 h-5 w-5 flex-shrink-0 text-electric"
+                  aria-hidden="true"
+                />
+                <span className="leading-relaxed text-on-light-dim">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
 
-
-      {/* Product Section */}
-      <div className="container mx-auto px-4 max-w-4xl py-16">
-        <GlassCard className="mb-16" padding="xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Co dostajesz w 77 minut</h2>
-            <ul className="text-left max-w-2xl mx-auto space-y-3 text-lg leading-relaxed">
-              <li className="text-foreground">• <strong>7 sprawdzonych technik</strong> w prostych punktach - zero „teorii dla teorii”.</li>
-              <li className="text-foreground">• <strong>Po każdej technice jedno zadanie</strong>, które wdrażasz od razu.</li>
-              <li className="text-foreground">• <strong>Zero aplikacji</strong> — wystarczy zwykły timer.</li>
-              <li className="text-foreground">• <strong>Dostęp natychmiast</strong> po zakupie.</li>
-            </ul>
-          </div>
-          
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-semibold text-foreground">Szybkie przypomnienie technik (po jednym zdaniu)</h3>
-          </div>
-          
-          <div className="grid gap-6 md:gap-8">
-            {[
-              { number: "1", title: "Blokowanie zadań", description: "grupujesz podobne rzeczy w jednym bloku; jedziesz A→B bez postojów." },
-              { number: "2", title: "Praca głęboka", description: "25 minut w trybie „samolot”: powiadomienia OFF, Ty ON." },
-              { number: "3", title: "Zatrudnij pierwszego robota", description: "Zapier/IFTTT/Make: zaloguj → połącz → start; ⭐ w Gmailu = zadanie w Todoist." },
-              { number: "4", title: "Hackowanie własnego maila", description: "plusy i kropki (ludwik+fb@… / lu.dw.ik@…) = porządek, filtry i automaty." },
-              { number: "5", title: "Werwa do pracy", description: "zrób „próżnię”: usuń Gmail z telefonu na weekend, zainstaluj w poniedziałek." },
-              { number: "6", title: "Estymowanie czasochłonności", description: "doliczasz połowę czasu i pracujesz spokojnie, bez czerwonego pola." },
-              { number: "7", title: "Otaczanie się skutecznymi Ludźmi", description: "silent co-working i społeczność siadlak.wip (PL kanał) trzymają Cię w działaniu." }
-            ].map((t, i) => (
-              <div key={i} className="flex gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
+          <h3 className="mb-6 text-center text-2xl font-bold text-on-light">
+            Siedem technik — po jednym zdaniu
+          </h3>
+          <ol className="grid gap-4">
+            {TECHNIQUES.map((t) => (
+              <li
+                key={t.number}
+                className="flex gap-4 rounded-[var(--border-radius-sm)] border border-border bg-white p-5 transition-colors duration-200 hover:border-electric/40"
+              >
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand-gradient text-base font-bold text-white">
                   {t.number}
-                </div>
-                <div className="text-foreground">
-                  <p className="leading-relaxed"><strong>{t.title}</strong> - {t.description}</p>
-                </div>
+                </span>
+                <p className="leading-relaxed text-on-light-dim">
+                  <strong className="text-on-light">{t.title}</strong> —{" "}
+                  {t.description}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* 4. PRODUCT PREVIEW */}
+      <section className="bg-diamond py-16 md:py-20">
+        <div className="container mx-auto max-w-6xl px-4">
+          <OptimizedImage
+            src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
+            alt="7 Technik Produktywności — podgląd kursu na różnych urządzeniach"
+            className="mx-auto h-auto w-full max-w-4xl object-contain"
+            width={1024}
+            height={728}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+          />
+        </div>
+      </section>
+
+      {/* 5. WHY 7 MINUTES */}
+      <section className="bg-void py-16 md:py-20">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="mb-6 text-center text-3xl font-bold text-locked-white md:text-4xl">
+            Dlaczego tylko 7 minut
+          </h2>
+          <div className="space-y-5 text-lg leading-relaxed text-dim">
+            <p>
+              Cenię ludzi decyzyjnych. Powiem wprost: to jest bardzo dobra
+              oferta i nie potrzebujesz więcej informacji. Dlatego system
+              wyłączy ją automatycznie 7 minut po otwarciu tej strony.
+            </p>
+            <p>
+              Albo widzisz w tym wartość, albo nie. Jeśli 77 PLN to dla Ciebie
+              za dużo — w porządku, spotkamy się na webinarze i i tak pokażę
+              Ci, jak pracuję.
+            </p>
+            <p className="text-locked-white">
+              Jeśli jednak — tak jak ja — widzisz sens w tym, żeby mieć ten
+              fundament już teraz, kliknij poniżej.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. FAQ */}
+      <section className="bg-background py-16 md:py-20">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold text-on-light md:text-4xl">
+            Zanim klikniesz
+          </h2>
+          <dl className="grid gap-4">
+            {FAQ.map((item) => (
+              <div
+                key={item.q}
+                className="rounded-[var(--border-radius-sm)] border border-border bg-white p-5"
+              >
+                <dt className="mb-2 font-bold text-on-light">{item.q}</dt>
+                <dd className="leading-relaxed text-on-light-dim">{item.a}</dd>
               </div>
             ))}
-          </div>
-        </GlassCard>
-        
-        {/* Course Preview Visual */}
-        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-16">
-          <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden flex items-center justify-center px-4 md:px-8">
-            <OptimizedImage
-              src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
-              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
-              className="max-h-full w-auto max-w-full object-contain object-center mx-auto"
-              width={800}
-              height={569}
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background/20 to-transparent"></div>
-          </div>
+          </dl>
         </div>
-      </div>
+      </section>
 
+      {/* 7. FINAL CTA */}
+      <section className="bg-void-glow py-16 md:py-24">
+        <div className="container mx-auto max-w-2xl px-4 text-center">
+          <h2 className="mb-6 text-3xl font-bold text-locked-white md:text-4xl">
+            Ostatni moment na tę cenę
+          </h2>
 
-      {/* Wartość vs. cena */}
-      <div className="bg-muted/30 py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Wartość vs. cena</h2>
-          </div>
-          
-          <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed">
-            <div className="text-center py-8">
-              <div className="inline-flex items-center gap-6 p-6 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
-                <div>
-                  <p className="text-sm text-muted-foreground mb-1">Regularnie</p>
-                  <p className="text-2xl font-bold line-through text-muted-foreground">497 PLN</p>
-                </div>
-                <div className="text-3xl text-muted-foreground"></div>
-                <div>
-                  <p className="text-sm text-primary font-medium mb-1">Dla Ciebie — mojego Gościa — i <s>tylko teraz</s></p>
-                  <p className="text-4xl font-bold text-primary">77 PLN</p>
-                </div>
-              </div>
-            </div>
-            
-            <p className="text-center">
-              To <strong>jednorazowa oferta</strong> aktywna <strong>przez 7 minut</strong> od kliknięcia.
-            </p>
-            
-            <div className="text-center">
-              <p className="mb-3 text-muted-foreground"><strong>Zegar tyka:</strong></p>
-              <div className="max-w-md mx-auto">
-                <OTOCountdown onExpired={onExpired} />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">Po czasie wraca katalogowa cena 497 PLN.</p>
-              <div className="mt-6">
-                <a href={withAttribution(OTO_CHECKOUT_URL)} onClick={handleOtoPurchaseClick} className="w-full md:w-auto bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 inline-flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Dodaj kurs 7 Technik Produktywności za 77 PLN">
-                  Dodaj kurs za 77 PLN
-                  <ArrowRight className="h-6 w-6" />
-                </a>
-                <p className="mt-2 text-sm text-muted-foreground">Dostęp natychmiast</p>
-              </div>
+          <div className="mb-8 rounded-[var(--border-radius-sm)] border border-white/15 bg-white/5 p-6">
+            <PriceBlock dark />
+            <div className="mt-6">
+              <OTOCountdown onExpired={onExpired} />
             </div>
           </div>
-        </div>
-      </div>
-      {/* Urgency Section */}
-      <div className="container mx-auto px-4 max-w-4xl py-16">
-        <div className="mb-12">
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="text-left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-destructive">Ważne: masz 7 minut</h2>
-              <div className="space-y-6 text-lg leading-relaxed">
-                <p className="font-medium">
-                 Cenię sobie ludzi decyzyjnych. I mówiąc wprost: to jest świetna oferta. Nie potrzebujesz więcej informacji. Dlatego system automatycznie wyłączy tę ofertę za 7 minut od otwarcia tej strony.
-                </p>
-                
-                <p className="text-muted-foreground">
-                  Dlaczego? Bo albo widzisz w tym wartość, albo nie. Nie potrzebujesz godziny na zastanawianie się.
-                </p>
-                
-                <p className="text-muted-foreground">
-                  Jeśli 77 PLN za techniki, które mogą zmienić sposób, w jaki pracujesz, to dla Ciebie za dużo — okej, spotkamy się na webinarze i pokażę Ci jak pracuję. 
-                </p>
-                
-                <p className="text-lg font-medium text-primary">
-                  Jeśli jednak (tak jak ja) widzisz sens w tym, żeby mieć ten fundament już teraz — kliknij poniżej.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <OptimizedImage
-                src="/lovable-uploads/7e50788e-1ddd-4b3c-900f-62fd313d17e5.png"
-                alt="7 Technik Produktywności – podgląd kursu na telewizorze"
-                className="w-full h-auto rounded-xl shadow-2xl object-contain"
-                width={600}
-                height={755}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
+
+          <CTAButton
+            href={CHECKOUT_HREF}
+            onClick={handleOtoPurchaseClick}
+            size="lg"
+            className="w-full"
+            data-cta="oto:final"
+            aria-label="Kup 7 Technik Produktywności za 77 PLN"
+          >
+            Tak, chcę to za 77 PLN
+          </CTAButton>
+
+          <div className="mt-6 space-y-3">
+            <TrustRow dark />
+            <PaymentIcons />
           </div>
-        </div>
 
-        {/* Countdown Timer */}
-        <div className="mb-12">
-          <OTOCountdown onExpired={onExpired} />
+          <p className="mx-auto mt-10 max-w-xl text-sm italic leading-relaxed text-on-dark-tertiary">
+            <strong className="text-dim">PS.</strong> Nie będzie maili
+            przypominających. Nie będzie „ostatniej szansy”. To jedyna okazja,
+            żeby dostać ten kurs w tej — przyznaję, nieprzyzwoicie niskiej —
+            cenie. Decyzja należy do Ciebie.
+          </p>
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center mb-16">
-          <GlassCard className="max-w-md mx-auto" padding="lg">
-             <a href={withAttribution(OTO_CHECKOUT_URL)} onClick={handleOtoPurchaseClick} className="w-full bg-gradient-locked-cta text-locked-white px-8 py-6 rounded-xl text-xl font-bold hover:shadow-xl hover:-translate-y-px transition-all duration-300 mb-6 flex items-center justify-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Tak, chcę 7 Technik Produktywności za 77 PLN">
-               Tak, chcę 7 Technik Produktywności za 77 PLN
-               <ArrowRight className="h-6 w-6" />
-             </a>
-            
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-4">
-              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <div className="flex flex-col items-center">
-                <span>Bezpieczne płatności</span>
-              </div>
-              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <span>Dostęp NATYCHMIAST</span>
-              <div className="h-2 w-2 bg-green-500 rounded-full"></div>
-              <span>Dostęp LIFETIME</span>
-            </div>
-            
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <OptimizedImage
-                src="/lovable-uploads/payment-processors.png"
-                alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
-                className="h-8 w-auto object-contain opacity-80"
-                width={300}
-                height={60}
-                sizes="300px"
-              />
-            </div>
-          </GlassCard>
-        </div>
-
-        {/* Footer Note */}
-        <div className="text-center">
-          <GlassCard variant="subtle" className="max-w-2xl mx-auto">
-            <p className="text-muted-foreground italic">
-              <strong>PS.</strong> Nie będzie przypominających maili. Nie będzie "ostatniej szansy". To jest jedyna okazja, żeby dostać ten kurs w tej (tak, wiem, że nieprzyzwoicie niskiej) cenie. Decyzja należy do Ciebie.
-            </p>
-          </GlassCard>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
