@@ -34,7 +34,7 @@ export function OTOMinimizedTimer({
   if (timeLeft <= 0) return null;
 
   const timerContent = (
-    <div className="fixed bottom-4 left-4 z-[9999] animate-fade-in">
+    <div className="fixed bottom-4 left-4 z-[9999] hidden animate-fade-in md:block">
       <div
         className={cn(
           "bg-card/95 border-2 rounded-md p-4 min-w-[280px]",

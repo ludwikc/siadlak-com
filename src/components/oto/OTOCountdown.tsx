@@ -28,33 +28,40 @@ export function OTOCountdown({ onExpired, className }: OTOCountdownProps) {
   const isUrgent = timeLeft <= 2 * 60 * 1000;
   
   return (
-    <div className={cn(
-      "bg-card p-6 text-center border-2 rounded-md",
-      isUrgent ? "border-destructive" : "border-primary/30",
-      className
-    )}>
-      <div className="flex items-center justify-center gap-3 mb-3">
-        <Timer className={cn(
-          "h-6 w-6",
-          isUrgent ? "text-destructive" : "text-primary"
-        )} />
-        <h3 className={cn(
-          "text-xl font-bold",
-          isUrgent ? "text-destructive" : "text-foreground"
-        )}>
-          OFERTA WYGASA ZA:
+    <div
+      className={cn(
+        "rounded-[var(--border-radius-sm)] border p-4 text-center",
+        isUrgent
+          ? "border-red-500/60 bg-red-500/10"
+          : "border-white/20 bg-white/5",
+        className,
+      )}
+    >
+      <div className="mb-2 flex items-center justify-center gap-2">
+        <Timer
+          className={cn("h-4 w-4", isUrgent ? "text-red-400" : "text-electric")}
+        />
+        <h3
+          className={cn(
+            "text-[11px] font-bold uppercase tracking-widest",
+            isUrgent ? "text-red-400" : "text-dim",
+          )}
+        >
+          Oferta wygasa za
         </h3>
       </div>
-      
-      <div className={cn(
-        "text-4xl font-mono font-bold tracking-wider",
-        isUrgent ? "text-destructive" : "text-primary"
-      )}>
+
+      <div
+        className={cn(
+          "font-mono text-4xl font-bold tracking-wider",
+          isUrgent ? "text-red-400" : "text-locked-white",
+        )}
+      >
         {formatOTOTime(timeLeft)}
       </div>
-      
-      <p className="text-sm text-muted-foreground mt-2">
-        To jednorazowa oferta — po wygaśnięciu nie będzie dostępna ponownie
+
+      <p className="mt-2 text-xs text-on-dark-tertiary">
+        Po czasie wraca cena katalogowa 497 PLN
       </p>
     </div>
   );

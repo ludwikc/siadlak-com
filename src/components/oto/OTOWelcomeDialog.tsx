@@ -11,7 +11,7 @@ import {
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import { OTOCountdown } from "./OTOCountdown";
-import { Button } from "@/design-system/components/button";
+import { CTAButton } from "@/design-system/components/cta-button";
 import { cn } from "@/lib/utils";
 
 interface OTOWelcomeDialogProps {
@@ -26,7 +26,6 @@ export function OTOWelcomeDialog({
   onExpired,
 }: OTOWelcomeDialogProps) {
   const handleContinueClick = () => {
-    console.log("OTO Dialog: Continue button clicked!");
     onContinue();
   };
 
@@ -78,7 +77,7 @@ export function OTOWelcomeDialog({
         <DialogOverlay className="fixed inset-0 z-[999998] bg-black/80 pointer-events-auto" />
         <DialogPrimitive.Content
           className={cn(
-            "fixed left-[50%] top-[50%] z-[999999] grid w-full max-w-2xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 pointer-events-auto",
+            "fixed left-[50%] top-[50%] z-[999999] grid w-full max-w-2xl translate-x-[-50%] translate-y-[-50%] gap-4 border border-white/15 bg-void p-6 shadow-2xl duration-200 pointer-events-auto",
             "data-[state=open]:animate-in data-[state=closed]:animate-out",
             "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
             "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
@@ -87,21 +86,21 @@ export function OTOWelcomeDialog({
             "sm:rounded-lg",
           )}
         >
-          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none z-[1000000] pointer-events-auto">
+          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm text-locked-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none z-[1000000] pointer-events-auto">
             <X className="h-4 w-4" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
 
           <DialogHeader>
-            <DialogTitle className="text-4xl font-bold text-center mb-2">
+            <DialogTitle className="text-3xl md:text-4xl font-bold text-center mb-2 text-locked-white">
               Twoje miejsce zostało zarezerwowane! 🥳
             </DialogTitle>
             <div className="text-center mb-4">
-              <h2 className="text-2xl font-semibold text-foreground">
+              <h2 className="text-xl md:text-2xl font-semibold text-dim">
                 Ale to nie wszystko...
               </h2>
             </div>
-            <DialogDescription className="text-base text-foreground">
+            <DialogDescription className="text-base text-dim">
               <p>
                 To jest <strong>jednorazowa</strong> oferta dostępu do kursu 7
                 Technik, Które Natychmiast Podnoszą Produktywność w cenie 77 PLN
@@ -115,14 +114,15 @@ export function OTOWelcomeDialog({
           </div>
 
           <div className="flex flex-col items-center gap-4">
-            <Button
+            <CTAButton
               onClick={handleContinueClick}
               size="lg"
-              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 text-lg font-bold relative z-[1000000] pointer-events-auto cursor-pointer"
+              className="relative z-[1000000] w-full cursor-pointer pointer-events-auto sm:w-auto"
+              data-cta="oto:welcome-dialog"
             >
-              Rozumiem, pokaż mi więcej informacji
-            </Button>
-            <p className="text-sm text-muted-foreground text-center max-w-md">
+              Pokaż mi tę ofertę
+            </CTAButton>
+            <p className="text-sm text-on-dark-tertiary text-center max-w-md">
               To jest akcja tylko dla zdecydowanych i pozytywnie
               zdeterminowanych uczestników spotkania, dlatego będzie ważna tylko
               przez 7 minut po czym zostanie wyłączona.
