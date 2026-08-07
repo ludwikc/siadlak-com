@@ -12,8 +12,8 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 
 ## Wartości (uzupełniane w trakcie wdrożenia)
 - GCAL_CRED_ID: O7J6rUJcu90TGtSu
-- ML_CRED_ID: (Task 3)
-- CRM_CRED_ID: (Task 3)
+- ML_CRED_ID: LNvQCU8e8mnYdcwT
+- CRM_CRED_ID: qDLoAAKeIzPr4u80
 - ML_GROUP_ID: (Task 4)
 - FILTER_TERM: (Task 5)
 - ERROR_WF_ID: y7NbiALAXFFBjvA9
