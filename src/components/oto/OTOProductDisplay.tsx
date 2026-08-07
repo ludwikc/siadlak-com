@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Check, Timer } from "@/lib/icons";
+import { Check, Timer } from "@/lib/icons";
 import { OTOCountdown } from "./OTOCountdown";
 import { OTOStickyBar } from "./OTOStickyBar";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
