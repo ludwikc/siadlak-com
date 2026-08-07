@@ -1,0 +1,23 @@
+{
+  "id": "REDACTED-EVENT-ID",
+  "status": "confirmed",
+  "htmlLink": "https://www.google.com/calendar/event?eid=REDACTED",
+  "created": "2026-08-07T17:12:39Z",
+  "updated": "2026-08-07T17:12:41Z",
+  "summary": "Sesja Discovery (Jan Testowy)",
+  "description": "<b>Booked by</b>\nJan Testowy\njan.testowy@example.com\n<br><b>Z jakim tematem przychodzisz? </b>\nprzykladowy temat \n<br>Spotkanie zajmie ok. 30 minut. Omówimy na nim możliwości współpracy i plan gry.<br><br>Po wybraniu terminu podaj swój <strong>numer telefonu </strong>na wypadek gdyby coś poszło nie tak.<p>Do zobaczenia,<br>Ludwik</p>",
+  "creator": { "email": "ludwikc@siadlak.com", "self": true },
+  "organizer": { "email": "ludwikc@siadlak.com", "self": true },
+  "start": { "dateTime": "2026-08-12T16:00:00+02:00", "timeZone": "Europe/Berlin" },
+  "end": { "dateTime": "2026-08-12T16:30:00+02:00", "timeZone": "Europe/Berlin" },
+  "attendees": [
+    { "email": "ludwikc@siadlak.com", "organizer": true, "self": true, "responseStatus": "accepted" }
+  ],
+  "eventType": "DEFAULT",
+  "_diagnostic_notes": {
+    "guest_not_in_attendees": "Google appointment schedule does NOT add the booker as attendee — attendees holds only the organizer. Booker name+email live ONLY in description ('Booked by' block).",
+    "filter": "summary contains 'Sesja Discovery' AND description contains 'Booked by'",
+    "extraction": "strip HTML → after 'Booked by': line 1 = name, line 2 = email; after 'Z jakim tematem przychodzisz?': line 1 = topic",
+    "echo_window": "updated - created = 2 s at creation"
+  }
+}

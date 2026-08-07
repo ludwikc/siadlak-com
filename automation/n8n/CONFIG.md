@@ -15,7 +15,9 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 - ML_CRED_ID: LNvQCU8e8mnYdcwT
 - CRM_CRED_ID: qDLoAAKeIzPr4u80
 - ML_GROUP_ID: (Task 4)
-- FILTER_TERM: (Task 5)
+- FILTER_TERM: Sesja Discovery (pole: summary)
+- FILTER_COND_2: description zawiera "Booked by"
+- NAME_SOURCE: description — blok "Booked by": linia 1 = imię i nazwisko, linia 2 = email; pytanie formularza "Z jakim tematem przychodzisz?" → topic
 - ERROR_WF_ID: y7NbiALAXFFBjvA9
 - MAIN_WF_ID: (Task 8)
 
