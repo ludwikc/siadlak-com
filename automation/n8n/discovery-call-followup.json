@@ -89,20 +89,20 @@
     {
       "id": "todoist-task",
       "name": "Create Todoist Task",
-      "type": "n8n-nodes-base.todoist",
-      "typeVersion": 2.1,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
       "position": [760, 0],
       "parameters": {
-        "operation": "create",
-        "project": { "__rl": true, "mode": "id", "value": "6P79PcCFvr79qX2X" },
-        "content": "=Przygotuj Discovery Call z {{ $json.firstName }}",
-        "options": {
-          "description": "=Email: {{ $json.email }}\nTemat: {{ $json.topic || '—' }}\nEvent: {{ $json.htmlLink }}\nEventID: {{ $json.eventId }}",
-          "dueDateTime": "={{ new Date($json.start).toISOString() }}",
-          "priority": 3
-        }
+        "method": "POST",
+        "url": "https://api.todoist.com/api/v1/tasks",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ content: 'Przygotuj Discovery Call z ' + $json.firstName, project_id: '6P79PcCFvr79qX2X', description: 'Email: ' + $json.email + '\\nTemat: ' + ($json.topic || '—') + '\\nEvent: ' + $json.htmlLink + '\\nEventID: ' + $json.eventId, due_datetime: new Date($json.start).toISOString(), priority: 3 }) }}",
+        "options": {}
       },
-      "credentials": { "todoistApi": { "id": "8UedYTvPCL4OBFqK", "name": "Todoist account" } }
+      "credentials": { "httpHeaderAuth": { "id": "RdHRFGa0aOV0YGA8", "name": "Todoist Bearer" } }
     },
     {
       "id": "slack-new",
