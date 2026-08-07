@@ -1,0 +1,263 @@
+{
+  "name": "Discovery Call Follow-up",
+  "settings": { "executionOrder": "v1", "timezone": "Europe/Warsaw", "errorWorkflow": "__ERROR_WF_ID__" },
+  "nodes": [
+    {
+      "id": "trig-created",
+      "name": "New Booking",
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "parameters": {
+        "pollTimes": { "item": [ { "mode": "everyX", "value": 5, "unit": "minutes" } ] },
+        "triggerOn": "eventCreated",
+        "calendarId": { "__rl": true, "mode": "id", "value": "ludwikc@siadlak.com" },
+        "options": {}
+      },
+      "credentials": { "googleCalendarOAuth2Api": { "id": "__GCAL_CRED_ID__", "name": "Google Calendar account" } }
+    },
+    {
+      "id": "trig-updated",
+      "name": "Updated Booking",
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "position": [0, 500],
+      "parameters": {
+        "pollTimes": { "item": [ { "mode": "everyX", "value": 5, "unit": "minutes" } ] },
+        "triggerOn": "eventUpdated",
+        "calendarId": { "__rl": true, "mode": "id", "value": "ludwikc@siadlak.com" },
+        "options": {}
+      },
+      "credentials": { "googleCalendarOAuth2Api": { "id": "__GCAL_CRED_ID__", "name": "Google Calendar account" } }
+    },
+    {
+      "id": "if-discovery-new",
+      "name": "Is Discovery Booking?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [240, 0],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c-summary",
+              "leftValue": "={{ $json.summary ?? '' }}",
+              "rightValue": "__FILTER_TERM__",
+              "operator": { "type": "string", "operation": "contains" }
+            },
+            {
+              "id": "c-desc",
+              "leftValue": "={{ $json.description ?? '' }}",
+              "rightValue": "Booked by",
+              "operator": { "type": "string", "operation": "contains" }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "code-extract",
+      "name": "Extract Guest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [480, 0],
+      "parameters": {
+        "jsCode": "const ev = $input.first().json;\nconst raw = String(ev.description || '');\nconst text = raw.replace(/<br\\s*\\/?>/gi, '\\n').replace(/<[^>]+>/g, '').replace(/\\r/g, '');\nconst booked = text.match(/Booked by\\s*\\n\\s*(.+)\\n\\s*([^\\s@]+@[^\\s]+)/i);\nif (!booked) throw new Error('Brak bloku \"Booked by\" w evencie ' + ev.id);\nconst name = booked[1].trim();\nconst email = booked[2].trim().toLowerCase();\nconst topicMatch = text.match(/Z jakim tematem przychodzisz\\?\\s*\\n\\s*(.+)/i);\nconst topic = topicMatch ? topicMatch[1].trim() : '';\nconst firstName = name.split(/\\s+/)[0];\nreturn [{ json: {\n  eventId: ev.id,\n  htmlLink: ev.htmlLink,\n  summary: ev.summary,\n  start: ev.start?.dateTime || ev.start?.date,\n  email,\n  name,\n  firstName,\n  topic\n} }];"
+      }
+    },
+    {
+      "id": "ml-upsert",
+      "name": "MailerLite Upsert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [760, -140],
+      "parameters": {
+        "method": "POST",
+        "url": "https://connect.mailerlite.com/api/subscribers",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ email: $json.email, fields: { name: $json.name }, groups: ['__ML_GROUP_ID__'] }) }}",
+        "options": {}
+      },
+      "credentials": { "httpHeaderAuth": { "id": "__ML_CRED_ID__", "name": "MailerLite Bearer" } }
+    },
+    {
+      "id": "todoist-task",
+      "name": "Create Todoist Task",
+      "type": "n8n-nodes-base.todoist",
+      "typeVersion": 2.1,
+      "position": [760, 0],
+      "parameters": {
+        "operation": "create",
+        "project": { "__rl": true, "mode": "id", "value": "6P79PcCFvr79qX2X" },
+        "content": "=Przygotuj Discovery Call z {{ $json.firstName }}",
+        "options": {
+          "description": "=Email: {{ $json.email }}\nTemat: {{ $json.topic || '—' }}\nEvent: {{ $json.htmlLink }}\nEventID: {{ $json.eventId }}",
+          "dueDateTime": "={{ $json.start }}",
+          "priority": 3
+        }
+      },
+      "credentials": { "todoistApi": { "id": "8oqfcW1IjExZk6rn", "name": "Todoist account" } }
+    },
+    {
+      "id": "slack-new",
+      "name": "Slack: New Booking",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [760, 140],
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
+        "text": "=📅 Nowa rezerwacja Discovery: {{ $json.name }} ({{ $json.email }}) — {{ $json.start && $json.start.includes('T') ? DateTime.fromISO($json.start).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : $json.start }}\nTemat: {{ $json.topic || '—' }}\n{{ $json.htmlLink }}",
+        "otherOptions": {}
+      },
+      "credentials": { "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" } }
+    },
+    {
+      "id": "crm-deal",
+      "name": "CRM: Discovery Deal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [760, 280],
+      "parameters": {
+        "method": "POST",
+        "url": "https://taswmdahpcubiyrgsjki.supabase.co/functions/v1/crm-booking",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ email: $json.email, name: $json.name, start: $json.start, eventId: $json.eventId, htmlLink: $json.htmlLink }) }}",
+        "options": {}
+      },
+      "credentials": { "httpHeaderAuth": { "id": "__CRM_CRED_ID__", "name": "CRM Booking Secret" } }
+    },
+    {
+      "id": "if-discovery-upd",
+      "name": "Is Discovery Booking (Update)?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [240, 500],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c-summary-u",
+              "leftValue": "={{ $json.summary ?? '' }}",
+              "rightValue": "__FILTER_TERM__",
+              "operator": { "type": "string", "operation": "contains" }
+            },
+            {
+              "id": "c-desc-u",
+              "leftValue": "={{ $json.description ?? '' }}",
+              "rightValue": "Booked by",
+              "operator": { "type": "string", "operation": "contains" }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "if-not-echo",
+      "name": "Not Creation Echo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [480, 500],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c-echo",
+              "leftValue": "={{ Math.abs(new Date($json.updated ?? 0).getTime() - new Date($json.created ?? 0).getTime()) }}",
+              "rightValue": 60000,
+              "operator": { "type": "number", "operation": "gte" }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "if-cancelled",
+      "name": "Cancelled?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [720, 500],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c-status",
+              "leftValue": "={{ $json.status ?? '' }}",
+              "rightValue": "cancelled",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "slack-cancelled",
+      "name": "Slack: Cancelled",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [960, 420],
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
+        "text": "=❌ ODWOŁANE: {{ $json.summary }} — {{ $json.start?.dateTime ? DateTime.fromISO($json.start.dateTime).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : ($json.start?.date ?? 'termin nieznany') }}\nObsłuż ręcznie: zadanie Todoist + ewentualny mail.\n{{ $json.htmlLink }}",
+        "otherOptions": {}
+      },
+      "credentials": { "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" } }
+    },
+    {
+      "id": "slack-changed",
+      "name": "Slack: Rescheduled",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [960, 580],
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
+        "text": "=🔁 ZMIANA rezerwacji: {{ $json.summary }} — nowy termin: {{ $json.start?.dateTime ? DateTime.fromISO($json.start.dateTime).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : ($json.start?.date ?? 'sprawdź kalendarz') }}\nObsłuż ręcznie: zaktualizuj zadanie Todoist.\n{{ $json.htmlLink }}",
+        "otherOptions": {}
+      },
+      "credentials": { "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" } }
+    }
+  ],
+  "connections": {
+    "New Booking": { "main": [[ { "node": "Is Discovery Booking?", "type": "main", "index": 0 } ]] },
+    "Is Discovery Booking?": { "main": [[ { "node": "Extract Guest", "type": "main", "index": 0 } ]] },
+    "Extract Guest": { "main": [[
+      { "node": "MailerLite Upsert", "type": "main", "index": 0 },
+      { "node": "Create Todoist Task", "type": "main", "index": 0 },
+      { "node": "Slack: New Booking", "type": "main", "index": 0 },
+      { "node": "CRM: Discovery Deal", "type": "main", "index": 0 }
+    ]] },
+    "Updated Booking": { "main": [[ { "node": "Is Discovery Booking (Update)?", "type": "main", "index": 0 } ]] },
+    "Is Discovery Booking (Update)?": { "main": [[ { "node": "Not Creation Echo?", "type": "main", "index": 0 } ]] },
+    "Not Creation Echo?": { "main": [[ { "node": "Cancelled?", "type": "main", "index": 0 } ]] },
+    "Cancelled?": { "main": [
+      [ { "node": "Slack: Cancelled", "type": "main", "index": 0 } ],
+      [ { "node": "Slack: Rescheduled", "type": "main", "index": 0 } ]
+    ] }
+  }
+}
