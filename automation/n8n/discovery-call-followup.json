@@ -98,7 +98,7 @@
         "content": "=Przygotuj Discovery Call z {{ $json.firstName }}",
         "options": {
           "description": "=Email: {{ $json.email }}\nTemat: {{ $json.topic || '—' }}\nEvent: {{ $json.htmlLink }}\nEventID: {{ $json.eventId }}",
-          "dueDateTime": "={{ $json.start }}",
+          "dueDateTime": "={{ new Date($json.start).toISOString() }}",
           "priority": 3
         }
       },
