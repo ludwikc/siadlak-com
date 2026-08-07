@@ -11,7 +11,7 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 - Todoist credential: 8oqfcW1IjExZk6rn
 
 ## Wartości (uzupełniane w trakcie wdrożenia)
-- GCAL_CRED_ID: (Task 2)
+- GCAL_CRED_ID: O7J6rUJcu90TGtSu
 - ML_CRED_ID: (Task 3)
 - CRM_CRED_ID: (Task 3)
 - ML_GROUP_ID: (Task 4)
