@@ -102,7 +102,7 @@
           "priority": 3
         }
       },
-      "credentials": { "todoistApi": { "id": "8oqfcW1IjExZk6rn", "name": "Todoist account" } }
+      "credentials": { "todoistApi": { "id": "8UedYTvPCL4OBFqK", "name": "Todoist account" } }
     },
     {
       "id": "slack-new",
