@@ -16,7 +16,7 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 - CRM_CRED_ID: (Task 3)
 - ML_GROUP_ID: (Task 4)
 - FILTER_TERM: (Task 5)
-- ERROR_WF_ID: (Task 6)
+- ERROR_WF_ID: y7NbiALAXFFBjvA9
 - MAIN_WF_ID: (Task 8)
 
 ## CRM (siadlak-portal)

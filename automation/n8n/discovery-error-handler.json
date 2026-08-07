@@ -1,0 +1,35 @@
+{
+  "name": "Discovery Error Handler",
+  "settings": { "executionOrder": "v1", "timezone": "Europe/Warsaw" },
+  "nodes": [
+    {
+      "id": "err-trigger",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "parameters": {}
+    },
+    {
+      "id": "err-slack",
+      "name": "Slack Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [220, 0],
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
+        "text": "=🚨 Workflow padł: {{ $json.workflow.name }}\nNode: {{ $json.execution?.lastNodeExecuted ?? 'n/a' }}\nBłąd: {{ $json.execution?.error?.message ?? 'n/a' }}\nExecution: {{ $json.execution?.url ?? 'n/a' }}",
+        "otherOptions": {}
+      },
+      "credentials": {
+        "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" }
+      }
+    }
+  ],
+  "connections": {
+    "Error Trigger": { "main": [[{ "node": "Slack Alert", "type": "main", "index": 0 }]] }
+  }
+}
