@@ -78,11 +78,11 @@ Dwa workflow w n8n:
 
 ### Filtr rezerwacji (krytyczny)
 
-Kalendarz główny zawiera też zwykłe spotkania z gośćmi — sam warunek "ma attendee" wysłałby follow-up przypadkowym osobom. Dyskryminator v1: **tytuł eventu pasuje do wzorca appointment schedule ORAZ attendee ≠ właściciel kalendarza**. Dokładny wzorzec summary/description potwierdza testowa rezerwacja — to pierwszy krok implementacji (Google formatuje eventy z appointment schedule według własnego szablonu, który trzeba zobaczyć na żywym evencie).
+Kalendarz główny zawiera też zwykłe spotkania. Testowa rezerwacja (2026-08-07) pokazała, że **Google appointment schedule NIE dodaje rezerwującego jako attendee** — event ma tylko organizatora, a dane gościa żyją wyłącznie w `description` (blok „Booked by": imię, email + odpowiedzi formularza). Dyskryminator v1 (potwierdzony na żywym evencie): **`summary` zawiera `Sesja Discovery` ORAZ `description` zawiera `Booked by`**. Zwykłe spotkania (nawet z gośćmi) nie mają tej pary markerów.
 
 ### Ścieżka created
 
-1. **Ekstrakcja danych gościa:** email = attendee ≠ self; imię = `displayName` attendee → fallback: parsowanie description (odpowiedzi z formularza rezerwacji) → fallback: summary.
+1. **Ekstrakcja danych gościa** (z `description`, bo gość nie jest attendee): strip HTML → blok „Booked by": linia 1 = imię i nazwisko, linia 2 = email; odpowiedź na pytanie formularza „Z jakim tematem przychodzisz?" → pole `topic` (trafia do Todoist i Slacka).
 2. **MailerLite:** upsert subskrybenta (email, imię) → przypisanie do grupy `Discovery — Booked`. Automatyzacja ML (trigger: dołączenie do grupy) wysyła mail przygotowujący. Google wysyła własne potwierdzenie rezerwacji — nasz mail to warstwa "przygotuj się do rozmowy", nie duplikat potwierdzenia. Treść: draft głosem Ludwika, akceptacja w UI MailerLite przed aktywacją.
 3. **Todoist:** task w projekcie CRM — content: `Przygotuj Discovery Call z {Imię}`, due = start eventu, priority p2, description: email gościa, link do eventu, **event ID** (fundament pod v2).
 4. **Slack:** `Nowa rezerwacja: {Imię} ({email}) — {data}` + link do eventu, kanał `C08HCGL5G0M`.

@@ -203,7 +203,7 @@ Wywołaj MCP `create_group` z name `Discovery — Booked`. Zapisz zwrócone `id`
 
 - [ ] **Step 2: Napisz draft maila głosem Ludwika**
 
-Użyj skilla `anthropic-skills:glos-ludwika`. Brief: mail po rezerwacji bezpłatnej sesji discovery; cel — przygotować do rozmowy, nie duplikować potwierdzenia Google (termin już potwierdzony). Zawartość: (1) co się wydarzy na 45-min rozmowie, (2) prośba o 2 min refleksji: „z czym przychodzisz / co ma się zmienić", (3) P.S. w stylu Ludwika. Temat np. „Zanim porozmawiamy — 2 minuty, które zmienią naszą rozmowę". Bez cen, bez pitch'u.
+Użyj skilla `anthropic-skills:glos-ludwika`. Brief: mail po rezerwacji bezpłatnej sesji discovery; cel — przygotować do rozmowy, nie duplikować potwierdzenia Google (termin już potwierdzony). Zawartość: (1) co się wydarzy na 30-min rozmowie (30 min = zgodnie z copy na /discovery i marketing-context.md), (2) prośba o 2 min refleksji: „z czym przychodzisz / co ma się zmienić", (3) P.S. w stylu Ludwika. Temat np. „Zanim porozmawiamy — 2 minuty, które zmienią naszą rozmowę". Bez cen, bez pitch'u.
 
 - [ ] **Step 3: [HUMAN GATE] Akceptacja treści**
 
@@ -602,10 +602,10 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
               "operator": { "type": "string", "operation": "contains" }
             },
             {
-              "id": "c-guest",
-              "leftValue": "={{ ($json.attendees ?? []).some(a => a.email && a.email.toLowerCase() !== 'ludwikc@siadlak.com') }}",
-              "rightValue": "",
-              "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+              "id": "c-desc",
+              "leftValue": "={{ $json.description ?? '' }}",
+              "rightValue": "Booked by",
+              "operator": { "type": "string", "operation": "contains" }
             }
           ]
         },
@@ -619,7 +619,7 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
       "typeVersion": 2,
       "position": [480, 0],
       "parameters": {
-        "jsCode": "const ev = $input.first().json;\nconst OWNER = 'ludwikc@siadlak.com';\nconst guest = (ev.attendees || []).find(a => a.email && a.email.toLowerCase() !== OWNER);\nif (!guest) throw new Error('Brak gościa na evencie ' + ev.id);\nlet name = guest.displayName || '';\nif (!name && ev.description) {\n  const firstLine = String(ev.description).split(/\\r?\\n/).map(s => s.trim()).find(s => s.length > 1 && !s.startsWith('http'));\n  if (firstLine) name = firstLine;\n}\nif (!name && ev.summary) {\n  name = String(ev.summary).replace(/__FILTER_TERM__/i, '').replace(/[-–—:()]+/g, ' ').trim();\n}\nif (!name) name = guest.email.split('@')[0];\nconst firstName = name.split(/\\s+/)[0];\nreturn [{ json: {\n  eventId: ev.id,\n  htmlLink: ev.htmlLink,\n  summary: ev.summary,\n  start: ev.start?.dateTime || ev.start?.date,\n  email: guest.email.toLowerCase(),\n  name,\n  firstName\n} }];"
+        "jsCode": "const ev = $input.first().json;\nconst raw = String(ev.description || '');\nconst text = raw.replace(/<br\\s*\\/?>/gi, '\\n').replace(/<[^>]+>/g, '').replace(/\\r/g, '');\nconst booked = text.match(/Booked by\\s*\\n\\s*(.+)\\n\\s*([^\\s@]+@[^\\s]+)/i);\nif (!booked) throw new Error('Brak bloku \"Booked by\" w evencie ' + ev.id);\nconst name = booked[1].trim();\nconst email = booked[2].trim().toLowerCase();\nconst topicMatch = text.match(/Z jakim tematem przychodzisz\\?\\s*\\n\\s*(.+)/i);\nconst topic = topicMatch ? topicMatch[1].trim() : '';\nconst firstName = name.split(/\\s+/)[0];\nreturn [{ json: {\n  eventId: ev.id,\n  htmlLink: ev.htmlLink,\n  summary: ev.summary,\n  start: ev.start?.dateTime || ev.start?.date,\n  email,\n  name,\n  firstName,\n  topic\n} }];"
       }
     },
     {
@@ -651,7 +651,7 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
         "project": { "__rl": true, "mode": "id", "value": "6P79PcCFvr79qX2X" },
         "content": "=Przygotuj Discovery Call z {{ $json.firstName }}",
         "options": {
-          "description": "=Email: {{ $json.email }}\nEvent: {{ $json.htmlLink }}\nEventID: {{ $json.eventId }}",
+          "description": "=Email: {{ $json.email }}\nTemat: {{ $json.topic || '—' }}\nEvent: {{ $json.htmlLink }}\nEventID: {{ $json.eventId }}",
           "dueDateTime": "={{ $json.start }}",
           "priority": 3
         }
@@ -669,7 +669,7 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
         "operation": "post",
         "select": "channel",
         "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
-        "text": "=📅 Nowa rezerwacja Discovery: {{ $json.name }} ({{ $json.email }}) — {{ $json.start && $json.start.includes('T') ? DateTime.fromISO($json.start).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : $json.start }}\n{{ $json.htmlLink }}",
+        "text": "=📅 Nowa rezerwacja Discovery: {{ $json.name }} ({{ $json.email }}) — {{ $json.start && $json.start.includes('T') ? DateTime.fromISO($json.start).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : $json.start }}\nTemat: {{ $json.topic || '—' }}\n{{ $json.htmlLink }}",
         "otherOptions": {}
       },
       "credentials": { "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" } }
@@ -710,10 +710,10 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
               "operator": { "type": "string", "operation": "contains" }
             },
             {
-              "id": "c-guest-u",
-              "leftValue": "={{ ($json.attendees ?? []).some(a => a.email && a.email.toLowerCase() !== 'ludwikc@siadlak.com') }}",
-              "rightValue": "",
-              "operator": { "type": "boolean", "operation": "true", "singleValue": true }
+              "id": "c-desc-u",
+              "leftValue": "={{ $json.description ?? '' }}",
+              "rightValue": "Booked by",
+              "operator": { "type": "string", "operation": "contains" }
             }
           ]
         },
@@ -817,7 +817,7 @@ git commit -m "feat(crm): add crm-booking edge function for discovery call intak
 }
 ```
 
-Uwaga (z Task 5): jeśli `NAME_SOURCE`/filtr wskazały `description` zamiast `summary`, zmień w obu IF-ach `leftValue` na `={{ $json.description ?? '' }}` przed deployem i zaktualizuj plik w repo.
+Uwaga: JSON powyżej uwzględnia już wyniki diagnostyki Task 5 — gość NIE jest attendee w evencie z appointment schedule; filtr = `summary` zawiera FILTER_TERM ORAZ `description` zawiera „Booked by"; dane gościa (imię, email, temat) parsowane z `description` w node „Extract Guest".
 
 - [ ] **Step 2: Podmień tokeny i deploy**
 
