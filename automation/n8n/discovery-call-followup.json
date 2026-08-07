@@ -31,6 +31,20 @@
       "credentials": { "googleCalendarOAuth2Api": { "id": "__GCAL_CRED_ID__", "name": "Google Calendar account" } }
     },
     {
+      "id": "trig-cancelled",
+      "name": "Cancelled Booking",
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "position": [0, 900],
+      "parameters": {
+        "pollTimes": { "item": [ { "mode": "everyX", "value": 5, "unit": "minutes" } ] },
+        "triggerOn": "eventCancelled",
+        "calendarId": { "__rl": true, "mode": "id", "value": "ludwikc@siadlak.com" },
+        "options": {}
+      },
+      "credentials": { "googleCalendarOAuth2Api": { "id": "__GCAL_CRED_ID__", "name": "Google Calendar account" } }
+    },
+    {
       "id": "if-discovery-new",
       "name": "Is Discovery Booking?",
       "type": "n8n-nodes-base.if",
@@ -221,10 +235,38 @@
         "operation": "post",
         "select": "channel",
         "channelId": { "__rl": true, "mode": "id", "value": "C08HCGL5G0M" },
-        "text": "=❌ ODWOŁANE: {{ $json.summary }} — {{ $json.start?.dateTime ? DateTime.fromISO($json.start.dateTime).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : ($json.start?.date ?? 'termin nieznany') }}\nObsłuż ręcznie: zadanie Todoist + ewentualny mail.\n{{ $json.htmlLink }}",
+        "text": "=❌ ODWOŁANE: {{ $json.summary ?? 'Sesja Discovery (szczegóły usunięte)' }} — {{ $json.start?.dateTime ? DateTime.fromISO($json.start.dateTime).setZone('Europe/Warsaw').toFormat('ccc dd.MM.yyyy HH:mm') : ($json.start?.date ?? 'termin nieznany') }}\nObsłuż ręcznie: zadanie Todoist + ewentualny mail.\n{{ $json.htmlLink }}",
         "otherOptions": {}
       },
       "credentials": { "slackApi": { "id": "KnH3d0aP27gBB42F", "name": "Slack account" } }
+    },
+    {
+      "id": "if-discovery-cancel",
+      "name": "Is Discovery Booking (Cancel)?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [240, 900],
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false, "leftValue": "", "typeValidation": "loose" },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c-summary-c",
+              "leftValue": "={{ $json.summary ?? '' }}",
+              "rightValue": "__FILTER_TERM__",
+              "operator": { "type": "string", "operation": "contains" }
+            },
+            {
+              "id": "c-desc-c",
+              "leftValue": "={{ $json.description ?? '' }}",
+              "rightValue": "Booked by",
+              "operator": { "type": "string", "operation": "contains" }
+            }
+          ]
+        },
+        "options": {}
+      }
     },
     {
       "id": "slack-changed",
@@ -258,6 +300,8 @@
     "Cancelled?": { "main": [
       [ { "node": "Slack: Cancelled", "type": "main", "index": 0 } ],
       [ { "node": "Slack: Rescheduled", "type": "main", "index": 0 } ]
-    ] }
+    ] },
+    "Cancelled Booking": { "main": [[ { "node": "Is Discovery Booking (Cancel)?", "type": "main", "index": 0 } ]] },
+    "Is Discovery Booking (Cancel)?": { "main": [[ { "node": "Slack: Cancelled", "type": "main", "index": 0 } ]] }
   }
 }
