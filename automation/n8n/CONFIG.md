@@ -25,3 +25,4 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 - Supabase: taswmdahpcubiyrgsjki
 - Endpoint: https://taswmdahpcubiyrgsjki.supabase.co/functions/v1/crm-booking
 - Sekret: CRM_BOOKING_SECRET (wartość POZA repo)
+- ML_AUTOMATION_ID: 195172847812871467 (Discovery Call — mail przygotowujący; trigger: join grupy Discovery — Booked; aktywacja ręczna w UI)
