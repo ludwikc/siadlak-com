@@ -1,0 +1,140 @@
+# Machine-readable system summary: Discovery Call Follow-up Automation
+# Audience: AI agents / tooling. Human runbook: ./README.md. Values registry: ./CONFIG.md.
+# NO SECRET VALUES in this file — only names and locations.
+
+meta:
+  system: discovery-call-followup
+  status: production
+  deployed: 2026-08-08
+  owner: ludwikc@siadlak.com
+  spec: docs/superpowers/specs/2026-08-07-discovery-call-followup-design.md
+  plan: docs/superpowers/plans/2026-08-07-discovery-call-followup.md
+  runbook: automation/n8n/README.md
+  registry: automation/n8n/CONFIG.md
+  commits:
+    siadlak-com: [a55d928, c376b59, f529e5a, d3dc4ad, b41036c, bcd95c1, 667eb8f, 1224558, f0e77f1, 5033471, 60fd0b8, 6286bd1, 71aeafa, 514b99f]
+    siadlak-portal: [09b5e87, c4056fe]  # range 7b6548e..c4056fe, pushed
+
+booking_source:
+  page: https://siadlak.com/discovery
+  cta_file: src/components/discovery/DiscoveryAvailabilityCheck.tsx:17
+  booking_url: https://calendar.app.google/Xj5U39t9HaVNqS1HA
+  mechanism: google_appointment_schedule
+  target_calendar: ludwikc@siadlak.com
+
+event_contract:  # facts verified on live bookings 2026-08-07/08
+  guest_is_attendee: false          # attendees[] contains ONLY organizer(self); older/manual bookings MAY have guest attendee — do not rely on it
+  guest_data_location: description  # HTML; block "<b>Booked by</b>\n{full_name}\n{email}\n[{phone}]" then "<b>Z jakim tematem przychodzisz? </b>\n{topic}"
+  summary_format: "Sesja Discovery ({guest_full_name})"
+  cancel_semantics: hard_delete     # Google appointment cancel REMOVES the event; eventUpdated poll never sees it; only eventCancelled trigger does
+  reschedule_semantics: same_event_updated  # status stays confirmed, start changes
+  creation_echo: "updated-created ~2s at creation; workflow skips updated-path when diff < 60000ms"
+  sample: automation/n8n/samples/booking-event.sample.json
+
+n8n:
+  instance: https://ula285-20285.wykr.es
+  api: "REST /api/v1, header X-N8N-API-KEY (key location: owner; rotation pending, see ops.pending)"
+  api_quirks:
+    - "POST/PUT workflows body = {name,nodes,connections,settings[,staticData]} only; read-only fields rejected"
+    - "activation separate: POST /api/v1/workflows/{id}/activate; PUT may deactivate — always re-activate + verify active:true"
+    - "no manual execution endpoint; no credential listing; POST /api/v1/credentials works"
+    - "PUT from repo JSON requires sed of __TOKEN__ placeholders (values in CONFIG.md); prefer round-tripping live GET to preserve trigger staticData"
+  workflows:
+    main:
+      name: Discovery Call Follow-up
+      id: 9ZEgF3LPgUHbK4Pc
+      file: automation/n8n/discovery-call-followup.json
+      active: true
+      nodes: 15
+      triggers:
+        - {node: New Booking, type: googleCalendarTrigger, triggerOn: eventCreated, poll: 5min}
+        - {node: Updated Booking, type: googleCalendarTrigger, triggerOn: eventUpdated, poll: 5min}
+        - {node: Cancelled Booking, type: googleCalendarTrigger, triggerOn: eventCancelled, poll: 5min}
+      filters:
+        created_and_updated: "summary contains 'Sesja Discovery' AND description contains 'Booked by'"
+        cancelled: "summary contains 'Sesja Discovery' ONLY (hard-deleted payloads may lack description)"
+        coupling: "schedule title rename => summary format changes => update FILTER_TERM in all three IF nodes + CONFIG.md"
+      extraction:  # Code node "Extract Guest", created-path only
+        input: event.description (HTML stripped, <br> -> newline)
+        outputs: {eventId, htmlLink, summary, start: "start.dateTime||start.date (offset-bearing ISO)", email: "lowercased, line after 'Booked by' name line", name: "line after 'Booked by'", firstName: "name.split(whitespace)[0]", topic: "line after form question, single-line capture"}
+    error_handler:
+      name: Discovery Error Handler
+      id: y7NbiALAXFFBjvA9
+      file: automation/n8n/discovery-error-handler.json
+      wiring: "main.settings.errorWorkflow -> this id"
+      logic: "IF error.message contains 'connection to the server was closed' -> SUPPRESS (transient Google poll blip, data-safe: next poll re-covers window); else Slack alert to C08HCGL5G0M with workflow/node/error/execution-url"
+  credentials:  # ids only; values live inside n8n
+    - {id: O7J6rUJcu90TGtSu, name: Google Calendar account, type: googleCalendarOAuth2Api, used_by: [all 3 triggers]}
+    - {id: LNvQCU8e8mnYdcwT, name: MailerLite Bearer, type: httpHeaderAuth, header: "Authorization: Bearer <ML token>", used_by: [MailerLite Upsert]}
+    - {id: RdHRFGa0aOV0YGA8, name: Todoist Bearer, type: httpHeaderAuth, header: "Authorization: Bearer <Todoist token>", used_by: [Create Todoist Task]}
+    - {id: qDLoAAKeIzPr4u80, name: CRM Booking Secret, type: httpHeaderAuth, header: "x-booking-secret: <CRM_BOOKING_SECRET>", used_by: [CRM Discovery Deal]}
+    - {id: KnH3d0aP27gBB42F, name: Slack account, type: slackApi, used_by: [all Slack nodes, error handler]}
+    - {id: 8UedYTvPCL4OBFqK, name: Todoist account, type: todoistApi, status: DEAD_DO_NOT_USE, reason: "legacy Todoist API retired -> 410"}
+
+flows:
+  created:  # sequential fan-out from Extract Guest; failure mid-sequence stops later actions (error alert fires; earlier actions already committed)
+    order: [mailerlite_upsert, todoist_task, slack_notify, crm_deal]
+    mailerlite_upsert: {method: POST, url: "https://connect.mailerlite.com/api/subscribers", body: "{email, fields:{name: firstName}, groups:[195147034085296057]}", idempotent: true}
+    todoist_task: {method: POST, url: "https://api.todoist.com/api/v1/tasks", note: "native n8n todoist node is DEAD (410) — direct HTTP only", body: "{content:'Przygotuj Discovery Call z {firstName}', project_id:'6P79PcCFvr79qX2X', description: email+topic+htmlLink+eventId, due_datetime: 'new Date(start).toISOString() (UTC)', priority: 3}", priority_mapping: "API 3 == UI p2"}
+    slack_notify: {channel: C08HCGL5G0M, text: "📅 Nowa rezerwacja Discovery: {name} ({email}) — {date Warsaw} / Temat: {topic} / {htmlLink}"}
+    crm_deal: {method: POST, url: "https://taswmdahpcubiyrgsjki.supabase.co/functions/v1/crm-booking", auth_header: x-booking-secret, body: "{email, name, start, eventId, htmlLink}", response: "{contactId, dealId, created:bool}"}
+  updated:
+    guards: ["skip if |updated-created| < 60000ms (creation echo)", "same discovery filter"]
+    branches: {cancelled_status: "Slack '❌ ODWOŁANE' (soft-cancel double net; never observed in prod)", else: "Slack '🔁 ZMIANA' with new date"}
+    side_effects: none  # Todoist/ML/CRM updates are MANUAL by v1 decision
+  cancelled:  # the REAL cancellation path (hard delete)
+    action: "Slack '❌ ODWOŁANE: {summary} — {date}'"
+    side_effects: none  # manual
+
+mailerlite:
+  group: {name: "Discovery — Booked", id: "195147034085296057"}
+  automation: {name: "Discovery Call — mail przygotowujący", id: "195172847812871467", trigger: subscriber_joins_group, enabled: true}
+  email: {subject: "Zanim się zobaczymy (2 minuty, obiecuję)", personalization: "{$name} <- receives firstName", editable_in: "ML dashboard only — zero n8n changes needed"}
+  behavior: "group-join automation fires ONCE per subscriber lifetime; re-joining does NOT resend; upsert+assign idempotent"
+
+crm:  # repo siadlak-portal
+  function: {name: crm-booking, path: "supabase/functions/crm-booking/index.ts", project_ref: taswmdahpcubiyrgsjki, verify_jwt: false, auth: "x-booking-secret == env CRM_BOOKING_SECRET (Supabase secrets; distinct from CRM_SYNC_SECRET by design)"}
+  behavior:
+    - "email lowercased+trimmed before DB (crm_contacts.email UNIQUE + CHECK lower(btrim))"
+    - "contact: insert if absent; name written only when contact new or name empty"
+    - "NEVER writes: in_mailerlite, in_easycart, segments, lead_score (owned by nightly crm-sync)"
+    - "deal dedup: newest deal where contact+product=life_os+title='Life OS — Discovery'+stage in (lead,rozmowa,oferta) -> update next_action/next_action_date; else insert {stage: rozmowa, value_cents: 1600000, next_action: 'Rozmowa Discovery', next_action_date: start[0:10]}"
+    - "errors: 401 bad/missing secret; 405 non-POST; 400 bad JSON/missing/non-string email; 500 DB errors (raw PG message)"
+    - "eventId/htmlLink accepted, unused in v1 (future per-event dedup would need a column)"
+  deploy: "cd siadlak-portal && supabase functions deploy crm-booking --project-ref taswmdahpcubiyrgsjki (CLI login required)"
+
+failure_modes:
+  silent_trigger_death: "expired/revoked Google OAuth or deactivated workflow => NO execution => NO alert => silent booking loss. Mitigation: weekly liveness check (README 'Puls życia'); v1.1 candidate: heartbeat cron"
+  transient_poll_blip: "suppressed by error-handler filter; data-safe (poll window re-covered next cycle)"
+  partial_failure: "created-path is sequential; mid-sequence failure => earlier actions done, later skipped, 🚨 alert; manual completion + duplicate check before retry"
+  ml_no_resend: "same email booking twice => no second prep mail (automation once-per-subscriber)"
+  filter_coupling: "appointment schedule TITLE rename breaks filter silently — see n8n.workflows.main.filters.coupling"
+  echo_window: "google update >60s after creation => false '🔁 ZMIANA' (rare, ignore)"
+
+ops:
+  liveness: "GET /api/v1/workflows/9ZEgF3LPgUHbK4Pc (active:true) + GET /api/v1/executions?workflowId=9ZEgF3LPgUHbK4Pc&limit=1 (recent execution after any real booking)"
+  redeploy: "edit repo JSON -> sed __TOKENS__ from CONFIG.md -> PUT full body -> POST activate -> verify active:true (prefer live-GET round-trip to keep trigger staticData)"
+  rotation_points:
+    mailerlite_token: "n8n credential 'MailerLite Bearer' LNvQCU8e8mnYdcwT"
+    todoist_token: "n8n credential 'Todoist Bearer' RdHRFGa0aOV0YGA8"
+    crm_secret: "Supabase secrets CRM_BOOKING_SECRET AND n8n credential 'CRM Booking Secret' qDLoAAKeIzPr4u80 — must match"
+    google_oauth: "n8n credential 'Google Calendar account' O7J6rUJcu90TGtSu (re-connect in UI)"
+  pending:
+    - "n8n API key rotation by owner (key was exposed in build-session transcript by owner's explicit choice)"
+    - "CRM E2E residue cleanup by owner (SQL): DELETE crm_deals/crm_contacts for email fundacja@hackerzy.pl (contact c283c82c-25e0-4f31-9f61-abd98b7b6d67, deal 886622e1-cfdc-4395-99da-e5deb5c107a9)"
+    - "test booking 'Test E2E' (event d0fa5br5a3ta5ji3mn14te0gbg, rescheduled to 2026-08-12 17:30) — owner cancels when convenient; expect ❌ Slack alert"
+
+manual_backfill:  # bookings made BEFORE system go-live (no retro-fire by design)
+  - guest: Pawel Mantur
+    email: pawelmantur@gmail.com
+    event: {id: 9122loc9ip9bo1ghc96rg5335o, start: "2026-08-10T10:30:00+02:00", booked: 2026-08-06}
+    done: {crm: {contactId: 872ef007-fb6a-4085-a732-ed489d74e7cd, dealId: dff510d7-68ae-4864-a435-73560f7b75ff, created: true}, todoist: {taskId: 6hFPmXWWg6WgwjjX, due: "2026-08-10 10:30", priority: p2}}
+    prep_email: SKIPPED_BY_OWNER_DECISION  # do not add to ML group
+
+v1_1_candidates:
+  - heartbeat cron (detect silent trigger death)
+  - decode HTML entities in Extract Guest (name/topic with &amp; etc. propagate raw)
+  - multi-line topic capture (current regex takes first line only)
+  - cancel/reschedule Slack messages use raw summary, not parsed name
+  - auto reschedule/cancel side effects (Todoist date update / task close, deal note) — v1 keeps manual by owner decision
+  - per-event CRM dedup via eventId column (portal migration required)
