@@ -67,6 +67,7 @@ Skoro awaria na poziomie triggera jest cicha (brak egzekucji → brak alertu), r
    - rotacja tokenu MailerLite → zaktualizuj credential „MailerLite Bearer" (`LNvQCU8e8mnYdcwT`)
    - rotacja tokenu Todoist → zaktualizuj credential „Todoist Bearer" (`RdHRFGa0aOV0YGA8`)
    - sekret CRM się rozjechał → `CRM_BOOKING_SECRET` w Supabase secrets musi być identyczny z wartością w credentialu n8n „CRM Booking Secret"
+   - błędy pollingu „connection to the server was closed…" na trigerach są auto-wyciszane w error handlerze (nic nie ginie, poll za 5 min powtarza okno) — realną awarię triggera wykrywa tylko trwała cisza, patrz „Puls życia" wyżej
 4. Mail nie wyszedł, a subskrybent jest w grupie: MailerLite → Automations → activity — group-join nie odpala się drugi raz dla tej samej osoby (patrz „Znane ograniczenia").
 5. Zmiana tytułu appointment schedule **zmienia `summary` eventów** → filtr przestanie łapać rezerwacje → zaktualizuj `FILTER_TERM` we **wszystkich trzech** node'ach IF „Is Discovery Booking?" i w `CONFIG.md`.
 
