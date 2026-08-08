@@ -8,7 +8,7 @@ Sekrety żyją POZA repo (scratchpad sesji / notatki Ludwika). Tu tylko identyfi
 - Slack channel: C08HCGL5G0M
 - Todoist projekt CRM: 6P79PcCFvr79qX2X
 - Slack credential: KnH3d0aP27gBB42F
-- Todoist credential: 8UedYTvPCL4OBFqK (poprzedni wpis 8oqfcW1IjExZk6rn nie istniał w n8n; API przy tworzeniu workflow #Task8 dopasowało po nazwie "Todoist account" i użyło realnego ID — poprawione tu)
+- Todoist credential: Todoist Bearer, RdHRFGa0aOV0YGA8 (httpHeaderAuth; używany przez node HTTP Request „Create Todoist Task". Stary credential todoistApi 8UedYTvPCL4OBFqK jest martwy — legacy Todoist API zwraca 410 Gone)
 
 ## Wartości (uzupełniane w trakcie wdrożenia)
 - GCAL_CRED_ID: O7J6rUJcu90TGtSu

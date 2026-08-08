@@ -50,30 +50,41 @@ Każda rezerwacja discovery call (siadlak.com/discovery → Google appointment s
 [Google Calendar: ludwikc@siadlak.com]
         │  (polling co 5 min)
         ├─ Trigger: Event Created ──┐
-        └─ Trigger: Event Updated ──┤
-                                    ▼
-                     [Filtr: rezerwacja discovery?]
-                     - summary pasuje do wzorca appointment schedule
-                     - istnieje attendee ≠ ludwikc@siadlak.com
-                                    │
-              ┌─────────── created ─┴─ updated ───────────┐
-              ▼                                           ▼
-   [Ekstrakcja danych gościa]              [Skip echo utworzenia:
-              │                             updated − created < 60 s]
-   ├─▶ MailerLite: upsert + grupa                         │
-   │   "Discovery — Booked"                 status == cancelled?
-   │   (automatyzacja ML wysyła mail)       ├─ tak → Slack "❌ ODWOŁANE"
-   ├─▶ Todoist: task w projekcie CRM        └─ nie → Slack "🔁 ZMIANA"
-   ├─▶ Slack: "Nowa rezerwacja"
-   └─▶ HTTP POST → edge function crm-booking (siadlak-portal / Supabase)
-       └─ upsert crm_contacts + deal "Life OS — Discovery" @ stage Rozmowa
+        ├─ Trigger: Event Updated ──┤
+        │                           ▼
+        │            [Filtr: rezerwacja discovery?]
+        │            - summary pasuje do wzorca appointment schedule
+        │            - istnieje attendee ≠ ludwikc@siadlak.com
+        │                           │
+        │     ┌─────────── created ─┴─ updated ───────────┐
+        │     ▼                                           ▼
+        │  [Ekstrakcja danych gościa]              [Skip echo utworzenia:
+        │             │                             updated − created < 60 s]
+        │  ├─▶ MailerLite: upsert + grupa                         │
+        │  │   "Discovery — Booked"                 status == cancelled?
+        │  │   (automatyzacja ML wysyła mail)       ├─ tak → Slack "❌ ODWOŁANE"
+        │  ├─▶ Todoist: task w projekcie CRM        └─ nie → Slack "🔁 ZMIANA"
+        │  ├─▶ Slack: "Nowa rezerwacja"                 (soft-cancel — double net; patrz
+        │  └─▶ HTTP POST → edge function crm-booking     przypis o triggerze Cancelled niżej)
+        │      (siadlak-portal / Supabase)
+        │      └─ upsert crm_contacts + deal "Life OS — Discovery" @ stage Rozmowa
+        │
+        └─ Trigger: Event Cancelled ──▶ [Filtr: summary zawiera "Sesja Discovery"]
+                                          (summary-only — hard-delete bywa dostarczany z
+                                          okrojonym payloadem, bez description)
+                                                          │
+                                                          ▼
+                                                Slack "❌ ODWOŁANE"
+                                          (realna ścieżka odwołań: appointment schedule
+                                          Google odwołuje przez hard-delete eventu, co
+                                          Event Updated nie widzi)
 
    [Error Handler workflow] — każdy fail głównego workflow → alert Slack
 ```
 
 Dwa workflow w n8n:
 
-1. **`Discovery Call Follow-up`** — główny (oba triggery + obie ścieżki)
+1. **`Discovery Call Follow-up`** — główny. **Backport z implementacji:** trzy triggery, nie dwa — Created / Updated / **Cancelled** (dedykowany, patrz diagram powyżej) + dwie ścieżki logiki (created; updated/cancelled)
 2. **`Discovery Error Handler`** — ustawiony jako error workflow głównego; wysyła na Slack: nazwę workflow, node, komunikat błędu
 
 ### Filtr rezerwacji (krytyczny)
@@ -91,9 +102,16 @@ Kalendarz główny zawiera też zwykłe spotkania. Testowa rezerwacja (2026-08-0
 ### Ścieżka updated (v1 lite)
 
 - Skip echa utworzenia: `updated − created < 60 s` → nic nie rób.
-- `status == cancelled` → Slack `❌ ODWOŁANE: {Imię} — {data}`.
+- `status == cancelled` → Slack `❌ ODWOŁANE: {Imię} — {data}`. **Backport z implementacji:** w praktyce appointment schedule Google odwołuje rezerwację przez **hard-delete** eventu, nie przez `status: cancelled` na żywym evencie — ta ścieżka jest więc soft-cancel „double net", nieobserwowana w E2E. Realne odwołania łapie dedykowany trigger Event Cancelled, patrz niżej.
 - Inaczej → Slack `🔁 ZMIANA: {Imię} — {nowa data}`.
 - Zero akcji MailerLite/Todoist — obsługa ręczna (decyzja v1).
+
+### Ścieżka cancelled (backport z implementacji — trzeci trigger)
+
+Nieprzewidziany w oryginalnym planie „dwa triggery": appointment schedule Google przy odwołaniu **usuwa event (hard-delete)**, zdarzenie niewidoczne dla `Event Updated`. Trzeci trigger Google Calendar (`eventCancelled`) łapie je osobno.
+
+- Filtr: **tylko `summary` zawiera „Sesja Discovery"** — bez warunku na `description`, bo hard-delete może dostarczyć okrojony payload (bez `description`, gdzie żyłby marker „Booked by"). Dwuwarunkowy filtr odrzuciłby taki event po cichu; summary-only gwarantuje alert.
+- → Slack `❌ ODWOŁANE`. To jest realna ścieżka odwołań; ścieżka soft-cancel w sekcji powyżej jest zabezpieczeniem, nie główną drogą.
 
 ### Dedup / idempotencja
 

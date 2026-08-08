@@ -33,12 +33,26 @@ Obsługa reschedule/cancel w MailerLite / Todoist / CRM jest **RĘCZNA** (decyzj
 
 Workflow **„Discovery Error Handler"** (`y7NbiALAXFFBjvA9`, Error Trigger → Slack Alert) jest podłączony jako `errorWorkflow` głównego workflow. Każdy nieobsłużony błąd w „Discovery Call Follow-up" → 🚨 alert na `C08HCGL5G0M` z nazwą node'a i treścią błędu. W produkcji: 2/2 skuteczności.
 
+⚠️ **Alert 🚨 łapie tylko błędy WEWNĄTRZ egzekucji** — trigger się odpalił, a jakiś node dalej w łańcuchu zwrócił błąd (np. rotacja tokenu MailerLite/Todoist, rozjechany sekret CRM). Awaria **na poziomie triggera** — wygasły/odwołany Google OAuth, dezaktywowany workflow, padnięty host n8n — nie tworzy żadnej egzekucji, więc error workflow nie ma czego złapać: **cisza, zero alertu**. To jest tryb cichej awarii; jedyna obrona to manualny puls życia poniżej.
+
 Status na 2026-08-08: workflow aktywny, checklist E2E zielony — szczegóły w `CONFIG.md` § „Wyniki testów E2E".
+
+### Puls życia
+
+Skoro awaria na poziomie triggera jest cicha (brak egzekucji → brak alertu), raz w tygodniu sprawdź manualnie, że workflow żyje:
+
+- n8n → Executions, filtr workflow „Discovery Call Follow-up" → po jakiejkolwiek realnej rezerwacji powinna być widoczna świeża egzekucja.
+- albo z terminala:
+  ```bash
+  curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$N8N_URL/api/v1/workflows/9ZEgF3LPgUHbK4Pc" | jq '.active'
+  curl -s -H "X-N8N-API-KEY: $N8N_API_KEY" "$N8N_URL/api/v1/executions?workflowId=9ZEgF3LPgUHbK4Pc&limit=1"
+  ```
+  Pierwsze wywołanie musi zwrócić `true`; drugie — egzekucję nie starszą niż ostatnia realna rezerwacja.
 
 ## Gdzie co mieszka
 
 - n8n: https://ula285-20285.wykr.es → workflows „Discovery Call Follow-up" (`9ZEgF3LPgUHbK4Pc`), „Discovery Error Handler" (`y7NbiALAXFFBjvA9`)
-- Kanoniczne JSON-y workflow: ten katalog (`discovery-call-followup.json`, `discovery-error-handler.json`) — to jest źródło prawdy. Redeploy = podstaw wartości `__PLACEHOLDER__` danymi z `CONFIG.md` (np. `sed`), wgraj **pełne body** przez `PUT /api/v1/workflows/:id`, potem re-aktywuj (aktywacja nie przechodzi automatycznie przy update przez API).
+- Kanoniczne JSON-y workflow: ten katalog (`discovery-call-followup.json`, `discovery-error-handler.json`) — to jest źródło prawdy. Redeploy = podstaw wartości `__PLACEHOLDER__` danymi z `CONFIG.md` (np. `sed`), wgraj **pełne body** przez `PUT /api/v1/workflows/:id`, potem re-aktywuj wprost: `POST /api/v1/workflows/:id/activate` (aktywacja nie przechodzi automatycznie przy update przez API).
 - Mail + automatyzacja: MailerLite → Automations → „Discovery Call — mail przygotowujący"
 - Filtr rezerwacji: trzy node'y IF „Is Discovery Booking?" (New/Update/Cancel) — `FILTER_TERM` w CONFIG.md
 - CRM: edge function `crm-booking` w repo siadlak-portal (`supabase/functions/crm-booking`), sekret `CRM_BOOKING_SECRET` (Supabase secrets + credential n8n „CRM Booking Secret"). Logika dedupu deali żyje w funkcji, nie w n8n. Deploy: `supabase functions deploy crm-booking --project-ref taswmdahpcubiyrgsjki`.
@@ -66,6 +80,7 @@ MailerLite → Automations → edytuj mail w automatyzacji „Discovery Call —
 - **Partial failure**: cztery akcje ścieżki „nowa rezerwacja" wykonują się sekwencyjnie w jednej egzekucji; błąd w środku (np. Todoist) zatrzymuje resztę — akcje wcześniejsze w kolejności JUŻ się wykonały. Po naprawie dostajesz alert Slacka; przed ponownym uruchomieniem sprawdź duplikaty (subskrybent w ML, task w Todoist, deal w CRM).
 - **Mail raz per subskrybent**: automatyzacja ML typu group-join nie odpala się ponownie dla osoby, która już była w grupie „Discovery — Booked".
 - **Echo-window 60s**: aktualizacja Google Calendar późniejsza niż 60s po utworzeniu eventu (np. Google Meet dogenerowuje szczegóły) może dać fałszywe 🔁 ZMIANA. Rzadkie, można zignorować.
-- **Fallback na stripped payload w Slack** dla ścieżki Cancelled: kod liczy się z tym, że hard-delete może nie nieść pełnych danych eventu, ale w testach E2E hard-delete zawsze zwracał pełny payload — ta ścieżka fallbacku jest **nieprzetestowana**.
+- **Filtr ścieżki Cancelled jest tylko `summary`**, celowo — w odróżnieniu od created/updated, które sprawdzają `summary` + `description` zawiera „Booked by". Hard-delete eventu bywa dostarczany ze zredukowanym payloadem, czasem bez `description` — dwuwarunkowy filtr wtedy odrzuciłby odwołanie po cichu. Summary-only gwarantuje, że alert ❌ ODWOŁANE wychodzi nawet przy okrojonym payloadzie (wiadomość Slacka ma dodatkowo `??` fallback na `summary`, na wypadek gdyby i ono było puste).
+- **`crm-booking` (siadlak-portal) liczy `next_action_date` ze `start` zawierającego `dateTime`** (ISO ze strefą/offsetem) — event całodniowy (`start.date`, bez `dateTime`) zachowałby się nieprawidłowo. W praktyce nieistotne: rezerwacje z appointment schedule Google mają zawsze konkretną godzinę, więc `dateTime` jest zawsze obecne.
 
 Pełne wyniki E2E (daty, execution ID per scenariusz): `automation/n8n/CONFIG.md` § „Wyniki testów E2E".

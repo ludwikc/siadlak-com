@@ -95,7 +95,7 @@
         "genericAuthType": "httpHeaderAuth",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={{ JSON.stringify({ email: $json.email, fields: { name: $json.name }, groups: ['__ML_GROUP_ID__'] }) }}",
+        "jsonBody": "={{ JSON.stringify({ email: $json.email, fields: { name: $json.firstName }, groups: ['__ML_GROUP_ID__'] }) }}",
         "options": {}
       },
       "credentials": { "httpHeaderAuth": { "id": "__ML_CRED_ID__", "name": "MailerLite Bearer" } }
@@ -255,12 +255,6 @@
               "id": "c-summary-c",
               "leftValue": "={{ $json.summary ?? '' }}",
               "rightValue": "__FILTER_TERM__",
-              "operator": { "type": "string", "operation": "contains" }
-            },
-            {
-              "id": "c-desc-c",
-              "leftValue": "={{ $json.description ?? '' }}",
-              "rightValue": "Booked by",
               "operator": { "type": "string", "operation": "contains" }
             }
           ]
