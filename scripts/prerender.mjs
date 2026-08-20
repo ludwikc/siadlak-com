@@ -50,29 +50,28 @@ async function launchBrowser() {
 
 async function startPreviewServer() {
   console.log("🚀 Starting preview server...");
-  return new Promise((resolve, reject) => {
-    const server = spawn("npx", ["vite", "preview", "--port", "8080", "--host"], {
-      stdio: ["pipe", "pipe", "pipe"],
-      cwd: projectRoot,
-    });
-    let serverReady = false;
-    server.stdout.on("data", (data) => {
-      const output = data.toString();
-      console.log(output);
-      if (output.includes("Local:") && !serverReady) {
-        serverReady = true;
-        setTimeout(() => resolve(server), 2000);
-      }
-    });
-    server.stderr.on("data", (data) => console.error(data.toString()));
-    server.on("error", reject);
-    setTimeout(() => {
-      if (!serverReady) {
-        server.kill();
-        reject(new Error("Preview server failed to start within 30 seconds"));
-      }
-    }, 30000);
+  const server = spawn("npx", ["vite", "preview", "--port", "8080", "--host"], {
+    stdio: ["pipe", "pipe", "pipe"],
+    cwd: projectRoot,
   });
+  server.stdout.on("data", (data) => console.log(data.toString()));
+  server.stderr.on("data", (data) => console.error(data.toString()));
+  server.on("error", (err) => console.error("Preview server error:", err.message));
+
+  // Readiness via HTTP poll — vite's startup banner lands on stdout or stderr
+  // depending on TTY/CI, so parsing it is unreliable (broke the Vercel build).
+  const deadline = Date.now() + 60000;
+  while (Date.now() < deadline) {
+    try {
+      const res = await fetch("http://localhost:8080/", { redirect: "manual" });
+      if (res.status < 500) return server;
+    } catch {
+      // server not accepting connections yet
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+  server.kill();
+  throw new Error("Preview server failed to start within 60 seconds");
 }
 
 async function prerender() {
@@ -160,22 +159,23 @@ async function prerender() {
     console.log(`\n🎉 Prerendering complete!`);
     console.log(`✅ Success: ${successCount} · ❌ Failed: ${errorCount}`);
   } catch (error) {
-    console.error("❌ Prerendering failed:", error.message);
-    throw error;
+    // Prerender is an SEO enhancement, not a correctness requirement — any
+    // route not snapshotted is served via the vercel.json SPA rewrite. Never
+    // fail the deploy over it; the warning stays visible in the build log.
+    console.warn(`⚠️  Prerendering skipped/incomplete: ${error.message}`);
   } finally {
     if (server) {
       console.log("\n🛑 Stopping preview server...");
       server.kill();
       await new Promise((resolve) => setTimeout(resolve, 1000));
     }
-    // Fail only if nothing prerendered at all (systemic problem). Partial
-    // failures fall back to the SPA rewrite for those routes, so don't break
-    // the deploy over a flaky route.
-    if (successCount === 0 && errorCount > 0) process.exit(1);
+    if (successCount === 0) {
+      console.warn("⚠️  No routes prerendered — deploy continues as plain SPA.");
+    }
   }
 }
 
 prerender().catch((error) => {
-  console.error(error);
-  process.exit(1);
+  console.warn(`⚠️  Prerendering skipped: ${error.message} — deploy continues as plain SPA.`);
+  process.exit(0);
 });
