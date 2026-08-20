@@ -5,4 +5,5 @@ export interface HelpPageData {
   readTime: string;
   category: string;
   slug?: string;
+  jsonLd?: Record<string, unknown>[];
 }

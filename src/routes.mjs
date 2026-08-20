@@ -42,4 +42,7 @@ export const staticRoutes = [
   "/start",
   "/siadlakvip",
   "/help",
+  // Fixed help subpage with FAQPage JSON-LD — worth a static snapshot for
+  // non-JS AI crawlers (other /help/:slug pages stay dynamic).
+  "/help/faq",
 ];

@@ -12,12 +12,14 @@ interface HelpPageLayoutProps {
 export default function HelpPageLayout({ data }: HelpPageLayoutProps) {
   return (
     <Layout>
-      <SEO 
+      <SEO
         title={`${data.title} - Centrum Pomocy`}
         description={`${data.title} — centrum pomocy i baza wiedzy. Znajdź odpowiedzi na pytania dotyczące platformy.`}
         url={`/help/${data.slug || ''}`}
         type="article"
         publishedDate={data.lastUpdated}
+        modifiedDate={data.lastUpdated}
+        jsonLd={data.jsonLd}
       />
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Breadcrumb navigation */}
