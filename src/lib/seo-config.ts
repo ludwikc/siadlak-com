@@ -18,7 +18,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/',
     seo: {
-      title: 'Ludwik C. Siadlak',
+      title: 'Coach Produktywności i Uważności',
       description: 'Ludwik C. Siadlak to coach produktywności i uważności z 19-letnim doświadczeniem. Pracuje z profesjonalistami IT poprzez mentoring 1:1 i samodzielne programy mentalne (Aplikacje Mentalne).',
       keywords: 'Ludwik Siadlak, coach produktywności, coaching uważności, rozwój osobisty, tech professionals, Diamentowy Umysł',
       url: '/',

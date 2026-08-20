@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "installCommand": "bun install",
-  "buildCommand": "bun run build",
+  "buildCommand": "bun run build:prerender",
   "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [

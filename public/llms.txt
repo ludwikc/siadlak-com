@@ -27,19 +27,18 @@ Siadlak.com to ekosystem rozwojowy prowadzony przez Ludwika C. Siadlaka — Micr
 - [Silna Głowa (Odporność)](https://siadlak.com/program/odpornosc): firewall mentalny, odporność psychiczna
 - [Uważne Życie](https://siadlak.com/program/uwaznosc): mindfulness dopasowany do ADHD i nadbodźców
 - [Męski Kompas](https://siadlak.com/program/meskosc): program dla mężczyzn 30+ szukających kierunku
-- [7 Technik](https://siadlak.com/program/7-technik): bezpłatny lead magnet — 7 fundamentalnych technik
 
 ## Podcasty i media
 
 - [Life Hacking Podcast](https://siadlak.com/podcast/life-hacking): hub podcastu o hakach życiowych
+- [Uważne Życie Podcast](https://siadlak.com/podcast/uwazne-zycie): podcast o uważności dla analitycznych umysłów
 - [Wywiady](https://siadlak.com/wywiady): archiwum rozmów z podcasterami 2018–2025
 - [MCT portfolio (English)](https://siadlak.com/mct): Microsoft Certified Trainer portfolio, anglojęzyczne
 
 ## Wydarzenia
 
-- [Kod Kapitana — webinar](https://siadlak.com/webinar): 90-min webinar o uważności (Deep Ocean Premium)
+- [Kod Kapitana — webinar](https://siadlak.com/webinar/kod-kapitana): 90-min webinar o uważności (Deep Ocean Premium)
 - [Webinar Męski Kompas](https://siadlak.com/webinar/meski-kompas): webinar dla mężczyzn 30+
-- [4-dniowe wyzwanie](https://siadlak.com/wyzwanie): bezpłatne wyzwanie sprawdzające pracę pod presją
 
 ## Społeczność
 
@@ -52,5 +51,5 @@ Siadlak.com to ekosystem rozwojowy prowadzony przez Ludwika C. Siadlaka — Micr
 - [Bio links](https://siadlak.com/links): mobilna strona linków (ruch z Instagrama)
 - [Mapa strony](https://siadlak.com/sitemap): pełen przegląd nawigacji
 - [Centrum pomocy](https://siadlak.com/help): FAQ i wsparcie
-- [Polityka prywatności](https://siadlak.com/legal/privacy)
-- [Warunki użytkowania](https://siadlak.com/legal/terms)
+- [Polityka prywatności](https://docs.siadlak.com/legal/privacy)
+- [Regulaminy](https://docs.siadlak.com/legal/regulaminy)

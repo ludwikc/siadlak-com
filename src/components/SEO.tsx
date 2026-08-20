@@ -22,7 +22,7 @@ const defaultSEO = {
   title: 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
   description: 'Odkryj swój potencjał z programami rozwoju osobistego, coachingiem i narzędziami produktywności. Dołącz do społeczności ludzi dążących do lepszego życia.',
   keywords: 'rozwój osobisty, coaching, produktywność, motywacja, sukces, życie, szczęście',
-  image: '/og-image.jpg',
+  image: '/lovable-uploads/ludwik-siadlak-profile.png',
   url: 'https://siadlak.com',
   type: 'website' as const,
   author: 'Ludwik C. Siadlak',
@@ -45,7 +45,7 @@ export default function SEO({
   jsonLd,
 }: SEOProps) {
   const fullTitle = title ? `${title} | ${TITLE_SUFFIX}` : defaultSEO.title;
-  const imageUrl = image.startsWith('http') ? image : `${url}${image}`;
+  const imageUrl = image.startsWith('http') ? image : `${defaultSEO.url}${image}`;
   const canonicalUrl = url === defaultSEO.url ? url : `${defaultSEO.url}${url}`;
 
   const structuredData = {
@@ -67,7 +67,7 @@ export default function SEO({
         name: 'Siadlak.com',
         logo: {
           '@type': 'ImageObject',
-          url: `${defaultSEO.url}/logo.png`
+          url: `${defaultSEO.url}/compass-favicon.png`
         }
       }
     })

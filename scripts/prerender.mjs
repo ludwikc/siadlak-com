@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import puppeteer from "puppeteer";
 import { writeFileSync, existsSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
@@ -24,6 +23,30 @@ const BLOCKED = [
   "connect.facebook.net",
   "facebook.com",
 ];
+
+// Local dev has full puppeteer (bundled Chrome). CI/Vercel build containers
+// can't run that download (bun skips postinstall), so fall back to
+// @sparticuz/chromium — a self-contained headless shell extracted at runtime.
+async function launchBrowser() {
+  try {
+    const puppeteer = (await import("puppeteer")).default;
+    return await puppeteer.launch({
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    });
+  } catch (err) {
+    console.warn(`⚠️  Bundled Chrome unavailable (${err.message}); trying @sparticuz/chromium…`);
+  }
+  const [{ default: puppeteerCore }, { default: chromium }] = await Promise.all([
+    import("puppeteer-core"),
+    import("@sparticuz/chromium"),
+  ]);
+  return await puppeteerCore.launch({
+    headless: true,
+    executablePath: await chromium.executablePath(),
+    args: [...chromium.args, "--no-sandbox", "--disable-setuid-sandbox"],
+  });
+}
 
 async function startPreviewServer() {
   console.log("🚀 Starting preview server...");
@@ -64,10 +87,7 @@ async function prerender() {
 
     let browser;
     try {
-      browser = await puppeteer.launch({
-        headless: true,
-        args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      });
+      browser = await launchBrowser();
     } catch (launchError) {
       // Prerender is an SEO/LCP enhancement, not a correctness requirement — the
       // SPA build already deployed serves every route via the vercel.json rewrite.

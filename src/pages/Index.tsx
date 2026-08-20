@@ -87,6 +87,7 @@ const Index = () => {
       <SEO {...getSEOConfig("/")} jsonLd={[
         ...getHomepageEntities(),
         getBreadcrumbSchema([{ name: 'Strona g\u0142\u00F3wna', path: '/' }]),
+        getFAQSchema(homepageFAQs),
       ]} />
       {(() => { const t = getTopicalConfig("/"); return t ? <TopicalMeta {...t} /> : null; })()}
 
@@ -701,7 +702,6 @@ const Index = () => {
       {/* ═══ FAQ ═══ */}
       <section className="py-20 bg-void-glow">
         <div className="container mx-auto px-4 max-w-3xl">
-          <SEO jsonLd={[getFAQSchema(homepageFAQs)]} />
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white text-center mb-12">
             Najczęściej zadawane pytania
           </h2>
