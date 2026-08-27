@@ -38,3 +38,5 @@ src/design-system/dist/
 .claude/worktrees/
 .design-sync/sb-reference/
 .design-sync/ds-full-entry.ts
+.vercel
+.env*

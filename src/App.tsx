@@ -73,6 +73,7 @@ const SiadlakVIP = lazy(() => import("./pages/SiadlakVIP"));
 const MailingMute = lazy(() => import("./pages/MailingMute"));
 const Mentoring = lazy(() => import("./pages/Mentoring"));
 const Reset = lazy(() => import("./pages/Reset"));
+const Eval = lazy(() => import("./pages/Eval"));
 
 import { Toaster } from "@/design-system/components/sonner";
 import Redirect from "./components/Redirect";
@@ -215,6 +216,7 @@ function App() {
                 <Route path="/siadlakvip" element={<SiadlakVIP />} />
                 <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
                 <Route path="/reset" element={<Reset />} />
+                <Route path="/eval" element={<Eval />} />
 
                 <Route path="/help" element={<Help />} />
                 <Route path="/help/:subpageSlug" element={<HelpSubpage />} />
