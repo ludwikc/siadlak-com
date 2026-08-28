@@ -99,6 +99,15 @@ const toMarkdown = (s: Submission, submittedAt: string): string => {
     .join("\n");
 };
 
+const storeInBlob = async (path: string, markdown: string) => {
+  const { put } = await import("@vercel/blob");
+  await put(`eval/${path}`, markdown, {
+    access: "public",
+    addRandomSuffix: true,
+    contentType: "text/markdown",
+  });
+};
+
 const commitToGitHub = async (path: string, markdown: string, message: string) => {
   const token = process.env.EVAL_GITHUB_TOKEN;
   if (!token) throw new Error("EVAL_GITHUB_TOKEN is not configured");
@@ -130,7 +139,11 @@ export default async function handler(req: EvalRequest, res: EvalResponse) {
   if (req.method === "GET") {
     res.status(200).json({
       ok: true,
-      storage: process.env.EVAL_GITHUB_TOKEN ? "configured" : "missing-token",
+      storage: process.env.EVAL_GITHUB_TOKEN
+        ? "github"
+        : process.env.BLOB_READ_WRITE_TOKEN
+          ? "blob"
+          : "missing-token",
     });
     return;
   }
@@ -159,15 +172,25 @@ export default async function handler(req: EvalRequest, res: EvalResponse) {
   const stamp = submittedAt.replace(/[:.]/g, "-");
   const path = `responses/${submission.training}/${stamp}-${slugify(submission.name)}.md`;
 
+  const markdown = toMarkdown(submission, submittedAt);
   try {
-    await commitToGitHub(
-      path,
-      toMarkdown(submission, submittedAt),
-      `eval: ${submission.name} — ${submission.training}`,
-    );
+    if (process.env.EVAL_GITHUB_TOKEN) {
+      await commitToGitHub(path, markdown, `eval: ${submission.name} — ${submission.training}`);
+    } else {
+      await storeInBlob(path, markdown);
+    }
     res.status(200).json({ ok: true });
   } catch (error) {
     console.error("eval-store-failed", error instanceof Error ? error.message : error);
-    res.status(502).json({ ok: false, error: "store-failed" });
+    try {
+      await storeInBlob(path, markdown);
+      res.status(200).json({ ok: true });
+    } catch (blobError) {
+      console.error(
+        "eval-blob-fallback-failed",
+        blobError instanceof Error ? blobError.message : blobError,
+      );
+      res.status(502).json({ ok: false, error: "store-failed" });
+    }
   }
 }
