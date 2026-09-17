@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Ludwik C. Siadlak - siadlak.com">
+    <meta name="theme-color" content="#080808">
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="__PREVIEWURL__">
+    <meta property="twitter:title" content="__FILENAME__">
+    <meta property="twitter:site" content="@ludwikc">
+    <meta property="og:title" content="__FILENAME__">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="siadlak.com">
+    <meta property="og:image" content="__PREVIEWURL__">
+    <title>__FILENAME__</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === Diamond Hybrid Design System — siadlak.com === */
+        :root {
+            --electric-blue: 211 100% 50%;
+            --depth-purple: 263 70% 50%;
+            --void-black: #080808;
+
+            --text-on-dark: 210 17% 96%;
+            --text-dim: 215 14% 65%;
+            --text-on-dark-tertiary: 215 14% 50%;
+
+            --gradient-premium: linear-gradient(135deg, hsl(211 100% 50%), hsl(263 70% 50%));
+            --glow-gradient:
+                radial-gradient(circle at 80% 20%, rgba(109, 40, 217, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(0, 122, 255, 0.15) 0%, transparent 50%);
+
+            --font-family-primary: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family-heading: "Space Grotesk", var(--font-family-primary);
+
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --border-radius-lg: 16px;
+
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.35);
+            --shadow-xl: 0 16px 24px rgba(0, 0, 0, 0.45);
+
+            --transition-fast: 0.2s ease;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            color: hsl(var(--text-on-dark));
+            background-color: var(--void-black);
+            background-image: var(--glow-gradient);
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .shell {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .card {
+            background: hsl(0 0% 100% / 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid hsl(0 0% 100% / 0.1);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        /* The Cut — sharp dark-to-light brand divider */
+        .the-cut {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #080808 0%, #007AFF 40%, #6D28D9 60%, #F9FAFB 100%);
+        }
+
+        .preview {
+            background: hsl(0 0% 0% / 0.25);
+            border-bottom: 1px solid hsl(0 0% 100% / 0.08);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .preview img,
+        .preview video {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .preview iframe {
+            width: 100%;
+            height: 50vh;
+            border: none;
+            border-radius: var(--border-radius-md);
+            background: #fff;
+        }
+
+        .file-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius-md);
+            border: 1px solid hsl(0 0% 100% / 0.1);
+            background: hsl(0 0% 100% / 0.05);
+        }
+
+        .file-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: hsl(var(--electric-blue));
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .content {
+            padding: 1.75rem 1.5rem;
+        }
+
+        .eyebrow {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: hsl(var(--text-on-dark-tertiary));
+            margin-bottom: 0.75rem;
+        }
+
+        .filename {
+            font-family: var(--font-family-heading);
+            font-size: 1.375rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: hsl(0 0% 100%);
+            word-break: break-word;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.75rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: hsl(var(--text-dim));
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: hsl(var(--electric-blue));
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            flex-shrink: 0;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.625rem;
+            min-height: 44px;
+            padding: 1rem 2rem;
+            background: var(--gradient-premium);
+            color: #fff;
+            border-radius: var(--border-radius-sm);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .download-btn:focus-visible {
+            outline: 2px solid hsl(var(--electric-blue));
+            outline-offset: 3px;
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .footer {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: hsl(var(--text-on-dark-tertiary));
+        }
+
+        .footer a {
+            color: hsl(var(--text-dim));
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .footer a:hover {
+            color: hsl(0 0% 100%);
+            border-bottom-color: hsl(var(--electric-blue));
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+
+            .preview {
+                padding: 1rem;
+                min-height: 150px;
+            }
+
+            .content {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .filename {
+                font-size: 1.1875rem;
+            }
+
+            .meta {
+                gap: 0.875rem;
+            }
+
+            .download-btn {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .download-btn {
+                transition: none;
+            }
+
+            .download-btn:hover {
+                transform: none;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var fileType = '__FILETYPE__';
+            var mediaTypes = ['public.png', 'public.jpeg', 'public.image', 'com.apple.quicktime-movie', 'public.mpeg-4', 'public.movie'];
+            var previewContainer = document.querySelector('.preview');
+            var hasMediaPreview = mediaTypes.some(function(type) {
+                return fileType.indexOf(type) !== -1 || type.indexOf(fileType) !== -1;
+            });
+
+            // Check if there's already an image or video
+            var hasImg = previewContainer.querySelector('img');
+            var hasVideo = previewContainer.querySelector('video');
+
+            if (!hasImg && !hasVideo && !hasMediaPreview) {
+                previewContainer.innerHTML = '<div class="file-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>';
+            }
+        });
+    </script>
+</head>
+<body>
+    <main class="shell">
+        <div class="card">
+            <div class="the-cut"></div>
+            <div class="preview">
+                __PREVIEW__
+            </div>
+            <div class="content">
+                <p class="eyebrow">Plik do pobrania</p>
+                <h1 class="filename">__FILENAME__</h1>
+                <div class="meta">
+                    <span class="meta-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        __FILESIZE__
+                    </span>
+                    <span class="meta-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        __SHAREDATE__
+                    </span>
+                </div>
+                <a href="__PATH__" class="download-btn" download="__FILENAME__">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Pobierz plik
+                </a>
+            </div>
+        </div>
+        <p class="footer">Udostępnione przez: <a href="https://siadlak.com" target="_blank" rel="noopener noreferrer">Ludwik C. Siadlak / siadlak.com</a></p>
+    </main>
+</body>
+</html>
