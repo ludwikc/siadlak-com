@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import SEO from "@/components/SEO";
-import Hero from "@/components/sections/Hero";
 import FaqAccordion from "@/components/mct/FaqAccordion";
 import MctLeadForm from "@/components/mct/MctLeadForm";
+import MctPageHero from "@/components/mct/MctPageHero";
 import MctShell from "@/components/mct/MctShell";
 import MctStickyCta from "@/components/mct/MctStickyCta";
 import ProcessLanes from "@/components/mct/ProcessLanes";
@@ -20,7 +20,7 @@ import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { getMctBreadcrumb, getMctEnterpriseService, getMctFaqSchema } from "@/lib/structured-data-mct";
 
-const CASE_QUOTES: Record<string, RegExp> = { "us-army": /Blankenship|Buenavente/ };
+const CASE_QUOTE_IDS: Record<string, string[]> = { "us-army": ["blankenship", "buenavente"] };
 
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
@@ -28,13 +28,11 @@ function EnterpriseHero() {
   const { locale, t, surface, setPrefill } = useMct();
 
   return (
-    <div className="[&>section]:bg-mct-navy">
-      <Hero
-        align="left"
-        eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.enterprise.eyebrow}</p>}
-        title={<span className="block text-4xl text-on-dark md:text-6xl">{t.enterprise.title}</span>}
-      >
-        <p className="mx-auto mt-0 mb-10 max-w-3xl text-lg leading-relaxed text-dim md:mx-0">{t.enterprise.sub}</p>
+    <MctPageHero
+      eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.enterprise.eyebrow}</p>}
+      title={t.enterprise.title}
+      subtitle={t.enterprise.sub}
+    >
         <div className="flex flex-wrap justify-center gap-4 md:justify-start">
           <CTAButton
             variant="primary"
@@ -56,8 +54,7 @@ function EnterpriseHero() {
             {t.enterprise.secondaryCta}
           </CTAButton>
         </div>
-      </Hero>
-    </div>
+    </MctPageHero>
   );
 }
 
@@ -70,10 +67,9 @@ function EnterpriseCases() {
         <SectionHead eyebrow={t.enterprise.casesEyebrow} title={t.enterprise.casesTitle} />
         <div className="grid gap-6 md:grid-cols-2">
           {t.enterprise.cases.map((item) => {
-            const pattern = CASE_QUOTES[item.id];
-            const quotes = pattern
-              ? testimonials.filter((quote) => quote.featured && pattern.test(quote.author))
-              : [];
+            const quotes = (CASE_QUOTE_IDS[item.id] ?? []).flatMap((id) =>
+              testimonials.filter((quote) => quote.id === id),
+            );
 
             return (
               <article key={item.id} className={cn(cardClass, "flex flex-col p-8")}>

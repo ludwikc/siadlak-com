@@ -28,4 +28,4 @@ export type PricingConfig = {
   currencyByLocale: Record<Locale, Currency>;
 };
 export type FaqItem = { id: string; question: Localized; answer: Localized; scope: Array<"hub" | "course" | "briefing" | "enterprise"> };
-export type Testimonial = { quote: string; detail?: string; author: string; tags: Array<"military" | "enterprise" | "data" | "modernwork">; featured?: boolean };
+export type Testimonial = { id?: string; quote: string; detail?: string; author: string; tags: Array<"military" | "enterprise" | "data" | "modernwork">; featured?: boolean };

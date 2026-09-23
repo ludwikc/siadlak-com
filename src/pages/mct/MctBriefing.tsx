@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Check } from "lucide-react";
 import SEO from "@/components/SEO";
-import Hero from "@/components/sections/Hero";
 import FaqAccordion from "@/components/mct/FaqAccordion";
 import MctLeadForm from "@/components/mct/MctLeadForm";
+import MctPageHero from "@/components/mct/MctPageHero";
 import MctShell from "@/components/mct/MctShell";
 import MctStickyCta from "@/components/mct/MctStickyCta";
 import ProcessLanes from "@/components/mct/ProcessLanes";
@@ -30,13 +30,11 @@ function BriefingHero() {
   const flat = formatPrice(pricing.briefing.flat[currency], currency, locale);
 
   return (
-    <div className="[&>section]:bg-mct-navy">
-      <Hero
-        align="left"
-        eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.briefing.eyebrow}</p>}
-        title={<span className="block text-4xl text-on-dark md:text-6xl">{t.briefing.title}</span>}
-        subtitle={fill(t.briefing.sub, { flat })}
-      >
+    <MctPageHero
+      eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.briefing.eyebrow}</p>}
+      title={t.briefing.title}
+      subtitle={fill(t.briefing.sub, { flat })}
+    >
         <div className="flex justify-center md:justify-start">
           <CTAButton
             variant="primary"
@@ -46,8 +44,7 @@ function BriefingHero() {
             {t.briefing.cta}
           </CTAButton>
         </div>
-      </Hero>
-    </div>
+    </MctPageHero>
   );
 }
 

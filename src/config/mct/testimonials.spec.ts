@@ -4,6 +4,7 @@ import { testimonialCount, testimonials } from "./testimonials";
 describe("testimonials", () => {
   it("exposes the count of migrated quotes", () => {
     expect([testimonialCount, testimonials.length]).toEqual([42, 42]);
+    expect(testimonials.filter((t) => t.id).map((t) => t.id)).toEqual(["blankenship", "buenavente"]);
   });
 
   it("has no duplicate quotes and every quote carries at least one tag", () => {

@@ -216,6 +216,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
+    id: "blankenship",
     quote: "Best class I've attended in a very long time.",
     detail:
       "Exceptionally professional and knowledgeable trainer. The course material was intense and difficult, but the trainer was able to explain rather complex ideas in a easily understandable manner....not an easy task. Kept me engaged for a whole week from 0800-1700 - again, not an easy task.",
@@ -224,6 +225,7 @@ export const testimonials: Testimonial[] = [
     featured: true,
   },
   {
+    id: "buenavente",
     quote: "One of the best classes I have ever been in.",
     detail:
       "Mr. Siadlak's way of teaching made it very easy to understand and retain. He showed genuine care in answering any questions we had. I wish we had more instructors like him.",

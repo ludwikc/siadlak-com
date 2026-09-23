@@ -50,7 +50,7 @@ export default function SEO({
 }: SEOProps) {
   const fullTitle = !title
     ? defaultSEO.title
-    : title.endsWith(TITLE_SUFFIX)
+    : title.endsWith(` | ${TITLE_SUFFIX}`)
       ? title
       : `${title} | ${TITLE_SUFFIX}`;
   const imageUrl = image.startsWith('http') ? image : `${defaultSEO.url}${image}`;

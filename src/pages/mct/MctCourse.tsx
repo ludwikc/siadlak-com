@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { Check, ExternalLink } from "lucide-react";
 import trainerPhoto from "@/assets/LUDWIKCSIADLAK-2025-sq.webp?w=160;320&format=avif;webp&as=picture";
 import SEO from "@/components/SEO";
-import Hero from "@/components/sections/Hero";
 import CourseCard from "@/components/mct/CourseCard";
 import FaqAccordion from "@/components/mct/FaqAccordion";
 import MctLeadForm from "@/components/mct/MctLeadForm";
+import MctPageHero from "@/components/mct/MctPageHero";
 import MctShell from "@/components/mct/MctShell";
 import MctStickyCta from "@/components/mct/MctStickyCta";
 import PricingTiers from "@/components/mct/PricingTiers";
@@ -20,7 +20,7 @@ import { coursePath, hreflangAlternates, htmlLang, hubPath, ogLocale } from "@/c
 import { formatPrice, seatPrice } from "@/config/mct/pricing-utils";
 import { sessions } from "@/config/mct/schedule";
 import { getSessionsForCourse } from "@/config/mct/schedule-utils";
-import type { Course, Locale } from "@/config/mct/types";
+import type { AgendaDay, Course, Locale } from "@/config/mct/types";
 import { proof } from "@/config/proof";
 import { CTAButton } from "@/design-system/components/cta-button";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
@@ -69,9 +69,7 @@ function CourseHero({ course }: { course: Course }) {
   ];
 
   return (
-    <div className="[&>section]:bg-mct-navy">
-      <Hero
-        align="left"
+    <MctPageHero
         eyebrow={
           <div className="mb-6 flex flex-wrap items-center justify-center gap-2 md:justify-start">
             <span className="mct-eyebrow text-electric">
@@ -89,7 +87,7 @@ function CourseHero({ course }: { course: Course }) {
             )}
           </div>
         }
-        title={<span className="block text-4xl text-on-dark md:text-6xl">{course.title[locale]}</span>}
+        title={course.title[locale]}
         subtitle={course.tagline[locale]}
       >
         <ul className="m-0 mb-10 flex list-none flex-wrap justify-center gap-2 p-0 md:justify-start">
@@ -125,50 +123,68 @@ function CourseHero({ course }: { course: Course }) {
             {t.tiers.items.public.cta}
           </CTAButton>
         </div>
-      </Hero>
-    </div>
+    </MctPageHero>
+  );
+}
+
+function AgendaDayContent({ day, label }: { day: AgendaDay; label: string }) {
+  const { locale, t } = useMct();
+
+  return (
+    <>
+      <h3 className="mt-0 mb-6 text-lg font-bold text-on-dark">
+        {label}: {day.title[locale]}
+      </h3>
+      <ol className="m-0 mb-8 flex list-none flex-col gap-4 p-0">
+        {day.modules[locale].map((module, moduleIndex) => (
+          <li key={module} className="flex gap-4">
+            <span className="shrink-0 font-mono text-sm font-bold text-electric" aria-hidden="true">
+              {String(moduleIndex + 1).padStart(2, "0")}
+            </span>
+            <span className={bodyClass}>{module}</span>
+          </li>
+        ))}
+      </ol>
+      <div className="border-l-2 border-electric pl-4">
+        <p className="mct-eyebrow mt-0 mb-2 text-electric">{t.course.addOn}</p>
+        <p className={cn(bodyClass, "m-0")}>{day.addOn[locale]}</p>
+      </div>
+    </>
   );
 }
 
 function CourseAgenda({ course }: { course: Course }) {
-  const { locale, t } = useMct();
+  const { t } = useMct();
   const dayLabel = (index: number) => fill(t.course.day, { n: index + 1 });
+  const panelClass = cn(cardClass, "p-8");
+
+  if (course.days === 1) {
+    return (
+      <ContentSection title={t.course.agenda}>
+        <div className={cn(panelClass, "max-w-3xl")}>
+          <AgendaDayContent day={course.agenda[0]} label={dayLabel(0)} />
+        </div>
+      </ContentSection>
+    );
+  }
 
   return (
     <ContentSection title={t.course.agenda}>
       <Tabs defaultValue="day-1" className="max-w-3xl">
-        {course.agenda.length > 1 && (
-          <TabsList className="mb-6 h-auto border border-white/10 bg-mct-navy-elevated">
-            {course.agenda.map((day, index) => (
-              <TabsTrigger
-                key={day.title.en}
-                value={`day-${index + 1}`}
-                className="px-4 py-2 text-dim data-[state=active]:bg-electric/15 data-[state=active]:text-on-dark"
-              >
-                {dayLabel(index)}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        )}
+        <TabsList aria-label={t.course.agenda} className="mb-6 h-auto border border-white/10 bg-mct-navy-elevated">
+          {course.agenda.map((day, index) => (
+            <TabsTrigger
+              key={day.title.en}
+              value={`day-${index + 1}`}
+              className="px-4 py-2 text-dim data-[state=active]:bg-electric/15 data-[state=active]:text-on-dark"
+            >
+              {dayLabel(index)}
+            </TabsTrigger>
+          ))}
+        </TabsList>
         {course.agenda.map((day, index) => (
-          <TabsContent key={day.title.en} value={`day-${index + 1}`} className={cn(cardClass, "mt-0 p-8")}>
-            <h3 className="mt-0 mb-6 text-lg font-bold text-on-dark">
-              {dayLabel(index)}: {day.title[locale]}
-            </h3>
-            <ol className="m-0 mb-8 flex list-none flex-col gap-4 p-0">
-              {day.modules[locale].map((module, moduleIndex) => (
-                <li key={module} className="flex gap-4">
-                  <span className="shrink-0 font-mono text-sm font-bold text-electric" aria-hidden="true">
-                    {String(moduleIndex + 1).padStart(2, "0")}
-                  </span>
-                  <span className={bodyClass}>{module}</span>
-                </li>
-              ))}
-            </ol>
-            <div className="border-l-2 border-electric pl-4">
-              <p className="mct-eyebrow mt-0 mb-2 text-electric">{t.course.addOn}</p>
-              <p className={cn(bodyClass, "m-0")}>{day.addOn[locale]}</p>
-            </div>
+          <TabsContent key={day.title.en} value={`day-${index + 1}`} className={cn(panelClass, "mt-0")}>
+            <AgendaDayContent day={day} label={dayLabel(index)} />
           </TabsContent>
         ))}
       </Tabs>

@@ -219,7 +219,7 @@ describe("getMctFaqSchema", () => {
     const names = getMctFaqSchema("en", "course").mainEntity.map((q) => q.name);
     const outOfScope = faq.filter((item) => !item.scope.includes("course")).map((item) => item.question.en);
 
-    expect(outOfScope.length).toBeGreaterThan(0);
+    expect(outOfScope.length).toEqual(3);
     expect(names.filter((name) => outOfScope.includes(name))).toEqual([]);
   });
 });

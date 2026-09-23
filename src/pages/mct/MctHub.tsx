@@ -40,8 +40,9 @@ function useHubPath(): HubPath | undefined {
   const { prefill } = useMct();
   const param = searchParams.get("path");
 
-  if (param === "enterprise") return "enterprise";
-  if (param === "teams" || prefill?.tier === "public") return "teams";
+  if (prefill?.tier === "enterprise") return "enterprise";
+  if (prefill?.tier === "public") return "teams";
+  if (param === "enterprise" || param === "teams") return param;
   return undefined;
 }
 
