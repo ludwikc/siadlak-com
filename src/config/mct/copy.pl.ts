@@ -65,7 +65,7 @@ export const pl = {
         price: "{perDay} / dzień · 2 dni {twoDay} (netto)",
         bullets: [
           "Na żywo online, maks. 8 osób",
-          "Praktyczne laboratoria w Twoim własnym środowisku",
+          "Ćwiczenia praktyczne (laby) w Twoim środowisku",
           "Od 3 miejsc −10%",
           "Materiały + 30 dni pytań mailem po szkoleniu",
         ],
@@ -96,7 +96,7 @@ export const pl = {
     columns: { course: "Kurs", dates: "Termin", hours: "Godziny", language: "Język", status: "Status", action: "" },
     hoursValue: "09:00–17:00 CET/CEST",
     status: {
-      open: "Otwarte",
+      open: "Otwarty",
       filling: "Zapełnia się",
       full: "Brak miejsc",
       confirmed: "Potwierdzony",
@@ -147,7 +147,7 @@ export const pl = {
   },
   proof: {
     eyebrow: "Z ankiet poszkoleniowych",
-    title: "{n} cytatów z ankiet poszkoleniowych. Zero scenariusza.",
+    title: "Cytaty z ankiet poszkoleniowych: {n}. Zero scenariusza.",
     sub: "Każdy cytat pochodzi z ankiety wypełnionej po szkoleniu. Nie ma tu gwiazdek, bo nie mam jeszcze zbioru ocen liczbowych. Kiedy go zbiorę, zobaczysz wynik i liczbę odpowiedzi.",
     note: "Oryginały po angielsku.",
     filters: {
@@ -166,7 +166,7 @@ export const pl = {
     title: "Co dzieje się po kliknięciu.",
     lanes: {
       public: {
-        title: "Otwarte miejsca",
+        title: "Otwarta klasa",
         beats: [
           "Rezerwujesz miejsca (2 min)",
           "Potwierdzam termin i w ciągu 1 dnia roboczego wysyłam pro formę albo fakturę",
@@ -188,7 +188,7 @@ export const pl = {
         beats: [
           "Opisujesz stack i harmonogram (2 min)",
           "20 minut rozmowy o zakresie, bez pitchu",
-          "Program zbudowany wokół Ciebie",
+          "Program szyty na miarę",
           "Szkolenie, które zostaje w zespole: zdalnie albo on-site, po polsku albo po angielsku",
         ],
       },
@@ -210,7 +210,7 @@ export const pl = {
   },
   form: {
     eyebrow: "Zapytanie",
-    modes: { seat: "Otwarte miejsca", briefing: "Briefing", scope: "Program na zamówienie" },
+    modes: { seat: "Otwarta klasa", briefing: "Briefing", scope: "Program na zamówienie" },
     titles: { seat: "Zarezerwuj miejsca", briefing: "Zamów briefing", scope: "Ustalmy zakres" },
     labels: {
       name: "Imię i nazwisko",
@@ -265,11 +265,11 @@ export const pl = {
     submit: { seat: "Zarezerwuj miejsca", briefing: "Zamów briefing", scope: "Wyślij i wybierz termin rozmowy" },
     sending: "Wysyłam…",
     microcopy: {
-      seat: "Teraz nic nie płacisz. Potwierdzenie dostajesz w ciągu jednego dnia roboczego, a fakturę albo pro formę, gdy termin jest potwierdzony.",
+      seat: "Teraz nic nie płacisz. Potwierdzenie dostajesz w ciągu jednego dnia roboczego, a fakturę albo pro formę, gdy termin zostanie potwierdzony.",
     },
     seatsHint6: "Sześć osób lub więcej? Prywatna edycja może wyjść taniej. Zaznacz, a dostaniesz obie wyceny.",
     success: {
-      title: "Mam to.",
+      title: "Dzięki, dotarło.",
       body: {
         seat: "Gdy termin zostanie potwierdzony, wyślę fakturę albo pro formę i checklistę przed kursem.",
         briefing: "Zaproponuję termin z Twoich okien czasowych i wyślę jednostronicową notatkę przygotowawczą.",
@@ -301,7 +301,7 @@ export const pl = {
     perSeat: "za miejsce",
     orPrivate: "albo prywatna edycja dla Twojego zespołu",
     condensedNotice:
-      "Wersja skrócona do 2 dni. Przerabiamy sedno oficjalnego programu, to, co liczy się na egzaminie, w szybkim tempie. Potrzebujesz każdego modułu? Zapytaj o prywatną edycję w pełnym wymiarze.",
+      "Wersja skrócona do 2 dni. W szybkim tempie przerabiamy rdzeń oficjalnego programu: to, co liczy się na egzaminie. Potrzebujesz każdego modułu? Zapytaj o prywatną edycję w pełnym wymiarze.",
     audience: "Dla kogo",
     notFor: "Nie dla",
     outcomesOne: "Po jednym dniu Twój zespół potrafi:",
@@ -317,7 +317,7 @@ export const pl = {
       items: [
         "Na żywo online, 09:00–17:00 CET/CEST",
         "Maks. 8 uczestników",
-        "Praktyczne laboratoria w Twoim własnym środowisku",
+        "Ćwiczenia praktyczne (laby) w Twoim środowisku",
         "Slajdy i pliki do laboratoriów zostają u Ciebie",
         "30 dni pytań mailem po szkoleniu",
       ],
@@ -409,10 +409,10 @@ export const pl = {
     casesEyebrow: "Gdzie to już działało",
     casesTitle: "Sale, w których uczyłem.",
     cases: [
-      { title: "NATO", body: "Autorskie programy szkoleniowe. Pisane, nie czytane." },
-      { title: "US Army Europe / USARAF", body: "Tygodniowe kursy techniczne w Wiesbaden i Vicenzy." },
-      { title: "Nordea, ING, DNB", body: "Szkolenia z platform danych dla zespołów bankowych." },
-      { title: "Volvo, Scania, Volkswagen", body: "Zespoły danych w przemyśle." },
+      { id: "nato", title: "NATO", body: "Autorskie programy szkoleniowe. Pisane, nie czytane." },
+      { id: "us-army", title: "US Army Europe / USARAF", body: "Tygodniowe kursy techniczne w Wiesbaden i Vicenzy." },
+      { id: "banking", title: "Nordea, ING, DNB", body: "Szkolenia z platform danych dla zespołów bankowych." },
+      { id: "manufacturing", title: "Volvo, Scania, Volkswagen", body: "Zespoły danych w przemyśle." },
     ],
     procurement: {
       eyebrow: "Zakupy",

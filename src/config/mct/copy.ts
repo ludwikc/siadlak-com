@@ -203,7 +203,7 @@ export type MctCopy = {
     secondaryCta: string;
     casesEyebrow: string;
     casesTitle: string;
-    cases: TitledText[];
+    cases: Array<TitledText & { id: string }>;
     procurement: { eyebrow: string; title: string; facts: LabelledFact[] };
     privateRun: TitledText;
   };

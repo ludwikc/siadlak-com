@@ -406,10 +406,10 @@ export const en = {
     casesEyebrow: "Where this has run",
     casesTitle: "Rooms I have trained in.",
     cases: [
-      { title: "NATO", body: "Custom training programs, written not read." },
-      { title: "US Army Europe / USARAF", body: "Week-long technical courses, Wiesbaden and Vicenza." },
-      { title: "Nordea, ING, DNB", body: "Data platform training for banking teams." },
-      { title: "Volvo, Scania, Volkswagen", body: "Manufacturing data teams." },
+      { id: "nato", title: "NATO", body: "Custom training programs, written not read." },
+      { id: "us-army", title: "US Army Europe / USARAF", body: "Week-long technical courses, Wiesbaden and Vicenza." },
+      { id: "banking", title: "Nordea, ING, DNB", body: "Data platform training for banking teams." },
+      { id: "manufacturing", title: "Volvo, Scania, Volkswagen", body: "Manufacturing data teams." },
     ],
     procurement: {
       eyebrow: "Procurement",
