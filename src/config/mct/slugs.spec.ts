@@ -111,6 +111,22 @@ describe("mct faq", () => {
     expect(new Set(faq.map((f) => f.id)).size).toBe(11);
   });
 
+  it("locks the scope of every item", () => {
+    expect(faq.map((f) => [f.id, f.scope])).toEqual([
+      ["invoices", ["hub", "course", "briefing", "enterprise"]],
+      ["po", ["hub", "course", "briefing", "enterprise"]],
+      ["vat", ["hub", "course", "briefing", "enterprise"]],
+      ["nda", ["enterprise", "hub"]],
+      ["cancel-public", ["hub", "course"]],
+      ["cancel-private", ["briefing", "enterprise"]],
+      ["recording", ["hub", "course", "enterprise"]],
+      ["discounts", ["hub", "course"]],
+      ["onsite", ["hub", "enterprise"]],
+      ["language", ["hub", "course", "briefing", "enterprise"]],
+      ["certification", ["hub", "course"]],
+    ]);
+  });
+
   it("fills question and answer in both languages and sets a scope", () => {
     const offenders = faq.filter(
       (f) =>

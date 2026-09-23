@@ -1,4 +1,5 @@
 import { policies } from "./policies";
+import { pricing } from "./pricing";
 import type { FaqItem } from "./types";
 
 export const faq: FaqItem[] = [
@@ -7,14 +8,14 @@ export const faq: FaqItem[] = [
     scope: ["hub", "course", "briefing", "enterprise"],
     question: { en: "How does invoicing work?", pl: "Jak wygląda fakturowanie?" },
     answer: {
-      en: "You receive a VAT invoice from a Polish company, payable by bank transfer in EUR or PLN. Public seats: pro-forma on request, invoice on confirmation, 14-day terms. Enterprise: milestone invoicing on request.",
-      pl: "Dostajesz fakturę VAT od polskiej firmy, płatną przelewem w EUR albo PLN. Miejsca na szkoleniach otwartych: pro forma na życzenie, faktura po potwierdzeniu, termin płatności 14 dni. Enterprise: na życzenie fakturowanie etapami.",
+      en: `You receive a VAT invoice from a Polish company, payable by bank transfer in EUR or PLN. Public seats: ${policies.paymentTerms.en} Enterprise: milestone invoicing on request.`,
+      pl: `Dostajesz fakturę VAT od polskiej firmy, płatną przelewem w EUR albo PLN. Szkolenia otwarte: ${policies.paymentTerms.pl} Enterprise: na życzenie fakturowanie etapami.`,
     },
   },
   {
     id: "po",
     scope: ["hub", "course", "briefing", "enterprise"],
-    question: { en: "Can you work with our purchase order?", pl: "Czy pracujesz na naszym zamówieniu (PO)?" },
+    question: { en: "Can you work with our purchase order?", pl: "Czy możesz wystawić fakturę do naszego zamówienia (PO)?" },
     answer: {
       en: "Yes. Send the PO number with the request and it appears on the invoice. Vendor onboarding forms: I fill them, you send them.",
       pl: "Tak. Podaj numer PO razem z zapytaniem, a pojawi się na fakturze. Formularze rejestracji dostawcy wypełniam ja, Ty tylko je wysyłasz.",
@@ -25,8 +26,8 @@ export const faq: FaqItem[] = [
     scope: ["hub", "course", "briefing", "enterprise"],
     question: { en: "Are prices net or gross?", pl: "Ceny są netto czy brutto?" },
     answer: {
-      en: "Prices are net. Polish companies: +23% VAT. EU companies with a valid VAT ID: reverse charge, 0% on the invoice, you self-account. Outside the EU: no Polish VAT.",
-      pl: "Ceny są netto. Firmy z Polski: +23% VAT. Firmy z UE z ważnym numerem VAT UE: odwrotne obciążenie, 0% na fakturze, VAT rozliczasz u siebie. Spoza UE: bez polskiego VAT.",
+      en: "Prices are net. Polish companies: +23% VAT. EU companies with a valid VAT ID: reverse charge — no Polish VAT on the invoice, you self-account in your country. Outside the EU: no Polish VAT.",
+      pl: "Ceny są netto. Firmy z Polski: +23% VAT. Firmy z UE z ważnym numerem VAT UE: odwrotne obciążenie — bez polskiego VAT na fakturze, VAT rozliczasz w swoim kraju. Spoza UE: bez polskiego VAT.",
     },
   },
   {
@@ -67,8 +68,8 @@ export const faq: FaqItem[] = [
     scope: ["hub", "course"],
     question: { en: "Is there a discount for several seats?", pl: "Czy jest rabat za kilka miejsc?" },
     answer: {
-      en: "3 or more seats: 10% off. Six or more: ask for a private-run quote and I show you both numbers.",
-      pl: "Od 3 miejsc: 10% rabatu. Od sześciu warto zapytać o wycenę szkolenia zamkniętego. Pokażę Ci obie kwoty obok siebie.",
+      en: `${pricing.publicSeat.multiSeatDiscount.fromSeats} or more seats: ${pricing.publicSeat.multiSeatDiscount.percent}% off. Six or more: ask for a private-run quote and I show you both numbers.`,
+      pl: `Od ${pricing.publicSeat.multiSeatDiscount.fromSeats} miejsc: ${pricing.publicSeat.multiSeatDiscount.percent}% rabatu. Od sześciu warto zapytać o wycenę szkolenia zamkniętego. Pokażę Ci obie kwoty obok siebie.`,
     },
   },
   {
@@ -86,7 +87,7 @@ export const faq: FaqItem[] = [
     question: { en: "Which language do you train in?", pl: "W jakim języku prowadzisz szkolenia?" },
     answer: {
       en: "English or Polish. Materials in English (official Microsoft courseware), delivery in either language.",
-      pl: "Po angielsku albo po polsku. Materiały są po angielsku (oficjalne materiały Microsoft), a zajęcia prowadzę w jednym z tych dwóch języków.",
+      pl: "Po angielsku albo po polsku. Materiały są po angielsku (oficjalne kursy Microsoft), a zajęcia prowadzę w jednym z tych dwóch języków.",
     },
   },
   {

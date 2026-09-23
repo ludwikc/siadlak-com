@@ -28,7 +28,7 @@ export const tracks: Record<Track, { title: Localized; blurb: Localized }> = {
 };
 
 const copilotStudioDay: AgendaDay = {
-  title: { en: "Build, publish and govern an agent", pl: "Budowa, publikacja i ład agenta" },
+  title: { en: "Build, publish and govern an agent", pl: "Budowa, publikacja i nadzór nad agentem" },
   modules: {
     en: [
       "Topics, entities and variables",
@@ -39,7 +39,7 @@ const copilotStudioDay: AgendaDay = {
     ],
     pl: [
       "Tematy, encje i zmienne",
-      "Odpowiedzi generatywne na Twojej wiedzy",
+      "Odpowiedzi generatywne oparte na Twoich źródłach wiedzy",
       "Akcje i konektory",
       "Publikacja w Teams i Microsoft 365 Copilot",
       "Analityka i kolejne iteracje",
@@ -47,7 +47,7 @@ const copilotStudioDay: AgendaDay = {
   },
   addOn: {
     en: "Governance checklist: DLP, environments, who can publish what.",
-    pl: "Lista kontrolna ładu: DLP, środowiska, kto co może publikować.",
+    pl: "Lista kontrolna nadzoru: DLP, środowiska, kto co może publikować.",
   },
 };
 
@@ -67,7 +67,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Built on Microsoft's official AB-731 course for business leaders. You see where generative AI creates value in your organization, where it creates risk, and which Microsoft tool fits which job. You leave with scored use cases and a one-page plan, not a slide deck of possibilities.",
-      pl: "Oparte na oficjalnym kursie Microsoft AB-731 dla liderów biznesu. Zobaczysz, gdzie generatywna AI daje Twojej organizacji realną wartość, gdzie tworzy ryzyko i które narzędzie Microsoft pasuje do którego zadania. Wychodzisz z ocenionymi przypadkami użycia i planem na jedną stronę, a nie z prezentacją pełną możliwości.",
+      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft AB-731 dla liderów biznesu. Zobaczysz, gdzie generatywna AI daje Twojej organizacji realną wartość, gdzie tworzy ryzyko i które narzędzie Microsoft pasuje do którego zadania. Wychodzisz z ocenionymi przypadkami użycia i planem na jedną stronę, a nie z prezentacją pełną możliwości.",
     },
     audience: {
       en: ["Executives and directors", "Transformation and innovation leads", "IT and business decision-makers"],
@@ -88,7 +88,7 @@ export const courses: Record<CourseSlug, Course> = {
       ],
       pl: [
         "Wyjaśnić, gdzie generatywna AI daje wartość biznesową, a gdzie nie",
-        "Ocenić kandydatów na przypadki użycia pod kątem wartości i ryzyka jedną wspólną metodą",
+        "Ocenić potencjalne przypadki użycia pod kątem wartości i ryzyka jedną wspólną metodą",
         "Dobrać Microsoft 365 Copilot, Copilot Studio albo Microsoft Foundry do konkretnego problemu",
         "Ustalić podstawy odpowiedzialnej AI i ładu (governance) przed pierwszym wdrożeniem",
         "Powiązać wydatki na AI z konkretnymi celami biznesowymi i ich właścicielami",
@@ -153,7 +153,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Built on Microsoft's official MS-4014 course. We cut through the agent hype: what an agent can and cannot do, how Copilot Studio, Microsoft Foundry and the Microsoft 365 Agents Toolkit differ, and how to plan an agent before anyone builds it. Then you build one on your own content.",
-      pl: "Oparte na oficjalnym kursie Microsoft MS-4014. Odcinamy szum wokół agentów: co agent potrafi, a czego nie, czym różnią się Copilot Studio, Microsoft Foundry i Microsoft 365 Agents Toolkit oraz jak zaplanować agenta, zanim ktokolwiek zacznie go budować. Potem budujesz własnego, na swoich treściach.",
+      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft MS-4014. Bez szumu wokół agentów: co agent potrafi, a czego nie, czym różnią się Copilot Studio, Microsoft Foundry i Microsoft 365 Agents Toolkit oraz jak zaplanować agenta, zanim ktokolwiek zacznie go budować. Potem budujesz własnego, na swoich treściach.",
     },
     audience: {
       en: ["Business analysts", "IT pros and M365 admins", "Citizen developers"],
@@ -234,7 +234,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Built on Microsoft's official PL-7008 course. A full day in Copilot Studio: conversation design, generative answers on your knowledge, actions that call real systems, and publishing to Teams and Microsoft 365 Copilot. You also get the governance side, so what you build can actually go live.",
-      pl: "Oparte na oficjalnym kursie Microsoft PL-7008. Cały dzień w Copilot Studio: projektowanie rozmowy, odpowiedzi generatywne na Twojej wiedzy, akcje wywołujące prawdziwe systemy i publikacja w Teams oraz Microsoft 365 Copilot. Dostajesz też stronę ładu i bezpieczeństwa, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
+      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft PL-7008. Cały dzień w Copilot Studio: projektowanie rozmowy, odpowiedzi generatywne na Twojej wiedzy, akcje wywołujące prawdziwe systemy i publikacja w Teams oraz Microsoft 365 Copilot. Omawiamy też ład i bezpieczeństwo, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
     },
     audience: {
       en: ["Power Platform makers", "M365 and Power Platform admins", "Business analysts"],
@@ -314,9 +314,9 @@ export const courses: Record<CourseSlug, Course> = {
       pl: [
         "Zaprojektować i opublikować agenta Copilot Studio od początku do końca",
         "Podłączyć agenta do własnych systemów przez konektory i akcje API",
-        "Napisać przypadki testowe dla ścieżek typowych, brzegowych i odmów",
+        "Napisać przypadki testowe obejmujące typowe ścieżki, przypadki brzegowe i odmowy",
         "Przeprowadzić agenta przez przegląd bezpieczeństwa z dowodami, a nie obietnicami",
-        "Przekazać agenta z runbookiem, według którego zespół utrzymania da sobie radę",
+        "Przekazać agenta z runbookiem, z którym zespół utrzymania poradzi sobie sam",
       ],
     },
     agenda: [
@@ -367,7 +367,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Condensed from the official 4-day outline into 2 intensive days. We cover the exam-relevant core of DP-600: lakehouses, warehouses, semantic models, DAX at scale, security and lifecycle. Expect a fast pace and labs, not a tour of every menu.",
-      pl: "Wersja skrócona: oficjalny 4-dniowy program skondensowany do 2 intensywnych dni. Przerabiamy to, co z DP-600 liczy się na egzaminie i w pracy: lakehouse, warehouse, modele semantyczne, DAX w skali, bezpieczeństwo i cykl życia. Szybkie tempo i laboratoria, a nie wycieczka po każdym menu.",
+      pl: "Wersja skrócona: oficjalny 4-dniowy program skondensowany do 2 intensywnych dni. Przerabiamy to, co z DP-600 liczy się na egzaminie i w pracy: lakehouse, warehouse, modele semantyczne, DAX dla dużych modeli, bezpieczeństwo i cykl życia. Szybkie tempo i laboratoria, a nie wycieczka po każdym menu.",
     },
     audience: {
       en: ["Analytics engineers", "BI developers", "Data architects"],
@@ -392,8 +392,8 @@ export const courses: Record<CourseSlug, Course> = {
         "Wybrać między lakehouse, warehouse i eventhouse, a potem obronić ten wybór",
         "Zbudować modele wymiarowe z wolnozmiennymi wymiarami (SCD)",
         "Przekształcać dane w Dataflows Gen2, notatnikach i T-SQL",
-        "Stroić modele semantyczne i DAX przy pomocy Performance Analyzer i agregacji",
-        "Zabezpieczyć obszary robocze, elementy i dane przez RLS, OLS i zabezpieczenia OneLake",
+        "Stroić modele semantyczne i DAX za pomocą Performance Analyzer i agregacji",
+        "Zabezpieczyć obszary robocze, elementy i dane za pomocą RLS, OLS i zabezpieczenia OneLake",
         "Wdrażać zmiany przez Git i potoki wdrożeniowe",
       ],
     },
@@ -435,7 +435,7 @@ export const courses: Record<CourseSlug, Course> = {
             "Preparing models for Copilot",
           ],
           pl: [
-            "Modele semantyczne i DAX w skali: tryby przechowywania, schemat gwiazdy",
+            "Modele semantyczne i DAX dla dużych modeli: tryby przechowywania, schemat gwiazdy",
             "Wydajność: Performance Analyzer, agregacje",
             "Zabezpieczenia na poziomie wierszy i obiektów (RLS/OLS)",
             "Cykl życia: Git, XMLA, potoki wdrożeniowe",
@@ -482,7 +482,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Built on Microsoft's official DP-605 course. You go through the whole Power BI path in a day: get data, clean it, model it, and design reports that answer a real question. We finish with Copilot in Power BI and where Power BI sits inside Microsoft Fabric.",
-      pl: "Oparte na oficjalnym kursie Microsoft DP-605. W jeden dzień przechodzisz całą ścieżkę Power BI: pobranie danych, czyszczenie, model i raporty, które odpowiadają na konkretne pytanie. Kończymy na Copilocie w Power BI i miejscu Power BI w Microsoft Fabric.",
+      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft DP-605. W jeden dzień przechodzisz całą ścieżkę Power BI: pobranie danych, czyszczenie, model i raporty, które odpowiadają na konkretne pytanie. Kończymy na Copilocie w Power BI i miejscu Power BI w Microsoft Fabric.",
     },
     audience: {
       en: ["Business analysts", "Finance and operations teams", "Excel power users"],
@@ -638,7 +638,7 @@ export const courses: Record<CourseSlug, Course> = {
         },
         addOn: {
           en: "Failure-mode lab: what breaks at 3 a.m. and who gets paged.",
-          pl: "Laboratorium awarii: co pada o 3 w nocy i do kogo wtedy dzwoni telefon.",
+          pl: "Laboratorium awarii: co pada o 3 w nocy i kogo wtedy budzi telefon.",
         },
       },
     ],
@@ -678,15 +678,15 @@ export const courses: Record<CourseSlug, Course> = {
     },
     summary: {
       en: "Condensed from the official 4-day outline into 2 intensive days. We cover the exam-relevant core of DP-300: choosing and deploying the right Azure SQL option, securing it, keeping it fast, automating the routine and planning for failure. Built for the people who will be on call for it.",
-      pl: "Wersja skrócona: oficjalny 4-dniowy program skondensowany do 2 intensywnych dni. Przerabiamy to, co z DP-300 liczy się na egzaminie i w pracy: wybór i wdrożenie właściwej opcji Azure SQL, zabezpieczenie, wydajność, automatyzację rutyny i plan na awarię. Dla ludzi, którzy będą mieli przy tym dyżury.",
+      pl: "Wersja skrócona: oficjalny 4-dniowy program skondensowany do 2 intensywnych dni. Przerabiamy to, co z DP-300 liczy się na egzaminie i w pracy: wybór i wdrożenie właściwej opcji Azure SQL, zabezpieczenie, wydajność, automatyzację rutyny i plan na awarię. Dla osób, które będą miały przy niej dyżury.",
     },
     audience: {
       en: ["Database administrators", "Cloud and infrastructure engineers", "Developers who own their databases"],
       pl: ["Administratorzy baz danych", "Inżynierowie chmury i infrastruktury", "Programiści odpowiedzialni za własne bazy"],
     },
     notFor: {
-      en: "Not for people who have never written a SQL query — start with DP-080.",
-      pl: "Nie dla osób, które nie napisały jeszcze żadnego zapytania SQL — zacznij od DP-080.",
+      en: "Not for people without hands-on SQL Server administration experience; start with DP-080.",
+      pl: "Nie dla osób bez praktycznego doświadczenia w administrowaniu SQL Server — zacznij od DP-080.",
     },
     outcomes: {
       en: [
@@ -700,8 +700,8 @@ export const courses: Record<CourseSlug, Course> = {
       pl: [
         "Wybrać między Azure SQL Database, Managed Instance i SQL Server na maszynie wirtualnej",
         "Zaplanować migrację z lokalnego SQL Server do Azure SQL",
-        "Zabezpieczyć bazę przez uwierzytelnianie Entra, TDE, Always Encrypted, maskowanie, RLS i audyt",
-        "Diagnozować wolne zapytania przy pomocy Query Store, indeksów i statystyk",
+        "Zabezpieczyć bazę za pomocą uwierzytelniania Entra, TDE, Always Encrypted, maskowanie, RLS i audyt",
+        "Diagnozować wolne zapytania za pomocą Query Store, indeksów i statystyk",
         "Automatyzować rutynowe zadania zamiast robić je ręcznie",
         "Zaprojektować wysoką dostępność i odtwarzanie po awarii z grupami failover i sprawdzonym przywracaniem",
       ],
@@ -729,7 +729,7 @@ export const courses: Record<CourseSlug, Course> = {
         },
         addOn: {
           en: "Your current SQL estate mapped to the right Azure SQL option.",
-          pl: "Twoje obecne środowisko SQL przypisane do właściwej opcji Azure SQL.",
+          pl: "Twoje obecne środowisko SQL dopasowane do właściwej opcji Azure SQL.",
         },
       },
       {
@@ -748,7 +748,7 @@ export const courses: Record<CourseSlug, Course> = {
             "Indeksy i statystyki",
             "Inteligentne przetwarzanie zapytań (IQP)",
             "Automatyzacja zadań",
-            "Grupy dostępności i grupy failover",
+            "Grupy dostępności i grupy trybu failover",
             "Kopie zapasowe i przywracanie",
           ],
         },
@@ -790,11 +790,11 @@ export const courses: Record<CourseSlug, Course> = {
     },
     tagline: {
       en: "Write the SQL you need at work, and understand why it works.",
-      pl: "Pisz SQL, którego potrzebujesz w pracy, i rozumiej, dlaczego działa.",
+      pl: "Pisz SQL, którego potrzebujesz w pracy, i wiedz, dlaczego działa.",
     },
     summary: {
       en: "Built on Microsoft's official DP-080 course. You start from a blank query window and finish writing joins, subqueries, aggregations and data changes with confidence. Every exercise runs against a real database, and every pattern is one you will use again.",
-      pl: "Oparte na oficjalnym kursie Microsoft DP-080. Zaczynasz od pustego okna zapytania, a kończysz, pewnie pisząc złączenia, podzapytania, agregacje i modyfikacje danych. Każde ćwiczenie działa na prawdziwej bazie, a każdy wzorzec jeszcze Ci się przyda.",
+      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft DP-080. Zaczynasz od pustego okna zapytania, a na koniec swobodnie piszesz złączenia, podzapytania, agregacje i modyfikacje danych. Każde ćwiczenie działa na prawdziwej bazie, a każdy wzorzec jeszcze Ci się przyda.",
     },
     audience: {
       en: ["Analysts", "Report and BI developers", "Developers new to SQL"],
@@ -802,7 +802,7 @@ export const courses: Record<CourseSlug, Course> = {
     },
     notFor: {
       en: "Not for people who already write T-SQL daily — T-SQL performance for developers is the better fit.",
-      pl: "Nie dla osób, które już codziennie piszą w T-SQL — lepiej pasuje Wydajność T-SQL dla programistów.",
+      pl: "Nie dla osób, które już codziennie piszą w T-SQL — lepiej pasuje „Wydajność T-SQL dla programistów”.",
     },
     outcomes: {
       en: [
