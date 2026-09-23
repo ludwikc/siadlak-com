@@ -106,7 +106,7 @@ export const pl = {
     seatsLeft: "Wolne miejsca: {n}",
     rowCta: "Zarezerwuj miejsce",
     empty: {
-      title: "Pierwsze otwarte terminy ustalam na Q4 2026.",
+      title: "Pierwsze otwarte terminy są w przygotowaniu.",
       body: "Napisz, który kurs Cię interesuje, a powiadomię Cię jako pierwszego. Albo zamów prywatną edycję.",
       notify: "Powiadom mnie",
       privateRun: "Zamów prywatną edycję",

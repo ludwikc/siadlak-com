@@ -1,4 +1,4 @@
-import { pricing } from "./pricing";
+import { pricing } from "./pricing.js";
 import type { Currency, Locale } from "./types";
 
 export type SeatQuote = {

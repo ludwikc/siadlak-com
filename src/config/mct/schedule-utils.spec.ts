@@ -1,12 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
-  formatSessionDate,
   formatSessionRange,
   getSessionsForCourse,
   getUpcomingSessions,
   nextSession,
   sessionEndsAt,
-  sessionHoursLabel,
 } from "./schedule-utils";
 import type { ScheduledSession } from "./types";
 
@@ -86,16 +84,6 @@ describe("sessionEndsAt", () => {
   });
 });
 
-describe("formatSessionDate", () => {
-  it("formats the Polish full date", () => {
-    expect(formatSessionDate(futureOpen, "pl")).toBe("poniedziałek, 16 listopada 2026");
-  });
-
-  it("formats the English (en-GB) full date", () => {
-    expect(formatSessionDate(futureOpen, "en")).toBe("Monday, 16 November 2026");
-  });
-});
-
 describe("formatSessionRange", () => {
   it("formats a 2-day range within the same month", () => {
     expect(formatSessionRange(futureOpen, "en")).toBe("16–17 November 2026");
@@ -109,11 +97,5 @@ describe("formatSessionRange", () => {
 
   it("formats a 1-day session as a single full date", () => {
     expect(formatSessionRange(futureOtherCourse, "en")).toBe("10 March 2026");
-  });
-});
-
-describe("sessionHoursLabel", () => {
-  it("is the fixed daily hours label", () => {
-    expect(sessionHoursLabel).toBe("09:00–17:00 CET/CEST");
   });
 });

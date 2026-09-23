@@ -1,15 +1,18 @@
 // Env vars: CRM_LEAD_URL (defaults to the crm-lead Supabase edge function),
-// CRM_LEAD_SECRET (sent as x-lead-secret; GET health reports "blob" storage
-// when unset), BLOB_READ_WRITE_TOKEN (read implicitly by @vercel/blob for the
-// fallback store used when the CRM call fails or times out).
+// CRM_LEAD_SECRET (sent as x-lead-secret; when unset the CRM call is skipped
+// entirely and every lead goes to the blob fallback, and GET health reports
+// "blob"), BLOB_READ_WRITE_TOKEN (read implicitly by @vercel/blob for the
+// fallback store used when the CRM is skipped, fails or times out),
+// MCT_LEAD_ALERT_WEBHOOK (optional Discord-style webhook; receives a
+// best-effort {content} alert on every blob fallback).
 import { randomUUID } from "node:crypto";
-import { courses } from "../src/config/mct/courses";
-import { toBlobMarkdown, toCrmPayload } from "../src/config/mct/lead-format";
-import { pricing } from "../src/config/mct/pricing";
-import { quoteSeats, quoteToCents } from "../src/config/mct/pricing-utils";
-import { leadSchema, type LeadPayload } from "../src/config/mct/lead-schema";
-import { sessions } from "../src/config/mct/schedule";
-import { getUpcomingSessions } from "../src/config/mct/schedule-utils";
+import { courses } from "../src/config/mct/courses.js";
+import { toBlobMarkdown, toCrmPayload, type CrmLeadPayload } from "../src/config/mct/lead-format.js";
+import { pricing } from "../src/config/mct/pricing.js";
+import { quoteSeats, quoteToCents } from "../src/config/mct/pricing-utils.js";
+import { leadSchema, type LeadPayload } from "../src/config/mct/lead-schema.js";
+import { sessions } from "../src/config/mct/schedule.js";
+import { getUpcomingSessions } from "../src/config/mct/schedule-utils.js";
 import type { ScheduledSession } from "../src/config/mct/types";
 
 type LeadRequest = {
@@ -26,6 +29,7 @@ type LeadResponse = {
 const CRM_LEAD_URL =
   process.env.CRM_LEAD_URL ?? "https://taswmdahpcubiyrgsjki.supabase.co/functions/v1/crm-lead";
 const CRM_TIMEOUT_MS = 8000;
+const ALERT_TIMEOUT_MS = 3000;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 const MAX_BODY_BYTES = 20_000;
@@ -88,10 +92,60 @@ function computeQuote(
   return {};
 }
 
-async function storeToBlob(submissionId: string, markdown: string, submittedAt: string): Promise<void> {
+type CrmResult = { contactId?: string } | { reason: string };
+
+async function sendToCrm(payload: CrmLeadPayload, secret: string): Promise<CrmResult> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), CRM_TIMEOUT_MS);
+  try {
+    const response = await fetch(CRM_LEAD_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-lead-secret": secret },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    if (response.ok) {
+      const data = (await response.json().catch(() => ({}))) as { contactId?: string; dealId?: string };
+      return { contactId: data.contactId };
+    }
+    const bodyText = await response.text().catch(() => "");
+    console.error("crm-lead", `${response.status} ${bodyText.slice(0, 300)}`);
+    return { reason: `crm-http-${response.status}` };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error("mct-lead-crm-failed", message);
+    return { reason: controller.signal.aborted ? "crm-timeout" : `crm-error: ${message}` };
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function alertFallback(lead: LeadPayload, submissionId: string, reason: string): Promise<void> {
+  const webhook = process.env.MCT_LEAD_ALERT_WEBHOOK;
+  if (!webhook) return;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), ALERT_TIMEOUT_MS);
+  try {
+    await fetch(webhook, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        content: `⚠️ MCT lead fell back to blob (${reason}) — ${lead.tier}/${lead.intent} ${lead.company ?? lead.email} · ${submissionId}`,
+      }),
+      signal: controller.signal,
+    });
+  } catch (error) {
+    console.error("mct-lead-alert-failed", error instanceof Error ? error.message : error);
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function storeToBlob(payload: CrmLeadPayload, submittedAt: string): Promise<void> {
   const { put } = await import("@vercel/blob");
+  const markdown = toBlobMarkdown(payload, submittedAt);
   const date = submittedAt.slice(0, 10);
-  await put(`mct-leads/${date}/${submissionId}.md`, markdown, {
+  await put(`mct-leads/${date}/${payload.submissionId}.md`, markdown, {
     access: "public",
     addRandomSuffix: true,
     contentType: "text/markdown",
@@ -148,7 +202,7 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
     }
   }
 
-  const submissionId = randomUUID();
+  const submissionId = lead.submissionId ?? randomUUID();
   const { quoteCents, currency } = computeQuote(lead, matchedSession?.days);
   const submittedAt = new Date().toISOString();
 
@@ -168,40 +222,32 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
   const enriched: LeadPayload & Record<string, unknown> = { ...raw, ...lead };
   const crmPayload = toCrmPayload(enriched, submissionId, quoteCents, currency);
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), CRM_TIMEOUT_MS);
-  try {
-    const response = await fetch(CRM_LEAD_URL, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        "x-lead-secret": process.env.CRM_LEAD_SECRET ?? "",
-      },
-      body: JSON.stringify(crmPayload),
-      signal: controller.signal,
-    });
-    if (response.ok) {
-      const data = (await response.json().catch(() => ({}))) as { contactId?: string; dealId?: string };
-      res.status(200).json({ ok: true, ref: "crm", contactId: data.contactId });
+  const secret = process.env.CRM_LEAD_SECRET;
+  let reason: string;
+  if (secret) {
+    const crm = await sendToCrm(crmPayload, secret);
+    if (!("reason" in crm)) {
+      res.status(200).json({ ok: true, ref: "crm", contactId: crm.contactId });
       return;
     }
-    const bodyText = await response.text().catch(() => "");
-    console.error("crm-lead", `${response.status} ${bodyText.slice(0, 300)}`);
-  } catch (error) {
-    console.error("mct-lead-crm-failed", error instanceof Error ? error.message : error);
-  } finally {
-    clearTimeout(timeout);
+    reason = crm.reason;
+  } else {
+    console.error("mct-lead: CRM_LEAD_SECRET not set — using blob fallback");
+    reason = "crm-secret-unset";
   }
 
-  try {
-    const markdown = toBlobMarkdown(crmPayload, submittedAt);
-    await storeToBlob(submissionId, markdown, submittedAt);
+  console.error("mct-lead FALLBACK", JSON.stringify({ submissionId, reason }));
+  const [stored] = await Promise.allSettled([
+    storeToBlob(crmPayload, submittedAt),
+    alertFallback(lead, submissionId, reason),
+  ]);
+  if (stored.status === "fulfilled") {
     res.status(200).json({ ok: true, ref: "blob" });
-  } catch (blobError) {
-    console.error(
-      "mct-lead-blob-fallback-failed",
-      blobError instanceof Error ? blobError.message : blobError,
-    );
-    res.status(502).json({ ok: false, error: "store-failed" });
+    return;
   }
+  console.error(
+    "mct-lead-blob-fallback-failed",
+    stored.reason instanceof Error ? stored.reason.message : stored.reason,
+  );
+  res.status(502).json({ ok: false, error: "store-failed" });
 }

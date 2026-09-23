@@ -77,22 +77,32 @@ const validSeatBody = {
   sessionId: "sess-open",
 };
 
+const ALERT_WEBHOOK = "https://discord.example/api/webhooks/alert";
+
 beforeEach(() => {
   fetchMock.mockReset();
   putMock.mockReset();
+  vi.stubEnv("CRM_LEAD_SECRET", "test-secret");
+  vi.stubEnv("MCT_LEAD_ALERT_WEBHOOK", "");
 });
 
 afterEach(() => {
   vi.useRealTimers();
+  vi.unstubAllEnvs();
 });
 
 describe("mct-lead handler", () => {
   it("GET reports the storage mode", async () => {
     const handler = await loadHandler();
-    const res = makeRes();
-    await handler({ method: "GET" }, res);
-    expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual({ ok: true, storage: "blob" });
+    const withSecret = makeRes();
+    await handler({ method: "GET" }, withSecret);
+    vi.stubEnv("CRM_LEAD_SECRET", "");
+    const withoutSecret = makeRes();
+    await handler({ method: "GET" }, withoutSecret);
+    expect([withSecret.body, withoutSecret.body]).toEqual([
+      { ok: true, storage: "crm" },
+      { ok: true, storage: "blob" },
+    ]);
   });
 
   it("rejects a non-GET/POST method with 405", async () => {
@@ -167,6 +177,61 @@ describe("mct-lead handler", () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({ ok: true, ref: "blob" });
     expect(putMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("skips the CRM entirely and stores to blob when CRM_LEAD_SECRET is unset", async () => {
+    vi.stubEnv("CRM_LEAD_SECRET", "");
+    putMock.mockResolvedValue({ url: "https://blob.example/mct-leads/x.md" });
+    const handler = await loadHandler();
+    const res = makeRes();
+    await handler({ method: "POST", body: validSeatBody }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toEqual({ ok: true, ref: "blob" });
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(putMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("posts one alert to the fallback webhook when the CRM fails", async () => {
+    vi.stubEnv("MCT_LEAD_ALERT_WEBHOOK", ALERT_WEBHOOK);
+    fetchMock.mockImplementation(async (url: string) =>
+      url === ALERT_WEBHOOK
+        ? { ok: true, status: 204, json: async () => ({}), text: async () => "" }
+        : { ok: false, status: 500, json: async () => ({}), text: async () => "server error" },
+    );
+    putMock.mockResolvedValue({ url: "https://blob.example/mct-leads/x.md" });
+    const handler = await loadHandler();
+    const res = makeRes();
+    await handler({ method: "POST", body: validSeatBody }, res);
+    const alertCalls = fetchMock.mock.calls.filter(([url]) => url === ALERT_WEBHOOK);
+    expect(res.body).toEqual({ ok: true, ref: "blob" });
+    expect(alertCalls).toHaveLength(1);
+    expect(JSON.parse(alertCalls[0][1].body)).toEqual({
+      content: "⚠️ MCT lead fell back to blob (crm-http-500) — public/seat Firma sp. z o.o. · test-submission-id",
+    });
+  });
+
+  it("keeps the blob response when the alert webhook itself fails", async () => {
+    vi.stubEnv("MCT_LEAD_ALERT_WEBHOOK", ALERT_WEBHOOK);
+    fetchMock.mockRejectedValue(new Error("everything down"));
+    putMock.mockResolvedValue({ url: "https://blob.example/mct-leads/x.md" });
+    const handler = await loadHandler();
+    const res = makeRes();
+    await handler({ method: "POST", body: validSeatBody }, res);
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toEqual({ ok: true, ref: "blob" });
+  });
+
+  it("uses the client-supplied submissionId for the CRM payload", async () => {
+    const submissionId = "3f1c2b8e-5d4a-4c7b-9e2f-1a6b0c9d8e7f";
+    fetchMock.mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ contactId: "contact_1" }),
+      text: async () => "",
+    });
+    const handler = await loadHandler();
+    await handler({ method: "POST", body: { ...validSeatBody, submissionId } }, makeRes());
+    expect(JSON.parse(fetchMock.mock.calls[0][1].body).submissionId).toEqual(submissionId);
   });
 
   it("returns 502 when both the CRM call and the blob fallback fail", async () => {

@@ -45,7 +45,7 @@ export default function SEO({
   noindex = false,
   favicon,
   jsonLd,
-  lang,
+  lang = 'pl',
   alternates,
 }: SEOProps) {
   const fullTitle = !title
@@ -82,7 +82,7 @@ export default function SEO({
   };
 
   return (
-    <Helmet {...(lang ? { htmlAttributes: { lang } } : {})}>
+    <Helmet htmlAttributes={{ lang }}>
       {/* Charset */}
       <meta charSet="UTF-8" />
 

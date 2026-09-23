@@ -113,6 +113,11 @@ describe("getMctCourseEntity", () => {
     expect(entity.offers).toHaveLength(2);
   });
 
+  it("omits courseCode for a course with no official code", () => {
+    const entity = getMctCourseEntity(courses["copilot-studio-agents"], [], "en");
+    expect([courses["copilot-studio-agents"].codes, "courseCode" in entity]).toEqual([[], false]);
+  });
+
   it("uses a single-day workload for a 1-day session", () => {
     const oneDaySession: ScheduledSession = { ...sessionEn, days: 1 };
     const entity = getMctCourseEntity(course, [oneDaySession], "en");

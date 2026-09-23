@@ -101,7 +101,9 @@ export default function ScheduleTable({ courseSlug }: ScheduleTableProps) {
                     <TableRow key={session.id} className="border-white/10 hover:bg-white/5">
                       {!courseSlug && (
                         <TableCell className="font-semibold text-on-dark">
-                          <span className="mr-2 font-mono text-xs text-electric">{course.codes[0]}</span>
+                          {course.codes[0] && (
+                            <span className="mr-2 font-mono text-xs text-electric">{course.codes[0]}</span>
+                          )}
                           {course.title[locale]}
                         </TableCell>
                       )}

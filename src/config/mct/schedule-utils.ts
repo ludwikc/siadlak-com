@@ -2,8 +2,6 @@ import type { CourseSlug, Locale, ScheduledSession } from "./types";
 
 const TZ = "Europe/Warsaw";
 
-export const sessionHoursLabel = "09:00–17:00 CET/CEST";
-
 // Approximates 17:00 Europe/Warsaw on the last day as startsAt + (days*24h − 16h);
 // does not correct for a DST transition falling inside a multi-day session.
 export function sessionEndsAt(s: ScheduledSession): Date {
@@ -35,16 +33,6 @@ const fullDate = (d: Date, locale: Locale): string =>
     year: "numeric",
     timeZone: TZ,
   }).format(d);
-
-export function formatSessionDate(s: ScheduledSession, locale: Locale): string {
-  return new Intl.DateTimeFormat(locale === "pl" ? "pl-PL" : "en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: TZ,
-  }).format(new Date(s.startsAt));
-}
 
 export function formatSessionRange(s: ScheduledSession, locale: Locale): string {
   const start = new Date(s.startsAt);

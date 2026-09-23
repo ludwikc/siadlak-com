@@ -47,7 +47,7 @@ export function getMctCourseEntity(
     "@id": url,
     name: course.title[locale],
     description: course.summary[locale],
-    courseCode: course.codes.join(", "),
+    ...(course.codes.length > 0 ? { courseCode: course.codes.join(", ") } : {}),
     provider: { "@id": IDS.organization },
     inLanguage: ["en", "pl"],
     offers,

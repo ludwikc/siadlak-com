@@ -106,7 +106,7 @@ export const en = {
     seatsLeft: "{n} seats left",
     rowCta: "Request a seat",
     empty: {
-      title: "First public dates are being set for Q4 2026.",
+      title: "First public dates are being set.",
       body: "Tell me which course and I'll notify you first, or request a private run.",
       notify: "Notify me",
       privateRun: "Request a private run",

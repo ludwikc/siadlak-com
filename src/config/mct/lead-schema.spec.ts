@@ -127,4 +127,17 @@ describe("leadSchema", () => {
     const result = leadSchema.safeParse({ ...basePublic, intent: "waitlist", phone: "" });
     expect(result.success).toBe(true);
   });
+
+  it("accepts a uuid submissionId and rejects a non-uuid one", () => {
+    const ok = leadSchema.safeParse({
+      ...basePublic,
+      intent: "waitlist",
+      submissionId: "3f1c2b8e-5d4a-4c7b-9e2f-1a6b0c9d8e7f",
+    });
+    const bad = leadSchema.safeParse({ ...basePublic, intent: "waitlist", submissionId: "not-a-uuid" });
+    expect([ok.success, bad.success]).toEqual([true, false]);
+    if (!bad.success) {
+      expect(bad.error.issues.map((i) => i.path.join("."))).toEqual(["submissionId"]);
+    }
+  });
 });

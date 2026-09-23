@@ -82,6 +82,9 @@ function Field({ id, label, error, className, children }: FieldProps) {
 export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }: MctLeadFormProps) {
   const { locale, t, surface, prefill } = useMct();
   const [now] = useState(() => new Date());
+  const [submissionId] = useState(() =>
+    typeof crypto !== "undefined" && typeof crypto.randomUUID === "function" ? crypto.randomUUID() : undefined,
+  );
   const [submitState, setSubmitState] = useState<SubmitState>({ status: "idle" });
   const successHeadingRef = useRef<HTMLHeadingElement>(null);
 
@@ -217,7 +220,7 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
       const response = await fetch("/api/mct-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(leadRequestBody(payload, values.website, getFlatAttribution())),
+        body: JSON.stringify(leadRequestBody(payload, values.website, getFlatAttribution(), submissionId)),
       });
       const body = (await response.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
       if (!response.ok || !body?.ok) throw new Error(body?.error ?? `http-${response.status}`);

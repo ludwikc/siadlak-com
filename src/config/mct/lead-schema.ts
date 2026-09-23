@@ -27,6 +27,7 @@ export const leadSchema = z
     pagePath: z.string().max(200),
     wantsPrivateQuote: z.boolean().optional(),
     website: z.string().max(0).optional(), // honeypot
+    submissionId: z.string().uuid().optional(),
   })
   .superRefine((v, ctx) => {
     if (v.tier === "public") {

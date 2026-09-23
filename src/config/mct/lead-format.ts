@@ -63,10 +63,6 @@ function buildMessage(p: LeadPayload): string | undefined {
   return combined.length > 0 ? combined : undefined;
 }
 
-export function toDealTitle(p: LeadPayload): string {
-  return `MCT — ${p.tier} — ${p.company}`;
-}
-
 export function toCrmPayload(
   p: LeadPayload & Record<string, unknown>,
   submissionId: string,

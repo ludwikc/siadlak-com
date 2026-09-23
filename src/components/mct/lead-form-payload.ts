@@ -85,8 +85,14 @@ export function leadRequestBody(
   payload: LeadPayloadDraft,
   website: string,
   attribution: Record<string, string>,
+  submissionId?: string,
 ): Record<string, unknown> {
-  return { ...attribution, ...payload, ...(website ? { website } : {}) };
+  return {
+    ...attribution,
+    ...payload,
+    ...(submissionId ? { submissionId } : {}),
+    ...(website ? { website } : {}),
+  };
 }
 
 // leadSchema's superRefine is skipped while a base field aborts (e.g. unchecked consent), so these

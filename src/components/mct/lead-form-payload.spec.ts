@@ -207,6 +207,18 @@ describe("leadRequestBody", () => {
       { ...payload, website: "bot.example" },
     ]);
   });
+
+  it("carries the client submission id, which attribution cannot override, and the schema accepts it", () => {
+    const submissionId = "3f1c2b8e-5d4a-4c7b-9e2f-1a6b0c9d8e7f";
+    const body = leadRequestBody(payload, "", { submissionId: "spoofed" }, submissionId);
+
+    expect(body).toEqual({ ...payload, submissionId });
+    expect(issuePaths(body)).toEqual([]);
+  });
+
+  it("omits submissionId when none was generated", () => {
+    expect("submissionId" in leadRequestBody(payload, "", {})).toEqual(false);
+  });
 });
 
 describe("nextSessionChoice", () => {

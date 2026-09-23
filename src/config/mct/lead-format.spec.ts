@@ -1,13 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { LeadPayload } from "./lead-schema";
-import { toBlobMarkdown, toCrmPayload, toDealTitle, type CrmLeadPayload } from "./lead-format";
-
-describe("toDealTitle", () => {
-  it("joins the tier and company into a deal title", () => {
-    const p = { tier: "enterprise", company: "Firma sp. z o.o." } as LeadPayload;
-    expect(toDealTitle(p)).toBe("MCT — enterprise — Firma sp. z o.o.");
-  });
-});
+import { toBlobMarkdown, toCrmPayload, type CrmLeadPayload } from "./lead-format";
 
 describe("toCrmPayload", () => {
   it("folds enterprise fields into message and collects attribution keys into utm", () => {
