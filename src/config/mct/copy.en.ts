@@ -282,6 +282,7 @@ export const en = {
       required: "This field is required.",
       email: "Enter a valid work email.",
       consent: "Please confirm you agree to be contacted.",
+      range: "Enter a whole number from {min} to {max}.",
     },
   },
   sticky: {

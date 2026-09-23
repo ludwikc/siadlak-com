@@ -149,7 +149,7 @@ export type MctCopy = {
     seatsHint6: string;
     success: { title: string; body: Record<FormMode, string>; calendar: string };
     error: string;
-    errors: { required: string; email: string; consent: string };
+    errors: { required: string; email: string; consent: string; range: string };
   };
   sticky: {
     teams: StickyCopy;

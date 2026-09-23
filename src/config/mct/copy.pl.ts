@@ -282,6 +282,7 @@ export const pl = {
       required: "To pole jest wymagane.",
       email: "Podaj poprawny służbowy e-mail.",
       consent: "Potwierdź zgodę na kontakt.",
+      range: "Wpisz liczbę całkowitą od {min} do {max}.",
     },
   },
   sticky: {

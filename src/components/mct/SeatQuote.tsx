@@ -47,9 +47,7 @@ export default function SeatQuote({ days, seats: controlledSeats, onSeatsChange 
           >
             <Minus className="h-4 w-4" aria-hidden="true" />
           </button>
-          <output aria-live="polite" className="w-8 text-center font-mono text-xl font-bold">
-            {seats}
-          </output>
+          <span className="w-8 text-center font-mono text-xl font-bold">{seats}</span>
           <button
             type="button"
             aria-label={t.form.quote.addSeat}
@@ -62,7 +60,7 @@ export default function SeatQuote({ days, seats: controlledSeats, onSeatsChange 
         </div>
       </div>
 
-      <dl className="mt-6 mb-0 space-y-2 text-sm" aria-live="polite">
+      <dl className="mt-6 mb-0 space-y-2 text-sm" aria-live="polite" aria-atomic="true">
         <div className="flex justify-between gap-4">
           <dt className="text-muted-foreground">
             {fill(t.form.quote.line, { n: quote.seats, price: price(quote.unit) })}
@@ -83,7 +81,7 @@ export default function SeatQuote({ days, seats: controlledSeats, onSeatsChange 
         </div>
       </dl>
 
-      {seats >= HINT_FROM_SEATS && <p className="mt-4 mb-0 text-sm text-electric">{t.form.seatsHint6}</p>}
+      {seats >= HINT_FROM_SEATS && <p className="mt-4 mb-0 text-sm text-electric-blue-dark">{t.form.seatsHint6}</p>}
     </div>
   );
 }
