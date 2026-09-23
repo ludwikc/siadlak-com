@@ -42,16 +42,16 @@ Siadlak.com to ekosystem rozwojowy prowadzony przez Ludwika C. Siadlaka — Micr
 - [Briefing dla zarządu (PL)](https://siadlak.com/szkolenia/briefing-dla-zarzadu): trzygodzinny briefing o Copilocie, Fabric i governance AI dla zarządu
 - [Enterprise training (EN)](https://siadlak.com/mct/enterprise): custom Microsoft training programs for enterprise rollouts
 - [Szkolenia enterprise (PL)](https://siadlak.com/szkolenia/enterprise): programy szkoleniowe na zamówienie dla enterprise
-- [AB-731 (EN)](https://siadlak.com/mct/courses/ab-731): from AI hype to a plan your board can sign off
-- [MS-4014 (EN)](https://siadlak.com/mct/courses/ms-4014): what agents really are, and one that works by the end of the day
-- [PL-7008 (EN)](https://siadlak.com/mct/courses/pl-7008): hands-on Copilot Studio, from topics to an agent published in Teams
-- [Copilot Studio Agents, custom (EN)](https://siadlak.com/mct/courses/copilot-studio-agents): one agent on your own systems, ready for a security review
-- [DP-600 Essentials (EN)](https://siadlak.com/mct/courses/dp-600): the exam-relevant core of DP-600, for people who will run Fabric in production
-- [DP-605 (EN)](https://siadlak.com/mct/courses/dp-605): from a raw export to a Power BI report people actually use
-- [DP-700 Essentials (EN)](https://siadlak.com/mct/courses/dp-700): Fabric data engineering that survives production, not just the demo
-- [DP-300 Essentials (EN)](https://siadlak.com/mct/courses/dp-300): deploy, secure, tune and recover Azure SQL, without the filler
-- [DP-080 (EN)](https://siadlak.com/mct/courses/dp-080): write the T-SQL you need at work, and understand why it works
-- [T-SQL performance, custom (EN)](https://siadlak.com/mct/courses/tsql-performance): read the plan, fix the query, keep it fast
+- [AB-731 (EN)](https://siadlak.com/mct/courses/ab-731): From AI hype to a plan your board can sign off.
+- [MS-4014 (EN)](https://siadlak.com/mct/courses/ms-4014): What agents really are, which Microsoft tool to build them with, and one that works by the end of the day.
+- [PL-7008 (EN)](https://siadlak.com/mct/courses/pl-7008): Hands-on Copilot Studio: from topics to an agent published in Teams.
+- [Copilot Studio Agents, custom (EN)](https://siadlak.com/mct/courses/copilot-studio-agents): One agent on your own systems, built and ready for a security review.
+- [DP-600 Essentials (EN)](https://siadlak.com/mct/courses/dp-600): The exam-relevant core of DP-600, for people who will run Fabric in production.
+- [DP-605 (EN)](https://siadlak.com/mct/courses/dp-605): From a raw export to a report people actually use.
+- [DP-700 Essentials (EN)](https://siadlak.com/mct/courses/dp-700): Fabric data engineering that survives production, not just the demo.
+- [DP-300 Essentials (EN)](https://siadlak.com/mct/courses/dp-300): Deploy, secure, tune and recover Azure SQL, without the filler.
+- [DP-080 (EN)](https://siadlak.com/mct/courses/dp-080): Write the SQL you need at work, and understand why it works.
+- [T-SQL performance, custom (EN)](https://siadlak.com/mct/courses/tsql-performance): Read the plan, fix the query, keep it fast.
 
 ## Wydarzenia
 
