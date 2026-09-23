@@ -1,4 +1,6 @@
 import type { SEOProps } from '@/components/SEO';
+import { en as mctEn } from '@/config/mct/copy.en';
+import { pl as mctPl } from '@/config/mct/copy.pl';
 
 export interface TopicalConfig {
   primaryTopic: string;
@@ -386,11 +388,79 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct',
     seo: {
-      title: 'Mental Code Terminal',
-      description: 'Interaktywne narzędzie diagnostyczne sprawdzające Twoją obecną konfigurację mentalną. Autorstwa Ludwika C. Siadlaka.',
-      keywords: 'mental code terminal, diagnostyka mentalna, Ludwik Siadlak',
+      title: mctEn.meta.hub.title,
+      description: mctEn.meta.hub.description,
+      keywords: 'Microsoft training, Copilot training, Fabric training, Azure SQL training, Microsoft Certified Trainer, corporate training',
       url: '/mct',
-      type: 'tool'
+      type: 'course',
+      locale: 'en_US'
+    },
+    topical: {
+      primaryTopic: 'Microsoft Fabric, Copilot and Azure SQL training for teams',
+      secondaryTopics: ['executive briefing', 'enterprise training', 'Microsoft Certified Trainer'],
+      intent: 'commercial',
+      significantLinks: ['/mct/executive-briefing', '/mct/enterprise', '/mct/courses/dp-600'],
+    }
+  },
+  {
+    path: '/szkolenia',
+    seo: {
+      title: mctPl.meta.hub.title,
+      description: mctPl.meta.hub.description,
+      keywords: 'szkolenia Microsoft, szkolenia Copilot, szkolenia Fabric, szkolenia Azure SQL, Microsoft Certified Trainer, szkolenia dla firm',
+      url: '/szkolenia',
+      type: 'course',
+      locale: 'pl_PL'
+    },
+    topical: {
+      primaryTopic: 'szkolenia Microsoft Fabric, Copilot i Azure SQL dla zespołów',
+      secondaryTopics: ['briefing dla zarządu', 'szkolenia enterprise', 'Microsoft Certified Trainer'],
+      intent: 'commercial',
+      significantLinks: ['/szkolenia/briefing-dla-zarzadu', '/szkolenia/enterprise', '/szkolenia/kursy/dp-600'],
+    }
+  },
+  {
+    path: '/mct/executive-briefing',
+    seo: {
+      title: mctEn.meta.briefing.title,
+      description: mctEn.meta.briefing.description,
+      keywords: 'executive briefing, Copilot ROI, Fabric strategy, AI governance, Microsoft training',
+      url: '/mct/executive-briefing',
+      type: 'course',
+      locale: 'en_US'
+    }
+  },
+  {
+    path: '/szkolenia/briefing-dla-zarzadu',
+    seo: {
+      title: mctPl.meta.briefing.title,
+      description: mctPl.meta.briefing.description,
+      keywords: 'briefing dla zarządu, ROI Copilot, strategia Fabric, governance AI, szkolenia Microsoft',
+      url: '/szkolenia/briefing-dla-zarzadu',
+      type: 'course',
+      locale: 'pl_PL'
+    }
+  },
+  {
+    path: '/mct/enterprise',
+    seo: {
+      title: mctEn.meta.enterprise.title,
+      description: mctEn.meta.enterprise.description,
+      keywords: 'enterprise Microsoft training, custom training program, private training, Microsoft Certified Trainer',
+      url: '/mct/enterprise',
+      type: 'course',
+      locale: 'en_US'
+    }
+  },
+  {
+    path: '/szkolenia/enterprise',
+    seo: {
+      title: mctPl.meta.enterprise.title,
+      description: mctPl.meta.enterprise.description,
+      keywords: 'szkolenia enterprise, program szkoleniowy na zamówienie, szkolenie prywatne, Microsoft Certified Trainer',
+      url: '/szkolenia/enterprise',
+      type: 'course',
+      locale: 'pl_PL'
     }
   },
   {

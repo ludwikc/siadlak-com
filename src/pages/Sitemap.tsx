@@ -1,7 +1,7 @@
 import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/design-system/components/glass-card';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Book, Mic2, Video, FileText, Mail } from '@/lib/icons';
+import { ExternalLink, Book, Mic2, Video, FileText, Mail, GraduationCap } from '@/lib/icons';
 
 const Sitemap = () => {
   const siteStructure = [
@@ -32,6 +32,25 @@ const Sitemap = () => {
         { name: 'LifeOS: System Upgrade', path: '/program/lifeos-system-upgrade', description: 'Program fundamentalnej transformacji' },
         { name: 'Silna Głowa', path: '/program/odpornosc', description: 'Program wzmocnienia mentalnego' },
         ]
+    },
+    {
+      category: 'Szkolenia Microsoft (B2B)',
+      icon: <GraduationCap className="h-5 w-5" />,
+      pages: [
+        { name: 'Szkolenia Microsoft — hub', path: '/szkolenia', description: 'Fabric, Copilot i Azure SQL dla zespołów 3–30 osób' },
+        { name: 'Briefing dla zarządu', path: '/szkolenia/briefing-dla-zarzadu', description: 'Trzygodzinny briefing o Copilocie, Fabric i governance AI' },
+        { name: 'Szkolenia enterprise', path: '/szkolenia/enterprise', description: 'Programy szkoleniowe na zamówienie dla enterprise' },
+        { name: 'Transformacja AI w organizacji', path: '/szkolenia/kursy/ab-731', description: 'AB-731 — od hype\'u AI do planu dla zarządu' },
+        { name: 'Wprowadzenie do budowy agentów AI', path: '/szkolenia/kursy/ms-4014', description: 'MS-4014 — czym naprawdę są agenci i jak zbudować pierwszego' },
+        { name: 'Agenci w Microsoft Copilot Studio', path: '/szkolenia/kursy/pl-7008', description: 'PL-7008 — od tematów do agenta opublikowanego w Teams' },
+        { name: 'Agenci Copilot Studio na Twoich danych', path: '/szkolenia/kursy/copilot-studio-agents', description: 'Szkolenie na zamówienie — agent gotowy na przegląd bezpieczeństwa' },
+        { name: 'DP-600 Essentials: rozwiązania analityczne w Microsoft Fabric', path: '/szkolenia/kursy/dp-600', description: 'Skondensowane 2-dniowe DP-600' },
+        { name: 'Przygotowanie i wizualizacja danych w Power BI', path: '/szkolenia/kursy/dp-605', description: 'DP-605 — od surowego eksportu do raportu, z którego ludzie korzystają' },
+        { name: 'DP-700 Essentials: inżynieria danych w Microsoft Fabric', path: '/szkolenia/kursy/dp-700', description: 'Skondensowane 2-dniowe DP-700' },
+        { name: 'DP-300 Essentials: bazy danych w Azure SQL', path: '/szkolenia/kursy/dp-300', description: 'Skondensowane 2-dniowe DP-300' },
+        { name: 'Zapytania i modyfikacja danych w Transact-SQL', path: '/szkolenia/kursy/dp-080', description: 'DP-080 — SQL potrzebny w pracy, ze zrozumieniem' },
+        { name: 'Wydajność T-SQL dla programistów', path: '/szkolenia/kursy/tsql-performance', description: 'Szkolenie na zamówienie — czytanie planu wykonania i strojenie zapytań' },
+      ]
     },
     {
       category: 'Podcasty',
