@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { courses } from "@/config/mct/courses";
+import { faq } from "@/config/mct/faq";
 import type { ScheduledSession } from "@/config/mct/types";
 import { BASE_URL, IDS } from "./structured-data";
 import {
@@ -7,6 +8,7 @@ import {
   getMctBriefingService,
   getMctCourseEntity,
   getMctEnterpriseService,
+  getMctFaqSchema,
   getMctHubEntities,
 } from "./structured-data-mct";
 
@@ -195,5 +197,29 @@ describe("getMctBreadcrumb", () => {
         { "@type": "ListItem", position: 2, name: "Training", item: `${BASE_URL}/szkolenia` },
       ],
     });
+  });
+});
+
+describe("getMctFaqSchema", () => {
+  it("builds a FAQPage from the scoped items in the given locale", () => {
+    const briefingItems = faq.filter((item) => item.scope.includes("briefing"));
+
+    expect(getMctFaqSchema("pl", "briefing")).toEqual({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: briefingItems.map((item) => ({
+        "@type": "Question",
+        name: item.question.pl,
+        acceptedAnswer: { "@type": "Answer", text: item.answer.pl },
+      })),
+    });
+  });
+
+  it("excludes items outside the scope", () => {
+    const names = getMctFaqSchema("en", "course").mainEntity.map((q) => q.name);
+    const outOfScope = faq.filter((item) => !item.scope.includes("course")).map((item) => item.question.en);
+
+    expect(outOfScope.length).toBeGreaterThan(0);
+    expect(names.filter((name) => outOfScope.includes(name))).toEqual([]);
   });
 });

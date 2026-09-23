@@ -7,7 +7,9 @@ import { cardClass } from "./mct-styles";
 
 const LANE_ORDER: TierId[] = ["public", "briefing", "enterprise"];
 
-export default function ProcessLanes() {
+type ProcessLanesProps = { emphasis?: TierId };
+
+export default function ProcessLanes({ emphasis }: ProcessLanesProps) {
   const { t } = useMct();
   const ref = useReveal<HTMLElement>();
 
@@ -17,7 +19,11 @@ export default function ProcessLanes() {
         <SectionHead eyebrow={t.process.eyebrow} title={t.process.title} />
         <div className="grid gap-6 lg:grid-cols-3">
           {LANE_ORDER.map((lane) => (
-            <div key={lane} className={cn(cardClass, "p-8")} data-reveal-child>
+            <div
+              key={lane}
+              className={cn(cardClass, "p-8", lane === emphasis && "border-electric/60")}
+              data-reveal-child
+            >
               <h3 className="mt-0 mb-6 text-lg font-bold text-on-dark">{t.process.lanes[lane].title}</h3>
               <ol className="m-0 flex list-none flex-col gap-5 p-0">
                 {t.process.lanes[lane].beats.map((beat, index) => (

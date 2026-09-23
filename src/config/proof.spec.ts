@@ -15,6 +15,10 @@ const BANNED = [
   "(100+)",
   "500+ kapitanów",
   "150+ Aktywnych",
+  "20+ years",
+  "20+ Years",
+  "10,000+ Microsoft certifications",
+  "Engineers Trained",
 ];
 
 function walk(dir: string): string[] {

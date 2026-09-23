@@ -48,7 +48,11 @@ export default function SEO({
   lang,
   alternates,
 }: SEOProps) {
-  const fullTitle = title ? `${title} | ${TITLE_SUFFIX}` : defaultSEO.title;
+  const fullTitle = !title
+    ? defaultSEO.title
+    : title.endsWith(TITLE_SUFFIX)
+      ? title
+      : `${title} | ${TITLE_SUFFIX}`;
   const imageUrl = image.startsWith('http') ? image : `${defaultSEO.url}${image}`;
   const canonicalUrl = url === defaultSEO.url ? url : `${defaultSEO.url}${url}`;
 

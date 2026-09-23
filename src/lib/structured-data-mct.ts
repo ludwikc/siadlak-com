@@ -1,10 +1,11 @@
 import { getCopy } from "@/config/mct/copy";
+import { faq } from "@/config/mct/faq";
 import { briefingPath, coursePath, enterprisePath, hubPath } from "@/config/mct/locale";
 import { pricing } from "@/config/mct/pricing";
 import { seatPrice } from "@/config/mct/pricing-utils";
 import { sessionEndsAt } from "@/config/mct/schedule-utils";
-import type { Course, Currency, Locale, ScheduledSession } from "@/config/mct/types";
-import { BASE_URL, IDS, getBreadcrumbSchema, getWebPageEntity } from "./structured-data";
+import type { Course, Currency, FaqItem, Locale, ScheduledSession } from "@/config/mct/types";
+import { BASE_URL, IDS, getBreadcrumbSchema, getFAQSchema, getWebPageEntity } from "./structured-data";
 
 type BreadcrumbItem = { name: string; path: string };
 
@@ -100,6 +101,14 @@ export function getMctEnterpriseService(locale: Locale) {
 export function getMctBreadcrumb(locale: Locale, items: BreadcrumbItem[]) {
   const home = { name: locale === "pl" ? "Strona główna" : "Home", path: "/" };
   return getBreadcrumbSchema([home, ...items]);
+}
+
+export function getMctFaqSchema(locale: Locale, scope: FaqItem["scope"][number]) {
+  return getFAQSchema(
+    faq
+      .filter((item) => item.scope.includes(scope))
+      .map((item) => ({ question: item.question[locale], answer: item.answer[locale] })),
+  );
 }
 
 export function getMctHubEntities(locale: Locale, courseList: Course[]) {
