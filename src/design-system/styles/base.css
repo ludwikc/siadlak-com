@@ -44,3 +44,78 @@ html {
   --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --font-sans: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+
+/* === MCT mini-site (/mct, /szkolenia) ===
+   Kept here, before @tailwind utilities, so utility classes can override them. */
+.mct-display {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: clamp(2.75rem, 8.5vw, 8rem);
+}
+
+.mct-display-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px hsl(var(--text-on-dark));
+}
+
+@media (max-width: 640px) {
+  .mct-display-outline { -webkit-text-stroke-width: 1px; }
+}
+
+@media (min-width: 1280px) {
+  .mct-display-outline { -webkit-text-stroke-width: 2px; }
+}
+
+@supports not (-webkit-text-stroke: 1px) {
+  .mct-display-outline { color: hsl(var(--text-on-dark-secondary)); }
+}
+
+.mct-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@keyframes mct-marquee {
+  to { transform: translateX(-50%); }
+}
+
+.mct-marquee-track {
+  animation: mct-marquee 45s linear infinite;
+}
+
+.mct-marquee:hover .mct-marquee-track {
+  animation-play-state: paused;
+}
+
+.mct-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.mct-reveal [data-reveal-child] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.mct-reveal.is-visible,
+.mct-reveal.is-visible [data-reveal-child] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mct-marquee-track { animation: none; }
+  .mct-reveal,
+  .mct-reveal [data-reveal-child] { transform: none; transition: none; }
+}

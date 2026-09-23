@@ -18,6 +18,8 @@ const preset: Partial<Config> = {
   			'depth-purple-light': 'hsl(var(--depth-purple-light))',
   			'depth-purple-dark': 'hsl(var(--depth-purple-dark))',
   			'void-black': 'hsl(var(--void-black))',
+  			'mct-navy': 'hsl(var(--mct-navy))',
+  			'mct-navy-elevated': 'hsl(var(--mct-navy-elevated))',
   			'diamond-light': 'hsl(var(--diamond-light))',
   			'text-on-dark': 'hsl(var(--text-on-dark))',
   			'text-on-light': 'hsl(var(--text-on-light))',

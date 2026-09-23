@@ -18,6 +18,7 @@ type StickyCtaBarProps = {
   /** Hide within this distance of the document end so it never covers footer CTAs. */
   hideNearBottomPx?: number;
   dataCta?: string;
+  dismissLabel?: string;
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -62,6 +63,7 @@ export default function StickyCtaBar({
   showAfterScrollPx = 600,
   hideNearBottomPx = 900,
   dataCta,
+  dismissLabel = "Zamknij",
 }: StickyCtaBarProps) {
   const dismissKey = storageKey ? `stickyCtaDismissed:${storageKey}` : null;
   const [dismissed, setDismissed] = useState<boolean>(() => {
@@ -150,7 +152,7 @@ export default function StickyCtaBar({
         <button
           type="button"
           onClick={dismiss}
-          aria-label="Zamknij"
+          aria-label={dismissLabel}
           className="flex-shrink-0 rounded-full p-2 text-dim transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric"
         >
           <X size={18} />

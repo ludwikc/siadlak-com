@@ -30,6 +30,10 @@
   --surface-dark-elevated: 0 0% 6%;
   --surface-dark-floating: 0 0% 10%;
 
+  /* === MCT MINI-SITE (B2B navy surfaces) === */
+  --mct-navy: 228 45% 6%;
+  --mct-navy-elevated: 228 35% 9%;
+
   /* === TEXT UTILITIES === */
   --text-on-dark: 210 17% 96%;
   --text-on-dark-secondary: 215 14% 65%;
