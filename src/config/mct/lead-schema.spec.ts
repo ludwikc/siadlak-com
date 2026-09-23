@@ -88,4 +88,43 @@ describe("leadSchema", () => {
     const result = leadSchema.safeParse({ ...basePublic, intent: "waitlist", courseSlug: "not-a-real-course" });
     expect(result.success).toBe(false);
   });
+
+  it("fails on sessionId when a public seat booking has none", () => {
+    const result = leadSchema.safeParse({ ...basePublic, intent: "seat" });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues.map((i) => i.path.join("."))).toContain("sessionId");
+    }
+  });
+
+  it("fails on topic when a briefing request has none", () => {
+    const result = leadSchema.safeParse({
+      name: "Jan Nowak",
+      email: "jan@firma.pl",
+      company: "Firma sp. z o.o.",
+      tier: "briefing",
+      intent: "briefing",
+      language: "pl",
+      locale: "pl",
+      consent: true,
+      pagePath: "/szkolenia/briefing-dla-zarzadu",
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues.map((i) => i.path.join("."))).toContain("topic");
+    }
+  });
+
+  it("coerces a numeric-string seat count", () => {
+    const result = leadSchema.safeParse({ ...basePublic, intent: "waitlist", seats: "3" });
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.seats).toBe(3);
+    }
+  });
+
+  it("accepts an empty phone string", () => {
+    const result = leadSchema.safeParse({ ...basePublic, intent: "waitlist", phone: "" });
+    expect(result.success).toBe(true);
+  });
 });

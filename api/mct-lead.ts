@@ -10,6 +10,7 @@ import { quoteSeats, quoteToCents } from "../src/config/mct/pricing-utils";
 import { leadSchema, type LeadPayload } from "../src/config/mct/lead-schema";
 import { sessions } from "../src/config/mct/schedule";
 import { getUpcomingSessions } from "../src/config/mct/schedule-utils";
+import type { ScheduledSession } from "../src/config/mct/types";
 
 type LeadRequest = {
   method?: string;
@@ -37,22 +38,45 @@ function clientIp(req: LeadRequest): string {
   return (raw ?? "unknown").split(",")[0].trim();
 }
 
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
+function pruneRateLimitHits(ip: string, now: number): number[] {
   const hits = (rateLimitHits.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
-  hits.push(now);
-  rateLimitHits.set(ip, hits);
-  return hits.length > RATE_LIMIT_MAX;
+  if (hits.length > 0) {
+    rateLimitHits.set(ip, hits);
+  } else {
+    rateLimitHits.delete(ip);
+  }
+  return hits;
 }
 
-function computeQuote(p: LeadPayload): { quoteCents?: number; currency?: "eur" | "pln" } {
+// Only an ACCEPTED request consumes quota: a 429 must not itself push a hit,
+// or repeated rejections would keep the window artificially full forever.
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const hits = pruneRateLimitHits(ip, now);
+  if (hits.length >= RATE_LIMIT_MAX) return true;
+  hits.push(now);
+  rateLimitHits.set(ip, hits);
+  return false;
+}
+
+function isHoneypotFilled(raw: Record<string, unknown>): boolean {
+  const { website } = raw;
+  if (website === undefined) return false;
+  if (typeof website === "string") return website.length > 0;
+  return true; // present but not a string — never let field validation name it
+}
+
+function computeQuote(
+  p: LeadPayload,
+  sessionDays?: 1 | 2,
+): { quoteCents?: number; currency?: "eur" | "pln" } {
   const currencyCode = pricing.currencyByLocale[p.locale];
   const currency = currencyCode.toLowerCase() as "eur" | "pln";
 
   if (p.tier === "public" && p.courseSlug && p.seats) {
-    const course = courses[p.courseSlug];
-    if (!course) return {};
-    const quote = quoteSeats(p.seats, course.days, currencyCode);
+    const days = sessionDays ?? courses[p.courseSlug]?.days;
+    if (!days) return {};
+    const quote = quoteSeats(p.seats, days, currencyCode);
     return { quoteCents: quoteToCents(quote.total), currency };
   }
 
@@ -64,11 +88,12 @@ function computeQuote(p: LeadPayload): { quoteCents?: number; currency?: "eur" |
   return {};
 }
 
-async function storeToBlob(submissionId: string, markdown: string): Promise<void> {
+async function storeToBlob(submissionId: string, markdown: string, submittedAt: string): Promise<void> {
   const { put } = await import("@vercel/blob");
-  const date = new Date().toISOString().slice(0, 10);
+  const date = submittedAt.slice(0, 10);
   await put(`mct-leads/${date}/${submissionId}.md`, markdown, {
-    access: "private",
+    access: "public",
+    addRandomSuffix: true,
     contentType: "text/markdown",
   });
 }
@@ -88,8 +113,8 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
     unknown
   >;
 
-  if (typeof raw.website === "string" && raw.website.length > 0) {
-    res.status(200).json({ ok: true }); // honeypot: pretend success, store nothing
+  if (isHoneypotFilled(raw)) {
+    res.status(200).json({ ok: true, ref: "crm" }); // indistinguishable from a real success
     return;
   }
 
@@ -110,22 +135,25 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
   }
   const lead = parsed.data;
 
+  let matchedSession: ScheduledSession | undefined;
   if (lead.tier === "public" && lead.intent === "seat") {
     const now = new Date();
     const upcoming = getUpcomingSessions(sessions, now);
-    const session = upcoming.find((s) => s.id === lead.sessionId);
-    if (!session) {
+    matchedSession = upcoming.find(
+      (s) => s.id === lead.sessionId && s.courseSlug === lead.courseSlug && s.status !== "full",
+    );
+    if (!matchedSession) {
       res.status(400).json({ ok: false, error: "session-unavailable" });
       return;
     }
   }
 
   const submissionId = randomUUID();
-  const { quoteCents, currency } = computeQuote(lead);
+  const { quoteCents, currency } = computeQuote(lead, matchedSession?.days);
   const submittedAt = new Date().toISOString();
 
-  // Log-based safety net: if both the CRM call and the blob fallback fail,
-  // the payload survives in the Vercel function logs.
+  // Safety net: if both stores fail below, only these five fields (not the
+  // full submission) survive in the Vercel function logs.
   console.log(
     "mct-lead",
     JSON.stringify({
@@ -152,23 +180,28 @@ export default async function handler(req: LeadRequest, res: LeadResponse) {
       body: JSON.stringify(crmPayload),
       signal: controller.signal,
     });
-    if (!response.ok) throw new Error(`CRM responded ${response.status}`);
-    const data = (await response.json()) as { contactId?: string; dealId?: string };
-    res.status(200).json({ ok: true, ref: "crm", contactId: data.contactId });
+    if (response.ok) {
+      const data = (await response.json().catch(() => ({}))) as { contactId?: string; dealId?: string };
+      res.status(200).json({ ok: true, ref: "crm", contactId: data.contactId });
+      return;
+    }
+    const bodyText = await response.text().catch(() => "");
+    console.error("crm-lead", `${response.status} ${bodyText.slice(0, 300)}`);
   } catch (error) {
     console.error("mct-lead-crm-failed", error instanceof Error ? error.message : error);
-    try {
-      const markdown = toBlobMarkdown(lead, submittedAt, submissionId);
-      await storeToBlob(submissionId, markdown);
-      res.status(200).json({ ok: true, ref: "blob" });
-    } catch (blobError) {
-      console.error(
-        "mct-lead-blob-fallback-failed",
-        blobError instanceof Error ? blobError.message : blobError,
-      );
-      res.status(502).json({ ok: false, error: "store-failed" });
-    }
   } finally {
     clearTimeout(timeout);
+  }
+
+  try {
+    const markdown = toBlobMarkdown(crmPayload, submittedAt);
+    await storeToBlob(submissionId, markdown, submittedAt);
+    res.status(200).json({ ok: true, ref: "blob" });
+  } catch (blobError) {
+    console.error(
+      "mct-lead-blob-fallback-failed",
+      blobError instanceof Error ? blobError.message : blobError,
+    );
+    res.status(502).json({ ok: false, error: "store-failed" });
   }
 }

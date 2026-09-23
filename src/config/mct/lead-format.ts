@@ -20,8 +20,6 @@ export type CrmLeadPayload = {
   utm?: Record<string, string>;
 };
 
-// Key names produced by src/lib/attribution.ts#getFlatAttribution: session
-// params as-is, first-touch params prefixed `ft_`.
 const ATTRIBUTION_PARAMS = [
   "utm_source",
   "utm_medium",
@@ -45,8 +43,6 @@ function extractUtm(raw: Record<string, unknown>): Record<string, string> | unde
   return Object.keys(utm).length > 0 ? utm : undefined;
 }
 
-// Briefing/enterprise fields have no home in the CRM schema's typed columns,
-// so they are folded into `message` as labelled lines instead of dropped.
 function foldExtrasIntoLines(p: LeadPayload): string[] {
   const lines: string[] = [];
   if (p.topic) lines.push(`Topic: ${p.topic}`);
@@ -98,12 +94,11 @@ export function toCrmPayload(
   };
 }
 
-export function toBlobMarkdown(p: LeadPayload, submittedAt: string, submissionId: string): string {
+export function toBlobMarkdown(p: CrmLeadPayload, submittedAt: string): string {
   const yaml = (value: unknown) => JSON.stringify(value ?? null);
-  const message = buildMessage(p);
   return [
     "---",
-    `submission_id: ${yaml(submissionId)}`,
+    `submission_id: ${yaml(p.submissionId)}`,
     `submitted_at: ${yaml(submittedAt)}`,
     `tier: ${yaml(p.tier)}`,
     `intent: ${yaml(p.intent)}`,
@@ -117,8 +112,11 @@ export function toBlobMarkdown(p: LeadPayload, submittedAt: string, submissionId
     `language: ${yaml(p.language)}`,
     `locale: ${yaml(p.locale)}`,
     `page_path: ${yaml(p.pagePath)}`,
+    `quote_cents: ${yaml(p.quoteCents)}`,
+    `currency: ${yaml(p.currency)}`,
+    `utm: ${yaml(p.utm)}`,
     "---",
     "",
-    message ? `## Message\n\n${message}\n` : "",
+    p.message ? `## Message\n\n${p.message}\n` : "",
   ].join("\n");
 }

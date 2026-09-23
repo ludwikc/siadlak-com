@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { LeadPayload } from "./lead-schema";
-import { toBlobMarkdown, toCrmPayload, toDealTitle } from "./lead-format";
+import { toBlobMarkdown, toCrmPayload, toDealTitle, type CrmLeadPayload } from "./lead-format";
 
 describe("toDealTitle", () => {
   it("joins the tier and company into a deal title", () => {
@@ -99,24 +99,51 @@ describe("toCrmPayload", () => {
 });
 
 describe("toBlobMarkdown", () => {
-  it("includes the submission id, contact fields and folded message body", () => {
-    const payload: LeadPayload = {
-      name: "Anna Kowalska",
+  it("renders the full CRM payload, including quote and attribution, as frontmatter markdown", () => {
+    const crmPayload: CrmLeadPayload = {
+      submissionId: "sub_789",
       email: "anna@firma.pl",
+      name: "Anna Kowalska",
       company: "Firma sp. z o.o.",
+      phone: undefined,
       tier: "briefing",
       intent: "briefing",
+      courseSlug: undefined,
+      sessionId: undefined,
+      seats: undefined,
       language: "pl",
       locale: "pl",
-      consent: true,
+      message: "Topic: Copilot dla zarządu",
       pagePath: "/szkolenia/briefing-dla-zarzadu",
-      topic: "Copilot dla zarządu",
+      quoteCents: 790000,
+      currency: "pln",
+      utm: { utm_source: "newsletter" },
     };
 
-    const markdown = toBlobMarkdown(payload, "2026-09-23T10:00:00.000Z", "sub_789");
+    const expected = [
+      "---",
+      'submission_id: "sub_789"',
+      'submitted_at: "2026-09-23T10:00:00.000Z"',
+      'tier: "briefing"',
+      'intent: "briefing"',
+      'name: "Anna Kowalska"',
+      'email: "anna@firma.pl"',
+      'company: "Firma sp. z o.o."',
+      "phone: null",
+      "course_slug: null",
+      "session_id: null",
+      "seats: null",
+      'language: "pl"',
+      'locale: "pl"',
+      'page_path: "/szkolenia/briefing-dla-zarzadu"',
+      "quote_cents: 790000",
+      'currency: "pln"',
+      'utm: {"utm_source":"newsletter"}',
+      "---",
+      "",
+      "## Message\n\nTopic: Copilot dla zarządu\n",
+    ].join("\n");
 
-    expect(markdown).toContain('submission_id: "sub_789"');
-    expect(markdown).toContain('email: "anna@firma.pl"');
-    expect(markdown).toContain("Topic: Copilot dla zarządu");
+    expect(toBlobMarkdown(crmPayload, "2026-09-23T10:00:00.000Z")).toEqual(expected);
   });
 });
