@@ -1,7 +1,7 @@
 import type { z } from "zod";
 import type { BriefingTopicId, DeliveryOption, FormMode, StackOption } from "@/config/mct/copy";
 import type { leadSchema } from "@/config/mct/lead-schema";
-import type { CourseSlug, LeadIntent, Locale, TierId } from "@/config/mct/types";
+import type { CourseSlug, LeadIntent, Locale, ScheduledSession, TierId } from "@/config/mct/types";
 
 export const NOTIFY_SESSION = "notify";
 export const PRIVATE_QUOTE_FROM_SEATS = 6;
@@ -69,6 +69,26 @@ export function pickSessionChoice(
   return sessionIds[0] ?? NOTIFY_SESSION;
 }
 
+export function nextSessionChoice(
+  prev: string,
+  prefill: { intent?: LeadIntent; courseSlug?: CourseSlug; sessionId?: string },
+  currentCourse: CourseSlug | "",
+  upcoming: ScheduledSession[],
+): string {
+  if (!prefill.courseSlug && !prefill.sessionId) return prev;
+  const course = prefill.courseSlug ?? currentCourse;
+  const offered = upcoming.filter((s) => s.courseSlug === course && s.status !== "full").map((s) => s.id);
+  return pickSessionChoice(offered, prefill);
+}
+
+export function leadRequestBody(
+  payload: LeadPayloadDraft,
+  website: string,
+  attribution: Record<string, string>,
+): Record<string, unknown> {
+  return { ...attribution, ...payload, ...(website ? { website } : {}) };
+}
+
 // leadSchema's superRefine is skipped while a base field aborts (e.g. unchecked consent), so these
 // per-mode requirements are listed up front to show every missing field on the first submit.
 export function missingModeFields(values: LeadFormValues): Array<keyof LeadFormValues> {
@@ -88,7 +108,6 @@ export function buildLeadPayload(values: LeadFormValues, ctx: LeadPayloadContext
     company: values.company,
     phone: optionalText(values.phone),
     consent: values.consent,
-    ...(values.website ? { website: values.website } : {}),
   };
 
   if (values.mode === "seat") {

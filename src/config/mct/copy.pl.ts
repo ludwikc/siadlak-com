@@ -278,11 +278,16 @@ export const pl = {
       calendar: "Wybierz 20-minutowy termin",
     },
     error: "Coś poszło nie tak. Twoje odpowiedzi są nadal tutaj. Spróbuj ponownie albo napisz na {email}.",
+    apiErrors: {
+      sessionUnavailable: "Ten termin właśnie się zapełnił albo nie jest już dostępny. Wybierz inny termin lub opcję „Powiadom mnie”.",
+      rateLimited: "Zbyt wiele zgłoszeń z tej sieci. Spróbuj ponownie za kilka minut albo napisz na {email}.",
+    },
     errors: {
       required: "To pole jest wymagane.",
       email: "Podaj poprawny służbowy e-mail.",
       consent: "Potwierdź zgodę na kontakt.",
       range: "Wpisz liczbę całkowitą od {min} do {max}.",
+      tooShort: "Za krótkie.",
     },
   },
   sticky: {

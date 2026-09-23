@@ -9,7 +9,7 @@ import { CALENDAR_URL, EMAIL, PORTAL_PRIVACY_URL } from "@/config/mct/contact";
 import { courseList, courses } from "@/config/mct/courses";
 import { leadSchema } from "@/config/mct/lead-schema";
 import { sessions } from "@/config/mct/schedule";
-import { formatSessionRange, getSessionsForCourse } from "@/config/mct/schedule-utils";
+import { formatSessionRange, getSessionsForCourse, getUpcomingSessions } from "@/config/mct/schedule-utils";
 import type { CourseSlug, Locale } from "@/config/mct/types";
 import { Checkbox } from "@/design-system/components/checkbox";
 import { CTAButton } from "@/design-system/components/cta-button";
@@ -28,8 +28,10 @@ import { getFlatAttribution } from "@/lib/attribution";
 import { cn } from "@/lib/utils";
 import {
   buildLeadPayload,
+  leadRequestBody,
   missingModeFields,
   MODE_TIER,
+  nextSessionChoice,
   NOTIFY_SESSION,
   pickSessionChoice,
   PRIVATE_QUOTE_FROM_SEATS,
@@ -41,7 +43,7 @@ import SeatQuote from "./SeatQuote";
 
 type MctLeadFormProps = { defaultMode?: FormMode; defaultCourseSlug?: CourseSlug };
 
-type SubmitState = { status: "idle" } | { status: "success"; mode: FormMode } | { status: "error" };
+type SubmitState = { status: "idle" } | { status: "success"; mode: FormMode } | { status: "error"; reason: string };
 
 const MODES: FormMode[] = ["seat", "briefing", "scope"];
 const TOPICS: TopicChoice[] = ["a", "b", "c", "custom"];
@@ -119,6 +121,7 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
     control,
     handleSubmit,
     setValue,
+    getValues,
     watch,
     clearErrors,
     formState: { errors, isSubmitting },
@@ -171,16 +174,14 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
     setSubmitState({ status: "idle" });
     clearErrors();
     setValue("mode", TIER_MODE[prefill.tier]);
+    const upcoming = getUpcomingSessions(sessions, now);
+    const choice = nextSessionChoice(getValues("sessionChoice"), prefill, getValues("courseSlug"), upcoming);
     if (prefill.courseSlug) setValue("courseSlug", prefill.courseSlug);
-    const offered = bookableSessions(prefill.courseSlug ?? "", now);
-    const choice = pickSessionChoice(
-      offered.map((s) => s.id),
-      prefill,
-    );
+    if (choice === getValues("sessionChoice")) return;
     setValue("sessionChoice", choice);
-    const session = offered.find((s) => s.id === choice);
+    const session = upcoming.find((s) => s.id === choice);
     if (session) setValue("language", session.language);
-  }, [prefill, now, setValue, clearErrors]);
+  }, [prefill, now, setValue, getValues, clearErrors]);
 
   const selectMode = (next: FormMode) => {
     clearErrors();
@@ -201,6 +202,7 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
     if (field === "email") return t.form.errors.email;
     if (field === "consent") return t.form.errors.consent;
     if (field === "leaders") return fill(t.form.errors.range, LEADERS_RANGE);
+    if (errors[field]?.type === "too_small" && String(getValues(field)).trim() !== "") return t.form.errors.tooShort;
     return t.form.errors.required;
   };
 
@@ -215,7 +217,7 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
       const response = await fetch("/api/mct-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...getFlatAttribution(), ...payload }),
+        body: JSON.stringify(leadRequestBody(payload, values.website, getFlatAttribution())),
       });
       const body = (await response.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
       if (!response.ok || !body?.ok) throw new Error(body?.error ?? `http-${response.status}`);
@@ -231,13 +233,9 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
       });
       setSubmitState({ status: "success", mode: values.mode });
     } catch (error) {
-      track("mct_lead_submit_error", {
-        locale,
-        tier,
-        page_path: payload.pagePath,
-        reason: error instanceof TypeError ? "network" : error instanceof Error ? error.message : "unknown",
-      });
-      setSubmitState({ status: "error" });
+      const reason = error instanceof TypeError ? "network" : error instanceof Error ? error.message : "unknown";
+      track("mct_lead_submit_error", { locale, tier, page_path: payload.pagePath, reason });
+      setSubmitState({ status: "error", reason });
     }
   };
 
@@ -268,7 +266,15 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
     </Field>
   );
 
-  const [errorBefore, errorAfter = ""] = t.form.error.split("{email}");
+  const submitErrorTemplate =
+    submitState.status !== "error"
+      ? ""
+      : submitState.reason === "session-unavailable"
+        ? t.form.apiErrors.sessionUnavailable
+        : submitState.reason === "rate-limited"
+          ? t.form.apiErrors.rateLimited
+          : t.form.error;
+  const [errorBefore, errorAfter] = submitErrorTemplate.split("{email}");
 
   return (
     <section id="request" className="scroll-mt-20 py-20">
@@ -618,10 +624,14 @@ export default function MctLeadForm({ defaultMode = "seat", defaultCourseSlug }:
                   {submitState.status === "error" && (
                     <p className={errorClass} role="alert">
                       {errorBefore}
-                      <a href={`mailto:${EMAIL}`} className={textLinkClass}>
-                        {EMAIL}
-                      </a>
-                      {errorAfter}
+                      {errorAfter !== undefined && (
+                        <>
+                          <a href={`mailto:${EMAIL}`} className={textLinkClass}>
+                            {EMAIL}
+                          </a>
+                          {errorAfter}
+                        </>
+                      )}
                     </p>
                   )}
                 </div>

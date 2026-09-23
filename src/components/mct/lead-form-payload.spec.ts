@@ -1,6 +1,14 @@
 import { describe, expect, it } from "vitest";
 import { leadSchema } from "@/config/mct/lead-schema";
-import { buildLeadPayload, missingModeFields, NOTIFY_SESSION, pickSessionChoice } from "./lead-form-payload";
+import type { ScheduledSession } from "@/config/mct/types";
+import {
+  buildLeadPayload,
+  leadRequestBody,
+  missingModeFields,
+  nextSessionChoice,
+  NOTIFY_SESSION,
+  pickSessionChoice,
+} from "./lead-form-payload";
 import type { LeadFormValues, LeadPayloadContext } from "./lead-form-payload";
 
 const ctx: LeadPayloadContext = {
@@ -150,11 +158,11 @@ describe("buildLeadPayload", () => {
     expect(buildLeadPayload({ ...blank, mode: "scope", courseSlug: "dp-600" }, ctx).courseSlug).toEqual("dp-600");
   });
 
-  it("flags missing consent and forwards a filled honeypot", () => {
-    const payload = buildLeadPayload({ ...blank, mode: "scope", consent: false, website: "spam.example" }, ctx);
+  it("keeps a filled honeypot out of the validated payload and flags missing consent", () => {
+    const payload = buildLeadPayload({ ...blank, mode: "scope", consent: false, website: "autofill" }, ctx);
 
-    expect(payload.website).toEqual("spam.example");
-    expect(issuePaths(payload)).toEqual(["consent", "website"]);
+    expect("website" in payload).toEqual(false);
+    expect(issuePaths(payload)).toEqual(["consent"]);
   });
 });
 
@@ -184,5 +192,46 @@ describe("missingModeFields", () => {
       missingModeFields({ ...blank, mode: "briefing", topic: "custom" }),
       missingModeFields({ ...blank, mode: "scope" }),
     ]).toEqual([["courseSlug"], [], ["topic"], [], []]);
+  });
+});
+
+describe("leadRequestBody", () => {
+  const payload = buildLeadPayload({ ...blank, mode: "scope" }, ctx);
+
+  it("adds the honeypot only when it has a value and never lets attribution override the payload", () => {
+    expect([
+      leadRequestBody(payload, "", { utm_source: "li", tier: "spoofed" }),
+      leadRequestBody(payload, "bot.example", {}),
+    ]).toEqual([
+      { utm_source: "li", ...payload },
+      { ...payload, website: "bot.example" },
+    ]);
+  });
+});
+
+describe("nextSessionChoice", () => {
+  const session = (id: string, courseSlug: ScheduledSession["courseSlug"]): ScheduledSession => ({
+    id,
+    courseSlug,
+    startsAt: "2026-11-16T09:00:00+01:00",
+    days: 2,
+    language: "en",
+    seatsTotal: 8,
+    status: "open",
+  });
+  const upcoming = [session("dp-a", "dp-600"), session("dp-b", "dp-600"), session("sql-a", "dp-300")];
+
+  it("picks the prefilled session", () => {
+    expect(nextSessionChoice("dp-a", { intent: "seat", courseSlug: "dp-600", sessionId: "dp-b" }, "dp-600", upcoming)).toEqual(
+      "dp-b",
+    );
+  });
+
+  it("picks the earliest session of a prefilled course", () => {
+    expect(nextSessionChoice("dp-b", { intent: "seat", courseSlug: "dp-300" }, "dp-600", upcoming)).toEqual("sql-a");
+  });
+
+  it("keeps the user's selection when the prefill names no course or session", () => {
+    expect(nextSessionChoice("dp-b", { intent: "seat" }, "dp-600", upcoming)).toEqual("dp-b");
   });
 });

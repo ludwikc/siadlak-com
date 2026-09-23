@@ -278,11 +278,16 @@ export const en = {
       calendar: "Pick a 20-minute slot",
     },
     error: "Something went wrong. Your answers are still here — try again or email {email}.",
+    apiErrors: {
+      sessionUnavailable: "That date just filled up or is no longer available. Pick another date or choose 'Notify me'.",
+      rateLimited: "Too many requests from this network. Try again in a few minutes or email {email}.",
+    },
     errors: {
       required: "This field is required.",
       email: "Enter a valid work email.",
       consent: "Please confirm you agree to be contacted.",
       range: "Enter a whole number from {min} to {max}.",
+      tooShort: "Too short.",
     },
   },
   sticky: {

@@ -53,7 +53,8 @@ html {
   line-height: 0.92;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  font-size: clamp(2.75rem, 8.5vw, 8rem);
+  font-size: clamp(2.75rem, 7vw, 7rem);
+  text-wrap: balance;
 }
 
 .mct-display-outline {

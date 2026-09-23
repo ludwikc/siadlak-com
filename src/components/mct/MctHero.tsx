@@ -28,7 +28,7 @@ export default function MctHero() {
         imageDescription={t.course.trainer.name}
         eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.hero.eyebrow}</p>}
         title={
-          <span className="mct-display block text-on-dark !text-[clamp(2.75rem,7vw,7rem)]">
+          <span className="mct-display block text-on-dark">
             {t.hero.line1}
             <span className="mct-display-outline block">{t.hero.line2}</span>
           </span>
