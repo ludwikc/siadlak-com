@@ -1,7 +1,7 @@
-const BASE_URL = 'https://siadlak.com';
+export const BASE_URL = 'https://siadlak.com';
 
 // ─── Core Entity IDs ───
-const IDS = {
+export const IDS = {
   person: `${BASE_URL}/#ludwik`,
   organization: `${BASE_URL}/#siadlak-com`,
   website: `${BASE_URL}/#website`,

@@ -7,6 +7,8 @@ export const LANDING_ROUTE_PREFIXES = [
   "/links",
   "/reset",
   "/ig",
+  "/mct",
+  "/szkolenia",
 ] as const;
 
 export const isLandingRoute = (pathname: string): boolean =>

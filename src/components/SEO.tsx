@@ -14,6 +14,8 @@ export interface SEOProps {
   noindex?: boolean;
   favicon?: string;
   jsonLd?: Record<string, unknown>[];
+  lang?: string;
+  alternates?: { hrefLang: string; href: string }[];
 }
 
 const TITLE_SUFFIX = 'Ludwik C. Siadlak';
@@ -43,6 +45,8 @@ export default function SEO({
   noindex = false,
   favicon,
   jsonLd,
+  lang,
+  alternates,
 }: SEOProps) {
   const fullTitle = title ? `${title} | ${TITLE_SUFFIX}` : defaultSEO.title;
   const imageUrl = image.startsWith('http') ? image : `${defaultSEO.url}${image}`;
@@ -74,7 +78,7 @@ export default function SEO({
   };
 
   return (
-    <Helmet>
+    <Helmet {...(lang ? { htmlAttributes: { lang } } : {})}>
       {/* Charset */}
       <meta charSet="UTF-8" />
 
@@ -84,7 +88,12 @@ export default function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <link rel="canonical" href={canonicalUrl} />
-      
+
+      {/* Hreflang alternates */}
+      {alternates?.map((alt) => (
+        <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+      ))}
+
       {/* Favicon */}
       {favicon && <link rel="icon" href={favicon} type="image/png" />}
       
