@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle } from "@/lib/icons";
 import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { altFor } from "@/config/image-alt";
 
 export default function SiedemTechnik() {
   return (
@@ -51,7 +52,7 @@ export default function SiedemTechnik() {
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
                 src="/lovable-uploads/ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast.png"
-                alt="7 Technik Produktywności — Logo kursu"
+                alt={altFor("ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast")}
                 width={1920}
                 height={1076}
                 sizes="(max-width: 768px) 100vw, 672px"
@@ -200,7 +201,7 @@ export default function SiedemTechnik() {
           <div className="max-w-6xl mx-auto">
             <OptimizedImage
               src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3.png"
-              alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
+              alt={altFor("ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3")}
               width={1920}
               height={1366}
               sizes="(max-width: 768px) 100vw, 1152px"

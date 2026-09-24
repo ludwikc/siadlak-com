@@ -17,6 +17,7 @@ import {
   Shield,
 } from "../../lib/icons";
 import { Link } from "react-router-dom";
+import { altFor } from "@/config/image-alt";
 
 const HomeTest = () => {
   return (
@@ -114,7 +115,7 @@ const HomeTest = () => {
               <div className="md:col-span-3 relative flex items-end">
                 <img
                   src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
-                  alt="Ludwik C. Siadlak"
+                  alt={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety")}
                   className="w-full h-auto max-h-[600px] md:max-h-[700px] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
                   style={{
                     filter: "saturate(1.1) brightness(1.05)",

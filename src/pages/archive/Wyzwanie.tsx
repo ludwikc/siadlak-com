@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/design-system/components/accordion";
+import { altFor } from "@/config/image-alt";
 
 // Countdown Timer Component
 function ChallengeCountdown() {
@@ -713,7 +714,7 @@ export default function Wyzwanie() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-electric/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
                 <OptimizedImage
                   src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
-                  alt="Ludwik C. Siadlak"
+                  alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat")}
                   className="relative rounded-xl w-full max-w-[300px] shadow-lg"
                   width={1080}
                   height={1080}
