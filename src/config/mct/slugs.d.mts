@@ -1,7 +1,7 @@
 export declare const COURSE_SLUGS: readonly [
   "ab-731",
   "ms-4014",
-  "pl-7008",
+  "ms-4022",
   "copilot-studio-agents",
   "dp-600",
   "dp-605",
