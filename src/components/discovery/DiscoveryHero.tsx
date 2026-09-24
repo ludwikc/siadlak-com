@@ -1,6 +1,7 @@
 import { Flame, Users, Star, Clock } from "@/lib/icons";
 import { CTAButton } from "@/design-system/components/cta-button";
 import ludwikAvatar from "@/assets/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.webp";
+import { altFor } from "@/config/image-alt";
 
 export default function DiscoveryHero() {
   const scrollToForm = () => {
@@ -16,7 +17,7 @@ export default function DiscoveryHero() {
           <div className="flex justify-center mb-5 sm:mb-6">
             <img
               src={ludwikAvatar}
-              alt="Ludwik C. Siadlak"
+              alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat")}
               width={128}
               height={128}
               loading="eager"

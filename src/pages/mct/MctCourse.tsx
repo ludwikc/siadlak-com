@@ -30,6 +30,7 @@ import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { getMctBreadcrumb, getMctCourseEntity, getMctEntityGraph, getMctFaqSchema } from "@/lib/structured-data-mct";
 import NotFound from "@/pages/NotFound";
+import { altFor } from "@/config/image-alt";
 
 const sectionClass = "py-20";
 const containerClass = "mx-auto max-w-6xl px-4";
@@ -194,7 +195,7 @@ function CourseAgenda({ course }: { course: Course }) {
 }
 
 function TrainerStrip() {
-  const { t } = useMct();
+  const { locale, t } = useMct();
   const stats = [
     { value: proof.yearsMct, label: t.course.trainer.years },
     { value: proof.trainedProfessionals, label: t.course.trainer.trained },
@@ -208,7 +209,7 @@ function TrainerStrip() {
           <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border border-white/10">
             <OptimizedImage
               src={trainerPhoto}
-              alt={t.course.trainer.name}
+              alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat", locale)}
               width={80}
               height={80}
               sizes="80px"

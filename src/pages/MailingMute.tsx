@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import ludwikPhoto from "@/assets/ludwikcsiadlak-selfie-plener-szalik-ios.png";
 import { muteTopics } from "@/data/mailing-mute-topics";
+import { altFor } from "@/config/image-alt";
 
 export default function MailingMute() {
   const { topic } = useParams<{ topic: string }>();
@@ -37,7 +38,7 @@ export default function MailingMute() {
             <div className="hidden md:flex justify-end">
               <img
                 src={ludwikPhoto}
-                alt="Ludwik Siadlak"
+                alt={altFor("ludwikcsiadlak-selfie-plener-szalik-ios")}
                 className="max-h-[70vh] w-auto object-contain rounded-2xl"
               />
             </div>

@@ -1,10 +1,12 @@
 import { Helmet } from 'react-helmet-async';
+import { altFor } from '@/config/image-alt';
 
 export interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
+  imageAlt?: string;
   url?: string;
   type?: 'website' | 'article' | 'course' | 'podcast' | 'event' | 'tool';
   author?: string;
@@ -36,6 +38,7 @@ export default function SEO({
   description = defaultSEO.description,
   keywords = defaultSEO.keywords,
   image = defaultSEO.image,
+  imageAlt,
   url = defaultSEO.url,
   type = defaultSEO.type,
   author = defaultSEO.author,
@@ -54,6 +57,11 @@ export default function SEO({
       ? title
       : `${title} | ${TITLE_SUFFIX}`;
   const imageUrl = image.startsWith('http') ? image : `${defaultSEO.url}${image}`;
+  const resolvedImageAlt =
+    imageAlt ??
+    (image === defaultSEO.image
+      ? altFor('ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat', lang === 'en' ? 'en' : 'pl')
+      : undefined);
   const canonicalUrl = url === defaultSEO.url ? url : `${defaultSEO.url}${url}`;
 
   const structuredData = {
@@ -109,6 +117,7 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
+      {resolvedImageAlt && <meta property="og:image:alt" content={resolvedImageAlt} />}
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content="SIADLAK.COM" />
@@ -118,6 +127,7 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
+      {resolvedImageAlt && <meta name="twitter:image:alt" content={resolvedImageAlt} />}
       
       {/* Date signals - for all content types */}
       {modifiedDate && <meta name="revised" content={modifiedDate} />}

@@ -1,3 +1,4 @@
+import { altFor } from '@/config/image-alt';
 export const BASE_URL = 'https://siadlak.com';
 
 // ─── Core Entity IDs ───
@@ -25,7 +26,13 @@ export function getPersonEntity() {
     name: 'Ludwik C. Siadlak',
     alternateName: 'Ludwik Siadlak',
     url: BASE_URL,
-    image: `${BASE_URL}/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png`,
+    image: {
+      '@type': 'ImageObject',
+      url: `${BASE_URL}/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png`,
+      caption: altFor('ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat'),
+      width: 1080,
+      height: 1080,
+    },
     jobTitle: 'Coach produktywności i uważności, mentor liderów, twórca metody Diamentowego Umysłu',
     description: 'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Certyfikowany Trener Microsoft (MCT), absolwent Oxford Brookes University. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pracuje z przedsiębiorcami, liderami i profesjonalistami technologicznymi poprzez mentoring 1:1 (Life OS) oraz programy zmiany sposobu myślenia. Przeszkolił ponad 10 000 osób w firmach Fortune 500 i jednostkach NATO.',
     knowsAbout: [

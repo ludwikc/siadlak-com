@@ -15,6 +15,7 @@ import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&f
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { Shield, Leaf } from "lucide-react";
+import { altFor } from "@/config/image-alt";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -144,7 +145,7 @@ const Index = () => {
               />
               <OptimizedImage
                 src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
-                alt="Ludwik C. Siadlak"
+                alt={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety")}
                 className="relative z-10 h-[85%] w-auto object-contain mx-auto"
                 priority
                 width={1000}

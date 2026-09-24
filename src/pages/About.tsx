@@ -7,6 +7,7 @@ import ProofInline from "@/components/proof/ProofInline";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getAboutEntities, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import { altFor } from "@/config/image-alt";
 
 const aboutFaqs = [
   {
@@ -215,7 +216,7 @@ const About = () => {
             <div className="lg:w-5/12">
               <OptimizedImage
                 src="/lovable-uploads/ludwikcsiadlak-lifestyle-instagram-siatka-6-zdjec.png"
-                alt="Ludwik Siadlak"
+                alt={altFor("ludwikcsiadlak-lifestyle-instagram-siatka-6-zdjec")}
                 className="w-full h-auto rounded-sm"
                 priority
                 width={1000}
@@ -344,7 +345,7 @@ const About = () => {
               <div className="lg:w-2/5">
                 <OptimizedImage
                   src="/lovable-uploads/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion.png"
-                  alt="Ludwik Siadlak"
+                  alt={altFor("ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion")}
                   className="w-full h-auto rounded-sm"
                   width={1283}
                   height={1920}

@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 
 const waitlistUrl = "https://buy.siadlak.com/checkout/program-meskosc";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { altFor } from "@/config/image-alt";
 
 export default function MeskiKompas() {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
@@ -2026,7 +2027,7 @@ export default function MeskiKompas() {
               >
                 <OptimizedImage
                   src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
-                  alt="Ludwik Siadlak - Mistrz porywania ludzi i pracy z emocjami"
+                  alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat")}
                   width={1080}
                   height={1080}
                   sizes="128px"
@@ -2050,7 +2051,7 @@ export default function MeskiKompas() {
               <div className="bg-white p-12 flex flex-col items-center text-center">
                 <OptimizedImage
                   src="/lovable-uploads/mateusz-lizak-portret-zielona-koszula-kwadrat.png"
-                  alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
+                  alt={altFor("mateusz-lizak-portret-zielona-koszula-kwadrat")}
                   width={1024}
                   height={1024}
                   sizes="128px"
@@ -2128,7 +2129,7 @@ export default function MeskiKompas() {
               <div className="order-2 lg:order-1">
                 <OptimizedImage
                   src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-1.png"
-                  alt="7 technik produktywności — kurs bonus"
+                  alt={altFor("ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-1")}
                   width={1920}
                   height={1366}
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -2255,7 +2256,7 @@ export default function MeskiKompas() {
               <div className="order-2 lg:order-1 text-center">
                 <OptimizedImage
                   src="/lovable-uploads/grafika-lifehackerzy-spotkanie-spolecznosci-video-call.png"
-                  alt="Lifehackerzy — Codzienne spotkania społeczności"
+                  alt={altFor("grafika-lifehackerzy-spotkanie-spolecznosci-video-call")}
                   width={1920}
                   height={984}
                   sizes="(max-width: 768px) 100vw, 50vw"

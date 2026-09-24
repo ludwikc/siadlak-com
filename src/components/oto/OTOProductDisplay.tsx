@@ -6,6 +6,7 @@ import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { track } from "@/lib/analytics";
 import { withAttribution } from "@/lib/attribution";
+import { altFor } from "@/config/image-alt";
 
 interface OTOProductDisplayProps {
   onExpired: () => void;
@@ -120,7 +121,7 @@ function PaymentIcons() {
   return (
     <OptimizedImage
       src="/lovable-uploads/grafika-platnosci-logotypy-applepay-gpay-blik-visa-mastercard-2.png"
-      alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
+      alt={altFor("grafika-platnosci-logotypy-applepay-gpay-blik-visa-mastercard-2")}
       className="mx-auto h-7 w-auto object-contain opacity-80"
       width={300}
       height={60}
@@ -242,7 +243,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <div className="relative">
               <OptimizedImage
                 src="/lovable-uploads/ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast.png"
-                alt="7 Technik Produktywności — kurs wideo"
+                alt={altFor("ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast")}
                 className="mx-auto h-auto w-full max-w-xl rounded-[var(--border-radius-sm)]"
                 width={672}
                 height={377}
@@ -261,7 +262,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
               <div className="flex items-center gap-3">
                 <OptimizedImage
                   src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
-                  alt="Ludwik C. Siadlak"
+                  alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat")}
                   className="h-10 w-10 rounded-full object-cover"
                   width={40}
                   height={40}
@@ -351,7 +352,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
         <div className="container mx-auto max-w-6xl px-4">
           <OptimizedImage
             src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3.png"
-            alt="7 Technik Produktywności — podgląd kursu na różnych urządzeniach"
+            alt={altFor("ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3")}
             className="mx-auto h-auto w-full max-w-4xl object-contain"
             width={1024}
             height={728}

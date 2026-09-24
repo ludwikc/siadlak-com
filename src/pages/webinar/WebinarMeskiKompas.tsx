@@ -15,6 +15,7 @@ import { getFunnelBySlug } from "@/config/funnels";
 import { useFunnelPhase } from "@/hooks/use-funnel-phase";
 import { formatEventDate, formatEventDateShort } from "@/config/funnels/format";
 import FunnelRegistrationCTA from "@/components/funnel/FunnelRegistrationCTA";
+import { altFor } from "@/config/image-alt";
 
 export default function WebinarMeskiKompas() {
   const funnel = getFunnelBySlug("meski-kompas")!;
@@ -552,7 +553,7 @@ export default function WebinarMeskiKompas() {
                 <div className="mb-6">
                   <OptimizedImage
                     src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
-                    alt="Ludwik C. Siadlak"
+                    alt={altFor("ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat")}
                     width={1080}
                     height={1080}
                     sizes="128px"
@@ -591,7 +592,7 @@ export default function WebinarMeskiKompas() {
                 <div className="mb-6">
                   <OptimizedImage
                     src="/lovable-uploads/mateusz-lizak-portret-zielona-koszula-kwadrat.png"
-                    alt="Mateusz Lizak"
+                    alt={altFor("mateusz-lizak-portret-zielona-koszula-kwadrat")}
                     width={1024}
                     height={1024}
                     sizes="128px"
