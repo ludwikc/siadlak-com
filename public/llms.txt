@@ -44,7 +44,7 @@ Siadlak.com to ekosystem rozwojowy prowadzony przez Ludwika C. Siadlaka — Micr
 - [Szkolenia enterprise (PL)](https://siadlak.com/szkolenia/enterprise): programy szkoleniowe na zamówienie dla enterprise
 - [AB-731 (EN)](https://siadlak.com/mct/courses/ab-731): From AI hype to a plan your board can sign off.
 - [MS-4014 (EN)](https://siadlak.com/mct/courses/ms-4014): What agents really are, which Microsoft tool to use, and a working one by the end of the day.
-- [PL-7008 (EN)](https://siadlak.com/mct/courses/pl-7008): Hands-on Copilot Studio: from topics to an agent published in Teams.
+- [Build agents in Microsoft Copilot Studio (EN)](https://siadlak.com/mct/courses/build-agents-copilot-studio): Hands-on Copilot Studio: from topics to an agent published in Teams.
 - [Copilot Studio Agents, custom (EN)](https://siadlak.com/mct/courses/copilot-studio-agents): One agent on your own systems, built and ready for a security review.
 - [DP-600 Essentials (EN)](https://siadlak.com/mct/courses/dp-600): The exam-relevant core of DP-600, for people who will run Fabric in production.
 - [DP-605 (EN)](https://siadlak.com/mct/courses/dp-605): From a raw export to a report people actually use.
