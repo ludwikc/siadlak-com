@@ -119,7 +119,7 @@ function TrustRow({ dark = false }: { dark?: boolean }) {
 function PaymentIcons() {
   return (
     <OptimizedImage
-      src="/lovable-uploads/payment-processors.png"
+      src="/lovable-uploads/grafika-platnosci-logotypy-applepay-gpay-blik-visa-mastercard-2.png"
       alt="Dostępne metody płatności: Apple Pay, Google Pay, BLIK, Przelewy24, Visa, Mastercard"
       className="mx-auto h-7 w-auto object-contain opacity-80"
       width={300}
@@ -241,7 +241,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
 
             <div className="relative">
               <OptimizedImage
-                src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                src="/lovable-uploads/ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast.png"
                 alt="7 Technik Produktywności — kurs wideo"
                 className="mx-auto h-auto w-full max-w-xl rounded-[var(--border-radius-sm)]"
                 width={672}
@@ -260,7 +260,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
             <div className="flex items-center justify-between border-b border-border px-5 py-4">
               <div className="flex items-center gap-3">
                 <OptimizedImage
-                  src="/lovable-uploads/3e37de9f-9414-4fdb-b6b8-927ece65c2ca.png"
+                  src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
                   alt="Ludwik C. Siadlak"
                   className="h-10 w-10 rounded-full object-cover"
                   width={40}
@@ -350,7 +350,7 @@ export function OTOProductDisplay({ onExpired }: OTOProductDisplayProps) {
       <section className="bg-diamond py-16 md:py-20">
         <div className="container mx-auto max-w-6xl px-4">
           <OptimizedImage
-            src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
+            src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3.png"
             alt="7 Technik Produktywności — podgląd kursu na różnych urządzeniach"
             className="mx-auto h-auto w-full max-w-4xl object-contain"
             width={1024}

@@ -182,7 +182,7 @@ export default function NewsletterPage() {
 
               <div className="rounded-sm border border-on-light/10 overflow-hidden">
                 <OptimizedImage
-                  src="/lovable-uploads/newsletter-example.png"
+                  src="/lovable-uploads/grafika-newsletter-przyklad-naglowek-kompas.png"
                   alt="Przykład newslettera — Fake it till you make it"
                   className="w-full"
                   width={284}

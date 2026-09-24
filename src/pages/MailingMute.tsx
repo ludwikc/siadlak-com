@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
-import ludwikPhoto from "@/assets/ludwikc-selfie.png";
+import ludwikPhoto from "@/assets/ludwikcsiadlak-selfie-plener-szalik-ios.png";
 import { muteTopics } from "@/data/mailing-mute-topics";
 
 export default function MailingMute() {

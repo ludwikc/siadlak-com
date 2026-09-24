@@ -13,7 +13,7 @@ import { useSelectPath } from "./useSelectPath";
 
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
-const HERO_IMAGE = "/lovable-uploads/SIADLAK-coffee-transparent.webp";
+const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
 
 export default function MctHero() {
   const { locale, t, surface } = useMct();

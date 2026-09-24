@@ -1,6 +1,6 @@
 import { Flame, Users, Star, Clock } from "@/lib/icons";
 import { CTAButton } from "@/design-system/components/cta-button";
-import ludwikAvatar from "@/assets/LUDWIKCSIADLAK-2025-sq.webp";
+import ludwikAvatar from "@/assets/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.webp";
 
 export default function DiscoveryHero() {
   const scrollToForm = () => {

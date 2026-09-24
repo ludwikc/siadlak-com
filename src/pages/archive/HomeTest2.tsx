@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 const DISCOVERY_LINK = "/discovery";
 const PROGRAM_LINK = "/program";
-const PROFILE_IMAGE = "/lovable-uploads/SIADLAK-coffee-transparent.png";
+const PROFILE_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png";
 
 /* ─── tiny reusable bits ─── */
 

@@ -712,7 +712,7 @@ export default function Wyzwanie() {
               <div className="mx-auto md:mx-0 relative group/img">
                 <div className="absolute -inset-1 bg-gradient-to-r from-electric/20 to-accent/20 rounded-xl blur opacity-0 group-hover/img:opacity-100 transition duration-300"></div>
                 <OptimizedImage
-                  src="/lovable-uploads/ludwik-siadlak-profile.png"
+                  src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
                   alt="Ludwik C. Siadlak"
                   className="relative rounded-xl w-full max-w-[300px] shadow-lg"
                   width={1080}

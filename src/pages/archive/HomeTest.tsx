@@ -113,7 +113,7 @@ const HomeTest = () => {
               {/* Image - 3 cols */}
               <div className="md:col-span-3 relative flex items-end">
                 <img
-                  src="/lovable-uploads/SIADLAK-coffee-transparent.png"
+                  src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
                   alt="Ludwik C. Siadlak"
                   className="w-full h-auto max-h-[600px] md:max-h-[700px] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
                   style={{

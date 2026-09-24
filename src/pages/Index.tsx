@@ -7,7 +7,7 @@ import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
 import { getHomepageEntities, getFAQSchema, getBreadcrumbSchema } from "../lib/structured-data";
 import { Link } from "react-router-dom";
-import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp?format=avif;webp&as=picture";
+import sessionPhoto6 from "@/assets/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion-1.webp?format=avif;webp&as=picture";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
@@ -143,7 +143,7 @@ const Index = () => {
                 }}
               />
               <OptimizedImage
-                src="/lovable-uploads/SIADLAK-coffee-transparent.png"
+                src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
                 alt="Ludwik C. Siadlak"
                 className="relative z-10 h-[85%] w-auto object-contain mx-auto"
                 priority

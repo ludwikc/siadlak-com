@@ -48,14 +48,14 @@ export const pl = {
     line1: "SPRAWDZONE W BOJU,",
     line2: "NIE W LABIE.",
     sub: "Szkolenia z Microsoft Fabric, Copilota i Azure SQL od trenera, którego zatrudniały Fortune 500 i NATO. Otwarte klasy online dla małych zespołów. Programy na zamówienie dla enterprise. Ten sam standard w obu wariantach.",
-    pathTeams: "Dla zespołów 3–30 osób",
+    pathTeams: "Dla zespołów 3–8 osób",
     pathEnterprise: "Dla enterprise i sektora publicznego",
     nextClass: "Najbliższa otwarta klasa: {course}, {date}",
   },
   trust: { eyebrow: "Zespoły, które szkoliłem" },
   segment: {
     teams: {
-      title: "Zespoły 3–30 osób.",
+      title: "Zespoły 3–8 osób.",
       body: "Wybierasz kurs, termin, liczbę miejsc. {price} netto za dzień szkoleniowy. Maks. 8 osób w klasie, więc dostajesz odpowiedzi, nie webinar. Faktura, nie koszyk.",
       cta: "Zobacz terminy i ceny",
     },

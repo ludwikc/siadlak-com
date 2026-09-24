@@ -22,7 +22,7 @@ export const en = {
       description:
         "Programs built for your stack, rollout and deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.",
       keywords:
-        "enterprise Microsoft training, custom training program, private training, on-site training, Copilot rollout training, Microsoft Fabric training, Microsoft Certified Trainer",
+        "enterprise Microsoft , custom training program, private training, on-site training, Copilot rollout training, Microsoft Fabric training, Microsoft Certified Trainer",
     },
     course: {
       title: "{shortTitle}",
@@ -48,14 +48,14 @@ export const en = {
     line1: "BATTLE-TESTED,",
     line2: "NOT LAB-TESTED.",
     sub: "Microsoft Fabric, Copilot and Azure SQL training from the trainer Fortune 500 and NATO booked. Public online classes for small teams. Custom programs for enterprise. Same courseware standard either way.",
-    pathTeams: "For teams of 3–30",
+    pathTeams: "For teams of 3–8",
     pathEnterprise: "For enterprise & public sector",
     nextClass: "Next public class: {course}, {date}",
   },
   trust: { eyebrow: "Teams I have trained" },
   segment: {
     teams: {
-      title: "Teams of 3–30.",
+      title: "Teams of 3–8.",
       body: "Pick a course, pick a date, request seats. {price} net per training day. Max 8 people per class, so you get answers, not a webinar. Invoice, not a checkout.",
       cta: "See dates and prices",
     },

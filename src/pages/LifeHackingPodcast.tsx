@@ -116,7 +116,7 @@ const LifeHackingPodcast = () => {
             <PodcastPlayer
               title="Life Hacking Podcast"
               embedUrl="https://open.spotify.com/embed/show/2WtHOHHGeeRZtsyYszSIlB"
-              coverArt="/lovable-uploads/208a0c75-6c6d-4324-8241-a7de28c2fa3e.png"
+              coverArt="/lovable-uploads/ludwikcsiadlak-podcast-life-hacking-okladka-kwadrat.png"
             />
 
             <ValueProposition

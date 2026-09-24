@@ -82,7 +82,7 @@ export default function MeskiKompas() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/lovable-uploads/meski-kompas-hero.png')`,
+            backgroundImage: `url('/lovable-uploads/meski-kompas-mosiezny-kompas-stara-mapa-hero.png')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
@@ -2025,7 +2025,7 @@ export default function MeskiKompas() {
                 style={{ backgroundColor: "hsl(210, 20%, 8%)" }}
               >
                 <OptimizedImage
-                  src="/lovable-uploads/2f3ca5c3-f7b8-49dc-84ce-efd1a4eaf31a.png"
+                  src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
                   alt="Ludwik Siadlak - Mistrz porywania ludzi i pracy z emocjami"
                   width={1080}
                   height={1080}
@@ -2049,7 +2049,7 @@ export default function MeskiKompas() {
               {/* Mateusz - White (Yang) */}
               <div className="bg-white p-12 flex flex-col items-center text-center">
                 <OptimizedImage
-                  src="/lovable-uploads/mateusz-lizak-profile.png"
+                  src="/lovable-uploads/mateusz-lizak-portret-zielona-koszula-kwadrat.png"
                   alt="Mateusz Lizak - Mistrz konkretu i pracy warsztatowej"
                   width={1024}
                   height={1024}
@@ -2127,7 +2127,7 @@ export default function MeskiKompas() {
               {/* Course Image */}
               <div className="order-2 lg:order-1">
                 <OptimizedImage
-                  src="/lovable-uploads/7technik_transparent.png"
+                  src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-1.png"
                   alt="7 technik produktywności — kurs bonus"
                   width={1920}
                   height={1366}
@@ -2254,7 +2254,7 @@ export default function MeskiKompas() {
               {/* Community Logo & Visual */}
               <div className="order-2 lg:order-1 text-center">
                 <OptimizedImage
-                  src="/lovable-uploads/lifehackerzy-community-call.png"
+                  src="/lovable-uploads/grafika-lifehackerzy-spotkanie-spolecznosci-video-call.png"
                   alt="Lifehackerzy — Codzienne spotkania społeczności"
                   width={1920}
                   height={984}

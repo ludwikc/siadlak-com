@@ -16,7 +16,7 @@ const UwazneZyciePodcast = () => {
         subtitle="Odnajdź równowagę w świecie ciągłych wymagań"
         ctaText="Posłuchaj najnowszego odcinka"
         ctaLink="#player"
-        backgroundImage="/lovable-uploads/83c4de73-257e-4763-9477-2e4a54d8f95b.png"
+        backgroundImage="/lovable-uploads/ludwikcsiadlak-portret-medytacja-po-turecku-smuga-swiatla-16x9.png"
         imageDescription="Osoba w pozie medytacyjnej w spokojnym otoczeniu"
         fullHeight={true}
       />
@@ -48,7 +48,7 @@ const UwazneZyciePodcast = () => {
             <PodcastPlayer
               title="Uważne Życie"
               embedUrl="https://open.spotify.com/embed/show/0M0P2V6eQfwzJ4fow7wsIc"
-              coverArt="/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png"
+              coverArt="/lovable-uploads/grafika-medytacje-drzewo-zycia-mandala-neon-kwadrat.png"
             />
           </div>
         </div>

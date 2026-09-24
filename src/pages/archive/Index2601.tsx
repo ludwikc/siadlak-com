@@ -100,7 +100,7 @@ A Ty od lat grzebiesz w interfejsie, nie dotykając kodu źródłowego.`}
               {/* Profile Image - Takes 3 columns on desktop (60%), frameless and sticks to bottom */}
               <div className="md:col-span-3 relative flex items-end">
                 <img
-                  src="/lovable-uploads/SIADLAK-coffee-transparent.png"
+                  src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
                   alt="Ludwik C. Siadlak - Lifehacker"
                   className="w-full h-auto max-h-[600px] md:max-h-[700px] object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
                   style={{

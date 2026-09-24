@@ -50,7 +50,7 @@ export default function SiedemTechnik() {
           <div className="text-center">
             <div className="relative max-w-2xl mx-auto">
               <OptimizedImage
-                src="/lovable-uploads/e615021d-1367-4c9b-a003-5ceae847d2e8.png"
+                src="/lovable-uploads/ludwikcsiadlak-prezentuje-cyfre-7-mikrofon-podcast.png"
                 alt="7 Technik Produktywności — Logo kursu"
                 width={1920}
                 height={1076}
@@ -199,7 +199,7 @@ export default function SiedemTechnik() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <OptimizedImage
-              src="/lovable-uploads/d08df776-7e4c-49e0-aa5a-b43910072e53.png"
+              src="/lovable-uploads/ludwikcsiadlak-kurs-7-technik-mockup-urzadzenia-wyciety-3.png"
               alt="7 Technik Produktywności — Podgląd kursu na różnych urządzeniach"
               width={1920}
               height={1366}

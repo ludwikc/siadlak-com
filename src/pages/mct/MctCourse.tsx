@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import { useParams } from "react-router-dom";
 import { Check, ExternalLink } from "lucide-react";
-import trainerPhoto from "@/assets/LUDWIKCSIADLAK-2025-sq.webp?w=160;320&format=avif;webp&as=picture";
+import trainerPhoto from "@/assets/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.webp?w=160;320&format=avif;webp&as=picture";
 import SEO from "@/components/SEO";
 import CourseCard from "@/components/mct/CourseCard";
 import FaqAccordion from "@/components/mct/FaqAccordion";

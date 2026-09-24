@@ -25,7 +25,7 @@ export function getPersonEntity() {
     name: 'Ludwik C. Siadlak',
     alternateName: 'Ludwik Siadlak',
     url: BASE_URL,
-    image: `${BASE_URL}/lovable-uploads/ludwik-siadlak-profile.png`,
+    image: `${BASE_URL}/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png`,
     jobTitle: 'Coach produktywności i uważności, mentor liderów, twórca metody Diamentowego Umysłu',
     description: 'Ludwik C. Siadlak — coach produktywności i uważności z 19-letnim doświadczeniem. Certyfikowany Trener Microsoft (MCT), absolwent Oxford Brookes University. Twórca Aplikacji Mentalnych i metody Diamentowego Umysłu. Pracuje z przedsiębiorcami, liderami i profesjonalistami technologicznymi poprzez mentoring 1:1 (Life OS) oraz programy zmiany sposobu myślenia. Przeszkolił ponad 10 000 osób w firmach Fortune 500 i jednostkach NATO.',
     knowsAbout: [
@@ -105,7 +105,7 @@ export function getOrganizationEntity() {
       width: 614,
       height: 410,
     },
-    image: `${BASE_URL}/lovable-uploads/ludwik-siadlak-profile.png`,
+    image: `${BASE_URL}/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png`,
     description: 'Siadlak.com — Aplikacje Mentalne i coaching mentalny dla profesjonalistów. Programy zmiany sposobu myślenia: Produktywność, Silna Głowa, Uważne Życie, Męski Kompas oraz Life OS: System Upgrade (mentoring 1:1). Stworzone przez Ludwika C. Siadlaka — 19 lat doświadczenia, 110+ absolwentów programów, ocena 4.9/5.0.',
     founder: { '@id': IDS.person },
     areaServed: [

@@ -551,7 +551,7 @@ export default function WebinarMeskiKompas() {
               <Card className="bg-gradient-to-br from-white via-gray-50 to-accent/5 border-accent/20 p-8">
                 <div className="mb-6">
                   <OptimizedImage
-                    src="/lovable-uploads/ludwik-siadlak-profile.png"
+                    src="/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png"
                     alt="Ludwik C. Siadlak"
                     width={1080}
                     height={1080}
@@ -590,7 +590,7 @@ export default function WebinarMeskiKompas() {
               <Card className="bg-gradient-to-br from-white via-gray-50 to-primary/5 border-primary/20 p-8">
                 <div className="mb-6">
                   <OptimizedImage
-                    src="/lovable-uploads/mateusz-lizak-profile.png"
+                    src="/lovable-uploads/mateusz-lizak-portret-zielona-koszula-kwadrat.png"
                     alt="Mateusz Lizak"
                     width={1024}
                     height={1024}

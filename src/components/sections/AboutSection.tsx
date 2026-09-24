@@ -13,7 +13,7 @@ export default function AboutSection() {
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/5] rounded-md overflow-hidden">
               <OptimizedImage
-                src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
+                src="/lovable-uploads/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion.png"
                 alt="Ludwik Siadlak"
                 className="w-full h-full object-cover"
                 width={600}

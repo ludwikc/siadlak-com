@@ -214,7 +214,7 @@ const About = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
             <div className="lg:w-5/12">
               <OptimizedImage
-                src="/lovable-uploads/SIADLAK-ig.png"
+                src="/lovable-uploads/ludwikcsiadlak-lifestyle-instagram-siatka-6-zdjec.png"
                 alt="Ludwik Siadlak"
                 className="w-full h-auto rounded-sm"
                 priority
@@ -343,7 +343,7 @@ const About = () => {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-2/5">
                 <OptimizedImage
-                  src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
+                  src="/lovable-uploads/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion.png"
                   alt="Ludwik Siadlak"
                   className="w-full h-auto rounded-sm"
                   width={1283}

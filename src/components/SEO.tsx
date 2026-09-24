@@ -24,7 +24,7 @@ const defaultSEO = {
   title: 'Siadlak.com — Diamentowy Umysł | Ludwik C. Siadlak',
   description: 'Odkryj swój potencjał z programami rozwoju osobistego, coachingiem i narzędziami produktywności. Dołącz do społeczności ludzi dążących do lepszego życia.',
   keywords: 'rozwój osobisty, coaching, produktywność, motywacja, sukces, życie, szczęście',
-  image: '/lovable-uploads/ludwik-siadlak-profile.png',
+  image: '/lovable-uploads/ludwikcsiadlak-portret-spojrzenie-w-gore-kwadrat.png',
   url: 'https://siadlak.com',
   type: 'website' as const,
   author: 'Ludwik C. Siadlak',
