@@ -150,8 +150,8 @@ export const courses: Record<CourseSlug, Course> = {
     title: { en: "Introduction to building AI agents", pl: "Wprowadzenie do budowy agentów AI" },
     shortTitle: { en: "MS-4014: Building AI agents (1 day)", pl: "MS-4014: budowa agentów AI (1 dzień)" },
     tagline: {
-      en: "What agents really are, which Microsoft tool to build them with, and one that works by the end of the day.",
-      pl: "Czym naprawdę są agenci, w czym ich budować i jeden działający agent pod koniec dnia.",
+      en: "What agents really are, which Microsoft tool to use, and a working one by the end of the day.",
+      pl: "Czym naprawdę są agenci, w czym ich budować i działający agent pod koniec dnia.",
     },
     summary: {
       en: "Built on Microsoft's official MS-4014 course. We cut through the agent hype: what an agent can and cannot do, how Copilot Studio, Microsoft Foundry and the Microsoft 365 Agents Toolkit differ, and how to plan an agent before anyone builds it. Then you build one on your own content.",

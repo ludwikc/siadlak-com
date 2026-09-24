@@ -388,7 +388,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct',
     seo: {
-      title: 'Microsoft training for teams: Fabric, Copilot, SQL',
+      title: 'Microsoft training: Fabric, Copilot, SQL',
       description: `Live online Microsoft Fabric, Copilot and Azure SQL training for teams. Max 8 per class. Briefings and custom programs. Microsoft Certified Trainer, ${proof.yearsMct} years.`,
       keywords: 'Microsoft Fabric training, Copilot training, Azure SQL training, DP-600, Microsoft Certified Trainer, live online course, team training',
       url: '/mct',
@@ -405,7 +405,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/szkolenia',
     seo: {
-      title: 'Szkolenia Microsoft: Fabric, Copilot, Azure SQL',
+      title: 'Szkolenia Microsoft: Fabric, Copilot, SQL',
       description: `Szkolenia online na żywo z Fabric, Copilota i Azure SQL. Maks. 8 osób w klasie, briefingi i programy na zamówienie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
       keywords: 'szkolenia Microsoft Fabric, szkolenia Copilot, szkolenia Azure SQL, DP-600, Microsoft Certified Trainer, szkolenie online na żywo, szkolenia dla zespołów',
       url: '/szkolenia',
@@ -422,7 +422,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct/executive-briefing',
     seo: {
-      title: 'Executive briefing: Copilot, Fabric, AI governance',
+      title: 'Executive briefing: Copilot, Fabric, AI',
       description: 'Three hours, up to 10 leaders, one decision unblocked. Copilot ROI, Fabric build vs buy, or AI governance for regulated organisations.',
       keywords: 'executive briefing, Copilot ROI, Microsoft Fabric strategy, AI governance, AI strategy for leaders, board briefing, Microsoft Certified Trainer',
       url: '/mct/executive-briefing',
@@ -455,7 +455,7 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/szkolenia/enterprise',
     seo: {
-      title: 'Szkolenia Microsoft na zamówienie (enterprise)',
+      title: 'Szkolenia Microsoft dla enterprise',
       description: 'Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i formalności zakupowe po mojej stronie.',
       keywords: 'szkolenia Microsoft dla firm, program szkoleniowy na zamówienie, szkolenie zamknięte, szkolenie on-site, wdrożenie Copilota, szkolenia Microsoft Fabric, Microsoft Certified Trainer',
       url: '/szkolenia/enterprise',

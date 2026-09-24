@@ -5,7 +5,7 @@ import { policies } from "./policies";
 export const pl = {
   meta: {
     hub: {
-      title: "Szkolenia Microsoft: Fabric, Copilot, Azure SQL",
+      title: "Szkolenia Microsoft: Fabric, Copilot, SQL",
       description: `Szkolenia online na żywo z Fabric, Copilota i Azure SQL. Maks. 8 osób w klasie, briefingi i programy na zamówienie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
       keywords:
         "szkolenia Microsoft Fabric, szkolenia Copilot, szkolenia Azure SQL, DP-600, Microsoft Certified Trainer, szkolenie online na żywo, szkolenia dla zespołów",
@@ -18,7 +18,7 @@ export const pl = {
         "briefing dla zarządu, ROI Copilota, strategia Microsoft Fabric, governance AI, strategia AI dla liderów, warsztat dla zarządu, Microsoft Certified Trainer",
     },
     enterprise: {
-      title: "Szkolenia Microsoft na zamówienie (enterprise)",
+      title: "Szkolenia Microsoft dla enterprise",
       description:
         "Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i formalności zakupowe po mojej stronie.",
       keywords:
@@ -27,7 +27,7 @@ export const pl = {
     course: {
       title: "{shortTitle}",
       description:
-        "{tagline} {days}-dniowa klasa online na żywo, maks. 8 miejsc, od {price} za miejsce (netto). Microsoft Certified Trainer od {years} lat.",
+        "{tagline} {days}-dniowa klasa online na żywo, maks. 8 miejsc, od {price} za miejsce (netto).",
       keywords:
         "{code}, szkolenie Microsoft, kurs online na żywo, szkolenie z trenerem, szkolenie w małej grupie, szkolenia dla zespołów, Microsoft Certified Trainer",
     },

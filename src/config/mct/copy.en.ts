@@ -5,13 +5,13 @@ import { policies } from "./policies";
 export const en = {
   meta: {
     hub: {
-      title: "Microsoft training for teams: Fabric, Copilot, SQL",
+      title: "Microsoft training: Fabric, Copilot, SQL",
       description: `Live online Microsoft Fabric, Copilot and Azure SQL training for teams. Max 8 per class. Briefings and custom programs. Microsoft Certified Trainer, ${proof.yearsMct} years.`,
       keywords:
         "Microsoft Fabric training, Copilot training, Azure SQL training, DP-600, Microsoft Certified Trainer, live online course, team training",
     },
     briefing: {
-      title: "Executive briefing: Copilot, Fabric, AI governance",
+      title: "Executive briefing: Copilot, Fabric, AI",
       description:
         "Three hours, up to 10 leaders, one decision unblocked. Copilot ROI, Fabric build vs buy, or AI governance for regulated organisations.",
       keywords:
@@ -27,7 +27,7 @@ export const en = {
     course: {
       title: "{shortTitle}",
       description:
-        "{tagline} {days}-day live online class, max 8 seats, from {price} per seat (net). Microsoft Certified Trainer, {years} years.",
+        "{tagline} {days}-day live online class, max 8 seats, from {price} per seat (net).",
       keywords:
         "{code}, Microsoft training, live online course, instructor-led training, small group training, team training, Microsoft Certified Trainer",
     },

@@ -12,7 +12,6 @@ export default function LocaleSwitch() {
     <Link
       to={altPath(locale, pathname)}
       hrefLang={target}
-      lang={target}
       aria-label={t.nav.localeSwitchLabel}
       onClick={() => track("mct_locale_switch", { from: locale, to: target, page_path: pathname })}
       className="rounded-full border border-white/20 px-4 py-1.5 text-sm text-on-dark hover:border-electric/60 transition-colors"

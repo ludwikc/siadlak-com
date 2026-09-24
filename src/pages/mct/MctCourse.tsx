@@ -253,7 +253,6 @@ function MctCourseContent({ course }: { course: Course }) {
           tagline: course.tagline[locale],
           days: course.days,
           price: formatPrice(seatPrice(course.days, currency), currency, locale),
-          years: proof.yearsMct,
         })}
         keywords={fill(t.meta.course.keywords, { code: course.codes[0] ?? course.title[locale] })}
         modifiedDate={MCT_CONTENT_UPDATED}
