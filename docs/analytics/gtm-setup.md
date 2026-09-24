@@ -48,7 +48,7 @@ function () {
 | `CE - registration_complete` | Custom Event | `registration_complete` |
 | `CE - oto_purchase_click` | Custom Event | `oto_purchase_click` |
 | `CE - discovery_booking_click` | Custom Event | `discovery_booking_click` |
-| `CE - all app events` | Custom Event | Event matches RegEx `^(funnel_view\|registration_click\|registration_complete\|lead_submitted\|webinar_bar_click\|cta_click\|oto_view\|oto_expired\|oto_purchase_click\|reset_quiz_start\|reset_quiz_complete\|discovery_booking_click\|exit_intent_shown\|exit_intent_dismissed\|exit_intent_converted\|experiment_exposure\|dtr_variant_applied)$` |
+| `CE - all app events` | Custom Event | Event matches RegEx `^(funnel_view\|registration_click\|registration_complete\|lead_submitted\|webinar_bar_click\|cta_click\|oto_view\|oto_expired\|oto_purchase_click\|reset_quiz_start\|reset_quiz_complete\|discovery_booking_click\|exit_intent_shown\|exit_intent_dismissed\|exit_intent_converted\|experiment_exposure\|dtr_variant_applied\|mct_.*\|eval_.*)$` |
 | `EX - webdriver` | Custom Event, RegEx `.*` | `JS - Is Webdriver` = `true` — attach as a **blocking exception on every tag** |
 
 ## Tags
@@ -70,7 +70,7 @@ function () {
 | 13 | Clarity | Microsoft Clarity template | `CE - cky (analytics)` — Once per page | **Additional: `analytics_storage`** | project `sixkjtkgsm`; SPA-aware once loaded; reads `dtr_*` / experiment custom tags set via `clarity("set", …)` |
 
 In GA4 admin mark `lead_submitted`, `registration_complete`, `oto_purchase_click`,
-`discovery_booking_click` as **key events**.
+`discovery_booking_click`, `mct_lead_submitted` as **key events**.
 
 ## Deploy ordering
 

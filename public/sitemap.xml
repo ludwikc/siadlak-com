@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://siadlak.com/</loc>
     <lastmod>2026-08-20</lastmod>
@@ -152,8 +152,236 @@
   </url>
   <url>
     <loc>https://siadlak.com/mct</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/executive-briefing</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/executive-briefing"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/briefing-dla-zarzadu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/executive-briefing"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/briefing-dla-zarzadu</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/executive-briefing"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/briefing-dla-zarzadu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/executive-briefing"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/enterprise</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/enterprise"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/enterprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/enterprise"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/enterprise</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/enterprise"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/enterprise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/enterprise"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/ab-731</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/ab-731"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/ab-731"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/ab-731"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/ab-731</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/ab-731"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/ab-731"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/ab-731"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/ms-4014</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/ms-4014"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/ms-4014"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/ms-4014"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/ms-4014</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/ms-4014"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/ms-4014"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/ms-4014"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/pl-7008</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/pl-7008"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/pl-7008"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/pl-7008"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/pl-7008</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/pl-7008"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/pl-7008"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/pl-7008"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/copilot-studio-agents</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/copilot-studio-agents"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/copilot-studio-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/copilot-studio-agents"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/copilot-studio-agents</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/copilot-studio-agents"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/copilot-studio-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/copilot-studio-agents"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/dp-600</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-600"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-600"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-600"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/dp-600</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-600"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-600"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-600"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/dp-605</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-605"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-605"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-605"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/dp-605</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-605"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-605"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-605"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/dp-700</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-700"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-700"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-700"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/dp-700</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-700"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-700"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-700"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/dp-300</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-300"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-300"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-300"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/dp-300</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-300"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-300"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-300"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/dp-080</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-080"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-080"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-080"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/dp-080</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/dp-080"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/dp-080"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/dp-080"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/mct/courses/tsql-performance</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/tsql-performance"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/tsql-performance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/tsql-performance"/>
+  </url>
+  <url>
+    <loc>https://siadlak.com/szkolenia/kursy/tsql-performance</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siadlak.com/mct/courses/tsql-performance"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://siadlak.com/szkolenia/kursy/tsql-performance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siadlak.com/mct/courses/tsql-performance"/>
   </url>
 </urlset>

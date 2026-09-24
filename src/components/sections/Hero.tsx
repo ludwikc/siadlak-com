@@ -4,6 +4,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 
 interface HeroProps {
+  eyebrow?: ReactNode;
   title: string | ReactNode;
   subtitle?: string | ReactNode;
   ctaText?: string;
@@ -31,6 +32,7 @@ const justifyClasses = {
 } as const;
 
 export default function Hero({
+  eyebrow,
   title,
   subtitle,
   ctaText,
@@ -84,6 +86,8 @@ export default function Hero({
             ${isMobile ? "" : textAlignClasses[align]}
           `}
           >
+            {eyebrow}
+
             <h1
               id="hero-title"
               className="mb-6 font-heading font-bold !leading-tight animate-fade-in text-white text-4xl md:text-6xl lg:text-7xl"

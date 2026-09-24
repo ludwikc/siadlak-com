@@ -15,13 +15,20 @@ const BANNED = [
   "(100+)",
   "500+ kapitanów",
   "150+ Aktywnych",
+  "20+ years",
+  "20+ lat",
+  "10,000+ microsoft certifications",
+  "10,000+ certifications",
+  "30+ courses",
+  "classified",
+  "engineers trained",
 ];
 
 function walk(dir: string): string[] {
   return readdirSync(dir).flatMap((entry) => {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) return walk(full);
-    if (/\.(ts|tsx)$/.test(entry) && !entry.endsWith(".spec.ts")) return [full];
+    if (/\.(ts|tsx)$/.test(entry) && !/\.spec\.tsx?$/.test(entry)) return [full];
     return [];
   });
 }
@@ -31,7 +38,7 @@ describe("uczciwy social proof — banned numbers", () => {
 
   for (const banned of BANNED) {
     it(`no source file contains "${banned}"`, () => {
-      const offenders = files.filter((f) => readFileSync(f, "utf8").includes(banned));
+      const offenders = files.filter((f) => readFileSync(f, "utf8").toLowerCase().includes(banned.toLowerCase()));
       expect(offenders).toEqual([]);
     });
   }

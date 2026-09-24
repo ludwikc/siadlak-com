@@ -65,7 +65,10 @@ const TrainTheTrainerAI = lazy(() => import("./pages/program/TrainTheTrainerAI")
 const WebinarMeskiKompas = lazy(() => import("./pages/webinar/WebinarMeskiKompas"));
 const WebinarKodKapitana = lazy(() => import("./pages/webinar/WebinarKodKapitana"));
 const WebinarDepresja = lazy(() => import("./pages/webinar/WebinarDepresja"));
-const MCT = lazy(() => import("./pages/MCT"));
+const MctHub = lazy(() => import("./pages/mct/MctHub"));
+const MctCourse = lazy(() => import("./pages/mct/MctCourse"));
+const MctBriefing = lazy(() => import("./pages/mct/MctBriefing"));
+const MctEnterprise = lazy(() => import("./pages/mct/MctEnterprise"));
 const Links = lazy(() => import("./pages/Links"));
 const IG = lazy(() => import("./pages/IG"));
 const Wspolpraca = lazy(() => import("./pages/Wspolpraca"));
@@ -203,7 +206,14 @@ function App() {
                   element={<WebinarLive />}
                 />
 
-                <Route path="/mct" element={<MCT />} />
+                <Route path="/mct" element={<MctHub locale="en" />} />
+                <Route path="/mct/courses/:slug" element={<MctCourse locale="en" />} />
+                <Route path="/mct/executive-briefing" element={<MctBriefing locale="en" />} />
+                <Route path="/mct/enterprise" element={<MctEnterprise locale="en" />} />
+                <Route path="/szkolenia" element={<MctHub locale="pl" />} />
+                <Route path="/szkolenia/kursy/:slug" element={<MctCourse locale="pl" />} />
+                <Route path="/szkolenia/briefing-dla-zarzadu" element={<MctBriefing locale="pl" />} />
+                <Route path="/szkolenia/enterprise" element={<MctEnterprise locale="pl" />} />
                 <Route
                   path="/stream"
                   element={

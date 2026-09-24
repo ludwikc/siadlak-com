@@ -44,6 +44,12 @@ export const redirects: RedirectConfig = {
   "/webinar/replay": "/webinar/meski-kompas/replay",
   "/webinar/live": "/webinar/depresja/live",
   "/thank-you/meski-kompas": "/webinar/meski-kompas/dziekuje",
+
+  // MCT mini-site shortcuts/aliases
+  "/mct/courses": "/mct",
+  "/szkolenia/kursy": "/szkolenia",
+  "/training": "/mct",
+  "/szkolenia-microsoft": "/szkolenia",
 };
 
 /**

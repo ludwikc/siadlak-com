@@ -9,6 +9,8 @@
  *  - webinar live/replay/dziekuje sub-routes (time-sensitive; heavy)
  *  - /help/:slug, /mailing/mute/:topic (dynamic params)
  */
+import { mctRoutes } from "./config/mct/slugs.mjs";
+
 export const staticRoutes = [
   "/",
   "/about",
@@ -33,7 +35,7 @@ export const staticRoutes = [
   "/webinar/kod-kapitana",
   "/webinar/meski-kompas",
   "/webinar/depresja",
-  "/mct",
+  ...mctRoutes(),
   // Instagram is the primary lead source — these link-in-bio landing pages are
   // top-priority for instant HTML + SEO.
   "/ig",

@@ -9,6 +9,7 @@
  */
 import { isBrowser, isPrerender } from "./env";
 import { getFlatAttribution } from "./attribution";
+import type { Locale } from "@/config/mct/types";
 
 type EventParams = {
   page_view: { page_path: string; page_title: string };
@@ -30,6 +31,29 @@ type EventParams = {
   exit_intent_converted: { offer: string };
   experiment_exposure: { experiment_id: string; variant: string };
   dtr_variant_applied: { funnel_slug: string; dtr_param: string; dtr_variant: string };
+  eval_submitted: { page_path: string; training: string; nps: number };
+  eval_submit_error: { page_path: string };
+  mct_view: { locale: Locale; page: "hub" | "course" | "briefing" | "enterprise"; course_slug?: string };
+  mct_tier_select: {
+    locale: Locale;
+    tier: "public" | "briefing" | "enterprise";
+    course_slug?: string;
+    session_id?: string;
+    placement: string;
+  };
+  mct_lead_submitted: {
+    locale: Locale;
+    tier: "public" | "briefing" | "enterprise";
+    intent: string;
+    course_slug?: string;
+    session_id?: string;
+    seats?: number;
+    language: Locale;
+    page_path: string;
+  };
+  mct_lead_submit_error: { locale: Locale; tier: "public" | "briefing" | "enterprise"; page_path: string; reason: string };
+  mct_locale_switch: { from: Locale; to: Locale; page_path: string };
+  mct_calendar_click: { locale: Locale; placement: string };
 };
 
 export type AnalyticsEvent = keyof EventParams;

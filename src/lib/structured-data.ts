@@ -1,7 +1,7 @@
-const BASE_URL = 'https://siadlak.com';
+export const BASE_URL = 'https://siadlak.com';
 
 // ─── Core Entity IDs ───
-const IDS = {
+export const IDS = {
   person: `${BASE_URL}/#ludwik`,
   organization: `${BASE_URL}/#siadlak-com`,
   website: `${BASE_URL}/#website`,
@@ -13,6 +13,8 @@ const IDS = {
   courseMeskiKompas: `${BASE_URL}/#kurs-meski-kompas`,
   podcastLifeHacking: `${BASE_URL}/#podcast-life-hacking`,
   podcastUwazneZycie: `${BASE_URL}/#podcast-uwazne-zycie`,
+  serviceMctBriefing: `${BASE_URL}/mct/executive-briefing#service`,
+  serviceMctEnterprise: `${BASE_URL}/mct/enterprise#service`,
 } as const;
 
 export function getPersonEntity() {
@@ -42,6 +44,11 @@ export function getPersonEntity() {
       'Focus Management',
       'Identity Work',
       'Masculine Development',
+      'Microsoft Fabric',
+      'Azure SQL',
+      'Copilot Studio',
+      'T-SQL',
+      'Data Engineering',
     ],
     hasCredential: [
       {
@@ -74,6 +81,8 @@ export function getPersonEntity() {
       { '@id': IDS.courseSilnaGlowa },
       { '@id': IDS.courseUwazneZycie },
       { '@id': IDS.courseMeskiKompas },
+      { '@id': IDS.serviceMctBriefing },
+      { '@id': IDS.serviceMctEnterprise },
     ],
     nationality: {
       '@type': 'Country',

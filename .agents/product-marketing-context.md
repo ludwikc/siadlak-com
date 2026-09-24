@@ -28,7 +28,7 @@ Kursy i Life OS: ceny **brutto**. TTT:AI: ceny **netto** (+ faktura VAT).
 | Program: Męski Kompas (Męskość) | 997 PLN pilot (regularna 1 997 PLN) + bonus 7 Technik | 5 tyg. · max 10 osób/kohorta | Reinstalacja systemu tożsamości. **Pilot wyprzedany — aktywna lista oczekujących na kolejną edycję.** Współprowadzący: Mateusz Lizak |
 | Life OS: System Upgrade | 16 000 PLN | 8 tyg. | Mentoring 1:1, max 5 osób jednocześnie, pełny upgrade systemu operacyjnego (możliwość 2 × 6 500 PLN netto na firmę) |
 | Train The Trainer: AI (TTT:AI) | 7 999 PLN netto (edycja inauguracyjna — trwa, 1 z 3 miejsc zajęte) / 24 999 PLN netto (regularna od Q3 2026) | 8 tyg. | Prywatny mentoring 1:1 dla geeków-freelancerów AI, którzy chcą zostać certyfikowanymi trenerami AI. Max 4 miejsca/kwartał |
-| Szkolenia MCT (B2B) | wycena indywidualna | wg projektu | Szkolenia korporacyjne: AI & Microsoft Copilot, Data & Analytics (Fabric, Power BI), Modern Work & M365. EN/PL, remote/on-site |
+| Szkolenia MCT (B2B) | Otwarte klasy online: €590 / 2 490 zł netto za dzień (2 dni: €1 090 / 4 490 zł), −10% od 3 miejsc, max 8 os. • Briefing dla zarządu: €1 900 / 7 900 zł netto • Enterprise: wycena indywidualna | wg formatu (1 dzień – custom program) | Szkolenia korporacyjne: Microsoft Fabric, Copilot, Azure SQL. EN/PL, remote/on-site |
 | Newsletter | bezpłatny | ongoing | Eseje o produktywności, AI, sensie życia — bez harmonogramu, 1 500+ czytelników |
 | Test Otwartych Pętli (/reset) | bezpłatny | 2 min | Lead magnet: 10-pytaniowy quiz mierzący drenaż energii z niedomkniętych pętli; zapis przez MailerLite |
 | Lifehackerzy (społeczność) | bonus do każdego programu | dożywotni | Discord: daily coaching 12:34, warsztaty, 50+ protipów, 500+ członków, 8+ krajów |
@@ -276,7 +276,7 @@ Kursy i Life OS: ceny **brutto**. TTT:AI: ceny **netto** (+ faktura VAT).
 **OTO:** po rezerwacji Sesji Discovery działa strona one-time offer (/oto) z licznikiem i logiką wygasania — upsell po zapisie.
 **Wyzwania live:** format "Drwal w Białej Koszuli" — 4-dniowe bezpłatne wyzwanie na Discordzie (limit 50 miejsc, scarcity), kończące się prezentacją programu Hakowanie Produktywności (edycja: 7–10 paź 2025).
 **Boczna ścieżka biznesowa #1:** Train The Trainer: AI (7 999 / 24 999 PLN netto) — dla geeków-freelancerów AI chcących zostać certyfikowanymi trenerami; rekrutacja przez rozmowę wstępną, max 4 osoby/kwartał. Strona /mentoring zestawia obie ścieżki 1:1 obok siebie: TTT:AI = "praca na zewnątrz", Life OS = "praca wewnątrz".
-**Boczna ścieżka biznesowa #2 (B2B):** Szkolenia MCT (/mct, strona po angielsku) — enterprise training (Copilot, Fabric, Azure, M365); proces: 2-min formularz → 20-min scope call → custom program; wycena indywidualna, bez cennika.
+**Boczna ścieżka biznesowa #2 (B2B):** Szkolenia Microsoft (/mct po angielsku, /szkolenia po polsku) — katalog 10 kursów (Fabric, Copilot, Azure SQL) + briefing dla zarządu + enterprise custom; lead z formularza (`api/mct-lead.ts`) trafia do CRM portalu, dalej scope call → wycena/program.
 
 ---
 
@@ -308,14 +308,30 @@ TTT:AI jest **odrębną propozycją wartości** od reszty oferty Aplikacji Menta
 
 ## MCT — B2B Notes (szkolenia korporacyjne)
 
-Strona /mct (całość po angielsku) — osobny track B2B, inny odbiorca niż Aplikacje Mentalne.
+Bilingwalny mini-serwis: /mct (EN) + /szkolenia (PL) — osobny track B2B, inny odbiorca niż Aplikacje Mentalne. 26 statycznych stron (2 huby, 2 briefingi, 2 enterprise, 20 stron kursów × 2 języki).
 
-**Oferta:** Custom training dla zespołów enterprise wdrażających Microsoft Fabric, Copilot, Azure. Trzy stacki: (1) AI & Microsoft Copilot — governance, prompt engineering, strategia ROI "not hype"; (2) Data & Analytics — Fabric, Azure Synapse, Power BI, lakehouses; (3) Modern Work & M365 — adopcja w skali, automatyzacja, systemy produktywności.
+**Oferta:** Otwarte klasy online dla zespołów 3–30 osób (max 8/klasa), briefing dla zarządu (3 h, max 10 osób) i programy enterprise custom. Trzy stacki: (1) AI & Microsoft Copilot — governance, agenci w Copilot Studio, strategia ROI "not hype"; (2) Microsoft Fabric — analityka i inżynieria danych, Power BI; (3) SQL & Azure SQL — Transact-SQL i strojenie na produkcji.
 
-**Autorytet:** "20+ Years MCT", 10 000+ przeszkolonych inżynierów. Logotypy: Unilever, HP, GM, GE, Volkswagen, Volvo, Scania, Nordea, ING; NATO, US Army Europe/Africa, US Navy, US Marines, Wojsko Polskie, policja norweska.
+**Katalog faza 1 (10 kursów, aktualne kody):**
+- AB-731 — Drive AI transformation in your organization
+- MS-4014 — Introduction to building AI agents
+- PL-7008 — Create agents in Microsoft Copilot Studio
+- Custom (bez kodu MOC): Copilot Studio agents for your data — 2-dniowe szkolenie na zamówienie
+- DP-600 Essentials — skondensowana 2-dniowa wersja DP-600 (Implement analytics solutions using Microsoft Fabric)
+- DP-605 — Prepare and visualize data with Microsoft Power BI
+- DP-700 Essentials — skondensowana 2-dniowa wersja DP-700 (Implement data engineering solutions using Microsoft Fabric)
+- DP-300 Essentials — skondensowana 2-dniowa wersja DP-300 (Implement scalable database solutions using Azure SQL)
+- DP-080 — Query and modify data with Transact-SQL
+- Custom (bez kodu MOC): T-SQL performance for developers
+
+**Autorytet:** 19 lat MCT (Microsoft Certified Trainer), 10 000+ przeszkolonych profesjonalistów. Logotypy: Unilever, HP, GM, GE, Volkswagen, Volvo, Scania, Nordea, ING; NATO, US Army Europe/Africa, US Navy, US Marines, Wojsko Polskie, policja norweska.
+
+**Reguła uczciwego social proof (proof.ts + proof.spec.ts):** cytujemy liczbę cytatów (testimoniali), nie gwiazdki/ocenę — na stronach MCT nie ma i nie będzie schema.org `AggregateRating`/`Review` z wymyśloną oceną, dopóki system /eval nie zbierze ≥30 realnych ocen z sesji szkoleniowych.
 
 **Differentiation vs generyczny trener:** pisze courseware dla NATO (nie czyta cudzych slajdów); uczy systemów, nie feature'ów; "debug T-SQL o 10:00, prezentacja dla zarządu o 14:00"; battle-tested, nie lab-tested.
 
-**Proces sprzedaży:** 2-min formularz scopingowy → 20-min scope call (bez pitchu) → custom program → delivery (remote/on-site, EN/PL, EU/US/Bliski Wschód). Bez cennika — wycena indywidualna.
+**Proces sprzedaży / CRM intake:** formularz leada na stronie (hub/kurs/briefing/enterprise) → `api/mct-lead.ts` → Supabase edge function `crm-lead` w projekcie siadlak-portal (rate-limit, walidacja, health-check) → jeśli CRM nie odpowiada lub przekracza timeout, fallback zapisuje lead jako markdown do Vercel Blob → dalej 20-min scope call (bez pitchu) → custom program / wycena. Otwarte klasy mają jawny cennik (patrz tabela wyżej); enterprise bez cennika — wycena indywidualna.
+
+**Routes:** EN hub `/mct` + kursy `/mct/courses/:slug` + `/mct/executive-briefing` + `/mct/enterprise`; PL hub `/szkolenia` + kursy `/szkolenia/kursy/:slug` + `/szkolenia/briefing-dla-zarzadu` + `/szkolenia/enterprise`. Katalog kursów renderowany z `src/config/mct/courses.ts` (10 slugów × 2 języki = 20 stron kursów).
 
 **Proof (testimonials EN):** "One of the best instructors I've ever had" — Ron Wilson, US Army; "Best class I've attended in very long time" — Lisa Blankenship, US Army.

@@ -1,7 +1,9 @@
 import Layout from '@/components/layout/Layout';
 import { GlassCard } from '@/design-system/components/glass-card';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Book, Mic2, Video, FileText, Mail } from '@/lib/icons';
+import { courseList } from '@/config/mct/courses';
+import { coursePath } from '@/config/mct/locale';
+import { ExternalLink, Book, Mic2, Video, FileText, Mail, GraduationCap } from '@/lib/icons';
 
 const Sitemap = () => {
   const siteStructure = [
@@ -32,6 +34,20 @@ const Sitemap = () => {
         { name: 'LifeOS: System Upgrade', path: '/program/lifeos-system-upgrade', description: 'Program fundamentalnej transformacji' },
         { name: 'Silna Głowa', path: '/program/odpornosc', description: 'Program wzmocnienia mentalnego' },
         ]
+    },
+    {
+      category: 'Szkolenia Microsoft (B2B)',
+      icon: <GraduationCap className="h-5 w-5" />,
+      pages: [
+        { name: 'Szkolenia Microsoft — hub', path: '/szkolenia', description: 'Fabric, Copilot i Azure SQL dla zespołów 3–30 osób' },
+        { name: 'Briefing dla zarządu', path: '/szkolenia/briefing-dla-zarzadu', description: 'Trzygodzinny briefing o Copilocie, Fabric i governance AI' },
+        { name: 'Szkolenia enterprise', path: '/szkolenia/enterprise', description: 'Programy szkoleniowe na zamówienie dla enterprise' },
+        ...courseList.map((course) => ({
+          name: course.title.pl,
+          path: coursePath('pl', course.slug),
+          description: course.tagline.pl,
+        })),
+      ]
     },
     {
       category: 'Podcasty',

@@ -1,4 +1,5 @@
 import type { SEOProps } from '@/components/SEO';
+import { proof } from '@/config/proof';
 
 export interface TopicalConfig {
   primaryTopic: string;
@@ -383,14 +384,83 @@ export const seoRouteConfig: RouteConfig[] = [
       significantLinks: ['/program', '/discovery', '/newsletter', '/podcast/life-hacking'],
     }
   },
+  // MCT pages set their own <SEO>; these entries exist for config parity only.
   {
     path: '/mct',
     seo: {
-      title: 'Mental Code Terminal',
-      description: 'Interaktywne narzędzie diagnostyczne sprawdzające Twoją obecną konfigurację mentalną. Autorstwa Ludwika C. Siadlaka.',
-      keywords: 'mental code terminal, diagnostyka mentalna, Ludwik Siadlak',
+      title: 'Microsoft training: Fabric, Copilot, SQL',
+      description: `Live online Microsoft Fabric, Copilot and Azure SQL training for teams. Max 8 per class. Briefings and custom programs. Microsoft Certified Trainer, ${proof.yearsMct} years.`,
+      keywords: 'Microsoft Fabric training, Copilot training, Azure SQL training, DP-600, Microsoft Certified Trainer, live online course, team training',
       url: '/mct',
-      type: 'tool'
+      type: 'course',
+      locale: 'en_US'
+    },
+    topical: {
+      primaryTopic: 'Microsoft Fabric, Copilot and Azure SQL training for teams',
+      secondaryTopics: ['executive briefing', 'enterprise training', 'Microsoft Certified Trainer'],
+      intent: 'commercial',
+      significantLinks: ['/mct/executive-briefing', '/mct/enterprise', '/mct/courses/dp-600'],
+    }
+  },
+  {
+    path: '/szkolenia',
+    seo: {
+      title: 'Szkolenia Microsoft: Fabric, Copilot, SQL',
+      description: `Szkolenia online na żywo z Fabric, Copilota i Azure SQL. Maks. 8 osób w klasie, briefingi i programy na zamówienie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
+      keywords: 'szkolenia Microsoft Fabric, szkolenia Copilot, szkolenia Azure SQL, DP-600, Microsoft Certified Trainer, szkolenie online na żywo, szkolenia dla zespołów',
+      url: '/szkolenia',
+      type: 'course',
+      locale: 'pl_PL'
+    },
+    topical: {
+      primaryTopic: 'szkolenia Microsoft Fabric, Copilot i Azure SQL dla zespołów',
+      secondaryTopics: ['briefing dla zarządu', 'szkolenia enterprise', 'Microsoft Certified Trainer'],
+      intent: 'commercial',
+      significantLinks: ['/szkolenia/briefing-dla-zarzadu', '/szkolenia/enterprise', '/szkolenia/kursy/dp-600'],
+    }
+  },
+  {
+    path: '/mct/executive-briefing',
+    seo: {
+      title: 'Executive briefing: Copilot, Fabric, AI',
+      description: 'Three hours, up to 10 leaders, one decision unblocked. Copilot ROI, Fabric build vs buy, or AI governance for regulated organisations.',
+      keywords: 'executive briefing, Copilot ROI, Microsoft Fabric strategy, AI governance, AI strategy for leaders, board briefing, Microsoft Certified Trainer',
+      url: '/mct/executive-briefing',
+      type: 'course',
+      locale: 'en_US'
+    }
+  },
+  {
+    path: '/szkolenia/briefing-dla-zarzadu',
+    seo: {
+      title: 'Briefing dla zarządu: Copilot, Fabric, AI',
+      description: 'Trzy godziny, do 10 osób z zarządu, jedna decyzja odblokowana. ROI Copilota, Fabric: budować czy kupować, albo governance AI w organizacji regulowanej.',
+      keywords: 'briefing dla zarządu, ROI Copilota, strategia Microsoft Fabric, governance AI, strategia AI dla liderów, warsztat dla zarządu, Microsoft Certified Trainer',
+      url: '/szkolenia/briefing-dla-zarzadu',
+      type: 'course',
+      locale: 'pl_PL'
+    }
+  },
+  {
+    path: '/mct/enterprise',
+    seo: {
+      title: 'Custom Microsoft training for enterprise',
+      description: 'Programs built for your stack, rollout and deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.',
+      keywords: 'enterprise Microsoft training, custom training program, private training, on-site training, Copilot rollout training, Microsoft Fabric training, Microsoft Certified Trainer',
+      url: '/mct/enterprise',
+      type: 'course',
+      locale: 'en_US'
+    }
+  },
+  {
+    path: '/szkolenia/enterprise',
+    seo: {
+      title: 'Szkolenia Microsoft dla enterprise',
+      description: 'Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i zakupy po mojej stronie.',
+      keywords: 'szkolenia Microsoft dla firm, program szkoleniowy na zamówienie, szkolenie zamknięte, szkolenie on-site, wdrożenie Copilota, szkolenia Microsoft Fabric, Microsoft Certified Trainer',
+      url: '/szkolenia/enterprise',
+      type: 'course',
+      locale: 'pl_PL'
     }
   },
   {
