@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { faq } from "@/config/mct/faq";
 import type { FaqItem } from "@/config/mct/types";
 import {
@@ -15,6 +16,7 @@ type FaqAccordionProps = { scope: FaqItem["scope"][number] };
 export default function FaqAccordion({ scope }: FaqAccordionProps) {
   const { locale, t } = useMct();
   const ref = useReveal<HTMLElement>();
+  const [openId, setOpenId] = useState("");
   const items = faq.filter((item) => item.scope.includes(scope));
 
   if (items.length === 0) return null;
@@ -23,13 +25,25 @@ export default function FaqAccordion({ scope }: FaqAccordionProps) {
     <section ref={ref} className="mct-reveal py-20">
       <div className="mx-auto max-w-6xl px-4">
         <SectionHead eyebrow={t.faq.eyebrow} title={t.faq.title} />
-        <Accordion type="single" collapsible className="max-w-3xl" data-reveal-child>
+        <Accordion
+          type="single"
+          collapsible
+          value={openId}
+          onValueChange={setOpenId}
+          className="max-w-3xl"
+          data-reveal-child
+        >
           {items.map((item) => (
             <AccordionItem key={item.id} value={item.id} className="border-b border-white/10">
               <AccordionTrigger className="gap-6 py-5 text-lg font-semibold text-on-dark hover:text-electric [&>svg]:text-electric">
                 {item.question[locale]}
               </AccordionTrigger>
-              <AccordionContent className="pb-6 text-base leading-relaxed text-dim">
+              {/* forceMount keeps answers in the prerendered DOM for crawlers; Radix drops `hidden` under forceMount, so it is set explicitly. */}
+              <AccordionContent
+                forceMount
+                hidden={openId !== item.id}
+                className="pb-6 text-base leading-relaxed text-dim"
+              >
                 {item.answer[locale]}
               </AccordionContent>
             </AccordionItem>

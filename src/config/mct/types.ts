@@ -12,7 +12,7 @@ export type AgendaDay = { title: Localized; modules: Localized<string[]>; addOn:
 export type Course = {
   slug: CourseSlug; track: Track; codes: string[]; official: boolean; condensed: boolean;
   days: 1 | 2; level: CourseLevel;
-  title: Localized; tagline: Localized; summary: Localized;
+  title: Localized; shortTitle: Localized; tagline: Localized; summary: Localized;
   audience: Localized<string[]>; notFor: Localized;
   outcomes: Localized<string[]>; agenda: AgendaDay[]; prerequisites: Localized<string[]>;
   tags: string[]; msLearnUrl?: string; examCode?: string;

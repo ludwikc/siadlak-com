@@ -7,6 +7,7 @@ import { MCT_PATHS } from "@/config/mct/slugs.mjs";
 import type { MctPaths } from "@/config/mct/slugs.mjs";
 import type { CourseSlug, Currency, LeadIntent, Locale, TierId } from "@/config/mct/types";
 import { track } from "@/lib/analytics";
+import { prefersReducedMotion } from "./motion";
 
 export type Prefill = {
   tier: TierId;
@@ -45,7 +46,7 @@ export function MctProvider({ locale, children }: { locale: Locale; children: Re
         placement,
       });
       if (!scroll || typeof document === "undefined") return;
-      document.getElementById("request")?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("request")?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
     },
     [locale],
   );

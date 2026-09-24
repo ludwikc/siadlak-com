@@ -44,7 +44,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
-const errorClass = "mt-2 text-sm text-[hsl(var(--color-error))]";
+const errorClass = "mt-2 text-sm text-color-error-strong";
 
 type QuestionProps = {
   number: string;

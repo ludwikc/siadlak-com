@@ -45,6 +45,7 @@
   --color-success: 142 71% 45%;
   --color-warning: 25 95% 53%;
   --color-error: 0 84% 60%;
+  --color-error-strong: 0 72% 42%;
   --color-info: 211 100% 50%;
 
   /* === SHADCN/UI SEMANTIC TOKENS === */

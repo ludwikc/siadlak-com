@@ -5,22 +5,31 @@ import { policies } from "./policies";
 export const pl = {
   meta: {
     hub: {
-      title: "Szkolenia Microsoft Fabric, Copilot i Azure SQL dla zespołów | Ludwik C. Siadlak",
-      description: `Szkolenia Microsoft na żywo online dla zespołów 3–30 osób, briefingi dla zarządu i programy enterprise na zamówienie. Fabric, Copilot, Azure SQL. Maks. 8 osób w klasie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
+      title: "Szkolenia Microsoft: Fabric, Copilot, Azure SQL",
+      description: `Szkolenia online na żywo z Fabric, Copilota i Azure SQL. Maks. 8 osób w klasie, briefingi i programy na zamówienie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
+      keywords:
+        "szkolenia Microsoft Fabric, szkolenia Copilot, szkolenia Azure SQL, DP-600, Microsoft Certified Trainer, szkolenie online na żywo, szkolenia dla zespołów",
     },
     briefing: {
-      title: "Briefing dla zarządu: Copilot, Fabric, governance AI | Ludwik C. Siadlak",
+      title: "Briefing dla zarządu: Copilot, Fabric, AI",
       description:
         "Trzy godziny, do 10 osób z zarządu, jedna decyzja odblokowana. ROI Copilota, Fabric: budować czy kupować, albo governance AI w organizacji regulowanej.",
+      keywords:
+        "briefing dla zarządu, ROI Copilota, strategia Microsoft Fabric, governance AI, strategia AI dla liderów, warsztat dla zarządu, Microsoft Certified Trainer",
     },
     enterprise: {
-      title: "Szkolenia Microsoft na zamówienie dla enterprise | Ludwik C. Siadlak",
+      title: "Szkolenia Microsoft na zamówienie (enterprise)",
       description:
-        "Programy pisane pod Twój stack, Twoje wdrożenie i Twój termin. Prywatne edycje dowolnego kursu, zdalnie albo on-site, po polsku albo po angielsku. NDA, zamówienie i rejestracja dostawcy po mojej stronie.",
+        "Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i formalności zakupowe po mojej stronie.",
+      keywords:
+        "szkolenia Microsoft dla firm, program szkoleniowy na zamówienie, szkolenie zamknięte, szkolenie on-site, wdrożenie Copilota, szkolenia Microsoft Fabric, Microsoft Certified Trainer",
     },
     course: {
-      title: "{title} | Szkolenie na żywo online | Ludwik C. Siadlak",
-      description: "{tagline}",
+      title: "{shortTitle}",
+      description:
+        "{tagline} {days}-dniowa klasa online na żywo, maks. 8 miejsc, od {price} za miejsce (netto). Microsoft Certified Trainer od {years} lat.",
+      keywords:
+        "{code}, szkolenie Microsoft, kurs online na żywo, szkolenie z trenerem, szkolenie w małej grupie, szkolenia dla zespołów, Microsoft Certified Trainer",
     },
   },
   nav: {
@@ -31,6 +40,8 @@ export const pl = {
     enterprise: "Enterprise",
     request: "Zapytaj",
     localeSwitch: "English version",
+    ariaLabel: "Główna",
+    localeSwitchLabel: "Przełącz na angielski",
   },
   hero: {
     eyebrow: `Microsoft Certified Trainer · ${proof.yearsMct} lat · ${proof.trainedProfessionals} przeszkolonych`,
@@ -207,6 +218,7 @@ export const pl = {
     contact: "Kontakt",
     responseTime: "Odpowiadam w ciągu jednego dnia roboczego.",
     privacy: "Polityka prywatności",
+    updated: "Treść zaktualizowana {date}",
   },
   form: {
     eyebrow: "Zapytanie",

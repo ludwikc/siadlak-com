@@ -5,22 +5,31 @@ import { policies } from "./policies";
 export const en = {
   meta: {
     hub: {
-      title: "Microsoft Fabric, Copilot & Azure SQL training for teams | Ludwik C. Siadlak",
-      description: `Live online Microsoft training for teams of 3–30, executive briefings and custom enterprise programs. Fabric, Copilot, Azure SQL. Max 8 per class. Microsoft Certified Trainer for ${proof.yearsMct} years.`,
+      title: "Microsoft training for teams: Fabric, Copilot, SQL",
+      description: `Live online Microsoft Fabric, Copilot and Azure SQL training for teams. Max 8 per class. Briefings and custom programs. Microsoft Certified Trainer, ${proof.yearsMct} years.`,
+      keywords:
+        "Microsoft Fabric training, Copilot training, Azure SQL training, DP-600, Microsoft Certified Trainer, live online course, team training",
     },
     briefing: {
-      title: "Executive briefing: Copilot, Fabric, AI governance | Ludwik C. Siadlak",
+      title: "Executive briefing: Copilot, Fabric, AI governance",
       description:
         "Three hours, up to 10 leaders, one decision unblocked. Copilot ROI, Fabric build vs buy, or AI governance for regulated organisations.",
+      keywords:
+        "executive briefing, Copilot ROI, Microsoft Fabric strategy, AI governance, AI strategy for leaders, board briefing, Microsoft Certified Trainer",
     },
     enterprise: {
-      title: "Custom Microsoft training programs for enterprise | Ludwik C. Siadlak",
+      title: "Custom Microsoft training for enterprise",
       description:
-        "Programs written for your stack, your rollout and your deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.",
+        "Programs built for your stack, rollout and deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.",
+      keywords:
+        "enterprise Microsoft training, custom training program, private training, on-site training, Copilot rollout training, Microsoft Fabric training, Microsoft Certified Trainer",
     },
     course: {
-      title: "{title} | Live online training | Ludwik C. Siadlak",
-      description: "{tagline}",
+      title: "{shortTitle}",
+      description:
+        "{tagline} {days}-day live online class, max 8 seats, from {price} per seat (net). Microsoft Certified Trainer, {years} years.",
+      keywords:
+        "{code}, Microsoft training, live online course, instructor-led training, small group training, team training, Microsoft Certified Trainer",
     },
   },
   nav: {
@@ -31,6 +40,8 @@ export const en = {
     enterprise: "Enterprise",
     request: "Request",
     localeSwitch: "Polska wersja",
+    ariaLabel: "Primary",
+    localeSwitchLabel: "Switch to Polish",
   },
   hero: {
     eyebrow: `Microsoft Certified Trainer · ${proof.yearsMct} years · ${proof.trainedProfessionals} professionals trained`,
@@ -207,6 +218,7 @@ export const en = {
     contact: "Contact",
     responseTime: "Reply within one business day.",
     privacy: "Privacy policy",
+    updated: "Content updated {date}",
   },
   form: {
     eyebrow: "Request",

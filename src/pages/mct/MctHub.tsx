@@ -20,10 +20,11 @@ import { darkSecondaryCtaClass } from "@/components/mct/mct-styles";
 import { EMAIL, PHONE_PL, PHONE_PL_TEL } from "@/config/mct/contact";
 import { courseList } from "@/config/mct/courses";
 import { hreflangAlternates, htmlLang, hubPath, ogLocale } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import type { LeadIntent, Locale, TierId } from "@/config/mct/types";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { track } from "@/lib/analytics";
-import { getMctFaqSchema, getMctHubEntities } from "@/lib/structured-data-mct";
+import { getMctEntityGraph, getMctFaqSchema, getMctHubEntities } from "@/lib/structured-data-mct";
 
 type HubPath = "teams" | "enterprise";
 
@@ -97,12 +98,14 @@ function MctHubContent() {
       <SEO
         title={t.meta.hub.title}
         description={t.meta.hub.description}
+        keywords={t.meta.hub.keywords}
+        modifiedDate={MCT_CONTENT_UPDATED}
         url={pathname}
         type="website"
         locale={ogLocale(locale)}
         lang={htmlLang(locale)}
         alternates={hreflangAlternates(locale, pathname)}
-        jsonLd={[...getMctHubEntities(locale, courseList), getMctFaqSchema(locale, "hub")]}
+        jsonLd={[...getMctEntityGraph(), ...getMctHubEntities(locale, courseList), getMctFaqSchema(locale, "hub")]}
       />
       <MctHero />
       <TrustBand />

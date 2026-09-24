@@ -388,9 +388,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct',
     seo: {
-      title: 'Microsoft Fabric, Copilot & Azure SQL training for teams | Ludwik C. Siadlak',
-      description: `Live online Microsoft training for teams of 3–30, executive briefings and custom enterprise programs. Fabric, Copilot, Azure SQL. Max 8 per class. Microsoft Certified Trainer for ${proof.yearsMct} years.`,
-      keywords: 'Microsoft training, Copilot training, Fabric training, Azure SQL training, Microsoft Certified Trainer, corporate training',
+      title: 'Microsoft training for teams: Fabric, Copilot, SQL',
+      description: `Live online Microsoft Fabric, Copilot and Azure SQL training for teams. Max 8 per class. Briefings and custom programs. Microsoft Certified Trainer, ${proof.yearsMct} years.`,
+      keywords: 'Microsoft Fabric training, Copilot training, Azure SQL training, DP-600, Microsoft Certified Trainer, live online course, team training',
       url: '/mct',
       type: 'course',
       locale: 'en_US'
@@ -405,9 +405,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/szkolenia',
     seo: {
-      title: 'Szkolenia Microsoft Fabric, Copilot i Azure SQL dla zespołów | Ludwik C. Siadlak',
-      description: `Szkolenia Microsoft na żywo online dla zespołów 3–30 osób, briefingi dla zarządu i programy enterprise na zamówienie. Fabric, Copilot, Azure SQL. Maks. 8 osób w klasie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
-      keywords: 'szkolenia Microsoft, szkolenia Copilot, szkolenia Fabric, szkolenia Azure SQL, Microsoft Certified Trainer, szkolenia dla firm',
+      title: 'Szkolenia Microsoft: Fabric, Copilot, Azure SQL',
+      description: `Szkolenia online na żywo z Fabric, Copilota i Azure SQL. Maks. 8 osób w klasie, briefingi i programy na zamówienie. Microsoft Certified Trainer od ${proof.yearsMct} lat.`,
+      keywords: 'szkolenia Microsoft Fabric, szkolenia Copilot, szkolenia Azure SQL, DP-600, Microsoft Certified Trainer, szkolenie online na żywo, szkolenia dla zespołów',
       url: '/szkolenia',
       type: 'course',
       locale: 'pl_PL'
@@ -422,9 +422,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct/executive-briefing',
     seo: {
-      title: 'Executive briefing: Copilot, Fabric, AI governance | Ludwik C. Siadlak',
+      title: 'Executive briefing: Copilot, Fabric, AI governance',
       description: 'Three hours, up to 10 leaders, one decision unblocked. Copilot ROI, Fabric build vs buy, or AI governance for regulated organisations.',
-      keywords: 'executive briefing, Copilot ROI, Fabric strategy, AI governance, Microsoft training',
+      keywords: 'executive briefing, Copilot ROI, Microsoft Fabric strategy, AI governance, AI strategy for leaders, board briefing, Microsoft Certified Trainer',
       url: '/mct/executive-briefing',
       type: 'course',
       locale: 'en_US'
@@ -433,9 +433,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/szkolenia/briefing-dla-zarzadu',
     seo: {
-      title: 'Briefing dla zarządu: Copilot, Fabric, governance AI | Ludwik C. Siadlak',
+      title: 'Briefing dla zarządu: Copilot, Fabric, AI',
       description: 'Trzy godziny, do 10 osób z zarządu, jedna decyzja odblokowana. ROI Copilota, Fabric: budować czy kupować, albo governance AI w organizacji regulowanej.',
-      keywords: 'briefing dla zarządu, ROI Copilot, strategia Fabric, governance AI, szkolenia Microsoft',
+      keywords: 'briefing dla zarządu, ROI Copilota, strategia Microsoft Fabric, governance AI, strategia AI dla liderów, warsztat dla zarządu, Microsoft Certified Trainer',
       url: '/szkolenia/briefing-dla-zarzadu',
       type: 'course',
       locale: 'pl_PL'
@@ -444,9 +444,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/mct/enterprise',
     seo: {
-      title: 'Custom Microsoft training programs for enterprise | Ludwik C. Siadlak',
-      description: 'Programs written for your stack, your rollout and your deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.',
-      keywords: 'enterprise Microsoft training, custom training program, private training, Microsoft Certified Trainer',
+      title: 'Custom Microsoft training for enterprise',
+      description: 'Programs built for your stack, rollout and deadline. Private runs of any course, remote or on-site, English or Polish. NDA, PO and vendor onboarding handled.',
+      keywords: 'enterprise Microsoft training, custom training program, private training, on-site training, Copilot rollout training, Microsoft Fabric training, Microsoft Certified Trainer',
       url: '/mct/enterprise',
       type: 'course',
       locale: 'en_US'
@@ -455,9 +455,9 @@ export const seoRouteConfig: RouteConfig[] = [
   {
     path: '/szkolenia/enterprise',
     seo: {
-      title: 'Szkolenia Microsoft na zamówienie dla enterprise | Ludwik C. Siadlak',
-      description: 'Programy pisane pod Twój stack, Twoje wdrożenie i Twój termin. Prywatne edycje dowolnego kursu, zdalnie albo on-site, po polsku albo po angielsku. NDA, zamówienie i rejestracja dostawcy po mojej stronie.',
-      keywords: 'szkolenia enterprise, program szkoleniowy na zamówienie, szkolenie prywatne, Microsoft Certified Trainer',
+      title: 'Szkolenia Microsoft na zamówienie (enterprise)',
+      description: 'Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i formalności zakupowe po mojej stronie.',
+      keywords: 'szkolenia Microsoft dla firm, program szkoleniowy na zamówienie, szkolenie zamknięte, szkolenie on-site, wdrożenie Copilota, szkolenia Microsoft Fabric, Microsoft Certified Trainer',
       url: '/szkolenia/enterprise',
       type: 'course',
       locale: 'pl_PL'

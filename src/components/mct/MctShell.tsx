@@ -2,8 +2,10 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import LandingLayout from "@/components/layout/LandingLayout";
 import { EMAIL, PHONE_DE, PHONE_PL, PHONE_PL_TEL, PORTAL_PRIVACY_URL } from "@/config/mct/contact";
+import { fill } from "@/config/mct/copy";
 import { courseList, tracks } from "@/config/mct/courses";
 import { coursePath } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED, formatUpdatedDate } from "@/config/mct/meta";
 import type { Track } from "@/config/mct/types";
 import LocaleSwitch from "./LocaleSwitch";
 import { useMct } from "./MctContext";
@@ -22,7 +24,7 @@ function MctTopBar() {
         <Link to="/" className="font-heading text-base font-bold text-on-dark">
           {t.nav.brand}
         </Link>
-        <nav className="ml-auto flex items-center gap-6">
+        <nav aria-label={t.nav.ariaLabel} className="ml-auto flex items-center gap-6">
           <Link
             to={paths.hub}
             className="hidden text-sm text-dim transition-colors hover:text-on-dark md:inline"
@@ -111,6 +113,7 @@ function MctFooter() {
       <div className="border-t border-white/10">
         <p className="mx-auto mb-0 max-w-6xl px-4 py-6 text-xs text-dim">
           © {year} {t.nav.brand} · {t.footer.since} ·{" "}
+          {fill(t.footer.updated, { date: formatUpdatedDate(MCT_CONTENT_UPDATED, locale) })} ·{" "}
           <a
             href={PORTAL_PRIVACY_URL}
             className="underline underline-offset-2 hover:text-on-dark-tertiary"

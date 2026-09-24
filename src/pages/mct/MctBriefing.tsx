@@ -13,13 +13,14 @@ import { cardClass } from "@/components/mct/mct-styles";
 import { fill } from "@/config/mct/copy";
 import type { BriefingTopicId } from "@/config/mct/copy";
 import { briefingPath, hreflangAlternates, htmlLang, hubPath, ogLocale } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import { pricing } from "@/config/mct/pricing";
 import { formatPrice } from "@/config/mct/pricing-utils";
 import type { Locale } from "@/config/mct/types";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
-import { getMctBreadcrumb, getMctBriefingService, getMctFaqSchema } from "@/lib/structured-data-mct";
+import { getMctBreadcrumb, getMctBriefingService, getMctEntityGraph, getMctFaqSchema } from "@/lib/structured-data-mct";
 
 const TOPIC_ORDER: BriefingTopicId[] = ["a", "b", "c"];
 
@@ -102,12 +103,15 @@ function MctBriefingContent() {
       <SEO
         title={t.meta.briefing.title}
         description={t.meta.briefing.description}
+        keywords={t.meta.briefing.keywords}
+        modifiedDate={MCT_CONTENT_UPDATED}
         url={pathname}
         type="website"
         locale={ogLocale(locale)}
         lang={htmlLang(locale)}
         alternates={hreflangAlternates(locale, pathname)}
         jsonLd={[
+          ...getMctEntityGraph(),
           getMctBriefingService(locale),
           getMctFaqSchema(locale, "briefing"),
           getMctBreadcrumb(locale, [

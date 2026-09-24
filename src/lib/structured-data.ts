@@ -13,6 +13,8 @@ export const IDS = {
   courseMeskiKompas: `${BASE_URL}/#kurs-meski-kompas`,
   podcastLifeHacking: `${BASE_URL}/#podcast-life-hacking`,
   podcastUwazneZycie: `${BASE_URL}/#podcast-uwazne-zycie`,
+  serviceMctBriefing: `${BASE_URL}/mct/executive-briefing`,
+  serviceMctEnterprise: `${BASE_URL}/mct/enterprise`,
 } as const;
 
 export function getPersonEntity() {
@@ -42,6 +44,11 @@ export function getPersonEntity() {
       'Focus Management',
       'Identity Work',
       'Masculine Development',
+      'Microsoft Fabric',
+      'Azure SQL',
+      'Copilot Studio',
+      'T-SQL',
+      'Data Engineering',
     ],
     hasCredential: [
       {
@@ -74,6 +81,8 @@ export function getPersonEntity() {
       { '@id': IDS.courseSilnaGlowa },
       { '@id': IDS.courseUwazneZycie },
       { '@id': IDS.courseMeskiKompas },
+      { '@id': IDS.serviceMctBriefing },
+      { '@id': IDS.serviceMctEnterprise },
     ],
     nationality: {
       '@type': 'Country',

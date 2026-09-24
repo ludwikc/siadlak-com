@@ -13,12 +13,13 @@ import { MctProvider, useMct } from "@/components/mct/MctContext";
 import { cardClass, darkSecondaryCtaClass } from "@/components/mct/mct-styles";
 import { CALENDAR_URL } from "@/config/mct/contact";
 import { enterprisePath, hreflangAlternates, htmlLang, hubPath, ogLocale } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import { testimonials } from "@/config/mct/testimonials";
 import type { Locale } from "@/config/mct/types";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
-import { getMctBreadcrumb, getMctEnterpriseService, getMctFaqSchema } from "@/lib/structured-data-mct";
+import { getMctBreadcrumb, getMctEnterpriseService, getMctEntityGraph, getMctFaqSchema } from "@/lib/structured-data-mct";
 
 const CASE_QUOTE_IDS: Record<string, string[]> = { "us-army": ["blankenship", "buenavente"] };
 
@@ -127,12 +128,15 @@ function MctEnterpriseContent() {
       <SEO
         title={t.meta.enterprise.title}
         description={t.meta.enterprise.description}
+        keywords={t.meta.enterprise.keywords}
+        modifiedDate={MCT_CONTENT_UPDATED}
         url={pathname}
         type="website"
         locale={ogLocale(locale)}
         lang={htmlLang(locale)}
         alternates={hreflangAlternates(locale, pathname)}
         jsonLd={[
+          ...getMctEntityGraph(),
           getMctEnterpriseService(locale),
           getMctFaqSchema(locale, "enterprise"),
           getMctBreadcrumb(locale, [

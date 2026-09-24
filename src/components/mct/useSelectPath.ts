@@ -1,8 +1,6 @@
 import { useCallback } from "react";
 import { useMct } from "./MctContext";
-
-const prefersReducedMotion = () =>
-  typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+import { prefersReducedMotion } from "./motion";
 
 export function useSelectPath() {
   const { setPrefill } = useMct();

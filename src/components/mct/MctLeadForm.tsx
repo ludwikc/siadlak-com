@@ -52,7 +52,7 @@ const DELIVERY_OPTIONS: DeliveryOption[] = ["remote", "onsite", "hybrid"];
 const LANGUAGES: Locale[] = ["en", "pl"];
 const LEADERS_RANGE = { min: 1, max: 10 };
 
-const errorClass = "mt-2 mb-0 text-sm font-medium text-color-error";
+const errorClass = "mt-2 mb-0 text-sm font-medium text-color-error-strong";
 const hintClass = "text-sm leading-relaxed text-on-light-dim";
 const textLinkClass = "underline underline-offset-4 hover:text-electric";
 

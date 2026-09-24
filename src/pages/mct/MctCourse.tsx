@@ -17,6 +17,7 @@ import { cardClass, chipClass, codeChipClass } from "@/components/mct/mct-styles
 import { fill } from "@/config/mct/copy";
 import { courseList } from "@/config/mct/courses";
 import { coursePath, hreflangAlternates, htmlLang, hubPath, ogLocale } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import { formatPrice, seatPrice } from "@/config/mct/pricing-utils";
 import { sessions } from "@/config/mct/schedule";
 import { getSessionsForCourse } from "@/config/mct/schedule-utils";
@@ -27,7 +28,7 @@ import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/design-system/components/tabs";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
-import { getMctBreadcrumb, getMctCourseEntity, getMctFaqSchema } from "@/lib/structured-data-mct";
+import { getMctBreadcrumb, getMctCourseEntity, getMctEntityGraph, getMctFaqSchema } from "@/lib/structured-data-mct";
 import NotFound from "@/pages/NotFound";
 
 const sectionClass = "py-20";
@@ -233,7 +234,7 @@ function TrainerStrip() {
 }
 
 function MctCourseContent({ course }: { course: Course }) {
-  const { locale, t } = useMct();
+  const { locale, t, currency } = useMct();
   const [upcoming] = useState(() => getSessionsForCourse(sessions, course.slug, new Date()));
   const pathname = coursePath(locale, course.slug);
   const related = courseList.filter((c) => c.track === course.track && c.slug !== course.slug);
@@ -247,14 +248,22 @@ function MctCourseContent({ course }: { course: Course }) {
   return (
     <MctShell>
       <SEO
-        title={fill(t.meta.course.title, { title: course.title[locale] })}
-        description={fill(t.meta.course.description, { tagline: course.tagline[locale] })}
+        title={fill(t.meta.course.title, { shortTitle: course.shortTitle[locale] })}
+        description={fill(t.meta.course.description, {
+          tagline: course.tagline[locale],
+          days: course.days,
+          price: formatPrice(seatPrice(course.days, currency), currency, locale),
+          years: proof.yearsMct,
+        })}
+        keywords={fill(t.meta.course.keywords, { code: course.codes[0] ?? course.title[locale] })}
+        modifiedDate={MCT_CONTENT_UPDATED}
         url={pathname}
         type="course"
         locale={ogLocale(locale)}
         lang={htmlLang(locale)}
         alternates={hreflangAlternates(locale, pathname)}
         jsonLd={[
+          ...getMctEntityGraph(),
           getMctCourseEntity(course, upcoming, locale),
           getMctFaqSchema(locale, "course"),
           getMctBreadcrumb(locale, [
@@ -265,8 +274,12 @@ function MctCourseContent({ course }: { course: Course }) {
       />
       <CourseHero course={course} />
 
+      <div className={cn(containerClass, "pt-20")}>
+        <p className="m-0 max-w-3xl text-lg leading-relaxed text-dim">{course.summary[locale]}</p>
+      </div>
+
       {course.condensed && (
-        <div className={cn(containerClass, "pt-20")}>
+        <div className={cn(containerClass, "pt-8")}>
           <p className={cn(cardClass, "m-0 max-w-3xl border-l-2 border-l-electric p-6", bodyClass)}>
             {t.course.condensedNotice}
           </p>

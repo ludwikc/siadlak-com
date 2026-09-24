@@ -58,8 +58,8 @@ export default function Testimonials() {
           eyebrow={t.proof.eyebrow}
           title={fill(t.proof.title, { n: testimonialCount })}
           sub={t.proof.sub}
+          note={locale === "pl" ? t.proof.note : undefined}
         />
-        {locale === "pl" && <p className="-mt-8 mb-10 text-sm text-on-dark-tertiary">{t.proof.note}</p>}
 
         <div role="group" aria-label={t.proof.eyebrow} className="mb-10 flex flex-wrap gap-2" data-reveal-child>
           {FILTERS.map((id) => (

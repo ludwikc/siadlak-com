@@ -1,13 +1,16 @@
 import { describe, expect, it } from "vitest";
+import { getCopy } from "@/config/mct/copy";
 import { courses } from "@/config/mct/courses";
 import { faq } from "@/config/mct/faq";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import type { ScheduledSession } from "@/config/mct/types";
-import { BASE_URL, IDS } from "./structured-data";
+import { BASE_URL, IDS, getOrganizationEntity, getPersonEntity } from "./structured-data";
 import {
   getMctBreadcrumb,
   getMctBriefingService,
   getMctCourseEntity,
   getMctEnterpriseService,
+  getMctEntityGraph,
   getMctFaqSchema,
   getMctHubEntities,
 } from "./structured-data-mct";
@@ -45,8 +48,17 @@ describe("getMctCourseEntity", () => {
       name: course.title.en,
       description: course.summary.en,
       courseCode: "DP-600T00",
+      url: `${BASE_URL}/mct/courses/dp-600`,
       provider: { "@id": IDS.organization },
+      instructor: { "@id": IDS.person },
       inLanguage: ["en", "pl"],
+      availableLanguage: ["en", "pl"],
+      educationalLevel: "Advanced",
+      timeRequired: "P2D",
+      teaches: course.outcomes.en,
+      coursePrerequisites: course.prerequisites.en,
+      audience: { "@type": "Audience", audienceType: course.audience.en.join(", ") },
+      dateModified: MCT_CONTENT_UPDATED,
       offers: [
         {
           "@type": "Offer",
@@ -118,6 +130,27 @@ describe("getMctCourseEntity", () => {
     expect([courses["copilot-studio-agents"].codes, "courseCode" in entity]).toEqual([[], false]);
   });
 
+  it("describes a 1-day beginner course in the requested locale", () => {
+    const oneDay = courses["ab-731"];
+    const entity = getMctCourseEntity(oneDay, [], "pl");
+
+    expect({
+      educationalLevel: entity.educationalLevel,
+      timeRequired: entity.timeRequired,
+      teaches: entity.teaches,
+      coursePrerequisites: entity.coursePrerequisites,
+      audience: entity.audience,
+      url: entity.url,
+    }).toEqual({
+      educationalLevel: "Beginner",
+      timeRequired: "P1D",
+      teaches: oneDay.outcomes.pl,
+      coursePrerequisites: oneDay.prerequisites.pl,
+      audience: { "@type": "Audience", audienceType: oneDay.audience.pl.join(", ") },
+      url: `${BASE_URL}/szkolenia/kursy/ab-731`,
+    });
+  });
+
   it("uses a single-day workload for a 1-day session", () => {
     const oneDaySession: ScheduledSession = { ...sessionEn, days: 1 };
     const entity = getMctCourseEntity(course, [oneDaySession], "en");
@@ -126,6 +159,19 @@ describe("getMctCourseEntity", () => {
 });
 
 describe("getMctBriefingService", () => {
+  it("shares one @id across locales and points url at the locale's page", () => {
+    const [en, pl] = [getMctBriefingService("en"), getMctBriefingService("pl")];
+
+    expect([en["@id"], pl["@id"], en.url, pl.url, en.dateModified, pl.dateModified]).toEqual([
+      IDS.serviceMctBriefing,
+      IDS.serviceMctBriefing,
+      `${BASE_URL}/mct/executive-briefing`,
+      `${BASE_URL}/szkolenia/briefing-dla-zarzadu`,
+      MCT_CONTENT_UPDATED,
+      MCT_CONTENT_UPDATED,
+    ]);
+  });
+
   it("prices the briefing at 1900 EUR and 7900 PLN", () => {
     const service = getMctBriefingService("en");
 
@@ -164,11 +210,19 @@ describe("getMctBriefingService", () => {
 });
 
 describe("getMctEnterpriseService", () => {
-  it("returns a Service with no offers", () => {
-    const service = getMctEnterpriseService("en");
-    expect(service["@type"]).toBe("Service");
-    expect(service).not.toHaveProperty("offers");
-    expect(service.provider).toEqual({ "@id": IDS.person });
+  it("returns a Service with no offers under a locale-independent @id", () => {
+    expect(getMctEnterpriseService("pl")).toEqual({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": IDS.serviceMctEnterprise,
+      url: `${BASE_URL}/szkolenia/enterprise`,
+      name: getCopy("pl").meta.enterprise.title,
+      description: getCopy("pl").meta.enterprise.description,
+      provider: { "@id": IDS.person },
+      serviceType: "Custom enterprise training",
+      dateModified: MCT_CONTENT_UPDATED,
+    });
+    expect(getMctEnterpriseService("en")["@id"]).toEqual(IDS.serviceMctEnterprise);
   });
 });
 
@@ -177,17 +231,39 @@ describe("getMctHubEntities", () => {
     const list = [course];
     const [webPage, itemList, breadcrumb] = getMctHubEntities("en", list);
 
-    expect(webPage).toMatchObject({ "@type": "WebPage", "@id": `${BASE_URL}/mct` });
+    expect(webPage).toMatchObject({
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/mct`,
+      dateModified: MCT_CONTENT_UPDATED,
+    });
 
     expect(itemList).toEqual({
       "@context": "https://schema.org",
       "@type": "ItemList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, url: `${BASE_URL}/mct/courses/dp-600` },
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: course.title.en,
+          url: `${BASE_URL}/mct/courses/dp-600`,
+        },
       ],
     });
 
     expect(breadcrumb["@type"]).toBe("BreadcrumbList");
+  });
+});
+
+describe("getMctEntityGraph", () => {
+  it("emits the Organization and Person nodes that the MCT entities reference by @id", () => {
+    expect(getMctEntityGraph()).toEqual([getOrganizationEntity(), getPersonEntity()]);
+  });
+
+  it("lists both MCT services among the Person's offers", () => {
+    expect(getPersonEntity().makesOffer.slice(-2)).toEqual([
+      { "@id": IDS.serviceMctBriefing },
+      { "@id": IDS.serviceMctEnterprise },
+    ]);
   });
 });
 

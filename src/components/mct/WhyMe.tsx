@@ -26,8 +26,6 @@ export default function WhyMe() {
             <OptimizedImage
               src={consultantPhoto}
               alt={t.course.trainer.name}
-              width={3388}
-              height={4940}
               sizes="(max-width: 1024px) 100vw, 33vw"
               className="h-auto w-full object-cover grayscale transition duration-700 hover:grayscale-0"
             />

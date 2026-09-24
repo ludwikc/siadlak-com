@@ -2,7 +2,7 @@ import { en } from "./copy.en";
 import { pl } from "./copy.pl";
 import type { CourseLevel, Locale, SessionStatus, Testimonial, TierId } from "./types";
 
-type Meta = { title: string; description: string };
+type Meta = { title: string; description: string; keywords: string };
 type TitledText = { title: string; body: string };
 type TierCopy = { title: string; price: string; bullets: string[]; cta: string };
 type StickyCopy = { label: string; cta: string };
@@ -31,6 +31,8 @@ export type MctCopy = {
     enterprise: string;
     request: string;
     localeSwitch: string;
+    ariaLabel: string;
+    localeSwitchLabel: string;
   };
   hero: {
     eyebrow: string;
@@ -101,6 +103,7 @@ export type MctCopy = {
     contact: string;
     responseTime: string;
     privacy: string;
+    updated: string;
   };
   form: {
     eyebrow: string;

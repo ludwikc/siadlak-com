@@ -61,6 +61,7 @@ export const courses: Record<CourseSlug, Course> = {
     days: 1,
     level: "beginner",
     title: { en: "Drive AI transformation in your organization", pl: "Transformacja AI w organizacji" },
+    shortTitle: { en: "AB-731: AI transformation for leaders (1 day)", pl: "AB-731: transformacja AI w firmie (1 dzień)" },
     tagline: {
       en: "From AI hype to a plan your board can sign off.",
       pl: "Od szumu wokół AI do planu, który zarząd może podpisać.",
@@ -147,6 +148,7 @@ export const courses: Record<CourseSlug, Course> = {
     days: 1,
     level: "beginner",
     title: { en: "Introduction to building AI agents", pl: "Wprowadzenie do budowy agentów AI" },
+    shortTitle: { en: "MS-4014: Building AI agents (1 day)", pl: "MS-4014: budowa agentów AI (1 dzień)" },
     tagline: {
       en: "What agents really are, which Microsoft tool to build them with, and one that works by the end of the day.",
       pl: "Czym naprawdę są agenci, w czym ich budować i jeden działający agent pod koniec dnia.",
@@ -228,6 +230,7 @@ export const courses: Record<CourseSlug, Course> = {
     days: 1,
     level: "intermediate",
     title: { en: "Create agents in Microsoft Copilot Studio", pl: "Agenci w Microsoft Copilot Studio" },
+    shortTitle: { en: "PL-7008: Copilot Studio agents (1 day)", pl: "PL-7008: agenci w Copilot Studio (1 dzień)" },
     tagline: {
       en: "Hands-on Copilot Studio: from topics to an agent published in Teams.",
       pl: "Copilot Studio w praktyce: od tematów do agenta opublikowanego w Teams.",
@@ -287,6 +290,7 @@ export const courses: Record<CourseSlug, Course> = {
     days: 2,
     level: "intermediate",
     title: { en: "Copilot Studio agents for your data", pl: "Agenci Copilot Studio na Twoich danych" },
+    shortTitle: { en: "Copilot Studio agents on your data (2 days)", pl: "Agenci Copilot Studio z Twoimi danymi (2 dni)" },
     tagline: {
       en: "One agent on your own systems, built and ready for a security review.",
       pl: "Jeden agent na Twoich systemach, zbudowany i gotowy na przegląd bezpieczeństwa.",
@@ -361,6 +365,7 @@ export const courses: Record<CourseSlug, Course> = {
       en: "DP-600 Essentials: Implement analytics solutions using Microsoft Fabric",
       pl: "DP-600 Essentials: rozwiązania analityczne w Microsoft Fabric",
     },
+    shortTitle: { en: "DP-600 Essentials: Fabric analytics (2 days)", pl: "DP-600 Essentials: analityka w Fabric (2 dni)" },
     tagline: {
       en: "The exam-relevant core of DP-600, for people who will run Fabric in production.",
       pl: "Sedno DP-600 dla osób, które będą utrzymywać Fabric na produkcji.",
@@ -476,6 +481,7 @@ export const courses: Record<CourseSlug, Course> = {
       en: "Prepare and visualize data with Microsoft Power BI",
       pl: "Przygotowanie i wizualizacja danych w Power BI",
     },
+    shortTitle: { en: "DP-605: Power BI data prep & visuals (1 day)", pl: "DP-605: dane i raporty w Power BI (1 dzień)" },
     tagline: {
       en: "From a raw export to a report people actually use.",
       pl: "Od surowego eksportu do raportu, z którego ludzie naprawdę korzystają.",
@@ -562,6 +568,7 @@ export const courses: Record<CourseSlug, Course> = {
       en: "DP-700 Essentials: Implement data engineering solutions using Microsoft Fabric",
       pl: "DP-700 Essentials: inżynieria danych w Microsoft Fabric",
     },
+    shortTitle: { en: "DP-700: Fabric data engineering (2 days)", pl: "DP-700: inżynieria danych w Fabric (2 dni)" },
     tagline: {
       en: "Fabric data engineering that survives production, not just the demo.",
       pl: "Inżynieria danych w Fabric, która przetrwa produkcję, a nie tylko demo.",
@@ -672,6 +679,7 @@ export const courses: Record<CourseSlug, Course> = {
       en: "DP-300 Essentials: Implement scalable database solutions using Azure SQL",
       pl: "DP-300 Essentials: bazy danych w Azure SQL",
     },
+    shortTitle: { en: "DP-300 Essentials: Azure SQL (2 days)", pl: "DP-300 Essentials: Azure SQL (2 dni)" },
     tagline: {
       en: "Deploy, secure, tune and recover Azure SQL, without the filler.",
       pl: "Wdrożenie, bezpieczeństwo, strojenie i odtwarzanie Azure SQL, bez waty.",
@@ -788,6 +796,7 @@ export const courses: Record<CourseSlug, Course> = {
       en: "Query and modify data with Transact-SQL",
       pl: "Zapytania i modyfikacja danych w Transact-SQL",
     },
+    shortTitle: { en: "DP-080: Transact-SQL fundamentals (2 days)", pl: "DP-080: podstawy Transact-SQL (2 dni)" },
     tagline: {
       en: "Write the SQL you need at work, and understand why it works.",
       pl: "Pisz SQL, którego potrzebujesz w pracy, i wiedz, dlaczego działa.",
@@ -868,6 +877,7 @@ export const courses: Record<CourseSlug, Course> = {
     days: 2,
     level: "advanced",
     title: { en: "T-SQL performance for developers", pl: "Wydajność T-SQL dla programistów" },
+    shortTitle: { en: "T-SQL performance for developers (2 days)", pl: "Wydajność T-SQL dla programistów (2 dni)" },
     tagline: {
       en: "Read the plan, fix the query, keep it fast.",
       pl: "Przeczytaj plan, popraw zapytanie, utrzymaj wydajność.",

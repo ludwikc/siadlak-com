@@ -39,6 +39,7 @@ const preset: Partial<Config> = {
 			'color-success': 'hsl(var(--color-success))',
 			'color-warning': 'hsl(var(--color-warning))',
 			'color-error': 'hsl(var(--color-error))',
+			'color-error-strong': 'hsl(var(--color-error-strong))',
 			'color-info': 'hsl(var(--color-info))',
   			lifehacker: {
   				purple: 'hsl(263, 70%, 50%)',

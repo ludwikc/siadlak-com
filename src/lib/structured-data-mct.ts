@@ -1,13 +1,28 @@
 import { getCopy } from "@/config/mct/copy";
 import { faq } from "@/config/mct/faq";
 import { briefingPath, coursePath, enterprisePath, hubPath } from "@/config/mct/locale";
+import { MCT_CONTENT_UPDATED } from "@/config/mct/meta";
 import { pricing } from "@/config/mct/pricing";
 import { seatPrice } from "@/config/mct/pricing-utils";
 import { sessionEndsAt } from "@/config/mct/schedule-utils";
-import type { Course, Currency, FaqItem, Locale, ScheduledSession } from "@/config/mct/types";
-import { BASE_URL, IDS, getBreadcrumbSchema, getFAQSchema, getWebPageEntity } from "./structured-data";
+import type { Course, CourseLevel, Currency, FaqItem, Locale, ScheduledSession } from "@/config/mct/types";
+import {
+  BASE_URL,
+  IDS,
+  getBreadcrumbSchema,
+  getFAQSchema,
+  getOrganizationEntity,
+  getPersonEntity,
+  getWebPageEntity,
+} from "./structured-data";
 
 type BreadcrumbItem = { name: string; path: string };
+
+const EDUCATIONAL_LEVEL: Record<CourseLevel, string> = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
+};
 
 function buildOffer(price: number, currency: Currency, url: string) {
   return {
@@ -48,8 +63,17 @@ export function getMctCourseEntity(
     name: course.title[locale],
     description: course.summary[locale],
     ...(course.codes.length > 0 ? { courseCode: course.codes.join(", ") } : {}),
+    url,
     provider: { "@id": IDS.organization },
+    instructor: { "@id": IDS.person },
     inLanguage: ["en", "pl"],
+    availableLanguage: ["en", "pl"],
+    educationalLevel: EDUCATIONAL_LEVEL[course.level],
+    timeRequired: course.days === 1 ? "P1D" : "P2D",
+    teaches: course.outcomes[locale],
+    coursePrerequisites: course.prerequisites[locale],
+    audience: { "@type": "Audience", audienceType: course.audience[locale].join(", ") },
+    dateModified: MCT_CONTENT_UPDATED,
     offers,
     hasCourseInstance: upcoming.map((session) => ({
       "@type": "CourseInstance",
@@ -72,11 +96,13 @@ export function getMctBriefingService(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": url,
+    "@id": IDS.serviceMctBriefing,
+    url,
     name: meta.title,
     description: meta.description,
     provider: { "@id": IDS.person },
     serviceType: "Executive briefing",
+    dateModified: MCT_CONTENT_UPDATED,
     offers: [
       buildOffer(pricing.briefing.flat.EUR, "EUR", url),
       buildOffer(pricing.briefing.flat.PLN, "PLN", url),
@@ -90,11 +116,13 @@ export function getMctEnterpriseService(locale: Locale) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${BASE_URL}${enterprisePath(locale)}`,
+    "@id": IDS.serviceMctEnterprise,
+    url: `${BASE_URL}${enterprisePath(locale)}`,
     name: meta.title,
     description: meta.description,
     provider: { "@id": IDS.person },
     serviceType: "Custom enterprise training",
+    dateModified: MCT_CONTENT_UPDATED,
   };
 }
 
@@ -116,16 +144,21 @@ export function getMctHubEntities(locale: Locale, courseList: Course[]) {
   const navHubLabel = getCopy(locale).nav.hub;
 
   return [
-    getWebPageEntity(hubPath(locale), meta.title, meta.description),
+    { ...getWebPageEntity(hubPath(locale), meta.title, meta.description), dateModified: MCT_CONTENT_UPDATED },
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
       itemListElement: courseList.map((course, i) => ({
         "@type": "ListItem",
         position: i + 1,
+        name: course.title[locale],
         url: `${BASE_URL}${coursePath(locale, course.slug)}`,
       })),
     },
     getMctBreadcrumb(locale, [{ name: navHubLabel, path: hubPath(locale) }]),
   ];
+}
+
+export function getMctEntityGraph() {
+  return [getOrganizationEntity(), getPersonEntity()];
 }

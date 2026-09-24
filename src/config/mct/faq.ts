@@ -2,6 +2,8 @@ import { policies } from "./policies";
 import { pricing } from "./pricing";
 import type { FaqItem } from "./types";
 
+const lcFirst = (text: string): string => text.charAt(0).toLocaleLowerCase("pl-PL") + text.slice(1);
+
 export const faq: FaqItem[] = [
   {
     id: "invoices",
@@ -9,7 +11,7 @@ export const faq: FaqItem[] = [
     question: { en: "How does invoicing work?", pl: "Jak wygląda fakturowanie?" },
     answer: {
       en: `You receive a VAT invoice from a Polish company, payable by bank transfer in EUR or PLN. Public seats: ${policies.paymentTerms.en} Enterprise: milestone invoicing on request.`,
-      pl: `Dostajesz fakturę VAT od polskiej firmy, płatną przelewem w EUR albo PLN. Szkolenia otwarte: ${policies.paymentTerms.pl} Enterprise: na życzenie fakturowanie etapami.`,
+      pl: `Dostajesz fakturę VAT od polskiej firmy, płatną przelewem w EUR albo PLN. Szkolenia otwarte: ${lcFirst(policies.paymentTerms.pl)} Enterprise: na życzenie fakturowanie etapami.`,
     },
   },
   {
