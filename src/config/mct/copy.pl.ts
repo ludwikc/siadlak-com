@@ -20,7 +20,7 @@ export const pl = {
     enterprise: {
       title: "Szkolenia Microsoft dla enterprise",
       description:
-        "Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i formalności zakupowe po mojej stronie.",
+        "Programy pod Twój stack, wdrożenie i termin. Prywatne edycje kursów, zdalnie lub on-site, po polsku lub angielsku. NDA i zakupy po mojej stronie.",
       keywords:
         "szkolenia Microsoft dla firm, program szkoleniowy na zamówienie, szkolenie zamknięte, szkolenie on-site, wdrożenie Copilota, szkolenia Microsoft Fabric, Microsoft Certified Trainer",
     },
