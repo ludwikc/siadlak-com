@@ -27,6 +27,8 @@ export const tracks: Record<Track, { title: Localized; blurb: Localized }> = {
   },
 };
 
+export const TRACK_ORDER: Track[] = ["copilot", "fabric", "sql"];
+
 const copilotStudioDay: AgendaDay = {
   title: { en: "Build, publish and govern an agent", pl: "Budowa, publikacja i nadzór nad agentem" },
   modules: {

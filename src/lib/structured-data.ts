@@ -13,8 +13,8 @@ export const IDS = {
   courseMeskiKompas: `${BASE_URL}/#kurs-meski-kompas`,
   podcastLifeHacking: `${BASE_URL}/#podcast-life-hacking`,
   podcastUwazneZycie: `${BASE_URL}/#podcast-uwazne-zycie`,
-  serviceMctBriefing: `${BASE_URL}/mct/executive-briefing`,
-  serviceMctEnterprise: `${BASE_URL}/mct/enterprise`,
+  serviceMctBriefing: `${BASE_URL}/mct/executive-briefing#service`,
+  serviceMctEnterprise: `${BASE_URL}/mct/enterprise#service`,
 } as const;
 
 export function getPersonEntity() {

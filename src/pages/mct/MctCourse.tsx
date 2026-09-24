@@ -254,7 +254,9 @@ function MctCourseContent({ course }: { course: Course }) {
           days: course.days,
           price: formatPrice(seatPrice(course.days, currency), currency, locale),
         })}
-        keywords={fill(t.meta.course.keywords, { code: course.codes[0] ?? course.title[locale] })}
+        keywords={fill(t.meta.course.keywords, {
+          code: course.examCode ?? course.codes[0]?.replace(/T00$/, "") ?? course.shortTitle[locale],
+        })}
         modifiedDate={MCT_CONTENT_UPDATED}
         url={pathname}
         type="course"

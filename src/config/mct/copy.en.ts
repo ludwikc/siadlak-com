@@ -41,7 +41,7 @@ export const en = {
     request: "Request",
     localeSwitch: "Polska wersja",
     ariaLabel: "Primary",
-    localeSwitchLabel: "Switch to Polish",
+    localeSwitchLabel: "PL – switch to Polish",
   },
   hero: {
     eyebrow: `Microsoft Certified Trainer · ${proof.yearsMct} years · ${proof.trainedProfessionals} professionals trained`,

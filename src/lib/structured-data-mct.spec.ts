@@ -52,9 +52,8 @@ describe("getMctCourseEntity", () => {
       provider: { "@id": IDS.organization },
       instructor: { "@id": IDS.person },
       inLanguage: ["en", "pl"],
-      availableLanguage: ["en", "pl"],
       educationalLevel: "Advanced",
-      timeRequired: "P2D",
+      timeRequired: "PT16H",
       teaches: course.outcomes.en,
       coursePrerequisites: course.prerequisites.en,
       audience: { "@type": "Audience", audienceType: course.audience.en.join(", ") },
@@ -143,7 +142,7 @@ describe("getMctCourseEntity", () => {
       url: entity.url,
     }).toEqual({
       educationalLevel: "Beginner",
-      timeRequired: "P1D",
+      timeRequired: "PT8H",
       teaches: oneDay.outcomes.pl,
       coursePrerequisites: oneDay.prerequisites.pl,
       audience: { "@type": "Audience", audienceType: oneDay.audience.pl.join(", ") },
@@ -162,13 +161,11 @@ describe("getMctBriefingService", () => {
   it("shares one @id across locales and points url at the locale's page", () => {
     const [en, pl] = [getMctBriefingService("en"), getMctBriefingService("pl")];
 
-    expect([en["@id"], pl["@id"], en.url, pl.url, en.dateModified, pl.dateModified]).toEqual([
+    expect([en["@id"], pl["@id"], en.url, pl.url]).toEqual([
       IDS.serviceMctBriefing,
       IDS.serviceMctBriefing,
       `${BASE_URL}/mct/executive-briefing`,
       `${BASE_URL}/szkolenia/briefing-dla-zarzadu`,
-      MCT_CONTENT_UPDATED,
-      MCT_CONTENT_UPDATED,
     ]);
   });
 
@@ -220,7 +217,6 @@ describe("getMctEnterpriseService", () => {
       description: getCopy("pl").meta.enterprise.description,
       provider: { "@id": IDS.person },
       serviceType: "Custom enterprise training",
-      dateModified: MCT_CONTENT_UPDATED,
     });
     expect(getMctEnterpriseService("en")["@id"]).toEqual(IDS.serviceMctEnterprise);
   });

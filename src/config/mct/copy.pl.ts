@@ -27,7 +27,7 @@ export const pl = {
     course: {
       title: "{shortTitle}",
       description:
-        "{tagline} {days}-dniowa klasa online na żywo, maks. 8 miejsc, od {price} za miejsce (netto).",
+        "{tagline} {days}-dniowa klasa online na żywo, maks. 8 osób, od {price} za miejsce netto.",
       keywords:
         "{code}, szkolenie Microsoft, kurs online na żywo, szkolenie z trenerem, szkolenie w małej grupie, szkolenia dla zespołów, Microsoft Certified Trainer",
     },
@@ -41,7 +41,7 @@ export const pl = {
     request: "Zapytaj",
     localeSwitch: "English version",
     ariaLabel: "Główna",
-    localeSwitchLabel: "Przełącz na angielski",
+    localeSwitchLabel: "EN – przełącz na angielski",
   },
   hero: {
     eyebrow: `Microsoft Certified Trainer · ${proof.yearsMct} lat · ${proof.trainedProfessionals} przeszkolonych`,

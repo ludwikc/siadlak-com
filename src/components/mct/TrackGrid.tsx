@@ -1,11 +1,8 @@
-import { courseList, tracks } from "@/config/mct/courses";
-import type { Track } from "@/config/mct/types";
+import { courseList, TRACK_ORDER, tracks } from "@/config/mct/courses";
 import { useReveal } from "@/hooks/use-reveal";
 import CourseCard from "./CourseCard";
 import { useMct } from "./MctContext";
 import SectionHead from "./SectionHead";
-
-const TRACK_ORDER: Track[] = ["copilot", "fabric", "sql"];
 
 export default function TrackGrid() {
   const { locale, t } = useMct();

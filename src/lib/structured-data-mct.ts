@@ -67,9 +67,8 @@ export function getMctCourseEntity(
     provider: { "@id": IDS.organization },
     instructor: { "@id": IDS.person },
     inLanguage: ["en", "pl"],
-    availableLanguage: ["en", "pl"],
     educationalLevel: EDUCATIONAL_LEVEL[course.level],
-    timeRequired: course.days === 1 ? "P1D" : "P2D",
+    timeRequired: course.days === 1 ? "PT8H" : "PT16H",
     teaches: course.outcomes[locale],
     coursePrerequisites: course.prerequisites[locale],
     audience: { "@type": "Audience", audienceType: course.audience[locale].join(", ") },
@@ -102,7 +101,6 @@ export function getMctBriefingService(locale: Locale) {
     description: meta.description,
     provider: { "@id": IDS.person },
     serviceType: "Executive briefing",
-    dateModified: MCT_CONTENT_UPDATED,
     offers: [
       buildOffer(pricing.briefing.flat.EUR, "EUR", url),
       buildOffer(pricing.briefing.flat.PLN, "PLN", url),
@@ -122,7 +120,6 @@ export function getMctEnterpriseService(locale: Locale) {
     description: meta.description,
     provider: { "@id": IDS.person },
     serviceType: "Custom enterprise training",
-    dateModified: MCT_CONTENT_UPDATED,
   };
 }
 

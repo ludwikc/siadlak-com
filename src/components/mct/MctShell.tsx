@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import LandingLayout from "@/components/layout/LandingLayout";
 import { EMAIL, PHONE_DE, PHONE_PL, PHONE_PL_TEL, PORTAL_PRIVACY_URL } from "@/config/mct/contact";
 import { fill } from "@/config/mct/copy";
-import { courseList, tracks } from "@/config/mct/courses";
+import { courseList, TRACK_ORDER, tracks } from "@/config/mct/courses";
 import { coursePath } from "@/config/mct/locale";
 import { MCT_CONTENT_UPDATED, formatUpdatedDate } from "@/config/mct/meta";
-import type { Track } from "@/config/mct/types";
 import LocaleSwitch from "./LocaleSwitch";
 import { useMct } from "./MctContext";
-
-const TRACK_ORDER = Object.keys(tracks) as Track[];
 
 const footerLinkClass = "text-sm text-dim transition-colors hover:text-on-dark";
 const footerHeadingClass = "mct-eyebrow mt-0 mb-5 text-on-dark-tertiary";

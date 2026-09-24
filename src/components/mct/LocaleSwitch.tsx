@@ -18,7 +18,6 @@ export default function LocaleSwitch() {
       data-cta={`${surface}:locale-switch`}
     >
       {target.toUpperCase()}
-      <span className="sr-only"> {t.nav.localeSwitch}</span>
     </Link>
   );
 }
