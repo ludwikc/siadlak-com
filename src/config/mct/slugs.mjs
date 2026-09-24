@@ -1,4 +1,4 @@
-export const COURSE_SLUGS = ["ab-731","ms-4014","pl-7008","copilot-studio-agents","dp-600","dp-605","dp-700","dp-300","dp-080","tsql-performance"];
+export const COURSE_SLUGS = ["ab-731","ms-4014","build-agents-copilot-studio","copilot-studio-agents","dp-600","dp-605","dp-700","dp-300","dp-080","tsql-performance"];
 export const MCT_PATHS = {
   en: { hub: "/mct", courses: "/mct/courses", briefing: "/mct/executive-briefing", enterprise: "/mct/enterprise" },
   pl: { hub: "/szkolenia", courses: "/szkolenia/kursy", briefing: "/szkolenia/briefing-dla-zarzadu", enterprise: "/szkolenia/enterprise" },

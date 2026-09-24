@@ -30,6 +30,8 @@
     { "source": "/thank-you/meski-kompas", "destination": "/webinar/meski-kompas/dziekuje", "permanent": true },
     { "source": "/mct/courses", "destination": "/mct", "permanent": true },
     { "source": "/szkolenia/kursy", "destination": "/szkolenia", "permanent": true },
+    { "source": "/mct/courses/pl-7008", "destination": "/mct/courses/build-agents-copilot-studio", "permanent": true },
+    { "source": "/szkolenia/kursy/pl-7008", "destination": "/szkolenia/kursy/build-agents-copilot-studio", "permanent": true },
     { "source": "/training", "destination": "/mct", "permanent": true },
     { "source": "/szkolenia-microsoft", "destination": "/szkolenia", "permanent": true },
     { "source": "/stream", "destination": "https://deepwork.pl", "permanent": true },

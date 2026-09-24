@@ -77,8 +77,8 @@ export const courses: Record<CourseSlug, Course> = {
       pl: ["Członkowie zarządu i dyrektorzy", "Liderzy transformacji i innowacji", "Decydenci IT i biznesu"],
     },
     notFor: {
-      en: "Not for builders who want to configure agents all day — MS-4014 or PL-7008 fit better.",
-      pl: "Nie dla osób, które chcą cały dzień konfigurować agentów — lepiej pasuje MS-4014 albo PL-7008.",
+      en: "Not for builders who want to configure agents all day — MS-4014 or my one-day Copilot Studio course fit better.",
+      pl: "Nie dla osób, które chcą cały dzień konfigurować agentów — lepiej pasuje MS-4014 albo mój jednodniowy kurs Copilot Studio.",
     },
     outcomes: {
       en: [
@@ -223,23 +223,23 @@ export const courses: Record<CourseSlug, Course> = {
     tags: ["ai", "agents", "copilot-studio", "foundry"],
     msLearnUrl: `${LEARN}/ms-4014`,
   },
-  "pl-7008": {
-    slug: "pl-7008",
+  "build-agents-copilot-studio": {
+    slug: "build-agents-copilot-studio",
     track: "copilot",
-    codes: ["PL-7008"],
-    official: true,
+    codes: [],
+    official: false,
     condensed: false,
     days: 1,
     level: "intermediate",
-    title: { en: "Create agents in Microsoft Copilot Studio", pl: "Agenci w Microsoft Copilot Studio" },
-    shortTitle: { en: "PL-7008: Copilot Studio agents (1 day)", pl: "PL-7008: agenci w Copilot Studio (1 dzień)" },
+    title: { en: "Build agents in Microsoft Copilot Studio", pl: "Budowa agentów w Microsoft Copilot Studio" },
+    shortTitle: { en: "Build agents in Copilot Studio (1 day)", pl: "Budowa agentów w Copilot Studio (1 dzień)" },
     tagline: {
       en: "Hands-on Copilot Studio: from topics to an agent published in Teams.",
       pl: "Copilot Studio w praktyce: od tematów do agenta opublikowanego w Teams.",
     },
     summary: {
-      en: "Built on Microsoft's official PL-7008 course. A full day in Copilot Studio: conversation design, generative answers on your knowledge, actions that call real systems, and publishing to Teams and Microsoft 365 Copilot. You also get the governance side, so what you build can actually go live.",
-      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft PL-7008. Cały dzień w Copilot Studio: projektowanie rozmowy, odpowiedzi generatywne na Twojej wiedzy, akcje wywołujące prawdziwe systemy i publikacja w Teams oraz Microsoft 365 Copilot. Omawiamy też ład i bezpieczeństwo, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
+      en: "A custom one-day programme, not an official Microsoft course. A full day in Copilot Studio: conversation design, generative answers on your knowledge, actions that call real systems, and publishing to Teams and Microsoft 365 Copilot. You also get the governance side, so what you build can actually go live.",
+      pl: "Autorski jednodniowy program, nie oficjalny kurs Microsoft. Cały dzień w Copilot Studio: projektowanie rozmowy, odpowiedzi generatywne na Twojej wiedzy, akcje wywołujące prawdziwe systemy i publikacja w Teams oraz Microsoft 365 Copilot. Omawiamy też ład i bezpieczeństwo, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
     },
     audience: {
       en: ["Power Platform makers", "M365 and Power Platform admins", "Business analysts"],
@@ -281,7 +281,6 @@ export const courses: Record<CourseSlug, Course> = {
       ],
     },
     tags: ["copilot-studio", "agents", "power-platform", "teams"],
-    msLearnUrl: `${LEARN}/pl-7008`,
   },
   "copilot-studio-agents": {
     slug: "copilot-studio-agents",
@@ -298,8 +297,8 @@ export const courses: Record<CourseSlug, Course> = {
       pl: "Jeden agent na Twoich systemach, zbudowany i gotowy na przegląd bezpieczeństwa.",
     },
     summary: {
-      en: "A custom programme, not an official Microsoft course. Day one covers the PL-7008 ground. Day two is your environment: connectors to your systems, API actions, testing, a security review and a handover runbook. The agent you build stays with you and keeps running.",
-      pl: "Autorski program, nie oficjalny kurs Microsoft. Pierwszy dzień obejmuje materiał PL-7008. Drugi dzień to Twoje środowisko: konektory do Twoich systemów, akcje API, testy, przegląd bezpieczeństwa i runbook przekazania. Agent, którego zbudujesz, zostaje u Ciebie i działa dalej.",
+      en: "A custom programme, not an official Microsoft course. Day one covers my one-day Copilot Studio course. Day two is your environment: connectors to your systems, API actions, testing, a security review and a handover runbook. The agent you build stays with you and keeps running.",
+      pl: "Autorski program, nie oficjalny kurs Microsoft. Pierwszy dzień obejmuje materiał mojego jednodniowego kursu Copilot Studio. Drugi dzień to Twoje środowisko: konektory do Twoich systemów, akcje API, testy, przegląd bezpieczeństwa i runbook przekazania. Agent, którego zbudujesz, zostaje u Ciebie i działa dalej.",
     },
     audience: {
       en: ["Power Platform makers", "Solution architects", "IT security and platform owners"],
@@ -341,13 +340,13 @@ export const courses: Record<CourseSlug, Course> = {
     ],
     prerequisites: {
       en: [
-        "Copilot Studio experience or PL-7008 level knowledge",
+        "Copilot Studio experience or my one-day Copilot Studio course",
         "An environment and test data you are allowed to use",
         "Someone who can approve connector and API access",
         "A short brief of the agent you want, sent before class",
       ],
       pl: [
-        "Doświadczenie z Copilot Studio lub wiedza na poziomie PL-7008",
+        "Doświadczenie z Copilot Studio lub mój jednodniowy kurs Copilot Studio",
         "Środowisko i dane testowe, których możesz używać",
         "Osoba, która może zatwierdzić dostęp do konektorów i API",
         "Krótki opis agenta, którego potrzebujesz, wysłany przed szkoleniem",
