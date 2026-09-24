@@ -7,9 +7,10 @@ interface PodcastPlayerProps {
   title: string;
   embedUrl: string;
   coverArt?: string;
+  coverArtAlt?: string;
 }
 
-const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
+const PodcastPlayer = ({ title, embedUrl, coverArt, coverArtAlt }: PodcastPlayerProps) => {
   return (
     <div className="podcast-player my-6 overflow-hidden rounded-lg border border-border bg-luminous-white shadow-sm">
       <div className="flex items-center p-4 border-b border-border">
@@ -17,7 +18,7 @@ const PodcastPlayer = ({ title, embedUrl, coverArt }: PodcastPlayerProps) => {
           <div className="mr-4 w-12 h-12 overflow-hidden rounded">
             <OptimizedImage
               src={coverArt}
-              alt={`${title} cover art`}
+              alt={coverArtAlt ?? `${title} — okładka`}
               className="w-full h-full object-cover"
               width={48}
               height={48}

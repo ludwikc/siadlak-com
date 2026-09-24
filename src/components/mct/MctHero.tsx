@@ -10,10 +10,11 @@ import { cn } from "@/lib/utils";
 import { useMct } from "./MctContext";
 import { darkSecondaryCtaClass } from "./mct-styles";
 import { useSelectPath } from "./useSelectPath";
+import { altFor } from "@/config/image-alt";
 
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
-const HERO_IMAGE = "/lovable-uploads/SIADLAK-coffee-transparent.webp";
+const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
 
 export default function MctHero() {
   const { locale, t, surface } = useMct();
@@ -25,7 +26,7 @@ export default function MctHero() {
       <Hero
         align="left"
         heroImage={HERO_IMAGE}
-        imageDescription={t.course.trainer.name}
+        imageDescription={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety", locale)}
         eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.hero.eyebrow}</p>}
         title={
           <span className="mct-display block text-on-dark">

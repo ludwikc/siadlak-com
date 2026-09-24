@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { getSEOConfig } from "@/lib/seo-config";
 import { Link } from "react-router-dom";
 import MailerLiteEmbed from "@/components/MailerLiteEmbed";
+import { altFor } from "@/config/image-alt";
 
 export default function NewsletterPage() {
 
@@ -182,8 +183,8 @@ export default function NewsletterPage() {
 
               <div className="rounded-sm border border-on-light/10 overflow-hidden">
                 <OptimizedImage
-                  src="/lovable-uploads/newsletter-example.png"
-                  alt="Przykład newslettera — Fake it till you make it"
+                  src="/lovable-uploads/grafika-newsletter-przyklad-naglowek-kompas.png"
+                  alt={altFor("grafika-newsletter-przyklad-naglowek-kompas")}
                   className="w-full"
                   width={284}
                   height={292}

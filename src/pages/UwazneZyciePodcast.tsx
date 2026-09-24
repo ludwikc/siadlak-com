@@ -7,17 +7,31 @@ import NextSessionCountdown from '../components/podcast/NextSessionCountdown';
 import MailerLiteEmbed from '@/components/MailerLiteEmbed';
 import { CTAButton } from '@/design-system/components/cta-button';
 import { Calendar } from 'lucide-react';
+import { altFor } from "@/config/image-alt";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/lib/seo-config";
+import { getPodcastBreadcrumb, getPodcastEntity, getWebPageEntity } from "@/lib/structured-data";
 
 const UwazneZyciePodcast = () => {
   return (
     <Layout>
+      <SEO
+        {...getSEOConfig("/podcast/uwazne-zycie")}
+        image="/lovable-uploads/grafika-medytacje-drzewo-zycia-mandala-neon-kwadrat.png"
+        imageAlt={altFor("grafika-medytacje-drzewo-zycia-mandala-neon-kwadrat")}
+        jsonLd={[
+          getPodcastEntity("uwazne-zycie"),
+          getWebPageEntity("/podcast/uwazne-zycie", "Uważne Życie Podcast", "Podcast o uważności, świadomym życiu i równowadze w codzienności. Prowadzi Ludwik C. Siadlak."),
+          getPodcastBreadcrumb("Uważne Życie Podcast", "/podcast/uwazne-zycie"),
+        ]}
+      />
       <Hero
         title="Uważne Życie"
         subtitle="Odnajdź równowagę w świecie ciągłych wymagań"
         ctaText="Posłuchaj najnowszego odcinka"
         ctaLink="#player"
-        backgroundImage="/lovable-uploads/83c4de73-257e-4763-9477-2e4a54d8f95b.png"
-        imageDescription="Osoba w pozie medytacyjnej w spokojnym otoczeniu"
+        backgroundImage="/lovable-uploads/ludwikcsiadlak-portret-medytacja-po-turecku-smuga-swiatla-16x9.png"
+        imageDescription={altFor("ludwikcsiadlak-portret-medytacja-po-turecku-smuga-swiatla-16x9")}
         fullHeight={true}
       />
 
@@ -48,7 +62,8 @@ const UwazneZyciePodcast = () => {
             <PodcastPlayer
               title="Uważne Życie"
               embedUrl="https://open.spotify.com/embed/show/0M0P2V6eQfwzJ4fow7wsIc"
-              coverArt="/lovable-uploads/17bd28c7-cb8f-4096-adcd-c6f6a3b7c266.png"
+              coverArt="/lovable-uploads/grafika-medytacje-drzewo-zycia-mandala-neon-kwadrat.png"
+              coverArtAlt={altFor("grafika-medytacje-drzewo-zycia-mandala-neon-kwadrat")}
             />
           </div>
         </div>

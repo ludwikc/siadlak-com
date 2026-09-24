@@ -7,6 +7,7 @@ import ProofInline from "@/components/proof/ProofInline";
 import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getAboutEntities, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import { altFor } from "@/config/image-alt";
 
 const aboutFaqs = [
   {
@@ -214,8 +215,8 @@ const About = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-start max-w-6xl mx-auto">
             <div className="lg:w-5/12">
               <OptimizedImage
-                src="/lovable-uploads/SIADLAK-ig.png"
-                alt="Ludwik Siadlak"
+                src="/lovable-uploads/ludwikcsiadlak-lifestyle-instagram-siatka-6-zdjec.png"
+                alt={altFor("ludwikcsiadlak-lifestyle-instagram-siatka-6-zdjec")}
                 className="w-full h-auto rounded-sm"
                 priority
                 width={1000}
@@ -343,8 +344,8 @@ const About = () => {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-2/5">
                 <OptimizedImage
-                  src="/lovable-uploads/18c4e8c1-8757-4b04-89ac-7f17deeae65f.png"
-                  alt="Ludwik Siadlak"
+                  src="/lovable-uploads/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion.png"
+                  alt={altFor("ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion")}
                   className="w-full h-auto rounded-sm"
                   width={1283}
                   height={1920}

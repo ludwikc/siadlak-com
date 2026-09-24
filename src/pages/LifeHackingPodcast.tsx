@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import { getSEOConfig, getTopicalConfig } from '../lib/seo-config';
 import TopicalMeta from '../components/TopicalMeta';
 import { getPodcastEntity, getWebPageEntity, getPodcastBreadcrumb, getFAQSchema } from '../lib/structured-data';
+import { altFor } from "@/config/image-alt";
 
 const podcastFaqs = [
   {
@@ -116,7 +117,8 @@ const LifeHackingPodcast = () => {
             <PodcastPlayer
               title="Life Hacking Podcast"
               embedUrl="https://open.spotify.com/embed/show/2WtHOHHGeeRZtsyYszSIlB"
-              coverArt="/lovable-uploads/208a0c75-6c6d-4324-8241-a7de28c2fa3e.png"
+              coverArt="/lovable-uploads/ludwikcsiadlak-podcast-life-hacking-okladka-kwadrat.png"
+              coverArtAlt={altFor("ludwikcsiadlak-podcast-life-hacking-okladka-kwadrat")}
             />
 
             <ValueProposition
