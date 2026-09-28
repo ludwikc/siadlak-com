@@ -9,6 +9,7 @@ import { getSEOConfig, getTopicalConfig } from "@/lib/seo-config";
 import TopicalMeta from "@/components/TopicalMeta";
 import { getProgramEntities } from "@/lib/structured-data";
 import OptimizedImage from "@/design-system/components/OptimizedImage";
+import { altFor } from "@/config/image-alt";
 
 const decisionTree = [
   {
@@ -307,8 +308,8 @@ export default function Program() {
             {/* Keynote image */}
             <div className="relative rounded-sm overflow-hidden border border-white/10">
               <OptimizedImage
-                src="/lovable-uploads/2b4bb1bb-6c2c-4c52-be4b-83bc755ec926.jpeg"
-                alt="Ludwik C. Siadlak presenting 'Hacker Umysłów' keynote at CAMPUS conference"
+                src="/lovable-uploads/ludwikcsiadlak-prezentacja-google-campus-hacker-umyslow-krawat-szeroki.jpeg"
+                alt={altFor("ludwikcsiadlak-prezentacja-google-campus-hacker-umyslow-krawat-szeroki")}
                 width={1920}
                 height={1080}
                 sizes="(max-width: 768px) 100vw, 672px"
@@ -421,8 +422,8 @@ export default function Program() {
             <div className="max-w-4xl mx-auto mb-10">
               <div className="relative rounded-sm overflow-hidden border border-lifehacker-purple/30">
                 <OptimizedImage
-                  src="/lovable-uploads/lifehackerzy-community-call.png"
-                  alt="Lifehackerzy community video call - daily coaching sessions"
+                  src="/lovable-uploads/grafika-lifehackerzy-spotkanie-spolecznosci-video-call.png"
+                  alt={altFor("grafika-lifehackerzy-spotkanie-spolecznosci-video-call")}
                   width={1920}
                   height={984}
                   sizes="(max-width: 768px) 100vw, 672px"

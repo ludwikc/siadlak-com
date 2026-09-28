@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Diamond, Shield, Check, X, Sparkles, Brain, Zap, Compass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { altFor } from "@/config/image-alt";
 
 const DISCOVERY_LINK = "/discovery";
 const PROGRAM_LINK = "/program";
-const PROFILE_IMAGE = "/lovable-uploads/SIADLAK-coffee-transparent.png";
+const PROFILE_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png";
 
 /* ─── tiny reusable bits ─── */
 
@@ -144,7 +145,7 @@ export default function HomeTest3() {
                   <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--text-on-dark))]/50 via-[hsl(var(--text-on-dark))]/30 to-transparent blur-[60px] scale-110" />
                   <img
                     src={PROFILE_IMAGE}
-                    alt="Ludwik C. Siadlak"
+                    alt={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety")}
                     className="relative z-10 w-72 md:w-96 lg:w-[28rem] h-auto object-contain drop-shadow-2xl"
                   />
                   {/* subtle diamond shape accent */}

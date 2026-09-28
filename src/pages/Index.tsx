@@ -7,7 +7,7 @@ import { getSEOConfig, getTopicalConfig } from "../lib/seo-config";
 import TopicalMeta from "../components/TopicalMeta";
 import { getHomepageEntities, getFAQSchema, getBreadcrumbSchema } from "../lib/structured-data";
 import { Link } from "react-router-dom";
-import sessionPhoto6 from "@/assets/Ludwik C. Siadlak-sessionphotos6.webp?format=avif;webp&as=picture";
+import sessionPhoto6 from "@/assets/ludwikcsiadlak-portret-reka-pod-broda-spojrzenie-w-obiektyw-pion-1.webp?format=avif;webp&as=picture";
 import programUwaznosc from "@/assets/LCS-program-Uwaznosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programProduktywnosc from "@/assets/LCS-program-Produktywnosc.png?w=400;800&format=avif;webp;png&as=picture";
 import programOdpornosc from "@/assets/LCS-program-Odpornosc.png?w=400;800&format=avif;webp;png&as=picture";
@@ -15,6 +15,7 @@ import programMeskiKompas from "@/assets/LCS-program-MeskiKompas.png?w=400;800&f
 import OptimizedImage from "@/design-system/components/OptimizedImage";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { Shield, Leaf } from "lucide-react";
+import { altFor } from "@/config/image-alt";
 
 /* ─── tiny reusable pieces ─── */
 
@@ -143,8 +144,8 @@ const Index = () => {
                 }}
               />
               <OptimizedImage
-                src="/lovable-uploads/SIADLAK-coffee-transparent.png"
-                alt="Ludwik C. Siadlak"
+                src="/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.png"
+                alt={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety")}
                 className="relative z-10 h-[85%] w-auto object-contain mx-auto"
                 priority
                 width={1000}
