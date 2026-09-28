@@ -48,6 +48,8 @@ export const redirects: RedirectConfig = {
   // MCT mini-site shortcuts/aliases
   "/mct/courses": "/mct",
   "/szkolenia/kursy": "/szkolenia",
+  "/mct/courses/pl-7008": "/mct/courses/ms-4022",
+  "/szkolenia/kursy/pl-7008": "/szkolenia/kursy/ms-4022",
   "/training": "/mct",
   "/szkolenia-microsoft": "/szkolenia",
 };

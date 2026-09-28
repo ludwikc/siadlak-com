@@ -315,7 +315,7 @@ Bilingwalny mini-serwis: /mct (EN) + /szkolenia (PL) — osobny track B2B, inny 
 **Katalog faza 1 (10 kursów, aktualne kody):**
 - AB-731 — Drive AI transformation in your organization
 - MS-4014 — Introduction to building AI agents
-- PL-7008 — Create agents in Microsoft Copilot Studio
+- MS-4022 — Extend Microsoft 365 Copilot in Copilot Studio (następca wycofanego PL-7008)
 - Custom (bez kodu MOC): Copilot Studio agents for your data — 2-dniowe szkolenie na zamówienie
 - DP-600 Essentials — skondensowana 2-dniowa wersja DP-600 (Implement analytics solutions using Microsoft Fabric)
 - DP-605 — Prepare and visualize data with Microsoft Power BI
