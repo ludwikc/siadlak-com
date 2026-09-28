@@ -33,20 +33,18 @@ const copilotStudioDay: AgendaDay = {
   title: { en: "Build, publish and govern an agent", pl: "Budowa, publikacja i nadzór nad agentem" },
   modules: {
     en: [
-      "Declarative agents for Microsoft 365 Copilot",
-      "Build your first agent in Copilot Studio",
-      "Custom knowledge and conversational instructions",
-      "Prompt tools that shape the answers",
-      "Connector tools to business systems",
-      "Publishing to Microsoft 365 Copilot",
+      "Topics, entities and variables",
+      "Generative answers on your knowledge",
+      "Actions and connectors",
+      "Publishing to Teams and Microsoft 365 Copilot",
+      "Analytics and iteration",
     ],
     pl: [
-      "Agenci deklaratywni dla Microsoft 365 Copilot",
-      "Pierwszy agent w Copilot Studio",
-      "Własna wiedza i instrukcje konwersacyjne",
-      "Narzędzia promptów, które kształtują odpowiedzi",
-      "Narzędzia konektorów do systemów biznesowych",
-      "Publikacja w Microsoft 365 Copilot",
+      "Tematy, encje i zmienne",
+      "Odpowiedzi generatywne oparte na Twoich źródłach wiedzy",
+      "Akcje i konektory",
+      "Publikacja w Teams i Microsoft 365 Copilot",
+      "Analityka i kolejne iteracje",
     ],
   },
   addOn: {
@@ -79,8 +77,8 @@ export const courses: Record<CourseSlug, Course> = {
       pl: ["Członkowie zarządu i dyrektorzy", "Liderzy transformacji i innowacji", "Decydenci IT i biznesu"],
     },
     notFor: {
-      en: "Not for builders who want to configure agents all day — MS-4014 or MS-4022 fit better.",
-      pl: "Nie dla osób, które chcą cały dzień konfigurować agentów — lepiej pasuje MS-4014 albo MS-4022.",
+      en: "Not for builders who want to configure agents all day — MS-4014 or my one-day Copilot Studio course fit better.",
+      pl: "Nie dla osób, które chcą cały dzień konfigurować agentów — lepiej pasuje MS-4014 albo mój jednodniowy kurs Copilot Studio.",
     },
     outcomes: {
       en: [
@@ -225,23 +223,23 @@ export const courses: Record<CourseSlug, Course> = {
     tags: ["ai", "agents", "copilot-studio", "foundry"],
     msLearnUrl: `${LEARN}/ms-4014`,
   },
-  "ms-4022": {
-    slug: "ms-4022",
+  "build-agents-copilot-studio": {
+    slug: "build-agents-copilot-studio",
     track: "copilot",
-    codes: ["MS-4022"],
-    official: true,
+    codes: [],
+    official: false,
     condensed: false,
     days: 1,
     level: "intermediate",
-    title: { en: "Extend Microsoft 365 Copilot in Copilot Studio", pl: "Rozszerzanie Microsoft 365 Copilot w Copilot Studio" },
-    shortTitle: { en: "MS-4022: Copilot Studio agents (1 day)", pl: "MS-4022: agenci w Copilot Studio (1 dzień)" },
+    title: { en: "Build agents in Microsoft Copilot Studio", pl: "Budowa agentów w Microsoft Copilot Studio" },
+    shortTitle: { en: "Build agents in Copilot Studio (1 day)", pl: "Budowa agentów w Copilot Studio (1 dzień)" },
     tagline: {
-      en: "Hands-on Copilot Studio: your own agent for Microsoft 365 Copilot.",
-      pl: "Copilot Studio w praktyce: własny agent dla Microsoft 365 Copilot.",
+      en: "Hands-on Copilot Studio: from topics to an agent published in Teams.",
+      pl: "Copilot Studio w praktyce: od tematów do agenta opublikowanego w Teams.",
     },
     summary: {
-      en: "Built on Microsoft's official MS-4022 course. A full day in Copilot Studio building declarative agents for Microsoft 365 Copilot: custom knowledge and instructions, prompt and connector tools that reach real systems, and publishing to your tenant. You also get the governance side, so what you build can actually go live.",
-      pl: "Szkolenie opiera się na oficjalnym kursie Microsoft MS-4022. Cały dzień w Copilot Studio nad agentami deklaratywnymi dla Microsoft 365 Copilot: własna wiedza i instrukcje, narzędzia promptów i konektorów sięgające do prawdziwych systemów oraz publikacja w Twojej organizacji. Omawiamy też ład i bezpieczeństwo, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
+      en: "A custom one-day programme, not an official Microsoft course. A full day in Copilot Studio: conversation design, generative answers on your knowledge, actions that call real systems, and publishing to Teams and Microsoft 365 Copilot. You also get the governance side, so what you build can actually go live.",
+      pl: "Autorski jednodniowy program, nie oficjalny kurs Microsoft. Cały dzień w Copilot Studio: projektowanie rozmowy, odpowiedzi generatywne na Twojej wiedzy, akcje wywołujące prawdziwe systemy i publikacja w Teams oraz Microsoft 365 Copilot. Omawiamy też ład i bezpieczeństwo, żeby to, co zbudujesz, mogło naprawdę trafić na produkcję.",
     },
     audience: {
       en: ["Power Platform makers", "M365 and Power Platform admins", "Business analysts"],
@@ -253,37 +251,36 @@ export const courses: Record<CourseSlug, Course> = {
     },
     outcomes: {
       en: [
-        "Explain what a declarative agent adds to Microsoft 365 Copilot",
-        "Build an agent in Copilot Studio with custom knowledge and instructions",
-        "Add prompt tools that shape how the agent answers",
-        "Connect connector tools to business systems",
-        "Publish the agent to Microsoft 365 Copilot for your team",
+        "Design topics with entities and variables that handle real conversations",
+        "Configure generative answers over your own knowledge sources",
+        "Connect actions and connectors to business systems",
+        "Publish an agent to Teams and Microsoft 365 Copilot",
+        "Read agent analytics and decide what to fix next",
         "Apply DLP policies and environment rules before publishing",
       ],
       pl: [
-        "Wyjaśnić, co agent deklaratywny wnosi do Microsoft 365 Copilot",
-        "Zbudować agenta w Copilot Studio z własną wiedzą i instrukcjami",
-        "Dodać narzędzia promptów, które kształtują odpowiedzi agenta",
-        "Podłączyć narzędzia konektorów do systemów biznesowych",
-        "Opublikować agenta w Microsoft 365 Copilot dla swojego zespołu",
+        "Projektować tematy z encjami i zmiennymi, które radzą sobie z prawdziwymi rozmowami",
+        "Skonfigurować odpowiedzi generatywne na własnych źródłach wiedzy",
+        "Podłączyć akcje i konektory do systemów biznesowych",
+        "Opublikować agenta w Teams i Microsoft 365 Copilot",
+        "Czytać analitykę agenta i decydować, co poprawić w następnej kolejności",
         "Zastosować zasady DLP i reguły środowisk przed publikacją",
       ],
     },
     agenda: [copilotStudioDay],
     prerequisites: {
       en: [
-        "Familiar with Microsoft 365 Copilot as a user",
         "Comfortable with Microsoft 365 and Teams",
+        "Basic Power Platform experience helps",
         "Copilot Studio trial or licence",
       ],
       pl: [
-        "Znajomość Microsoft 365 Copilot z perspektywy użytkownika",
         "Swobodna praca w Microsoft 365 i Teams",
+        "Podstawowe doświadczenie z Power Platform będzie pomocne",
         "Wersja próbna lub licencja Copilot Studio",
       ],
     },
-    tags: ["copilot-studio", "agents", "microsoft-365-copilot", "declarative-agents"],
-    msLearnUrl: `${LEARN}/ms-4022`,
+    tags: ["copilot-studio", "agents", "power-platform", "teams"],
   },
   "copilot-studio-agents": {
     slug: "copilot-studio-agents",
@@ -300,8 +297,8 @@ export const courses: Record<CourseSlug, Course> = {
       pl: "Jeden agent na Twoich systemach, zbudowany i gotowy na przegląd bezpieczeństwa.",
     },
     summary: {
-      en: "A custom programme, not an official Microsoft course. Day one covers the MS-4022 ground. Day two is your environment: connectors to your systems, API actions, testing, a security review and a handover runbook. The agent you build stays with you and keeps running.",
-      pl: "Autorski program, nie oficjalny kurs Microsoft. Pierwszy dzień obejmuje materiał MS-4022. Drugi dzień to Twoje środowisko: konektory do Twoich systemów, akcje API, testy, przegląd bezpieczeństwa i runbook przekazania. Agent, którego zbudujesz, zostaje u Ciebie i działa dalej.",
+      en: "A custom programme, not an official Microsoft course. Day one covers my one-day Copilot Studio course. Day two is your environment: connectors to your systems, API actions, testing, a security review and a handover runbook. The agent you build stays with you and keeps running.",
+      pl: "Autorski program, nie oficjalny kurs Microsoft. Pierwszy dzień obejmuje materiał mojego jednodniowego kursu Copilot Studio. Drugi dzień to Twoje środowisko: konektory do Twoich systemów, akcje API, testy, przegląd bezpieczeństwa i runbook przekazania. Agent, którego zbudujesz, zostaje u Ciebie i działa dalej.",
     },
     audience: {
       en: ["Power Platform makers", "Solution architects", "IT security and platform owners"],
@@ -343,13 +340,13 @@ export const courses: Record<CourseSlug, Course> = {
     ],
     prerequisites: {
       en: [
-        "Copilot Studio experience or MS-4022 level knowledge",
+        "Copilot Studio experience or my one-day Copilot Studio course",
         "An environment and test data you are allowed to use",
         "Someone who can approve connector and API access",
         "A short brief of the agent you want, sent before class",
       ],
       pl: [
-        "Doświadczenie z Copilot Studio lub wiedza na poziomie MS-4022",
+        "Doświadczenie z Copilot Studio lub mój jednodniowy kurs Copilot Studio",
         "Środowisko i dane testowe, których możesz używać",
         "Osoba, która może zatwierdzić dostęp do konektorów i API",
         "Krótki opis agenta, którego potrzebujesz, wysłany przed szkoleniem",
