@@ -39,7 +39,7 @@ const Sitemap = () => {
       category: 'Szkolenia Microsoft (B2B)',
       icon: <GraduationCap className="h-5 w-5" />,
       pages: [
-        { name: 'Szkolenia Microsoft — hub', path: '/szkolenia', description: 'Fabric, Copilot i Azure SQL dla zespołów 3–30 osób' },
+        { name: 'Szkolenia Microsoft — hub', path: '/szkolenia', description: 'Fabric, Copilot i Azure SQL dla zespołów 3–8 osób' },
         { name: 'Briefing dla zarządu', path: '/szkolenia/briefing-dla-zarzadu', description: 'Trzygodzinny briefing o Copilocie, Fabric i governance AI' },
         { name: 'Szkolenia enterprise', path: '/szkolenia/enterprise', description: 'Programy szkoleniowe na zamówienie dla enterprise' },
         ...courseList.map((course) => ({
