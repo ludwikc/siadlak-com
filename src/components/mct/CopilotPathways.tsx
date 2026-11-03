@@ -58,7 +58,7 @@ export default function CopilotPathways() {
             <h3 className="m-0 text-xl font-bold text-on-dark">{pathwayCopy.customTitle}</h3>
             <p className="mt-2 mb-0 leading-relaxed text-dim">{pathwayCopy.customBody}</p>
           </div>
-          <CTAButton variant="secondary" onClick={() => setPrefill({ tier: "enterprise", intent: "scope-call", stack: ["copilot"] }, "pathway-custom")} data-cta={`${surface}:pathway-custom`} className="shrink-0">
+          <CTAButton variant="secondary" onClick={() => setPrefill({ tier: "enterprise", intent: "scope-call" }, "pathway-custom")} data-cta={`${surface}:pathway-custom`} className="shrink-0">
             {pathwayCopy.customCta}
           </CTAButton>
         </div>
