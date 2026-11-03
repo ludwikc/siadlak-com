@@ -14,6 +14,22 @@ import { altFor } from "@/config/image-alt";
 
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
+const gradientWordClass = "bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent";
+const glowWordStyle = {
+  color: "rgb(255, 255, 255)",
+  textShadow:
+    "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px",
+  transition: "text-shadow 0.3s",
+};
+
+const heroTitle = (line1: string, line2: string) => {
+  const [lead, ...tail1] = line1.split(" ");
+  const [accent2, ...tail2] = line2.split(" ");
+  void lead;
+  void accent2;
+  return null;
+};
+
 const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
 
 export default function MctHero() {
