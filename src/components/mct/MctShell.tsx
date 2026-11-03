@@ -56,7 +56,7 @@ function MctFooter() {
   const { locale, t, paths } = useMct();
   const year = new Date().getFullYear();
   const formats = [
-    { to: `${paths.hub}#pricing`, label: t.tiers.items.public.title },
+    { to: `${paths.hub}${locale === "en" ? "#courses" : "#pricing"}`, label: t.tiers.items.public.title },
     { to: paths.briefing, label: t.tiers.items.briefing.title },
     { to: paths.enterprise, label: t.tiers.items.enterprise.title },
   ];
