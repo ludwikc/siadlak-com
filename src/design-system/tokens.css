@@ -33,6 +33,14 @@
   /* === MCT MINI-SITE (B2B navy surfaces) === */
   --mct-navy: 228 45% 6%;
   --mct-navy-elevated: 228 35% 9%;
+  --mct-buyer-paper: 0 0% 100%;
+  --mct-buyer-surface: 210 20% 98%;
+  --mct-buyer-ink: 200 6% 18%;
+  --mct-buyer-muted: 210 9% 35%;
+  --mct-buyer-rule: 210 12% 85%;
+  --mct-buyer-dark-muted: 210 12% 78%;
+  --mct-buyer-link: 211 100% 38%;
+  --mct-buyer-glow: 0 0 8px hsl(0 0% 100% / 0.45), 0 0 24px hsl(0 0% 100% / 0.3), 0 0 48px hsl(0 0% 100% / 0.15);
 
   /* === TEXT UTILITIES === */
   --text-on-dark: 210 17% 96%;

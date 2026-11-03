@@ -8,6 +8,7 @@ import { coursePath } from "@/config/mct/locale";
 import { MCT_CONTENT_UPDATED, formatUpdatedDate } from "@/config/mct/meta";
 import LocaleSwitch from "./LocaleSwitch";
 import "./mct-editorial.css";
+import "./mct-buyer.css";
 import { useMct } from "./MctContext";
 
 const footerLinkClass = "text-sm text-dim transition-colors hover:text-on-dark";
@@ -124,9 +125,9 @@ function MctFooter() {
   );
 }
 
-export default function MctShell({ children }: { children: ReactNode }) {
+export default function MctShell({ children, buyer = false }: { children: ReactNode; buyer?: boolean }) {
   return (
-    <LandingLayout showLegal={false} className="mct-editorial bg-mct-navy text-on-dark min-h-screen">
+    <LandingLayout showLegal={false} className={`mct-editorial ${buyer ? "mct-buyer" : ""} bg-mct-navy text-on-dark min-h-screen`}>
       <MctTopBar />
       <main>{children}</main>
       <MctFooter />

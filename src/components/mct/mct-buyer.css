@@ -1,0 +1,118 @@
+.mct-editorial.mct-buyer {
+  --mct-navy: var(--mct-buyer-paper);
+  --mct-navy-elevated: var(--mct-buyer-surface);
+  --text-on-dark: var(--mct-buyer-ink);
+  --text-on-dark-secondary: var(--mct-buyer-muted);
+  --text-on-dark-tertiary: var(--mct-buyer-muted);
+  --text-dim: var(--mct-buyer-muted);
+  --foreground: var(--mct-buyer-ink);
+  --background: var(--mct-buyer-paper);
+  --border: var(--mct-buyer-rule);
+  --gradient-premium: var(--gradient-hero);
+  color: hsl(var(--mct-buyer-ink));
+}
+
+.mct-buyer .text-dim,
+.mct-buyer .text-on-dark-tertiary { color: hsl(var(--text-dim)); }
+.mct-buyer .text-electric,
+.mct-buyer .text-electric-blue-dark { color: hsl(var(--mct-buyer-link)); }
+.mct-buyer :is(h1, h2, h3, h4, .mct-display) {
+  letter-spacing: 0;
+  text-transform: none;
+}
+.mct-buyer .mct-eyebrow {
+  font-family: var(--font-family-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+.mct-buyer .font-mono { font-family: var(--font-family-primary); }
+.mct-buyer main > :is(section, div > section) { padding-block: 5rem; }
+.mct-buyer .mct-reveal,
+.mct-buyer .mct-reveal [data-reveal-child] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.mct-buyer [data-cta] {
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  border-radius: var(--border-radius-sm);
+}
+.mct-buyer [data-cta].min-h-\[44px\][class*="gradient-premium"],
+.mct-buyer [data-cta].min-h-\[44px\][class*="gradient-premium"]:hover {
+  background: var(--gradient-premium);
+  border-color: transparent;
+  color: hsl(var(--primary-foreground));
+}
+.mct-buyer :is(a, button, input, textarea, [role="combobox"]):focus-visible {
+  outline: 2px solid hsl(var(--electric-blue));
+  outline-offset: 4px;
+  box-shadow: none;
+}
+.mct-buyer .border-white\/10,
+.mct-buyer .border-white\/20 { border-color: hsl(var(--mct-buyer-rule)); }
+.mct-buyer .mct-hero-dark {
+  --text-on-dark: var(--primary-foreground);
+  --text-dim: var(--mct-buyer-dark-muted);
+}
+.mct-buyer .mct-hero-dark .bg-void-glow {
+  background: hsl(var(--void-black));
+}
+.mct-buyer .mct-hero-dark .container { max-width: 72rem; }
+.mct-buyer .mct-hero-dark h1,
+.mct-buyer .mct-hero-dark .mct-display {
+  font-size: 3rem;
+  line-height: 1.15;
+  text-wrap: initial;
+}
+.mct-buyer .mct-hero-dark .mct-hero-white { color: hsl(var(--primary-foreground)); }
+.mct-buyer .mct-hero-glow {
+  color: hsl(var(--primary-foreground));
+  text-shadow: var(--mct-buyer-glow);
+  transition: text-shadow 0.3s;
+}
+.mct-buyer .mct-hero-dark .mct-eyebrow { color: hsl(var(--mct-buyer-dark-muted)); }
+.mct-buyer .mct-hero-dark [data-cta] { width: auto; }
+.mct-buyer .mct-trust { padding-block: 2.5rem; }
+.mct-buyer .mct-trust img { opacity: 1; }
+.mct-buyer .mct-trust .mct-client-name {
+  border: none;
+  padding: 0;
+  color: hsl(var(--mct-buyer-muted));
+  font-weight: 500;
+}
+.mct-buyer .mct-offer-band,
+.mct-buyer .mct-proof-band,
+.mct-buyer .mct-process-band { background: hsl(var(--mct-buyer-surface)); }
+.mct-buyer .mct-offer-band article,
+.mct-buyer .mct-proof-band figure { background: hsl(var(--mct-buyer-paper)); }
+.mct-buyer #request { background: hsl(var(--mct-buyer-surface)); }
+.mct-buyer #request > div > div { background: transparent; padding: 0; box-shadow: none; }
+.mct-buyer #request :is(input, textarea, [role="combobox"]) {
+  min-height: 48px;
+  background: hsl(var(--mct-buyer-paper));
+}
+.mct-buyer footer { --text-dim: var(--mct-buyer-dark-muted); }
+
+@media (min-width: 1024px) {
+  .mct-buyer .mct-hero-dark h1,
+  .mct-buyer .mct-hero-dark .mct-display { font-size: 3.5rem; }
+}
+@media (max-width: 767px) {
+  .mct-buyer main > :is(section, div > section) { padding-block: 4rem; }
+  .mct-buyer .mct-hero-dark h1,
+  .mct-buyer .mct-hero-dark .mct-display { font-size: 2.25rem; }
+  .mct-buyer .mct-hero-dark .container > div { align-items: flex-start; }
+  .mct-buyer .mct-hero-dark .container > div > div:first-child { text-align: left; margin-bottom: 0; }
+  .mct-buyer .mct-hero-dark .container > div > div:last-child { display: none; }
+  .mct-buyer .mct-hero-dark p { margin-inline: 0; }
+  .mct-buyer .mct-hero-dark [data-cta] { width: 100%; }
+  .mct-buyer .mct-trust { padding-block: 2rem; }
+  .mct-buyer article { padding: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mct-buyer .mct-hero-glow { transition: none; }
+}
