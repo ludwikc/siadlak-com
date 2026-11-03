@@ -45,8 +45,8 @@ export const en = {
   },
   hero: {
     eyebrow: `Microsoft Certified Trainer · ${proof.yearsMct} years · ${proof.trainedProfessionals} professionals trained`,
-    line1: "BATTLE-TESTED,",
-    line2: "NOT LAB-TESTED.",
+    line1: "Most trainers read the courseware.",
+    line2: "I have written it.",
     sub: "Microsoft Fabric, Copilot and Azure SQL training from the trainer Fortune 500 and NATO booked. Public online classes for small teams. Custom programs for enterprise. Same courseware standard either way.",
     pathTeams: "For teams of 3–8",
     pathEnterprise: "For enterprise & public sector",

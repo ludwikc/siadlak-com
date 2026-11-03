@@ -52,7 +52,7 @@ describe("fill", () => {
 describe("getCopy", () => {
   it("returns distinct EN and PL dictionaries", () => {
     expect([getCopy("en").hero.line1, getCopy("pl").hero.line1]).toEqual([
-      "BATTLE-TESTED,",
+      "Most trainers read the courseware.",
       "SPRAWDZONE W BOJU,",
     ]);
   });
