@@ -112,7 +112,7 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Leading <span className="text-white" style={{ textShadow: "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px", transition: "text-shadow 0.3s" }}>classrooms</span>, <br /> <span className="bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent">mentoring </span><span className="text-white" style={{ textShadow: "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px", transition: "text-shadow 0.3s" }}>Leaders.</span>
+                Leading <span className="bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent">classrooms</span>, <br /> <span className="bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent">mentoring </span><span className="text-white" style={{ textShadow: "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px", transition: "text-shadow 0.3s" }}>Leaders.</span>
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
