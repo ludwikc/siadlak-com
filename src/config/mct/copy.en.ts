@@ -125,7 +125,7 @@ export const en = {
   },
   catalog: {
     eyebrow: "Phase-1 catalog",
-    title: "Three tracks, one courseware standard.",
+    title: "Three tracks, delivered in military-grade training standard.",
     footer:
       "Power BI, Microsoft 365 and Data Engineering tracks follow. Need one now? Ask, it is probably a private run away.",
     dayOne: "1 day",

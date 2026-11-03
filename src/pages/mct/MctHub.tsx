@@ -113,9 +113,6 @@ function MctHubContent() {
       <TrustBand />
       {locale === "en" ? (
         <>
-          <div id="pricing" className="mct-offer-band scroll-mt-20">
-            <PricingTiers highlight={path === "teams" ? "public" : "enterprise"} />
-          </div>
           <div id="courses" className="scroll-mt-20"><TrackGrid /></div>
           <div className="mct-proof-band"><Testimonials compact /></div>
           <WhyMe />
