@@ -108,6 +108,8 @@
   .mct-buyer .mct-hero-dark .container > div { align-items: flex-start; }
   .mct-buyer .mct-hero-dark .container > div > div:first-child { text-align: left; margin-bottom: 0; }
   .mct-buyer .mct-hero-dark .container > div > div:last-child { display: none; }
+  .mct-buyer .mct-hero-dark > section { padding-block: 2.5rem; }
+  .mct-buyer .mct-hero-dark p.text-lg { font-size: 1rem; line-height: 1.7; }
   .mct-buyer .mct-hero-dark p { margin-inline: 0; }
   .mct-buyer .mct-hero-dark [data-cta] { width: 100%; }
   .mct-buyer .mct-trust { padding-block: 2rem; }
