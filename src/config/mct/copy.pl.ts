@@ -312,6 +312,7 @@ export const pl = {
     dismiss: "Zamknij",
   },
   course: {
+    startingAt: "",
     duration: "Czas trwania",
     level: "Poziom",
     maxSeats: "Maks. 8 osób",

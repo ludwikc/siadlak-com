@@ -73,7 +73,7 @@ export const en = {
     items: {
       public: {
         title: "Public online class, per seat",
-        price: "Per day · 2-day starting at {twoDay} (net)",
+        price: "Starting at {perDay} / day · 2-day starting at {twoDay} (net)",
         bullets: [
           "Live online, max 8",
           "Hands-on labs on your own environment",
@@ -84,7 +84,7 @@ export const en = {
       },
       briefing: {
         title: "Half-day executive briefing",
-        price: "3-hour briefing (net)",
+        price: "Starting at {flat} for a 3-hour briefing (net)",
         bullets: ["3 hours, remote", "Up to 10 leaders", "One topic, your numbers on the table", "Written summary within 48 h"],
         cta: "Book a briefing",
       },
