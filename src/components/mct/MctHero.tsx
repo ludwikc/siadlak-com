@@ -22,12 +22,25 @@ const glowWordStyle = {
   transition: "text-shadow 0.3s",
 };
 
-const heroTitle = (line1: string, line2: string) => {
-  const [lead, ...tail1] = line1.split(" ");
-  const [accent2, ...tail2] = line2.split(" ");
-  void lead;
-  void accent2;
-  return null;
+const splitTail = (text: string, tailWords: number) => {
+  const words = text.split(" ");
+  const tail = words.splice(-tailWords).join(" ");
+  return [words.join(" "), tail] as const;
+};
+
+const StyledHeroTitle = ({ line1, line2 }: { line1: string; line2: string }) => {
+  const [lead1, tail1] = splitTail(line1, 1);
+  const [lead2, tail2] = splitTail(line2, 2);
+  return (
+    <span className="mct-display block text-on-dark">
+      <span className={gradientWordClass}>{lead1} </span>
+      <span className="text-white">{tail1}</span>
+      <span className="block">
+        <span className={gradientWordClass}>{lead2} </span>
+        <span style={glowWordStyle}>{tail2}</span>
+      </span>
+    </span>
+  );
 };
 
 const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
