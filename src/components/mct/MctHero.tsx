@@ -58,10 +58,14 @@ export default function MctHero() {
         imageDescription={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety", locale)}
         eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.hero.eyebrow}</p>}
         title={
-          <span className="mct-display block text-on-dark">
-            {t.hero.line1}
-            <span className="mct-display-outline block">{t.hero.line2}</span>
-          </span>
+          locale === "en" ? (
+            <StyledHeroTitle line1={t.hero.line1} line2={t.hero.line2} />
+          ) : (
+            <span className="mct-display block text-on-dark">
+              {t.hero.line1}
+              <span className="mct-display-outline block">{t.hero.line2}</span>
+            </span>
+          )
         }
       >
         <p className="mx-auto mt-0 mb-10 max-w-2xl text-lg leading-relaxed text-dim md:mx-0 md:text-xl">
