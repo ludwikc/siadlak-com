@@ -165,6 +165,7 @@ export type MctCopy = {
     dismiss: string;
   };
   course: {
+    startingAt?: string;
     duration: string;
     level: string;
     maxSeats: string;

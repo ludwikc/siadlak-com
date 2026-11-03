@@ -36,6 +36,7 @@ export default function CourseCard({ course, headingLevel = "h3" }: CourseCardPr
         {daysLabel} · {t.levels[course.level]}
       </p>
       <p className="m-0 text-on-dark">
+        {t.course.startingAt && <span className="mb-1 block text-sm text-dim">{t.course.startingAt}</span>}
         <span className="font-mono text-lg font-bold">
           {formatPrice(seatPrice(course.days, currency), currency, locale)}
         </span>{" "}
