@@ -100,6 +100,7 @@ function CourseHero({ course }: { course: Course }) {
           ))}
         </ul>
         <p className="mt-0 mb-2">
+          {t.course.startingAt && <span className="mb-2 block text-sm text-dim">{t.course.startingAt}</span>}
           <span className="text-3xl font-bold text-on-dark">
             {formatPrice(seatPrice(course.days, currency), currency, locale)}
           </span>

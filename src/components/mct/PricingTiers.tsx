@@ -65,6 +65,7 @@ export default function PricingTiers({ compact = false, highlight }: PricingTier
                 </div>
                 {headline ? (
                   <>
+                    {t.course.startingAt && <p className="mt-0 mb-2 text-sm font-medium text-dim">{t.course.startingAt}</p>}
                     <p className="mct-display m-0 text-[2.5rem] normal-case tracking-normal text-on-dark">
                       {headline}
                     </p>

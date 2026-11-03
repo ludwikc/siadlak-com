@@ -27,7 +27,7 @@ export const en = {
     course: {
       title: "{shortTitle}",
       description:
-        "{tagline} {days}-day live online class, max 8 seats, from {price} per seat (net).",
+        "{tagline} {days}-day live online class, max 8 seats, starting at {price} per seat (net).",
       keywords:
         "{code}, Microsoft training, live online course, instructor-led training, small group training, team training, Microsoft Certified Trainer",
     },
@@ -56,7 +56,7 @@ export const en = {
   segment: {
     teams: {
       title: "Teams of 3–8.",
-      body: "Pick a course, pick a date, request seats. {price} net per training day. Max 8 people per class, so you get answers, not a webinar. Invoice, not a checkout.",
+      body: "Pick a course, pick a date, request seats. Starting at {price} net per training day. Max 8 people per class, so you get answers, not a webinar. Invoice, not a checkout.",
       cta: "See dates and prices",
     },
     enterprise: {
@@ -66,14 +66,14 @@ export const en = {
     },
   },
   tiers: {
-    eyebrow: "Three ways to work with me",
-    title: "Pick the format that fits the problem.",
+    eyebrow: "Training formats & investment",
+    title: "The right format for your team.",
     briefingBadge: "For leadership",
     footnote: "Six or more? A private run is usually the better deal.",
     items: {
       public: {
         title: "Public online class, per seat",
-        price: "{perDay} / day · 2-day {twoDay} (net)",
+        price: "Starting at {perDay} / day · 2-day starting at {twoDay} (net)",
         bullets: [
           "Live online, max 8",
           "Hands-on labs on your own environment",
@@ -84,7 +84,7 @@ export const en = {
       },
       briefing: {
         title: "Half-day executive briefing",
-        price: "{flat} flat (net)",
+        price: "Starting at {flat} for a 3-hour briefing (net)",
         bullets: ["3 hours, remote", "Up to 10 leaders", "One topic, your numbers on the table", "Written summary within 48 h"],
         cta: "Book a briefing",
       },
@@ -303,15 +303,16 @@ export const en = {
     },
   },
   sticky: {
-    teams: { label: "Seats from {perDay} net", cta: "Request a seat" },
+    teams: { label: "Seats starting at {perDay} net", cta: "Request a seat" },
     enterprise: { label: "Rolling out Fabric or Copilot?", cta: "Scope it in 20 minutes" },
     course: { label: "{code} · next date {date}", cta: "Request a seat" },
     courseNoDate: { label: "{code}", cta: "Request a private run" },
-    briefing: { label: "3 hours, 10 leaders, {flat} net", cta: "Book a briefing" },
+    briefing: { label: "3 hours, up to 10 leaders, starting at {flat} net", cta: "Book a briefing" },
     enterprisePage: { label: "20-minute scope call, no pitch", cta: "Pick a time" },
     dismiss: "Dismiss",
   },
   course: {
+    startingAt: "Starting at",
     duration: "Duration",
     level: "Level",
     maxSeats: "Max 8",
@@ -354,7 +355,7 @@ export const en = {
   briefing: {
     eyebrow: "Executive briefing",
     title: "Three hours. One decision unblocked.",
-    sub: "{flat} net. 3 hours remote, up to 10 leaders, written summary in 48 h.",
+    sub: "Starting at {flat} net. 3 hours remote, up to 10 leaders, written summary in 48 h.",
     cta: "Book a briefing",
     topicsEyebrow: "Pick one topic",
     topicsTitle: "Three topics. One decision each.",
@@ -413,7 +414,7 @@ export const en = {
         ],
       },
     },
-    ownQuestion: "Bring your own question. Same format, same price.",
+    ownQuestion: "Bring your own question. Same format, priced for your scope.",
   },
   enterprise: {
     eyebrow: "Enterprise & public sector",
