@@ -29,9 +29,9 @@ import { getMctEntityGraph, getMctFaqSchema, getMctHubEntities } from "@/lib/str
 type HubPath = "teams" | "enterprise";
 
 const FINAL_TIERS: Array<{ tier: TierId; intent: LeadIntent }> = [
-  { tier: "public", intent: "seat" },
-  { tier: "briefing", intent: "briefing" },
   { tier: "enterprise", intent: "scope-call" },
+  { tier: "briefing", intent: "briefing" },
+  { tier: "public", intent: "seat" },
 ];
 
 const contactLinkClass = "text-on-dark underline underline-offset-4 hover:text-electric";
@@ -94,7 +94,7 @@ function MctHubContent() {
   }, [locale]);
 
   return (
-    <MctShell>
+    <MctShell buyer={locale === "en"}>
       <SEO
         title={t.meta.hub.title}
         description={t.meta.hub.description}
@@ -109,20 +109,36 @@ function MctHubContent() {
       />
       <MctHero />
       <TrustBand />
-      <ClientMarquee />
-      <SegmentPaths />
-      <div id="pricing" className="scroll-mt-20">
-        <PricingTiers highlight={path === "teams" ? "public" : undefined} />
-      </div>
-      <ScheduleTable />
-      <TrackGrid />
-      <WhyMe />
-      <Testimonials />
-      <ProcessLanes />
+      {locale === "en" ? (
+        <>
+          <SegmentPaths />
+          <div id="pricing" className="mct-offer-band scroll-mt-20">
+            <PricingTiers highlight={path === "teams" ? "public" : "enterprise"} />
+          </div>
+          <div id="courses" className="scroll-mt-20"><TrackGrid /></div>
+          <div className="mct-proof-band"><Testimonials compact /></div>
+          <WhyMe />
+          <div className="mct-process-band"><ProcessLanes emphasis="enterprise" /></div>
+          <ScheduleTable />
+        </>
+      ) : (
+        <>
+          <ClientMarquee />
+          <SegmentPaths />
+          <div id="pricing" className="scroll-mt-20">
+            <PricingTiers highlight={path === "teams" ? "public" : undefined} />
+          </div>
+          <ScheduleTable />
+          <TrackGrid />
+          <WhyMe />
+          <Testimonials />
+          <ProcessLanes />
+        </>
+      )}
       <FaqAccordion scope="hub" />
       <FinalCta />
-      <MctLeadForm />
-      <MctStickyCta variant={path === "enterprise" ? "hub-enterprise" : "hub-teams"} />
+      <MctLeadForm defaultMode={locale === "en" ? "scope" : "seat"} />
+      <MctStickyCta variant={path === "teams" || locale === "pl" ? "hub-teams" : "hub-enterprise"} />
     </MctShell>
   );
 }
