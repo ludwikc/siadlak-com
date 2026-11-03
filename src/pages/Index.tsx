@@ -112,7 +112,7 @@ const Index = () => {
             {/* Left: text */}
             <div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.02em] text-white mb-8 font-heading">
-                Leading classrooms, <br /> <span className="bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent">mentoring Leaders.</span>
+                Leading classrooms, <br /> <span className="bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent" style={{ filter: "drop-shadow(0 0 14px rgba(255,255,255,0.30))" }}>mentoring Leaders.</span>
               </h1>
 
               <div className="space-y-6 text-lg md:text-xl text-dim leading-relaxed max-w-2xl">
