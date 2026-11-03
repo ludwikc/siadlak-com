@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import SEO from "@/components/SEO";
 import ClientMarquee from "@/components/mct/ClientMarquee";
+import CopilotPathways from "@/components/mct/CopilotPathways";
 import FaqAccordion from "@/components/mct/FaqAccordion";
 import MctHero from "@/components/mct/MctHero";
 import MctLeadForm from "@/components/mct/MctLeadForm";
@@ -108,10 +109,10 @@ function MctHubContent() {
         jsonLd={[...getMctEntityGraph(), ...getMctHubEntities(locale, courseList), getMctFaqSchema(locale, "hub")]}
       />
       <MctHero />
+      {locale === "en" && <CopilotPathways />}
       <TrustBand />
       {locale === "en" ? (
         <>
-          <SegmentPaths />
           <div id="pricing" className="mct-offer-band scroll-mt-20">
             <PricingTiers highlight={path === "teams" ? "public" : "enterprise"} />
           </div>

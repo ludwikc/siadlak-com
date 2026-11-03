@@ -90,6 +90,12 @@
 .mct-buyer .mct-offer-band article,
 .mct-buyer .mct-proof-band figure { background: hsl(var(--mct-buyer-paper)); }
 .mct-buyer #request { background: hsl(var(--mct-buyer-surface)); }
+.mct-buyer .mct-pathways { background: hsl(var(--mct-buyer-surface)); }
+.mct-buyer .mct-pathway {
+  background: hsl(var(--mct-buyer-paper));
+  border: 1px solid hsl(var(--mct-buyer-rule));
+  border-top: 3px solid hsl(var(--mct-buyer-link));
+}
 .mct-buyer #request > div > div { background: transparent; padding: 0; box-shadow: none; }
 .mct-buyer #request :is(input, textarea, [role="combobox"]) {
   min-height: 48px;
