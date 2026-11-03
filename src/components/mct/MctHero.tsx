@@ -14,6 +14,35 @@ import { altFor } from "@/config/image-alt";
 
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
+const gradientWordClass = "bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent";
+const glowWordStyle = {
+  color: "rgb(255, 255, 255)",
+  textShadow:
+    "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px",
+  transition: "text-shadow 0.3s",
+};
+
+const splitTail = (text: string, tailWords: number) => {
+  const words = text.split(" ");
+  const tail = words.splice(-tailWords).join(" ");
+  return [words.join(" "), tail] as const;
+};
+
+const StyledHeroTitle = ({ line1, line2 }: { line1: string; line2: string }) => {
+  const [lead1, tail1] = splitTail(line1, 1);
+  const [lead2, tail2] = splitTail(line2, 2);
+  return (
+    <span className="mct-display block text-on-dark">
+      <span className={gradientWordClass}>{lead1} </span>
+      <span className="text-white">{tail1}</span>
+      <span className="block">
+        <span className={gradientWordClass}>{lead2} </span>
+        <span style={glowWordStyle}>{tail2}</span>
+      </span>
+    </span>
+  );
+};
+
 const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
 
 export default function MctHero() {
@@ -29,10 +58,14 @@ export default function MctHero() {
         imageDescription={altFor("ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety", locale)}
         eyebrow={<p className="mct-eyebrow mt-0 mb-6 text-electric">{t.hero.eyebrow}</p>}
         title={
-          <span className="mct-display block text-on-dark">
-            {t.hero.line1}
-            <span className="mct-display-outline block">{t.hero.line2}</span>
-          </span>
+          locale === "en" ? (
+            <StyledHeroTitle line1={t.hero.line1} line2={t.hero.line2} />
+          ) : (
+            <span className="mct-display block text-on-dark">
+              {t.hero.line1}
+              <span className="mct-display-outline block">{t.hero.line2}</span>
+            </span>
+          )
         }
       >
         <p className="mx-auto mt-0 mb-10 max-w-2xl text-lg leading-relaxed text-dim md:mx-0 md:text-xl">
