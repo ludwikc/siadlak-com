@@ -7,6 +7,7 @@ import { courseList, TRACK_ORDER, tracks } from "@/config/mct/courses";
 import { coursePath } from "@/config/mct/locale";
 import { MCT_CONTENT_UPDATED, formatUpdatedDate } from "@/config/mct/meta";
 import LocaleSwitch from "./LocaleSwitch";
+import "./mct-editorial.css";
 import { useMct } from "./MctContext";
 
 const footerLinkClass = "text-sm text-dim transition-colors hover:text-on-dark";
@@ -125,7 +126,7 @@ function MctFooter() {
 
 export default function MctShell({ children }: { children: ReactNode }) {
   return (
-    <LandingLayout showLegal={false} className="bg-mct-navy text-on-dark min-h-screen">
+    <LandingLayout showLegal={false} className="mct-editorial bg-mct-navy text-on-dark min-h-screen">
       <MctTopBar />
       <main>{children}</main>
       <MctFooter />
