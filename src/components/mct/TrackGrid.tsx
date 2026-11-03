@@ -1,4 +1,5 @@
 import { courseList, TRACK_ORDER, tracks } from "@/config/mct/courses";
+import { productLogos } from "@/config/mct/product-logos";
 import { useReveal } from "@/hooks/use-reveal";
 import CourseCard from "./CourseCard";
 import { useMct } from "./MctContext";
@@ -16,6 +17,16 @@ export default function TrackGrid() {
           {TRACK_ORDER.map((track) => (
             <div key={track} className="flex flex-col gap-4">
               <div data-reveal-child>
+                {locale === "en" && (
+                  <img
+                    src={productLogos[track].src}
+                    alt={productLogos[track].name}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    className="mb-5 h-12 w-12 object-contain"
+                  />
+                )}
                 <h3 className="m-0 text-xl font-bold text-on-dark">{tracks[track].title[locale]}</h3>
                 <p className="mt-2 mb-0 text-sm leading-relaxed text-dim">{tracks[track].blurb[locale]}</p>
               </div>

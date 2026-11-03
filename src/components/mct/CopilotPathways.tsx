@@ -4,6 +4,7 @@ import { courses } from "@/config/mct/courses";
 import { coursePath } from "@/config/mct/locale";
 import { copilotPathways, pathwayCopy } from "@/config/mct/pathways";
 import { formatPrice, seatPrice } from "@/config/mct/pricing-utils";
+import { productLogos } from "@/config/mct/product-logos";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { useMct } from "./MctContext";
 import SectionHead from "./SectionHead";
@@ -16,6 +17,7 @@ export default function CopilotPathways() {
   return (
     <section id="ai-pathways" className="mct-pathways scroll-mt-20 py-20">
       <div className="mx-auto max-w-6xl px-4">
+        <img src={productLogos.copilot.src} alt={productLogos.copilot.name} width={48} height={48} loading="lazy" className="mb-6 h-12 w-12 object-contain" />
         <SectionHead eyebrow={pathwayCopy.eyebrow} title={pathwayCopy.title} />
         <p className="mt-0 mb-10 max-w-3xl text-lg leading-relaxed text-dim">{pathwayCopy.sub}</p>
         <div className="grid gap-6 lg:grid-cols-3">

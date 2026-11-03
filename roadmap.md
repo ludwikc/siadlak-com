@@ -4,3 +4,4 @@
 - [x] Verify desktop/mobile presentation, enquiry selection, validation and testimonial filters; 87 tests passed. Live delivery not exercised to avoid sending a test lead.
 - [x] Qualify advertised English MCT prices as starting at, without changing amounts or quote calculations.
 - [x] Lead the hub with outcome-led Microsoft Copilot and AI course pathways; course navigation, enquiry opening and mobile layout verified; 16 tests passed.
+- [x] Remove the English format section, update the tracks heading and add Microsoft product logos; 16 tests passed, hosted images loaded, navigation and layout verified at 1280/893/393 px.
