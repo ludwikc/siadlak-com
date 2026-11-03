@@ -51,7 +51,7 @@ export default function MctHero() {
   const [upcoming] = useState(() => nextSession(sessions, new Date()));
 
   return (
-    <div className="[&>section]:bg-mct-navy">
+    <div className="mct-hero-dark">
       <Hero
         align="left"
         heroImage={HERO_IMAGE}
