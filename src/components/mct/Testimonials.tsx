@@ -34,7 +34,7 @@ function TestimonialCard({ testimonial, large }: { testimonial: Testimonial; lar
   );
 }
 
-export default function Testimonials() {
+export default function Testimonials({ compact = false }: { compact?: boolean }) {
   const { locale, t } = useMct();
   const ref = useReveal<HTMLElement>();
   const [filter, setFilter] = useState<Filter>("all");
@@ -44,7 +44,7 @@ export default function Testimonials() {
     filter === "all" ? testimonials : testimonials.filter((item) => item.tags.includes(filter));
   const featured = visible.filter((item) => item.featured).slice(0, FEATURED_COUNT);
   const rest = visible.filter((item) => !featured.includes(item));
-  const shownRest = expanded ? rest : rest.slice(0, COLLAPSED_COUNT);
+  const shownRest = expanded ? rest : rest.slice(0, compact ? 0 : COLLAPSED_COUNT);
 
   const selectFilter = (next: Filter) => {
     setFilter(next);
@@ -63,7 +63,8 @@ export default function Testimonials() {
 
         <div role="group" aria-label={t.proof.eyebrow} className="mb-10 flex flex-wrap gap-2" data-reveal-child>
           {FILTERS.map((id) => (
-            <button
+            <Button
+              variant="ghost"
               key={id}
               type="button"
               aria-pressed={filter === id}
@@ -76,7 +77,7 @@ export default function Testimonials() {
               )}
             >
               {t.proof.filters[id]}
-            </button>
+            </Button>
           ))}
         </div>
 

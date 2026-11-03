@@ -8,7 +8,7 @@ export default function TrustBand() {
   const ref = useReveal<HTMLElement>();
 
   return (
-    <section ref={ref} className="mct-reveal border-y border-white/10 bg-mct-navy-elevated py-20">
+    <section ref={ref} className="mct-trust mct-reveal border-y border-white/10 bg-mct-navy-elevated py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4">
         <p className="mct-eyebrow m-0 text-electric" data-reveal-child>
           {t.trust.eyebrow}
@@ -27,7 +27,7 @@ export default function TrustBand() {
         </ul>
         <ul className="m-0 flex list-none flex-wrap gap-2 p-0" data-reveal-child>
           {textChips.map((name) => (
-            <li key={name} className={chipClass}>
+            <li key={name} className={`mct-client-name ${chipClass}`}>
               {name}
             </li>
           ))}

@@ -2,7 +2,6 @@ import { useState } from "react";
 import Hero from "@/components/sections/Hero";
 import { fill } from "@/config/mct/copy";
 import { courses } from "@/config/mct/courses";
-import { enterprisePath } from "@/config/mct/locale";
 import { sessions } from "@/config/mct/schedule";
 import { formatSessionRange, nextSession } from "@/config/mct/schedule-utils";
 import { CTAButton } from "@/design-system/components/cta-button";
@@ -15,12 +14,6 @@ import { altFor } from "@/config/image-alt";
 const pillClass = "w-full whitespace-normal text-center sm:w-auto";
 
 const gradientWordClass = "bg-gradient-to-r from-electric to-accent bg-clip-text text-transparent";
-const glowWordStyle = {
-  color: "rgb(255, 255, 255)",
-  textShadow:
-    "rgba(255, 255, 255, 0.45) 0px 0px 8px, rgba(255, 255, 255, 0.3) 0px 0px 24px, rgba(255, 255, 255, 0.15) 0px 0px 48px",
-  transition: "text-shadow 0.3s",
-};
 
 const splitTail = (text: string, tailWords: number) => {
   const words = text.split(" ");
@@ -34,10 +27,10 @@ const StyledHeroTitle = ({ line1, line2 }: { line1: string; line2: string }) => 
   return (
     <span className="mct-display block text-on-dark">
       <span className={gradientWordClass}>{lead1} </span>
-      <span className="text-white">{tail1}</span>
+      <span className="mct-hero-white">{tail1}</span>
       <span className="block">
         <span className={gradientWordClass}>{lead2} </span>
-        <span style={glowWordStyle}>{tail2}</span>
+        <span className="mct-hero-glow">{tail2}</span>
       </span>
     </span>
   );
@@ -46,7 +39,7 @@ const StyledHeroTitle = ({ line1, line2 }: { line1: string; line2: string }) => 
 const HERO_IMAGE = "/lovable-uploads/ludwikcsiadlak-stojacy-kawa-fioletowa-poswiata-wyciety.webp";
 
 export default function MctHero() {
-  const { locale, t, surface } = useMct();
+  const { locale, t, surface, paths, setPrefill } = useMct();
   const selectPath = useSelectPath();
   const [upcoming] = useState(() => nextSession(sessions, new Date()));
 
@@ -68,25 +61,31 @@ export default function MctHero() {
           )
         }
       >
-        <p className="mx-auto mt-0 mb-10 max-w-2xl text-lg leading-relaxed text-dim md:mx-0 md:text-xl">
+        <p className="mx-auto mt-0 mb-8 max-w-2xl text-lg leading-relaxed text-dim md:mx-0">
           {t.hero.sub}
         </p>
-        <div className="flex flex-wrap justify-center gap-4 md:justify-start">
+        <div className="flex flex-wrap justify-start gap-3">
           <CTAButton
             variant="primary"
-            onClick={() => selectPath("hero-teams")}
-            data-cta={`${surface}:hero-teams`}
+            onClick={() => setPrefill({ tier: "enterprise", intent: "scope-call" }, "hero-enterprise")}
+            data-cta={`${surface}:hero-enterprise`}
             className={pillClass}
           >
-            {t.hero.pathTeams}
+            {t.enterprise.primaryCta}
           </CTAButton>
           <CTAButton
             variant="secondary"
-            to={enterprisePath(locale)}
-            data-cta={`${surface}:hero-enterprise`}
+            onClick={() => selectPath("hero-teams")}
+            data-cta={`${surface}:hero-teams`}
             className={cn(pillClass, darkSecondaryCtaClass)}
           >
-            {t.hero.pathEnterprise}
+            {t.segment.teams.cta}
+          </CTAButton>
+        </div>
+        <p className="mt-5 mb-0 text-sm text-dim">{t.footer.responseTime}</p>
+        <div className="mt-5 md:hidden">
+          <CTAButton variant="tertiary" to={paths.enterprise} data-cta={`${surface}:hero-programs`}>
+            {t.segment.enterprise.cta}
           </CTAButton>
         </div>
         {upcoming && (

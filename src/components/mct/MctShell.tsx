@@ -10,12 +10,13 @@ import LocaleSwitch from "./LocaleSwitch";
 import "./mct-editorial.css";
 import "./mct-buyer.css";
 import { useMct } from "./MctContext";
+import { CTAButton } from "@/design-system/components/cta-button";
 
 const footerLinkClass = "text-sm text-dim transition-colors hover:text-on-dark";
 const footerHeadingClass = "mct-eyebrow mt-0 mb-5 text-on-dark-tertiary";
 
-function MctTopBar() {
-  const { t, paths } = useMct();
+function MctTopBar({ buyer }: { buyer: boolean }) {
+  const { t, paths, surface, setPrefill } = useMct();
 
   return (
     <header className="sticky top-0 z-30 border-b border-white/10 bg-mct-navy/80 backdrop-blur">
@@ -24,12 +25,26 @@ function MctTopBar() {
           {t.nav.brand}
         </Link>
         <nav aria-label={t.nav.ariaLabel} className="ml-auto flex items-center gap-6">
-          <Link
+          {buyer ? (
+            <>
+              <CTAButton variant="tertiary" href="#courses" showArrow={false} className="hidden md:inline-flex">
+                {t.nav.courses}
+              </CTAButton>
+              <CTAButton
+                size="default"
+                onClick={() => setPrefill({ tier: "enterprise", intent: "scope-call" }, "header-request")}
+                data-cta={`${surface}:header-request`}
+                className="hidden sm:inline-flex"
+              >
+                {t.nav.request}
+              </CTAButton>
+            </>
+          ) : <Link
             to={paths.hub}
             className="hidden text-sm text-dim transition-colors hover:text-on-dark md:inline"
           >
             {t.nav.hub}
-          </Link>
+          </Link>}
           <LocaleSwitch />
         </nav>
       </div>
@@ -128,7 +143,7 @@ function MctFooter() {
 export default function MctShell({ children, buyer = false }: { children: ReactNode; buyer?: boolean }) {
   return (
     <LandingLayout showLegal={false} className={`mct-editorial ${buyer ? "mct-buyer" : ""} bg-mct-navy text-on-dark min-h-screen`}>
-      <MctTopBar />
+      <MctTopBar buyer={buyer} />
       <main>{children}</main>
       <MctFooter />
     </LandingLayout>
