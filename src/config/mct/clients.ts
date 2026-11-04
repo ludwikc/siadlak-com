@@ -12,7 +12,8 @@ import nfzLogo from "@/assets/logos/nfz.svg";
 import nikLogo from "@/assets/logos/nik.svg";
 import nordeaLogo from "@/assets/logos/nordea.svg";
 import orbisLogo from "@/assets/logos/orbis.svg";
-import pwcLogo from "@/assets/logos/pwc.svg";
+import pwcLogo from "@/assets/logos/clients/pwc-current.svg.asset.json";
+import eyLogo from "@/assets/logos/clients/ey-current.svg.asset.json";
 import pzuLogo from "@/assets/logos/pzu.svg";
 import scaniaLogo from "@/assets/logos/scania.svg";
 import skmLogo from "@/assets/logos/skm.svg";
@@ -60,7 +61,8 @@ export const brandLogos: ClientLogo[] = [
   { name: "Volvo", src: volvoLogo },
   { name: "Scania", src: scaniaLogo },
   { name: "Thomson Reuters", src: thomsonReutersLogo },
-  { name: "PwC", src: pwcLogo },
+  { name: "PwC", src: pwcLogo.url, original: true },
+  { name: "EY", src: eyLogo.url, original: true },
   { name: "Accenture", src: accentureLogo },
   { name: "Alstom", src: alstomLogo },
   { name: "Nordea", src: nordeaLogo },

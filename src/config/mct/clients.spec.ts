@@ -11,7 +11,7 @@ describe("clients", () => {
   });
 
   it("keeps the agreed logo set and text chips", () => {
-    expect(brandLogos.length).toEqual(46);
+    expect(brandLogos.length).toEqual(47);
     expect(brandLogos.map((l) => l.name)).toContain("Microsoft");
     expect(brandLogos.map((l) => l.name)).toContain("mBank");
     expect(textChips).toEqual([
