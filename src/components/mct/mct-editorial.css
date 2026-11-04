@@ -103,7 +103,7 @@
   .mct-editorial [data-cta] { transition: none; }
 }
 
-.mct-editorial img.opacity-60 { filter: invert(1) brightness(0.35); }
+.mct-editorial img.opacity-60 { filter: grayscale(1) invert(1) brightness(0.35); }
 
 /* Hero exception: dark void band (like the homepage) so white + gradient headline words read. */
 .mct-editorial .mct-hero-dark {
