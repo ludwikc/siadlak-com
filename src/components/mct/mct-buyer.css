@@ -78,6 +78,7 @@
 .mct-buyer .mct-hero-dark [data-cta] { width: auto; }
 .mct-buyer .mct-trust { padding-block: 2.5rem; }
 .mct-buyer .mct-trust img { opacity: 1; }
+.mct-buyer .mct-client-original { filter: grayscale(1); }
 .mct-buyer .mct-client-logos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

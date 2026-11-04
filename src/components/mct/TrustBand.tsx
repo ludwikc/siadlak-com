@@ -20,7 +20,7 @@ export default function TrustBand() {
                 src={logo.src}
                 alt={logo.name}
                 loading="lazy"
-                className="h-6 w-auto opacity-60 transition-opacity hover:opacity-90 md:h-7"
+                className={`${logo.original ? "mct-client-original" : "opacity-60"} h-6 w-auto transition-opacity hover:opacity-90 md:h-7`}
               />
             </li>
           ))}
