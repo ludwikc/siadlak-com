@@ -43,6 +43,7 @@ import financeLogo from "@/assets/logos/clients/finance.webp.asset.json";
 import wimLogo from "@/assets/logos/clients/wim.svg.asset.json";
 import cityGuardLogo from "@/assets/logos/clients/warsaw-city-guard.webp.asset.json";
 import customsLogo from "@/assets/logos/clients/customs-service-historical.webp.asset.json";
+import kasLogo from "@/assets/logos/clients/kas.png.asset.json";
 import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
@@ -95,10 +96,10 @@ export const brandLogos: ClientLogo[] = [
   { name: "Military Institute of Medicine", src: wimLogo.url, original: true, reverse: true },
   { name: "Warsaw City Guard", src: cityGuardLogo.url, original: true },
   { name: "Customs Service", src: customsLogo.url, original: true },
+  { name: "National Revenue Administration (KAS)", src: kasLogo.url, original: true },
 ];
 
 export const textChips = [
-  "National Revenue Administration (KAS)",
   "ACTION Education Centre",
   "RINF TECH",
   "ITMAGINATION",
