@@ -47,7 +47,6 @@ export const brandLogos: { name: string; src: string }[] = [
   { name: "ZUS", src: zusLogo },
   { name: "NFZ", src: nfzLogo },
   { name: "NIK", src: nikLogo },
-  { name: "MSWiA", src: mswiaLogo },
   { name: "Orbis", src: orbisLogo },
   { name: "Inter Cars", src: interCarsLogo },
   { name: "PKP Szybka Kolej Miejska", src: skmLogo },
