@@ -22,11 +22,18 @@ import unileverLogo from "@/assets/logos/unilever.svg";
 import volkswagenLogo from "@/assets/logos/volkswagen.svg";
 import volvoLogo from "@/assets/logos/volvo.svg";
 import zusLogo from "@/assets/logos/zus.svg";
+import dnbLogo from "@/assets/logos/clients/dnb.svg.asset.json";
+import pekaoLogo from "@/assets/logos/clients/pekao.svg.asset.json";
+import pkoLogo from "@/assets/logos/clients/pkobp.svg.asset.json";
+import sygnityLogo from "@/assets/logos/clients/sygnity.svg.asset.json";
+import tikkurilaLogo from "@/assets/logos/clients/tikkurila.svg.asset.json";
 import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
 
-export const brandLogos: { name: string; src: string }[] = [
+type ClientLogo = { name: string; src: string; original?: boolean };
+
+export const brandLogos: ClientLogo[] = [
   { name: "Microsoft", src: microsoftLogo },
   { name: "Unilever", src: unileverLogo },
   { name: "Hewlett-Packard", src: hpLogo },
@@ -51,6 +58,11 @@ export const brandLogos: { name: string; src: string }[] = [
   { name: "PKP Szybka Kolej Miejska", src: skmLogo },
   { name: "University of Gdansk", src: ugLogo },
   { name: "Asseco", src: assecoLogo },
+  { name: "DNB", src: dnbLogo.url, original: true },
+  { name: "PKO Bank Polski", src: pkoLogo.url, original: true },
+  { name: "Bank Pekao", src: pekaoLogo.url, original: true },
+  { name: "Tikkurila", src: tikkurilaLogo.url, original: true },
+  { name: "Sygnity", src: sygnityLogo.url, original: true },
 ];
 
 export const textChips = [
