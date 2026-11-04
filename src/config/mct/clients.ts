@@ -1,4 +1,4 @@
-import accentureLogo from "@/assets/logos/accenture.svg";
+import accentureLogo from "@/assets/logos/clients/accenture-wordmark.svg.asset.json";
 import alstomLogo from "@/assets/logos/alstom.svg";
 import assecoLogo from "@/assets/logos/asseco.svg";
 import bphLogo from "@/assets/logos/bph.svg";
@@ -38,7 +38,7 @@ import navyLogo from "@/assets/logos/clients/navy.svg.asset.json";
 import marinesLogo from "@/assets/logos/clients/marines.svg.asset.json";
 import defenseLogo from "@/assets/logos/clients/us-department-of-defense.svg.asset.json";
 import norwayPoliceLogo from "@/assets/logos/clients/norway-police.svg.asset.json";
-import polandPoliceLogo from "@/assets/logos/clients/poland-police.webp.asset.json";
+import polandPoliceLogo from "@/assets/logos/clients/policja.svg.asset.json";
 import mswiaLogo from "@/assets/logos/clients/mswia.webp.asset.json";
 import financeLogo from "@/assets/logos/clients/finance.webp.asset.json";
 import wimLogo from "@/assets/logos/clients/wim.svg.asset.json";
@@ -63,7 +63,7 @@ export const brandLogos: ClientLogo[] = [
   { name: "Thomson Reuters", src: thomsonReutersLogo },
   { name: "PwC", src: pwcLogo.url, original: true },
   { name: "EY", src: eyLogo.url, original: true },
-  { name: "Accenture", src: accentureLogo },
+  { name: "Accenture", src: accentureLogo.url, original: true },
   { name: "Alstom", src: alstomLogo },
   { name: "Nordea", src: nordeaLogo },
   { name: "ING", src: ingLogo },
