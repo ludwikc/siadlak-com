@@ -45,6 +45,8 @@ import wimLogo from "@/assets/logos/clients/wim.svg.asset.json";
 import cityGuardLogo from "@/assets/logos/clients/warsaw-city-guard.webp.asset.json";
 import customsLogo from "@/assets/logos/clients/customs-service-historical.webp.asset.json";
 import kasLogo from "@/assets/logos/clients/kas.png.asset.json";
+import itmaginationLogo from "@/assets/logos/clients/itmagination.png.asset.json";
+import combidataLogo from "@/assets/logos/clients/combidata.png.asset.json";
 import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
@@ -84,6 +86,8 @@ export const brandLogos: ClientLogo[] = [
   { name: "Sygnity", src: sygnityLogo.url, original: true },
   { name: "mBank", src: mbankLogo.url, original: true },
   { name: "Softronic", src: softronicLogo.url, original: true },
+  { name: "ITMAGINATION", src: itmaginationLogo.url, original: true, reverse: true },
+  { name: "Combidata", src: combidataLogo.url, original: true },
   { name: "POSTDATA", src: postdataLogo.url, original: true, reverse: true },
   { name: "NATO", src: natoLogo.url, original: true },
   { name: "US Army Africa", src: armyAfricaLogo.url, original: true },
@@ -104,8 +108,6 @@ export const brandLogos: ClientLogo[] = [
 export const textChips = [
   "ACTION Education Centre",
   "RINF TECH",
-  "ITMAGINATION",
-  "Combidata",
   "BRE Bank",
 ];
 
