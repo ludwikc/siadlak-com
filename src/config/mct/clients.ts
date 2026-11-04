@@ -1,4 +1,4 @@
-import accentureLogo from "@/assets/logos/accenture.svg";
+import accentureLogo from "@/assets/logos/clients/accenture-wordmark.svg.asset.json";
 import alstomLogo from "@/assets/logos/alstom.svg";
 import assecoLogo from "@/assets/logos/asseco.svg";
 import bphLogo from "@/assets/logos/bph.svg";
@@ -38,13 +38,15 @@ import navyLogo from "@/assets/logos/clients/navy.svg.asset.json";
 import marinesLogo from "@/assets/logos/clients/marines.svg.asset.json";
 import defenseLogo from "@/assets/logos/clients/us-department-of-defense.svg.asset.json";
 import norwayPoliceLogo from "@/assets/logos/clients/norway-police.svg.asset.json";
-import polandPoliceLogo from "@/assets/logos/clients/poland-police.webp.asset.json";
+import polandPoliceLogo from "@/assets/logos/clients/policja.svg.asset.json";
 import mswiaLogo from "@/assets/logos/clients/mswia.webp.asset.json";
 import financeLogo from "@/assets/logos/clients/finance.webp.asset.json";
 import wimLogo from "@/assets/logos/clients/wim.svg.asset.json";
 import cityGuardLogo from "@/assets/logos/clients/warsaw-city-guard.webp.asset.json";
 import customsLogo from "@/assets/logos/clients/customs-service-historical.webp.asset.json";
 import kasLogo from "@/assets/logos/clients/kas.png.asset.json";
+import itmaginationLogo from "@/assets/logos/clients/itmagination.png.asset.json";
+import combidataLogo from "@/assets/logos/clients/combidata.png.asset.json";
 import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
@@ -63,7 +65,7 @@ export const brandLogos: ClientLogo[] = [
   { name: "Thomson Reuters", src: thomsonReutersLogo },
   { name: "PwC", src: pwcLogo.url, original: true },
   { name: "EY", src: eyLogo.url, original: true },
-  { name: "Accenture", src: accentureLogo },
+  { name: "Accenture", src: accentureLogo.url, original: true },
   { name: "Alstom", src: alstomLogo },
   { name: "Nordea", src: nordeaLogo },
   { name: "ING", src: ingLogo },
@@ -84,6 +86,8 @@ export const brandLogos: ClientLogo[] = [
   { name: "Sygnity", src: sygnityLogo.url, original: true },
   { name: "mBank", src: mbankLogo.url, original: true },
   { name: "Softronic", src: softronicLogo.url, original: true },
+  { name: "ITMAGINATION", src: itmaginationLogo.url, original: true, reverse: true },
+  { name: "Combidata", src: combidataLogo.url, original: true },
   { name: "POSTDATA", src: postdataLogo.url, original: true, reverse: true },
   { name: "NATO", src: natoLogo.url, original: true },
   { name: "US Army Africa", src: armyAfricaLogo.url, original: true },
@@ -104,10 +108,39 @@ export const brandLogos: ClientLogo[] = [
 export const textChips = [
   "ACTION Education Centre",
   "RINF TECH",
-  "ITMAGINATION",
-  "Combidata",
   "BRE Bank",
 ];
+
+export type TrustGroupId = "commercial" | "poland" | "norway" | "united-states";
+
+const governmentClients: Record<Exclude<TrustGroupId, "commercial">, string[]> = {
+  poland: ["ZUS", "NFZ", "NIK", "Police of Poland", "MSWiA", "Ministry of Finance", "Military Institute of Medicine", "Warsaw City Guard", "Customs Service", "National Revenue Administration (KAS)"],
+  norway: ["Police of Norway"],
+  "united-states": ["US Army Africa", "US Army Europe", "US Navy", "US Marines", "US Department of Defense"],
+};
+
+const independentClients = ["NATO", "University of Gdansk"];
+
+export const trustGroups: { id: TrustGroupId; label: Localized; logos: ClientLogo[]; names: string[] }[] = [
+  {
+    id: "commercial",
+    label: { en: "Corporate/Commercial Clients", pl: "Klienci korporacyjni i komercyjni" },
+    logos: brandLogos.filter((logo) => !Object.values(governmentClients).flat().includes(logo.name) && !independentClients.includes(logo.name)),
+    names: textChips,
+  },
+  ...(["poland", "norway", "united-states"] as const).map((id) => ({
+    id,
+    label: {
+      poland: { en: "Government of Poland", pl: "Administracja publiczna Polski" },
+      norway: { en: "Government of Norway", pl: "Administracja publiczna Norwegii" },
+      "united-states": { en: "Government of United States", pl: "Administracja publiczna Stanów Zjednoczonych" },
+    }[id],
+    logos: brandLogos.filter((logo) => governmentClients[id].includes(logo.name)),
+    names: [],
+  })),
+];
+
+export const independentLogos = brandLogos.filter((logo) => independentClients.includes(logo.name));
 
 export const clientWall: Record<ClientGroupId, string[]> = {
   defense: [
