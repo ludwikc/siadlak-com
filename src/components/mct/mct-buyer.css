@@ -78,6 +78,31 @@
 .mct-buyer .mct-hero-dark [data-cta] { width: auto; }
 .mct-buyer .mct-trust { padding-block: 2.5rem; }
 .mct-buyer .mct-trust img { opacity: 1; }
+.mct-buyer .mct-client-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+}
+.mct-buyer .mct-client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 4.5rem;
+}
+.mct-buyer .mct-client-logo img {
+  display: block;
+  width: 100%;
+  max-width: 8rem;
+  height: 3rem;
+  object-fit: contain;
+}
+@media (min-width: 640px) {
+  .mct-buyer .mct-client-logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .mct-buyer .mct-client-logos { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
 .mct-buyer .mct-trust .mct-client-name {
   border: none;
   padding: 0;

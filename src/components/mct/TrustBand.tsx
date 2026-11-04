@@ -13,9 +13,9 @@ export default function TrustBand() {
         <p className="mct-eyebrow m-0 text-electric" data-reveal-child>
           {t.trust.eyebrow}
         </p>
-        <ul className="m-0 flex list-none flex-wrap items-center gap-x-10 gap-y-6 p-0" data-reveal-child>
+        <ul className="mct-client-logos m-0 flex list-none flex-wrap items-center gap-x-10 gap-y-6 p-0" data-reveal-child>
           {brandLogos.map((logo) => (
-            <li key={logo.name}>
+            <li key={logo.name} className="mct-client-logo">
               <img
                 src={logo.src}
                 alt={logo.name}
