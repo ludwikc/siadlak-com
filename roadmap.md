@@ -5,5 +5,6 @@
 - [x] Qualify advertised English MCT prices as starting at, without changing amounts or quote calculations.
 - [x] Lead the hub with outcome-led Microsoft Copilot and AI course pathways; course navigation, enquiry opening and mobile layout verified; 16 tests passed.
 - [x] Remove the English format section, update the tracks heading and add Microsoft product logos; 16 tests passed, hosted images loaded, navigation and layout verified at 1280/893/393 px.
-- [ ] Find authentic missing organization logos from the new attachment, preserving historical identities and avoiding ambiguous substitutions.
-- [ ] Add verified logos to the optically balanced client band and verify desktop/mobile rendering.
+- [x] Find authentic missing organization logos from the new attachment, preserving historical identities and avoiding ambiguous substitutions; confirmed KAS identity.
+- [x] Add 22 verified logos to the client band (46 total); hosted assets load and mobile layout has no overflow.
+- [ ] Replace ACTION Education, ITMAGINATION, Combidata and BRE Bank text labels when verified original logo files become available; blocked by unavailable authenticated historical artwork, not replaced by successor brands.

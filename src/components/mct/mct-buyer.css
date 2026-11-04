@@ -80,6 +80,7 @@
 .mct-buyer .mct-trust img { opacity: 1; }
 .mct-buyer .mct-client-original { filter: grayscale(1); }
 .mct-buyer .mct-client-reverse { filter: grayscale(1) invert(1); }
+.mct-buyer .mct-client-muted { filter: grayscale(1) brightness(0.45); }
 .mct-buyer .mct-client-logos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

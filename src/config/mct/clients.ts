@@ -48,7 +48,7 @@ import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
 
-type ClientLogo = { name: string; src: string; original?: boolean; reverse?: boolean };
+type ClientLogo = { name: string; src: string; original?: boolean; reverse?: boolean; muted?: boolean };
 
 export const brandLogos: ClientLogo[] = [
   { name: "Microsoft", src: microsoftLogo },
@@ -95,8 +95,8 @@ export const brandLogos: ClientLogo[] = [
   { name: "Ministry of Finance", src: financeLogo.url, original: true },
   { name: "Military Institute of Medicine", src: wimLogo.url, original: true, reverse: true },
   { name: "Warsaw City Guard", src: cityGuardLogo.url, original: true },
-  { name: "Customs Service", src: customsLogo.url, original: true },
-  { name: "National Revenue Administration (KAS)", src: kasLogo.url, original: true },
+  { name: "Customs Service", src: customsLogo.url, original: true, muted: true },
+  { name: "National Revenue Administration (KAS)", src: kasLogo.url, original: true, muted: true },
 ];
 
 export const textChips = [
