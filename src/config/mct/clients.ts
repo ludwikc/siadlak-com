@@ -43,7 +43,7 @@ export const brandLogos: { name: string; src: string }[] = [
   { name: "Nordea", src: nordeaLogo },
   { name: "ING", src: ingLogo },
   { name: "PZU", src: pzuLogo },
-  { name: "mBank predecessor BPH", src: bphLogo },
+  { name: "Bank BPH", src: bphLogo },
   { name: "ZUS", src: zusLogo },
   { name: "NFZ", src: nfzLogo },
   { name: "NIK", src: nikLogo },
