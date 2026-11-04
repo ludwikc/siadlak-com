@@ -8,7 +8,6 @@ import hpLogo from "@/assets/logos/hp.svg";
 import ingLogo from "@/assets/logos/ing.svg";
 import interCarsLogo from "@/assets/logos/inter-cars.svg";
 import microsoftLogo from "@/assets/logos/microsoft.svg";
-import mswiaLogo from "@/assets/logos/mswia.svg";
 import nfzLogo from "@/assets/logos/nfz.svg";
 import nikLogo from "@/assets/logos/nik.svg";
 import nordeaLogo from "@/assets/logos/nordea.svg";
@@ -60,6 +59,7 @@ export const textChips = [
   "US Navy",
   "US Marines",
   "National Revenue Administration (KAS)",
+  "MSWiA",
   "ACTION Education Centre",
   "Postdata (Envelo)",
   "RINF TECH",

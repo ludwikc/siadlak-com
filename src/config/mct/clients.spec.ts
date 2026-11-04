@@ -11,7 +11,7 @@ describe("clients", () => {
   });
 
   it("keeps the agreed logo set and text chips", () => {
-    expect(brandLogos.length).toEqual(25);
+    expect(brandLogos.length).toEqual(24);
     expect(brandLogos.map((l) => l.name)).toContain("Microsoft");
     expect(brandLogos.map((l) => l.name)).not.toContain("mBank");
     expect(textChips).toEqual([
@@ -20,6 +20,7 @@ describe("clients", () => {
       "US Navy",
       "US Marines",
       "National Revenue Administration (KAS)",
+      "MSWiA",
       "ACTION Education Centre",
       "Postdata (Envelo)",
       "RINF TECH",
