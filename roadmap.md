@@ -8,3 +8,5 @@
 - [x] Find authentic missing organization logos from the new attachment, preserving historical identities and avoiding ambiguous substitutions; confirmed KAS identity.
 - [x] Add 22 verified logos to the client band (46 total); hosted assets load and mobile layout has no overflow.
 - [ ] Replace ACTION Education, ITMAGINATION, Combidata and BRE Bank text labels when verified original logo files become available; blocked by unavailable authenticated historical artwork, not replaced by successor brands.
+- [ ] Correct Accenture and Polish Police logos, obtain authentic ITMAGINATION and Combidata artwork, and verify the grouped client band.
+- [ ] Organize the band into Corporate/Commercial Clients, Government of Poland, Government of Norway and Government of United States without misclassifying NATO or the university.
