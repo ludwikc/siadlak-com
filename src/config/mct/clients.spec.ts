@@ -10,10 +10,23 @@ describe("clients", () => {
     expect(Object.keys(clientGroupLabels)).toEqual(Object.keys(clientWall));
   });
 
-  it("keeps seven logos and the agreed text chips", () => {
-    expect([brandLogos.length, textChips]).toEqual([
-      7,
-      ["NATO", "US Army Europe", "US Navy", "US Marines", "Nordea", "ING"],
+  it("keeps the agreed logo set and text chips", () => {
+    expect(brandLogos.length).toEqual(24);
+    expect(brandLogos.map((l) => l.name)).toContain("Microsoft");
+    expect(brandLogos.map((l) => l.name)).not.toContain("mBank");
+    expect(textChips).toEqual([
+      "NATO",
+      "US Army Europe",
+      "US Navy",
+      "US Marines",
+      "National Revenue Administration (KAS)",
+      "MSWiA",
+      "ACTION Education Centre",
+      "Postdata (Envelo)",
+      "RINF TECH",
+      "Military Institute of Medicine",
+      "Warsaw City Guard",
+      "mBank",
     ]);
   });
 });
