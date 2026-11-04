@@ -11,22 +11,16 @@ describe("clients", () => {
   });
 
   it("keeps the agreed logo set and text chips", () => {
-    expect(brandLogos.length).toEqual(24);
+    expect(brandLogos.length).toEqual(45);
     expect(brandLogos.map((l) => l.name)).toContain("Microsoft");
-    expect(brandLogos.map((l) => l.name)).not.toContain("mBank");
+    expect(brandLogos.map((l) => l.name)).toContain("mBank");
     expect(textChips).toEqual([
-      "NATO",
-      "US Army Europe",
-      "US Navy",
-      "US Marines",
       "National Revenue Administration (KAS)",
-      "MSWiA",
       "ACTION Education Centre",
-      "Postdata (Envelo)",
       "RINF TECH",
-      "Military Institute of Medicine",
-      "Warsaw City Guard",
-      "mBank",
+      "ITMAGINATION",
+      "Combidata",
+      "BRE Bank",
     ]);
   });
 });

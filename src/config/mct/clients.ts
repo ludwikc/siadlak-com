@@ -27,11 +27,27 @@ import pekaoLogo from "@/assets/logos/clients/pekao.svg.asset.json";
 import pkoLogo from "@/assets/logos/clients/pkobp.svg.asset.json";
 import sygnityLogo from "@/assets/logos/clients/sygnity.svg.asset.json";
 import tikkurilaLogo from "@/assets/logos/clients/tikkurila.svg.asset.json";
+import mbankLogo from "@/assets/logos/clients/mbank.webp.asset.json";
+import softronicLogo from "@/assets/logos/clients/softronic-poland.webp.asset.json";
+import postdataLogo from "@/assets/logos/clients/postdata.svg.asset.json";
+import natoLogo from "@/assets/logos/clients/nato.webp.asset.json";
+import armyAfricaLogo from "@/assets/logos/clients/army-africa-historical.webp.asset.json";
+import armyEuropeLogo from "@/assets/logos/clients/army-europe.svg.asset.json";
+import navyLogo from "@/assets/logos/clients/navy.svg.asset.json";
+import marinesLogo from "@/assets/logos/clients/marines.svg.asset.json";
+import defenseLogo from "@/assets/logos/clients/us-department-of-defense.svg.asset.json";
+import norwayPoliceLogo from "@/assets/logos/clients/norway-police.svg.asset.json";
+import polandPoliceLogo from "@/assets/logos/clients/poland-police.webp.asset.json";
+import mswiaLogo from "@/assets/logos/clients/mswia.webp.asset.json";
+import financeLogo from "@/assets/logos/clients/finance.webp.asset.json";
+import wimLogo from "@/assets/logos/clients/wim.svg.asset.json";
+import cityGuardLogo from "@/assets/logos/clients/warsaw-city-guard.webp.asset.json";
+import customsLogo from "@/assets/logos/clients/customs-service-historical.webp.asset.json";
 import type { Localized } from "./types";
 
 export type ClientGroupId = "defense" | "enterprise" | "education" | "partners";
 
-type ClientLogo = { name: string; src: string; original?: boolean };
+type ClientLogo = { name: string; src: string; original?: boolean; reverse?: boolean };
 
 export const brandLogos: ClientLogo[] = [
   { name: "Microsoft", src: microsoftLogo },
@@ -63,21 +79,31 @@ export const brandLogos: ClientLogo[] = [
   { name: "Bank Pekao", src: pekaoLogo.url, original: true },
   { name: "Tikkurila", src: tikkurilaLogo.url, original: true },
   { name: "Sygnity", src: sygnityLogo.url, original: true },
+  { name: "mBank", src: mbankLogo.url, original: true },
+  { name: "Softronic", src: softronicLogo.url, original: true },
+  { name: "POSTDATA", src: postdataLogo.url, original: true, reverse: true },
+  { name: "NATO", src: natoLogo.url, original: true },
+  { name: "US Army Africa", src: armyAfricaLogo.url, original: true },
+  { name: "US Army Europe", src: armyEuropeLogo.url, original: true },
+  { name: "US Navy", src: navyLogo.url, original: true },
+  { name: "US Marines", src: marinesLogo.url, original: true },
+  { name: "US Department of Defense", src: defenseLogo.url, original: true },
+  { name: "Police of Norway", src: norwayPoliceLogo.url, original: true },
+  { name: "Police of Poland", src: polandPoliceLogo.url, original: true },
+  { name: "MSWiA", src: mswiaLogo.url, original: true },
+  { name: "Ministry of Finance", src: financeLogo.url, original: true },
+  { name: "Military Institute of Medicine", src: wimLogo.url, original: true, reverse: true },
+  { name: "Warsaw City Guard", src: cityGuardLogo.url, original: true },
+  { name: "Customs Service", src: customsLogo.url, original: true },
 ];
 
 export const textChips = [
-  "NATO",
-  "US Army Europe",
-  "US Navy",
-  "US Marines",
   "National Revenue Administration (KAS)",
-  "MSWiA",
   "ACTION Education Centre",
-  "Postdata (Envelo)",
   "RINF TECH",
-  "Military Institute of Medicine",
-  "Warsaw City Guard",
-  "mBank",
+  "ITMAGINATION",
+  "Combidata",
+  "BRE Bank",
 ];
 
 export const clientWall: Record<ClientGroupId, string[]> = {
