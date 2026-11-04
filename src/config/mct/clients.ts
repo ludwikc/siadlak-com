@@ -109,6 +109,37 @@ export const textChips = [
   "BRE Bank",
 ];
 
+export type TrustGroupId = "commercial" | "poland" | "norway" | "united-states";
+
+const governmentClients: Record<Exclude<TrustGroupId, "commercial">, string[]> = {
+  poland: ["ZUS", "NFZ", "NIK", "Police of Poland", "MSWiA", "Ministry of Finance", "Military Institute of Medicine", "Warsaw City Guard", "Customs Service", "National Revenue Administration (KAS)"],
+  norway: ["Police of Norway"],
+  "united-states": ["US Army Africa", "US Army Europe", "US Navy", "US Marines", "US Department of Defense"],
+};
+
+const independentClients = ["NATO", "University of Gdansk"];
+
+export const trustGroups: { id: TrustGroupId; label: Localized; logos: ClientLogo[]; names: string[] }[] = [
+  {
+    id: "commercial",
+    label: { en: "Corporate/Commercial Clients", pl: "Klienci korporacyjni i komercyjni" },
+    logos: brandLogos.filter((logo) => !Object.values(governmentClients).flat().includes(logo.name) && !independentClients.includes(logo.name)),
+    names: textChips,
+  },
+  ...(["poland", "norway", "united-states"] as const).map((id) => ({
+    id,
+    label: {
+      poland: { en: "Government of Poland", pl: "Administracja publiczna Polski" },
+      norway: { en: "Government of Norway", pl: "Administracja publiczna Norwegii" },
+      "united-states": { en: "Government of United States", pl: "Administracja publiczna Stanów Zjednoczonych" },
+    }[id],
+    logos: brandLogos.filter((logo) => governmentClients[id].includes(logo.name)),
+    names: [],
+  })),
+];
+
+export const independentLogos = brandLogos.filter((logo) => independentClients.includes(logo.name));
+
 export const clientWall: Record<ClientGroupId, string[]> = {
   defense: [
     "NATO",
