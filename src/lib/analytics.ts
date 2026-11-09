@@ -33,6 +33,7 @@ type EventParams = {
   dtr_variant_applied: { funnel_slug: string; dtr_param: string; dtr_variant: string };
   eval_submitted: { page_path: string; training: string; nps: number };
   eval_submit_error: { page_path: string };
+  booking_requested: { center: string; training: string; days: number };
   mct_view: { locale: Locale; page: "hub" | "course" | "briefing" | "enterprise"; course_slug?: string };
   mct_tier_select: {
     locale: Locale;

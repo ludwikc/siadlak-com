@@ -1,0 +1,103 @@
+import type { Locale } from "../mct/types";
+
+const pl = {
+  eyebrow: "Rezerwacja terminu szkolenia",
+  title: (center: string) => `Termin szkolenia dla ${center}`,
+  lead: "Wybierz szkolenie i liczbę dni, a kalendarz pokaże wolne terminy. Wysłanie formularza wstępnie blokuje termin — potwierdzę go mailowo, zwykle w ciągu jednego dnia roboczego.",
+  sections: { training: "Szkolenie", date: "Termin", details: "Szczegóły", contact: "Kontakt" },
+  training: "Szkolenie",
+  trainingPlaceholder: "Wybierz szkolenie",
+  customOption: "Inne / własne szkolenie",
+  customTraining: "Nazwa szkolenia",
+  customPlaceholder: "np. Power Automate dla zaawansowanych",
+  days: "Liczba dni",
+  daysHint: (n: number) => `Domyślnie ${n} d. — możesz zmienić (1–5 dni, bez weekendów).`,
+  pickTrainingFirst: "Najpierw wybierz szkolenie, a pokażę wolne terminy.",
+  loading: "Sprawdzam kalendarz…",
+  calendarHint: "Dostępne są tylko dni rozpoczęcia, po których jest wymagana liczba wolnych dni roboczych w tym samym tygodniu.",
+  noSlots: (days: number) =>
+    `W najbliższym kwartale nie ma ${days} wolnych dni roboczych pod rząd. Napisz do mnie, a coś zaproponuję:`,
+  selected: "Wybrany termin",
+  delivery: "Forma",
+  deliveryOptions: { remote: "Zdalnie", onsite: "Stacjonarnie" },
+  city: "Miasto",
+  language: "Język szkolenia",
+  languageOptions: { pl: "Polski", en: "Angielski" },
+  participants: "Liczba uczestników",
+  notes: "Uwagi",
+  notesPlaceholder: "Godziny, profil grupy, numer zamówienia — wszystko, co warto wiedzieć.",
+  name: "Imię i nazwisko",
+  email: "E-mail",
+  phone: "Telefon",
+  optional: "(opcjonalnie)",
+  submit: "Wyślij prośbę o termin",
+  submitting: "Wysyłam…",
+  errors: {
+    required: "To pole jest wymagane.",
+    email: "Sprawdź adres e-mail.",
+    startDate: "Wybierz termin w kalendarzu.",
+    generic: "Nie udało się wysłać prośby. Spróbuj ponownie albo napisz do mnie:",
+    slotTaken: "Ten termin został właśnie zajęty. Kalendarz jest odświeżony — wybierz inny dzień.",
+    calendar: "Kalendarz jest chwilowo niedostępny. Napisz do mnie, a ustalimy termin mailowo:",
+  },
+  done: {
+    title: "Dziękuję — termin jest wstępnie zablokowany",
+    body: (range: string) =>
+      `Wstępnie zablokowałem w kalendarzu termin: ${range}. Potwierdzę go mailowo, zwykle w ciągu jednego dnia roboczego.`,
+    again: "Zarezerwuj kolejny termin",
+  },
+  dayUnit: (n: number): string => (n === 1 ? "dzień" : "dni"),
+};
+
+type BookingCopy = typeof pl;
+
+const en: BookingCopy = {
+  eyebrow: "Training date request",
+  title: (center: string) => `Training dates for ${center}`,
+  lead: "Pick a training and the number of days, and the calendar shows the dates I have free. Sending the form puts a tentative hold on the date — I confirm by email, usually within one working day.",
+  sections: { training: "Training", date: "Dates", details: "Details", contact: "Contact" },
+  training: "Training",
+  trainingPlaceholder: "Choose a training",
+  customOption: "Other / custom training",
+  customTraining: "Training name",
+  customPlaceholder: "e.g. Advanced Power Automate",
+  days: "Number of days",
+  daysHint: (n: number) => `Default ${n} ${n === 1 ? "day" : "days"} — you can change it (1–5 days, no weekends).`,
+  pickTrainingFirst: "Choose a training first and I'll show the free dates.",
+  loading: "Checking the calendar…",
+  calendarHint: "Only start days followed by enough free working days in the same week are available.",
+  noSlots: (days: number) =>
+    `There are no ${days} consecutive free working days in the next quarter. Write to me and I'll suggest something:`,
+  selected: "Selected dates",
+  delivery: "Format",
+  deliveryOptions: { remote: "Remote", onsite: "On-site" },
+  city: "City",
+  language: "Training language",
+  languageOptions: { pl: "Polish", en: "English" },
+  participants: "Number of participants",
+  notes: "Notes",
+  notesPlaceholder: "Hours, group profile, PO number — anything worth knowing.",
+  name: "Full name",
+  email: "Email",
+  phone: "Phone",
+  optional: "(optional)",
+  submit: "Send date request",
+  submitting: "Sending…",
+  errors: {
+    required: "This field is required.",
+    email: "Check the email address.",
+    startDate: "Pick a date in the calendar.",
+    generic: "The request didn't go through. Try again or write to me:",
+    slotTaken: "Those dates were just taken. The calendar has been refreshed — pick another day.",
+    calendar: "The calendar is unavailable right now. Write to me and we'll agree the dates by email:",
+  },
+  done: {
+    title: "Thank you — the dates are on hold",
+    body: (range: string) =>
+      `I've put a tentative hold on these dates in my calendar: ${range}. I'll confirm by email, usually within one working day.`,
+    again: "Request another date",
+  },
+  dayUnit: (n: number) => (n === 1 ? "day" : "days"),
+};
+
+export const bookingCopy: Record<Locale, BookingCopy> = { pl, en };
