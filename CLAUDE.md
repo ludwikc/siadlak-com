@@ -82,6 +82,7 @@ The app uses React Router with routes defined in `src/App.tsx`. Main route categ
 
 - **GH-1 (MUST)** Use Conventional Commits format: https://www.conventionalcommits.org/en/v1.0.0
 - **GH-2 (SHOULD NOT)** Refer to Claude or Anthropic in commit messages
+- **GH-3 (MUST)** Ship changes straight to production: commit and push directly to `main` (Vercel auto-deploys `main` to siadlak.com). No feature branches, pull requests, previews or staging — this overrides any default branch/PR workflow. Run tests, typecheck and lint before pushing.
 
 ## Brand Design System
 
