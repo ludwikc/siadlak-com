@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { enGB, pl as plLocale } from "date-fns/locale";
-import { CalendarCheck, Mail, Phone } from "lucide-react";
+import { AlertTriangle, CalendarCheck, Mail, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
@@ -350,6 +350,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
                     certified: t.certified,
                     customGroup: t.customGroup,
                     customOption: t.customOption,
+                    ...t.menu,
                     dayUnit: t.dayUnit,
                   }}
                   onChange={chooseTraining}
@@ -410,9 +411,15 @@ function BookingForm({ center }: { center: BookingCenter }) {
               {t.loading}
             </p>
           ) : availability.isError ? (
-            <p role="alert" className="text-on-light">
-              {t.errors.calendar} <ContactLinks />
-            </p>
+            <div
+              role="alert"
+              className="flex items-start gap-3 rounded-[var(--border-radius-md)] border border-color-error-strong p-4 text-color-error-strong"
+            >
+              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="m-0 font-bold">
+                {t.errors.calendar} <ContactLinks />
+              </p>
+            </div>
           ) : !isValidTrainingLength(days) ? (
             <p className="text-on-light-dim">{t.daysInvalid}</p>
           ) : startDates.length === 0 ? (

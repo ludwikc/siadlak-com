@@ -72,3 +72,6 @@ export const findTraining = (id: string): BookingTraining | undefined => TRAININ
 
 export const trainingLabel = (training: BookingTraining, locale: Locale): string =>
   training.code ? `${training.shortName}: ${training.title[locale]}` : training.title[locale];
+
+export const matchesQuery = (training: BookingTraining, locale: Locale, query: string): boolean =>
+  `${training.shortName} ${training.title[locale]}`.toLowerCase().includes(query.trim().toLowerCase());

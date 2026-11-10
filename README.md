@@ -111,6 +111,10 @@ przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwik
 - **Linki:** `/booking-center/asseco` (PL), `/booking-center/glasspaper` (EN). Bez
   indeksowania (meta `noindex` + nagłówek `X-Robots-Tag` w `vercel.json`) i poza
   nawigacją; stare `/rezerwacja/:center` przekierowują 308.
+- **Megamenu:** jeden panel — po lewej kategorie (przełączane najechaniem), po prawej
+  szkolenia w kolumnach *Business Intelligence* / *Artificial Intelligence* z kodem,
+  nazwą i liczbą dni oraz wyszukiwarką po kodzie i nazwie. Nowy kurs w katalogu MCT
+  trafia na listę po dopisaniu go do `OFFICIAL_DAYS`.
 - **Flow:** wybór szkolenia (megamenu: *Szkolenia autoryzowane* = kursy Microsoft z
   oficjalnym kodem, *Szkolenia autorskie* = pozostałe + „Inne / własne — opisz
   wymagania”) → liczba dni (domyślnie oficjalna długość, 1–5) → kalendarz z wolnymi
