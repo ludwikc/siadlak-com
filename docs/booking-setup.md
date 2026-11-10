@@ -47,6 +47,39 @@ Centra dodajesz w `src/config/booking/catalog.ts` (`CENTERS`). Tam też są domy
    | `GOOGLE_REFRESH_TOKEN` | Refresh token z kroku 6 |
    | `BOOKING_CALENDAR_ID` | opcjonalnie, domyślnie `primary` |
    | `BOOKING_ALERT_WEBHOOK` | opcjonalnie, webhook Discorda — ping przy każdej prośbie |
+   | `BOOKING_NOTIFY_EMAIL` | opcjonalnie, adres na powiadomienia mailowe — patrz niżej |
+   | `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` | opcjonalnie, powiadomienia WhatsApp — patrz niżej |
 
 8. Redeploy. Test: `https://siadlak.com/api/booking?center=asseco` powinno zwrócić
    `{"ok":true,"from":…,"freeDays":[…]}`. Odpowiedź `calendar-not-configured` oznacza brak zmiennych.
+
+## Powiadomienia o nowej prośbie
+
+Każda prośba wysyła powiadomienie na każdy skonfigurowany kanał (brak zmiennych = kanał
+wyłączony). Błąd powiadomienia nie blokuje rezerwacji — trafia do logów funkcji
+(`booking-notify-failed`). Treść: centrum, szkolenie, termin, forma, kontakt, uwagi
+i link do blokady w kalendarzu.
+
+### WhatsApp (CallMeBot)
+
+1. Otwórz https://www.callmebot.com/blog/free-api-whatsapp-messages/ i dodaj do
+   kontaktów numer bota podany na tej stronie.
+2. Wyślij do niego z WhatsAppa wiadomość `I allow callmebot to send me messages`.
+3. Bot odpisze kluczem API.
+4. Vercel → Environment Variables (Production): `CALLMEBOT_PHONE` = `+48510666531`,
+   `CALLMEBOT_APIKEY` = klucz z kroku 3. Redeploy.
+
+CallMeBot to darmowa usługa zewnętrzna — treść powiadomienia (w tym imię i e-mail
+klienta) przechodzi przez jej serwery.
+
+### E-mail (Gmail, z konta ludwikc@siadlak.com)
+
+1. Google Cloud → **APIs & Services → Library** → włącz **Gmail API** (ten sam projekt).
+2. OAuth Playground (jak w kroku 5–6 wyżej) — w polu scope wpisz oba, oddzielone spacją:
+   `https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/gmail.send`
+   → Authorize → Exchange → skopiuj **nowy** refresh token.
+3. Vercel: podmień `GOOGLE_REFRESH_TOKEN` na nowy token i dodaj
+   `BOOKING_NOTIFY_EMAIL` = `ludwikc@siadlak.com`. Redeploy.
+
+Mail przychodzi od Ciebie do Ciebie z `Reply-To` ustawionym na klienta, więc „Odpowiedz”
+pisze od razu do osoby z centrum.

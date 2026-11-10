@@ -140,7 +140,8 @@ Nowe centrum: dopisz wpis do `CENTERS` (slug, nazwa, `locale`) i wyślij link
 
 Jedyne zmienne środowiskowe ustawione na Vercelu (nie w repo) są dla booking center:
 `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` (wymagane),
-`BOOKING_CALENDAR_ID`, `BOOKING_ALERT_WEBHOOK` (opcjonalne) — patrz
+`BOOKING_CALENDAR_ID`, `BOOKING_NOTIFY_EMAIL`, `CALLMEBOT_PHONE` + `CALLMEBOT_APIKEY`
+(WhatsApp), `BOOKING_ALERT_WEBHOOK` (opcjonalne powiadomienia) — patrz
 `docs/booking-setup.md`. `.env` jest **pusty i śledzony w gicie**; we froncie
 używane jest tylko `import.meta.env.DEV`. Wszystkie identyfikatory zewnętrzne są jawne
 w kodzie (publiczne):

@@ -1,7 +1,9 @@
 // Env vars: GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN (OAuth for
 // ludwikc@siadlak.com with the calendar.events scope — see docs/booking-setup.md),
-// BOOKING_CALENDAR_ID (defaults to "primary"), BOOKING_ALERT_WEBHOOK (optional
-// Discord-style webhook pinged on every new request).
+// BOOKING_CALENDAR_ID (defaults to "primary"). Optional notifications on every
+// new request: BOOKING_NOTIFY_EMAIL (Gmail API; the refresh token also needs the
+// gmail.send scope), CALLMEBOT_PHONE + CALLMEBOT_APIKEY (WhatsApp via CallMeBot),
+// BOOKING_ALERT_WEBHOOK (Discord-style webhook).
 import { randomUUID } from "node:crypto";
 import {
   addDays,
@@ -12,6 +14,8 @@ import {
   type CalendarEvent,
 } from "../src/config/booking/availability.js";
 import { findCenter } from "../src/config/booking/catalog.js";
+import { buildNotification, toGmailRaw } from "../src/config/booking/notify.js";
+import type { BookingNotification } from "../src/config/booking/notify";
 import { bookingRequestSchema, buildBlockerEvent } from "../src/config/booking/request.js";
 
 type BookingRequest = {
@@ -108,17 +112,49 @@ async function currentFreeDays(token: string) {
   return { ...window, freeDays: freeWorkdays(busyDays(events), window.from, window.to) };
 }
 
-async function alert(content: string): Promise<void> {
+async function expectOk(label: string, response: Response): Promise<void> {
+  if (!response.ok) throw new Error(`${label}-${response.status} ${(await response.text()).slice(0, 200)}`);
+}
+
+async function notifyEmail(token: string, notification: BookingNotification, replyTo: string): Promise<void> {
+  const to = process.env.BOOKING_NOTIFY_EMAIL;
+  if (!to) return;
+  const response = await googleFetch("https://gmail.googleapis.com/gmail/v1/users/me/messages/send", {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ raw: toGmailRaw(to, notification, replyTo) }),
+  });
+  await expectOk("gmail-send", response);
+}
+
+async function notifyWhatsApp({ text }: BookingNotification): Promise<void> {
+  const { CALLMEBOT_PHONE, CALLMEBOT_APIKEY } = process.env;
+  if (!CALLMEBOT_PHONE || !CALLMEBOT_APIKEY) return;
+  const params = new URLSearchParams({ phone: CALLMEBOT_PHONE, text, apikey: CALLMEBOT_APIKEY });
+  await expectOk("callmebot", await googleFetch(`https://api.callmebot.com/whatsapp.php?${params}`));
+}
+
+async function notifyWebhook({ text }: BookingNotification): Promise<void> {
   const webhook = process.env.BOOKING_ALERT_WEBHOOK;
   if (!webhook) return;
-  try {
-    await googleFetch(webhook, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ content }),
-    });
-  } catch (error) {
-    console.error("booking-alert-failed", error instanceof Error ? error.message : error);
+  const response = await googleFetch(webhook, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ content: text }),
+  });
+  await expectOk("webhook", response);
+}
+
+async function notifyAll(token: string, notification: BookingNotification, replyTo: string): Promise<void> {
+  const results = await Promise.allSettled([
+    notifyEmail(token, notification, replyTo),
+    notifyWhatsApp(notification),
+    notifyWebhook(notification),
+  ]);
+  for (const result of results) {
+    if (result.status === "rejected") {
+      console.error("booking-notify-failed", result.reason instanceof Error ? result.reason.message : result.reason);
+    }
   }
 }
 
@@ -189,10 +225,11 @@ async function handlePost(req: BookingRequest, res: BookingResponse) {
       headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
       body: JSON.stringify(event),
     });
-    if (!response.ok) throw new Error(`google-insert-${response.status} ${(await response.text()).slice(0, 200)}`);
+    await expectOk("google-insert", response);
+    const created = (await response.json().catch(() => ({}))) as { htmlLink?: string };
 
     console.log("booking", JSON.stringify({ requestId, center: center.slug, startDate: request.startDate }));
-    await alert(`📅 Nowa prośba o termin: ${event.summary} · ${request.startDate} (${request.days} d.) · ${request.email}`);
+    await notifyAll(token, buildNotification(request, center, created.htmlLink), request.email);
     res.status(200).json({ ok: true, requestId });
   } catch (error) {
     fail(res, error);
