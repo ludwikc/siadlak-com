@@ -103,9 +103,45 @@ npm run storybook        # port 6006
 npm run build:ds         # tsup → src/design-system/dist
 ```
 
+## Booking center (rezerwacja terminów szkoleń)
+
+Prywatne strony, na których centra szkoleniowe rezerwują terminy szkoleń prowadzonych
+przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwikc@siadlak.com`.
+
+- **Linki:** `/booking-center/asseco` (PL), `/booking-center/glasspaper` (EN). Bez
+  indeksowania (meta `noindex` + nagłówek `X-Robots-Tag` w `vercel.json`) i poza
+  nawigacją; stare `/rezerwacja/:center` przekierowują 308.
+- **Flow:** wybór szkolenia (megamenu: *Szkolenia autoryzowane* = kursy Microsoft z
+  oficjalnym kodem, *Szkolenia autorskie* = pozostałe + „Inne / własne — opisz
+  wymagania”) → liczba dni (domyślnie oficjalna długość, 1–5) → kalendarz z wolnymi dniami
+  rozpoczęcia → szczegóły i kontakt → wstępna rezerwacja.
+- **Dostępność:** dzień jest zajęty, jeśli ma wydarzenie całodniowe albo nachodzące na
+  9:00–17:00 Europe/Warsaw. Szkolenie to N kolejnych dni roboczych w jednym tygodniu
+  (bez weekendów), okno od jutra do +3 miesięcy. Klient widzi tylko wolne/zajęte.
+- **Po wysłaniu:** `api/booking.ts` ponownie sprawdza dostępność (409, gdy termin zajęty)
+  i tworzy w kalendarzu wstępne wydarzenie całodniowe `[Blocker] DP-600 – Asseco` z
+  danymi w opisie. Zatwierdzenie: zmiana tytułu; odrzucenie: usunięcie wydarzenia.
+  Dane kontaktowe klienta zapisują się w `localStorage` i uzupełniają przy kolejnej wizycie.
+
+| Co | Gdzie |
+|---|---|
+| centra, lista szkoleń, domyślne długości (`CENTERS`, `OFFICIAL_DAYS`) | `src/config/booking/catalog.ts` |
+| reguły dostępności (czysta logika, testowane) | `src/config/booking/availability.ts` |
+| walidacja zgłoszenia, treść blokady w kalendarzu | `src/config/booking/request.ts` |
+| teksty PL/EN, kontakt | `src/config/booking/copy.ts` |
+| strona + megamenu | `src/pages/Booking.tsx`, `src/components/booking/TrainingMenu.tsx` |
+| API (GET dostępność, POST rezerwacja) | `api/booking.ts` |
+| konfiguracja Google OAuth krok po kroku | `docs/booking-setup.md` |
+
+Nowe centrum: dopisz wpis do `CENTERS` (slug, nazwa, `locale`) i wyślij link
+`/booking-center/<slug>`.
+
 ## Konfiguracja
 
-Brak zmiennych środowiskowych. `.env` jest **pusty i śledzony w gicie**; w kodzie
+Jedyne zmienne środowiskowe ustawione na Vercelu (nie w repo) są dla booking center:
+`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` (wymagane),
+`BOOKING_CALENDAR_ID`, `BOOKING_ALERT_WEBHOOK` (opcjonalne) — patrz
+`docs/booking-setup.md`. `.env` jest **pusty i śledzony w gicie**; we froncie
 używane jest tylko `import.meta.env.DEV`. Wszystkie identyfikatory zewnętrzne są jawne
 w kodzie (publiczne):
 
@@ -122,7 +158,7 @@ Nie dodawaj sekretów do `.env` — jest w repozytorium.
 ## Konwencje
 
 - **Commity:** Conventional Commits (`feat`, `fix`, `perf`, `chore`); bez wzmianek o narzędziach AI
-- **Branche:** `main` jest wdrażany na Vercel; wcześniejsza praca CRO szła przez stackowane branche `feat/*`
+- **Branche:** zmiany idą prosto na `main`, który Vercel wdraża na produkcję — bez PR-ów i stagingu (reguła GH-3 w `CLAUDE.md`)
 - **Styl kodu:** ESLint 9 flat config (`eslint.config.js`); Prettier **nie jest zainstalowany**
 - **Typy:** `strict` + `noUnusedLocals`/`noUnusedParameters` w `tsconfig.app.json`; `@typescript-eslint/no-unused-vars` jest wyłączony, więc nieużywany import przechodzi lint i wywala `tsc -b`
 - **Import UI:** z `@/design-system/components/*` (80 miejsc w kodzie). `src/components/ui/` **nie istnieje**
