@@ -46,4 +46,16 @@ describe("buildBlockerEvent", () => {
       "[Blocker] Power Automate – Glasspaper",
     );
   });
+
+  it("includes the custom requirements in the description", () => {
+    const request = bookingRequestSchema.parse({
+      ...base,
+      training: "custom",
+      customTraining: "Power Automate",
+      requirements: "Approvals and SharePoint flows",
+    });
+    expect(buildBlockerEvent(request, findCenter("asseco")!, "req-3").description).toContain(
+      "Opis wymagań:\nApprovals and SharePoint flows",
+    );
+  });
 });

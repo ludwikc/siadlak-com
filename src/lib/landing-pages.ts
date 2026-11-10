@@ -9,7 +9,7 @@ export const LANDING_ROUTE_PREFIXES = [
   "/ig",
   "/mct",
   "/szkolenia",
-  "/rezerwacja",
+  "/booking-center",
 ] as const;
 
 export const isLandingRoute = (pathname: string): boolean =>

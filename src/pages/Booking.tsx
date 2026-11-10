@@ -11,7 +11,8 @@ import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
 import { startDatesFor, trainingDates } from "@/config/booking/availability";
-import { CUSTOM_TRAINING, findCenter, findTraining, TRAININGS, trainingLabel } from "@/config/booking/catalog";
+import TrainingMenu from "@/components/booking/TrainingMenu";
+import { CUSTOM_TRAINING, findCenter, findTraining, trainingLabel } from "@/config/booking/catalog";
 import type { BookingCenter } from "@/config/booking/catalog";
 import { BOOKING_EMAIL, BOOKING_PHONE, BOOKING_PHONE_TEL, bookingCopy } from "@/config/booking/copy";
 import { bookingRequestSchema } from "@/config/booking/request";
@@ -97,6 +98,9 @@ function BookingSummary({ values, center, t, formatDay }: SummaryProps) {
   const rows: Array<[string, ReactNode]> = [
     [t.done.labels.center, center.name],
     [t.done.labels.training, training ? trainingLabel(training, center.locale) : values.customTraining],
+    ...(!training && values.requirements
+      ? [[t.done.labels.requirements, <span className="whitespace-pre-line">{values.requirements}</span>] as [string, ReactNode]]
+      : []),
     [
       t.done.labels.dates,
       <>
@@ -166,6 +170,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
     center: center.slug,
     training: "",
     customTraining: "",
+    requirements: "",
     days: 1,
     startDate: "",
     name: "",
@@ -325,21 +330,20 @@ function BookingForm({ center }: { center: BookingCenter }) {
               control={control}
               name="training"
               render={({ field }) => (
-                <Select value={field.value} onValueChange={chooseTraining}>
-                  <SelectTrigger id="booking-training" className="text-base">
-                    <SelectValue placeholder={t.trainingPlaceholder} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {TRAININGS.map((item) => (
-                      <SelectItem key={item.id} value={item.id} className="text-base">
-                        {trainingLabel(item, center.locale)} · {item.defaultDays} {t.dayUnit(item.defaultDays)}
-                      </SelectItem>
-                    ))}
-                    <SelectItem value={CUSTOM_TRAINING} className="text-base">
-                      {t.customOption}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                <TrainingMenu
+                  id="booking-training"
+                  value={field.value}
+                  locale={center.locale}
+                  copy={{
+                    placeholder: t.trainingPlaceholder,
+                    certified: t.certified,
+                    customGroup: t.customGroup,
+                    customOption: t.customOption,
+                    dayUnit: t.dayUnit,
+                  }}
+                  onChange={chooseTraining}
+                  invalid={Boolean(errors.training)}
+                />
               )}
             />
           </Field>
@@ -347,6 +351,18 @@ function BookingForm({ center }: { center: BookingCenter }) {
           {training === CUSTOM_TRAINING && (
             <Field id="booking-custom" label={t.customTraining} error={fieldError("customTraining")}>
               <Input id="booking-custom" className="text-base" placeholder={t.customPlaceholder} {...register("customTraining")} />
+            </Field>
+          )}
+
+          {training === CUSTOM_TRAINING && (
+            <Field id="booking-requirements" label={t.requirements} optional={t.optional}>
+              <Textarea
+                id="booking-requirements"
+                rows={5}
+                className="text-base"
+                placeholder={t.requirementsPlaceholder}
+                {...register("requirements")}
+              />
             </Field>
           )}
 
@@ -580,7 +596,7 @@ export default function Booking() {
       <SEO
         title={bookingCopy[center.locale].title(center.name)}
         description={bookingCopy[center.locale].lead}
-        url={`/rezerwacja/${center.slug}`}
+        url={`/booking-center/${center.slug}`}
         lang={center.locale}
         noindex
       />
