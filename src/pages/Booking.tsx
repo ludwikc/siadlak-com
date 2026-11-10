@@ -425,10 +425,10 @@ function BookingForm({ center }: { center: BookingCenter }) {
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-on-light-dim">
                 <LegendSwatch className="border border-electric/40 bg-electric/10" label={t.legend.available} />
                 <LegendSwatch className="bg-electric" label={t.legend.selected} />
+                <LegendSwatch className="border border-border bg-transparent" label={t.legend.unavailable} />
                 {tightDays.length > 0 && (
                   <LegendSwatch className="border border-dashed border-on-light-dim" label={t.legend.tight(days)} />
                 )}
-                <LegendSwatch className="border border-border bg-transparent" label={t.legend.unavailable} />
               </div>
               <Controller
                 control={control}
@@ -441,7 +441,6 @@ function BookingForm({ center }: { center: BookingCenter }) {
                     showOutsideDays={false}
                     fromDate={fromDateKey(availability.data.from)}
                     toDate={fromDateKey(availability.data.to)}
-                    defaultMonth={fromDateKey(field.value || startDates[0])}
                     onDayClick={(date) => {
                       const start = blockStartFor(startDates, days, toDateKey(date));
                       if (start) field.onChange(start);

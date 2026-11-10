@@ -28,10 +28,10 @@ const pl = {
       : `Kliknij dowolny wolny dzień — zaznaczę cały ${days}-dniowy termin. Szkolenie zajmuje kolejne dni robocze w jednym tygodniu.`,
   daysInvalid: "Podaj liczbę dni od 1 do 5, a pokażę wolne terminy.",
   legend: {
-    available: "Wolny termin",
+    available: "Możliwy termin",
     selected: "Twój termin",
-    tight: (days: number) => `Wolny dzień, ale brak ${days} dni pod rząd`,
-    unavailable: "Zajęty, weekend lub święto",
+    tight: (days: number) => `Dostępny dzień, ale brak ${days} dni pod rząd`,
+    unavailable: "Zajęty / niedostępny",
   },
   noSlots: (days: number) =>
     `W najbliższym kwartale nie ma ${days} wolnych dni roboczych pod rząd. Skontaktuj się ze mną, a coś zaproponuję:`,
@@ -110,10 +110,10 @@ const en: BookingCopy = {
       : `Click any free day — I'll mark the whole ${days}-day block. A training takes consecutive working days within one week.`,
   daysInvalid: "Enter a number of days from 1 to 5 and I'll show the free dates.",
   legend: {
-    available: "Free dates",
+    available: "Possible dates",
     selected: "Your dates",
-    tight: (days: number) => `Free day, but no ${days} days in a row`,
-    unavailable: "Busy, weekend or public holiday",
+    tight: (days: number) => `Available day, but no ${days} days in a row`,
+    unavailable: "Busy / unavailable",
   },
   noSlots: (days: number) =>
     `There are no ${days} consecutive free working days in the next quarter. Get in touch and I'll suggest something:`,

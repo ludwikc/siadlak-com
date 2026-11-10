@@ -123,7 +123,8 @@ przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwik
   poprawnym bloku N dni (nie tylko dzień rozpoczęcia) — np. piątek przy szkoleniu
   2-dniowym. Kliknięcie zaznacza cały blok: od klikniętego dnia, a gdy się nie mieści —
   blok cofa się tak, by kliknięty dzień był w nim ostatnim możliwym (`blockStartFor`).
-  Najechanie pokazuje podgląd bloku. Wolne dni, w których N dni się nie zmieści, mają
+  Najechanie pokazuje podgląd bloku. Kalendarz otwiera się zawsze na bieżącym miesiącu
+  (celowo — zajęty miesiąc pokazuje popyt). Wolne dni, w których N dni się nie zmieści, mają
   przerywaną ramkę i osobną pozycję w legendzie. Do API nadal idzie data rozpoczęcia.
 - **Po wysłaniu:** `api/booking.ts` ponownie sprawdza dostępność (409, gdy termin zajęty)
   i tworzy w kalendarzu wstępne wydarzenie całodniowe `[Blocker] DP-600 – Asseco` z
