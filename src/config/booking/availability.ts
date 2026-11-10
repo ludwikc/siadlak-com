@@ -101,10 +101,35 @@ export function bookingWindow(now: Date, timeZone = BOOKING_TIME_ZONE): { from: 
   return { from: addDays(today, 1), to: stampToKey(Date.UTC(y, m - 1 + HORIZON_MONTHS, d)) };
 }
 
+const easterSunday = (year: number): string => {
+  const a = year % 19;
+  const b = Math.floor(year / 100);
+  const c = year % 100;
+  const d = Math.floor(b / 4);
+  const e = b % 4;
+  const g = Math.floor((8 * b + 13) / 25);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4);
+  const k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 19 * l) / 433);
+  const month = Math.floor((h + l - 7 * m + 90) / 25);
+  const day = (h + l - 7 * m + 33 * month + 19) % 32;
+  return stampToKey(Date.UTC(year, month - 1, day));
+};
+
+const FIXED_POLISH_HOLIDAYS = ["01-01", "01-06", "05-01", "05-03", "08-15", "11-01", "11-11", "12-24", "12-25", "12-26"];
+
+export function isPolishHoliday(key: string): boolean {
+  if (FIXED_POLISH_HOLIDAYS.includes(key.slice(5))) return true;
+  const easter = easterSunday(Number(key.slice(0, 4)));
+  return key === addDays(easter, 1) || key === addDays(easter, 60);
+}
+
 export function freeWorkdays(busy: Set<string>, from: string, to: string): string[] {
   const free: string[] = [];
   for (let day = from; day <= to; day = addDays(day, 1)) {
-    if (!isWeekend(day) && !busy.has(day)) free.push(day);
+    if (!isWeekend(day) && !isPolishHoliday(day) && !busy.has(day)) free.push(day);
   }
   return free;
 }
@@ -113,10 +138,22 @@ export const trainingDates = (start: string, days: number): string[] =>
   Array.from({ length: days }, (_, i) => addDays(start, i));
 
 export function startDatesFor(free: string[], days: number): string[] {
-  if (!Number.isInteger(days) || days < 1 || days > MAX_TRAINING_DAYS) return [];
+  if (!isValidTrainingLength(days)) return [];
   const freeSet = new Set(free);
   return free.filter(
     (start) =>
       isoWeekday(start) + days - 1 <= 5 && trainingDates(start, days).every((day) => freeSet.has(day)),
   );
+}
+
+export const isValidTrainingLength = (days: number): boolean =>
+  Number.isInteger(days) && days >= 1 && days <= MAX_TRAINING_DAYS;
+
+export function bookableDays(starts: string[], days: number): Set<string> {
+  return new Set(starts.flatMap((start) => trainingDates(start, days)));
+}
+
+export function blockStartFor(starts: string[], days: number, day: string): string | undefined {
+  if (starts.includes(day)) return day;
+  return starts.filter((start) => start < day && addDays(start, days - 1) >= day).sort().pop();
 }

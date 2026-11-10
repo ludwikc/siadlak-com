@@ -10,7 +10,13 @@ import { CalendarCheck, Mail, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
-import { startDatesFor, trainingDates } from "@/config/booking/availability";
+import {
+  blockStartFor,
+  bookableDays,
+  isValidTrainingLength,
+  startDatesFor,
+  trainingDates,
+} from "@/config/booking/availability";
 import TrainingMenu from "@/components/booking/TrainingMenu";
 import { CUSTOM_TRAINING, findCenter, findTraining, trainingLabel } from "@/config/booking/catalog";
 import type { BookingCenter } from "@/config/booking/catalog";
@@ -201,11 +207,16 @@ function BookingForm({ center }: { center: BookingCenter }) {
   const startDate = watch("startDate");
   const delivery = watch("delivery");
 
-  const startDates = useMemo(
-    () => new Set(availability.data ? startDatesFor(availability.data.freeDays, days) : []),
-    [availability.data, days],
-  );
-  const selectedDates = startDate && startDates.has(startDate) ? trainingDates(startDate, days) : [];
+  const [hoveredDay, setHoveredDay] = useState("");
+  const freeDays = availability.data?.freeDays;
+  const startDates = useMemo(() => (freeDays ? startDatesFor(freeDays, days) : []), [freeDays, days]);
+  const bookable = useMemo(() => bookableDays(startDates, days), [startDates, days]);
+  const tightDays = useMemo(() => (freeDays ?? []).filter((day) => !bookable.has(day)), [freeDays, bookable]);
+  const selectedDates = startDate && startDates.includes(startDate) ? trainingDates(startDate, days) : [];
+  const previewStart = hoveredDay ? blockStartFor(startDates, days, hoveredDay) : undefined;
+  const previewDates = previewStart
+    ? trainingDates(previewStart, days).filter((day) => !selectedDates.includes(day))
+    : [];
   const formatDay = (key: string) => format(fromDateKey(key), "EEEE, d MMMM yyyy", { locale: dateLocale });
 
   const chooseTraining = (value: string) => {
@@ -377,7 +388,10 @@ function BookingForm({ center }: { center: BookingCenter }) {
                 className="w-28 text-base"
                 {...register("days", {
                   valueAsNumber: true,
-                  onChange: () => setValue("startDate", ""),
+                  onChange: (event) => {
+                    const next = Number(event.target.value);
+                    if (!startDatesFor(freeDays ?? [], next).includes(startDate)) setValue("startDate", "");
+                  },
                 })}
               />
               <p className="mt-2 mb-0 text-sm text-on-light-dim">
@@ -399,7 +413,9 @@ function BookingForm({ center }: { center: BookingCenter }) {
             <p role="alert" className="text-on-light">
               {t.errors.calendar} <ContactLinks />
             </p>
-          ) : startDates.size === 0 ? (
+          ) : !isValidTrainingLength(days) ? (
+            <p className="text-on-light-dim">{t.daysInvalid}</p>
+          ) : startDates.length === 0 ? (
             <p className="text-on-light">
               {t.noSlots(days)} <ContactLinks />
             </p>
@@ -409,6 +425,9 @@ function BookingForm({ center }: { center: BookingCenter }) {
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-on-light-dim">
                 <LegendSwatch className="border border-electric/40 bg-electric/10" label={t.legend.available} />
                 <LegendSwatch className="bg-electric" label={t.legend.selected} />
+                {tightDays.length > 0 && (
+                  <LegendSwatch className="border border-dashed border-on-light-dim" label={t.legend.tight(days)} />
+                )}
                 <LegendSwatch className="border border-border bg-transparent" label={t.legend.unavailable} />
               </div>
               <Controller
@@ -416,19 +435,32 @@ function BookingForm({ center }: { center: BookingCenter }) {
                 name="startDate"
                 render={({ field }) => (
                   <Calendar
-                    mode="single"
                     locale={dateLocale}
                     weekStartsOn={1}
                     numberOfMonths={2}
                     showOutsideDays={false}
                     fromDate={fromDateKey(availability.data.from)}
                     toDate={fromDateKey(availability.data.to)}
-                    selected={field.value ? fromDateKey(field.value) : undefined}
-                    onSelect={(date) => field.onChange(date ? toDateKey(date) : "")}
-                    disabled={(date) => !startDates.has(toDateKey(date))}
-                    modifiers={{ available: [...startDates].map(fromDateKey), booked: selectedDates.map(fromDateKey) }}
+                    defaultMonth={fromDateKey(field.value || startDates[0])}
+                    onDayClick={(date) => {
+                      const start = blockStartFor(startDates, days, toDateKey(date));
+                      if (start) field.onChange(start);
+                    }}
+                    onDayMouseEnter={(date) => setHoveredDay(toDateKey(date))}
+                    onDayMouseLeave={() => setHoveredDay("")}
+                    onDayFocus={(date) => setHoveredDay(toDateKey(date))}
+                    onDayBlur={() => setHoveredDay("")}
+                    disabled={(date) => !bookable.has(toDateKey(date))}
+                    modifiers={{
+                      available: [...bookable].map(fromDateKey),
+                      tight: tightDays.map(fromDateKey),
+                      preview: previewDates.map(fromDateKey),
+                      booked: selectedDates.map(fromDateKey),
+                    }}
                     modifiersClassNames={{
                       available: "border border-electric/40 bg-electric/10 font-bold text-electric",
+                      tight: "border border-dashed border-on-light-dim !opacity-70",
+                      preview: "!bg-electric/30",
                       booked: "!bg-electric !text-white !opacity-100 font-bold",
                     }}
                     classNames={{
@@ -438,8 +470,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
                       row: "mt-1.5 flex w-full gap-1",
                       head_row: "flex gap-1",
                       cell: "relative h-10 w-10 p-0 text-center",
-                      day: "h-10 w-10 rounded-md p-0 text-base font-normal transition-colors hover:bg-electric/20",
-                      day_selected: "!bg-electric !text-white",
+                      day: "h-10 w-10 rounded-md p-0 text-base font-normal transition-colors",
                       day_today: "underline underline-offset-4",
                       day_disabled: "text-on-light-dim opacity-40 hover:bg-transparent",
                     }}

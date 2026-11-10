@@ -8,7 +8,7 @@ const pl = {
   eyebrow: "Rezerwacja terminu szkolenia",
   title: (center: string) => `Termin szkolenia dla ${center}`,
   lead: "Wybierz szkolenie i liczbę dni, a kalendarz pokaże wolne terminy. Wysłanie formularza wstępnie rezerwuje termin — potwierdzę go mailowo, zwykle w ciągu jednego dnia roboczego.",
-  sections: { training: "Szkolenie", date: "Termin (data rozpoczęcia)", details: "Szczegóły", contact: "Kontakt" },
+  sections: { training: "Szkolenie", date: "Termin szkolenia", details: "Szczegóły", contact: "Kontakt" },
   training: "Szkolenie",
   trainingPlaceholder: "Wybierz szkolenie",
   certified: "Szkolenia autoryzowane",
@@ -24,9 +24,15 @@ const pl = {
   loading: "Sprawdzam kalendarz…",
   calendarHint: (days: number) =>
     days === 1
-      ? "Kliknij dzień szkolenia. Do wyboru są tylko wolne dni robocze."
-      : `Kliknij dzień rozpoczęcia. Do wyboru są tylko dni, od których mam ${days} wolne dni robocze pod rząd w tym samym tygodniu — zaznaczę cały blok.`,
-  legend: { available: "Dostępny dzień rozpoczęcia", selected: "Twój termin", unavailable: "Niedostępny" },
+      ? "Kliknij dzień szkolenia."
+      : `Kliknij dowolny wolny dzień — zaznaczę cały ${days}-dniowy termin. Szkolenie zajmuje kolejne dni robocze w jednym tygodniu.`,
+  daysInvalid: "Podaj liczbę dni od 1 do 5, a pokażę wolne terminy.",
+  legend: {
+    available: "Wolny termin",
+    selected: "Twój termin",
+    tight: (days: number) => `Wolny dzień, ale brak ${days} dni pod rząd`,
+    unavailable: "Zajęty, weekend lub święto",
+  },
   noSlots: (days: number) =>
     `W najbliższym kwartale nie ma ${days} wolnych dni roboczych pod rząd. Skontaktuj się ze mną, a coś zaproponuję:`,
   startLabel: "Rozpoczęcie",
@@ -84,7 +90,7 @@ const en: BookingCopy = {
   eyebrow: "Training date request",
   title: (center: string) => `Training dates for ${center}`,
   lead: "Pick a training and the number of days, and the calendar shows the dates I have free. Sending the form provisionally reserves the date — I confirm by email, usually within one working day.",
-  sections: { training: "Training", date: "Dates (start date)", details: "Details", contact: "Contact" },
+  sections: { training: "Training", date: "Training dates", details: "Details", contact: "Contact" },
   training: "Training",
   trainingPlaceholder: "Choose a training",
   certified: "Certified trainings",
@@ -100,9 +106,15 @@ const en: BookingCopy = {
   loading: "Checking the calendar…",
   calendarHint: (days: number) =>
     days === 1
-      ? "Click the training day. Only free working days can be picked."
-      : `Click the start day. Only days followed by ${days} free working days in the same week can be picked — the whole block gets highlighted.`,
-  legend: { available: "Available start day", selected: "Your dates", unavailable: "Unavailable" },
+      ? "Click the training day."
+      : `Click any free day — I'll mark the whole ${days}-day block. A training takes consecutive working days within one week.`,
+  daysInvalid: "Enter a number of days from 1 to 5 and I'll show the free dates.",
+  legend: {
+    available: "Free dates",
+    selected: "Your dates",
+    tight: (days: number) => `Free day, but no ${days} days in a row`,
+    unavailable: "Busy, weekend or public holiday",
+  },
   noSlots: (days: number) =>
     `There are no ${days} consecutive free working days in the next quarter. Get in touch and I'll suggest something:`,
   startLabel: "Starts",

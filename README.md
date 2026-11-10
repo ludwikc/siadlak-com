@@ -113,20 +113,29 @@ przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwik
   nawigacją; stare `/rezerwacja/:center` przekierowują 308.
 - **Flow:** wybór szkolenia (megamenu: *Szkolenia autoryzowane* = kursy Microsoft z
   oficjalnym kodem, *Szkolenia autorskie* = pozostałe + „Inne / własne — opisz
-  wymagania”) → liczba dni (domyślnie oficjalna długość, 1–5) → kalendarz z wolnymi dniami
-  rozpoczęcia → szczegóły i kontakt → wstępna rezerwacja.
+  wymagania”) → liczba dni (domyślnie oficjalna długość, 1–5) → kalendarz z wolnymi
+  terminami → szczegóły i kontakt → wstępna rezerwacja.
 - **Dostępność:** dzień jest zajęty, jeśli ma wydarzenie całodniowe albo nachodzące na
-  9:00–17:00 Europe/Warsaw. Szkolenie to N kolejnych dni roboczych w jednym tygodniu
-  (bez weekendów), okno od jutra do +3 miesięcy. Klient widzi tylko wolne/zajęte.
+  9:00–17:00 Europe/Warsaw, wypada w weekend albo w polskie święto ustawowe
+  (`isPolishHoliday`). Szkolenie to N kolejnych dni roboczych w jednym tygodniu, okno od
+  jutra do +3 miesięcy. Klient widzi tylko wolne/zajęte.
+- **Wybór terminu:** klikalny jest **każdy** wolny dzień, który mieści się w jakimś
+  poprawnym bloku N dni (nie tylko dzień rozpoczęcia) — np. piątek przy szkoleniu
+  2-dniowym. Kliknięcie zaznacza cały blok: od klikniętego dnia, a gdy się nie mieści —
+  blok cofa się tak, by kliknięty dzień był w nim ostatnim możliwym (`blockStartFor`).
+  Najechanie pokazuje podgląd bloku. Wolne dni, w których N dni się nie zmieści, mają
+  przerywaną ramkę i osobną pozycję w legendzie. Do API nadal idzie data rozpoczęcia.
 - **Po wysłaniu:** `api/booking.ts` ponownie sprawdza dostępność (409, gdy termin zajęty)
   i tworzy w kalendarzu wstępne wydarzenie całodniowe `[Blocker] DP-600 – Asseco` z
-  danymi w opisie. Zatwierdzenie: zmiana tytułu; odrzucenie: usunięcie wydarzenia.
+  danymi w opisie, po czym wysyła powiadomienia (e-mail przez Gmail API, WhatsApp przez
+  CallMeBot, webhook — każdy kanał opcjonalny, `src/config/booking/notify.ts`). Zatwierdzenie: zmiana tytułu; odrzucenie: usunięcie wydarzenia.
   Dane kontaktowe klienta zapisują się w `localStorage` i uzupełniają przy kolejnej wizycie.
 
 | Co | Gdzie |
 |---|---|
 | centra, lista szkoleń, domyślne długości (`CENTERS`, `OFFICIAL_DAYS`) | `src/config/booking/catalog.ts` |
-| reguły dostępności (czysta logika, testowane) | `src/config/booking/availability.ts` |
+| reguły dostępności, święta, wybór bloku (czysta logika, testowane) | `src/config/booking/availability.ts` |
+| treść powiadomień (e-mail / WhatsApp) | `src/config/booking/notify.ts` |
 | walidacja zgłoszenia, treść blokady w kalendarzu | `src/config/booking/request.ts` |
 | teksty PL/EN, kontakt | `src/config/booking/copy.ts` |
 | strona + megamenu | `src/pages/Booking.tsx`, `src/components/booking/TrainingMenu.tsx` |

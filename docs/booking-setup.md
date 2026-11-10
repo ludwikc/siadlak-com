@@ -13,10 +13,14 @@ Centra dodajesz w `src/config/booking/catalog.ts` (`CENTERS`). Tam też są domy
 ## Jak to działa
 
 1. Centrum wybiera szkolenie z listy albo wpisuje własne, potem liczbę dni (domyślnie oficjalna długość, 1–5).
-2. Kalendarz pokazuje dni startu, od których jest tyle wolnych dni roboczych pod rząd w tym samym tygodniu
-   (bez weekendów), w oknie od jutra do 3 miesięcy do przodu.
+2. Kalendarz pokazuje jako wolne wszystkie dni, które mieszczą się w jakimś bloku tylu wolnych dni
+   roboczych pod rząd w tym samym tygodniu (bez weekendów), w oknie od jutra do 3 miesięcy do przodu.
+   Kliknięcie dowolnego z nich zaznacza cały blok: od klikniętego dnia, a jeśli się nie mieści
+   (np. piątek przy szkoleniu 2-dniowym) — blok kończący się na tym dniu. Wolny dzień, w którym
+   szkolenie się nie zmieści, ma przerywaną ramkę i nie da się go kliknąć.
 3. Dzień jest zajęty, jeśli w kalendarzu głównym jest wydarzenie całodniowe albo wydarzenie
-   nachodzące na 9:00–17:00 (czasu warszawskiego). Pomijane są: odwołane, odrzucone, oznaczone jako
+   nachodzące na 9:00–17:00 (czasu warszawskiego), albo jest to polskie święto ustawowe (wyliczane
+   w kodzie, nie trzeba ich mieć w kalendarzu). Pomijane są: odwołane, odrzucone, oznaczone jako
    „wolny" (tylko godzinowe) oraz „lokalizacja pracy" i urodziny.
 4. Klient widzi tylko wolne/zajęte — żadnych szczegółów wydarzeń.
 5. Po wysłaniu formularza serwer ponownie sprawdza dostępność i tworzy w kalendarzu wstępne,
