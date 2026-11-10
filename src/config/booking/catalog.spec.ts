@@ -1,17 +1,19 @@
 import { describe, expect, it } from "vitest";
-import { trainingsIn } from "./catalog";
+import { trainingLabel, trainingsIn } from "./catalog";
 
 describe("trainingsIn", () => {
-  it("lists certified Microsoft trainings sorted by official code", () => {
-    expect(trainingsIn("certified").map((t) => t.code)).toEqual([
-      "AB-731T00",
-      "DP-080T00",
-      "DP-300T00",
-      "DP-600T00",
-      "DP-605T00",
-      "DP-700T00",
-      "MS-4014",
+  it("groups certified Business Intelligence trainings sorted by code", () => {
+    expect(trainingsIn("certified", "bi").map((t) => t.shortName)).toEqual([
+      "DP-080",
+      "DP-300",
+      "DP-600",
+      "DP-605",
+      "DP-700",
     ]);
+  });
+
+  it("groups certified Artificial Intelligence trainings sorted by code", () => {
+    expect(trainingsIn("certified", "ai").map((t) => t.shortName)).toEqual(["AB-731", "MS-4014"]);
   });
 
   it("puts trainings without an official code under custom", () => {
@@ -20,5 +22,13 @@ describe("trainingsIn", () => {
       "copilot-studio-agents",
       "tsql-performance",
     ]);
+  });
+});
+
+describe("trainingLabel", () => {
+  it("uses the code without the T00 suffix", () => {
+    expect(trainingLabel(trainingsIn("certified", "bi")[2], "en")).toEqual(
+      "DP-600: Implement analytics solutions using Microsoft Fabric",
+    );
   });
 });

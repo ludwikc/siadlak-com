@@ -27,17 +27,27 @@ const OFFICIAL_DAYS: Record<CourseSlug, number> = {
 };
 
 export type TrainingCategory = "certified" | "custom";
+export type TrainingArea = "bi" | "ai";
+
+export const TRAINING_AREAS: Array<{ id: TrainingArea; label: string }> = [
+  { id: "bi", label: "Business Intelligence" },
+  { id: "ai", label: "Artificial Intelligence" },
+];
 
 export type BookingTraining = {
   id: CourseSlug;
   category: TrainingCategory;
+  area: TrainingArea;
   code?: string;
   shortName: string;
   title: Record<Locale, string>;
   defaultDays: number;
 };
 
-const stripEssentials = (title: string): string => title.replace(/^[A-Z]{2}-\d{3} Essentials: /, "");
+const stripEssentials = (title: string): string => {
+  const stripped = title.replace(/^[A-Z]{2}-\d{3} Essentials: /, "");
+  return stripped.charAt(0).toUpperCase() + stripped.slice(1);
+};
 
 export const TRAININGS: BookingTraining[] = (Object.keys(OFFICIAL_DAYS) as CourseSlug[]).map((slug) => {
   const course = courses[slug];
@@ -45,6 +55,7 @@ export const TRAININGS: BookingTraining[] = (Object.keys(OFFICIAL_DAYS) as Cours
   return {
     id: slug,
     category: code ? "certified" : "custom",
+    area: course.track === "copilot" ? "ai" : "bi",
     code,
     shortName: code ? code.replace(/T00$/, "") : course.shortTitle.pl.replace(/\s*\(.*\)$/, ""),
     title: { en: stripEssentials(course.title.en), pl: stripEssentials(course.title.pl) },
@@ -52,10 +63,12 @@ export const TRAININGS: BookingTraining[] = (Object.keys(OFFICIAL_DAYS) as Cours
   };
 });
 
-export const trainingsIn = (category: TrainingCategory): BookingTraining[] =>
-  TRAININGS.filter((t) => t.category === category).sort((a, b) => (a.code ?? "").localeCompare(b.code ?? ""));
+export const trainingsIn = (category: TrainingCategory, area?: TrainingArea): BookingTraining[] =>
+  TRAININGS.filter((t) => t.category === category && (!area || t.area === area)).sort((a, b) =>
+    (a.code ?? "").localeCompare(b.code ?? ""),
+  );
 
 export const findTraining = (id: string): BookingTraining | undefined => TRAININGS.find((t) => t.id === id);
 
 export const trainingLabel = (training: BookingTraining, locale: Locale): string =>
-  training.code ? `${training.code}: ${training.title[locale]}` : training.title[locale];
+  training.code ? `${training.shortName}: ${training.title[locale]}` : training.title[locale];

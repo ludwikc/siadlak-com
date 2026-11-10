@@ -1,8 +1,8 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Award, ChevronDown, ChevronRight, PencilLine, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { CUSTOM_TRAINING, findTraining, trainingLabel, trainingsIn } from "@/config/booking/catalog";
-import type { TrainingCategory } from "@/config/booking/catalog";
+import { CUSTOM_TRAINING, findTraining, TRAINING_AREAS, trainingsIn } from "@/config/booking/catalog";
+import type { BookingTraining, TrainingCategory } from "@/config/booking/catalog";
 import type { Locale } from "@/config/mct/types";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
@@ -34,23 +34,44 @@ const GROUPS: Array<{ category: TrainingCategory; icon: LucideIcon }> = [
   { category: "custom", icon: Wrench },
 ];
 
+const areaLabelClass = "px-3 pt-2.5 pb-1 text-xs font-bold uppercase tracking-wider text-on-light-dim";
+
+const TrainingName = ({ training, locale }: { training: BookingTraining; locale: Locale }) =>
+  training.code ? (
+    <span>
+      <strong className="font-bold">{training.shortName}</strong> {training.title[locale]}
+    </span>
+  ) : (
+    <span>{training.title[locale]}</span>
+  );
+
 type GroupItemsProps = { category: TrainingCategory; value: string; locale: Locale; copy: MenuCopy; onChange: (value: string) => void };
 
 function GroupItems({ category, value, locale, copy, onChange }: GroupItemsProps) {
+  const item = (training: BookingTraining) => (
+    <DropdownMenu.Item
+      key={training.id}
+      onSelect={() => onChange(training.id)}
+      className={cn(rowClass, "justify-between", value === training.id && "text-electric")}
+    >
+      <TrainingName training={training} locale={locale} />
+      <span className="shrink-0 text-sm text-on-light-dim">
+        {training.defaultDays} {copy.dayUnit(training.defaultDays)}
+      </span>
+    </DropdownMenu.Item>
+  );
+
   return (
     <>
-      {trainingsIn(category).map((training) => (
-        <DropdownMenu.Item
-          key={training.id}
-          onSelect={() => onChange(training.id)}
-          className={cn(rowClass, "justify-between", value === training.id && "font-bold text-electric")}
-        >
-          <span>{trainingLabel(training, locale)}</span>
-          <span className="shrink-0 text-sm text-on-light-dim">
-            {training.defaultDays} {copy.dayUnit(training.defaultDays)}
-          </span>
-        </DropdownMenu.Item>
-      ))}
+      {category === "certified"
+        ? TRAINING_AREAS.map((area, index) => (
+            <DropdownMenu.Group key={area.id}>
+              {index > 0 && <DropdownMenu.Separator className="-mx-1 my-1 h-px bg-border" />}
+              <DropdownMenu.Label className={areaLabelClass}>{area.label}</DropdownMenu.Label>
+              {trainingsIn(category, area.id).map(item)}
+            </DropdownMenu.Group>
+          ))
+        : trainingsIn(category).map(item)}
       {category === "custom" && (
         <>
           <DropdownMenu.Separator className="-mx-1 my-1 h-px bg-border" />
@@ -71,7 +92,11 @@ export default function TrainingMenu({ id, value, locale, copy, onChange, invali
   const isMobile = useIsMobile();
   const groupTitle = (category: TrainingCategory) => (category === "certified" ? copy.certified : copy.customGroup);
   const selected = findTraining(value);
-  const label = selected ? trainingLabel(selected, locale) : value === CUSTOM_TRAINING ? copy.customOption : "";
+  const label = selected ? (
+    <TrainingName training={selected} locale={locale} />
+  ) : value === CUSTOM_TRAINING ? (
+    copy.customOption
+  ) : null;
 
   return (
     <DropdownMenu.Root>
