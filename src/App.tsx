@@ -228,7 +228,7 @@ function App() {
                 <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
                 <Route path="/reset" element={<Reset />} />
                 <Route path="/eval" element={<Eval />} />
-                <Route path="/rezerwacja/:center" element={<Booking />} />
+                <Route path="/booking-center/:center" element={<Booking />} />
 
                 <Route path="/help" element={<Help />} />
                 <Route path="/help/:subpageSlug" element={<HelpSubpage />} />

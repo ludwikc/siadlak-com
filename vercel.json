@@ -6,6 +6,7 @@
   "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [
+    { "source": "/rezerwacja/:center", "destination": "/booking-center/:center", "permanent": true },
     { "source": "/kontakt", "destination": "/contact", "permanent": true },
     { "source": "/mk", "destination": "/program/meskosc", "permanent": true },
     { "source": "/meskikompas", "destination": "/program/meskosc", "permanent": true },
@@ -77,6 +78,14 @@
     { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/booking-center/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/api/booking",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]

@@ -26,8 +26,11 @@ const OFFICIAL_DAYS: Record<CourseSlug, number> = {
   "tsql-performance": 2,
 };
 
+export type TrainingCategory = "certified" | "custom";
+
 export type BookingTraining = {
   id: CourseSlug;
+  category: TrainingCategory;
   code?: string;
   shortName: string;
   title: Record<Locale, string>;
@@ -41,12 +44,16 @@ export const TRAININGS: BookingTraining[] = (Object.keys(OFFICIAL_DAYS) as Cours
   const code = course.codes[0];
   return {
     id: slug,
+    category: code ? "certified" : "custom",
     code,
     shortName: code ? code.replace(/T00$/, "") : course.shortTitle.pl.replace(/\s*\(.*\)$/, ""),
     title: { en: stripEssentials(course.title.en), pl: stripEssentials(course.title.pl) },
     defaultDays: OFFICIAL_DAYS[slug],
   };
 });
+
+export const trainingsIn = (category: TrainingCategory): BookingTraining[] =>
+  TRAININGS.filter((t) => t.category === category).sort((a, b) => (a.code ?? "").localeCompare(b.code ?? ""));
 
 export const findTraining = (id: string): BookingTraining | undefined => TRAININGS.find((t) => t.id === id);
 

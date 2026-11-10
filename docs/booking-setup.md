@@ -2,8 +2,10 @@
 
 Prywatne linki (bez indeksowania, poza nawigacją):
 
-- `https://siadlak.com/rezerwacja/asseco`
-- `https://siadlak.com/rezerwacja/glasspaper`
+- `https://siadlak.com/booking-center/asseco`
+- `https://siadlak.com/booking-center/glasspaper`
+
+Stare linki `/rezerwacja/<centrum>` przekierowują na nowe.
 
 Centra dodajesz w `src/config/booking/catalog.ts` (`CENTERS`). Tam też są domyślne
 (oficjalne) długości szkoleń (`OFFICIAL_DAYS`).

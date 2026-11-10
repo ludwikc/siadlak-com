@@ -6,17 +6,18 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { format } from "date-fns";
 import { enGB, pl as plLocale } from "date-fns/locale";
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Mail, Phone } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import SEO from "@/components/SEO";
 import NotFound from "@/pages/NotFound";
 import { startDatesFor, trainingDates } from "@/config/booking/availability";
-import { CUSTOM_TRAINING, findCenter, findTraining, TRAININGS, trainingLabel } from "@/config/booking/catalog";
+import TrainingMenu from "@/components/booking/TrainingMenu";
+import { CUSTOM_TRAINING, findCenter, findTraining, trainingLabel } from "@/config/booking/catalog";
 import type { BookingCenter } from "@/config/booking/catalog";
-import { bookingCopy } from "@/config/booking/copy";
+import { BOOKING_EMAIL, BOOKING_PHONE, BOOKING_PHONE_TEL, bookingCopy } from "@/config/booking/copy";
 import { bookingRequestSchema } from "@/config/booking/request";
 import type { BookingRequest } from "@/config/booking/request";
-import { EMAIL } from "@/config/mct/contact";
+import { forgetContact, loadContact, saveContact } from "@/config/booking/stored-contact";
 import { Calendar } from "@/design-system/components/calendar";
 import { CTAButton } from "@/design-system/components/cta-button";
 import { Input } from "@/design-system/components/input";
@@ -34,10 +35,13 @@ import { cn } from "@/lib/utils";
 
 type Availability = { from: string; to: string; freeDays: string[] };
 type FormValues = BookingRequest & { website?: string };
-type SubmitState = { status: "idle" } | { status: "error"; message: string } | { status: "done"; range: string };
+type Copy = (typeof bookingCopy)["pl"];
+type SubmitState = { status: "idle" } | { status: "error"; message: string } | { status: "done"; values: FormValues };
 
 const errorClass = "mt-2 mb-0 text-sm font-medium text-color-error-strong";
 const sectionTitleClass = "text-xl font-bold";
+const linkClass = "font-bold underline underline-offset-4 hover:text-electric";
+const cardClass = "rounded-[var(--border-radius-md)] border border-border bg-card";
 
 const toDateKey = (date: Date): string => format(date, "yyyy-MM-dd");
 const fromDateKey = (key: string): Date => {
@@ -68,16 +72,92 @@ const Field = ({ id, label, optional, error, children }: FieldProps) => (
   </div>
 );
 
-const MailLink = () => (
-  <a href={`mailto:${EMAIL}`} className="font-bold underline underline-offset-4 hover:text-electric">
-    {EMAIL}
-  </a>
+const ContactLinks = () => (
+  <span className="inline-flex flex-wrap gap-x-4 gap-y-1">
+    <a href={`mailto:${BOOKING_EMAIL}`} className={linkClass}>
+      {BOOKING_EMAIL}
+    </a>
+    <a href={`tel:${BOOKING_PHONE_TEL}`} className={linkClass}>
+      {BOOKING_PHONE}
+    </a>
+  </span>
 );
+
+const LegendSwatch = ({ className, label }: { className: string; label: string }) => (
+  <span className="inline-flex items-center gap-2">
+    <span className={cn("inline-block h-4 w-4 rounded", className)} aria-hidden="true" />
+    {label}
+  </span>
+);
+
+type SummaryProps = { values: FormValues; center: BookingCenter; t: Copy; formatDay: (key: string) => string };
+
+function BookingSummary({ values, center, t, formatDay }: SummaryProps) {
+  const dates = trainingDates(values.startDate, values.days);
+  const training = findTraining(values.training);
+  const rows: Array<[string, ReactNode]> = [
+    [t.done.labels.center, center.name],
+    [t.done.labels.training, training ? trainingLabel(training, center.locale) : values.customTraining],
+    ...(!training && values.requirements
+      ? [[t.done.labels.requirements, <span className="whitespace-pre-line">{values.requirements}</span>] as [string, ReactNode]]
+      : []),
+    [
+      t.done.labels.dates,
+      <>
+        <span className="block">
+          {t.startLabel}: {formatDay(dates[0])}
+        </span>
+        {dates.length > 1 && (
+          <span className="block">
+            {t.endLabel}: {formatDay(dates[dates.length - 1])}
+          </span>
+        )}
+        <span className="block text-on-light-dim">
+          {values.days} {t.dayUnit(values.days)}
+        </span>
+      </>,
+    ],
+    [
+      t.done.labels.delivery,
+      values.delivery === "onsite" ? `${t.deliveryOptions.onsite}, ${values.city}` : t.deliveryOptions.remote,
+    ],
+    [t.done.labels.language, t.languageOptions[values.language]],
+    ...(values.participants ? [[t.done.labels.participants, String(values.participants)] as [string, ReactNode]] : []),
+    [
+      t.done.labels.contact,
+      <>
+        <span className="block">{values.name}</span>
+        <span className="block text-on-light-dim">{values.email}</span>
+        {values.phone && <span className="block text-on-light-dim">{values.phone}</span>}
+      </>,
+    ],
+  ];
+
+  return (
+    <section className={cn(cardClass, "mt-10 overflow-hidden")} aria-labelledby="booking-summary-title">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-6 py-4">
+        <h2 id="booking-summary-title" className="m-0 text-lg font-bold">
+          {t.done.summary}
+        </h2>
+        <span className="rounded-full bg-electric/10 px-3 py-1 text-sm font-bold text-electric">{t.done.status}</span>
+      </div>
+      <dl className="m-0 divide-y divide-border">
+        {rows.map(([label, value]) => (
+          <div key={label} className="grid gap-1 px-6 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6">
+            <dt className="text-sm font-bold uppercase tracking-wider text-on-light-dim">{label}</dt>
+            <dd className="m-0 text-base">{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
 
 function BookingForm({ center }: { center: BookingCenter }) {
   const t = bookingCopy[center.locale];
   const dateLocale = center.locale === "pl" ? plLocale : enGB;
   const [submitState, setSubmitState] = useState<SubmitState>({ status: "idle" });
+  const [storedContact, setStoredContact] = useState(() => loadContact(center.slug));
 
   const availability = useQuery({
     queryKey: ["booking-availability", center.slug],
@@ -85,6 +165,23 @@ function BookingForm({ center }: { center: BookingCenter }) {
     staleTime: 60_000,
     retry: 1,
   });
+
+  const emptyValues: FormValues = {
+    center: center.slug,
+    training: "",
+    customTraining: "",
+    requirements: "",
+    days: 1,
+    startDate: "",
+    name: "",
+    email: "",
+    phone: "",
+    delivery: "remote",
+    city: "",
+    language: center.locale,
+    notes: "",
+    website: "",
+  };
 
   const {
     register,
@@ -96,21 +193,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(bookingRequestSchema),
-    defaultValues: {
-      center: center.slug,
-      training: "",
-      customTraining: "",
-      days: 1,
-      startDate: "",
-      name: "",
-      email: "",
-      phone: "",
-      delivery: "remote",
-      city: "",
-      language: center.locale,
-      notes: "",
-      website: "",
-    },
+    defaultValues: { ...emptyValues, ...storedContact },
   });
 
   const training = watch("training");
@@ -123,21 +206,20 @@ function BookingForm({ center }: { center: BookingCenter }) {
     [availability.data, days],
   );
   const selectedDates = startDate && startDates.has(startDate) ? trainingDates(startDate, days) : [];
-  const formatRange = (dates: string[]) =>
-    dates.length === 0
-      ? ""
-      : dates.length === 1
-        ? format(fromDateKey(dates[0]), "EEEE, d MMMM yyyy", { locale: dateLocale })
-        : `${format(fromDateKey(dates[0]), "EEEE, d MMMM", { locale: dateLocale })} – ${format(
-            fromDateKey(dates[dates.length - 1]),
-            "EEEE, d MMMM yyyy",
-            { locale: dateLocale },
-          )}`;
+  const formatDay = (key: string) => format(fromDateKey(key), "EEEE, d MMMM yyyy", { locale: dateLocale });
 
   const chooseTraining = (value: string) => {
     setValue("training", value, { shouldValidate: true });
     setValue("days", findTraining(value)?.defaultDays ?? 1);
     setValue("startDate", "");
+  };
+
+  const clearStoredContact = () => {
+    forgetContact(center.slug);
+    setStoredContact(null);
+    for (const field of ["name", "email", "phone", "delivery", "city", "language"] as const) {
+      setValue(field, emptyValues[field]);
+    }
   };
 
   const fieldError = (name: keyof FormValues): string | undefined => {
@@ -165,7 +247,17 @@ function BookingForm({ center }: { center: BookingCenter }) {
       }
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       track("booking_requested", { center: center.slug, training: values.training, days: values.days });
-      setSubmitState({ status: "done", range: formatRange(trainingDates(values.startDate, values.days)) });
+      const contact = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        delivery: values.delivery,
+        city: values.city,
+        language: values.language,
+      };
+      saveContact(center.slug, contact);
+      setStoredContact(contact);
+      setSubmitState({ status: "done", values });
       availability.refetch();
       window.scrollTo({ top: 0 });
     } catch {
@@ -175,16 +267,33 @@ function BookingForm({ center }: { center: BookingCenter }) {
 
   if (submitState.status === "done") {
     return (
-      <div className="mt-16" aria-live="polite">
+      <div className="mt-12" aria-live="polite">
         <CalendarCheck className="h-10 w-10 text-electric" aria-hidden="true" />
         <h1 className="mt-6 text-3xl md:text-5xl font-bold">{t.done.title}</h1>
-        <p className="mt-6 text-lg leading-relaxed text-on-light-dim">{t.done.body(submitState.range)}</p>
+        <p className="mt-6 text-lg leading-relaxed text-on-light-dim">{t.done.body}</p>
+
+        <BookingSummary values={submitState.values} center={center} t={t} formatDay={formatDay} />
+
+        <div className={cn(cardClass, "mt-6 flex flex-wrap items-center justify-between gap-4 px-6 py-5")}>
+          <p className="m-0 text-base font-bold">{t.done.faster}</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a href={`tel:${BOOKING_PHONE_TEL}`} className="inline-flex items-center gap-2 font-bold hover:text-electric">
+              <Phone className="h-4 w-4 text-electric" aria-hidden="true" />
+              {t.done.call}: {BOOKING_PHONE}
+            </a>
+            <a href={`mailto:${BOOKING_EMAIL}`} className="inline-flex items-center gap-2 font-bold hover:text-electric">
+              <Mail className="h-4 w-4 text-electric" aria-hidden="true" />
+              {BOOKING_EMAIL}
+            </a>
+          </div>
+        </div>
+
         <div className="mt-10">
           <CTAButton
             variant="secondary"
             showArrow={false}
             onClick={() => {
-              reset();
+              reset({ ...emptyValues, ...storedContact });
               setSubmitState({ status: "idle" });
             }}
           >
@@ -201,6 +310,9 @@ function BookingForm({ center }: { center: BookingCenter }) {
         <p className="text-sm font-bold uppercase tracking-widest text-electric">{t.eyebrow}</p>
         <h1 className="mt-3 text-3xl md:text-5xl font-bold">{t.title(center.name)}</h1>
         <p className="mt-5 text-lg leading-relaxed text-on-light-dim">{t.lead}</p>
+        <p className="mt-3 text-base text-on-light-dim">
+          {t.contact.questions} <ContactLinks />
+        </p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="mt-12 space-y-12" noValidate>
@@ -218,21 +330,20 @@ function BookingForm({ center }: { center: BookingCenter }) {
               control={control}
               name="training"
               render={({ field }) => (
-                <Select value={field.value} onValueChange={chooseTraining}>
-                  <SelectTrigger id="booking-training" className="text-base">
-                    <SelectValue placeholder={t.trainingPlaceholder} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {TRAININGS.map((item) => (
-                      <SelectItem key={item.id} value={item.id} className="text-base">
-                        {trainingLabel(item, center.locale)} · {item.defaultDays} {t.dayUnit(item.defaultDays)}
-                      </SelectItem>
-                    ))}
-                    <SelectItem value={CUSTOM_TRAINING} className="text-base">
-                      {t.customOption}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                <TrainingMenu
+                  id="booking-training"
+                  value={field.value}
+                  locale={center.locale}
+                  copy={{
+                    placeholder: t.trainingPlaceholder,
+                    certified: t.certified,
+                    customGroup: t.customGroup,
+                    customOption: t.customOption,
+                    dayUnit: t.dayUnit,
+                  }}
+                  onChange={chooseTraining}
+                  invalid={Boolean(errors.training)}
+                />
               )}
             />
           </Field>
@@ -240,6 +351,18 @@ function BookingForm({ center }: { center: BookingCenter }) {
           {training === CUSTOM_TRAINING && (
             <Field id="booking-custom" label={t.customTraining} error={fieldError("customTraining")}>
               <Input id="booking-custom" className="text-base" placeholder={t.customPlaceholder} {...register("customTraining")} />
+            </Field>
+          )}
+
+          {training === CUSTOM_TRAINING && (
+            <Field id="booking-requirements" label={t.requirements} optional={t.optional}>
+              <Textarea
+                id="booking-requirements"
+                rows={5}
+                className="text-base"
+                placeholder={t.requirementsPlaceholder}
+                {...register("requirements")}
+              />
             </Field>
           )}
 
@@ -269,20 +392,25 @@ function BookingForm({ center }: { center: BookingCenter }) {
           {!training ? (
             <p className="text-on-light-dim">{t.pickTrainingFirst}</p>
           ) : availability.isPending ? (
-            <div aria-live="polite">
-              <p className="text-sm text-on-light-dim">{t.loading}</p>
-            </div>
+            <p className="text-on-light-dim" aria-live="polite">
+              {t.loading}
+            </p>
           ) : availability.isError ? (
             <p role="alert" className="text-on-light">
-              {t.errors.calendar} <MailLink />
+              {t.errors.calendar} <ContactLinks />
             </p>
           ) : startDates.size === 0 ? (
             <p className="text-on-light">
-              {t.noSlots(days)} <MailLink />
+              {t.noSlots(days)} <ContactLinks />
             </p>
           ) : (
             <>
-              <p className="text-sm text-on-light-dim">{t.calendarHint}</p>
+              <p className="text-base text-on-light-dim">{t.calendarHint(days)}</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-on-light-dim">
+                <LegendSwatch className="border border-electric/40 bg-electric/10" label={t.legend.available} />
+                <LegendSwatch className="bg-electric" label={t.legend.selected} />
+                <LegendSwatch className="border border-border bg-transparent" label={t.legend.unavailable} />
+              </div>
               <Controller
                 control={control}
                 name="startDate"
@@ -299,15 +427,43 @@ function BookingForm({ center }: { center: BookingCenter }) {
                     onSelect={(date) => field.onChange(date ? toDateKey(date) : "")}
                     disabled={(date) => !startDates.has(toDateKey(date))}
                     modifiers={{ available: [...startDates].map(fromDateKey), booked: selectedDates.map(fromDateKey) }}
-                    modifiersClassNames={{ available: "font-bold text-electric", booked: "rounded-md !bg-electric/15 !text-on-light !opacity-100" }}
-                    className="w-fit rounded-[var(--border-radius-sm)] border border-border"
+                    modifiersClassNames={{
+                      available: "border border-electric/40 bg-electric/10 font-bold text-electric",
+                      booked: "!bg-electric !text-white !opacity-100 font-bold",
+                    }}
+                    classNames={{
+                      months: "flex flex-col gap-8 sm:flex-row",
+                      caption_label: "text-base font-bold capitalize",
+                      head_cell: "w-10 text-xs font-medium uppercase text-on-light-dim",
+                      row: "mt-1.5 flex w-full gap-1",
+                      head_row: "flex gap-1",
+                      cell: "relative h-10 w-10 p-0 text-center",
+                      day: "h-10 w-10 rounded-md p-0 text-base font-normal transition-colors hover:bg-electric/20",
+                      day_selected: "!bg-electric !text-white",
+                      day_today: "underline underline-offset-4",
+                      day_disabled: "text-on-light-dim opacity-40 hover:bg-transparent",
+                    }}
+                    className={cn(cardClass, "w-fit p-4")}
                   />
                 )}
               />
               {selectedDates.length > 0 && (
-                <p className="font-bold" aria-live="polite">
-                  {t.selected}: {formatRange(selectedDates)}
-                </p>
+                <div className={cn(cardClass, "grid gap-4 p-5 sm:grid-cols-3")} aria-live="polite">
+                  <div>
+                    <p className="m-0 text-sm font-bold uppercase tracking-wider text-on-light-dim">{t.startLabel}</p>
+                    <p className="m-0 mt-1 text-base font-bold">{formatDay(selectedDates[0])}</p>
+                  </div>
+                  <div>
+                    <p className="m-0 text-sm font-bold uppercase tracking-wider text-on-light-dim">{t.endLabel}</p>
+                    <p className="m-0 mt-1 text-base font-bold">{formatDay(selectedDates[selectedDates.length - 1])}</p>
+                  </div>
+                  <div>
+                    <p className="m-0 text-sm font-bold uppercase tracking-wider text-on-light-dim">{t.days}</p>
+                    <p className="m-0 mt-1 text-base font-bold">
+                      {days} {t.dayUnit(days)}
+                    </p>
+                  </div>
+                </div>
               )}
               {errors.startDate && (
                 <p className={errorClass} role="alert">
@@ -386,6 +542,14 @@ function BookingForm({ center }: { center: BookingCenter }) {
 
         <section className="space-y-6 border-t border-border pt-10">
           <h2 className={sectionTitleClass}>{t.sections.contact}</h2>
+          {storedContact && (
+            <p className="text-sm text-on-light-dim">
+              {t.remembered}{" "}
+              <button type="button" onClick={clearStoredContact} className="font-bold underline underline-offset-4 hover:text-electric">
+                {t.forget}
+              </button>
+            </p>
+          )}
           <div className="grid gap-5 sm:grid-cols-2">
             <Field id="booking-name" label={t.name} error={fieldError("name")}>
               <Input id="booking-name" autoComplete="name" className="text-base" {...register("name")} />
@@ -410,7 +574,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
 
         {submitState.status === "error" && (
           <p role="alert" className={cn(errorClass, "text-base")}>
-            {submitState.message} {submitState.message === t.errors.generic && <MailLink />}
+            {submitState.message} {submitState.message === t.errors.generic && <ContactLinks />}
           </p>
         )}
 
@@ -432,7 +596,7 @@ export default function Booking() {
       <SEO
         title={bookingCopy[center.locale].title(center.name)}
         description={bookingCopy[center.locale].lead}
-        url={`/rezerwacja/${center.slug}`}
+        url={`/booking-center/${center.slug}`}
         lang={center.locale}
         noindex
       />
