@@ -14,7 +14,10 @@ Stare linki (`/booking-center/asseco`, `/rezerwacja/asseco`, `…/glasspaper`) p
 
 ## Jak to działa
 
-1. Centrum wybiera szkolenie z listy albo wpisuje własne, potem liczbę dni (domyślnie oficjalna długość, 1–5).
+1. Centrum wybiera szkolenie z megamenu: „Szkolenia autoryzowane” (kursy Microsoft z oficjalnym
+   kodem) albo „Szkolenia autorskie” (pozostałe oraz „Inne / własne — opisz wymagania”), w obu
+   grupach z podziałem na Business Intelligence i Artificial Intelligence i wyszukiwarką. Potem
+   podaje liczbę dni (domyślnie oficjalna długość, 1–5).
 2. Kalendarz pokazuje jako wolne wszystkie dni, które mieszczą się w jakimś bloku tylu wolnych dni
    roboczych pod rząd w tym samym tygodniu (bez weekendów), w oknie od jutra do 3 miesięcy do przodu.
    Kliknięcie dowolnego z nich zaznacza cały blok: od klikniętego dnia, a jeśli się nie mieści
@@ -41,7 +44,8 @@ Stare linki (`/booking-center/asseco`, `/rezerwacja/asseco`, `…/glasspaper`) p
    Authorized redirect URI: `https://developers.google.com/oauthplayground`.
 5. Otwórz [OAuth Playground](https://developers.google.com/oauthplayground) → ikona zębatki →
    zaznacz *Use your own OAuth credentials* → wklej Client ID i Client secret.
-6. W polu scope wpisz `https://www.googleapis.com/auth/calendar.events` → *Authorize APIs* →
+6. W polu scope wpisz `https://www.googleapis.com/auth/calendar.events` (a jeśli chcesz też
+   powiadomienia mailowe — od razu oba zakresy z sekcji „E-mail” niżej) → *Authorize APIs* →
    zaloguj się jako **ludwikc@siadlak.com** → *Exchange authorization code for tokens* → skopiuj
    **Refresh token**.
 7. Vercel → projekt → **Settings → Environment Variables** (Production):
@@ -89,3 +93,25 @@ klienta) przechodzi przez jej serwery.
 
 Mail przychodzi od Ciebie do Ciebie z `Reply-To` ustawionym na klienta, więc „Odpowiedz”
 pisze od razu do osoby z centrum.
+
+## Gdy coś nie działa
+
+| Objaw | Przyczyna i naprawa |
+| --- | --- |
+| Czerwony komunikat „Kalendarz jest chwilowo niedostępny”, API zwraca `calendar-not-configured` | Brak zmiennych `GOOGLE_*` w środowisku Production albo nie było Redeploy po ich dodaniu. |
+| Ten sam komunikat, API zwraca `calendar-unavailable` | Błąd po stronie Google — szczegóły w logach funkcji `/api/booking` na Vercelu. `google-token-400/401`: zły secret albo refresh token. `google-events-403`: token bez zakresu `calendar.events` (typowe po wygenerowaniu nowego tokena tylko z `gmail.send`) albo wyłączone Calendar API. |
+| Rezerwacja przechodzi, ale nie ma maila / WhatsAppa | W logach szukaj `booking-notify-failed`. `gmail-send-403`: token bez zakresu `gmail.send` albo wyłączone Gmail API. `callmebot-…`: zły numer lub klucz. |
+| Dzień jest wolny w kalendarzu, a na stronie zajęty | Wydarzenie całodniowe (także oznaczone jako „wolny”), wydarzenie nachodzące na 9–17, polskie święto albo wcześniejsza blokada `[Blocker]`. |
+| Klient widzi komunikat, że termin został właśnie zajęty | Ktoś zarezerwował go chwilę wcześniej albo w kalendarzu pojawiło się nowe wydarzenie — kalendarz na stronie odświeża się sam. |
+
+## Utrzymanie
+
+- **Nowy kurs na liście:** dodaj go do katalogu MCT (`src/config/mct/courses.ts`), a potem jego
+  slug i oficjalną liczbę dni do `OFFICIAL_DAYS` w `src/config/booking/catalog.ts`. Kurs z
+  oficjalnym kodem trafia do „autoryzowanych”, bez kodu — do „autorskich”; obszar BI/AI wynika
+  z pola `track`.
+- **Nowy partner:** nic nie trzeba zmieniać — wyślij `/booking-center/pl` albo `/booking-center/en`
+  (opcjonalnie z `?company=Nazwa`).
+- **Teksty i dane kontaktowe na stronie:** `src/config/booking/copy.ts`.
+- **Wymiana client secret:** Google Cloud → Credentials → klient OAuth → *Add secret*, podmień
+  `GOOGLE_CLIENT_SECRET` na Vercelu, Redeploy, usuń stary secret. Refresh token zostaje ten sam.
