@@ -78,6 +78,7 @@ const Mentoring = lazy(() => import("./pages/Mentoring"));
 const Reset = lazy(() => import("./pages/Reset"));
 const Eval = lazy(() => import("./pages/Eval"));
 const Booking = lazy(() => import("./pages/Booking"));
+const BookingIndex = lazy(() => import("./pages/BookingIndex"));
 
 import { Toaster } from "@/design-system/components/sonner";
 import Redirect from "./components/Redirect";
@@ -228,7 +229,9 @@ function App() {
                 <Route path="/mailing/mute/:topic?" element={<MailingMute />} />
                 <Route path="/reset" element={<Reset />} />
                 <Route path="/eval" element={<Eval />} />
+                <Route path="/booking-center" element={<BookingIndex />} />
                 <Route path="/booking-center/:center" element={<Booking />} />
+                <Route path="/rezerwacja/:center" element={<Booking />} />
 
                 <Route path="/help" element={<Help />} />
                 <Route path="/help/:subpageSlug" element={<HelpSubpage />} />

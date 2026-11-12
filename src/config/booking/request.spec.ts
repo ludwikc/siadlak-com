@@ -3,7 +3,8 @@ import { findCenter } from "./catalog";
 import { bookingRequestSchema, buildBlockerEvent } from "./request";
 
 const base = {
-  center: "asseco",
+  center: "pl",
+  company: "Asseco",
   training: "dp-600",
   days: 4,
   startDate: "2027-01-11",
@@ -16,6 +17,10 @@ const base = {
 describe("bookingRequestSchema", () => {
   it("accepts a catalog training", () => {
     expect(bookingRequestSchema.safeParse(base).success).toBe(true);
+  });
+
+  it("requires the company name", () => {
+    expect(bookingRequestSchema.safeParse({ ...base, company: " " }).success).toBe(false);
   });
 
   it("requires a name for a custom training", () => {
@@ -32,7 +37,7 @@ describe("bookingRequestSchema", () => {
 describe("buildBlockerEvent", () => {
   it("creates a tentative all-day blocker spanning the training days", () => {
     const request = bookingRequestSchema.parse(base);
-    const event = buildBlockerEvent(request, findCenter("asseco")!, "req-1");
+    const event = buildBlockerEvent(request, findCenter("pl")!, "req-1");
     expect(event.summary).toEqual("[Blocker] DP-600 – Asseco");
     expect(event.start).toEqual({ date: "2027-01-11" });
     expect(event.end).toEqual({ date: "2027-01-15" });
@@ -41,8 +46,13 @@ describe("buildBlockerEvent", () => {
   });
 
   it("uses the custom training name in the summary", () => {
-    const request = bookingRequestSchema.parse({ ...base, training: "custom", customTraining: "Power Automate" });
-    expect(buildBlockerEvent(request, findCenter("glasspaper")!, "req-2").summary).toEqual(
+    const request = bookingRequestSchema.parse({
+      ...base,
+      company: "Glasspaper",
+      training: "custom",
+      customTraining: "Power Automate",
+    });
+    expect(buildBlockerEvent(request, findCenter("en")!, "req-2").summary).toEqual(
       "[Blocker] Power Automate – Glasspaper",
     );
   });
@@ -54,7 +64,7 @@ describe("buildBlockerEvent", () => {
       customTraining: "Power Automate",
       requirements: "Approvals and SharePoint flows",
     });
-    expect(buildBlockerEvent(request, findCenter("asseco")!, "req-3").description).toContain(
+    expect(buildBlockerEvent(request, findCenter("pl")!, "req-3").description).toContain(
       "Opis wymagań:\nApprovals and SharePoint flows",
     );
   });

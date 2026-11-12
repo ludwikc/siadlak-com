@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { findTraining, matchesQuery, trainingLabel, trainingsIn } from "./catalog";
+import { findCenter, findTraining, legacyCenterPath, matchesQuery, trainingLabel, trainingsIn } from "./catalog";
 
 describe("trainingsIn", () => {
   it("groups certified Business Intelligence trainings sorted by code", () => {
@@ -44,5 +44,18 @@ describe("matchesQuery", () => {
 
   it("rejects unrelated queries", () => {
     expect(matchesQuery(dp600, "en", "copilot")).toBe(false);
+  });
+});
+
+describe("legacyCenterPath", () => {
+  it("maps old per-center slugs to the language page with the company prefilled", () => {
+    expect(legacyCenterPath("asseco")).toEqual("/booking-center/pl?company=Asseco");
+    expect(legacyCenterPath("Glasspaper")).toEqual("/booking-center/en?company=Glasspaper");
+  });
+
+  it("ignores current and unknown slugs", () => {
+    expect(legacyCenterPath("pl")).toBeUndefined();
+    expect(legacyCenterPath(undefined)).toBeUndefined();
+    expect(findCenter("asseco")).toBeUndefined();
   });
 });

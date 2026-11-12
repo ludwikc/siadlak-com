@@ -6,6 +6,7 @@ import type { BookingCenter } from "./catalog";
 export const bookingRequestSchema = z
   .object({
     center: z.string().trim().min(1).max(60),
+    company: z.string().trim().min(2).max(120),
     training: z.string().trim().min(1).max(60),
     customTraining: z.string().trim().max(200).optional().default(""),
     requirements: z.string().trim().max(4000).optional().default(""),
@@ -58,7 +59,7 @@ export function buildBlockerEvent(request: BookingRequest, center: BookingCenter
   const description = [
     "Prośba o termin szkolenia — do zatwierdzenia.",
     "",
-    `Centrum: ${center.name}`,
+    `Centrum: ${request.company}`,
     `Szkolenie: ${full}`,
     `Termin: ${dates[0]} – ${dates[dates.length - 1]} (${request.days} d.)`,
     `Forma: ${delivery}`,
@@ -79,7 +80,7 @@ export function buildBlockerEvent(request: BookingRequest, center: BookingCenter
   ].join("\n");
 
   return {
-    summary: `[Blocker] ${short} – ${center.name}`,
+    summary: `[Blocker] ${short} – ${request.company}`,
     description,
     start: { date: request.startDate },
     end: { date: addDays(request.startDate, request.days) },

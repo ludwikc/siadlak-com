@@ -5,8 +5,12 @@ export const BOOKING_PHONE = "+48 510 666 531";
 export const BOOKING_PHONE_TEL = "+48510666531";
 
 const pl = {
-  eyebrow: "Rezerwacja terminu szkolenia",
-  title: (center: string) => `Termin szkolenia dla ${center}`,
+  eyebrow: "Booking center",
+  title: "Rezerwacja szkolenia technicznego",
+  intro:
+    "Moduł wstępnej rezerwacji terminów szkoleń dla moich partnerów — centrów szkoleniowych. Rezerwacja nie oznacza przyjęcia zlecenia; terminy przydzielam na zasadzie first come, first served.",
+  open: "Zarezerwuj termin",
+  company: "Centrum szkoleniowe / firma",
   lead: "Wybierz szkolenie i liczbę dni, a kalendarz pokaże wolne terminy. Wysłanie formularza wstępnie rezerwuje termin — potwierdzę go mailowo, zwykle w ciągu jednego dnia roboczego.",
   sections: { training: "Szkolenie", date: "Termin szkolenia", details: "Szczegóły", contact: "Kontakt" },
   training: "Szkolenie",
@@ -95,8 +99,12 @@ const pl = {
 type BookingCopy = typeof pl;
 
 const en: BookingCopy = {
-  eyebrow: "Training date request",
-  title: (center: string) => `Training dates for ${center}`,
+  eyebrow: "Booking center",
+  title: "Technical training booking",
+  intro:
+    "A preliminary booking module for my partners — training centres. A reservation does not mean the order is accepted; dates are allocated on a first come, first served basis.",
+  open: "Book a date",
+  company: "Training centre / company",
   lead: "Pick a training and the number of days, and the calendar shows the dates I have free. Sending the form provisionally reserves the date — I confirm by email, usually within one working day.",
   sections: { training: "Training", date: "Training dates", details: "Details", contact: "Contact" },
   training: "Training",

@@ -108,9 +108,14 @@ npm run build:ds         # tsup → src/design-system/dist
 Prywatne strony, na których centra szkoleniowe rezerwują terminy szkoleń prowadzonych
 przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwikc@siadlak.com`.
 
-- **Linki:** `/booking-center/asseco` (PL), `/booking-center/glasspaper` (EN). Bez
-  indeksowania (meta `noindex` + nagłówek `X-Robots-Tag` w `vercel.json`) i poza
-  nawigacją; stare `/rezerwacja/:center` przekierowują 308.
+- **Linki:** `/booking-center` (strona startowa z kartami PL i EN), `/booking-center/pl`,
+  `/booking-center/en`. Bez indeksowania (meta `noindex` + nagłówek `X-Robots-Tag` w
+  `vercel.json`) i poza nawigacją. Formularz jest wspólny dla wszystkich partnerów —
+  nazwę centrum podaje pole „Centrum szkoleniowe / firma”.
+- **Stare linki (302):** `/booking-center/asseco`, `/rezerwacja/asseco` →
+  `/booking-center/pl?company=Asseco`; `…/glasspaper` → `/booking-center/en?company=Glasspaper`
+  (parametr `company` wstępnie wypełnia pole firmy). Mapa: `LEGACY_CENTERS` w
+  `catalog.ts` + wpisy w `vercel.json` — trzymaj zsynchronizowane.
 - **Megamenu:** jeden panel — po lewej kategorie (przełączane najechaniem), po prawej
   szkolenia w kolumnach *Business Intelligence* / *Artificial Intelligence* z kodem,
   nazwą i liczbą dni oraz wyszukiwarką po kodzie i nazwie. Nowy kurs w katalogu MCT
@@ -138,17 +143,17 @@ przez Ludwika. Dostępność czytana jest z głównego Kalendarza Google `ludwik
 
 | Co | Gdzie |
 |---|---|
-| centra, lista szkoleń, domyślne długości (`CENTERS`, `OFFICIAL_DAYS`) | `src/config/booking/catalog.ts` |
+| wersje językowe, stare slugi, lista szkoleń, domyślne długości (`CENTERS`, `LEGACY_CENTERS`, `OFFICIAL_DAYS`) | `src/config/booking/catalog.ts` |
 | reguły dostępności, święta, wybór bloku (czysta logika, testowane) | `src/config/booking/availability.ts` |
 | treść powiadomień (e-mail / WhatsApp) | `src/config/booking/notify.ts` |
 | walidacja zgłoszenia, treść blokady w kalendarzu | `src/config/booking/request.ts` |
 | teksty PL/EN, kontakt | `src/config/booking/copy.ts` |
-| strona + megamenu | `src/pages/Booking.tsx`, `src/components/booking/TrainingMenu.tsx` |
+| strona startowa, formularz, megamenu | `src/pages/BookingIndex.tsx`, `src/pages/Booking.tsx`, `src/components/booking/TrainingMenu.tsx` |
 | API (GET dostępność, POST rezerwacja) | `api/booking.ts` |
 | konfiguracja Google OAuth krok po kroku | `docs/booking-setup.md` |
 
-Nowe centrum: dopisz wpis do `CENTERS` (slug, nazwa, `locale`) i wyślij link
-`/booking-center/<slug>`.
+Nowy partner nie wymaga zmian w kodzie — wyślij mu `/booking-center/pl` albo
+`/booking-center/en` (opcjonalnie z `?company=Nazwa`, żeby pole firmy było wypełnione).
 
 ## Konfiguracja
 

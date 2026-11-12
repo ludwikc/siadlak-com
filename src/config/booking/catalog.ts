@@ -1,15 +1,27 @@
 import { courses } from "../mct/courses.js";
 import type { CourseSlug, Locale } from "../mct/types";
 
-export type BookingCenter = { slug: string; name: string; locale: Locale };
+export const BOOKING_PATH = "/booking-center";
+
+export type BookingCenter = { slug: Locale; locale: Locale };
 
 export const CENTERS: BookingCenter[] = [
-  { slug: "asseco", name: "Asseco", locale: "pl" },
-  { slug: "glasspaper", name: "Glasspaper", locale: "en" },
+  { slug: "pl", locale: "pl" },
+  { slug: "en", locale: "en" },
 ];
 
 export const findCenter = (slug: string | undefined): BookingCenter | undefined =>
   CENTERS.find((c) => c.slug === slug?.toLowerCase());
+
+export const LEGACY_CENTERS: Record<string, { slug: Locale; company: string }> = {
+  asseco: { slug: "pl", company: "Asseco" },
+  glasspaper: { slug: "en", company: "Glasspaper" },
+};
+
+export const legacyCenterPath = (slug: string | undefined): string | undefined => {
+  const legacy = LEGACY_CENTERS[slug?.toLowerCase() ?? ""];
+  return legacy && `${BOOKING_PATH}/${legacy.slug}?company=${encodeURIComponent(legacy.company)}`;
+};
 
 export const CUSTOM_TRAINING = "custom";
 

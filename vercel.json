@@ -6,7 +6,12 @@
   "outputDirectory": "dist",
   "trailingSlash": false,
   "redirects": [
-    { "source": "/rezerwacja/:center", "destination": "/booking-center/:center", "permanent": true },
+    { "source": "/booking-center/asseco", "destination": "/booking-center/pl?company=Asseco", "statusCode": 302 },
+    { "source": "/booking-center/glasspaper", "destination": "/booking-center/en?company=Glasspaper", "statusCode": 302 },
+    { "source": "/rezerwacja/asseco", "destination": "/booking-center/pl?company=Asseco", "statusCode": 302 },
+    { "source": "/rezerwacja/glasspaper", "destination": "/booking-center/en?company=Glasspaper", "statusCode": 302 },
+    { "source": "/rezerwacja", "destination": "/booking-center", "statusCode": 302 },
+    { "source": "/rezerwacja/:center", "destination": "/booking-center/:center", "statusCode": 302 },
     { "source": "/kontakt", "destination": "/contact", "permanent": true },
     { "source": "/mk", "destination": "/program/meskosc", "permanent": true },
     { "source": "/meskikompas", "destination": "/program/meskosc", "permanent": true },
@@ -78,6 +83,10 @@
     { "source": "/((?!assets/).*)", "destination": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/booking-center",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
     {
       "source": "/booking-center/(.*)",
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]

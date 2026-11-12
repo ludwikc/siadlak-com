@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { parseStoredContact } from "./stored-contact";
 
 const contact = {
+  company: "Asseco",
   name: "Anna Nowak",
   email: "anna@example.com",
   phone: "",

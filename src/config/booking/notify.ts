@@ -16,7 +16,7 @@ export function buildNotification(
   const range = dates.length > 1 ? `${dates[0]} – ${dates[dates.length - 1]}` : dates[0];
   const delivery = request.delivery === "onsite" ? `stacjonarnie, ${request.city}` : "zdalnie";
   const lines = [
-    `Nowa prośba o termin od ${center.name}`,
+    `Nowa prośba o termin od ${request.company} (${center.slug.toUpperCase()})`,
     "",
     `Szkolenie: ${name}`,
     `Termin: ${range} (${request.days} d.)`,
@@ -28,7 +28,7 @@ export function buildNotification(
     ...(eventLink ? ["", `Blokada w kalendarzu: ${eventLink}`] : []),
   ];
   return {
-    subject: `[Booking] ${center.name}: ${training?.shortName ?? request.customTraining} · ${range}`,
+    subject: `[Booking] ${request.company}: ${training?.shortName ?? request.customTraining} · ${range}`,
     text: lines.join("\n"),
   };
 }

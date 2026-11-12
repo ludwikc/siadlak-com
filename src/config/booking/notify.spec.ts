@@ -4,7 +4,8 @@ import { buildNotification, toGmailRaw } from "./notify";
 import { bookingRequestSchema } from "./request";
 
 const request = bookingRequestSchema.parse({
-  center: "asseco",
+  center: "pl",
+  company: "Asseco",
   training: "dp-600",
   days: 4,
   startDate: "2027-01-11",
@@ -18,7 +19,7 @@ const request = bookingRequestSchema.parse({
 
 describe("buildNotification", () => {
   it("summarises the request with the calendar link", () => {
-    const { subject, text } = buildNotification(request, findCenter("asseco")!, "https://calendar.google.com/e/1");
+    const { subject, text } = buildNotification(request, findCenter("pl")!, "https://calendar.google.com/e/1");
     expect(subject).toEqual("[Booking] Asseco: DP-600 · 2027-01-11 – 2027-01-14");
     expect(text).toContain("Termin: 2027-01-11 – 2027-01-14 (4 d.)");
     expect(text).toContain("Forma: stacjonarnie, Rzeszów · język PL");
@@ -27,7 +28,7 @@ describe("buildNotification", () => {
   });
 
   it("omits empty optional lines", () => {
-    const { text } = buildNotification({ ...request, participants: undefined }, findCenter("asseco")!);
+    const { text } = buildNotification({ ...request, participants: undefined }, findCenter("pl")!);
     expect(text).not.toContain("Uczestnicy");
     expect(text).not.toContain("Blokada w kalendarzu");
   });

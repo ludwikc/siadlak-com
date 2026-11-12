@@ -3,6 +3,7 @@ import { z } from "zod";
 const STORAGE_PREFIX = "siadlak-booking:";
 
 const storedContactSchema = z.object({
+  company: z.string().max(120),
   name: z.string().max(120),
   email: z.string().max(200),
   phone: z.string().max(40),

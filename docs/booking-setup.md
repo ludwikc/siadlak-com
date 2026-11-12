@@ -1,14 +1,16 @@
 # Rezerwacja terminów szkoleń dla centrów szkoleniowych
 
-Prywatne linki (bez indeksowania, poza nawigacją):
+Linki (bez indeksowania, poza nawigacją):
 
-- `https://siadlak.com/booking-center/asseco`
-- `https://siadlak.com/booking-center/glasspaper`
+- `https://siadlak.com/booking-center` — strona startowa z kartami PL i EN
+- `https://siadlak.com/booking-center/pl`
+- `https://siadlak.com/booking-center/en`
 
-Stare linki `/rezerwacja/<centrum>` przekierowują na nowe.
-
-Centra dodajesz w `src/config/booking/catalog.ts` (`CENTERS`). Tam też są domyślne
-(oficjalne) długości szkoleń (`OFFICIAL_DAYS`).
+Formularz jest wspólny dla wszystkich partnerów; centrum wpisuje swoją nazwę w polu
+„Centrum szkoleniowe / firma”. Dodanie `?company=Nazwa` do linku wypełnia to pole.
+Stare linki (`/booking-center/asseco`, `/rezerwacja/asseco`, `…/glasspaper`) przekierowują
+(302) na nowe z wypełnioną nazwą firmy. Domyślne (oficjalne) długości szkoleń są w
+`src/config/booking/catalog.ts` (`OFFICIAL_DAYS`).
 
 ## Jak to działa
 
@@ -54,7 +56,7 @@ Centra dodajesz w `src/config/booking/catalog.ts` (`CENTERS`). Tam też są domy
    | `BOOKING_NOTIFY_EMAIL` | opcjonalnie, adres na powiadomienia mailowe — patrz niżej |
    | `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` | opcjonalnie, powiadomienia WhatsApp — patrz niżej |
 
-8. Redeploy. Test: `https://siadlak.com/api/booking?center=asseco` powinno zwrócić
+8. Redeploy. Test: `https://siadlak.com/api/booking?center=pl` powinno zwrócić
    `{"ok":true,"from":…,"freeDays":[…]}`. Odpowiedź `calendar-not-configured` oznacza brak zmiennych.
 
 ## Powiadomienia o nowej prośbie

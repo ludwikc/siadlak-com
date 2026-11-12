@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,7 +18,14 @@ import {
   trainingDates,
 } from "@/config/booking/availability";
 import TrainingMenu from "@/components/booking/TrainingMenu";
-import { CUSTOM_TRAINING, findCenter, findTraining, trainingLabel } from "@/config/booking/catalog";
+import {
+  BOOKING_PATH,
+  CUSTOM_TRAINING,
+  findCenter,
+  findTraining,
+  legacyCenterPath,
+  trainingLabel,
+} from "@/config/booking/catalog";
 import type { BookingCenter } from "@/config/booking/catalog";
 import { BOOKING_EMAIL, BOOKING_PHONE, BOOKING_PHONE_TEL, bookingCopy } from "@/config/booking/copy";
 import { bookingRequestSchema } from "@/config/booking/request";
@@ -102,7 +109,7 @@ function BookingSummary({ values, center, t, formatDay }: SummaryProps) {
   const dates = trainingDates(values.startDate, values.days);
   const training = findTraining(values.training);
   const rows: Array<[string, ReactNode]> = [
-    [t.done.labels.center, center.name],
+    [t.done.labels.center, values.company],
     [t.done.labels.training, training ? trainingLabel(training, center.locale) : values.customTraining],
     ...(!training && values.requirements
       ? [[t.done.labels.requirements, <span className="whitespace-pre-line">{values.requirements}</span>] as [string, ReactNode]]
@@ -161,6 +168,8 @@ function BookingSummary({ values, center, t, formatDay }: SummaryProps) {
 
 function BookingForm({ center }: { center: BookingCenter }) {
   const t = bookingCopy[center.locale];
+  const [searchParams] = useSearchParams();
+  const prefillCompany = (searchParams.get("company") ?? "").trim().slice(0, 120);
   const dateLocale = center.locale === "pl" ? plLocale : enGB;
   const [submitState, setSubmitState] = useState<SubmitState>({ status: "idle" });
   const [storedContact, setStoredContact] = useState(() => loadContact(center.slug));
@@ -174,6 +183,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
 
   const emptyValues: FormValues = {
     center: center.slug,
+    company: "",
     training: "",
     customTraining: "",
     requirements: "",
@@ -199,7 +209,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(bookingRequestSchema),
-    defaultValues: { ...emptyValues, ...storedContact },
+    defaultValues: { ...emptyValues, ...storedContact, ...(prefillCompany ? { company: prefillCompany } : {}) },
   });
 
   const training = watch("training");
@@ -228,7 +238,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
   const clearStoredContact = () => {
     forgetContact(center.slug);
     setStoredContact(null);
-    for (const field of ["name", "email", "phone", "delivery", "city", "language"] as const) {
+    for (const field of ["company", "name", "email", "phone", "delivery", "city", "language"] as const) {
       setValue(field, emptyValues[field]);
     }
   };
@@ -259,6 +269,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       track("booking_requested", { center: center.slug, training: values.training, days: values.days });
       const contact = {
+        company: values.company,
         name: values.name,
         email: values.email,
         phone: values.phone,
@@ -305,6 +316,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
             showArrow={false}
             onClick={() => {
               reset({ ...emptyValues, ...storedContact });
+              setHoveredDay("");
               setSubmitState({ status: "idle" });
             }}
           >
@@ -319,7 +331,7 @@ function BookingForm({ center }: { center: BookingCenter }) {
     <>
       <div className="mt-10 md:mt-14">
         <p className="text-sm font-bold uppercase tracking-widest text-electric">{t.eyebrow}</p>
-        <h1 className="mt-3 text-3xl md:text-5xl font-bold">{t.title(center.name)}</h1>
+        <h1 className="mt-3 text-3xl md:text-5xl font-bold">{t.title}</h1>
         <p className="mt-5 text-lg leading-relaxed text-on-light-dim">{t.lead}</p>
         <p className="mt-3 text-base text-on-light-dim">
           {t.contact.questions} <ContactLinks />
@@ -588,6 +600,9 @@ function BookingForm({ center }: { center: BookingCenter }) {
             </p>
           )}
           <div className="grid gap-5 sm:grid-cols-2">
+            <Field id="booking-company" label={t.company} error={fieldError("company")}>
+              <Input id="booking-company" autoComplete="organization" className="text-base" {...register("company")} />
+            </Field>
             <Field id="booking-name" label={t.name} error={fieldError("name")}>
               <Input id="booking-name" autoComplete="name" className="text-base" {...register("name")} />
             </Field>
@@ -626,14 +641,16 @@ function BookingForm({ center }: { center: BookingCenter }) {
 export default function Booking() {
   const { center: slug } = useParams();
   const center = findCenter(slug);
+  const legacyPath = legacyCenterPath(slug);
+  if (legacyPath) return <Navigate to={legacyPath} replace />;
   if (!center) return <NotFound />;
 
   return (
     <Layout hideHeader hideFooter>
       <SEO
-        title={bookingCopy[center.locale].title(center.name)}
+        title={bookingCopy[center.locale].title}
         description={bookingCopy[center.locale].lead}
-        url={`/booking-center/${center.slug}`}
+        url={`${BOOKING_PATH}/${center.slug}`}
         lang={center.locale}
         noindex
       />
